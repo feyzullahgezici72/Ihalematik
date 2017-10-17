@@ -17,8 +17,11 @@ namespace IhalematikPro.Forms
     public partial class frm_PozluKayit : DevExpress.XtraEditors.XtraForm
     {
         List<PozModel> pozModels = new List<PozModel>();
-        public frm_PozluKayit()
+
+        frm_Teklif_Adim1 _owner;
+        public frm_PozluKayit(frm_Teklif_Adim1 owner)
         {
+            _owner = owner;
             InitializeComponent();
             //grdPozList..MultiSelect = true;
         }
@@ -26,7 +29,6 @@ namespace IhalematikPro.Forms
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
-
         }
 
         private void btnBul_Click(object sender, EventArgs e)
@@ -80,6 +82,8 @@ namespace IhalematikPro.Forms
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
+            _owner.fm_RefreshDgv();
+            //this.RefreshDgv("", "", "");
             this.Close();
         }
 

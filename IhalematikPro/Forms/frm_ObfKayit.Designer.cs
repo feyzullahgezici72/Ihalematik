@@ -397,7 +397,7 @@
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn5.Caption = "STOK KODU";
-            this.gridColumn5.FieldName = "Number";
+            this.gridColumn5.FieldName = "PozOBFNumber";
             this.gridColumn5.MaxWidth = 160;
             this.gridColumn5.MinWidth = 160;
             this.gridColumn5.Name = "gridColumn5";
@@ -422,7 +422,7 @@
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn6.Caption = "İŞİN AÇIKLAMASI";
-            this.gridColumn6.FieldName = "Description";
+            this.gridColumn6.FieldName = "PozOBFDescription";
             this.gridColumn6.MaxWidth = 340;
             this.gridColumn6.MinWidth = 340;
             this.gridColumn6.Name = "gridColumn6";
@@ -447,7 +447,7 @@
             this.gridColumn7.AppearanceHeader.Options.UseFont = true;
             this.gridColumn7.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn7.Caption = "BİRİMİ";
-            this.gridColumn7.FieldName = "Unit";
+            this.gridColumn7.FieldName = "PozOBFUnit";
             this.gridColumn7.MaxWidth = 100;
             this.gridColumn7.MinWidth = 100;
             this.gridColumn7.Name = "gridColumn7";
@@ -474,7 +474,7 @@
             this.gridColumn8.Caption = "BİRİM FİYATI";
             this.gridColumn8.DisplayFormat.FormatString = "N2";
             this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.gridColumn8.FieldName = "UnitPrice";
+            this.gridColumn8.FieldName = "PozOBFUnitPrice";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.OptionsColumn.AllowFocus = false;
@@ -517,6 +517,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(91, 44);
             this.simpleButton2.TabIndex = 24;
             this.simpleButton2.Text = "Seçilenleri Çıkar";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // popupMenu1
             // 

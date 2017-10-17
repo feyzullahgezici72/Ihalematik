@@ -26,9 +26,10 @@ namespace IhalematikPro.Forms
         {
             okf.ShowDialog();
         }
-        Forms.frm_PozluKayit pkf = new frm_PozluKayit();
+       
         private void simpleButton3_Click(object sender, EventArgs e)
         {
+            frm_PozluKayit pkf = new frm_PozluKayit(this);
             pkf.ShowDialog();
         }
 
@@ -56,7 +57,7 @@ namespace IhalematikPro.Forms
         {
             grdMaterialList.DataSource = null;
             bindingSource1.DataSource = GlobalVeriablesManager.MaterialList; //typeof(List<MaterialList>);
-            grdMaterialList.DataSource = bindingSource1;          
+            grdMaterialList.DataSource = bindingSource1;
             lblTenderDescription.Text = GlobalVeriablesManager.CurrentTender.Description;
             lblTenderNumber.Text = GlobalVeriablesManager.CurrentTender.DisplayNumber;
             this.KeyPreview = true;
@@ -65,8 +66,9 @@ namespace IhalematikPro.Forms
 
         private void Frm_Teklif_Adim1_KeyDown(object sender, KeyEventArgs e)
         {
-           if (e.KeyCode.ToString() == "F1")
+            if (e.KeyCode.ToString() == "F1")
             {
+                frm_PozluKayit pkf = new frm_PozluKayit(this);
                 pkf.ShowDialog();
             }
             if (e.KeyCode.ToString() == "F2")
@@ -75,7 +77,7 @@ namespace IhalematikPro.Forms
             }
         }
 
-      
+
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             int[] selectedRows = grdMaterialList2.GetSelectedRows();
@@ -126,6 +128,12 @@ namespace IhalematikPro.Forms
         private void panelControl2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public void fm_RefreshDgv()
+        {
+            grdMaterialList.DataSource = GlobalVeriablesManager.MaterialList;
+            grdMaterialList.RefreshDataSource();
         }
     }
 }

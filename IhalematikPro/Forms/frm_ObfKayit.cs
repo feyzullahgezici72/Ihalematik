@@ -66,21 +66,47 @@ namespace IhalematikPro.Forms
                 if (items.Count == 0)
                 {
                     GlobalVeriablesManager.MaterialList.Add(materialList);
-                    frm_Teklif_Adim1 frm = new frm_Teklif_Adim1();
-                    frm.grdMaterialList.DataSource = null;
-                    frm.grdMaterialList.DataSource = new BindingSource(GlobalVeriablesManager.MaterialList, "");
                 }
-
-                //frm.grdMaterialList.DataSource = GlobalVeriablesManager.MaterialList;
             }
 
+            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(GlobalVeriablesManager.MaterialList.Where(p => !p.IsPoz).ToList());
+
             grdAddedOBF.DataSource = null;
-            //grdAddedOBF.DataSource = models;
+            grdAddedOBF.DataSource = models;
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
             this.Close();  
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            int[] selectedRows = gridView2.GetSelectedRows();
+            List<MaterialListModel> models = (List<MaterialListModel>)gridView2.DataSource;
+
+            MaterialListModel[] selectedRowsItems = models.ToArray();
+
+            GlobalVeriablesManager.MaterialList.ForEach(p => p.Id = p.PozOBFId);
+
+            foreach (int item in selectedRows)
+            {
+                MaterialListModel pozModel = selectedRowsItems[item];
+
+                MaterialList selectedItem = GlobalVeriablesManager.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
+
+                if (selectedItem != null)
+                {
+                    int index = GlobalVeriablesManager.MaterialList.IndexOf(selectedItem);
+
+                    GlobalVeriablesManager.MaterialList.RemoveAt(index);
+                }
+            }
+
+            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(GlobalVeriablesManager.MaterialList.Where(p => !p.IsPoz).ToList());
+
+            grdAddedOBF.DataSource = null;
+            grdAddedOBF.DataSource = dataSource;
         }
     }
 }
