@@ -75,12 +75,12 @@ namespace IhalematikPro.Forms
             }
 
             grdAddedOBF.DataSource = null;
-            grdAddedOBF.DataSource = models;
+            //grdAddedOBF.DataSource = models;
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();  
         }
     }
 }
