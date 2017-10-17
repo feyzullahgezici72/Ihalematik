@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E0BEF73-F7D6-4D3D-A02D-3B4BA085CA6A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IhalematikProBL</RootNamespace>
+    <AssemblyName>IhalematikProBL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation">
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet">
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms">
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\External\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\External\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\External\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.2.4.26, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\External\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.2.4.26, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Raverus.FiskalizacijaDEV">
+      <HintPath>..\External\Raverus.FiskalizacijaDEV.dll</HintPath>
+    </Reference>
+    <Reference Include="Raverus.FiskalizacijaDEV.XmlSerializers">
+      <HintPath>..\External\Raverus.FiskalizacijaDEV.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine">
+      <HintPath>..\External\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleApplicationBase.BL">
+      <HintPath>..\External\SimpleApplicationBase.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleApplicationBase.SocialToolkit">
+      <HintPath>..\External\SimpleApplicationBase.SocialToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleApplicationBase.Toolkit, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\SimpleApplicationBase.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleApplicationBase.Web.BL">
+      <HintPath>..\External\SimpleApplicationBase.Web.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleApplicationBase.Web.Toolkit">
+      <HintPath>..\External\SimpleApplicationBase.Web.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Stonefish.Payment.BL">
+      <HintPath>..\External\Stonefish.Payment.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\EntityBase.cs" />
+    <Compile Include="Entity\Fare.cs" />
+    <Compile Include="Entity\Material.cs" />
+    <Compile Include="Entity\MaterialList.cs" />
+    <Compile Include="Entity\OBF.cs" />
+    <Compile Include="Entity\Poz.cs" />
+    <Compile Include="Entity\Tender.cs" />
+    <Compile Include="Entity\TenderEquipment.cs" />
+    <Compile Include="Entity\TenderMaterialEquipment.cs" />
+    <Compile Include="Entity\Title.cs" />
+    <Compile Include="Entity\Vehicle.cs" />
+    <Compile Include="Entity\VehicleTitle.cs" />
+    <Compile Include="Entity\Worker.cs" />
+    <Compile Include="Enum\CurrencyTypesEnum.cs" />
+    <Compile Include="Manager\CustomDBConnectionManager.cs" />
+    <Compile Include="Manager\TenderManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider\CustomEntityBaseProvider.cs" />
+    <Compile Include="Provider\MaterialListProvider.cs" />
+    <Compile Include="Provider\OBFProvider.cs" />
+    <Compile Include="Provider\PozProvider.cs" />
+    <Compile Include="Provider\TenderEquipmentProvider.cs" />
+    <Compile Include="Provider\TenderMaterialEquipmentProvider.cs" />
+    <Compile Include="Provider\TenderProvider.cs" />
+    <Compile Include="Provider\TitleProvider.cs" />
+    <Compile Include="Provider\VehicleProvider.cs" />
+    <Compile Include="Provider\VehicleTitleProvider.cs" />
+    <Compile Include="Provider\WorkerProvider.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

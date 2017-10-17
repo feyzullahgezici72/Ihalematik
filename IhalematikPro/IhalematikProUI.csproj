@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67C48430-1819-4E38-A0DF-63D93083A209}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IhalematikProUI</RootNamespace>
+    <AssemblyName>IhalematikProUI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.SpellChecker.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Win, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpellChecker.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="ExcelDataReader, Version=3.2.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.2.0\lib\net45\ExcelDataReader.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation">
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet">
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms">
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\External\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\External\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\External\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.2.4.26, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\External\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.2.4.26, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Raverus.FiskalizacijaDEV">
+      <HintPath>..\External\Raverus.FiskalizacijaDEV.dll</HintPath>
+    </Reference>
+    <Reference Include="Raverus.FiskalizacijaDEV.XmlSerializers">
+      <HintPath>..\External\Raverus.FiskalizacijaDEV.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine">
+      <HintPath>..\External\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleApplicationBase.BL">
+      <HintPath>..\External\SimpleApplicationBase.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleApplicationBase.SocialToolkit">
+      <HintPath>..\External\SimpleApplicationBase.SocialToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleApplicationBase.Toolkit, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\SimpleApplicationBase.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleApplicationBase.Web.BL">
+      <HintPath>..\External\SimpleApplicationBase.Web.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleApplicationBase.Web.Toolkit">
+      <HintPath>..\External\SimpleApplicationBase.Web.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Stonefish.Payment.BL">
+      <HintPath>..\External\Stonefish.Payment.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\frm_Anaform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Anaform.Designer.cs">
+      <DependentUpon>frm_Anaform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_AracEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_AracEkle.Designer.cs">
+      <DependentUpon>frm_AracEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_AracTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_AracTanimlama.Designer.cs">
+      <DependentUpon>frm_AracTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_BelgeKontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_BelgeKontrol.Designer.cs">
+      <DependentUpon>frm_BelgeKontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_CalisanEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_CalisanEkle.Designer.cs">
+      <DependentUpon>frm_CalisanEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_CalisanTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_CalisanTanimlama.Designer.cs">
+      <DependentUpon>frm_CalisanTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Cikis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Cikis.Designer.cs">
+      <DependentUpon>frm_Cikis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_DevamEdenIhaleListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_DevamEdenIhaleListesi.Designer.cs">
+      <DependentUpon>frm_DevamEdenIhaleListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_DovizKurlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_DovizKurlari.Designer.cs">
+      <DependentUpon>frm_DovizKurlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_FaalitetAlaniEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_FaalitetAlaniEkle.Designer.cs">
+      <DependentUpon>frm_FaalitetAlaniEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_FirmaTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_FirmaTanimlama.Designer.cs">
+      <DependentUpon>frm_FirmaTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_MalzemeFiyatTeklifiOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_MalzemeFiyatTeklifiOlustur.Designer.cs">
+      <DependentUpon>frm_MalzemeFiyatTeklifiOlustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_ProgramHakkinda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_ProgramHakkinda.Designer.cs">
+      <DependentUpon>frm_ProgramHakkinda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_TedarikcilerdenFiyatAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_TedarikcilerdenFiyatAl.Designer.cs">
+      <DependentUpon>frm_TedarikcilerdenFiyatAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_TedarikciTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_TedarikciTanimlama.Designer.cs">
+      <DependentUpon>frm_TedarikciTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_TeklifListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_TeklifListesi.Designer.cs">
+      <DependentUpon>frm_TeklifListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_TeklifSonAdim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_TeklifSonAdim.Designer.cs">
+      <DependentUpon>frm_TeklifSonAdim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Teklif_Adim4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Teklif_Adim4.Designer.cs">
+      <DependentUpon>frm_Teklif_Adim4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_ObfKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_ObfKayit.Designer.cs">
+      <DependentUpon>frm_ObfKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_PozListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_PozListesi.Designer.cs">
+      <DependentUpon>frm_PozListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_PozluKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_PozluKayit.Designer.cs">
+      <DependentUpon>frm_PozluKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_SplashScreen.Designer.cs">
+      <DependentUpon>frm_SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_OzelStokListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_OzelStokListesi.Designer.cs">
+      <DependentUpon>frm_OzelStokListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Teklif_Adim1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Teklif_Adim1.Designer.cs">
+      <DependentUpon>frm_Teklif_Adim1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Teklif_Adim3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Teklif_Adim3.Designer.cs">
+      <DependentUpon>frm_Teklif_Adim3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_wait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_wait.Designer.cs">
+      <DependentUpon>frm_wait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_YeniIhaleYarat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_YeniIhaleYarat.Designer.cs">
+      <DependentUpon>frm_YeniIhaleYarat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_YeniTeklifOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_YeniTeklifOlustur.Designer.cs">
+      <DependentUpon>frm_YeniTeklifOlustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\GlobalVeriablesManager.cs" />
+    <Compile Include="Manager\UIMaterialListManager.cs" />
+    <Compile Include="Manager\UIOBFManager.cs" />
+    <Compile Include="Manager\UIPozManager.cs" />
+    <Compile Include="Manager\UITitleManager.cs" />
+    <Compile Include="Manager\UIVehicleManager.cs" />
+    <Compile Include="Manager\UIVehicleTitleManager.cs" />
+    <Compile Include="Manager\UIWorkerManager.cs" />
+    <Compile Include="Model\CustomSaveableModelBase.cs" />
+    <Compile Include="Model\IhalematikModelBase.cs" />
+    <Compile Include="Model\MaterialListModel.cs" />
+    <Compile Include="Model\OBFModel.cs" />
+    <Compile Include="Model\PozModel.cs" />
+    <Compile Include="Model\TitleModel.cs" />
+    <Compile Include="Model\VehicleModel.cs" />
+    <Compile Include="Model\VehicleTitleModel.cs" />
+    <Compile Include="Model\WorkerModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frm_Anaform.resx">
+      <DependentUpon>frm_Anaform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_AracEkle.resx">
+      <DependentUpon>frm_AracEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_AracTanimlama.resx">
+      <DependentUpon>frm_AracTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_BelgeKontrol.resx">
+      <DependentUpon>frm_BelgeKontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_CalisanEkle.resx">
+      <DependentUpon>frm_CalisanEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_CalisanTanimlama.resx">
+      <DependentUpon>frm_CalisanTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Cikis.resx">
+      <DependentUpon>frm_Cikis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_DevamEdenIhaleListesi.resx">
+      <DependentUpon>frm_DevamEdenIhaleListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_DovizKurlari.resx">
+      <DependentUpon>frm_DovizKurlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_FaalitetAlaniEkle.resx">
+      <DependentUpon>frm_FaalitetAlaniEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_FirmaTanimlama.resx">
+      <DependentUpon>frm_FirmaTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_MalzemeFiyatTeklifiOlustur.resx">
+      <DependentUpon>frm_MalzemeFiyatTeklifiOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_ProgramHakkinda.resx">
+      <DependentUpon>frm_ProgramHakkinda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_TedarikcilerdenFiyatAl.resx">
+      <DependentUpon>frm_TedarikcilerdenFiyatAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_TedarikciTanimlama.resx">
+      <DependentUpon>frm_TedarikciTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_TeklifListesi.resx">
+      <DependentUpon>frm_TeklifListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_TeklifSonAdim.resx">
+      <DependentUpon>frm_TeklifSonAdim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Teklif_Adim4.resx">
+      <DependentUpon>frm_Teklif_Adim4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_ObfKayit.resx">
+      <DependentUpon>frm_ObfKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_PozListesi.resx">
+      <DependentUpon>frm_PozListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_PozluKayit.resx">
+      <DependentUpon>frm_PozluKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_SplashScreen.resx">
+      <DependentUpon>frm_SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_OzelStokListesi.resx">
+      <DependentUpon>frm_OzelStokListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Teklif_Adim1.resx">
+      <DependentUpon>frm_Teklif_Adim1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Teklif_Adim3.resx">
+      <DependentUpon>frm_Teklif_Adim3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_wait.resx">
+      <DependentUpon>frm_wait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_YeniIhaleYarat.resx">
+      <DependentUpon>frm_YeniIhaleYarat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_YeniTeklifOlustur.resx">
+      <DependentUpon>frm_YeniTeklifOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\kirmizi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\mavi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\orange.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\mor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\ihale.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IhalematikProBL\IhalematikProBL.csproj">
+      <Project>{0e0bef73-f7d6-4d3d-a02d-3b4ba085ca6a}</Project>
+      <Name>IhalematikProBL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\yukleniyor.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\loading.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
