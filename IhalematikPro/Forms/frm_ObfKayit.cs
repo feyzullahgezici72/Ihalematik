@@ -74,7 +74,7 @@ namespace IhalematikPro.Forms
                 //frm.grdMaterialList.DataSource = GlobalVeriablesManager.MaterialList;
             }
 
-            grdAddedOBF.DataSource = null;
+            //grdAddedOBF.DataSource = null;
             //grdAddedOBF.DataSource = models;
         }
 
