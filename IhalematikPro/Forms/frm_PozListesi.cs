@@ -36,8 +36,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            MesajVer();
-            LoadGrid();
+           
         }
         public void bekleyiniz()
         {
@@ -80,6 +79,10 @@ namespace IhalematikPro.Forms
 
         }
 
-      
+        private void btnListele_Click(object sender, EventArgs e)
+        {
+            MesajVer();
+            LoadGrid();
+        }
     }
 }

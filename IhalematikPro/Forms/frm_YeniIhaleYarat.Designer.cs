@@ -69,17 +69,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(238, 56);
+            this.label1.Location = new System.Drawing.Point(357, 82);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 16);
+            this.label1.Size = new System.Drawing.Size(127, 24);
             this.label1.TabIndex = 15;
             this.label1.Text = "Ihale Tarihi";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(240, 74);
+            this.dateTimePicker1.Location = new System.Drawing.Point(360, 108);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(213, 21);
+            this.dateTimePicker1.Size = new System.Drawing.Size(318, 27);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // simpleButton2
@@ -88,30 +90,34 @@
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(8, 10);
+            this.simpleButton2.Location = new System.Drawing.Point(646, 0);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(95, 34);
+            this.simpleButton2.Size = new System.Drawing.Size(132, 54);
             this.simpleButton2.TabIndex = 0;
             this.simpleButton2.Text = "Oluştur";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // txtAciklama
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(110, 101);
+            this.txtAciklama.Location = new System.Drawing.Point(165, 148);
+            this.txtAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAciklama.Properties.Appearance.ForeColor = System.Drawing.Color.Navy;
             this.txtAciklama.Properties.Appearance.Options.UseFont = true;
             this.txtAciklama.Properties.Appearance.Options.UseForeColor = true;
             this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtAciklama.Size = new System.Drawing.Size(485, 32);
+            this.txtAciklama.Size = new System.Drawing.Size(728, 44);
             this.txtAciklama.TabIndex = 1;
             // 
             // txtTeklifNo
             // 
             this.txtTeklifNo.Enabled = false;
-            this.txtTeklifNo.Location = new System.Drawing.Point(110, 61);
+            this.txtTeklifNo.Location = new System.Drawing.Point(165, 89);
+            this.txtTeklifNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTeklifNo.Name = "txtTeklifNo";
             this.txtTeklifNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTeklifNo.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -119,16 +125,17 @@
             this.txtTeklifNo.Properties.Appearance.Options.UseForeColor = true;
             this.txtTeklifNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtTeklifNo.Properties.Mask.BeepOnError = true;
-            this.txtTeklifNo.Size = new System.Drawing.Size(109, 32);
+            this.txtTeklifNo.Size = new System.Drawing.Size(164, 44);
             this.txtTeklifNo.TabIndex = 0;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl2.Location = new System.Drawing.Point(10, 105);
+            this.labelControl2.Location = new System.Drawing.Point(15, 153);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(93, 23);
+            this.labelControl2.Size = new System.Drawing.Size(143, 35);
             this.labelControl2.TabIndex = 9;
             this.labelControl2.Text = "Açıklama:";
             // 
@@ -136,9 +143,10 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl1.Location = new System.Drawing.Point(14, 65);
+            this.labelControl1.Location = new System.Drawing.Point(21, 95);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(89, 23);
+            this.labelControl1.Size = new System.Drawing.Size(136, 35);
             this.labelControl1.TabIndex = 10;
             this.labelControl1.Text = "İhale No:";
             // 
@@ -148,10 +156,12 @@
             this.btnIptal.Appearance.Options.UseFont = true;
             this.btnIptal.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
-            this.btnIptal.Location = new System.Drawing.Point(109, 10);
+            this.btnIptal.Location = new System.Drawing.Point(778, 0);
+            this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
             this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(89, 34);
+            this.btnIptal.Size = new System.Drawing.Size(132, 54);
             this.btnIptal.TabIndex = 1;
             this.btnIptal.Text = "Iptal";
             this.btnIptal.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -163,12 +173,13 @@
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImage = global::IhalematikProUI.Properties.Resources.mavi;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Controls.Add(this.labelControl3);
+            this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(607, 50);
+            this.panelControl1.Size = new System.Drawing.Size(910, 54);
             this.panelControl1.TabIndex = 31;
             this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
@@ -179,10 +190,11 @@
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl2.Controls.Add(this.simpleButton2);
             this.panelControl2.Controls.Add(this.btnIptal);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl2.Location = new System.Drawing.Point(406, 0);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(0, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(201, 50);
+            this.panelControl2.Size = new System.Drawing.Size(910, 54);
             this.panelControl2.TabIndex = 3;
             // 
             // labelControl3
@@ -193,10 +205,11 @@
             this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl3.LineColor = System.Drawing.Color.Red;
             this.labelControl3.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl3.Location = new System.Drawing.Point(10, 12);
+            this.labelControl3.Location = new System.Drawing.Point(8, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.ShowLineShadow = false;
-            this.labelControl3.Size = new System.Drawing.Size(296, 32);
+            this.labelControl3.Size = new System.Drawing.Size(436, 47);
             this.labelControl3.TabIndex = 0;
             this.labelControl3.Text = "YENİ İHALE OLUŞTUR";
             this.labelControl3.UseMnemonic = false;
@@ -209,19 +222,22 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.groupControl1.Controls.Add(this.grdWorker);
-            this.groupControl1.Location = new System.Drawing.Point(12, 149);
+            this.groupControl1.Location = new System.Drawing.Point(18, 218);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(290, 274);
+            this.groupControl1.Size = new System.Drawing.Size(435, 400);
             this.groupControl1.TabIndex = 32;
             this.groupControl1.Text = "Çalışacak Personel Profili";
             // 
             // grdWorker
             // 
             this.grdWorker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdWorker.Location = new System.Drawing.Point(2, 20);
+            this.grdWorker.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.grdWorker.Location = new System.Drawing.Point(3, 32);
             this.grdWorker.MainView = this.grdWorker2;
+            this.grdWorker.Margin = new System.Windows.Forms.Padding(4);
             this.grdWorker.Name = "grdWorker";
-            this.grdWorker.Size = new System.Drawing.Size(286, 252);
+            this.grdWorker.Size = new System.Drawing.Size(429, 365);
             this.grdWorker.TabIndex = 0;
             this.grdWorker.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdWorker2});
@@ -259,19 +275,22 @@
             this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.Controls.Add(this.grdVehicle);
-            this.groupControl2.Location = new System.Drawing.Point(308, 149);
+            this.groupControl2.Location = new System.Drawing.Point(462, 218);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(287, 274);
+            this.groupControl2.Size = new System.Drawing.Size(430, 400);
             this.groupControl2.TabIndex = 32;
             this.groupControl2.Text = "Çalışacak Araç Profili";
             // 
             // grdVehicle
             // 
             this.grdVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdVehicle.Location = new System.Drawing.Point(2, 20);
+            this.grdVehicle.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.grdVehicle.Location = new System.Drawing.Point(3, 32);
             this.grdVehicle.MainView = this.grdVehicle2;
+            this.grdVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.grdVehicle.Name = "grdVehicle";
-            this.grdVehicle.Size = new System.Drawing.Size(283, 252);
+            this.grdVehicle.Size = new System.Drawing.Size(424, 365);
             this.grdVehicle.TabIndex = 0;
             this.grdVehicle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdVehicle2});
@@ -306,10 +325,10 @@
             // 
             // frm_YeniIhaleYarat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(607, 437);
+            this.ClientSize = new System.Drawing.Size(910, 639);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
@@ -321,6 +340,7 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_YeniIhaleYarat";

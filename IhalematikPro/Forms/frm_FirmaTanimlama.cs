@@ -23,5 +23,10 @@ namespace IhalematikPro.Forms
             this.Close();
 
         }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

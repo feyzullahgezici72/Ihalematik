@@ -37,17 +37,19 @@
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(709, 182);
+            this.labelControl1.Size = new System.Drawing.Size(1064, 266);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = resources.GetString("labelControl1.Text");
             // 
             // frm_BelgeKontrol
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 452);
+            this.ClientSize = new System.Drawing.Size(1064, 661);
             this.Controls.Add(this.labelControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_BelgeKontrol";
             this.Text = "frm_BelgeKontrol";
             this.ResumeLayout(false);

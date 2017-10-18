@@ -54,7 +54,8 @@
             // 
             // txtUnvan
             // 
-            this.txtUnvan.Location = new System.Drawing.Point(94, 30);
+            this.txtUnvan.Location = new System.Drawing.Point(141, 50);
+            this.txtUnvan.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnvan.Name = "txtUnvan";
             this.txtUnvan.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUnvan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -62,16 +63,17 @@
             this.txtUnvan.Properties.Appearance.Options.UseBackColor = true;
             this.txtUnvan.Properties.Appearance.Options.UseFont = true;
             this.txtUnvan.Properties.Appearance.Options.UseForeColor = true;
-            this.txtUnvan.Size = new System.Drawing.Size(281, 26);
+            this.txtUnvan.Size = new System.Drawing.Size(501, 36);
             this.txtUnvan.TabIndex = 0;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(10, 33);
+            this.labelControl2.Location = new System.Drawing.Point(15, 54);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(79, 13);
+            this.labelControl2.Size = new System.Drawing.Size(121, 21);
             this.labelControl2.TabIndex = 97;
             this.labelControl2.Text = "Faaliyet Alanı:";
             // 
@@ -86,10 +88,11 @@
             this.groupControl2.Controls.Add(this.btnSave);
             this.groupControl2.Controls.Add(this.txtUnvan);
             this.groupControl2.Controls.Add(this.labelControl2);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl2.Location = new System.Drawing.Point(0, 50);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl2.Location = new System.Drawing.Point(0, 54);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(476, 71);
+            this.groupControl2.Size = new System.Drawing.Size(714, 118);
             this.groupControl2.TabIndex = 36;
             // 
             // btnSave
@@ -100,20 +103,22 @@
             this.btnSave.Appearance.Options.UseForeColor = true;
             this.btnSave.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(381, 26);
+            this.btnSave.Location = new System.Drawing.Point(650, 43);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(86, 32);
+            this.btnSave.Size = new System.Drawing.Size(64, 54);
             this.btnSave.TabIndex = 93;
-            this.btnSave.Text = "Kaydet";
             // 
             // btnKapat
             // 
             this.btnKapat.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
-            this.btnKapat.Location = new System.Drawing.Point(3, 6);
+            this.btnKapat.Location = new System.Drawing.Point(650, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(41, 38);
+            this.btnKapat.Size = new System.Drawing.Size(64, 54);
             this.btnKapat.TabIndex = 1;
             // 
             // panelControl1
@@ -121,14 +126,15 @@
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.DimGray;
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.ContentImage = global::IhalematikProUI.Properties.Resources.mavi;
+            this.panelControl1.ContentImage = global::IhalematikProUI.Properties.Resources.kirmizi;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Controls.Add(this.labelControl1);
+            this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(476, 50);
+            this.panelControl1.Size = new System.Drawing.Size(714, 54);
             this.panelControl1.TabIndex = 35;
             // 
             // panelControl2
@@ -137,10 +143,11 @@
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl2.Controls.Add(this.btnKapat);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl2.Location = new System.Drawing.Point(427, 0);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(0, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(49, 50);
+            this.panelControl2.Size = new System.Drawing.Size(714, 54);
             this.panelControl2.TabIndex = 2;
             // 
             // labelControl1
@@ -151,10 +158,11 @@
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(10, 12);
+            this.labelControl1.Location = new System.Drawing.Point(15, 7);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(306, 32);
+            this.labelControl1.Size = new System.Drawing.Size(445, 47);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "FAALİYET ALANI EKLE";
             this.labelControl1.UseMnemonic = false;
@@ -162,14 +170,15 @@
             // frm_FaalitetAlaniEkle
             // 
             this.AcceptButton = this.btnSave;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(476, 118);
+            this.ClientSize = new System.Drawing.Size(714, 172);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_FaalitetAlaniEkle";

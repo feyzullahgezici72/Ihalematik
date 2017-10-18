@@ -54,7 +54,8 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(62, 30);
+            this.txtName.Location = new System.Drawing.Point(93, 54);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
             this.txtName.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -62,15 +63,16 @@
             this.txtName.Properties.Appearance.Options.UseBackColor = true;
             this.txtName.Properties.Appearance.Options.UseFont = true;
             this.txtName.Properties.Appearance.Options.UseForeColor = true;
-            this.txtName.Size = new System.Drawing.Size(281, 26);
+            this.txtName.Size = new System.Drawing.Size(491, 36);
             this.txtName.TabIndex = 0;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(10, 38);
+            this.labelControl2.Location = new System.Drawing.Point(15, 60);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(50, 13);
+            this.labelControl2.Size = new System.Drawing.Size(77, 21);
             this.labelControl2.TabIndex = 97;
             this.labelControl2.Text = "Araç Adı:";
             // 
@@ -85,10 +87,11 @@
             this.groupControl2.Controls.Add(this.btnSave);
             this.groupControl2.Controls.Add(this.txtName);
             this.groupControl2.Controls.Add(this.labelControl2);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl2.Location = new System.Drawing.Point(0, 50);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl2.Location = new System.Drawing.Point(0, 54);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(437, 71);
+            this.groupControl2.Size = new System.Drawing.Size(656, 123);
             this.groupControl2.TabIndex = 36;
             this.groupControl2.Text = "Araç Bilgileri";
             // 
@@ -100,21 +103,23 @@
             this.btnSave.Appearance.Options.UseForeColor = true;
             this.btnSave.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(344, 27);
+            this.btnSave.Location = new System.Drawing.Point(592, 47);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(86, 32);
+            this.btnSave.Size = new System.Drawing.Size(64, 54);
             this.btnSave.TabIndex = 93;
-            this.btnSave.Text = "Kaydet";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnKapat
             // 
             this.btnKapat.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
-            this.btnKapat.Location = new System.Drawing.Point(3, 6);
+            this.btnKapat.Location = new System.Drawing.Point(592, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(41, 38);
+            this.btnKapat.Size = new System.Drawing.Size(64, 54);
             this.btnKapat.TabIndex = 1;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
@@ -123,14 +128,15 @@
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.DimGray;
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.ContentImage = global::IhalematikProUI.Properties.Resources.mavi;
+            this.panelControl1.ContentImage = global::IhalematikProUI.Properties.Resources.orange;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Controls.Add(this.labelControl1);
+            this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(437, 50);
+            this.panelControl1.Size = new System.Drawing.Size(656, 54);
             this.panelControl1.TabIndex = 35;
             // 
             // panelControl2
@@ -139,10 +145,11 @@
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl2.Controls.Add(this.btnKapat);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl2.Location = new System.Drawing.Point(388, 0);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(0, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(49, 50);
+            this.panelControl2.Size = new System.Drawing.Size(656, 54);
             this.panelControl2.TabIndex = 2;
             // 
             // labelControl1
@@ -153,10 +160,11 @@
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(10, 12);
+            this.labelControl1.Location = new System.Drawing.Point(15, 5);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(159, 32);
+            this.labelControl1.Size = new System.Drawing.Size(234, 47);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "ARAÇ EKLE";
             this.labelControl1.UseMnemonic = false;
@@ -164,14 +172,15 @@
             // frm_AracEkle
             // 
             this.AcceptButton = this.btnSave;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(437, 121);
+            this.ClientSize = new System.Drawing.Size(656, 177);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_AracEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
