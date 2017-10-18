@@ -80,12 +80,12 @@
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.Adimlar = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.Adimlar = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -532,6 +532,16 @@
             this.ribbonPage7.Name = "ribbonPage7";
             this.ribbonPage7.Text = "İhaleler";
             // 
+            // Adimlar
+            // 
+            this.Adimlar.ItemLinks.Add(this.barBtnTeklifHazirla);
+            this.Adimlar.ItemLinks.Add(this.btnAdimx1);
+            this.Adimlar.ItemLinks.Add(this.btnAdimx4);
+            this.Adimlar.ItemLinks.Add(this.btnAdimx3);
+            this.Adimlar.ItemLinks.Add(this.btnAdimx5);
+            this.Adimlar.Name = "Adimlar";
+            this.Adimlar.Visible = false;
+            // 
             // ribbonPageGroup9
             // 
             this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem6);
@@ -567,16 +577,6 @@
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem15);
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem13);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            // 
-            // Adimlar
-            // 
-            this.Adimlar.ItemLinks.Add(this.barBtnTeklifHazirla);
-            this.Adimlar.ItemLinks.Add(this.btnAdimx1);
-            this.Adimlar.ItemLinks.Add(this.btnAdimx4);
-            this.Adimlar.ItemLinks.Add(this.btnAdimx3);
-            this.Adimlar.ItemLinks.Add(this.btnAdimx5);
-            this.Adimlar.Name = "Adimlar";
-            this.Adimlar.Visible = false;
             // 
             // ribbonPage4
             // 
@@ -620,7 +620,7 @@
             this.ribbonPageGroup7.Enabled = false;
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "                                                                                 " +
-    "                                                                     ";
+    "                                  ";
             // 
             // ribbonPageGroup6
             // 
