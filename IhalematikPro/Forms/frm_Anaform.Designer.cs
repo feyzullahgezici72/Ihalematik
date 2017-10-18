@@ -85,8 +85,6 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Adimlar = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -150,7 +148,6 @@
             this.ribbonPage7,
             this.ribbonPage2,
             this.ribbonPage8,
-            this.ribbonPage3,
             this.ribbonPage4,
             this.ribbonPage5,
             this.ribbonPage6});
@@ -158,7 +155,7 @@
             this.ribbon.ShowCategoryInCaption = false;
             this.ribbon.ShowFullScreenButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1047, 143);
+            this.ribbon.Size = new System.Drawing.Size(1449, 202);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             this.ribbon.TransparentEditors = true;
@@ -175,7 +172,7 @@
             // 
             // barBtnDovizKurlari
             // 
-            this.barBtnDovizKurlari.Caption = "Döviz Kurları";
+            this.barBtnDovizKurlari.Caption = "Kur Tanımlama";
             this.barBtnDovizKurlari.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnDovizKurlari.Glyph")));
             this.barBtnDovizKurlari.Id = 2;
             this.barBtnDovizKurlari.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnDovizKurlari.LargeGlyph")));
@@ -199,7 +196,7 @@
             this.barBtnOzelStokListesi.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnOzelStokListesi.Glyph")));
             this.barBtnOzelStokListesi.Id = 4;
             this.barBtnOzelStokListesi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnOzelStokListesi.LargeGlyph")));
-            this.barBtnOzelStokListesi.LargeWidth = 100;
+            this.barBtnOzelStokListesi.LargeWidth = 120;
             this.barBtnOzelStokListesi.Name = "barBtnOzelStokListesi";
             this.barBtnOzelStokListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnOzelStokListesi_ItemClick);
             // 
@@ -209,7 +206,7 @@
             this.barBtnTeklifHazirla.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnTeklifHazirla.Glyph")));
             this.barBtnTeklifHazirla.Id = 5;
             this.barBtnTeklifHazirla.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnTeklifHazirla.LargeGlyph")));
-            this.barBtnTeklifHazirla.LargeWidth = 100;
+            this.barBtnTeklifHazirla.LargeWidth = 140;
             this.barBtnTeklifHazirla.Name = "barBtnTeklifHazirla";
             this.barBtnTeklifHazirla.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnTeklifHazirla_ItemClick);
             // 
@@ -328,7 +325,7 @@
             this.btnAdimx1.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx1.Glyph")));
             this.btnAdimx1.Id = 9;
             this.btnAdimx1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx1.LargeGlyph")));
-            this.btnAdimx1.LargeWidth = 60;
+            this.btnAdimx1.LargeWidth = 80;
             this.btnAdimx1.Name = "btnAdimx1";
             toolTipItem1.Text = "Keşif Listesi ";
             superToolTip1.Items.Add(toolTipItem1);
@@ -354,7 +351,7 @@
             this.btnAdimx3.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx3.Glyph")));
             this.btnAdimx3.Id = 11;
             this.btnAdimx3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx3.LargeGlyph")));
-            this.btnAdimx3.LargeWidth = 60;
+            this.btnAdimx3.LargeWidth = 80;
             this.btnAdimx3.Name = "btnAdimx3";
             toolTipItem3.Text = "İşçilik";
             superToolTip3.Items.Add(toolTipItem3);
@@ -367,7 +364,7 @@
             this.btnAdimx4.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx4.Glyph")));
             this.btnAdimx4.Id = 12;
             this.btnAdimx4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx4.LargeGlyph")));
-            this.btnAdimx4.LargeWidth = 60;
+            this.btnAdimx4.LargeWidth = 80;
             this.btnAdimx4.Name = "btnAdimx4";
             toolTipItem4.Text = "Malzemeler";
             superToolTip4.Items.Add(toolTipItem4);
@@ -380,7 +377,7 @@
             this.btnAdimx5.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx5.Glyph")));
             this.btnAdimx5.Id = 13;
             this.btnAdimx5.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx5.LargeGlyph")));
-            this.btnAdimx5.LargeWidth = 60;
+            this.btnAdimx5.LargeWidth = 80;
             this.btnAdimx5.Name = "btnAdimx5";
             toolTipItem5.Text = "Teklifi kaydet ve yazdır";
             superToolTip5.Items.Add(toolTipItem5);
@@ -486,7 +483,7 @@
             this.barButtonItem13.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.Glyph")));
             this.barButtonItem13.Id = 10;
             this.barButtonItem13.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.LargeGlyph")));
-            this.barButtonItem13.LargeWidth = 100;
+            this.barButtonItem13.LargeWidth = 130;
             this.barButtonItem13.Name = "barButtonItem13";
             this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
             // 
@@ -505,7 +502,7 @@
             this.barButtonItem15.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.Glyph")));
             this.barButtonItem15.Id = 12;
             this.barButtonItem15.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.LargeGlyph")));
-            this.barButtonItem15.LargeWidth = 100;
+            this.barButtonItem15.LargeWidth = 130;
             this.barButtonItem15.Name = "barButtonItem15";
             this.barButtonItem15.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem15_ItemClick);
             // 
@@ -530,6 +527,7 @@
             // ribbonPage7
             // 
             this.ribbonPage7.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.Adimlar,
             this.ribbonPageGroup9});
             this.ribbonPage7.Name = "ribbonPage7";
             this.ribbonPage7.Text = "İhaleler";
@@ -570,23 +568,9 @@
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem13);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             // 
-            // ribbonPage3
-            // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3,
-            this.Adimlar});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "İhale Hazırla";
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.AllowTextClipping = false;
-            this.ribbonPageGroup3.ItemLinks.Add(this.barBtnTeklifHazirla);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.ShowCaptionButton = false;
-            // 
             // Adimlar
             // 
+            this.Adimlar.ItemLinks.Add(this.barBtnTeklifHazirla);
             this.Adimlar.ItemLinks.Add(this.btnAdimx1);
             this.Adimlar.ItemLinks.Add(this.btnAdimx4);
             this.Adimlar.ItemLinks.Add(this.btnAdimx3);
@@ -647,10 +631,10 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 432);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 420);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1047, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1449, 43);
             // 
             // styleController1
             // 
@@ -678,9 +662,9 @@
             this.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 463);
+            this.ClientSize = new System.Drawing.Size(1449, 463);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -715,8 +699,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem barBtnTeklifHazirla;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem barBtnYardimKonulari;
         private DevExpress.XtraBars.BarButtonItem barBtnProgramHakkinda;
         private DevExpress.XtraBars.BarButtonItem barBtnLisansIslemleri;
