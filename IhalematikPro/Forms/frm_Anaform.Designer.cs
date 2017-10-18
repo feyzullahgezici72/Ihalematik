@@ -95,6 +95,7 @@
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.styleController1 = new DevExpress.XtraEditors.StyleController(this.components);
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.styleController1)).BeginInit();
             this.SuspendLayout();
@@ -527,6 +528,7 @@
             // ribbonPage7
             // 
             this.ribbonPage7.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup3,
             this.Adimlar,
             this.ribbonPageGroup9});
             this.ribbonPage7.Name = "ribbonPage7";
@@ -534,7 +536,6 @@
             // 
             // Adimlar
             // 
-            this.Adimlar.ItemLinks.Add(this.barBtnTeklifHazirla);
             this.Adimlar.ItemLinks.Add(this.btnAdimx1);
             this.Adimlar.ItemLinks.Add(this.btnAdimx4);
             this.Adimlar.ItemLinks.Add(this.btnAdimx3);
@@ -655,6 +656,11 @@
             this.styleController1.LookAndFeel.SkinName = "Seven Classic";
             this.styleController1.PopupBorderStyle = DevExpress.XtraEditors.Controls.PopupBorderStyles.Style3D;
             // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.barBtnTeklifHazirla);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            // 
             // frm_Anaform
             // 
             this.ActiveGlowColor = System.Drawing.SystemColors.Control;
@@ -743,5 +749,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem13;
         private DevExpress.XtraBars.BarButtonItem barButtonItem14;
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
     }
 }
