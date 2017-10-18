@@ -367,7 +367,6 @@
             this.gridView1.OptionsFind.FindFilterColumns = "";
             this.gridView1.OptionsFind.FindNullPrompt = "Poz No giriniz...";
             this.gridView1.OptionsFind.SearchInPreview = true;
-            this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
@@ -407,7 +406,7 @@
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 608;
+            this.gridColumn2.Width = 515;
             // 
             // gridColumn3
             // 
@@ -426,7 +425,7 @@
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 156;
+            this.gridColumn3.Width = 245;
             // 
             // gridColumn4
             // 

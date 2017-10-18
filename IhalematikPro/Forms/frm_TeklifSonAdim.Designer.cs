@@ -693,7 +693,6 @@
             this.grdMaterialList2.OptionsSelection.CheckBoxSelectorColumnWidth = 60;
             this.grdMaterialList2.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.False;
             this.grdMaterialList2.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.False;
-            this.grdMaterialList2.OptionsView.ColumnAutoWidth = false;
             this.grdMaterialList2.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1

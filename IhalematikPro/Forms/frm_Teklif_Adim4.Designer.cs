@@ -107,7 +107,7 @@
             this.gridColumn8.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
             this.gridColumn8.AppearanceHeader.Options.UseFont = true;
             this.gridColumn8.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn8.Caption = "TUTAR TOPLAMI";
+            this.gridColumn8.Caption = "T.TOPLAMI";
             this.gridColumn8.DisplayFormat.FormatString = "C2";
             this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn8.FieldName = "TotalAmount";
@@ -117,7 +117,7 @@
             this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 7;
-            this.gridColumn8.Width = 158;
+            this.gridColumn8.Width = 114;
             // 
             // gridColumn7
             // 
@@ -177,7 +177,6 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsNavigation.AutoFocusNewRow = true;
             this.gridView1.OptionsNavigation.EnterMoveNextColumn = true;
-            this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 

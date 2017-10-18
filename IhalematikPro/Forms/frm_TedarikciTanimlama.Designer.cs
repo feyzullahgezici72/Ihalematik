@@ -568,7 +568,6 @@
             this.gridColumn6});
             this.gridView1.GridControl = this.grdWorker;
             this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn2
