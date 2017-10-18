@@ -78,7 +78,7 @@
             this.txtAciklama.Properties.Appearance.Options.UseFont = true;
             this.txtAciklama.Properties.Appearance.Options.UseForeColor = true;
             this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtAciklama.Size = new System.Drawing.Size(577, 44);
+            this.txtAciklama.Size = new System.Drawing.Size(663, 44);
             this.txtAciklama.TabIndex = 33;
             // 
             // txtTeklifNo
@@ -125,10 +125,10 @@
             this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(504, 0);
+            this.simpleButton2.Location = new System.Drawing.Point(552, 0);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(130, 54);
+            this.simpleButton2.Size = new System.Drawing.Size(141, 54);
             this.simpleButton2.TabIndex = 0;
             this.simpleButton2.Text = "Oluştur";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -140,10 +140,10 @@
             this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
-            this.btnIptal.Location = new System.Drawing.Point(634, 0);
+            this.btnIptal.Location = new System.Drawing.Point(693, 0);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
             this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(123, 54);
+            this.btnIptal.Size = new System.Drawing.Size(145, 54);
             this.btnIptal.TabIndex = 1;
             this.btnIptal.Text = "Iptal";
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
@@ -161,7 +161,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(757, 54);
+            this.panelControl1.Size = new System.Drawing.Size(838, 54);
             this.panelControl1.TabIndex = 38;
             // 
             // labelControl3
@@ -176,9 +176,9 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.ShowLineShadow = false;
-            this.labelControl3.Size = new System.Drawing.Size(436, 47);
+            this.labelControl3.Size = new System.Drawing.Size(506, 47);
             this.labelControl3.TabIndex = 0;
-            this.labelControl3.Text = "YENİ İHALE OLUŞTUR";
+            this.labelControl3.Text = "YENİ F.TEKLİFİ OLUŞTUR";
             this.labelControl3.UseMnemonic = false;
             // 
             // panelControl2
@@ -192,7 +192,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(757, 54);
+            this.panelControl2.Size = new System.Drawing.Size(838, 54);
             this.panelControl2.TabIndex = 3;
             // 
             // frm_YeniTeklifOlustur
@@ -201,7 +201,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(757, 216);
+            this.ClientSize = new System.Drawing.Size(838, 216);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.label1);

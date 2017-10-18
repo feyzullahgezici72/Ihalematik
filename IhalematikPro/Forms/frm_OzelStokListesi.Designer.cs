@@ -87,6 +87,7 @@
             this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 180;
             // 
             // gridColumn2
             // 
@@ -104,6 +105,7 @@
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 662;
             // 
             // gridColumn1
             // 
@@ -113,7 +115,7 @@
             this.gridColumn1.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
             this.gridColumn1.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn1.Caption = "STOK KODU";
+            this.gridColumn1.Caption = "MALZEME KODU";
             this.gridColumn1.FieldName = "Number";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
@@ -121,6 +123,7 @@
             this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 155;
             // 
             // gridView1
             // 
@@ -133,6 +136,7 @@
             this.gridColumn4});
             this.gridView1.GridControl = this.grdOBFList;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
@@ -152,6 +156,7 @@
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 162;
             // 
             // grdOBFList
             // 

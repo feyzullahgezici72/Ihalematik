@@ -41,6 +41,7 @@
             DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barBtnFirmaTanimlama = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnDovizKurlari = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnPozListesi = new DevExpress.XtraBars.BarButtonItem();
@@ -77,6 +78,7 @@
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -95,11 +97,9 @@
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.styleController1 = new DevExpress.XtraEditors.StyleController(this.components);
-            this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.styleController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.styleController1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -166,6 +166,12 @@
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             this.ribbon.TransparentEditors = true;
             // 
+            // popupMenu1
+            // 
+            this.popupMenu1.Name = "popupMenu1";
+            this.popupMenu1.Ribbon = this.ribbon;
+            this.popupMenu1.ShowCaption = true;
+            // 
             // barBtnFirmaTanimlama
             // 
             this.barBtnFirmaTanimlama.ActAsDropDown = true;
@@ -214,11 +220,11 @@
             // 
             // barBtnTeklifHazirla
             // 
-            this.barBtnTeklifHazirla.Caption = "İhale Hazırlama Sihirbazını Başlat";
+            this.barBtnTeklifHazirla.Caption = "Yeni İhale Hazırlama Sihirbazını Başlat";
             this.barBtnTeklifHazirla.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnTeklifHazirla.Glyph")));
             this.barBtnTeklifHazirla.Id = 5;
             this.barBtnTeklifHazirla.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnTeklifHazirla.LargeGlyph")));
-            this.barBtnTeklifHazirla.LargeWidth = 140;
+            this.barBtnTeklifHazirla.LargeWidth = 180;
             this.barBtnTeklifHazirla.Name = "barBtnTeklifHazirla";
             this.barBtnTeklifHazirla.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnTeklifHazirla_ItemClick);
             // 
@@ -518,6 +524,11 @@
             this.barButtonItem15.Name = "barButtonItem15";
             this.barButtonItem15.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem15_ItemClick);
             // 
+            // ribbonPageCategory1
+            // 
+            this.ribbonPageCategory1.Name = "ribbonPageCategory1";
+            this.ribbonPageCategory1.Text = "ribbonPageCategory1";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -663,17 +674,6 @@
             this.styleController1.LookAndFeel.SkinName = "Seven Classic";
             this.styleController1.PopupBorderStyle = DevExpress.XtraEditors.Controls.PopupBorderStyles.Style3D;
             // 
-            // ribbonPageCategory1
-            // 
-            this.ribbonPageCategory1.Name = "ribbonPageCategory1";
-            this.ribbonPageCategory1.Text = "ribbonPageCategory1";
-            // 
-            // popupMenu1
-            // 
-            this.popupMenu1.Name = "popupMenu1";
-            this.popupMenu1.Ribbon = this.ribbon;
-            this.popupMenu1.ShowCaption = true;
-            // 
             // frm_Anaform
             // 
             this.ActiveGlowColor = System.Drawing.SystemColors.Control;
@@ -699,8 +699,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_Anaform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.styleController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.styleController1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

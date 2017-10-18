@@ -97,6 +97,7 @@
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 8;
+            this.gridColumn9.Width = 70;
             // 
             // gridColumn8
             // 
@@ -116,6 +117,7 @@
             this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 7;
+            this.gridColumn8.Width = 158;
             // 
             // gridColumn7
             // 
@@ -135,17 +137,18 @@
             this.gridColumn7.OptionsColumn.ReadOnly = true;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.Width = 122;
             // 
             // grdMaterialListNonWorkship
             // 
             this.grdMaterialListNonWorkship.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdMaterialListNonWorkship.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grdMaterialListNonWorkship.EmbeddedNavigator.Appearance.Options.UseFont = true;
-            this.grdMaterialListNonWorkship.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdMaterialListNonWorkship.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialListNonWorkship.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grdMaterialListNonWorkship.Location = new System.Drawing.Point(0, 166);
             this.grdMaterialListNonWorkship.MainView = this.gridView1;
-            this.grdMaterialListNonWorkship.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdMaterialListNonWorkship.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialListNonWorkship.Name = "grdMaterialListNonWorkship";
             this.grdMaterialListNonWorkship.Size = new System.Drawing.Size(1512, 728);
             this.grdMaterialListNonWorkship.TabIndex = 28;
@@ -174,6 +177,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsNavigation.AutoFocusNewRow = true;
             this.gridView1.OptionsNavigation.EnterMoveNextColumn = true;
+            this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 
@@ -193,6 +197,7 @@
             this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 124;
             // 
             // gridColumn2
             // 
@@ -210,6 +215,7 @@
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 236;
             // 
             // gridColumn3
             // 
@@ -227,6 +233,7 @@
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 80;
             // 
             // gridColumn4
             // 
@@ -244,6 +251,7 @@
             this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 94;
             // 
             // gridColumn5
             // 
@@ -263,6 +271,7 @@
             this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 74;
             // 
             // gridColumn6
             // 
@@ -272,7 +281,7 @@
             this.gridColumn6.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn6.Caption = "BİRİM FİYATI";
+            this.gridColumn6.Caption = "B. FİYATI";
             this.gridColumn6.DisplayFormat.FormatString = "C2";
             this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "PozOBF.UnitPrice";
@@ -282,6 +291,7 @@
             this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.Width = 103;
             // 
             // gridColumn10
             // 
@@ -301,6 +311,7 @@
             this.gridColumn10.OptionsColumn.ReadOnly = true;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 9;
+            this.gridColumn10.Width = 124;
             // 
             // gridColumn11
             // 
@@ -320,6 +331,7 @@
             this.gridColumn11.OptionsColumn.ReadOnly = true;
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 10;
+            this.gridColumn11.Width = 148;
             // 
             // gridColumn12
             // 
@@ -329,7 +341,7 @@
             this.gridColumn12.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
             this.gridColumn12.AppearanceHeader.Options.UseFont = true;
             this.gridColumn12.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn12.Caption = "KARLI BİRİM FİYAT";
+            this.gridColumn12.Caption = "K. BİRİM FİYAT";
             this.gridColumn12.DisplayFormat.FormatString = "C2";
             this.gridColumn12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn12.FieldName = "MarkupUnitPrice";
@@ -339,6 +351,7 @@
             this.gridColumn12.OptionsColumn.ReadOnly = true;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 11;
+            this.gridColumn12.Width = 156;
             // 
             // panelControl2
             // 
@@ -351,7 +364,7 @@
             this.panelControl2.Controls.Add(this.labelControl4);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 64);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1512, 102);
             this.panelControl2.TabIndex = 27;
@@ -361,7 +374,7 @@
             this.lblTenderNumber.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenderNumber.Appearance.ForeColor = System.Drawing.Color.Crimson;
             this.lblTenderNumber.Location = new System.Drawing.Point(165, 10);
-            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderNumber.Name = "lblTenderNumber";
             this.lblTenderNumber.Size = new System.Drawing.Size(0, 34);
             this.lblTenderNumber.TabIndex = 40;
@@ -374,9 +387,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Teal;
             this.groupBox1.Location = new System.Drawing.Point(1302, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(210, 102);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
@@ -390,7 +403,7 @@
             this.btnTumuneUygula.Appearance.Options.UseForeColor = true;
             this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
             this.btnTumuneUygula.Location = new System.Drawing.Point(87, 29);
-            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
             this.btnTumuneUygula.Size = new System.Drawing.Size(105, 34);
             this.btnTumuneUygula.TabIndex = 34;
@@ -405,7 +418,7 @@
             0,
             0});
             this.txtMarkup.Location = new System.Drawing.Point(9, 29);
-            this.txtMarkup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMarkup.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarkup.Name = "txtMarkup";
             this.txtMarkup.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtMarkup.Properties.Appearance.Options.UseFont = true;
@@ -426,7 +439,7 @@
             this.lblTenderDescription.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenderDescription.Appearance.ForeColor = System.Drawing.Color.Turquoise;
             this.lblTenderDescription.Location = new System.Drawing.Point(15, 50);
-            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderDescription.Name = "lblTenderDescription";
             this.lblTenderDescription.Size = new System.Drawing.Size(0, 34);
             this.lblTenderDescription.TabIndex = 39;
@@ -436,7 +449,7 @@
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl4.Location = new System.Drawing.Point(18, 9);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(123, 34);
             this.labelControl4.TabIndex = 38;
@@ -453,7 +466,7 @@
             this.panel6.Controls.Add(this.labelControl8);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(987, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(525, 118);
             this.panel6.TabIndex = 9;
@@ -467,7 +480,7 @@
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
             this.btnKaydet.Location = new System.Drawing.Point(0, 0);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(136, 118);
             this.btnKaydet.TabIndex = 11;
@@ -478,7 +491,7 @@
             // 
             this.txtTotalAmount.Enabled = false;
             this.txtTotalAmount.Location = new System.Drawing.Point(310, 83);
-            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTotalAmount.Properties.Appearance.Options.UseBackColor = true;
@@ -492,7 +505,7 @@
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl7.Location = new System.Drawing.Point(174, 88);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(138, 21);
             this.labelControl7.TabIndex = 8;
@@ -503,7 +516,7 @@
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl6.Location = new System.Drawing.Point(188, 12);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(118, 21);
             this.labelControl6.TabIndex = 9;
@@ -513,7 +526,7 @@
             // 
             this.txtBaseKDVAmount.Enabled = false;
             this.txtBaseKDVAmount.Location = new System.Drawing.Point(310, 45);
-            this.txtBaseKDVAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBaseKDVAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtBaseKDVAmount.Name = "txtBaseKDVAmount";
             this.txtBaseKDVAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBaseKDVAmount.Properties.Appearance.Options.UseBackColor = true;
@@ -526,7 +539,7 @@
             // 
             this.txtBaseAmount.Enabled = false;
             this.txtBaseAmount.Location = new System.Drawing.Point(310, 7);
-            this.txtBaseAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBaseAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtBaseAmount.Name = "txtBaseAmount";
             this.txtBaseAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBaseAmount.Properties.Appearance.Options.UseBackColor = true;
@@ -540,7 +553,7 @@
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl8.Location = new System.Drawing.Point(183, 50);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(126, 21);
             this.labelControl8.TabIndex = 10;
@@ -551,7 +564,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(471, 118);
             this.panel2.TabIndex = 10;
@@ -566,7 +579,7 @@
             this.panelControl3.Controls.Add(this.panel6);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl3.Location = new System.Drawing.Point(0, 776);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(1512, 118);
             this.panelControl3.TabIndex = 29;
@@ -578,7 +591,7 @@
             this.groupControl1.Controls.Add(this.lblTotalMarkup);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupControl1.Location = new System.Drawing.Point(582, 0);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(405, 118);
             this.groupControl1.TabIndex = 11;
@@ -588,7 +601,7 @@
             // 
             this.lblTotalMarkup.Appearance.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalMarkup.Location = new System.Drawing.Point(87, 61);
-            this.lblTotalMarkup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTotalMarkup.Margin = new System.Windows.Forms.Padding(4);
             this.lblTotalMarkup.Name = "lblTotalMarkup";
             this.lblTotalMarkup.Size = new System.Drawing.Size(67, 37);
             this.lblTotalMarkup.TabIndex = 0;
@@ -604,7 +617,7 @@
             this.panelControl1.Controls.Add(this.txtAdimAciklama);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1512, 64);
             this.panelControl1.TabIndex = 26;
@@ -617,7 +630,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1448, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(64, 64);
             this.btnKapat.TabIndex = 3;
@@ -633,7 +646,7 @@
             this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
             this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.txtAdimAciklama.Location = new System.Drawing.Point(15, 12);
-            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
             this.txtAdimAciklama.Size = new System.Drawing.Size(501, 47);
@@ -651,7 +664,7 @@
             this.Controls.Add(this.grdMaterialListNonWorkship);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
             this.Name = "frm_Teklif_Adim4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

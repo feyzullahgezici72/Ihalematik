@@ -82,7 +82,7 @@
             this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnObfKayit.Location = new System.Drawing.Point(1351, 0);
-            this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4);
             this.btnObfKayit.Name = "btnObfKayit";
             this.btnObfKayit.Size = new System.Drawing.Size(226, 88);
             this.btnObfKayit.TabIndex = 7;
@@ -92,7 +92,7 @@
             // 
             this.lblTenderDescription.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenderDescription.Location = new System.Drawing.Point(236, 86);
-            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderDescription.Name = "lblTenderDescription";
             this.lblTenderDescription.Size = new System.Drawing.Size(0, 34);
             this.lblTenderDescription.TabIndex = 10;
@@ -101,7 +101,7 @@
             // 
             this.lblTenderNumber.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenderNumber.Location = new System.Drawing.Point(236, 32);
-            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderNumber.Name = "lblTenderNumber";
             this.lblTenderNumber.Size = new System.Drawing.Size(0, 34);
             this.lblTenderNumber.TabIndex = 8;
@@ -111,7 +111,7 @@
             this.lblTederDescription.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTederDescription.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.lblTederDescription.Location = new System.Drawing.Point(18, 77);
-            this.lblTederDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTederDescription.Margin = new System.Windows.Forms.Padding(4);
             this.lblTederDescription.Name = "lblTederDescription";
             this.lblTederDescription.Size = new System.Drawing.Size(0, 34);
             this.lblTederDescription.TabIndex = 7;
@@ -125,7 +125,7 @@
             this.panelControl2.Controls.Add(this.lblTederDescription);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1641, 16);
             this.panelControl2.TabIndex = 27;
@@ -139,7 +139,7 @@
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
             this.btnKaydet.Location = new System.Drawing.Point(6, 0);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(136, 83);
             this.btnKaydet.TabIndex = 19;
@@ -154,7 +154,7 @@
             this.panelControl6.Controls.Add(this.panelControl2);
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl6.Location = new System.Drawing.Point(0, 88);
-            this.panelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl6.Name = "panelControl6";
             this.panelControl6.Size = new System.Drawing.Size(1641, 633);
             this.panelControl6.TabIndex = 31;
@@ -162,10 +162,10 @@
             // grdMaterialList
             // 
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Location = new System.Drawing.Point(0, 16);
             this.grdMaterialList.MainView = this.grdMaterialList2;
-            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.Size = new System.Drawing.Size(1641, 617);
             this.grdMaterialList.TabIndex = 0;
@@ -200,6 +200,7 @@
             this.grdMaterialList2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.grdMaterialList2.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.False;
             this.grdMaterialList2.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.False;
+            this.grdMaterialList2.OptionsView.ColumnAutoWidth = false;
             this.grdMaterialList2.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1
@@ -219,6 +220,7 @@
             this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
+            this.gridColumn1.Width = 128;
             // 
             // gridColumn2
             // 
@@ -237,6 +239,7 @@
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
+            this.gridColumn2.Width = 644;
             // 
             // gridColumn3
             // 
@@ -255,6 +258,7 @@
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
+            this.gridColumn3.Width = 126;
             // 
             // gridColumn7
             // 
@@ -267,13 +271,14 @@
             this.gridColumn7.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
             this.gridColumn7.AppearanceHeader.Options.UseFont = true;
             this.gridColumn7.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn7.Caption = "KDV ORANI";
+            this.gridColumn7.Caption = "KDV %";
             this.gridColumn7.DisplayFormat.FormatString = "{0:f0} %";
             this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.gridColumn7.FieldName = "KDVPercentage";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 4;
+            this.gridColumn7.Width = 107;
             // 
             // gridColumn4
             // 
@@ -291,6 +296,7 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 5;
+            this.gridColumn4.Width = 115;
             // 
             // gridColumn5
             // 
@@ -308,6 +314,7 @@
             this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 6;
+            this.gridColumn5.Width = 155;
             // 
             // gridColumn6
             // 
@@ -328,6 +335,7 @@
             this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 7;
+            this.gridColumn6.Width = 135;
             // 
             // gridColumn8
             // 
@@ -348,6 +356,7 @@
             this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 8;
+            this.gridColumn8.Width = 150;
             // 
             // panelControl1
             // 
@@ -362,7 +371,7 @@
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1641, 88);
             this.panelControl1.TabIndex = 29;
@@ -372,7 +381,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Turquoise;
             this.labelControl2.Location = new System.Drawing.Point(330, 56);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(209, 34);
             this.labelControl2.TabIndex = 9;
@@ -386,7 +395,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1577, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(64, 88);
             this.btnKapat.TabIndex = 3;
@@ -402,7 +411,7 @@
             this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
             this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.txtAdimAciklama.Location = new System.Drawing.Point(15, 12);
-            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
             this.txtAdimAciklama.Size = new System.Drawing.Size(994, 47);
@@ -414,7 +423,7 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.labelControl1.Location = new System.Drawing.Point(8, 56);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(133, 34);
             this.labelControl1.TabIndex = 6;
@@ -426,7 +435,7 @@
             this.panel2.Controls.Add(this.btnKaydet);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1499, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(142, 83);
             this.panel2.TabIndex = 10;
@@ -440,7 +449,7 @@
             this.panelControl3.Controls.Add(this.panel2);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl3.Location = new System.Drawing.Point(0, 721);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(1641, 83);
             this.panelControl3.TabIndex = 30;
@@ -449,7 +458,7 @@
             // 
             this.radioGroup1.Dock = System.Windows.Forms.DockStyle.Right;
             this.radioGroup1.Location = new System.Drawing.Point(1193, 0);
-            this.radioGroup1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioGroup1.Margin = new System.Windows.Forms.Padding(4);
             this.radioGroup1.Name = "radioGroup1";
             this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "En Düşük Fiyata Göre"),
@@ -468,7 +477,7 @@
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TedarikcilerdenFiyatAl";

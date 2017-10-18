@@ -73,14 +73,15 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnObfKayit = new DevExpress.XtraEditors.SimpleButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.grdMaterialListIsWorkship = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
+            this.grdMaterialList2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -104,7 +105,10 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialListIsWorkship)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
+            this.gridSplitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -119,7 +123,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1520, 64);
+            this.panelControl1.Size = new System.Drawing.Size(1391, 64);
             this.panelControl1.TabIndex = 20;
             // 
             // btnKapat
@@ -128,7 +132,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1458, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1329, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(62, 64);
@@ -148,9 +152,9 @@
             this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
-            this.txtAdimAciklama.Size = new System.Drawing.Size(717, 47);
+            this.txtAdimAciklama.Size = new System.Drawing.Size(154, 47);
             this.txtAdimAciklama.TabIndex = 0;
-            this.txtAdimAciklama.Text = "MALZEME LİSTESİ KAYIT İŞLEMLERİ";
+            this.txtAdimAciklama.Text = "TEKLİF ";
             // 
             // panel1
             // 
@@ -161,7 +165,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 564);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1520, 221);
+            this.panel1.Size = new System.Drawing.Size(1391, 221);
             this.panel1.TabIndex = 21;
             // 
             // groupControl3
@@ -463,7 +467,7 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.lblTotalMarkup);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl1.Location = new System.Drawing.Point(1262, 0);
+            this.groupControl1.Location = new System.Drawing.Point(1133, 0);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(258, 221);
@@ -498,7 +502,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 64);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1520, 96);
+            this.panelControl2.Size = new System.Drawing.Size(1391, 96);
             this.panelControl2.TabIndex = 22;
             // 
             // panelControl4
@@ -516,7 +520,7 @@
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1256, 96);
+            this.panelControl4.Size = new System.Drawing.Size(1127, 96);
             this.panelControl4.TabIndex = 23;
             // 
             // labelControl14
@@ -578,7 +582,7 @@
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(1256, 0);
+            this.simpleButton1.Location = new System.Drawing.Point(1127, 0);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(132, 96);
@@ -644,77 +648,180 @@
             this.btnObfKayit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnObfKayit.Location = new System.Drawing.Point(1388, 0);
+            this.btnObfKayit.Location = new System.Drawing.Point(1259, 0);
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4);
             this.btnObfKayit.Name = "btnObfKayit";
             this.btnObfKayit.Size = new System.Drawing.Size(132, 96);
             this.btnObfKayit.TabIndex = 5;
             this.btnObfKayit.Text = "Yazdır";
             // 
-            // grdMaterialListIsWorkship
+            // grdMaterialList
             // 
-            this.grdMaterialListIsWorkship.AllowUserToAddRows = false;
-            this.grdMaterialListIsWorkship.AllowUserToDeleteRows = false;
-            this.grdMaterialListIsWorkship.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdMaterialListIsWorkship.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
-            this.grdMaterialListIsWorkship.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialListIsWorkship.Location = new System.Drawing.Point(0, 160);
-            this.grdMaterialListIsWorkship.Margin = new System.Windows.Forms.Padding(4);
-            this.grdMaterialListIsWorkship.Name = "grdMaterialListIsWorkship";
-            this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(1520, 404);
-            this.grdMaterialListIsWorkship.TabIndex = 27;
+            this.grdMaterialList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.grdMaterialList.Location = new System.Drawing.Point(0, 0);
+            this.grdMaterialList.MainView = this.grdMaterialList2;
+            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
+            this.grdMaterialList.Name = "grdMaterialList";
+            this.grdMaterialList.Size = new System.Drawing.Size(1391, 404);
+            this.grdMaterialList.TabIndex = 28;
+            this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdMaterialList2});
             // 
-            // Column1
+            // grdMaterialList2
             // 
-            this.Column1.HeaderText = "Sıra No";
-            this.Column1.Name = "Column1";
+            this.grdMaterialList2.Appearance.FocusedCell.BackColor = System.Drawing.SystemColors.Highlight;
+            this.grdMaterialList2.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
+            this.grdMaterialList2.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.grdMaterialList2.Appearance.FocusedRow.BackColor = System.Drawing.Color.Lime;
+            this.grdMaterialList2.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.grdMaterialList2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.grdMaterialList2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn8});
+            this.grdMaterialList2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.grdMaterialList2.GridControl = this.grdMaterialList;
+            this.grdMaterialList2.Name = "grdMaterialList2";
+            this.grdMaterialList2.OptionsDetail.AllowExpandEmptyDetails = true;
+            this.grdMaterialList2.OptionsNavigation.AutoFocusNewRow = true;
+            this.grdMaterialList2.OptionsNavigation.EnterMoveNextColumn = true;
+            this.grdMaterialList2.OptionsSelection.CheckBoxSelectorColumnWidth = 60;
+            this.grdMaterialList2.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.False;
+            this.grdMaterialList2.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.False;
+            this.grdMaterialList2.OptionsView.ColumnAutoWidth = false;
+            this.grdMaterialList2.OptionsView.ShowGroupPanel = false;
             // 
-            // Column2
+            // gridColumn1
             // 
-            this.Column2.HeaderText = "Öbf/Poz No";
-            this.Column2.Name = "Column2";
+            this.gridColumn1.AppearanceCell.BackColor = System.Drawing.Color.Azure;
+            this.gridColumn1.AppearanceCell.BackColor2 = System.Drawing.Color.Azure;
+            this.gridColumn1.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn1.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn1.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn1.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn1.Caption = "ÖBF/POZ NO";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.gridColumn1.OptionsColumn.AllowFocus = false;
+            this.gridColumn1.OptionsColumn.ReadOnly = true;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 135;
             // 
-            // Column3
+            // gridColumn2
             // 
-            this.Column3.HeaderText = "İş Kaleminin Adı ve Kısa Açıklaması ";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 360;
+            this.gridColumn2.AppearanceCell.BackColor = System.Drawing.Color.Azure;
+            this.gridColumn2.AppearanceCell.BackColor2 = System.Drawing.Color.Azure;
+            this.gridColumn2.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn2.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn2.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn2.Caption = "İŞ KALEMİNİN ADI VE KISA AÇIKLAMA";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowEdit = false;
+            this.gridColumn2.OptionsColumn.AllowFocus = false;
+            this.gridColumn2.OptionsColumn.ReadOnly = true;
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 601;
             // 
-            // Column4
+            // gridColumn3
             // 
-            this.Column4.HeaderText = "Birimi";
-            this.Column4.Name = "Column4";
+            this.gridColumn3.AppearanceCell.BackColor = System.Drawing.Color.Azure;
+            this.gridColumn3.AppearanceCell.BackColor2 = System.Drawing.Color.Azure;
+            this.gridColumn3.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn3.Caption = "BİRİMİ";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.OptionsColumn.AllowFocus = false;
+            this.gridColumn3.OptionsColumn.ReadOnly = true;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 151;
             // 
-            // Column5
+            // gridColumn4
             // 
-            this.Column5.HeaderText = "Miktarı";
-            this.Column5.Name = "Column5";
+            this.gridColumn4.AppearanceCell.BackColor = System.Drawing.Color.White;
+            this.gridColumn4.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn4.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.gridColumn4.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn4.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn4.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn4.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn4.Caption = "MİKTARI";
+            this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 156;
             // 
-            // Column6
+            // gridColumn5
             // 
-            this.Column6.HeaderText = "Birim Fiyat";
-            this.Column6.Name = "Column6";
+            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn5.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn5.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn5.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn5.Caption = "BİRİM FİYATI";
+            this.gridColumn5.DisplayFormat.FormatString = "c2";
+            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.AllowEdit = false;
+            this.gridColumn5.OptionsColumn.AllowFocus = false;
+            this.gridColumn5.OptionsColumn.ReadOnly = true;
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 153;
             // 
-            // Column7
+            // gridColumn8
             // 
-            this.Column7.HeaderText = "Tutarı";
-            this.Column7.Name = "Column7";
+            this.gridColumn8.AppearanceCell.BackColor = System.Drawing.Color.LavenderBlush;
+            this.gridColumn8.AppearanceCell.BackColor2 = System.Drawing.Color.LavenderBlush;
+            this.gridColumn8.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn8.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn8.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn8.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn8.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn8.Caption = "TUTARI";
+            this.gridColumn8.DisplayFormat.FormatString = "c2";
+            this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.AllowEdit = false;
+            this.gridColumn8.OptionsColumn.AllowFocus = false;
+            this.gridColumn8.OptionsColumn.ReadOnly = true;
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 5;
+            this.gridColumn8.Width = 254;
+            // 
+            // gridSplitContainer1
+            // 
+            this.gridSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridSplitContainer1.Grid = this.grdMaterialList;
+            this.gridSplitContainer1.Location = new System.Drawing.Point(0, 160);
+            this.gridSplitContainer1.Name = "gridSplitContainer1";
+            this.gridSplitContainer1.Panel1.Controls.Add(this.grdMaterialList);
+            this.gridSplitContainer1.Size = new System.Drawing.Size(1391, 404);
+            this.gridSplitContainer1.TabIndex = 23;
             // 
             // frm_TeklifSonAdim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(1520, 785);
+            this.ClientSize = new System.Drawing.Size(1391, 785);
             this.ControlBox = false;
-            this.Controls.Add(this.grdMaterialListIsWorkship);
+            this.Controls.Add(this.gridSplitContainer1);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelControl1);
@@ -753,7 +860,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialListIsWorkship)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
+            this.gridSplitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -772,14 +882,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btnObfKayit;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.DataGridView grdMaterialListIsWorkship;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl lblTotalMarkup;
@@ -812,5 +914,14 @@
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        public DevExpress.XtraGrid.GridControl grdMaterialList;
+        public DevExpress.XtraGrid.Views.Grid.GridView grdMaterialList2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
     }
 }

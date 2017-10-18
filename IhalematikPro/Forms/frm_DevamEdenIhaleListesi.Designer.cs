@@ -189,15 +189,14 @@
             this.gridColumn1.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn1.Caption = "IHALE NO";
             this.gridColumn1.FieldName = "Number";
-            this.gridColumn1.MaxWidth = 100;
-            this.gridColumn1.MinWidth = 100;
+            this.gridColumn1.MinWidth = 80;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.OptionsColumn.AllowFocus = false;
             this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 100;
+            this.gridColumn1.Width = 142;
             // 
             // gridColumn2
             // 
@@ -207,15 +206,14 @@
             this.gridColumn2.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn2.Caption = "IHALE TARIHI";
             this.gridColumn2.FieldName = "LastOfferDate";
-            this.gridColumn2.MaxWidth = 120;
-            this.gridColumn2.MinWidth = 120;
+            this.gridColumn2.MinWidth = 80;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.OptionsColumn.AllowFocus = false;
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 120;
+            this.gridColumn2.Width = 172;
             // 
             // gridColumn3
             // 
@@ -225,12 +223,14 @@
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn3.Caption = "ACIKLAMA";
             this.gridColumn3.FieldName = "Description";
+            this.gridColumn3.MinWidth = 80;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 880;
             // 
             // panelControl3
             // 

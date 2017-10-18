@@ -568,6 +568,7 @@
             this.gridColumn6});
             this.gridView1.GridControl = this.grdWorker;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn2
@@ -586,7 +587,7 @@
             this.gridColumn2.OptionsColumn.AllowFocus = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
-            this.gridColumn2.Width = 418;
+            this.gridColumn2.Width = 309;
             // 
             // gridColumn3
             // 
@@ -607,7 +608,7 @@
             this.gridColumn3.OptionsColumn.FixedWidth = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 160;
+            this.gridColumn3.Width = 167;
             // 
             // gridColumn1
             // 
@@ -622,7 +623,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 2;
-            this.gridColumn1.Width = 214;
+            this.gridColumn1.Width = 197;
             // 
             // gridColumn4
             // 
@@ -637,7 +638,7 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 153;
+            this.gridColumn4.Width = 197;
             // 
             // gridColumn5
             // 
@@ -652,7 +653,7 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 161;
+            this.gridColumn5.Width = 197;
             // 
             // gridColumn6
             // 
@@ -667,7 +668,7 @@
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 167;
+            this.gridColumn6.Width = 204;
             // 
             // frm_TedarikciTanimlama
             // 

@@ -367,6 +367,7 @@
             this.gridView1.OptionsFind.FindFilterColumns = "";
             this.gridView1.OptionsFind.FindNullPrompt = "Poz No giriniz...";
             this.gridView1.OptionsFind.SearchInPreview = true;
+            this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
@@ -380,12 +381,14 @@
             this.gridColumn1.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn1.Caption = "POZ NO";
             this.gridColumn1.FieldName = "Number";
+            this.gridColumn1.MinWidth = 80;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.OptionsColumn.AllowFocus = false;
             this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 137;
             // 
             // gridColumn2
             // 
@@ -397,15 +400,14 @@
             this.gridColumn2.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn2.Caption = "AÇIKLAMA";
             this.gridColumn2.FieldName = "Description";
-            this.gridColumn2.MaxWidth = 600;
-            this.gridColumn2.MinWidth = 600;
+            this.gridColumn2.MinWidth = 80;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.OptionsColumn.AllowFocus = false;
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 600;
+            this.gridColumn2.Width = 608;
             // 
             // gridColumn3
             // 
@@ -417,12 +419,14 @@
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn3.Caption = "BİRİMİ";
             this.gridColumn3.FieldName = "Unit";
+            this.gridColumn3.MinWidth = 80;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 156;
             // 
             // gridColumn4
             // 
@@ -436,12 +440,14 @@
             this.gridColumn4.DisplayFormat.FormatString = "N2";
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.gridColumn4.FieldName = "UnitPrice";
+            this.gridColumn4.MinWidth = 80;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
             this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 139;
             // 
             // frm_PozListesi
             // 
