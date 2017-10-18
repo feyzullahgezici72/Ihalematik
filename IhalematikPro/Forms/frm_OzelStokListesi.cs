@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using IhalematikPro.Model;
 using IhalematikPro.Manager;
 using IhalematikProUI.Forms;
+using System.Threading;
 
 namespace IhalematikPro.Forms
 {
@@ -20,6 +21,17 @@ namespace IhalematikPro.Forms
         {
             InitializeComponent();
             LoadGrid();
+        }
+        public void bekleyiniz()
+        {
+            Thread.Sleep(1000);
+        }
+        public void MesajVer()
+        {
+            using (frm_wait frm = new frm_wait(bekleyiniz))
+            {
+                frm.ShowDialog();
+            }
         }
         private void LoadGrid()
         {
@@ -52,6 +64,7 @@ namespace IhalematikPro.Forms
 
         private void frmOzelStokListesi_Load(object sender, EventArgs e)
         {
+            MesajVer();
             LoadGrid();
         }
 
@@ -77,6 +90,7 @@ namespace IhalematikPro.Forms
 
         private void btnListele_Click(object sender, EventArgs e)
         {
+          MesajVer();
           LoadGrid();
         }
     }

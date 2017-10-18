@@ -43,10 +43,5 @@ namespace IhalematikProUI.Forms
                 frm.ShowDialog();
             }
         }
-
-        private void btnKaydet_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
