@@ -22,5 +22,10 @@ namespace IhalematikProUI.Forms
         {
             this.Close();
         }
+
+        private void groupControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

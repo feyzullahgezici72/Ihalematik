@@ -171,7 +171,6 @@
             this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnKaydet.Appearance.Options.UseFont = true;
             this.btnKaydet.Appearance.Options.UseForeColor = true;
-            this.btnKaydet.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
             this.btnKaydet.Location = new System.Drawing.Point(862, 0);
@@ -188,7 +187,6 @@
             this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.Appearance.Options.UseForeColor = true;
-            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
             this.simpleButton2.Location = new System.Drawing.Point(994, 0);
@@ -204,7 +202,6 @@
             this.simpleButton3.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.simpleButton3.Appearance.Options.UseFont = true;
             this.simpleButton3.Appearance.Options.UseForeColor = true;
-            this.simpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton3.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.Image")));
             this.simpleButton3.Location = new System.Drawing.Point(1126, 0);
@@ -220,7 +217,6 @@
             this.simpleButton4.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.simpleButton4.Appearance.Options.UseFont = true;
             this.simpleButton4.Appearance.Options.UseForeColor = true;
-            this.simpleButton4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.simpleButton4.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton4.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.Image")));
             this.simpleButton4.Location = new System.Drawing.Point(1258, 0);
@@ -236,7 +232,6 @@
             this.btnListele.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnListele.Appearance.Options.UseFont = true;
             this.btnListele.Appearance.Options.UseForeColor = true;
-            this.btnListele.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnListele.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnListele.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnListele.Image = ((System.Drawing.Image)(resources.GetObject("btnListele.Image")));
@@ -251,10 +246,10 @@
             // 
             // btnKapat
             // 
-            this.btnKapat.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1522, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
@@ -822,7 +817,7 @@
             // 
             this.yeniAraçEkleToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.yeniAraçEkleToolStripMenuItem.Name = "yeniAraçEkleToolStripMenuItem";
-            this.yeniAraçEkleToolStripMenuItem.Size = new System.Drawing.Size(227, 32);
+            this.yeniAraçEkleToolStripMenuItem.Size = new System.Drawing.Size(226, 32);
             this.yeniAraçEkleToolStripMenuItem.Text = "Yeni Araç Ekle";
             this.yeniAraçEkleToolStripMenuItem.Click += new System.EventHandler(this.yeniAraçEkleToolStripMenuItem_Click);
             // 
@@ -864,14 +859,14 @@
             this.gridColumn2.Caption = "ARAÇ";
             this.gridColumn2.FieldName = "Title.Name";
             this.gridColumn2.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.Value;
-            this.gridColumn2.MinWidth = 540;
+            this.gridColumn2.MinWidth = 80;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.OptionsColumn.AllowFocus = false;
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
-            this.gridColumn2.Width = 540;
+            this.gridColumn2.Width = 516;
             // 
             // gridColumn3
             // 
@@ -886,15 +881,14 @@
             this.gridColumn3.DisplayFormat.FormatString = "c2";
             this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn3.FieldName = "MonthPrice";
-            this.gridColumn3.MaxWidth = 100;
-            this.gridColumn3.MinWidth = 100;
+            this.gridColumn3.MinWidth = 80;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 100;
+            this.gridColumn3.Width = 168;
             // 
             // gridColumn4
             // 
@@ -909,15 +903,14 @@
             this.gridColumn4.DisplayFormat.FormatString = "c2";
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "DayPrice";
-            this.gridColumn4.MaxWidth = 100;
-            this.gridColumn4.MinWidth = 100;
+            this.gridColumn4.MinWidth = 80;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
             this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 100;
+            this.gridColumn4.Width = 173;
             // 
             // gridColumn5
             // 
@@ -932,15 +925,14 @@
             this.gridColumn5.DisplayFormat.FormatString = "c2";
             this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn5.FieldName = "HourPrice";
-            this.gridColumn5.MaxWidth = 100;
-            this.gridColumn5.MinWidth = 100;
+            this.gridColumn5.MinWidth = 80;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.OptionsColumn.AllowFocus = false;
             this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 100;
+            this.gridColumn5.Width = 188;
             // 
             // frm_AracTanimlama
             // 

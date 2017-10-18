@@ -115,5 +115,10 @@ namespace IhalematikPro.Forms
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = dataSource;
         }
+
+        private void txtPozNumber_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DevamEdenIhaleListesi));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnOpen = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.grdActiveTenderList = new DevExpress.XtraGrid.GridControl();
@@ -74,6 +74,23 @@
             this.panelControl1.Size = new System.Drawing.Size(1224, 54);
             this.panelControl1.TabIndex = 37;
             // 
+            // lblTenderCaptin
+            // 
+            this.lblTenderCaptin.Appearance.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTenderCaptin.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
+            this.lblTenderCaptin.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.lblTenderCaptin.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblTenderCaptin.LineColor = System.Drawing.Color.Red;
+            this.lblTenderCaptin.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.lblTenderCaptin.Location = new System.Drawing.Point(15, 5);
+            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTenderCaptin.Name = "lblTenderCaptin";
+            this.lblTenderCaptin.ShowLineShadow = false;
+            this.lblTenderCaptin.Size = new System.Drawing.Size(411, 47);
+            this.lblTenderCaptin.TabIndex = 0;
+            this.lblTenderCaptin.Text = "AKTİF İHALE LİSTESİ";
+            this.lblTenderCaptin.UseMnemonic = false;
+            // 
             // panelControl2
             // 
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -94,7 +111,6 @@
             this.btnOpen.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnOpen.Appearance.Options.UseFont = true;
             this.btnOpen.Appearance.Options.UseForeColor = true;
-            this.btnOpen.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnOpen.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnOpen.Image = ((System.Drawing.Image)(resources.GetObject("btnOpen.Image")));
             this.btnOpen.Location = new System.Drawing.Point(934, 0);
@@ -106,33 +122,16 @@
             // 
             // btnKapat
             // 
-            this.btnKapat.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1160, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(64, 54);
             this.btnKapat.TabIndex = 1;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
-            // lblTenderCaptin
-            // 
-            this.lblTenderCaptin.Appearance.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTenderCaptin.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
-            this.lblTenderCaptin.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.lblTenderCaptin.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblTenderCaptin.LineColor = System.Drawing.Color.Red;
-            this.lblTenderCaptin.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.lblTenderCaptin.Location = new System.Drawing.Point(15, 5);
-            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4);
-            this.lblTenderCaptin.Name = "lblTenderCaptin";
-            this.lblTenderCaptin.ShowLineShadow = false;
-            this.lblTenderCaptin.Size = new System.Drawing.Size(411, 47);
-            this.lblTenderCaptin.TabIndex = 0;
-            this.lblTenderCaptin.Text = "AKTİF İHALE LİSTESİ";
-            this.lblTenderCaptin.UseMnemonic = false;
             // 
             // timer1
             // 
@@ -252,7 +251,6 @@
             this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.Appearance.Options.UseForeColor = true;
-            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
             this.simpleButton2.Location = new System.Drawing.Point(813, 3);
@@ -269,7 +267,6 @@
             this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Appearance.Options.UseForeColor = true;
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.Location = new System.Drawing.Point(1013, 3);

@@ -96,5 +96,10 @@ namespace IhalematikPro.Forms
         {
 
         }
+
+        private void btnKaydet_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
