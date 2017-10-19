@@ -405,5 +405,17 @@ namespace IhalematikPro.Forms
         {
            ts=null;
         }
+
+        private void barButtonItem23_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Forms.frm_Cikis frm = new frm_Cikis();
+            frm.ShowDialog();
+        }
+
+        private void barButtonItem24_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Forms.frm_FirmaTanimlama frm = new frm_FirmaTanimlama();
+            frm.ShowDialog();
+        }
     }
 }

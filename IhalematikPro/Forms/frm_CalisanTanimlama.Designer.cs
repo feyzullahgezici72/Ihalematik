@@ -305,10 +305,10 @@
             this.panel1.Controls.Add(this.txtStampTaxFare);
             this.panel1.Controls.Add(this.txtFoodFare);
             this.panel1.Controls.Add(this.labelControl9);
-            this.panel1.Location = new System.Drawing.Point(8, 115);
+            this.panel1.Location = new System.Drawing.Point(7, 115);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(406, 528);
+            this.panel1.Size = new System.Drawing.Size(407, 528);
             this.panel1.TabIndex = 34;
             // 
             // txtUnemployment
@@ -363,7 +363,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl4.Location = new System.Drawing.Point(75, 18);
+            this.labelControl4.Location = new System.Drawing.Point(81, 18);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(90, 21);
@@ -421,9 +421,9 @@
             this.labelControl5.Location = new System.Drawing.Point(2, 56);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(168, 21);
+            this.labelControl5.Size = new System.Drawing.Size(169, 21);
             this.labelControl5.TabIndex = 100;
-            this.labelControl5.Text = "SGK Primi İşçi Payı:";
+            this.labelControl5.Text = "SGK Primi Kesintisi:";
             // 
             // txtISGFare
             // 
@@ -461,7 +461,7 @@
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl12.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl12.Location = new System.Drawing.Point(76, 406);
+            this.labelControl12.Location = new System.Drawing.Point(75, 406);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(90, 21);
@@ -499,7 +499,7 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl7.Location = new System.Drawing.Point(57, 132);
+            this.labelControl7.Location = new System.Drawing.Point(62, 132);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(109, 21);
@@ -510,7 +510,7 @@
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl11.Location = new System.Drawing.Point(63, 368);
+            this.labelControl11.Location = new System.Drawing.Point(64, 368);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(101, 21);
@@ -553,7 +553,7 @@
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl10.Location = new System.Drawing.Point(16, 246);
+            this.labelControl10.Location = new System.Drawing.Point(17, 246);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(148, 21);
@@ -564,7 +564,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl2.Location = new System.Drawing.Point(130, 208);
+            this.labelControl2.Location = new System.Drawing.Point(131, 208);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(34, 21);
@@ -575,7 +575,7 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl8.Location = new System.Drawing.Point(36, 170);
+            this.labelControl8.Location = new System.Drawing.Point(42, 170);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(129, 21);
@@ -629,7 +629,7 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl9.Location = new System.Drawing.Point(99, 292);
+            this.labelControl9.Location = new System.Drawing.Point(102, 292);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(63, 21);
