@@ -514,6 +514,180 @@
   <ItemGroup>
     <None Include="pic\loading.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\worker-green-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\worker-green-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\cargo-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Lorry-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Inventory-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\App-lists-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\price-tag-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\agency-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\agency-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Login-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\License-manager-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\System-Info-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Actions-dialog-close-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Actions-dialog-close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Save-as-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Save-as-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Reload-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Actions-trash-empty-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Reload-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Actions-edit-clear-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Actions-edit-clear-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Inventory-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Check-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\open-file-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\ok-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Windows-Stand-By-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\earth-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Actions-contact-new-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Actions-list-add-user-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\coin-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\stock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\chart-search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Actions-view-refresh-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Developer-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Excel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\email-send-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\document-excel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\k-get-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\search-icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Button-Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Actions-trash-empty-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\stock-vector-operator-controls-the-front-loader.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\print-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\data-apply-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Button-Add-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\ok-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\App-lists-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Actions-contact-new-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Actions-view-refresh-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Windows-Stand-By-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\print-icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\print-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\coin-add-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\search-icon %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\document-excel-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Check-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\open-file-icon %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

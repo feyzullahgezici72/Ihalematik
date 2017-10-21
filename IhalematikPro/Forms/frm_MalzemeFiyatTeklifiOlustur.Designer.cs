@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MalzemeFiyatTeklifiOlustur));
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.grdMaterialList2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -68,7 +66,7 @@
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnExceleAktar = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
@@ -543,9 +541,8 @@
             this.btnPozKayit.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnPozKayit.Appearance.Options.UseFont = true;
             this.btnPozKayit.Appearance.Options.UseForeColor = true;
-            this.btnPozKayit.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnPozKayit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPozKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnPozKayit.Image")));
+            this.btnPozKayit.Image = global::IhalematikProUI.Properties.Resources.Inventory_icon__1_;
             this.btnPozKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnPozKayit.Location = new System.Drawing.Point(1354, 0);
             this.btnPozKayit.Margin = new System.Windows.Forms.Padding(4);
@@ -561,9 +558,8 @@
             this.btnObfKayit.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnObfKayit.Appearance.Options.UseFont = true;
             this.btnObfKayit.Appearance.Options.UseForeColor = true;
-            this.btnObfKayit.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnObfKayit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
+            this.btnObfKayit.Image = global::IhalematikProUI.Properties.Resources.App_lists_icon__1_;
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnObfKayit.Location = new System.Drawing.Point(1564, 0);
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4);
@@ -576,7 +572,7 @@
             // 
             this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1790, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
@@ -625,7 +621,7 @@
             this.simpleButton2.Appearance.Options.UseForeColor = true;
             this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
+            this.simpleButton2.Image = global::IhalematikProUI.Properties.Resources.document_excel_icon;
             this.simpleButton2.Location = new System.Drawing.Point(154, 0);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
@@ -637,7 +633,7 @@
             // 
             this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.k_get_icon;
             this.simpleButton1.Location = new System.Drawing.Point(0, 0);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
@@ -666,7 +662,7 @@
             this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
+            this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
             this.btnKaydet.Location = new System.Drawing.Point(5, 0);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
@@ -682,7 +678,7 @@
             this.btnExceleAktar.Appearance.Options.UseForeColor = true;
             this.btnExceleAktar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnExceleAktar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExceleAktar.Image = ((System.Drawing.Image)(resources.GetObject("btnExceleAktar.Image")));
+            this.btnExceleAktar.Image = global::IhalematikProUI.Properties.Resources.Excel_icon;
             this.btnExceleAktar.Location = new System.Drawing.Point(141, 0);
             this.btnExceleAktar.Margin = new System.Windows.Forms.Padding(4);
             this.btnExceleAktar.Name = "btnExceleAktar";
@@ -698,7 +694,7 @@
             this.simpleButton3.Appearance.Options.UseForeColor = true;
             this.simpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.simpleButton3.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.Image")));
+            this.simpleButton3.Image = global::IhalematikProUI.Properties.Resources.email_send_icon;
             this.simpleButton3.Location = new System.Drawing.Point(369, 0);
             this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton3.Name = "simpleButton3";
