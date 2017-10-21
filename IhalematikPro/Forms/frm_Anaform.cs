@@ -33,7 +33,6 @@ namespace IhalematikPro.Forms
         }
         private void frm_Anaform_Load(object sender, EventArgs e)
         {
-            GlobalVeriablesManager.CurrentTender = TenderProvider.Instance.GetItem(160);
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)

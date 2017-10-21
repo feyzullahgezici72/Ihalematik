@@ -18,6 +18,8 @@ using System.Threading;
 using System.Reflection.Emit;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.BandedGrid;
+using IhalematikProUI.Model;
+using IhalematikProBL.Enum;
 
 namespace IhalematikPro.Forms
 {
@@ -27,6 +29,7 @@ namespace IhalematikPro.Forms
         {
             InitializeComponent();
 
+            //GlobalVeriablesManager.MaterialListIsWorkship.ForEach(p => p.TenderEquipments = GlobalVeriablesManager.CurrentTender.Equipments);
             grdMaterialListIsWorkship.AutoGenerateColumns = false;
 
             DataGridViewColumn column = new DataGridViewTextBoxColumn();
@@ -53,6 +56,7 @@ namespace IhalematikPro.Forms
             column.DataPropertyName = "KDVPercentage";
             column.Name = "KDV ORAN";
             column.ReadOnly = true;
+            //column.CellTemplate
             grdMaterialListIsWorkship.Columns.Add(column);
 
 
@@ -62,37 +66,140 @@ namespace IhalematikPro.Forms
             column.ReadOnly = true;
             grdMaterialListIsWorkship.Columns.Add(column);
 
+            column = new DataGridViewTextBoxColumn();
+            column.DataPropertyName = "WorkerMarkup";
+            column.Name = "WorkerMarkup";
+            column.HeaderText = "KAR %";
+            column.ReadOnly = false;
+            grdMaterialListIsWorkship.Columns.Add(column);
+
+            column = new DataGridViewTextBoxColumn();
+            column.DataPropertyName = "UnitTime";
+            column.Name = "BIRIM SURE";
+            column.ReadOnly = false;
+            grdMaterialListIsWorkship.Columns.Add(column);
+
+            column = new DataGridViewComboBoxColumn { DataSource = GetUnitTimes(), ValueMember = "Self", DisplayMember = "DisplayText" };
+
+            column.DataPropertyName = "UnitTimeType";
+            column.Name = "Zaman Tipi";
+            column.ReadOnly = false;
+
+            grdMaterialListIsWorkship.Columns.Add(column);
+
 
             if (GlobalVeriablesManager.CurrentTender.Equipments != null)
             {
                 List<TenderEquipment> equipmentItems = GlobalVeriablesManager.CurrentTender.Equipments.OrderBy(p => !p.IsWorker).ToList();
-                List<TenderEquipment> workers = equipmentItems.Where(p => p.IsWorker).ToList();
-                List<TenderEquipment> vehicles = equipmentItems.Where(p => !p.IsWorker).ToList();
-                int i = 8;
+
                 foreach (TenderEquipment item in equipmentItems)
                 {
                     GridColumn unbColumn = new GridColumn();
+                    column = new DataGridViewTextBoxColumn();
+
                     if (item.IsWorker)
                     {
-                        column = new DataGridViewTextBoxColumn();
-                        //column.DataPropertyName = "Test";
+                        //column.DataPropertyName = "item.Worker.Title.Name";
                         column.Name = item.Worker.Title.Name;
                         column.HeaderText = item.Worker.Title.Name;
-                        grdMaterialListIsWorkship.Columns.Add(column);
                     }
                     else
                     {
-                        column = new DataGridViewTextBoxColumn();
+                        //column = new DataGridViewTextBoxColumn();
                         column.Name = item.Vehicle.Title.Name;
                         column.HeaderText = item.Vehicle.Title.Name;
-                        grdMaterialListIsWorkship.Columns.Add(column);
                     }
-                   
-                    i++;
+                    grdMaterialListIsWorkship.Columns.Add(column);
+                }
+            }
+            column = new DataGridViewTextBoxColumn();
+            column.DataPropertyName = "WorkerUnitPrice";
+            column.Name = "ISCILIK(MALZEME) BIRIM FIYAT";
+            column.ReadOnly = false;
+            grdMaterialListIsWorkship.Columns.Add(column);
+
+            grdMaterialListIsWorkship.CellValueChanged += GrdMaterialListIsWorkship_CellValueChanged;
+        }
+
+        private void GrdMaterialListIsWorkship_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            string currentColumnName = grdMaterialListIsWorkship.Columns[e.ColumnIndex].Name;
+            List<MaterialListModel> items = GlobalVeriablesManager.MaterialListIsWorkship;
+            MaterialListModel materialListModel = GlobalVeriablesManager.MaterialListIsWorkship.ToArray()[e.RowIndex];
+            if (currentColumnName.Equals("WorkerMarkup"))
+            {
+                double value = Convert.ToDouble(grdMaterialListIsWorkship["WorkerMarkup", grdMaterialListIsWorkship.CurrentRow.Index].Value);
+                materialListModel.WorkerMarkup = value;
+            }
+            else if (currentColumnName.Equals("UnitTime"))
+            {
+
+            }
+            else if (materialListModel.TenderEquipments != null)
+            {
+                foreach (TenderEquipment equipmentItem in materialListModel.TenderEquipments)
+                {
+                    string columnName = string.Empty;
+                    if (equipmentItem.IsWorker)
+                    {
+                        columnName = equipmentItem.Worker.Title.Name;
+                    }
+                    else
+                    {
+                        columnName = equipmentItem.Vehicle.Title.Name;
+                    }
+                    if (columnName.Equals(currentColumnName))
+                    {
+                        int value = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(grdMaterialListIsWorkship[columnName, grdMaterialListIsWorkship.CurrentRow.Index].Value);
+                        equipmentItem.Quantity = value;
+                    }
                 }
             }
         }
+        private List<UnitTimeTypesModel> GetUnitTimes()
+        {
+            List<UnitTimeTypesModel> models = new List<UnitTimeTypesModel>();
 
+            foreach (UnitTimeTypesEnum unitTimeType in Enum.GetValues(typeof(UnitTimeTypesEnum)))
+            {
+                UnitTimeTypesModel model = new UnitTimeTypesModel();
+                model.DisplayText = this.GetUnitTimeTypesDisplayText(unitTimeType);
+                model.Id = (int)unitTimeType;
+                models.Add(model);
+            }
+
+            return models;
+        }
+
+        private string GetUnitTimeTypesDisplayText(UnitTimeTypesEnum UnitTimeType)
+        {
+            string displayText = string.Empty;
+            switch (UnitTimeType)
+            {
+                case UnitTimeTypesEnum.Minute:
+                    displayText = "Dakika";
+                    break;
+                case UnitTimeTypesEnum.Hour:
+                    displayText = "Saat";
+                    break;
+                case UnitTimeTypesEnum.Day:
+                    displayText = "Gün";
+                    break;
+                case UnitTimeTypesEnum.Week:
+                    displayText = "Hafta";
+                    break;
+                case UnitTimeTypesEnum.Month:
+                    displayText = "Ay";
+                    break;
+                case UnitTimeTypesEnum.Year:
+                    displayText = "Yıl";
+                    break;
+                default:
+                    break;
+            }
+
+            return displayText;
+        }
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -140,7 +247,7 @@ namespace IhalematikPro.Forms
                         unbColumn.VisibleIndex = i;
                     }
 
-                   // grdMaterialListIsWorkship2.Columns.Add(unbColumn);
+                    // grdMaterialListIsWorkship2.Columns.Add(unbColumn);
 
                     i++;
                 }
@@ -250,7 +357,7 @@ namespace IhalematikPro.Forms
             double markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtWorkerMarkup.Text);
             GlobalVeriablesManager.MaterialListIsWorkship.ForEach(p => p.WorkerMarkup = markup);
             grdMaterialListIsWorkship.DataSource = GlobalVeriablesManager.MaterialListIsWorkship;
-           // grdMaterialListIsWorkship.RefreshDataSource();
+            grdMaterialListIsWorkship.Refresh();
         }
 
         private void btnTumuneUygulaMalzeme_Click(object sender, EventArgs e)

@@ -21,9 +21,10 @@ namespace IhalematikPro.Forms
             InitializeComponent();
         }
 
-        Forms.frm_ObfKayit okf = new frm_ObfKayit();
+        
         private void simpleButton2_Click(object sender, EventArgs e)
         {
+            Forms.frm_ObfKayit okf = new frm_ObfKayit(this);
             okf.ShowDialog();
         }
        
@@ -73,6 +74,7 @@ namespace IhalematikPro.Forms
             }
             if (e.KeyCode.ToString() == "F2")
             {
+                Forms.frm_ObfKayit okf = new frm_ObfKayit(this);
                 okf.ShowDialog();
             }
         }
@@ -130,7 +132,7 @@ namespace IhalematikPro.Forms
 
         }
 
-        public void fm_RefreshDgv()
+        public void RefreshDataGrid()
         {
             grdMaterialList.DataSource = GlobalVeriablesManager.MaterialList;
             grdMaterialList.RefreshDataSource();

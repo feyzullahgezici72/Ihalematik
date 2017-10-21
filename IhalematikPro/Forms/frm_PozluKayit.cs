@@ -82,7 +82,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            _owner.fm_RefreshDgv();
+            _owner.RefreshDataGrid();
             //this.RefreshDgv("", "", "");
             this.Close();
         }

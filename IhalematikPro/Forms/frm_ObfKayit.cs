@@ -18,10 +18,11 @@ namespace IhalematikPro.Forms
     {
         List<OBFModel> oBFModels = new List<OBFModel>();
 
-        public frm_ObfKayit()
+        frm_Teklif_Adim1 _owner;
+        public frm_ObfKayit(frm_Teklif_Adim1 Owner)
         {
+            _owner = Owner;
             InitializeComponent();
-
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -77,6 +78,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
+            this._owner.RefreshDataGrid();
             this.Close();  
         }
 

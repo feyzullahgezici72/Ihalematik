@@ -1,4 +1,6 @@
-﻿using System;
+﻿using IhalematikPro.Manager;
+using IhalematikProBL.Provider;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,10 @@ namespace IhalematikPro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.frm_Login());//.frm_Anaform()
+            GlobalVeriablesManager.CurrentTender = TenderProvider.Instance.GetItem(160);
+
+            Application.Run(new Forms.frm_Teklif_Adim3());//.frm_Anaform()
+
         }
     }
 }

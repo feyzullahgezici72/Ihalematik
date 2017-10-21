@@ -126,6 +126,7 @@
     <Compile Include="Entity\VehicleTitle.cs" />
     <Compile Include="Entity\Worker.cs" />
     <Compile Include="Enum\CurrencyTypesEnum.cs" />
+    <Compile Include="Enum\UnitTimeTypesEnum.cs" />
     <Compile Include="Manager\CustomDBConnectionManager.cs" />
     <Compile Include="Manager\TenderManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

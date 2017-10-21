@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SimpleApplicationBase.BL.Base;
 using System.Dynamic;
+using IhalematikProUI.Model;
 
 namespace IhalematikPro.Model
 {
@@ -144,7 +145,11 @@ namespace IhalematikPro.Model
             }
         }
 
-        public dynamic GeneralProperty = new ExpandoObject() as IDictionary<string, Object>;
+        public List<TenderEquipment> TenderEquipments { get; set; }
+
+        public UnitTimeTypesModel UnitTimeType { get; set; }
+
+        public int UnitTime { get; set; }
 
         public MaterialListModel()
         {
