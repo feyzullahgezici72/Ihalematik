@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikcilerdenFiyatAl));
             this.btnObfKayit = new DevExpress.XtraEditors.SimpleButton();
             this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
             this.lblTenderNumber = new DevExpress.XtraEditors.LabelControl();
             this.lblTederDescription = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.grdMaterialList2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -79,7 +77,7 @@
             this.btnObfKayit.Appearance.Options.UseForeColor = true;
             this.btnObfKayit.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnObfKayit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
+            this.btnObfKayit.Image = global::IhalematikProUI.Properties.Resources.Actions_view_refresh_icon__1_;
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnObfKayit.Location = new System.Drawing.Point(1351, 0);
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4);
@@ -137,7 +135,7 @@
             this.btnKaydet.Appearance.Options.UseFont = true;
             this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
+            this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
             this.btnKaydet.Location = new System.Drawing.Point(6, 0);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
@@ -391,7 +389,7 @@
             this.btnKapat.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1577, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
@@ -409,7 +407,7 @@
             this.txtAdimAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
             this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.txtAdimAciklama.Location = new System.Drawing.Point(15, 12);
+            this.txtAdimAciklama.Location = new System.Drawing.Point(6, 12);
             this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
@@ -459,6 +457,10 @@
             this.radioGroup1.Location = new System.Drawing.Point(1193, 0);
             this.radioGroup1.Margin = new System.Windows.Forms.Padding(4);
             this.radioGroup1.Name = "radioGroup1";
+            this.radioGroup1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioGroup1.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.radioGroup1.Properties.Appearance.Options.UseFont = true;
+            this.radioGroup1.Properties.Appearance.Options.UseForeColor = true;
             this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "En Düşük Fiyata Göre"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Fiyat Ortalamasına Göre")});

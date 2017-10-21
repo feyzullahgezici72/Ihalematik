@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_FirmaTanimlama));
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -58,11 +56,12 @@
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
@@ -85,6 +84,7 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textEdit3
@@ -92,7 +92,7 @@
             this.textEdit3.Location = new System.Drawing.Point(136, 111);
             this.textEdit3.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.textEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Snow;
             this.textEdit3.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit3.Size = new System.Drawing.Size(224, 26);
             this.textEdit3.TabIndex = 2;
@@ -102,7 +102,7 @@
             this.textEdit2.Location = new System.Drawing.Point(136, 73);
             this.textEdit2.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.textEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Snow;
             this.textEdit2.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit2.Size = new System.Drawing.Size(705, 26);
             this.textEdit2.TabIndex = 1;
@@ -118,17 +118,17 @@
             // 
             // textEdit11
             // 
-            this.textEdit11.Location = new System.Drawing.Point(132, 224);
+            this.textEdit11.Location = new System.Drawing.Point(132, 235);
             this.textEdit11.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit11.Name = "textEdit11";
-            this.textEdit11.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit11.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit11.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit11.Size = new System.Drawing.Size(731, 26);
             this.textEdit11.TabIndex = 6;
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(40, 231);
+            this.labelControl12.Location = new System.Drawing.Point(40, 242);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(84, 19);
@@ -137,17 +137,17 @@
             // 
             // textEdit10
             // 
-            this.textEdit10.Location = new System.Drawing.Point(132, 186);
+            this.textEdit10.Location = new System.Drawing.Point(132, 197);
             this.textEdit10.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit10.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit10.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit10.Size = new System.Drawing.Size(731, 26);
             this.textEdit10.TabIndex = 5;
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(34, 193);
+            this.labelControl11.Location = new System.Drawing.Point(34, 204);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(87, 19);
@@ -156,7 +156,7 @@
             // 
             // labelControl13
             // 
-            this.labelControl13.Location = new System.Drawing.Point(398, 35);
+            this.labelControl13.Location = new System.Drawing.Point(398, 46);
             this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(51, 19);
@@ -165,17 +165,17 @@
             // 
             // textEdit13
             // 
-            this.textEdit13.Location = new System.Drawing.Point(130, 148);
+            this.textEdit13.Location = new System.Drawing.Point(130, 159);
             this.textEdit13.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit13.Name = "textEdit13";
-            this.textEdit13.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit13.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit13.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit13.Size = new System.Drawing.Size(224, 26);
             this.textEdit13.TabIndex = 3;
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(86, 155);
+            this.labelControl14.Location = new System.Drawing.Point(86, 166);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(38, 19);
@@ -184,10 +184,10 @@
             // 
             // textEdit9
             // 
-            this.textEdit9.Location = new System.Drawing.Point(130, 110);
+            this.textEdit9.Location = new System.Drawing.Point(130, 121);
             this.textEdit9.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit9.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit9.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit9.Size = new System.Drawing.Size(224, 26);
             this.textEdit9.TabIndex = 2;
@@ -197,7 +197,7 @@
             this.textEdit1.Location = new System.Drawing.Point(136, 35);
             this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Snow;
             this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit1.Size = new System.Drawing.Size(705, 26);
             this.textEdit1.TabIndex = 0;
@@ -213,7 +213,7 @@
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(88, 117);
+            this.labelControl10.Location = new System.Drawing.Point(88, 128);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(30, 19);
@@ -222,17 +222,17 @@
             // 
             // textEdit8
             // 
-            this.textEdit8.Location = new System.Drawing.Point(130, 72);
+            this.textEdit8.Location = new System.Drawing.Point(130, 83);
             this.textEdit8.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit8.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit8.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit8.Size = new System.Drawing.Size(224, 26);
             this.textEdit8.TabIndex = 1;
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(48, 79);
+            this.labelControl9.Location = new System.Drawing.Point(48, 90);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(73, 19);
@@ -241,7 +241,7 @@
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(48, 41);
+            this.labelControl8.Location = new System.Drawing.Point(48, 52);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(73, 19);
@@ -259,20 +259,20 @@
             // 
             // textEdit7
             // 
-            this.textEdit7.Location = new System.Drawing.Point(130, 34);
+            this.textEdit7.Location = new System.Drawing.Point(130, 45);
             this.textEdit7.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit7.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit7.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit7.Size = new System.Drawing.Size(224, 26);
             this.textEdit7.TabIndex = 0;
             // 
             // textEdit12
             // 
-            this.textEdit12.Location = new System.Drawing.Point(458, 37);
+            this.textEdit12.Location = new System.Drawing.Point(458, 48);
             this.textEdit12.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit12.Name = "textEdit12";
-            this.textEdit12.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit12.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit12.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit12.Size = new System.Drawing.Size(405, 134);
             this.textEdit12.TabIndex = 4;
@@ -282,7 +282,7 @@
             this.textEdit6.Location = new System.Drawing.Point(136, 225);
             this.textEdit6.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.textEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Snow;
             this.textEdit6.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit6.Size = new System.Drawing.Size(224, 26);
             this.textEdit6.TabIndex = 5;
@@ -301,7 +301,7 @@
             this.textEdit5.Location = new System.Drawing.Point(136, 187);
             this.textEdit5.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.textEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Snow;
             this.textEdit5.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit5.Size = new System.Drawing.Size(224, 26);
             this.textEdit5.TabIndex = 4;
@@ -320,7 +320,7 @@
             this.textEdit4.Location = new System.Drawing.Point(136, 149);
             this.textEdit4.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.textEdit4.Properties.Appearance.BackColor = System.Drawing.Color.Snow;
             this.textEdit4.Properties.Appearance.Options.UseBackColor = true;
             this.textEdit4.Size = new System.Drawing.Size(224, 26);
             this.textEdit4.TabIndex = 3;
@@ -348,7 +348,7 @@
             this.groupControl3.Location = new System.Drawing.Point(4, 260);
             this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(869, 270);
+            this.groupControl3.Size = new System.Drawing.Size(886, 270);
             this.groupControl3.TabIndex = 88;
             this.groupControl3.Text = "İletişim Bilgileri";
             // 
@@ -401,9 +401,9 @@
             this.btnKapat.Appearance.Options.UseForeColor = true;
             this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(839, 0);
+            this.btnKapat.Location = new System.Drawing.Point(822, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(64, 54);
@@ -417,15 +417,40 @@
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImage = global::IhalematikProUI.Properties.Resources.mavi;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(903, 54);
+            this.panelControl1.Size = new System.Drawing.Size(886, 54);
             this.panelControl1.TabIndex = 28;
             this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.pictureBox1);
+            this.panelControl2.Controls.Add(this.labelControl1);
+            this.panelControl2.Controls.Add(this.btnKaydet);
+            this.panelControl2.Controls.Add(this.btnKapat);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(0, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(886, 54);
+            this.panelControl2.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.agency_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 54);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // labelControl1
             // 
@@ -434,7 +459,7 @@
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(2, 7);
+            this.labelControl1.Location = new System.Drawing.Point(57, 4);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
@@ -443,20 +468,6 @@
             this.labelControl1.Text = " FİRMA TANIMLAMA ";
             this.labelControl1.UseMnemonic = false;
             // 
-            // panelControl2
-            // 
-            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl2.Appearance.Options.UseBackColor = true;
-            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.btnKaydet);
-            this.panelControl2.Controls.Add(this.btnKapat);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(903, 54);
-            this.panelControl2.TabIndex = 2;
-            // 
             // btnKaydet
             // 
             this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -464,8 +475,8 @@
             this.btnKaydet.Appearance.Options.UseFont = true;
             this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(701, 0);
+            this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Actions_view_refresh_icon__1_;
+            this.btnKaydet.Location = new System.Drawing.Point(684, 0);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(138, 54);
@@ -477,7 +488,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(903, 615);
+            this.ClientSize = new System.Drawing.Size(886, 615);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.groupControl2);
@@ -506,9 +517,10 @@
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -549,5 +561,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

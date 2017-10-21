@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CalisanEkle));
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.txtUnvan = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnvan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
@@ -46,6 +45,7 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -102,7 +102,7 @@
             this.btnSave.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.Appearance.Options.UseForeColor = true;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
             this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnSave.Location = new System.Drawing.Point(593, 43);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
@@ -115,7 +115,7 @@
             // 
             this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(593, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
@@ -131,7 +131,6 @@
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImage = global::IhalematikProUI.Properties.Resources.mavi;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
@@ -139,6 +138,31 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(657, 54);
             this.panelControl1.TabIndex = 33;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.pictureBox1);
+            this.panelControl2.Controls.Add(this.labelControl1);
+            this.panelControl2.Controls.Add(this.btnKapat);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(0, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(657, 54);
+            this.panelControl2.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.worker_green_icon1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 54);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // labelControl1
             // 
@@ -148,7 +172,7 @@
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(15, 6);
+            this.labelControl1.Location = new System.Drawing.Point(58, 4);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
@@ -156,19 +180,6 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "ÇALIŞAN EKLE";
             this.labelControl1.UseMnemonic = false;
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl2.Appearance.Options.UseBackColor = true;
-            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.btnKapat);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(657, 54);
-            this.panelControl2.TabIndex = 2;
             // 
             // frm_CalisanEkle
             // 
@@ -190,9 +201,10 @@
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -208,5 +220,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

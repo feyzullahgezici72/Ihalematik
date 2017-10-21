@@ -28,25 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim3));
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.lblTenderNumber = new DevExpress.XtraEditors.LabelControl();
             this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnTumuneUygulaIscilik = new DevExpress.XtraEditors.SimpleButton();
             this.txtWorkerMarkup = new DevExpress.XtraEditors.SpinEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtTotalAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -54,7 +45,6 @@
             this.txtBaseKDVAmount = new DevExpress.XtraEditors.TextEdit();
             this.txtBaseAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.grdMaterialListIsWorkship = new System.Windows.Forms.DataGridView();
             this.C1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,9 +53,13 @@
             this.C5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.btnTumuneUygulaIscilik = new DevExpress.XtraEditors.SimpleButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtWorkerMarkup.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -77,8 +71,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseKDVAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseAmount.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialListIsWorkship)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -86,7 +81,6 @@
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.groupBox1);
             this.panelControl2.Controls.Add(this.lblTenderNumber);
             this.panelControl2.Controls.Add(this.lblTenderDescription);
             this.panelControl2.Controls.Add(this.labelControl4);
@@ -97,61 +91,6 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1629, 105);
             this.panelControl2.TabIndex = 22;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Teal;
-            this.groupBox1.Location = new System.Drawing.Point(1005, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(414, 105);
-            this.groupBox1.TabIndex = 38;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "İşçilik Birim Süre Türünü Seçiniz";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.ForeColor = System.Drawing.Color.DarkRed;
-            this.radioButton3.Location = new System.Drawing.Point(276, 48);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(124, 25);
-            this.radioButton3.TabIndex = 0;
-            this.radioButton3.Text = "Adam Gün";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.Color.DarkRed;
-            this.radioButton2.Location = new System.Drawing.Point(136, 48);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(127, 25);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.Text = "Adam Saat";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.DarkRed;
-            this.radioButton1.Location = new System.Drawing.Point(9, 48);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(117, 25);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Adam Dk.";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // lblTenderNumber
             // 
@@ -200,19 +139,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "İşçilik Kar % \'si";
             // 
-            // btnTumuneUygulaIscilik
-            // 
-            this.btnTumuneUygulaIscilik.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnTumuneUygulaIscilik.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygulaIscilik.Image")));
-            this.btnTumuneUygulaIscilik.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnTumuneUygulaIscilik.Location = new System.Drawing.Point(110, 24);
-            this.btnTumuneUygulaIscilik.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTumuneUygulaIscilik.Name = "btnTumuneUygulaIscilik";
-            this.btnTumuneUygulaIscilik.Size = new System.Drawing.Size(96, 77);
-            this.btnTumuneUygulaIscilik.TabIndex = 34;
-            this.btnTumuneUygulaIscilik.Text = "Uygula";
-            this.btnTumuneUygulaIscilik.Click += new System.EventHandler(this.btnTumuneUygulaIscilik_Click);
-            // 
             // txtWorkerMarkup
             // 
             this.txtWorkerMarkup.EditValue = new decimal(new int[] {
@@ -243,6 +169,7 @@
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            this.panelControl1.Controls.Add(this.pictureBox1);
             this.panelControl1.Controls.Add(this.btnKapat);
             this.panelControl1.Controls.Add(this.txtAdimAciklama);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -253,20 +180,6 @@
             this.panelControl1.TabIndex = 21;
             this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
-            // btnKapat
-            // 
-            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
-            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1565, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(64, 64);
-            this.btnKapat.TabIndex = 3;
-            this.btnKapat.TabStop = false;
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
             // txtAdimAciklama
             // 
             this.txtAdimAciklama.Appearance.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -275,7 +188,7 @@
             this.txtAdimAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
             this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.txtAdimAciklama.Location = new System.Drawing.Point(15, 12);
+            this.txtAdimAciklama.Location = new System.Drawing.Point(67, 9);
             this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
@@ -307,21 +220,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(140, 118);
             this.panel2.TabIndex = 10;
-            // 
-            // btnKaydet
-            // 
-            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnKaydet.Appearance.Options.UseFont = true;
-            this.btnKaydet.Appearance.Options.UseForeColor = true;
-            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(0, 0);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(136, 118);
-            this.btnKaydet.TabIndex = 3;
-            this.btnKaydet.Text = "Kaydet";
             // 
             // panel6
             // 
@@ -468,6 +366,58 @@
             this.C7.HeaderText = "BİRİM FİYAT";
             this.C7.Name = "C7";
             // 
+            // btnKapat
+            // 
+            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
+            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnKapat.Location = new System.Drawing.Point(1565, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(64, 64);
+            this.btnKapat.TabIndex = 3;
+            this.btnKapat.TabStop = false;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnKaydet.Appearance.Options.UseFont = true;
+            this.btnKaydet.Appearance.Options.UseForeColor = true;
+            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
+            this.btnKaydet.Location = new System.Drawing.Point(0, 0);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(136, 118);
+            this.btnKaydet.TabIndex = 3;
+            this.btnKaydet.Text = "Kaydet";
+            // 
+            // btnTumuneUygulaIscilik
+            // 
+            this.btnTumuneUygulaIscilik.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnTumuneUygulaIscilik.Image = global::IhalematikProUI.Properties.Resources.Check_icon__1_;
+            this.btnTumuneUygulaIscilik.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnTumuneUygulaIscilik.Location = new System.Drawing.Point(110, 24);
+            this.btnTumuneUygulaIscilik.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTumuneUygulaIscilik.Name = "btnTumuneUygulaIscilik";
+            this.btnTumuneUygulaIscilik.Size = new System.Drawing.Size(96, 77);
+            this.btnTumuneUygulaIscilik.TabIndex = 34;
+            this.btnTumuneUygulaIscilik.Text = "Uygula";
+            this.btnTumuneUygulaIscilik.Click += new System.EventHandler(this.btnTumuneUygulaIscilik_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.worker_green_icon1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 64);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // frm_Teklif_Adim3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -490,8 +440,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtWorkerMarkup.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -505,8 +453,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseKDVAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseAmount.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialListIsWorkship)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -535,10 +484,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl lblTenderNumber;
         private System.Windows.Forms.DataGridView grdMaterialListIsWorkship;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.DataGridViewTextBoxColumn C1;
         private System.Windows.Forms.DataGridViewTextBoxColumn C2;
         private System.Windows.Forms.DataGridViewTextBoxColumn C3;
@@ -546,5 +491,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn C5;
         private System.Windows.Forms.DataGridViewTextBoxColumn C6;
         private System.Windows.Forms.DataGridViewTextBoxColumn C7;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

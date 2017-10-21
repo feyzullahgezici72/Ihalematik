@@ -479,5 +479,10 @@ namespace IhalematikPro.Forms
         {
           
         }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Anaform));
-            DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem14 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip15 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem15 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip16 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem16 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barBtnDovizKurlari = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnPozListesi = new DevExpress.XtraBars.BarButtonItem();
@@ -77,8 +77,6 @@
             this.Adimlar = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemPopupContainerEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit();
             this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.repositoryItemRatingControl1 = new DevExpress.XtraEditors.Repository.RepositoryItemRatingControl();
@@ -139,8 +137,7 @@
             this.ribbonPage1,
             this.ribbonPage8,
             this.ribbonPage7,
-            this.ribbonPage4,
-            this.ribbonPage5});
+            this.ribbonPage4});
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemPopupContainerEdit1,
             this.repositoryItemDateEdit1,
@@ -171,7 +168,7 @@
             this.barBtnPozListesi.DropDownEnabled = false;
             this.barBtnPozListesi.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnPozListesi.Glyph")));
             this.barBtnPozListesi.Id = 3;
-            this.barBtnPozListesi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnPozListesi.LargeGlyph")));
+            this.barBtnPozListesi.LargeGlyph = global::IhalematikProUI.Properties.Resources.Inventory_icon;
             this.barBtnPozListesi.LargeWidth = 100;
             this.barBtnPozListesi.Name = "barBtnPozListesi";
             this.barBtnPozListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnPozListesi_ItemClick);
@@ -181,7 +178,7 @@
             this.barBtnOzelStokListesi.Caption = "ÖBF Malzeme Listesi";
             this.barBtnOzelStokListesi.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnOzelStokListesi.Glyph")));
             this.barBtnOzelStokListesi.Id = 4;
-            this.barBtnOzelStokListesi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnOzelStokListesi.LargeGlyph")));
+            this.barBtnOzelStokListesi.LargeGlyph = global::IhalematikProUI.Properties.Resources.App_lists_icon;
             this.barBtnOzelStokListesi.LargeWidth = 120;
             this.barBtnOzelStokListesi.Name = "barBtnOzelStokListesi";
             this.barBtnOzelStokListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnOzelStokListesi_ItemClick);
@@ -232,9 +229,9 @@
             this.btnAdimx1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx1.LargeGlyph")));
             this.btnAdimx1.LargeWidth = 80;
             this.btnAdimx1.Name = "btnAdimx1";
-            toolTipItem13.Text = "Keşif Listesi ";
-            superToolTip13.Items.Add(toolTipItem13);
-            this.btnAdimx1.SuperTip = superToolTip13;
+            toolTipItem1.Text = "Keşif Listesi ";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.btnAdimx1.SuperTip = superToolTip1;
             this.btnAdimx1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdimx1_ItemClick);
             // 
             // btnAdimx3
@@ -245,9 +242,9 @@
             this.btnAdimx3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx3.LargeGlyph")));
             this.btnAdimx3.LargeWidth = 80;
             this.btnAdimx3.Name = "btnAdimx3";
-            toolTipItem14.Text = "İşçilik";
-            superToolTip14.Items.Add(toolTipItem14);
-            this.btnAdimx3.SuperTip = superToolTip14;
+            toolTipItem2.Text = "İşçilik";
+            superToolTip2.Items.Add(toolTipItem2);
+            this.btnAdimx3.SuperTip = superToolTip2;
             this.btnAdimx3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdimx3_ItemClick);
             // 
             // btnAdimx4
@@ -258,9 +255,9 @@
             this.btnAdimx4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx4.LargeGlyph")));
             this.btnAdimx4.LargeWidth = 80;
             this.btnAdimx4.Name = "btnAdimx4";
-            toolTipItem15.Text = "Malzemeler";
-            superToolTip15.Items.Add(toolTipItem15);
-            this.btnAdimx4.SuperTip = superToolTip15;
+            toolTipItem3.Text = "Malzemeler";
+            superToolTip3.Items.Add(toolTipItem3);
+            this.btnAdimx4.SuperTip = superToolTip3;
             this.btnAdimx4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdimx4_ItemClick);
             // 
             // btnAdimx5
@@ -271,9 +268,9 @@
             this.btnAdimx5.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx5.LargeGlyph")));
             this.btnAdimx5.LargeWidth = 80;
             this.btnAdimx5.Name = "btnAdimx5";
-            toolTipItem16.Text = "Teklifi kaydet ve yazdır";
-            superToolTip16.Items.Add(toolTipItem16);
-            this.btnAdimx5.SuperTip = superToolTip16;
+            toolTipItem4.Text = "Teklifi kaydet ve yazdır";
+            superToolTip4.Items.Add(toolTipItem4);
+            this.btnAdimx5.SuperTip = superToolTip4;
             this.btnAdimx5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdimx5_ItemClick);
             // 
             // barButtonItem2
@@ -281,7 +278,7 @@
             this.barButtonItem2.Caption = "Çalışan Tanımlama";
             this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
             this.barButtonItem2.Id = 14;
-            this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
+            this.barButtonItem2.LargeGlyph = global::IhalematikProUI.Properties.Resources.worker_green_icon__2_;
             this.barButtonItem2.LargeWidth = 100;
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
@@ -289,9 +286,8 @@
             // barButtonItem4
             // 
             this.barButtonItem4.Caption = "Araç Tanımlama";
-            this.barButtonItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.Glyph")));
             this.barButtonItem4.Id = 1;
-            this.barButtonItem4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.LargeGlyph")));
+            this.barButtonItem4.LargeGlyph = global::IhalematikProUI.Properties.Resources.cargo_2_icon;
             this.barButtonItem4.LargeWidth = 100;
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
@@ -314,6 +310,7 @@
             this.barButtonItem7.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.LargeGlyph")));
             this.barButtonItem7.LargeWidth = 160;
             this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
             // 
             // barButtonItem10
             // 
@@ -330,14 +327,14 @@
             this.barButtonItem12.Caption = "Yeni Teklif Oluştur";
             this.barButtonItem12.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.Glyph")));
             this.barButtonItem12.Id = 9;
-            this.barButtonItem12.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.LargeGlyph")));
+            this.barButtonItem12.LargeGlyph = global::IhalematikProUI.Properties.Resources.price_tag_icon;
             this.barButtonItem12.LargeWidth = 100;
             this.barButtonItem12.Name = "barButtonItem12";
             this.barButtonItem12.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick);
             // 
             // barButtonItem13
             // 
-            this.barButtonItem13.Caption = "Teklif Listesi";
+            this.barButtonItem13.Caption = "Teklif Listeleri";
             this.barButtonItem13.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.Glyph")));
             this.barButtonItem13.Id = 10;
             this.barButtonItem13.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.LargeGlyph")));
@@ -368,7 +365,7 @@
             // 
             this.barButtonItem23.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem23.Caption = "Firma Bilgileri";
-            this.barButtonItem23.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem23.Glyph")));
+            this.barButtonItem23.Glyph = global::IhalematikProUI.Properties.Resources.agency_icon__1_;
             this.barButtonItem23.Id = 24;
             this.barButtonItem23.Name = "barButtonItem23";
             this.barButtonItem23.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem23_ItemClick_1);
@@ -385,7 +382,7 @@
             // 
             this.barButtonItem25.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem25.Caption = "Lisans İşlemleri";
-            this.barButtonItem25.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem25.Glyph")));
+            this.barButtonItem25.Glyph = global::IhalematikProUI.Properties.Resources.License_manager_icon__1_;
             this.barButtonItem25.Id = 26;
             this.barButtonItem25.Name = "barButtonItem25";
             // 
@@ -401,7 +398,7 @@
             // 
             this.barButtonItem27.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem27.Caption = "Program Hakkında";
-            this.barButtonItem27.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem27.Glyph")));
+            this.barButtonItem27.Glyph = global::IhalematikProUI.Properties.Resources.System_Info_icon__1_;
             this.barButtonItem27.Id = 28;
             this.barButtonItem27.Name = "barButtonItem27";
             this.barButtonItem27.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem27_ItemClick);
@@ -410,7 +407,7 @@
             // 
             this.barbtnCikisx.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barbtnCikisx.Caption = "Çıkış";
-            this.barbtnCikisx.Glyph = ((System.Drawing.Image)(resources.GetObject("barbtnCikisx.Glyph")));
+            this.barbtnCikisx.Glyph = global::IhalematikProUI.Properties.Resources.Login_icon__1_;
             this.barbtnCikisx.Id = 29;
             this.barbtnCikisx.Name = "barbtnCikisx";
             this.barbtnCikisx.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnCikisx_ItemClick);
@@ -522,22 +519,6 @@
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.ShowCaptionButton = false;
             // 
-            // ribbonPage5
-            // 
-            this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup5});
-            this.ribbonPage5.Name = "ribbonPage5";
-            this.ribbonPage5.Text = "Yardım";
-            // 
-            // ribbonPageGroup5
-            // 
-            this.ribbonPageGroup5.AllowTextClipping = false;
-            this.ribbonPageGroup5.ItemLinks.Add(this.barBtnYardimKonulari);
-            this.ribbonPageGroup5.ItemLinks.Add(this.barBtnProgramHakkinda);
-            this.ribbonPageGroup5.ItemLinks.Add(this.barBtnLisansIslemleri);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.ShowCaptionButton = false;
-            // 
             // repositoryItemPopupContainerEdit1
             // 
             this.repositoryItemPopupContainerEdit1.AutoHeight = false;
@@ -623,8 +604,6 @@
         private DevExpress.XtraBars.BarButtonItem barBtnLisansIslemleri;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         public DevExpress.XtraBars.BarButtonItem btnAdimx3;
         public DevExpress.XtraBars.BarButtonItem btnAdimx4;
         public DevExpress.XtraBars.BarButtonItem btnAdimx5;

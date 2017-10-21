@@ -118,37 +118,235 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pic\orange.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Actions-view-refresh-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Actions-view-refresh-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ok-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\ok-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pic\mor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="email-send-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\email-send-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="earth-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\earth-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Reload-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Reload-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ok-icon (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\ok-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inventory-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Inventory-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cargo-2-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\cargo-2-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="open-file-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\open-file-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="price-tag-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\price-tag-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Actions-edit-clear-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Actions-edit-clear-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Save-as-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Save-as-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Untitled2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Actions-dialog-close-icon (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Actions-dialog-close-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ihale" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pic\ihale.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Check-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Check-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="open-file-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\open-file-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ok-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\ok-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document-excel-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\document-excel-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="worker-green-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\worker-green-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="print-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\print-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Save-as-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Save-as-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stock-vector-operator-controls-the-front-loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\stock-vector-operator-controls-the-front-loader.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search-icon (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\search-icon (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Actions-list-add-user-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Actions-list-add-user-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document-excel-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\document-excel-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mavi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pic\mavi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Actions-edit-clear-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Actions-edit-clear-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kirmizi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pic\kirmizi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Actions-trash-empty-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Actions-trash-empty-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Actions-contact-new-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Actions-contact-new-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Check-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Check-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Actions-dialog-close-icon (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Actions-dialog-close-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Windows-Stand-By-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Windows-Stand-By-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cargo-2-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\cargo-2-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Excel-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Excel-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="data-apply-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\data-apply-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\mor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coin-add-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\coin-add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chart-search-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\chart-search-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Untitled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="worker-green-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\worker-green-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ihale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\ihale.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Actions-view-refresh-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Actions-view-refresh-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="worker-green-icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\worker-green-icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Login-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="System-Info-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\System-Info-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="yukleniyor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\yukleniyor.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="License-manager-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\License-manager-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="App-lists-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\App-lists-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ok-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\ok-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Developer-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Developer-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\orange.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="print-icon (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\print-icon (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search-icon (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\search-icon (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Untitled3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Actions-dialog-close-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Actions-dialog-close-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mavi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\mavi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coin-add-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\coin-add-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inventory-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Inventory-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Actions-dialog-close-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Actions-dialog-close-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document-excel-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\document-excel-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kirmizi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\kirmizi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button-Add-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Button-Add-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agency-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\agency-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Reload-icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Reload-icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Windows-Stand-By-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Windows-Stand-By-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agency-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\agency-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lorry-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Lorry-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\stock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="worker-green-icon (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\worker-green-icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="k-get-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\k-get-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="print-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\print-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button-Add-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Button-Add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Actions-trash-empty-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Actions-trash-empty-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="App-lists-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\App-lists-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Actions-contact-new-icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Actions-contact-new-icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="open-file-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\open-file-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

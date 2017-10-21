@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_YeniTeklifOlustur));
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtAciklama = new DevExpress.XtraEditors.TextEdit();
@@ -120,11 +119,11 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
+            this.simpleButton2.Image = global::IhalematikProUI.Properties.Resources.Button_Add_icon__1_;
             this.simpleButton2.Location = new System.Drawing.Point(552, 0);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
@@ -135,11 +134,11 @@
             // 
             // btnIptal
             // 
-            this.btnIptal.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIptal.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnIptal.Appearance.Options.UseFont = true;
             this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
+            this.btnIptal.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnIptal.Location = new System.Drawing.Point(693, 0);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
             this.btnIptal.Name = "btnIptal";

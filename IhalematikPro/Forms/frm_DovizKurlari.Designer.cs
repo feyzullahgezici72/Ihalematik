@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DovizKurlari));
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.btnYeni = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -61,7 +60,7 @@
             // 
             this.dateEdit1.EditValue = null;
             this.dateEdit1.Location = new System.Drawing.Point(64, 48);
-            this.dateEdit1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dateEdit1.Properties.Appearance.Options.UseBackColor = true;
@@ -74,10 +73,10 @@
             // 
             // btnYeni
             // 
-            this.btnYeni.Image = ((System.Drawing.Image)(resources.GetObject("btnYeni.Image")));
+            this.btnYeni.Image = global::IhalematikProUI.Properties.Resources.coin_add_icon__1_;
             this.btnYeni.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnYeni.Location = new System.Drawing.Point(241, 53);
-            this.btnYeni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnYeni.Margin = new System.Windows.Forms.Padding(4);
             this.btnYeni.Name = "btnYeni";
             this.btnYeni.Size = new System.Drawing.Size(92, 80);
             this.btnYeni.TabIndex = 7;
@@ -96,7 +95,7 @@
             this.groupControl1.Controls.Add(this.calcEdit1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(440, 162);
             this.groupControl1.TabIndex = 2;
@@ -106,7 +105,7 @@
             // 
             this.btnGizliKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnGizliKapat.Location = new System.Drawing.Point(448, 0);
-            this.btnGizliKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGizliKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnGizliKapat.Name = "btnGizliKapat";
             this.btnGizliKapat.Size = new System.Drawing.Size(112, 34);
             this.btnGizliKapat.TabIndex = 8;
@@ -115,10 +114,10 @@
             // 
             // BtnKaydet
             // 
-            this.BtnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.Image")));
+            this.BtnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
             this.BtnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.BtnKaydet.Location = new System.Drawing.Point(341, 53);
-            this.BtnKaydet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(92, 80);
             this.BtnKaydet.TabIndex = 7;
@@ -127,7 +126,7 @@
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(18, 121);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(39, 19);
             this.labelControl2.TabIndex = 3;
@@ -136,7 +135,7 @@
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(14, 53);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(43, 19);
             this.labelControl3.TabIndex = 4;
@@ -145,7 +144,7 @@
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(14, 91);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(44, 19);
             this.labelControl1.TabIndex = 4;
@@ -159,7 +158,7 @@
             0,
             131072});
             this.textEdit1.Location = new System.Drawing.Point(66, 86);
-            this.textEdit1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
@@ -177,7 +176,7 @@
             0,
             131072});
             this.calcEdit1.Location = new System.Drawing.Point(66, 124);
-            this.calcEdit1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.calcEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.calcEdit1.Name = "calcEdit1";
             this.calcEdit1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.calcEdit1.Properties.Appearance.Options.UseBackColor = true;
@@ -192,7 +191,7 @@
             this.groupControl2.Controls.Add(this.gridControl1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 162);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(440, 516);
             this.groupControl2.TabIndex = 3;
@@ -201,10 +200,10 @@
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Location = new System.Drawing.Point(3, 30);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(434, 483);
             this.gridControl1.TabIndex = 0;
@@ -254,7 +253,7 @@
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_DovizKurlari";
