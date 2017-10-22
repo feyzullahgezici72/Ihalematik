@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using SimpleApplicationBase.BL.Base;
 using System.Dynamic;
 using IhalematikProUI.Model;
+using IhalematikPro.Manager;
 
 namespace IhalematikPro.Model
 {
@@ -117,6 +118,7 @@ namespace IhalematikPro.Model
         public bool IsWorkship { get; set; }
         public double Markup { get; set; }
 
+        //Birim Kar
         public double UnitMarkup
         {
             get
@@ -125,6 +127,7 @@ namespace IhalematikPro.Model
             }
         }
 
+        //Toplam Kar
         public double TotalMarkup
         {
             get
@@ -133,10 +136,12 @@ namespace IhalematikPro.Model
             }
         }
 
+        //Calisan kar
         public double WorkerMarkup { get; set; }
 
         public double MaterialMarkup { get; set; }
 
+        // Birim kar
         public double MarkupUnitPrice
         {
             get
@@ -145,10 +150,123 @@ namespace IhalematikPro.Model
             }
         }
 
-        public List<TenderEquipment> TenderEquipments { get; set; }
+        //ISCILIK(MALZEME) BIRIM FIYAT
+        private double workerUnitPrice = 0;
+        public double WorkerUnitPrice
+        {
+            get
+            {
+                if (this.UnitTimeType != null)
+                {
+                    this.workerUnitPrice = 0;
+                    if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
+                    {
+                        foreach (TenderEquipment item in this.TenderEquipments)
+                        {
+                            if (item.IsWorker)
+                            {
+                                this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                            }
+                        }
+                    }
+                    else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Hour)
+                    {
+                        foreach (TenderEquipment item in this.TenderEquipments)
+                        {
+                            if (item.IsWorker)
+                            {
+                                this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount / (30 * 8)), 2) * this.UnitTime * item.Quantity;
+                            }
+                        }
+                    }
+                    else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Day)
+                    {
+                        foreach (TenderEquipment item in this.TenderEquipments)
+                        {
+                            if (item.IsWorker)
+                            {
+                                this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount / 30), 2) * this.UnitTime * item.Quantity;
+                            }
+                        }
+                    }
+                    else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Week)
+                    {
+                        foreach (TenderEquipment item in this.TenderEquipments)
+                        {
+                            if (item.IsWorker)
+                            {
+                                this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount / 4), 2) * this.UnitTime * item.Quantity;
+                            }
+                        }
+                    }
+                    else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Month)
+                    {
+                        foreach (TenderEquipment item in this.TenderEquipments)
+                        {
+                            if (item.IsWorker)
+                            {
+                                this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount), 2) * this.UnitTime * item.Quantity;
+                            }
+                        }
+                    }
+                    else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Year)
+                    {
+                        foreach (TenderEquipment item in this.TenderEquipments)
+                        {
+                            if (item.IsWorker)
+                            {
+                                this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount), 2) * 12 * this.UnitTime * item.Quantity;
+                            }
+                        }
+                    }
+                }
 
+                return this.workerUnitPrice;
+
+            }
+        }
+
+        private List<TenderEquipment> tenderEquipments = null;
+
+        public List<TenderEquipment> TenderEquipments
+        {
+            get
+            {
+                if (this.tenderEquipments == null)
+                {
+                    this.tenderEquipments = TenderEquipmentProvider.Instance.GetItems("TenderId", CurrentManager.CurrentTender.Id);
+                }
+                return this.tenderEquipments;
+            }
+            set
+            {
+                this.tenderEquipments = value;
+            }
+        }
+
+        private List<TenderMaterialListEquipment> tenderMaterialListEquipment = null;
+
+        public List<TenderMaterialListEquipment> TenderMaterialListEquipment
+        {
+            get
+            {
+                if (this.tenderEquipments == null)
+                {
+                    this.tenderMaterialListEquipment = TenderMaterialListEquipmentProvider.Instance.GetItems("TenderId", CurrentManager.CurrentTender.Id);
+                }
+                return this.tenderMaterialListEquipment;
+            }
+            set
+            {
+                this.tenderMaterialListEquipment = value;
+            }
+        }
+
+
+        //Zaman Tipi
         public UnitTimeTypesModel UnitTimeType { get; set; }
 
+        //BIRIM SURE
         public int UnitTime { get; set; }
 
         public MaterialListModel()

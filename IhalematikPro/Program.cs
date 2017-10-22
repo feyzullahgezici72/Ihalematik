@@ -18,9 +18,10 @@ namespace IhalematikPro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            GlobalVeriablesManager.CurrentTender = TenderProvider.Instance.GetItem(160);
+            CurrentManager.CurrentTender = TenderProvider.Instance.GetItem(160);
 
-            Application.Run(new Forms.frm_Teklif_Adim3());//.frm_Anaform()
+            //Application.Run(new Forms.frm_Teklif_Adim3());
+            Application.Run(new Forms.frm_Anaform());
 
         }
     }

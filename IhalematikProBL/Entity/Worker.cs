@@ -61,5 +61,39 @@ namespace IhalematikProBL.Entity
 
         //Diger ucretler
         public Fare ExtraFare { get; set; }
+
+        public Fare TotalFare
+        {
+            get
+            {
+                double totalAmount = this.AGIFare.Amount + this.BaseFare.Amount + this.ExtraFare.Amount + this.FoodFare.Amount + this.HotelFare.Amount + this.ISGFare.Amount + this.SGKPrimFare.Amount + this.StampTaxFare.Amount + this.StopajFare.Amount + this.TravelFare.Amount;
+
+                return new Fare(totalAmount);
+            }
+        }
+
+        public Fare DayFare
+        {
+            get
+            {
+                return new Fare(Math.Round((this.TotalFare.Amount / 30), 2));
+            }
+        }
+
+        public Fare HourFare
+        {
+            get
+            {
+                return new Fare(Math.Round((this.DayFare.Amount / 8), 2));
+            }
+        }
+
+        public Fare MinuteFare
+        {
+            get
+            {
+                return new Fare(Math.Round((this.HourFare.Amount / 60), 2));
+            }
+        }
     }
 }

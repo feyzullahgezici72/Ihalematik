@@ -57,10 +57,10 @@ namespace IhalematikPro.Forms
         private void frm_Teklif_Adim1_Load(object sender, EventArgs e)
         {
             grdMaterialList.DataSource = null;
-            bindingSource1.DataSource = GlobalVeriablesManager.MaterialList; //typeof(List<MaterialList>);
+            bindingSource1.DataSource = CurrentManager.MaterialList; //typeof(List<MaterialList>);
             grdMaterialList.DataSource = bindingSource1;
-            lblTenderDescription.Text = GlobalVeriablesManager.CurrentTender.Description;
-            lblTenderNumber.Text = GlobalVeriablesManager.CurrentTender.DisplayNumber;
+            lblTenderDescription.Text = CurrentManager.CurrentTender.Description;
+            lblTenderNumber.Text = CurrentManager.CurrentTender.DisplayNumber;
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(Frm_Teklif_Adim1_KeyDown);
         }
@@ -84,7 +84,7 @@ namespace IhalematikPro.Forms
         {
             int[] selectedRows = grdMaterialList2.GetSelectedRows();
 
-            MaterialList[] items = GlobalVeriablesManager.MaterialList.ToArray();
+            MaterialList[] items = CurrentManager.MaterialList.ToArray();
 
             foreach (int rowIndex in selectedRows)
             {
@@ -92,9 +92,9 @@ namespace IhalematikPro.Forms
                 item.IsWorkship = true;
             }
 
-            foreach (MaterialList item in GlobalVeriablesManager.MaterialList)
+            foreach (MaterialList item in CurrentManager.MaterialList)
             {
-                item.TenderId = GlobalVeriablesManager.CurrentTender.Id;
+                item.TenderId = CurrentManager.CurrentTender.Id;
                 MaterialListProvider.Instance.Save(item);
             }
 
@@ -108,14 +108,14 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            grdMaterialList.DataSource = GlobalVeriablesManager.MaterialList;
+            grdMaterialList.DataSource = CurrentManager.MaterialList;
             grdMaterialList.RefreshDataSource();
         }
 
         private void grdMaterialList2_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            double baseAmount = GlobalVeriablesManager.MaterialList.Sum(p => p.TotalAmount);
-            double baseKDVAmount = GlobalVeriablesManager.MaterialList.Sum(p => p.KDVAmount);
+            double baseAmount = CurrentManager.MaterialList.Sum(p => p.TotalAmount);
+            double baseKDVAmount = CurrentManager.MaterialList.Sum(p => p.KDVAmount);
 
             txtBaseAmount.Text = string.Format("{0:C2}", baseAmount);
             txtBaseKDVAmount.Text = string.Format("{0:C2}", baseKDVAmount);
@@ -134,7 +134,7 @@ namespace IhalematikPro.Forms
 
         public void RefreshDataGrid()
         {
-            grdMaterialList.DataSource = GlobalVeriablesManager.MaterialList;
+            grdMaterialList.DataSource = CurrentManager.MaterialList;
             grdMaterialList.RefreshDataSource();
         }
     }

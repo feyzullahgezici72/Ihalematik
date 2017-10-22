@@ -28,16 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.lblTenderNumber = new DevExpress.XtraEditors.LabelControl();
             this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnTumuneUygulaIscilik = new DevExpress.XtraEditors.SimpleButton();
             this.txtWorkerMarkup = new DevExpress.XtraEditors.SpinEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtTotalAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -46,24 +51,14 @@
             this.txtBaseAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.grdMaterialListIsWorkship = new System.Windows.Forms.DataGridView();
-            this.C1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.btnTumuneUygulaIscilik = new DevExpress.XtraEditors.SimpleButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtWorkerMarkup.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -72,7 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseKDVAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialListIsWorkship)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,40 +80,36 @@
             this.panelControl2.Controls.Add(this.labelControl4);
             this.panelControl2.Controls.Add(this.groupBox2);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(0, 64);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl2.Location = new System.Drawing.Point(0, 44);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1629, 105);
+            this.panelControl2.Size = new System.Drawing.Size(917, 72);
             this.panelControl2.TabIndex = 22;
             // 
             // lblTenderNumber
             // 
             this.lblTenderNumber.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenderNumber.Appearance.ForeColor = System.Drawing.Color.Crimson;
-            this.lblTenderNumber.Location = new System.Drawing.Point(165, 9);
-            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTenderNumber.Location = new System.Drawing.Point(110, 6);
             this.lblTenderNumber.Name = "lblTenderNumber";
-            this.lblTenderNumber.Size = new System.Drawing.Size(0, 34);
+            this.lblTenderNumber.Size = new System.Drawing.Size(0, 22);
             this.lblTenderNumber.TabIndex = 37;
             // 
             // lblTenderDescription
             // 
             this.lblTenderDescription.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenderDescription.Appearance.ForeColor = System.Drawing.Color.Turquoise;
-            this.lblTenderDescription.Location = new System.Drawing.Point(15, 48);
-            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTenderDescription.Location = new System.Drawing.Point(10, 33);
             this.lblTenderDescription.Name = "lblTenderDescription";
-            this.lblTenderDescription.Size = new System.Drawing.Size(0, 34);
+            this.lblTenderDescription.Size = new System.Drawing.Size(0, 22);
             this.lblTenderDescription.TabIndex = 36;
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl4.Location = new System.Drawing.Point(18, 7);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl4.Location = new System.Drawing.Point(12, 5);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(123, 34);
+            this.labelControl4.Size = new System.Drawing.Size(81, 22);
             this.labelControl4.TabIndex = 35;
             this.labelControl4.Text = "İhale No:";
             // 
@@ -130,14 +120,24 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Teal;
-            this.groupBox2.Location = new System.Drawing.Point(1419, 0);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(777, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(210, 105);
+            this.groupBox2.Size = new System.Drawing.Size(140, 72);
             this.groupBox2.TabIndex = 34;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "İşçilik Kar % \'si";
+            // 
+            // btnTumuneUygulaIscilik
+            // 
+            this.btnTumuneUygulaIscilik.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnTumuneUygulaIscilik.Image = global::IhalematikProUI.Properties.Resources.Check_icon__1_;
+            this.btnTumuneUygulaIscilik.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnTumuneUygulaIscilik.Location = new System.Drawing.Point(73, 17);
+            this.btnTumuneUygulaIscilik.Name = "btnTumuneUygulaIscilik";
+            this.btnTumuneUygulaIscilik.Size = new System.Drawing.Size(64, 52);
+            this.btnTumuneUygulaIscilik.TabIndex = 34;
+            this.btnTumuneUygulaIscilik.Text = "Uygula";
+            this.btnTumuneUygulaIscilik.Click += new System.EventHandler(this.btnTumuneUygulaIscilik_Click);
             // 
             // txtWorkerMarkup
             // 
@@ -146,8 +146,7 @@
             0,
             0,
             0});
-            this.txtWorkerMarkup.Location = new System.Drawing.Point(30, 48);
-            this.txtWorkerMarkup.Margin = new System.Windows.Forms.Padding(4);
+            this.txtWorkerMarkup.Location = new System.Drawing.Point(20, 33);
             this.txtWorkerMarkup.Name = "txtWorkerMarkup";
             this.txtWorkerMarkup.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtWorkerMarkup.Properties.Appearance.Options.UseFont = true;
@@ -160,7 +159,7 @@
             0,
             0,
             0});
-            this.txtWorkerMarkup.Size = new System.Drawing.Size(70, 30);
+            this.txtWorkerMarkup.Size = new System.Drawing.Size(47, 22);
             this.txtWorkerMarkup.TabIndex = 34;
             // 
             // panelControl1
@@ -174,11 +173,34 @@
             this.panelControl1.Controls.Add(this.txtAdimAciklama);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1629, 64);
+            this.panelControl1.Size = new System.Drawing.Size(917, 44);
             this.panelControl1.TabIndex = 21;
-            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
+            //this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.worker_green_icon1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 44);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnKapat
+            // 
+            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
+            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnKapat.Location = new System.Drawing.Point(874, 0);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(43, 44);
+            this.btnKapat.TabIndex = 3;
+            this.btnKapat.TabStop = false;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // txtAdimAciklama
             // 
@@ -188,11 +210,10 @@
             this.txtAdimAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
             this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.txtAdimAciklama.Location = new System.Drawing.Point(67, 9);
-            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdimAciklama.Location = new System.Drawing.Point(45, 6);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
-            this.txtAdimAciklama.Size = new System.Drawing.Size(435, 47);
+            this.txtAdimAciklama.Size = new System.Drawing.Size(301, 32);
             this.txtAdimAciklama.TabIndex = 0;
             this.txtAdimAciklama.Text = "İŞÇİLİK KEŞİF LİSTESİ";
             // 
@@ -204,10 +225,9 @@
             this.panelControl3.Controls.Add(this.panel2);
             this.panelControl3.Controls.Add(this.panel6);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl3.Location = new System.Drawing.Point(0, 936);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl3.Location = new System.Drawing.Point(0, 451);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1629, 118);
+            this.panelControl3.Size = new System.Drawing.Size(917, 81);
             this.panelControl3.TabIndex = 25;
             // 
             // panel2
@@ -215,11 +235,25 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.btnKaydet);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1121, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(579, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(140, 118);
+            this.panel2.Size = new System.Drawing.Size(93, 81);
             this.panel2.TabIndex = 10;
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnKaydet.Appearance.Options.UseFont = true;
+            this.btnKaydet.Appearance.Options.UseForeColor = true;
+            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
+            this.btnKaydet.Location = new System.Drawing.Point(0, 0);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(91, 81);
+            this.btnKaydet.TabIndex = 3;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // panel6
             // 
@@ -232,33 +266,30 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.ForeColor = System.Drawing.Color.Teal;
-            this.panel6.Location = new System.Drawing.Point(1261, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Location = new System.Drawing.Point(672, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(368, 118);
+            this.panel6.Size = new System.Drawing.Size(245, 81);
             this.panel6.TabIndex = 9;
             // 
             // txtTotalAmount
             // 
             this.txtTotalAmount.Enabled = false;
-            this.txtTotalAmount.Location = new System.Drawing.Point(158, 80);
-            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalAmount.Location = new System.Drawing.Point(105, 55);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTotalAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtTotalAmount.Properties.Mask.EditMask = "c";
             this.txtTotalAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtTotalAmount.Size = new System.Drawing.Size(204, 26);
+            this.txtTotalAmount.Size = new System.Drawing.Size(136, 20);
             this.txtTotalAmount.TabIndex = 5;
             // 
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl7.Location = new System.Drawing.Point(21, 85);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl7.Location = new System.Drawing.Point(14, 58);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(138, 21);
+            this.labelControl7.Size = new System.Drawing.Size(85, 13);
             this.labelControl7.TabIndex = 8;
             this.labelControl7.Text = "GENEL TOPLAM:";
             // 
@@ -266,47 +297,43 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl6.Location = new System.Drawing.Point(34, 9);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl6.Location = new System.Drawing.Point(23, 6);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(118, 21);
+            this.labelControl6.Size = new System.Drawing.Size(76, 13);
             this.labelControl6.TabIndex = 9;
             this.labelControl6.Text = "ARA TOPLAM:";
             // 
             // txtBaseKDVAmount
             // 
             this.txtBaseKDVAmount.Enabled = false;
-            this.txtBaseKDVAmount.Location = new System.Drawing.Point(158, 42);
-            this.txtBaseKDVAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBaseKDVAmount.Location = new System.Drawing.Point(105, 29);
             this.txtBaseKDVAmount.Name = "txtBaseKDVAmount";
             this.txtBaseKDVAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBaseKDVAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtBaseKDVAmount.Properties.Mask.EditMask = "c";
             this.txtBaseKDVAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtBaseKDVAmount.Size = new System.Drawing.Size(204, 26);
+            this.txtBaseKDVAmount.Size = new System.Drawing.Size(136, 20);
             this.txtBaseKDVAmount.TabIndex = 6;
             // 
             // txtBaseAmount
             // 
             this.txtBaseAmount.Enabled = false;
-            this.txtBaseAmount.Location = new System.Drawing.Point(158, 4);
-            this.txtBaseAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBaseAmount.Location = new System.Drawing.Point(105, 3);
             this.txtBaseAmount.Name = "txtBaseAmount";
             this.txtBaseAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBaseAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtBaseAmount.Properties.Mask.EditMask = "c";
             this.txtBaseAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtBaseAmount.Size = new System.Drawing.Size(204, 26);
+            this.txtBaseAmount.Size = new System.Drawing.Size(136, 20);
             this.txtBaseAmount.TabIndex = 7;
             // 
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl8.Location = new System.Drawing.Point(30, 47);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl8.Location = new System.Drawing.Point(20, 32);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(126, 21);
+            this.labelControl8.Size = new System.Drawing.Size(79, 13);
             this.labelControl8.TabIndex = 10;
             this.labelControl8.Text = "KDV TOPLAMI:";
             // 
@@ -315,122 +342,24 @@
             this.grdMaterialListIsWorkship.AllowUserToAddRows = false;
             this.grdMaterialListIsWorkship.AllowUserToDeleteRows = false;
             this.grdMaterialListIsWorkship.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdMaterialListIsWorkship.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.C1,
-            this.C2,
-            this.C3,
-            this.C4,
-            this.C5,
-            this.C6,
-            this.C7});
             this.grdMaterialListIsWorkship.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialListIsWorkship.Location = new System.Drawing.Point(0, 169);
-            this.grdMaterialListIsWorkship.Margin = new System.Windows.Forms.Padding(4);
+            this.grdMaterialListIsWorkship.Location = new System.Drawing.Point(0, 116);
             this.grdMaterialListIsWorkship.Name = "grdMaterialListIsWorkship";
-            this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(1629, 767);
+            this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(917, 335);
             this.grdMaterialListIsWorkship.TabIndex = 26;
-            // 
-            // C1
-            // 
-            this.C1.HeaderText = "KAR %";
-            this.C1.Name = "C1";
-            // 
-            // C2
-            // 
-            this.C2.HeaderText = "İŞÇİ SAYISI";
-            this.C2.Name = "C2";
-            // 
-            // C3
-            // 
-            this.C3.HeaderText = "ARAÇ SAYISI";
-            this.C3.Name = "C3";
-            // 
-            // C4
-            // 
-            this.C4.HeaderText = "İŞÇİLİK MALİYETİ";
-            this.C4.Name = "C4";
-            // 
-            // C5
-            // 
-            this.C5.HeaderText = "TOPLAM SÜRE";
-            this.C5.Name = "C5";
-            // 
-            // C6
-            // 
-            this.C6.HeaderText = "BİRİM SÜRE ( Dk )";
-            this.C6.Name = "C6";
-            this.C6.Width = 120;
-            // 
-            // C7
-            // 
-            this.C7.HeaderText = "BİRİM FİYAT";
-            this.C7.Name = "C7";
-            // 
-            // btnKapat
-            // 
-            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
-            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1565, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(64, 64);
-            this.btnKapat.TabIndex = 3;
-            this.btnKapat.TabStop = false;
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
-            // btnKaydet
-            // 
-            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnKaydet.Appearance.Options.UseFont = true;
-            this.btnKaydet.Appearance.Options.UseForeColor = true;
-            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
-            this.btnKaydet.Location = new System.Drawing.Point(0, 0);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(136, 118);
-            this.btnKaydet.TabIndex = 3;
-            this.btnKaydet.Text = "Kaydet";
-            // 
-            // btnTumuneUygulaIscilik
-            // 
-            this.btnTumuneUygulaIscilik.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnTumuneUygulaIscilik.Image = global::IhalematikProUI.Properties.Resources.Check_icon__1_;
-            this.btnTumuneUygulaIscilik.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnTumuneUygulaIscilik.Location = new System.Drawing.Point(110, 24);
-            this.btnTumuneUygulaIscilik.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTumuneUygulaIscilik.Name = "btnTumuneUygulaIscilik";
-            this.btnTumuneUygulaIscilik.Size = new System.Drawing.Size(96, 77);
-            this.btnTumuneUygulaIscilik.TabIndex = 34;
-            this.btnTumuneUygulaIscilik.Text = "Uygula";
-            this.btnTumuneUygulaIscilik.Click += new System.EventHandler(this.btnTumuneUygulaIscilik_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.worker_green_icon1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 64);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // frm_Teklif_Adim3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(1629, 1054);
+            this.ClientSize = new System.Drawing.Size(917, 532);
             this.ControlBox = false;
             this.Controls.Add(this.grdMaterialListIsWorkship);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Teklif_Adim3";
@@ -445,6 +374,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -454,7 +384,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseKDVAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialListIsWorkship)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -484,13 +413,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl lblTenderNumber;
         private System.Windows.Forms.DataGridView grdMaterialListIsWorkship;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C7;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

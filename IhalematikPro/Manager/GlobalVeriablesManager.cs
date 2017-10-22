@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace IhalematikPro.Manager
 {
-    public static class GlobalVeriablesManager
+    public static class CurrentManager
     {
         public static List<MaterialList> MaterialList { get; set; }
         public static List<MaterialListModel> MaterialListNonWorkship { get; set; }

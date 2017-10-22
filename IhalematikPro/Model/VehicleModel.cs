@@ -32,6 +32,13 @@ namespace IhalematikPro.Model
         //sirket aracimi?
         public bool IsCompanyVehicle { get; set; }
 
+        public Fare TotalFare
+        {
+            get
+            {
+                return new Fare(IhalematikProBL.Enum.CurrencyTypesEnum.TL, 0);
+            }
+        }
 
         //calisacak saat
         public float WorkHour { get; set; }
@@ -49,6 +56,7 @@ namespace IhalematikPro.Model
                 return Math.Round(this.HourPrice * 8, 2);
             }
         }
+
         public double MonthPrice
         {
             get

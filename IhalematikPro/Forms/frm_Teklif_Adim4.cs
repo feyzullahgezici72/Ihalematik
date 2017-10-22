@@ -35,13 +35,13 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim4_Load(object sender, EventArgs e)
         {
-            lblTenderDescription.Text = GlobalVeriablesManager.CurrentTender.Description;
-            lblTenderNumber.Text = GlobalVeriablesManager.CurrentTender.DisplayNumber;
+            lblTenderDescription.Text = CurrentManager.CurrentTender.Description;
+            lblTenderNumber.Text = CurrentManager.CurrentTender.DisplayNumber;
 
             List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListNonWorkship();
             grdMaterialListNonWorkship.DataSource = null;
-            GlobalVeriablesManager.MaterialListNonWorkship = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            bindingSource1.DataSource = GlobalVeriablesManager.MaterialListNonWorkship; //typeof(List<MaterialList>);
+            CurrentManager.MaterialListNonWorkship = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            bindingSource1.DataSource = CurrentManager.MaterialListNonWorkship; //typeof(List<MaterialList>);
             grdMaterialListNonWorkship.DataSource = bindingSource1;
             double baseAmount = 0;
             this.CalculateInnerValue(ref baseAmount);
@@ -55,14 +55,14 @@ namespace IhalematikPro.Forms
         private void btnTumuneUygula_Click(object sender, EventArgs e)
         {
             double markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMarkup.Text);
-            GlobalVeriablesManager.MaterialListNonWorkship.ForEach(p => p.Markup = markup);
+            CurrentManager.MaterialListNonWorkship.ForEach(p => p.Markup = markup);
             grdMaterialListNonWorkship.DataSource = null;
-            grdMaterialListNonWorkship.DataSource = GlobalVeriablesManager.MaterialListNonWorkship;
+            grdMaterialListNonWorkship.DataSource = CurrentManager.MaterialListNonWorkship;
             grdMaterialListNonWorkship.RefreshDataSource();
             double baseAmount = 0;
             this.CalculateInnerValue(ref baseAmount);
             //double baseAmount = GlobalVeriablesManager.MaterialListNonWorkship.Sum(p => p.MarkupUnitPrice * p.Quantity);
-            lblTotalMarkup.Text = (baseAmount - GlobalVeriablesManager.MaterialListNonWorkship.Sum(p => p.TotalAmount)).ToString("C2");
+            lblTotalMarkup.Text = (baseAmount - CurrentManager.MaterialListNonWorkship.Sum(p => p.TotalAmount)).ToString("C2");
         }
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -73,8 +73,8 @@ namespace IhalematikPro.Forms
 
         private void CalculateInnerValue(ref double BaseAmount)
         {
-            BaseAmount = GlobalVeriablesManager.MaterialListNonWorkship.Sum(p => p.MarkupUnitPrice * p.Quantity);
-            double baseKDVAmount = GlobalVeriablesManager.MaterialListNonWorkship.Sum(p => p.KDVAmount);
+            BaseAmount = CurrentManager.MaterialListNonWorkship.Sum(p => p.MarkupUnitPrice * p.Quantity);
+            double baseKDVAmount = CurrentManager.MaterialListNonWorkship.Sum(p => p.KDVAmount);
 
             txtBaseAmount.Text = string.Format("{0:C2}", BaseAmount);
             txtBaseKDVAmount.Text = string.Format("{0:C2}", baseKDVAmount);
@@ -83,9 +83,9 @@ namespace IhalematikPro.Forms
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            if (GlobalVeriablesManager.MaterialListNonWorkship != null)
+            if (CurrentManager.MaterialListNonWorkship != null)
             {
-                foreach (MaterialListModel materialListModel in GlobalVeriablesManager.MaterialListNonWorkship)
+                foreach (MaterialListModel materialListModel in CurrentManager.MaterialListNonWorkship)
                 {
                     materialListModel.Save();
                 }

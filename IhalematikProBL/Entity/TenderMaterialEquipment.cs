@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IhalematikProBL.Entity
 {
-    public class TenderMaterialEquipment : CustomEntityBase
+    public class TenderMaterialListEquipment : CustomEntityBase
     {
         public int TenderId { get; set; }
         private Tender tender { get; set; }
@@ -26,7 +26,7 @@ namespace IhalematikProBL.Entity
             }
         }
 
-        public int MaterialId { get; set; }
+        public int MaterialListId { get; set; }
         private MaterialList materialList { get; set; }
         public MaterialList MaterialList
         {
@@ -34,9 +34,9 @@ namespace IhalematikProBL.Entity
             {
                 if (this.materialList == null)
                 {
-                    if (this.MaterialId != 0)
+                    if (this.MaterialListId != 0)
                     {
-                        this.materialList = MaterialListProvider.Instance.GetItem(this.MaterialId);
+                        this.materialList = MaterialListProvider.Instance.GetItem(this.MaterialListId);
                     }
                 }
                 return this.materialList;
@@ -59,8 +59,7 @@ namespace IhalematikProBL.Entity
                 return this.equipment;
             }
         }
-
-        public bool IsWorker { get; set; }
+        
         public double Quantity { get; set; }
     }
 }

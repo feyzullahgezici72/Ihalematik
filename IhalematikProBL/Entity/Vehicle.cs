@@ -38,5 +38,14 @@ namespace IhalematikProBL.Entity
 
         //diger giderler
         public double OtherPrice { get; set; }
+
+
+        public Fare TotalFare
+        {
+            get
+            {
+                return new Fare(IhalematikProBL.Enum.CurrencyTypesEnum.TL, 0);
+            }
+        }
     }
 }

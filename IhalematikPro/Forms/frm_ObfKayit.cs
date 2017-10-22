@@ -47,9 +47,9 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            if (GlobalVeriablesManager.MaterialList == null)
+            if (CurrentManager.MaterialList == null)
             {
-                GlobalVeriablesManager.MaterialList = new List<MaterialList>();
+                CurrentManager.MaterialList = new List<MaterialList>();
             }
             int[] selectedRows = gridView1.GetSelectedRows();
 
@@ -62,15 +62,15 @@ namespace IhalematikPro.Forms
                 materialList.IsPoz = false;
                 materialList.PozOBFId = pozModel.Id.Value;
 
-                List<MaterialList> items = GlobalVeriablesManager.MaterialList.Where(p => p.PozOBFId == materialList.PozOBFId && !p.IsPoz).ToList();
+                List<MaterialList> items = CurrentManager.MaterialList.Where(p => p.PozOBFId == materialList.PozOBFId && !p.IsPoz).ToList();
 
                 if (items.Count == 0)
                 {
-                    GlobalVeriablesManager.MaterialList.Add(materialList);
+                    CurrentManager.MaterialList.Add(materialList);
                 }
             }
 
-            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(GlobalVeriablesManager.MaterialList.Where(p => !p.IsPoz).ToList());
+            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(CurrentManager.MaterialList.Where(p => !p.IsPoz).ToList());
 
             grdAddedOBF.DataSource = null;
             grdAddedOBF.DataSource = models;
@@ -89,23 +89,23 @@ namespace IhalematikPro.Forms
 
             MaterialListModel[] selectedRowsItems = models.ToArray();
 
-            GlobalVeriablesManager.MaterialList.ForEach(p => p.Id = p.PozOBFId);
+            CurrentManager.MaterialList.ForEach(p => p.Id = p.PozOBFId);
 
             foreach (int item in selectedRows)
             {
                 MaterialListModel pozModel = selectedRowsItems[item];
 
-                MaterialList selectedItem = GlobalVeriablesManager.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
+                MaterialList selectedItem = CurrentManager.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
 
                 if (selectedItem != null)
                 {
-                    int index = GlobalVeriablesManager.MaterialList.IndexOf(selectedItem);
+                    int index = CurrentManager.MaterialList.IndexOf(selectedItem);
 
-                    GlobalVeriablesManager.MaterialList.RemoveAt(index);
+                    CurrentManager.MaterialList.RemoveAt(index);
                 }
             }
 
-            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(GlobalVeriablesManager.MaterialList.Where(p => !p.IsPoz).ToList());
+            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(CurrentManager.MaterialList.Where(p => !p.IsPoz).ToList());
 
             grdAddedOBF.DataSource = null;
             grdAddedOBF.DataSource = dataSource;

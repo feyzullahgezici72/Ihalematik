@@ -15,7 +15,7 @@ namespace IhalematikPro.Manager
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("IsWorkship", true);
-            parameters.Add("TenderId", GlobalVeriablesManager.CurrentTender.Id);
+            parameters.Add("TenderId", CurrentManager.CurrentTender.Id);
             List<MaterialList> items = MaterialListProvider.Instance.GetItems(parameters);
             return items;
         }
@@ -24,7 +24,7 @@ namespace IhalematikPro.Manager
 
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("IsWorkship", false);
-            parameters.Add("TenderId", GlobalVeriablesManager.CurrentTender.Id);
+            parameters.Add("TenderId", CurrentManager.CurrentTender.Id);
             List<MaterialList> items = MaterialListProvider.Instance.GetItems(parameters);
             return items;
         }

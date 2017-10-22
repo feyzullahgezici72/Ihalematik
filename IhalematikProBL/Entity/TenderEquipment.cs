@@ -61,6 +61,21 @@ namespace IhalematikProBL.Entity
             }
         }
 
+        public Fare UnitPrice
+        {
+            get
+            {
+                if (this.IsWorker)
+                {
+                    return this.Worker.TotalFare;
+                }
+                else
+                {
+                    return this.Vehicle.TotalFare;
+                }
+            }
+        }
+
         public override string ToString()
         {
             if (this.IsWorker)
@@ -69,8 +84,9 @@ namespace IhalematikProBL.Entity
             }
             else
             {
-               return this.Vehicle.Title.Name;
+                return this.Vehicle.Title.Name;
             }
         }
+
     }
 }

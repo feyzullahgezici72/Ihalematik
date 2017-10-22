@@ -28,11 +28,11 @@ namespace IhalematikPro.Forms
             int lastTenderNumber = TenderManager.Instance.GetLastTenderNumber();
             txtTeklifNo.Text = string.Format("{0}", (lastTenderNumber + 1).ToString().PadLeft(8, '0'));
 
-            GlobalVeriablesManager.Vehicles = UIVehicleManager.Instance.GetVehicles();
-            GlobalVeriablesManager.Workers = UIWorkerManager.Instance.GetWorkers();
+            CurrentManager.Vehicles = UIVehicleManager.Instance.GetVehicles();
+            CurrentManager.Workers = UIWorkerManager.Instance.GetWorkers();
 
-            grdVehicle.DataSource = GlobalVeriablesManager.Vehicles;
-            grdWorker.DataSource = GlobalVeriablesManager.Workers;
+            grdVehicle.DataSource = CurrentManager.Vehicles;
+            grdWorker.DataSource = CurrentManager.Workers;
         }
         
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace IhalematikPro.Forms
             {
                 foreach (int vehicleIndex in selectedVehicles)
                 {
-                    VehicleModel[] arry = GlobalVeriablesManager.Vehicles.ToArray();
+                    VehicleModel[] arry = CurrentManager.Vehicles.ToArray();
                     VehicleModel model = arry[vehicleIndex];
                     TenderEquipment equipment = new TenderEquipment();
                     equipment.IsWorker = false;
@@ -63,7 +63,7 @@ namespace IhalematikPro.Forms
             {
                 foreach (int workerIndex in selectedWorkers)
                 {
-                    WorkerModel[] arry = GlobalVeriablesManager.Workers.ToArray();
+                    WorkerModel[] arry = CurrentManager.Workers.ToArray();
                     WorkerModel model = arry[workerIndex];
                     TenderEquipment equipment = new TenderEquipment();
                     equipment.IsWorker = true;
@@ -79,7 +79,7 @@ namespace IhalematikPro.Forms
             }
             else
             {
-                GlobalVeriablesManager.CurrentTender = tender;
+                CurrentManager.CurrentTender = tender;
             }
             MessageBox.Show("Yeni Ihale olusturuldu...");
             
