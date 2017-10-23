@@ -85,7 +85,7 @@ namespace IhalematikPro.Forms
             
             for (int i = 0; i <101  ; i++)
             {
-                Thread.Sleep(10);
+               Thread.Sleep(0);
                 pbControl.Position = i;
                 Application.DoEvents();
             }

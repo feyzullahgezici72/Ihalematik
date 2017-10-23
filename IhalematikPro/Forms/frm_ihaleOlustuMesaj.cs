@@ -22,5 +22,27 @@ namespace IhalematikPro.Forms
         {
             this.Close();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (lblMesaj.Visible==true)
+            {
+                lblMesaj.Visible = false;
+            }
+            else
+            {
+                lblMesaj.Visible = true;
+            }
+        }
+
+        private void frm_BelgeKontrol_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+        }
+
+        private void frm_BelgeKontrol_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            timer1.Enabled = false;
+        }
     }
 }

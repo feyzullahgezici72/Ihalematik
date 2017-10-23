@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.lblMesaj = new DevExpress.XtraEditors.LabelControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTamam
             // 
-            this.btnTamam.Image = global::IhalematikProUI.Properties.Resources.ok_icon__1_;
+            this.btnTamam.Image = global::IhalematikProUI.Properties.Resources.Check_icon__1_;
             this.btnTamam.Location = new System.Drawing.Point(461, 57);
             this.btnTamam.Name = "btnTamam";
             this.btnTamam.Size = new System.Drawing.Size(111, 58);
@@ -57,19 +57,20 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // labelControl1
+            // lblMesaj
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl1.Location = new System.Drawing.Point(159, 12);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(345, 34);
-            this.labelControl1.TabIndex = 6;
-            this.labelControl1.Text = "Yeni İhale Oluşturuldu...";
+            this.lblMesaj.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMesaj.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblMesaj.Location = new System.Drawing.Point(159, 12);
+            this.lblMesaj.Name = "lblMesaj";
+            this.lblMesaj.Size = new System.Drawing.Size(345, 34);
+            this.lblMesaj.TabIndex = 6;
+            this.lblMesaj.Text = "Yeni İhale Oluşturuldu...";
             // 
             // timer1
             // 
             this.timer1.Interval = 300;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frm_BelgeKontrol
             // 
@@ -82,11 +83,13 @@
             this.ControlBox = false;
             this.Controls.Add(this.btnTamam);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.lblMesaj);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_BelgeKontrol";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_BelgeKontrol_FormClosed);
+            this.Load += new System.EventHandler(this.frm_BelgeKontrol_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -97,7 +100,7 @@
 
         private DevExpress.XtraEditors.SimpleButton btnTamam;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl lblMesaj;
         private System.Windows.Forms.Timer timer1;
     }
 }

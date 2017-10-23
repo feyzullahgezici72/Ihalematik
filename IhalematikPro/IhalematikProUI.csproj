@@ -224,6 +224,12 @@
     <Compile Include="Forms\frm_FirmaTanimlama.Designer.cs">
       <DependentUpon>frm_FirmaTanimlama.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frm_IscilikIslemKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_IscilikIslemKayit.Designer.cs">
+      <DependentUpon>frm_IscilikIslemKayit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frm_MalzemeFiyatTeklifiOlustur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -384,6 +390,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_FirmaTanimlama.resx">
       <DependentUpon>frm_FirmaTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_IscilikIslemKayit.resx">
+      <DependentUpon>frm_IscilikIslemKayit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_MalzemeFiyatTeklifiOlustur.resx">
       <DependentUpon>frm_MalzemeFiyatTeklifiOlustur.cs</DependentUpon>

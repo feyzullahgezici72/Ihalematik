@@ -21,6 +21,7 @@ using DevExpress.XtraGrid.Views.BandedGrid;
 using IhalematikProUI.Model;
 using IhalematikProBL.Enum;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Forms;
 
 namespace IhalematikPro.Forms
 {
@@ -230,5 +231,10 @@ namespace IhalematikPro.Forms
             return displayText;
         }
 
+        private void grdMaterialListIsWorkship_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            frm_IscilikIslemKayit frm = new frm_IscilikIslemKayit();
+            frm.ShowDialog();
+        }
     }
 }
