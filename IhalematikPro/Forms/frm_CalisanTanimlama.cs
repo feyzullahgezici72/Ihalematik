@@ -119,15 +119,19 @@ namespace IhalematikPro.Forms
             model.TitleId = ((TitleModel)ddlTitles.SelectedItem).Id.Value;
             model.IsNormal = rbNormal.Checked;
             model.BaseFare = new Fare(double.Parse(txtBaseFare.Text));
-            model.SGKPrimFare = new Fare(double.Parse(txtSGKPrimFare.Text));
-            model.AGIFare = new Fare(double.Parse(txtAGI.Text));
-            model.StopajFare = new Fare(double.Parse(txtStopajFare.Text));
-            model.StampTaxFare = new Fare(double.Parse(txtStampTaxFare.Text));
-            model.FoodFare = new Fare(double.Parse(txtFoodFare.Text));
-            model.TravelFare = new Fare(double.Parse(txtTravelFare.Text));
-            model.HotelFare = new Fare(double.Parse(txtHotelFare.Text));
-            model.ISGFare = new Fare(double.Parse(txtISGFare.Text));
-            model.ExtraFare = new Fare(double.Parse(txtExtraFare.Text));
+            model.SGKPrimFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtSGKPrimFare.Text));
+
+            model.WorklesFonFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtWorklesFonFare.Text));
+            model.IncomeTaxFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtIncomeTaxFare.Text));
+            model.SeveranceFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtSeveranceFare.Text));
+
+            model.StampTaxFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtStampTaxFare.Text));
+            model.AGIFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtAGI.Text));
+            model.FoodFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtFoodFare.Text));
+            model.TravelFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtTravelFare.Text));
+            model.HotelFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtHotelFare.Text));
+            model.ISGFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtISGFare.Text));
+            model.ExtraFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtExtraFare.Text));
 
             model.Save();
             LoadGrid();
@@ -161,11 +165,11 @@ namespace IhalematikPro.Forms
 
         private void txtBaseFare_EditValueChanged_1(object sender, EventArgs e)
         {
-            double NetUcretUcret = double.Parse(txtBaseFare.Text);
-            txtSGKPrimFare.Text = Math.Round((NetUcretUcret / 100 * 14), 2).ToString();
-            txtUnemployment.Text = Math.Round((NetUcretUcret / 100 * 1), 2).ToString();
-            txtStopajFare.Text = Math.Round((NetUcretUcret / 100 * 15), 2).ToString();
-            txtStampTaxFare.Text = Math.Round((NetUcretUcret / 1000 * 759), 2).ToString();
+            //double NetUcretUcret = double.Parse(txtBaseFare.Text);
+            //txtSGKPrimFare.Text = Math.Round((NetUcretUcret / 100 * 14), 2).ToString();
+            //txtWorklesFonFare.Text = Math.Round((NetUcretUcret / 100 * 1), 2).ToString();
+            //txtIncomeTaxFare.Text = Math.Round((NetUcretUcret / 100 * 15), 2).ToString();
+            //txtStampTaxFare.Text = Math.Round((NetUcretUcret / 1000 * 759), 2).ToString();
             //Net Maaş    4.000,00 TL
             //SGK Primi İşçi Payı(% 14)    560,00 TL
             //İşsizlik Sig.Fonu(% 1)  40,00 TL
@@ -182,8 +186,8 @@ namespace IhalematikPro.Forms
             {
                 double NetUcretUcret = double.Parse(txtBaseFare.Text);
                 txtSGKPrimFare.Text = Math.Round((NetUcretUcret / 100 * 14), 2).ToString();
-                txtUnemployment.Text = Math.Round((NetUcretUcret / 100 * 1), 2).ToString();
-                txtStopajFare.Text = Math.Round((NetUcretUcret / 100 * 15), 2).ToString();
+                txtWorklesFonFare.Text = Math.Round((NetUcretUcret / 100 * 1), 2).ToString();
+                txtIncomeTaxFare.Text = Math.Round((NetUcretUcret / 100 * 15), 2).ToString();
                 txtStampTaxFare.Text = Math.Round((NetUcretUcret / 1000 *  759), 2).ToString();
 
 

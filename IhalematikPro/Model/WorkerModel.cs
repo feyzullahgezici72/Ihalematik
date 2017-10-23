@@ -24,7 +24,7 @@ namespace IhalematikPro.Model
                     if (this.TitleId != 0)
                     {
                         this.title = TitleProvider.Instance.GetItem(this.TitleId);
-                    } 
+                    }
                 }
 
                 return this.title;
@@ -44,11 +44,21 @@ namespace IhalematikPro.Model
         //Net Maas
         public Fare BaseFare { get; set; }
 
+        //SGK Prim Kesintisi
         public Fare SGKPrimFare { get; set; }
 
-        public Fare AGIFare { get; set; }
+        //Issizlik sigorta fonu
+        public Fare WorklesFonFare { get; set; }
 
-        public Fare StopajFare { get; set; }
+        //Gelir Vergisi
+        public Fare IncomeTaxFare { get; set; }
+
+        //Kidem Tazminati
+        public Fare SeveranceFare { get; set; }
+
+        //AGI
+        public Fare AGIFare { get; set; }
+        
 
         //Damga Vergisi
         public Fare StampTaxFare { get; set; }
@@ -71,7 +81,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                double totalAmount = this.AGIFare.Amount + this.BaseFare.Amount + this.ExtraFare.Amount + this.FoodFare.Amount + this.HotelFare.Amount + this.ISGFare.Amount + this.SGKPrimFare.Amount + this.StampTaxFare.Amount + this.StopajFare.Amount + this.TravelFare.Amount;
+                double totalAmount = this.AGIFare.Amount + this.BaseFare.Amount + this.ExtraFare.Amount + this.FoodFare.Amount + this.HotelFare.Amount + this.ISGFare.Amount + this.SGKPrimFare.Amount + this.StampTaxFare.Amount + this.TravelFare.Amount + this.WorklesFonFare.Amount + this.IncomeTaxFare.Amount + this.SeveranceFare.Amount;
 
                 return new Fare(totalAmount);
             }
@@ -100,7 +110,7 @@ namespace IhalematikPro.Model
                 return new Fare(Math.Round((this.HourFare.Amount / 60), 2));
             }
         }
-        
+
 
         public WorkerModel()
         {
@@ -120,9 +130,11 @@ namespace IhalematikPro.Model
             this.IsNormal = Entity.IsNormal;
             this.SGKPrimFare = Entity.SGKPrimFare;
             this.StampTaxFare = Entity.StampTaxFare;
-            this.StopajFare = Entity.StopajFare;
             this.Title = Entity.Title;
             this.TravelFare = Entity.TravelFare;
+            this.SeveranceFare = Entity.SeveranceFare;
+            this.IncomeTaxFare = Entity.IncomeTaxFare;
+            this.WorklesFonFare = Entity.WorklesFonFare;
         }
         public override EntityBase ToEntity()
         {
@@ -141,9 +153,11 @@ namespace IhalematikPro.Model
             worker.IsNormal = this.IsNormal;
             worker.SGKPrimFare = this.SGKPrimFare;
             worker.StampTaxFare = this.StampTaxFare;
-            worker.StopajFare = this.StopajFare;
             worker.Title = this.Title;
             worker.TravelFare = this.TravelFare;
+            worker.SeveranceFare = this.SeveranceFare;
+            worker.IncomeTaxFare = this.IncomeTaxFare;
+            worker.WorklesFonFare = this.WorklesFonFare;
             return worker;
         }
 

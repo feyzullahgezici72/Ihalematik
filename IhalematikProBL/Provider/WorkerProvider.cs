@@ -35,10 +35,16 @@ namespace IhalematikProBL.Provider
             parameters.Add("SGKPrimFareCurrency", t.SGKPrimFare.CurrencyType);
             parameters.Add("StampTaxFareAmount", t.StampTaxFare.Amount);
             parameters.Add("StampTaxFareCurrency", t.StampTaxFare.CurrencyType);
-            parameters.Add("StopajFareAmount", t.StopajFare.Amount);
-            parameters.Add("StopajFareCurrency", t.StopajFare.CurrencyType);
             parameters.Add("TravelFareAmount", t.TravelFare.Amount);
             parameters.Add("TravelFareCurrency", t.TravelFare.CurrencyType);
+
+            parameters.Add("SeveranceFareAmount", t.SeveranceFare.Amount);
+            parameters.Add("SeveranceFareCurrency", t.SeveranceFare.CurrencyType);
+            parameters.Add("IncomeTaxFareAmount", t.IncomeTaxFare.Amount);
+            parameters.Add("IncomeTaxFareCurrency", t.IncomeTaxFare.CurrencyType);
+            parameters.Add("WorklesFonFareAmount", t.WorklesFonFare.Amount);
+            parameters.Add("WorklesFonFareCurrency", t.WorklesFonFare.CurrencyType);
+
 
             return parameters;
         }
@@ -55,8 +61,10 @@ namespace IhalematikProBL.Provider
             t.ISGFare = new Fare(dr.GetValue<double>("ISGFareAmount"));
             t.SGKPrimFare = new Fare(dr.GetValue<double>("SGKPrimFareAmount"));
             t.StampTaxFare = new Fare(dr.GetValue<double>("StampTaxFareAmount"));
-            t.StopajFare = new Fare(dr.GetValue<double>("StopajFareAmount"));
             t.TravelFare = new Fare(dr.GetValue<double>("TravelFareAmount"));
+            t.SeveranceFare = new Fare(dr.GetValue<double>("SeveranceFareAmount"));
+            t.IncomeTaxFare = new Fare(dr.GetValue<double>("IncomeTaxFareAmount"));
+            t.WorklesFonFare = new Fare(dr.GetValue<double>("WorklesFonFareAmount"));
             t.IsNormal = dr.GetValue<bool>("IsNormal");
         }
     }

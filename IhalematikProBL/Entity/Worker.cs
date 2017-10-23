@@ -43,8 +43,6 @@ namespace IhalematikProBL.Entity
 
         public Fare AGIFare { get; set; }
 
-        public Fare StopajFare { get; set; }
-
         //Damga Vergisi
         public Fare StampTaxFare { get; set; }
 
@@ -62,11 +60,20 @@ namespace IhalematikProBL.Entity
         //Diger ucretler
         public Fare ExtraFare { get; set; }
 
+        //Issizlik sigorta fonu
+        public Fare WorklesFonFare { get; set; }
+
+        //Gelir Vergisi
+        public Fare IncomeTaxFare { get; set; }
+
+        //Kidem Tazminati
+        public Fare SeveranceFare { get; set; }
+
         public Fare TotalFare
         {
             get
             {
-                double totalAmount = this.AGIFare.Amount + this.BaseFare.Amount + this.ExtraFare.Amount + this.FoodFare.Amount + this.HotelFare.Amount + this.ISGFare.Amount + this.SGKPrimFare.Amount + this.StampTaxFare.Amount + this.StopajFare.Amount + this.TravelFare.Amount;
+                double totalAmount = this.AGIFare.Amount + this.BaseFare.Amount + this.ExtraFare.Amount + this.FoodFare.Amount + this.HotelFare.Amount + this.ISGFare.Amount + this.SGKPrimFare.Amount + this.StampTaxFare.Amount + this.TravelFare.Amount + this.WorklesFonFare.Amount + this.IncomeTaxFare.Amount + this.SeveranceFare.Amount;
 
                 return new Fare(totalAmount);
             }
