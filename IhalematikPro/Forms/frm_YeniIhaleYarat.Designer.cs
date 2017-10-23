@@ -48,6 +48,8 @@
             this.grdVehicle = new DevExpress.XtraGrid.GridControl();
             this.grdVehicle2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.pbControl = new DevExpress.XtraEditors.ProgressBarControl();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeklifNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -63,6 +65,8 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdVehicle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdVehicle2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -70,7 +74,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(357, 82);
+            this.label1.Location = new System.Drawing.Point(355, 100);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 24);
@@ -79,7 +83,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(360, 108);
+            this.dateTimePicker1.Location = new System.Drawing.Point(358, 126);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(318, 27);
@@ -87,12 +91,12 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.Image = global::IhalematikProUI.Properties.Resources.Button_Add_icon__1_;
-            this.simpleButton2.Location = new System.Drawing.Point(607, 0);
+            this.simpleButton2.Location = new System.Drawing.Point(595, 0);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(153, 54);
@@ -102,7 +106,7 @@
             // 
             // txtAciklama
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(165, 148);
+            this.txtAciklama.Location = new System.Drawing.Point(163, 166);
             this.txtAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -116,7 +120,7 @@
             // txtTeklifNo
             // 
             this.txtTeklifNo.Enabled = false;
-            this.txtTeklifNo.Location = new System.Drawing.Point(165, 89);
+            this.txtTeklifNo.Location = new System.Drawing.Point(163, 107);
             this.txtTeklifNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTeklifNo.Name = "txtTeklifNo";
             this.txtTeklifNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -132,7 +136,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl2.Location = new System.Drawing.Point(15, 153);
+            this.labelControl2.Location = new System.Drawing.Point(13, 171);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(143, 35);
@@ -143,7 +147,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl1.Location = new System.Drawing.Point(21, 95);
+            this.labelControl1.Location = new System.Drawing.Point(19, 113);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(136, 35);
@@ -152,12 +156,12 @@
             // 
             // btnIptal
             // 
-            this.btnIptal.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIptal.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnIptal.Appearance.Options.UseFont = true;
             this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnIptal.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
-            this.btnIptal.Location = new System.Drawing.Point(760, 0);
+            this.btnIptal.Location = new System.Drawing.Point(748, 0);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(150, 54);
@@ -177,7 +181,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(910, 54);
+            this.panelControl1.Size = new System.Drawing.Size(898, 54);
             this.panelControl1.TabIndex = 31;
             this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
@@ -190,11 +194,11 @@
             this.panelControl2.Controls.Add(this.labelControl3);
             this.panelControl2.Controls.Add(this.simpleButton2);
             this.panelControl2.Controls.Add(this.btnIptal);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(910, 54);
+            this.panelControl2.Size = new System.Drawing.Size(898, 54);
             this.panelControl2.TabIndex = 3;
             // 
             // pictureBox1
@@ -233,7 +237,7 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.groupControl1.Controls.Add(this.grdWorker);
-            this.groupControl1.Location = new System.Drawing.Point(18, 218);
+            this.groupControl1.Location = new System.Drawing.Point(13, 227);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(435, 400);
@@ -286,7 +290,7 @@
             this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.Controls.Add(this.grdVehicle);
-            this.groupControl2.Location = new System.Drawing.Point(462, 218);
+            this.groupControl2.Location = new System.Drawing.Point(457, 227);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(430, 400);
@@ -334,13 +338,31 @@
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             // 
+            // pbControl
+            // 
+            this.pbControl.Location = new System.Drawing.Point(3, 8);
+            this.pbControl.Name = "pbControl";
+            this.pbControl.Properties.Step = 1;
+            this.pbControl.Size = new System.Drawing.Size(888, 25);
+            this.pbControl.TabIndex = 33;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pbControl);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 54);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(898, 42);
+            this.panel1.TabIndex = 5;
+            // 
             // frm_YeniIhaleYarat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(910, 639);
+            this.ClientSize = new System.Drawing.Size(898, 642);
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl1);
@@ -373,6 +395,8 @@
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdVehicle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdVehicle2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,5 +424,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView grdVehicle2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraEditors.ProgressBarControl pbControl;
+        private System.Windows.Forms.Panel panel1;
     }
 }

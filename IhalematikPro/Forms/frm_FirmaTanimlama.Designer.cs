@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -56,13 +57,13 @@
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.timer1 = new System.Windows.Forms.Timer();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
@@ -431,8 +432,8 @@
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.pictureBox1);
             this.panelControl2.Controls.Add(this.labelControl1);
+            this.panelControl2.Controls.Add(this.pictureBox1);
             this.panelControl2.Controls.Add(this.btnKaydet);
             this.panelControl2.Controls.Add(this.btnKapat);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -452,22 +453,6 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
-            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.labelControl1.LineColor = System.Drawing.Color.Red;
-            this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(57, 4);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(396, 47);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = " FİRMA TANIMLAMA ";
-            this.labelControl1.UseMnemonic = false;
-            // 
             // btnKaydet
             // 
             this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -483,6 +468,22 @@
             this.btnKaydet.TabIndex = 0;
             this.btnKaydet.Text = "Güncelle";
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.labelControl1.LineColor = System.Drawing.Color.Red;
+            this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.labelControl1.Location = new System.Drawing.Point(57, 6);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.ShowLineShadow = false;
+            this.labelControl1.Size = new System.Drawing.Size(396, 47);
+            this.labelControl1.TabIndex = 5;
+            this.labelControl1.Text = " FİRMA TANIMLAMA ";
+            this.labelControl1.UseMnemonic = false;
+            // 
             // frm_FirmaTanimlama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -492,7 +493,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.groupControl2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_FirmaTanimlama";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -544,7 +545,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.TextEdit textEdit8;
         private DevExpress.XtraEditors.LabelControl labelControl9;
@@ -562,5 +562,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

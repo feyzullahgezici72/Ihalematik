@@ -13,6 +13,7 @@ using IhalematikProBL.Provider;
 using IhalematikProBL.Manager;
 using IhalematikPro.Model;
 using IhalematikPro.Manager;
+using System.Threading;
 
 namespace IhalematikPro.Forms
 {
@@ -81,8 +82,18 @@ namespace IhalematikPro.Forms
             {
                 CurrentManager.CurrentTender = tender;
             }
-            MessageBox.Show("Yeni Ihale olusturuldu...");
             
+            for (int i = 0; i <101  ; i++)
+            {
+                Thread.Sleep(10);
+                pbControl.Position = i;
+                Application.DoEvents();
+            }
+            
+            frm_BelgeKontrol bk = new frm_BelgeKontrol();
+            bk.ShowDialog();
+            
+            pbControl.Position = 0;
              
             this.Close();
         }

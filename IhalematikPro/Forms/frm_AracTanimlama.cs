@@ -103,5 +103,11 @@ namespace IhalematikPro.Forms
 
             
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            frm_AracEkle frm = new frm_AracEkle();
+            frm.ShowDialog();
+        }
     }
 }

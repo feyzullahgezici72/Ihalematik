@@ -25,8 +25,7 @@ namespace IhalematikProUI.Forms
 
         private void çalışanEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_FaalitetAlaniEkle FAE = new frm_FaalitetAlaniEkle();
-            FAE.ShowDialog();
+            
         }
 
         private void frm_TedarikciTanimlama_Load(object sender, EventArgs e)
@@ -42,6 +41,12 @@ namespace IhalematikProUI.Forms
                 frm_FaalitetAlaniEkle frm = new frm_FaalitetAlaniEkle ();
                 frm.ShowDialog();
             }
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            frm_FaalitetAlaniEkle FAE = new frm_FaalitetAlaniEkle();
+            FAE.ShowDialog();
         }
     }
 }

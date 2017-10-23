@@ -58,9 +58,6 @@
             this.txtFoodFare = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.txtSGKPrimFare = new DevExpress.XtraEditors.MemoEdit();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.çalışanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.çalışanEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grdWorker = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -69,6 +66,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -86,7 +84,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtStampTaxFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFoodFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSGKPrimFare.Properties)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdWorker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -193,7 +190,7 @@
             this.btnTemizle.Appearance.Options.UseFont = true;
             this.btnTemizle.Appearance.Options.UseForeColor = true;
             this.btnTemizle.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnTemizle.Image = global::IhalematikProUI.Properties.Resources.Actions_edit_clear_icon__1_;
+            this.btnTemizle.Image = global::IhalematikProUI.Properties.Resources.Actions_edit_clear_icon;
             this.btnTemizle.Location = new System.Drawing.Point(1596, 0);
             this.btnTemizle.Margin = new System.Windows.Forms.Padding(4);
             this.btnTemizle.Name = "btnTemizle";
@@ -237,8 +234,8 @@
             this.groupControl1.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl1.Controls.Add(this.simpleButton2);
             this.groupControl1.Controls.Add(this.groupControl2);
-            this.groupControl1.Controls.Add(this.menuStrip1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 64);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
@@ -271,8 +268,7 @@
             this.groupControl2.Controls.Add(this.txtFoodFare);
             this.groupControl2.Controls.Add(this.labelControl9);
             this.groupControl2.Controls.Add(this.txtSGKPrimFare);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl2.Location = new System.Drawing.Point(3, 72);
+            this.groupControl2.Location = new System.Drawing.Point(10, 98);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(615, 641);
@@ -512,38 +508,6 @@
             this.txtSGKPrimFare.Size = new System.Drawing.Size(416, 110);
             this.txtSGKPrimFare.TabIndex = 4;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.White;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.çalışanToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(3, 35);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(622, 37);
-            this.menuStrip1.TabIndex = 87;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // çalışanToolStripMenuItem
-            // 
-            this.çalışanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.çalışanEkleToolStripMenuItem});
-            this.çalışanToolStripMenuItem.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.çalışanToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.çalışanToolStripMenuItem.Image = global::IhalematikProUI.Properties.Resources.Untitled3;
-            this.çalışanToolStripMenuItem.Name = "çalışanToolStripMenuItem";
-            this.çalışanToolStripMenuItem.Size = new System.Drawing.Size(248, 31);
-            this.çalışanToolStripMenuItem.Text = "Faaliyet Alanı Ekle >F1";
-            // 
-            // çalışanEkleToolStripMenuItem
-            // 
-            this.çalışanEkleToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.çalışanEkleToolStripMenuItem.Name = "çalışanEkleToolStripMenuItem";
-            this.çalışanEkleToolStripMenuItem.Size = new System.Drawing.Size(258, 32);
-            this.çalışanEkleToolStripMenuItem.Text = "Faaliyet Alanı Ekle";
-            this.çalışanEkleToolStripMenuItem.Click += new System.EventHandler(this.çalışanEkleToolStripMenuItem_Click);
-            // 
             // grdWorker
             // 
             this.grdWorker.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -669,6 +633,22 @@
             this.gridColumn6.VisibleIndex = 5;
             this.gridColumn6.Width = 204;
             // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.ForestGreen;
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Appearance.Options.UseForeColor = true;
+            this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
+            this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.simpleButton2.Location = new System.Drawing.Point(3, 35);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(622, 56);
+            this.simpleButton2.TabIndex = 94;
+            this.simpleButton2.Text = "Tedarikçi Ekle > F1";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
             // frm_TedarikciTanimlama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -693,7 +673,6 @@
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
@@ -706,8 +685,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtStampTaxFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFoodFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSGKPrimFare.Properties)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdWorker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
@@ -738,9 +715,6 @@
         private DevExpress.XtraEditors.TextEdit txtFoodFare;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.MemoEdit txtSGKPrimFare;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem çalışanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem çalışanEkleToolStripMenuItem;
         private DevExpress.XtraGrid.GridControl grdWorker;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
@@ -755,5 +729,6 @@
         private DevExpress.XtraEditors.SimpleButton btnTemizle;
         private DevExpress.XtraEditors.SimpleButton btnListele;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }

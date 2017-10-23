@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Anaform));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
@@ -65,7 +66,7 @@
             this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
             this.barbtnCikisx = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -96,7 +97,10 @@
             this.ribbon.ApplicationIcon = global::IhalematikProUI.Properties.Resources.ihale;
             this.ribbon.BackColor = System.Drawing.SystemColors.Control;
             this.ribbon.ButtonGroupsVertAlign = DevExpress.Utils.VertAlignment.Center;
+            this.ribbon.ExpandCollapseItem.CloseRadialMenuOnItemClick = true;
             this.ribbon.ExpandCollapseItem.Id = 0;
+            this.ribbon.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ribbon.ForeColor = System.Drawing.Color.Teal;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
             this.barBtnDovizKurlari,
@@ -127,6 +131,7 @@
             this.barbtnCikisx,
             this.barButtonItem1,
             this.barButtonItem3});
+            this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.MaxItemId = 4;
             this.ribbon.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
@@ -143,9 +148,11 @@
             this.repositoryItemDateEdit1,
             this.repositoryItemRatingControl1,
             this.repositoryItemPopupContainerEdit2});
-            this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2007;
+            this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowCategoryInCaption = false;
+            this.ribbon.ShowFullScreenButton = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbon.ShowItemCaptionsInPageHeader = true;
             this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.ShowOnMultiplePages;
             this.ribbon.ShowToolbarCustomizeItem = false;
             this.ribbon.Size = new System.Drawing.Size(1449, 202);
@@ -415,11 +422,13 @@
             // barButtonItem1
             // 
             this.barButtonItem1.AllowAllUp = true;
-            this.barButtonItem1.Caption = "Menü";
+            this.barButtonItem1.Caption = "Çıkış";
             this.barButtonItem1.CloseRadialMenuOnItemClick = true;
             this.barButtonItem1.DropDownControl = this.popupMenu1;
             this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
             this.barButtonItem1.Id = 2;
+            this.barButtonItem1.ItemAppearance.Pressed.BackColor = System.Drawing.Color.Red;
+            this.barButtonItem1.ItemAppearance.Pressed.Options.UseBackColor = true;
             this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick_1);
@@ -437,7 +446,6 @@
             // 
             // barButtonItem3
             // 
-            this.barButtonItem3.Caption = "Programı Simge Durumuna getir";
             this.barButtonItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.Glyph")));
             this.barButtonItem3.Id = 3;
             this.barButtonItem3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.LargeGlyph")));
@@ -564,17 +572,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1449, 494);
+            this.ControlBox = false;
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbon);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.InactiveGlowColor = System.Drawing.SystemColors.Control;
             this.IsMdiContainer = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_Anaform";
             this.Ribbon = this.ribbon;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar1;
-            this.Text = "İhalematikPro Versiyon 1.0.0.0";
+            this.Text = "İhaleMatikPro 1.0.0.0";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_Anaform_Load);
             this.Resize += new System.EventHandler(this.frm_Anaform_Resize);
@@ -591,8 +602,6 @@
         }
 
         #endregion
-
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem barBtnDovizKurlari;
@@ -637,5 +646,6 @@
         private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
+        public DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
     }
 }

@@ -403,6 +403,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap green_checkmark_clip_art {
+            get {
+                object obj = ResourceManager.GetObject("green_checkmark_clip_art", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ihale {
             get {
                 object obj = ResourceManager.GetObject("ihale", resourceCulture);
@@ -476,6 +486,16 @@ namespace IhalematikProUI.Properties {
         internal static System.Drawing.Bitmap Login_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("Login-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_ihale {
+            get {
+                object obj = ResourceManager.GetObject("logo_ihale", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

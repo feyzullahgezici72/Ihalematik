@@ -17,5 +17,10 @@ namespace IhalematikPro.Forms
         {
             InitializeComponent();
         }
+
+        private void btnTamam_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

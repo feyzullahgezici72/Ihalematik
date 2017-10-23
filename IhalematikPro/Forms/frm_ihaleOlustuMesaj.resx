@@ -117,15 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="labelControl1.Text" xml:space="preserve">
-    <value>hale dosyamızı kapatmadan önce aşağıdaki hususları kontrol etmemizde fayda vardır.
-Hazırladığımız bütün belgeleri mutlaka  imzalayıp kaşemizi vurmamız  gerekir
-Anahtar Teknik personel isteniyorsa, anahtar teknik personele ait kanıtlayıcı belgeler (son dört aylık ssk belgesi yada şirketin ortağı olduğunu gösteren belgeler ve iş deneyiminin gösteren belgeler) verilmelidir.
-Mali durum bildirimi için bankalardan alınacak referans mektupları ilan tarihinden sonra alınmış olmalı ve teklif edilen tutarın en az % 10 u kadar   olmalıdır.
-İhale dosyasına koyacağımız iş deneyim belgesinin   güncellemesini yaparak verdiğimiz teklifi karşılayıp karşılamadığına bakmalı, ihale ilanındaki  benzer işler sayılacak işlerin listesiyle iş deneyim belgemizin uyuşup uyuşmadığına bakmalıyız.
-İhale dosyasının içine iş deneyim belgesinin aslını yada noter   onaylı suretini koymalıyız.
-Geçici teminatın tutarının ihale ilanında belirtilen oranı karşılayıp karşılamadığına bakmalı, geçici teminatın süresini teklif geçerlilik süresinden sonra 30 gün ilave ederek bulmalı ve kontrol etmeliyiz.
-Yapı araçları taahhütnamesi isteniyorsa bu belgede noterden onaylatılacaktır.
-Son olarak dosya kapatıldıktan sonra güzelce yapıştırılmalı ve 4 köşesi imzalanarak kaşe vurulmalıdır. Ayrıca zarfın üzerine işin    Adı, Grup numarası, İdarenin adı, ihale tarih ve saati gibi bilgiler yazılmalıdır.</value>
-  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

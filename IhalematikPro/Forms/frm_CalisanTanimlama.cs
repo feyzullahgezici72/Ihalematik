@@ -156,8 +156,7 @@ namespace IhalematikPro.Forms
 
         private void çalışanEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_CalisanEkle frm = new frm_CalisanEkle();
-            frm.ShowDialog();
+           
         }
 
         private void txtBaseFare_EditValueChanged_1(object sender, EventArgs e)
@@ -196,6 +195,17 @@ namespace IhalematikPro.Forms
         private void btnListele_Click(object sender, EventArgs e)
         {
             LoadGrid();
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            frm_CalisanEkle frm = new frm_CalisanEkle();
+            frm.ShowDialog();
         }
     }
 }
