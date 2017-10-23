@@ -30,10 +30,14 @@ namespace IhalematikPro.Forms
         public frm_Anaform()
         {
             InitializeComponent();
+             
         }
+
+        
 
         private void frm_Anaform_Load(object sender, EventArgs e)
         {
+            
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
@@ -65,7 +69,7 @@ namespace IhalematikPro.Forms
         Forms.frm_PozListesi pl;
         private void barBtnPozListesi_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //radialMenu.HidePopup();
+            RibonPasif();
             if (pl == null)
             {
                 pl = new frm_PozListesi();
@@ -83,12 +87,13 @@ namespace IhalematikPro.Forms
         private void Pl_FormClosed(object sender, FormClosedEventArgs e)
         {
             pl = null;
+            RibonAktif();
         }
 
         Forms.frm_OzelStokListesi osl;
         private void barBtnOzelStokListesi_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //radialMenu.HidePopup();
+            RibonPasif();
             if (osl == null)
             {
                 osl = new frm_OzelStokListesi();
@@ -107,6 +112,7 @@ namespace IhalematikPro.Forms
         private void Osl_FormClosed(object sender, FormClosedEventArgs e)
         {
             osl = null;
+            RibonAktif();
         }
 
         //public void AdimlarAktif()
@@ -120,15 +126,16 @@ namespace IhalematikPro.Forms
         //}
         private void barBtnTeklifHazirla_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Adimlar.Visible = true;
-            //AdimlarPasif();
+            
+             
             frm_YeniIhaleYarat frm = new frm_YeniIhaleYarat();
             frm.ShowDialog();
+            Adimlar.Visible = true;
         }
         Forms.frm_Teklif_Adim1 ta1;
         private void btnAdimx1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //radialMenu.HidePopup();
+            RibonPasif();
             if (ta1 == null)
             {
                 ta1 = new frm_Teklif_Adim1();
@@ -146,6 +153,7 @@ namespace IhalematikPro.Forms
         private void Ta1_FormClosed(object sender, FormClosedEventArgs e)
         {
             ta1 = null;
+            RibonAktif();
         }
 
         //Forms.frm_Teklif_Adim2 ta2;
@@ -174,6 +182,8 @@ namespace IhalematikPro.Forms
         Forms.frm_CalisanTanimlama ct;
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
+            RibonPasif();
+            
             //radialMenu.HidePopup();
             if (ct == null)
             {
@@ -191,11 +201,12 @@ namespace IhalematikPro.Forms
         private void Ct_FormClosed(object sender, FormClosedEventArgs e)
         {
             ct = null;
+            RibonAktif();
         }
         Forms.frm_Teklif_Adim3 ta3;
         private void btnAdimx3_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //radialMenu.HidePopup();
+            RibonPasif();
             if (ta3 == null)
             {
                 ta3 = new frm_Teklif_Adim3();
@@ -212,12 +223,13 @@ namespace IhalematikPro.Forms
         private void Ta3_FormClosed(object sender, FormClosedEventArgs e)
         {
             ta3 = null;
+            RibonAktif();
         }
 
         Forms.frm_Teklif_Adim4 ta4;
         private void btnAdimx4_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //radialMenu.HidePopup();
+            RibonPasif();
             if (ta4 == null)
             {
                 ta4 = new frm_Teklif_Adim4();
@@ -234,6 +246,7 @@ namespace IhalematikPro.Forms
         private void Ta4_FormClosed(object sender, FormClosedEventArgs e)
         {
             ta4 = null;
+            RibonAktif();
         }
 
         private void barBtnProgramHakkinda_ItemClick(object sender, ItemClickEventArgs e)
@@ -249,7 +262,7 @@ namespace IhalematikPro.Forms
         frm_AracTanimlama at;
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //radialMenu.HidePopup();
+            RibonPasif();
             if (at == null)
             {
                 at = new frm_AracTanimlama();
@@ -266,11 +279,13 @@ namespace IhalematikPro.Forms
         private void At_FormClosed(object sender, FormClosedEventArgs e)
         {
             at = null;
+            RibonAktif();
         }
 
         frm_DevamEdenIhaleListesi dei;
         private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
         {
+            RibonPasif();
             if (dei == null)
             {
                 dei = new frm_DevamEdenIhaleListesi();
@@ -287,6 +302,7 @@ namespace IhalematikPro.Forms
         private void Dei_FormClosed(object sender, FormClosedEventArgs e)
         {
             dei = null;
+            RibonAktif();
         }
 
         private void pasif_ItemClick(object sender, ItemClickEventArgs e)
@@ -298,6 +314,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
         {
+            RibonPasif();
             if (tt == null)
             {
                 tt = new frm_TedarikciTanimlama();
@@ -314,6 +331,7 @@ namespace IhalematikPro.Forms
         private void Tt_FormClosed(object sender, FormClosedEventArgs e)
         {
             tt = null;
+            RibonAktif();
         }
 
         private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
@@ -324,6 +342,7 @@ namespace IhalematikPro.Forms
         frm_TeklifListesi tl;
         private void barButtonItem13_ItemClick(object sender, ItemClickEventArgs e)
         {
+            RibonPasif();
             if (tl == null)
             {
                 tl = new frm_TeklifListesi();
@@ -340,11 +359,12 @@ namespace IhalematikPro.Forms
         private void Tl_FormClosed(object sender, FormClosedEventArgs e)
         {
             tl = null;
+            RibonAktif();
         }
         frm_MalzemeFiyatTeklifiOlustur mfto;
         private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            RibonPasif();
             if (mfto == null)
             {
                 mfto = new frm_MalzemeFiyatTeklifiOlustur();
@@ -362,10 +382,12 @@ namespace IhalematikPro.Forms
         private void Mfto_FormClosed(object sender, FormClosedEventArgs e)
         {
             mfto = null;
+            RibonAktif();
         }
         frm_TedarikcilerdenFiyatAl tfa;
         private void barButtonItem15_ItemClick(object sender, ItemClickEventArgs e)
         {
+            RibonPasif();
             if (tfa == null)
             {
                 tfa = new frm_TedarikcilerdenFiyatAl();
@@ -383,10 +405,12 @@ namespace IhalematikPro.Forms
         private void Tfa_FormClosed(object sender, FormClosedEventArgs e)
         {
             tfa = null;
+            RibonAktif();
         }
         frm_TeklifSonAdim ts;
         private void btnAdimx5_ItemClick(object sender, ItemClickEventArgs e)
         {
+            RibonPasif();
             if (ts == null)
             {
                 ts = new frm_TeklifSonAdim();
@@ -403,6 +427,7 @@ namespace IhalematikPro.Forms
         private void Ts_FormClosed(object sender, FormClosedEventArgs e)
         {
             ts = null;
+            RibonAktif();
         }
 
         private void barButtonItem23_ItemClick(object sender, ItemClickEventArgs e)
@@ -482,6 +507,29 @@ namespace IhalematikPro.Forms
         private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
         {
 
+        }
+
+        private void frm_Anaform_Deactivate(object sender, EventArgs e)
+        {
+            //ribbon.Enabled = false;
+        }
+
+        private void frm_Anaform_Activated(object sender, EventArgs e)
+        {
+            //ribbon.Enabled = true;
+        }
+
+        public void RibonAktif()
+        {
+            ribbon.Enabled = true;
+        }
+        public void RibonPasif()
+        {
+            ribbon.Enabled = false;
+        }
+        private void barButtonItem2_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            //childForm.ShowDialog(this);
         }
     }
 }

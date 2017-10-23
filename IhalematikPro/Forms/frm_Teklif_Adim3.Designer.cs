@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtWorkerMarkup = new System.Windows.Forms.MaskedTextBox();
+            this.btnTumuneUygula = new DevExpress.XtraEditors.SimpleButton();
             this.lblTenderNumber = new DevExpress.XtraEditors.LabelControl();
             this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -49,11 +52,10 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.grdMaterialListIsWorkship = new System.Windows.Forms.DataGridView();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtWorkerMarkup = new System.Windows.Forms.MaskedTextBox();
-            this.btnTumuneUygula = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
@@ -65,7 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialListIsWorkship)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -73,6 +74,7 @@
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.simpleButton1);
             this.panelControl2.Controls.Add(this.groupBox1);
             this.panelControl2.Controls.Add(this.lblTenderNumber);
             this.panelControl2.Controls.Add(this.lblTenderDescription);
@@ -84,6 +86,46 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1376, 105);
             this.panelControl2.TabIndex = 22;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtWorkerMarkup);
+            this.groupBox1.Controls.Add(this.btnTumuneUygula);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Crimson;
+            this.groupBox1.Location = new System.Drawing.Point(1206, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(170, 105);
+            this.groupBox1.TabIndex = 38;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Kar % \'si";
+            // 
+            // txtWorkerMarkup
+            // 
+            this.txtWorkerMarkup.Location = new System.Drawing.Point(7, 43);
+            this.txtWorkerMarkup.Mask = "##%";
+            this.txtWorkerMarkup.Name = "txtWorkerMarkup";
+            this.txtWorkerMarkup.Size = new System.Drawing.Size(66, 27);
+            this.txtWorkerMarkup.TabIndex = 41;
+            this.txtWorkerMarkup.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btnTumuneUygula
+            // 
+            this.btnTumuneUygula.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTumuneUygula.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnTumuneUygula.Appearance.Options.UseFont = true;
+            this.btnTumuneUygula.Appearance.Options.UseForeColor = true;
+            this.btnTumuneUygula.AutoSize = true;
+            this.btnTumuneUygula.Image = global::IhalematikProUI.Properties.Resources.ok_icon__1_1;
+            this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnTumuneUygula.Location = new System.Drawing.Point(80, 33);
+            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTumuneUygula.Name = "btnTumuneUygula";
+            this.btnTumuneUygula.Size = new System.Drawing.Size(44, 46);
+            this.btnTumuneUygula.TabIndex = 34;
             // 
             // lblTenderNumber
             // 
@@ -313,47 +355,15 @@
             this.grdMaterialListIsWorkship.Name = "grdMaterialListIsWorkship";
             this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(1376, 491);
             this.grdMaterialListIsWorkship.TabIndex = 26;
-            this.grdMaterialListIsWorkship.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdMaterialListIsWorkship_RowEnter);
             // 
-            // groupBox1
+            // simpleButton1
             // 
-            this.groupBox1.Controls.Add(this.txtWorkerMarkup);
-            this.groupBox1.Controls.Add(this.btnTumuneUygula);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Crimson;
-            this.groupBox1.Location = new System.Drawing.Point(1240, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(136, 105);
-            this.groupBox1.TabIndex = 38;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Kar % \'si";
-            // 
-            // txtWorkerMarkup
-            // 
-            this.txtWorkerMarkup.Location = new System.Drawing.Point(7, 52);
-            this.txtWorkerMarkup.Mask = "##%";
-            this.txtWorkerMarkup.Name = "txtWorkerMarkup";
-            this.txtWorkerMarkup.Size = new System.Drawing.Size(66, 27);
-            this.txtWorkerMarkup.TabIndex = 41;
-            this.txtWorkerMarkup.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // btnTumuneUygula
-            // 
-            this.btnTumuneUygula.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTumuneUygula.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnTumuneUygula.Appearance.Options.UseFont = true;
-            this.btnTumuneUygula.Appearance.Options.UseForeColor = true;
-            this.btnTumuneUygula.AutoSize = true;
-            this.btnTumuneUygula.Image = global::IhalematikProUI.Properties.Resources.ok_icon__1_1;
-            this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(80, 46);
-            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTumuneUygula.Name = "btnTumuneUygula";
-            this.btnTumuneUygula.Size = new System.Drawing.Size(44, 40);
-            this.btnTumuneUygula.TabIndex = 34;
+            this.simpleButton1.Location = new System.Drawing.Point(733, 50);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(397, 47);
+            this.simpleButton1.TabIndex = 39;
+            this.simpleButton1.Text = "Satır Üzerinde enter yada duble click olursa";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // frm_Teklif_Adim3
             // 
@@ -377,6 +387,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -390,8 +402,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialListIsWorkship)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -421,5 +431,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MaskedTextBox txtWorkerMarkup;
         private DevExpress.XtraEditors.SimpleButton btnTumuneUygula;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

@@ -89,8 +89,8 @@ namespace IhalematikPro.Forms
                 pbControl.Position = i;
                 Application.DoEvents();
             }
-            
-            frm_BelgeKontrol bk = new frm_BelgeKontrol();
+
+            frm_ihaleOlustuMesaj bk = new frm_ihaleOlustuMesaj();
             bk.ShowDialog();
             
             pbControl.Position = 0;

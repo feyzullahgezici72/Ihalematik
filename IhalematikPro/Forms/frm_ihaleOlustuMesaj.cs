@@ -11,12 +11,14 @@ using DevExpress.XtraEditors;
 
 namespace IhalematikPro.Forms
 {
-    public partial class frm_BelgeKontrol : DevExpress.XtraEditors.XtraForm
+    public partial class frm_ihaleOlustuMesaj : DevExpress.XtraEditors.XtraForm
     {
-        public frm_BelgeKontrol()
+        public frm_ihaleOlustuMesaj()
         {
             InitializeComponent();
         }
+
+      
 
         private void btnTamam_Click(object sender, EventArgs e)
         {
@@ -35,12 +37,12 @@ namespace IhalematikPro.Forms
             }
         }
 
-        private void frm_BelgeKontrol_Load(object sender, EventArgs e)
+        private void frm_ihaleOlustuMesaj_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
         }
 
-        private void frm_BelgeKontrol_FormClosed(object sender, FormClosedEventArgs e)
+        private void frm_ihaleOlustuMesaj_FormClosed(object sender, FormClosedEventArgs e)
         {
             timer1.Enabled = false;
         }

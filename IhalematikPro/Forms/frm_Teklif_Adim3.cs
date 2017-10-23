@@ -233,7 +233,12 @@ namespace IhalematikPro.Forms
 
         private void grdMaterialListIsWorkship_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            frm_IscilikIslemKayit frm = new frm_IscilikIslemKayit();
+         
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+             frm_IscilikIslemKayit frm = new frm_IscilikIslemKayit();
             frm.ShowDialog();
         }
     }
