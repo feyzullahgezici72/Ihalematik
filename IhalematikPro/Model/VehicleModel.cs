@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SimpleApplicationBase.BL.Base;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
+using IhalematikProBL.Enum;
 
 namespace IhalematikPro.Model
 {
@@ -36,24 +37,46 @@ namespace IhalematikPro.Model
         {
             get
             {
-                return new Fare(IhalematikProBL.Enum.CurrencyTypesEnum.TL, 0);
+                return new Fare(IhalematikProBL.Enum.CurrencyTypesEnum.TL, this.MonthPrice);
             }
         }
 
-        //calisacak saat
-        public float WorkHour { get; set; }
+        //Gunluk yakit(LT)
+        public float FuelOilDay { get; set; }
 
-        //saatlik gider
-        public double HourPrice { get; set; }
+        //Yakit litre fiyati(LT)
+        public double FuelOilFare { get; set; }
 
-        //diger giderler
-        public double OtherPrice { get; set; }
+        //Sofor yevmiyesi
+        public double DriverFare { get; set; }
 
+        //Bakim Gideri
+        public double MaintenanceFare { get; set; }
+
+        //Bakim Gideri
+        public double ServiceFare { get; set; }
+
+        //Bakim Gideri
+        public double GeneralFare { get; set; }
+
+        //Bakim Gideri
+        public double OtherFare { get; set; }
+
+        public RentTypesEnum RentType { get; set; }
+
+        public double HourPrice
+        {
+            get
+            {
+                return Math.Round(this.DayPrice / 8);
+            }
+        }
         public double DayPrice
         {
             get
             {
-                return Math.Round(this.HourPrice * 8, 2);
+                //return 0;
+                return Math.Round(this.MonthPrice / 30);
             }
         }
 
@@ -61,10 +84,9 @@ namespace IhalematikPro.Model
         {
             get
             {
-                return Math.Round(this.DayPrice * 30, 2);
+                return Math.Round(this.DriverFare + (this.FuelOilDay * this.FuelOilFare * 30) + this.GeneralFare + this.MaintenanceFare + this.OtherFare + this.ServiceFare);
             }
         }
-
 
         public VehicleModel()
         {
@@ -73,25 +95,34 @@ namespace IhalematikPro.Model
 
         public VehicleModel(Vehicle Vehicle)
         {
-            this.HourPrice = Vehicle.HourPrice;
             this.Id = Vehicle.Id;
             this.IsCompanyVehicle = Vehicle.IsCompanyVehicle;
-            this.OtherPrice = Vehicle.OtherPrice;
             this.TitleId = Vehicle.TitleId;
-            this.WorkHour = Vehicle.WorkHour;
+            this.FuelOilFare = Vehicle.FuelOilFare;
+            this.FuelOilDay = Vehicle.FuelOilDay;
+            this.DriverFare = Vehicle.DriverFare;
+            this.MaintenanceFare = Vehicle.MaintenanceFare;
+            this.ServiceFare = Vehicle.ServiceFare;
+            this.GeneralFare = Vehicle.GeneralFare;
+            this.OtherFare = Vehicle.OtherFare;
         }
         public override EntityBase ToEntity()
         {
             Vehicle vehicle = new Vehicle();
-            vehicle.HourPrice = this.HourPrice;
+
             if (this.Id.HasValue)
             {
                 vehicle.Id = this.Id.Value;
             }
             vehicle.IsCompanyVehicle = this.IsCompanyVehicle;
-            vehicle.OtherPrice = this.OtherPrice;
             vehicle.TitleId = this.TitleId;
-            vehicle.WorkHour = this.WorkHour;
+            vehicle.FuelOilFare = this.FuelOilFare;
+            vehicle.FuelOilDay = this.FuelOilDay;
+            vehicle.DriverFare = this.DriverFare;
+            vehicle.MaintenanceFare = this.MaintenanceFare;
+            vehicle.ServiceFare = this.ServiceFare;
+            vehicle.GeneralFare = this.GeneralFare;
+            vehicle.OtherFare = this.OtherFare;
 
             return vehicle;
         }

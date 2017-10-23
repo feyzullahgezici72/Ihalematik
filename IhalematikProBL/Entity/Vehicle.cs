@@ -1,4 +1,5 @@
-﻿using IhalematikProBL.Provider;
+﻿using IhalematikProBL.Enum;
+using IhalematikProBL.Provider;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,22 +31,58 @@ namespace IhalematikProBL.Entity
         //sirket aracimi?
         public bool IsCompanyVehicle { get; set; }
 
-        //calisacak saat
-        public float WorkHour { get; set; }
-
-        //saatlik gider
-        public double HourPrice { get; set; }
-
-        //diger giderler
-        public double OtherPrice { get; set; }
-
-
         public Fare TotalFare
         {
             get
             {
-                return new Fare(IhalematikProBL.Enum.CurrencyTypesEnum.TL, 0);
+                return new Fare(IhalematikProBL.Enum.CurrencyTypesEnum.TL, this.MonthPrice);
             }
         }
+
+        public double HourPrice
+        {
+            get
+            {
+                return Math.Round(this.DayPrice / 8);
+            }
+        }
+        public double DayPrice
+        {
+            get
+            {
+                //return 0;
+                return Math.Round(this.MonthPrice / 30);
+            }
+        }
+
+        public double MonthPrice
+        {
+            get
+            {
+                return Math.Round(this.DriverFare + (this.FuelOilDay * this.FuelOilFare * 30) + this.GeneralFare + this.MaintenanceFare + this.OtherFare + this.ServiceFare);
+            }
+        }
+
+        //Gunluk yakit(LT)
+        public float FuelOilDay { get; set; }
+
+        //Yakit litre fiyati(LT)
+        public double FuelOilFare { get; set; }
+
+        //Sofor yevmiyesi
+        public double DriverFare { get; set; }
+
+        //Bakim Gideri
+        public double MaintenanceFare { get; set; }
+
+        //Bakim Gideri
+        public double ServiceFare { get; set; }
+
+        //Bakim Gideri
+        public double GeneralFare { get; set; }
+
+        //Bakim Gideri
+        public double OtherFare { get; set; }
+        public RentTypesEnum RentType { get; set; }
     }
 }

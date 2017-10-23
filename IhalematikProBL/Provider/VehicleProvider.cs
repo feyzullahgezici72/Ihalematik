@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using SimpleApplicationBase.Toolkit;
+using IhalematikProBL.Enum;
 
 namespace IhalematikProBL.Provider
 {
@@ -14,11 +15,16 @@ namespace IhalematikProBL.Provider
         protected override Hashtable GetCommonParameters(Vehicle t)
         {
             Hashtable parameters = base.GetCommonParameters(t);
-            parameters.Add("HourPrice", t.HourPrice);
             parameters.Add("IsCompanyVehicle", t.IsCompanyVehicle);
-            parameters.Add("OtherPrice", t.OtherPrice);
             parameters.Add("TitleId", t.TitleId);
-            parameters.Add("WorkHour", t.WorkHour);
+            parameters.Add("DriverFare", t.DriverFare);
+            parameters.Add("FuelOilDay", t.FuelOilDay);
+            parameters.Add("FuelOilFare", t.FuelOilFare);
+            parameters.Add("GeneralFare", t.GeneralFare);
+            parameters.Add("MaintenanceFare", t.MaintenanceFare);
+            parameters.Add("OtherFare", t.OtherFare);
+            parameters.Add("ServiceFare", t.ServiceFare);
+            parameters.Add("RentType", t.RentType);
 
             return parameters;
         }
@@ -26,11 +32,17 @@ namespace IhalematikProBL.Provider
         protected override void Initialize(Vehicle t, Dictionary<string, object> dr)
         {
             base.Initialize(t, dr);
-            t.HourPrice = dr.GetValue<float>("HourPrice");
             t.IsCompanyVehicle = dr.GetValue<bool>("IsCompanyVehicle");
-            t.OtherPrice = dr.GetValue<float>("OtherPrice");
             t.TitleId = dr.GetValue<int>("TitleId");
-            t.WorkHour = dr.GetValue<float>("WorkHour");
+            t.DriverFare = dr.GetValue<double>("DriverFare");
+            t.FuelOilDay = dr.GetValue<float>("FuelOilDay");
+            t.FuelOilFare = dr.GetValue<double>("FuelOilFare");
+            t.GeneralFare = dr.GetValue<double>("GeneralFare");
+            t.MaintenanceFare = dr.GetValue<double>("MaintenanceFare");
+            t.OtherFare = dr.GetValue<double>("OtherFare");
+            t.RentType = dr.GetValue<RentTypesEnum>("RentType");
+            t.ServiceFare = dr.GetValue<double>("ServiceFare");
+
         }
 
     }

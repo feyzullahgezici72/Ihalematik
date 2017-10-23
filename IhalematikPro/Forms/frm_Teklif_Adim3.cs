@@ -72,7 +72,7 @@ namespace IhalematikPro.Forms
                 {
                     GridColumn unbColumn = new GridColumn();
                     column = new DataGridViewTextBoxColumn();
-                    column.DataPropertyName = "TenderEquipments.Quantity";
+                    column.DataPropertyName = "TenderMaterialListEquipment.Quantity";
 
                     if (item.IsWorker)
                     {
@@ -167,6 +167,7 @@ namespace IhalematikPro.Forms
             List<MaterialListModel> items = CurrentManager.MaterialListIsWorkship;
             foreach (MaterialListModel materialListModel in items)
             {
+                
                 materialListModel.Save();
 
                 foreach (TenderEquipment tenderEquipment in materialListModel.TenderEquipments)

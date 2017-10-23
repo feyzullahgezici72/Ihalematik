@@ -167,6 +167,10 @@ namespace IhalematikPro.Model
                             {
                                 this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
                             }
+                            else
+                            {
+                                this.workerUnitPrice += Math.Round((item.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                            }
                         }
                     }
                     else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Hour)
@@ -176,6 +180,10 @@ namespace IhalematikPro.Model
                             if (item.IsWorker)
                             {
                                 this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount / (30 * 8)), 2) * this.UnitTime * item.Quantity;
+                            }
+                            else
+                            {
+                                this.workerUnitPrice += Math.Round((item.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
                             }
                         }
                     }
@@ -187,6 +195,10 @@ namespace IhalematikPro.Model
                             {
                                 this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount / 30), 2) * this.UnitTime * item.Quantity;
                             }
+                            else
+                            {
+                                this.workerUnitPrice += Math.Round((item.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                            }
                         }
                     }
                     else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Week)
@@ -196,6 +208,10 @@ namespace IhalematikPro.Model
                             if (item.IsWorker)
                             {
                                 this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount / 4), 2) * this.UnitTime * item.Quantity;
+                            }
+                            else
+                            {
+                                this.workerUnitPrice += Math.Round((item.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
                             }
                         }
                     }
@@ -207,6 +223,10 @@ namespace IhalematikPro.Model
                             {
                                 this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount), 2) * this.UnitTime * item.Quantity;
                             }
+                            else
+                            {
+                                this.workerUnitPrice += Math.Round((item.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                            }
                         }
                     }
                     else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Year)
@@ -216,6 +236,10 @@ namespace IhalematikPro.Model
                             if (item.IsWorker)
                             {
                                 this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount), 2) * 12 * this.UnitTime * item.Quantity;
+                            }
+                            else
+                            {
+                                this.workerUnitPrice += Math.Round((item.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
                             }
                         }
                     }
@@ -250,7 +274,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                if (this.tenderEquipments == null)
+                if (this.tenderMaterialListEquipment == null)
                 {
                     this.tenderMaterialListEquipment = TenderMaterialListEquipmentProvider.Instance.GetItems("TenderId", CurrentManager.CurrentTender.Id);
                 }
@@ -269,6 +293,23 @@ namespace IhalematikPro.Model
         //BIRIM SURE
         public int UnitTime { get; set; }
 
+        public int TenderId { get; set; }
+        private Tender tender { get; set; }
+        public Tender Tender
+        {
+            get
+            {
+                if (this.tender == null)
+                {
+                    if (this.TenderId != 0)
+                    {
+                        this.tender = TenderProvider.Instance.GetItem(this.TenderId);
+                    }
+                }
+                return this.tender;
+            }
+        }
+
         public MaterialListModel()
         {
 
@@ -282,6 +323,7 @@ namespace IhalematikPro.Model
             this.Id = Entity.Id;
             this.IsPoz = Entity.IsPoz;
             this.Markup = Entity.Markup;
+            this.TenderId = Entity.TenderId;
         }
 
         public override EntityBase ToEntity()
@@ -294,6 +336,7 @@ namespace IhalematikPro.Model
             materialList.Markup = this.Markup;
             materialList.PozOBFId = this.PozOBFId;
             materialList.Quantity = this.Quantity;
+            materialList.TenderId = this.TenderId;
             return materialList;
         }
 

@@ -33,7 +33,7 @@ namespace IhalematikPro.Forms
 
         private void araçEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         public void InitilalizeForm()
@@ -52,7 +52,7 @@ namespace IhalematikPro.Forms
         {
             LoadGrid();
             this.KeyPreview = true;
-            this.KeyDown +=new KeyEventHandler(Frm_AracTanimlama_KeyDown);
+            this.KeyDown += new KeyEventHandler(Frm_AracTanimlama_KeyDown);
         }
 
         private void Frm_AracTanimlama_KeyDown(object sender, KeyEventArgs e)
@@ -62,17 +62,32 @@ namespace IhalematikPro.Forms
                 frm_AracEkle frm = new frm_AracEkle();
                 frm.ShowDialog();
             }
-           
+
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             VehicleModel model = new VehicleModel();
-            model.HourPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtExpenseHour.Text);
-            //model.IsCompanyVehicle = rbCompanyVehicle.Checked;
-            model.OtherPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtOtherPrice.Text);
-            model.WorkHour = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtWorkHour.Text);
+            if (rdHour.Checked)
+            {
+                model.RentType = IhalematikProBL.Enum.RentTypesEnum.Hour;
+            }
+            else if (rdDay.Checked)
+            {
+                model.RentType = IhalematikProBL.Enum.RentTypesEnum.Day;
+            }
+            else if (rdMonth.Checked)
+            {
+                model.RentType = IhalematikProBL.Enum.RentTypesEnum.Month;
+            }
             model.TitleId = ((VehicleTitleModel)ddlVehicleTitle.SelectedItem).Id.Value;
+            model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtFuelOilFare.Text);
+            model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtFuelOilDay.Text);
+            model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtDriverFare.Text);
+            model.MaintenanceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMaintenanceFare.Text);
+            model.ServiceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtServiceFare.Text);
+            model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtGeneralFare.Text);
+            model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtOtherFare.Text);
             model.Save();
             LoadGrid();
         }
@@ -101,7 +116,7 @@ namespace IhalematikPro.Forms
             PanelSirket.Visible = false;
             PanelKira.Location = new Point(13, 72);
 
-            
+
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

@@ -19,6 +19,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("PozOBFId", t.PozOBFId);
             parameters.Add("KDVPercentage", t.KDVPercentage);
             parameters.Add("IsPoz", t.IsPoz);
+            parameters.Add("IsWorkship", t.IsWorkship); 
             parameters.Add("Markup", t.Markup);
             parameters.Add("TenderId", t.TenderId);
             return parameters;
@@ -28,6 +29,7 @@ namespace IhalematikProBL.Provider
         {
             base.Initialize(t, dr);
             t.IsPoz = dr.GetValue<bool>("IsPoz");
+            t.IsWorkship = dr.GetValue<bool>("IsWorkship");
             t.KDVPercentage = dr.GetValue<float>("KDVPercentage");
             t.PozOBFId = dr.GetValue<int>("PozOBFId");
             t.Quantity = dr.GetValue<float>("Quantity");

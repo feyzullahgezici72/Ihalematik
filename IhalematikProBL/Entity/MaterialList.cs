@@ -70,5 +70,7 @@ namespace IhalematikProBL.Entity
                 return this.tender;
             }
         }
+
+
     }
 }
