@@ -78,5 +78,61 @@ namespace IhalematikProBL.Entity
         //BIRIM SURE
         public int UnitTime { get; set; }
 
+        private List<TenderEquipment> tenderEquipments = null;
+
+        public List<TenderEquipment> TenderEquipments
+        {
+            get
+            {
+                if (this.tenderEquipments == null)
+                {
+                    this.tenderEquipments = TenderEquipmentProvider.Instance.GetItems("TenderId", this.Tender.Id);
+                }
+                return this.tenderEquipments;
+            }
+            set
+            {
+                this.tenderEquipments = value;
+            }
+        }
+
+        private List<TenderMaterialListEquipment> tenderMaterialListEquipment = null;
+
+        public List<TenderMaterialListEquipment> TenderMaterialListEquipment
+        {
+            get
+            {
+                if (this.tenderMaterialListEquipment == null)
+                {
+                    this.tenderMaterialListEquipment = new List<IhalematikProBL.Entity.TenderMaterialListEquipment>();
+                    foreach (TenderEquipment item in this.TenderEquipments)
+                    {
+                        Dictionary<string, object> parameters = new Dictionary<string, object>();
+                        parameters.Add("TenderId", this.Tender.Id);
+                        parameters.Add("MaterialId", this.Id);
+                        parameters.Add("EquipmentId", item.Id);
+
+                        TenderMaterialListEquipment tenderMaterialListEquipment = TenderMaterialListEquipmentProvider.Instance.GetItems(parameters).FirstOrDefault();
+                        if (tenderMaterialListEquipment == null)
+                        {
+                            tenderMaterialListEquipment = new IhalematikProBL.Entity.TenderMaterialListEquipment()
+                            {
+                                TenderId = this.Tender.Id,
+                                MaterialListId = this.Id,
+                                EquipmentId = item.Id
+                            };
+                        }
+                        this.tenderMaterialListEquipment.Add(tenderMaterialListEquipment);
+                    }
+                }
+                return this.tenderMaterialListEquipment;
+            }
+            set
+            {
+                this.tenderMaterialListEquipment = value;
+            }
+        }
+
+
     }
 }

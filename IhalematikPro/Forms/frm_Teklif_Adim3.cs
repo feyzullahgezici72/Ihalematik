@@ -27,6 +27,7 @@ namespace IhalematikPro.Forms
 {
     public partial class frm_Teklif_Adim3 : DevExpress.XtraEditors.XtraForm
     {
+        public bool IsInitializeTenderMaterialListEquipment = false;
         public frm_Teklif_Adim3()
         {
             InitializeComponent();
@@ -108,12 +109,18 @@ namespace IhalematikPro.Forms
 
         private void InitializeTenderMaterialListEquipment()
         {
-            MaterialListModel[] items = CurrentManager.MaterialListIsWorkship.ToArray();
+            if (IsInitializeTenderMaterialListEquipment)
+            {
+                //return;
+            }
+            
+            List<MaterialList> items = CurrentManager.CurrentTender.MaterialListIsWorkship;
+            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
 
             foreach (DataGridViewRow CurrentRow in grdMaterialListIsWorkship.Rows)
             {
-                MaterialListModel item = items[CurrentRow.Index];
-
+                MaterialListModel item = models.ToArray()[CurrentRow.Index];
+               
                 if (item.TenderMaterialListEquipment != null)
                 {
                     foreach (TenderMaterialListEquipment tenderMaterialListEquipment in item.TenderMaterialListEquipment)
@@ -134,22 +141,26 @@ namespace IhalematikPro.Forms
                     }
                 }
             }
+
+            //grdMaterialListIsWorkship.Refresh();
+            IsInitializeTenderMaterialListEquipment = true;
         }
 
         private void frm_Teklif_Adim3_Load(object sender, EventArgs e)
         {
             lblTenderDescription.Text = CurrentManager.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.CurrentTender.DisplayNumber;
-            List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
-            CurrentManager.MaterialListIsWorkship = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            grdMaterialListIsWorkship.DataSource = CurrentManager.MaterialListIsWorkship;
+            List<MaterialList> items = CurrentManager.CurrentTender.MaterialListIsWorkship;
+            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            grdMaterialListIsWorkship.DataSource = models;
         }
 
         private void GrdMaterialListIsWorkship_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             string currentColumnName = grdMaterialListIsWorkship.Columns[e.ColumnIndex].Name;
-            List<MaterialListModel> items = CurrentManager.MaterialListIsWorkship;
-            MaterialListModel materialListModel = CurrentManager.MaterialListIsWorkship.ToArray()[e.RowIndex];
+            List<MaterialList> items = CurrentManager.CurrentTender.MaterialListIsWorkship;
+            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            MaterialListModel materialListModel = models.ToArray()[e.RowIndex];
             if (currentColumnName.Equals("WorkerMarkup"))
             {
                 double value = Convert.ToDouble(grdMaterialListIsWorkship["WorkerMarkup", grdMaterialListIsWorkship.CurrentRow.Index].Value);
@@ -164,7 +175,7 @@ namespace IhalematikPro.Forms
                 UnitTimeTypesModel value = (UnitTimeTypesModel)grdMaterialListIsWorkship["UnitTimeType", grdMaterialListIsWorkship.CurrentRow.Index].Value;
                 materialListModel.UnitTimeType = value;
             }
-            else if (materialListModel.TenderEquipments != null)
+            else if (materialListModel.TenderMaterialListEquipment != null)
             {
                 foreach (TenderMaterialListEquipment equipmentItem in materialListModel.TenderMaterialListEquipment)
                 {
@@ -181,6 +192,16 @@ namespace IhalematikPro.Forms
                     {
                         int value = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(grdMaterialListIsWorkship[columnName, grdMaterialListIsWorkship.CurrentRow.Index].Value);
                         equipmentItem.Quantity = value;
+
+                        MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
+                        if (materialList != null)
+                        {
+                            TenderMaterialListEquipment tenderMaterialListEquipment = materialList.TenderMaterialListEquipment.Where(k => k.Id == equipmentItem.Id).First();
+                            if (tenderMaterialListEquipment != null)
+                            {
+                                tenderMaterialListEquipment.Quantity = value;
+                            }
+                        }
                     }
                 }
             }
@@ -191,25 +212,21 @@ namespace IhalematikPro.Forms
         private void btnTumuneUygulaIscilik_Click(object sender, EventArgs e)
         {
             double markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtWorkerMarkup.Text);
-            CurrentManager.MaterialListIsWorkship.ForEach(p => p.WorkerMarkup = markup);
-            grdMaterialListIsWorkship.DataSource = CurrentManager.MaterialListIsWorkship;
-            grdMaterialListIsWorkship.Refresh();
+            //CurrentManager.CurrentTender.MaterialListIsWorkship.ForEach(p => p = markup);
+            //grdMaterialListIsWorkship.DataSource = CurrentManager.MaterialListIsWorkship;
+            //grdMaterialListIsWorkship.Refresh();
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            List<MaterialListModel> items = CurrentManager.MaterialListIsWorkship;
-            foreach (MaterialListModel materialListModel in items)
+            List<MaterialList> items = CurrentManager.CurrentTender.MaterialListIsWorkship;
+            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            foreach (MaterialListModel materialListModel in models)
             {
                 materialListModel.Save();
 
                 foreach (TenderMaterialListEquipment tenderMaterialListEquipment in materialListModel.TenderMaterialListEquipment)
                 {
-                    //TenderMaterialListEquipment tenderMaterialListEquipment = new TenderMaterialListEquipment();
-                    //tenderMaterialListEquipment.EquipmentId = tenderEquipment.Id;
-                    //tenderMaterialListEquipment.TenderId = CurrentManager.CurrentTender.Id;
-                    //tenderMaterialListEquipment.MaterialListId = materialListModel.Id.Value;
-                    //tenderMaterialListEquipment.Quantity = tenderEquipment.Quantity;
                     TenderMaterialListEquipmentProvider.Instance.Save(tenderMaterialListEquipment);
                 }
             }
