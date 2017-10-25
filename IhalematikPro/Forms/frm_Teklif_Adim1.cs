@@ -97,7 +97,7 @@ namespace IhalematikPro.Forms
                 item.TenderId = CurrentManager.CurrentTender.Id;
                 MaterialListProvider.Instance.Save(item);
             }
-
+            this.Enabled = false;
             frm_ihaleOlustuMesaj frm = new frm_ihaleOlustuMesaj();
             frm.lblMesaj.Text = "Malzemeler Kaydedildi...";
             frm.ShowDialog();
@@ -105,8 +105,11 @@ namespace IhalematikPro.Forms
 
             this.Close();
 
-            //frm_Anaform frm = new frm_Anaform();
-            //frm.btnAdimx3.PerformClick();
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+             
+            af.btnAdimx3.Enabled = true;
+            af.btnAdimx4.Enabled = true;
+            af.btnAdimx5.Enabled = true;
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

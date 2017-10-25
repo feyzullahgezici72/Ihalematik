@@ -89,13 +89,18 @@ namespace IhalematikPro.Forms
                 pbControl.Position = i;
                 Application.DoEvents();
             }
-
+            this.Enabled = false;
             frm_ihaleOlustuMesaj bk = new frm_ihaleOlustuMesaj();
             bk.ShowDialog();
             
             pbControl.Position = 0;
-             
+            
             this.Close();
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            af.Adimlar.Visible = true;
+            af.btnAdimx3.Enabled = false;
+            af.btnAdimx4.Enabled = false;
+            af.btnAdimx5.Enabled = false;
         }
 
         private void panelControl1_Paint(object sender, PaintEventArgs e)
@@ -105,7 +110,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void frm_YeniIhaleYarat_FormClosed(object sender, FormClosedEventArgs e)

@@ -115,22 +115,18 @@ namespace IhalematikPro.Forms
             RibonAktif();
         }
 
-        //public void AdimlarAktif()
-        //{
-        //    btnAdimx1.Enabled = true;
-        //    btnAdimx2.Enabled = true;
-        //    btnAdimx3.Enabled = true;
-        //    btnAdimx4.Enabled = true;
-        //    btnAdimx5.Enabled = true;
+         public void AdimlarAktif()
+         {
+            Adimlar.Enabled = true;
 
-        //}
+        }
         private void barBtnTeklifHazirla_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
+            Adimlar.Visible = false;
              
             frm_YeniIhaleYarat frm = new frm_YeniIhaleYarat();
             frm.ShowDialog();
-            Adimlar.Visible = true;
+            //Adimlar.Visible = true;
         }
         Forms.frm_Teklif_Adim1 ta1;
         private void btnAdimx1_ItemClick(object sender, ItemClickEventArgs e)

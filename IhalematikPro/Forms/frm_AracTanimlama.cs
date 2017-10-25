@@ -135,8 +135,19 @@ namespace IhalematikPro.Forms
         {
 
             frm_Arac_Guncelleme frm = new frm_Arac_Guncelleme();
-            frm.Location = new Point(5, 215);
+            // frm.Location = new Point(5, 215);
+            KayitMenusu.Visible = false; 
+            this.Opacity = 10;
+            this.Enabled = false;
             frm.ShowDialog();
+            this.Enabled = true;
+            this.Opacity = 100;
+            KayitMenusu.Visible = true;
+        }
+
+        private void panelControl2_MouseMove(object sender, MouseEventArgs e)
+        {
+            
         }
     }
 }

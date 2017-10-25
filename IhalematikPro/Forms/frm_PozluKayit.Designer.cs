@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.txtPozNumber = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnBul = new DevExpress.XtraEditors.SimpleButton();
@@ -36,7 +35,7 @@
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -406,6 +405,7 @@
             this.gridView2.OptionsSelection.CheckBoxSelectorColumnWidth = 30;
             this.gridView2.OptionsSelection.MultiSelect = true;
             this.gridView2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gridView2.OptionsSelection.UseIndicatorForSelection = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn5
