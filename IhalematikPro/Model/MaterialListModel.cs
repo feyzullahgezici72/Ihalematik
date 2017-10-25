@@ -9,6 +9,7 @@ using SimpleApplicationBase.BL.Base;
 using System.Dynamic;
 using IhalematikProUI.Model;
 using IhalematikPro.Manager;
+using System.Collections;
 
 namespace IhalematikPro.Model
 {
@@ -276,7 +277,26 @@ namespace IhalematikPro.Model
             {
                 if (this.tenderMaterialListEquipment == null)
                 {
-                    this.tenderMaterialListEquipment = TenderMaterialListEquipmentProvider.Instance.GetItems("TenderId", CurrentManager.CurrentTender.Id);
+                    this.tenderMaterialListEquipment = new List<IhalematikProBL.Entity.TenderMaterialListEquipment>();
+                    foreach (TenderEquipment item in this.TenderEquipments)
+                    {
+                        Dictionary<string, object> parameters = new Dictionary<string, object>();
+                        parameters.Add("TenderId", CurrentManager.CurrentTender.Id);
+                        parameters.Add("MaterialId", this.Id);
+                        parameters.Add("EquipmentId", item.Id);
+
+                        TenderMaterialListEquipment tenderMaterialListEquipment = TenderMaterialListEquipmentProvider.Instance.GetItems(parameters).FirstOrDefault();
+                        if (tenderMaterialListEquipment == null)
+                        {
+                            tenderMaterialListEquipment = new IhalematikProBL.Entity.TenderMaterialListEquipment()
+                            {
+                                TenderId = CurrentManager.CurrentTender.Id,
+                                MaterialListId = this.Id.Value,
+                                EquipmentId = item.Id
+                            };
+                        }
+                        this.tenderMaterialListEquipment.Add(tenderMaterialListEquipment);
+                    }
                 }
                 return this.tenderMaterialListEquipment;
             }
@@ -324,6 +344,8 @@ namespace IhalematikPro.Model
             this.IsPoz = Entity.IsPoz;
             this.Markup = Entity.Markup;
             this.TenderId = Entity.TenderId;
+            this.UnitTimeType = new UnitTimeTypesModel().Create(Entity.UnitTimeType);
+            this.UnitTime = Entity.UnitTime;
         }
 
         public override EntityBase ToEntity()
@@ -337,6 +359,11 @@ namespace IhalematikPro.Model
             materialList.PozOBFId = this.PozOBFId;
             materialList.Quantity = this.Quantity;
             materialList.TenderId = this.TenderId;
+            materialList.UnitTime = this.UnitTime;
+            if (this.UnitTimeType != null)
+            {
+                materialList.UnitTimeType = this.UnitTimeType.UnitTimeType;
+            }
             return materialList;
         }
 
