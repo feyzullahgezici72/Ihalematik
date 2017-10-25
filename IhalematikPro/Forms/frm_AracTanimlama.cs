@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using IhalematikPro.Model;
 using IhalematikPro.Manager;
+using IhalematikProUI.Forms;
 
 namespace IhalematikPro.Forms
 {
@@ -122,6 +123,19 @@ namespace IhalematikPro.Forms
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             frm_AracEkle frm = new frm_AracEkle();
+            frm.ShowDialog();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
+        }
+
+        private void güncelleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            frm_Arac_Guncelleme frm = new frm_Arac_Guncelleme();
+            frm.Location = new Point(5, 215);
             frm.ShowDialog();
         }
     }

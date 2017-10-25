@@ -562,7 +562,7 @@ namespace IhalematikPro.Forms
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 451);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 561);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbon;
             this.ribbonStatusBar1.Size = new System.Drawing.Size(1449, 43);
@@ -576,12 +576,13 @@ namespace IhalematikPro.Forms
             this.Appearance.Options.UseFont = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1449, 494);
+            this.ClientSize = new System.Drawing.Size(1449, 604);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbon);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.InactiveGlowColor = System.Drawing.SystemColors.Control;
             this.IsMdiContainer = true;
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Anaform";
             this.Ribbon = this.ribbon;

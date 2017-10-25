@@ -176,6 +176,18 @@
     <Compile Include="Forms\frm_AracTanimlama.Designer.cs">
       <DependentUpon>frm_AracTanimlama.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frm_Arac_Guncelleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Arac_Guncelleme.Designer.cs">
+      <DependentUpon>frm_Arac_Guncelleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Calisan_Guncelleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Calisan_Guncelleme.Designer.cs">
+      <DependentUpon>frm_Calisan_Guncelleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frm_ihaleOlustuMesaj.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -366,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_AracTanimlama.resx">
       <DependentUpon>frm_AracTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Arac_Guncelleme.resx">
+      <DependentUpon>frm_Arac_Guncelleme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_ihaleOlustuMesaj.resx">
       <DependentUpon>frm_ihaleOlustuMesaj.cs</DependentUpon>
