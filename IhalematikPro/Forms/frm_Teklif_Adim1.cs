@@ -98,12 +98,15 @@ namespace IhalematikPro.Forms
                 MaterialListProvider.Instance.Save(item);
             }
 
-            MessageBox.Show("Malzemler Kaydedildi...");
+            frm_ihaleOlustuMesaj frm = new frm_ihaleOlustuMesaj();
+            frm.lblMesaj.Text = "Malzemeler Kaydedildi...";
+            frm.ShowDialog();
+            //MessageBox.Show("Malzemler Kaydedildi...");
 
             this.Close();
 
-            frm_Anaform frm = new frm_Anaform();
-            frm.btnAdimx3.PerformClick();
+            //frm_Anaform frm = new frm_Anaform();
+            //frm.btnAdimx3.PerformClick();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
