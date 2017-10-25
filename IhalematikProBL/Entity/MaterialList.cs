@@ -1,4 +1,5 @@
-﻿using IhalematikProBL.Provider;
+﻿using IhalematikProBL.Enum;
+using IhalematikProBL.Provider;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,6 +72,11 @@ namespace IhalematikProBL.Entity
             }
         }
 
+        //Zaman Tipi
+        public UnitTimeTypesEnum UnitTimeType { get; set; }
+
+        //BIRIM SURE
+        public int UnitTime { get; set; }
 
     }
 }

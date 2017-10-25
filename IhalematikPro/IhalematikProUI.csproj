@@ -364,6 +364,7 @@
     <Compile Include="Model\OBFModel.cs" />
     <Compile Include="Model\PozModel.cs" />
     <Compile Include="Model\TitleModel.cs" />
+    <Compile Include="Model\UnitTimeTypes.cs" />
     <Compile Include="Model\UnitTimeTypesModel.cs" />
     <Compile Include="Model\VehicleModel.cs" />
     <Compile Include="Model\VehicleTitleModel.cs" />

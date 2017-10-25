@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using SimpleApplicationBase.Toolkit;
+using IhalematikProBL.Enum;
 
 namespace IhalematikProBL.Provider
 {
@@ -22,6 +23,9 @@ namespace IhalematikProBL.Provider
             parameters.Add("IsWorkship", t.IsWorkship); 
             parameters.Add("Markup", t.Markup);
             parameters.Add("TenderId", t.TenderId);
+            parameters.Add("UnitTimeType", t.UnitTimeType);
+            parameters.Add("UnitTime", t.UnitTime);
+            
             return parameters;
         }
 
@@ -35,6 +39,8 @@ namespace IhalematikProBL.Provider
             t.Quantity = dr.GetValue<float>("Quantity");
             t.Markup = dr.GetValue<float>("Markup");
             t.TenderId = dr.GetValue<int>("TenderId");
+            t.UnitTime = dr.GetValue<int>("UnitTime");
+            t.UnitTimeType = dr.GetValue<UnitTimeTypesEnum>("UnitTimeType");
         }
     }
 }

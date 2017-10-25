@@ -46,7 +46,7 @@ namespace IhalematikPro.Forms
             column.Name = "MİKTAR";
             column.ReadOnly = true;
             grdMaterialListIsWorkship.Columns.Add(column);
-            
+
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "UnitTime";
             column.Name = "UnitTime";
@@ -55,12 +55,11 @@ namespace IhalematikPro.Forms
             grdMaterialListIsWorkship.Columns.Add(column);
 
             column = new DataGridViewComboBoxColumn { DataSource = GetUnitTimes(), ValueMember = "Self", DisplayMember = "DisplayText" };
-
             column.DataPropertyName = "UnitTimeType";
-            column.Name= "UnitTimeType";
+            column.Name = "UnitTimeType";
             column.HeaderText = "Zaman Tipi";
             column.ReadOnly = false;
-
+            column.ValueType = typeof(UnitTimeTypesModel);
             grdMaterialListIsWorkship.Columns.Add(column);
 
 
@@ -70,9 +69,8 @@ namespace IhalematikPro.Forms
 
                 foreach (TenderEquipment item in equipmentItems)
                 {
-                    GridColumn unbColumn = new GridColumn();
                     column = new DataGridViewTextBoxColumn();
-                    column.DataPropertyName = "TenderMaterialListEquipment.Quantity";
+                    //column.DataPropertyName = "TenderMaterialListEquipment.Quantity";
 
                     if (item.IsWorker)
                     {
@@ -98,14 +96,50 @@ namespace IhalematikPro.Forms
             grdMaterialListIsWorkship.Columns.Add(column);
 
             grdMaterialListIsWorkship.CellValueChanged += GrdMaterialListIsWorkship_CellValueChanged;
+
+            //grdMaterialListIsWorkship.CellFormatting += GrdMaterialListIsWorkship_CellFormatting;
+            grdMaterialListIsWorkship.DataBindingComplete += GrdMaterialListIsWorkship_DataBindingComplete;
+        }
+
+        private void GrdMaterialListIsWorkship_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            InitializeTenderMaterialListEquipment();
+        }
+
+        private void InitializeTenderMaterialListEquipment()
+        {
+            MaterialListModel[] items = CurrentManager.MaterialListIsWorkship.ToArray();
+
+            foreach (DataGridViewRow CurrentRow in grdMaterialListIsWorkship.Rows)
+            {
+                MaterialListModel item = items[CurrentRow.Index];
+
+                if (item.TenderMaterialListEquipment != null)
+                {
+                    foreach (TenderMaterialListEquipment tenderMaterialListEquipment in item.TenderMaterialListEquipment)
+                    {
+                        if (tenderMaterialListEquipment != null)
+                        {
+                            string columnName = string.Empty;
+                            if (tenderMaterialListEquipment.Equipment.IsWorker)
+                            {
+                                columnName = tenderMaterialListEquipment.Equipment.Worker.Title.Name;
+                            }
+                            else
+                            {
+                                columnName = tenderMaterialListEquipment.Equipment.Vehicle.Title.Name;
+                            }
+                            grdMaterialListIsWorkship.Rows[CurrentRow.Index].Cells[columnName].Value = tenderMaterialListEquipment.Quantity;
+                        }
+                    }
+                }
+            }
         }
 
         private void frm_Teklif_Adim3_Load(object sender, EventArgs e)
         {
-
             lblTenderDescription.Text = CurrentManager.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.CurrentTender.DisplayNumber;
-
             List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
             CurrentManager.MaterialListIsWorkship = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             grdMaterialListIsWorkship.DataSource = CurrentManager.MaterialListIsWorkship;
@@ -132,16 +166,16 @@ namespace IhalematikPro.Forms
             }
             else if (materialListModel.TenderEquipments != null)
             {
-                foreach (TenderEquipment equipmentItem in materialListModel.TenderEquipments)
+                foreach (TenderMaterialListEquipment equipmentItem in materialListModel.TenderMaterialListEquipment)
                 {
                     string columnName = string.Empty;
-                    if (equipmentItem.IsWorker)
+                    if (equipmentItem.Equipment.IsWorker)
                     {
-                        columnName = equipmentItem.Worker.Title.Name;
+                        columnName = equipmentItem.Equipment.Worker.Title.Name;
                     }
                     else
                     {
-                        columnName = equipmentItem.Vehicle.Title.Name;
+                        columnName = equipmentItem.Equipment.Vehicle.Title.Name;
                     }
                     if (columnName.Equals(currentColumnName))
                     {
@@ -161,22 +195,21 @@ namespace IhalematikPro.Forms
             grdMaterialListIsWorkship.DataSource = CurrentManager.MaterialListIsWorkship;
             grdMaterialListIsWorkship.Refresh();
         }
-       
+
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             List<MaterialListModel> items = CurrentManager.MaterialListIsWorkship;
             foreach (MaterialListModel materialListModel in items)
             {
-                
                 materialListModel.Save();
 
-                foreach (TenderEquipment tenderEquipment in materialListModel.TenderEquipments)
+                foreach (TenderMaterialListEquipment tenderMaterialListEquipment in materialListModel.TenderMaterialListEquipment)
                 {
-                    TenderMaterialListEquipment tenderMaterialListEquipment = new TenderMaterialListEquipment();
-                    tenderMaterialListEquipment.EquipmentId = tenderEquipment.Id;
-                    tenderMaterialListEquipment.TenderId = CurrentManager.CurrentTender.Id;
-                    tenderMaterialListEquipment.MaterialListId = materialListModel.Id.Value;
-                    tenderMaterialListEquipment.Quantity = tenderEquipment.Quantity;
+                    //TenderMaterialListEquipment tenderMaterialListEquipment = new TenderMaterialListEquipment();
+                    //tenderMaterialListEquipment.EquipmentId = tenderEquipment.Id;
+                    //tenderMaterialListEquipment.TenderId = CurrentManager.CurrentTender.Id;
+                    //tenderMaterialListEquipment.MaterialListId = materialListModel.Id.Value;
+                    //tenderMaterialListEquipment.Quantity = tenderEquipment.Quantity;
                     TenderMaterialListEquipmentProvider.Instance.Save(tenderMaterialListEquipment);
                 }
             }
@@ -192,54 +225,21 @@ namespace IhalematikPro.Forms
 
             foreach (UnitTimeTypesEnum unitTimeType in Enum.GetValues(typeof(UnitTimeTypesEnum)))
             {
-                UnitTimeTypesModel model = new UnitTimeTypesModel();
-                model.DisplayText = this.GetUnitTimeTypesDisplayText(unitTimeType);
-                model.Id = (int)unitTimeType;
-                model.UnitTimeType = unitTimeType;
+                UnitTimeTypesModel model = new UnitTimeTypesModel().Create(unitTimeType);
                 models.Add(model);
             }
 
             return models;
         }
 
-        private string GetUnitTimeTypesDisplayText(UnitTimeTypesEnum UnitTimeType)
-        {
-            string displayText = string.Empty;
-            switch (UnitTimeType)
-            {
-                case UnitTimeTypesEnum.Minute:
-                    displayText = "Dakika";
-                    break;
-                case UnitTimeTypesEnum.Hour:
-                    displayText = "Saat";
-                    break;
-                case UnitTimeTypesEnum.Day:
-                    displayText = "Gün";
-                    break;
-                case UnitTimeTypesEnum.Week:
-                    displayText = "Hafta";
-                    break;
-                case UnitTimeTypesEnum.Month:
-                    displayText = "Ay";
-                    break;
-                case UnitTimeTypesEnum.Year:
-                    displayText = "Yıl";
-                    break;
-                default:
-                    break;
-            }
-
-            return displayText;
-        }
-
         private void grdMaterialListIsWorkship_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-         
+
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-             frm_IscilikIslemKayit frm = new frm_IscilikIslemKayit();
+            frm_IscilikIslemKayit frm = new frm_IscilikIslemKayit();
             frm.ShowDialog();
         }
     }
