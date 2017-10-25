@@ -13,7 +13,7 @@ using System.Collections;
 
 namespace IhalematikPro.Model
 {
-    public class MaterialListModel : CustomSaveableModelBase
+    public class MaterialListModel : CustomSaveableModelBase, ICloneable
     {
         public float KDVPercentage { get; set; }
         public double KDVAmount
@@ -162,85 +162,85 @@ namespace IhalematikPro.Model
                     this.workerUnitPrice = 0;
                     if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
                     {
-                        foreach (TenderEquipment item in this.TenderEquipments)
+                        foreach (TenderMaterialListEquipment item in this.TenderMaterialListEquipment)
                         {
-                            if (item.IsWorker)
+                            if (item.Equipment.IsWorker)
                             {
-                                this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Worker.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
                             }
                             else
                             {
-                                this.workerUnitPrice += Math.Round((item.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
                             }
                         }
                     }
                     else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Hour)
                     {
-                        foreach (TenderEquipment item in this.TenderEquipments)
+                        foreach (TenderMaterialListEquipment item in this.TenderMaterialListEquipment)
                         {
-                            if (item.IsWorker)
+                            if (item.Equipment.IsWorker)
                             {
-                                this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount / (30 * 8)), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Worker.TotalFare.Amount / (30 * 8)), 2) * this.UnitTime * item.Quantity;
                             }
                             else
                             {
-                                this.workerUnitPrice += Math.Round((item.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
                             }
                         }
                     }
                     else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Day)
                     {
-                        foreach (TenderEquipment item in this.TenderEquipments)
+                        foreach (TenderMaterialListEquipment item in this.TenderMaterialListEquipment)
                         {
-                            if (item.IsWorker)
+                            if (item.Equipment.IsWorker)
                             {
-                                this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount / 30), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Worker.TotalFare.Amount / 30), 2) * this.UnitTime * item.Quantity;
                             }
                             else
                             {
-                                this.workerUnitPrice += Math.Round((item.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
                             }
                         }
                     }
                     else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Week)
                     {
-                        foreach (TenderEquipment item in this.TenderEquipments)
+                        foreach (TenderMaterialListEquipment item in this.TenderMaterialListEquipment)
                         {
-                            if (item.IsWorker)
+                            if (item.Equipment.IsWorker)
                             {
-                                this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount / 4), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Worker.TotalFare.Amount / 4), 2) * this.UnitTime * item.Quantity;
                             }
                             else
                             {
-                                this.workerUnitPrice += Math.Round((item.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
                             }
                         }
                     }
                     else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Month)
                     {
-                        foreach (TenderEquipment item in this.TenderEquipments)
+                        foreach (TenderMaterialListEquipment item in this.TenderMaterialListEquipment)
                         {
-                            if (item.IsWorker)
+                            if (item.Equipment.IsWorker)
                             {
-                                this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Worker.TotalFare.Amount), 2) * this.UnitTime * item.Quantity;
                             }
                             else
                             {
-                                this.workerUnitPrice += Math.Round((item.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
                             }
                         }
                     }
                     else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Year)
                     {
-                        foreach (TenderEquipment item in this.TenderEquipments)
+                        foreach (TenderMaterialListEquipment item in this.TenderMaterialListEquipment)
                         {
-                            if (item.IsWorker)
+                            if (item.Equipment.IsWorker)
                             {
-                                this.workerUnitPrice += Math.Round((item.Worker.TotalFare.Amount), 2) * 12 * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Worker.TotalFare.Amount), 2) * 12 * this.UnitTime * item.Quantity;
                             }
                             else
                             {
-                                this.workerUnitPrice += Math.Round((item.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
                             }
                         }
                     }
@@ -370,6 +370,11 @@ namespace IhalematikPro.Model
         protected override void SaveEntity(EntityBase Entity)
         {
             MaterialListProvider.Instance.Save(Entity);
+        }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
         }
     }
 }
