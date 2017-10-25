@@ -114,7 +114,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 54);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(430, 499);
+            this.groupControl2.Size = new System.Drawing.Size(433, 499);
             this.groupControl2.TabIndex = 93;
             this.groupControl2.Text = "Araç Bilgileri";
             // 
@@ -129,7 +129,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl1.Location = new System.Drawing.Point(0, 434);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(430, 65);
+            this.panelControl1.Size = new System.Drawing.Size(433, 65);
             this.panelControl1.TabIndex = 79;
             // 
             // btnGuncelle
@@ -140,7 +140,7 @@
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.Reload_icon__2_;
-            this.btnGuncelle.Location = new System.Drawing.Point(102, 0);
+            this.btnGuncelle.Location = new System.Drawing.Point(105, 0);
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(132, 65);
@@ -155,7 +155,7 @@
             this.btnSil.Appearance.Options.UseForeColor = true;
             this.btnSil.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSil.Image = global::IhalematikProUI.Properties.Resources.Actions_trash_empty_icon__1_;
-            this.btnSil.Location = new System.Drawing.Point(234, 0);
+            this.btnSil.Location = new System.Drawing.Point(237, 0);
             this.btnSil.Margin = new System.Windows.Forms.Padding(4);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(132, 65);
@@ -168,7 +168,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(366, 0);
+            this.btnKapat.Location = new System.Drawing.Point(369, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(64, 65);
@@ -196,10 +196,10 @@
             this.PanelKira.Controls.Add(this.labelControl22);
             this.PanelKira.Controls.Add(this.textEdit16);
             this.PanelKira.Controls.Add(this.labelControl23);
-            this.PanelKira.Location = new System.Drawing.Point(7, 386);
+            this.PanelKira.Location = new System.Drawing.Point(7, 333);
             this.PanelKira.Margin = new System.Windows.Forms.Padding(4);
             this.PanelKira.Name = "PanelKira";
-            this.PanelKira.Size = new System.Drawing.Size(421, 301);
+            this.PanelKira.Size = new System.Drawing.Size(437, 301);
             this.PanelKira.TabIndex = 38;
             this.PanelKira.Visible = false;
             // 
@@ -217,7 +217,7 @@
             // 
             // textEdit5
             // 
-            this.textEdit5.Location = new System.Drawing.Point(166, 67);
+            this.textEdit5.Location = new System.Drawing.Point(183, 65);
             this.textEdit5.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -267,7 +267,7 @@
             // 
             // textEdit7
             // 
-            this.textEdit7.Location = new System.Drawing.Point(166, 186);
+            this.textEdit7.Location = new System.Drawing.Point(183, 184);
             this.textEdit7.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit7.Name = "textEdit7";
             this.textEdit7.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -305,7 +305,7 @@
             // 
             // textEdit13
             // 
-            this.textEdit13.Location = new System.Drawing.Point(166, 219);
+            this.textEdit13.Location = new System.Drawing.Point(183, 217);
             this.textEdit13.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit13.Name = "textEdit13";
             this.textEdit13.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -321,7 +321,7 @@
             // 
             // textEdit14
             // 
-            this.textEdit14.Location = new System.Drawing.Point(166, 110);
+            this.textEdit14.Location = new System.Drawing.Point(183, 108);
             this.textEdit14.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit14.Name = "textEdit14";
             this.textEdit14.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -358,7 +358,7 @@
             // 
             // textEdit15
             // 
-            this.textEdit15.Location = new System.Drawing.Point(166, 257);
+            this.textEdit15.Location = new System.Drawing.Point(183, 255);
             this.textEdit15.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit15.Name = "textEdit15";
             this.textEdit15.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -385,7 +385,7 @@
             // 
             // textEdit16
             // 
-            this.textEdit16.Location = new System.Drawing.Point(166, 143);
+            this.textEdit16.Location = new System.Drawing.Point(183, 141);
             this.textEdit16.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit16.Name = "textEdit16";
             this.textEdit16.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -430,12 +430,12 @@
             this.PanelSirket.Location = new System.Drawing.Point(7, 105);
             this.PanelSirket.Margin = new System.Windows.Forms.Padding(4);
             this.PanelSirket.Name = "PanelSirket";
-            this.PanelSirket.Size = new System.Drawing.Size(415, 273);
+            this.PanelSirket.Size = new System.Drawing.Size(437, 273);
             this.PanelSirket.TabIndex = 39;
             // 
             // txtMaintenanceFare
             // 
-            this.txtMaintenanceFare.Location = new System.Drawing.Point(172, 118);
+            this.txtMaintenanceFare.Location = new System.Drawing.Point(179, 120);
             this.txtMaintenanceFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaintenanceFare.Name = "txtMaintenanceFare";
             this.txtMaintenanceFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -450,7 +450,7 @@
             // 
             // txtFuelOilDay
             // 
-            this.txtFuelOilDay.Location = new System.Drawing.Point(172, 4);
+            this.txtFuelOilDay.Location = new System.Drawing.Point(179, 6);
             this.txtFuelOilDay.Margin = new System.Windows.Forms.Padding(4);
             this.txtFuelOilDay.Name = "txtFuelOilDay";
             this.txtFuelOilDay.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -509,7 +509,7 @@
             // 
             // txtServiceFare
             // 
-            this.txtServiceFare.Location = new System.Drawing.Point(172, 156);
+            this.txtServiceFare.Location = new System.Drawing.Point(179, 158);
             this.txtServiceFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtServiceFare.Name = "txtServiceFare";
             this.txtServiceFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -525,7 +525,7 @@
             // 
             // txtFuelOilFare
             // 
-            this.txtFuelOilFare.Location = new System.Drawing.Point(172, 42);
+            this.txtFuelOilFare.Location = new System.Drawing.Point(179, 44);
             this.txtFuelOilFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtFuelOilFare.Name = "txtFuelOilFare";
             this.txtFuelOilFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -541,7 +541,7 @@
             // 
             // txtOtherFare
             // 
-            this.txtOtherFare.Location = new System.Drawing.Point(172, 232);
+            this.txtOtherFare.Location = new System.Drawing.Point(179, 234);
             this.txtOtherFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtOtherFare.Name = "txtOtherFare";
             this.txtOtherFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -568,7 +568,7 @@
             // 
             // txtGeneralFare
             // 
-            this.txtGeneralFare.Location = new System.Drawing.Point(172, 194);
+            this.txtGeneralFare.Location = new System.Drawing.Point(179, 196);
             this.txtGeneralFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtGeneralFare.Name = "txtGeneralFare";
             this.txtGeneralFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -595,7 +595,7 @@
             // 
             // txtDriverFare
             // 
-            this.txtDriverFare.Location = new System.Drawing.Point(172, 80);
+            this.txtDriverFare.Location = new System.Drawing.Point(179, 82);
             this.txtDriverFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtDriverFare.Name = "txtDriverFare";
             this.txtDriverFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -685,7 +685,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(430, 54);
+            this.panelControl2.Size = new System.Drawing.Size(433, 54);
             this.panelControl2.TabIndex = 95;
             // 
             // labelControl1
@@ -711,7 +711,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(430, 553);
+            this.ClientSize = new System.Drawing.Size(433, 553);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl2);

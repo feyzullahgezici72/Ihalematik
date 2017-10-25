@@ -206,7 +206,7 @@
             this.KayitMenusu.Location = new System.Drawing.Point(0, 64);
             this.KayitMenusu.Margin = new System.Windows.Forms.Padding(4);
             this.KayitMenusu.Name = "KayitMenusu";
-            this.KayitMenusu.Size = new System.Drawing.Size(456, 693);
+            this.KayitMenusu.Size = new System.Drawing.Size(448, 693);
             this.KayitMenusu.TabIndex = 35;
             this.KayitMenusu.Text = "Menü";
             // 
@@ -221,7 +221,7 @@
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.simpleButton1.Location = new System.Drawing.Point(3, 35);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(450, 56);
+            this.simpleButton1.Size = new System.Drawing.Size(442, 56);
             this.simpleButton1.TabIndex = 93;
             this.simpleButton1.Text = "Araç Ekle > F1";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -230,7 +230,6 @@
             // 
             this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
-            this.groupControl2.Controls.Add(this.PanelKira);
             this.groupControl2.Controls.Add(this.panelControl3);
             this.groupControl2.Controls.Add(this.PanelSirket);
             this.groupControl2.Controls.Add(this.ddlVehicleTitle);
@@ -265,10 +264,10 @@
             this.PanelKira.Controls.Add(this.labelControl22);
             this.PanelKira.Controls.Add(this.textEdit16);
             this.PanelKira.Controls.Add(this.labelControl23);
-            this.PanelKira.Location = new System.Drawing.Point(217, 105);
+            this.PanelKira.Location = new System.Drawing.Point(489, 224);
             this.PanelKira.Margin = new System.Windows.Forms.Padding(4);
             this.PanelKira.Name = "PanelKira";
-            this.PanelKira.Size = new System.Drawing.Size(416, 301);
+            this.PanelKira.Size = new System.Drawing.Size(399, 301);
             this.PanelKira.TabIndex = 38;
             this.PanelKira.Visible = false;
             // 
@@ -789,11 +788,11 @@
             this.grdVehicle.ContextMenuStrip = this.contextMenuStrip1;
             this.grdVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdVehicle.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdVehicle.Location = new System.Drawing.Point(456, 64);
+            this.grdVehicle.Location = new System.Drawing.Point(448, 64);
             this.grdVehicle.MainView = this.gridView1;
             this.grdVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.grdVehicle.Name = "grdVehicle";
-            this.grdVehicle.Size = new System.Drawing.Size(922, 693);
+            this.grdVehicle.Size = new System.Drawing.Size(930, 693);
             this.grdVehicle.TabIndex = 36;
             this.grdVehicle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -922,6 +921,7 @@
             this.CancelButton = this.btnKapat;
             this.ClientSize = new System.Drawing.Size(1378, 757);
             this.ControlBox = false;
+            this.Controls.Add(this.PanelKira);
             this.Controls.Add(this.grdVehicle);
             this.Controls.Add(this.KayitMenusu);
             this.Controls.Add(this.panelControl1);
