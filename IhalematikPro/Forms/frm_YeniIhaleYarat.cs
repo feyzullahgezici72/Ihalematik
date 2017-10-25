@@ -92,7 +92,6 @@ namespace IhalematikPro.Forms
             this.Enabled = false;
             frm_ihaleOlustuMesaj bk = new frm_ihaleOlustuMesaj();
             bk.ShowDialog();
-            
             pbControl.Position = 0;
             
             this.Close();
