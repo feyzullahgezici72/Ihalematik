@@ -257,6 +257,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_DovizKurlari";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frm_DovizKurlari_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();

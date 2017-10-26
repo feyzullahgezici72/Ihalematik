@@ -39,7 +39,7 @@ namespace IhalematikPro.Forms
         private void frm_Anaform_Load(object sender, EventArgs e)
         {
             DevExpress.UserSkins.BonusSkins.Register();
-            SkinHelper.InitSkinGallery(Temalar);
+            //SkinHelper.InitSkinGallery(Temalar);
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)

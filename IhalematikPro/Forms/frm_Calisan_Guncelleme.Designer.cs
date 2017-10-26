@@ -582,10 +582,10 @@
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.Reload_icon__2_;
-            this.btnGuncelle.Location = new System.Drawing.Point(147, 0);
+            this.btnGuncelle.Location = new System.Drawing.Point(144, 3);
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(139, 62);
+            this.btnGuncelle.Size = new System.Drawing.Size(139, 56);
             this.btnGuncelle.TabIndex = 22;
             this.btnGuncelle.Text = "Güncelle";
             // 
@@ -597,10 +597,10 @@
             this.btnSil.Appearance.Options.UseForeColor = true;
             this.btnSil.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSil.Image = global::IhalematikProUI.Properties.Resources.Actions_trash_empty_icon__1_;
-            this.btnSil.Location = new System.Drawing.Point(286, 0);
+            this.btnSil.Location = new System.Drawing.Point(283, 3);
             this.btnSil.Margin = new System.Windows.Forms.Padding(4);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(141, 62);
+            this.btnSil.Size = new System.Drawing.Size(141, 56);
             this.btnSil.TabIndex = 21;
             this.btnSil.Text = "Sil";
             // 
@@ -622,6 +622,7 @@
             this.MinimizeBox = false;
             this.Name = "frm_Calisan_Guncelleme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();

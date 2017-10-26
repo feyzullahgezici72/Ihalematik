@@ -38,7 +38,7 @@
             // btnTamam
             // 
             this.btnTamam.Image = global::IhalematikProUI.Properties.Resources.Check_icon__1_;
-            this.btnTamam.Location = new System.Drawing.Point(472, 64);
+            this.btnTamam.Location = new System.Drawing.Point(455, 78);
             this.btnTamam.Name = "btnTamam";
             this.btnTamam.Size = new System.Drawing.Size(129, 58);
             this.btnTamam.TabIndex = 8;
