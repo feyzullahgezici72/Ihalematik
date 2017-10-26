@@ -46,13 +46,13 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
-            this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
             this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOBFList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).BeginInit();
@@ -164,7 +164,7 @@
             this.grdOBFList.MainView = this.gridView1;
             this.grdOBFList.Margin = new System.Windows.Forms.Padding(4);
             this.grdOBFList.Name = "grdOBFList";
-            this.grdOBFList.Size = new System.Drawing.Size(1180, 703);
+            this.grdOBFList.Size = new System.Drawing.Size(1180, 717);
             this.grdOBFList.TabIndex = 21;
             this.grdOBFList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -203,10 +203,10 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.grdOBFList);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(426, 64);
+            this.groupControl1.Location = new System.Drawing.Point(426, 50);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1186, 738);
+            this.groupControl1.Size = new System.Drawing.Size(1186, 752);
             this.groupControl1.TabIndex = 41;
             this.groupControl1.Text = "ÖBF MalzemeListesi";
             // 
@@ -261,6 +261,8 @@
             this.groupControl3.AppearanceCaption.ForeColor = System.Drawing.Color.Maroon;
             this.groupControl3.AppearanceCaption.Options.UseFont = true;
             this.groupControl3.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl3.Controls.Add(this.btnKaydet);
+            this.groupControl3.Controls.Add(this.btnTemizle);
             this.groupControl3.Controls.Add(this.labelControl5);
             this.groupControl3.Controls.Add(this.txtUnit);
             this.groupControl3.Controls.Add(this.labelControl4);
@@ -270,10 +272,10 @@
             this.groupControl3.Controls.Add(this.txtNumber);
             this.groupControl3.Controls.Add(this.labelControl2);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl3.Location = new System.Drawing.Point(0, 64);
+            this.groupControl3.Location = new System.Drawing.Point(0, 50);
             this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(426, 738);
+            this.groupControl3.Size = new System.Drawing.Size(426, 752);
             this.groupControl3.TabIndex = 40;
             this.groupControl3.Text = "Yeni Malzeme Ekle";
             this.groupControl3.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl3_Paint);
@@ -289,17 +291,17 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(0, 9);
+            this.labelControl1.Location = new System.Drawing.Point(13, 9);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(503, 47);
+            this.labelControl1.Size = new System.Drawing.Size(398, 37);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "ÖBF\'Lİ MALZEME LİSTESİ";
             // 
@@ -307,34 +309,16 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.labelControl1);
-            this.panel2.Controls.Add(this.btnKaydet);
             this.panel2.Controls.Add(this.btnGuncelle);
             this.panel2.Controls.Add(this.btnSil);
-            this.panel2.Controls.Add(this.btnTemizle);
             this.panel2.Controls.Add(this.btnListele);
             this.panel2.Controls.Add(this.btnKapat);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1612, 64);
+            this.panel2.Size = new System.Drawing.Size(1612, 50);
             this.panel2.TabIndex = 1;
-            // 
-            // btnKaydet
-            // 
-            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnKaydet.Appearance.Options.UseFont = true;
-            this.btnKaydet.Appearance.Options.UseForeColor = true;
-            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
-            this.btnKaydet.Location = new System.Drawing.Point(890, 0);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(132, 64);
-            this.btnKaydet.TabIndex = 24;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnGuncelle
             // 
@@ -344,10 +328,10 @@
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.Reload_icon__2_;
-            this.btnGuncelle.Location = new System.Drawing.Point(1022, 0);
+            this.btnGuncelle.Location = new System.Drawing.Point(1154, 0);
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(132, 64);
+            this.btnGuncelle.Size = new System.Drawing.Size(132, 50);
             this.btnGuncelle.TabIndex = 23;
             this.btnGuncelle.Text = "Güncelle";
             // 
@@ -359,27 +343,12 @@
             this.btnSil.Appearance.Options.UseForeColor = true;
             this.btnSil.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSil.Image = global::IhalematikProUI.Properties.Resources.Actions_trash_empty_icon__1_;
-            this.btnSil.Location = new System.Drawing.Point(1154, 0);
+            this.btnSil.Location = new System.Drawing.Point(1286, 0);
             this.btnSil.Margin = new System.Windows.Forms.Padding(4);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(132, 64);
+            this.btnSil.Size = new System.Drawing.Size(132, 50);
             this.btnSil.TabIndex = 22;
             this.btnSil.Text = "Sil";
-            // 
-            // btnTemizle
-            // 
-            this.btnTemizle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTemizle.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnTemizle.Appearance.Options.UseFont = true;
-            this.btnTemizle.Appearance.Options.UseForeColor = true;
-            this.btnTemizle.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnTemizle.Image = global::IhalematikProUI.Properties.Resources.Actions_edit_clear_icon;
-            this.btnTemizle.Location = new System.Drawing.Point(1286, 0);
-            this.btnTemizle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(132, 64);
-            this.btnTemizle.TabIndex = 21;
-            this.btnTemizle.Text = "Temizle";
             // 
             // btnListele
             // 
@@ -393,7 +362,7 @@
             this.btnListele.Location = new System.Drawing.Point(1418, 0);
             this.btnListele.Margin = new System.Windows.Forms.Padding(4);
             this.btnListele.Name = "btnListele";
-            this.btnListele.Size = new System.Drawing.Size(132, 64);
+            this.btnListele.Size = new System.Drawing.Size(132, 50);
             this.btnListele.TabIndex = 20;
             this.btnListele.TabStop = false;
             this.btnListele.Text = "Listele";
@@ -408,7 +377,7 @@
             this.btnKapat.Location = new System.Drawing.Point(1550, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(62, 64);
+            this.btnKapat.Size = new System.Drawing.Size(62, 50);
             this.btnKapat.TabIndex = 19;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
@@ -423,9 +392,37 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1612, 64);
+            this.panelControl1.Size = new System.Drawing.Size(1612, 50);
             this.panelControl1.TabIndex = 39;
             this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
+            // 
+            // btnTemizle
+            // 
+            this.btnTemizle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTemizle.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnTemizle.Appearance.Options.UseFont = true;
+            this.btnTemizle.Appearance.Options.UseForeColor = true;
+            this.btnTemizle.Image = global::IhalematikProUI.Properties.Resources.Actions_edit_clear_icon;
+            this.btnTemizle.Location = new System.Drawing.Point(286, 195);
+            this.btnTemizle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(132, 50);
+            this.btnTemizle.TabIndex = 23;
+            this.btnTemizle.Text = "Temizle";
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnKaydet.Appearance.Options.UseFont = true;
+            this.btnKaydet.Appearance.Options.UseForeColor = true;
+            this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
+            this.btnKaydet.Location = new System.Drawing.Point(153, 195);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(132, 50);
+            this.btnKaydet.TabIndex = 25;
+            this.btnKaydet.Text = "Kaydet";
             // 
             // frm_OzelStokListesi
             // 
@@ -485,11 +482,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.SimpleButton btnGuncelle;
         private DevExpress.XtraEditors.SimpleButton btnSil;
-        private DevExpress.XtraEditors.SimpleButton btnTemizle;
         private DevExpress.XtraEditors.SimpleButton btnListele;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
+        private DevExpress.XtraEditors.SimpleButton btnKaydet;
+        private DevExpress.XtraEditors.SimpleButton btnTemizle;
     }
 }

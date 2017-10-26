@@ -69,8 +69,8 @@
             this.rbAsgariUcret = new System.Windows.Forms.RadioButton();
             this.rbCompanyVehicle = new System.Windows.Forms.RadioButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -102,7 +102,7 @@
             this.groupControl2.Appearance.Options.UseBackColor = true;
             this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
-            this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.groupControl2.Controls.Add(this.panelControl1);
             this.groupControl2.Controls.Add(this.PanelKira);
             this.groupControl2.Controls.Add(this.PanelSirket);
@@ -120,7 +120,7 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.White;
+            this.panelControl1.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.Controls.Add(this.btnGuncelle);
@@ -398,7 +398,7 @@
             // 
             // PanelSirket
             // 
-            this.PanelSirket.BackColor = System.Drawing.Color.White;
+            this.PanelSirket.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.PanelSirket.Controls.Add(this.txtMaintenanceFare);
             this.PanelSirket.Controls.Add(this.txtFuelOilDay);
             this.PanelSirket.Controls.Add(this.labelControl7);
@@ -636,6 +636,7 @@
             // rbAsgariUcret
             // 
             this.rbAsgariUcret.AutoSize = true;
+            this.rbAsgariUcret.BackColor = System.Drawing.SystemColors.Control;
             this.rbAsgariUcret.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbAsgariUcret.Location = new System.Drawing.Point(282, 72);
             this.rbAsgariUcret.Margin = new System.Windows.Forms.Padding(4);
@@ -643,12 +644,13 @@
             this.rbAsgariUcret.Size = new System.Drawing.Size(132, 25);
             this.rbAsgariUcret.TabIndex = 2;
             this.rbAsgariUcret.Text = "Kiralık Araç";
-            this.rbAsgariUcret.UseVisualStyleBackColor = true;
+            this.rbAsgariUcret.UseVisualStyleBackColor = false;
             this.rbAsgariUcret.CheckedChanged += new System.EventHandler(this.rbAsgariUcret_CheckedChanged);
             // 
             // rbCompanyVehicle
             // 
             this.rbCompanyVehicle.AutoSize = true;
+            this.rbCompanyVehicle.BackColor = System.Drawing.SystemColors.Control;
             this.rbCompanyVehicle.Checked = true;
             this.rbCompanyVehicle.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbCompanyVehicle.Location = new System.Drawing.Point(152, 72);
@@ -658,7 +660,7 @@
             this.rbCompanyVehicle.TabIndex = 1;
             this.rbCompanyVehicle.TabStop = true;
             this.rbCompanyVehicle.Text = "Şirket Aracı";
-            this.rbCompanyVehicle.UseVisualStyleBackColor = true;
+            this.rbCompanyVehicle.UseVisualStyleBackColor = false;
             this.rbCompanyVehicle.CheckedChanged += new System.EventHandler(this.rbCompanyVehicle_CheckedChanged);
             // 
             // panelControl2
@@ -674,6 +676,19 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(453, 54);
             this.panelControl2.TabIndex = 95;
+            // 
+            // btnKapat
+            // 
+            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
+            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnKapat.Location = new System.Drawing.Point(389, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(64, 54);
+            this.btnKapat.TabIndex = 21;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // labelControl1
             // 
@@ -691,19 +706,6 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "ARAÇ GÜNCELLE";
             this.labelControl1.UseMnemonic = false;
-            // 
-            // btnKapat
-            // 
-            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
-            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(389, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(64, 54);
-            this.btnKapat.TabIndex = 21;
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // frm_Arac_Guncelleme
             // 

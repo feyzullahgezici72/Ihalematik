@@ -15,6 +15,7 @@ using IhalematikProBL.Enum;
 using IhalematikProBL.Provider;
 using System.IO;
 using ExcelDataReader;
+using IhalematikProUI.Forms;
 
 namespace IhalematikPro.Forms
 {
@@ -189,10 +190,6 @@ namespace IhalematikPro.Forms
                 txtWorklesFonFare.Text = Math.Round((NetUcretUcret / 100 * 1), 2).ToString();
                 txtIncomeTaxFare.Text = Math.Round((NetUcretUcret / 100 * 15), 2).ToString();
                 txtStampTaxFare.Text = Math.Round((NetUcretUcret / 1000 *  759), 2).ToString();
-
-
-
-
             }
         }
 
@@ -210,6 +207,25 @@ namespace IhalematikPro.Forms
         {
             frm_CalisanEkle frm = new frm_CalisanEkle();
             frm.ShowDialog();
+        }
+
+        private void güncelleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Calisan_Guncelleme cg = new frm_Calisan_Guncelleme();
+      
+            // frm.Location = new Point(5, 215);
+            kayitMenusu.Visible = false;
+            this.Opacity = 10;
+            this.Enabled = false;
+            cg.ShowDialog();
+            this.Enabled = true;
+            this.Opacity = 100;
+            kayitMenusu.Visible = true;
+        }
+
+        private void kayitMenusu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

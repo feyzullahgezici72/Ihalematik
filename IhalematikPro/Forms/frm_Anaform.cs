@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using DevExpress.XtraBars.Helpers;
 using IhalematikProUI.Forms;
 using IhalematikPro.Manager;
 using IhalematikProBL.Provider;
@@ -37,7 +38,8 @@ namespace IhalematikPro.Forms
 
         private void frm_Anaform_Load(object sender, EventArgs e)
         {
-            
+            DevExpress.UserSkins.BonusSkins.Register();
+            SkinHelper.InitSkinGallery(Temalar);
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
@@ -481,8 +483,8 @@ namespace IhalematikPro.Forms
 
         private void frm_Anaform_Resize(object sender, EventArgs e)
         {
-            if (this.WindowState != FormWindowState.Minimized)
-                    this.WindowState = FormWindowState.Maximized;
+            //if (this.WindowState != FormWindowState.Minimized)
+            //        this.WindowState = FormWindowState.Maximized;
             
         }
         
