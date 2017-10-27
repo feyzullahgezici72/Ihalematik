@@ -157,7 +157,7 @@
             this.btnGiris.Location = new System.Drawing.Point(295, 174);
             this.btnGiris.Margin = new System.Windows.Forms.Padding(4);
             this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(146, 92);
+            this.btnGiris.Size = new System.Drawing.Size(146, 64);
             this.btnGiris.TabIndex = 0;
             this.btnGiris.Text = "Giriş";
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
@@ -172,7 +172,7 @@
             this.btnIptal.Location = new System.Drawing.Point(441, 174);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
             this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(143, 92);
+            this.btnIptal.Size = new System.Drawing.Size(143, 64);
             this.btnIptal.TabIndex = 1;
             this.btnIptal.Text = "İptal";
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
@@ -185,7 +185,7 @@
             this.btnSetting.Location = new System.Drawing.Point(0, 174);
             this.btnSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(189, 92);
+            this.btnSetting.Size = new System.Drawing.Size(189, 64);
             this.btnSetting.TabIndex = 2;
             this.btnSetting.Text = "Menü Ayarları";
             this.btnSetting.Visible = false;
@@ -214,7 +214,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(584, 266);
+            this.ClientSize = new System.Drawing.Size(584, 238);
             this.ControlBox = false;
             this.Controls.Add(this.btnSetting);
             this.Controls.Add(this.btnGiris);
