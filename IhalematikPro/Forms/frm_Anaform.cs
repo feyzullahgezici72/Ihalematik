@@ -39,7 +39,7 @@ namespace IhalematikPro.Forms
         private void frm_Anaform_Load(object sender, EventArgs e)
         {
             DevExpress.UserSkins.BonusSkins.Register();
-            //SkinHelper.InitSkinGallery(Temalar);
+            //SkinHelper.InitSkinGallery(tema);
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
@@ -533,6 +533,76 @@ namespace IhalematikPro.Forms
         private void simpleButton1_Click(object sender, EventArgs e)
         {
           
+        }
+
+        private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Green";
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
+        }
+
+        private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Pink";
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
+        }
+
+        private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Blue";
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
+        }
+
+        private void barButtonItem16_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Silver";
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
+        }
+
+        private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "London Liquid Sky";
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
+        }
+
+        private void barButtonItem18_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Lilian";
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
+        }
+
+        private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "McSkin";
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
+        }
+
+        private void barButtonItem20_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Stardust";
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
+        }
+
+        private void barButtonItem21_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Black";
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
+        }
+
+        private void barButtonItem22_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "iMaginary";
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
         }
     }
 }
