@@ -125,6 +125,7 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1391, 64);
             this.panelControl1.TabIndex = 20;
+            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
             // btnKapat
             // 
@@ -502,7 +503,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 64);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1391, 96);
+            this.panelControl2.Size = new System.Drawing.Size(1391, 80);
             this.panelControl2.TabIndex = 22;
             // 
             // panelControl4
@@ -520,36 +521,36 @@
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1127, 96);
+            this.panelControl4.Size = new System.Drawing.Size(1127, 80);
             this.panelControl4.TabIndex = 23;
             // 
             // labelControl14
             // 
-            this.labelControl14.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl14.Location = new System.Drawing.Point(232, 53);
+            this.labelControl14.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl14.Location = new System.Drawing.Point(139, 45);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(0, 34);
+            this.labelControl14.Size = new System.Drawing.Size(0, 29);
             this.labelControl14.TabIndex = 10;
             // 
             // labelControl15
             // 
-            this.labelControl15.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl15.Appearance.ForeColor = System.Drawing.Color.Turquoise;
-            this.labelControl15.Location = new System.Drawing.Point(15, 50);
+            this.labelControl15.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl15.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.labelControl15.Location = new System.Drawing.Point(15, 44);
             this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(199, 34);
+            this.labelControl15.Size = new System.Drawing.Size(118, 29);
             this.labelControl15.TabIndex = 9;
-            this.labelControl15.Text = "İhale Açıklama";
+            this.labelControl15.Text = "Açıklama :";
             // 
             // labelControl16
             // 
-            this.labelControl16.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl16.Location = new System.Drawing.Point(153, 13);
+            this.labelControl16.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl16.Location = new System.Drawing.Point(139, 13);
             this.labelControl16.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(0, 34);
+            this.labelControl16.Size = new System.Drawing.Size(0, 29);
             this.labelControl16.TabIndex = 8;
             // 
             // labelControl17
@@ -564,14 +565,14 @@
             // 
             // labelControl18
             // 
-            this.labelControl18.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl18.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl18.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl18.Location = new System.Drawing.Point(15, 9);
             this.labelControl18.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(123, 34);
+            this.labelControl18.Size = new System.Drawing.Size(115, 29);
             this.labelControl18.TabIndex = 6;
-            this.labelControl18.Text = "İhale No:";
+            this.labelControl18.Text = "İhale No  :";
             // 
             // simpleButton1
             // 
@@ -585,7 +586,7 @@
             this.simpleButton1.Location = new System.Drawing.Point(1127, 0);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(132, 96);
+            this.simpleButton1.Size = new System.Drawing.Size(132, 80);
             this.simpleButton1.TabIndex = 11;
             this.simpleButton1.Text = "Kaydet";
             // 
@@ -651,7 +652,7 @@
             this.btnObfKayit.Location = new System.Drawing.Point(1259, 0);
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4);
             this.btnObfKayit.Name = "btnObfKayit";
-            this.btnObfKayit.Size = new System.Drawing.Size(132, 96);
+            this.btnObfKayit.Size = new System.Drawing.Size(132, 80);
             this.btnObfKayit.TabIndex = 5;
             this.btnObfKayit.Text = "Yazdır";
             // 
@@ -664,7 +665,7 @@
             this.grdMaterialList.MainView = this.grdMaterialList2;
             this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
-            this.grdMaterialList.Size = new System.Drawing.Size(1391, 404);
+            this.grdMaterialList.Size = new System.Drawing.Size(1391, 420);
             this.grdMaterialList.TabIndex = 28;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdMaterialList2});
@@ -807,10 +808,10 @@
             // 
             this.gridSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSplitContainer1.Grid = this.grdMaterialList;
-            this.gridSplitContainer1.Location = new System.Drawing.Point(0, 160);
+            this.gridSplitContainer1.Location = new System.Drawing.Point(0, 144);
             this.gridSplitContainer1.Name = "gridSplitContainer1";
             this.gridSplitContainer1.Panel1.Controls.Add(this.grdMaterialList);
-            this.gridSplitContainer1.Size = new System.Drawing.Size(1391, 404);
+            this.gridSplitContainer1.Size = new System.Drawing.Size(1391, 420);
             this.gridSplitContainer1.TabIndex = 23;
             // 
             // frm_TeklifSonAdim
