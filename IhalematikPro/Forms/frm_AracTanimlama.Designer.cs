@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.KayitMenusu = new DevExpress.XtraEditors.GroupControl();
+            this.pnlArac = new DevExpress.XtraEditors.GroupControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.pnlArac = new DevExpress.XtraEditors.GroupControl();
             this.PanelKira = new DevExpress.XtraEditors.PanelControl();
             this.rdHour = new System.Windows.Forms.RadioButton();
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
@@ -75,8 +75,9 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.rbAsgariUcret = new System.Windows.Forms.RadioButton();
             this.rbCompanyVehicle = new System.Windows.Forms.RadioButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.grdVehicle = new DevExpress.XtraGrid.GridControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.güncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -89,10 +90,10 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KayitMenusu)).BeginInit();
             this.KayitMenusu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
-            this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlArac)).BeginInit();
             this.pnlArac.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PanelKira)).BeginInit();
             this.PanelKira.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
@@ -198,9 +199,9 @@
             this.KayitMenusu.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.KayitMenusu.AppearanceCaption.Options.UseFont = true;
             this.KayitMenusu.AppearanceCaption.Options.UseForeColor = true;
-            this.KayitMenusu.Controls.Add(this.panelControl3);
-            this.KayitMenusu.Controls.Add(this.simpleButton1);
+            this.KayitMenusu.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.KayitMenusu.Controls.Add(this.pnlArac);
+            this.KayitMenusu.Controls.Add(this.simpleButton1);
             this.KayitMenusu.Dock = System.Windows.Forms.DockStyle.Left;
             this.KayitMenusu.Location = new System.Drawing.Point(0, 50);
             this.KayitMenusu.Margin = new System.Windows.Forms.Padding(4);
@@ -209,12 +210,32 @@
             this.KayitMenusu.TabIndex = 35;
             this.KayitMenusu.Text = "Menü";
             // 
+            // pnlArac
+            // 
+            this.pnlArac.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlArac.AppearanceCaption.Options.UseFont = true;
+            this.pnlArac.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlArac.Controls.Add(this.panelControl3);
+            this.pnlArac.Controls.Add(this.PanelKira);
+            this.pnlArac.Controls.Add(this.PanelSirket);
+            this.pnlArac.Controls.Add(this.ddlVehicleTitle);
+            this.pnlArac.Controls.Add(this.labelControl3);
+            this.pnlArac.Controls.Add(this.rbAsgariUcret);
+            this.pnlArac.Controls.Add(this.rbCompanyVehicle);
+            this.pnlArac.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlArac.Location = new System.Drawing.Point(0, 56);
+            this.pnlArac.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlArac.Name = "pnlArac";
+            this.pnlArac.Size = new System.Drawing.Size(448, 651);
+            this.pnlArac.TabIndex = 92;
+            this.pnlArac.Text = "Araç Bilgileri";
+            // 
             // panelControl3
             // 
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl3.Controls.Add(this.btnKaydet);
             this.panelControl3.Controls.Add(this.btnTemizle);
-            this.panelControl3.Location = new System.Drawing.Point(19, 501);
+            this.panelControl3.Location = new System.Drawing.Point(12, 388);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(411, 50);
             this.panelControl3.TabIndex = 79;
@@ -250,38 +271,6 @@
             this.btnTemizle.TabIndex = 19;
             this.btnTemizle.Text = "Temizle";
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Appearance.Options.UseForeColor = true;
-            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.Untitled;
-            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.simpleButton1.Location = new System.Drawing.Point(3, 35);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(442, 56);
-            this.simpleButton1.TabIndex = 93;
-            this.simpleButton1.Text = "Araç Ekle > F1";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // pnlArac
-            // 
-            this.pnlArac.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlArac.AppearanceCaption.Options.UseFont = true;
-            this.pnlArac.Controls.Add(this.PanelSirket);
-            this.pnlArac.Controls.Add(this.ddlVehicleTitle);
-            this.pnlArac.Controls.Add(this.labelControl3);
-            this.pnlArac.Controls.Add(this.rbAsgariUcret);
-            this.pnlArac.Controls.Add(this.rbCompanyVehicle);
-            this.pnlArac.Location = new System.Drawing.Point(13, 98);
-            this.pnlArac.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlArac.Name = "pnlArac";
-            this.pnlArac.Size = new System.Drawing.Size(430, 507);
-            this.pnlArac.TabIndex = 92;
-            this.pnlArac.Text = "Araç Bilgileri";
-            // 
             // PanelKira
             // 
             this.PanelKira.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -303,17 +292,17 @@
             this.PanelKira.Controls.Add(this.labelControl22);
             this.PanelKira.Controls.Add(this.textEdit16);
             this.PanelKira.Controls.Add(this.labelControl23);
-            this.PanelKira.Location = new System.Drawing.Point(3, 256);
+            this.PanelKira.Location = new System.Drawing.Point(427, 82);
             this.PanelKira.Margin = new System.Windows.Forms.Padding(4);
             this.PanelKira.Name = "PanelKira";
-            this.PanelKira.Size = new System.Drawing.Size(407, 293);
+            this.PanelKira.Size = new System.Drawing.Size(403, 293);
             this.PanelKira.TabIndex = 38;
             this.PanelKira.Visible = false;
             // 
             // rdHour
             // 
             this.rdHour.AutoSize = true;
-            this.rdHour.Location = new System.Drawing.Point(309, 34);
+            this.rdHour.Location = new System.Drawing.Point(312, 37);
             this.rdHour.Margin = new System.Windows.Forms.Padding(4);
             this.rdHour.Name = "rdHour";
             this.rdHour.Size = new System.Drawing.Size(80, 23);
@@ -340,7 +329,7 @@
             // rdDay
             // 
             this.rdDay.AutoSize = true;
-            this.rdDay.Location = new System.Drawing.Point(230, 34);
+            this.rdDay.Location = new System.Drawing.Point(233, 37);
             this.rdDay.Margin = new System.Windows.Forms.Padding(4);
             this.rdDay.Name = "rdDay";
             this.rdDay.Size = new System.Drawing.Size(84, 23);
@@ -353,7 +342,7 @@
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl11.Location = new System.Drawing.Point(20, 186);
+            this.labelControl11.Location = new System.Drawing.Point(23, 189);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(144, 21);
@@ -363,7 +352,7 @@
             // rdMonth
             // 
             this.rdMonth.AutoSize = true;
-            this.rdMonth.Location = new System.Drawing.Point(162, 34);
+            this.rdMonth.Location = new System.Drawing.Point(165, 37);
             this.rdMonth.Margin = new System.Windows.Forms.Padding(4);
             this.rdMonth.Name = "rdMonth";
             this.rdMonth.Size = new System.Drawing.Size(69, 23);
@@ -392,7 +381,7 @@
             // 
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl18.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl18.Location = new System.Drawing.Point(166, 6);
+            this.labelControl18.Location = new System.Drawing.Point(169, 9);
             this.labelControl18.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(111, 21);
@@ -403,7 +392,7 @@
             // 
             this.labelControl19.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl19.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl19.Location = new System.Drawing.Point(36, 224);
+            this.labelControl19.Location = new System.Drawing.Point(39, 227);
             this.labelControl19.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(128, 21);
@@ -445,7 +434,7 @@
             // 
             this.labelControl20.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl20.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl20.Location = new System.Drawing.Point(39, 262);
+            this.labelControl20.Location = new System.Drawing.Point(42, 265);
             this.labelControl20.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl20.Name = "labelControl20";
             this.labelControl20.Size = new System.Drawing.Size(125, 21);
@@ -456,7 +445,7 @@
             // 
             this.labelControl21.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl21.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl21.Location = new System.Drawing.Point(64, 73);
+            this.labelControl21.Location = new System.Drawing.Point(67, 76);
             this.labelControl21.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl21.Name = "labelControl21";
             this.labelControl21.Size = new System.Drawing.Size(98, 21);
@@ -483,7 +472,7 @@
             // 
             this.labelControl22.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl22.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl22.Location = new System.Drawing.Point(10, 110);
+            this.labelControl22.Location = new System.Drawing.Point(13, 113);
             this.labelControl22.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl22.Name = "labelControl22";
             this.labelControl22.Size = new System.Drawing.Size(156, 21);
@@ -510,7 +499,7 @@
             // 
             this.labelControl23.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl23.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl23.Location = new System.Drawing.Point(38, 148);
+            this.labelControl23.Location = new System.Drawing.Point(41, 151);
             this.labelControl23.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl23.Name = "labelControl23";
             this.labelControl23.Size = new System.Drawing.Size(126, 21);
@@ -519,7 +508,6 @@
             // 
             // PanelSirket
             // 
-            this.PanelSirket.Controls.Add(this.PanelKira);
             this.PanelSirket.Controls.Add(this.txtMaintenanceFare);
             this.PanelSirket.Controls.Add(this.txtFuelOilDay);
             this.PanelSirket.Controls.Add(this.labelControl7);
@@ -534,7 +522,7 @@
             this.PanelSirket.Controls.Add(this.labelControl2);
             this.PanelSirket.Controls.Add(this.txtDriverFare);
             this.PanelSirket.Controls.Add(this.labelControl13);
-            this.PanelSirket.Location = new System.Drawing.Point(7, 105);
+            this.PanelSirket.Location = new System.Drawing.Point(12, 82);
             this.PanelSirket.Margin = new System.Windows.Forms.Padding(4);
             this.PanelSirket.Name = "PanelSirket";
             this.PanelSirket.Size = new System.Drawing.Size(407, 274);
@@ -729,7 +717,7 @@
             // 
             // ddlVehicleTitle
             // 
-            this.ddlVehicleTitle.Location = new System.Drawing.Point(186, 34);
+            this.ddlVehicleTitle.Location = new System.Drawing.Point(179, 4);
             this.ddlVehicleTitle.Margin = new System.Windows.Forms.Padding(4);
             this.ddlVehicleTitle.Name = "ddlVehicleTitle";
             this.ddlVehicleTitle.Properties.AccessibleDescription = "Name";
@@ -747,7 +735,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl3.Location = new System.Drawing.Point(102, 38);
+            this.labelControl3.Location = new System.Drawing.Point(95, 9);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(80, 21);
@@ -758,7 +746,7 @@
             // 
             this.rbAsgariUcret.AutoSize = true;
             this.rbAsgariUcret.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbAsgariUcret.Location = new System.Drawing.Point(282, 72);
+            this.rbAsgariUcret.Location = new System.Drawing.Point(279, 40);
             this.rbAsgariUcret.Margin = new System.Windows.Forms.Padding(4);
             this.rbAsgariUcret.Name = "rbAsgariUcret";
             this.rbAsgariUcret.Size = new System.Drawing.Size(132, 25);
@@ -772,7 +760,7 @@
             this.rbCompanyVehicle.AutoSize = true;
             this.rbCompanyVehicle.Checked = true;
             this.rbCompanyVehicle.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbCompanyVehicle.Location = new System.Drawing.Point(152, 72);
+            this.rbCompanyVehicle.Location = new System.Drawing.Point(149, 40);
             this.rbCompanyVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.rbCompanyVehicle.Name = "rbCompanyVehicle";
             this.rbCompanyVehicle.Size = new System.Drawing.Size(133, 25);
@@ -781,6 +769,22 @@
             this.rbCompanyVehicle.Text = "Şirket Aracı";
             this.rbCompanyVehicle.UseVisualStyleBackColor = true;
             this.rbCompanyVehicle.CheckedChanged += new System.EventHandler(this.rbCompanyVehicle_CheckedChanged);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.Untitled;
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.simpleButton1.Location = new System.Drawing.Point(0, 0);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(448, 56);
+            this.simpleButton1.TabIndex = 93;
+            this.simpleButton1.Text = "Araç Ekle > F1";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // grdVehicle
             // 
@@ -937,11 +941,11 @@
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KayitMenusu)).EndInit();
             this.KayitMenusu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
-            this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnlArac)).EndInit();
             this.pnlArac.ResumeLayout(false);
             this.pnlArac.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PanelKira)).EndInit();
             this.PanelKira.ResumeLayout(false);
             this.PanelKira.PerformLayout();
