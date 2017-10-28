@@ -726,7 +726,7 @@
             // 
             // gridView1
             // 
-            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.Lime;
+            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.SteelBlue;
             this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn2,
@@ -740,8 +740,10 @@
             // 
             // gridColumn2
             // 
+            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn2.AppearanceHeader.Options.UseFont = true;
             this.gridColumn2.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn2.Caption = "ÜNVANI";
@@ -758,8 +760,10 @@
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn3.Caption = "AYLIK MASRAFI";
@@ -777,8 +781,10 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn4.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn4.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn4.Caption = "GÜNLÜK ÜCRETİ";
@@ -797,8 +803,10 @@
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn5.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn5.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn5.Caption = "SAAT ÜCRETİ";
@@ -817,8 +825,10 @@
             // 
             // gridColumn6
             // 
+            this.gridColumn6.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn6.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn6.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn6.Caption = "DAKİKA ÜCRETİ";

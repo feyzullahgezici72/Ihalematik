@@ -760,8 +760,7 @@ namespace IhalematikPro.Forms
             this.Appearance.Options.UseForeColor = true;
             this.Appearance.Options.UseImage = true;
             this.Appearance.Options.UseTextOptions = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1449, 598);
@@ -770,6 +769,7 @@ namespace IhalematikPro.Forms
             this.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.InactiveGlowColor = System.Drawing.SystemColors.Control;
             this.IsMdiContainer = true;
+            this.KeyPreview = true;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "frm_Anaform";
