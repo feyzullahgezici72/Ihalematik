@@ -144,7 +144,6 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
         }
     }
 }
