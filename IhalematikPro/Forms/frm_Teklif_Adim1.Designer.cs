@@ -86,9 +86,6 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.gridColumn1.AppearanceCell.BackColor2 = System.Drawing.Color.Azure;
-            this.gridColumn1.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn1.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
@@ -492,9 +489,6 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.gridColumn2.AppearanceCell.BackColor2 = System.Drawing.Color.Azure;
-            this.gridColumn2.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn2.AppearanceHeader.Options.UseFont = true;
@@ -511,9 +505,6 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.gridColumn3.AppearanceCell.BackColor2 = System.Drawing.Color.Azure;
-            this.gridColumn3.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
@@ -530,11 +521,8 @@
             // 
             // gridColumn7
             // 
-            this.gridColumn7.AppearanceCell.BackColor = System.Drawing.Color.Azure;
-            this.gridColumn7.AppearanceCell.BackColor2 = System.Drawing.Color.Azure;
             this.gridColumn7.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn7.AppearanceCell.ForeColor = System.Drawing.Color.Black;
-            this.gridColumn7.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn7.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn7.AppearanceHeader.Options.UseFont = true;
@@ -550,10 +538,8 @@
             // 
             // gridColumn4
             // 
-            this.gridColumn4.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.gridColumn4.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn4.AppearanceCell.ForeColor = System.Drawing.Color.Black;
-            this.gridColumn4.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn4.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
@@ -586,9 +572,6 @@
             // 
             // gridColumn6
             // 
-            this.gridColumn6.AppearanceCell.BackColor = System.Drawing.Color.LavenderBlush;
-            this.gridColumn6.AppearanceCell.BackColor2 = System.Drawing.Color.LavenderBlush;
-            this.gridColumn6.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn6.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
@@ -607,9 +590,6 @@
             // 
             // gridColumn8
             // 
-            this.gridColumn8.AppearanceCell.BackColor = System.Drawing.Color.LavenderBlush;
-            this.gridColumn8.AppearanceCell.BackColor2 = System.Drawing.Color.LavenderBlush;
-            this.gridColumn8.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn8.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn8.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn8.AppearanceHeader.Options.UseFont = true;

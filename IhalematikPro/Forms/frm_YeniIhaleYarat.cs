@@ -112,12 +112,7 @@ namespace IhalematikPro.Forms
                 a1.Activate();
             }
 
-            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-             af.RibonPasif();
-            af.Adimlar.Visible = true;
-            af.btnAdimx3.Enabled = false;
-            af.btnAdimx4.Enabled = false;
-            af.btnAdimx5.Enabled = false;
+             
         }
 
         private void a1_FormClosed(object sender, FormClosedEventArgs e)

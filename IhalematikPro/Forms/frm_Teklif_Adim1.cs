@@ -144,12 +144,7 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-            af.RibonAktif();
-            af.btnAdimx1.Enabled = false;
-            af.btnAdimx3.Enabled = false;
-            af.btnAdimx4.Enabled = false;
-            af.btnAdimx5.Enabled = false;
+            
         }
     }
 }
