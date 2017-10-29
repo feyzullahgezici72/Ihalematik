@@ -117,18 +117,14 @@ namespace IhalematikPro.Forms
             RibonAktif();
         }
 
-         public void AdimlarAktif()
-         {
-            Adimlar.Enabled = true;
-
-        }
+        
         private void barBtnTeklifHazirla_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Adimlar.Visible = false;
+         
              
             frm_YeniIhaleYarat frm = new frm_YeniIhaleYarat();
             frm.ShowDialog();
-            //Adimlar.Visible = true;
+           
         }
         Forms.frm_Teklif_Adim1 ta1;
         private void btnAdimx1_ItemClick(object sender, ItemClickEventArgs e)

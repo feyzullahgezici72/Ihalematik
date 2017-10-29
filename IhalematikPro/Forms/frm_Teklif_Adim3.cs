@@ -99,7 +99,7 @@ namespace IhalematikPro.Forms
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "WorkerUnitPrice";
             column.Name = "WorkerUnitPrice";
-            column.HeaderText = "BİRİM FİYAT OLSUN";
+            column.HeaderText = "BİRİM FİYAT";
             column.DefaultCellStyle.Format = "c2";
             column.ReadOnly = false;
             grdMaterialListIsWorkship.Columns.Add(column);

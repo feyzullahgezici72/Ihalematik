@@ -102,7 +102,7 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.CadetBlue;
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.SteelBlue;
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.BottomLeft;
@@ -163,7 +163,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 50);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1380, 80);
+            this.panelControl2.Size = new System.Drawing.Size(1380, 89);
             this.panelControl2.TabIndex = 20;
             this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
@@ -230,7 +230,7 @@
             this.btnPozKayit.Margin = new System.Windows.Forms.Padding(4);
             this.btnPozKayit.Name = "btnPozKayit";
             this.btnPozKayit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnPozKayit.Size = new System.Drawing.Size(210, 80);
+            this.btnPozKayit.Size = new System.Drawing.Size(210, 89);
             this.btnPozKayit.TabIndex = 5;
             this.btnPozKayit.Text = "F1 : Poz Kayıt";
             this.btnPozKayit.Click += new System.EventHandler(this.simpleButton3_Click);
@@ -247,7 +247,7 @@
             this.btnObfKayit.Location = new System.Drawing.Point(1154, 0);
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4);
             this.btnObfKayit.Name = "btnObfKayit";
-            this.btnObfKayit.Size = new System.Drawing.Size(226, 80);
+            this.btnObfKayit.Size = new System.Drawing.Size(226, 89);
             this.btnObfKayit.TabIndex = 5;
             this.btnObfKayit.Text = "F2 : ÖBF Kayıt";
             this.btnObfKayit.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -437,10 +437,10 @@
             this.panelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl6.Controls.Add(this.grdMaterialList);
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl6.Location = new System.Drawing.Point(0, 130);
+            this.panelControl6.Location = new System.Drawing.Point(0, 139);
             this.panelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(1380, 462);
+            this.panelControl6.Size = new System.Drawing.Size(1380, 453);
             this.panelControl6.TabIndex = 24;
             // 
             // grdMaterialList
@@ -451,7 +451,7 @@
             this.grdMaterialList.MainView = this.grdMaterialList2;
             this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
-            this.grdMaterialList.Size = new System.Drawing.Size(1380, 462);
+            this.grdMaterialList.Size = new System.Drawing.Size(1380, 453);
             this.grdMaterialList.TabIndex = 0;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdMaterialList2});
@@ -460,8 +460,6 @@
             // grdMaterialList2
             // 
             this.grdMaterialList2.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
-            this.grdMaterialList2.Appearance.FocusedRow.BackColor = System.Drawing.Color.SteelBlue;
-            this.grdMaterialList2.Appearance.FocusedRow.Options.UseBackColor = true;
             this.grdMaterialList2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.grdMaterialList2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
@@ -483,6 +481,7 @@
             this.grdMaterialList2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.grdMaterialList2.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.False;
             this.grdMaterialList2.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.False;
+            this.grdMaterialList2.OptionsView.ShowDetailButtons = false;
             this.grdMaterialList2.OptionsView.ShowGroupPanel = false;
             this.grdMaterialList2.ColumnUnboundExpressionChanged += new DevExpress.XtraGrid.Views.Base.ColumnEventHandler(this.grdMaterialList2_ColumnUnboundExpressionChanged);
             this.grdMaterialList2.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.grdMaterialList2_CellValueChanged);
@@ -521,8 +520,12 @@
             // 
             // gridColumn7
             // 
-            this.gridColumn7.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn7.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.gridColumn7.AppearanceCell.BackColor = System.Drawing.Color.Red;
+            this.gridColumn7.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn7.AppearanceCell.ForeColor = System.Drawing.Color.White;
+            this.gridColumn7.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn7.AppearanceCell.Options.UseFont = true;
+            this.gridColumn7.AppearanceCell.Options.UseForeColor = true;
             this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn7.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn7.AppearanceHeader.Options.UseFont = true;
@@ -538,8 +541,12 @@
             // 
             // gridColumn4
             // 
-            this.gridColumn4.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn4.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.gridColumn4.AppearanceCell.BackColor = System.Drawing.Color.Red;
+            this.gridColumn4.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn4.AppearanceCell.ForeColor = System.Drawing.Color.White;
+            this.gridColumn4.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn4.AppearanceCell.Options.UseFont = true;
+            this.gridColumn4.AppearanceCell.Options.UseForeColor = true;
             this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn4.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
