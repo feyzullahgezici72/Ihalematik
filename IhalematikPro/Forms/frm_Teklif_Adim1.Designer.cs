@@ -86,11 +86,11 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.AppearanceCell.BackColor = System.Drawing.Color.Azure;
+            this.gridColumn1.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.gridColumn1.AppearanceCell.BackColor2 = System.Drawing.Color.Azure;
             this.gridColumn1.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn1.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn1.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
             this.gridColumn1.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn1.Caption = "ÖBF/POZ NO";
@@ -282,7 +282,7 @@
             this.simpleButton1.Location = new System.Drawing.Point(0, 0);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(511, 118);
+            this.simpleButton1.Size = new System.Drawing.Size(504, 118);
             this.simpleButton1.TabIndex = 12;
             this.simpleButton1.Text = "Fiyat Araştırmasından getir";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -294,7 +294,7 @@
             this.panel2.Controls.Add(this.btnYazdir);
             this.panel2.Controls.Add(this.btnKaydet);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(511, 0);
+            this.panel2.Location = new System.Drawing.Point(504, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(501, 118);
@@ -355,10 +355,10 @@
             this.panel6.Controls.Add(this.txtBaseAmount);
             this.panel6.Controls.Add(this.labelControl8);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(1012, 0);
+            this.panel6.Location = new System.Drawing.Point(1005, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(368, 118);
+            this.panel6.Size = new System.Drawing.Size(375, 118);
             this.panel6.TabIndex = 9;
             // 
             // txtTotalAmount
@@ -389,12 +389,12 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl6.Location = new System.Drawing.Point(34, 9);
+            this.labelControl6.Location = new System.Drawing.Point(-2, 9);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(118, 21);
+            this.labelControl6.Size = new System.Drawing.Size(158, 21);
             this.labelControl6.TabIndex = 9;
-            this.labelControl6.Text = "ARA TOPLAM:";
+            this.labelControl6.Text = "MALİYET TOPLAM:";
             // 
             // txtBaseKDVAmount
             // 
@@ -431,7 +431,7 @@
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(126, 21);
             this.labelControl8.TabIndex = 10;
-            this.labelControl8.Text = "KDV TOPLAMI:";
+            this.labelControl8.Text = "KAR TOPLAMI:";
             // 
             // panelControl6
             // 
@@ -462,10 +462,8 @@
             // 
             // grdMaterialList2
             // 
-            this.grdMaterialList2.Appearance.FocusedCell.BackColor = System.Drawing.SystemColors.Highlight;
             this.grdMaterialList2.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
-            this.grdMaterialList2.Appearance.FocusedCell.Options.UseBackColor = true;
-            this.grdMaterialList2.Appearance.FocusedRow.BackColor = System.Drawing.Color.Lime;
+            this.grdMaterialList2.Appearance.FocusedRow.BackColor = System.Drawing.Color.SteelBlue;
             this.grdMaterialList2.Appearance.FocusedRow.Options.UseBackColor = true;
             this.grdMaterialList2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.grdMaterialList2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -494,11 +492,11 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.AppearanceCell.BackColor = System.Drawing.Color.Azure;
+            this.gridColumn2.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.gridColumn2.AppearanceCell.BackColor2 = System.Drawing.Color.Azure;
             this.gridColumn2.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn2.AppearanceHeader.Options.UseFont = true;
             this.gridColumn2.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn2.Caption = "AÇIKLAMA";
@@ -513,11 +511,11 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.AppearanceCell.BackColor = System.Drawing.Color.Azure;
+            this.gridColumn3.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.gridColumn3.AppearanceCell.BackColor2 = System.Drawing.Color.Azure;
             this.gridColumn3.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn3.Caption = "BİRİMİ";
@@ -538,7 +536,7 @@
             this.gridColumn7.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.gridColumn7.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn7.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn7.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn7.AppearanceHeader.Options.UseFont = true;
             this.gridColumn7.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn7.Caption = "KDV %";
@@ -557,7 +555,7 @@
             this.gridColumn4.AppearanceCell.ForeColor = System.Drawing.Color.Black;
             this.gridColumn4.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn4.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn4.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn4.Caption = "MİKTARI";
@@ -571,7 +569,7 @@
             // gridColumn5
             // 
             this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn5.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn5.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn5.Caption = "BİRİM FİYATI";
@@ -592,7 +590,7 @@
             this.gridColumn6.AppearanceCell.BackColor2 = System.Drawing.Color.LavenderBlush;
             this.gridColumn6.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn6.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn6.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn6.Caption = "KDV TUTARI";
@@ -613,7 +611,7 @@
             this.gridColumn8.AppearanceCell.BackColor2 = System.Drawing.Color.LavenderBlush;
             this.gridColumn8.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn8.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn8.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
+            this.gridColumn8.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn8.AppearanceHeader.Options.UseFont = true;
             this.gridColumn8.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn8.Caption = "TOPLAM TUTAR";
@@ -646,6 +644,7 @@
             this.Name = "frm_Teklif_Adim1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_Teklif_Adim1_FormClosed);
             this.Load += new System.EventHandler(this.frm_Teklif_Adim1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

@@ -572,37 +572,27 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem18_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Lilian";
-            DevExpress.Skins.SkinManager.EnableFormSkins();
-            Application.EnableVisualStyles();
+            
         }
 
         private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "McSkin";
-            DevExpress.Skins.SkinManager.EnableFormSkins();
-            Application.EnableVisualStyles();
+            
         }
 
         private void barButtonItem20_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Stardust";
-            DevExpress.Skins.SkinManager.EnableFormSkins();
-            Application.EnableVisualStyles();
+            
         }
 
         private void barButtonItem21_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Black";
-            DevExpress.Skins.SkinManager.EnableFormSkins();
-            Application.EnableVisualStyles();
+           
         }
 
         private void barButtonItem22_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "iMaginary";
-            DevExpress.Skins.SkinManager.EnableFormSkins();
-            Application.EnableVisualStyles();
+           
         }
     }
 }

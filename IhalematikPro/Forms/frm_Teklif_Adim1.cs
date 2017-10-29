@@ -105,11 +105,7 @@ namespace IhalematikPro.Forms
 
             this.Close();
 
-            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-             
-            af.btnAdimx3.Enabled = true;
-            af.btnAdimx4.Enabled = true;
-            af.btnAdimx5.Enabled = true;
+            
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -128,6 +124,8 @@ namespace IhalematikPro.Forms
             txtTotalAmount.Text = string.Format("{0:C2}", Math.Round((baseKDVAmount + baseAmount), 2));
         }
 
+        
+
         private void grdMaterialList2_ColumnUnboundExpressionChanged(object sender, DevExpress.XtraGrid.Views.Base.ColumnEventArgs e)
         {
 
@@ -142,6 +140,16 @@ namespace IhalematikPro.Forms
         {
             grdMaterialList.DataSource = CurrentManager.MaterialList;
             grdMaterialList.RefreshDataSource();
+        }
+
+        private void frm_Teklif_Adim1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            af.RibonAktif();
+            af.btnAdimx1.Enabled = false;
+            af.btnAdimx3.Enabled = false;
+            af.btnAdimx4.Enabled = false;
+            af.btnAdimx5.Enabled = false;
         }
     }
 }
