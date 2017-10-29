@@ -52,17 +52,5 @@ namespace IhalematikProBL.Entity
                 return this.materialList;
             }
         }
-
-        private List<MaterialList> materialListIsWorkship { get; set; }
-
-        public List<MaterialList> MaterialListIsWorkship
-        {
-            get
-            {
-                return this.MaterialList.Where(p => p.IsWorkship).ToList();
-            }
-        }
-
-
     }
 }

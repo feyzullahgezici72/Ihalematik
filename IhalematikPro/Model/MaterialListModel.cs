@@ -137,17 +137,23 @@ namespace IhalematikPro.Model
             }
         }
 
-        //Calisan kar
-        public double WorkerMarkup { get; set; }
-
         public double MaterialMarkup { get; set; }
 
-        // Birim kar
+        //Iscilikli Birim Fiyat
         public double MarkupUnitPrice
         {
             get
             {
                 return Math.Round(this.PozOBF.UnitPrice + this.UnitMarkup, 2);
+            }
+        }
+
+        //Iscilikli Birim Kar
+        public double WorkerMarkup
+        {
+            get
+            {
+                return Math.Round(this.WorkerUnitPrice * this.Markup / 100, 2);
             }
         }
 
@@ -184,7 +190,7 @@ namespace IhalematikPro.Model
                             }
                             else
                             {
-                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount / (30 * 8)), 2) * this.UnitTime * item.Quantity;
                             }
                         }
                     }
@@ -198,7 +204,7 @@ namespace IhalematikPro.Model
                             }
                             else
                             {
-                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount / (30)), 2) * this.UnitTime * item.Quantity;
                             }
                         }
                     }
@@ -212,7 +218,7 @@ namespace IhalematikPro.Model
                             }
                             else
                             {
-                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount / 4), 2) * this.UnitTime * item.Quantity;
                             }
                         }
                     }
@@ -226,7 +232,7 @@ namespace IhalematikPro.Model
                             }
                             else
                             {
-                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount / 2), 2) * this.UnitTime * item.Quantity;
                             }
                         }
                     }
@@ -240,7 +246,7 @@ namespace IhalematikPro.Model
                             }
                             else
                             {
-                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                                this.workerUnitPrice += Math.Round((item.Equipment.Vehicle.TotalFare.Amount), 2) * 12 * this.UnitTime * item.Quantity;
                             }
                         }
                     }
