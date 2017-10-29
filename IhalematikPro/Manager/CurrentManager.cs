@@ -9,10 +9,7 @@ using System.Threading.Tasks;
 namespace IhalematikPro.Manager
 {
     public static class CurrentManager
-    {
-        public static List<MaterialList> MaterialList { get; set; }
-        public static List<MaterialListModel> MaterialListNonWorkship { get; set; }
-        
+    {   
         public static List<VehicleModel> Vehicles { get; set; }
         public static List<WorkerModel> Workers { get; set; }
 

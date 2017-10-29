@@ -70,6 +70,11 @@ namespace IhalematikProBL.Entity
                 }
                 return this.tender;
             }
+            set
+            {
+                this.tender = value;
+                this.TenderId = this.tender.Id;
+            }
         }
 
         //Zaman Tipi

@@ -22,12 +22,14 @@ using IhalematikProUI.Model;
 using IhalematikProBL.Enum;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms;
+using SimpleApplicationBase.BL.Base;
 
 namespace IhalematikPro.Forms
 {
     public partial class frm_Teklif_Adim3 : DevExpress.XtraEditors.XtraForm
     {
         public bool IsInitializeTenderMaterialListEquipment = false;
+        public bool isDataGridFormatted = false;
         public frm_Teklif_Adim3()
         {
             InitializeComponent();
@@ -46,6 +48,12 @@ namespace IhalematikPro.Forms
             column.DataPropertyName = "Quantity";
             column.Name = "MİKTAR";
             column.ReadOnly = true;
+            grdMaterialListIsWorkship.Columns.Add(column);
+
+            column = new DataGridViewTextBoxColumn();
+            column.DataPropertyName = "Markup";
+            column.Name = "Kar %";
+            column.ReadOnly = false;
             grdMaterialListIsWorkship.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
@@ -91,7 +99,15 @@ namespace IhalematikPro.Forms
             column = new DataGridViewTextBoxColumn();
             column.DataPropertyName = "WorkerUnitPrice";
             column.Name = "WorkerUnitPrice";
-            column.HeaderText = "ISCILIK(MALZEME) BIRIM FIYAT";
+            column.HeaderText = "BİRİM FİYAT OLSUN";
+            column.DefaultCellStyle.Format = "c2";
+            column.ReadOnly = false;
+            grdMaterialListIsWorkship.Columns.Add(column);
+
+            column = new DataGridViewTextBoxColumn();
+            column.DataPropertyName = "WorkerMarkup";
+            column.Name = "WorkerMarkup";
+            column.HeaderText = "KARLI BİRİM FİYAT";
             column.DefaultCellStyle.Format = "c2";
             column.ReadOnly = false;
             grdMaterialListIsWorkship.Columns.Add(column);
@@ -104,7 +120,10 @@ namespace IhalematikPro.Forms
 
         private void GrdMaterialListIsWorkship_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            InitializeTenderMaterialListEquipment();
+            //if (!this.isDataGridFormatted)
+            //    return;
+            //InitializeTenderMaterialListEquipment();
+            //this.isDataGridFormatted = false;
         }
 
         private void InitializeTenderMaterialListEquipment()
@@ -113,14 +132,14 @@ namespace IhalematikPro.Forms
             {
                 //return;
             }
-            
-            List<MaterialList> items = CurrentManager.CurrentTender.MaterialListIsWorkship;
+
+            List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
             List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
 
             foreach (DataGridViewRow CurrentRow in grdMaterialListIsWorkship.Rows)
             {
                 MaterialListModel item = models.ToArray()[CurrentRow.Index];
-               
+
                 if (item.TenderMaterialListEquipment != null)
                 {
                     foreach (TenderMaterialListEquipment tenderMaterialListEquipment in item.TenderMaterialListEquipment)
@@ -150,21 +169,28 @@ namespace IhalematikPro.Forms
         {
             lblTenderDescription.Text = CurrentManager.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.CurrentTender.DisplayNumber;
-            List<MaterialList> items = CurrentManager.CurrentTender.MaterialListIsWorkship;
+            List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
             List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             grdMaterialListIsWorkship.DataSource = models;
+            InitializeTenderMaterialListEquipment();
+            txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
+            txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
+            txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
         }
 
         private void GrdMaterialListIsWorkship_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
+            if (!IsInitializeTenderMaterialListEquipment)
+                return;
+
             string currentColumnName = grdMaterialListIsWorkship.Columns[e.ColumnIndex].Name;
-            List<MaterialList> items = CurrentManager.CurrentTender.MaterialListIsWorkship;
-            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            //List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
+            List<MaterialListModel> models = (List<MaterialListModel>)grdMaterialListIsWorkship.DataSource; //IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             MaterialListModel materialListModel = models.ToArray()[e.RowIndex];
             if (currentColumnName.Equals("WorkerMarkup"))
             {
                 double value = Convert.ToDouble(grdMaterialListIsWorkship["WorkerMarkup", grdMaterialListIsWorkship.CurrentRow.Index].Value);
-                materialListModel.WorkerMarkup = value;
+                materialListModel.Markup = value;
             }
             else if (currentColumnName.Equals("UnitTime"))
             {
@@ -200,26 +226,46 @@ namespace IhalematikPro.Forms
                             if (tenderMaterialListEquipment != null)
                             {
                                 tenderMaterialListEquipment.Quantity = value;
+                                OperationResult result = TenderMaterialListEquipmentProvider.Instance.Save(tenderMaterialListEquipment);
+                                if (!result.Success)
+                                {
+                                    //TODO feyzullahg
+                                }
                             }
                         }
                     }
                 }
             }
 
+            txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
+            txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
+            txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
+
             grdMaterialListIsWorkship.Refresh();
         }
 
         private void btnTumuneUygulaIscilik_Click(object sender, EventArgs e)
         {
-            double markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtWorkerMarkup.Text);
-            //CurrentManager.CurrentTender.MaterialListIsWorkship.ForEach(p => p = markup);
-            //grdMaterialListIsWorkship.DataSource = CurrentManager.MaterialListIsWorkship;
+            //double markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtWorkerMarkup.Text);
+            //List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
+            //List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            //models.ForEach(p => p.Markup = markup);
+            //foreach (var item in items)
+            //{
+            //    item.Markup = markup;
+            //    OperationResult result = MaterialListProvider.Instance.Save(item);
+            //    if (!result.Success)
+            //    {
+            //        //TODO feyzullahg
+            //    }
+            //}
+            //grdMaterialListIsWorkship.DataSource = models;
             //grdMaterialListIsWorkship.Refresh();
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            List<MaterialList> items = CurrentManager.CurrentTender.MaterialListIsWorkship;
+            List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
             List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             foreach (MaterialListModel materialListModel in models)
             {
@@ -258,6 +304,24 @@ namespace IhalematikPro.Forms
         {
             frm_IscilikIslemKayit frm = new frm_IscilikIslemKayit();
             frm.ShowDialog();
+        }
+
+        private void btnTumuneUygula_Click(object sender, EventArgs e)
+        {
+            double markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtWorkerMarkup.Text.Replace("%", ""));
+            List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
+            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            models.ForEach(p => p.Markup = markup);
+            foreach (var item in items)
+            {
+                item.Markup = markup;
+                OperationResult result = MaterialListProvider.Instance.Save(item);
+                if (!result.Success)
+                {
+                    //TODO feyzullahg
+                }
+            }
+            this.frm_Teklif_Adim3_Load(null, null);
         }
     }
 }

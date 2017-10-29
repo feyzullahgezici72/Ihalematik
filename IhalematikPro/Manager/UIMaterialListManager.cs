@@ -21,5 +21,14 @@ namespace IhalematikPro.Manager
             List<MaterialList> items = MaterialListProvider.Instance.GetItems(parameters);
             return items;
         }
+        public List<MaterialList> GetMaterialListIsWorkship()
+        {
+
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("IsWorkship", true);
+            parameters.Add("TenderId", CurrentManager.CurrentTender.Id);
+            List<MaterialList> items = MaterialListProvider.Instance.GetItems(parameters);
+            return items;
+        }
     }
 }

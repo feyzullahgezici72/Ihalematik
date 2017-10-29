@@ -57,7 +57,7 @@ namespace IhalematikPro.Forms
         private void frm_Teklif_Adim1_Load(object sender, EventArgs e)
         {
             grdMaterialList.DataSource = null;
-            bindingSource1.DataSource = CurrentManager.MaterialList; //typeof(List<MaterialList>);
+            bindingSource1.DataSource = CurrentManager.CurrentTender.MaterialList; //typeof(List<MaterialList>);
             grdMaterialList.DataSource = bindingSource1;
             lblTenderDescription.Text = CurrentManager.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.CurrentTender.DisplayNumber;
@@ -84,7 +84,7 @@ namespace IhalematikPro.Forms
         {
             int[] selectedRows = grdMaterialList2.GetSelectedRows();
 
-            MaterialList[] items = CurrentManager.MaterialList.ToArray();
+            MaterialList[] items = CurrentManager.CurrentTender.MaterialList.ToArray();
 
             foreach (int rowIndex in selectedRows)
             {
@@ -92,7 +92,7 @@ namespace IhalematikPro.Forms
                 item.IsWorkship = true;
             }
 
-            foreach (MaterialList item in CurrentManager.MaterialList)
+            foreach (MaterialList item in CurrentManager.CurrentTender.MaterialList)
             {
                 item.TenderId = CurrentManager.CurrentTender.Id;
                 MaterialListProvider.Instance.Save(item);
@@ -110,14 +110,14 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            grdMaterialList.DataSource = CurrentManager.MaterialList;
+            grdMaterialList.DataSource = CurrentManager.CurrentTender.MaterialList;
             grdMaterialList.RefreshDataSource();
         }
 
         private void grdMaterialList2_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            double baseAmount = CurrentManager.MaterialList.Sum(p => p.TotalAmount);
-            double baseKDVAmount = CurrentManager.MaterialList.Sum(p => p.KDVAmount);
+            double baseAmount = CurrentManager.CurrentTender.MaterialList.Sum(p => p.TotalAmount);
+            double baseKDVAmount = CurrentManager.CurrentTender.MaterialList.Sum(p => p.KDVAmount);
 
             txtBaseAmount.Text = string.Format("{0:C2}", baseAmount);
             txtBaseKDVAmount.Text = string.Format("{0:C2}", baseKDVAmount);
@@ -138,7 +138,7 @@ namespace IhalematikPro.Forms
 
         public void RefreshDataGrid()
         {
-            grdMaterialList.DataSource = CurrentManager.MaterialList;
+            grdMaterialList.DataSource = CurrentManager.CurrentTender.MaterialList;
             grdMaterialList.RefreshDataSource();
         }
 

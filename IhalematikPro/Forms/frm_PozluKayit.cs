@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using IhalematikPro.Model;
 using IhalematikPro.Manager;
 using IhalematikProBL.Entity;
+using IhalematikProBL.Provider;
 
 namespace IhalematikPro.Forms
 {
@@ -52,10 +53,8 @@ namespace IhalematikPro.Forms
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            if (CurrentManager.MaterialList == null)
-            {
-                CurrentManager.MaterialList = new List<MaterialList>();
-            }
+            Tender currentTender = CurrentManager.CurrentTender;
+            
             int[] selectedRows = gridView1.GetSelectedRows();
 
             PozModel[] selectedRowsItems = pozModels.ToArray();
@@ -66,15 +65,16 @@ namespace IhalematikPro.Forms
                 MaterialList materialList = new MaterialList();
                 materialList.IsPoz = true;
                 materialList.PozOBFId = pozModel.Id.Value;
-                List<MaterialList> items = CurrentManager.MaterialList.Where(p => p.PozOBFId == materialList.PozOBFId && p.IsPoz).ToList();
+                materialList.Tender = currentTender;
+                List<MaterialList> items = currentTender.MaterialList.Where(p => p.PozOBFId == materialList.PozOBFId && p.IsPoz).ToList();
 
                 if (items.Count == 0)
                 {
-                    CurrentManager.MaterialList.Add(materialList);
+                    currentTender.MaterialList.Add(materialList);
                 }
             }
 
-            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(CurrentManager.MaterialList.Where(p => p.IsPoz).ToList());
+            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(currentTender.MaterialList.Where(p => p.IsPoz).ToList());
 
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = models;
@@ -82,6 +82,15 @@ namespace IhalematikPro.Forms
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
+            Tender currentTender = CurrentManager.CurrentTender;
+            if (currentTender.MaterialList != null)
+            {
+                List<MaterialList> items = currentTender.MaterialList.Where(p => p.IsPoz).ToList();
+                foreach (MaterialList item in items)
+                {
+                    MaterialListProvider.Instance.Save(item);
+                }
+            }
             _owner.RefreshDataGrid();
             //this.RefreshDgv("", "", "");
             this.Close();
@@ -89,28 +98,29 @@ namespace IhalematikPro.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
+            Tender currentTender = CurrentManager.CurrentTender;
             int[] selectedRows = gridView2.GetSelectedRows();
             List<MaterialListModel> models = (List<MaterialListModel>)gridView2.DataSource;
 
             MaterialListModel[] selectedRowsItems = models.ToArray();
 
-            CurrentManager.MaterialList.ForEach(p => p.Id = p.PozOBFId);
+            currentTender.MaterialList.ForEach(p => p.Id = p.PozOBFId);
 
             foreach (int item in selectedRows)
             {
                 MaterialListModel pozModel = selectedRowsItems[item];
 
-                MaterialList selectedItem = CurrentManager.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
+                MaterialList selectedItem = currentTender.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
                 
                 if (selectedItem != null)
                 {
-                    int index = CurrentManager.MaterialList.IndexOf(selectedItem);
+                    int index = currentTender.MaterialList.IndexOf(selectedItem);
 
-                    CurrentManager.MaterialList.RemoveAt(index);
+                    currentTender.MaterialList.RemoveAt(index);
                 }
             }
 
-            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(CurrentManager.MaterialList.Where(p => p.IsPoz).ToList());
+            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(currentTender.MaterialList.Where(p => p.IsPoz).ToList());
 
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = dataSource;
