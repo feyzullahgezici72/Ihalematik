@@ -312,6 +312,26 @@ namespace IhalematikPro.Model
             }
         }
 
+        #region 4. adim
+        //4. adim birim fiyat
+        public double UnitTotalFare
+        {
+            get
+            {
+                return Math.Round(this.WorkerUnitPrice + this.MarkupUnitPrice, 2);
+            }
+        }
+
+        //4. adim Toplam birim fiyat
+        public double TotalFare
+        {
+            get
+            {
+                return Math.Round(this.UnitTotalFare * this.Quantity, 2);
+            }
+        }
+
+        #endregion
 
         //Zaman Tipi
         public UnitTimeTypesModel UnitTimeType { get; set; }
