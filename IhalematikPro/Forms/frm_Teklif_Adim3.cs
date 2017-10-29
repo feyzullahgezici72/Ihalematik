@@ -222,7 +222,7 @@ namespace IhalematikPro.Forms
                         MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
                         if (materialList != null)
                         {
-                            TenderMaterialListEquipment tenderMaterialListEquipment = materialList.TenderMaterialListEquipment.Where(k => k.Id == equipmentItem.Id).First();
+                            TenderMaterialListEquipment tenderMaterialListEquipment = materialList.TenderMaterialListEquipment.Where(k => k.Id == equipmentItem.Id).FirstOrDefault();
                             if (tenderMaterialListEquipment != null)
                             {
                                 tenderMaterialListEquipment.Quantity = value;
