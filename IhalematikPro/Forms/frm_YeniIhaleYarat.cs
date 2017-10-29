@@ -19,6 +19,8 @@ namespace IhalematikPro.Forms
 {
     public partial class frm_YeniIhaleYarat : DevExpress.XtraEditors.XtraForm
     {
+        private object a1;
+
         public frm_YeniIhaleYarat()
         {
             InitializeComponent();
@@ -93,13 +95,34 @@ namespace IhalematikPro.Forms
             frm_ihaleOlustuMesaj bk = new frm_ihaleOlustuMesaj();
             bk.ShowDialog();
             pbControl.Position = 0;
-            
+           
             this.Close();
+            frm_Teklif_Adim1 a1 = (frm_Teklif_Adim1)Application.OpenForms["frm_Teklif_Adim1"];
+           
+            if (a1 == null)
+            {
+                a1 = new frm_Teklif_Adim1();
+                a1.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                a1.FormClosed += new FormClosedEventHandler(a1_FormClosed);
+                a1.Show();
+                 
+            }
+            else
+            {
+                a1.Activate();
+            }
+
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+             af.RibonPasif();
             af.Adimlar.Visible = true;
             af.btnAdimx3.Enabled = false;
             af.btnAdimx4.Enabled = false;
             af.btnAdimx5.Enabled = false;
+        }
+
+        private void a1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            a1 = null;
         }
 
         private void panelControl1_Paint(object sender, PaintEventArgs e)

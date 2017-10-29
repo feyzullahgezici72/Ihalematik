@@ -112,7 +112,7 @@
             this.txtAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAciklama.Properties.Appearance.ForeColor = System.Drawing.Color.Navy;
+            this.txtAciklama.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtAciklama.Properties.Appearance.Options.UseFont = true;
             this.txtAciklama.Properties.Appearance.Options.UseForeColor = true;
             this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
@@ -259,6 +259,8 @@
             // 
             // grdWorker2
             // 
+            this.grdWorker2.Appearance.FocusedRow.BackColor = System.Drawing.Color.SteelBlue;
+            this.grdWorker2.Appearance.FocusedRow.Options.UseBackColor = true;
             this.grdWorker2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1});
             this.grdWorker2.GridControl = this.grdWorker;
@@ -270,12 +272,8 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.AppearanceCell.BackColor = System.Drawing.Color.LemonChiffon;
-            this.gridColumn1.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn1.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn1.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn1.Caption = "ÜNVANI";
             this.gridColumn1.FieldName = "Title.Name";
             this.gridColumn1.Name = "gridColumn1";
@@ -312,6 +310,8 @@
             // 
             // grdVehicle2
             // 
+            this.grdVehicle2.Appearance.FocusedRow.BackColor = System.Drawing.Color.SteelBlue;
+            this.grdVehicle2.Appearance.FocusedRow.Options.UseBackColor = true;
             this.grdVehicle2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn2});
             this.grdVehicle2.GridControl = this.grdVehicle;
@@ -323,12 +323,6 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.AppearanceCell.BackColor = System.Drawing.Color.Honeydew;
-            this.gridColumn2.AppearanceCell.Options.UseBackColor = true;
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gridColumn2.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn2.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn2.Caption = "ARAÇ TİPİ";
             this.gridColumn2.FieldName = "Title.Name";
             this.gridColumn2.Name = "gridColumn2";

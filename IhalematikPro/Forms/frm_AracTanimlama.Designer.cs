@@ -832,6 +832,8 @@
             // 
             // gridColumn2
             // 
+            this.gridColumn2.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.gridColumn2.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
@@ -853,6 +855,8 @@
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.gridColumn3.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
@@ -875,6 +879,8 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.gridColumn4.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn4.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
@@ -897,6 +903,8 @@
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.gridColumn5.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn5.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
