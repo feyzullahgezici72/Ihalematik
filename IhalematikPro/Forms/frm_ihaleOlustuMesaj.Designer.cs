@@ -29,33 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblMesaj = new DevExpress.XtraEditors.LabelControl();
+            this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnTamam
-            // 
-            this.btnTamam.Image = global::IhalematikProUI.Properties.Resources.Check_icon__1_;
-            this.btnTamam.Location = new System.Drawing.Point(455, 78);
-            this.btnTamam.Name = "btnTamam";
-            this.btnTamam.Size = new System.Drawing.Size(129, 58);
-            this.btnTamam.TabIndex = 8;
-            this.btnTamam.Text = "Tamam";
-            this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.logo_ihale;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(136, 172);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // timer1
             // 
@@ -66,11 +45,32 @@
             // 
             this.lblMesaj.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblMesaj.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblMesaj.Location = new System.Drawing.Point(163, 24);
+            this.lblMesaj.Location = new System.Drawing.Point(196, 35);
             this.lblMesaj.Name = "lblMesaj";
             this.lblMesaj.Size = new System.Drawing.Size(345, 34);
             this.lblMesaj.TabIndex = 6;
             this.lblMesaj.Text = "Yeni İhale Oluşturuldu...";
+            // 
+            // btnTamam
+            // 
+            this.btnTamam.Image = global::IhalematikProUI.Properties.Resources.Check_icon__1_;
+            this.btnTamam.Location = new System.Drawing.Point(482, 102);
+            this.btnTamam.Name = "btnTamam";
+            this.btnTamam.Size = new System.Drawing.Size(129, 58);
+            this.btnTamam.TabIndex = 8;
+            this.btnTamam.Text = "Tamam";
+            this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.Status_dialog_information_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(179, 172);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // frm_ihaleOlustuMesaj
             // 

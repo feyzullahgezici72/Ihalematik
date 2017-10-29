@@ -737,6 +737,27 @@
   <ItemGroup>
     <None Include="pic\File-Picture-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\refresh-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\System-recycling-bin-empty-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Action-exit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\user-group-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\orangecar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\icons8-digger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pic\Status-dialog-information-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -40,7 +40,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl1.Location = new System.Drawing.Point(68, 44);
+            this.labelControl1.Location = new System.Drawing.Point(28, 28);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(348, 24);
@@ -50,7 +50,7 @@
             // btnEvet
             // 
             this.btnEvet.Image = global::IhalematikProUI.Properties.Resources.ok_icon__1_1;
-            this.btnEvet.Location = new System.Drawing.Point(146, 89);
+            this.btnEvet.Location = new System.Drawing.Point(118, 75);
             this.btnEvet.Margin = new System.Windows.Forms.Padding(4);
             this.btnEvet.Name = "btnEvet";
             this.btnEvet.Size = new System.Drawing.Size(118, 64);
@@ -62,7 +62,7 @@
             // 
             this.btnHayir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnHayir.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
-            this.btnHayir.Location = new System.Drawing.Point(272, 89);
+            this.btnHayir.Location = new System.Drawing.Point(258, 75);
             this.btnHayir.Margin = new System.Windows.Forms.Padding(4);
             this.btnHayir.Name = "btnHayir";
             this.btnHayir.Size = new System.Drawing.Size(118, 64);
@@ -74,13 +74,13 @@
             // 
             this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(428, 0);
+            this.pictureEdit1.Location = new System.Drawing.Point(403, 0);
             this.pictureEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(208, 168);
+            this.pictureEdit1.Size = new System.Drawing.Size(208, 158);
             this.pictureEdit1.TabIndex = 0;
             // 
             // frm_Cikis
@@ -91,7 +91,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnHayir;
-            this.ClientSize = new System.Drawing.Size(636, 168);
+            this.ClientSize = new System.Drawing.Size(611, 158);
             this.ControlBox = false;
             this.Controls.Add(this.btnHayir);
             this.Controls.Add(this.btnEvet);
@@ -101,6 +101,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Cikis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

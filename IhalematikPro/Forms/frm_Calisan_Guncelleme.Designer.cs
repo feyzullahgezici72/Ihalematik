@@ -88,7 +88,7 @@
             // 
             // panelControl2
             // 
-            this.panelControl2.Appearance.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panelControl2.Appearance.BackColor = System.Drawing.Color.SteelBlue;
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl2.Controls.Add(this.btnKapat);
@@ -134,6 +134,8 @@
             // 
             this.groupControl2.Appearance.BackColor = System.Drawing.Color.White;
             this.groupControl2.Appearance.Options.UseBackColor = true;
+            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.groupControl2.Controls.Add(this.panel1);
             this.groupControl2.Controls.Add(this.ddlTitles);
@@ -144,7 +146,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 54);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(427, 635);
+            this.groupControl2.Size = new System.Drawing.Size(427, 655);
             this.groupControl2.TabIndex = 97;
             this.groupControl2.Text = "Çalışan Bilgileri";
             // 
@@ -186,7 +188,7 @@
             this.txtWorklesFonFare.Location = new System.Drawing.Point(172, 89);
             this.txtWorklesFonFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtWorklesFonFare.Name = "txtWorklesFonFare";
-            this.txtWorklesFonFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtWorklesFonFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtWorklesFonFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtWorklesFonFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtWorklesFonFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -202,7 +204,7 @@
             this.txtSeveranceFare.Location = new System.Drawing.Point(172, 241);
             this.txtSeveranceFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtSeveranceFare.Name = "txtSeveranceFare";
-            this.txtSeveranceFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSeveranceFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSeveranceFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtSeveranceFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtSeveranceFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -218,7 +220,7 @@
             this.txtAGI.Location = new System.Drawing.Point(172, 203);
             this.txtAGI.Margin = new System.Windows.Forms.Padding(4);
             this.txtAGI.Name = "txtAGI";
-            this.txtAGI.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtAGI.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtAGI.Properties.Appearance.Options.UseBackColor = true;
             this.txtAGI.Properties.DisplayFormat.FormatString = "N2";
             this.txtAGI.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -245,7 +247,7 @@
             this.txtExtraFare.Location = new System.Drawing.Point(172, 440);
             this.txtExtraFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtExtraFare.Name = "txtExtraFare";
-            this.txtExtraFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtExtraFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtExtraFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtExtraFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtExtraFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -299,7 +301,7 @@
             this.txtISGFare.Location = new System.Drawing.Point(172, 402);
             this.txtISGFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtISGFare.Name = "txtISGFare";
-            this.txtISGFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtISGFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtISGFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtISGFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtISGFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -315,7 +317,7 @@
             this.txtSGKPrimFare.Location = new System.Drawing.Point(172, 51);
             this.txtSGKPrimFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtSGKPrimFare.Name = "txtSGKPrimFare";
-            this.txtSGKPrimFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSGKPrimFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSGKPrimFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtSGKPrimFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtSGKPrimFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -353,7 +355,7 @@
             this.txtHotelFare.Location = new System.Drawing.Point(172, 364);
             this.txtHotelFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtHotelFare.Name = "txtHotelFare";
-            this.txtHotelFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtHotelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtHotelFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtHotelFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtHotelFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -391,7 +393,7 @@
             this.txtIncomeTaxFare.Location = new System.Drawing.Point(172, 127);
             this.txtIncomeTaxFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtIncomeTaxFare.Name = "txtIncomeTaxFare";
-            this.txtIncomeTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtIncomeTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtIncomeTaxFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtIncomeTaxFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtIncomeTaxFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -407,7 +409,7 @@
             this.txtTravelFare.Location = new System.Drawing.Point(172, 326);
             this.txtTravelFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtTravelFare.Name = "txtTravelFare";
-            this.txtTravelFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtTravelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTravelFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtTravelFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtTravelFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -467,7 +469,7 @@
             this.txtStampTaxFare.Location = new System.Drawing.Point(172, 165);
             this.txtStampTaxFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtStampTaxFare.Name = "txtStampTaxFare";
-            this.txtStampTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtStampTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtStampTaxFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtStampTaxFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtStampTaxFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -483,7 +485,7 @@
             this.txtFoodFare.Location = new System.Drawing.Point(172, 288);
             this.txtFoodFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtFoodFare.Name = "txtFoodFare";
-            this.txtFoodFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtFoodFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtFoodFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtFoodFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtFoodFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -569,7 +571,7 @@
             this.panelControl1.Controls.Add(this.btnGuncelle);
             this.panelControl1.Controls.Add(this.btnSil);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 627);
+            this.panelControl1.Location = new System.Drawing.Point(0, 647);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(427, 62);
             this.panelControl1.TabIndex = 98;
@@ -581,12 +583,12 @@
             this.btnGuncelle.Appearance.Options.UseFont = true;
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.Reload_icon__2_;
-            this.btnGuncelle.Location = new System.Drawing.Point(144, 3);
+            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
+            this.btnGuncelle.Location = new System.Drawing.Point(164, 3);
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(139, 56);
-            this.btnGuncelle.TabIndex = 22;
+            this.btnGuncelle.Size = new System.Drawing.Size(130, 56);
+            this.btnGuncelle.TabIndex = 24;
             this.btnGuncelle.Text = "Güncelle";
             // 
             // btnSil
@@ -596,27 +598,27 @@
             this.btnSil.Appearance.Options.UseFont = true;
             this.btnSil.Appearance.Options.UseForeColor = true;
             this.btnSil.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSil.Image = global::IhalematikProUI.Properties.Resources.Actions_trash_empty_icon__1_;
-            this.btnSil.Location = new System.Drawing.Point(283, 3);
+            this.btnSil.Image = global::IhalematikProUI.Properties.Resources.System_recycling_bin_empty_icon;
+            this.btnSil.Location = new System.Drawing.Point(294, 3);
             this.btnSil.Margin = new System.Windows.Forms.Padding(4);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(141, 56);
-            this.btnSil.TabIndex = 21;
+            this.btnSil.Size = new System.Drawing.Size(130, 56);
+            this.btnSil.TabIndex = 23;
             this.btnSil.Text = "Sil";
             // 
             // frm_Calisan_Guncelleme
             // 
-            this.AcceptButton = this.btnGuncelle;
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(427, 689);
+            this.ClientSize = new System.Drawing.Size(427, 709);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl2);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

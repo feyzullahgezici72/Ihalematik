@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.timer1 = new System.Windows.Forms.Timer();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
+            this.btnOpen = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.grdActiveTenderList = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -41,20 +46,16 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtSumTender = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.btnOpen = new DevExpress.XtraEditors.SimpleButton();
-            this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdActiveTenderList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -70,6 +71,66 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1224, 54);
             this.panelControl1.TabIndex = 37;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.lblTenderCaptin);
+            this.panelControl2.Controls.Add(this.btnOpen);
+            this.panelControl2.Controls.Add(this.btnKapat);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(0, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(1224, 54);
+            this.panelControl2.TabIndex = 2;
+            // 
+            // lblTenderCaptin
+            // 
+            this.lblTenderCaptin.Appearance.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTenderCaptin.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
+            this.lblTenderCaptin.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.lblTenderCaptin.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblTenderCaptin.LineColor = System.Drawing.Color.Red;
+            this.lblTenderCaptin.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.lblTenderCaptin.Location = new System.Drawing.Point(13, 10);
+            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTenderCaptin.Name = "lblTenderCaptin";
+            this.lblTenderCaptin.ShowLineShadow = false;
+            this.lblTenderCaptin.Size = new System.Drawing.Size(326, 37);
+            this.lblTenderCaptin.TabIndex = 0;
+            this.lblTenderCaptin.Text = "AÇIK TEKLİF LİSTESİ";
+            this.lblTenderCaptin.UseMnemonic = false;
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpen.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnOpen.Appearance.Options.UseFont = true;
+            this.btnOpen.Appearance.Options.UseForeColor = true;
+            this.btnOpen.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnOpen.Image = global::IhalematikProUI.Properties.Resources.open_file_icon__1_;
+            this.btnOpen.Location = new System.Drawing.Point(1057, 0);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(103, 54);
+            this.btnOpen.TabIndex = 94;
+            this.btnOpen.Text = " Aç";
+            // 
+            // btnKapat
+            // 
+            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
+            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnKapat.Location = new System.Drawing.Point(1160, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(64, 54);
+            this.btnKapat.TabIndex = 1;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // timer1
             // 
@@ -90,7 +151,7 @@
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(1224, 633);
             this.groupControl2.TabIndex = 39;
-            this.groupControl2.Text = "İhaleler";
+            this.groupControl2.Text = "Teklifler";
             // 
             // grdActiveTenderList
             // 
@@ -198,7 +259,7 @@
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(200, 54);
             this.simpleButton2.TabIndex = 97;
-            this.simpleButton2.Text = "Aktif Ihaleler";
+            this.simpleButton2.Text = "Açık Teklifler";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton1
@@ -214,7 +275,7 @@
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(208, 54);
             this.simpleButton1.TabIndex = 96;
-            this.simpleButton1.Text = "Pasif Ihaleler";
+            this.simpleButton1.Text = "Kapalı Teklifler";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // txtSumTender
@@ -222,7 +283,7 @@
             this.txtSumTender.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSumTender.Appearance.ForeColor = System.Drawing.Color.Crimson;
             this.txtSumTender.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtSumTender.Location = new System.Drawing.Point(247, 3);
+            this.txtSumTender.Location = new System.Drawing.Point(245, 3);
             this.txtSumTender.Margin = new System.Windows.Forms.Padding(4);
             this.txtSumTender.Name = "txtSumTender";
             this.txtSumTender.Size = new System.Drawing.Size(15, 29);
@@ -236,69 +297,9 @@
             this.labelControl2.Location = new System.Drawing.Point(3, 3);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(244, 29);
+            this.labelControl2.Size = new System.Drawing.Size(242, 29);
             this.labelControl2.TabIndex = 94;
-            this.labelControl2.Text = "Aktif Ihale Toplamı: ";
-            // 
-            // btnKapat
-            // 
-            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
-            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1160, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(64, 54);
-            this.btnKapat.TabIndex = 1;
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpen.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnOpen.Appearance.Options.UseFont = true;
-            this.btnOpen.Appearance.Options.UseForeColor = true;
-            this.btnOpen.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnOpen.Image = global::IhalematikProUI.Properties.Resources.open_file_icon__1_;
-            this.btnOpen.Location = new System.Drawing.Point(934, 0);
-            this.btnOpen.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(226, 54);
-            this.btnOpen.TabIndex = 94;
-            this.btnOpen.Text = "Seçili Ihaleyi Aç";
-            // 
-            // lblTenderCaptin
-            // 
-            this.lblTenderCaptin.Appearance.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTenderCaptin.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
-            this.lblTenderCaptin.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.lblTenderCaptin.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblTenderCaptin.LineColor = System.Drawing.Color.Red;
-            this.lblTenderCaptin.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.lblTenderCaptin.Location = new System.Drawing.Point(13, 10);
-            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4);
-            this.lblTenderCaptin.Name = "lblTenderCaptin";
-            this.lblTenderCaptin.ShowLineShadow = false;
-            this.lblTenderCaptin.Size = new System.Drawing.Size(325, 37);
-            this.lblTenderCaptin.TabIndex = 0;
-            this.lblTenderCaptin.Text = "AKTİF İHALE LİSTESİ";
-            this.lblTenderCaptin.UseMnemonic = false;
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl2.Appearance.Options.UseBackColor = true;
-            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.lblTenderCaptin);
-            this.panelControl2.Controls.Add(this.btnOpen);
-            this.panelControl2.Controls.Add(this.btnKapat);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1224, 54);
-            this.panelControl2.TabIndex = 2;
+            this.labelControl2.Text = "Açık Teklif Toplamı: ";
             // 
             // frm_DevamEdenIhaleListesi
             // 
@@ -320,6 +321,9 @@
             this.Load += new System.EventHandler(this.frm_DevamEdenIhaleListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdActiveTenderList)).EndInit();
@@ -327,9 +331,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
             this.ResumeLayout(false);
 
         }

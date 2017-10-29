@@ -63,6 +63,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Action_exit_icon {
+            get {
+                object obj = ResourceManager.GetObject("Action-exit-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Actions_contact_new_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("Actions-contact-new-icon (1)", resourceCulture);
@@ -433,6 +443,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_digger {
+            get {
+                object obj = ResourceManager.GetObject("icons8-digger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ihale {
             get {
                 object obj = ResourceManager.GetObject("ihale", resourceCulture);
@@ -643,6 +663,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap orangecar1 {
+            get {
+                object obj = ResourceManager.GetObject("orangecar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap price_tag_icon {
             get {
                 object obj = ResourceManager.GetObject("price-tag-icon", resourceCulture);
@@ -676,6 +706,16 @@ namespace IhalematikProUI.Properties {
         internal static System.Drawing.Bitmap print_icon__3_ {
             get {
                 object obj = ResourceManager.GetObject("print-icon (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresh_icon {
+            get {
+                object obj = ResourceManager.GetObject("refresh-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -743,6 +783,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Status_dialog_information_icon {
+            get {
+                object obj = ResourceManager.GetObject("Status-dialog-information-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap stock {
             get {
                 object obj = ResourceManager.GetObject("stock", resourceCulture);
@@ -773,6 +823,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap System_recycling_bin_empty_icon {
+            get {
+                object obj = ResourceManager.GetObject("System-recycling-bin-empty-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Untitled {
             get {
                 object obj = ResourceManager.GetObject("Untitled", resourceCulture);
@@ -796,6 +856,26 @@ namespace IhalematikProUI.Properties {
         internal static System.Drawing.Bitmap Untitled3 {
             get {
                 object obj = ResourceManager.GetObject("Untitled3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_group_icon {
+            get {
+                object obj = ResourceManager.GetObject("user-group-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_group_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("user-group-icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

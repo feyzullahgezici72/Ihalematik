@@ -30,8 +30,6 @@
         {
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.PanelKira = new DevExpress.XtraEditors.PanelControl();
             this.rdHour = new System.Windows.Forms.RadioButton();
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
@@ -69,8 +67,10 @@
             this.rbAsgariUcret = new System.Windows.Forms.RadioButton();
             this.rbCompanyVehicle = new System.Windows.Forms.RadioButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -114,7 +114,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 54);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(453, 506);
+            this.groupControl2.Size = new System.Drawing.Size(453, 520);
             this.groupControl2.TabIndex = 93;
             this.groupControl2.Text = "Araç Bilgileri";
             // 
@@ -126,40 +126,10 @@
             this.panelControl1.Controls.Add(this.btnGuncelle);
             this.panelControl1.Controls.Add(this.btnSil);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(3, 441);
+            this.panelControl1.Location = new System.Drawing.Point(3, 455);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(447, 62);
             this.panelControl1.TabIndex = 79;
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnGuncelle.Appearance.Options.UseFont = true;
-            this.btnGuncelle.Appearance.Options.UseForeColor = true;
-            this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.Reload_icon__2_;
-            this.btnGuncelle.Location = new System.Drawing.Point(238, 0);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(101, 62);
-            this.btnGuncelle.TabIndex = 22;
-            this.btnGuncelle.Text = "Güncelle";
-            // 
-            // btnSil
-            // 
-            this.btnSil.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSil.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnSil.Appearance.Options.UseFont = true;
-            this.btnSil.Appearance.Options.UseForeColor = true;
-            this.btnSil.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSil.Image = global::IhalematikProUI.Properties.Resources.Actions_trash_empty_icon__1_;
-            this.btnSil.Location = new System.Drawing.Point(339, 0);
-            this.btnSil.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(108, 62);
-            this.btnSil.TabIndex = 21;
-            this.btnSil.Text = "Sil";
             // 
             // PanelKira
             // 
@@ -677,19 +647,6 @@
             this.panelControl2.Size = new System.Drawing.Size(453, 54);
             this.panelControl2.TabIndex = 95;
             // 
-            // btnKapat
-            // 
-            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
-            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(389, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(64, 54);
-            this.btnKapat.TabIndex = 21;
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -707,16 +664,60 @@
             this.labelControl1.Text = "ARAÇ GÜNCELLE";
             this.labelControl1.UseMnemonic = false;
             // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnGuncelle.Appearance.Options.UseFont = true;
+            this.btnGuncelle.Appearance.Options.UseForeColor = true;
+            this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
+            this.btnGuncelle.Location = new System.Drawing.Point(187, 0);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(130, 62);
+            this.btnGuncelle.TabIndex = 22;
+            this.btnGuncelle.Text = "Güncelle";
+            // 
+            // btnKapat
+            // 
+            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
+            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnKapat.Location = new System.Drawing.Point(389, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(64, 54);
+            this.btnKapat.TabIndex = 21;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            // 
+            // btnSil
+            // 
+            this.btnSil.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSil.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnSil.Appearance.Options.UseFont = true;
+            this.btnSil.Appearance.Options.UseForeColor = true;
+            this.btnSil.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSil.Image = global::IhalematikProUI.Properties.Resources.System_recycling_bin_empty_icon;
+            this.btnSil.Location = new System.Drawing.Point(317, 0);
+            this.btnSil.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(130, 62);
+            this.btnSil.TabIndex = 21;
+            this.btnSil.Text = "Sil";
+            // 
             // frm_Arac_Guncelleme
             // 
             this.AcceptButton = this.btnGuncelle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(453, 560);
+            this.ClientSize = new System.Drawing.Size(453, 574);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl2);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

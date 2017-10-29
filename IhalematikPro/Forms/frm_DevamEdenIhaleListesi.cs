@@ -47,7 +47,8 @@ namespace IhalematikPro.Forms
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
             txtSumTender.Text = list.Count.ToString();
             grdActiveTenderList.DataSource = list;
-            lblTenderCaptin.Text = "AKTİF İHALE LİSTESİ";
+            lblTenderCaptin.Text = "AÇIK TEKLİF LİSTESİ";
+            labelControl2.Text = "Açık Teklif Toplamı: ";
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -55,7 +56,8 @@ namespace IhalematikPro.Forms
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", false);
             txtSumTender.Text = list.Count.ToString();
             grdActiveTenderList.DataSource = list;
-            lblTenderCaptin.Text = "PAİF İHALE LİSTESİ";
+            lblTenderCaptin.Text = "KAPALI TEKLİF LİSTESİ";
+            labelControl2.Text = "Kapalı Teklif Toplamı: ";
         }
     }
 }

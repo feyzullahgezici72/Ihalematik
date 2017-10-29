@@ -314,7 +314,7 @@ namespace IhalematikPro.Forms
             this.barButtonItem2.Caption = "Çalışan Tanımlama";
             this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
             this.barButtonItem2.Id = 14;
-            this.barButtonItem2.LargeGlyph = global::IhalematikProUI.Properties.Resources.worker_green_icon__2_;
+            this.barButtonItem2.LargeGlyph = global::IhalematikProUI.Properties.Resources.user_group_icon;
             this.barButtonItem2.LargeWidth = 100;
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
@@ -323,7 +323,7 @@ namespace IhalematikPro.Forms
             // 
             this.barButtonItem4.Caption = "Araç Tanımlama";
             this.barButtonItem4.Id = 1;
-            this.barButtonItem4.LargeGlyph = global::IhalematikProUI.Properties.Resources.cargo_2_icon;
+            this.barButtonItem4.LargeGlyph = global::IhalematikProUI.Properties.Resources.icons8_digger;
             this.barButtonItem4.LargeWidth = 100;
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
@@ -455,11 +455,11 @@ namespace IhalematikPro.Forms
             this.barButtonItem1.Caption = "Çıkış";
             this.barButtonItem1.CloseRadialMenuOnItemClick = true;
             this.barButtonItem1.DropDownControl = this.popupMenu1;
-            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
+            this.barButtonItem1.Glyph = global::IhalematikProUI.Properties.Resources.Action_exit_icon;
             this.barButtonItem1.Id = 2;
             this.barButtonItem1.ItemAppearance.Pressed.BackColor = System.Drawing.SystemColors.Control;
             this.barButtonItem1.ItemAppearance.Pressed.Options.UseBackColor = true;
-            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
+            this.barButtonItem1.LargeGlyph = global::IhalematikProUI.Properties.Resources.Action_exit_icon;
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));

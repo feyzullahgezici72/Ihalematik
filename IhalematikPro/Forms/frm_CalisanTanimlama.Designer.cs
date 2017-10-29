@@ -78,6 +78,9 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.aracToplam = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -105,6 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdWorker)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -303,7 +307,7 @@
             this.txtWorklesFonFare.Location = new System.Drawing.Point(172, 89);
             this.txtWorklesFonFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtWorklesFonFare.Name = "txtWorklesFonFare";
-            this.txtWorklesFonFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtWorklesFonFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtWorklesFonFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtWorklesFonFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtWorklesFonFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -319,7 +323,7 @@
             this.txtSeveranceFare.Location = new System.Drawing.Point(172, 241);
             this.txtSeveranceFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtSeveranceFare.Name = "txtSeveranceFare";
-            this.txtSeveranceFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSeveranceFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSeveranceFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtSeveranceFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtSeveranceFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -335,7 +339,7 @@
             this.txtAGI.Location = new System.Drawing.Point(172, 203);
             this.txtAGI.Margin = new System.Windows.Forms.Padding(4);
             this.txtAGI.Name = "txtAGI";
-            this.txtAGI.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtAGI.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtAGI.Properties.Appearance.Options.UseBackColor = true;
             this.txtAGI.Properties.DisplayFormat.FormatString = "N2";
             this.txtAGI.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -362,7 +366,7 @@
             this.txtExtraFare.Location = new System.Drawing.Point(172, 430);
             this.txtExtraFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtExtraFare.Name = "txtExtraFare";
-            this.txtExtraFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtExtraFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtExtraFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtExtraFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtExtraFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -417,7 +421,7 @@
             this.txtISGFare.Location = new System.Drawing.Point(172, 392);
             this.txtISGFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtISGFare.Name = "txtISGFare";
-            this.txtISGFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtISGFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtISGFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtISGFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtISGFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -433,7 +437,7 @@
             this.txtSGKPrimFare.Location = new System.Drawing.Point(172, 51);
             this.txtSGKPrimFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtSGKPrimFare.Name = "txtSGKPrimFare";
-            this.txtSGKPrimFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtSGKPrimFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSGKPrimFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtSGKPrimFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtSGKPrimFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -471,7 +475,7 @@
             this.txtHotelFare.Location = new System.Drawing.Point(172, 354);
             this.txtHotelFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtHotelFare.Name = "txtHotelFare";
-            this.txtHotelFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtHotelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtHotelFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtHotelFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtHotelFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -509,7 +513,7 @@
             this.txtIncomeTaxFare.Location = new System.Drawing.Point(172, 127);
             this.txtIncomeTaxFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtIncomeTaxFare.Name = "txtIncomeTaxFare";
-            this.txtIncomeTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtIncomeTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtIncomeTaxFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtIncomeTaxFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtIncomeTaxFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -525,7 +529,7 @@
             this.txtTravelFare.Location = new System.Drawing.Point(172, 316);
             this.txtTravelFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtTravelFare.Name = "txtTravelFare";
-            this.txtTravelFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtTravelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTravelFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtTravelFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtTravelFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -585,7 +589,7 @@
             this.txtStampTaxFare.Location = new System.Drawing.Point(172, 165);
             this.txtStampTaxFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtStampTaxFare.Name = "txtStampTaxFare";
-            this.txtStampTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtStampTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtStampTaxFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtStampTaxFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtStampTaxFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -601,7 +605,7 @@
             this.txtFoodFare.Location = new System.Drawing.Point(172, 278);
             this.txtFoodFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtFoodFare.Name = "txtFoodFare";
-            this.txtFoodFare.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtFoodFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtFoodFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtFoodFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtFoodFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
@@ -686,7 +690,7 @@
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.Actions_list_add_user_icon__1_;
+            this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.cargo_2_icon1;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.simpleButton1.Location = new System.Drawing.Point(3, 35);
             this.simpleButton1.Name = "simpleButton1";
@@ -853,6 +857,31 @@
             this.gridColumn6.VisibleIndex = 4;
             this.gridColumn6.Width = 149;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.aracToplam});
+            this.statusStrip1.Location = new System.Drawing.Point(430, 804);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(948, 33);
+            this.statusStrip1.TabIndex = 38;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(109, 28);
+            this.toolStripStatusLabel1.Text = "Tanımlanan :";
+            // 
+            // aracToplam
+            // 
+            this.aracToplam.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.aracToplam.Name = "aracToplam";
+            this.aracToplam.Size = new System.Drawing.Size(36, 28);
+            this.aracToplam.Text = "10";
+            // 
             // frm_CalisanTanimlama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -860,6 +889,7 @@
             this.CancelButton = this.btnKapat;
             this.ClientSize = new System.Drawing.Size(1378, 837);
             this.ControlBox = false;
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.grdWorker);
             this.Controls.Add(this.kayitMenusu);
             this.Controls.Add(this.panelControl1);
@@ -900,7 +930,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdWorker)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -955,5 +988,8 @@
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel aracToplam;
     }
 }

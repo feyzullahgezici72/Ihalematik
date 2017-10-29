@@ -23,6 +23,7 @@ namespace IhalematikPro
             CurrentManager.CurrentTender = TenderProvider.Instance.GetItem(1174);
 
             Application.Run(new Forms.frm_Anaform());
+            //Application.Run(new Forms.frm_Teklif_Adim3());
             //Application.Run(new Forms.frm_Login()); //.frm_Anaform
 
         }

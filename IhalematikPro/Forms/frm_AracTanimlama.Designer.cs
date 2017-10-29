@@ -84,6 +84,9 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.aracToplam = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -114,6 +117,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdVehicle)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -235,7 +239,7 @@
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl3.Controls.Add(this.btnKaydet);
             this.panelControl3.Controls.Add(this.btnTemizle);
-            this.panelControl3.Location = new System.Drawing.Point(12, 388);
+            this.panelControl3.Location = new System.Drawing.Point(12, 405);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(411, 50);
             this.panelControl3.TabIndex = 79;
@@ -722,7 +726,7 @@
             this.ddlVehicleTitle.Name = "ddlVehicleTitle";
             this.ddlVehicleTitle.Properties.AccessibleDescription = "Name";
             this.ddlVehicleTitle.Properties.AccessibleName = "Id";
-            this.ddlVehicleTitle.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.ddlVehicleTitle.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ddlVehicleTitle.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ddlVehicleTitle.Properties.Appearance.Options.UseBackColor = true;
             this.ddlVehicleTitle.Properties.Appearance.Options.UseFont = true;
@@ -777,7 +781,7 @@
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.Untitled;
+            this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.icons8_digger;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.simpleButton1.Location = new System.Drawing.Point(0, 0);
             this.simpleButton1.Name = "simpleButton1";
@@ -832,8 +836,6 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.gridColumn2.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
@@ -925,6 +927,31 @@
             this.gridColumn5.VisibleIndex = 3;
             this.gridColumn5.Width = 188;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.aracToplam});
+            this.statusStrip1.Location = new System.Drawing.Point(448, 724);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(930, 33);
+            this.statusStrip1.TabIndex = 37;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(109, 28);
+            this.toolStripStatusLabel1.Text = "Tanımlanan :";
+            // 
+            // aracToplam
+            // 
+            this.aracToplam.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.aracToplam.Name = "aracToplam";
+            this.aracToplam.Size = new System.Drawing.Size(36, 28);
+            this.aracToplam.Text = "10";
+            // 
             // frm_AracTanimlama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -932,6 +959,7 @@
             this.CancelButton = this.btnKapat;
             this.ClientSize = new System.Drawing.Size(1378, 757);
             this.ControlBox = false;
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.grdVehicle);
             this.Controls.Add(this.KayitMenusu);
             this.Controls.Add(this.panelControl1);
@@ -976,7 +1004,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdVehicle)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1036,5 +1067,8 @@
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.SimpleButton btnTemizle;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel aracToplam;
     }
 }
