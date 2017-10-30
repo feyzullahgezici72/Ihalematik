@@ -547,7 +547,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Blue";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "McSkin"; //Office 2007 Blue
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
@@ -589,6 +589,12 @@ namespace IhalematikPro.Forms
         private void barButtonItem22_ItemClick(object sender, ItemClickEventArgs e)
         {
            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //lblDate.Caption = DateTime.Now.ToLongDateString();
+            //lblTime.Caption= DateTime.Now.ToLongTimeString();
         }
     }
 }
