@@ -119,6 +119,43 @@ namespace IhalematikPro.Forms
 
             //grdMaterialListIsWorkship.CellFormatting += GrdMaterialListIsWorkship_CellFormatting;
             grdMaterialListIsWorkship.DataBindingComplete += GrdMaterialListIsWorkship_DataBindingComplete;
+            grdMaterialListIsWorkship.EditingControlShowing += GrdMaterialListIsWorkship_EditingControlShowing;
+        }
+
+        private void GrdMaterialListIsWorkship_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (grdMaterialListIsWorkship.CurrentCell.ColumnIndex == 4 && e.Control is System.Windows.Forms.ComboBox)
+            {
+                System.Windows.Forms.ComboBox comboBox = e.Control as System.Windows.Forms.ComboBox;
+                comboBox.SelectedIndexChanged -= LastColumnComboSelectionChanged;
+                comboBox.SelectedIndexChanged += LastColumnComboSelectionChanged;
+            }
+        }
+
+        private void LastColumnComboSelectionChanged(object sender, EventArgs e)
+        {
+            List<MaterialListModel> models = (List<MaterialListModel>)grdMaterialListIsWorkship.DataSource; //IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            MaterialListModel materialListModel = models.ToArray()[grdMaterialListIsWorkship.CurrentRow.Index];
+            var sendingCB = sender as DataGridViewComboBoxEditingControl;
+
+            UnitTimeTypesModel value = (UnitTimeTypesModel)sendingCB.SelectedValue;//grdMaterialListIsWorkship["UnitTimeType", grdMaterialListIsWorkship.CurrentRow.Index].Value;
+            materialListModel.UnitTimeType = value;
+
+            MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
+            if (materialList != null)
+            {
+                materialList.UnitTimeType = materialListModel.UnitTimeType.UnitTimeType;
+                OperationResult result = MaterialListProvider.Instance.Save(materialList);
+                if (!result.Success)
+                {
+                    //TODO feyzullahg
+                }
+            }
+            grdMaterialListIsWorkship.Refresh();
+            //var currentcell = grdMaterialListIsWorkship.CurrentRow.Index;
+            //var sendingCB = sender as DataGridViewComboBoxEditingControl;
+            //DataGridViewTextBoxCell cel = (DataGridViewTextBoxCell)grdMaterialListIsWorkship.Rows[currentcell.Y].Cells[0];
+            //cel.Value = sendingCB.EditingControlFormattedValue.ToString();
         }
 
         private void GrdMaterialListIsWorkship_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -197,12 +234,21 @@ namespace IhalematikPro.Forms
             }
             else if (currentColumnName.Equals("UnitTime"))
             {
-
+                int value = Convert.ToInt32(grdMaterialListIsWorkship["UnitTime", grdMaterialListIsWorkship.CurrentRow.Index].Value);
+                MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
+                if (materialList != null)
+                {
+                    OperationResult result = MaterialListProvider.Instance.Save(materialList);
+                    if (!result.Success)
+                    {
+                        //TODO feyzullahg
+                    }
+                }
             }
             else if (currentColumnName.Equals("UnitTimeType"))
             {
-                UnitTimeTypesModel value = (UnitTimeTypesModel)grdMaterialListIsWorkship["UnitTimeType", grdMaterialListIsWorkship.CurrentRow.Index].Value;
-                materialListModel.UnitTimeType = value;
+                //UnitTimeTypesModel value = (UnitTimeTypesModel)grdMaterialListIsWorkship["UnitTimeType", grdMaterialListIsWorkship.CurrentRow.Index].Value;
+                //materialListModel.UnitTimeType = value;
             }
             else if (materialListModel.TenderMaterialListEquipment != null)
             {
