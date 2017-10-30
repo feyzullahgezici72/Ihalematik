@@ -174,6 +174,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsNavigation.AutoFocusNewRow = true;
             this.gridView1.OptionsNavigation.EnterMoveNextColumn = true;
+            this.gridView1.OptionsView.ShowDetailButtons = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 

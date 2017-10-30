@@ -561,7 +561,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "London Liquid Sky";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Lilian"; //London Liquid Sky
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }

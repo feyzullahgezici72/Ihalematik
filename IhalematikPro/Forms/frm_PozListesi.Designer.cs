@@ -29,9 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
@@ -56,6 +63,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.xpPageSelector1 = new DevExpress.Xpo.XPPageSelector(this.components);
+            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -87,9 +95,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.btnGuncelle);
-            this.panel2.Controls.Add(this.btnSil);
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.btnListele);
             this.panel2.Controls.Add(this.btnKapat);
             this.panel2.Controls.Add(this.labelControl1);
@@ -100,35 +106,22 @@
             this.panel2.Size = new System.Drawing.Size(1509, 50);
             this.panel2.TabIndex = 1;
             // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnGuncelle.Appearance.Options.UseFont = true;
-            this.btnGuncelle.Appearance.Options.UseForeColor = true;
-            this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.Location = new System.Drawing.Point(1051, 0);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(132, 50);
-            this.btnGuncelle.TabIndex = 23;
-            this.btnGuncelle.Text = "Güncelle";
-            // 
             // btnSil
             // 
             this.btnSil.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSil.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnSil.Appearance.Options.UseFont = true;
             this.btnSil.Appearance.Options.UseForeColor = true;
-            this.btnSil.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSil.Image = global::IhalematikProUI.Properties.Resources.Actions_trash_empty_icon__1_;
-            this.btnSil.Location = new System.Drawing.Point(1183, 0);
+            this.btnSil.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnSil.Location = new System.Drawing.Point(376, 195);
             this.btnSil.Margin = new System.Windows.Forms.Padding(4);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(132, 50);
+            this.btnSil.Size = new System.Drawing.Size(54, 50);
+            toolTipTitleItem1.Text = "Sil";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.btnSil.SuperTip = superToolTip1;
             this.btnSil.TabIndex = 22;
-            this.btnSil.Text = "Sil";
             // 
             // btnListele
             // 
@@ -183,6 +176,8 @@
             this.groupControl3.AppearanceCaption.ForeColor = System.Drawing.Color.Maroon;
             this.groupControl3.AppearanceCaption.Options.UseFont = true;
             this.groupControl3.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl3.Controls.Add(this.btnSil);
+            this.groupControl3.Controls.Add(this.btnGuncelle);
             this.groupControl3.Controls.Add(this.btnKaydet);
             this.groupControl3.Controls.Add(this.btnTemizle);
             this.groupControl3.Controls.Add(this.labelControl5);
@@ -208,12 +203,15 @@
             this.btnKaydet.Appearance.Options.UseFont = true;
             this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
-            this.btnKaydet.Location = new System.Drawing.Point(162, 195);
+            this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnKaydet.Location = new System.Drawing.Point(196, 195);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(132, 50);
+            this.btnKaydet.Size = new System.Drawing.Size(54, 50);
+            toolTipTitleItem3.Text = "Kaydet";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            this.btnKaydet.SuperTip = superToolTip3;
             this.btnKaydet.TabIndex = 26;
-            this.btnKaydet.Text = "Kaydet";
             // 
             // btnTemizle
             // 
@@ -222,17 +220,21 @@
             this.btnTemizle.Appearance.Options.UseFont = true;
             this.btnTemizle.Appearance.Options.UseForeColor = true;
             this.btnTemizle.Image = global::IhalematikProUI.Properties.Resources.Actions_edit_clear_icon;
-            this.btnTemizle.Location = new System.Drawing.Point(296, 195);
+            this.btnTemizle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnTemizle.Location = new System.Drawing.Point(316, 195);
             this.btnTemizle.Margin = new System.Windows.Forms.Padding(4);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(132, 50);
+            this.btnTemizle.Size = new System.Drawing.Size(54, 50);
+            toolTipTitleItem4.Text = "Temizle";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            this.btnTemizle.SuperTip = superToolTip4;
             this.btnTemizle.TabIndex = 25;
-            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
             this.labelControl5.Location = new System.Drawing.Point(9, 165);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
@@ -437,6 +439,23 @@
             this.gridColumn4.VisibleIndex = 3;
             this.gridColumn4.Width = 139;
             // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnGuncelle.Appearance.Options.UseFont = true;
+            this.btnGuncelle.Appearance.Options.UseForeColor = true;
+            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
+            this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnGuncelle.Location = new System.Drawing.Point(254, 195);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(54, 50);
+            toolTipTitleItem2.Text = "Güncelle";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.btnGuncelle.SuperTip = superToolTip2;
+            this.btnGuncelle.TabIndex = 27;
+            // 
             // frm_PozListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -497,11 +516,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private DevExpress.Xpo.XPPageSelector xpPageSelector1;
-        private DevExpress.XtraEditors.SimpleButton btnGuncelle;
         private DevExpress.XtraEditors.SimpleButton btnSil;
         private DevExpress.XtraEditors.SimpleButton btnListele;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.SimpleButton btnTemizle;
+        private DevExpress.XtraEditors.SimpleButton btnGuncelle;
     }
 }

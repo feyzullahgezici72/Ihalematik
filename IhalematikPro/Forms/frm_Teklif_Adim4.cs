@@ -106,7 +106,8 @@ namespace IhalematikPro.Forms
 
         private void btnKaydet_Click_1(object sender, EventArgs e)
         {
-
+            frm_ihaleOlustuMesaj msj = new frm_ihaleOlustuMesaj();
+            msj.lblMesaj.Text = "Kaydedildi...";
         }
     }
 }

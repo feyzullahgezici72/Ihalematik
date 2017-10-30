@@ -84,5 +84,14 @@ namespace IhalematikPro.Forms
             MesajVer();
             LoadGrid();
         }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            txtDescription.ResetText();
+            txtNumber.ResetText();
+            txtUnit.ResetText();
+            txtUnitPrice.ResetText();
+            txtNumber.Focus();
+        }
     }
 }
