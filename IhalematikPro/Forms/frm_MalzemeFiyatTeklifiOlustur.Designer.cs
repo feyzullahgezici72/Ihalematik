@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.grdMaterialList2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -66,7 +67,7 @@
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnExceleAktar = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
@@ -149,9 +150,6 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.AppearanceCell.BackColor = System.Drawing.Color.Azure;
-            this.gridColumn1.AppearanceCell.BackColor2 = System.Drawing.Color.Azure;
-            this.gridColumn1.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn1.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
@@ -168,8 +166,7 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.AppearanceCell.BackColor = System.Drawing.Color.Azure;
-            this.gridColumn2.AppearanceCell.BackColor2 = System.Drawing.Color.Azure;
+            this.gridColumn2.AppearanceCell.BackColor = System.Drawing.Color.AliceBlue;
             this.gridColumn2.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
@@ -187,8 +184,7 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.AppearanceCell.BackColor = System.Drawing.Color.Azure;
-            this.gridColumn3.AppearanceCell.BackColor2 = System.Drawing.Color.Azure;
+            this.gridColumn3.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.gridColumn3.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
@@ -263,7 +259,6 @@
             // gridColumn6
             // 
             this.gridColumn6.AppearanceCell.BackColor = System.Drawing.Color.LavenderBlush;
-            this.gridColumn6.AppearanceCell.BackColor2 = System.Drawing.Color.LavenderBlush;
             this.gridColumn6.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn6.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
@@ -283,8 +278,7 @@
             // 
             // gridColumn8
             // 
-            this.gridColumn8.AppearanceCell.BackColor = System.Drawing.Color.LavenderBlush;
-            this.gridColumn8.AppearanceCell.BackColor2 = System.Drawing.Color.LavenderBlush;
+            this.gridColumn8.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.gridColumn8.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn8.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn8.AppearanceHeader.ForeColor = System.Drawing.Color.Crimson;
@@ -436,8 +430,7 @@
             // 
             // gridColumn10
             // 
-            this.gridColumn10.AppearanceCell.BackColor = System.Drawing.Color.Yellow;
-            this.gridColumn10.AppearanceCell.BackColor2 = System.Drawing.Color.Salmon;
+            this.gridColumn10.AppearanceCell.BackColor = System.Drawing.Color.LightYellow;
             this.gridColumn10.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn10.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn10.AppearanceHeader.ForeColor = System.Drawing.Color.ForestGreen;
@@ -497,7 +490,7 @@
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Crimson;
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Lime;
             this.labelControl2.Location = new System.Drawing.Point(330, 56);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
@@ -518,7 +511,7 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.CadetBlue;
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.SteelBlue;
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.BottomLeft;
