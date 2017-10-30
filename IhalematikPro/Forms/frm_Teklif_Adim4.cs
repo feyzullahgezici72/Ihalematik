@@ -17,6 +17,7 @@ namespace IhalematikPro.Forms
 {
     public partial class frm_Teklif_Adim4 : DevExpress.XtraEditors.XtraForm
     {
+        private object a3;
 
         public frm_Teklif_Adim4()
         {
@@ -97,17 +98,34 @@ namespace IhalematikPro.Forms
                     MaterialListProvider.Instance.Save(materialList);// materialListModel.Save();
                 }
             }
+            frm_ihaleOlustuMesaj frm = new frm_ihaleOlustuMesaj();
+            frm.lblMesaj.Text = "Malzemeler Kaydedildi...";
+            frm.ShowDialog();
+            //MessageBox.Show("Malzemler Kaydedildi...");
+            this.Close();
+            frm_Teklif_Adim3 a3 = (frm_Teklif_Adim3)Application.OpenForms["frm_Teklif_Adim3"];
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            if (a3 == null)
+            {
+                a3 = new frm_Teklif_Adim3();
+                a3.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                a3.FormClosed += new FormClosedEventHandler(a3_FormClosed);
+                af.MainPanel.Visible = false;
+                a3.Show();
+
+            }
+            else
+            {
+                a3.Activate();
+            }
+
         }
 
-        private void grdMaterialListNonWorkship_Click(object sender, EventArgs e)
+     
+        private void a3_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void btnKaydet_Click_1(object sender, EventArgs e)
-        {
-            frm_ihaleOlustuMesaj msj = new frm_ihaleOlustuMesaj();
-            msj.lblMesaj.Text = "Kaydedildi...";
+            a3 = null;
         }
     }
+    
 }

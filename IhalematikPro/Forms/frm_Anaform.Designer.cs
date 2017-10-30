@@ -82,9 +82,11 @@ namespace IhalematikPro.Forms
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
+            this.barBtnDovizKurlar = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -103,8 +105,6 @@ namespace IhalematikPro.Forms
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.MainPanel = new DevExpress.XtraEditors.PanelControl();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barBtnDovizKurlar = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).BeginInit();
@@ -617,6 +617,16 @@ namespace IhalematikPro.Forms
             this.barStaticItem3.Name = "barStaticItem3";
             this.barStaticItem3.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
+            // barBtnDovizKurlar
+            // 
+            this.barBtnDovizKurlar.Caption = "Döviz Kurları";
+            this.barBtnDovizKurlar.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnDovizKurlar.Glyph")));
+            this.barBtnDovizKurlar.Id = 8;
+            this.barBtnDovizKurlar.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnDovizKurlar.LargeGlyph")));
+            this.barBtnDovizKurlar.LargeWidth = 120;
+            this.barBtnDovizKurlar.Name = "barBtnDovizKurlar";
+            this.barBtnDovizKurlar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnDovizKurlar_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -643,6 +653,11 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup10.ItemLinks.Add(this.barBtnOzelStokListesi);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             this.ribbonPageGroup10.ShowCaptionButton = false;
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnDovizKurlar);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // ribbonPage8
             // 
@@ -780,22 +795,7 @@ namespace IhalematikPro.Forms
             this.MainPanel.Location = new System.Drawing.Point(0, 202);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(1449, 353);
-            this.MainPanel.TabIndex = 3;
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnDovizKurlar);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            // 
-            // barBtnDovizKurlar
-            // 
-            this.barBtnDovizKurlar.Caption = "Döviz Kurları";
-            this.barBtnDovizKurlar.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnDovizKurlar.Glyph")));
-            this.barBtnDovizKurlar.Id = 8;
-            this.barBtnDovizKurlar.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnDovizKurlar.LargeGlyph")));
-            this.barBtnDovizKurlar.LargeWidth = 120;
-            this.barBtnDovizKurlar.Name = "barBtnDovizKurlar";
-            this.barBtnDovizKurlar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnDovizKurlar_ItemClick);
+            this.MainPanel.TabIndex = 4;
             // 
             // frm_Anaform
             // 
@@ -911,9 +911,9 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
         private DevExpress.XtraBars.BarStaticItem barStaticItem3;
-        private DevExpress.XtraEditors.PanelControl MainPanel;
         private DevExpress.XtraBars.BarButtonItem barBtnDovizKurlar;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        public DevExpress.XtraEditors.PanelControl MainPanel;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }

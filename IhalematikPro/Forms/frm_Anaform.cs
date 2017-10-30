@@ -603,5 +603,10 @@ namespace IhalematikPro.Forms
             Forms.frm_DovizKurlari frm = new frm_DovizKurlari();
             frm.ShowDialog();
         }
+
+        private void MainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

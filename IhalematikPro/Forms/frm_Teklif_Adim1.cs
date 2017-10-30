@@ -16,6 +16,8 @@ namespace IhalematikPro.Forms
 {
     public partial class frm_Teklif_Adim1 : DevExpress.XtraEditors.XtraForm
     {
+        private object a4;
+
         public frm_Teklif_Adim1()
         {
             InitializeComponent();
@@ -102,10 +104,29 @@ namespace IhalematikPro.Forms
             frm.lblMesaj.Text = "Malzemeler Kaydedildi...";
             frm.ShowDialog();
             //MessageBox.Show("Malzemler Kaydedildi...");
-
             this.Close();
+            frm_Teklif_Adim4 a4 = (frm_Teklif_Adim4)Application.OpenForms["frm_Teklif_Adim4"];
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            if (a4 == null)
+            {
+                a4 = new frm_Teklif_Adim4();
+                a4.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                a4.FormClosed += new FormClosedEventHandler(a4_FormClosed);
+                af.MainPanel.Visible = false;
+                a4.Show();
 
-            
+            }
+            else
+            {
+                a4.Activate();
+            }
+
+
+        }
+
+        private void a4_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            a4= null;
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

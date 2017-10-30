@@ -153,7 +153,6 @@
             this.grdMaterialListNonWorkship.TabIndex = 28;
             this.grdMaterialListNonWorkship.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.grdMaterialListNonWorkship.Click += new System.EventHandler(this.grdMaterialListNonWorkship_Click);
             // 
             // gridView1
             // 
@@ -478,7 +477,6 @@
             this.btnKaydet.Size = new System.Drawing.Size(136, 118);
             this.btnKaydet.TabIndex = 11;
             this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click_1);
             // 
             // txtTotalAmount
             // 
