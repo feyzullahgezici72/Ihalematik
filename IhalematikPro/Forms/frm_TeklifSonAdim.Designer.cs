@@ -655,10 +655,7 @@
             // grdMaterialList2
             // 
             this.grdMaterialList2.Appearance.FocusedCell.BackColor = System.Drawing.SystemColors.Highlight;
-            this.grdMaterialList2.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
             this.grdMaterialList2.Appearance.FocusedCell.Options.UseBackColor = true;
-            this.grdMaterialList2.Appearance.FocusedRow.BackColor = System.Drawing.Color.Lime;
-            this.grdMaterialList2.Appearance.FocusedRow.Options.UseBackColor = true;
             this.grdMaterialList2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.grdMaterialList2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,

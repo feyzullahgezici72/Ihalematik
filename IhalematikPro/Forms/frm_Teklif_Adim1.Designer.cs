@@ -459,7 +459,6 @@
             // 
             // grdMaterialList2
             // 
-            this.grdMaterialList2.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
             this.grdMaterialList2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.grdMaterialList2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
