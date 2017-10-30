@@ -53,7 +53,8 @@ namespace IhalematikPro.Forms
             grdMaterialListIsWorkship.Columns.Add(column);
 
             column = new DataGridViewTextBoxColumn();
-            column.DataPropertyName = "Markup";
+            column.DataPropertyName = "WorkerPercentageMarkup";
+            column.Name = "WorkerPercentageMarkup";
             column.Name = "Kar %";
             column.ReadOnly = false;
             grdMaterialListIsWorkship.Columns.Add(column);
@@ -189,10 +190,10 @@ namespace IhalematikPro.Forms
             //List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
             List<MaterialListModel> models = (List<MaterialListModel>)grdMaterialListIsWorkship.DataSource; //IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             MaterialListModel materialListModel = models.ToArray()[e.RowIndex];
-            if (currentColumnName.Equals("WorkerMarkup"))
+            if (currentColumnName.Equals("WorkerPercentageMarkup"))
             {
                 double value = Convert.ToDouble(grdMaterialListIsWorkship["WorkerMarkup", grdMaterialListIsWorkship.CurrentRow.Index].Value);
-                materialListModel.Markup = value;
+                materialListModel.WorkerPercentageMarkup = value;
             }
             else if (currentColumnName.Equals("UnitTime"))
             {
@@ -283,7 +284,7 @@ namespace IhalematikPro.Forms
             msj.ShowDialog();
             this.Close();
 
-          
+
             frm_TeklifAdimSon a1 = (frm_TeklifAdimSon)Application.OpenForms[" frm_TeklifSonAdim"];
 
             if (a1 == null)
@@ -306,7 +307,7 @@ namespace IhalematikPro.Forms
         {
             a1 = null;
         }
-    private void btnKapat_Click(object sender, EventArgs e)
+        private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -342,7 +343,7 @@ namespace IhalematikPro.Forms
             models.ForEach(p => p.Markup = markup);
             foreach (var item in items)
             {
-                item.Markup = markup;
+                item.WorkerMarkup = markup;
                 OperationResult result = MaterialListProvider.Instance.Save(item);
                 if (!result.Success)
                 {

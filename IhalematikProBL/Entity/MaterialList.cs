@@ -11,6 +11,9 @@ namespace IhalematikProBL.Entity
     public class MaterialList : CustomEntityBase
     {
         public double Markup { get; set; }
+
+        public double WorkerMarkup { get; set; }
+
         public float KDVPercentage { get; set; }
         public double KDVAmount
         {

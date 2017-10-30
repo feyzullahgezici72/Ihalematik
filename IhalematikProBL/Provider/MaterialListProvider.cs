@@ -22,6 +22,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("IsPoz", t.IsPoz);
             parameters.Add("IsWorkship", t.IsWorkship); 
             parameters.Add("Markup", t.Markup);
+            parameters.Add("WorkerMarkup", t.WorkerMarkup);
             parameters.Add("TenderId", t.TenderId);
             parameters.Add("UnitTimeType", t.UnitTimeType);
             parameters.Add("UnitTime", t.UnitTime);
@@ -38,6 +39,7 @@ namespace IhalematikProBL.Provider
             t.PozOBFId = dr.GetValue<int>("PozOBFId");
             t.Quantity = dr.GetValue<float>("Quantity");
             t.Markup = dr.GetValue<float>("Markup");
+            t.WorkerMarkup = dr.GetValue<float>("WorkerMarkup");
             t.TenderId = dr.GetValue<int>("TenderId");
             t.UnitTime = dr.GetValue<int>("UnitTime");
             t.UnitTimeType = dr.GetValue<UnitTimeTypesEnum>("UnitTimeType");
