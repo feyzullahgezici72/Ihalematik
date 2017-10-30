@@ -117,7 +117,12 @@ namespace IhalematikPro.Model
         public float Quantity { get; set; }
 
         public bool IsWorkship { get; set; }
+
+        //Malzeme birim kar yuzdesi
         public double Markup { get; set; }
+
+        //Iscilik birim kar yuzdesi
+        public double WorkerPercentageMarkup { get; set; }
 
         //Birim Kar
         public double UnitMarkup
@@ -153,7 +158,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                return Math.Round(this.WorkerUnitPrice * this.Markup / 100, 2);
+                return Math.Round(this.WorkerUnitPrice * this.WorkerPercentageMarkup / 100, 2);
             }
         }
 
@@ -372,6 +377,7 @@ namespace IhalematikPro.Model
             this.TenderId = Entity.TenderId;
             this.UnitTimeType = new UnitTimeTypesModel().Create(Entity.UnitTimeType);
             this.UnitTime = Entity.UnitTime;
+            this.WorkerPercentageMarkup = Entity.WorkerMarkup;
         }
 
         public override EntityBase ToEntity()
@@ -386,6 +392,7 @@ namespace IhalematikPro.Model
             materialList.Quantity = this.Quantity;
             materialList.TenderId = this.TenderId;
             materialList.UnitTime = this.UnitTime;
+            materialList.WorkerMarkup = this.WorkerPercentageMarkup;
             if (this.UnitTimeType != null)
             {
                 materialList.UnitTimeType = this.UnitTimeType.UnitTimeType;

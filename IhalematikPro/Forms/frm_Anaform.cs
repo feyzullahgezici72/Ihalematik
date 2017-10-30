@@ -400,13 +400,13 @@ namespace IhalematikPro.Forms
             tfa = null;
             RibonAktif();
         }
-        frm_TeklifSonAdim ts;
+        frm_TeklifAdimSon ts;
         private void btnAdimx5_ItemClick(object sender, ItemClickEventArgs e)
         {
             RibonPasif();
             if (ts == null)
             {
-                ts = new frm_TeklifSonAdim();
+                ts = new frm_TeklifAdimSon();
                 ts.MdiParent = this;
                 ts.FormClosed += new FormClosedEventHandler(Ts_FormClosed);
                 ts.Show();

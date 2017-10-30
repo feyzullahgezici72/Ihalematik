@@ -14,9 +14,9 @@ using IhalematikProBL.Entity;
 
 namespace IhalematikProUI.Forms
 {
-    public partial class frm_TeklifSonAdim : DevExpress.XtraEditors.XtraForm
+    public partial class frm_TeklifAdimSon : DevExpress.XtraEditors.XtraForm
     {
-        public frm_TeklifSonAdim()
+        public frm_TeklifAdimSon()
         {
             InitializeComponent();
         }

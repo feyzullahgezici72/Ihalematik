@@ -11,12 +11,15 @@ namespace IhalematikProBL.Entity
     public class MaterialList : CustomEntityBase
     {
         public double Markup { get; set; }
+
+        public double WorkerMarkup { get; set; }
+
         public float KDVPercentage { get; set; }
         public double KDVAmount
         {
             get
             {
-                return Math.Round((this.KDVPercentage * this.pozOBF.UnitPrice / 100 * this.Quantity), 2);
+                return Math.Round((this.KDVPercentage * this.PozOBF.UnitPrice / 100 * this.Quantity), 2);
             }
         }
 
@@ -24,7 +27,7 @@ namespace IhalematikProBL.Entity
         {
             get
             {
-                return Math.Round(this.pozOBF.UnitPrice * this.Quantity, 2);// hata verdi
+                return Math.Round(this.PozOBF.UnitPrice * this.Quantity, 2);// hata verdi
             }
         }
         public bool IsPoz { get; set; }
