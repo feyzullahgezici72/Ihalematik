@@ -64,8 +64,7 @@ namespace IhalematikPro.Forms
         private void barBtnDovizKurlari_ItemClick(object sender, ItemClickEventArgs e)
         {
             //radialMenu.HidePopup();
-            Forms.frm_DovizKurlari frm = new frm_DovizKurlari();
-            frm.ShowDialog();
+           
         }
 
         Forms.frm_PozListesi pl;
@@ -516,10 +515,12 @@ namespace IhalematikPro.Forms
         public void RibonAktif()
         {
             ribbon.Enabled = true;
+            MainPanel.Visible = true;
         }
         public void RibonPasif()
         {
             ribbon.Enabled = false;
+            MainPanel.Visible = false;
         }
         private void barButtonItem2_ItemClick_1(object sender, ItemClickEventArgs e)
         {
@@ -533,14 +534,14 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Green";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Pink";
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
 
         private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Pink";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Green";
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
@@ -595,6 +596,12 @@ namespace IhalematikPro.Forms
         {
             //lblDate.Caption = DateTime.Now.ToLongDateString();
             //lblTime.Caption= DateTime.Now.ToLongTimeString();
+        }
+
+        private void barBtnDovizKurlar_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Forms.frm_DovizKurlari frm = new frm_DovizKurlari();
+            frm.ShowDialog();
         }
     }
 }
