@@ -31,6 +31,7 @@ namespace IhalematikPro.Forms
         public bool IsInitializeTenderMaterialListEquipment = false;
         public bool isDataGridFormatted = false;
         private object a1;
+        private object a4;
 
         public frm_Teklif_Adim3()
         {
@@ -331,28 +332,29 @@ namespace IhalematikPro.Forms
             this.Close();
 
 
-            frm_TeklifAdimSon a1 = (frm_TeklifAdimSon)Application.OpenForms[" frm_TeklifSonAdim"];
+            frm_TeklifAdimSon a4 = (frm_TeklifAdimSon)Application.OpenForms[" frm_TeklifSonAdim"];
 
-            if (a1 == null)
+            if (a4 == null)
             {
-                a1 = new frm_TeklifAdimSon();
-                a1.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                a1.FormClosed += new FormClosedEventHandler(a1_FormClosed);
-                a1.Show();
+                a4 = new frm_TeklifAdimSon();
+                a4.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                a4.FormClosed += new FormClosedEventHandler(a4_FormClosed);
+                a4.Show();
 
             }
             else
             {
-                a1.Activate();
+                a4.Activate();
             }
 
 
         }
 
-        private void a1_FormClosed(object sender, FormClosedEventArgs e)
+        private void a4_FormClosed(object sender, FormClosedEventArgs e)
         {
-            a1 = null;
+            a4 = null;
         }
+
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();

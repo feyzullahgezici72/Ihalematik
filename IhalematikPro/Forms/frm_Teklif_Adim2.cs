@@ -15,10 +15,11 @@ using IhalematikPro.Model;
 
 namespace IhalematikPro.Forms
 {
-    public partial class frm_Teklif_Adim4 : DevExpress.XtraEditors.XtraForm
+    public partial class frm_Teklif_Adim2 : DevExpress.XtraEditors.XtraForm
     {
+        private object a3;
 
-        public frm_Teklif_Adim4()
+        public frm_Teklif_Adim2()
         {
             InitializeComponent();
         }
@@ -33,7 +34,7 @@ namespace IhalematikPro.Forms
 
         }
 
-        private void frm_Teklif_Adim4_Load(object sender, EventArgs e)
+        private void frm_Teklif_Adim2_Load(object sender, EventArgs e)
         {
             lblTenderDescription.Text = CurrentManager.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.CurrentTender.DisplayNumber;
@@ -63,7 +64,7 @@ namespace IhalematikPro.Forms
                 MaterialListProvider.Instance.Save(item);
             }
 
-            this.frm_Teklif_Adim4_Load(null, null);
+            this.frm_Teklif_Adim2_Load(null, null);
         }
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -93,6 +94,30 @@ namespace IhalematikPro.Forms
                     MaterialListProvider.Instance.Save(materialList);// materialListModel.Save();
                 }
             }
+            frm_ihaleOlustuMesaj frm = new frm_ihaleOlustuMesaj();
+            frm.lblMesaj.Text = "Malzemeler Kaydedildi...";
+            frm.ShowDialog();
+            this.Close();
+            frm_Teklif_Adim3 a3= (frm_Teklif_Adim3)Application.OpenForms["frm_Teklif_Adim3"];
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            if (a3 == null)
+            {
+                a3 = new frm_Teklif_Adim3();
+                a3.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                a3.FormClosed += new FormClosedEventHandler(a3_FormClosed);
+                af.MainPanel.Visible = false;
+                a3.Show();
+
+            }
+            else
+            {
+                a3.Activate();
+            }
+        }
+
+        private void a3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            a3 = null;
         }
 
         private void grdMaterialListNonWorkship_Click(object sender, EventArgs e)
@@ -102,8 +127,7 @@ namespace IhalematikPro.Forms
 
         private void btnKaydet_Click_1(object sender, EventArgs e)
         {
-            frm_ihaleOlustuMesaj msj = new frm_ihaleOlustuMesaj();
-            msj.lblMesaj.Text = "Kaydedildi...";
+          
         }
     }
 }

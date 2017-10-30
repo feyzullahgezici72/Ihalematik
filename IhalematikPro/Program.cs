@@ -16,14 +16,14 @@ namespace IhalematikPro
         [STAThread]
         static void Main()
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Pink";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Lilian";
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             CurrentManager.CurrentTender = TenderProvider.Instance.GetItem(1199);
 
-            //Application.Run(new Forms.frm_Anaform());
-            Application.Run(new Forms.frm_Teklif_Adim3());
+            Application.Run(new Forms.frm_Anaform());
+            //Application.Run(new Forms.frm_Teklif_Adim3());
             //Application.Run(new Forms.frm_Login()); //.frm_Anaform
 
         }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim1));
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -65,7 +64,7 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -459,6 +458,16 @@
             // 
             // grdMaterialList2
             // 
+            this.grdMaterialList2.Appearance.FocusedCell.BackColor = System.Drawing.Color.White;
+            this.grdMaterialList2.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.grdMaterialList2.Appearance.FocusedRow.BackColor = System.Drawing.Color.White;
+            this.grdMaterialList2.Appearance.FocusedRow.ForeColor = System.Drawing.Color.Black;
+            this.grdMaterialList2.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.grdMaterialList2.Appearance.FocusedRow.Options.UseForeColor = true;
+            this.grdMaterialList2.Appearance.SelectedRow.BackColor = System.Drawing.Color.White;
+            this.grdMaterialList2.Appearance.SelectedRow.ForeColor = System.Drawing.Color.Black;
+            this.grdMaterialList2.Appearance.SelectedRow.Options.UseBackColor = true;
+            this.grdMaterialList2.Appearance.SelectedRow.Options.UseForeColor = true;
             this.grdMaterialList2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.grdMaterialList2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,

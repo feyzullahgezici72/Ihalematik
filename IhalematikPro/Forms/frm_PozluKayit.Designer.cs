@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.txtPozNumber = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnBul = new DevExpress.XtraEditors.SimpleButton();
@@ -36,7 +35,7 @@
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -277,7 +276,13 @@
             // 
             // gridView1
             // 
-            this.gridView1.Appearance.SelectedRow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.FocusedRow.ForeColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.FocusedRow.Options.UseForeColor = true;
+            this.gridView1.Appearance.SelectedRow.BackColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.SelectedRow.ForeColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.SelectedRow.Options.UseBackColor = true;
             this.gridView1.Appearance.SelectedRow.Options.UseForeColor = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
@@ -394,7 +399,13 @@
             // 
             // gridView2
             // 
-            this.gridView2.Appearance.SelectedRow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridView2.Appearance.FocusedRow.BackColor = System.Drawing.Color.White;
+            this.gridView2.Appearance.FocusedRow.ForeColor = System.Drawing.Color.Black;
+            this.gridView2.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.gridView2.Appearance.FocusedRow.Options.UseForeColor = true;
+            this.gridView2.Appearance.SelectedRow.BackColor = System.Drawing.Color.White;
+            this.gridView2.Appearance.SelectedRow.ForeColor = System.Drawing.Color.Black;
+            this.gridView2.Appearance.SelectedRow.Options.UseBackColor = true;
             this.gridView2.Appearance.SelectedRow.Options.UseForeColor = true;
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn5,

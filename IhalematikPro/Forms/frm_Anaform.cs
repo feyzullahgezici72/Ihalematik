@@ -219,13 +219,13 @@ namespace IhalematikPro.Forms
             RibonAktif();
         }
 
-        Forms.frm_Teklif_Adim4 ta4;
+        Forms.frm_Teklif_Adim2 ta4;
         private void btnAdimx4_ItemClick(object sender, ItemClickEventArgs e)
         {
             RibonPasif();
             if (ta4 == null)
             {
-                ta4 = new frm_Teklif_Adim4();
+                ta4 = new frm_Teklif_Adim2();
                 ta4.MdiParent = this;
                 ta4.FormClosed += new FormClosedEventHandler(Ta4_FormClosed);
                 ta4.Show();
@@ -534,7 +534,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Pink";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Lilian";
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
@@ -562,7 +562,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Lilian"; //London Liquid Sky
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Pink"; //London Liquid Sky
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }

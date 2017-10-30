@@ -57,6 +57,7 @@
             this.txtMaterialCostAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.lblTotalMarkupNonKDV = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
@@ -81,7 +82,6 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
-            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -479,6 +479,15 @@
             this.groupControl1.TabIndex = 12;
             this.groupControl1.Text = "Kdv Hariç Toplam Tutar";
             // 
+            // labelControl19
+            // 
+            this.labelControl19.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl19.Location = new System.Drawing.Point(13, 7);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(240, 24);
+            this.labelControl19.TabIndex = 1;
+            this.labelControl19.Text = "KDV hariç Toplam Tutar";
+            // 
             // lblTotalMarkupNonKDV
             // 
             this.lblTotalMarkupNonKDV.Appearance.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -662,6 +671,14 @@
             // 
             this.grdMaterialList2.Appearance.FocusedCell.BackColor = System.Drawing.SystemColors.Highlight;
             this.grdMaterialList2.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.grdMaterialList2.Appearance.FocusedRow.BackColor = System.Drawing.Color.White;
+            this.grdMaterialList2.Appearance.FocusedRow.ForeColor = System.Drawing.Color.Black;
+            this.grdMaterialList2.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.grdMaterialList2.Appearance.FocusedRow.Options.UseForeColor = true;
+            this.grdMaterialList2.Appearance.SelectedRow.BackColor = System.Drawing.Color.White;
+            this.grdMaterialList2.Appearance.SelectedRow.ForeColor = System.Drawing.Color.Black;
+            this.grdMaterialList2.Appearance.SelectedRow.Options.UseBackColor = true;
+            this.grdMaterialList2.Appearance.SelectedRow.Options.UseForeColor = true;
             this.grdMaterialList2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.grdMaterialList2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
@@ -804,16 +821,7 @@
             this.gridSplitContainer1.Size = new System.Drawing.Size(1376, 427);
             this.gridSplitContainer1.TabIndex = 23;
             // 
-            // labelControl19
-            // 
-            this.labelControl19.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl19.Location = new System.Drawing.Point(13, 7);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(240, 24);
-            this.labelControl19.TabIndex = 1;
-            this.labelControl19.Text = "KDV hariç Toplam Tutar";
-            // 
-            // frm_TeklifSonAdim
+            // frm_TeklifAdimSon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -828,7 +836,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frm_TeklifSonAdim";
+            this.Name = "frm_TeklifAdimSon";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_TeklifSonAdim_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
