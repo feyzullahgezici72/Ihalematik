@@ -278,17 +278,17 @@
     <Compile Include="Forms\frm_TeklifListesi.Designer.cs">
       <DependentUpon>frm_TeklifListesi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_TeklifSonAdim.cs">
+    <Compile Include="Forms\frm_TeklifAdimSon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_TeklifSonAdim.Designer.cs">
-      <DependentUpon>frm_TeklifSonAdim.cs</DependentUpon>
+    <Compile Include="Forms\frm_TeklifAdimSon.Designer.cs">
+      <DependentUpon>frm_TeklifAdimSon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_Teklif_Adim4.cs">
+    <Compile Include="Forms\frm_Teklif_Adim2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_Teklif_Adim4.Designer.cs">
-      <DependentUpon>frm_Teklif_Adim4.cs</DependentUpon>
+    <Compile Include="Forms\frm_Teklif_Adim2.Designer.cs">
+      <DependentUpon>frm_Teklif_Adim2.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frm_Login.cs">
       <SubType>Form</SubType>
@@ -434,11 +434,11 @@
     <EmbeddedResource Include="Forms\frm_TeklifListesi.resx">
       <DependentUpon>frm_TeklifListesi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_TeklifSonAdim.resx">
-      <DependentUpon>frm_TeklifSonAdim.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frm_TeklifAdimSon.resx">
+      <DependentUpon>frm_TeklifAdimSon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_Teklif_Adim4.resx">
-      <DependentUpon>frm_Teklif_Adim4.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frm_Teklif_Adim2.resx">
+      <DependentUpon>frm_Teklif_Adim2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>

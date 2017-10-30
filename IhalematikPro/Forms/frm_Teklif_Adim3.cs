@@ -284,11 +284,11 @@ namespace IhalematikPro.Forms
             this.Close();
 
           
-            frm_TeklifSonAdim a1 = (frm_TeklifSonAdim)Application.OpenForms[" frm_TeklifSonAdim"];
+            frm_TeklifAdimSon a1 = (frm_TeklifAdimSon)Application.OpenForms[" frm_TeklifSonAdim"];
 
             if (a1 == null)
             {
-                a1 = new frm_TeklifSonAdim();
+                a1 = new frm_TeklifAdimSon();
                 a1.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
                 a1.FormClosed += new FormClosedEventHandler(a1_FormClosed);
                 a1.Show();
