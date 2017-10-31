@@ -923,10 +923,12 @@
             // 
             this.gridColumn1.Caption = "GÜNCELLE";
             this.gridColumn1.ColumnEdit = this.btnGuncelle;
+            this.gridColumn1.MaxWidth = 80;
+            this.gridColumn1.MinWidth = 80;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 4;
-            this.gridColumn1.Width = 102;
+            this.gridColumn1.Width = 80;
             // 
             // btnGuncelle
             // 

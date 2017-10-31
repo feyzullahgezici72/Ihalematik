@@ -448,10 +448,12 @@
             // 
             this.gridColumn6.Caption = "ÇALIŞANLAR";
             this.gridColumn6.ColumnEdit = this.btnIscilikveAracGirisi;
+            this.gridColumn6.MaxWidth = 80;
+            this.gridColumn6.MinWidth = 80;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 2;
-            this.gridColumn6.Width = 114;
+            this.gridColumn6.Width = 80;
             // 
             // btnIscilikveAracGirisi
             // 
