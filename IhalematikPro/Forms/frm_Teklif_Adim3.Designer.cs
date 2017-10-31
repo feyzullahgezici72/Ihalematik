@@ -109,7 +109,7 @@
             this.grdMaterialListIsWorkship.Location = new System.Drawing.Point(553, 8);
             this.grdMaterialListIsWorkship.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialListIsWorkship.Name = "grdMaterialListIsWorkship";
-            this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(149, 52);
+            this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(121, 46);
             this.grdMaterialListIsWorkship.TabIndex = 26;
             // 
             // groupBox1
