@@ -389,20 +389,22 @@
             this.groupBox1.Controls.Add(this.txtMarkup);
             this.groupBox1.Controls.Add(this.btnTumuneUygula);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Crimson;
-            this.groupBox1.Location = new System.Drawing.Point(1342, 0);
+            this.groupBox1.Location = new System.Drawing.Point(1376, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(170, 80);
+            this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox1.Size = new System.Drawing.Size(136, 80);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kar % \'si";
             // 
             // txtMarkup
             // 
-            this.txtMarkup.Location = new System.Drawing.Point(33, 36);
+            this.txtMarkup.Location = new System.Drawing.Point(12, 36);
             this.txtMarkup.Mask = "##%";
             this.txtMarkup.Name = "txtMarkup";
             this.txtMarkup.Size = new System.Drawing.Size(66, 27);
@@ -418,7 +420,7 @@
             this.btnTumuneUygula.AutoSize = true;
             this.btnTumuneUygula.Image = global::IhalematikProUI.Properties.Resources.ok_icon__1_1;
             this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(106, 26);
+            this.btnTumuneUygula.Location = new System.Drawing.Point(86, 26);
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
             this.btnTumuneUygula.Size = new System.Drawing.Size(44, 46);

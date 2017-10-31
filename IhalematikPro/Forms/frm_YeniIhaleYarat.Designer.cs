@@ -224,9 +224,9 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.ShowLineShadow = false;
-            this.labelControl3.Size = new System.Drawing.Size(334, 37);
+            this.labelControl3.Size = new System.Drawing.Size(463, 37);
             this.labelControl3.TabIndex = 0;
-            this.labelControl3.Text = "YENİ İHALE OLUŞTUR";
+            this.labelControl3.Text = "YENİ İHALE TEKLİFİ OLUŞTUR";
             this.labelControl3.UseMnemonic = false;
             // 
             // groupControl1
@@ -237,7 +237,7 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.groupControl1.Controls.Add(this.grdWorker);
-            this.groupControl1.Location = new System.Drawing.Point(13, 268);
+            this.groupControl1.Location = new System.Drawing.Point(10, 367);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(435, 385);
@@ -259,8 +259,6 @@
             // 
             // grdWorker2
             // 
-            this.grdWorker2.Appearance.FocusedRow.BackColor = System.Drawing.Color.SteelBlue;
-            this.grdWorker2.Appearance.FocusedRow.Options.UseBackColor = true;
             this.grdWorker2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1});
             this.grdWorker2.GridControl = this.grdWorker;
@@ -288,7 +286,7 @@
             this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.Controls.Add(this.grdVehicle);
-            this.groupControl2.Location = new System.Drawing.Point(457, 268);
+            this.groupControl2.Location = new System.Drawing.Point(454, 367);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(430, 385);
@@ -310,8 +308,6 @@
             // 
             // grdVehicle2
             // 
-            this.grdVehicle2.Appearance.FocusedRow.BackColor = System.Drawing.Color.SteelBlue;
-            this.grdVehicle2.Appearance.FocusedRow.Options.UseBackColor = true;
             this.grdVehicle2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn2});
             this.grdVehicle2.GridControl = this.grdVehicle;
@@ -354,7 +350,7 @@
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 657);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 278);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.statusStrip1.Size = new System.Drawing.Size(898, 22);
@@ -366,7 +362,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(898, 679);
+            this.ClientSize = new System.Drawing.Size(898, 300);
             this.ControlBox = false;
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel1);

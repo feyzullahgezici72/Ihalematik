@@ -459,7 +459,9 @@
             // grdMaterialList2
             // 
             this.grdMaterialList2.Appearance.FocusedCell.BackColor = System.Drawing.Color.White;
+            this.grdMaterialList2.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
             this.grdMaterialList2.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.grdMaterialList2.Appearance.FocusedCell.Options.UseForeColor = true;
             this.grdMaterialList2.Appearance.FocusedRow.BackColor = System.Drawing.Color.White;
             this.grdMaterialList2.Appearance.FocusedRow.ForeColor = System.Drawing.Color.Black;
             this.grdMaterialList2.Appearance.FocusedRow.Options.UseBackColor = true;

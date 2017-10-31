@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace IhalematikProUI.Forms
 {
-    public partial class frm_IscilikIslemKayit : DevExpress.XtraEditors.XtraForm
+    public partial class frm_IscilikAracDetay : DevExpress.XtraEditors.XtraForm
     {
-        public frm_IscilikIslemKayit()
+        public frm_IscilikAracDetay()
         {
             InitializeComponent();
         }

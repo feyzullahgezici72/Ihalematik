@@ -276,6 +276,10 @@
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.FocusedCell.BackColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gridView1.Appearance.FocusedCell.Options.UseForeColor = true;
             this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.White;
             this.gridView1.Appearance.FocusedRow.ForeColor = System.Drawing.Color.Black;
             this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;

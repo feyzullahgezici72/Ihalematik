@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.grdMaterialListIsWorkship = new System.Windows.Forms.DataGridView();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtWorkerMarkup = new System.Windows.Forms.MaskedTextBox();
@@ -51,10 +52,20 @@
             this.txtMarkupAmount = new DevExpress.XtraEditors.TextEdit();
             this.txtBaseAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.grdMaterialListIsWorkship = new System.Windows.Forms.DataGridView();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.detaylarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialListIsWorkship)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -65,8 +76,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMarkupAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseAmount.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialListIsWorkship)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -74,6 +88,7 @@
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.grdMaterialListIsWorkship);
             this.panelControl2.Controls.Add(this.simpleButton1);
             this.panelControl2.Controls.Add(this.groupBox1);
             this.panelControl2.Controls.Add(this.lblTenderNumber);
@@ -86,6 +101,18 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1376, 80);
             this.panelControl2.TabIndex = 22;
+            // 
+            // grdMaterialListIsWorkship
+            // 
+            this.grdMaterialListIsWorkship.AllowUserToAddRows = false;
+            this.grdMaterialListIsWorkship.AllowUserToDeleteRows = false;
+            this.grdMaterialListIsWorkship.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.grdMaterialListIsWorkship.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdMaterialListIsWorkship.Location = new System.Drawing.Point(575, 19);
+            this.grdMaterialListIsWorkship.Margin = new System.Windows.Forms.Padding(4);
+            this.grdMaterialListIsWorkship.Name = "grdMaterialListIsWorkship";
+            this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(34, 42);
+            this.grdMaterialListIsWorkship.TabIndex = 26;
             // 
             // simpleButton1
             // 
@@ -101,20 +128,22 @@
             this.groupBox1.Controls.Add(this.txtWorkerMarkup);
             this.groupBox1.Controls.Add(this.btnTumuneUygula);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Crimson;
-            this.groupBox1.Location = new System.Drawing.Point(1206, 0);
+            this.groupBox1.Location = new System.Drawing.Point(1238, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(170, 80);
+            this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox1.Size = new System.Drawing.Size(138, 80);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kar % \'si";
             // 
             // txtWorkerMarkup
             // 
-            this.txtWorkerMarkup.Location = new System.Drawing.Point(44, 27);
+            this.txtWorkerMarkup.Location = new System.Drawing.Point(8, 27);
             this.txtWorkerMarkup.Mask = "##%";
             this.txtWorkerMarkup.Name = "txtWorkerMarkup";
             this.txtWorkerMarkup.Size = new System.Drawing.Size(66, 27);
@@ -130,7 +159,7 @@
             this.btnTumuneUygula.AutoSize = true;
             this.btnTumuneUygula.Image = global::IhalematikProUI.Properties.Resources.Check_icon__1_;
             this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(117, 19);
+            this.btnTumuneUygula.Location = new System.Drawing.Point(81, 19);
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
             this.btnTumuneUygula.Size = new System.Drawing.Size(45, 45);
@@ -354,18 +383,89 @@
             this.labelControl8.TabIndex = 10;
             this.labelControl8.Text = "KAR TOPLAMI:";
             // 
-            // grdMaterialListIsWorkship
+            // gridControl1
             // 
-            this.grdMaterialListIsWorkship.AllowUserToAddRows = false;
-            this.grdMaterialListIsWorkship.AllowUserToDeleteRows = false;
-            this.grdMaterialListIsWorkship.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.grdMaterialListIsWorkship.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdMaterialListIsWorkship.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialListIsWorkship.Location = new System.Drawing.Point(0, 130);
-            this.grdMaterialListIsWorkship.Margin = new System.Windows.Forms.Padding(4);
-            this.grdMaterialListIsWorkship.Name = "grdMaterialListIsWorkship";
-            this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(1376, 530);
-            this.grdMaterialListIsWorkship.TabIndex = 26;
+            this.gridControl1.ContextMenuStrip = this.contextMenuStrip1;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 130);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(1376, 530);
+            this.gridControl1.TabIndex = 26;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "POZ/ÖBF NO";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 151;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "AÇIKLAMA";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 831;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "BİRİMİ";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 121;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "MİKTARI";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 121;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "BİRİM FİYAT";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 129;
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.Name = "popupMenu1";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.detaylarToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(150, 34);
+            this.contextMenuStrip1.Text = "İşlem detayı";
+            // 
+            // detaylarToolStripMenuItem
+            // 
+            this.detaylarToolStripMenuItem.Name = "detaylarToolStripMenuItem";
+            this.detaylarToolStripMenuItem.Size = new System.Drawing.Size(149, 30);
+            this.detaylarToolStripMenuItem.Text = "Detaylar";
+            this.detaylarToolStripMenuItem.Click += new System.EventHandler(this.detaylarToolStripMenuItem_Click);
             // 
             // frm_Teklif_Adim3
             // 
@@ -374,7 +474,7 @@
             this.CancelButton = this.btnKapat;
             this.ClientSize = new System.Drawing.Size(1376, 778);
             this.ControlBox = false;
-            this.Controls.Add(this.grdMaterialListIsWorkship);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
@@ -389,6 +489,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialListIsWorkship)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -402,8 +503,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMarkupAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseAmount.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialListIsWorkship)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -434,5 +538,15 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.TextEdit txtMarkupAmount;
         private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem detaylarToolStripMenuItem;
     }
 }

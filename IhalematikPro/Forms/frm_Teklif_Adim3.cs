@@ -379,7 +379,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            frm_IscilikIslemKayit frm = new frm_IscilikIslemKayit();
+            frm_IscilikAracDetay frm = new frm_IscilikAracDetay();
             frm.ShowDialog();
         }
 
@@ -399,6 +399,12 @@ namespace IhalematikPro.Forms
                 }
             }
             this.frm_Teklif_Adim3_Load(null, null);
+        }
+
+        private void detaylarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_IscilikAracDetay frm = new frm_IscilikAracDetay();
+            frm.ShowDialog();
         }
     }
 }
