@@ -37,130 +37,130 @@ namespace IhalematikPro.Forms
         {
             InitializeComponent();
 
-            grdMaterialListIsWorkship.AutoGenerateColumns = false;
+            //grdMaterialListIsWorkship.AutoGenerateColumns = false;
 
-            DataGridViewColumn column = new DataGridViewTextBoxColumn();
-            column = new DataGridViewTextBoxColumn();
-            column.DataPropertyName = "PozOBFDescription";
-            column.Name = "AÇIKLAMA";
-            column.ReadOnly = true;
-            column.Width = 340;
-            grdMaterialListIsWorkship.Columns.Add(column);
+            //DataGridViewColumn column = new DataGridViewTextBoxColumn();
+            //column = new DataGridViewTextBoxColumn();
+            //column.DataPropertyName = "PozOBFDescription";
+            //column.Name = "AÇIKLAMA";
+            //column.ReadOnly = true;
+            //column.Width = 340;
+            //grdMaterialListIsWorkship.Columns.Add(column);
 
-            column = new DataGridViewTextBoxColumn();
-            column.DataPropertyName = "Quantity";
-            column.Name = "MİKTAR";
-            column.ReadOnly = true;
-            grdMaterialListIsWorkship.Columns.Add(column);
+            //column = new DataGridViewTextBoxColumn();
+            //column.DataPropertyName = "Quantity";
+            //column.Name = "MİKTAR";
+            //column.ReadOnly = true;
+            //grdMaterialListIsWorkship.Columns.Add(column);
 
-            column = new DataGridViewTextBoxColumn();
-            column.DataPropertyName = "WorkerPercentageMarkup";
-            column.Name = "WorkerPercentageMarkup";
-            column.Name = "Kar %";
-            column.ReadOnly = false;
-            grdMaterialListIsWorkship.Columns.Add(column);
+            //column = new DataGridViewTextBoxColumn();
+            //column.DataPropertyName = "WorkerPercentageMarkup";
+            //column.Name = "WorkerPercentageMarkup";
+            //column.Name = "Kar %";
+            //column.ReadOnly = false;
+            //grdMaterialListIsWorkship.Columns.Add(column);
 
-            column = new DataGridViewTextBoxColumn();
-            column.DataPropertyName = "UnitTime";
-            column.Name = "UnitTime";
-            column.HeaderText = "BIRIM SURE";
-            column.ReadOnly = false;
-            grdMaterialListIsWorkship.Columns.Add(column);
+            //column = new DataGridViewTextBoxColumn();
+            //column.DataPropertyName = "UnitTime";
+            //column.Name = "UnitTime";
+            //column.HeaderText = "BIRIM SURE";
+            //column.ReadOnly = false;
+            //grdMaterialListIsWorkship.Columns.Add(column);
 
-            column = new DataGridViewComboBoxColumn { DataSource = GetUnitTimes(), ValueMember = "Self", DisplayMember = "DisplayText" };
-            column.DataPropertyName = "UnitTimeType";
-            column.Name = "UnitTimeType";
-            column.HeaderText = "Zaman Tipi";
-            column.ReadOnly = false;
-            column.ValueType = typeof(UnitTimeTypesModel);
-            grdMaterialListIsWorkship.Columns.Add(column);
+            //column = new DataGridViewComboBoxColumn { DataSource = GetUnitTimes(), ValueMember = "Self", DisplayMember = "DisplayText" };
+            //column.DataPropertyName = "UnitTimeType";
+            //column.Name = "UnitTimeType";
+            //column.HeaderText = "Zaman Tipi";
+            //column.ReadOnly = false;
+            //column.ValueType = typeof(UnitTimeTypesModel);
+            //grdMaterialListIsWorkship.Columns.Add(column);
 
 
-            if (CurrentManager.CurrentTender.Equipments != null)
-            {
-                List<TenderEquipment> equipmentItems = CurrentManager.CurrentTender.Equipments.OrderBy(p => !p.IsWorker).ToList();
+            //if (CurrentManager.CurrentTender.Equipments != null)
+            //{
+            //    List<TenderEquipment> equipmentItems = CurrentManager.CurrentTender.Equipments.OrderBy(p => !p.IsWorker).ToList();
 
-                foreach (TenderEquipment item in equipmentItems)
-                {
-                    column = new DataGridViewTextBoxColumn();
-                    //column.DataPropertyName = "TenderMaterialListEquipment.Quantity";
+            //    foreach (TenderEquipment item in equipmentItems)
+            //    {
+            //        column = new DataGridViewTextBoxColumn();
+            //        //column.DataPropertyName = "TenderMaterialListEquipment.Quantity";
 
-                    if (item.IsWorker)
-                    {
-                        //column.DataPropertyName = "item.Worker.Title.Name";
-                        column.Name = item.Worker.Title.Name;
-                        column.HeaderText = item.Worker.Title.Name;
-                    }
-                    else
-                    {
-                        //column = new DataGridViewTextBoxColumn();
-                        column.Name = item.Vehicle.Title.Name;
-                        column.HeaderText = item.Vehicle.Title.Name;
-                    }
-                    grdMaterialListIsWorkship.Columns.Add(column);
-                }
-            }
-            column = new DataGridViewTextBoxColumn();
-            column.DataPropertyName = "WorkerUnitPrice";
-            column.Name = "WorkerUnitPrice";
-            column.HeaderText = "BİRİM FİYAT";
-            column.DefaultCellStyle.Format = "c2";
-            column.ReadOnly = false;
-            grdMaterialListIsWorkship.Columns.Add(column);
+            //        if (item.IsWorker)
+            //        {
+            //            //column.DataPropertyName = "item.Worker.Title.Name";
+            //            column.Name = item.Worker.Title.Name;
+            //            column.HeaderText = item.Worker.Title.Name;
+            //        }
+            //        else
+            //        {
+            //            //column = new DataGridViewTextBoxColumn();
+            //            column.Name = item.Vehicle.Title.Name;
+            //            column.HeaderText = item.Vehicle.Title.Name;
+            //        }
+            //        grdMaterialListIsWorkship.Columns.Add(column);
+            //    }
+            //}
+            //column = new DataGridViewTextBoxColumn();
+            //column.DataPropertyName = "WorkerUnitPrice";
+            //column.Name = "WorkerUnitPrice";
+            //column.HeaderText = "BİRİM FİYAT";
+            //column.DefaultCellStyle.Format = "c2";
+            //column.ReadOnly = false;
+            //grdMaterialListIsWorkship.Columns.Add(column);
 
-            column = new DataGridViewTextBoxColumn();
-            column.DataPropertyName = "WorkerMarkup";
-            column.Name = "WorkerMarkup";
-            column.HeaderText = "KARLI BİRİM FİYAT";
-            column.DefaultCellStyle.Format = "c2";
-            column.ReadOnly = false;
-            grdMaterialListIsWorkship.Columns.Add(column);
+            //column = new DataGridViewTextBoxColumn();
+            //column.DataPropertyName = "WorkerMarkup";
+            //column.Name = "WorkerMarkup";
+            //column.HeaderText = "KARLI BİRİM FİYAT";
+            //column.DefaultCellStyle.Format = "c2";
+            //column.ReadOnly = false;
+            //grdMaterialListIsWorkship.Columns.Add(column);
 
-            grdMaterialListIsWorkship.CellValueChanged += GrdMaterialListIsWorkship_CellValueChanged;
+            //grdMaterialListIsWorkship.CellValueChanged += GrdMaterialListIsWorkship_CellValueChanged;
 
-            //grdMaterialListIsWorkship.CellFormatting += GrdMaterialListIsWorkship_CellFormatting;
-            grdMaterialListIsWorkship.DataBindingComplete += GrdMaterialListIsWorkship_DataBindingComplete;
-            grdMaterialListIsWorkship.EditingControlShowing += GrdMaterialListIsWorkship_EditingControlShowing;
+            ////grdMaterialListIsWorkship.CellFormatting += GrdMaterialListIsWorkship_CellFormatting;
+            //grdMaterialListIsWorkship.DataBindingComplete += GrdMaterialListIsWorkship_DataBindingComplete;
+            //grdMaterialListIsWorkship.EditingControlShowing += GrdMaterialListIsWorkship_EditingControlShowing;
         }
 
-        private void GrdMaterialListIsWorkship_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            if (grdMaterialListIsWorkship.CurrentCell.ColumnIndex == 4 && e.Control is System.Windows.Forms.ComboBox)
-            {
-                System.Windows.Forms.ComboBox comboBox = e.Control as System.Windows.Forms.ComboBox;
-                comboBox.SelectedIndexChanged -= LastColumnComboSelectionChanged;
-                comboBox.SelectedIndexChanged += LastColumnComboSelectionChanged;
-            }
-        }
+        //private void GrdMaterialListIsWorkship_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        //{
+        //    if (grdMaterialListIsWorkship.CurrentCell.ColumnIndex == 4 && e.Control is System.Windows.Forms.ComboBox)
+        //    {
+        //        System.Windows.Forms.ComboBox comboBox = e.Control as System.Windows.Forms.ComboBox;
+        //        comboBox.SelectedIndexChanged -= LastColumnComboSelectionChanged;
+        //        comboBox.SelectedIndexChanged += LastColumnComboSelectionChanged;
+        //    }
+        //}
 
-        private void LastColumnComboSelectionChanged(object sender, EventArgs e)
-        {
-            List<MaterialListModel> models = (List<MaterialListModel>)grdMaterialListIsWorkship.DataSource; //IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            MaterialListModel materialListModel = models.ToArray()[grdMaterialListIsWorkship.CurrentRow.Index];
-            var sendingCB = sender as DataGridViewComboBoxEditingControl;
+        //private void LastColumnComboSelectionChanged(object sender, EventArgs e)
+        //{
+        //    List<MaterialListModel> models = (List<MaterialListModel>)grdMaterialListIsWorkship.DataSource; //IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+        //    MaterialListModel materialListModel = models.ToArray()[grdMaterialListIsWorkship.CurrentRow.Index];
+        //    var sendingCB = sender as DataGridViewComboBoxEditingControl;
 
-            UnitTimeTypesModel value = (UnitTimeTypesModel)sendingCB.SelectedValue;//grdMaterialListIsWorkship["UnitTimeType", grdMaterialListIsWorkship.CurrentRow.Index].Value;
-            if (value != null)
-            {
-                materialListModel.UnitTimeType = value;
+        //    UnitTimeTypesModel value = (UnitTimeTypesModel)sendingCB.SelectedValue;//grdMaterialListIsWorkship["UnitTimeType", grdMaterialListIsWorkship.CurrentRow.Index].Value;
+        //    if (value != null)
+        //    {
+        //        materialListModel.UnitTimeType = value;
 
-                MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
-                if (materialList != null)
-                {
-                    materialList.UnitTimeType = materialListModel.UnitTimeType.UnitTimeType;
-                    OperationResult result = MaterialListProvider.Instance.Save(materialList);
-                    if (!result.Success)
-                    {
-                        //TODO feyzullahg
-                    }
-                }
-                grdMaterialListIsWorkship.Refresh(); 
-            }
-            //var currentcell = grdMaterialListIsWorkship.CurrentRow.Index;
-            //var sendingCB = sender as DataGridViewComboBoxEditingControl;
-            //DataGridViewTextBoxCell cel = (DataGridViewTextBoxCell)grdMaterialListIsWorkship.Rows[currentcell.Y].Cells[0];
-            //cel.Value = sendingCB.EditingControlFormattedValue.ToString();
-        }
+        //        MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
+        //        if (materialList != null)
+        //        {
+        //            materialList.UnitTimeType = materialListModel.UnitTimeType.UnitTimeType;
+        //            OperationResult result = MaterialListProvider.Instance.Save(materialList);
+        //            if (!result.Success)
+        //            {
+        //                //TODO feyzullahg
+        //            }
+        //        }
+        //        grdMaterialListIsWorkship.Refresh(); 
+        //    }
+        //    //var currentcell = grdMaterialListIsWorkship.CurrentRow.Index;
+        //    //var sendingCB = sender as DataGridViewComboBoxEditingControl;
+        //    //DataGridViewTextBoxCell cel = (DataGridViewTextBoxCell)grdMaterialListIsWorkship.Rows[currentcell.Y].Cells[0];
+        //    //cel.Value = sendingCB.EditingControlFormattedValue.ToString();
+        //}
 
         private void GrdMaterialListIsWorkship_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -170,44 +170,44 @@ namespace IhalematikPro.Forms
             //this.isDataGridFormatted = false;
         }
 
-        private void InitializeTenderMaterialListEquipment()
-        {
-            if (IsInitializeTenderMaterialListEquipment)
-            {
-                //return;
-            }
+        //private void InitializeTenderMaterialListEquipment()
+        //{
+        //    if (IsInitializeTenderMaterialListEquipment)
+        //    {
+        //        //return;
+        //    }
 
-            List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
-            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+        //    List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
+        //    List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
 
-            foreach (DataGridViewRow CurrentRow in grdMaterialListIsWorkship.Rows)
-            {
-                MaterialListModel item = models.ToArray()[CurrentRow.Index];
+        //    foreach (DataGridViewRow CurrentRow in grdMaterialListIsWorkship.Rows)
+        //    {
+        //        MaterialListModel item = models.ToArray()[CurrentRow.Index];
 
-                if (item.TenderMaterialListEquipment != null)
-                {
-                    foreach (TenderMaterialListEquipment tenderMaterialListEquipment in item.TenderMaterialListEquipment)
-                    {
-                        if (tenderMaterialListEquipment != null)
-                        {
-                            string columnName = string.Empty;
-                            if (tenderMaterialListEquipment.Equipment.IsWorker)
-                            {
-                                columnName = tenderMaterialListEquipment.Equipment.Worker.Title.Name;
-                            }
-                            else
-                            {
-                                columnName = tenderMaterialListEquipment.Equipment.Vehicle.Title.Name;
-                            }
-                            grdMaterialListIsWorkship.Rows[CurrentRow.Index].Cells[columnName].Value = tenderMaterialListEquipment.Quantity;
-                        }
-                    }
-                }
-            }
+        //        if (item.TenderMaterialListEquipment != null)
+        //        {
+        //            foreach (TenderMaterialListEquipment tenderMaterialListEquipment in item.TenderMaterialListEquipment)
+        //            {
+        //                if (tenderMaterialListEquipment != null)
+        //                {
+        //                    string columnName = string.Empty;
+        //                    if (tenderMaterialListEquipment.Equipment.IsWorker)
+        //                    {
+        //                        columnName = tenderMaterialListEquipment.Equipment.Worker.Title.Name;
+        //                    }
+        //                    else
+        //                    {
+        //                        columnName = tenderMaterialListEquipment.Equipment.Vehicle.Title.Name;
+        //                    }
+        //                    grdMaterialListIsWorkship.Rows[CurrentRow.Index].Cells[columnName].Value = tenderMaterialListEquipment.Quantity;
+        //                }
+        //            }
+        //        }
+        //    }
 
-            //grdMaterialListIsWorkship.Refresh();
-            IsInitializeTenderMaterialListEquipment = true;
-        }
+        //    //grdMaterialListIsWorkship.Refresh();
+        //    IsInitializeTenderMaterialListEquipment = true;
+        //}
 
         private void frm_Teklif_Adim3_Load(object sender, EventArgs e)
         {
@@ -216,97 +216,97 @@ namespace IhalematikPro.Forms
             List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
             List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             grdMaterialListIsWorkship.DataSource = models;
-            InitializeTenderMaterialListEquipment();
+            //InitializeTenderMaterialListEquipment();
             txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
             txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
             txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
         }
 
-        private void GrdMaterialListIsWorkship_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            if (!IsInitializeTenderMaterialListEquipment)
-                return;
+        //private void GrdMaterialListIsWorkship_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    if (!IsInitializeTenderMaterialListEquipment)
+        //        return;
 
-            string currentColumnName = grdMaterialListIsWorkship.Columns[e.ColumnIndex].Name;
-            //List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
-            List<MaterialListModel> models = (List<MaterialListModel>)grdMaterialListIsWorkship.DataSource; //IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            MaterialListModel materialListModel = models.ToArray()[e.RowIndex];
-            if (currentColumnName.Equals("WorkerPercentageMarkup"))
-            {
-                double value = Convert.ToDouble(grdMaterialListIsWorkship["WorkerMarkup", grdMaterialListIsWorkship.CurrentRow.Index].Value);
-                materialListModel.WorkerPercentageMarkup = value;
-                MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
-                if (materialList != null)
-                {
-                    materialList.WorkerMarkup = value;
-                    OperationResult result = MaterialListProvider.Instance.Save(materialList);
-                    if (!result.Success)
-                    {
-                        //TODO feyzullahg
-                    }
-                }
-            }
-            else if (currentColumnName.Equals("UnitTime"))
-            {
-                int value = Convert.ToInt32(grdMaterialListIsWorkship["UnitTime", grdMaterialListIsWorkship.CurrentRow.Index].Value);
-                MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
-                if (materialList != null)
-                {
-                    materialList.UnitTime = value;
-                    OperationResult result = MaterialListProvider.Instance.Save(materialList);
-                    if (!result.Success)
-                    {
-                        //TODO feyzullahg
-                    }
-                }
-            }
-            else if (currentColumnName.Equals("UnitTimeType"))
-            {
-                //UnitTimeTypesModel value = (UnitTimeTypesModel)grdMaterialListIsWorkship["UnitTimeType", grdMaterialListIsWorkship.CurrentRow.Index].Value;
-                //materialListModel.UnitTimeType = value;
-            }
-            else if (materialListModel.TenderMaterialListEquipment != null)
-            {
-                foreach (TenderMaterialListEquipment equipmentItem in materialListModel.TenderMaterialListEquipment)
-                {
-                    string columnName = string.Empty;
-                    if (equipmentItem.Equipment.IsWorker)
-                    {
-                        columnName = equipmentItem.Equipment.Worker.Title.Name;
-                    }
-                    else
-                    {
-                        columnName = equipmentItem.Equipment.Vehicle.Title.Name;
-                    }
-                    if (columnName.Equals(currentColumnName))
-                    {
-                        int value = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(grdMaterialListIsWorkship[columnName, grdMaterialListIsWorkship.CurrentRow.Index].Value);
-                        equipmentItem.Quantity = value;
+        //    string currentColumnName = grdMaterialListIsWorkship.Columns[e.ColumnIndex].Name;
+        //    //List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
+        //    List<MaterialListModel> models = (List<MaterialListModel>)grdMaterialListIsWorkship.DataSource; //IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+        //    MaterialListModel materialListModel = models.ToArray()[e.RowIndex];
+        //    if (currentColumnName.Equals("WorkerPercentageMarkup"))
+        //    {
+        //        double value = Convert.ToDouble(grdMaterialListIsWorkship["WorkerMarkup", grdMaterialListIsWorkship.CurrentRow.Index].Value);
+        //        materialListModel.WorkerPercentageMarkup = value;
+        //        MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
+        //        if (materialList != null)
+        //        {
+        //            materialList.WorkerMarkup = value;
+        //            OperationResult result = MaterialListProvider.Instance.Save(materialList);
+        //            if (!result.Success)
+        //            {
+        //                //TODO feyzullahg
+        //            }
+        //        }
+        //    }
+        //    else if (currentColumnName.Equals("UnitTime"))
+        //    {
+        //        int value = Convert.ToInt32(grdMaterialListIsWorkship["UnitTime", grdMaterialListIsWorkship.CurrentRow.Index].Value);
+        //        MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
+        //        if (materialList != null)
+        //        {
+        //            materialList.UnitTime = value;
+        //            OperationResult result = MaterialListProvider.Instance.Save(materialList);
+        //            if (!result.Success)
+        //            {
+        //                //TODO feyzullahg
+        //            }
+        //        }
+        //    }
+        //    else if (currentColumnName.Equals("UnitTimeType"))
+        //    {
+        //        //UnitTimeTypesModel value = (UnitTimeTypesModel)grdMaterialListIsWorkship["UnitTimeType", grdMaterialListIsWorkship.CurrentRow.Index].Value;
+        //        //materialListModel.UnitTimeType = value;
+        //    }
+        //    else if (materialListModel.TenderMaterialListEquipment != null)
+        //    {
+        //        foreach (TenderMaterialListEquipment equipmentItem in materialListModel.TenderMaterialListEquipment)
+        //        {
+        //            string columnName = string.Empty;
+        //            if (equipmentItem.Equipment.IsWorker)
+        //            {
+        //                columnName = equipmentItem.Equipment.Worker.Title.Name;
+        //            }
+        //            else
+        //            {
+        //                columnName = equipmentItem.Equipment.Vehicle.Title.Name;
+        //            }
+        //            if (columnName.Equals(currentColumnName))
+        //            {
+        //                int value = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(grdMaterialListIsWorkship[columnName, grdMaterialListIsWorkship.CurrentRow.Index].Value);
+        //                equipmentItem.Quantity = value;
 
-                        MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
-                        if (materialList != null)
-                        {
-                            TenderMaterialListEquipment tenderMaterialListEquipment = materialList.TenderMaterialListEquipment.Where(k => k.Id == equipmentItem.Id).FirstOrDefault();
-                            if (tenderMaterialListEquipment != null)
-                            {
-                                tenderMaterialListEquipment.Quantity = value;
-                                OperationResult result = TenderMaterialListEquipmentProvider.Instance.Save(tenderMaterialListEquipment);
-                                if (!result.Success)
-                                {
-                                    //TODO feyzullahg
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        //                MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
+        //                if (materialList != null)
+        //                {
+        //                    TenderMaterialListEquipment tenderMaterialListEquipment = materialList.TenderMaterialListEquipment.Where(k => k.Id == equipmentItem.Id).FirstOrDefault();
+        //                    if (tenderMaterialListEquipment != null)
+        //                    {
+        //                        tenderMaterialListEquipment.Quantity = value;
+        //                        OperationResult result = TenderMaterialListEquipmentProvider.Instance.Save(tenderMaterialListEquipment);
+        //                        if (!result.Success)
+        //                        {
+        //                            //TODO feyzullahg
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
 
-            txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
-            txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
-            txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
+        //    txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
+        //    txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
+        //    txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
 
-            grdMaterialListIsWorkship.Refresh();
-        }
+        //    grdMaterialListIsWorkship.Refresh();
+        //}
 
         private void btnTumuneUygulaIscilik_Click(object sender, EventArgs e)
         {
