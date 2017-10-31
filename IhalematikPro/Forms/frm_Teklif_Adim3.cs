@@ -140,19 +140,22 @@ namespace IhalematikPro.Forms
             var sendingCB = sender as DataGridViewComboBoxEditingControl;
 
             UnitTimeTypesModel value = (UnitTimeTypesModel)sendingCB.SelectedValue;//grdMaterialListIsWorkship["UnitTimeType", grdMaterialListIsWorkship.CurrentRow.Index].Value;
-            materialListModel.UnitTimeType = value;
-
-            MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
-            if (materialList != null)
+            if (value != null)
             {
-                materialList.UnitTimeType = materialListModel.UnitTimeType.UnitTimeType;
-                OperationResult result = MaterialListProvider.Instance.Save(materialList);
-                if (!result.Success)
+                materialListModel.UnitTimeType = value;
+
+                MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
+                if (materialList != null)
                 {
-                    //TODO feyzullahg
+                    materialList.UnitTimeType = materialListModel.UnitTimeType.UnitTimeType;
+                    OperationResult result = MaterialListProvider.Instance.Save(materialList);
+                    if (!result.Success)
+                    {
+                        //TODO feyzullahg
+                    }
                 }
+                grdMaterialListIsWorkship.Refresh(); 
             }
-            grdMaterialListIsWorkship.Refresh();
             //var currentcell = grdMaterialListIsWorkship.CurrentRow.Index;
             //var sendingCB = sender as DataGridViewComboBoxEditingControl;
             //DataGridViewTextBoxCell cel = (DataGridViewTextBoxCell)grdMaterialListIsWorkship.Rows[currentcell.Y].Cells[0];
@@ -232,6 +235,16 @@ namespace IhalematikPro.Forms
             {
                 double value = Convert.ToDouble(grdMaterialListIsWorkship["WorkerMarkup", grdMaterialListIsWorkship.CurrentRow.Index].Value);
                 materialListModel.WorkerPercentageMarkup = value;
+                MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
+                if (materialList != null)
+                {
+                    materialList.WorkerMarkup = value;
+                    OperationResult result = MaterialListProvider.Instance.Save(materialList);
+                    if (!result.Success)
+                    {
+                        //TODO feyzullahg
+                    }
+                }
             }
             else if (currentColumnName.Equals("UnitTime"))
             {
@@ -239,6 +252,7 @@ namespace IhalematikPro.Forms
                 MaterialList materialList = CurrentManager.CurrentTender.MaterialList.Where(p => p.Id == materialListModel.Id).First();
                 if (materialList != null)
                 {
+                    materialList.UnitTime = value;
                     OperationResult result = MaterialListProvider.Instance.Save(materialList);
                     if (!result.Success)
                     {
