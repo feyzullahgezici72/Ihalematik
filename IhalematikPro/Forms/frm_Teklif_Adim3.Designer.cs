@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.grdMaterialListIsWorkship = new System.Windows.Forms.DataGridView();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtWorkerMarkup = new System.Windows.Forms.MaskedTextBox();
             this.btnTumuneUygula = new DevExpress.XtraEditors.SimpleButton();
@@ -89,7 +88,6 @@
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl2.Controls.Add(this.grdMaterialListIsWorkship);
-            this.panelControl2.Controls.Add(this.simpleButton1);
             this.panelControl2.Controls.Add(this.groupBox1);
             this.panelControl2.Controls.Add(this.lblTenderNumber);
             this.panelControl2.Controls.Add(this.lblTenderDescription);
@@ -108,20 +106,11 @@
             this.grdMaterialListIsWorkship.AllowUserToDeleteRows = false;
             this.grdMaterialListIsWorkship.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.grdMaterialListIsWorkship.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdMaterialListIsWorkship.Location = new System.Drawing.Point(575, 19);
+            this.grdMaterialListIsWorkship.Location = new System.Drawing.Point(553, 8);
             this.grdMaterialListIsWorkship.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialListIsWorkship.Name = "grdMaterialListIsWorkship";
-            this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(34, 42);
+            this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(149, 52);
             this.grdMaterialListIsWorkship.TabIndex = 26;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(740, 25);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(398, 47);
-            this.simpleButton1.TabIndex = 39;
-            this.simpleButton1.Text = "Satır Üzerinde enter yada duble click olursa";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // groupBox1
             // 
@@ -533,7 +522,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MaskedTextBox txtWorkerMarkup;
         private DevExpress.XtraEditors.SimpleButton btnTumuneUygula;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.TextEdit txtTotalAmount;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.TextEdit txtMarkupAmount;

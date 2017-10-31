@@ -379,8 +379,6 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            frm_IscilikAracDetay frm = new frm_IscilikAracDetay();
-            frm.ShowDialog();
         }
 
         private void btnTumuneUygula_Click(object sender, EventArgs e)
