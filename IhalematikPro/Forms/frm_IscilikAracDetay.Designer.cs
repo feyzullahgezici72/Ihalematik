@@ -50,6 +50,7 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -57,9 +58,8 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -341,6 +341,14 @@
             this.gridColumn7.VisibleIndex = 2;
             this.gridColumn7.Width = 120;
             // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "ZAMAN TİPİ";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 3;
+            this.gridColumn10.Width = 120;
+            // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "MALİYET";
@@ -415,14 +423,6 @@
             this.gridColumn3.VisibleIndex = 2;
             this.gridColumn3.Width = 116;
             // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "MALİYET";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 4;
-            this.gridColumn4.Width = 123;
-            // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "ZAMAN TİPİ";
@@ -431,13 +431,13 @@
             this.gridColumn9.VisibleIndex = 3;
             this.gridColumn9.Width = 116;
             // 
-            // gridColumn10
+            // gridColumn4
             // 
-            this.gridColumn10.Caption = "ZAMAN TİPİ";
-            this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 3;
-            this.gridColumn10.Width = 120;
+            this.gridColumn4.Caption = "MALİYET";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 4;
+            this.gridColumn4.Width = 123;
             // 
             // frm_IscilikAracDetay
             // 

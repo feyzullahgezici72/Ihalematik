@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -65,7 +66,7 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialListNonWorkship)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -405,7 +406,7 @@
             // txtMarkup
             // 
             this.txtMarkup.Location = new System.Drawing.Point(12, 36);
-            this.txtMarkup.Mask = "##%";
+            this.txtMarkup.Mask = "%##";
             this.txtMarkup.Name = "txtMarkup";
             this.txtMarkup.Size = new System.Drawing.Size(66, 27);
             this.txtMarkup.TabIndex = 41;

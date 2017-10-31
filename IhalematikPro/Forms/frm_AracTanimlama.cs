@@ -135,20 +135,26 @@ namespace IhalematikPro.Forms
         private void güncelleToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        
+        }
+
+        private void panelControl2_MouseMove(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
             frm_Arac_Guncelleme frm = new frm_Arac_Guncelleme();
             // frm.Location = new Point(5, 215);
-            KayitMenusu.Visible = false; 
+            KayitMenusu.Visible = false;
             this.Opacity = 10;
             this.Enabled = false;
             frm.ShowDialog();
             this.Enabled = true;
             this.Opacity = 100;
             KayitMenusu.Visible = true;
-        }
-
-        private void panelControl2_MouseMove(object sender, MouseEventArgs e)
-        {
-            
         }
     }
 }

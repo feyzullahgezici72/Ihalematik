@@ -73,20 +73,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(349, 115);
+            this.label1.Location = new System.Drawing.Point(3, 213);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 24);
+            this.label1.Size = new System.Drawing.Size(159, 29);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Ihale Tarihi :";
+            this.label1.Text = "Ihale Tarihi:";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(497, 111);
+            this.dateTimePicker1.Location = new System.Drawing.Point(162, 209);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(387, 34);
@@ -101,14 +101,14 @@
             this.simpleButton2.Location = new System.Drawing.Point(731, 203);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(153, 54);
+            this.simpleButton2.Size = new System.Drawing.Size(153, 56);
             this.simpleButton2.TabIndex = 0;
             this.simpleButton2.Text = "Oluştur";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // txtAciklama
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(138, 157);
+            this.txtAciklama.Location = new System.Drawing.Point(162, 157);
             this.txtAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -116,13 +116,13 @@
             this.txtAciklama.Properties.Appearance.Options.UseFont = true;
             this.txtAciklama.Properties.Appearance.Options.UseForeColor = true;
             this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtAciklama.Size = new System.Drawing.Size(746, 38);
+            this.txtAciklama.Size = new System.Drawing.Size(727, 38);
             this.txtAciklama.TabIndex = 1;
             // 
             // txtTeklifNo
             // 
             this.txtTeklifNo.Enabled = false;
-            this.txtTeklifNo.Location = new System.Drawing.Point(139, 107);
+            this.txtTeklifNo.Location = new System.Drawing.Point(162, 109);
             this.txtTeklifNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTeklifNo.Name = "txtTeklifNo";
             this.txtTeklifNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -138,7 +138,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl2.Location = new System.Drawing.Point(13, 161);
+            this.labelControl2.Location = new System.Drawing.Point(37, 161);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(117, 29);
@@ -149,7 +149,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl1.Location = new System.Drawing.Point(19, 113);
+            this.labelControl1.Location = new System.Drawing.Point(42, 113);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(112, 29);
@@ -164,7 +164,7 @@
             this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnIptal.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnIptal.Location = new System.Drawing.Point(841, 0);
+            this.btnIptal.Location = new System.Drawing.Point(840, 0);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(57, 54);
@@ -182,7 +182,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(898, 54);
+            this.panelControl1.Size = new System.Drawing.Size(897, 54);
             this.panelControl1.TabIndex = 31;
             this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
@@ -198,7 +198,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(898, 54);
+            this.panelControl2.Size = new System.Drawing.Size(897, 54);
             this.panelControl2.TabIndex = 3;
             // 
             // pictureBox1
@@ -335,7 +335,7 @@
             this.pbControl.Name = "pbControl";
             this.pbControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.pbControl.Properties.Step = 1;
-            this.pbControl.Size = new System.Drawing.Size(898, 31);
+            this.pbControl.Size = new System.Drawing.Size(897, 31);
             this.pbControl.TabIndex = 33;
             // 
             // panel1
@@ -344,7 +344,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(898, 31);
+            this.panel1.Size = new System.Drawing.Size(897, 31);
             this.panel1.TabIndex = 5;
             // 
             // statusStrip1
@@ -353,7 +353,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 278);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStrip1.Size = new System.Drawing.Size(898, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(897, 22);
             this.statusStrip1.TabIndex = 33;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -362,7 +362,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(898, 300);
+            this.ClientSize = new System.Drawing.Size(897, 300);
             this.ControlBox = false;
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel1);
