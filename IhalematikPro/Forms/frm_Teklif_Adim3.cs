@@ -211,6 +211,8 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim3_Load(object sender, EventArgs e)
         {
+            isciAracGirisPaneli.Top = 0;
+            
             lblTenderDescription.Text = CurrentManager.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.CurrentTender.DisplayNumber;
             List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
@@ -430,8 +432,30 @@ namespace IhalematikPro.Forms
 
         private void btnCalisanlarveAraclar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            frm_IscilikAracDetay frm = new frm_IscilikAracDetay();
-            frm.ShowDialog();
+            isciAracGirisPaneli.Top =  0;
+            isciAracGirisPaneli.Visible = true;
+            
+            grdMaterialListIsWorkship.Enabled = false;
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnPanelKapat_Click(object sender, EventArgs e)
+        {
+            isciAracGirisPaneli.Top = 0;
+             
+
+            isciAracGirisPaneli.Visible = false;
+            grdMaterialListIsWorkship.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }
