@@ -40,11 +40,7 @@ namespace IhalematikPro.Forms
         {
             DevExpress.UserSkins.BonusSkins.Register();
             //SkinHelper.InitSkinGallery(tema);
-        }
-
-        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
+            
         }
 
         private void barBtnCikis_ItemClick(object sender, ItemClickEventArgs e)
@@ -449,7 +445,7 @@ namespace IhalematikPro.Forms
         {
 
 
-            popupMenu1.ShowPopup(Control.MousePosition);
+            
 
 
         }
@@ -607,6 +603,11 @@ namespace IhalematikPro.Forms
         private void MainPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            popupMenu1.ShowPopup(Control.MousePosition);
         }
     }
 }

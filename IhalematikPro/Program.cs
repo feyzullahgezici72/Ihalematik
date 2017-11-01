@@ -16,7 +16,7 @@ namespace IhalematikPro
         [STAThread]
         static void Main()
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Lilian";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Lilian";//
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

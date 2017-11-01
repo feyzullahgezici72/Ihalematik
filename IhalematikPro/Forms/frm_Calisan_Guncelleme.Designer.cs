@@ -598,7 +598,7 @@
             this.btnSil.Appearance.Options.UseFont = true;
             this.btnSil.Appearance.Options.UseForeColor = true;
             this.btnSil.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSil.Image = global::IhalematikProUI.Properties.Resources.System_recycling_bin_empty_icon;
+            this.btnSil.Image = global::IhalematikProUI.Properties.Resources.Actions_trash_empty_icon__1_;
             this.btnSil.Location = new System.Drawing.Point(294, 3);
             this.btnSil.Margin = new System.Windows.Forms.Padding(4);
             this.btnSil.Name = "btnSil";

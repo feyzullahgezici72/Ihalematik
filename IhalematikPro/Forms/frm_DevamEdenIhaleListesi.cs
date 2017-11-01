@@ -59,5 +59,10 @@ namespace IhalematikPro.Forms
             lblTenderCaptin.Text = "KAPALI TEKLİF LİSTESİ";
             labelControl2.Text = "Kapalı Teklif Toplamı: ";
         }
+
+        private void btnIhaleAc_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            MessageBox.Show("Hazır Değil...");
+        }
     }
 }

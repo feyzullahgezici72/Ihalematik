@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CalisanTanimlama));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -79,6 +80,8 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnGuncelle = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.aracToplam = new System.Windows.Forms.ToolStripStatusLabel();
@@ -109,6 +112,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdWorker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSil)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,7 +127,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1575, 50);
+            this.panelControl1.Size = new System.Drawing.Size(1299, 50);
             this.panelControl1.TabIndex = 31;
             this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
@@ -139,7 +143,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1575, 50);
+            this.panelControl2.Size = new System.Drawing.Size(1299, 50);
             this.panelControl2.TabIndex = 2;
             // 
             // labelControl1
@@ -168,7 +172,7 @@
             this.btnListele.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnListele.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnListele.Image = global::IhalematikProUI.Properties.Resources.Inventory_icon__1_;
-            this.btnListele.Location = new System.Drawing.Point(1381, 0);
+            this.btnListele.Location = new System.Drawing.Point(1105, 0);
             this.btnListele.Margin = new System.Windows.Forms.Padding(4);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(132, 50);
@@ -182,7 +186,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1513, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1237, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(62, 50);
@@ -709,11 +713,13 @@
             this.grdWorker.Margin = new System.Windows.Forms.Padding(4);
             this.grdWorker.Name = "grdWorker";
             this.grdWorker.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btnGuncelle});
-            this.grdWorker.Size = new System.Drawing.Size(1145, 790);
+            this.btnGuncelle,
+            this.btnSil});
+            this.grdWorker.Size = new System.Drawing.Size(869, 757);
             this.grdWorker.TabIndex = 33;
             this.grdWorker.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.grdWorker.Click += new System.EventHandler(this.grdWorker_Click);
             // 
             // gridView1
             // 
@@ -729,7 +735,8 @@
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6,
-            this.gridColumn1});
+            this.gridColumn1,
+            this.gridColumn7});
             this.gridView1.GridControl = this.grdWorker;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
@@ -749,10 +756,9 @@
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.OptionsColumn.AllowFocus = false;
             this.gridColumn2.OptionsColumn.AllowSize = false;
-            this.gridColumn2.OptionsColumn.FixedWidth = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
-            this.gridColumn2.Width = 530;
+            this.gridColumn2.Width = 205;
             // 
             // gridColumn3
             // 
@@ -772,10 +778,9 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
-            this.gridColumn3.OptionsColumn.FixedWidth = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 132;
+            this.gridColumn3.Width = 134;
             // 
             // gridColumn4
             // 
@@ -796,10 +801,9 @@
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
             this.gridColumn4.OptionsColumn.AllowSize = false;
-            this.gridColumn4.OptionsColumn.FixedWidth = true;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 152;
+            this.gridColumn4.Width = 125;
             // 
             // gridColumn5
             // 
@@ -820,10 +824,9 @@
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.OptionsColumn.AllowFocus = false;
             this.gridColumn5.OptionsColumn.AllowSize = false;
-            this.gridColumn5.OptionsColumn.FixedWidth = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 116;
+            this.gridColumn5.Width = 134;
             // 
             // gridColumn6
             // 
@@ -844,9 +847,9 @@
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.OptionsColumn.AllowFocus = false;
             this.gridColumn6.OptionsColumn.AllowSize = false;
-            this.gridColumn6.OptionsColumn.FixedWidth = true;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 4;
+            this.gridColumn6.Width = 124;
             // 
             // gridColumn1
             // 
@@ -857,16 +860,36 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 5;
-            this.gridColumn1.Width = 97;
+            this.gridColumn1.Width = 84;
             // 
             // btnGuncelle
             // 
             this.btnGuncelle.AutoHeight = false;
             this.btnGuncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnGuncelle.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnGuncelle.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, "", null, null, true)});
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnGuncelle.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnGuncelle_ButtonClick);
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "SİL";
+            this.gridColumn7.ColumnEdit = this.btnSil;
+            this.gridColumn7.ImageAlignment = System.Drawing.StringAlignment.Center;
+            this.gridColumn7.MaxWidth = 40;
+            this.gridColumn7.MinWidth = 40;
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.Width = 40;
+            // 
+            // btnSil
+            // 
+            this.btnSil.AutoHeight = false;
+            this.btnSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSil.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject22, "", null, null, true)});
+            this.btnSil.Name = "btnSil";
+            this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // statusStrip1
             // 
@@ -876,7 +899,7 @@
             this.aracToplam});
             this.statusStrip1.Location = new System.Drawing.Point(430, 807);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1145, 33);
+            this.statusStrip1.Size = new System.Drawing.Size(869, 33);
             this.statusStrip1.TabIndex = 38;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -898,10 +921,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(1575, 840);
+            this.ClientSize = new System.Drawing.Size(1299, 840);
             this.ControlBox = false;
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.grdWorker);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.kayitMenusu);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -941,6 +964,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdWorker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSil)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -1002,5 +1026,7 @@
         private System.Windows.Forms.ToolStripStatusLabel aracToplam;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnGuncelle;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSil;
     }
 }

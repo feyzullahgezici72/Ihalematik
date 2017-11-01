@@ -233,5 +233,10 @@ namespace IhalematikPro.Forms
             this.Opacity = 100;
             kayitMenusu.Visible = true;
         }
+
+        private void grdWorker_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

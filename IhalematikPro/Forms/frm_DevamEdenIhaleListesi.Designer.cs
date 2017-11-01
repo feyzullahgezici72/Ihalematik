@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DevamEdenIhaleListesi));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
-            this.btnOpen = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.grdActiveTenderList = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -46,6 +46,8 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtSumTender = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnIhaleAc = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -56,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnIhaleAc)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -78,7 +81,6 @@
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl2.Controls.Add(this.lblTenderCaptin);
-            this.panelControl2.Controls.Add(this.btnOpen);
             this.panelControl2.Controls.Add(this.btnKapat);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
@@ -103,21 +105,6 @@
             this.lblTenderCaptin.TabIndex = 0;
             this.lblTenderCaptin.Text = "AÇIK TEKLİF LİSTESİ";
             this.lblTenderCaptin.UseMnemonic = false;
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpen.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnOpen.Appearance.Options.UseFont = true;
-            this.btnOpen.Appearance.Options.UseForeColor = true;
-            this.btnOpen.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnOpen.Image = global::IhalematikProUI.Properties.Resources.open_file_icon__1_;
-            this.btnOpen.Location = new System.Drawing.Point(1057, 0);
-            this.btnOpen.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(103, 54);
-            this.btnOpen.TabIndex = 94;
-            this.btnOpen.Text = " Aç";
             // 
             // btnKapat
             // 
@@ -163,6 +150,8 @@
             this.grdActiveTenderList.MainView = this.gridView1;
             this.grdActiveTenderList.Margin = new System.Windows.Forms.Padding(4);
             this.grdActiveTenderList.Name = "grdActiveTenderList";
+            this.grdActiveTenderList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.btnIhaleAc});
             this.grdActiveTenderList.Size = new System.Drawing.Size(1218, 532);
             this.grdActiveTenderList.TabIndex = 0;
             this.grdActiveTenderList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -173,7 +162,8 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
-            this.gridColumn3});
+            this.gridColumn3,
+            this.gridColumn4});
             this.gridView1.GridControl = this.grdActiveTenderList;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowDetailButtons = false;
@@ -304,6 +294,31 @@
             this.labelControl2.TabIndex = 94;
             this.labelControl2.Text = "Açık Teklif Toplamı: ";
             // 
+            // gridColumn4
+            // 
+            this.gridColumn4.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn4.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn4.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn4.AppearanceCell.Options.UseFont = true;
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn4.AppearanceHeader.ForeColor = System.Drawing.Color.Navy;
+            this.gridColumn4.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn4.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn4.Caption = "AÇ";
+            this.gridColumn4.ColumnEdit = this.btnIhaleAc;
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            // 
+            // btnIhaleAc
+            // 
+            this.btnIhaleAc.AutoHeight = false;
+            this.btnIhaleAc.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnIhaleAc.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            this.btnIhaleAc.Name = "btnIhaleAc";
+            this.btnIhaleAc.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnIhaleAc.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnIhaleAc_ButtonClick);
+            // 
             // frm_DevamEdenIhaleListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -334,6 +349,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnIhaleAc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -355,7 +371,8 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.LabelControl lblTenderCaptin;
-        private DevExpress.XtraEditors.SimpleButton btnOpen;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnIhaleAc;
     }
 }

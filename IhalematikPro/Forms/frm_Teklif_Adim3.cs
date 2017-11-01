@@ -415,8 +415,7 @@ namespace IhalematikPro.Forms
 
         private void detaylarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_IscilikAracDetay frm = new frm_IscilikAracDetay();
-            frm.ShowDialog();
+          
         }
 
         private void repositoryItemButtonEdit1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -425,6 +424,11 @@ namespace IhalematikPro.Forms
         }
 
         private void btnIscilikveAracGirisi_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+         
+        }
+
+        private void btnCalisanlarveAraclar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             frm_IscilikAracDetay frm = new frm_IscilikAracDetay();
             frm.ShowDialog();

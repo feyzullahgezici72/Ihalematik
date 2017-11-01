@@ -120,7 +120,7 @@
             this.btnGuncelle.Appearance.Options.UseFont = true;
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.Actions_view_refresh_icon__1_;
+            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
             this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnGuncelle.Location = new System.Drawing.Point(805, 0);
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
