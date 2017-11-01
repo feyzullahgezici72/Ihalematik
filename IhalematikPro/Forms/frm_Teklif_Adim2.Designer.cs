@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim2));
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -44,9 +45,11 @@
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.lblTenderNumber = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.txtMarkup = new System.Windows.Forms.MaskedTextBox();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btnTumuneUygula = new DevExpress.XtraEditors.SimpleButton();
+            this.lblTenderNumber = new DevExpress.XtraEditors.LabelControl();
             this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -65,13 +68,14 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pcWorld = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialListNonWorkship)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseKDVAmount.Properties)).BeginInit();
@@ -83,8 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
-            this.panelControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             this.SuspendLayout();
             // 
             // gridColumn9
@@ -377,15 +380,17 @@
             this.panelControl2.Size = new System.Drawing.Size(1512, 80);
             this.panelControl2.TabIndex = 27;
             // 
-            // lblTenderNumber
+            // panelControl4
             // 
-            this.lblTenderNumber.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTenderNumber.Appearance.ForeColor = System.Drawing.Color.Crimson;
-            this.lblTenderNumber.Location = new System.Drawing.Point(140, 10);
-            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4);
-            this.lblTenderNumber.Name = "lblTenderNumber";
-            this.lblTenderNumber.Size = new System.Drawing.Size(0, 29);
-            this.lblTenderNumber.TabIndex = 40;
+            this.panelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl4.Controls.Add(this.txtMarkup);
+            this.panelControl4.Controls.Add(this.labelControl2);
+            this.panelControl4.Controls.Add(this.btnTumuneUygula);
+            this.panelControl4.Location = new System.Drawing.Point(1328, 10);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(173, 58);
+            this.panelControl4.TabIndex = 43;
             // 
             // txtMarkup
             // 
@@ -396,6 +401,18 @@
             this.txtMarkup.Size = new System.Drawing.Size(53, 27);
             this.txtMarkup.TabIndex = 41;
             this.txtMarkup.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.labelControl2.Location = new System.Drawing.Point(3, 15);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(53, 29);
+            this.labelControl2.TabIndex = 42;
+            this.labelControl2.Text = "Kar :";
             // 
             // btnTumuneUygula
             // 
@@ -414,6 +431,16 @@
             this.btnTumuneUygula.Size = new System.Drawing.Size(26, 27);
             this.btnTumuneUygula.TabIndex = 34;
             this.btnTumuneUygula.Click += new System.EventHandler(this.btnTumuneUygula_Click);
+            // 
+            // lblTenderNumber
+            // 
+            this.lblTenderNumber.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTenderNumber.Appearance.ForeColor = System.Drawing.Color.Crimson;
+            this.lblTenderNumber.Location = new System.Drawing.Point(140, 10);
+            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTenderNumber.Name = "lblTenderNumber";
+            this.lblTenderNumber.Size = new System.Drawing.Size(0, 29);
+            this.lblTenderNumber.TabIndex = 40;
             // 
             // lblTenderDescription
             // 
@@ -605,6 +632,7 @@
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            this.panelControl1.Controls.Add(this.pcWorld);
             this.panelControl1.Controls.Add(this.btnKapat);
             this.panelControl1.Controls.Add(this.txtAdimAciklama);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -637,7 +665,7 @@
             this.txtAdimAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
             this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.txtAdimAciklama.Location = new System.Drawing.Point(15, 8);
+            this.txtAdimAciklama.Location = new System.Drawing.Point(73, 9);
             this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
@@ -645,29 +673,16 @@
             this.txtAdimAciklama.TabIndex = 0;
             this.txtAdimAciklama.Text = "MALZEME KEŞİF LİSTESİ ";
             // 
-            // labelControl2
+            // pcWorld
             // 
-            this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl2.Location = new System.Drawing.Point(3, 15);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(6);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(53, 29);
-            this.labelControl2.TabIndex = 42;
-            this.labelControl2.Text = "Kar :";
-            // 
-            // panelControl4
-            // 
-            this.panelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl4.Controls.Add(this.txtMarkup);
-            this.panelControl4.Controls.Add(this.labelControl2);
-            this.panelControl4.Controls.Add(this.btnTumuneUygula);
-            this.panelControl4.Location = new System.Drawing.Point(1328, 10);
-            this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(173, 58);
-            this.panelControl4.TabIndex = 43;
+            this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
+            this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Name = "pcWorld";
+            this.pcWorld.Size = new System.Drawing.Size(70, 50);
+            this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcWorld.TabIndex = 16;
+            this.pcWorld.TabStop = false;
             // 
             // frm_Teklif_Adim2
             // 
@@ -692,6 +707,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
+            this.panelControl4.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalAmount.Properties)).EndInit();
@@ -706,9 +724,7 @@
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
-            this.panelControl4.ResumeLayout(false);
-            this.panelControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -753,5 +769,6 @@
         private DevExpress.XtraEditors.SimpleButton btnTumuneUygula;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl4;
+        private System.Windows.Forms.PictureBox pcWorld;
     }
 }

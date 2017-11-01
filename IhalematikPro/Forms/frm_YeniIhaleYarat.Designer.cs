@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_YeniIhaleYarat));
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
@@ -38,7 +39,6 @@
             this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.grdWorker = new DevExpress.XtraGrid.GridControl();
@@ -51,13 +51,13 @@
             this.pbControl = new DevExpress.XtraEditors.ProgressBarControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.pcWorld = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeklifNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdWorker)).BeginInit();
@@ -68,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdVehicle2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -191,7 +192,7 @@
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.pictureBox1);
+            this.panelControl2.Controls.Add(this.pcWorld);
             this.panelControl2.Controls.Add(this.labelControl3);
             this.panelControl2.Controls.Add(this.btnIptal);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -201,17 +202,6 @@
             this.panelControl2.Size = new System.Drawing.Size(897, 54);
             this.panelControl2.TabIndex = 3;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.ihale;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -220,7 +210,7 @@
             this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl3.LineColor = System.Drawing.Color.Red;
             this.labelControl3.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl3.Location = new System.Drawing.Point(67, 14);
+            this.labelControl3.Location = new System.Drawing.Point(72, 10);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.ShowLineShadow = false;
@@ -357,6 +347,17 @@
             this.statusStrip1.TabIndex = 33;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // pcWorld
+            // 
+            this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
+            this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Name = "pcWorld";
+            this.pcWorld.Size = new System.Drawing.Size(70, 54);
+            this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcWorld.TabIndex = 16;
+            this.pcWorld.TabStop = false;
+            // 
             // frm_YeniIhaleYarat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -391,7 +392,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdWorker)).EndInit();
@@ -402,6 +402,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdVehicle2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,9 +429,9 @@
         private DevExpress.XtraGrid.GridControl grdVehicle;
         private DevExpress.XtraGrid.Views.Grid.GridView grdVehicle2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraEditors.ProgressBarControl pbControl;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.PictureBox pcWorld;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_YeniTeklifOlustur));
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtAciklama = new DevExpress.XtraEditors.TextEdit();
@@ -40,12 +41,14 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.pcWorld = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeklifNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -138,7 +141,6 @@
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
@@ -155,13 +157,13 @@
             this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl3.LineColor = System.Drawing.Color.Red;
             this.labelControl3.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl3.Location = new System.Drawing.Point(8, 10);
+            this.labelControl3.Location = new System.Drawing.Point(72, 11);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.ShowLineShadow = false;
-            this.labelControl3.Size = new System.Drawing.Size(389, 37);
+            this.labelControl3.Size = new System.Drawing.Size(460, 37);
             this.labelControl3.TabIndex = 0;
-            this.labelControl3.Text = "YENİ F.TEKLİFİ OLUŞTUR";
+            this.labelControl3.Text = "YENİ FİYAT TEKLİFİ OLUŞTUR";
             this.labelControl3.UseMnemonic = false;
             // 
             // panelControl2
@@ -169,6 +171,8 @@
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.pcWorld);
+            this.panelControl2.Controls.Add(this.labelControl3);
             this.panelControl2.Controls.Add(this.btnIptal);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
@@ -199,6 +203,17 @@
             this.simpleButton2.TabIndex = 41;
             this.simpleButton2.Text = "Oluştur";
             // 
+            // pcWorld
+            // 
+            this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
+            this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Name = "pcWorld";
+            this.pcWorld.Size = new System.Drawing.Size(70, 54);
+            this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcWorld.TabIndex = 16;
+            this.pcWorld.TabStop = false;
+            // 
             // frm_YeniTeklifOlustur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -226,9 +241,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTeklifNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +264,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.PictureBox pcWorld;
     }
 }

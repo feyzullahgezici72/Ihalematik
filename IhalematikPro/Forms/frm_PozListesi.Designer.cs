@@ -31,19 +31,21 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PozListesi));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -63,7 +65,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.xpPageSelector1 = new DevExpress.Xpo.XPPageSelector(this.components);
-            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.pcWorld = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,6 +79,7 @@
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdPozList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -96,6 +99,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.pcWorld);
             this.panel2.Controls.Add(this.btnListele);
             this.panel2.Controls.Add(this.btnKapat);
             this.panel2.Controls.Add(this.labelControl1);
@@ -105,23 +109,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1509, 50);
             this.panel2.TabIndex = 1;
-            // 
-            // btnSil
-            // 
-            this.btnSil.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSil.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnSil.Appearance.Options.UseFont = true;
-            this.btnSil.Appearance.Options.UseForeColor = true;
-            this.btnSil.Image = global::IhalematikProUI.Properties.Resources.Actions_trash_empty_icon__1_;
-            this.btnSil.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnSil.Location = new System.Drawing.Point(376, 195);
-            this.btnSil.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(54, 50);
-            toolTipTitleItem1.Text = "Sil";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.btnSil.SuperTip = superToolTip1;
-            this.btnSil.TabIndex = 22;
             // 
             // btnListele
             // 
@@ -162,13 +149,30 @@
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(4, 5);
+            this.labelControl1.Location = new System.Drawing.Point(72, 8);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
             this.labelControl1.Size = new System.Drawing.Size(192, 37);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "POZ LİSTESİ";
+            // 
+            // btnSil
+            // 
+            this.btnSil.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSil.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnSil.Appearance.Options.UseFont = true;
+            this.btnSil.Appearance.Options.UseForeColor = true;
+            this.btnSil.Image = global::IhalematikProUI.Properties.Resources.Actions_trash_empty_icon__1_;
+            this.btnSil.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnSil.Location = new System.Drawing.Point(376, 195);
+            this.btnSil.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(54, 50);
+            toolTipTitleItem1.Text = "Sil";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.btnSil.SuperTip = superToolTip1;
+            this.btnSil.TabIndex = 22;
             // 
             // groupControl3
             // 
@@ -195,6 +199,23 @@
             this.groupControl3.Size = new System.Drawing.Size(442, 608);
             this.groupControl3.TabIndex = 37;
             this.groupControl3.Text = "Yeni Poz Ekle";
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnGuncelle.Appearance.Options.UseFont = true;
+            this.btnGuncelle.Appearance.Options.UseForeColor = true;
+            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
+            this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnGuncelle.Location = new System.Drawing.Point(254, 195);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(54, 50);
+            toolTipTitleItem2.Text = "Güncelle";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.btnGuncelle.SuperTip = superToolTip2;
+            this.btnGuncelle.TabIndex = 27;
             // 
             // btnKaydet
             // 
@@ -439,22 +460,16 @@
             this.gridColumn4.VisibleIndex = 3;
             this.gridColumn4.Width = 139;
             // 
-            // btnGuncelle
+            // pcWorld
             // 
-            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnGuncelle.Appearance.Options.UseFont = true;
-            this.btnGuncelle.Appearance.Options.UseForeColor = true;
-            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnGuncelle.Location = new System.Drawing.Point(254, 195);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(54, 50);
-            toolTipTitleItem2.Text = "Güncelle";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            this.btnGuncelle.SuperTip = superToolTip2;
-            this.btnGuncelle.TabIndex = 27;
+            this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
+            this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Name = "pcWorld";
+            this.pcWorld.Size = new System.Drawing.Size(70, 50);
+            this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcWorld.TabIndex = 21;
+            this.pcWorld.TabStop = false;
             // 
             // frm_PozListesi
             // 
@@ -489,6 +504,7 @@
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdPozList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -522,5 +538,6 @@
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.SimpleButton btnTemizle;
         private DevExpress.XtraEditors.SimpleButton btnGuncelle;
+        private System.Windows.Forms.PictureBox pcWorld;
     }
 }

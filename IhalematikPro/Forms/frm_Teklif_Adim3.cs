@@ -211,8 +211,10 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim3_Load(object sender, EventArgs e)
         {
+            //panel
             isciAracGirisPaneli.Top = 0;
-            
+            isciAracGirisPaneli.Left = (Screen.PrimaryScreen.WorkingArea.Width / 2) -(isciAracGirisPaneli.Width / 2);
+            //panel 
             lblTenderDescription.Text = CurrentManager.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.CurrentTender.DisplayNumber;
             List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
@@ -432,10 +434,7 @@ namespace IhalematikPro.Forms
 
         private void btnCalisanlarveAraclar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            isciAracGirisPaneli.Top =  0;
-            isciAracGirisPaneli.Visible = true;
-            
-            grdMaterialListIsWorkship.Enabled = false;
+            panelAc();
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -445,17 +444,29 @@ namespace IhalematikPro.Forms
 
         private void btnPanelKapat_Click(object sender, EventArgs e)
         {
-            isciAracGirisPaneli.Top = 0;
-             
-
-            isciAracGirisPaneli.Visible = false;
-            grdMaterialListIsWorkship.Enabled = true;
+            panelKapat();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             
 
+        }
+        void panelKapat()
+        {
+            isciAracGirisPaneli.Top = 0;
+            isciAracGirisPaneli.Visible = false;
+            grdMaterialListIsWorkship.Enabled = true;
+        }
+        void panelAc()
+        {
+            isciAracGirisPaneli.Top = 0;
+            isciAracGirisPaneli.Visible = true;
+            grdMaterialListIsWorkship.Enabled = false;
+        }
+        private void simpleButton1_Click_1(object sender, EventArgs e)
+        {
+            panelKapat();
         }
     }
 }
