@@ -118,6 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="simpleButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
   <data name="pcWorld.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhoAB4APYsAABEAAARAACZMzNmMwAzAAAzMyIiIjOZMzMzAAB3AAAiAACZAABVAABmMwBmADNm

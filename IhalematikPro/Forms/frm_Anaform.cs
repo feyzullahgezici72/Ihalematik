@@ -609,5 +609,14 @@ namespace IhalematikPro.Forms
         {
             popupMenu1.ShowPopup(Control.MousePosition);
         }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            //lblHatirlatma.Top = lblHatirlatma.Top - 1;
+            //if (lblHatirlatma.Top<-lblHatirlatma.Height)
+            //{
+            //    lblHatirlatma.Top = groupControl1.Height; 
+            //}
+        }
     }
 }
