@@ -13,8 +13,6 @@ namespace IhalematikProUI.Model
         public int Id { get; set; }
         public string DisplayText { get; set; }
 
-        public UnitTimeTypesModel Self { get { return this; } }
-
         public UnitTimeTypesModel Create(UnitTimeTypesEnum Item)
         {
             UnitTimeTypesModel model = new UnitTimeTypesModel();
@@ -51,19 +49,6 @@ namespace IhalematikProUI.Model
             }
 
             return displayText;
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (obj is UnitTimeTypesModel && obj != null)
-            {
-                UnitTimeTypesModel a = obj as UnitTimeTypesModel;
-                if (a.UnitTimeType == this.UnitTimeType)
-                {
-                    return true;
-                }
-            }
-            return false;
         }
     }
 }

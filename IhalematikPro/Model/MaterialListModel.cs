@@ -168,7 +168,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                if (this.UnitTimeType != null)
+                if (this.UnitTimeType != null && this.TenderMaterialListEquipment != null)
                 {
                     this.workerUnitPrice = 0;
                     if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
@@ -292,7 +292,7 @@ namespace IhalematikPro.Model
                     foreach (TenderEquipment item in this.TenderEquipments)
                     {
                         Dictionary<string, object> parameters = new Dictionary<string, object>();
-                        parameters.Add("TenderId", CurrentManager.CurrentTender.Id);
+                        parameters.Add("TenderId", this.Tender.Id);
                         parameters.Add("MaterialId", this.Id);
                         parameters.Add("EquipmentId", item.Id);
 
@@ -301,7 +301,7 @@ namespace IhalematikPro.Model
                         {
                             tenderMaterialListEquipment = new IhalematikProBL.Entity.TenderMaterialListEquipment()
                             {
-                                TenderId = CurrentManager.CurrentTender.Id,
+                                TenderId = this.Tender.Id,
                                 MaterialListId = this.Id.Value,
                                 EquipmentId = item.Id
                             };
@@ -316,7 +316,6 @@ namespace IhalematikPro.Model
                 this.tenderMaterialListEquipment = value;
             }
         }
-
         #region 4. adim
         //4. adim birim fiyat
         public double UnitTotalFare
@@ -378,6 +377,8 @@ namespace IhalematikPro.Model
             this.UnitTimeType = new UnitTimeTypesModel().Create(Entity.UnitTimeType);
             this.UnitTime = Entity.UnitTime;
             this.WorkerPercentageMarkup = Entity.WorkerMarkup;
+            this.TenderMaterialListEquipment = Entity.TenderMaterialListEquipment;
+            //this.TenderMaterialListEquipment = IhalematikModelBase.GetModels<TenderMaterialListEquipmentModel, TenderMaterialListEquipment>(Entity.TenderMaterialListEquipment);
         }
 
         public override EntityBase ToEntity()

@@ -369,6 +369,7 @@
     <Compile Include="Model\MaterialListModel.cs" />
     <Compile Include="Model\OBFModel.cs" />
     <Compile Include="Model\PozModel.cs" />
+    <Compile Include="Model\TenderMaterialListEquipmentModel.cs" />
     <Compile Include="Model\TitleModel.cs" />
     <Compile Include="Model\UnitTimeTypes.cs" />
     <Compile Include="Model\UnitTimeTypesModel.cs" />
