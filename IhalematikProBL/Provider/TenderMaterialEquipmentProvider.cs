@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using SimpleApplicationBase.Toolkit;
+using IhalematikProBL.Enum;
 
 namespace IhalematikProBL.Provider
 {
@@ -18,6 +19,8 @@ namespace IhalematikProBL.Provider
             parameters.Add("MaterialId", t.MaterialListId);
             parameters.Add("Quantity", t.Quantity);
             parameters.Add("TenderId", t.TenderId);
+            parameters.Add("UnitTime", t.UnitTime);
+            parameters.Add("UnitTimeType", t.UnitTimeType);
             return parameters;
         }
 
@@ -28,6 +31,8 @@ namespace IhalematikProBL.Provider
             t.EquipmentId = dr.GetValue<int>("EquipmentId");
             t.MaterialListId = dr.GetValue<int>("MaterialId");
             t.Quantity = dr.GetValue<double>("Quantity");
+            t.UnitTime = dr.GetValue<double>("UnitTime");
+            t.UnitTimeType = dr.GetValue<UnitTimeTypesEnum>("UnitTimeType");
         }
     }
 }
