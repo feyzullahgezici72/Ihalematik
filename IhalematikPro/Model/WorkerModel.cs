@@ -58,7 +58,7 @@ namespace IhalematikPro.Model
 
         //AGI
         public Fare AGIFare { get; set; }
-        
+
 
         //Damga Vergisi
         public Fare StampTaxFare { get; set; }
@@ -111,6 +111,13 @@ namespace IhalematikPro.Model
             }
         }
 
+        public string DisplayText
+        {
+            get
+            {
+                return this.Title.Name;
+            }
+        }
 
         public WorkerModel()
         {

@@ -43,6 +43,46 @@ namespace IhalematikProUI.Model
             }
         }
 
+        //ISCILIK(MALZEME) BIRIM FIYAT
+        private double workerUnitPrice = 0;
+        public double WorkerUnitPrice
+        {
+            get
+            {
+                if (this.Equipment == null)
+                {
+                    return 0;
+                }
+                double amount = ((Worker)this.Equipment.WorkerVehicle)== null ? 0 : ((Worker)this.Equipment.WorkerVehicle).TotalFare.Amount;
+                if (this.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
+                {
+                    this.workerUnitPrice += Math.Round((amount / (30 * 8 * 60)), 2) * this.UnitTime * this.Quantity;
+                }
+                else if (this.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Hour)
+                {
+                    this.workerUnitPrice += Math.Round((amount / (30 * 8)), 2) * this.UnitTime * this.Quantity;
+                }
+                else if (this.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Day)
+                {
+                    this.workerUnitPrice += Math.Round((amount / (30)), 2) * this.UnitTime * this.Quantity;
+                }
+                else if (this.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Week)
+                {
+                    this.workerUnitPrice += Math.Round((amount / 4), 2) * this.UnitTime * this.Quantity;
+                }
+                else if (this.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Month)
+                {
+                    this.workerUnitPrice += Math.Round((amount), 2) * this.UnitTime * this.Quantity;
+                }
+                else if (this.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Year)
+                {
+                    this.workerUnitPrice += Math.Round(amount, 2) * 12 * this.UnitTime * this.Quantity;
+                }
+                return this.workerUnitPrice;
+            }
+        }
+
+        public int SelectedWorker { get; set; }
 
         public TenderMaterialListEquipmentModel(TenderMaterialListEquipment Entity)
         {
@@ -51,6 +91,11 @@ namespace IhalematikProUI.Model
             this.Id = Entity.Id;
             this.UnitTime = Entity.UnitTime;
             this.UnitTimeType = Entity.UnitTimeType;
+
+            if (this.Equipment.IsWorker && this.Equipment.WorkerVehicle != null)
+            {
+                this.SelectedWorker = this.Equipment.WorkerVehicle.Id;
+            }
         }
 
         public TenderMaterialListEquipmentModel()

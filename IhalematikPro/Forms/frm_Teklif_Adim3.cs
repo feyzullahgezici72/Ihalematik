@@ -39,29 +39,7 @@ namespace IhalematikPro.Forms
         public frm_Teklif_Adim3()
         {
             InitializeComponent();
-            //repositoryItemLookUpEdit1.DataSource = this.GetUnitTimes();
-            //repositoryItemLookUpEdit1.DisplayMember = "DisplayText";
-            //repositoryItemLookUpEdit1.ValueMember = "Id";
-            //repositoryItemLookUpEdit1.ForceInitialize();
-            //repositoryItemLookUpEdit1.PopulateColumns();
-
-            //repositoryItemLookUpEdit1.Properties.Columns["Id"].Visible = false;
-            //repositoryItemLookUpEdit1.Properties.Columns["UnitTimeType"].Visible = false;
-
-            //List<StokModel> models = new List<StokModel>();
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    StokModel m = new StokModel()
-            //    {
-            //        Quantity = 10,
-            //        Total = 20,
-            //        UnitTime = 10
-            //    };
-            //    models.Add(m);
-            //}
-
             bindingSourceAddWorker.DataSource = typeof(List<TenderMaterialListEquipmentModel>);
-
             grdAddWorker.DataSource = bindingSourceAddWorker;
         }
 
@@ -119,6 +97,22 @@ namespace IhalematikPro.Forms
             txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
             txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
             txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
+
+
+            List<DropDownModel> models1 = UIWorkerManager.Instance.GetDropDownWorkers();
+            //rpstWorker.Items.AddRange(models1);
+
+            rpstWorker2.DataSource = models1;
+            rpstWorker2.DisplayMember = "Text";
+            rpstWorker2.ValueMember = "Id";
+            rpstWorker2.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            rpstWorker2.NullText = string.Empty;
+            rpstWorker2.ForceInitialize();
+            rpstWorker2.PopulateColumns();
+            //rpstWorker2.GetDataSourceValue();
+            rpstWorker2.Properties.Columns["Id"].Visible = false;
+            //rpstWorker2.Properties.Columns["Self"].Visible = false;
+            rpstWorker2.ShowHeader = false;
         }
 
         private void btnTumuneUygulaIscilik_Click(object sender, EventArgs e)
@@ -218,22 +212,26 @@ namespace IhalematikPro.Forms
 
         #endregion
 
+        public MaterialListModel SelectedMaterial = null;
         #region Grid Event
         private void btnCalisanlarveAraclar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            //rpstWorker2. = rpstWorker2.Properties.GetDataSourceValue(rpstWorker2.Properties.ValueMember, 0);
+
             int currentId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id"));
             List<MaterialListModel> models = grdMaterialListIsWorkship.DataSource as List<MaterialListModel>;
             foreach (var item in models)
             {
                 if (item.Id == currentId)
                 {
+                    this.SelectedMaterial = item;
                     item.TenderMaterialListEquipment = null;
                     this.panelAc(item);
                     List<TenderMaterialListEquipmentModel> tenderMaterialListEquipmentModels = new List<TenderMaterialListEquipmentModel>();
 
                     if (item.TenderMaterialListEquipment != null)
                     {
-                        foreach (TenderMaterialListEquipment tenderMaterialListEquipment in item.TenderMaterialListEquipment)
+                        foreach (TenderMaterialListEquipment tenderMaterialListEquipment in item.TenderMaterialListEquipment.Where(p => p.Equipment.IsWorker))
                         {
                             TenderMaterialListEquipmentModel tenderMaterialListEquipmentModel = new TenderMaterialListEquipmentModel(tenderMaterialListEquipment);
                             tenderMaterialListEquipmentModels.Add(tenderMaterialListEquipmentModel);
@@ -247,17 +245,46 @@ namespace IhalematikPro.Forms
 
         private void gridViewAddWorker_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            int currentId = Convert.ToInt32(gridViewAddWorker.GetFocusedRowCellValue("Id"));
-            List<TenderMaterialListEquipmentModel> items = (List<TenderMaterialListEquipmentModel>)bindingSourceAddWorker.DataSource;
-            TenderMaterialListEquipmentModel currentItem = new TenderMaterialListEquipmentModel();
-            foreach (TenderMaterialListEquipmentModel item in items)
+            TenderMaterialListEquipmentModel currentItem = new TenderMaterialListEquipmentModel(); ;
+            if (gridViewAddWorker.IsNewItemRow(e.RowHandle))
             {
-                if (item.Id == currentId)
+                currentItem = new TenderMaterialListEquipmentModel();
+                TenderEquipment equipment = new TenderEquipment();
+                equipment.IsWorker = true;
+                equipment.TenderId = CurrentManager.CurrentTender.Id;
+                if (e.Column == colWorker)
                 {
-                    currentItem = item;
-                    break;
+                    equipment.WorkerVehicleId = (int)e.Value;
+                }
+                OperationResult result = TenderEquipmentProvider.Instance.Save(equipment);
+                if (result.Success)
+                {
+                    TenderMaterialListEquipment tenderMaterialListEquipment = new TenderMaterialListEquipment();
+                    tenderMaterialListEquipment.EquipmentId = equipment.Id;
+                    tenderMaterialListEquipment.MaterialListId = this.SelectedMaterial.Id.Value;
+                    tenderMaterialListEquipment.TenderId = CurrentManager.CurrentTender.Id;
+                    OperationResult result1 = TenderMaterialListEquipmentProvider.Instance.Save(tenderMaterialListEquipment);
+                    if (result1.Success)
+                    {
+                        currentItem = new TenderMaterialListEquipmentModel(tenderMaterialListEquipment);
+                    }
                 }
             }
+            else
+            {
+                int currentId = Convert.ToInt32(gridViewAddWorker.GetFocusedRowCellValue("Id"));
+                List<TenderMaterialListEquipmentModel> items = (List<TenderMaterialListEquipmentModel>)bindingSourceAddWorker.DataSource;
+
+                foreach (TenderMaterialListEquipmentModel item in items)
+                {
+                    if (item.Id == currentId)
+                    {
+                        currentItem = item;
+                        break;
+                    }
+                }
+            }
+
             if (e.Column == colQuantity)
             {
                 currentItem.Quantity = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
@@ -271,9 +298,26 @@ namespace IhalematikPro.Forms
                 currentItem.UnitTimeType = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<UnitTimeTypesEnum>(e.Value);
             }
 
+            else if (e.Column == colWorker)
+            {
+                currentItem.Equipment.WorkerVehicleId = (int)e.Value;
+            }
+
             currentItem.Save();
+
+            grdAddWorker.Refresh();
         }
 
         #endregion
+
+        private void rpstWorker2_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridViewAddWorker_ShownEditor(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -365,6 +365,7 @@
     <Compile Include="Manager\UIVehicleTitleManager.cs" />
     <Compile Include="Manager\UIWorkerManager.cs" />
     <Compile Include="Model\CustomSaveableModelBase.cs" />
+    <Compile Include="Model\DropDownModel.cs" />
     <Compile Include="Model\IhalematikModelBase.cs" />
     <Compile Include="Model\MaterialListModel.cs" />
     <Compile Include="Model\OBFModel.cs" />
