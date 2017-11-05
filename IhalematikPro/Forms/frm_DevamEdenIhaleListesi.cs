@@ -64,5 +64,10 @@ namespace IhalematikPro.Forms
         {
             MessageBox.Show("Hazır Değil...");
         }
+
+        private void grdActiveTenderList_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,7 +12,7 @@ using DevExpress.XtraBars.Helpers;
 using IhalematikProUI.Forms;
 using IhalematikPro.Manager;
 using IhalematikProBL.Provider;
-
+using IhalematikProBL.Entity;
 namespace IhalematikPro.Forms
 {
     public partial class frm_Anaform : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -39,8 +39,11 @@ namespace IhalematikPro.Forms
         private void frm_Anaform_Load(object sender, EventArgs e)
         {
             DevExpress.UserSkins.BonusSkins.Register();
-            //SkinHelper.InitSkinGallery(tema);
+            List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
             
+            grdActiveTenderList.DataSource = list;
+            //this.webBrowser1.Navigate("https://ekap.kik.gov.tr");
+
         }
 
         private void barBtnCikis_ItemClick(object sender, ItemClickEventArgs e)
@@ -172,8 +175,6 @@ namespace IhalematikPro.Forms
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
             RibonPasif();
-            
-            //radialMenu.HidePopup();
             if (ct == null)
             {
                 ct = new frm_CalisanTanimlama();
@@ -515,8 +516,8 @@ namespace IhalematikPro.Forms
         }
         public void RibonPasif()
         {
-            ribbon.Enabled = false;
             MainPanel.Visible = false;
+            ribbon.Enabled = false;
         }
         private void barButtonItem2_ItemClick_1(object sender, ItemClickEventArgs e)
         {
@@ -617,6 +618,12 @@ namespace IhalematikPro.Forms
             //{
             //    lblHatirlatma.Top = groupControl1.Height; 
             //}
+        }
+
+        private void groupControl2_Click(object sender, EventArgs e)
+        {
+            Forms.frm_FirmaTanimlama frm = new frm_FirmaTanimlama();
+            frm.ShowDialog();
         }
     }
 }

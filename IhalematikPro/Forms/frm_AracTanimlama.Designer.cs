@@ -238,6 +238,9 @@
             // 
             // pnlArac
             // 
+            this.pnlArac.Appearance.BackColor = System.Drawing.Color.PowderBlue;
+            this.pnlArac.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.pnlArac.Appearance.Options.UseBackColor = true;
             this.pnlArac.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlArac.AppearanceCaption.Options.UseFont = true;
             this.pnlArac.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -258,6 +261,8 @@
             // 
             // panelControl3
             // 
+            this.panelControl3.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl3.Appearance.Options.UseBackColor = true;
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl3.Controls.Add(this.btnKaydet);
             this.panelControl3.Controls.Add(this.btnTemizle);
@@ -534,6 +539,7 @@
             // 
             // PanelSirket
             // 
+            this.PanelSirket.BackColor = System.Drawing.Color.Transparent;
             this.PanelSirket.Controls.Add(this.txtMaintenanceFare);
             this.PanelSirket.Controls.Add(this.txtFuelOilDay);
             this.PanelSirket.Controls.Add(this.labelControl7);
@@ -771,6 +777,7 @@
             // rbAsgariUcret
             // 
             this.rbAsgariUcret.AutoSize = true;
+            this.rbAsgariUcret.BackColor = System.Drawing.Color.Transparent;
             this.rbAsgariUcret.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbAsgariUcret.ForeColor = System.Drawing.Color.Maroon;
             this.rbAsgariUcret.Location = new System.Drawing.Point(279, 44);
@@ -779,12 +786,13 @@
             this.rbAsgariUcret.Size = new System.Drawing.Size(132, 25);
             this.rbAsgariUcret.TabIndex = 2;
             this.rbAsgariUcret.Text = "Kiralık Araç";
-            this.rbAsgariUcret.UseVisualStyleBackColor = true;
+            this.rbAsgariUcret.UseVisualStyleBackColor = false;
             this.rbAsgariUcret.CheckedChanged += new System.EventHandler(this.rbAsgariUcret_CheckedChanged);
             // 
             // rbCompanyVehicle
             // 
             this.rbCompanyVehicle.AutoSize = true;
+            this.rbCompanyVehicle.BackColor = System.Drawing.Color.Transparent;
             this.rbCompanyVehicle.Checked = true;
             this.rbCompanyVehicle.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbCompanyVehicle.ForeColor = System.Drawing.Color.Maroon;
@@ -795,7 +803,7 @@
             this.rbCompanyVehicle.TabIndex = 1;
             this.rbCompanyVehicle.TabStop = true;
             this.rbCompanyVehicle.Text = "Şirket Aracı";
-            this.rbCompanyVehicle.UseVisualStyleBackColor = true;
+            this.rbCompanyVehicle.UseVisualStyleBackColor = false;
             this.rbCompanyVehicle.CheckedChanged += new System.EventHandler(this.rbCompanyVehicle_CheckedChanged);
             // 
             // simpleButton1
@@ -956,7 +964,8 @@
             // 
             this.btnGuncelle.AutoHeight = false;
             this.btnGuncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, ((System.Drawing.Image)(resources.GetObject("btnGuncelle.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.btnGuncelle.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnGuncelle.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnGuncelle_ButtonClick);
@@ -976,7 +985,8 @@
             // 
             this.btnSil.AutoHeight = false;
             this.btnSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSil.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnSil.Name = "btnSil";
             this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 

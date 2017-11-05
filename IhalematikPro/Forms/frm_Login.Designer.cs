@@ -51,7 +51,7 @@
             // 
             // splashScreenManager1
             // 
-            splashScreenManager1.ClosingDelay = 500;
+            splashScreenManager1.ClosingDelay = 1500;
             // 
             // groupControl1
             // 

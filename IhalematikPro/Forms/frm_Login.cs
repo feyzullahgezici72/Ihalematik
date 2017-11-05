@@ -23,7 +23,7 @@ namespace IhalematikPro.Forms
 
         private void frm_Login_Load(object sender, EventArgs e)
         {
-            Thread.Sleep(1500);
+            //Thread.Sleep(1500);
         }
 
       

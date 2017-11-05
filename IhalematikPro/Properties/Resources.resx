@@ -154,6 +154,12 @@
   <data name="open-file-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\open-file-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="edit16-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\edit16-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\edit-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user-group-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\user-group-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -313,6 +319,9 @@
   <data name="Actions-dialog-close-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\Actions-dialog-close-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Status-dialog-information-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\Status-dialog-information-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mavi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\mavi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -342,6 +351,9 @@
   </data>
   <data name="agency-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\agency-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit16-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\edit16-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Check-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\Check-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -382,7 +394,7 @@
   <data name="Actions-contact-new-icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\Actions-contact-new-icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Status-dialog-information-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pic\Status-dialog-information-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="erase-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\erase-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

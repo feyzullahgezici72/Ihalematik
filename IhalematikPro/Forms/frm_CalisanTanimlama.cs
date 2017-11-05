@@ -140,7 +140,7 @@ namespace IhalematikPro.Forms
 
         private void txtBaseFare_EditValueChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void rbAsgariUcret_CheckedChanged(object sender, EventArgs e)
@@ -166,6 +166,7 @@ namespace IhalematikPro.Forms
 
         private void txtBaseFare_EditValueChanged_1(object sender, EventArgs e)
         {
+                  
             //double NetUcretUcret = double.Parse(txtBaseFare.Text);
             //txtSGKPrimFare.Text = Math.Round((NetUcretUcret / 100 * 14), 2).ToString();
             //txtWorklesFonFare.Text = Math.Round((NetUcretUcret / 100 * 1), 2).ToString();
