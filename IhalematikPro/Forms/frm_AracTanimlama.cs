@@ -39,6 +39,7 @@ namespace IhalematikPro.Forms
 
         public void InitilalizeForm()
         {
+
             List<VehicleTitleModel> models = UIVehicleTitleManager.Instance.GetVehicleTitles();
             ddlVehicleTitle.Properties.Items.AddRange(models);
             ddlVehicleTitle.SelectedIndex = 0;
