@@ -29,9 +29,8 @@ namespace IhalematikPro.Forms
     public partial class frm_Teklif_Adim3 : DevExpress.XtraEditors.XtraForm
     {
         #region Variables
-        public bool IsInitializeTenderMaterialListEquipment = false;
-        public bool isDataGridFormatted = false;
         private object a4;
+        public MaterialListModel SelectedMaterial = null;
 
         #endregion
 
@@ -39,30 +38,55 @@ namespace IhalematikPro.Forms
         public frm_Teklif_Adim3()
         {
             InitializeComponent();
-            //repositoryItemLookUpEdit1.DataSource = this.GetUnitTimes();
-            //repositoryItemLookUpEdit1.DisplayMember = "DisplayText";
-            //repositoryItemLookUpEdit1.ValueMember = "Id";
-            //repositoryItemLookUpEdit1.ForceInitialize();
-            //repositoryItemLookUpEdit1.PopulateColumns();
-
-            //repositoryItemLookUpEdit1.Properties.Columns["Id"].Visible = false;
-            //repositoryItemLookUpEdit1.Properties.Columns["UnitTimeType"].Visible = false;
-
-            //List<StokModel> models = new List<StokModel>();
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    StokModel m = new StokModel()
-            //    {
-            //        Quantity = 10,
-            //        Total = 20,
-            //        UnitTime = 10
-            //    };
-            //    models.Add(m);
-            //}
-
             bindingSourceAddWorker.DataSource = typeof(List<TenderMaterialListEquipmentModel>);
-
             grdAddWorker.DataSource = bindingSourceAddWorker;
+            grdAddVehicle.DataSource = bindingSourceAddVehicle;
+        }
+        private void frm_Teklif_Adim3_Load(object sender, EventArgs e)
+        {
+            //panel
+            isciAracGirisPaneli.Top = 0;
+            isciAracGirisPaneli.Left = (Screen.PrimaryScreen.WorkingArea.Width / 2) - (isciAracGirisPaneli.Width / 2);
+            //panel 
+            lblTenderDescription.Text = CurrentManager.CurrentTender.Description;
+            lblTenderNumber.Text = CurrentManager.CurrentTender.DisplayNumber;
+            List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
+            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            grdMaterialListIsWorkship.DataSource = models;
+
+            txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
+            txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
+            txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
+
+            #region repostryWorkers
+            List<DropDownModel> workers = UIWorkerManager.Instance.GetDropDownWorkers();
+            rpstWorker.DataSource = workers;
+            rpstWorker.DisplayMember = "Text";
+            rpstWorker.ValueMember = "Id";
+            rpstWorker.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            rpstWorker.NullText = string.Empty;
+            rpstWorker.ForceInitialize();
+            rpstWorker.PopulateColumns();
+            //rpstWorker2.GetDataSourceValue();
+            rpstWorker.Properties.Columns["Id"].Visible = false;
+            //rpstWorker2.Properties.Columns["Self"].Visible = false;
+            rpstWorker.ShowHeader = false;
+            #endregion
+
+            #region repostryVehicles
+            List<DropDownModel> vehicles = UIVehicleManager.Instance.GetDropDownVehicles();
+            rpstVehicle.DataSource = vehicles;
+            rpstVehicle.DisplayMember = "Text";
+            rpstVehicle.ValueMember = "Id";
+            rpstVehicle.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            rpstVehicle.NullText = string.Empty;
+            rpstVehicle.ForceInitialize();
+            rpstVehicle.PopulateColumns();
+            //rpstWorker2.GetDataSourceValue();
+            rpstVehicle.Properties.Columns["Id"].Visible = false;
+            //rpstWorker2.Properties.Columns["Self"].Visible = false;
+            rpstVehicle.ShowHeader = false;
+            #endregion
         }
 
         #endregion
@@ -74,12 +98,12 @@ namespace IhalematikPro.Forms
             isciAracGirisPaneli.Visible = false;
             grdMaterialListIsWorkship.Enabled = true;
         }
-        public void panelAc(MaterialListModel CurrentItem)
+        public void panelAc()
         {
-            txtCurrentNumber.Text = CurrentItem.PozOBFNumber;
-            txtCurrentDescription.Text = CurrentItem.PozOBFDescription;
-            txtCurrentQuantity.Text = CurrentItem.Quantity.ToString();
-            txtCurrentUnit.Text = CurrentItem.PozOBFUnit;
+            txtCurrentNumber.Text = this.SelectedMaterial.PozOBFNumber;
+            txtCurrentDescription.Text = this.SelectedMaterial.PozOBFDescription;
+            txtCurrentQuantity.Text = this.SelectedMaterial.Quantity.ToString();
+            txtCurrentUnit.Text = this.SelectedMaterial.PozOBFUnit;
 
             isciAracGirisPaneli.Top = 0;
             isciAracGirisPaneli.Visible = true;
@@ -104,22 +128,6 @@ namespace IhalematikPro.Forms
         #endregion
 
         #region Form Event
-        private void frm_Teklif_Adim3_Load(object sender, EventArgs e)
-        {
-            //panel
-            isciAracGirisPaneli.Top = 0;
-            isciAracGirisPaneli.Left = (Screen.PrimaryScreen.WorkingArea.Width / 2) - (isciAracGirisPaneli.Width / 2);
-            //panel 
-            lblTenderDescription.Text = CurrentManager.CurrentTender.Description;
-            lblTenderNumber.Text = CurrentManager.CurrentTender.DisplayNumber;
-            List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
-            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            grdMaterialListIsWorkship.DataSource = models;
-            //InitializeTenderMaterialListEquipment();
-            txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
-            txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
-            txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
-        }
 
         private void btnTumuneUygulaIscilik_Click(object sender, EventArgs e)
         {
@@ -185,6 +193,7 @@ namespace IhalematikPro.Forms
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
+            grdMaterialListIsWorkship.Refresh();
         }
 
         private void btnTumuneUygula_Click(object sender, EventArgs e)
@@ -218,62 +227,203 @@ namespace IhalematikPro.Forms
 
         #endregion
 
-        #region Grid Event
+        #region GridMaterialList
         private void btnCalisanlarveAraclar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            bindingSourceAddWorker.DataSource = null;
             int currentId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id"));
             List<MaterialListModel> models = grdMaterialListIsWorkship.DataSource as List<MaterialListModel>;
             foreach (var item in models)
             {
                 if (item.Id == currentId)
                 {
-                    item.TenderMaterialListEquipment = null;
-                    this.panelAc(item);
-                    List<TenderMaterialListEquipmentModel> tenderMaterialListEquipmentModels = new List<TenderMaterialListEquipmentModel>();
-
-                    if (item.TenderMaterialListEquipment != null)
-                    {
-                        foreach (TenderMaterialListEquipment tenderMaterialListEquipment in item.TenderMaterialListEquipment)
-                        {
-                            TenderMaterialListEquipmentModel tenderMaterialListEquipmentModel = new TenderMaterialListEquipmentModel(tenderMaterialListEquipment);
-                            tenderMaterialListEquipmentModels.Add(tenderMaterialListEquipmentModel);
-                        }
-                    }
-                    bindingSourceAddWorker.DataSource = tenderMaterialListEquipmentModels;
+                    this.SelectedMaterial = item;
+                    this.panelAc();
+                    LoadWorkerMateriallistGrid();
                     break;
                 }
             }
         }
+        #endregion
+
+        #region GridAddWorker Event
 
         private void gridViewAddWorker_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            int currentId = Convert.ToInt32(gridViewAddWorker.GetFocusedRowCellValue("Id"));
-            List<TenderMaterialListEquipmentModel> items = (List<TenderMaterialListEquipmentModel>)bindingSourceAddWorker.DataSource;
-            TenderMaterialListEquipmentModel currentItem = new TenderMaterialListEquipmentModel();
-            foreach (TenderMaterialListEquipmentModel item in items)
+            if (e.Column == colAddWorkerId || e.Column == colAddWorkerWorkerUnitPrice)
             {
-                if (item.Id == currentId)
+                return;
+            }
+            TenderMaterialListEquipmentModel currentItem = new TenderMaterialListEquipmentModel();
+            int currentId = Convert.ToInt32(gridViewAddWorker.GetFocusedRowCellValue("Id"));
+            if (currentId <= 0)
+            {
+                currentItem = new TenderMaterialListEquipmentModel();
+                TenderEquipment equipment = new TenderEquipment();
+                equipment.IsWorker = true;
+                equipment.TenderId = CurrentManager.CurrentTender.Id;
+                if (e.Column == colAddWorkerWorker)
                 {
-                    currentItem = item;
-                    break;
+                    object b = gridViewAddWorker.ActiveEditor.EditValue;
+                    equipment.WorkerVehicleId = (int)b;
+                }
+                OperationResult result = TenderEquipmentProvider.Instance.Save(equipment);
+                if (result.Success)
+                {
+                    TenderMaterialListEquipment tenderMaterialListEquipment = new TenderMaterialListEquipment();
+                    tenderMaterialListEquipment.EquipmentId = equipment.Id;
+                    tenderMaterialListEquipment.MaterialListId = this.SelectedMaterial.Id.Value;
+                    tenderMaterialListEquipment.TenderId = CurrentManager.CurrentTender.Id;
+                    tenderMaterialListEquipment.Equipment = equipment;
+                    OperationResult result1 = TenderMaterialListEquipmentProvider.Instance.Save(tenderMaterialListEquipment);
+                    if (result1.Success)
+                    {
+                        currentItem = new TenderMaterialListEquipmentModel(tenderMaterialListEquipment);
+                        currentItem.Equipment = equipment;
+                        gridViewAddWorker.SetFocusedRowCellValue(colAddWorkerId, currentItem.Id);
+                        LoadWorkerMateriallistGrid();
+                        return;
+                    }
                 }
             }
-            if (e.Column == colQuantity)
+            else
+            {
+                List<TenderMaterialListEquipmentModel> items = ((IEnumerable<TenderMaterialListEquipmentModel>)bindingSourceAddWorker.DataSource).ToList();
+
+                foreach (TenderMaterialListEquipmentModel item in items)
+                {
+                    if (item.Id == currentId)
+                    {
+                        currentItem = item;
+                        break;
+                    }
+                }
+            }
+
+            if (e.Column == colAddWorkerQuantity)
             {
                 currentItem.Quantity = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
             }
-            else if (e.Column == colUnitTime)
+            else if (e.Column == colAddWorkerUnitTime)
             {
                 currentItem.UnitTime = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(e.Value);
             }
-            else if (e.Column == colUnitTimeType)
+            else if (e.Column == colAddWorkerUnitTimeType)
             {
                 currentItem.UnitTimeType = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<UnitTimeTypesEnum>(e.Value);
             }
 
+            else if (e.Column == colAddWorkerWorker)
+            {
+                currentItem.Equipment.WorkerVehicleId = (int)e.Value;
+                TenderEquipmentProvider.Instance.Save(currentItem.Equipment);
+            }
+
             currentItem.Save();
+            grdAddWorker.Refresh();
         }
 
+        private void LoadWorkerMateriallistGrid()
+        {
+            List<TenderMaterialListEquipmentModel> tenderMaterialListEquipmentModels = new List<TenderMaterialListEquipmentModel>();
+
+            this.SelectedMaterial.TenderEquipments = null;
+            this.SelectedMaterial.TenderMaterialListEquipment = null;
+            List<TenderEquipment> a = this.SelectedMaterial.TenderEquipments;
+            if (this.SelectedMaterial.TenderMaterialListEquipment != null)
+            {
+                foreach (TenderMaterialListEquipment tenderMaterialListEquipment in this.SelectedMaterial.TenderMaterialListEquipment)
+                {
+                    TenderMaterialListEquipmentModel tenderMaterialListEquipmentModel = new TenderMaterialListEquipmentModel(tenderMaterialListEquipment);
+                    tenderMaterialListEquipmentModels.Add(tenderMaterialListEquipmentModel);
+                }
+            }
+
+            bindingSourceAddWorker.DataSource = tenderMaterialListEquipmentModels.Where(p => p.Equipment.IsWorker);
+            bindingSourceAddVehicle.DataSource = tenderMaterialListEquipmentModels.Where(p => !p.Equipment.IsWorker);
+        }
         #endregion
+
+        private void gridViewAddVehicle_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            if (e.Column == colAddVehicleId || e.Column == colAddVehicleWorkerUnitPrice)
+            {
+                return;
+            }
+            TenderMaterialListEquipmentModel currentItem = new TenderMaterialListEquipmentModel();
+            int currentId = Convert.ToInt32(gridViewAddVehicle.GetFocusedRowCellValue("Id"));
+            if (currentId <= 0)
+            {
+                //if (e.Value == null)
+                //{
+                //    return;
+                //}
+                currentItem = new TenderMaterialListEquipmentModel();
+                TenderEquipment equipment = new TenderEquipment();
+                equipment.IsWorker = false;
+                equipment.TenderId = CurrentManager.CurrentTender.Id;
+                if (e.Column == colAddVehicleVehicle)
+                {
+                    //System.Data.DataRow row = gridViewAddVehicle.GetDataRow(gridViewAddVehicle.FocusedRowHandle);
+                    //string cellValue = row[0].ToString();
+                    //object a = gridViewAddVehicle.GetSelectedRow("SelectedVehicle");
+                    object b = gridViewAddVehicle.ActiveEditor.EditValue;
+                    equipment.WorkerVehicleId = (int)b;
+                }
+                OperationResult result = TenderEquipmentProvider.Instance.Save(equipment);
+                if (result.Success)
+                {
+                    TenderMaterialListEquipment tenderMaterialListEquipment = new TenderMaterialListEquipment();
+                    tenderMaterialListEquipment.EquipmentId = equipment.Id;
+                    tenderMaterialListEquipment.MaterialListId = this.SelectedMaterial.Id.Value;
+                    tenderMaterialListEquipment.TenderId = CurrentManager.CurrentTender.Id;
+                    tenderMaterialListEquipment.Equipment = equipment;
+                    OperationResult result1 = TenderMaterialListEquipmentProvider.Instance.Save(tenderMaterialListEquipment);
+                    if (result1.Success)
+                    {
+                        currentItem = new TenderMaterialListEquipmentModel(tenderMaterialListEquipment);
+                        currentItem.Equipment = equipment;
+                        gridViewAddVehicle.SetFocusedRowCellValue(colAddVehicleId, currentItem.Id);
+                        LoadWorkerMateriallistGrid();
+                        return;
+                    }
+                }
+            }
+            else
+            {
+                List<TenderMaterialListEquipmentModel> items = ((IEnumerable<TenderMaterialListEquipmentModel>)bindingSourceAddVehicle.DataSource).ToList();
+
+                foreach (TenderMaterialListEquipmentModel item in items)
+                {
+                    if (item.Id == currentId)
+                    {
+                        currentItem = item;
+                        break;
+                    }
+                }
+            }
+
+            if (e.Column == colAddVehicleQuantity)
+            {
+                currentItem.Quantity = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
+            }
+            else if (e.Column == colAddVehicleUnitTime)
+            {
+                currentItem.UnitTime = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(e.Value);
+            }
+            else if (e.Column == colAddVehicleUnitTimeType)
+            {
+                currentItem.UnitTimeType = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<UnitTimeTypesEnum>(e.Value);
+            }
+
+            else if (e.Column == colAddVehicleVehicle)
+            {
+                currentItem.Equipment.WorkerVehicleId = (int)e.Value;
+                TenderEquipmentProvider.Instance.Save(currentItem.Equipment);
+            }
+
+            currentItem.Save();
+            grdAddVehicle.Refresh();
+        }
     }
 }

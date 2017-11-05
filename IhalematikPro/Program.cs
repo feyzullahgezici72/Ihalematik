@@ -20,7 +20,7 @@ namespace IhalematikPro
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            CurrentManager.CurrentTender = TenderProvider.Instance.GetItem(1170);
+            CurrentManager.CurrentTender = TenderProvider.Instance.GetItem(1207);
 
             Application.Run(new Forms.frm_Anaform());
             //Application.Run(new Forms.frm_Teklif_Adim3());

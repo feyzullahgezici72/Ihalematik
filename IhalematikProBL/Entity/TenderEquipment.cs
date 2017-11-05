@@ -29,35 +29,23 @@ namespace IhalematikProBL.Entity
         public int WorkerVehicleId { get; set; }
         public bool IsWorker { get; set; }
 
-        private Worker worker { get; set; }
-        public Worker Worker
+        private CustomEntityBase workerVehicle { get; set; }
+        public CustomEntityBase WorkerVehicle
         {
             get
             {
-                if (this.worker == null)
+                if (this.workerVehicle == null)
                 {
                     if (this.IsWorker)
                     {
-                        this.worker = WorkerProvider.Instance.GetItem(this.WorkerVehicleId);
+                        this.workerVehicle = WorkerProvider.Instance.GetItem(this.WorkerVehicleId);
                     }
-                }
-                return this.worker;
-            }
-        }
-
-        private Vehicle vehicle { get; set; }
-        public Vehicle Vehicle
-        {
-            get
-            {
-                if (this.vehicle == null)
-                {
-                    if (!this.IsWorker)
+                    else
                     {
-                        this.vehicle = VehicleProvider.Instance.GetItem(this.WorkerVehicleId);
+                        this.workerVehicle = VehicleProvider.Instance.GetItem(this.WorkerVehicleId);
                     }
                 }
-                return this.vehicle;
+                return this.workerVehicle;
             }
         }
 
@@ -67,11 +55,11 @@ namespace IhalematikProBL.Entity
             {
                 if (this.IsWorker)
                 {
-                    return this.Worker.TotalFare;
+                    return ((Worker)this.WorkerVehicle).TotalFare;
                 }
                 else
                 {
-                    return this.Vehicle.TotalFare;
+                    return ((Vehicle)this.workerVehicle).TotalFare;
                 }
             }
         }
@@ -80,11 +68,11 @@ namespace IhalematikProBL.Entity
         {
             if (this.IsWorker)
             {
-                return this.Worker.Title.Name;
+                return ((Worker)this.WorkerVehicle).Title.Name;
             }
             else
             {
-                return this.Vehicle.Title.Name;
+                return ((Vehicle)this.WorkerVehicle).Title.Name;
             }
         }
 
