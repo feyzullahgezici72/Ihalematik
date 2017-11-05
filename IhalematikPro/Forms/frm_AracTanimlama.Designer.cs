@@ -243,7 +243,6 @@
             this.pnlArac.Appearance.Options.UseBackColor = true;
             this.pnlArac.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlArac.AppearanceCaption.Options.UseFont = true;
-            this.pnlArac.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pnlArac.Controls.Add(this.panelControl3);
             this.pnlArac.Controls.Add(this.PanelKira);
             this.pnlArac.Controls.Add(this.PanelSirket);
@@ -554,7 +553,7 @@
             this.PanelSirket.Controls.Add(this.labelControl2);
             this.PanelSirket.Controls.Add(this.txtDriverFare);
             this.PanelSirket.Controls.Add(this.labelControl13);
-            this.PanelSirket.Location = new System.Drawing.Point(12, 82);
+            this.PanelSirket.Location = new System.Drawing.Point(13, 111);
             this.PanelSirket.Margin = new System.Windows.Forms.Padding(4);
             this.PanelSirket.Name = "PanelSirket";
             this.PanelSirket.Size = new System.Drawing.Size(407, 274);
@@ -749,7 +748,7 @@
             // 
             // ddlVehicleTitle
             // 
-            this.ddlVehicleTitle.Location = new System.Drawing.Point(179, 4);
+            this.ddlVehicleTitle.Location = new System.Drawing.Point(186, 38);
             this.ddlVehicleTitle.Margin = new System.Windows.Forms.Padding(4);
             this.ddlVehicleTitle.Name = "ddlVehicleTitle";
             this.ddlVehicleTitle.Properties.AccessibleDescription = "Name";
@@ -767,7 +766,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl3.Location = new System.Drawing.Point(95, 9);
+            this.labelControl3.Location = new System.Drawing.Point(98, 41);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(80, 21);
@@ -780,7 +779,7 @@
             this.rbAsgariUcret.BackColor = System.Drawing.Color.Transparent;
             this.rbAsgariUcret.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbAsgariUcret.ForeColor = System.Drawing.Color.Maroon;
-            this.rbAsgariUcret.Location = new System.Drawing.Point(279, 44);
+            this.rbAsgariUcret.Location = new System.Drawing.Point(280, 71);
             this.rbAsgariUcret.Margin = new System.Windows.Forms.Padding(4);
             this.rbAsgariUcret.Name = "rbAsgariUcret";
             this.rbAsgariUcret.Size = new System.Drawing.Size(132, 25);
@@ -796,7 +795,7 @@
             this.rbCompanyVehicle.Checked = true;
             this.rbCompanyVehicle.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbCompanyVehicle.ForeColor = System.Drawing.Color.Maroon;
-            this.rbCompanyVehicle.Location = new System.Drawing.Point(149, 44);
+            this.rbCompanyVehicle.Location = new System.Drawing.Point(150, 71);
             this.rbCompanyVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.rbCompanyVehicle.Name = "rbCompanyVehicle";
             this.rbCompanyVehicle.Size = new System.Drawing.Size(133, 25);
