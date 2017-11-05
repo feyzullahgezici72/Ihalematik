@@ -317,6 +317,7 @@ namespace IhalematikPro.Forms
             {
                 currentItem.Equipment.WorkerVehicleId = (int)e.Value;
                 TenderEquipmentProvider.Instance.Save(currentItem.Equipment);
+                currentItem.Equipment = null;
             }
 
             currentItem.Save();
@@ -420,6 +421,7 @@ namespace IhalematikPro.Forms
             {
                 currentItem.Equipment.WorkerVehicleId = (int)e.Value;
                 TenderEquipmentProvider.Instance.Save(currentItem.Equipment);
+                currentItem.Equipment = null;
             }
 
             currentItem.Save();

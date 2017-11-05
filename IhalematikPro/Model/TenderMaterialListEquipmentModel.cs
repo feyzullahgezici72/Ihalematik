@@ -39,7 +39,10 @@ namespace IhalematikProUI.Model
             set
             {
                 this.equipment = value;
-                this.EquipmentId = this.equipment.Id;
+                if (this.equipment != null)
+                {
+                    this.EquipmentId = this.equipment.Id; 
+                }
             }
         }
 
