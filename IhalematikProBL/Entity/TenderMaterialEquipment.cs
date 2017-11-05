@@ -59,6 +59,11 @@ namespace IhalematikProBL.Entity
                 }
                 return this.equipment;
             }
+            set
+            {
+                this.equipment = value;
+                this.EquipmentId = this.equipment.Id;
+            }
         }
 
         public double Quantity { get; set; }

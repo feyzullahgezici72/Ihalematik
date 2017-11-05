@@ -69,23 +69,25 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.isciAracGirisPaneli = new DevExpress.XtraEditors.PanelControl();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grdAddVehicle = new DevExpress.XtraGrid.GridControl();
+            this.gridViewAddVehicle = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colAddVehicleId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddVehicleVehicle = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rpstVehicle = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.colAddVehicleQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddVehicleUnitTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddVehicleUnitTimeType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddVehicleWorkerUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.grdAddWorker = new DevExpress.XtraGrid.GridControl();
             this.gridViewAddWorker = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colWorker = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.rpstWorker2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUnitTime = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUnitTimeType = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddWorkerId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddWorkerWorker = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rpstWorker = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.colAddWorkerQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddWorkerUnitTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddWorkerUnitTimeType = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddWorkerWorkerUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtCurrentDescription = new DevExpress.XtraEditors.TextEdit();
             this.txtCurrentQuantity = new DevExpress.XtraEditors.TextEdit();
@@ -101,6 +103,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.btnPanelKapat = new DevExpress.XtraEditors.SimpleButton();
             this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btnIscilikveAracGirisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -122,13 +125,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCalisanlarveAraclar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.isciAracGirisPaneli)).BeginInit();
             this.isciAracGirisPaneli.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdAddVehicle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewAddVehicle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstVehicle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdAddWorker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewAddWorker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rpstWorker2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstWorker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCurrentDescription.Properties)).BeginInit();
@@ -138,6 +142,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddWorker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddVehicle)).BeginInit();
             this.SuspendLayout();
             // 
             // btnIscilikveAracGirisi
@@ -550,6 +555,7 @@
             // gridColumn5
             // 
             this.gridColumn5.Caption = "BİRİM FİYAT";
+            this.gridColumn5.FieldName = "WorkerUnitPrice";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 6;
@@ -558,7 +564,7 @@
             // isciAracGirisPaneli
             // 
             this.isciAracGirisPaneli.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.isciAracGirisPaneli.Controls.Add(this.gridControl2);
+            this.isciAracGirisPaneli.Controls.Add(this.grdAddVehicle);
             this.isciAracGirisPaneli.Controls.Add(this.groupControl3);
             this.isciAracGirisPaneli.Controls.Add(this.groupControl1);
             this.isciAracGirisPaneli.Controls.Add(this.panelControl5);
@@ -569,74 +575,87 @@
             this.isciAracGirisPaneli.TabIndex = 26;
             this.isciAracGirisPaneli.Visible = false;
             // 
-            // gridControl2
+            // grdAddVehicle
             // 
-            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
-            this.gridControl2.Location = new System.Drawing.Point(2, 269);
-            this.gridControl2.MainView = this.gridView3;
-            this.gridControl2.Margin = new System.Windows.Forms.Padding(2);
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(625, 222);
-            this.gridControl2.TabIndex = 7;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3});
+            this.grdAddVehicle.Location = new System.Drawing.Point(0, 270);
+            this.grdAddVehicle.MainView = this.gridViewAddVehicle;
+            this.grdAddVehicle.Name = "grdAddVehicle";
+            this.grdAddVehicle.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.rpstVehicle});
+            this.grdAddVehicle.Size = new System.Drawing.Size(624, 141);
+            this.grdAddVehicle.TabIndex = 1;
+            this.grdAddVehicle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewAddVehicle});
             // 
-            // gridView3
+            // gridViewAddVehicle
             // 
-            this.gridView3.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridView3.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Navy;
-            this.gridView3.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView3.Appearance.HeaderPanel.Options.UseForeColor = true;
-            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn13,
-            this.gridColumn14,
-            this.gridColumn15,
-            this.gridColumn16,
-            this.gridColumn17});
-            this.gridView3.GridControl = this.gridControl2;
-            this.gridView3.Name = "gridView3";
-            this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gridViewAddVehicle.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colAddVehicleId,
+            this.colAddVehicleVehicle,
+            this.colAddVehicleQuantity,
+            this.colAddVehicleUnitTime,
+            this.colAddVehicleUnitTimeType,
+            this.colAddVehicleWorkerUnitPrice});
+            this.gridViewAddVehicle.GridControl = this.grdAddVehicle;
+            this.gridViewAddVehicle.Name = "gridViewAddVehicle";
+            this.gridViewAddVehicle.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.gridViewAddVehicle.OptionsView.ShowGroupPanel = false;
+            this.gridViewAddVehicle.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewAddVehicle_CellValueChanged);
             // 
-            // gridColumn13
+            // colAddVehicleId
             // 
-            this.gridColumn13.Caption = "ARAÇ";
-            this.gridColumn13.Name = "gridColumn13";
-            this.gridColumn13.Visible = true;
-            this.gridColumn13.VisibleIndex = 0;
-            this.gridColumn13.Width = 454;
+            this.colAddVehicleId.FieldName = "Id";
+            this.colAddVehicleId.Name = "colAddVehicleId";
             // 
-            // gridColumn14
+            // colAddVehicleVehicle
             // 
-            this.gridColumn14.Caption = "SAYI";
-            this.gridColumn14.Name = "gridColumn14";
-            this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 1;
-            this.gridColumn14.Width = 78;
+            this.colAddVehicleVehicle.Caption = "ARAÇ";
+            this.colAddVehicleVehicle.ColumnEdit = this.rpstVehicle;
+            this.colAddVehicleVehicle.FieldName = "SelectedVehicle";
+            this.colAddVehicleVehicle.Name = "colAddVehicleVehicle";
+            this.colAddVehicleVehicle.Visible = true;
+            this.colAddVehicleVehicle.VisibleIndex = 0;
             // 
-            // gridColumn15
+            // rpstVehicle
             // 
-            this.gridColumn15.Caption = "SÜRE";
-            this.gridColumn15.Name = "gridColumn15";
-            this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 2;
-            this.gridColumn15.Width = 120;
+            this.rpstVehicle.AutoHeight = false;
+            this.rpstVehicle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.rpstVehicle.Name = "rpstVehicle";
             // 
-            // gridColumn16
+            // colAddVehicleQuantity
             // 
-            this.gridColumn16.Caption = "ZAMAN TİPİ";
-            this.gridColumn16.Name = "gridColumn16";
-            this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 3;
-            this.gridColumn16.Width = 120;
+            this.colAddVehicleQuantity.Caption = "SAYI";
+            this.colAddVehicleQuantity.FieldName = "Quantity";
+            this.colAddVehicleQuantity.Name = "colAddVehicleQuantity";
+            this.colAddVehicleQuantity.Visible = true;
+            this.colAddVehicleQuantity.VisibleIndex = 1;
             // 
-            // gridColumn17
+            // colAddVehicleUnitTime
             // 
-            this.gridColumn17.Caption = "MALİYET";
-            this.gridColumn17.Name = "gridColumn17";
-            this.gridColumn17.Visible = true;
-            this.gridColumn17.VisibleIndex = 4;
-            this.gridColumn17.Width = 124;
+            this.colAddVehicleUnitTime.Caption = "SÜRE";
+            this.colAddVehicleUnitTime.FieldName = "UnitTime";
+            this.colAddVehicleUnitTime.Name = "colAddVehicleUnitTime";
+            this.colAddVehicleUnitTime.Visible = true;
+            this.colAddVehicleUnitTime.VisibleIndex = 2;
+            // 
+            // colAddVehicleUnitTimeType
+            // 
+            this.colAddVehicleUnitTimeType.Caption = "ZAMAN TİPİ";
+            this.colAddVehicleUnitTimeType.FieldName = "UnitTimeType";
+            this.colAddVehicleUnitTimeType.Name = "colAddVehicleUnitTimeType";
+            this.colAddVehicleUnitTimeType.Visible = true;
+            this.colAddVehicleUnitTimeType.VisibleIndex = 3;
+            // 
+            // colAddVehicleWorkerUnitPrice
+            // 
+            this.colAddVehicleWorkerUnitPrice.Caption = "MALİYET";
+            this.colAddVehicleWorkerUnitPrice.DisplayFormat.FormatString = "c2";
+            this.colAddVehicleWorkerUnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colAddVehicleWorkerUnitPrice.FieldName = "VehicleUnitPrice";
+            this.colAddVehicleWorkerUnitPrice.Name = "colAddVehicleWorkerUnitPrice";
+            this.colAddVehicleWorkerUnitPrice.Visible = true;
+            this.colAddVehicleWorkerUnitPrice.VisibleIndex = 4;
             // 
             // groupControl3
             // 
@@ -656,7 +675,7 @@
             this.grdAddWorker.MainView = this.gridViewAddWorker;
             this.grdAddWorker.Name = "grdAddWorker";
             this.grdAddWorker.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.rpstWorker2});
+            this.rpstWorker});
             this.grdAddWorker.Size = new System.Drawing.Size(624, 141);
             this.grdAddWorker.TabIndex = 0;
             this.grdAddWorker.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -665,72 +684,72 @@
             // gridViewAddWorker
             // 
             this.gridViewAddWorker.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colId,
-            this.colWorker,
-            this.colQuantity,
-            this.colUnitTime,
-            this.colUnitTimeType,
-            this.colTotal});
+            this.colAddWorkerId,
+            this.colAddWorkerWorker,
+            this.colAddWorkerQuantity,
+            this.colAddWorkerUnitTime,
+            this.colAddWorkerUnitTimeType,
+            this.colAddWorkerWorkerUnitPrice});
             this.gridViewAddWorker.GridControl = this.grdAddWorker;
             this.gridViewAddWorker.Name = "gridViewAddWorker";
             this.gridViewAddWorker.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gridViewAddWorker.OptionsView.ShowGroupPanel = false;
-            this.gridViewAddWorker.ShownEditor += new System.EventHandler(this.gridViewAddWorker_ShownEditor);
             this.gridViewAddWorker.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewAddWorker_CellValueChanged);
             // 
-            // colId
+            // colAddWorkerId
             // 
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
+            this.colAddWorkerId.FieldName = "Id";
+            this.colAddWorkerId.Name = "colAddWorkerId";
             // 
-            // colWorker
+            // colAddWorkerWorker
             // 
-            this.colWorker.Caption = "ÇALIŞAN";
-            this.colWorker.ColumnEdit = this.rpstWorker2;
-            this.colWorker.FieldName = "SelectedWorker";
-            this.colWorker.Name = "colWorker";
-            this.colWorker.Visible = true;
-            this.colWorker.VisibleIndex = 0;
+            this.colAddWorkerWorker.Caption = "ÇALIŞAN";
+            this.colAddWorkerWorker.ColumnEdit = this.rpstWorker;
+            this.colAddWorkerWorker.FieldName = "SelectedWorker";
+            this.colAddWorkerWorker.Name = "colAddWorkerWorker";
+            this.colAddWorkerWorker.Visible = true;
+            this.colAddWorkerWorker.VisibleIndex = 0;
             // 
-            // rpstWorker2
+            // rpstWorker
             // 
-            this.rpstWorker2.AutoHeight = false;
-            this.rpstWorker2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.rpstWorker.AutoHeight = false;
+            this.rpstWorker.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.rpstWorker2.Name = "rpstWorker2";
-            this.rpstWorker2.EditValueChanged += new System.EventHandler(this.rpstWorker2_EditValueChanged);
+            this.rpstWorker.Name = "rpstWorker";
             // 
-            // colQuantity
+            // colAddWorkerQuantity
             // 
-            this.colQuantity.Caption = "SAYI";
-            this.colQuantity.FieldName = "Quantity";
-            this.colQuantity.Name = "colQuantity";
-            this.colQuantity.Visible = true;
-            this.colQuantity.VisibleIndex = 1;
+            this.colAddWorkerQuantity.Caption = "SAYI";
+            this.colAddWorkerQuantity.FieldName = "Quantity";
+            this.colAddWorkerQuantity.Name = "colAddWorkerQuantity";
+            this.colAddWorkerQuantity.Visible = true;
+            this.colAddWorkerQuantity.VisibleIndex = 1;
             // 
-            // colUnitTime
+            // colAddWorkerUnitTime
             // 
-            this.colUnitTime.Caption = "SÜRE";
-            this.colUnitTime.FieldName = "UnitTime";
-            this.colUnitTime.Name = "colUnitTime";
-            this.colUnitTime.Visible = true;
-            this.colUnitTime.VisibleIndex = 2;
+            this.colAddWorkerUnitTime.Caption = "SÜRE";
+            this.colAddWorkerUnitTime.FieldName = "UnitTime";
+            this.colAddWorkerUnitTime.Name = "colAddWorkerUnitTime";
+            this.colAddWorkerUnitTime.Visible = true;
+            this.colAddWorkerUnitTime.VisibleIndex = 2;
             // 
-            // colUnitTimeType
+            // colAddWorkerUnitTimeType
             // 
-            this.colUnitTimeType.Caption = "ZAMAN TİPİ";
-            this.colUnitTimeType.FieldName = "UnitTimeType";
-            this.colUnitTimeType.Name = "colUnitTimeType";
-            this.colUnitTimeType.Visible = true;
-            this.colUnitTimeType.VisibleIndex = 3;
+            this.colAddWorkerUnitTimeType.Caption = "ZAMAN TİPİ";
+            this.colAddWorkerUnitTimeType.FieldName = "UnitTimeType";
+            this.colAddWorkerUnitTimeType.Name = "colAddWorkerUnitTimeType";
+            this.colAddWorkerUnitTimeType.Visible = true;
+            this.colAddWorkerUnitTimeType.VisibleIndex = 3;
             // 
-            // colTotal
+            // colAddWorkerWorkerUnitPrice
             // 
-            this.colTotal.Caption = "MALİYET";
-            this.colTotal.FieldName = "WorkerUnitPrice";
-            this.colTotal.Name = "colTotal";
-            this.colTotal.Visible = true;
-            this.colTotal.VisibleIndex = 4;
+            this.colAddWorkerWorkerUnitPrice.Caption = "MALİYET";
+            this.colAddWorkerWorkerUnitPrice.DisplayFormat.FormatString = "c2";
+            this.colAddWorkerWorkerUnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colAddWorkerWorkerUnitPrice.FieldName = "WorkerUnitPricea";
+            this.colAddWorkerWorkerUnitPrice.Name = "colAddWorkerWorkerUnitPrice";
+            this.colAddWorkerWorkerUnitPrice.Visible = true;
+            this.colAddWorkerWorkerUnitPrice.VisibleIndex = 4;
             // 
             // groupControl1
             // 
@@ -959,13 +978,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCalisanlarveAraclar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.isciAracGirisPaneli)).EndInit();
             this.isciAracGirisPaneli.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdAddVehicle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewAddVehicle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstVehicle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdAddWorker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewAddWorker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rpstWorker2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstWorker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -977,6 +997,7 @@
             this.panelControl5.ResumeLayout(false);
             this.panelControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddWorker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddVehicle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1033,24 +1054,27 @@
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.GroupControl groupControl3;
-        private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
         private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraGrid.Columns.GridColumn Id;
         private System.Windows.Forms.BindingSource bindingSourceAddWorker;
         private DevExpress.XtraGrid.GridControl grdAddWorker;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewAddWorker;
-        private DevExpress.XtraGrid.Columns.GridColumn colQuantity;
-        private DevExpress.XtraGrid.Columns.GridColumn colUnitTime;
-        private DevExpress.XtraGrid.Columns.GridColumn colUnitTimeType;
-        private DevExpress.XtraGrid.Columns.GridColumn colId;
-        private DevExpress.XtraGrid.Columns.GridColumn colTotal;
-        private DevExpress.XtraGrid.Columns.GridColumn colWorker;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit rpstWorker2;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddWorkerQuantity;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddWorkerUnitTime;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddWorkerUnitTimeType;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddWorkerId;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddWorkerWorkerUnitPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddWorkerWorker;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit rpstWorker;
+        private System.Windows.Forms.BindingSource bindingSourceAddVehicle;
+        private DevExpress.XtraGrid.GridControl grdAddVehicle;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewAddVehicle;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddVehicleId;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddVehicleVehicle;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit rpstVehicle;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddVehicleQuantity;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddVehicleUnitTime;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddVehicleUnitTimeType;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddVehicleWorkerUnitPrice;
     }
 }

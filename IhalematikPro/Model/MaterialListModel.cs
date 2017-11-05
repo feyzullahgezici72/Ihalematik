@@ -180,31 +180,31 @@ namespace IhalematikPro.Model
                         }
                         else
                         {
-                            amount = ((Vehicle)item.Equipment.WorkerVehicle) == null ? 0: ((Vehicle)item.Equipment.WorkerVehicle).TotalFare.Amount;
+                            amount = ((Vehicle)item.Equipment.WorkerVehicle) == null ? 0 : ((Vehicle)item.Equipment.WorkerVehicle).TotalFare.Amount;
                         }
                         if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
                         {
-                            this.workerUnitPrice += Math.Round((amount / (30 * 8 * 60)), 2) * this.UnitTime * item.Quantity;
+                            this.workerUnitPrice += Math.Round((amount / (30 * 8 * 60)), 2) * item.UnitTime * item.Quantity;
                         }
                         else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Hour)
                         {
-                            this.workerUnitPrice += Math.Round((amount / (30 * 8)), 2) * this.UnitTime * item.Quantity;
+                            this.workerUnitPrice += Math.Round((amount / (30 * 8)), 2) * item.UnitTime * item.Quantity;
                         }
                         else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Day)
                         {
-                            this.workerUnitPrice += Math.Round((amount / (30)), 2) * this.UnitTime * item.Quantity;
+                            this.workerUnitPrice += Math.Round((amount / (30)), 2) * item.UnitTime * item.Quantity;
                         }
                         else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Week)
                         {
-                            this.workerUnitPrice += Math.Round((amount / 4), 2) * this.UnitTime * item.Quantity;
+                            this.workerUnitPrice += Math.Round((amount / 4), 2) * item.UnitTime * item.Quantity;
                         }
                         else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Month)
                         {
-                            this.workerUnitPrice += Math.Round((amount), 2) * this.UnitTime * item.Quantity;
+                            this.workerUnitPrice += Math.Round((amount), 2) * item.UnitTime * item.Quantity;
                         }
                         else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Year)
                         {
-                            this.workerUnitPrice += Math.Round(amount, 2) * 12 * this.UnitTime * item.Quantity;
+                            this.workerUnitPrice += Math.Round(amount, 2) * 12 * item.UnitTime * item.Quantity;
                         }
                     }
                 }
@@ -222,7 +222,10 @@ namespace IhalematikPro.Model
             {
                 if (this.tenderEquipments == null)
                 {
-                    this.tenderEquipments = TenderEquipmentProvider.Instance.GetItems("TenderId", CurrentManager.CurrentTender.Id);
+                    Dictionary<string, object> parameters = new Dictionary<string, object>();
+                    parameters.Add("TenderId", CurrentManager.CurrentTender.Id);
+                    //parameters.Add("MaterialId", this.Id);
+                    this.tenderEquipments = TenderEquipmentProvider.Instance.GetItems(parameters);
                 }
                 return this.tenderEquipments;
             }
@@ -241,25 +244,11 @@ namespace IhalematikPro.Model
                 if (this.tenderMaterialListEquipment == null)
                 {
                     this.tenderMaterialListEquipment = new List<IhalematikProBL.Entity.TenderMaterialListEquipment>();
-                    foreach (TenderEquipment item in this.TenderEquipments)
-                    {
-                        Dictionary<string, object> parameters = new Dictionary<string, object>();
-                        parameters.Add("TenderId", this.Tender.Id);
-                        parameters.Add("MaterialId", this.Id);
-                        parameters.Add("EquipmentId", item.Id);
-
-                        TenderMaterialListEquipment tenderMaterialListEquipment = TenderMaterialListEquipmentProvider.Instance.GetItems(parameters).FirstOrDefault();
-                        if (tenderMaterialListEquipment == null)
-                        {
-                            tenderMaterialListEquipment = new IhalematikProBL.Entity.TenderMaterialListEquipment()
-                            {
-                                TenderId = this.Tender.Id,
-                                MaterialListId = this.Id.Value,
-                                EquipmentId = item.Id
-                            };
-                        }
-                        this.tenderMaterialListEquipment.Add(tenderMaterialListEquipment);
-                    }
+                    Dictionary<string, object> parameters = new Dictionary<string, object>();
+                    parameters.Add("TenderId", this.Tender.Id);
+                    parameters.Add("MaterialId", this.Id);
+                    
+                    this.tenderMaterialListEquipment = TenderMaterialListEquipmentProvider.Instance.GetItems(parameters);
                 }
                 return this.tenderMaterialListEquipment;
             }
