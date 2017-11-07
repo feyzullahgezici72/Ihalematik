@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using IhalematikPro.Manager;
 using IhalematikPro.Model;
 using IhalematikProBL.Entity;
+using IhalematikProUI.Report;
 
 namespace IhalematikProUI.Forms
 {
@@ -77,5 +78,10 @@ namespace IhalematikProUI.Forms
 
             lblTotalMarkupNonKDV.Text = totalMarkupNonKDV.ToString("c2"); 
         }
+
+        //private void Rapor_Click(object sender, EventArgs e)
+        //{
+        //    //MainReportcs.
+        //}
     }
 }

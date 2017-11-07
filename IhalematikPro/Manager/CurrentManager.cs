@@ -14,5 +14,6 @@ namespace IhalematikPro.Manager
         public static List<WorkerModel> Workers { get; set; }
 
         public static Tender CurrentTender { get; set; }
+        public static Company CurrentCompany { get; set; }
     }
 }

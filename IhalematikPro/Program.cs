@@ -21,7 +21,7 @@ namespace IhalematikPro
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             CurrentManager.CurrentTender = TenderProvider.Instance.GetItem(1207);
-
+            CurrentManager.CurrentCompany = CompanyProvider.Instance.GetItems().FirstOrDefault();
             Application.Run(new Forms.frm_Anaform());
             //Application.Run(new Forms.frm_Teklif_Adim3());
             //Application.Run(new Forms.frm_Login()); //.frm_Anaform

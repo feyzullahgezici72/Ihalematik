@@ -22,6 +22,8 @@ namespace IhalematikPro.Forms
         public frm_Teklif_Adim2()
         {
             InitializeComponent();
+            bindingSourceMaterialListNonWorkship.DataSource = typeof(List<MaterialList>);
+            grdMaterialListNonWorkship.DataSource = bindingSourceMaterialListNonWorkship;
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -40,10 +42,8 @@ namespace IhalematikPro.Forms
             lblTenderNumber.Text = CurrentManager.CurrentTender.DisplayNumber;
 
             List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialLists();
-            grdMaterialListNonWorkship.DataSource = null;
             List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            bindingSource1.DataSource = models; //typeof(List<MaterialList>);
-            grdMaterialListNonWorkship.DataSource = bindingSource1;
+            grdMaterialListNonWorkship.DataSource = models;
             double baseAmount = 0;
             this.CalculateInnerValue(ref baseAmount);
             lblTotalMarkup.Text = (models.Sum(p => p.TotalMarkup)).ToString("C2");
@@ -69,19 +69,24 @@ namespace IhalematikPro.Forms
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            double baseAmount = 0;
-            this.CalculateInnerValue(ref baseAmount);
+            if (e.Column == colMarkup)
+            {
+                double baseAmount = 0;
+                this.CalculateInnerValue(ref baseAmount);
+            }
         }
 
         private void CalculateInnerValue(ref double BaseAmount)
         {
-            List<MaterialList> items = CurrentManager.CurrentTender.MaterialList.Where(p => p.IsWorkship == false).ToList();//.Instance.GetMaterialListNonWorkship();
+            List<MaterialListModel> items = grdMaterialListNonWorkship.DataSource as List<MaterialListModel>;//CurrentManager.CurrentTender.MaterialList;//.Instance.GetMaterialListNonWorkship();
             BaseAmount = items.Sum(p => p.Markup * p.Quantity);
             double baseKDVAmount = items.Sum(p => p.KDVAmount);
 
             txtBaseAmount.Text = string.Format("{0:C2}", BaseAmount);
             txtBaseKDVAmount.Text = string.Format("{0:C2}", baseKDVAmount);
             txtTotalAmount.Text = string.Format("{0:C2}", Math.Round((baseKDVAmount + BaseAmount), 2));
+
+            lblTotalMarkup.Text = (items.Sum(p => p.TotalMarkup)).ToString("C2");
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -98,7 +103,7 @@ namespace IhalematikPro.Forms
             frm.lblMesaj.Text = "Malzemeler Kaydedildi...";
             frm.ShowDialog();
             this.Close();
-            frm_Teklif_Adim3 a3= (frm_Teklif_Adim3)Application.OpenForms["frm_Teklif_Adim3"];
+            frm_Teklif_Adim3 a3 = (frm_Teklif_Adim3)Application.OpenForms["frm_Teklif_Adim3"];
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             if (a3 == null)
             {
@@ -127,7 +132,7 @@ namespace IhalematikPro.Forms
 
         private void btnKaydet_Click_1(object sender, EventArgs e)
         {
-          
+
         }
     }
 }
