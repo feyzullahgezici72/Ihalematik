@@ -84,5 +84,6 @@ namespace IhalematikProBL.Entity
         //Bakim Gideri
         public double OtherFare { get; set; }
         public RentTypesEnum RentType { get; set; }
+        public double RentFare { get; set; }
     }
 }

@@ -71,26 +71,52 @@ namespace IhalematikPro.Forms
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             VehicleModel model = new VehicleModel();
-            if (rdHour.Checked)
-            {
-                model.RentType = IhalematikProBL.Enum.RentTypesEnum.Hour;
-            }
-            else if (rdDay.Checked)
-            {
-                model.RentType = IhalematikProBL.Enum.RentTypesEnum.Day;
-            }
-            else if (rdMonth.Checked)
-            {
-                model.RentType = IhalematikProBL.Enum.RentTypesEnum.Month;
-            }
             model.TitleId = ((VehicleTitleModel)ddlVehicleTitle.SelectedItem).Id.Value;
-            model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtFuelOilFare.Text);
-            model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtFuelOilDay.Text);
-            model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtDriverFare.Text);
-            model.MaintenanceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMaintenanceFare.Text);
-            model.ServiceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtServiceFare.Text);
-            model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtGeneralFare.Text);
-            model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtOtherFare.Text);
+            if (rbCompanyVehicle.Checked)
+            {
+                model.IsCompanyVehicle = true;
+                model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtFuelOilFare.Text);
+                model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtFuelOilDay.Text);
+                model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtDriverFare.Text);
+                model.MaintenanceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMaintenanceFare.Text);
+                model.ServiceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtServiceFare.Text);
+                model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtGeneralFare.Text);
+                model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtOtherFare.Text);
+            }
+            else
+            {
+                model.IsCompanyVehicle = false;
+
+                if (rdHour.Checked)
+                {
+                    model.RentType = IhalematikProBL.Enum.RentTypesEnum.Hour;
+                }
+                else if (rdDay.Checked)
+                {
+                    model.RentType = IhalematikProBL.Enum.RentTypesEnum.Day;
+                }
+                else if (rdMonth.Checked)
+                {
+                    model.RentType = IhalematikProBL.Enum.RentTypesEnum.Month;
+                }
+                model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentFuelOilFare.Text);
+                model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtRentFuelOilDay.Text);
+                model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentDriverFare.Text);
+                model.RentFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentFare.Text);
+                //model.MaintenanceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMaintenanceFare.Text);
+                //model.ServiceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtServiceFare.Text);
+                model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentGeneralFare.Text);
+                model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentOtherFare.Text);
+            }
+
+           
+            //model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtFuelOilFare.Text);
+            //model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtFuelOilDay.Text);
+            //model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtDriverFare.Text);
+            //model.MaintenanceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMaintenanceFare.Text);
+            //model.ServiceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtServiceFare.Text);
+            //model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtGeneralFare.Text);
+            //model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtOtherFare.Text);
             model.Save();
             LoadGrid();
         }
@@ -147,7 +173,11 @@ namespace IhalematikPro.Forms
         private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
 
-            frm_Arac_Guncelleme frm = new frm_Arac_Guncelleme();
+            frm_Arac_Guncelleme frm = new frm_Arac_Guncelleme(this);
+
+            int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewVehicle.GetFocusedRowCellValue("Id"));
+            frm.CurrentVehicleId = id;
+
             // frm.Location = new Point(5, 215);
             KayitMenusu.Visible = false;
             this.Opacity = 10;

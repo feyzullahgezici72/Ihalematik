@@ -50,16 +50,20 @@ namespace IhalematikPro.Model
         //Sofor yevmiyesi
         public double DriverFare { get; set; }
 
+        //Kira yevmiyesi
+        public double RentFare { get; set; }
+
+
         //Bakim Gideri
         public double MaintenanceFare { get; set; }
 
-        //Bakim Gideri
+        //Servis Gideri
         public double ServiceFare { get; set; }
 
-        //Bakim Gideri
+        //Genel Gideri
         public double GeneralFare { get; set; }
 
-        //Bakim Gideri
+        //Diger Gideri
         public double OtherFare { get; set; }
 
         public RentTypesEnum RentType { get; set; }
@@ -105,6 +109,7 @@ namespace IhalematikPro.Model
             this.ServiceFare = Vehicle.ServiceFare;
             this.GeneralFare = Vehicle.GeneralFare;
             this.OtherFare = Vehicle.OtherFare;
+            this.RentFare = Vehicle.RentFare;
         }
         public override EntityBase ToEntity()
         {
@@ -123,7 +128,7 @@ namespace IhalematikPro.Model
             vehicle.ServiceFare = this.ServiceFare;
             vehicle.GeneralFare = this.GeneralFare;
             vehicle.OtherFare = this.OtherFare;
-
+            vehicle.RentFare = this.RentFare;
             return vehicle;
         }
 

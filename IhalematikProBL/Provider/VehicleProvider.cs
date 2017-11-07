@@ -25,6 +25,8 @@ namespace IhalematikProBL.Provider
             parameters.Add("OtherFare", t.OtherFare);
             parameters.Add("ServiceFare", t.ServiceFare);
             parameters.Add("RentType", t.RentType);
+            parameters.Add("RentFare", t.RentFare);
+
 
             return parameters;
         }
@@ -42,7 +44,7 @@ namespace IhalematikProBL.Provider
             t.OtherFare = dr.GetValue<double>("OtherFare");
             t.RentType = dr.GetValue<RentTypesEnum>("RentType");
             t.ServiceFare = dr.GetValue<double>("ServiceFare");
-
+            t.RentFare = dr.GetValue<double>("RentFare");
         }
 
     }
