@@ -26,6 +26,7 @@ namespace IhalematikPro.Forms
         {
             InitializeComponent();
             InitilalizeForm();
+            //this._owner = this;
             //getExcel();
         }
 
@@ -94,7 +95,7 @@ namespace IhalematikPro.Forms
         {
             LoadGrid();
             this.KeyPreview = true;
-            this.KeyDown +=new KeyEventHandler( Frm_CalisanTanimlama_KeyDown);
+            this.KeyDown += new KeyEventHandler(Frm_CalisanTanimlama_KeyDown);
         }
 
         private void Frm_CalisanTanimlama_KeyDown(object sender, KeyEventArgs e)
@@ -107,7 +108,7 @@ namespace IhalematikPro.Forms
 
         }
 
-        private void LoadGrid()
+        public void LoadGrid()
         {
             List<WorkerModel> models = UIWorkerManager.Instance.GetWorkers();
             grdWorker.DataSource = models;
@@ -140,7 +141,7 @@ namespace IhalematikPro.Forms
 
         private void txtBaseFare_EditValueChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void rbAsgariUcret_CheckedChanged(object sender, EventArgs e)
@@ -161,12 +162,12 @@ namespace IhalematikPro.Forms
 
         private void çalışanEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtBaseFare_EditValueChanged_1(object sender, EventArgs e)
         {
-                  
+
             //double NetUcretUcret = double.Parse(txtBaseFare.Text);
             //txtSGKPrimFare.Text = Math.Round((NetUcretUcret / 100 * 14), 2).ToString();
             //txtWorklesFonFare.Text = Math.Round((NetUcretUcret / 100 * 1), 2).ToString();
@@ -190,7 +191,7 @@ namespace IhalematikPro.Forms
                 txtSGKPrimFare.Text = Math.Round((NetUcretUcret / 100 * 14), 2).ToString();
                 txtWorklesFonFare.Text = Math.Round((NetUcretUcret / 100 * 1), 2).ToString();
                 txtIncomeTaxFare.Text = Math.Round((NetUcretUcret / 100 * 15), 2).ToString();
-                txtStampTaxFare.Text = Math.Round((NetUcretUcret / 1000 *  759), 2).ToString();
+                txtStampTaxFare.Text = Math.Round((NetUcretUcret / 1000 * 759), 2).ToString();
             }
         }
 
@@ -201,21 +202,22 @@ namespace IhalematikPro.Forms
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             frm_CalisanEkle frm = new frm_CalisanEkle();
+            
             frm.ShowDialog();
         }
 
         private void güncelleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-      
+
+
             // frm.Location = new Point(5, 215);
-            
+
         }
 
         private void kayitMenusu_Paint(object sender, PaintEventArgs e)
@@ -225,7 +227,11 @@ namespace IhalematikPro.Forms
 
         private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            frm_Calisan_Guncelleme cg = new frm_Calisan_Guncelleme();
+            frm_Calisan_Guncelleme cg = new frm_Calisan_Guncelleme(this);
+            
+            int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewWorker.GetFocusedRowCellValue("Id"));
+            cg.CurrentWorkerId = id;
+
             kayitMenusu.Visible = false;
             this.Opacity = 10;
             this.Enabled = false;
