@@ -32,40 +32,39 @@ namespace IhalematikPro.Forms
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Anaform));
-            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem14 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip15 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem15 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip16 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem16 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem16 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip17 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem17 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem17 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip18 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem18 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem18 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip19 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem19 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem19 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip20 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem20 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem20 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip21 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem21 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem21 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip22 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem22 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.backstageViewControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
             this.backstageViewClientControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
@@ -104,8 +103,8 @@ namespace IhalematikPro.Forms
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
@@ -133,6 +132,7 @@ namespace IhalematikPro.Forms
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
             this.repositoryItemPictureEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
@@ -143,14 +143,13 @@ namespace IhalematikPro.Forms
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.pnIhaleListesi = new DevExpress.XtraEditors.PanelControl();
             this.grdActiveTenderList = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnIhaleAc = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
@@ -164,19 +163,17 @@ namespace IhalematikPro.Forms
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel)).BeginInit();
             this.MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnIhaleListesi)).BeginInit();
+            this.pnIhaleListesi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdActiveTenderList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnIhaleAc)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -237,7 +234,7 @@ namespace IhalematikPro.Forms
             this.barStaticItem6});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 16;
+            this.ribbon.MaxItemId = 19;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsTouch.AffectOnlyRibbon = true;
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -256,7 +253,8 @@ namespace IhalematikPro.Forms
             this.repositoryItemPopupContainerEdit2,
             this.repositoryItemPictureEdit1,
             this.repositoryItemImageEdit1,
-            this.repositoryItemPictureEdit2});
+            this.repositoryItemPictureEdit2,
+            this.repositoryItemTextEdit1});
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowCategoryInCaption = false;
@@ -310,19 +308,19 @@ namespace IhalematikPro.Forms
             this.barBtnPozListesi.DropDownEnabled = false;
             this.barBtnPozListesi.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnPozListesi.Glyph")));
             this.barBtnPozListesi.Id = 3;
-            this.barBtnPozListesi.LargeGlyph = global::IhalematikProUI.Properties.Resources.Inventory_icon;
+            this.barBtnPozListesi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnPozListesi.LargeGlyph")));
             this.barBtnPozListesi.LargeWidth = 100;
             this.barBtnPozListesi.Name = "barBtnPozListesi";
-            toolTipTitleItem12.Text = "POZLU MALZEMELER";
-            toolTipItem12.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipItem12.Appearance.Options.UseImage = true;
-            toolTipItem12.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem12.Image")));
-            toolTipItem12.LeftIndent = 6;
-            toolTipItem12.Text = "Devlet tarafından belirlenen mevcut tüm pozların kaydedildiği ve listelendiği For" +
+            toolTipTitleItem1.Text = "POZLU MALZEMELER";
+            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            toolTipItem1.Appearance.Options.UseImage = true;
+            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Devlet tarafından belirlenen mevcut tüm pozların kaydedildiği ve listelendiği For" +
     "m";
-            superToolTip12.Items.Add(toolTipTitleItem12);
-            superToolTip12.Items.Add(toolTipItem12);
-            this.barBtnPozListesi.SuperTip = superToolTip12;
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.barBtnPozListesi.SuperTip = superToolTip1;
             this.barBtnPozListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnPozListesi_ItemClick);
             // 
             // barBtnOzelStokListesi
@@ -330,15 +328,15 @@ namespace IhalematikPro.Forms
             this.barBtnOzelStokListesi.Caption = "ÖBF Malzeme Listesi";
             this.barBtnOzelStokListesi.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnOzelStokListesi.Glyph")));
             this.barBtnOzelStokListesi.Id = 4;
-            this.barBtnOzelStokListesi.LargeGlyph = global::IhalematikProUI.Properties.Resources.App_lists_icon;
+            this.barBtnOzelStokListesi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnOzelStokListesi.LargeGlyph")));
             this.barBtnOzelStokListesi.LargeWidth = 120;
             this.barBtnOzelStokListesi.Name = "barBtnOzelStokListesi";
-            toolTipTitleItem13.Text = "ÖBF\'Lİ MALZEMELER";
-            toolTipItem13.LeftIndent = 6;
-            toolTipItem13.Text = "Öbf \'li malzeme kayıt ve listeleme formu";
-            superToolTip13.Items.Add(toolTipTitleItem13);
-            superToolTip13.Items.Add(toolTipItem13);
-            this.barBtnOzelStokListesi.SuperTip = superToolTip13;
+            toolTipTitleItem2.Text = "ÖBF\'Lİ MALZEMELER";
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Öbf \'li malzeme kayıt ve listeleme formu";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.barBtnOzelStokListesi.SuperTip = superToolTip2;
             this.barBtnOzelStokListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnOzelStokListesi_ItemClick);
             // 
             // barBtnTeklifHazirla
@@ -349,15 +347,15 @@ namespace IhalematikPro.Forms
             this.barBtnTeklifHazirla.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnTeklifHazirla.LargeGlyph")));
             this.barBtnTeklifHazirla.LargeWidth = 140;
             this.barBtnTeklifHazirla.Name = "barBtnTeklifHazirla";
-            toolTipTitleItem14.Text = "İHALE TEKLİFİ";
-            toolTipItem14.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            toolTipItem14.Appearance.Options.UseImage = true;
-            toolTipItem14.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem14.Image")));
-            toolTipItem14.LeftIndent = 6;
-            toolTipItem14.Text = "İhale Teklifi Oluşturma formu";
-            superToolTip14.Items.Add(toolTipTitleItem14);
-            superToolTip14.Items.Add(toolTipItem14);
-            this.barBtnTeklifHazirla.SuperTip = superToolTip14;
+            toolTipTitleItem3.Text = "İHALE TEKLİFİ";
+            toolTipItem3.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            toolTipItem3.Appearance.Options.UseImage = true;
+            toolTipItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem3.Image")));
+            toolTipItem3.LeftIndent = 6;
+            toolTipItem3.Text = "İhale Teklifi Oluşturma formu";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            superToolTip3.Items.Add(toolTipItem3);
+            this.barBtnTeklifHazirla.SuperTip = superToolTip3;
             this.barBtnTeklifHazirla.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnTeklifHazirla_ItemClick);
             // 
             // barBtnYardimKonulari
@@ -396,15 +394,15 @@ namespace IhalematikPro.Forms
             this.btnAdimx1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx1.LargeGlyph")));
             this.btnAdimx1.LargeWidth = 100;
             this.btnAdimx1.Name = "btnAdimx1";
-            toolTipTitleItem15.Text = "KEŞİF LİSTESİ";
-            toolTipItem15.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            toolTipItem15.Appearance.Options.UseImage = true;
-            toolTipItem15.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem15.Image")));
-            toolTipItem15.LeftIndent = 6;
-            toolTipItem15.Text = "Keşif Listesi Oluşturma İşlemleri";
-            superToolTip15.Items.Add(toolTipTitleItem15);
-            superToolTip15.Items.Add(toolTipItem15);
-            this.btnAdimx1.SuperTip = superToolTip15;
+            toolTipTitleItem4.Text = "KEŞİF LİSTESİ";
+            toolTipItem4.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            toolTipItem4.Appearance.Options.UseImage = true;
+            toolTipItem4.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem4.Image")));
+            toolTipItem4.LeftIndent = 6;
+            toolTipItem4.Text = "Keşif Listesi Oluşturma İşlemleri";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            superToolTip4.Items.Add(toolTipItem4);
+            this.btnAdimx1.SuperTip = superToolTip4;
             this.btnAdimx1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdimx1_ItemClick);
             // 
             // btnAdimx3
@@ -415,15 +413,15 @@ namespace IhalematikPro.Forms
             this.btnAdimx3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx3.LargeGlyph")));
             this.btnAdimx3.LargeWidth = 100;
             this.btnAdimx3.Name = "btnAdimx3";
-            toolTipTitleItem16.Text = "İŞÇİLİK";
-            toolTipItem16.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
-            toolTipItem16.Appearance.Options.UseImage = true;
-            toolTipItem16.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem16.Image")));
-            toolTipItem16.LeftIndent = 6;
-            toolTipItem16.Text = "İşçilik ve İş Süresi belirleme ve İşçilik Kar Oranları İşlemleri";
-            superToolTip16.Items.Add(toolTipTitleItem16);
-            superToolTip16.Items.Add(toolTipItem16);
-            this.btnAdimx3.SuperTip = superToolTip16;
+            toolTipTitleItem5.Text = "İŞÇİLİK";
+            toolTipItem5.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            toolTipItem5.Appearance.Options.UseImage = true;
+            toolTipItem5.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem5.Image")));
+            toolTipItem5.LeftIndent = 6;
+            toolTipItem5.Text = "İşçilik ve İş Süresi belirleme ve İşçilik Kar Oranları İşlemleri";
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            superToolTip5.Items.Add(toolTipItem5);
+            this.btnAdimx3.SuperTip = superToolTip5;
             this.btnAdimx3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdimx3_ItemClick);
             // 
             // btnAdimx4
@@ -434,15 +432,15 @@ namespace IhalematikPro.Forms
             this.btnAdimx4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx4.LargeGlyph")));
             this.btnAdimx4.LargeWidth = 100;
             this.btnAdimx4.Name = "btnAdimx4";
-            toolTipTitleItem17.Text = "MALZEMELER";
-            toolTipItem17.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
-            toolTipItem17.Appearance.Options.UseImage = true;
-            toolTipItem17.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem17.Image")));
-            toolTipItem17.LeftIndent = 6;
-            toolTipItem17.Text = "Tüm Malzeme Keşif ve Kar Oranı İşlemleri";
-            superToolTip17.Items.Add(toolTipTitleItem17);
-            superToolTip17.Items.Add(toolTipItem17);
-            this.btnAdimx4.SuperTip = superToolTip17;
+            toolTipTitleItem6.Text = "MALZEMELER";
+            toolTipItem6.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            toolTipItem6.Appearance.Options.UseImage = true;
+            toolTipItem6.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem6.Image")));
+            toolTipItem6.LeftIndent = 6;
+            toolTipItem6.Text = "Tüm Malzeme Keşif ve Kar Oranı İşlemleri";
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            superToolTip6.Items.Add(toolTipItem6);
+            this.btnAdimx4.SuperTip = superToolTip6;
             this.btnAdimx4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdimx4_ItemClick);
             // 
             // btnAdimx5
@@ -453,15 +451,15 @@ namespace IhalematikPro.Forms
             this.btnAdimx5.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx5.LargeGlyph")));
             this.btnAdimx5.LargeWidth = 100;
             this.btnAdimx5.Name = "btnAdimx5";
-            toolTipTitleItem18.Text = "GENEL MALİYET";
-            toolTipItem18.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
-            toolTipItem18.Appearance.Options.UseImage = true;
-            toolTipItem18.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem18.Image")));
-            toolTipItem18.LeftIndent = 6;
-            toolTipItem18.Text = "Maliyet ve Karlılık Analizi Durumu";
-            superToolTip18.Items.Add(toolTipTitleItem18);
-            superToolTip18.Items.Add(toolTipItem18);
-            this.btnAdimx5.SuperTip = superToolTip18;
+            toolTipTitleItem7.Text = "GENEL MALİYET";
+            toolTipItem7.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            toolTipItem7.Appearance.Options.UseImage = true;
+            toolTipItem7.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem7.Image")));
+            toolTipItem7.LeftIndent = 6;
+            toolTipItem7.Text = "Maliyet ve Karlılık Analizi Durumu";
+            superToolTip7.Items.Add(toolTipTitleItem7);
+            superToolTip7.Items.Add(toolTipItem7);
+            this.btnAdimx5.SuperTip = superToolTip7;
             this.btnAdimx5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdimx5_ItemClick);
             // 
             // barButtonItem2
@@ -469,39 +467,39 @@ namespace IhalematikPro.Forms
             this.barButtonItem2.Caption = "Çalışan Tanımlama";
             this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
             this.barButtonItem2.Id = 14;
-            this.barButtonItem2.LargeGlyph = global::IhalematikProUI.Properties.Resources.user_group_icon;
+            this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
             this.barButtonItem2.LargeWidth = 100;
             this.barButtonItem2.Name = "barButtonItem2";
-            toolTipTitleItem19.Text = "ÇALIŞANLAR";
-            toolTipItem19.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
-            toolTipItem19.Appearance.Options.UseImage = true;
-            toolTipItem19.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem19.Image")));
-            toolTipItem19.LeftIndent = 6;
-            toolTipItem19.Text = "Çalışanların Şirkete olan maliyetlerini hesaplama formu.\r\nMasrafları Aylık,Günlük" +
+            toolTipTitleItem8.Text = "ÇALIŞANLAR";
+            toolTipItem8.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
+            toolTipItem8.Appearance.Options.UseImage = true;
+            toolTipItem8.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem8.Image")));
+            toolTipItem8.LeftIndent = 6;
+            toolTipItem8.Text = "Çalışanların Şirkete olan maliyetlerini hesaplama formu.\r\nMasrafları Aylık,Günlük" +
     ", Saatlik ve Dakika olarak hesaplar";
-            superToolTip19.Items.Add(toolTipTitleItem19);
-            superToolTip19.Items.Add(toolTipItem19);
-            this.barButtonItem2.SuperTip = superToolTip19;
+            superToolTip8.Items.Add(toolTipTitleItem8);
+            superToolTip8.Items.Add(toolTipItem8);
+            this.barButtonItem2.SuperTip = superToolTip8;
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // barButtonItem4
             // 
             this.barButtonItem4.Caption = "Araç Tanımlama";
-            this.barButtonItem4.Glyph = global::IhalematikProUI.Properties.Resources.icons8_digger;
+            this.barButtonItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.Glyph")));
             this.barButtonItem4.Id = 1;
-            this.barButtonItem4.LargeGlyph = global::IhalematikProUI.Properties.Resources.icons8_digger;
+            this.barButtonItem4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.LargeGlyph")));
             this.barButtonItem4.LargeWidth = 100;
             this.barButtonItem4.Name = "barButtonItem4";
-            toolTipTitleItem20.Text = "ARAÇLAR";
-            toolTipItem20.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
-            toolTipItem20.Appearance.Options.UseImage = true;
-            toolTipItem20.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem20.Image")));
-            toolTipItem20.LeftIndent = 6;
-            toolTipItem20.Text = "Araçların Şirkete olan maliyetlerini hesaplama formu.\r\nMasrafları Aylık,Günlük, S" +
+            toolTipTitleItem9.Text = "ARAÇLAR";
+            toolTipItem9.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            toolTipItem9.Appearance.Options.UseImage = true;
+            toolTipItem9.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem9.Image")));
+            toolTipItem9.LeftIndent = 6;
+            toolTipItem9.Text = "Araçların Şirkete olan maliyetlerini hesaplama formu.\r\nMasrafları Aylık,Günlük, S" +
     "aatlik olarak hesaplar";
-            superToolTip20.Items.Add(toolTipTitleItem20);
-            superToolTip20.Items.Add(toolTipItem20);
-            this.barButtonItem4.SuperTip = superToolTip20;
+            superToolTip9.Items.Add(toolTipTitleItem9);
+            superToolTip9.Items.Add(toolTipItem9);
+            this.barButtonItem4.SuperTip = superToolTip9;
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // barButtonItem6
@@ -532,15 +530,15 @@ namespace IhalematikPro.Forms
             this.barButtonItem10.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.LargeGlyph")));
             this.barButtonItem10.LargeWidth = 100;
             this.barButtonItem10.Name = "barButtonItem10";
-            toolTipTitleItem21.Text = "TEDARİKÇİLER";
-            toolTipItem21.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
-            toolTipItem21.Appearance.Options.UseImage = true;
-            toolTipItem21.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem21.Image")));
-            toolTipItem21.LeftIndent = 6;
-            toolTipItem21.Text = "Kendisinden Malzeme aldığımız firmaları tanımlama formu";
-            superToolTip21.Items.Add(toolTipTitleItem21);
-            superToolTip21.Items.Add(toolTipItem21);
-            this.barButtonItem10.SuperTip = superToolTip21;
+            toolTipTitleItem10.Text = "TEDARİKÇİLER";
+            toolTipItem10.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
+            toolTipItem10.Appearance.Options.UseImage = true;
+            toolTipItem10.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem10.Image")));
+            toolTipItem10.LeftIndent = 6;
+            toolTipItem10.Text = "Kendisinden Malzeme aldığımız firmaları tanımlama formu";
+            superToolTip10.Items.Add(toolTipTitleItem10);
+            superToolTip10.Items.Add(toolTipItem10);
+            this.barButtonItem10.SuperTip = superToolTip10;
             this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
             // 
             // barButtonItem12
@@ -548,7 +546,7 @@ namespace IhalematikPro.Forms
             this.barButtonItem12.Caption = "Yeni Teklif Oluştur";
             this.barButtonItem12.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.Glyph")));
             this.barButtonItem12.Id = 9;
-            this.barButtonItem12.LargeGlyph = global::IhalematikProUI.Properties.Resources.price_tag_icon;
+            this.barButtonItem12.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.LargeGlyph")));
             this.barButtonItem12.LargeWidth = 100;
             this.barButtonItem12.Name = "barButtonItem12";
             this.barButtonItem12.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick);
@@ -586,7 +584,7 @@ namespace IhalematikPro.Forms
             // 
             this.barButtonItem23.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem23.Caption = "Firma Bilgileri";
-            this.barButtonItem23.Glyph = global::IhalematikProUI.Properties.Resources.agency_icon__1_;
+            this.barButtonItem23.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem23.Glyph")));
             this.barButtonItem23.Id = 24;
             this.barButtonItem23.Name = "barButtonItem23";
             this.barButtonItem23.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem23_ItemClick_1);
@@ -603,7 +601,7 @@ namespace IhalematikPro.Forms
             // 
             this.barButtonItem25.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem25.Caption = "Lisans İşlemleri";
-            this.barButtonItem25.Glyph = global::IhalematikProUI.Properties.Resources.License_manager_icon__1_;
+            this.barButtonItem25.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem25.Glyph")));
             this.barButtonItem25.Id = 26;
             this.barButtonItem25.Name = "barButtonItem25";
             // 
@@ -619,7 +617,7 @@ namespace IhalematikPro.Forms
             // 
             this.barButtonItem27.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem27.Caption = "Program Hakkında";
-            this.barButtonItem27.Glyph = global::IhalematikProUI.Properties.Resources.System_Info_icon__1_;
+            this.barButtonItem27.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem27.Glyph")));
             this.barButtonItem27.Id = 28;
             this.barButtonItem27.Name = "barButtonItem27";
             this.barButtonItem27.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem27_ItemClick);
@@ -628,9 +626,9 @@ namespace IhalematikPro.Forms
             // 
             this.barbtnCikisx.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barbtnCikisx.Caption = "Çıkış";
-            this.barbtnCikisx.Glyph = global::IhalematikProUI.Properties.Resources.Login_icon__1_;
+            this.barbtnCikisx.Glyph = ((System.Drawing.Image)(resources.GetObject("barbtnCikisx.Glyph")));
             this.barbtnCikisx.Id = 29;
-            this.barbtnCikisx.LargeGlyph = global::IhalematikProUI.Properties.Resources.File_Picture_icon;
+            this.barbtnCikisx.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barbtnCikisx.LargeGlyph")));
             this.barbtnCikisx.Name = "barbtnCikisx";
             this.barbtnCikisx.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnCikisx_ItemClick);
             // 
@@ -640,11 +638,11 @@ namespace IhalematikPro.Forms
             this.barButtonItem1.Caption = "Çıkış";
             this.barButtonItem1.CloseRadialMenuOnItemClick = true;
             this.barButtonItem1.DropDownControl = this.popupMenu1;
-            this.barButtonItem1.Glyph = global::IhalematikProUI.Properties.Resources.Action_exit_icon;
+            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
             this.barButtonItem1.Id = 2;
             this.barButtonItem1.ItemAppearance.Pressed.BackColor = System.Drawing.SystemColors.Control;
             this.barButtonItem1.ItemAppearance.Pressed.Options.UseBackColor = true;
-            this.barButtonItem1.LargeGlyph = global::IhalematikProUI.Properties.Resources.Action_exit_icon;
+            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -657,17 +655,18 @@ namespace IhalematikPro.Forms
             this.popupMenu1.ItemLinks.Add(this.barButtonItem25);
             this.popupMenu1.ItemLinks.Add(this.barButtonItem27);
             this.popupMenu1.ItemLinks.Add(this.barSubItem1);
+            this.popupMenu1.ItemLinks.Add(this.barButtonItem18, true);
             this.popupMenu1.ItemLinks.Add(this.barButtonItem26);
-            this.popupMenu1.ItemLinks.Add(this.barbtnCikisx);
+            this.popupMenu1.ItemLinks.Add(this.barbtnCikisx, true);
             this.popupMenu1.Name = "popupMenu1";
             this.popupMenu1.Ribbon = this.ribbon;
             // 
             // barSubItem1
             // 
             this.barSubItem1.Caption = "Temalar";
-            this.barSubItem1.Glyph = global::IhalematikProUI.Properties.Resources.File_Picture_icon;
+            this.barSubItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem1.Glyph")));
             this.barSubItem1.Id = 1;
-            this.barSubItem1.LargeGlyph = global::IhalematikProUI.Properties.Resources.File_Picture_icon;
+            this.barSubItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem1.LargeGlyph")));
             this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem8),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem9),
@@ -680,9 +679,9 @@ namespace IhalematikPro.Forms
             // barButtonItem8
             // 
             this.barButtonItem8.Caption = "Tema -1";
-            this.barButtonItem8.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem8.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.Glyph")));
             this.barButtonItem8.Id = 14;
-            this.barButtonItem8.LargeGlyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem8.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.LargeGlyph")));
             this.barButtonItem8.LargeWidth = 120;
             this.barButtonItem8.Name = "barButtonItem8";
             this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
@@ -690,9 +689,9 @@ namespace IhalematikPro.Forms
             // barButtonItem9
             // 
             this.barButtonItem9.Caption = "Tema-2";
-            this.barButtonItem9.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem9.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.Glyph")));
             this.barButtonItem9.Id = 15;
-            this.barButtonItem9.LargeGlyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem9.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.LargeGlyph")));
             this.barButtonItem9.LargeWidth = 120;
             this.barButtonItem9.Name = "barButtonItem9";
             this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
@@ -700,9 +699,9 @@ namespace IhalematikPro.Forms
             // barButtonItem11
             // 
             this.barButtonItem11.Caption = "Tema-3";
-            this.barButtonItem11.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem11.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem11.Glyph")));
             this.barButtonItem11.Id = 16;
-            this.barButtonItem11.LargeGlyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem11.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem11.LargeGlyph")));
             this.barButtonItem11.LargeWidth = 120;
             this.barButtonItem11.Name = "barButtonItem11";
             this.barButtonItem11.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
@@ -710,9 +709,9 @@ namespace IhalematikPro.Forms
             // barButtonItem16
             // 
             this.barButtonItem16.Caption = "Tema-4";
-            this.barButtonItem16.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem16.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem16.Glyph")));
             this.barButtonItem16.Id = 17;
-            this.barButtonItem16.LargeGlyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem16.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem16.LargeGlyph")));
             this.barButtonItem16.LargeWidth = 120;
             this.barButtonItem16.Name = "barButtonItem16";
             this.barButtonItem16.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem16_ItemClick);
@@ -720,12 +719,22 @@ namespace IhalematikPro.Forms
             // barButtonItem17
             // 
             this.barButtonItem17.Caption = "Tema-5";
-            this.barButtonItem17.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem17.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.Glyph")));
             this.barButtonItem17.Id = 18;
-            this.barButtonItem17.LargeGlyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem17.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.LargeGlyph")));
             this.barButtonItem17.LargeWidth = 120;
             this.barButtonItem17.Name = "barButtonItem17";
             this.barButtonItem17.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem17_ItemClick);
+            // 
+            // barButtonItem18
+            // 
+            this.barButtonItem18.Caption = "İhale Panosu ";
+            this.barButtonItem18.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.Glyph")));
+            this.barButtonItem18.Id = 19;
+            this.barButtonItem18.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.LargeGlyph")));
+            this.barButtonItem18.LargeWidth = 120;
+            this.barButtonItem18.Name = "barButtonItem18";
+            this.barButtonItem18.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem18_ItemClick);
             // 
             // barButtonItem3
             // 
@@ -735,22 +744,12 @@ namespace IhalematikPro.Forms
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
-            // barButtonItem18
-            // 
-            this.barButtonItem18.Caption = "Tema-6";
-            this.barButtonItem18.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
-            this.barButtonItem18.Id = 19;
-            this.barButtonItem18.LargeGlyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
-            this.barButtonItem18.LargeWidth = 120;
-            this.barButtonItem18.Name = "barButtonItem18";
-            this.barButtonItem18.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem18_ItemClick);
-            // 
             // barButtonItem19
             // 
             this.barButtonItem19.Caption = "Tema-7";
-            this.barButtonItem19.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem19.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem19.Glyph")));
             this.barButtonItem19.Id = 20;
-            this.barButtonItem19.LargeGlyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem19.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem19.LargeGlyph")));
             this.barButtonItem19.LargeWidth = 120;
             this.barButtonItem19.Name = "barButtonItem19";
             this.barButtonItem19.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem19_ItemClick);
@@ -758,9 +757,9 @@ namespace IhalematikPro.Forms
             // barButtonItem20
             // 
             this.barButtonItem20.Caption = "Tema-8";
-            this.barButtonItem20.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem20.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem20.Glyph")));
             this.barButtonItem20.Id = 21;
-            this.barButtonItem20.LargeGlyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem20.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem20.LargeGlyph")));
             this.barButtonItem20.LargeWidth = 120;
             this.barButtonItem20.Name = "barButtonItem20";
             this.barButtonItem20.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem20_ItemClick);
@@ -768,9 +767,9 @@ namespace IhalematikPro.Forms
             // barButtonItem21
             // 
             this.barButtonItem21.Caption = "Tema-9";
-            this.barButtonItem21.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem21.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem21.Glyph")));
             this.barButtonItem21.Id = 27;
-            this.barButtonItem21.LargeGlyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem21.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem21.LargeGlyph")));
             this.barButtonItem21.LargeWidth = 120;
             this.barButtonItem21.Name = "barButtonItem21";
             this.barButtonItem21.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem21_ItemClick);
@@ -778,9 +777,9 @@ namespace IhalematikPro.Forms
             // barButtonItem22
             // 
             this.barButtonItem22.Caption = "Tema-10";
-            this.barButtonItem22.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem22.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem22.Glyph")));
             this.barButtonItem22.Id = 28;
-            this.barButtonItem22.LargeGlyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem22.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem22.LargeGlyph")));
             this.barButtonItem22.LargeWidth = 120;
             this.barButtonItem22.Name = "barButtonItem22";
             this.barButtonItem22.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem22_ItemClick);
@@ -789,7 +788,7 @@ namespace IhalematikPro.Forms
             // 
             this.barStaticItem3.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.barStaticItem3.Caption = "Temalar";
-            this.barStaticItem3.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barStaticItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem3.Glyph")));
             this.barStaticItem3.Id = 6;
             this.barStaticItem3.Name = "barStaticItem3";
             this.barStaticItem3.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -802,15 +801,15 @@ namespace IhalematikPro.Forms
             this.barBtnDovizKurlar.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnDovizKurlar.LargeGlyph")));
             this.barBtnDovizKurlar.LargeWidth = 120;
             this.barBtnDovizKurlar.Name = "barBtnDovizKurlar";
-            toolTipTitleItem22.Text = "KURLAR";
-            toolTipItem22.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
-            toolTipItem22.Appearance.Options.UseImage = true;
-            toolTipItem22.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem22.Image")));
-            toolTipItem22.LeftIndent = 6;
-            toolTipItem22.Text = "Aktif döviz kurlarını tanımlama ve listeleme formu";
-            superToolTip22.Items.Add(toolTipTitleItem22);
-            superToolTip22.Items.Add(toolTipItem22);
-            this.barBtnDovizKurlar.SuperTip = superToolTip22;
+            toolTipTitleItem11.Text = "KURLAR";
+            toolTipItem11.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
+            toolTipItem11.Appearance.Options.UseImage = true;
+            toolTipItem11.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem11.Image")));
+            toolTipItem11.LeftIndent = 6;
+            toolTipItem11.Text = "Aktif döviz kurlarını tanımlama ve listeleme formu";
+            superToolTip11.Items.Add(toolTipTitleItem11);
+            superToolTip11.Items.Add(toolTipItem11);
+            this.barBtnDovizKurlar.SuperTip = superToolTip11;
             this.barBtnDovizKurlar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnDovizKurlar_ItemClick);
             // 
             // barStaticItem5
@@ -919,7 +918,7 @@ namespace IhalematikPro.Forms
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.AllowTextClipping = false;
-            this.ribbonPageGroup4.Glyph = global::IhalematikProUI.Properties.Resources.kirmizi;
+            this.ribbonPageGroup4.Glyph = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup4.Glyph")));
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem6);
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem7);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
@@ -969,6 +968,11 @@ namespace IhalematikPro.Forms
             // 
             this.repositoryItemPictureEdit2.Name = "repositoryItemPictureEdit2";
             // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            // 
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem6);
@@ -988,7 +992,7 @@ namespace IhalematikPro.Forms
             // 
             this.barButtonItem5.Caption = "Tema-1";
             this.barButtonItem5.Id = 13;
-            this.barButtonItem5.LargeGlyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem5.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.LargeGlyph")));
             this.barButtonItem5.Name = "barButtonItem5";
             // 
             // barStaticItem1
@@ -1036,12 +1040,13 @@ namespace IhalematikPro.Forms
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.Controls.Add(this.panelControl4);
-            this.panelControl1.Controls.Add(this.panelControl2);
+            this.panelControl1.Controls.Add(this.pnIhaleListesi);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(3, 3);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1443, 347);
             this.panelControl1.TabIndex = 0;
+            this.panelControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelControl1_MouseMove);
             // 
             // panelControl4
             // 
@@ -1055,7 +1060,7 @@ namespace IhalematikPro.Forms
             this.panelControl4.Enabled = false;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1043, 36);
+            this.panelControl4.Size = new System.Drawing.Size(1043, 42);
             this.panelControl4.TabIndex = 2;
             // 
             // labelControl1
@@ -1068,59 +1073,147 @@ namespace IhalematikPro.Forms
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = " ASH Group Ltd.Şti.";
             // 
-            // panelControl2
+            // pnIhaleListesi
             // 
-            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.groupControl1);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl2.Location = new System.Drawing.Point(1043, 0);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(400, 347);
-            this.panelControl2.TabIndex = 0;
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupControl1.AppearanceCaption.ForeColor = System.Drawing.Color.Gray;
-            this.groupControl1.AppearanceCaption.Options.UseFont = true;
-            this.groupControl1.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl1.Controls.Add(this.grdActiveTenderList);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(400, 347);
-            this.groupControl1.TabIndex = 1;
-            this.groupControl1.Text = "İHALE PANOSU";
+            this.pnIhaleListesi.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnIhaleListesi.Controls.Add(this.grdActiveTenderList);
+            this.pnIhaleListesi.Controls.Add(this.labelControl2);
+            this.pnIhaleListesi.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnIhaleListesi.Location = new System.Drawing.Point(1043, 0);
+            this.pnIhaleListesi.Name = "pnIhaleListesi";
+            this.pnIhaleListesi.Size = new System.Drawing.Size(400, 347);
+            this.pnIhaleListesi.TabIndex = 0;
+            this.pnIhaleListesi.Visible = false;
             // 
             // grdActiveTenderList
             // 
             this.grdActiveTenderList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdActiveTenderList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdActiveTenderList.Location = new System.Drawing.Point(3, 40);
+            this.grdActiveTenderList.Location = new System.Drawing.Point(0, 35);
             this.grdActiveTenderList.MainView = this.gridView1;
             this.grdActiveTenderList.Margin = new System.Windows.Forms.Padding(4);
             this.grdActiveTenderList.Name = "grdActiveTenderList";
-            this.grdActiveTenderList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btnIhaleAc});
-            this.grdActiveTenderList.Size = new System.Drawing.Size(394, 304);
-            this.grdActiveTenderList.TabIndex = 2;
+            this.grdActiveTenderList.Size = new System.Drawing.Size(400, 312);
+            this.grdActiveTenderList.TabIndex = 3;
             this.grdActiveTenderList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
-            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.SteelBlue;
-            this.gridView1.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.ColumnFilterButton.BackColor = System.Drawing.Color.Silver;
+            this.gridView1.Appearance.ColumnFilterButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridView1.Appearance.ColumnFilterButton.BorderColor = System.Drawing.Color.Silver;
+            this.gridView1.Appearance.ColumnFilterButton.ForeColor = System.Drawing.Color.Gray;
+            this.gridView1.Appearance.ColumnFilterButton.Options.UseBackColor = true;
+            this.gridView1.Appearance.ColumnFilterButton.Options.UseBorderColor = true;
+            this.gridView1.Appearance.ColumnFilterButton.Options.UseForeColor = true;
+            this.gridView1.Appearance.ColumnFilterButtonActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridView1.Appearance.ColumnFilterButtonActive.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            this.gridView1.Appearance.ColumnFilterButtonActive.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridView1.Appearance.ColumnFilterButtonActive.ForeColor = System.Drawing.Color.Blue;
+            this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
+            this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
+            this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
+            this.gridView1.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridView1.Appearance.Empty.Options.UseBackColor = true;
+            this.gridView1.Appearance.EvenRow.BackColor = System.Drawing.Color.Silver;
+            this.gridView1.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
+            this.gridView1.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.EvenRow.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.gridView1.Appearance.EvenRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.EvenRow.Options.UseForeColor = true;
+            this.gridView1.Appearance.FilterCloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.gridView1.Appearance.FilterCloseButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.gridView1.Appearance.FilterCloseButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.gridView1.Appearance.FilterCloseButton.ForeColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.FilterCloseButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.gridView1.Appearance.FilterCloseButton.Options.UseBackColor = true;
+            this.gridView1.Appearance.FilterCloseButton.Options.UseBorderColor = true;
+            this.gridView1.Appearance.FilterCloseButton.Options.UseForeColor = true;
+            this.gridView1.Appearance.FilterPanel.BackColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.FilterPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.gridView1.Appearance.FilterPanel.ForeColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.FilterPanel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.gridView1.Appearance.FilterPanel.Options.UseBackColor = true;
+            this.gridView1.Appearance.FilterPanel.Options.UseForeColor = true;
+            this.gridView1.Appearance.FixedLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.gridView1.Appearance.FixedLine.Options.UseBackColor = true;
+            this.gridView1.Appearance.FocusedCell.BackColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Purple;
+            this.gridView1.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gridView1.Appearance.FocusedCell.Options.UseForeColor = true;
+            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.Purple;
+            this.gridView1.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(50)))), ((int)(((byte)(178)))));
             this.gridView1.Appearance.FocusedRow.ForeColor = System.Drawing.Color.White;
             this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
-            this.gridView1.Appearance.FocusedRow.Options.UseFont = true;
             this.gridView1.Appearance.FocusedRow.Options.UseForeColor = true;
-            this.gridView1.Appearance.SelectedRow.BackColor = System.Drawing.Color.SteelBlue;
-            this.gridView1.Appearance.SelectedRow.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridView1.Appearance.FooterPanel.BackColor = System.Drawing.Color.Silver;
+            this.gridView1.Appearance.FooterPanel.BorderColor = System.Drawing.Color.Silver;
+            this.gridView1.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.FooterPanel.Options.UseBackColor = true;
+            this.gridView1.Appearance.FooterPanel.Options.UseBorderColor = true;
+            this.gridView1.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.gridView1.Appearance.GroupButton.BackColor = System.Drawing.Color.Silver;
+            this.gridView1.Appearance.GroupButton.BorderColor = System.Drawing.Color.Silver;
+            this.gridView1.Appearance.GroupButton.ForeColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.GroupButton.Options.UseBackColor = true;
+            this.gridView1.Appearance.GroupButton.Options.UseBorderColor = true;
+            this.gridView1.Appearance.GroupButton.Options.UseForeColor = true;
+            this.gridView1.Appearance.GroupFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.gridView1.Appearance.GroupFooter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.gridView1.Appearance.GroupFooter.ForeColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.GroupFooter.Options.UseBackColor = true;
+            this.gridView1.Appearance.GroupFooter.Options.UseBorderColor = true;
+            this.gridView1.Appearance.GroupFooter.Options.UseForeColor = true;
+            this.gridView1.Appearance.GroupPanel.BackColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.GroupPanel.BackColor2 = System.Drawing.Color.White;
+            this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.GroupPanel.ForeColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.GroupPanel.Options.UseBackColor = true;
+            this.gridView1.Appearance.GroupPanel.Options.UseFont = true;
+            this.gridView1.Appearance.GroupPanel.Options.UseForeColor = true;
+            this.gridView1.Appearance.GroupRow.BackColor = System.Drawing.Color.Gray;
+            this.gridView1.Appearance.GroupRow.ForeColor = System.Drawing.Color.Silver;
+            this.gridView1.Appearance.GroupRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.GroupRow.Options.UseForeColor = true;
+            this.gridView1.Appearance.HeaderPanel.BackColor = System.Drawing.Color.Silver;
+            this.gridView1.Appearance.HeaderPanel.BorderColor = System.Drawing.Color.Silver;
+            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridView1.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.HeaderPanel.Options.UseBackColor = true;
+            this.gridView1.Appearance.HeaderPanel.Options.UseBorderColor = true;
+            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridView1.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.gridView1.Appearance.HideSelectionRow.BackColor = System.Drawing.Color.Gray;
+            this.gridView1.Appearance.HideSelectionRow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.gridView1.Appearance.HideSelectionRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.HideSelectionRow.Options.UseForeColor = true;
+            this.gridView1.Appearance.HorzLine.BackColor = System.Drawing.Color.Silver;
+            this.gridView1.Appearance.HorzLine.Options.UseBackColor = true;
+            this.gridView1.Appearance.OddRow.BackColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.OddRow.BackColor2 = System.Drawing.Color.White;
+            this.gridView1.Appearance.OddRow.ForeColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.OddRow.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.gridView1.Appearance.OddRow.Options.UseBackColor = true;
+            this.gridView1.Appearance.OddRow.Options.UseForeColor = true;
+            this.gridView1.Appearance.Preview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.gridView1.Appearance.Preview.BackColor2 = System.Drawing.Color.White;
+            this.gridView1.Appearance.Preview.ForeColor = System.Drawing.Color.Purple;
+            this.gridView1.Appearance.Preview.Options.UseBackColor = true;
+            this.gridView1.Appearance.Preview.Options.UseForeColor = true;
+            this.gridView1.Appearance.Row.BackColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.Row.ForeColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.Row.Options.UseBackColor = true;
+            this.gridView1.Appearance.Row.Options.UseForeColor = true;
+            this.gridView1.Appearance.RowSeparator.BackColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.RowSeparator.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridView1.Appearance.RowSeparator.Options.UseBackColor = true;
+            this.gridView1.Appearance.SelectedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(10)))), ((int)(((byte)(138)))));
             this.gridView1.Appearance.SelectedRow.ForeColor = System.Drawing.Color.White;
             this.gridView1.Appearance.SelectedRow.Options.UseBackColor = true;
-            this.gridView1.Appearance.SelectedRow.Options.UseFont = true;
             this.gridView1.Appearance.SelectedRow.Options.UseForeColor = true;
+            this.gridView1.Appearance.VertLine.BackColor = System.Drawing.Color.Silver;
+            this.gridView1.Appearance.VertLine.Options.UseBackColor = true;
             this.gridView1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
@@ -1128,9 +1221,12 @@ namespace IhalematikPro.Forms
             this.gridColumn2});
             this.gridView1.GridControl = this.grdActiveTenderList;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.EnableAppearanceEvenRow = true;
+            this.gridView1.OptionsView.EnableAppearanceOddRow = true;
             this.gridView1.OptionsView.ShowDetailButtons = false;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.PaintStyleName = "Web";
             // 
             // gridColumn1
             // 
@@ -1149,8 +1245,12 @@ namespace IhalematikPro.Forms
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn3.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
             this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.gridColumn3.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn3.Caption = "İHALE ADI";
@@ -1166,10 +1266,12 @@ namespace IhalematikPro.Forms
             // 
             // gridColumn2
             // 
-            this.gridColumn2.AppearanceCell.BackColor = System.Drawing.Color.LightYellow;
-            this.gridColumn2.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn2.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
             this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.gridColumn2.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn2.AppearanceHeader.Options.UseFont = true;
             this.gridColumn2.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn2.Caption = "KALAN GÜN";
@@ -1183,13 +1285,29 @@ namespace IhalematikPro.Forms
             this.gridColumn2.VisibleIndex = 1;
             this.gridColumn2.Width = 108;
             // 
-            // btnIhaleAc
+            // labelControl2
             // 
-            this.btnIhaleAc.AutoHeight = false;
-            this.btnIhaleAc.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnIhaleAc.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
-            this.btnIhaleAc.Name = "btnIhaleAc";
-            this.btnIhaleAc.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.labelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl2.Appearance.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Show;
+            this.labelControl2.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.labelControl2.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl2.AppearanceHovered.TextOptions.Trimming = DevExpress.Utils.Trimming.None;
+            this.labelControl2.AppearanceHovered.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.labelControl2.AppearanceHovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelControl2.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.labelControl2.LineVisible = true;
+            this.labelControl2.Location = new System.Drawing.Point(0, 0);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(400, 35);
+            this.labelControl2.TabIndex = 0;
+            this.labelControl2.Text = "İHALE PANOSU";
+            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
             // 
             // timer1
             // 
@@ -1242,6 +1360,7 @@ namespace IhalematikPro.Forms
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel)).EndInit();
             this.MainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -1250,13 +1369,10 @@ namespace IhalematikPro.Forms
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pnIhaleListesi)).EndInit();
+            this.pnIhaleListesi.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdActiveTenderList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnIhaleAc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1340,18 +1456,18 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem1;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.PanelControl pnIhaleListesi;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
         private System.Windows.Forms.Timer timer1;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.PanelControl panelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraGrid.GridControl grdActiveTenderList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnIhaleAc;
-        private DevExpress.XtraEditors.PanelControl panelControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }

@@ -93,5 +93,15 @@ namespace IhalematikPro.Forms
             txtUnitPrice.ResetText();
             txtNumber.Focus();
         }
+
+        private void repositoryItemButtonEdit1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            pozMenu.Visible = false;
+            grdPozList.Enabled = false;
+            frm_pozGuncelle pg = new frm_pozGuncelle();
+            pg.ShowDialog();
+            pozMenu.Visible = true;
+            grdPozList.Enabled = true;
+        }
     }
 }

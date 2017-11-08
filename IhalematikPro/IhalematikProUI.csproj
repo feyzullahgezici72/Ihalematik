@@ -271,6 +271,18 @@
     <Compile Include="Forms\frm_MalzemeFiyatTeklifiOlustur.Designer.cs">
       <DependentUpon>frm_MalzemeFiyatTeklifiOlustur.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frm_obfGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_obfGuncelle.Designer.cs">
+      <DependentUpon>frm_obfGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_pozGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_pozGuncelle.Designer.cs">
+      <DependentUpon>frm_pozGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frm_ProgramHakkinda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -446,6 +458,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_MalzemeFiyatTeklifiOlustur.resx">
       <DependentUpon>frm_MalzemeFiyatTeklifiOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_obfGuncelle.resx">
+      <DependentUpon>frm_obfGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_pozGuncelle.resx">
+      <DependentUpon>frm_pozGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_ProgramHakkinda.resx">
       <DependentUpon>frm_ProgramHakkinda.cs</DependentUpon>

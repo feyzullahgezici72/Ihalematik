@@ -42,7 +42,8 @@ namespace IhalematikPro.Forms
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
             
             grdActiveTenderList.DataSource = list;
-            //this.webBrowser1.Navigate("https://ekap.kik.gov.tr");
+            this.WindowState = FormWindowState.Maximized;
+
 
         }
 
@@ -566,7 +567,17 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem18_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
+            if (pnIhaleListesi.Visible == false)
+            {
+                pnIhaleListesi.Visible = true;
+                barButtonItem18.ButtonStyle = BarButtonStyle.Check;
+            }
+            else
+            {
+                pnIhaleListesi.Visible = false;
+                barButtonItem18.ButtonStyle = BarButtonStyle.Default;
+            }
+
         }
 
         private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)
@@ -624,6 +635,23 @@ namespace IhalematikPro.Forms
         {
             Forms.frm_FirmaTanimlama frm = new frm_FirmaTanimlama();
             frm.ShowDialog();
+        }
+
+        private void panelControl1_MouseMove(object sender, MouseEventArgs e)
+        {
+           
+            
+         
+        }
+
+        private void simpleButton1_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void labelControl2_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

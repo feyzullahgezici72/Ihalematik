@@ -79,11 +79,11 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dateTimePicker1.Location = new System.Drawing.Point(150, 251);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(305, 30);
+            this.dateTimePicker1.Size = new System.Drawing.Size(305, 28);
             this.dateTimePicker1.TabIndex = 3;
             // 
             // simpleButton2
@@ -105,12 +105,12 @@
             this.txtAciklama.Location = new System.Drawing.Point(150, 159);
             this.txtAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAciklama.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAciklama.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtAciklama.Properties.Appearance.Options.UseFont = true;
             this.txtAciklama.Properties.Appearance.Options.UseForeColor = true;
             this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtAciklama.Size = new System.Drawing.Size(719, 34);
+            this.txtAciklama.Size = new System.Drawing.Size(719, 30);
             this.txtAciklama.TabIndex = 1;
             // 
             // txtTeklifNo
@@ -119,34 +119,34 @@
             this.txtTeklifNo.Location = new System.Drawing.Point(150, 113);
             this.txtTeklifNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTeklifNo.Name = "txtTeklifNo";
-            this.txtTeklifNo.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTeklifNo.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTeklifNo.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txtTeklifNo.Properties.Appearance.Options.UseFont = true;
             this.txtTeklifNo.Properties.Appearance.Options.UseForeColor = true;
             this.txtTeklifNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtTeklifNo.Properties.Mask.BeepOnError = true;
-            this.txtTeklifNo.Size = new System.Drawing.Size(188, 34);
+            this.txtTeklifNo.Size = new System.Drawing.Size(188, 30);
             this.txtTeklifNo.TabIndex = 0;
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl2.Location = new System.Drawing.Point(43, 163);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl2.Location = new System.Drawing.Point(54, 163);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(99, 24);
+            this.labelControl2.Size = new System.Drawing.Size(88, 22);
             this.labelControl2.TabIndex = 9;
             this.labelControl2.Text = "İhale Adı:";
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl1.Location = new System.Drawing.Point(49, 117);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl1.Location = new System.Drawing.Point(57, 117);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(93, 24);
+            this.labelControl1.Size = new System.Drawing.Size(85, 22);
             this.labelControl1.TabIndex = 10;
             this.labelControl1.Text = "İhale No:";
             // 
@@ -354,22 +354,22 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePicker2.Location = new System.Drawing.Point(150, 293);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(131, 30);
+            this.dateTimePicker2.Size = new System.Drawing.Size(131, 28);
             this.dateTimePicker2.TabIndex = 4;
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl4.Location = new System.Drawing.Point(28, 209);
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl4.Location = new System.Drawing.Point(40, 209);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(114, 24);
+            this.labelControl4.Size = new System.Drawing.Size(102, 22);
             this.labelControl4.TabIndex = 9;
             this.labelControl4.Text = "Kurum Adı:";
             // 
@@ -378,35 +378,35 @@
             this.textEdit1.Location = new System.Drawing.Point(150, 205);
             this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textEdit1.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
             this.textEdit1.Properties.Appearance.Options.UseForeColor = true;
             this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit1.Size = new System.Drawing.Size(719, 34);
+            this.textEdit1.Size = new System.Drawing.Size(719, 30);
             this.textEdit1.TabIndex = 2;
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl5.Location = new System.Drawing.Point(18, 255);
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl5.Location = new System.Drawing.Point(30, 255);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(124, 24);
+            this.labelControl5.Size = new System.Drawing.Size(112, 22);
             this.labelControl5.TabIndex = 9;
             this.labelControl5.Text = "İhale Tarihi:";
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl6.Location = new System.Drawing.Point(84, 299);
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl6.Location = new System.Drawing.Point(37, 298);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(58, 24);
+            this.labelControl6.Size = new System.Drawing.Size(105, 22);
             this.labelControl6.TabIndex = 9;
-            this.labelControl6.Text = "Saati:";
+            this.labelControl6.Text = "İhale Saati:";
             // 
             // frm_YeniIhaleYarat
             // 
