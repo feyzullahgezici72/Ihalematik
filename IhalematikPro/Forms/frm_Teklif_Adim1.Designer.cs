@@ -59,7 +59,6 @@
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.grdMaterialList2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.ChkIscilik = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -67,6 +66,7 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ChkIscilik = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -519,8 +519,8 @@
             this.grdMaterialList2.Appearance.FilterPanel.Options.UseForeColor = true;
             this.grdMaterialList2.Appearance.FixedLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.grdMaterialList2.Appearance.FixedLine.Options.UseBackColor = true;
-            this.grdMaterialList2.Appearance.FocusedCell.BackColor = System.Drawing.Color.Purple;
-            this.grdMaterialList2.Appearance.FocusedCell.ForeColor = System.Drawing.Color.White;
+            this.grdMaterialList2.Appearance.FocusedCell.BackColor = System.Drawing.Color.Yellow;
+            this.grdMaterialList2.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
             this.grdMaterialList2.Appearance.FocusedCell.Options.UseBackColor = true;
             this.grdMaterialList2.Appearance.FocusedCell.Options.UseForeColor = true;
             this.grdMaterialList2.Appearance.FocusedRow.BackColor = System.Drawing.Color.Purple;
@@ -623,12 +623,6 @@
             this.grdMaterialList2.PaintStyleName = "Web";
             this.grdMaterialList2.ColumnUnboundExpressionChanged += new DevExpress.XtraGrid.Views.Base.ColumnEventHandler(this.grdMaterialList2_ColumnUnboundExpressionChanged);
             this.grdMaterialList2.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.grdMaterialList2_CellValueChanged);
-            // 
-            // ChkIscilik
-            // 
-            this.ChkIscilik.AutoHeight = false;
-            this.ChkIscilik.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
-            this.ChkIscilik.Name = "ChkIscilik";
             // 
             // gridColumn2
             // 
@@ -780,6 +774,12 @@
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 8;
             this.gridColumn8.Width = 149;
+            // 
+            // ChkIscilik
+            // 
+            this.ChkIscilik.AutoHeight = false;
+            this.ChkIscilik.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.ChkIscilik.Name = "ChkIscilik";
             // 
             // frm_Teklif_Adim1
             // 

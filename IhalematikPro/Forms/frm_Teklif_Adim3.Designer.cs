@@ -165,7 +165,7 @@
             this.panelControl2.Controls.Add(this.labelControl4);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 50);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1376, 80);
             this.panelControl2.TabIndex = 22;
@@ -194,7 +194,7 @@
             this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
             this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnTumuneUygula.Location = new System.Drawing.Point(130, 18);
-            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
             this.btnTumuneUygula.Size = new System.Drawing.Size(39, 32);
             this.btnTumuneUygula.TabIndex = 34;
@@ -206,7 +206,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl2.Location = new System.Drawing.Point(18, 16);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(53, 29);
             this.labelControl2.TabIndex = 35;
@@ -229,7 +229,7 @@
             this.lblTenderNumber.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTenderNumber.Appearance.ForeColor = System.Drawing.Color.Crimson;
             this.lblTenderNumber.Location = new System.Drawing.Point(146, 9);
-            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderNumber.Name = "lblTenderNumber";
             this.lblTenderNumber.Size = new System.Drawing.Size(0, 29);
             this.lblTenderNumber.TabIndex = 37;
@@ -239,7 +239,7 @@
             this.lblTenderDescription.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTenderDescription.Appearance.ForeColor = System.Drawing.Color.Crimson;
             this.lblTenderDescription.Location = new System.Drawing.Point(146, 44);
-            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderDescription.Name = "lblTenderDescription";
             this.lblTenderDescription.Size = new System.Drawing.Size(0, 29);
             this.lblTenderDescription.TabIndex = 36;
@@ -249,7 +249,7 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl1.Location = new System.Drawing.Point(15, 48);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(118, 29);
             this.labelControl1.TabIndex = 35;
@@ -260,7 +260,7 @@
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl4.Location = new System.Drawing.Point(18, 9);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(115, 29);
             this.labelControl4.TabIndex = 35;
@@ -277,7 +277,7 @@
             this.panelControl1.Controls.Add(this.txtAdimAciklama);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1376, 50);
             this.panelControl1.TabIndex = 21;
@@ -300,7 +300,7 @@
             this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1312, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(64, 50);
             this.btnKapat.TabIndex = 3;
@@ -316,7 +316,7 @@
             this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
             this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.txtAdimAciklama.Location = new System.Drawing.Point(72, 7);
-            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
             this.txtAdimAciklama.Size = new System.Drawing.Size(341, 37);
@@ -332,7 +332,7 @@
             this.panelControl3.Controls.Add(this.panel6);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl3.Location = new System.Drawing.Point(0, 660);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(1376, 118);
             this.panelControl3.TabIndex = 25;
@@ -343,7 +343,7 @@
             this.panel2.Controls.Add(this.btnKaydet);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(868, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(140, 118);
             this.panel2.TabIndex = 10;
@@ -357,7 +357,7 @@
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
             this.btnKaydet.Location = new System.Drawing.Point(0, 0);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(6);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(136, 118);
             this.btnKaydet.TabIndex = 3;
@@ -376,7 +376,7 @@
             this.panel6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.ForeColor = System.Drawing.Color.Teal;
             this.panel6.Location = new System.Drawing.Point(1008, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(368, 118);
             this.panel6.TabIndex = 9;
@@ -385,7 +385,7 @@
             // 
             this.txtTotalAmount.Enabled = false;
             this.txtTotalAmount.Location = new System.Drawing.Point(158, 80);
-            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(6);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTotalAmount.Properties.Appearance.Options.UseBackColor = true;
@@ -399,7 +399,7 @@
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl7.Location = new System.Drawing.Point(21, 85);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(138, 21);
             this.labelControl7.TabIndex = 8;
@@ -410,7 +410,7 @@
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl6.Location = new System.Drawing.Point(6, 9);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(158, 21);
             this.labelControl6.TabIndex = 9;
@@ -420,7 +420,7 @@
             // 
             this.txtMarkupAmount.Enabled = false;
             this.txtMarkupAmount.Location = new System.Drawing.Point(158, 42);
-            this.txtMarkupAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMarkupAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarkupAmount.Name = "txtMarkupAmount";
             this.txtMarkupAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMarkupAmount.Properties.Appearance.Options.UseBackColor = true;
@@ -433,7 +433,7 @@
             // 
             this.txtBaseAmount.Enabled = false;
             this.txtBaseAmount.Location = new System.Drawing.Point(158, 4);
-            this.txtBaseAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBaseAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtBaseAmount.Name = "txtBaseAmount";
             this.txtBaseAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBaseAmount.Properties.Appearance.Options.UseBackColor = true;
@@ -447,7 +447,7 @@
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl8.Location = new System.Drawing.Point(30, 47);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(126, 21);
             this.labelControl8.TabIndex = 10;
@@ -725,10 +725,10 @@
             // grdAddVehicle
             // 
             this.grdAddVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdAddVehicle.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdAddVehicle.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddVehicle.Location = new System.Drawing.Point(3, 393);
             this.grdAddVehicle.MainView = this.gridViewAddVehicle;
-            this.grdAddVehicle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdAddVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddVehicle.Name = "grdAddVehicle";
             this.grdAddVehicle.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstVehicle});
@@ -876,8 +876,8 @@
             // 
             // colAddVehicleVehicle
             // 
-            this.colAddVehicleVehicle.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.colAddVehicleVehicle.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
+            this.colAddVehicleVehicle.AppearanceHeader.BackColor = System.Drawing.Color.White;
+            this.colAddVehicleVehicle.AppearanceHeader.BackColor2 = System.Drawing.Color.Teal;
             this.colAddVehicleVehicle.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colAddVehicleVehicle.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colAddVehicleVehicle.AppearanceHeader.Options.UseBackColor = true;
@@ -888,7 +888,7 @@
             this.colAddVehicleVehicle.Name = "colAddVehicleVehicle";
             this.colAddVehicleVehicle.Visible = true;
             this.colAddVehicleVehicle.VisibleIndex = 0;
-            this.colAddVehicleVehicle.Width = 213;
+            this.colAddVehicleVehicle.Width = 215;
             // 
             // rpstVehicle
             // 
@@ -899,8 +899,8 @@
             // 
             // colAddVehicleQuantity
             // 
-            this.colAddVehicleQuantity.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.colAddVehicleQuantity.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
+            this.colAddVehicleQuantity.AppearanceHeader.BackColor = System.Drawing.Color.White;
+            this.colAddVehicleQuantity.AppearanceHeader.BackColor2 = System.Drawing.Color.Teal;
             this.colAddVehicleQuantity.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colAddVehicleQuantity.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colAddVehicleQuantity.AppearanceHeader.Options.UseBackColor = true;
@@ -914,8 +914,8 @@
             // 
             // colAddVehicleUnitTime
             // 
-            this.colAddVehicleUnitTime.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.colAddVehicleUnitTime.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
+            this.colAddVehicleUnitTime.AppearanceHeader.BackColor = System.Drawing.Color.White;
+            this.colAddVehicleUnitTime.AppearanceHeader.BackColor2 = System.Drawing.Color.Teal;
             this.colAddVehicleUnitTime.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colAddVehicleUnitTime.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colAddVehicleUnitTime.AppearanceHeader.Options.UseBackColor = true;
@@ -925,12 +925,12 @@
             this.colAddVehicleUnitTime.Name = "colAddVehicleUnitTime";
             this.colAddVehicleUnitTime.Visible = true;
             this.colAddVehicleUnitTime.VisibleIndex = 3;
-            this.colAddVehicleUnitTime.Width = 62;
+            this.colAddVehicleUnitTime.Width = 76;
             // 
             // colAddVehicleUnitTimeType
             // 
-            this.colAddVehicleUnitTimeType.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.colAddVehicleUnitTimeType.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
+            this.colAddVehicleUnitTimeType.AppearanceHeader.BackColor = System.Drawing.Color.White;
+            this.colAddVehicleUnitTimeType.AppearanceHeader.BackColor2 = System.Drawing.Color.Teal;
             this.colAddVehicleUnitTimeType.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colAddVehicleUnitTimeType.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colAddVehicleUnitTimeType.AppearanceHeader.Options.UseBackColor = true;
@@ -940,12 +940,12 @@
             this.colAddVehicleUnitTimeType.Name = "colAddVehicleUnitTimeType";
             this.colAddVehicleUnitTimeType.Visible = true;
             this.colAddVehicleUnitTimeType.VisibleIndex = 2;
-            this.colAddVehicleUnitTimeType.Width = 112;
+            this.colAddVehicleUnitTimeType.Width = 140;
             // 
             // colAddVehicleWorkerUnitPrice
             // 
-            this.colAddVehicleWorkerUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.colAddVehicleWorkerUnitPrice.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
+            this.colAddVehicleWorkerUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.White;
+            this.colAddVehicleWorkerUnitPrice.AppearanceHeader.BackColor2 = System.Drawing.Color.Teal;
             this.colAddVehicleWorkerUnitPrice.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colAddVehicleWorkerUnitPrice.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colAddVehicleWorkerUnitPrice.AppearanceHeader.Options.UseBackColor = true;
@@ -957,7 +957,7 @@
             this.colAddVehicleWorkerUnitPrice.Name = "colAddVehicleWorkerUnitPrice";
             this.colAddVehicleWorkerUnitPrice.Visible = true;
             this.colAddVehicleWorkerUnitPrice.VisibleIndex = 4;
-            this.colAddVehicleWorkerUnitPrice.Width = 228;
+            this.colAddVehicleWorkerUnitPrice.Width = 192;
             // 
             // groupControl3
             // 
@@ -973,10 +973,10 @@
             // grdAddWorker
             // 
             this.grdAddWorker.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grdAddWorker.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdAddWorker.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddWorker.Location = new System.Drawing.Point(0, 0);
             this.grdAddWorker.MainView = this.gridViewAddWorker;
-            this.grdAddWorker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdAddWorker.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddWorker.Name = "grdAddWorker";
             this.grdAddWorker.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstWorker});
@@ -1132,7 +1132,7 @@
             this.colAddWorkerWorker.Name = "colAddWorkerWorker";
             this.colAddWorkerWorker.Visible = true;
             this.colAddWorkerWorker.VisibleIndex = 0;
-            this.colAddWorkerWorker.Width = 215;
+            this.colAddWorkerWorker.Width = 216;
             // 
             // rpstWorker
             // 
@@ -1165,7 +1165,7 @@
             this.colAddWorkerUnitTime.Name = "colAddWorkerUnitTime";
             this.colAddWorkerUnitTime.Visible = true;
             this.colAddWorkerUnitTime.VisibleIndex = 3;
-            this.colAddWorkerUnitTime.Width = 67;
+            this.colAddWorkerUnitTime.Width = 72;
             // 
             // colAddWorkerUnitTimeType
             // 
@@ -1178,7 +1178,7 @@
             this.colAddWorkerUnitTimeType.Name = "colAddWorkerUnitTimeType";
             this.colAddWorkerUnitTimeType.Visible = true;
             this.colAddWorkerUnitTimeType.VisibleIndex = 2;
-            this.colAddWorkerUnitTimeType.Width = 107;
+            this.colAddWorkerUnitTimeType.Width = 138;
             // 
             // colAddWorkerWorkerUnitPrice
             // 
@@ -1193,7 +1193,7 @@
             this.colAddWorkerWorkerUnitPrice.Name = "colAddWorkerWorkerUnitPrice";
             this.colAddWorkerWorkerUnitPrice.Visible = true;
             this.colAddWorkerWorkerUnitPrice.VisibleIndex = 4;
-            this.colAddWorkerWorkerUnitPrice.Width = 227;
+            this.colAddWorkerWorkerUnitPrice.Width = 196;
             // 
             // groupControl1
             // 
@@ -1304,7 +1304,7 @@
             this.panelControl5.Controls.Add(this.btnPanelKapat);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl5.Location = new System.Drawing.Point(3, 3);
-            this.panelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl5.Name = "panelControl5";
             this.panelControl5.Size = new System.Drawing.Size(720, 54);
             this.panelControl5.TabIndex = 4;
@@ -1319,7 +1319,7 @@
             this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.simpleButton1.Location = new System.Drawing.Point(542, 0);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(62, 54);
             this.simpleButton1.TabIndex = 7;
@@ -1335,7 +1335,7 @@
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
             this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnGuncelle.Location = new System.Drawing.Point(604, 0);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(52, 54);
             this.btnGuncelle.TabIndex = 6;
@@ -1348,7 +1348,7 @@
             this.labelControl3.LineColor = System.Drawing.Color.Red;
             this.labelControl3.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.labelControl3.Location = new System.Drawing.Point(10, 10);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.ShowLineShadow = false;
             this.labelControl3.Size = new System.Drawing.Size(446, 37);
@@ -1367,7 +1367,7 @@
             this.btnPanelKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnPanelKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnPanelKapat.Location = new System.Drawing.Point(656, 0);
-            this.btnPanelKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPanelKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnPanelKapat.Name = "btnPanelKapat";
             this.btnPanelKapat.Size = new System.Drawing.Size(64, 54);
             this.btnPanelKapat.TabIndex = 1;
@@ -1386,7 +1386,7 @@
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Teklif_Adim3";
