@@ -48,16 +48,16 @@ namespace IhalematikPro.Model
 
         protected override void SaveEntity(EntityBase Entity)
         {
-            OBF OBF = (OBF)Entity;
+            OBF oBF = (OBF)Entity;
 
-            if (OBF.Id == 0)
+            List<OBF> existingOBFs = UIOBFManager.Instance.GetOBF(oBF.Number);
+            if (existingOBFs != null)
             {
-                OBF existingOBF = UIOBFManager.Instance.GetOBF(OBF.Number);
-                if (existingOBF != null)
+                OBF existingPoz = existingOBFs.Where(p => p.Id != oBF.Id).FirstOrDefault();
+                if (existingPoz != null)
                 {
                     System.Windows.Forms.MessageBox.Show("Bu OBF numarasi ile kayit bulunmaktadir");
-
-                }//OBFProvider.Instance.get
+                }
                 else
                 {
                     OperationResult result = OBFProvider.Instance.Save(Entity);
@@ -65,6 +65,14 @@ namespace IhalematikPro.Model
                     {
                         System.Windows.Forms.MessageBox.Show("OBF Kaydedildi");
                     }
+                }
+            }
+            else
+            {
+                OperationResult result = OBFProvider.Instance.Save(Entity);
+                if (result.Success)
+                {
+                    System.Windows.Forms.MessageBox.Show("OBF Kaydedildi");
                 }
             }
         }
