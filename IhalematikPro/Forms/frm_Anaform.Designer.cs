@@ -239,8 +239,8 @@ namespace IhalematikPro.Forms
             this.ribbon.OptionsTouch.AffectOnlyRibbon = true;
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
-            this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem3);
             this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem1);
+            this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem3);
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage8,
@@ -738,6 +738,7 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem3
             // 
+            this.barButtonItem3.Caption = "Simge Durumuna Küçült";
             this.barButtonItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.Glyph")));
             this.barButtonItem3.Id = 3;
             this.barButtonItem3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.LargeGlyph")));
