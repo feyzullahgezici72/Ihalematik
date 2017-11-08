@@ -34,7 +34,7 @@
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.PanelKira = new DevExpress.XtraEditors.PanelControl();
             this.rdHour = new System.Windows.Forms.RadioButton();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.txtRentFare = new DevExpress.XtraEditors.TextEdit();
             this.rdDay = new System.Windows.Forms.RadioButton();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.rdMonth = new System.Windows.Forms.RadioButton();
@@ -77,7 +77,7 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PanelKira)).BeginInit();
             this.PanelKira.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRentFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRentDriverFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRentGeneralFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRentFuelOilDay.Properties)).BeginInit();
@@ -144,6 +144,7 @@
             this.btnGuncelle.Size = new System.Drawing.Size(87, 42);
             this.btnGuncelle.TabIndex = 22;
             this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
@@ -165,7 +166,7 @@
             this.PanelKira.Appearance.Options.UseBackColor = true;
             this.PanelKira.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.PanelKira.Controls.Add(this.rdHour);
-            this.PanelKira.Controls.Add(this.textEdit5);
+            this.PanelKira.Controls.Add(this.txtRentFare);
             this.PanelKira.Controls.Add(this.rdDay);
             this.PanelKira.Controls.Add(this.labelControl11);
             this.PanelKira.Controls.Add(this.rdMonth);
@@ -197,19 +198,19 @@
             this.rdHour.Text = "Saatlik";
             this.rdHour.UseVisualStyleBackColor = true;
             // 
-            // textEdit5
+            // txtRentFare
             // 
-            this.textEdit5.Location = new System.Drawing.Point(122, 44);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit5.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit5.Properties.DisplayFormat.FormatString = "N2";
-            this.textEdit5.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.textEdit5.Properties.EditFormat.FormatString = "N2";
-            this.textEdit5.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.textEdit5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEdit5.Size = new System.Drawing.Size(149, 20);
-            this.textEdit5.TabIndex = 3;
+            this.txtRentFare.Location = new System.Drawing.Point(122, 44);
+            this.txtRentFare.Name = "txtRentFare";
+            this.txtRentFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtRentFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtRentFare.Properties.DisplayFormat.FormatString = "N2";
+            this.txtRentFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.txtRentFare.Properties.EditFormat.FormatString = "N2";
+            this.txtRentFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.txtRentFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtRentFare.Size = new System.Drawing.Size(149, 20);
+            this.txtRentFare.TabIndex = 3;
             // 
             // rdDay
             // 
@@ -693,7 +694,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PanelKira)).EndInit();
             this.PanelKira.ResumeLayout(false);
             this.PanelKira.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRentFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRentDriverFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRentGeneralFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRentFuelOilDay.Properties)).EndInit();
@@ -740,7 +741,7 @@
         private System.Windows.Forms.RadioButton rbCompanyVehicle;
         private DevExpress.XtraEditors.PanelControl PanelKira;
         private System.Windows.Forms.RadioButton rdHour;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit txtRentFare;
         private System.Windows.Forms.RadioButton rdDay;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private System.Windows.Forms.RadioButton rdMonth;

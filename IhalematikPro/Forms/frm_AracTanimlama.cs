@@ -45,7 +45,7 @@ namespace IhalematikPro.Forms
             ddlVehicleTitle.SelectedIndex = 0;
         }
 
-        private void LoadGrid()
+        public void LoadGrid()
         {
             List<VehicleModel> models = UIVehicleManager.Instance.GetVehicles();
             grdVehicle.DataSource = models;

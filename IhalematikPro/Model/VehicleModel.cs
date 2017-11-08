@@ -129,6 +129,7 @@ namespace IhalematikPro.Model
             vehicle.GeneralFare = this.GeneralFare;
             vehicle.OtherFare = this.OtherFare;
             vehicle.RentFare = this.RentFare;
+            vehicle.RentType = this.RentType;
             return vehicle;
         }
 
