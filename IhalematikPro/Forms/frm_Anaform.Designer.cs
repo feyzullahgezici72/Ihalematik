@@ -635,14 +635,14 @@ namespace IhalematikPro.Forms
             // barButtonItem1
             // 
             this.barButtonItem1.AllowAllUp = true;
-            this.barButtonItem1.Caption = "Çıkış";
+            this.barButtonItem1.Caption = "Menü";
             this.barButtonItem1.CloseRadialMenuOnItemClick = true;
             this.barButtonItem1.DropDownControl = this.popupMenu1;
-            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
+            this.barButtonItem1.Glyph = global::IhalematikProUI.Properties.Resources.Menu_icon;
             this.barButtonItem1.Id = 2;
             this.barButtonItem1.ItemAppearance.Pressed.BackColor = System.Drawing.SystemColors.Control;
             this.barButtonItem1.ItemAppearance.Pressed.Options.UseBackColor = true;
-            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
+            this.barButtonItem1.LargeGlyph = global::IhalematikProUI.Properties.Resources.Menu_icon;
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
