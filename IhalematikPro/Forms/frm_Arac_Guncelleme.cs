@@ -82,6 +82,7 @@ namespace IhalematikProUI.Forms
                 else
                 {
                     rbRentVehicle.Checked = true;
+                    txtRentFare.Text = model.RentFare.ToString();
                     txtRentFuelOilFare.Text = model.FuelOilFare.ToString();// = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>();
                     txtRentFuelOilDay.Text = model.FuelOilDay.ToString(); //= SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>();
                     txtRentDriverFare.Text = model.DriverFare.ToString(); //SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>();
@@ -104,6 +105,52 @@ namespace IhalematikProUI.Forms
                 }
                 //model.Save();
             }
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            VehicleModel model = new VehicleModel(CurrentVehicle);
+            model.TitleId = ((VehicleTitleModel)ddlVehicleTitle.SelectedItem).Id.Value;
+            if (rbCompanyVehicle.Checked)
+            {
+                model.IsCompanyVehicle = true;
+                model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtCompanyFuelOilFare.Text);
+                model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtCompanyFuelOilDay.Text);
+                model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtCompanyDriverFare.Text);
+                model.MaintenanceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtCompanyMaintenanceFare.Text);
+                model.ServiceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtCompanyServiceFare.Text);
+                model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtCompanyGeneralFare.Text);
+                model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtCompanyOtherFare.Text);
+            }
+            else
+            {
+                model.IsCompanyVehicle = false;
+
+                if (rdHour.Checked)
+                {
+                    model.RentType = IhalematikProBL.Enum.RentTypesEnum.Hour;
+                }
+                else if (rdDay.Checked)
+                {
+                    model.RentType = IhalematikProBL.Enum.RentTypesEnum.Day;
+                }
+                else if (rdMonth.Checked)
+                {
+                    model.RentType = IhalematikProBL.Enum.RentTypesEnum.Month;
+                }
+                model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentFuelOilFare.Text);
+                model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtRentFuelOilDay.Text);
+                model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentDriverFare.Text);
+                model.RentFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentFare.Text);
+                //model.MaintenanceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMaintenanceFare.Text);
+                //model.ServiceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtServiceFare.Text);
+                model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentGeneralFare.Text);
+                model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentOtherFare.Text);
+            }
+            
+            model.Save();
+           this._owner.LoadGrid();
+
         }
     }
 }
