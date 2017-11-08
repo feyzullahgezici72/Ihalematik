@@ -49,14 +49,16 @@ namespace IhalematikPro.Model
         {
             Poz poz = (Poz)Entity;
 
-            if (poz.Id == 0)
+            //if (poz.Id == 0)
+            //{
+            List<Poz> existingPozs = UIPozManager.Instance.GetPoz(poz.Number);
+            if (existingPozs != null)
             {
-                Poz existingPoz = UIPozManager.Instance.GetPoz(poz.Number);
+                Poz existingPoz = existingPozs.Where(p => p.Id != poz.Id).FirstOrDefault();
                 if (existingPoz != null)
                 {
                     System.Windows.Forms.MessageBox.Show("Bu Poz numarasi ile kayit bulunmaktadir");
-
-                }//PozProvider.Instance.get
+                }
                 else
                 {
                     OperationResult result = PozProvider.Instance.Save(Entity);
@@ -64,6 +66,15 @@ namespace IhalematikPro.Model
                     {
                         System.Windows.Forms.MessageBox.Show("Poz Kaydedildi");
                     }
+                }
+
+            }
+            else
+            {
+                OperationResult result = PozProvider.Instance.Save(Entity);
+                if (result.Success)
+                {
+                    System.Windows.Forms.MessageBox.Show("Poz Kaydedildi");
                 }
             }
         }

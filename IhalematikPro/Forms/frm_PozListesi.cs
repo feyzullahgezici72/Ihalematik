@@ -36,7 +36,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-           
+
         }
         public void bekleyiniz()
         {
@@ -49,7 +49,7 @@ namespace IhalematikPro.Forms
                 frm.ShowDialog();
             }
         }
-        private void LoadGrid()
+        public void LoadGrid()
         {
             List<PozModel> pozs = UIPozManager.Instance.GetPozs();
             grdPozList.DataSource = pozs;
@@ -96,10 +96,14 @@ namespace IhalematikPro.Forms
 
         private void repositoryItemButtonEdit1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            frm_pozGuncelle frm = new frm_pozGuncelle(this);
+            int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewPozList.GetFocusedRowCellValue("Id"));
+            frm.CurrentPozId = id;
+
             pozMenu.Visible = false;
             grdPozList.Enabled = false;
-            frm_pozGuncelle pg = new frm_pozGuncelle();
-            pg.ShowDialog();
+
+            frm.ShowDialog();
             pozMenu.Visible = true;
             grdPozList.Enabled = true;
         }

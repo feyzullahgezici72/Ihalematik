@@ -26,12 +26,12 @@ namespace IhalematikPro.Manager
             return models;
         }
 
-        public Poz GetPoz(string PozNumber)
+        public List<Poz> GetPoz(string PozNumber)
         {
             List<Poz> pozs = PozProvider.Instance.GetItems("Number", PozNumber);
             if (pozs.Count != 0)
             {
-                return pozs.First();
+                return pozs;
             }
             return null;
         }
