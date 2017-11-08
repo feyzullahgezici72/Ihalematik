@@ -728,9 +728,7 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem18
             // 
-            this.barButtonItem18.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem18.Caption = "İhale Panosu ";
-            this.barButtonItem18.Down = true;
             this.barButtonItem18.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.Glyph")));
             this.barButtonItem18.Id = 19;
             this.barButtonItem18.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.LargeGlyph")));

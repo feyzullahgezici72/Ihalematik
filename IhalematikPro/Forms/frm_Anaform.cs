@@ -42,7 +42,7 @@ namespace IhalematikPro.Forms
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
             
             grdActiveTenderList.DataSource = list;
-           
+            this.WindowState = FormWindowState.Maximized;
 
 
         }

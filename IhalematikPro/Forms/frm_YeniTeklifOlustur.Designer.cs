@@ -130,10 +130,10 @@
             this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnIptal.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnIptal.Location = new System.Drawing.Point(788, 0);
+            this.btnIptal.Location = new System.Drawing.Point(778, 0);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
             this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(50, 54);
+            this.btnIptal.Size = new System.Drawing.Size(60, 54);
             this.btnIptal.TabIndex = 1;
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
             // 
