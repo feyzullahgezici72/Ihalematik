@@ -102,5 +102,15 @@ namespace IhalematikPro.Forms
             txtUnitPrice.ResetText();
             txtNumber.Focus();
         }
+
+        private void btnGncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            pnlObfKayit.Visible = false;
+            grdOBFList.Enabled = false;
+            frm_obfGuncelle obfg = new frm_obfGuncelle();
+            obfg.ShowDialog();
+            pnlObfKayit.Visible = true;
+            grdOBFList.Enabled = true;
+        }
     }
 }

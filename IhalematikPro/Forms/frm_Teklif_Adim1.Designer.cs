@@ -59,7 +59,6 @@
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.grdMaterialList2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ChkIscilik = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -598,7 +597,6 @@
             this.grdMaterialList2.Appearance.VertLine.Options.UseBackColor = true;
             this.grdMaterialList2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.grdMaterialList2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn9,
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
@@ -614,6 +612,8 @@
             this.grdMaterialList2.OptionsNavigation.AutoFocusNewRow = true;
             this.grdMaterialList2.OptionsNavigation.EnterMoveNextColumn = true;
             this.grdMaterialList2.OptionsSelection.CheckBoxSelectorColumnWidth = 60;
+            this.grdMaterialList2.OptionsSelection.MultiSelect = true;
+            this.grdMaterialList2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.grdMaterialList2.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.False;
             this.grdMaterialList2.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.False;
             this.grdMaterialList2.OptionsView.EnableAppearanceEvenRow = true;
@@ -623,21 +623,6 @@
             this.grdMaterialList2.PaintStyleName = "Web";
             this.grdMaterialList2.ColumnUnboundExpressionChanged += new DevExpress.XtraGrid.Views.Base.ColumnEventHandler(this.grdMaterialList2_ColumnUnboundExpressionChanged);
             this.grdMaterialList2.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.grdMaterialList2_CellValueChanged);
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.AppearanceHeader.BackColor = System.Drawing.Color.Maroon;
-            this.gridColumn9.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn9.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gridColumn9.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn9.Caption = "İŞÇİLİK";
-            this.gridColumn9.ColumnEdit = this.ChkIscilik;
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.OptionsColumn.AllowEdit = false;
-            this.gridColumn9.OptionsColumn.AllowFocus = false;
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 0;
-            this.gridColumn9.Width = 82;
             // 
             // ChkIscilik
             // 
@@ -879,7 +864,6 @@
         private DevExpress.XtraEditors.LabelControl lblTenderDescription;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.PictureBox pcWorld;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit ChkIscilik;
     }
 }

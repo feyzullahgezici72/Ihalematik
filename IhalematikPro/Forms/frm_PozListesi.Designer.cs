@@ -34,19 +34,15 @@
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.btnSil = new DevExpress.XtraEditors.SimpleButton();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.pozMenu = new DevExpress.XtraEditors.GroupControl();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -65,18 +61,24 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnGncelle = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnSl = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pozMenu)).BeginInit();
+            this.pozMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdPozList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSl)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -165,68 +167,32 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "POZ LİSTESİ";
             // 
-            // btnSil
+            // pozMenu
             // 
-            this.btnSil.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSil.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnSil.Appearance.Options.UseFont = true;
-            this.btnSil.Appearance.Options.UseForeColor = true;
-            this.btnSil.Image = global::IhalematikProUI.Properties.Resources.Actions_trash_empty_icon__1_;
-            this.btnSil.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnSil.Location = new System.Drawing.Point(376, 195);
-            this.btnSil.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(54, 50);
-            toolTipTitleItem1.Text = "Sil";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.btnSil.SuperTip = superToolTip1;
-            this.btnSil.TabIndex = 22;
-            // 
-            // groupControl3
-            // 
-            this.groupControl3.Appearance.BackColor = System.Drawing.Color.PowderBlue;
-            this.groupControl3.Appearance.BackColor2 = System.Drawing.Color.White;
-            this.groupControl3.Appearance.Options.UseBackColor = true;
-            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupControl3.AppearanceCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.groupControl3.AppearanceCaption.Options.UseFont = true;
-            this.groupControl3.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl3.Controls.Add(this.btnSil);
-            this.groupControl3.Controls.Add(this.btnGuncelle);
-            this.groupControl3.Controls.Add(this.btnKaydet);
-            this.groupControl3.Controls.Add(this.btnTemizle);
-            this.groupControl3.Controls.Add(this.labelControl5);
-            this.groupControl3.Controls.Add(this.txtUnit);
-            this.groupControl3.Controls.Add(this.labelControl4);
-            this.groupControl3.Controls.Add(this.txtDescription);
-            this.groupControl3.Controls.Add(this.labelControl3);
-            this.groupControl3.Controls.Add(this.txtUnitPrice);
-            this.groupControl3.Controls.Add(this.txtNumber);
-            this.groupControl3.Controls.Add(this.labelControl2);
-            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl3.Location = new System.Drawing.Point(0, 50);
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(442, 608);
-            this.groupControl3.TabIndex = 37;
-            this.groupControl3.Text = "Yeni Poz Ekle";
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnGuncelle.Appearance.Options.UseFont = true;
-            this.btnGuncelle.Appearance.Options.UseForeColor = true;
-            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnGuncelle.Location = new System.Drawing.Point(254, 195);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(54, 50);
-            toolTipTitleItem2.Text = "Güncelle";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            this.btnGuncelle.SuperTip = superToolTip2;
-            this.btnGuncelle.TabIndex = 27;
+            this.pozMenu.Appearance.BackColor = System.Drawing.Color.PowderBlue;
+            this.pozMenu.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.pozMenu.Appearance.Options.UseBackColor = true;
+            this.pozMenu.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.pozMenu.AppearanceCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.pozMenu.AppearanceCaption.Options.UseFont = true;
+            this.pozMenu.AppearanceCaption.Options.UseForeColor = true;
+            this.pozMenu.Controls.Add(this.btnKaydet);
+            this.pozMenu.Controls.Add(this.btnTemizle);
+            this.pozMenu.Controls.Add(this.labelControl5);
+            this.pozMenu.Controls.Add(this.txtUnit);
+            this.pozMenu.Controls.Add(this.labelControl4);
+            this.pozMenu.Controls.Add(this.txtDescription);
+            this.pozMenu.Controls.Add(this.labelControl3);
+            this.pozMenu.Controls.Add(this.txtUnitPrice);
+            this.pozMenu.Controls.Add(this.txtNumber);
+            this.pozMenu.Controls.Add(this.labelControl2);
+            this.pozMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pozMenu.Location = new System.Drawing.Point(0, 50);
+            this.pozMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.pozMenu.Name = "pozMenu";
+            this.pozMenu.Size = new System.Drawing.Size(442, 608);
+            this.pozMenu.TabIndex = 37;
+            this.pozMenu.Text = "Yeni Poz Ekle";
             // 
             // btnKaydet
             // 
@@ -235,15 +201,17 @@
             this.btnKaydet.Appearance.Options.UseFont = true;
             this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
-            this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKaydet.Location = new System.Drawing.Point(196, 195);
+            this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnKaydet.Location = new System.Drawing.Point(170, 210);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(54, 50);
-            toolTipTitleItem3.Text = "Kaydet";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            this.btnKaydet.SuperTip = superToolTip3;
+            this.btnKaydet.Size = new System.Drawing.Size(125, 50);
+            toolTipTitleItem1.Text = "Kaydet";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.btnKaydet.SuperTip = superToolTip1;
             this.btnKaydet.TabIndex = 26;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnTemizle
             // 
@@ -252,15 +220,16 @@
             this.btnTemizle.Appearance.Options.UseFont = true;
             this.btnTemizle.Appearance.Options.UseForeColor = true;
             this.btnTemizle.Image = global::IhalematikProUI.Properties.Resources.Actions_edit_clear_icon;
-            this.btnTemizle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnTemizle.Location = new System.Drawing.Point(316, 195);
+            this.btnTemizle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnTemizle.Location = new System.Drawing.Point(303, 210);
             this.btnTemizle.Margin = new System.Windows.Forms.Padding(4);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(54, 50);
-            toolTipTitleItem4.Text = "Temizle";
-            superToolTip4.Items.Add(toolTipTitleItem4);
-            this.btnTemizle.SuperTip = superToolTip4;
+            this.btnTemizle.Size = new System.Drawing.Size(125, 50);
+            toolTipTitleItem2.Text = "Temizle";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.btnTemizle.SuperTip = superToolTip2;
             this.btnTemizle.TabIndex = 25;
+            this.btnTemizle.Text = "Temizle";
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // labelControl5
@@ -362,6 +331,9 @@
             this.grdPozList.MainView = this.gridView1;
             this.grdPozList.Margin = new System.Windows.Forms.Padding(4);
             this.grdPozList.Name = "grdPozList";
+            this.grdPozList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.btnGncelle,
+            this.btnSl});
             this.grdPozList.Size = new System.Drawing.Size(1067, 608);
             this.grdPozList.TabIndex = 38;
             this.grdPozList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -487,7 +459,9 @@
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
-            this.gridColumn4});
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6});
             this.gridView1.GridControl = this.grdPozList;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsFind.FindFilterColumns = "";
@@ -585,6 +559,53 @@
             this.gridColumn4.VisibleIndex = 3;
             this.gridColumn4.Width = 139;
             // 
+            // gridColumn5
+            // 
+            this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn5.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
+            this.gridColumn5.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn5.ColumnEdit = this.btnGncelle;
+            this.gridColumn5.MaxWidth = 30;
+            this.gridColumn5.MinWidth = 30;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 30;
+            // 
+            // btnGncelle
+            // 
+            this.btnGncelle.AutoHeight = false;
+            this.btnGncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.btnGncelle.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.btnGncelle.Name = "btnGncelle";
+            this.btnGncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnGncelle.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryItemButtonEdit1_ButtonClick);
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn6.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
+            this.gridColumn6.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn6.ColumnEdit = this.btnSl;
+            this.gridColumn6.MaxWidth = 30;
+            this.gridColumn6.MinWidth = 30;
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.Width = 30;
+            // 
+            // btnSl
+            // 
+            this.btnSl.AutoHeight = false;
+            this.btnSl.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.btnSl.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.btnSl.Name = "btnSl";
+            this.btnSl.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
             // frm_PozListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -593,7 +614,7 @@
             this.ClientSize = new System.Drawing.Size(1509, 658);
             this.ControlBox = false;
             this.Controls.Add(this.grdPozList);
-            this.Controls.Add(this.groupControl3);
+            this.Controls.Add(this.pozMenu);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -608,15 +629,17 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-            this.groupControl3.ResumeLayout(false);
-            this.groupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pozMenu)).EndInit();
+            this.pozMenu.ResumeLayout(false);
+            this.pozMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdPozList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSl)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -626,7 +649,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraEditors.GroupControl pozMenu;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.TextEdit txtUnit;
         private DevExpress.XtraEditors.LabelControl labelControl4;
@@ -637,12 +660,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private DevExpress.Xpo.XPPageSelector xpPageSelector1;
-        private DevExpress.XtraEditors.SimpleButton btnSil;
         private DevExpress.XtraEditors.SimpleButton btnListele;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.SimpleButton btnTemizle;
-        private DevExpress.XtraEditors.SimpleButton btnGuncelle;
         private System.Windows.Forms.PictureBox pcWorld;
         private DevExpress.XtraGrid.GridControl grdPozList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
@@ -650,5 +671,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnGncelle;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSl;
     }
 }
