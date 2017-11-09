@@ -33,7 +33,7 @@ namespace IhalematikPro.Forms
                 frm.ShowDialog();
             }
         }
-        private void LoadGrid()
+        public void LoadGrid()
         {
             List<OBFModel> items = UIOBFManager.Instance.GetOBFs();
             grdOBFList.DataSource = items;
@@ -80,7 +80,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void groupControl3_Paint(object sender, PaintEventArgs e)
@@ -90,8 +90,8 @@ namespace IhalematikPro.Forms
 
         private void btnListele_Click(object sender, EventArgs e)
         {
-          MesajVer();
-          LoadGrid();
+            MesajVer();
+            LoadGrid();
         }
 
         private void btnTemizle_Click(object sender, EventArgs e)
@@ -105,10 +105,13 @@ namespace IhalematikPro.Forms
 
         private void btnGncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            frm_obfGuncelle frm = new frm_obfGuncelle(this);
+            int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOBFList.GetFocusedRowCellValue("Id"));
+            frm.CurrentOBFId = id;
+
             pnlObfKayit.Visible = false;
             grdOBFList.Enabled = false;
-            frm_obfGuncelle obfg = new frm_obfGuncelle();
-            obfg.ShowDialog();
+            frm.ShowDialog();
             pnlObfKayit.Visible = true;
             grdOBFList.Enabled = true;
         }

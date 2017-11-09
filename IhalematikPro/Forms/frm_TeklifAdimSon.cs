@@ -12,6 +12,9 @@ using IhalematikPro.Manager;
 using IhalematikPro.Model;
 using IhalematikProBL.Entity;
 using IhalematikProUI.Report;
+using IhalematikProUI.Model;
+using DevExpress.XtraReports.UI;
+//using IhalematikProUI.Report;
 
 namespace IhalematikProUI.Forms
 {
@@ -76,7 +79,39 @@ namespace IhalematikProUI.Forms
             txtMarkupWorkerAmount.Text = markupWorkerAmount.ToString("c2");
             txtMarkupAmount.Text = (markupWorkerAmount + markupMaterialAmount).ToString("c2");
 
-            lblTotalMarkupNonKDV.Text = totalMarkupNonKDV.ToString("c2"); 
+            lblTotalMarkupNonKDV.Text = totalMarkupNonKDV.ToString("c2");
+        }
+
+        private void btnObfKayit_Click(object sender, EventArgs e)
+        {
+            MainReport ms = new MainReport();
+
+            List<ReportModel> models = new List<ReportModel>();
+
+            List<MaterialList> items = CurrentManager.CurrentTender.MaterialList;
+            List<MaterialListModel> materialModels = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+
+            if (materialModels != null)
+            {
+                foreach (var item in materialModels)
+                {
+                    ReportModel model = new ReportModel();
+                    model.Description = item.PozOBFDescription;
+                    model.Number1 = item.PozOBFNumber;
+                    model.Number = string.Empty;
+                    model.Quantity = item.Quantity.ToString();
+                    model.Total = "";
+                    model.Unit = item.PozOBFUnit;
+                    model.UnitPrice = item.PozOBFUnitPrice.ToString("C2");
+                    models.Add(model);
+                } 
+            }
+            
+            ms.DataSource = models;
+
+            ReportPrintTool tool = new ReportPrintTool(ms);
+            ms.ShowPreview();
+
         }
 
         //private void Rapor_Click(object sender, EventArgs e)

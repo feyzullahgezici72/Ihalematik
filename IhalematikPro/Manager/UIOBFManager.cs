@@ -26,12 +26,12 @@ namespace IhalematikPro.Manager
             return models;
         }
 
-        public OBF GetOBF(string PozNumber)
+        public List<OBF> GetOBF(string PozNumber)
         {
             List<OBF> pozs = OBFProvider.Instance.GetItems("Number", PozNumber);
             if (pozs.Count != 0)
             {
-                return pozs.First();
+                return pozs;
             }
             return null;
         }

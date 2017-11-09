@@ -6,9 +6,9 @@ using DevExpress.XtraReports.UI;
 
 namespace IhalematikProUI.Report
 {
-    public partial class MainReportcs : DevExpress.XtraReports.UI.XtraReport
+    public partial class MainReport : DevExpress.XtraReports.UI.XtraReport
     {
-        public MainReportcs()
+        public MainReport()
         {
             InitializeComponent();
         }

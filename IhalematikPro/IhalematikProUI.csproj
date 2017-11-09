@@ -399,6 +399,7 @@
     <Compile Include="Model\MaterialListModel.cs" />
     <Compile Include="Model\OBFModel.cs" />
     <Compile Include="Model\PozModel.cs" />
+    <Compile Include="Model\ReportModel.cs" />
     <Compile Include="Model\TenderMaterialListEquipmentModel.cs" />
     <Compile Include="Model\TitleModel.cs" />
     <Compile Include="Model\UnitTimeTypes.cs" />
@@ -408,11 +409,11 @@
     <Compile Include="Model\WorkerModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report\MainReportcs.cs">
+    <Compile Include="Report\MainReport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\MainReportcs.Designer.cs">
-      <DependentUpon>MainReportcs.cs</DependentUpon>
+    <Compile Include="Report\MainReport.Designer.cs">
+      <DependentUpon>MainReport.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\frm_Anaform.resx">
       <DependentUpon>frm_Anaform.cs</DependentUpon>
@@ -527,8 +528,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Report\MainReportcs.resx">
-      <DependentUpon>MainReportcs.cs</DependentUpon>
+    <EmbeddedResource Include="Report\MainReport.resx">
+      <DependentUpon>MainReport.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -816,6 +817,7 @@
   <ItemGroup>
     <None Include="pic\Menu-icon.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
