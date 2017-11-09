@@ -31,6 +31,7 @@ namespace IhalematikPro.Forms
         #region Variables
         private object a4;
         public MaterialListModel SelectedMaterial = null;
+        private object a5;
 
         #endregion
 
@@ -167,13 +168,14 @@ namespace IhalematikPro.Forms
             this.Close();
 
 
-            frm_TeklifAdimSon a4 = (frm_TeklifAdimSon)Application.OpenForms[" frm_TeklifSonAdim"];
-
+            frm_TeklifAdimSon a4 = (frm_TeklifAdimSon)Application.OpenForms["frm_TeklifSonAdim"];
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             if (a4 == null)
             {
                 a4 = new frm_TeklifAdimSon();
                 a4.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
                 a4.FormClosed += new FormClosedEventHandler(a4_FormClosed);
+                af.MainPanel.Visible = false;
                 a4.Show();
 
             }
@@ -426,6 +428,33 @@ namespace IhalematikPro.Forms
 
             currentItem.Save();
             grdAddVehicle.Refresh();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+             this.Close();
+
+            frm_IscilikFirimFiyat a5 = (frm_IscilikFirimFiyat)Application.OpenForms["frm_IscilikFirimFiyat"];
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            if (a5 == null)
+            {
+                a5 = new frm_IscilikFirimFiyat();
+                a5.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                a5.FormClosed +=new FormClosedEventHandler(A5_FormClosed);
+                af.MainPanel.Visible = false;
+                a5.Show();
+                
+            }
+            else
+            {
+                a5.Activate();
+            }
+           
+        }
+
+        private void A5_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            a5 = null;
         }
     }
 }

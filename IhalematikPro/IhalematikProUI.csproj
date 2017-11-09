@@ -265,6 +265,12 @@
     <Compile Include="Forms\frm_IscilikAracDetay.Designer.cs">
       <DependentUpon>frm_IscilikAracDetay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frm_IscilikFirimFiyat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_IscilikFirimFiyat.Designer.cs">
+      <DependentUpon>frm_IscilikFirimFiyat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frm_MalzemeFiyatTeklifiOlustur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -456,6 +462,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_IscilikAracDetay.resx">
       <DependentUpon>frm_IscilikAracDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_IscilikFirimFiyat.resx">
+      <DependentUpon>frm_IscilikFirimFiyat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_MalzemeFiyatTeklifiOlustur.resx">
       <DependentUpon>frm_MalzemeFiyatTeklifiOlustur.cs</DependentUpon>

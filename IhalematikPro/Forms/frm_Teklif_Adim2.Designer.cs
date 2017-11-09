@@ -92,9 +92,10 @@
             // 
             // colMarkup
             // 
-            this.colMarkup.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.colMarkup.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
             this.colMarkup.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.colMarkup.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colMarkup.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colMarkup.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colMarkup.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colMarkup.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colMarkup.AppearanceHeader.Options.UseBackColor = true;
@@ -109,9 +110,10 @@
             // 
             // gridColumn8
             // 
-            this.gridColumn8.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn8.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
             this.gridColumn8.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn8.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn8.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn8.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn8.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn8.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn8.AppearanceHeader.Options.UseBackColor = true;
@@ -131,9 +133,10 @@
             // 
             // gridColumn7
             // 
-            this.gridColumn7.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn7.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
             this.gridColumn7.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn7.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn7.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn7.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn7.AppearanceHeader.Options.UseBackColor = true;
@@ -156,11 +159,11 @@
             this.grdMaterialListNonWorkship.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdMaterialListNonWorkship.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grdMaterialListNonWorkship.EmbeddedNavigator.Appearance.Options.UseFont = true;
-            this.grdMaterialListNonWorkship.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdMaterialListNonWorkship.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialListNonWorkship.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grdMaterialListNonWorkship.Location = new System.Drawing.Point(0, 130);
             this.grdMaterialListNonWorkship.MainView = this.gridView1;
-            this.grdMaterialListNonWorkship.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdMaterialListNonWorkship.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialListNonWorkship.Name = "grdMaterialListNonWorkship";
             this.grdMaterialListNonWorkship.Size = new System.Drawing.Size(1362, 634);
             this.grdMaterialListNonWorkship.TabIndex = 0;
@@ -184,23 +187,23 @@
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridView1.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridView1.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.gridView1.Appearance.Empty.Options.UseBackColor = true;
-            this.gridView1.Appearance.EvenRow.BackColor = System.Drawing.Color.Silver;
+            this.gridView1.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridView1.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridView1.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
             this.gridView1.Appearance.EvenRow.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.gridView1.Appearance.EvenRow.Options.UseBackColor = true;
             this.gridView1.Appearance.EvenRow.Options.UseForeColor = true;
             this.gridView1.Appearance.FilterCloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.gridView1.Appearance.FilterCloseButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.gridView1.Appearance.FilterCloseButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(170)))), ((int)(((byte)(225)))));
             this.gridView1.Appearance.FilterCloseButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
             this.gridView1.Appearance.FilterCloseButton.ForeColor = System.Drawing.Color.Black;
             this.gridView1.Appearance.FilterCloseButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.gridView1.Appearance.FilterCloseButton.Options.UseBackColor = true;
             this.gridView1.Appearance.FilterCloseButton.Options.UseBorderColor = true;
             this.gridView1.Appearance.FilterCloseButton.Options.UseForeColor = true;
-            this.gridView1.Appearance.FilterPanel.BackColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.FilterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(80)))), ((int)(((byte)(135)))));
             this.gridView1.Appearance.FilterPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
             this.gridView1.Appearance.FilterPanel.ForeColor = System.Drawing.Color.White;
             this.gridView1.Appearance.FilterPanel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
@@ -208,14 +211,11 @@
             this.gridView1.Appearance.FilterPanel.Options.UseForeColor = true;
             this.gridView1.Appearance.FixedLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.gridView1.Appearance.FixedLine.Options.UseBackColor = true;
-            this.gridView1.Appearance.FocusedCell.BackColor = System.Drawing.Color.White;
-            this.gridView1.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Purple;
+            this.gridView1.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
+            this.gridView1.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
             this.gridView1.Appearance.FocusedCell.Options.UseBackColor = true;
             this.gridView1.Appearance.FocusedCell.Options.UseForeColor = true;
-            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.Purple;
-            this.gridView1.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(50)))), ((int)(((byte)(178)))));
             this.gridView1.Appearance.FocusedRow.ForeColor = System.Drawing.Color.White;
-            this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridView1.Appearance.FocusedRow.Options.UseForeColor = true;
             this.gridView1.Appearance.FooterPanel.BackColor = System.Drawing.Color.Silver;
             this.gridView1.Appearance.FooterPanel.BorderColor = System.Drawing.Color.Silver;
@@ -235,7 +235,7 @@
             this.gridView1.Appearance.GroupFooter.Options.UseBackColor = true;
             this.gridView1.Appearance.GroupFooter.Options.UseBorderColor = true;
             this.gridView1.Appearance.GroupFooter.Options.UseForeColor = true;
-            this.gridView1.Appearance.GroupPanel.BackColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.GroupPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
             this.gridView1.Appearance.GroupPanel.BackColor2 = System.Drawing.Color.White;
             this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridView1.Appearance.GroupPanel.ForeColor = System.Drawing.Color.White;
@@ -266,9 +266,8 @@
             this.gridView1.Appearance.OddRow.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.gridView1.Appearance.OddRow.Options.UseBackColor = true;
             this.gridView1.Appearance.OddRow.Options.UseForeColor = true;
-            this.gridView1.Appearance.Preview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.gridView1.Appearance.Preview.BackColor2 = System.Drawing.Color.White;
-            this.gridView1.Appearance.Preview.ForeColor = System.Drawing.Color.Purple;
+            this.gridView1.Appearance.Preview.BackColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.Preview.ForeColor = System.Drawing.Color.Navy;
             this.gridView1.Appearance.Preview.Options.UseBackColor = true;
             this.gridView1.Appearance.Preview.Options.UseForeColor = true;
             this.gridView1.Appearance.Row.BackColor = System.Drawing.Color.White;
@@ -276,11 +275,9 @@
             this.gridView1.Appearance.Row.Options.UseBackColor = true;
             this.gridView1.Appearance.Row.Options.UseForeColor = true;
             this.gridView1.Appearance.RowSeparator.BackColor = System.Drawing.Color.White;
-            this.gridView1.Appearance.RowSeparator.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridView1.Appearance.RowSeparator.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.gridView1.Appearance.RowSeparator.Options.UseBackColor = true;
-            this.gridView1.Appearance.SelectedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(10)))), ((int)(((byte)(138)))));
             this.gridView1.Appearance.SelectedRow.ForeColor = System.Drawing.Color.White;
-            this.gridView1.Appearance.SelectedRow.Options.UseBackColor = true;
             this.gridView1.Appearance.SelectedRow.Options.UseForeColor = true;
             this.gridView1.Appearance.VertLine.BackColor = System.Drawing.Color.Silver;
             this.gridView1.Appearance.VertLine.Options.UseBackColor = true;
@@ -312,9 +309,10 @@
             // 
             this.gridColumn1.AppearanceCell.BackColor = System.Drawing.Color.White;
             this.gridColumn1.AppearanceCell.Options.UseBackColor = true;
-            this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
             this.gridColumn1.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn1.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn1.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn1.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
@@ -332,9 +330,10 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
             this.gridColumn2.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn2.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn2.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
@@ -352,9 +351,10 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
             this.gridColumn3.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn3.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn3.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
@@ -372,9 +372,10 @@
             // 
             // gridColumn4
             // 
-            this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
             this.gridColumn4.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn4.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn4.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn4.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
@@ -392,9 +393,10 @@
             // 
             // gridColumn5
             // 
-            this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
             this.gridColumn5.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn5.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn5.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn5.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
@@ -414,9 +416,10 @@
             // 
             // gridColumn6
             // 
-            this.gridColumn6.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn6.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
             this.gridColumn6.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn6.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn6.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn6.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
@@ -436,9 +439,10 @@
             // 
             // gridColumn10
             // 
-            this.gridColumn10.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn10.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
             this.gridColumn10.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn10.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn10.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn10.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn10.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn10.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn10.AppearanceHeader.Options.UseBackColor = true;
@@ -458,9 +462,10 @@
             // 
             // gridColumn11
             // 
-            this.gridColumn11.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn11.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
             this.gridColumn11.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn11.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn11.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn11.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn11.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn11.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn11.AppearanceHeader.Options.UseBackColor = true;
@@ -480,9 +485,10 @@
             // 
             // gridColumn12
             // 
-            this.gridColumn12.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn12.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
             this.gridColumn12.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn12.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn12.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn12.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn12.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn12.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn12.AppearanceHeader.Options.UseBackColor = true;
@@ -513,7 +519,7 @@
             this.panelControl2.Controls.Add(this.labelControl4);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 50);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1362, 80);
             this.panelControl2.TabIndex = 27;
@@ -533,10 +539,10 @@
             // txtMarkup
             // 
             this.txtMarkup.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMarkup.Location = new System.Drawing.Point(64, 15);
-            this.txtMarkup.Mask = "%##";
+            this.txtMarkup.Location = new System.Drawing.Point(90, 15);
+            this.txtMarkup.Mask = "00";
             this.txtMarkup.Name = "txtMarkup";
-            this.txtMarkup.Size = new System.Drawing.Size(54, 27);
+            this.txtMarkup.Size = new System.Drawing.Size(28, 27);
             this.txtMarkup.TabIndex = 41;
             this.txtMarkup.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -546,11 +552,11 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl2.Location = new System.Drawing.Point(3, 15);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(53, 29);
+            this.labelControl2.Size = new System.Drawing.Size(78, 29);
             this.labelControl2.TabIndex = 42;
-            this.labelControl2.Text = "Kar :";
+            this.labelControl2.Text = "Kar % :";
             // 
             // btnTumuneUygula
             // 
@@ -564,7 +570,7 @@
             this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
             this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnTumuneUygula.Location = new System.Drawing.Point(124, 15);
-            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
             this.btnTumuneUygula.Size = new System.Drawing.Size(39, 32);
             this.btnTumuneUygula.TabIndex = 34;
@@ -575,7 +581,7 @@
             this.lblTenderNumber.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTenderNumber.Appearance.ForeColor = System.Drawing.Color.Crimson;
             this.lblTenderNumber.Location = new System.Drawing.Point(140, 10);
-            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderNumber.Name = "lblTenderNumber";
             this.lblTenderNumber.Size = new System.Drawing.Size(0, 29);
             this.lblTenderNumber.TabIndex = 40;
@@ -585,7 +591,7 @@
             this.lblTenderDescription.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTenderDescription.Appearance.ForeColor = System.Drawing.Color.Crimson;
             this.lblTenderDescription.Location = new System.Drawing.Point(140, 45);
-            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderDescription.Name = "lblTenderDescription";
             this.lblTenderDescription.Size = new System.Drawing.Size(0, 29);
             this.lblTenderDescription.TabIndex = 39;
@@ -595,7 +601,7 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl1.Location = new System.Drawing.Point(18, 45);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(118, 29);
             this.labelControl1.TabIndex = 38;
@@ -606,7 +612,7 @@
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl4.Location = new System.Drawing.Point(18, 9);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(115, 29);
             this.labelControl4.TabIndex = 38;
@@ -623,7 +629,7 @@
             this.panel6.Controls.Add(this.labelControl8);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(837, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(525, 118);
             this.panel6.TabIndex = 9;
@@ -637,7 +643,7 @@
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
             this.btnKaydet.Location = new System.Drawing.Point(0, 0);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(136, 118);
             this.btnKaydet.TabIndex = 11;
@@ -648,7 +654,7 @@
             // 
             this.txtTotalAmount.Enabled = false;
             this.txtTotalAmount.Location = new System.Drawing.Point(310, 83);
-            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTotalAmount.Properties.Appearance.Options.UseBackColor = true;
@@ -662,7 +668,7 @@
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl7.Location = new System.Drawing.Point(174, 88);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(138, 21);
             this.labelControl7.TabIndex = 8;
@@ -673,7 +679,7 @@
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl6.Location = new System.Drawing.Point(188, 12);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(118, 21);
             this.labelControl6.TabIndex = 9;
@@ -683,7 +689,7 @@
             // 
             this.txtBaseKDVAmount.Enabled = false;
             this.txtBaseKDVAmount.Location = new System.Drawing.Point(310, 45);
-            this.txtBaseKDVAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBaseKDVAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtBaseKDVAmount.Name = "txtBaseKDVAmount";
             this.txtBaseKDVAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBaseKDVAmount.Properties.Appearance.Options.UseBackColor = true;
@@ -696,7 +702,7 @@
             // 
             this.txtBaseAmount.Enabled = false;
             this.txtBaseAmount.Location = new System.Drawing.Point(310, 7);
-            this.txtBaseAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBaseAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtBaseAmount.Name = "txtBaseAmount";
             this.txtBaseAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBaseAmount.Properties.Appearance.Options.UseBackColor = true;
@@ -710,7 +716,7 @@
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl8.Location = new System.Drawing.Point(183, 50);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(126, 21);
             this.labelControl8.TabIndex = 10;
@@ -721,7 +727,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(471, 118);
             this.panel2.TabIndex = 10;
@@ -736,7 +742,7 @@
             this.panelControl3.Controls.Add(this.panel6);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl3.Location = new System.Drawing.Point(0, 646);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(1362, 118);
             this.panelControl3.TabIndex = 29;
@@ -748,7 +754,7 @@
             this.groupControl1.Controls.Add(this.lblTotalMarkup);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupControl1.Location = new System.Drawing.Point(432, 0);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(405, 118);
             this.groupControl1.TabIndex = 11;
@@ -758,7 +764,7 @@
             // 
             this.lblTotalMarkup.Appearance.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalMarkup.Location = new System.Drawing.Point(87, 61);
-            this.lblTotalMarkup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTotalMarkup.Margin = new System.Windows.Forms.Padding(4);
             this.lblTotalMarkup.Name = "lblTotalMarkup";
             this.lblTotalMarkup.Size = new System.Drawing.Size(67, 37);
             this.lblTotalMarkup.TabIndex = 0;
@@ -775,7 +781,7 @@
             this.panelControl1.Controls.Add(this.txtAdimAciklama);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1362, 50);
             this.panelControl1.TabIndex = 26;
@@ -799,7 +805,7 @@
             this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1312, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(50, 50);
             this.btnKapat.TabIndex = 3;
@@ -815,7 +821,7 @@
             this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
             this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.txtAdimAciklama.Location = new System.Drawing.Point(74, 9);
-            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
             this.txtAdimAciklama.Size = new System.Drawing.Size(398, 37);
@@ -833,7 +839,7 @@
             this.Controls.Add(this.grdMaterialListNonWorkship);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Teklif_Adim2";

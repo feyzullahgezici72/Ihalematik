@@ -136,7 +136,7 @@
             this.lblTenderCaptin.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.lblTenderCaptin.LineColor = System.Drawing.Color.Red;
             this.lblTenderCaptin.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.lblTenderCaptin.Location = new System.Drawing.Point(67, 9);
+            this.lblTenderCaptin.Location = new System.Drawing.Point(67, 6);
             this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderCaptin.Name = "lblTenderCaptin";
             this.lblTenderCaptin.ShowLineShadow = false;
@@ -243,23 +243,23 @@
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridView1.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridView1.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.gridView1.Appearance.Empty.Options.UseBackColor = true;
-            this.gridView1.Appearance.EvenRow.BackColor = System.Drawing.Color.Silver;
+            this.gridView1.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridView1.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridView1.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
             this.gridView1.Appearance.EvenRow.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.gridView1.Appearance.EvenRow.Options.UseBackColor = true;
             this.gridView1.Appearance.EvenRow.Options.UseForeColor = true;
             this.gridView1.Appearance.FilterCloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.gridView1.Appearance.FilterCloseButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.gridView1.Appearance.FilterCloseButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(170)))), ((int)(((byte)(225)))));
             this.gridView1.Appearance.FilterCloseButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
             this.gridView1.Appearance.FilterCloseButton.ForeColor = System.Drawing.Color.Black;
             this.gridView1.Appearance.FilterCloseButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.gridView1.Appearance.FilterCloseButton.Options.UseBackColor = true;
             this.gridView1.Appearance.FilterCloseButton.Options.UseBorderColor = true;
             this.gridView1.Appearance.FilterCloseButton.Options.UseForeColor = true;
-            this.gridView1.Appearance.FilterPanel.BackColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.FilterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(80)))), ((int)(((byte)(135)))));
             this.gridView1.Appearance.FilterPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
             this.gridView1.Appearance.FilterPanel.ForeColor = System.Drawing.Color.White;
             this.gridView1.Appearance.FilterPanel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
@@ -267,14 +267,11 @@
             this.gridView1.Appearance.FilterPanel.Options.UseForeColor = true;
             this.gridView1.Appearance.FixedLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.gridView1.Appearance.FixedLine.Options.UseBackColor = true;
-            this.gridView1.Appearance.FocusedCell.BackColor = System.Drawing.Color.White;
-            this.gridView1.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Purple;
+            this.gridView1.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
+            this.gridView1.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
             this.gridView1.Appearance.FocusedCell.Options.UseBackColor = true;
             this.gridView1.Appearance.FocusedCell.Options.UseForeColor = true;
-            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.Purple;
-            this.gridView1.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(50)))), ((int)(((byte)(178)))));
             this.gridView1.Appearance.FocusedRow.ForeColor = System.Drawing.Color.White;
-            this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridView1.Appearance.FocusedRow.Options.UseForeColor = true;
             this.gridView1.Appearance.FooterPanel.BackColor = System.Drawing.Color.Silver;
             this.gridView1.Appearance.FooterPanel.BorderColor = System.Drawing.Color.Silver;
@@ -294,7 +291,7 @@
             this.gridView1.Appearance.GroupFooter.Options.UseBackColor = true;
             this.gridView1.Appearance.GroupFooter.Options.UseBorderColor = true;
             this.gridView1.Appearance.GroupFooter.Options.UseForeColor = true;
-            this.gridView1.Appearance.GroupPanel.BackColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.GroupPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
             this.gridView1.Appearance.GroupPanel.BackColor2 = System.Drawing.Color.White;
             this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridView1.Appearance.GroupPanel.ForeColor = System.Drawing.Color.White;
@@ -325,9 +322,8 @@
             this.gridView1.Appearance.OddRow.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.gridView1.Appearance.OddRow.Options.UseBackColor = true;
             this.gridView1.Appearance.OddRow.Options.UseForeColor = true;
-            this.gridView1.Appearance.Preview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.gridView1.Appearance.Preview.BackColor2 = System.Drawing.Color.White;
-            this.gridView1.Appearance.Preview.ForeColor = System.Drawing.Color.Purple;
+            this.gridView1.Appearance.Preview.BackColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.Preview.ForeColor = System.Drawing.Color.Navy;
             this.gridView1.Appearance.Preview.Options.UseBackColor = true;
             this.gridView1.Appearance.Preview.Options.UseForeColor = true;
             this.gridView1.Appearance.Row.BackColor = System.Drawing.Color.White;
@@ -335,11 +331,9 @@
             this.gridView1.Appearance.Row.Options.UseBackColor = true;
             this.gridView1.Appearance.Row.Options.UseForeColor = true;
             this.gridView1.Appearance.RowSeparator.BackColor = System.Drawing.Color.White;
-            this.gridView1.Appearance.RowSeparator.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridView1.Appearance.RowSeparator.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.gridView1.Appearance.RowSeparator.Options.UseBackColor = true;
-            this.gridView1.Appearance.SelectedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(10)))), ((int)(((byte)(138)))));
             this.gridView1.Appearance.SelectedRow.ForeColor = System.Drawing.Color.White;
-            this.gridView1.Appearance.SelectedRow.Options.UseBackColor = true;
             this.gridView1.Appearance.SelectedRow.Options.UseForeColor = true;
             this.gridView1.Appearance.VertLine.BackColor = System.Drawing.Color.Silver;
             this.gridView1.Appearance.VertLine.Options.UseBackColor = true;
@@ -356,9 +350,10 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
             this.gridColumn1.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn1.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn1.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn1.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
@@ -377,9 +372,10 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
             this.gridColumn2.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn2.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn2.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
@@ -398,9 +394,10 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
             this.gridColumn3.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn3.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn3.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
