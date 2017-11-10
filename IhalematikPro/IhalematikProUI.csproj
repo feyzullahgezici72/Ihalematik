@@ -407,6 +407,7 @@
     <Compile Include="Model\VehicleModel.cs" />
     <Compile Include="Model\VehicleTitleModel.cs" />
     <Compile Include="Model\WorkerModel.cs" />
+    <Compile Include="Model\WrapperReportModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report\MainReport.cs">
