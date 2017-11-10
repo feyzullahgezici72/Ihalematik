@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using IhalematikPro.Model;
 using IhalematikPro.Manager;
 using IhalematikProUI.Forms;
+using System.Threading;
 
 namespace IhalematikPro.Forms
 {
@@ -25,16 +26,6 @@ namespace IhalematikPro.Forms
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void araçEkleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         public void InitilalizeForm()
@@ -56,6 +47,7 @@ namespace IhalematikPro.Forms
             LoadGrid();
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(Frm_AracTanimlama_KeyDown);
+            
         }
 
         private void Frm_AracTanimlama_KeyDown(object sender, KeyEventArgs e)

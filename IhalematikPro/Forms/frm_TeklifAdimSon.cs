@@ -90,7 +90,6 @@ namespace IhalematikProUI.Forms
 
             List<MaterialList> items = CurrentManager.CurrentTender.MaterialList;
             List<MaterialListModel> materialModels = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-
             if (materialModels != null)
             {
                 foreach (var item in materialModels)
