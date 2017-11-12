@@ -85,6 +85,20 @@ namespace IhalematikPro.Forms
             company.Title = txtTitle.Text;
             company.WebAddress = txtWebAddress.Text;
             CompanyProvider.Instance.Save(company);
+            MessageBox.Show("Firma Bilgileri Güncellendi..");
+        }
+
+        private void frm_FirmaTanimlama_KeyDown(object sender, KeyEventArgs e)
+        {
+            Control fControl;
+            if (e.KeyCode == Keys.Enter)
+            {
+                fControl = GetNextControl(ActiveControl, !e.Shift);
+                if (fControl == null)
+                    fControl = GetNextControl(null, true);
+                fControl.Focus();
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }

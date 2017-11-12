@@ -185,6 +185,7 @@ namespace IhalematikPro.Forms
 
         private void rbNormal_CheckedChanged(object sender, EventArgs e)
         {
+           
             if (!this.rbAsgariUcret.Checked)
             {
                 double NetUcretUcret = double.Parse(txtBaseFare.Text);

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CalisanTanimlama));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
@@ -490,7 +490,7 @@
             // 
             this.btnGuncelle.AutoHeight = false;
             this.btnGuncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
             this.btnGuncelle.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -519,7 +519,7 @@
             // 
             this.btnSil.AutoHeight = false;
             this.btnSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
             this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnSil.Name = "btnSil";
             this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -666,7 +666,7 @@
             this.txtWorklesFonFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtWorklesFonFare.Properties.EditFormat.FormatString = "N2";
             this.txtWorklesFonFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtWorklesFonFare.Properties.Mask.EditMask = "c2";
+            this.txtWorklesFonFare.Properties.Mask.EditMask = "c";
             this.txtWorklesFonFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtWorklesFonFare.Size = new System.Drawing.Size(224, 26);
             this.txtWorklesFonFare.TabIndex = 113;
@@ -732,6 +732,7 @@
             // 
             // txtBaseFare
             // 
+            this.txtBaseFare.EditValue = "TL";
             this.txtBaseFare.Location = new System.Drawing.Point(183, 109);
             this.txtBaseFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtBaseFare.Name = "txtBaseFare";
@@ -741,7 +742,7 @@
             this.txtBaseFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtBaseFare.Properties.EditFormat.FormatString = "N2";
             this.txtBaseFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtBaseFare.Properties.Mask.EditMask = "c2";
+            this.txtBaseFare.Properties.Mask.EditMask = "c";
             this.txtBaseFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtBaseFare.Size = new System.Drawing.Size(224, 26);
             this.txtBaseFare.TabIndex = 111;
@@ -786,6 +787,7 @@
             // 
             // txtSGKPrimFare
             // 
+            this.txtSGKPrimFare.EditValue = "TL";
             this.txtSGKPrimFare.Location = new System.Drawing.Point(183, 147);
             this.txtSGKPrimFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtSGKPrimFare.Name = "txtSGKPrimFare";
@@ -795,7 +797,7 @@
             this.txtSGKPrimFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtSGKPrimFare.Properties.EditFormat.FormatString = "N2";
             this.txtSGKPrimFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtSGKPrimFare.Properties.Mask.EditMask = "c2";
+            this.txtSGKPrimFare.Properties.Mask.EditMask = "c";
             this.txtSGKPrimFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtSGKPrimFare.Size = new System.Drawing.Size(224, 26);
             this.txtSGKPrimFare.TabIndex = 112;
@@ -871,7 +873,7 @@
             this.txtIncomeTaxFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtIncomeTaxFare.Properties.EditFormat.FormatString = "N2";
             this.txtIncomeTaxFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtIncomeTaxFare.Properties.Mask.EditMask = "c2";
+            this.txtIncomeTaxFare.Properties.Mask.EditMask = "c";
             this.txtIncomeTaxFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtIncomeTaxFare.Size = new System.Drawing.Size(224, 26);
             this.txtIncomeTaxFare.TabIndex = 114;
