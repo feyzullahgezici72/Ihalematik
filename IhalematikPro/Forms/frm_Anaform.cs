@@ -582,7 +582,9 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
+            RibonPasif();
+            frm_Kurallistesi kl = new frm_Kurallistesi();
+            kl.ShowDialog();
         }
 
         private void barButtonItem20_ItemClick(object sender, ItemClickEventArgs e)

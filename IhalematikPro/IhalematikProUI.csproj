@@ -271,6 +271,18 @@
     <Compile Include="Forms\frm_IscilikFirimFiyat.Designer.cs">
       <DependentUpon>frm_IscilikFirimFiyat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frm_Kurallar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Kurallar.Designer.cs">
+      <DependentUpon>frm_Kurallar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Kurallistesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Kurallistesi.Designer.cs">
+      <DependentUpon>frm_Kurallistesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frm_MalzemeFiyatTeklifiOlustur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -466,6 +478,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_IscilikFirimFiyat.resx">
       <DependentUpon>frm_IscilikFirimFiyat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Kurallar.resx">
+      <DependentUpon>frm_Kurallar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Kurallistesi.resx">
+      <DependentUpon>frm_Kurallistesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_MalzemeFiyatTeklifiOlustur.resx">
       <DependentUpon>frm_MalzemeFiyatTeklifiOlustur.cs</DependentUpon>

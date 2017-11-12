@@ -891,12 +891,10 @@
             this.gridViewVehicle.Appearance.GroupPanel.Options.UseForeColor = true;
             this.gridViewVehicle.Appearance.GroupRow.ForeColor = System.Drawing.Color.Silver;
             this.gridViewVehicle.Appearance.GroupRow.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.HeaderPanel.BackColor = System.Drawing.Color.Silver;
-            this.gridViewVehicle.Appearance.HeaderPanel.BorderColor = System.Drawing.Color.Silver;
+            this.gridViewVehicle.Appearance.HeaderPanel.BackColor = System.Drawing.Color.Gainsboro;
             this.gridViewVehicle.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridViewVehicle.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
             this.gridViewVehicle.Appearance.HeaderPanel.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.HeaderPanel.Options.UseBorderColor = true;
             this.gridViewVehicle.Appearance.HeaderPanel.Options.UseFont = true;
             this.gridViewVehicle.Appearance.HeaderPanel.Options.UseForeColor = true;
             this.gridViewVehicle.Appearance.HideSelectionRow.BackColor = System.Drawing.Color.Gray;
@@ -940,9 +938,8 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.SlateGray;
-            this.gridColumn2.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn2.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn2.AppearanceHeader.Options.UseBorderColor = true;
@@ -961,9 +958,8 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.SlateGray;
-            this.gridColumn3.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn3.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.AppearanceHeader.Options.UseBorderColor = true;
@@ -983,9 +979,8 @@
             // 
             // gridColumn4
             // 
-            this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.SlateGray;
-            this.gridColumn4.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn4.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.AppearanceHeader.Options.UseBorderColor = true;
@@ -1005,9 +1000,8 @@
             // 
             // gridColumn5
             // 
-            this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.SlateGray;
-            this.gridColumn5.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn5.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.AppearanceHeader.Options.UseBorderColor = true;
@@ -1027,9 +1021,8 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.SlateGray;
-            this.gridColumn1.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn1.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
@@ -1053,9 +1046,8 @@
             // 
             // gridColumn6
             // 
-            this.gridColumn6.AppearanceHeader.BackColor = System.Drawing.Color.SlateGray;
-            this.gridColumn6.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn6.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn6.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;

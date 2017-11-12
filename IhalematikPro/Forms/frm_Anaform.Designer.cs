@@ -651,6 +651,7 @@ namespace IhalematikPro.Forms
             // 
             this.popupMenu1.ItemLinks.Add(this.barButtonItem23);
             this.popupMenu1.ItemLinks.Add(this.barButtonItem24);
+            this.popupMenu1.ItemLinks.Add(this.barButtonItem19);
             this.popupMenu1.ItemLinks.Add(this.barButtonItem25);
             this.popupMenu1.ItemLinks.Add(this.barButtonItem27);
             this.popupMenu1.ItemLinks.Add(this.barSubItem1);
@@ -746,7 +747,7 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem19
             // 
-            this.barButtonItem19.Caption = "Tema-7";
+            this.barButtonItem19.Caption = "Kurallar";
             this.barButtonItem19.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem19.Glyph")));
             this.barButtonItem19.Id = 20;
             this.barButtonItem19.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem19.LargeGlyph")));
