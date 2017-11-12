@@ -22,6 +22,22 @@ namespace IhalematikPro.Forms
     public partial class frm_CalisanTanimlama : DevExpress.XtraEditors.XtraForm
     {
         List<Worker> workers = new List<Worker>();
+        private List<IhalematikProBL.Entity.Rule> rules = null;
+        public List<IhalematikProBL.Entity.Rule> Rules
+        {
+            get
+            {
+                if (this.rules == null)
+                {
+                    this.Rules = RuleProvider.Instance.GetItems();
+                }
+                return this.rules;
+            }
+            set
+            {
+                this.rules = value;
+            }
+        }
         public frm_CalisanTanimlama()
         {
             InitializeComponent();
@@ -29,6 +45,10 @@ namespace IhalematikPro.Forms
             //this._owner = this;
             //getExcel();
         }
+
+        public bool IsCalculatedMinimumWage = false;
+
+        public string BaseFare = string.Empty;
 
         public void getExcel()
         {
@@ -141,58 +161,80 @@ namespace IhalematikPro.Forms
 
         private void txtBaseFare_EditValueChanged(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(txtBaseFare.Text))
+            {
+                txtBaseFare.Text = "0";
+            }
+            double minimumWage = double.Parse(txtBaseFare.Text.Replace("TL", ""));
+            if (this.Rules != null && rbNormal.Checked)
+            {
+                foreach (var item in this.Rules)
+                {
+                    if (item.RuleType == RuleTypesEnum.IncomeTaxFare)
+                    {
+                        txtIncomeTaxFare.Text = (minimumWage * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString();
+                    }
+                    else if (item.RuleType == RuleTypesEnum.SGKPrimFare)
+                    {
+                        txtSGKPrimFare.Text = (minimumWage * double.Parse(item.Value) / 100).ToString();
+                    }
+                    else if (item.RuleType == RuleTypesEnum.StampTaxFare)
+                    {
+                        txtStampTaxFare.Text = (minimumWage * double.Parse(item.Value) / 100000).ToString();
+                    }
+                    else if (item.RuleType == RuleTypesEnum.WorklesFonFare)
+                    {
+                        txtWorklesFonFare.Text = (minimumWage * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString();
+                    }
+                }
+                if (!this.IsCalculatedMinimumWage)
+                {
+                    this.BaseFare = txtBaseFare.Text;
+                }
+            }
         }
 
         private void rbAsgariUcret_CheckedChanged(object sender, EventArgs e)
         {
-            if (!this.rbNormal.Checked)
+            this.IsCalculatedMinimumWage = true;
+            if (this.rbAsgariUcret.Checked)
             {
-                double asgariUcret = 1404;
-                txtBaseFare.Text = asgariUcret.ToString();
-                txtSGKPrimFare.Text = Math.Round((asgariUcret / 100 * 13), 2).ToString();
+                IhalematikProBL.Entity.Rule minimumWage = this.Rules.Where(p => p.RuleType == RuleTypesEnum.MinimumWage).FirstOrDefault();
+                txtBaseFare.Text = minimumWage.Value;
+                if (this.Rules != null)
+                {
+                    foreach (var item in this.Rules)
+                    {
+                        if (item.RuleType == RuleTypesEnum.IncomeTaxFare)
+                        {
+                            txtIncomeTaxFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString();
+                        }
+                        else if (item.RuleType == RuleTypesEnum.SGKPrimFare)
+                        {
+                            txtSGKPrimFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString();
+                        }
+                        else if (item.RuleType == RuleTypesEnum.StampTaxFare)
+                        {
+                            txtStampTaxFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100000).ToString();
+                        }
+                        else if (item.RuleType == RuleTypesEnum.WorklesFonFare)
+                        {
+                            txtWorklesFonFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString();
+                        }
+                    }
+                }
             }
-
-        }
-
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void çalışanEkleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBaseFare_EditValueChanged_1(object sender, EventArgs e)
-        {
-
-            //double NetUcretUcret = double.Parse(txtBaseFare.Text);
-            //txtSGKPrimFare.Text = Math.Round((NetUcretUcret / 100 * 14), 2).ToString();
-            //txtWorklesFonFare.Text = Math.Round((NetUcretUcret / 100 * 1), 2).ToString();
-            //txtIncomeTaxFare.Text = Math.Round((NetUcretUcret / 100 * 15), 2).ToString();
-            //txtStampTaxFare.Text = Math.Round((NetUcretUcret / 1000 * 759), 2).ToString();
-            //Net Maaş    4.000,00 TL
-            //SGK Primi İşçi Payı(% 14)    560,00 TL
-            //İşsizlik Sig.Fonu(% 1)  40,00 TL
-            //Gelir Vergisi(% 15)  600,00 TL
-            //Damga Vergisi(% 0, 759)   30,36 TL
-            //Asgari Geçim İndirimi    123,53 TL
-            //Toplam Maliyet   5.353,89 TL
-
         }
 
         private void rbNormal_CheckedChanged(object sender, EventArgs e)
         {
-           
-            if (!this.rbAsgariUcret.Checked)
+            this.IsCalculatedMinimumWage = false;
+            if (this.rbNormal.Checked)
             {
-                double NetUcretUcret = double.Parse(txtBaseFare.Text);
-                txtSGKPrimFare.Text = Math.Round((NetUcretUcret / 100 * 14), 2).ToString();
-                txtWorklesFonFare.Text = Math.Round((NetUcretUcret / 100 * 1), 2).ToString();
-                txtIncomeTaxFare.Text = Math.Round((NetUcretUcret / 100 * 15), 2).ToString();
-                txtStampTaxFare.Text = Math.Round((NetUcretUcret / 1000 * 759), 2).ToString();
+                //if (string.IsNullOrEmpty(this.BaseFare))
+                //{
+                    txtBaseFare.Text = this.BaseFare;
+                //}
             }
         }
 
@@ -209,7 +251,7 @@ namespace IhalematikPro.Forms
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             frm_CalisanEkle frm = new frm_CalisanEkle();
-            
+
             frm.ShowDialog();
         }
 
@@ -229,7 +271,7 @@ namespace IhalematikPro.Forms
         private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             frm_Calisan_Guncelleme cg = new frm_Calisan_Guncelleme(this);
-            
+
             int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewWorker.GetFocusedRowCellValue("Id"));
             cg.CurrentWorkerId = id;
 
