@@ -87,26 +87,33 @@ namespace IhalematikProUI.Forms
             MainReport ms = new MainReport();
 
             List<ReportModel> models = new List<ReportModel>();
-
             List<MaterialList> items = CurrentManager.CurrentTender.MaterialList;
             List<MaterialListModel> materialModels = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            double totalAmount = 0;
             if (materialModels != null)
             {
+                int i = 1;
                 foreach (var item in materialModels)
                 {
                     ReportModel model = new ReportModel();
                     model.Description = item.PozOBFDescription;
-                    model.Number1 = item.PozOBFNumber;
-                    model.Number = string.Empty;
+                    model.PozOBFNumber = item.PozOBFNumber;
+                    model.ItemNumber = i.ToString();
                     model.Quantity = item.Quantity.ToString();
-                    model.Total = "";
+                    totalAmount += Math.Round((item.MarkupUnitPrice + item.WorkerUnitPrice) * item.Quantity, 2);
+                    model.Total = Math.Round((item.MarkupUnitPrice + item.WorkerUnitPrice) * item.Quantity, 2).ToString("c2");
                     model.Unit = item.PozOBFUnit;
                     model.UnitPrice = item.PozOBFUnitPrice.ToString("C2");
                     models.Add(model);
-                } 
+                    i++;
+                }
             }
-            
-            ms.DataSource = models;
+
+            WrapperReportModel reportModel = new WrapperReportModel();
+            reportModel.Items = models;
+            reportModel.TenderNumber = CurrentManager.CurrentTender.Number.ToString();
+            reportModel.TotalAmount = totalAmount.ToString("c2");
+            ms.DataSource = reportModel;
 
             ReportPrintTool tool = new ReportPrintTool(ms);
             ms.ShowPreview();

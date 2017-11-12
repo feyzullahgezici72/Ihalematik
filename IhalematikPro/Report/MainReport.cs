@@ -13,5 +13,9 @@ namespace IhalematikProUI.Report
             InitializeComponent();
         }
 
+        private void xrLabel2_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+
+        }
     }
 }
