@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim3));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -57,7 +56,7 @@
             this.txtMarkupAmount = new DevExpress.XtraEditors.TextEdit();
             this.txtBaseAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             this.grdMaterialListIsWorkship = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -103,8 +102,8 @@
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.btnPanelKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource();
+            this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource();
             ((System.ComponentModel.ISupportInitialize)(this.btnIscilikveAracGirisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -618,9 +617,8 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
-            this.gridColumn1.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn1.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn1.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
@@ -634,9 +632,8 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
-            this.gridColumn2.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn2.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn2.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
@@ -650,9 +647,8 @@
             // 
             // clmEquipments
             // 
-            this.clmEquipments.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
-            this.clmEquipments.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.clmEquipments.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.clmEquipments.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.clmEquipments.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.clmEquipments.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.clmEquipments.AppearanceHeader.ForeColor = System.Drawing.Color.Navy;
             this.clmEquipments.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -681,9 +677,8 @@
             // 
             this.gridColumn7.AppearanceCell.BackColor = System.Drawing.Color.LightYellow;
             this.gridColumn7.AppearanceCell.Options.UseBackColor = true;
-            this.gridColumn7.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
-            this.gridColumn7.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn7.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn7.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn7.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn7.AppearanceHeader.Options.UseBackColor = true;
@@ -696,9 +691,8 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
-            this.gridColumn3.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn3.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn3.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
@@ -712,9 +706,8 @@
             // 
             // gridColumn4
             // 
-            this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
-            this.gridColumn4.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn4.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn4.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
@@ -728,9 +721,8 @@
             // 
             // gridColumn5
             // 
-            this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
-            this.gridColumn5.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn5.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn5.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
@@ -906,9 +898,8 @@
             // 
             // colAddVehicleVehicle
             // 
-            this.colAddVehicleVehicle.AppearanceHeader.BackColor = System.Drawing.Color.White;
-            this.colAddVehicleVehicle.AppearanceHeader.BackColor2 = System.Drawing.Color.Gray;
-            this.colAddVehicleVehicle.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddVehicleVehicle.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colAddVehicleVehicle.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddVehicleVehicle.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddVehicleVehicle.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colAddVehicleVehicle.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -932,9 +923,8 @@
             // 
             // colAddVehicleQuantity
             // 
-            this.colAddVehicleQuantity.AppearanceHeader.BackColor = System.Drawing.Color.White;
-            this.colAddVehicleQuantity.AppearanceHeader.BackColor2 = System.Drawing.Color.Gray;
-            this.colAddVehicleQuantity.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddVehicleQuantity.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colAddVehicleQuantity.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddVehicleQuantity.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddVehicleQuantity.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colAddVehicleQuantity.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -950,9 +940,8 @@
             // 
             // colAddVehicleUnitTime
             // 
-            this.colAddVehicleUnitTime.AppearanceHeader.BackColor = System.Drawing.Color.White;
-            this.colAddVehicleUnitTime.AppearanceHeader.BackColor2 = System.Drawing.Color.Gray;
-            this.colAddVehicleUnitTime.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddVehicleUnitTime.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colAddVehicleUnitTime.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddVehicleUnitTime.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddVehicleUnitTime.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colAddVehicleUnitTime.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -968,9 +957,8 @@
             // 
             // colAddVehicleUnitTimeType
             // 
-            this.colAddVehicleUnitTimeType.AppearanceHeader.BackColor = System.Drawing.Color.White;
-            this.colAddVehicleUnitTimeType.AppearanceHeader.BackColor2 = System.Drawing.Color.Gray;
-            this.colAddVehicleUnitTimeType.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddVehicleUnitTimeType.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colAddVehicleUnitTimeType.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddVehicleUnitTimeType.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddVehicleUnitTimeType.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colAddVehicleUnitTimeType.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -986,9 +974,8 @@
             // 
             // colAddVehicleWorkerUnitPrice
             // 
-            this.colAddVehicleWorkerUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.White;
-            this.colAddVehicleWorkerUnitPrice.AppearanceHeader.BackColor2 = System.Drawing.Color.Gray;
-            this.colAddVehicleWorkerUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddVehicleWorkerUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colAddVehicleWorkerUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddVehicleWorkerUnitPrice.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddVehicleWorkerUnitPrice.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colAddVehicleWorkerUnitPrice.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -1163,9 +1150,8 @@
             // 
             // colAddWorkerWorker
             // 
-            this.colAddWorkerWorker.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
-            this.colAddWorkerWorker.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.colAddWorkerWorker.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddWorkerWorker.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colAddWorkerWorker.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddWorkerWorker.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddWorkerWorker.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colAddWorkerWorker.AppearanceHeader.Options.UseBackColor = true;
@@ -1187,9 +1173,8 @@
             // 
             // colAddWorkerQuantity
             // 
-            this.colAddWorkerQuantity.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
-            this.colAddWorkerQuantity.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.colAddWorkerQuantity.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddWorkerQuantity.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colAddWorkerQuantity.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddWorkerQuantity.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddWorkerQuantity.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colAddWorkerQuantity.AppearanceHeader.Options.UseBackColor = true;
@@ -1203,9 +1188,8 @@
             // 
             // colAddWorkerUnitTime
             // 
-            this.colAddWorkerUnitTime.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
-            this.colAddWorkerUnitTime.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.colAddWorkerUnitTime.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddWorkerUnitTime.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colAddWorkerUnitTime.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddWorkerUnitTime.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddWorkerUnitTime.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colAddWorkerUnitTime.AppearanceHeader.Options.UseBackColor = true;
@@ -1219,9 +1203,8 @@
             // 
             // colAddWorkerUnitTimeType
             // 
-            this.colAddWorkerUnitTimeType.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
-            this.colAddWorkerUnitTimeType.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.colAddWorkerUnitTimeType.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddWorkerUnitTimeType.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colAddWorkerUnitTimeType.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddWorkerUnitTimeType.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddWorkerUnitTimeType.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colAddWorkerUnitTimeType.AppearanceHeader.Options.UseBackColor = true;
@@ -1235,9 +1218,8 @@
             // 
             // colAddWorkerWorkerUnitPrice
             // 
-            this.colAddWorkerWorkerUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gray;
-            this.colAddWorkerWorkerUnitPrice.AppearanceHeader.BackColor2 = System.Drawing.Color.White;
-            this.colAddWorkerWorkerUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddWorkerWorkerUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colAddWorkerWorkerUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddWorkerWorkerUnitPrice.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddWorkerWorkerUnitPrice.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colAddWorkerWorkerUnitPrice.AppearanceHeader.Options.UseBackColor = true;
