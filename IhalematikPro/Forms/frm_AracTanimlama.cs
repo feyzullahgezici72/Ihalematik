@@ -30,7 +30,7 @@ namespace IhalematikPro.Forms
 
         public void InitilalizeForm()
         {
-
+            ddlVehicleTitle.Properties.Items.Clear();
             List<VehicleTitleModel> models = UIVehicleTitleManager.Instance.GetVehicleTitles();
             ddlVehicleTitle.Properties.Items.AddRange(models);
             ddlVehicleTitle.SelectedIndex = 0;
@@ -45,16 +45,14 @@ namespace IhalematikPro.Forms
         {
             LoadGrid();
             this.KeyPreview = true;
-            this.KeyDown += new KeyEventHandler(Frm_AracTanimlama_KeyDown);
-        
-             
+            this.KeyDown += new KeyEventHandler(Frm_AracTanimlama_KeyDown);  
         }
 
         private void Frm_AracTanimlama_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode.ToString() == "F1")
             {
-                frm_AracEkle frm = new frm_AracEkle();
+                frm_AracEkle frm = new frm_AracEkle(this);
                 frm.ShowDialog();
             }
 
@@ -115,7 +113,7 @@ namespace IhalematikPro.Forms
 
         private void yeniAraçEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_AracEkle frm = new frm_AracEkle();
+            frm_AracEkle frm = new frm_AracEkle(this);
             frm.ShowDialog();
         }
 
@@ -142,7 +140,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            frm_AracEkle frm = new frm_AracEkle();
+            frm_AracEkle frm = new frm_AracEkle(this);
             frm.ShowDialog();
         }
 

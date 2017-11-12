@@ -61,7 +61,7 @@ namespace IhalematikProUI.Forms
         {
             List<VehicleTitleModel> models = UIVehicleTitleManager.Instance.GetVehicleTitles();
             ddlVehicleTitle.Properties.Items.AddRange(models);
-
+            ddlVehicleTitle.ReadOnly = true;
             if (CurrentVehicle != null)
             {
                 VehicleModel model = new VehicleModel(currentVehicle);

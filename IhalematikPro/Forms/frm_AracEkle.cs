@@ -16,9 +16,12 @@ namespace IhalematikPro.Forms
 {
     public partial class frm_AracEkle : DevExpress.XtraEditors.XtraForm
     {
-        public frm_AracEkle()
+        frm_AracTanimlama _owner = null;
+
+        public frm_AracEkle(frm_AracTanimlama Owner)
         {
             InitializeComponent();
+            this._owner = Owner;
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -36,7 +39,8 @@ namespace IhalematikPro.Forms
             MessageBox.Show("Araç Kaydedildi...");
             txtName.ResetText();
             txtName.Focus();
-
+            this._owner.InitilalizeForm();
+            this.Close();
         }
     }
 }
