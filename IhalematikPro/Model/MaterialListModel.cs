@@ -144,7 +144,7 @@ namespace IhalematikPro.Model
 
         public double MaterialMarkup { get; set; }
 
-        //Iscilikli Birim Fiyat
+        //Karli Malzeme Birim Fiyat
         public double MarkupUnitPrice
         {
             get

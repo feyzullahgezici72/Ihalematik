@@ -122,6 +122,9 @@
 2 Bu sütun isteklilerce doldurulacaktır.
 3 Teklif vermeye yetkili kişi tarafından her sayfası ad soyad/ticaret unvanı yazılarak imzalanacaktır. Ortak girişim olarak teklif verilmesi halinde, her sayfası ad soyad/ticatet unvanı yazılarak bütün ortaklar veya yetki verdikleri kişiler tarafından imzalanacaktır </value>
   </data>
+  <metadata name="objectDataSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
   <metadata name="objectDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

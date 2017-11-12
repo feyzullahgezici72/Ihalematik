@@ -84,11 +84,37 @@ namespace IhalematikPro.Model
             }
         }
 
+        private double monthPrice = 0;
         public double MonthPrice
         {
             get
             {
-                return Math.Round(this.DriverFare + (this.FuelOilDay * this.FuelOilFare * 30) + this.GeneralFare + this.MaintenanceFare + this.OtherFare + this.ServiceFare);
+                if (this.monthPrice == 0)
+                {
+                    if (this.IsCompanyVehicle)
+                    {
+
+                        this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.DriverFare + this.GeneralFare + this.MaintenanceFare + this.OtherFare + this.ServiceFare) * 30, 2);
+                    }
+                    else
+                    {
+
+                        if (this.RentType == RentTypesEnum.Day)
+                        {
+                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare + this.ServiceFare) * 30, 2);
+                        }
+                        else if (this.RentType == RentTypesEnum.Hour)
+                        {
+                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare + this.ServiceFare) * 30 * 8, 2);
+                        }
+                        else if (this.RentType == RentTypesEnum.Month)
+                        {
+                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare + this.ServiceFare), 2);
+                        }
+                    }
+                }
+
+                return this.monthPrice;
             }
         }
 
@@ -110,6 +136,7 @@ namespace IhalematikPro.Model
             this.GeneralFare = Vehicle.GeneralFare;
             this.OtherFare = Vehicle.OtherFare;
             this.RentFare = Vehicle.RentFare;
+            this.RentType = Vehicle.RentType;
         }
         public override EntityBase ToEntity()
         {

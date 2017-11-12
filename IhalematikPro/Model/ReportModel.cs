@@ -9,10 +9,10 @@ namespace IhalematikProUI.Model
     public class ReportModel
     {
         //Sira no
-        public string Number { get; set; }
+        public string ItemNumber { get; set; }
 
         //Is kalemi no
-        public string Number1 { get; set; }
+        public string PozOBFNumber { get; set; }
 
         //Is kaleminin adi ve kisa aciklamasi
         public string Description { get; set; }

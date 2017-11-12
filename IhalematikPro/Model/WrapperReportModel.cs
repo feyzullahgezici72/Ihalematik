@@ -10,6 +10,8 @@ namespace IhalematikProUI.Model
     {
         public List<ReportModel> Items { get; set; }
 
-        public string Total { get; set; }
+        public string TotalAmount { get; set; }
+
+        public string TenderNumber { get; set; }
     }
 }
