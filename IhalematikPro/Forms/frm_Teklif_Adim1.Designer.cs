@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim1));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -57,18 +58,18 @@
             this.txtBaseKDVAmount = new DevExpress.XtraEditors.TextEdit();
             this.txtBaseAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.grdVehicle = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.btnGuncelle = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridViewVehicle = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnGuncelle = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
-            this.ChkIscilik = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.grdMaterialList2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -78,7 +79,7 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
+            this.ChkIscilik = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -95,15 +96,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdVehicle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewVehicle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewVehicle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ChkIscilik)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChkIscilik)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -461,12 +462,11 @@
             // 
             // grdVehicle
             // 
-            this.grdVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdVehicle.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             gridLevelNode1.RelationName = "Level1";
             this.grdVehicle.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.grdVehicle.Location = new System.Drawing.Point(3, 3);
+            this.grdVehicle.Location = new System.Drawing.Point(15, 36);
             this.grdVehicle.MainView = this.gridViewVehicle;
             this.grdVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.grdVehicle.Name = "grdVehicle";
@@ -476,30 +476,8 @@
             this.grdVehicle.Size = new System.Drawing.Size(380, 447);
             this.grdVehicle.TabIndex = 40;
             this.grdVehicle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewVehicle});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.grdVehicle;
-            this.gridView1.Name = "gridView1";
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.AutoHeight = false;
-            this.btnGuncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
-            this.btnGuncelle.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // btnSil
-            // 
-            this.btnSil.AutoHeight = false;
-            this.btnSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
-            this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnSil.Name = "btnSil";
-            this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.gridViewVehicle,
+            this.gridView1});
             // 
             // gridViewVehicle
             // 
@@ -654,6 +632,29 @@
             this.gridColumn10.VisibleIndex = 1;
             this.gridColumn10.Width = 429;
             // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.AutoHeight = false;
+            this.btnGuncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.btnGuncelle.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // btnSil
+            // 
+            this.btnSil.AutoHeight = false;
+            this.btnSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.btnSil.Name = "btnSil";
+            this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.grdVehicle;
+            this.gridView1.Name = "gridView1";
+            // 
             // panelControl6
             // 
             this.panelControl6.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -668,11 +669,21 @@
             this.panelControl6.Size = new System.Drawing.Size(1380, 453);
             this.panelControl6.TabIndex = 24;
             // 
-            // ChkIscilik
+            // grdMaterialList
             // 
-            this.ChkIscilik.AutoHeight = false;
-            this.ChkIscilik.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
-            this.ChkIscilik.Name = "ChkIscilik";
+            this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.grdMaterialList.Location = new System.Drawing.Point(386, 0);
+            this.grdMaterialList.MainView = this.grdMaterialList2;
+            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
+            this.grdMaterialList.Name = "grdMaterialList";
+            this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.ChkIscilik});
+            this.grdMaterialList.Size = new System.Drawing.Size(994, 453);
+            this.grdMaterialList.TabIndex = 0;
+            this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdMaterialList2});
+            this.grdMaterialList.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // grdMaterialList2
             // 
@@ -984,21 +995,11 @@
             this.gridColumn8.VisibleIndex = 8;
             this.gridColumn8.Width = 149;
             // 
-            // grdMaterialList
+            // ChkIscilik
             // 
-            this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdMaterialList.Location = new System.Drawing.Point(386, 0);
-            this.grdMaterialList.MainView = this.grdMaterialList2;
-            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
-            this.grdMaterialList.Name = "grdMaterialList";
-            this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.ChkIscilik});
-            this.grdMaterialList.Size = new System.Drawing.Size(994, 453);
-            this.grdMaterialList.TabIndex = 0;
-            this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.grdMaterialList2});
-            this.grdMaterialList.Click += new System.EventHandler(this.gridControl1_Click);
+            this.ChkIscilik.AutoHeight = false;
+            this.ChkIscilik.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.ChkIscilik.Name = "ChkIscilik";
             // 
             // frm_Teklif_Adim1
             // 
@@ -1039,15 +1040,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdVehicle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewVehicle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewVehicle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
             this.panelControl6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ChkIscilik)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChkIscilik)).EndInit();
             this.ResumeLayout(false);
 
         }
