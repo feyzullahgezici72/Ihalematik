@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
+using IhalematikPro.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -30,7 +31,7 @@ namespace IhalematikPro.Forms
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
             txtSumTender.Text = list.Count.ToString();
             grdActiveTenderList.DataSource = list;
-            
+
         }
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -69,6 +70,13 @@ namespace IhalematikPro.Forms
         private void grdActiveTenderList_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnIhaleAc_Click(object sender, EventArgs e)
+        {
+            int Id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewActiveTenderList.GetFocusedRowCellValue("Id"));
+            CurrentManager.CurrentTender = TenderProvider.Instance.GetItem(Id);
+            this.Close();
         }
     }
 }
