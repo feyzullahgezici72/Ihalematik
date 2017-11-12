@@ -211,6 +211,18 @@
     <Compile Include="Forms\frm_Calisan_Guncelleme.Designer.cs">
       <DependentUpon>frm_Calisan_Guncelleme.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frm_IhaleGrup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_IhaleGrup.Designer.cs">
+      <DependentUpon>frm_IhaleGrup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_IhaleGrupGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_IhaleGrupGuncelle.Designer.cs">
+      <DependentUpon>frm_IhaleGrupGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frm_ihaleOlustuMesaj.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -449,6 +461,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Calisan_Guncelleme.resx">
       <DependentUpon>frm_Calisan_Guncelleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_IhaleGrup.resx">
+      <DependentUpon>frm_IhaleGrup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_IhaleGrupGuncelle.resx">
+      <DependentUpon>frm_IhaleGrupGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_ihaleOlustuMesaj.resx">
       <DependentUpon>frm_ihaleOlustuMesaj.cs</DependentUpon>

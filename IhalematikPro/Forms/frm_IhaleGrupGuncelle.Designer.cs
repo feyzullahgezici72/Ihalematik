@@ -1,6 +1,6 @@
 ﻿namespace IhalematikProUI.Forms
 {
-    partial class frm_Kurallar
+    partial class frm_IhaleGrupGuncelle
     {
         /// <summary>
         /// Required designer variable.
@@ -29,42 +29,43 @@
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.lblRuleName = new DevExpress.XtraEditors.LabelControl();
-            this.txtRuleValue = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRuleValue.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
-            this.groupControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.groupControl1.Appearance.Options.UseBackColor = true;
-            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
-            this.groupControl1.Controls.Add(this.btnKapat);
-            this.groupControl1.Controls.Add(this.btnGuncelle);
-            this.groupControl1.Controls.Add(this.lblRuleName);
-            this.groupControl1.Controls.Add(this.txtRuleValue);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(412, 170);
-            this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "KURAL GÜNCELLE";
+            this.groupControl1.Size = new System.Drawing.Size(734, 77);
+            this.groupControl1.TabIndex = 7;
+            this.groupControl1.Text = "Grup Adı";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(6, 41);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(723, 26);
+            this.textEdit1.TabIndex = 0;
             // 
             // btnKapat
             // 
             this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(338, 91);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Location = new System.Drawing.Point(661, 91);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(64, 54);
-            this.btnKapat.TabIndex = 148;
+            this.btnKapat.TabIndex = 150;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // btnGuncelle
@@ -74,58 +75,35 @@
             this.btnGuncelle.Appearance.Options.UseFont = true;
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.Location = new System.Drawing.Point(200, 91);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuncelle.Location = new System.Drawing.Point(523, 91);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(130, 54);
-            this.btnGuncelle.TabIndex = 147;
+            this.btnGuncelle.TabIndex = 149;
             this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
-            // lblRuleName
-            // 
-            this.lblRuleName.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblRuleName.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblRuleName.Location = new System.Drawing.Point(52, 58);
-            this.lblRuleName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.lblRuleName.Name = "lblRuleName";
-            this.lblRuleName.Size = new System.Drawing.Size(0, 19);
-            this.lblRuleName.TabIndex = 146;
-            // 
-            // txtRuleValue
-            // 
-            this.txtRuleValue.Location = new System.Drawing.Point(200, 56);
-            this.txtRuleValue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtRuleValue.Name = "txtRuleValue";
-            this.txtRuleValue.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtRuleValue.Properties.Appearance.Options.UseBackColor = true;
-            this.txtRuleValue.Properties.DisplayFormat.FormatString = "N2";
-            this.txtRuleValue.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtRuleValue.Properties.EditFormat.FormatString = "N2";
-            this.txtRuleValue.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtRuleValue.Size = new System.Drawing.Size(202, 26);
-            this.txtRuleValue.TabIndex = 145;
-            // 
-            // frm_Kurallar
+            // frm_IhaleGrupGuncelle
             // 
             this.AcceptButton = this.btnGuncelle;
+            this.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(412, 170);
+            this.ClientSize = new System.Drawing.Size(734, 149);
             this.ControlBox = false;
+            this.Controls.Add(this.btnKapat);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "frm_Kurallar";
+            this.Name = "frm_IhaleGrupGuncelle";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = " ";
-            this.Load += new System.EventHandler(this.frm_Kurallar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRuleValue.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -133,9 +111,8 @@
         #endregion
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
         private DevExpress.XtraEditors.SimpleButton btnGuncelle;
-        private DevExpress.XtraEditors.LabelControl lblRuleName;
-        private DevExpress.XtraEditors.TextEdit txtRuleValue;
     }
 }

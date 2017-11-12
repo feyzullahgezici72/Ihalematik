@@ -1,5 +1,6 @@
 ﻿using IhalematikPro.Model;
 using IhalematikProBL.Entity;
+using IhalematikProUI.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 namespace IhalematikPro.Manager
 {
     public static class CurrentManager
-    {   
+    {
         public static List<VehicleModel> Vehicles { get; set; }
         public static List<WorkerModel> Workers { get; set; }
 

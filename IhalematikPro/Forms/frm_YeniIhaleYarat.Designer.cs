@@ -40,14 +40,6 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.grdWorker = new DevExpress.XtraGrid.GridControl();
-            this.grdWorker2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.grdVehicle = new DevExpress.XtraGrid.GridControl();
-            this.grdVehicle2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pbControl = new DevExpress.XtraEditors.ProgressBarControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -62,14 +54,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdWorker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdWorker2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdVehicle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdVehicle2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
@@ -222,105 +206,6 @@
             this.labelControl3.Text = "YENİ İHALE TEKLİFİ OLUŞTUR";
             this.labelControl3.UseMnemonic = false;
             // 
-            // groupControl1
-            // 
-            this.groupControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupControl1.Appearance.Options.UseFont = true;
-            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupControl1.AppearanceCaption.Options.UseFont = true;
-            this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.groupControl1.Controls.Add(this.grdWorker);
-            this.groupControl1.Location = new System.Drawing.Point(10, 367);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(435, 385);
-            this.groupControl1.TabIndex = 32;
-            this.groupControl1.Text = "Çalışacak Personel Profili";
-            // 
-            // grdWorker
-            // 
-            this.grdWorker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdWorker.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdWorker.Location = new System.Drawing.Point(3, 32);
-            this.grdWorker.MainView = this.grdWorker2;
-            this.grdWorker.Margin = new System.Windows.Forms.Padding(4);
-            this.grdWorker.Name = "grdWorker";
-            this.grdWorker.Size = new System.Drawing.Size(429, 350);
-            this.grdWorker.TabIndex = 0;
-            this.grdWorker.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.grdWorker2});
-            // 
-            // grdWorker2
-            // 
-            this.grdWorker2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1});
-            this.grdWorker2.GridControl = this.grdWorker;
-            this.grdWorker2.Name = "grdWorker2";
-            this.grdWorker2.OptionsSelection.CheckBoxSelectorColumnWidth = 40;
-            this.grdWorker2.OptionsSelection.MultiSelect = true;
-            this.grdWorker2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
-            this.grdWorker2.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn1.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn1.Caption = "ÜNVANI";
-            this.gridColumn1.FieldName = "Title.Name";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.AllowEdit = false;
-            this.gridColumn1.OptionsColumn.AllowFocus = false;
-            this.gridColumn1.OptionsColumn.ReadOnly = true;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 1;
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupControl2.AppearanceCaption.Options.UseFont = true;
-            this.groupControl2.Controls.Add(this.grdVehicle);
-            this.groupControl2.Location = new System.Drawing.Point(454, 367);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(430, 385);
-            this.groupControl2.TabIndex = 32;
-            this.groupControl2.Text = "Çalışacak Araç Profili";
-            // 
-            // grdVehicle
-            // 
-            this.grdVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdVehicle.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdVehicle.Location = new System.Drawing.Point(3, 32);
-            this.grdVehicle.MainView = this.grdVehicle2;
-            this.grdVehicle.Margin = new System.Windows.Forms.Padding(4);
-            this.grdVehicle.Name = "grdVehicle";
-            this.grdVehicle.Size = new System.Drawing.Size(424, 350);
-            this.grdVehicle.TabIndex = 0;
-            this.grdVehicle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.grdVehicle2});
-            // 
-            // grdVehicle2
-            // 
-            this.grdVehicle2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn2});
-            this.grdVehicle2.GridControl = this.grdVehicle;
-            this.grdVehicle2.Name = "grdVehicle2";
-            this.grdVehicle2.OptionsSelection.CheckBoxSelectorColumnWidth = 40;
-            this.grdVehicle2.OptionsSelection.MultiSelect = true;
-            this.grdVehicle2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
-            this.grdVehicle2.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "ARAÇ TİPİ";
-            this.gridColumn2.FieldName = "Title.Name";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.OptionsColumn.AllowEdit = false;
-            this.gridColumn2.OptionsColumn.AllowFocus = false;
-            this.gridColumn2.OptionsColumn.ReadOnly = true;
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            // 
             // pbControl
             // 
             this.pbControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -406,8 +291,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.groupControl2);
-            this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
@@ -435,14 +318,6 @@
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdWorker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdWorker2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdVehicle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdVehicle2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
@@ -462,14 +337,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraGrid.GridControl grdWorker;
-        private DevExpress.XtraGrid.Views.Grid.GridView grdWorker2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraGrid.GridControl grdVehicle;
-        private DevExpress.XtraGrid.Views.Grid.GridView grdVehicle2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.ProgressBarControl pbControl;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pcWorld;

@@ -123,7 +123,7 @@ namespace IhalematikPro.Forms
          
              
             frm_YeniIhaleYarat frm = new frm_YeniIhaleYarat();
-            frm.ShowDialog();
+            frm.Show();
            
         }
         Forms.frm_Teklif_Adim1 ta1;
