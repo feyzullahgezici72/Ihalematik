@@ -71,9 +71,8 @@ namespace IhalematikProUI.Forms
         {
             List<TitleModel> models = UITitleManager.Instance.GetTitles();
             ddlTitles.Properties.Items.AddRange(models);
-            //this.CurrentWorker = 
-
-
+            ddlTitles.ReadOnly = true; 
+            
             if (CurrentWorker != null)
             {
                 txtAGI.Text = CurrentWorker.AGIFare.Amount.ToString();

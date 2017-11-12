@@ -102,6 +102,7 @@ namespace IhalematikPro.Forms
         }
         public void InitilalizeForm()
         {
+            ddlTitles.Properties.Items.Clear();
             List<TitleModel> models = UITitleManager.Instance.GetTitles();
             ddlTitles.Properties.Items.AddRange(models);
         }
@@ -122,7 +123,7 @@ namespace IhalematikPro.Forms
         {
             if (e.KeyCode.ToString() == "F1")
             {
-                frm_CalisanEkle frm = new frm_CalisanEkle();
+                frm_CalisanEkle frm = new frm_CalisanEkle(this);
                 frm.ShowDialog();
             }
 
@@ -250,7 +251,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            frm_CalisanEkle frm = new frm_CalisanEkle();
+            frm_CalisanEkle frm = new frm_CalisanEkle(this);
 
             frm.ShowDialog();
         }
