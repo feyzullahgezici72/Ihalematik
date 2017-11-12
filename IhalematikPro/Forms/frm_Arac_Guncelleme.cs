@@ -150,7 +150,6 @@ namespace IhalematikProUI.Forms
             
             model.Save();
            this._owner.LoadGrid();
-
         }
     }
 }

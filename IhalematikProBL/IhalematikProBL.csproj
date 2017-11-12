@@ -119,6 +119,7 @@
     <Compile Include="Entity\MaterialList.cs" />
     <Compile Include="Entity\OBF.cs" />
     <Compile Include="Entity\Poz.cs" />
+    <Compile Include="Entity\Rule.cs" />
     <Compile Include="Entity\Tender.cs" />
     <Compile Include="Entity\TenderEquipment.cs" />
     <Compile Include="Entity\TenderMaterialEquipment.cs" />
@@ -137,6 +138,7 @@
     <Compile Include="Provider\MaterialListProvider.cs" />
     <Compile Include="Provider\OBFProvider.cs" />
     <Compile Include="Provider\PozProvider.cs" />
+    <Compile Include="Provider\RuleProvider.cs" />
     <Compile Include="Provider\TenderEquipmentProvider.cs" />
     <Compile Include="Provider\TenderMaterialEquipmentProvider.cs" />
     <Compile Include="Provider\TenderProvider.cs" />
