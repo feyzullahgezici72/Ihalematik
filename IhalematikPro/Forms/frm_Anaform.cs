@@ -34,17 +34,18 @@ namespace IhalematikPro.Forms
              
         }
 
-        
 
-        private void frm_Anaform_Load(object sender, EventArgs e)
+        public void frm_Anaform_Load(object sender, EventArgs e)
         {
             DevExpress.UserSkins.BonusSkins.Register();
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
             
             grdActiveTenderList.DataSource = list;
             this.WindowState = FormWindowState.Maximized;
-
-
+            if (CurrentManager.CurrentCompany != null)
+            {
+                lblCompanyName.Text = CurrentManager.CurrentCompany.Name;
+            }
         }
 
         private void barBtnCikis_ItemClick(object sender, ItemClickEventArgs e)
@@ -57,7 +58,7 @@ namespace IhalematikPro.Forms
         private void barBtnFirmaTanimlama_ItemClick(object sender, ItemClickEventArgs e)
         {
             //radialMenu.HidePopup();
-            Forms.frm_FirmaTanimlama frm = new frm_FirmaTanimlama();
+            Forms.frm_FirmaTanimlama frm = new frm_FirmaTanimlama(this);
             frm.ShowDialog();
         }
 
@@ -470,7 +471,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem23_ItemClick_1(object sender, ItemClickEventArgs e)
         {
-            Forms.frm_FirmaTanimlama frm = new frm_FirmaTanimlama();
+            Forms.frm_FirmaTanimlama frm = new frm_FirmaTanimlama(this);
             frm.ShowDialog();
         }
 
@@ -635,7 +636,7 @@ namespace IhalematikPro.Forms
 
         private void groupControl2_Click(object sender, EventArgs e)
         {
-            Forms.frm_FirmaTanimlama frm = new frm_FirmaTanimlama();
+            Forms.frm_FirmaTanimlama frm = new frm_FirmaTanimlama(this);
             frm.ShowDialog();
         }
 

@@ -16,9 +16,11 @@ namespace IhalematikPro.Forms
 {
     public partial class frm_FirmaTanimlama : DevExpress.XtraEditors.XtraForm
     {
-        public frm_FirmaTanimlama()
+        frm_Anaform _owner = null;
+        public frm_FirmaTanimlama(frm_Anaform Owner)
         {
             InitializeComponent();
+            this._owner = Owner;
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -85,6 +87,8 @@ namespace IhalematikPro.Forms
             company.Title = txtTitle.Text;
             company.WebAddress = txtWebAddress.Text;
             CompanyProvider.Instance.Save(company);
+
+            this._owner.frm_Anaform_Load(null, null);
         }
     }
 }
