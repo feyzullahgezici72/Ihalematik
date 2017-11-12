@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using IhalematikPro.Forms;
+using IhalematikProBL.Provider;
 
 namespace IhalematikProUI.Forms
 {
@@ -17,6 +18,8 @@ namespace IhalematikProUI.Forms
         public frm_Kurallistesi()
         {
             InitializeComponent();
+            bindingSourceRules.DataSource = typeof(List<IhalematikProBL.Entity.Rule>);
+            grdRules.DataSource = bindingSourceRules;
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -24,7 +27,7 @@ namespace IhalematikProUI.Forms
             this.Close();
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             af.RibonAktif();
-            
+
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -34,9 +37,21 @@ namespace IhalematikProUI.Forms
 
         private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            frm_Kurallar krl = new frm_Kurallar();
+            int currentRuleId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewRules.GetFocusedRowCellValue("Id"));
+            frm_Kurallar krl = new frm_Kurallar(this);
+            krl.CurrentRuleId = currentRuleId;
             krl.ShowDialog();
-            
+        }
+
+        private void frm_Kurallistesi_Load(object sender, EventArgs e)
+        {
+            this.LoadGrid();
+        }
+
+        public void LoadGrid()
+        {
+            List<IhalematikProBL.Entity.Rule> rules = RuleProvider.Instance.GetItems();
+            grdRules.DataSource = rules;
         }
     }
 }

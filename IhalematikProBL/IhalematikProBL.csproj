@@ -129,6 +129,7 @@
     <Compile Include="Entity\Worker.cs" />
     <Compile Include="Enum\CurrencyTypesEnum.cs" />
     <Compile Include="Enum\RentTypesEnum.cs" />
+    <Compile Include="Enum\RuleTypesEnum.cs" />
     <Compile Include="Enum\UnitTimeTypesEnum.cs" />
     <Compile Include="Manager\CustomDBConnectionManager.cs" />
     <Compile Include="Manager\TenderManager.cs" />

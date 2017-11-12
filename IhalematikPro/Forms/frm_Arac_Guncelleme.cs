@@ -148,7 +148,7 @@ namespace IhalematikProUI.Forms
                 model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentOtherFare.Text);
             }
             
-            model.Save();
+           model.Save();
            this._owner.LoadGrid();
         }
     }
