@@ -30,6 +30,7 @@ namespace IhalematikPro.Forms
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
             txtSumTender.Text = list.Count.ToString();
             grdActiveTenderList.DataSource = list;
+            
         }
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)

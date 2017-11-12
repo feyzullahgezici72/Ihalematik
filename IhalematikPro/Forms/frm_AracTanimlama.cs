@@ -46,7 +46,8 @@ namespace IhalematikPro.Forms
             LoadGrid();
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(Frm_AracTanimlama_KeyDown);
-            
+        
+             
         }
 
         private void Frm_AracTanimlama_KeyDown(object sender, KeyEventArgs e)
@@ -177,6 +178,11 @@ namespace IhalematikPro.Forms
             this.Enabled = true;
             this.Opacity = 100;
             KayitMenusu.Visible = true;
+        }
+
+        private void grdVehicle_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
