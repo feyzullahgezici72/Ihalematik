@@ -40,7 +40,6 @@ namespace IhalematikPro.Forms
         {
             List<VehicleModel> models = UIVehicleManager.Instance.GetVehicles();
             grdVehicle.DataSource = models;
-           
         }
         private void frm_AracTanimlama_Load(object sender, EventArgs e)
         {
