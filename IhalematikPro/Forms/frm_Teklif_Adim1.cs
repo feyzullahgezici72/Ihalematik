@@ -77,6 +77,13 @@ namespace IhalematikPro.Forms
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
+            //this.SaveMaterialListIsWorkship();
+
+            this.OpenForm2();
+        }
+
+        private void SaveMaterialListIsWorkship()
+        {
             int[] selectedRows = grdMaterialList2.GetSelectedRows();
 
             MaterialList[] items = CurrentManager.Instance.CurrentTender.MaterialList.ToArray();
@@ -92,6 +99,10 @@ namespace IhalematikPro.Forms
                 item.TenderId = CurrentManager.Instance.CurrentTender.Id;
                 MaterialListProvider.Instance.Save(item);
             }
+        }
+
+        private void OpenForm2()
+        {
             this.Enabled = false;
             frm_ihaleOlustuMesaj frm = new frm_ihaleOlustuMesaj();
             frm.lblMesaj.Text = "Malzemeler Kaydedildi...";
@@ -168,6 +179,8 @@ namespace IhalematikPro.Forms
 
         public void LoadTenderMaterialList()
         {
+            //this.SaveMaterialListIsWorkship();
+
             if (this.SelectedGroupId != 0 && CurrentManager.Instance.CurrentTender.MaterialList != null)
             {
                 List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList(); 

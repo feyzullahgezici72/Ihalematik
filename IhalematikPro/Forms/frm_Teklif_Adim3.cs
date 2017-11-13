@@ -498,7 +498,7 @@ namespace IhalematikPro.Forms
         {
             if (this.SelectedGroupId != 0 && CurrentManager.Instance.CurrentTender.MaterialList != null)
             {
-                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
+                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
                 List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
                 grdMaterialListIsWorkship.DataSource = models;
             }

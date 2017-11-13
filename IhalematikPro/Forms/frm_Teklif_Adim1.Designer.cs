@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim1));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
@@ -79,7 +79,8 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ChkIscilik = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rpstWorkship = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -105,7 +106,7 @@
             this.panelControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChkIscilik)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstWorkship)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -119,9 +120,8 @@
             this.panelControl1.Controls.Add(this.txtAdimAciklama);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1376, 50);
+            this.panelControl1.Size = new System.Drawing.Size(917, 34);
             this.panelControl1.TabIndex = 19;
             // 
             // pcWorld
@@ -129,8 +129,9 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2);
             this.pcWorld.Name = "pcWorld";
-            this.pcWorld.Size = new System.Drawing.Size(70, 50);
+            this.pcWorld.Size = new System.Drawing.Size(47, 34);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcWorld.TabIndex = 16;
             this.pcWorld.TabStop = false;
@@ -141,10 +142,9 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1312, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Location = new System.Drawing.Point(874, 0);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(64, 50);
+            this.btnKapat.Size = new System.Drawing.Size(43, 34);
             this.btnKapat.TabIndex = 3;
             this.btnKapat.TabStop = false;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
@@ -157,11 +157,10 @@
             this.txtAdimAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
             this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.txtAdimAciklama.Location = new System.Drawing.Point(76, 7);
-            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdimAciklama.Location = new System.Drawing.Point(51, 5);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
-            this.txtAdimAciklama.Size = new System.Drawing.Size(567, 37);
+            this.txtAdimAciklama.Size = new System.Drawing.Size(369, 24);
             this.txtAdimAciklama.TabIndex = 0;
             this.txtAdimAciklama.Text = "MALZEME LİSTESİ KAYIT İŞLEMLERİ";
             // 
@@ -179,59 +178,53 @@
             this.panelControl2.Controls.Add(this.btnPozKayit);
             this.panelControl2.Controls.Add(this.btnObfKayit);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(0, 50);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Location = new System.Drawing.Point(0, 34);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1376, 89);
+            this.panelControl2.Size = new System.Drawing.Size(917, 61);
             this.panelControl2.TabIndex = 20;
             // 
             // lblTenderDescription
             // 
             this.lblTenderDescription.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTenderDescription.Location = new System.Drawing.Point(140, 48);
-            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderDescription.Location = new System.Drawing.Point(93, 33);
             this.lblTenderDescription.Name = "lblTenderDescription";
-            this.lblTenderDescription.Size = new System.Drawing.Size(0, 29);
+            this.lblTenderDescription.Size = new System.Drawing.Size(0, 19);
             this.lblTenderDescription.TabIndex = 10;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl2.Location = new System.Drawing.Point(15, 48);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Location = new System.Drawing.Point(10, 33);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(118, 29);
+            this.labelControl2.Size = new System.Drawing.Size(79, 19);
             this.labelControl2.TabIndex = 9;
             this.labelControl2.Text = "Açıklama :";
             // 
             // lblTenderNumber
             // 
             this.lblTenderNumber.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTenderNumber.Location = new System.Drawing.Point(140, 13);
-            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderNumber.Location = new System.Drawing.Point(93, 9);
             this.lblTenderNumber.Name = "lblTenderNumber";
-            this.lblTenderNumber.Size = new System.Drawing.Size(0, 29);
+            this.lblTenderNumber.Size = new System.Drawing.Size(0, 19);
             this.lblTenderNumber.TabIndex = 8;
             // 
             // lblTederDescription
             // 
             this.lblTederDescription.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTederDescription.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.lblTederDescription.Location = new System.Drawing.Point(15, 75);
-            this.lblTederDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTederDescription.Location = new System.Drawing.Point(10, 51);
             this.lblTederDescription.Name = "lblTederDescription";
-            this.lblTederDescription.Size = new System.Drawing.Size(0, 34);
+            this.lblTederDescription.Size = new System.Drawing.Size(0, 22);
             this.lblTederDescription.TabIndex = 7;
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl1.Location = new System.Drawing.Point(15, 13);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Location = new System.Drawing.Point(10, 9);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(115, 29);
+            this.labelControl1.Size = new System.Drawing.Size(76, 19);
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "İhale No  :";
             // 
@@ -245,11 +238,10 @@
             this.btnPozKayit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnPozKayit.Image = global::IhalematikProUI.Properties.Resources.Inventory_icon__1_;
             this.btnPozKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnPozKayit.Location = new System.Drawing.Point(937, 3);
-            this.btnPozKayit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPozKayit.Location = new System.Drawing.Point(624, 2);
             this.btnPozKayit.Name = "btnPozKayit";
             this.btnPozKayit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnPozKayit.Size = new System.Drawing.Size(210, 83);
+            this.btnPozKayit.Size = new System.Drawing.Size(140, 57);
             this.btnPozKayit.TabIndex = 5;
             this.btnPozKayit.Text = "F1 : Poz Kayıt";
             this.btnPozKayit.Click += new System.EventHandler(this.simpleButton3_Click);
@@ -264,10 +256,9 @@
             this.btnObfKayit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnObfKayit.Image = global::IhalematikProUI.Properties.Resources.App_lists_icon__1_;
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnObfKayit.Location = new System.Drawing.Point(1147, 3);
-            this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnObfKayit.Location = new System.Drawing.Point(764, 2);
             this.btnObfKayit.Name = "btnObfKayit";
-            this.btnObfKayit.Size = new System.Drawing.Size(226, 83);
+            this.btnObfKayit.Size = new System.Drawing.Size(151, 57);
             this.btnObfKayit.TabIndex = 5;
             this.btnObfKayit.Text = "F2 : ÖBF Kayıt";
             this.btnObfKayit.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -281,10 +272,9 @@
             this.panelControl3.Controls.Add(this.panel2);
             this.panelControl3.Controls.Add(this.panel6);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl3.Location = new System.Drawing.Point(0, 592);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl3.Location = new System.Drawing.Point(0, 405);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1376, 118);
+            this.panelControl3.Size = new System.Drawing.Size(917, 81);
             this.panelControl3.TabIndex = 21;
             // 
             // simpleButton1
@@ -297,9 +287,8 @@
             this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.document_excel_icon;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.simpleButton1.Location = new System.Drawing.Point(0, 0);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(471, 118);
+            this.simpleButton1.Size = new System.Drawing.Size(314, 81);
             this.simpleButton1.TabIndex = 12;
             this.simpleButton1.Text = "Fiyat Araştırmasından getir";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -311,10 +300,9 @@
             this.panel2.Controls.Add(this.btnYazdir);
             this.panel2.Controls.Add(this.btnKaydet);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(471, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(314, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(501, 118);
+            this.panel2.Size = new System.Drawing.Size(334, 81);
             this.panel2.TabIndex = 10;
             // 
             // btnExceleAktar
@@ -325,10 +313,9 @@
             this.btnExceleAktar.Appearance.Options.UseForeColor = true;
             this.btnExceleAktar.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnExceleAktar.Image = ((System.Drawing.Image)(resources.GetObject("btnExceleAktar.Image")));
-            this.btnExceleAktar.Location = new System.Drawing.Point(285, 0);
-            this.btnExceleAktar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExceleAktar.Location = new System.Drawing.Point(190, 0);
             this.btnExceleAktar.Name = "btnExceleAktar";
-            this.btnExceleAktar.Size = new System.Drawing.Size(216, 118);
+            this.btnExceleAktar.Size = new System.Drawing.Size(144, 81);
             this.btnExceleAktar.TabIndex = 3;
             this.btnExceleAktar.Text = "Excel\'e Aktar";
             // 
@@ -340,10 +327,9 @@
             this.btnYazdir.Appearance.Options.UseForeColor = true;
             this.btnYazdir.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnYazdir.Image = global::IhalematikProUI.Properties.Resources.print_icon__1_;
-            this.btnYazdir.Location = new System.Drawing.Point(141, 0);
-            this.btnYazdir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnYazdir.Location = new System.Drawing.Point(94, 0);
             this.btnYazdir.Name = "btnYazdir";
-            this.btnYazdir.Size = new System.Drawing.Size(144, 118);
+            this.btnYazdir.Size = new System.Drawing.Size(96, 81);
             this.btnYazdir.TabIndex = 3;
             this.btnYazdir.Text = "Yazdır";
             // 
@@ -356,9 +342,8 @@
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
             this.btnKaydet.Location = new System.Drawing.Point(0, 0);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(141, 118);
+            this.btnKaydet.Size = new System.Drawing.Size(94, 81);
             this.btnKaydet.TabIndex = 3;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
@@ -372,33 +357,30 @@
             this.panel6.Controls.Add(this.txtBaseAmount);
             this.panel6.Controls.Add(this.labelControl8);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(972, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Location = new System.Drawing.Point(648, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(404, 118);
+            this.panel6.Size = new System.Drawing.Size(269, 81);
             this.panel6.TabIndex = 9;
             // 
             // txtTotalAmount
             // 
             this.txtTotalAmount.Enabled = false;
-            this.txtTotalAmount.Location = new System.Drawing.Point(178, 80);
-            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotalAmount.Location = new System.Drawing.Point(119, 55);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTotalAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtTotalAmount.Properties.Mask.EditMask = "c";
             this.txtTotalAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtTotalAmount.Size = new System.Drawing.Size(204, 26);
+            this.txtTotalAmount.Size = new System.Drawing.Size(136, 20);
             this.txtTotalAmount.TabIndex = 5;
             // 
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl7.Location = new System.Drawing.Point(40, 85);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl7.Location = new System.Drawing.Point(27, 58);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(138, 21);
+            this.labelControl7.Size = new System.Drawing.Size(85, 13);
             this.labelControl7.TabIndex = 8;
             this.labelControl7.Text = "GENEL TOPLAM:";
             // 
@@ -406,47 +388,43 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl6.Location = new System.Drawing.Point(18, 9);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl6.Location = new System.Drawing.Point(12, 6);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(158, 21);
+            this.labelControl6.Size = new System.Drawing.Size(101, 13);
             this.labelControl6.TabIndex = 9;
             this.labelControl6.Text = "MALİYET TOPLAM:";
             // 
             // txtBaseKDVAmount
             // 
             this.txtBaseKDVAmount.Enabled = false;
-            this.txtBaseKDVAmount.Location = new System.Drawing.Point(178, 42);
-            this.txtBaseKDVAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBaseKDVAmount.Location = new System.Drawing.Point(119, 29);
             this.txtBaseKDVAmount.Name = "txtBaseKDVAmount";
             this.txtBaseKDVAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBaseKDVAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtBaseKDVAmount.Properties.Mask.EditMask = "c";
             this.txtBaseKDVAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtBaseKDVAmount.Size = new System.Drawing.Size(204, 26);
+            this.txtBaseKDVAmount.Size = new System.Drawing.Size(136, 20);
             this.txtBaseKDVAmount.TabIndex = 6;
             // 
             // txtBaseAmount
             // 
             this.txtBaseAmount.Enabled = false;
-            this.txtBaseAmount.Location = new System.Drawing.Point(178, 4);
-            this.txtBaseAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBaseAmount.Location = new System.Drawing.Point(119, 3);
             this.txtBaseAmount.Name = "txtBaseAmount";
             this.txtBaseAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBaseAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtBaseAmount.Properties.Mask.EditMask = "c";
             this.txtBaseAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtBaseAmount.Size = new System.Drawing.Size(204, 26);
+            this.txtBaseAmount.Size = new System.Drawing.Size(136, 20);
             this.txtBaseAmount.TabIndex = 7;
             // 
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl8.Location = new System.Drawing.Point(50, 47);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl8.Location = new System.Drawing.Point(33, 32);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(126, 21);
+            this.labelControl8.Size = new System.Drawing.Size(80, 13);
             this.labelControl8.TabIndex = 10;
             this.labelControl8.Text = "KAR TOPLAMI:";
             // 
@@ -455,26 +433,25 @@
             this.panelControl4.Controls.Add(this.grdTenderGroup);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
+            this.panelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(386, 453);
+            this.panelControl4.Size = new System.Drawing.Size(257, 310);
             this.panelControl4.TabIndex = 1;
             // 
             // grdTenderGroup
             // 
             this.grdTenderGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdTenderGroup.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.grdTenderGroup.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.grdTenderGroup.Location = new System.Drawing.Point(3, 3);
+            gridLevelNode2});
+            this.grdTenderGroup.Location = new System.Drawing.Point(2, 2);
             this.grdTenderGroup.MainView = this.gridViewTenderGroup;
-            this.grdTenderGroup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdTenderGroup.Name = "grdTenderGroup";
             this.grdTenderGroup.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGuncelle,
             this.btnSil,
             this.rpstColId});
-            this.grdTenderGroup.Size = new System.Drawing.Size(380, 447);
+            this.grdTenderGroup.Size = new System.Drawing.Size(253, 306);
             this.grdTenderGroup.TabIndex = 40;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup,
@@ -647,7 +624,7 @@
             // 
             this.btnGuncelle.AutoHeight = false;
             this.btnGuncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnGuncelle.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -656,7 +633,7 @@
             // 
             this.btnSil.AutoHeight = false;
             this.btnSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnSil.Name = "btnSil";
             this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -674,23 +651,20 @@
             this.panelControl6.Controls.Add(this.grdMaterialList);
             this.panelControl6.Controls.Add(this.panelControl4);
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl6.Location = new System.Drawing.Point(0, 139);
-            this.panelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl6.Location = new System.Drawing.Point(0, 95);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(1376, 453);
+            this.panelControl6.Size = new System.Drawing.Size(917, 310);
             this.panelControl6.TabIndex = 24;
             // 
             // grdMaterialList
             // 
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grdMaterialList.Location = new System.Drawing.Point(386, 0);
+            this.grdMaterialList.Location = new System.Drawing.Point(257, 0);
             this.grdMaterialList.MainView = this.grdMaterialList2;
-            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.ChkIscilik});
-            this.grdMaterialList.Size = new System.Drawing.Size(990, 453);
+            this.rpstWorkship});
+            this.grdMaterialList.Size = new System.Drawing.Size(660, 310);
             this.grdMaterialList.TabIndex = 0;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdMaterialList2});
@@ -814,7 +788,8 @@
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6,
-            this.gridColumn8});
+            this.gridColumn8,
+            this.gridColumn9});
             this.grdMaterialList2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.grdMaterialList2.GridControl = this.grdMaterialList;
             this.grdMaterialList2.Name = "grdMaterialList2";
@@ -822,7 +797,6 @@
             this.grdMaterialList2.OptionsNavigation.AutoFocusNewRow = true;
             this.grdMaterialList2.OptionsNavigation.EnterMoveNextColumn = true;
             this.grdMaterialList2.OptionsSelection.CheckBoxSelectorColumnWidth = 60;
-            this.grdMaterialList2.OptionsSelection.MultiSelect = true;
             this.grdMaterialList2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.grdMaterialList2.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.False;
             this.grdMaterialList2.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.False;
@@ -1004,26 +978,32 @@
             this.gridColumn8.VisibleIndex = 8;
             this.gridColumn8.Width = 149;
             // 
-            // ChkIscilik
+            // gridColumn9
             // 
-            this.ChkIscilik.AutoHeight = false;
-            this.ChkIscilik.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
-            this.ChkIscilik.Name = "ChkIscilik";
+            this.gridColumn9.ColumnEdit = this.rpstWorkship;
+            this.gridColumn9.FieldName = "IsWorkship";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 0;
+            // 
+            // rpstWorkship
+            // 
+            this.rpstWorkship.AutoHeight = false;
+            this.rpstWorkship.Name = "rpstWorkship";
             // 
             // frm_Teklif_Adim1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(1376, 710);
+            this.ClientSize = new System.Drawing.Size(917, 486);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl6);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Teklif_Adim1";
@@ -1058,7 +1038,7 @@
             this.panelControl6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChkIscilik)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstWorkship)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1110,7 +1090,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit ChkIscilik;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit rpstColId;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit rpstWorkship;
     }
 }
