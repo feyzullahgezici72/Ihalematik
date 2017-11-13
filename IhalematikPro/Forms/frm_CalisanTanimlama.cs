@@ -234,7 +234,7 @@ namespace IhalematikPro.Forms
             {
                 //if (string.IsNullOrEmpty(this.BaseFare))
                 //{
-                    txtBaseFare.Text = this.BaseFare;
+                txtBaseFare.Text = this.BaseFare;
                 //}
             }
         }
@@ -289,5 +289,25 @@ namespace IhalematikPro.Forms
         {
 
         }
-    }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            ddlTitles.SelectedIndex = -1;
+            rbNormal.Checked = false;
+            rbAsgariUcret.Checked = false;
+            txtAGI.ResetText();
+            txtBaseFare.ResetText();
+            txtExtraFare.ResetText();
+            txtFoodFare.ResetText();
+            txtHotelFare.ResetText();
+            txtIncomeTaxFare.ResetText();
+            txtISGFare.ResetText();
+            txtSeveranceFare.ResetText();
+            txtSGKPrimFare.ResetText();
+            txtStampTaxFare.ResetText();
+            txtTravelFare.ResetText();
+            txtWorklesFonFare.ResetText();
+
+        }
+    } 
 }

@@ -301,6 +301,12 @@
     <Compile Include="Forms\frm_MalzemeFiyatTeklifiOlustur.Designer.cs">
       <DependentUpon>frm_MalzemeFiyatTeklifiOlustur.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frm_MesajFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_MesajFormu.Designer.cs">
+      <DependentUpon>frm_MesajFormu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frm_obfGuncelle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -506,6 +512,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_MalzemeFiyatTeklifiOlustur.resx">
       <DependentUpon>frm_MalzemeFiyatTeklifiOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_MesajFormu.resx">
+      <DependentUpon>frm_MesajFormu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_obfGuncelle.resx">
       <DependentUpon>frm_obfGuncelle.cs</DependentUpon>

@@ -137,7 +137,7 @@
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1376, 50);
             this.panelControl1.TabIndex = 34;
@@ -153,7 +153,7 @@
             this.panelControl2.Controls.Add(this.btnKapat);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1376, 50);
             this.panelControl2.TabIndex = 2;
@@ -178,7 +178,7 @@
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.labelControl1.Location = new System.Drawing.Point(76, 7);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
             this.labelControl1.Size = new System.Drawing.Size(293, 37);
@@ -196,7 +196,7 @@
             this.btnListele.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnListele.Image = global::IhalematikProUI.Properties.Resources.Inventory_icon__1_;
             this.btnListele.Location = new System.Drawing.Point(1182, 0);
-            this.btnListele.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnListele.Margin = new System.Windows.Forms.Padding(4);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(132, 50);
             this.btnListele.TabIndex = 14;
@@ -211,7 +211,7 @@
             this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1314, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(62, 50);
             this.btnKapat.TabIndex = 1;
@@ -228,7 +228,7 @@
             this.KayitMenusu.Controls.Add(this.simpleButton1);
             this.KayitMenusu.Dock = System.Windows.Forms.DockStyle.Left;
             this.KayitMenusu.Location = new System.Drawing.Point(0, 50);
-            this.KayitMenusu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KayitMenusu.Margin = new System.Windows.Forms.Padding(4);
             this.KayitMenusu.Name = "KayitMenusu";
             this.KayitMenusu.Size = new System.Drawing.Size(448, 843);
             this.KayitMenusu.TabIndex = 35;
@@ -249,7 +249,7 @@
             this.pnlArac.Controls.Add(this.PanelKira);
             this.pnlArac.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlArac.Location = new System.Drawing.Point(0, 56);
-            this.pnlArac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlArac.Margin = new System.Windows.Forms.Padding(4);
             this.pnlArac.Name = "pnlArac";
             this.pnlArac.Size = new System.Drawing.Size(448, 787);
             this.pnlArac.TabIndex = 92;
@@ -277,7 +277,7 @@
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
             this.btnKaydet.Location = new System.Drawing.Point(178, 0);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(132, 58);
             this.btnKaydet.TabIndex = 20;
@@ -293,7 +293,7 @@
             this.btnTemizle.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnTemizle.Image = global::IhalematikProUI.Properties.Resources.Actions_edit_clear_icon;
             this.btnTemizle.Location = new System.Drawing.Point(310, 0);
-            this.btnTemizle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTemizle.Margin = new System.Windows.Forms.Padding(4);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(132, 58);
             this.btnTemizle.TabIndex = 19;
@@ -317,15 +317,15 @@
             this.PanelSirket.Controls.Add(this.txtDriverFare);
             this.PanelSirket.Controls.Add(this.labelControl13);
             this.PanelSirket.Location = new System.Drawing.Point(14, 111);
-            this.PanelSirket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelSirket.Margin = new System.Windows.Forms.Padding(4);
             this.PanelSirket.Name = "PanelSirket";
-            this.PanelSirket.Size = new System.Drawing.Size(406, 273);
+            this.PanelSirket.Size = new System.Drawing.Size(411, 273);
             this.PanelSirket.TabIndex = 39;
             // 
             // txtMaintenanceFare
             // 
             this.txtMaintenanceFare.Location = new System.Drawing.Point(172, 118);
-            this.txtMaintenanceFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaintenanceFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaintenanceFare.Name = "txtMaintenanceFare";
             this.txtMaintenanceFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMaintenanceFare.Properties.Appearance.Options.UseBackColor = true;
@@ -340,7 +340,7 @@
             // txtFuelOilDay
             // 
             this.txtFuelOilDay.Location = new System.Drawing.Point(172, 4);
-            this.txtFuelOilDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFuelOilDay.Margin = new System.Windows.Forms.Padding(4);
             this.txtFuelOilDay.Name = "txtFuelOilDay";
             this.txtFuelOilDay.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtFuelOilDay.Properties.Appearance.Options.UseBackColor = true;
@@ -357,7 +357,7 @@
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelControl7.Location = new System.Drawing.Point(74, 126);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(96, 19);
             this.labelControl7.TabIndex = 122;
@@ -368,7 +368,7 @@
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelControl5.Location = new System.Drawing.Point(33, 12);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(131, 19);
             this.labelControl5.TabIndex = 123;
@@ -379,7 +379,7 @@
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelControl4.Location = new System.Drawing.Point(74, 164);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(95, 19);
             this.labelControl4.TabIndex = 124;
@@ -390,7 +390,7 @@
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelControl6.Location = new System.Drawing.Point(62, 50);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(106, 19);
             this.labelControl6.TabIndex = 125;
@@ -399,7 +399,7 @@
             // txtServiceFare
             // 
             this.txtServiceFare.Location = new System.Drawing.Point(172, 156);
-            this.txtServiceFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtServiceFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtServiceFare.Name = "txtServiceFare";
             this.txtServiceFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtServiceFare.Properties.Appearance.Options.UseBackColor = true;
@@ -415,7 +415,7 @@
             // txtFuelOilFare
             // 
             this.txtFuelOilFare.Location = new System.Drawing.Point(172, 42);
-            this.txtFuelOilFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFuelOilFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtFuelOilFare.Name = "txtFuelOilFare";
             this.txtFuelOilFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtFuelOilFare.Properties.Appearance.Options.UseBackColor = true;
@@ -431,7 +431,7 @@
             // txtOtherFare
             // 
             this.txtOtherFare.Location = new System.Drawing.Point(172, 232);
-            this.txtOtherFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtOtherFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtOtherFare.Name = "txtOtherFare";
             this.txtOtherFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtOtherFare.Properties.Appearance.Options.UseBackColor = true;
@@ -449,7 +449,7 @@
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelControl8.Location = new System.Drawing.Point(62, 240);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(105, 19);
             this.labelControl8.TabIndex = 126;
@@ -458,7 +458,7 @@
             // txtGeneralFare
             // 
             this.txtGeneralFare.Location = new System.Drawing.Point(172, 194);
-            this.txtGeneralFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGeneralFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtGeneralFare.Name = "txtGeneralFare";
             this.txtGeneralFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtGeneralFare.Properties.Appearance.Options.UseBackColor = true;
@@ -476,7 +476,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelControl2.Location = new System.Drawing.Point(58, 202);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(107, 19);
             this.labelControl2.TabIndex = 127;
@@ -485,7 +485,7 @@
             // txtDriverFare
             // 
             this.txtDriverFare.Location = new System.Drawing.Point(172, 80);
-            this.txtDriverFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDriverFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtDriverFare.Name = "txtDriverFare";
             this.txtDriverFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtDriverFare.Properties.Appearance.Options.UseBackColor = true;
@@ -503,7 +503,7 @@
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl13.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelControl13.Location = new System.Drawing.Point(44, 88);
-            this.labelControl13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(120, 19);
             this.labelControl13.TabIndex = 128;
@@ -512,7 +512,7 @@
             // ddlVehicleTitle
             // 
             this.ddlVehicleTitle.Location = new System.Drawing.Point(186, 38);
-            this.ddlVehicleTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ddlVehicleTitle.Margin = new System.Windows.Forms.Padding(4);
             this.ddlVehicleTitle.Name = "ddlVehicleTitle";
             this.ddlVehicleTitle.Properties.AccessibleDescription = "Name";
             this.ddlVehicleTitle.Properties.AccessibleName = "Id";
@@ -530,7 +530,7 @@
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelControl3.Location = new System.Drawing.Point(98, 41);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(80, 21);
             this.labelControl3.TabIndex = 78;
@@ -543,7 +543,7 @@
             this.rbAsgariUcret.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbAsgariUcret.ForeColor = System.Drawing.Color.Maroon;
             this.rbAsgariUcret.Location = new System.Drawing.Point(280, 72);
-            this.rbAsgariUcret.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbAsgariUcret.Margin = new System.Windows.Forms.Padding(4);
             this.rbAsgariUcret.Name = "rbAsgariUcret";
             this.rbAsgariUcret.Size = new System.Drawing.Size(132, 25);
             this.rbAsgariUcret.TabIndex = 2;
@@ -559,7 +559,7 @@
             this.rbCompanyVehicle.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbCompanyVehicle.ForeColor = System.Drawing.Color.Maroon;
             this.rbCompanyVehicle.Location = new System.Drawing.Point(150, 72);
-            this.rbCompanyVehicle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbCompanyVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.rbCompanyVehicle.Name = "rbCompanyVehicle";
             this.rbCompanyVehicle.Size = new System.Drawing.Size(133, 25);
             this.rbCompanyVehicle.TabIndex = 1;
@@ -587,10 +587,10 @@
             this.PanelKira.Controls.Add(this.labelControl22);
             this.PanelKira.Controls.Add(this.txtRentFuelOilFare);
             this.PanelKira.Controls.Add(this.labelControl23);
-            this.PanelKira.Location = new System.Drawing.Point(3, 392);
-            this.PanelKira.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelKira.Location = new System.Drawing.Point(12, 392);
+            this.PanelKira.Margin = new System.Windows.Forms.Padding(4);
             this.PanelKira.Name = "PanelKira";
-            this.PanelKira.Size = new System.Drawing.Size(436, 301);
+            this.PanelKira.Size = new System.Drawing.Size(413, 301);
             this.PanelKira.TabIndex = 39;
             this.PanelKira.Visible = false;
             // 
@@ -598,7 +598,7 @@
             // 
             this.rdHour.AutoSize = true;
             this.rdHour.Location = new System.Drawing.Point(309, 34);
-            this.rdHour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdHour.Margin = new System.Windows.Forms.Padding(4);
             this.rdHour.Name = "rdHour";
             this.rdHour.Size = new System.Drawing.Size(80, 23);
             this.rdHour.TabIndex = 2;
@@ -609,7 +609,7 @@
             // txtRentFare
             // 
             this.txtRentFare.Location = new System.Drawing.Point(183, 64);
-            this.txtRentFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRentFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtRentFare.Name = "txtRentFare";
             this.txtRentFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtRentFare.Properties.Appearance.Options.UseBackColor = true;
@@ -625,7 +625,7 @@
             // 
             this.rdDay.AutoSize = true;
             this.rdDay.Location = new System.Drawing.Point(230, 34);
-            this.rdDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdDay.Margin = new System.Windows.Forms.Padding(4);
             this.rdDay.Name = "rdDay";
             this.rdDay.Size = new System.Drawing.Size(84, 23);
             this.rdDay.TabIndex = 1;
@@ -638,7 +638,7 @@
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl11.Location = new System.Drawing.Point(56, 180);
-            this.labelControl11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(120, 19);
             this.labelControl11.TabIndex = 114;
@@ -648,7 +648,7 @@
             // 
             this.rdMonth.AutoSize = true;
             this.rdMonth.Location = new System.Drawing.Point(162, 34);
-            this.rdMonth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdMonth.Margin = new System.Windows.Forms.Padding(4);
             this.rdMonth.Name = "rdMonth";
             this.rdMonth.Size = new System.Drawing.Size(69, 23);
             this.rdMonth.TabIndex = 0;
@@ -659,7 +659,7 @@
             // txtRentDriverFare
             // 
             this.txtRentDriverFare.Location = new System.Drawing.Point(183, 184);
-            this.txtRentDriverFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRentDriverFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtRentDriverFare.Name = "txtRentDriverFare";
             this.txtRentDriverFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtRentDriverFare.Properties.Appearance.Options.UseBackColor = true;
@@ -677,7 +677,7 @@
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl18.Appearance.ForeColor = System.Drawing.Color.Crimson;
             this.labelControl18.Location = new System.Drawing.Point(166, 6);
-            this.labelControl18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl18.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(111, 21);
             this.labelControl18.TabIndex = 115;
@@ -688,7 +688,7 @@
             this.labelControl19.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl19.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl19.Location = new System.Drawing.Point(68, 218);
-            this.labelControl19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl19.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(107, 19);
             this.labelControl19.TabIndex = 113;
@@ -697,7 +697,7 @@
             // txtRentGeneralFare
             // 
             this.txtRentGeneralFare.Location = new System.Drawing.Point(183, 216);
-            this.txtRentGeneralFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRentGeneralFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtRentGeneralFare.Name = "txtRentGeneralFare";
             this.txtRentGeneralFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtRentGeneralFare.Properties.Appearance.Options.UseBackColor = true;
@@ -713,7 +713,7 @@
             // txtRentFuelOilDay
             // 
             this.txtRentFuelOilDay.Location = new System.Drawing.Point(183, 108);
-            this.txtRentFuelOilDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRentFuelOilDay.Margin = new System.Windows.Forms.Padding(4);
             this.txtRentFuelOilDay.Name = "txtRentFuelOilDay";
             this.txtRentFuelOilDay.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtRentFuelOilDay.Properties.Appearance.Options.UseBackColor = true;
@@ -730,7 +730,7 @@
             this.labelControl20.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl20.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl20.Location = new System.Drawing.Point(70, 256);
-            this.labelControl20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl20.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl20.Name = "labelControl20";
             this.labelControl20.Size = new System.Drawing.Size(105, 19);
             this.labelControl20.TabIndex = 112;
@@ -741,7 +741,7 @@
             this.labelControl21.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl21.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl21.Location = new System.Drawing.Point(94, 67);
-            this.labelControl21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl21.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl21.Name = "labelControl21";
             this.labelControl21.Size = new System.Drawing.Size(80, 19);
             this.labelControl21.TabIndex = 109;
@@ -750,7 +750,7 @@
             // txtRentOtherFare
             // 
             this.txtRentOtherFare.Location = new System.Drawing.Point(183, 254);
-            this.txtRentOtherFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRentOtherFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtRentOtherFare.Name = "txtRentOtherFare";
             this.txtRentOtherFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtRentOtherFare.Properties.Appearance.Options.UseBackColor = true;
@@ -768,7 +768,7 @@
             this.labelControl22.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl22.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl22.Location = new System.Drawing.Point(44, 104);
-            this.labelControl22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl22.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl22.Name = "labelControl22";
             this.labelControl22.Size = new System.Drawing.Size(147, 19);
             this.labelControl22.TabIndex = 110;
@@ -777,7 +777,7 @@
             // txtRentFuelOilFare
             // 
             this.txtRentFuelOilFare.Location = new System.Drawing.Point(183, 140);
-            this.txtRentFuelOilFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRentFuelOilFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtRentFuelOilFare.Name = "txtRentFuelOilFare";
             this.txtRentFuelOilFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtRentFuelOilFare.Properties.Appearance.Options.UseBackColor = true;
@@ -795,7 +795,7 @@
             this.labelControl23.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl23.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl23.Location = new System.Drawing.Point(69, 142);
-            this.labelControl23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl23.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl23.Name = "labelControl23";
             this.labelControl23.Size = new System.Drawing.Size(106, 19);
             this.labelControl23.TabIndex = 111;
@@ -846,13 +846,13 @@
             // grdVehicle
             // 
             this.grdVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdVehicle.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdVehicle.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             gridLevelNode1.RelationName = "Level1";
             this.grdVehicle.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
             this.grdVehicle.Location = new System.Drawing.Point(448, 50);
             this.grdVehicle.MainView = this.gridViewVehicle;
-            this.grdVehicle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.grdVehicle.Name = "grdVehicle";
             this.grdVehicle.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGuncelle,
@@ -1126,7 +1126,7 @@
             this.Controls.Add(this.KayitMenusu);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_AracTanimlama";

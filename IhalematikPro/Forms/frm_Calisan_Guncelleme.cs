@@ -203,6 +203,10 @@ namespace IhalematikProUI.Forms
             model.ExtraFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtExtraFare.Text));
 
             model.Save();
+            frm_MesajFormu mf = new frm_MesajFormu();
+            mf.lblMesaj.Text = "Kayıt Güncellendi...";
+            mf.ShowDialog();
+            this.Close();
         }
     }
 }

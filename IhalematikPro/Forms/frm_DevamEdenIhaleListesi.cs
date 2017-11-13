@@ -71,12 +71,32 @@ namespace IhalematikPro.Forms
         {
 
         }
-
+        Forms.frm_Teklif_Adim1 ta1;
         private void btnIhaleAc_Click(object sender, EventArgs e)
         {
             int Id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewActiveTenderList.GetFocusedRowCellValue("Id"));
             CurrentManager.CurrentTender = TenderProvider.Instance.GetItem(Id);
             this.Close();
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            af.RibonPasif();
+            if (ta1 == null)
+            {
+                ta1 = new frm_Teklif_Adim1();
+                ta1.MdiParent = af;
+                ta1.FormClosed += new FormClosedEventHandler(Ta1_FormClosed);
+                ta1.Show();
+            }
+            else
+            {
+                ta1.Activate();
+            }
+        }
+             private void Ta1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ta1 = null;
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            af.RibonAktif();
         }
     }
-}
+ }
+    

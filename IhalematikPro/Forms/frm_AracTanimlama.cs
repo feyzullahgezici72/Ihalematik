@@ -133,9 +133,7 @@ namespace IhalematikPro.Forms
         {
             PanelKira.Visible = true;
             PanelSirket.Visible = false;
-            PanelKira.Location =  new Point(12,52); //1347; 73
-
-
+            PanelKira.Location = PanelSirket.Location;   
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
