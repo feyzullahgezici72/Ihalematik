@@ -46,7 +46,7 @@ namespace IhalematikPro.Forms
 
         private void frm_FirmaTanimlama_Load(object sender, EventArgs e)
         {
-            Company company = CurrentManager.CurrentCompany;
+            Company company = CurrentManager.Instance.CurrentCompany;
             if (company == null)
             {
                 company = new Company();
@@ -69,7 +69,7 @@ namespace IhalematikPro.Forms
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            Company company = CurrentManager.CurrentCompany;
+            Company company = CurrentManager.Instance.CurrentCompany;
             if (company == null)
             {
                 company = new Company();

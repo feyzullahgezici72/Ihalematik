@@ -32,8 +32,8 @@ namespace IhalematikPro.Forms
             int lastTenderNumber = TenderManager.Instance.GetLastTenderNumber();
             txtTeklifNo.Text = string.Format("{0}", (lastTenderNumber + 1).ToString().PadLeft(8, '0'));
 
-            CurrentManager.Vehicles = UIVehicleManager.Instance.GetVehicles();
-            CurrentManager.Workers = UIWorkerManager.Instance.GetWorkers();
+            //CurrentManager.Vehicles = UIVehicleManager.Instance.GetVehicles();
+            //CurrentManager.Workers = UIWorkerManager.Instance.GetWorkers();
 
             //grdVehicle.DataSource = CurrentManager.Vehicles;
             //grdWorker.DataSource = CurrentManager.Workers;
@@ -83,7 +83,7 @@ namespace IhalematikPro.Forms
             }
             else
             {
-                CurrentManager.CurrentTender = tender;
+                CurrentManager.Instance.CurrentTender = tender;
             }
 
             for (int i = 0; i < 101; i++)

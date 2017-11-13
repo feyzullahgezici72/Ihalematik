@@ -18,6 +18,7 @@ namespace IhalematikProBL.Entity
         }
         public int Number { get; set; }
         public string Description { get; set; }
+        public string CompanyName { get; set; }
         public DateTime? LastOfferDate { get; set; }
         public bool IsActive { get; set; }
 
@@ -50,6 +51,10 @@ namespace IhalematikProBL.Entity
                 }
 
                 return this.materialList;
+            }
+            set
+            {
+                this.materialList = value;
             }
         }
     }

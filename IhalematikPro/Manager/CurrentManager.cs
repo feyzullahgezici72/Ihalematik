@@ -1,6 +1,7 @@
 ﻿using IhalematikPro.Model;
 using IhalematikProBL.Entity;
 using IhalematikProUI.Forms;
+using SimpleApplicationBase.BL.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace IhalematikPro.Manager
 {
-    public static class CurrentManager
+    public class CurrentManager : SingletonBase<CurrentManager>
     {
-        public static List<VehicleModel> Vehicles { get; set; }
-        public static List<WorkerModel> Workers { get; set; }
+        public List<VehicleModel> Vehicles { get; set; }
+        public List<WorkerModel> Workers { get; set; }
 
-        public static Tender CurrentTender { get; set; }
-        public static Company CurrentCompany { get; set; }
+        public Tender CurrentTender { get; set; }
+        public Company CurrentCompany { get; set; }
     }
 }

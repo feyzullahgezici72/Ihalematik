@@ -42,9 +42,9 @@ namespace IhalematikPro.Forms
             
             grdActiveTenderList.DataSource = list;
             this.WindowState = FormWindowState.Maximized;
-            if (CurrentManager.CurrentCompany != null)
+            if (CurrentManager.Instance.CurrentCompany != null)
             {
-                lblCompanyName.Text = CurrentManager.CurrentCompany.Name;
+                lblCompanyName.Text = CurrentManager.Instance.CurrentCompany.Name;
             }
         }
 

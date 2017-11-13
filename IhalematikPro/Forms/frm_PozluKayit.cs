@@ -20,6 +20,9 @@ namespace IhalematikPro.Forms
         List<PozModel> pozModels = new List<PozModel>();
 
         frm_Teklif_Adim1 _owner;
+
+        public int SelectedGroupId { get; set; }
+
         public frm_PozluKayit(frm_Teklif_Adim1 owner)
         {
             _owner = owner;
@@ -53,8 +56,8 @@ namespace IhalematikPro.Forms
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            Tender currentTender = CurrentManager.CurrentTender;
-            
+            Tender currentTender = CurrentManager.Instance.CurrentTender;
+
             int[] selectedRows = gridView1.GetSelectedRows();
 
             PozModel[] selectedRowsItems = pozModels.ToArray();
@@ -66,6 +69,7 @@ namespace IhalematikPro.Forms
                 materialList.IsPoz = true;
                 materialList.PozOBFId = pozModel.Id.Value;
                 materialList.Tender = currentTender;
+                materialList.TenderGroupId = this.SelectedGroupId;
                 List<MaterialList> items = currentTender.MaterialList.Where(p => p.PozOBFId == materialList.PozOBFId && p.IsPoz).ToList();
 
                 if (items.Count == 0)
@@ -74,7 +78,7 @@ namespace IhalematikPro.Forms
                 }
             }
 
-            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(currentTender.MaterialList.Where(p => p.IsPoz).ToList());
+            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(currentTender.MaterialList.Where(p => p.IsPoz && p.TenderGroupId == this.SelectedGroupId).ToList());
 
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = models;
@@ -82,12 +86,17 @@ namespace IhalematikPro.Forms
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            Tender currentTender = CurrentManager.CurrentTender;
+            Tender currentTender = CurrentManager.Instance.CurrentTender;
             if (currentTender.MaterialList != null)
             {
-                List<MaterialList> items = currentTender.MaterialList.Where(p => p.IsPoz).ToList();
+                List<MaterialList> items = currentTender.MaterialList.Where(p => p.IsPoz && p.TenderGroupId == this.SelectedGroupId).ToList();
                 foreach (MaterialList item in items)
                 {
+                    if (item.IsMarkedForDeletion)
+                    {
+                        currentTender.MaterialList.Remove(item);
+                    }
+                    item.TenderGroupId = this.SelectedGroupId;
                     MaterialListProvider.Instance.Save(item);
                 }
             }
@@ -98,29 +107,30 @@ namespace IhalematikPro.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            Tender currentTender = CurrentManager.CurrentTender;
+            Tender currentTender = CurrentManager.Instance.CurrentTender;
             int[] selectedRows = gridView2.GetSelectedRows();
             List<MaterialListModel> models = (List<MaterialListModel>)gridView2.DataSource;
 
             MaterialListModel[] selectedRowsItems = models.ToArray();
 
-            currentTender.MaterialList.ForEach(p => p.Id = p.PozOBFId);
+            //currentTender.MaterialList.ForEach(p => p.Poz = p.PozOBFId);
 
             foreach (int item in selectedRows)
             {
                 MaterialListModel pozModel = selectedRowsItems[item];
 
                 MaterialList selectedItem = currentTender.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
-                
+
                 if (selectedItem != null)
                 {
+                    selectedItem.IsMarkedForDeletion = true;
                     int index = currentTender.MaterialList.IndexOf(selectedItem);
 
-                    currentTender.MaterialList.RemoveAt(index);
+                    //currentTender.MaterialList.RemoveAt(index);
                 }
             }
 
-            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(currentTender.MaterialList.Where(p => p.IsPoz).ToList());
+            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(currentTender.MaterialList.Where(p => p.IsPoz && p.TenderGroupId == this.SelectedGroupId && !p.IsMarkedForDeletion).ToList());
 
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = dataSource;
@@ -129,6 +139,13 @@ namespace IhalematikPro.Forms
         private void txtPozNumber_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void frm_PozluKayit_Load(object sender, EventArgs e)
+        {
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
+            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items).ToList();
+            grdAddedPoz.DataSource = dataSource;
         }
     }
 }
