@@ -109,6 +109,9 @@ namespace IhalematikPro.Forms
             //model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtOtherFare.Text);
             model.Save();
             LoadGrid();
+            frm_MesajFormu mf = new frm_MesajFormu();
+            mf.lblMesaj.Text = "Kayıt Yapıldı...";
+            mf.ShowDialog();
         }
 
         private void yeniAraçEkleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -119,7 +122,7 @@ namespace IhalematikPro.Forms
 
         private void btnListele_Click(object sender, EventArgs e)
         {
-            LoadGrid();
+           
         }
 
         private void rbCompanyVehicle_CheckedChanged(object sender, EventArgs e)

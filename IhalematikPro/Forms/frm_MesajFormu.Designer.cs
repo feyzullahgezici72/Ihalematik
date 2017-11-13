@@ -38,7 +38,7 @@
             // 
             this.btnTamam.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnTamam.Image = global::IhalematikProUI.Properties.Resources.Check_icon__1_;
-            this.btnTamam.Location = new System.Drawing.Point(625, 96);
+            this.btnTamam.Location = new System.Drawing.Point(529, 96);
             this.btnTamam.Name = "btnTamam";
             this.btnTamam.Size = new System.Drawing.Size(129, 58);
             this.btnTamam.TabIndex = 11;
@@ -74,7 +74,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnTamam;
-            this.ClientSize = new System.Drawing.Size(766, 166);
+            this.ClientSize = new System.Drawing.Size(670, 166);
             this.ControlBox = false;
             this.Controls.Add(this.btnTamam);
             this.Controls.Add(this.pictureBox1);

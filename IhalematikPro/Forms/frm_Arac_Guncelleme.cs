@@ -150,6 +150,9 @@ namespace IhalematikProUI.Forms
             
            model.Save();
            this._owner.LoadGrid();
+            frm_MesajFormu mf = new frm_MesajFormu();
+            mf.lblMesaj.Text = "Güncelleme Yapıldı...";
+            mf.ShowDialog();
         }
     }
 }

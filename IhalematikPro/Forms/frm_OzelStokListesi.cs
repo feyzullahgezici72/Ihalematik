@@ -40,14 +40,18 @@ namespace IhalematikPro.Forms
         }
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            OBFModel model = new OBFModel();
-            model.Description = txtDescription.Text;
-            model.Number = txtNumber.Text;
-            model.Unit = txtUnit.Text;
-            model.UnitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtUnitPrice.Text);
-            model.Save();
-            FormClear();
-            LoadGrid();
+                OBFModel model = new OBFModel();
+                model.Description = txtDescription.Text;
+                model.Number = txtNumber.Text;
+                model.Unit = txtUnit.Text;
+                model.UnitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtUnitPrice.Text);
+                model.Save();
+                FormClear();
+                LoadGrid();
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Kayıt Yapıldı...";
+                mf.ShowDialog();
+             
         }
         private void FormClear()
         {
@@ -90,8 +94,7 @@ namespace IhalematikPro.Forms
 
         private void btnListele_Click(object sender, EventArgs e)
         {
-            MesajVer();
-            LoadGrid();
+         
         }
 
         private void btnTemizle_Click(object sender, EventArgs e)

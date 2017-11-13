@@ -64,6 +64,10 @@ namespace IhalematikProUI.Forms
                 model.Unit = txtUnit.Text;
                 model.UnitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtUnitPrice.Text);
                 model.Save();
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Kayıt Güncellendi...";
+                mf.ShowDialog();
+                this.Close();
                 //PozProvider.Instance.Save()
             }
         }

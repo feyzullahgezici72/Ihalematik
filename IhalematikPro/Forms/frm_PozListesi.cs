@@ -56,7 +56,7 @@ namespace IhalematikPro.Forms
         }
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            MesajVer();
+            
             PozModel model = new PozModel();
             model.Description = txtDescription.Text;
             model.Number = txtNumber.Text;
@@ -65,6 +65,10 @@ namespace IhalematikPro.Forms
             model.Save();
             FormClear();
             LoadGrid();
+            frm_MesajFormu mf = new frm_MesajFormu();
+            mf.lblMesaj.Text = "Kayıt Yapıldı...";
+            mf.ShowDialog();
+
         }
         private void FormClear()
         {
@@ -81,8 +85,7 @@ namespace IhalematikPro.Forms
 
         private void btnListele_Click(object sender, EventArgs e)
         {
-            MesajVer();
-            LoadGrid();
+            
         }
 
         private void btnTemizle_Click(object sender, EventArgs e)
