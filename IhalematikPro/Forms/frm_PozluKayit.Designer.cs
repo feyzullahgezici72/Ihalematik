@@ -780,6 +780,7 @@
             this.AcceptButton = this.btnBul;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.CancelButton = this.btnKapat;
             this.ClientSize = new System.Drawing.Size(1258, 798);
             this.ControlBox = false;

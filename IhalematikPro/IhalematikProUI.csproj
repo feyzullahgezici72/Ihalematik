@@ -343,6 +343,7 @@
     <Compile Include="Forms\frm_TeklifAdimSon.Designer.cs">
       <DependentUpon>frm_TeklifAdimSon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frm_Teklif_Adim11.cs" />
     <Compile Include="Forms\frm_Teklif_Adim2.cs">
       <SubType>Form</SubType>
     </Compile>

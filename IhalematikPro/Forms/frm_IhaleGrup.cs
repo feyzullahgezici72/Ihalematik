@@ -44,7 +44,9 @@ namespace IhalematikProUI.Forms
                 item.Description = txtTenderGroupDescription.Text;
                 item.Tender = CurrentManager.Instance.CurrentTender;
                 TenderGroupProvider.Instance.Save(item);
-                this.LoadGrid(); 
+                this.LoadGrid();
+                txtTenderGroupDescription.ResetText();
+                txtTenderGroupDescription.Focus();
             }
         }
 

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_YeniIhaleYarat));
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnIhaleOlustur = new DevExpress.XtraEditors.SimpleButton();
             this.txtAciklama = new DevExpress.XtraEditors.TextEdit();
             this.txtTeklifNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -63,29 +63,30 @@
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(106, 198);
+            this.dateTimePicker1.Location = new System.Drawing.Point(106, 197);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(305, 26);
             this.dateTimePicker1.TabIndex = 3;
             // 
-            // simpleButton2
+            // btnIhaleOlustur
             // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(672, 201);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(153, 76);
-            this.simpleButton2.TabIndex = 0;
-            this.simpleButton2.Text = "Oluştur";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            this.btnIhaleOlustur.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnIhaleOlustur.Appearance.Options.UseFont = true;
+            this.btnIhaleOlustur.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnIhaleOlustur.Image = ((System.Drawing.Image)(resources.GetObject("btnIhaleOlustur.Image")));
+            this.btnIhaleOlustur.Location = new System.Drawing.Point(672, 201);
+            this.btnIhaleOlustur.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIhaleOlustur.Name = "btnIhaleOlustur";
+            this.btnIhaleOlustur.Size = new System.Drawing.Size(153, 76);
+            this.btnIhaleOlustur.TabIndex = 5;
+            this.btnIhaleOlustur.Text = "Oluştur";
+            this.btnIhaleOlustur.Click += new System.EventHandler(this.btnIhaleOlustur_Click);
             // 
             // txtAciklama
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(106, 126);
+            this.txtAciklama.EnterMoveNextControl = true;
+            this.txtAciklama.Location = new System.Drawing.Point(106, 127);
             this.txtAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -99,16 +100,17 @@
             // txtTeklifNo
             // 
             this.txtTeklifNo.Enabled = false;
+            this.txtTeklifNo.EnterMoveNextControl = true;
             this.txtTeklifNo.Location = new System.Drawing.Point(106, 90);
             this.txtTeklifNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTeklifNo.Name = "txtTeklifNo";
-            this.txtTeklifNo.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTeklifNo.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTeklifNo.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txtTeklifNo.Properties.Appearance.Options.UseFont = true;
             this.txtTeklifNo.Properties.Appearance.Options.UseForeColor = true;
             this.txtTeklifNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtTeklifNo.Properties.Mask.BeepOnError = true;
-            this.txtTeklifNo.Size = new System.Drawing.Size(188, 28);
+            this.txtTeklifNo.Size = new System.Drawing.Size(188, 30);
             this.txtTeklifNo.TabIndex = 0;
             // 
             // labelControl2
@@ -230,7 +232,7 @@
             this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(106, 232);
+            this.dateTimePicker2.Location = new System.Drawing.Point(106, 230);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(131, 26);
@@ -249,6 +251,7 @@
             // 
             // textEdit1
             // 
+            this.textEdit1.EnterMoveNextControl = true;
             this.textEdit1.Location = new System.Drawing.Point(106, 162);
             this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit1.Name = "textEdit1";
@@ -290,7 +293,7 @@
             this.ClientSize = new System.Drawing.Size(837, 325);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.btnIhaleOlustur);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
@@ -328,7 +331,7 @@
 
         #endregion
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnIhaleOlustur;
         private DevExpress.XtraEditors.TextEdit txtAciklama;
         private DevExpress.XtraEditors.TextEdit txtTeklifNo;
         private DevExpress.XtraEditors.LabelControl labelControl2;

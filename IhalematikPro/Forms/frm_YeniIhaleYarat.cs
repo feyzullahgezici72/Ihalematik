@@ -37,9 +37,35 @@ namespace IhalematikPro.Forms
 
             //grdVehicle.DataSource = CurrentManager.Vehicles;
             //grdWorker.DataSource = CurrentManager.Workers;
+            
+        }
+            
+        private void a1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            a1 = null;
         }
 
-        private void simpleButton2_Click(object sender, EventArgs e)
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frm_YeniIhaleYarat_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
+        }
+          
+        private void frm_YeniIhaleYarat_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void btnIhaleOlustur_Click(object sender, EventArgs e)
         {
             Tender tender = new Tender();
             tender.Equipments = new List<TenderEquipment>();
@@ -48,33 +74,6 @@ namespace IhalematikPro.Forms
             tender.Description = txtAciklama.Text;
             tender.LastOfferDate = dateTimePicker1.Value;
             tender.IsActive = true;
-            //int[] selectedVehicles = grdVehicle2.GetSelectedRows();
-            //int[] selectedWorkers = grdWorker2.GetSelectedRows();
-
-            //if (selectedVehicles != null)
-            //{
-            //    foreach (int vehicleIndex in selectedVehicles)
-            //    {
-            //        VehicleModel[] arry = CurrentManager.Vehicles.ToArray();
-            //        VehicleModel model = arry[vehicleIndex];
-            //        TenderEquipment equipment = new TenderEquipment();
-            //        equipment.IsWorker = false;
-            //        equipment.WorkerVehicleId = model.Id.Value;
-            //        tender.Equipments.Add(equipment);
-            //    }
-            //}
-            //if (selectedWorkers != null)
-            //{
-            //    foreach (int workerIndex in selectedWorkers)
-            //    {
-            //        WorkerModel[] arry = CurrentManager.Workers.ToArray();
-            //        WorkerModel model = arry[workerIndex];
-            //        TenderEquipment equipment = new TenderEquipment();
-            //        equipment.IsWorker = true;
-            //        equipment.WorkerVehicleId = model.Id.Value;
-            //        tender.Equipments.Add(equipment);
-            //    }
-            //}
 
             bool result = TenderManager.Instance.Save(tender);
             if (!result)
@@ -97,56 +96,28 @@ namespace IhalematikPro.Forms
             bk.ShowDialog();
             pbControl.Position = 0;
 
-            this.Close();
-            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+
+
             frm_IhaleGrup ig = new frm_IhaleGrup();
             ig.ShowDialog();
-
-        }
-       
-         
-
-        //    frm_Anaform af= (frm_Anaform)Application.OpenForms["frm_Anaform"];
-        //    if (a1 == null)
-        //    {
-        //        a1 = new frm_Teklif_Adim1();
-        //        a1.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-        //        a1.FormClosed += new FormClosedEventHandler(a1_FormClosed);
-        //        af.MainPanel.Visible = false;
-        //        a1.Show();
-                 
-        //    }
-        //    else
-        //    {
-        //        a1.Activate();
-        //    }
-
-             
-        //}
-
-        //private void a1_FormClosed(object sender, FormClosedEventArgs e)
-        //{
-        //    a1 = null;
-        //}
-
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
             this.Close();
+            frm_Teklif_Adim1 a1 = (frm_Teklif_Adim1)Application.OpenForms["frm_Teklif_Adim1"];
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            if (a1 == null)
+            {
+                a1 = new frm_Teklif_Adim1();
+                a1.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                a1.FormClosed += new FormClosedEventHandler(a1_FormClosed);
+                af.MainPanel.Visible = false;
+                a1.Show();
+
+            }
+            else
+            {
+                a1.Activate();
+            }
         }
 
-        private void frm_YeniIhaleYarat_FormClosed(object sender, FormClosedEventArgs e)
-        {
-           
-        }
-          
-        private void frm_YeniIhaleYarat_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-        }
     }
+}
 }
