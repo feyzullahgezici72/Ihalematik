@@ -12,17 +12,19 @@ using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikPro.Manager;
 using IhalematikPro.Model;
+using IhalematikProUI.Model;
 
 namespace IhalematikPro.Forms
 {
     public partial class frm_Teklif_Adim2 : DevExpress.XtraEditors.XtraForm
     {
         private object a3;
+        public int SelectedGroupId { get; set; }
 
         public frm_Teklif_Adim2()
         {
             InitializeComponent();
-            bindingSourceMaterialListNonWorkship.DataSource = typeof(List<MaterialList>);
+            bindingSourceMaterialListNonWorkship.DataSource = typeof(List<MaterialListModel>);
             grdMaterialListNonWorkship.DataSource = bindingSourceMaterialListNonWorkship;
         }
 
@@ -40,31 +42,42 @@ namespace IhalematikPro.Forms
         {
             lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
-
-            List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialLists();
-            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            grdMaterialListNonWorkship.DataSource = models;
-            double baseAmount = 0;
-            this.CalculateInnerValue(ref baseAmount);
-            lblTotalMarkup.Text = (models.Sum(p => p.TotalMarkup)).ToString("C2");
+            this.LoadTenderGroupGrid();
+            this.CalculateTotalMarkup();
         }
 
-        private void btnBul_Click(object sender, EventArgs e)
+        private void CalculateTotalMarkup()
         {
-            //grdMaterialListNonWorkship.DataSource = MaterialListNonWorkship;
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+            if (items != null)
+            {
+                List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+                double baseAmount = 0;
+                this.CalculateInnerValue(ref baseAmount);
+                lblTotalMarkup.Text = (models.Sum(p => p.TotalMarkup)).ToString("C2");
+            }
+        }
+
+        public void LoadTenderGroupGrid()
+        {
+            List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
+            List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(items);
+            grdTenderGroup.DataSource = models;
         }
 
         private void btnTumuneUygula_Click(object sender, EventArgs e)
         {
             double markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMarkup.Text.Replace("%", ""));
-            List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialLists(); ;//.Instance.GetMaterialListNonWorkship();
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
             foreach (var item in items)
             {
                 item.Markup = markup;
                 MaterialListProvider.Instance.Save(item);
             }
 
-            this.frm_Teklif_Adim2_Load(null, null);
+
+            this.CalculateTotalMarkup();
+            this.LoadTenderMaterialList();
         }
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -79,14 +92,17 @@ namespace IhalematikPro.Forms
         private void CalculateInnerValue(ref double BaseAmount)
         {
             List<MaterialListModel> items = grdMaterialListNonWorkship.DataSource as List<MaterialListModel>;//CurrentManager.CurrentTender.MaterialList;//.Instance.GetMaterialListNonWorkship();
-            BaseAmount = items.Sum(p => p.Markup * p.Quantity);
-            double baseKDVAmount = items.Sum(p => p.KDVAmount);
+            if (items != null)
+            {
+                BaseAmount = items.Sum(p => p.Markup * p.Quantity);
+                double baseKDVAmount = items.Sum(p => p.KDVAmount);
 
-            txtBaseAmount.Text = string.Format("{0:C2}", BaseAmount);
-            txtBaseKDVAmount.Text = string.Format("{0:C2}", baseKDVAmount);
-            txtTotalAmount.Text = string.Format("{0:C2}", Math.Round((baseKDVAmount + BaseAmount), 2));
+                txtBaseAmount.Text = string.Format("{0:C2}", BaseAmount);
+                txtBaseKDVAmount.Text = string.Format("{0:C2}", baseKDVAmount);
+                txtTotalAmount.Text = string.Format("{0:C2}", Math.Round((baseKDVAmount + BaseAmount), 2));
 
-            lblTotalMarkup.Text = (items.Sum(p => p.TotalMarkup)).ToString("C2");
+                lblTotalMarkup.Text = (items.Sum(p => p.TotalMarkup)).ToString("C2");
+            }
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -125,14 +141,35 @@ namespace IhalematikPro.Forms
             a3 = null;
         }
 
-        private void grdMaterialListNonWorkship_Click(object sender, EventArgs e)
+        private void gridViewTenderGroup_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-
+            this.gridviewTenderGroupSelectedRow();
         }
 
-        private void btnKaydet_Click_1(object sender, EventArgs e)
+        private void rpstColId_CheckedChanged(object sender, EventArgs e)
         {
+            this.gridviewTenderGroupSelectedRow();
+        }
 
+        private void gridviewTenderGroupSelectedRow()
+        {
+            for (int i = 0; i < gridViewTenderGroup.RowCount; i++)
+            {
+                gridViewTenderGroup.SetRowCellValue(i, colSelectedId, false);
+            }
+            gridViewTenderGroup.SetFocusedRowCellValue("SelectedId", true);
+            this.SelectedGroupId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewTenderGroup.GetFocusedRowCellValue("Id"));
+            this.LoadTenderMaterialList();
+        }
+
+        public void LoadTenderMaterialList()
+        {
+            if (this.SelectedGroupId != 0 && CurrentManager.Instance.CurrentTender.MaterialList != null)
+            {
+                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
+                List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+                grdMaterialListNonWorkship.DataSource = models;
+            }
         }
     }
 }
