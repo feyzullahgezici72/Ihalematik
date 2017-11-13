@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnEkle = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.grdVehicle = new DevExpress.XtraGrid.GridControl();
-            this.gridViewVehicle = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.txtTenderGroupDescription = new DevExpress.XtraEditors.TextEdit();
+            this.grdTenderGroup = new DevExpress.XtraGrid.GridControl();
+            this.gridViewTenderGroup = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,26 +48,28 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.txtAciklama = new DevExpress.XtraEditors.TextEdit();
+            this.txtTenderCompanyName = new DevExpress.XtraEditors.TextEdit();
+            this.txtTenderDescription = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txtTeklifNo = new DevExpress.XtraEditors.TextEdit();
+            this.txtTenderNumber = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.bindingSourceTenderGroup = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdVehicle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewVehicle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderGroupDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTenderGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTenderGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTeklifNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderCompanyName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTenderGroup)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -78,9 +81,8 @@
             this.panelControl2.Controls.Add(this.btnIptal);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(839, 54);
+            this.panelControl2.Size = new System.Drawing.Size(559, 37);
             this.panelControl2.TabIndex = 4;
             // 
             // labelControl3
@@ -91,11 +93,10 @@
             this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl3.LineColor = System.Drawing.Color.Red;
             this.labelControl3.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl3.Location = new System.Drawing.Point(4, 10);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Location = new System.Drawing.Point(3, 7);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.ShowLineShadow = false;
-            this.labelControl3.Size = new System.Drawing.Size(154, 37);
+            this.labelControl3.Size = new System.Drawing.Size(102, 24);
             this.labelControl3.TabIndex = 0;
             this.labelControl3.Text = "GRUPLAR";
             this.labelControl3.UseMnemonic = false;
@@ -108,10 +109,9 @@
             this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnIptal.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnIptal.Location = new System.Drawing.Point(782, 0);
-            this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIptal.Location = new System.Drawing.Point(521, 0);
             this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(57, 54);
+            this.btnIptal.Size = new System.Drawing.Size(38, 37);
             this.btnIptal.TabIndex = 1;
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
             // 
@@ -122,11 +122,12 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl1.Controls.Add(this.btnEkle);
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.txtTenderGroupDescription);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(0, 199);
+            this.groupControl1.Location = new System.Drawing.Point(0, 136);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(839, 77);
+            this.groupControl1.Size = new System.Drawing.Size(559, 53);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Grup Adı";
             // 
@@ -136,154 +137,155 @@
             this.btnEkle.Appearance.Options.UseFont = true;
             this.btnEkle.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEkle.Image = global::IhalematikProUI.Properties.Resources.Button_Add_icon__1_;
-            this.btnEkle.Location = new System.Drawing.Point(708, 33);
+            this.btnEkle.Location = new System.Drawing.Point(472, 21);
+            this.btnEkle.Margin = new System.Windows.Forms.Padding(2);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(128, 41);
+            this.btnEkle.Size = new System.Drawing.Size(85, 30);
             this.btnEkle.TabIndex = 1;
             this.btnEkle.Text = "Ekle";
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // textEdit1
+            // txtTenderGroupDescription
             // 
-            this.textEdit1.Location = new System.Drawing.Point(6, 41);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(682, 26);
-            this.textEdit1.TabIndex = 0;
+            this.txtTenderGroupDescription.Location = new System.Drawing.Point(4, 28);
+            this.txtTenderGroupDescription.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTenderGroupDescription.Name = "txtTenderGroupDescription";
+            this.txtTenderGroupDescription.Size = new System.Drawing.Size(455, 20);
+            this.txtTenderGroupDescription.TabIndex = 0;
             // 
-            // grdVehicle
+            // grdTenderGroup
             // 
-            this.grdVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdVehicle.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            gridLevelNode1.RelationName = "Level1";
-            this.grdVehicle.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.grdVehicle.Location = new System.Drawing.Point(0, 276);
-            this.grdVehicle.MainView = this.gridViewVehicle;
-            this.grdVehicle.Margin = new System.Windows.Forms.Padding(4);
-            this.grdVehicle.Name = "grdVehicle";
-            this.grdVehicle.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.grdTenderGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            gridLevelNode2.RelationName = "Level1";
+            this.grdTenderGroup.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode2});
+            this.grdTenderGroup.Location = new System.Drawing.Point(0, 189);
+            this.grdTenderGroup.MainView = this.gridViewTenderGroup;
+            this.grdTenderGroup.Name = "grdTenderGroup";
+            this.grdTenderGroup.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGuncelle,
             this.btnSil});
-            this.grdVehicle.Size = new System.Drawing.Size(839, 430);
-            this.grdVehicle.TabIndex = 39;
-            this.grdVehicle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewVehicle});
+            this.grdTenderGroup.Size = new System.Drawing.Size(559, 294);
+            this.grdTenderGroup.TabIndex = 39;
+            this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewTenderGroup});
             // 
-            // gridViewVehicle
+            // gridViewTenderGroup
             // 
-            this.gridViewVehicle.Appearance.ColumnFilterButton.BackColor = System.Drawing.Color.Silver;
-            this.gridViewVehicle.Appearance.ColumnFilterButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.gridViewVehicle.Appearance.ColumnFilterButton.BorderColor = System.Drawing.Color.Silver;
-            this.gridViewVehicle.Appearance.ColumnFilterButton.ForeColor = System.Drawing.Color.Gray;
-            this.gridViewVehicle.Appearance.ColumnFilterButton.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.ColumnFilterButton.Options.UseBorderColor = true;
-            this.gridViewVehicle.Appearance.ColumnFilterButton.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.ColumnFilterButtonActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.gridViewVehicle.Appearance.ColumnFilterButtonActive.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.gridViewVehicle.Appearance.ColumnFilterButtonActive.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.gridViewVehicle.Appearance.ColumnFilterButtonActive.ForeColor = System.Drawing.Color.Blue;
-            this.gridViewVehicle.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
-            this.gridViewVehicle.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.Empty.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gridViewVehicle.Appearance.Empty.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
-            this.gridViewVehicle.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
-            this.gridViewVehicle.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
-            this.gridViewVehicle.Appearance.EvenRow.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.gridViewVehicle.Appearance.EvenRow.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.EvenRow.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.FilterCloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.gridViewVehicle.Appearance.FilterCloseButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(170)))), ((int)(((byte)(225)))));
-            this.gridViewVehicle.Appearance.FilterCloseButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.gridViewVehicle.Appearance.FilterCloseButton.ForeColor = System.Drawing.Color.Black;
-            this.gridViewVehicle.Appearance.FilterCloseButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.gridViewVehicle.Appearance.FilterCloseButton.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.FilterCloseButton.Options.UseBorderColor = true;
-            this.gridViewVehicle.Appearance.FilterCloseButton.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.FilterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(80)))), ((int)(((byte)(135)))));
-            this.gridViewVehicle.Appearance.FilterPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.gridViewVehicle.Appearance.FilterPanel.ForeColor = System.Drawing.Color.White;
-            this.gridViewVehicle.Appearance.FilterPanel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.gridViewVehicle.Appearance.FilterPanel.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.FilterPanel.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.FixedLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            this.gridViewVehicle.Appearance.FixedLine.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
-            this.gridViewVehicle.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
-            this.gridViewVehicle.Appearance.FocusedCell.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.FocusedCell.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.FocusedRow.ForeColor = System.Drawing.Color.White;
-            this.gridViewVehicle.Appearance.FocusedRow.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.FooterPanel.BackColor = System.Drawing.Color.Silver;
-            this.gridViewVehicle.Appearance.FooterPanel.BorderColor = System.Drawing.Color.Silver;
-            this.gridViewVehicle.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Black;
-            this.gridViewVehicle.Appearance.FooterPanel.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.FooterPanel.Options.UseBorderColor = true;
-            this.gridViewVehicle.Appearance.FooterPanel.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.GroupButton.BackColor = System.Drawing.Color.Silver;
-            this.gridViewVehicle.Appearance.GroupButton.BorderColor = System.Drawing.Color.Silver;
-            this.gridViewVehicle.Appearance.GroupButton.ForeColor = System.Drawing.Color.Black;
-            this.gridViewVehicle.Appearance.GroupButton.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.GroupButton.Options.UseBorderColor = true;
-            this.gridViewVehicle.Appearance.GroupButton.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.GroupFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.gridViewVehicle.Appearance.GroupFooter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.gridViewVehicle.Appearance.GroupFooter.ForeColor = System.Drawing.Color.Black;
-            this.gridViewVehicle.Appearance.GroupFooter.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.GroupFooter.Options.UseBorderColor = true;
-            this.gridViewVehicle.Appearance.GroupFooter.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.GroupPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
-            this.gridViewVehicle.Appearance.GroupPanel.BackColor2 = System.Drawing.Color.White;
-            this.gridViewVehicle.Appearance.GroupPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.gridViewVehicle.Appearance.GroupPanel.ForeColor = System.Drawing.Color.White;
-            this.gridViewVehicle.Appearance.GroupPanel.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.GroupPanel.Options.UseFont = true;
-            this.gridViewVehicle.Appearance.GroupPanel.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.GroupRow.ForeColor = System.Drawing.Color.Silver;
-            this.gridViewVehicle.Appearance.GroupRow.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.HeaderPanel.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridViewVehicle.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.gridViewVehicle.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
-            this.gridViewVehicle.Appearance.HeaderPanel.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridViewVehicle.Appearance.HeaderPanel.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.HideSelectionRow.BackColor = System.Drawing.Color.Gray;
-            this.gridViewVehicle.Appearance.HideSelectionRow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.gridViewVehicle.Appearance.HideSelectionRow.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.HideSelectionRow.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.HorzLine.BackColor = System.Drawing.Color.Silver;
-            this.gridViewVehicle.Appearance.HorzLine.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.OddRow.BackColor = System.Drawing.Color.White;
-            this.gridViewVehicle.Appearance.OddRow.BackColor2 = System.Drawing.Color.White;
-            this.gridViewVehicle.Appearance.OddRow.ForeColor = System.Drawing.Color.Black;
-            this.gridViewVehicle.Appearance.OddRow.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
-            this.gridViewVehicle.Appearance.OddRow.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.OddRow.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.Preview.BackColor = System.Drawing.Color.White;
-            this.gridViewVehicle.Appearance.Preview.ForeColor = System.Drawing.Color.Navy;
-            this.gridViewVehicle.Appearance.Preview.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.Preview.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.Row.BackColor = System.Drawing.Color.White;
-            this.gridViewVehicle.Appearance.Row.ForeColor = System.Drawing.Color.Black;
-            this.gridViewVehicle.Appearance.Row.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.Row.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.RowSeparator.BackColor = System.Drawing.Color.White;
-            this.gridViewVehicle.Appearance.RowSeparator.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.gridViewVehicle.Appearance.RowSeparator.Options.UseBackColor = true;
-            this.gridViewVehicle.Appearance.SelectedRow.ForeColor = System.Drawing.Color.White;
-            this.gridViewVehicle.Appearance.SelectedRow.Options.UseForeColor = true;
-            this.gridViewVehicle.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridViewTenderGroup.Appearance.ColumnFilterButton.BackColor = System.Drawing.Color.Silver;
+            this.gridViewTenderGroup.Appearance.ColumnFilterButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridViewTenderGroup.Appearance.ColumnFilterButton.BorderColor = System.Drawing.Color.Silver;
+            this.gridViewTenderGroup.Appearance.ColumnFilterButton.ForeColor = System.Drawing.Color.Gray;
+            this.gridViewTenderGroup.Appearance.ColumnFilterButton.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.ColumnFilterButton.Options.UseBorderColor = true;
+            this.gridViewTenderGroup.Appearance.ColumnFilterButton.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.ColumnFilterButtonActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridViewTenderGroup.Appearance.ColumnFilterButtonActive.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            this.gridViewTenderGroup.Appearance.ColumnFilterButtonActive.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridViewTenderGroup.Appearance.ColumnFilterButtonActive.ForeColor = System.Drawing.Color.Blue;
+            this.gridViewTenderGroup.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
+            this.gridViewTenderGroup.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.Empty.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gridViewTenderGroup.Appearance.Empty.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
+            this.gridViewTenderGroup.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
+            this.gridViewTenderGroup.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
+            this.gridViewTenderGroup.Appearance.EvenRow.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.gridViewTenderGroup.Appearance.EvenRow.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.EvenRow.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.FilterCloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.gridViewTenderGroup.Appearance.FilterCloseButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(170)))), ((int)(((byte)(225)))));
+            this.gridViewTenderGroup.Appearance.FilterCloseButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.gridViewTenderGroup.Appearance.FilterCloseButton.ForeColor = System.Drawing.Color.Black;
+            this.gridViewTenderGroup.Appearance.FilterCloseButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.gridViewTenderGroup.Appearance.FilterCloseButton.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.FilterCloseButton.Options.UseBorderColor = true;
+            this.gridViewTenderGroup.Appearance.FilterCloseButton.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.FilterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(80)))), ((int)(((byte)(135)))));
+            this.gridViewTenderGroup.Appearance.FilterPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.gridViewTenderGroup.Appearance.FilterPanel.ForeColor = System.Drawing.Color.White;
+            this.gridViewTenderGroup.Appearance.FilterPanel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.gridViewTenderGroup.Appearance.FilterPanel.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.FilterPanel.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.FixedLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.gridViewTenderGroup.Appearance.FixedLine.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
+            this.gridViewTenderGroup.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
+            this.gridViewTenderGroup.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.FocusedCell.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.FocusedRow.ForeColor = System.Drawing.Color.White;
+            this.gridViewTenderGroup.Appearance.FocusedRow.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.FooterPanel.BackColor = System.Drawing.Color.Silver;
+            this.gridViewTenderGroup.Appearance.FooterPanel.BorderColor = System.Drawing.Color.Silver;
+            this.gridViewTenderGroup.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Black;
+            this.gridViewTenderGroup.Appearance.FooterPanel.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.FooterPanel.Options.UseBorderColor = true;
+            this.gridViewTenderGroup.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.GroupButton.BackColor = System.Drawing.Color.Silver;
+            this.gridViewTenderGroup.Appearance.GroupButton.BorderColor = System.Drawing.Color.Silver;
+            this.gridViewTenderGroup.Appearance.GroupButton.ForeColor = System.Drawing.Color.Black;
+            this.gridViewTenderGroup.Appearance.GroupButton.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.GroupButton.Options.UseBorderColor = true;
+            this.gridViewTenderGroup.Appearance.GroupButton.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.GroupFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.gridViewTenderGroup.Appearance.GroupFooter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.gridViewTenderGroup.Appearance.GroupFooter.ForeColor = System.Drawing.Color.Black;
+            this.gridViewTenderGroup.Appearance.GroupFooter.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.GroupFooter.Options.UseBorderColor = true;
+            this.gridViewTenderGroup.Appearance.GroupFooter.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.GroupPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
+            this.gridViewTenderGroup.Appearance.GroupPanel.BackColor2 = System.Drawing.Color.White;
+            this.gridViewTenderGroup.Appearance.GroupPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridViewTenderGroup.Appearance.GroupPanel.ForeColor = System.Drawing.Color.White;
+            this.gridViewTenderGroup.Appearance.GroupPanel.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.GroupPanel.Options.UseFont = true;
+            this.gridViewTenderGroup.Appearance.GroupPanel.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.GroupRow.ForeColor = System.Drawing.Color.Silver;
+            this.gridViewTenderGroup.Appearance.GroupRow.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.HeaderPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridViewTenderGroup.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridViewTenderGroup.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
+            this.gridViewTenderGroup.Appearance.HeaderPanel.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gridViewTenderGroup.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.HideSelectionRow.BackColor = System.Drawing.Color.Gray;
+            this.gridViewTenderGroup.Appearance.HideSelectionRow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
+            this.gridViewTenderGroup.Appearance.HideSelectionRow.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.HideSelectionRow.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.HorzLine.BackColor = System.Drawing.Color.Silver;
+            this.gridViewTenderGroup.Appearance.HorzLine.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.OddRow.BackColor = System.Drawing.Color.White;
+            this.gridViewTenderGroup.Appearance.OddRow.BackColor2 = System.Drawing.Color.White;
+            this.gridViewTenderGroup.Appearance.OddRow.ForeColor = System.Drawing.Color.Black;
+            this.gridViewTenderGroup.Appearance.OddRow.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.gridViewTenderGroup.Appearance.OddRow.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.OddRow.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.Preview.BackColor = System.Drawing.Color.White;
+            this.gridViewTenderGroup.Appearance.Preview.ForeColor = System.Drawing.Color.Navy;
+            this.gridViewTenderGroup.Appearance.Preview.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.Preview.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.Row.BackColor = System.Drawing.Color.White;
+            this.gridViewTenderGroup.Appearance.Row.ForeColor = System.Drawing.Color.Black;
+            this.gridViewTenderGroup.Appearance.Row.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.Row.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Appearance.RowSeparator.BackColor = System.Drawing.Color.White;
+            this.gridViewTenderGroup.Appearance.RowSeparator.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.gridViewTenderGroup.Appearance.RowSeparator.Options.UseBackColor = true;
+            this.gridViewTenderGroup.Appearance.SelectedRow.ForeColor = System.Drawing.Color.White;
+            this.gridViewTenderGroup.Appearance.SelectedRow.Options.UseForeColor = true;
+            this.gridViewTenderGroup.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.gridColumn7,
             this.gridColumn2,
             this.gridColumn1,
             this.gridColumn6});
-            this.gridViewVehicle.GridControl = this.grdVehicle;
-            this.gridViewVehicle.Name = "gridViewVehicle";
-            this.gridViewVehicle.OptionsView.EnableAppearanceEvenRow = true;
-            this.gridViewVehicle.OptionsView.EnableAppearanceOddRow = true;
-            this.gridViewVehicle.OptionsView.ShowGroupPanel = false;
-            this.gridViewVehicle.PaintStyleName = "Web";
+            this.gridViewTenderGroup.GridControl = this.grdTenderGroup;
+            this.gridViewTenderGroup.Name = "gridViewTenderGroup";
+            this.gridViewTenderGroup.OptionsView.EnableAppearanceEvenRow = true;
+            this.gridViewTenderGroup.OptionsView.EnableAppearanceOddRow = true;
+            this.gridViewTenderGroup.OptionsView.ShowGroupPanel = false;
+            this.gridViewTenderGroup.PaintStyleName = "Web";
             // 
             // colId
             // 
@@ -293,6 +295,7 @@
             // gridColumn7
             // 
             this.gridColumn7.Caption = "NO";
+            this.gridColumn7.FieldName = "ItemNumber";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 0;
@@ -306,7 +309,7 @@
             this.gridColumn2.AppearanceHeader.Options.UseBorderColor = true;
             this.gridColumn2.AppearanceHeader.Options.UseFont = true;
             this.gridColumn2.Caption = "GRUP ADI";
-            this.gridColumn2.FieldName = "Title.Name";
+            this.gridColumn2.FieldName = "Description";
             this.gridColumn2.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.Value;
             this.gridColumn2.MinWidth = 80;
             this.gridColumn2.Name = "gridColumn2";
@@ -336,7 +339,7 @@
             // 
             this.btnGuncelle.AutoHeight = false;
             this.btnGuncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnGuncelle.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -362,7 +365,7 @@
             // 
             this.btnSil.AutoHeight = false;
             this.btnSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnSil.Name = "btnSil";
             this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -373,80 +376,76 @@
             this.groupControl2.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl2.Controls.Add(this.textEdit2);
-            this.groupControl2.Controls.Add(this.txtAciklama);
+            this.groupControl2.Controls.Add(this.txtTenderCompanyName);
+            this.groupControl2.Controls.Add(this.txtTenderDescription);
             this.groupControl2.Controls.Add(this.labelControl4);
-            this.groupControl2.Controls.Add(this.txtTeklifNo);
+            this.groupControl2.Controls.Add(this.txtTenderNumber);
             this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Controls.Add(this.labelControl1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Enabled = false;
-            this.groupControl2.Location = new System.Drawing.Point(0, 54);
+            this.groupControl2.Location = new System.Drawing.Point(0, 37);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(839, 145);
+            this.groupControl2.Size = new System.Drawing.Size(559, 99);
             this.groupControl2.TabIndex = 40;
             this.groupControl2.Text = "İhale Bilgisi";
             // 
-            // textEdit2
+            // txtTenderCompanyName
             // 
-            this.textEdit2.Location = new System.Drawing.Point(113, 102);
-            this.textEdit2.Margin = new System.Windows.Forms.Padding(4);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit2.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit2.Size = new System.Drawing.Size(719, 28);
-            this.textEdit2.TabIndex = 13;
+            this.txtTenderCompanyName.Location = new System.Drawing.Point(75, 70);
+            this.txtTenderCompanyName.Name = "txtTenderCompanyName";
+            this.txtTenderCompanyName.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTenderCompanyName.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtTenderCompanyName.Properties.Appearance.Options.UseFont = true;
+            this.txtTenderCompanyName.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTenderCompanyName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtTenderCompanyName.Size = new System.Drawing.Size(479, 22);
+            this.txtTenderCompanyName.TabIndex = 13;
             // 
-            // txtAciklama
+            // txtTenderDescription
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(113, 68);
-            this.txtAciklama.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAciklama.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtAciklama.Properties.Appearance.Options.UseFont = true;
-            this.txtAciklama.Properties.Appearance.Options.UseForeColor = true;
-            this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtAciklama.Size = new System.Drawing.Size(719, 28);
-            this.txtAciklama.TabIndex = 12;
+            this.txtTenderDescription.Location = new System.Drawing.Point(75, 47);
+            this.txtTenderDescription.Name = "txtTenderDescription";
+            this.txtTenderDescription.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTenderDescription.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtTenderDescription.Properties.Appearance.Options.UseFont = true;
+            this.txtTenderDescription.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTenderDescription.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtTenderDescription.Size = new System.Drawing.Size(479, 22);
+            this.txtTenderDescription.TabIndex = 12;
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Location = new System.Drawing.Point(10, 109);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl4.Location = new System.Drawing.Point(7, 75);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(82, 19);
+            this.labelControl4.Size = new System.Drawing.Size(52, 13);
             this.labelControl4.TabIndex = 14;
             this.labelControl4.Text = "Kurum Adı:";
             // 
-            // txtTeklifNo
+            // txtTenderNumber
             // 
-            this.txtTeklifNo.Enabled = false;
-            this.txtTeklifNo.Location = new System.Drawing.Point(113, 34);
-            this.txtTeklifNo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTeklifNo.Name = "txtTeklifNo";
-            this.txtTeklifNo.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtTeklifNo.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtTeklifNo.Properties.Appearance.Options.UseFont = true;
-            this.txtTeklifNo.Properties.Appearance.Options.UseForeColor = true;
-            this.txtTeklifNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtTeklifNo.Properties.Mask.BeepOnError = true;
-            this.txtTeklifNo.Size = new System.Drawing.Size(188, 28);
-            this.txtTeklifNo.TabIndex = 11;
+            this.txtTenderNumber.Enabled = false;
+            this.txtTenderNumber.Location = new System.Drawing.Point(75, 23);
+            this.txtTenderNumber.Name = "txtTenderNumber";
+            this.txtTenderNumber.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTenderNumber.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtTenderNumber.Properties.Appearance.Options.UseFont = true;
+            this.txtTenderNumber.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTenderNumber.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtTenderNumber.Properties.Mask.BeepOnError = true;
+            this.txtTenderNumber.Size = new System.Drawing.Size(125, 22);
+            this.txtTenderNumber.TabIndex = 11;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(16, 75);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Location = new System.Drawing.Point(11, 51);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(70, 19);
+            this.labelControl2.Size = new System.Drawing.Size(46, 13);
             this.labelControl2.TabIndex = 15;
             this.labelControl2.Text = "İhale Adı:";
             // 
@@ -454,47 +453,49 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl1.Location = new System.Drawing.Point(18, 41);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Location = new System.Drawing.Point(12, 28);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(66, 19);
+            this.labelControl1.Size = new System.Drawing.Size(44, 13);
             this.labelControl1.TabIndex = 16;
             this.labelControl1.Text = "İhale No:";
             // 
             // frm_IhaleGrup
             // 
             this.AcceptButton = this.btnEkle;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(839, 706);
+            this.ClientSize = new System.Drawing.Size(559, 483);
             this.ControlBox = false;
-            this.Controls.Add(this.grdVehicle);
+            this.Controls.Add(this.grdTenderGroup);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_IhaleGrup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.Load += new System.EventHandler(this.frm_IhaleGrup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdVehicle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewVehicle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderGroupDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTenderGroup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTenderGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTeklifNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderCompanyName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTenderGroup)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -506,9 +507,9 @@
         private DevExpress.XtraEditors.SimpleButton btnIptal;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton btnEkle;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraGrid.GridControl grdVehicle;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridViewVehicle;
+        private DevExpress.XtraEditors.TextEdit txtTenderGroupDescription;
+        private DevExpress.XtraGrid.GridControl grdTenderGroup;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewTenderGroup;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
@@ -517,11 +518,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSil;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit txtAciklama;
+        private DevExpress.XtraEditors.TextEdit txtTenderCompanyName;
+        private DevExpress.XtraEditors.TextEdit txtTenderDescription;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit txtTeklifNo;
+        private DevExpress.XtraEditors.TextEdit txtTenderNumber;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.BindingSource bindingSourceTenderGroup;
     }
 }

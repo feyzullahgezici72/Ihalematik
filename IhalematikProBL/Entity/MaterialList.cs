@@ -80,6 +80,25 @@ namespace IhalematikProBL.Entity
             }
         }
 
+        public int TenderGroupId { get; set; }
+        private TenderGroup tenderGroup { get; set; }
+        public TenderGroup TenderGroup
+        {
+            get
+            {
+                if (this.tenderGroup == null)
+                {
+                    this.tenderGroup = TenderGroupProvider.Instance.GetItem(this.TenderGroupId);
+                }
+                return this.tenderGroup;
+            }
+            set
+            {
+                this.tenderGroup = value;
+                this.TenderGroupId = this.tenderGroup.Id;
+            }
+        }
+
         //Zaman Tipi
         public UnitTimeTypesEnum UnitTimeType { get; set; }
 

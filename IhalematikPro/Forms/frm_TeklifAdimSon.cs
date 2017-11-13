@@ -37,8 +37,8 @@ namespace IhalematikProUI.Forms
 
         private void frm_TeklifSonAdim_Load(object sender, EventArgs e)
         {
-            lblTenderDescription.Text = CurrentManager.CurrentTender.Description;
-            lblTenderNumber.Text = CurrentManager.CurrentTender.DisplayNumber;
+            lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
+            lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
             List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
             List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
 
@@ -87,7 +87,7 @@ namespace IhalematikProUI.Forms
             MainReport ms = new MainReport();
 
             List<ReportModel> models = new List<ReportModel>();
-            List<MaterialList> items = CurrentManager.CurrentTender.MaterialList;
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
             List<MaterialListModel> materialModels = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             double totalAmount = 0;
             if (materialModels != null)
@@ -111,7 +111,7 @@ namespace IhalematikProUI.Forms
 
             WrapperReportModel reportModel = new WrapperReportModel();
             reportModel.Items = models;
-            reportModel.TenderNumber = CurrentManager.CurrentTender.Number.ToString();
+            reportModel.TenderNumber = CurrentManager.Instance.CurrentTender.Number.ToString();
             reportModel.TotalAmount = totalAmount.ToString("c2");
             ms.DataSource = reportModel;
 

@@ -44,16 +44,18 @@
             this.groupControl1.Controls.Add(this.textEdit1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(734, 77);
+            this.groupControl1.Size = new System.Drawing.Size(487, 53);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "Grup Adı";
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(6, 41);
+            this.textEdit1.Location = new System.Drawing.Point(4, 28);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(723, 26);
+            this.textEdit1.Size = new System.Drawing.Size(482, 20);
             this.textEdit1.TabIndex = 0;
             // 
             // btnKapat
@@ -61,10 +63,9 @@
             this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(661, 91);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Location = new System.Drawing.Point(441, 62);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(64, 54);
+            this.btnKapat.Size = new System.Drawing.Size(43, 37);
             this.btnKapat.TabIndex = 150;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
@@ -75,27 +76,27 @@
             this.btnGuncelle.Appearance.Options.UseFont = true;
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.Location = new System.Drawing.Point(523, 91);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuncelle.Location = new System.Drawing.Point(349, 62);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(130, 54);
+            this.btnGuncelle.Size = new System.Drawing.Size(87, 37);
             this.btnGuncelle.TabIndex = 149;
             this.btnGuncelle.Text = "Güncelle";
             // 
             // frm_IhaleGrupGuncelle
             // 
             this.AcceptButton = this.btnGuncelle;
-            this.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(734, 149);
+            this.ClientSize = new System.Drawing.Size(487, 116);
             this.ControlBox = false;
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_IhaleGrupGuncelle";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

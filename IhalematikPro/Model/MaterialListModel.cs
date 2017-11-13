@@ -223,7 +223,7 @@ namespace IhalematikPro.Model
                 if (this.tenderEquipments == null)
                 {
                     Dictionary<string, object> parameters = new Dictionary<string, object>();
-                    parameters.Add("TenderId", CurrentManager.CurrentTender.Id);
+                    parameters.Add("TenderId", CurrentManager.Instance.CurrentTender.Id);
                     //parameters.Add("MaterialId", this.Id);
                     this.tenderEquipments = TenderEquipmentProvider.Instance.GetItems(parameters);
                 }

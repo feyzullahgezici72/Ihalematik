@@ -122,6 +122,7 @@
     <Compile Include="Entity\Rule.cs" />
     <Compile Include="Entity\Tender.cs" />
     <Compile Include="Entity\TenderEquipment.cs" />
+    <Compile Include="Entity\TenderGroup.cs" />
     <Compile Include="Entity\TenderMaterialEquipment.cs" />
     <Compile Include="Entity\Title.cs" />
     <Compile Include="Entity\Vehicle.cs" />
@@ -141,6 +142,7 @@
     <Compile Include="Provider\PozProvider.cs" />
     <Compile Include="Provider\RuleProvider.cs" />
     <Compile Include="Provider\TenderEquipmentProvider.cs" />
+    <Compile Include="Provider\TenderGroupProvider.cs" />
     <Compile Include="Provider\TenderMaterialEquipmentProvider.cs" />
     <Compile Include="Provider\TenderProvider.cs" />
     <Compile Include="Provider\TitleProvider.cs" />

@@ -11,6 +11,8 @@ using DevExpress.XtraEditors;
 using IhalematikPro.Manager;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Model;
+using IhalematikPro.Model;
 
 namespace IhalematikPro.Forms
 {
@@ -18,27 +20,24 @@ namespace IhalematikPro.Forms
     {
         private object a4;
 
+        public int SelectedGroupId { get; set; }
+
         public frm_Teklif_Adim1()
         {
             InitializeComponent();
         }
 
-        
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             Forms.frm_ObfKayit okf = new frm_ObfKayit(this);
             okf.ShowDialog();
         }
-       
+
         private void simpleButton3_Click(object sender, EventArgs e)
         {
             frm_PozluKayit pkf = new frm_PozluKayit(this);
+            pkf.SelectedGroupId = this.SelectedGroupId;
             pkf.ShowDialog();
-        }
-
-        private void btnKapat_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -46,25 +45,20 @@ namespace IhalematikPro.Forms
             this.Close();
         }
 
-        private void gridControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void frm_Teklif_Adim1_Load(object sender, EventArgs e)
         {
-            grdMaterialList.DataSource = null;
-            bindingSource1.DataSource = CurrentManager.CurrentTender.MaterialList; //typeof(List<MaterialList>);
-            grdMaterialList.DataSource = bindingSource1;
-            lblTenderDescription.Text = CurrentManager.CurrentTender.Description;
-            lblTenderNumber.Text = CurrentManager.CurrentTender.DisplayNumber;
+            lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
+            lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(Frm_Teklif_Adim1_KeyDown);
+            this.LoadTenderGroupGrid();
+        }
+
+        public void LoadTenderGroupGrid()
+        {
+            List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
+            List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(items);
+            grdTenderGroup.DataSource = models;
         }
 
         private void Frm_Teklif_Adim1_KeyDown(object sender, KeyEventArgs e)
@@ -81,12 +75,11 @@ namespace IhalematikPro.Forms
             }
         }
 
-
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             int[] selectedRows = grdMaterialList2.GetSelectedRows();
 
-            MaterialList[] items = CurrentManager.CurrentTender.MaterialList.ToArray();
+            MaterialList[] items = CurrentManager.Instance.CurrentTender.MaterialList.ToArray();
 
             foreach (int rowIndex in selectedRows)
             {
@@ -94,9 +87,9 @@ namespace IhalematikPro.Forms
                 item.IsWorkship = true;
             }
 
-            foreach (MaterialList item in CurrentManager.CurrentTender.MaterialList)
+            foreach (MaterialList item in CurrentManager.Instance.CurrentTender.MaterialList)
             {
-                item.TenderId = CurrentManager.CurrentTender.Id;
+                item.TenderId = CurrentManager.Instance.CurrentTender.Id;
                 MaterialListProvider.Instance.Save(item);
             }
             this.Enabled = false;
@@ -120,51 +113,66 @@ namespace IhalematikPro.Forms
             {
                 a4.Activate();
             }
-
-
         }
 
         private void a4_FormClosed(object sender, FormClosedEventArgs e)
         {
-            a4= null;
+            a4 = null;
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            grdMaterialList.DataSource = CurrentManager.CurrentTender.MaterialList;
+            grdMaterialList.DataSource = CurrentManager.Instance.CurrentTender.MaterialList;
             grdMaterialList.RefreshDataSource();
         }
 
         private void grdMaterialList2_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            double baseAmount = CurrentManager.CurrentTender.MaterialList.Sum(p => p.TotalAmount);
-            double baseKDVAmount = CurrentManager.CurrentTender.MaterialList.Sum(p => p.KDVAmount);
+            double baseAmount = CurrentManager.Instance.CurrentTender.MaterialList.Sum(p => p.TotalAmount);
+            double baseKDVAmount = CurrentManager.Instance.CurrentTender.MaterialList.Sum(p => p.KDVAmount);
 
             txtBaseAmount.Text = string.Format("{0:C2}", baseAmount);
             txtBaseKDVAmount.Text = string.Format("{0:C2}", baseKDVAmount);
             txtTotalAmount.Text = string.Format("{0:C2}", Math.Round((baseKDVAmount + baseAmount), 2));
         }
 
-        
-
-        private void grdMaterialList2_ColumnUnboundExpressionChanged(object sender, DevExpress.XtraGrid.Views.Base.ColumnEventArgs e)
-        {
-
-        }
-
-        private void panelControl2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         public void RefreshDataGrid()
         {
-            grdMaterialList.DataSource = CurrentManager.CurrentTender.MaterialList;
-            grdMaterialList.RefreshDataSource();
+            if (this.SelectedGroupId != 0)
+            {
+                grdMaterialList.DataSource = CurrentManager.Instance.CurrentTender.MaterialList.Where(p=> p.TenderGroupId == this.SelectedGroupId);
+                grdMaterialList.RefreshDataSource(); 
+            }
         }
 
-        private void frm_Teklif_Adim1_FormClosed(object sender, FormClosedEventArgs e)
+        private void gridViewTenderGroup_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
+            this.gridviewTenderGroupSelectedRow();
+        }
+
+        private void rpstColId_CheckedChanged(object sender, EventArgs e)
+        {
+            this.gridviewTenderGroupSelectedRow();
+        }
+
+        private void gridviewTenderGroupSelectedRow()
+        {
+            for (int i = 0; i < gridViewTenderGroup.RowCount; i++)
+            {
+                gridViewTenderGroup.SetRowCellValue(i, colSelectedId, false);
+            }
+            gridViewTenderGroup.SetFocusedRowCellValue("SelectedId", true);
+            this.SelectedGroupId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewTenderGroup.GetFocusedRowCellValue("Id"));
+            this.LoadTenderMaterialList();
+        }
+
+        public void LoadTenderMaterialList()
+        {
+            if (this.SelectedGroupId != 0 && CurrentManager.Instance.CurrentTender.MaterialList != null)
+            {
+                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList(); 
+                grdMaterialList.DataSource = items;
+            }
         }
     }
 }

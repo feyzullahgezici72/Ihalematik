@@ -48,7 +48,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            Tender currentTender = CurrentManager.CurrentTender;
+            Tender currentTender = CurrentManager.Instance.CurrentTender;
 
             int[] selectedRows = gridView1.GetSelectedRows();
 
@@ -78,7 +78,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            Tender currentTender = CurrentManager.CurrentTender;
+            Tender currentTender = CurrentManager.Instance.CurrentTender;
             if (currentTender.MaterialList != null)
             {
                 List<MaterialList> items = currentTender.MaterialList.Where(p => !p.IsPoz).ToList();
@@ -94,7 +94,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            Tender currentTender = CurrentManager.CurrentTender;
+            Tender currentTender = CurrentManager.Instance.CurrentTender;
             int[] selectedRows = gridView2.GetSelectedRows();
             List<MaterialListModel> models = (List<MaterialListModel>)gridView2.DataSource;
 

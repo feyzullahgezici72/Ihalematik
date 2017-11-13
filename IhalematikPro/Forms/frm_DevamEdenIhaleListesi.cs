@@ -75,7 +75,7 @@ namespace IhalematikPro.Forms
         private void btnIhaleAc_Click(object sender, EventArgs e)
         {
             int Id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewActiveTenderList.GetFocusedRowCellValue("Id"));
-            CurrentManager.CurrentTender = TenderProvider.Instance.GetItem(Id);
+            CurrentManager.Instance.CurrentTender = TenderProvider.Instance.GetItem(Id);
             this.Close();
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             af.RibonPasif();

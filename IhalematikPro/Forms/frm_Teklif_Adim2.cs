@@ -38,8 +38,8 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim2_Load(object sender, EventArgs e)
         {
-            lblTenderDescription.Text = CurrentManager.CurrentTender.Description;
-            lblTenderNumber.Text = CurrentManager.CurrentTender.DisplayNumber;
+            lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
+            lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
 
             List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialLists();
             List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
