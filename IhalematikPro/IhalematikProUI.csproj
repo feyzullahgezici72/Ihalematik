@@ -271,12 +271,6 @@
     <Compile Include="Forms\frm_FirmaTanimlama.Designer.cs">
       <DependentUpon>frm_FirmaTanimlama.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_IscilikAracDetay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frm_IscilikAracDetay.Designer.cs">
-      <DependentUpon>frm_IscilikAracDetay.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\frm_IscilikFirimFiyat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -497,9 +491,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_FirmaTanimlama.resx">
       <DependentUpon>frm_FirmaTanimlama.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_IscilikAracDetay.resx">
-      <DependentUpon>frm_IscilikAracDetay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_IscilikFirimFiyat.resx">
       <DependentUpon>frm_IscilikFirimFiyat.cs</DependentUpon>

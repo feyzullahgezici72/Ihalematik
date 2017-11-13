@@ -29,7 +29,7 @@ namespace IhalematikPro.Forms
         private void frm_DevamEdenIhaleListesi_Load(object sender, EventArgs e)
         {
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
-            txtSumTender.Text = list.Count.ToString();
+            lblRecordCount.Text = list.Count.ToString();
             grdActiveTenderList.DataSource = list;
 
         }
@@ -46,20 +46,14 @@ namespace IhalematikPro.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
-            txtSumTender.Text = list.Count.ToString();
-            grdActiveTenderList.DataSource = list;
-            lblTenderCaptin.Text = "AÇIK TEKLİF LİSTESİ";
-            labelControl2.Text = "Açık Teklif Toplamı: ";
+            //aktifler
+           
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            List<Tender> list = TenderProvider.Instance.GetItems("IsActive", false);
-            txtSumTender.Text = list.Count.ToString();
-            grdActiveTenderList.DataSource = list;
-            lblTenderCaptin.Text = "KAPALI TEKLİF LİSTESİ";
-            labelControl2.Text = "Kapalı Teklif Toplamı: ";
+            //pasifler
+            
         }
 
         private void btnIhaleAc_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -96,6 +90,26 @@ namespace IhalematikPro.Forms
             ta1 = null;
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             af.RibonAktif();
+        }
+
+        private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxEdit1.SelectedIndex==0)
+            {
+                List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
+                lblRecordCount.Text = list.Count.ToString();
+                grdActiveTenderList.DataSource = list;
+                lblTenderCaptin.Text = "AÇIK TEKLİF LİSTESİ";
+                 
+
+            }
+            if (comboBoxEdit1.SelectedIndex==1)
+            {
+                List<Tender> list = TenderProvider.Instance.GetItems("IsActive", false);
+                lblRecordCount.Text = list.Count.ToString();
+                grdActiveTenderList.DataSource = list;
+                lblTenderCaptin.Text = "KAPALI TEKLİF LİSTESİ";
+            }
         }
     }
  }

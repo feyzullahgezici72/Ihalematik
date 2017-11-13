@@ -51,7 +51,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(412, 170);
+            this.groupControl1.Size = new System.Drawing.Size(524, 170);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "KURAL GÜNCELLE";
             // 
@@ -60,8 +60,8 @@
             this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(338, 91);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Location = new System.Drawing.Point(447, 90);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(64, 54);
             this.btnKapat.TabIndex = 148;
@@ -74,8 +74,8 @@
             this.btnGuncelle.Appearance.Options.UseFont = true;
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.Location = new System.Drawing.Point(200, 91);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuncelle.Location = new System.Drawing.Point(309, 90);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(130, 54);
             this.btnGuncelle.TabIndex = 147;
@@ -87,15 +87,16 @@
             this.lblRuleName.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblRuleName.Appearance.ForeColor = System.Drawing.Color.Black;
             this.lblRuleName.Location = new System.Drawing.Point(52, 58);
-            this.lblRuleName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblRuleName.Margin = new System.Windows.Forms.Padding(4);
             this.lblRuleName.Name = "lblRuleName";
             this.lblRuleName.Size = new System.Drawing.Size(0, 19);
             this.lblRuleName.TabIndex = 146;
             // 
             // txtRuleValue
             // 
-            this.txtRuleValue.Location = new System.Drawing.Point(200, 56);
-            this.txtRuleValue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRuleValue.EnterMoveNextControl = true;
+            this.txtRuleValue.Location = new System.Drawing.Point(309, 58);
+            this.txtRuleValue.Margin = new System.Windows.Forms.Padding(4);
             this.txtRuleValue.Name = "txtRuleValue";
             this.txtRuleValue.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtRuleValue.Properties.Appearance.Options.UseBackColor = true;
@@ -112,7 +113,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(412, 170);
+            this.ClientSize = new System.Drawing.Size(524, 170);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
