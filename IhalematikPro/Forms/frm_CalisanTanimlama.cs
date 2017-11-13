@@ -309,5 +309,20 @@ namespace IhalematikPro.Forms
             txtWorklesFonFare.ResetText();
 
         }
-    } 
+
+        private void ddlTitles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlTitles.SelectedItem == null)
+            {
+                return;
+            }
+            TitleModel selectedItem = (TitleModel)ddlTitles.SelectedItem;
+            List<Worker> workers = WorkerProvider.Instance.GetItems("TitleId", selectedItem.Id);
+            if (workers.Count != 0)
+            {
+                MessageBox.Show("Bu unvanda tanimla calisan vardir");
+                ddlTitles.SelectedItem = null;
+            }
+        }
+    }
 }

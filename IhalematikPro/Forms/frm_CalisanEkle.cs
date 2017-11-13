@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using IhalematikPro.Model;
+using IhalematikProBL.Entity;
+using IhalematikProBL.Provider;
 
 namespace IhalematikPro.Forms
 {
@@ -31,12 +33,22 @@ namespace IhalematikPro.Forms
         {
             TitleModel model = new TitleModel();
             model.Name = txtUnvan.Text;
-            model.Save();
-            MessageBox.Show("Ünvan Kaydedildi");
-            txtUnvan.ResetText();
-            txtUnvan.Focus();
-            this._owner.InitilalizeForm();
-            this.Close();
+            List<Title> existingItems = TitleProvider.Instance.GetItems("Name", model.Name.Trim());
+            if (existingItems.Count == 0)
+            {
+                model.Save();
+                MessageBox.Show("Ünvan Kaydedildi");
+                txtUnvan.ResetText();
+                txtUnvan.Focus();
+                this._owner.InitilalizeForm();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Bu unvan zaten mevcut");
+                txtUnvan.ResetText();
+                txtUnvan.Focus();
+            }
         }
     }
 }
