@@ -36,7 +36,6 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.KayitMenusu = new DevExpress.XtraEditors.GroupControl();
             this.pnlArac = new DevExpress.XtraEditors.GroupControl();
@@ -80,9 +79,6 @@
             this.txtRentFuelOilFare = new DevExpress.XtraEditors.TextEdit();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.aracToplam = new System.Windows.Forms.ToolStripStatusLabel();
             this.grdVehicle = new DevExpress.XtraGrid.GridControl();
             this.gridViewVehicle = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -93,6 +89,10 @@
             this.btnGuncelle = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.statusPanel = new System.Windows.Forms.Panel();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -121,11 +121,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRentFuelOilDay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRentOtherFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRentFuelOilFare.Properties)).BeginInit();
-            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdVehicle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewVehicle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).BeginInit();
+            this.statusPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -149,7 +150,6 @@
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl2.Controls.Add(this.pcWorld);
             this.panelControl2.Controls.Add(this.labelControl1);
-            this.panelControl2.Controls.Add(this.btnListele);
             this.panelControl2.Controls.Add(this.btnKapat);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
@@ -185,24 +185,6 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "ARAÇ TANIMLAMA";
             this.labelControl1.UseMnemonic = false;
-            // 
-            // btnListele
-            // 
-            this.btnListele.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListele.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnListele.Appearance.Options.UseFont = true;
-            this.btnListele.Appearance.Options.UseForeColor = true;
-            this.btnListele.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnListele.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnListele.Image = global::IhalematikProUI.Properties.Resources.Inventory_icon__1_;
-            this.btnListele.Location = new System.Drawing.Point(1182, 0);
-            this.btnListele.Margin = new System.Windows.Forms.Padding(4);
-            this.btnListele.Name = "btnListele";
-            this.btnListele.Size = new System.Drawing.Size(132, 50);
-            this.btnListele.TabIndex = 14;
-            this.btnListele.TabStop = false;
-            this.btnListele.Text = "Listele";
-            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
             // btnKapat
             // 
@@ -817,32 +799,6 @@
             this.simpleButton1.Text = "Araç Ekle > F1";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.aracToplam});
-            this.statusStrip1.Location = new System.Drawing.Point(448, 860);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 14, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(928, 33);
-            this.statusStrip1.TabIndex = 37;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(109, 28);
-            this.toolStripStatusLabel1.Text = "Tanımlanan :";
-            // 
-            // aracToplam
-            // 
-            this.aracToplam.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.aracToplam.Name = "aracToplam";
-            this.aracToplam.Size = new System.Drawing.Size(36, 28);
-            this.aracToplam.Text = "10";
-            // 
             // grdVehicle
             // 
             this.grdVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1114,6 +1070,60 @@
             this.btnSil.Name = "btnSil";
             this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
+            // statusPanel
+            // 
+            this.statusPanel.Controls.Add(this.comboBoxEdit1);
+            this.statusPanel.Controls.Add(this.lblRecordCount);
+            this.statusPanel.Controls.Add(this.labelControl14);
+            this.statusPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.statusPanel.Location = new System.Drawing.Point(448, 860);
+            this.statusPanel.Name = "statusPanel";
+            this.statusPanel.Size = new System.Drawing.Size(928, 33);
+            this.statusPanel.TabIndex = 39;
+            // 
+            // comboBoxEdit1
+            // 
+            this.comboBoxEdit1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.comboBoxEdit1.EditValue = "Aktif Kayıtlar";
+            this.comboBoxEdit1.EnterMoveNextControl = true;
+            this.comboBoxEdit1.Location = new System.Drawing.Point(758, 0);
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBoxEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            "Aktif Kayıtlar",
+            "Pasif Kayıtlar",
+            "Tüm Kayıtlar"});
+            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxEdit1.Size = new System.Drawing.Size(170, 28);
+            this.comboBoxEdit1.TabIndex = 1;
+            // 
+            // lblRecordCount
+            // 
+            this.lblRecordCount.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblRecordCount.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblRecordCount.Location = new System.Drawing.Point(97, 0);
+            this.lblRecordCount.Name = "lblRecordCount";
+            this.lblRecordCount.Size = new System.Drawing.Size(18, 22);
+            this.lblRecordCount.TabIndex = 0;
+            this.lblRecordCount.Text = "10";
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelControl14.Location = new System.Drawing.Point(0, 0);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(97, 22);
+            this.labelControl14.TabIndex = 0;
+            this.labelControl14.Text = "Kayıt Sayısı : ";
+            // 
             // frm_AracTanimlama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1122,7 +1132,7 @@
             this.ClientSize = new System.Drawing.Size(1376, 893);
             this.ControlBox = false;
             this.Controls.Add(this.grdVehicle);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.statusPanel);
             this.Controls.Add(this.KayitMenusu);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1165,14 +1175,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRentFuelOilDay.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRentOtherFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRentFuelOilFare.Properties)).EndInit();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdVehicle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewVehicle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).EndInit();
+            this.statusPanel.ResumeLayout(false);
+            this.statusPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1202,14 +1212,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private System.Windows.Forms.RadioButton rbAsgariUcret;
         private System.Windows.Forms.RadioButton rbCompanyVehicle;
-        private DevExpress.XtraEditors.SimpleButton btnListele;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.SimpleButton btnTemizle;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel aracToplam;
         private System.Windows.Forms.PictureBox pcWorld;
         private DevExpress.XtraEditors.PanelControl PanelKira;
         private System.Windows.Forms.RadioButton rdHour;
@@ -1238,5 +1244,9 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnGuncelle;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSil;
+        private System.Windows.Forms.Panel statusPanel;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.LabelControl lblRecordCount;
+        private DevExpress.XtraEditors.LabelControl labelControl14;
     }
 }

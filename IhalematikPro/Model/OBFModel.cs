@@ -63,7 +63,7 @@ namespace IhalematikPro.Model
                     OperationResult result = OBFProvider.Instance.Save(Entity);
                     if (result.Success)
                     {
-                        System.Windows.Forms.MessageBox.Show("OBF Kaydedildi");
+                       // System.Windows.Forms.MessageBox.Show("OBF Kaydedildi");
                     }
                 }
             }
@@ -72,7 +72,7 @@ namespace IhalematikPro.Model
                 OperationResult result = OBFProvider.Instance.Save(Entity);
                 if (result.Success)
                 {
-                    System.Windows.Forms.MessageBox.Show("OBF Kaydedildi");
+                   // System.Windows.Forms.MessageBox.Show("OBF Kaydedildi");
                 }
             }
         }
