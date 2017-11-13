@@ -147,11 +147,7 @@
             // 
             // txtTenderGroupDescription
             // 
-            this.textEdit1.EnterMoveNextControl = true;
-            this.textEdit1.Location = new System.Drawing.Point(6, 41);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(682, 26);
-            this.textEdit1.TabIndex = 0;
+           
             // 
             // grdTenderGroup
             // 

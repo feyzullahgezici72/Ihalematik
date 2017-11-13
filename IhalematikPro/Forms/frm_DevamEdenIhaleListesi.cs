@@ -110,6 +110,13 @@ namespace IhalematikPro.Forms
                 grdActiveTenderList.DataSource = list;
                 lblTenderCaptin.Text = "KAPALI TEKLİF LİSTESİ";
             }
+            if (comboBoxEdit1.SelectedIndex == 2)
+            {
+                List<Tender> list = TenderProvider.Instance.GetItems();
+                lblRecordCount.Text = list.Count.ToString();
+                grdActiveTenderList.DataSource = list;
+                lblTenderCaptin.Text = "TÜM TEKLİF LİSTESİ";
+            }
         }
     }
  }
