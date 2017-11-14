@@ -68,5 +68,23 @@ namespace IhalematikProBL.Entity
                 this.materialList = value;
             }
         }
+
+        private List<TenderGroup> groups { get; set; }
+        public List<TenderGroup> Groups
+        {
+            get
+            {
+                if (this.groups == null)
+                {
+                    this.groups = TenderGroupProvider.Instance.GetItems("TenderId", this.Id);
+                }
+
+                return this.groups;
+            }
+            set
+            {
+                this.groups = value;
+            }
+        }
     }
 }

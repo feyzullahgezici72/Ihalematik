@@ -12,9 +12,6 @@ namespace IhalematikPro.Manager
 {
     public class CurrentManager : SingletonBase<CurrentManager>
     {
-        public List<VehicleModel> Vehicles { get; set; }
-        public List<WorkerModel> Workers { get; set; }
-
         public Tender CurrentTender { get; set; }
         public Company CurrentCompany { get; set; }
     }

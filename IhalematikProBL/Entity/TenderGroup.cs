@@ -9,6 +9,7 @@ namespace IhalematikProBL.Entity
 {
     public class TenderGroup : CustomEntityBase
     {
+        public bool IsSelected { get; set; }
         private Tender tender { get; set; }
         public int TenderId { get; set; }
         public Tender Tender

@@ -27,6 +27,15 @@ namespace IhalematikProUI.Forms
 
         private void btnIptal_Click(object sender, EventArgs e)
         {
+
+            if (CurrentManager.Instance.CurrentTender.Groups == null || CurrentManager.Instance.CurrentTender.Groups.Count == 0)
+            {
+                TenderGroup item = new TenderGroup();
+                item.Description = "Genel Grup";
+                item.Tender = CurrentManager.Instance.CurrentTender;
+                TenderGroupProvider.Instance.Save(item);
+            }
+
             this.Close();
         }
 
