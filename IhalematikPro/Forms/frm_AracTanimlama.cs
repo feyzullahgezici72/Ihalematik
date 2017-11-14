@@ -169,8 +169,8 @@ namespace IhalematikPro.Forms
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Silmek Istediginzden emin misiniz?", "Sil", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            if (result.Equals(DialogResult.OK))
+            DialogResult result = MessageBox.Show("Silmek Istediginzden emin misiniz?", "Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.Yes))
             {
                 this.FocusedRowHandle = gridViewVehicle.FocusedRowHandle;
                 int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewVehicle.GetFocusedRowCellValue("Id"));

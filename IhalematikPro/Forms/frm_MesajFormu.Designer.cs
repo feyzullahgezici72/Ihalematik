@@ -44,9 +44,9 @@
             // 
             this.btnTamam.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
-            this.btnTamam.Location = new System.Drawing.Point(528, 103);
+            this.btnTamam.Location = new System.Drawing.Point(501, 113);
             this.btnTamam.Name = "btnTamam";
-            this.btnTamam.Size = new System.Drawing.Size(110, 50);
+            this.btnTamam.Size = new System.Drawing.Size(131, 50);
             this.btnTamam.TabIndex = 11;
             this.btnTamam.Text = "Tamam";
             this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
@@ -98,7 +98,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnTamam;
-            this.ClientSize = new System.Drawing.Size(644, 160);
+            this.ClientSize = new System.Drawing.Size(644, 175);
             this.ControlBox = false;
             this.Controls.Add(this.lblMesaj);
             this.Controls.Add(this.panelControl1);

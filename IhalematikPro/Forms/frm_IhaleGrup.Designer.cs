@@ -139,8 +139,8 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl5.LineColor = System.Drawing.Color.Red;
             this.labelControl5.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
             this.labelControl5.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Horizontal;
@@ -148,7 +148,7 @@
             this.labelControl5.LineVisible = true;
             this.labelControl5.Location = new System.Drawing.Point(17, 20);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(80, 19);
+            this.labelControl5.Size = new System.Drawing.Size(87, 19);
             this.labelControl5.TabIndex = 3;
             this.labelControl5.Text = "Grup Adı : ";
             // 
@@ -169,7 +169,7 @@
             this.txtTenderGroupDescription.Location = new System.Drawing.Point(107, 17);
             this.txtTenderGroupDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenderGroupDescription.Name = "txtTenderGroupDescription";
-            this.txtTenderGroupDescription.Properties.Appearance.BackColor = System.Drawing.Color.Pink;
+            this.txtTenderGroupDescription.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtTenderGroupDescription.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTenderGroupDescription.Properties.Appearance.Options.UseBackColor = true;
             this.txtTenderGroupDescription.Properties.Appearance.Options.UseFont = true;
