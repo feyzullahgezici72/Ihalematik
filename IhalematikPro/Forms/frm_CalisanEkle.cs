@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using IhalematikPro.Model;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Forms;
 
 namespace IhalematikPro.Forms
 {
@@ -37,11 +38,15 @@ namespace IhalematikPro.Forms
             if (existingItems.Count == 0)
             {
                 model.Save();
-                MessageBox.Show("Ünvan Kaydedildi");
                 txtUnvan.ResetText();
                 txtUnvan.Focus();
                 this._owner.InitilalizeForm();
                 this.Close();
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Çalışan Ünvanı Kaydedildi...";
+                mf.ShowDialog();
+
+
             }
             else
             {

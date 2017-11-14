@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MesajFormu));
             this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMesaj = new DevExpress.XtraEditors.LabelControl();
@@ -42,12 +43,12 @@
             // btnTamam
             // 
             this.btnTamam.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnTamam.Image = global::IhalematikProUI.Properties.Resources.Check_icon__1_;
-            this.btnTamam.Location = new System.Drawing.Point(499, 96);
+            this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
+            this.btnTamam.Location = new System.Drawing.Point(528, 103);
             this.btnTamam.Name = "btnTamam";
-            this.btnTamam.Size = new System.Drawing.Size(139, 57);
+            this.btnTamam.Size = new System.Drawing.Size(110, 50);
             this.btnTamam.TabIndex = 11;
-            this.btnTamam.Text = "Kapat";
+            this.btnTamam.Text = "Tamam";
             this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
             // 
             // pictureBox1
@@ -63,11 +64,11 @@
             // 
             // lblMesaj
             // 
-            this.lblMesaj.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMesaj.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblMesaj.Appearance.ForeColor = System.Drawing.Color.Black;
             this.lblMesaj.Location = new System.Drawing.Point(39, 56);
             this.lblMesaj.Name = "lblMesaj";
-            this.lblMesaj.Size = new System.Drawing.Size(9, 34);
+            this.lblMesaj.Size = new System.Drawing.Size(7, 27);
             this.lblMesaj.TabIndex = 9;
             this.lblMesaj.Text = ".";
             // 
