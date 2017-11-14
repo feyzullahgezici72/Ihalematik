@@ -814,6 +814,7 @@
             this.grdMaterialList2.OptionsView.EnableAppearanceEvenRow = true;
             this.grdMaterialList2.OptionsView.EnableAppearanceOddRow = true;
             this.grdMaterialList2.OptionsView.ShowDetailButtons = false;
+            this.grdMaterialList2.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
             this.grdMaterialList2.OptionsView.ShowGroupPanel = false;
             this.grdMaterialList2.PaintStyleName = "Web";
             this.grdMaterialList2.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.grdMaterialList2_CellValueChanged);
@@ -834,6 +835,7 @@
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.OptionsColumn.AllowFocus = false;
             this.gridColumn1.OptionsColumn.ReadOnly = true;
+            this.gridColumn1.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
             this.gridColumn1.Width = 99;
@@ -854,6 +856,7 @@
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.OptionsColumn.AllowFocus = false;
             this.gridColumn2.OptionsColumn.ReadOnly = true;
+            this.gridColumn2.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
             this.gridColumn2.Width = 556;
@@ -874,6 +877,7 @@
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
             this.gridColumn3.OptionsColumn.ReadOnly = true;
+            this.gridColumn3.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
             this.gridColumn3.Width = 60;
@@ -897,6 +901,7 @@
             this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.gridColumn7.FieldName = "KDVPercentage";
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 4;
             this.gridColumn7.Width = 70;
@@ -919,6 +924,7 @@
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "Quantity";
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 5;
             this.gridColumn4.Width = 78;
@@ -941,6 +947,7 @@
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.OptionsColumn.AllowFocus = false;
             this.gridColumn5.OptionsColumn.ReadOnly = true;
+            this.gridColumn5.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 6;
             this.gridColumn5.Width = 106;
@@ -963,6 +970,7 @@
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.OptionsColumn.AllowFocus = false;
             this.gridColumn6.OptionsColumn.ReadOnly = true;
+            this.gridColumn6.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 7;
             this.gridColumn6.Width = 107;
@@ -985,15 +993,18 @@
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.OptionsColumn.AllowFocus = false;
             this.gridColumn8.OptionsColumn.ReadOnly = true;
+            this.gridColumn8.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 8;
             this.gridColumn8.Width = 149;
             // 
             // gridColumn9
             // 
+            this.gridColumn9.Caption = "İşçilikli";
             this.gridColumn9.ColumnEdit = this.rpstWorkship;
             this.gridColumn9.FieldName = "IsWorkship";
             this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 0;
             // 
