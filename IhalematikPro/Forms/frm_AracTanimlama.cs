@@ -203,5 +203,28 @@ namespace IhalematikPro.Forms
                 ddlVehicleTitle.SelectedItem = null;
             }
         }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            ddlVehicleTitle.SelectedIndex = -1;
+            rbAsgariUcret.Checked = false;
+            rbCompanyVehicle.Checked = false;
+            rdDay.Checked = false;
+            rdHour.Checked = false;
+            rdMonth.Checked = false;
+            txtDriverFare.ResetText();
+            txtFuelOilDay.ResetText();
+            txtFuelOilFare.ResetText();
+            txtGeneralFare.ResetText();
+            txtMaintenanceFare.ResetText();
+            txtOtherFare.ResetText();
+            txtRentDriverFare.ResetText();
+            txtRentFare.ResetText();
+            txtRentFuelOilDay.ResetText();
+            txtRentFuelOilFare.ResetText();
+            txtRentGeneralFare.ResetText();
+            txtRentOtherFare.ResetText();
+            txtServiceFare.ResetText();
+        }
     }
 }
