@@ -12,7 +12,7 @@ namespace IhalematikProUI.Model
 {
     public class TenderGroupModel : CustomSaveableModelBase
     {
-        public bool SelectedId { get; set; }
+        public bool IsSelected { get; set; }
         private Tender tender { get; set; }
         public int TenderId { get; set; }
         public Tender Tender

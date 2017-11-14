@@ -62,12 +62,13 @@
             this.grupPanel = new DevExpress.XtraEditors.PanelControl();
             this.grdTenderGroup = new DevExpress.XtraGrid.GridControl();
             this.gridViewTenderGroup = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSelectedId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.rpstColId = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.colIsSelected = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rpstSelected = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.colId1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnGuncelle = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.rpstColId = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
@@ -82,6 +83,7 @@
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpstWorkship = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -99,9 +101,10 @@
             this.grupPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdTenderGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTenderGroup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rpstColId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstSelected)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstColId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
@@ -130,7 +133,7 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2);
             this.pcWorld.Name = "pcWorld";
             this.pcWorld.Size = new System.Drawing.Size(47, 34);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -434,7 +437,7 @@
             this.grupPanel.Controls.Add(this.grdTenderGroup);
             this.grupPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.grupPanel.Location = new System.Drawing.Point(0, 0);
-            this.grupPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grupPanel.Margin = new System.Windows.Forms.Padding(2);
             this.grupPanel.Name = "grupPanel";
             this.grupPanel.Size = new System.Drawing.Size(257, 310);
             this.grupPanel.TabIndex = 1;
@@ -451,7 +454,8 @@
             this.grdTenderGroup.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGuncelle,
             this.btnSil,
-            this.rpstColId});
+            this.rpstColId,
+            this.rpstSelected});
             this.grdTenderGroup.Size = new System.Drawing.Size(253, 306);
             this.grdTenderGroup.TabIndex = 40;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -571,8 +575,8 @@
             this.gridViewTenderGroup.Appearance.VertLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(127)))), ((int)(((byte)(196)))));
             this.gridViewTenderGroup.Appearance.VertLine.Options.UseBackColor = true;
             this.gridViewTenderGroup.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colId,
-            this.colSelectedId,
+            this.colIsSelected,
+            this.colId1,
             this.gridColumn10});
             this.gridViewTenderGroup.GridControl = this.grdTenderGroup;
             this.gridViewTenderGroup.Name = "gridViewTenderGroup";
@@ -582,26 +586,26 @@
             this.gridViewTenderGroup.PaintStyleName = "Web";
             this.gridViewTenderGroup.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridViewTenderGroup_RowClick);
             // 
-            // colId
+            // colIsSelected
             // 
-            this.colId.Caption = "gridColumn7";
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
+            this.colIsSelected.Caption = " ";
+            this.colIsSelected.ColumnEdit = this.rpstSelected;
+            this.colIsSelected.FieldName = "IsSelected";
+            this.colIsSelected.Name = "colIsSelected";
+            this.colIsSelected.Visible = true;
+            this.colIsSelected.VisibleIndex = 0;
             // 
-            // colSelectedId
+            // rpstSelected
             // 
-            this.colSelectedId.ColumnEdit = this.rpstColId;
-            this.colSelectedId.FieldName = "SelectedId";
-            this.colSelectedId.Name = "colSelectedId";
-            this.colSelectedId.Visible = true;
-            this.colSelectedId.VisibleIndex = 0;
+            this.rpstSelected.AutoHeight = false;
+            this.rpstSelected.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.rpstSelected.Name = "rpstSelected";
+            this.rpstSelected.CheckedChanged += new System.EventHandler(this.rpstSelected_CheckedChanged);
             // 
-            // rpstColId
+            // colId1
             // 
-            this.rpstColId.AutoHeight = false;
-            this.rpstColId.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
-            this.rpstColId.Name = "rpstColId";
-            this.rpstColId.CheckedChanged += new System.EventHandler(this.rpstColId_CheckedChanged);
+            this.colId1.FieldName = "Id";
+            this.colId1.Name = "colId1";
             // 
             // gridColumn10
             // 
@@ -638,6 +642,12 @@
             this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnSil.Name = "btnSil";
             this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // rpstColId
+            // 
+            this.rpstColId.AutoHeight = false;
+            this.rpstColId.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.rpstColId.Name = "rpstColId";
             // 
             // gridView1
             // 
@@ -992,6 +1002,12 @@
             this.rpstWorkship.AutoHeight = false;
             this.rpstWorkship.Name = "rpstWorkship";
             // 
+            // colId
+            // 
+            this.colId.Caption = "gridColumn7";
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            // 
             // frm_Teklif_Adim1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1031,9 +1047,10 @@
             this.grupPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdTenderGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTenderGroup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rpstColId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstSelected)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstColId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
             this.panelControl6.ResumeLayout(false);
@@ -1073,8 +1090,7 @@
         private System.Windows.Forms.PictureBox pcWorld;
         private DevExpress.XtraGrid.GridControl grdTenderGroup;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewTenderGroup;
-        private DevExpress.XtraGrid.Columns.GridColumn colId;
-        private DevExpress.XtraGrid.Columns.GridColumn colSelectedId;
+        private DevExpress.XtraGrid.Columns.GridColumn colId1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnGuncelle;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSil;
@@ -1094,5 +1110,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit rpstWorkship;
         public DevExpress.XtraEditors.PanelControl grupPanel;
+        private DevExpress.XtraGrid.Columns.GridColumn colIsSelected;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit rpstSelected;
+        private DevExpress.XtraGrid.Columns.GridColumn colId;
     }
 }
