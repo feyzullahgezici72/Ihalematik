@@ -39,6 +39,7 @@
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.lblGrupName = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.grdOBFList = new DevExpress.XtraGrid.GridControl();
@@ -59,7 +60,6 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.lblGrupName = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
@@ -136,7 +136,6 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.EnterMoveNextControl = true;
             this.textEdit1.Location = new System.Drawing.Point(470, 15);
             this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit1.Name = "textEdit1";
@@ -162,7 +161,6 @@
             // 
             // txtNumber
             // 
-            this.txtNumber.EnterMoveNextControl = true;
             this.txtNumber.Location = new System.Drawing.Point(114, 15);
             this.txtNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumber.Name = "txtNumber";
@@ -232,6 +230,16 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1258, 50);
             this.panelControl2.TabIndex = 2;
+            // 
+            // lblGrupName
+            // 
+            this.lblGrupName.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGrupName.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblGrupName.Location = new System.Drawing.Point(4, 8);
+            this.lblGrupName.Name = "lblGrupName";
+            this.lblGrupName.Size = new System.Drawing.Size(156, 35);
+            this.lblGrupName.TabIndex = 2;
+            this.lblGrupName.Text = "lblGrupName";
             // 
             // labelControl1
             // 
@@ -628,12 +636,19 @@
             this.gridColumn8});
             this.gridView2.GridControl = this.grdAddedOBF;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsFind.AllowFindPanel = false;
+            this.gridView2.OptionsFind.ClearFindOnClose = false;
+            this.gridView2.OptionsFind.FindFilterColumns = "";
+            this.gridView2.OptionsFind.HighlightFindResults = false;
+            this.gridView2.OptionsFind.ShowClearButton = false;
+            this.gridView2.OptionsFind.ShowCloseButton = false;
+            this.gridView2.OptionsFind.ShowFindButton = false;
             this.gridView2.OptionsSelection.CheckBoxSelectorColumnWidth = 30;
             this.gridView2.OptionsSelection.MultiSelect = true;
             this.gridView2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.gridView2.OptionsView.EnableAppearanceEvenRow = true;
             this.gridView2.OptionsView.EnableAppearanceOddRow = true;
-            this.gridView2.OptionsView.ShowGroupExpandCollapseButtons = false;
+            this.gridView2.OptionsView.ShowDetailButtons = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             this.gridView2.PaintStyleName = "Web";
             // 
@@ -646,7 +661,7 @@
             this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn5.Caption = "STOK KODU";
+            this.gridColumn5.Caption = "ÖBF NO";
             this.gridColumn5.FieldName = "PozOBFNumber";
             this.gridColumn5.MinWidth = 80;
             this.gridColumn5.Name = "gridColumn5";
@@ -772,16 +787,6 @@
             this.statusStrip1.Size = new System.Drawing.Size(1258, 22);
             this.statusStrip1.TabIndex = 34;
             this.statusStrip1.Text = "statusStrip1";
-            // 
-            // lblGrupName
-            // 
-            this.lblGrupName.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGrupName.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblGrupName.Location = new System.Drawing.Point(4, 8);
-            this.lblGrupName.Name = "lblGrupName";
-            this.lblGrupName.Size = new System.Drawing.Size(156, 35);
-            this.lblGrupName.TabIndex = 2;
-            this.lblGrupName.Text = "lblGrupName";
             // 
             // frm_ObfKayit
             // 
