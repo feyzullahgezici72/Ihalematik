@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DevamEdenIhaleListesi));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -46,6 +47,8 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnIhaleAc = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnDetay = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.statusPanel = new System.Windows.Forms.Panel();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
@@ -64,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdActiveTenderList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewActiveTenderList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnIhaleAc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDetay)).BeginInit();
             this.statusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
@@ -155,7 +159,8 @@
             this.grdActiveTenderList.Margin = new System.Windows.Forms.Padding(4);
             this.grdActiveTenderList.Name = "grdActiveTenderList";
             this.grdActiveTenderList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btnIhaleAc});
+            this.btnIhaleAc,
+            this.btnDetay});
             this.grdActiveTenderList.Size = new System.Drawing.Size(1224, 550);
             this.grdActiveTenderList.TabIndex = 95;
             this.grdActiveTenderList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -275,7 +280,8 @@
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
-            this.gridColumn4});
+            this.gridColumn4,
+            this.gridColumn5});
             this.gridViewActiveTenderList.GridControl = this.grdActiveTenderList;
             this.gridViewActiveTenderList.Name = "gridViewActiveTenderList";
             this.gridViewActiveTenderList.OptionsView.EnableAppearanceEvenRow = true;
@@ -377,6 +383,27 @@
             this.btnIhaleAc.Name = "btnIhaleAc";
             this.btnIhaleAc.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnIhaleAc.Click += new System.EventHandler(this.btnIhaleAc_Click);
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn5.ColumnEdit = this.btnDetay;
+            this.gridColumn5.MaxWidth = 30;
+            this.gridColumn5.MinWidth = 30;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 30;
+            // 
+            // btnDetay
+            // 
+            this.btnDetay.AutoHeight = false;
+            this.btnDetay.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.detail_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.btnDetay.Name = "btnDetay";
+            this.btnDetay.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnDetay.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDetay_ButtonClick);
             // 
             // statusPanel
             // 
@@ -533,6 +560,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdActiveTenderList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewActiveTenderList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnIhaleAc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDetay)).EndInit();
             this.statusPanel.ResumeLayout(false);
             this.statusPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
@@ -570,5 +598,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDetay;
     }
 }
