@@ -22,6 +22,7 @@ namespace IhalematikPro.Forms
     public partial class frm_CalisanTanimlama : DevExpress.XtraEditors.XtraForm
     {
         List<Worker> workers = new List<Worker>();
+
         private List<IhalematikProBL.Entity.Rule> rules = null;
         public List<IhalematikProBL.Entity.Rule> Rules
         {
@@ -38,7 +39,10 @@ namespace IhalematikPro.Forms
                 this.rules = value;
             }
         }
+
         public int FocusedRowHandle = 0;
+
+        public int SelectedTitleId = 0;
 
         public frm_CalisanTanimlama()
         {
@@ -107,6 +111,12 @@ namespace IhalematikPro.Forms
             ddlTitles.Properties.Items.Clear();
             List<TitleModel> models = UITitleManager.Instance.GetTitles();
             ddlTitles.Properties.Items.AddRange(models);
+            if (this.SelectedTitleId != 0)
+            {
+                TitleModel selectedTite = models.Where(p => p.Id == this.SelectedTitleId).FirstOrDefault();
+                int selectedIndex = models.IndexOf(selectedTite);
+                ddlTitles.SelectedIndex = selectedIndex;
+            }
         }
 
         private void btnKapat_Click(object sender, EventArgs e)

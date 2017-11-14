@@ -35,21 +35,19 @@ namespace IhalematikPro.Forms
             bool IsEmpty = IsEmptyKontrol();
             if (!IsEmpty)
             {
-                TitleModel model = new TitleModel();
+                Title model = new Title();
                 model.Name = txtUnvan.Text;
                 List<Title> existingItems = TitleProvider.Instance.GetItems("Name", model.Name.Trim());
                 if (existingItems.Count == 0)
                 {
-                    model.Save();
-                    txtUnvan.ResetText();
-                    txtUnvan.Focus();
-                    this._owner.InitilalizeForm();
-                    this.Close();
+                    TitleProvider.Instance.Save(model);
+
                     frm_MesajFormu mf = new frm_MesajFormu();
                     mf.lblMesaj.Text = "Çalışan Ünvanı Kaydedildi...";
                     mf.ShowDialog();
-
-
+                    this._owner.SelectedTitleId = model.Id;
+                    this._owner.InitilalizeForm();
+                    this.Close();
                 }
                 else
                 {
