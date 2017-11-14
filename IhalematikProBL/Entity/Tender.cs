@@ -18,9 +18,20 @@ namespace IhalematikProBL.Entity
         }
         public int Number { get; set; }
         public string Description { get; set; }
-        public string CompanyName { get; set; }
         public DateTime? LastOfferDate { get; set; }
         public bool IsActive { get; set; }
+
+        public string CompanyName { get; set; }
+        public string EkapNumber { get; set; }
+        public string Type { get; set; }
+        //ihalenin kapsami
+        public string Scope { get; set; }
+        //Ihalenin Usulu
+        public string Procedure { get; set; }
+        //ihalenin yeri
+        public string Place { get; set; }
+        //Ust Idare
+        public string Management { get; set; }
 
         private List<TenderEquipment> equipments { get; set; }
         public List<TenderEquipment> Equipments
