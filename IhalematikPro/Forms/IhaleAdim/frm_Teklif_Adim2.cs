@@ -179,18 +179,6 @@ namespace IhalematikPro.Forms
             this.LoadTenderMaterialList();
         }
 
-     
-        //private void gridviewTenderGroupSelectedRow()
-        //{
-        //    for (int i = 0; i < gridViewTenderGroup.RowCount; i++)
-        //    {
-        //        gridViewTenderGroup.SetRowCellValue(i, colIsSelected, false);
-        //    }
-        //    gridViewTenderGroup.SetFocusedRowCellValue("SelectedId", true);
-        //    this.SelectedGroupId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewTenderGroup.GetFocusedRowCellValue("Id"));
-        //    this.LoadTenderMaterialList();
-        //}
-
         public void LoadTenderMaterialList()
         {
             if (this.SelectedGroupId != 0 && CurrentManager.Instance.CurrentTender.MaterialList != null)
