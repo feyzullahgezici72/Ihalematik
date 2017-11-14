@@ -72,7 +72,7 @@ namespace IhalematikPro.Forms
             int lastTenderNumber = TenderManager.Instance.GetLastTenderNumber();
             tender.Number = lastTenderNumber + 1;
             tender.Description = txtAciklama.Text;
-            tender.LastOfferDate = dateTimePicker1.Value;
+            tender.LastOfferDate = LastOfferDate.DateTime;
             tender.IsActive = true;
 
             bool result = TenderManager.Instance.Save(tender);

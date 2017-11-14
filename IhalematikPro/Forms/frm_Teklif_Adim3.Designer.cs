@@ -626,6 +626,10 @@
             this.gridColumn5});
             this.gridView1.GridControl = this.grdMaterialListIsWorkship;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsFind.AllowFindPanel = false;
+            this.gridView1.OptionsFind.ShowClearButton = false;
+            this.gridView1.OptionsFind.ShowCloseButton = false;
+            this.gridView1.OptionsFind.ShowFindButton = false;
             this.gridView1.OptionsView.EnableAppearanceEvenRow = true;
             this.gridView1.OptionsView.EnableAppearanceOddRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
@@ -764,7 +768,7 @@
             this.isciAracGirisPaneli.Controls.Add(this.groupControl1);
             this.isciAracGirisPaneli.Controls.Add(this.panelControl5);
             this.isciAracGirisPaneli.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.isciAracGirisPaneli.Location = new System.Drawing.Point(1070, 208);
+            this.isciAracGirisPaneli.Location = new System.Drawing.Point(533, 164);
             this.isciAracGirisPaneli.Name = "isciAracGirisPaneli";
             this.isciAracGirisPaneli.Size = new System.Drawing.Size(726, 721);
             this.isciAracGirisPaneli.TabIndex = 26;
@@ -1158,6 +1162,10 @@
             this.colAddWorkerWorkerUnitPrice});
             this.gridViewAddWorker.GridControl = this.grdAddWorker;
             this.gridViewAddWorker.Name = "gridViewAddWorker";
+            this.gridViewAddWorker.OptionsFind.AllowFindPanel = false;
+            this.gridViewAddWorker.OptionsFind.ShowClearButton = false;
+            this.gridViewAddWorker.OptionsFind.ShowCloseButton = false;
+            this.gridViewAddWorker.OptionsFind.ShowFindButton = false;
             this.gridViewAddWorker.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewAddWorker.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewAddWorker.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
