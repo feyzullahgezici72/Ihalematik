@@ -16,6 +16,7 @@ namespace IhalematikPro.Model
         public string Description { get; set; }
         public string Unit { get; set; }
         public double UnitPrice { get; set; }
+        public bool IsActive { get; set; }
 
         public PozModel(Poz Entity)
         {
@@ -24,6 +25,7 @@ namespace IhalematikPro.Model
             this.UnitPrice = Entity.UnitPrice;
             this.Description = Entity.Description;
             this.Id = Entity.Id;
+            this.IsActive = Entity.IsActive;
         }
 
         public PozModel()
@@ -42,15 +44,14 @@ namespace IhalematikPro.Model
             poz.Number = this.Number;
             poz.Unit = this.Unit;
             poz.UnitPrice = this.UnitPrice;
+            poz.IsActive = this.IsActive;
             return poz;
         }
 
         protected override void SaveEntity(EntityBase Entity)
         {
             Poz poz = (Poz)Entity;
-
-            //if (poz.Id == 0)
-            //{
+            
             List<Poz> existingPozs = UIPozManager.Instance.GetPoz(poz.Number);
             if (existingPozs != null)
             {
@@ -62,20 +63,12 @@ namespace IhalematikPro.Model
                 else
                 {
                     OperationResult result = PozProvider.Instance.Save(Entity);
-                    if (result.Success)
-                    {
-                        System.Windows.Forms.MessageBox.Show("Poz Kaydedildi");
-                    }
                 }
 
             }
             else
             {
                 OperationResult result = PozProvider.Instance.Save(Entity);
-                if (result.Success)
-                {
-                    System.Windows.Forms.MessageBox.Show("Poz Kaydedildi");
-                }
             }
         }
     }

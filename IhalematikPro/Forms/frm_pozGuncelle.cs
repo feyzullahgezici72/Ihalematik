@@ -40,7 +40,6 @@ namespace IhalematikProUI.Forms
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
-            this._owner.LoadGrid();
         }
 
         private void frm_pozGuncelle_Load(object sender, EventArgs e)

@@ -19,7 +19,6 @@ namespace IhalematikPro.Forms
 {
     public partial class frm_AracTanimlama : DevExpress.XtraEditors.XtraForm
     {
-
         public int FocusedRowHandle = 0;
         public frm_AracTanimlama()
         {

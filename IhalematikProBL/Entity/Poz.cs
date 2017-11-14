@@ -8,6 +8,6 @@ namespace IhalematikProBL.Entity
 {
     public class Poz : Material
     {
-
+        public bool IsActive { get; set; }
     }
 }
