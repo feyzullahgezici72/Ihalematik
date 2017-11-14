@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.txtUnvan = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -38,7 +37,7 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnvan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
@@ -46,6 +45,7 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -55,6 +55,7 @@
             // txtUnvan
             // 
             this.txtUnvan.EnterMoveNextControl = true;
+            this.dxErrorProvider1.SetIconAlignment(this.txtUnvan, System.Windows.Forms.ErrorIconAlignment.BottomRight);
             this.txtUnvan.Location = new System.Drawing.Point(86, 55);
             this.txtUnvan.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnvan.Name = "txtUnvan";
@@ -64,7 +65,7 @@
             this.txtUnvan.Properties.Appearance.Options.UseBackColor = true;
             this.txtUnvan.Properties.Appearance.Options.UseFont = true;
             this.txtUnvan.Properties.Appearance.Options.UseForeColor = true;
-            this.txtUnvan.Size = new System.Drawing.Size(528, 26);
+            this.txtUnvan.Size = new System.Drawing.Size(504, 26);
             this.txtUnvan.TabIndex = 0;
             // 
             // labelControl2
@@ -93,7 +94,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 54);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(619, 181);
+            this.groupControl2.Size = new System.Drawing.Size(619, 190);
             this.groupControl2.TabIndex = 34;
             this.groupControl2.Text = "Çalışan Bilgileri";
             // 
@@ -105,7 +106,7 @@
             this.btnSave.Appearance.Options.UseForeColor = true;
             this.btnSave.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
             this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(494, 105);
+            this.btnSave.Location = new System.Drawing.Point(486, 121);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(120, 50);
@@ -171,14 +172,9 @@
             this.labelControl1.Text = "ÇALIŞAN EKLE";
             this.labelControl1.UseMnemonic = false;
             // 
-            // statusStrip1
+            // dxErrorProvider1
             // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 213);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(619, 22);
-            this.statusStrip1.TabIndex = 99;
-            this.statusStrip1.Text = "statusStrip1";
+            this.dxErrorProvider1.ContainerControl = this;
             // 
             // frm_CalisanEkle
             // 
@@ -186,9 +182,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(619, 235);
+            this.ClientSize = new System.Drawing.Size(619, 244);
             this.ControlBox = false;
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -205,8 +200,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -221,6 +216,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
     }
 }

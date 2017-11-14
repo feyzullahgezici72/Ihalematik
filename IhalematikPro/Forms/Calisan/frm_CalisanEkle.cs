@@ -32,6 +32,7 @@ namespace IhalematikPro.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            Kontrol();
             TitleModel model = new TitleModel();
             model.Name = txtUnvan.Text;
             List<Title> existingItems = TitleProvider.Instance.GetItems("Name", model.Name.Trim());
@@ -53,6 +54,18 @@ namespace IhalematikPro.Forms
                 MessageBox.Show("Bu unvan zaten mevcut");
                 txtUnvan.ResetText();
                 txtUnvan.Focus();
+            }
+        }
+        void Kontrol()
+        {
+            if (string.IsNullOrEmpty(txtUnvan.Text.Trim()))
+            {
+                dxErrorProvider1.SetError(txtUnvan, "Boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                return;
+            }
+            else
+            {
+                dxErrorProvider1.ClearErrors();
             }
         }
     }
