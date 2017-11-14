@@ -19,6 +19,8 @@ namespace IhalematikPro.Forms
 {
     public partial class frm_AracTanimlama : DevExpress.XtraEditors.XtraForm
     {
+
+        public int FocusedRowHandle = 0;
         public frm_AracTanimlama()
         {
             InitializeComponent();
@@ -52,6 +54,11 @@ namespace IhalematikPro.Forms
                 grdVehicle.DataSource = models.Where(p => !p.IsActive);
                 //gridViewVehicle.Columns[colEdit.].Visible = false;
                 colEdit.Visible = false;
+            }
+
+            if (this.FocusedRowHandle != 0)
+            {
+                gridViewVehicle.FocusedRowHandle = this.FocusedRowHandle;
             }
         }
         private void frm_AracTanimlama_Load(object sender, EventArgs e)
@@ -148,6 +155,9 @@ namespace IhalematikPro.Forms
             frm_Arac_Guncelleme frm = new frm_Arac_Guncelleme(this);
 
             int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewVehicle.GetFocusedRowCellValue("Id"));
+
+            this.FocusedRowHandle = gridViewVehicle.FocusedRowHandle;
+
             frm.CurrentVehicleId = id;
             KayitMenusu.Visible = false;
             this.Opacity = 10;

@@ -38,6 +38,8 @@ namespace IhalematikPro.Forms
                 this.rules = value;
             }
         }
+        public int FocusedRowHandle = 0;
+
         public frm_CalisanTanimlama()
         {
             InitializeComponent();
@@ -141,8 +143,12 @@ namespace IhalematikPro.Forms
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
                 grdWorker.DataSource = models.Where(p => !p.IsActive);
-                //gridViewVehicle.Columns[colEdit.].Visible = false;
                 colEdit.Visible = false;
+            }
+
+            if (this.FocusedRowHandle != 0)
+            {
+                gridViewWorker.FocusedRowHandle = this.FocusedRowHandle;
             }
         }
 
@@ -255,11 +261,6 @@ namespace IhalematikPro.Forms
             LoadGrid();
         }
 
-        private void btnGuncelle_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             frm_CalisanEkle frm = new frm_CalisanEkle(this);
@@ -270,10 +271,11 @@ namespace IhalematikPro.Forms
         private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             frm_Calisan_Guncelleme cg = new frm_Calisan_Guncelleme(this);
+            this.FocusedRowHandle = gridViewWorker.FocusedRowHandle;
 
             int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewWorker.GetFocusedRowCellValue("Id"));
             cg.CurrentWorkerId = id;
-
+            
             kayitMenusu.Visible = false;
             this.Opacity = 10;
             this.Enabled = false;
