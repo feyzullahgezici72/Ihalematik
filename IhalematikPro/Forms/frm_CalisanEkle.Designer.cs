@@ -59,22 +59,22 @@
             this.txtUnvan.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnvan.Name = "txtUnvan";
             this.txtUnvan.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtUnvan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUnvan.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtUnvan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUnvan.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtUnvan.Properties.Appearance.Options.UseBackColor = true;
             this.txtUnvan.Properties.Appearance.Options.UseFont = true;
             this.txtUnvan.Properties.Appearance.Options.UseForeColor = true;
-            this.txtUnvan.Size = new System.Drawing.Size(601, 36);
+            this.txtUnvan.Size = new System.Drawing.Size(528, 26);
             this.txtUnvan.TabIndex = 0;
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl2.Location = new System.Drawing.Point(15, 59);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(66, 21);
+            this.labelControl2.Size = new System.Drawing.Size(55, 19);
             this.labelControl2.TabIndex = 97;
             this.labelControl2.Text = "Ünvanı:";
             // 
@@ -93,7 +93,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 54);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(700, 181);
+            this.groupControl2.Size = new System.Drawing.Size(619, 181);
             this.groupControl2.TabIndex = 34;
             this.groupControl2.Text = "Çalışan Bilgileri";
             // 
@@ -105,7 +105,7 @@
             this.btnSave.Appearance.Options.UseForeColor = true;
             this.btnSave.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
             this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(567, 99);
+            this.btnSave.Location = new System.Drawing.Point(494, 105);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(120, 50);
@@ -119,7 +119,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(636, 0);
+            this.btnKapat.Location = new System.Drawing.Point(555, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(64, 54);
@@ -137,7 +137,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(700, 54);
+            this.panelControl1.Size = new System.Drawing.Size(619, 54);
             this.panelControl1.TabIndex = 33;
             // 
             // panelControl2
@@ -151,7 +151,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(700, 54);
+            this.panelControl2.Size = new System.Drawing.Size(619, 54);
             this.panelControl2.TabIndex = 2;
             // 
             // labelControl1
@@ -176,7 +176,7 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Location = new System.Drawing.Point(0, 213);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(700, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(619, 22);
             this.statusStrip1.TabIndex = 99;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -186,7 +186,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(700, 235);
+            this.ClientSize = new System.Drawing.Size(619, 235);
             this.ControlBox = false;
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupControl2);

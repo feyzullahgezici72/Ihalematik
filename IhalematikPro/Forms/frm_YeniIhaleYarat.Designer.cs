@@ -310,9 +310,10 @@
             this.LastOfferDate.Name = "LastOfferDate";
             this.LastOfferDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LastOfferDate.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
             this.LastOfferDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.LastOfferDate.Properties.Mask.EditMask = "F";
+            this.LastOfferDate.Properties.Mask.EditMask = "f";
             this.LastOfferDate.Size = new System.Drawing.Size(396, 26);
             this.LastOfferDate.TabIndex = 33;
             // 
