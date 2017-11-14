@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikPro.Manager;
+using IhalematikProUI.Forms;
 
 namespace IhalematikPro.Forms
 {
@@ -117,6 +118,13 @@ namespace IhalematikPro.Forms
                 grdActiveTenderList.DataSource = list;
                 lblTenderCaptin.Text = "TÜM TEKLİF LİSTESİ";
             }
+        }
+
+        private void btnDetay_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            frm_IhaleBilgisiDetay ibd = new frm_IhaleBilgisiDetay();
+            ibd.ShowDialog();
+
         }
     }
  }

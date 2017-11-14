@@ -211,6 +211,12 @@
     <Compile Include="Forms\frm_Calisan_Guncelleme.Designer.cs">
       <DependentUpon>frm_Calisan_Guncelleme.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frm_IhaleBilgisiDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_IhaleBilgisiDetay.Designer.cs">
+      <DependentUpon>frm_IhaleBilgisiDetay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frm_IhaleGrup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -456,6 +462,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Calisan_Guncelleme.resx">
       <DependentUpon>frm_Calisan_Guncelleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_IhaleBilgisiDetay.resx">
+      <DependentUpon>frm_IhaleBilgisiDetay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_IhaleGrup.resx">
       <DependentUpon>frm_IhaleGrup.cs</DependentUpon>
@@ -856,7 +865,9 @@
   <ItemGroup>
     <None Include="pic\Menu-icon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="pic\detail-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
