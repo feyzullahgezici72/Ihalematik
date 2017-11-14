@@ -105,7 +105,7 @@ namespace IhalematikPro.Forms
                 lblTotalMarkup.Text = (items.Sum(p => p.TotalMarkup)).ToString("C2");
             }
         }
-
+        frm_TeklifAdimSon a4 = (frm_TeklifAdimSon)Application.OpenForms["frm_TeklifSonAdim"];
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListNonWorkship();
@@ -122,21 +122,44 @@ namespace IhalematikPro.Forms
             this.Close();
             frm_Teklif_Adim3 a3 = (frm_Teklif_Adim3)Application.OpenForms["frm_Teklif_Adim3"];
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-            if (a3 == null)
-            {
-                a3 = new frm_Teklif_Adim3();
-                a3.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                a3.FormClosed += new FormClosedEventHandler(a3_FormClosed);
-                af.MainPanel.Visible = false;
-                a3.Show();
 
+            if (CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() == 0)
+            {
+                if (a4 == null)
+                {
+                    a4 = new frm_TeklifAdimSon();
+                    a4.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                    a4.FormClosed += new FormClosedEventHandler(a4_FormClosed);
+                    af.MainPanel.Visible = false;
+                    a4.Show();
+
+                }
+                else
+                {
+                    a4.Activate();
+                }
             }
             else
             {
-                a3.Activate();
+                if (a3 == null)
+                {
+                    a3 = new frm_Teklif_Adim3();
+                    a3.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                    a3.FormClosed += new FormClosedEventHandler(a3_FormClosed);
+                    af.MainPanel.Visible = false;
+                    a3.Show();
+
+                }
+                else
+                {
+                    a3.Activate();
+                }
             }
         }
-
+        private void a4_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            a4 = null;
+        }
         private void a3_FormClosed(object sender, FormClosedEventArgs e)
         {
             a3 = null;
