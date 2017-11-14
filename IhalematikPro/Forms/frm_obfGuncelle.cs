@@ -67,8 +67,8 @@ namespace IhalematikProUI.Forms
                 frm_MesajFormu mf = new frm_MesajFormu();
                 mf.lblMesaj.Text = "Kayıt Güncellendi...";
                 mf.ShowDialog();
+                this._owner.LoadGrid();
                 this.Close();
-                //PozProvider.Instance.Save()
             }
         }
     }

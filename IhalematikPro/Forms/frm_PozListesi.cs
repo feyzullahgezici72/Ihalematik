@@ -81,13 +81,24 @@ namespace IhalematikPro.Forms
             model.Unit = txtUnit.Text;
             model.IsActive = true;
             model.UnitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtUnitPrice.Text);
-            model.Save();
-            FormClear();
-            LoadGrid();
-            frm_MesajFormu mf = new frm_MesajFormu();
-            mf.lblMesaj.Text = "Kayıt Yapıldı...";
-            mf.ShowDialog();
 
+            List<Poz> existingPozs = UIPozManager.Instance.GetPoz(model.Number);
+            if (existingPozs != null && existingPozs.Count != 0)
+            {
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Bu Poz numarasi ile kayit bulunmaktadir";
+                mf.ShowDialog();
+                this.txtNumber.ResetText();
+            }
+            else
+            {
+                model.Save();
+                FormClear();
+                LoadGrid();
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Kayıt Yapıldı...";
+                mf.ShowDialog();
+            }
         }
         private void FormClear()
         {
@@ -133,6 +144,7 @@ namespace IhalematikPro.Forms
             DialogResult result = MessageBox.Show("Silmek Istediginzden emin misiniz?", "Sil", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result.Equals(DialogResult.OK))
             {
+                this.FocusedRowHandle = gridViewPozList.FocusedRowHandle;
                 int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewPozList.GetFocusedRowCellValue("Id"));
                 Poz selectedVehicle = PozProvider.Instance.GetItem(id);
                 selectedVehicle.IsActive = false;

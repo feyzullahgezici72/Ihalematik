@@ -13,5 +13,6 @@ namespace IhalematikProBL.Entity
         public string Unit { get; set; }
 
         public double UnitPrice { get; set; }
+        public bool IsActive { get; set; }
     }
 }

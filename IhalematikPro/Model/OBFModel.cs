@@ -17,6 +17,7 @@ namespace IhalematikPro.Model
         public string Description { get; set; }
         public string Unit { get; set; }
         public double UnitPrice { get; set; }
+        public bool IsActive { get; set; }
 
         public OBFModel(OBF Entity)
         {
@@ -25,6 +26,7 @@ namespace IhalematikPro.Model
             this.UnitPrice = Entity.UnitPrice;
             this.Description = Entity.Description;
             this.Id = Entity.Id;
+            this.IsActive = Entity.IsActive;
         }
 
         public OBFModel()
@@ -43,38 +45,13 @@ namespace IhalematikPro.Model
             OBF.Number = this.Number;
             OBF.Unit = this.Unit;
             OBF.UnitPrice = this.UnitPrice;
+            OBF.IsActive = this.IsActive;
             return OBF;
         }
 
         protected override void SaveEntity(EntityBase Entity)
         {
-            OBF oBF = (OBF)Entity;
-
-            List<OBF> existingOBFs = UIOBFManager.Instance.GetOBF(oBF.Number);
-            if (existingOBFs != null)
-            {
-                OBF existingPoz = existingOBFs.Where(p => p.Id != oBF.Id).FirstOrDefault();
-                if (existingPoz != null)
-                {
-                    System.Windows.Forms.MessageBox.Show("Bu OBF numarasi ile kayit bulunmaktadir");
-                }
-                else
-                {
-                    OperationResult result = OBFProvider.Instance.Save(Entity);
-                    if (result.Success)
-                    {
-                       // System.Windows.Forms.MessageBox.Show("OBF Kaydedildi");
-                    }
-                }
-            }
-            else
-            {
-                OperationResult result = OBFProvider.Instance.Save(Entity);
-                if (result.Success)
-                {
-                   // System.Windows.Forms.MessageBox.Show("OBF Kaydedildi");
-                }
-            }
+            OBFProvider.Instance.Save(Entity);
         }
     }
 }

@@ -330,6 +330,7 @@ namespace IhalematikPro.Forms
             DialogResult result = MessageBox.Show("Silmek Istediginzden emin misiniz?", "Sil", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result.Equals(DialogResult.OK))
             {
+                this.FocusedRowHandle = gridViewWorker.FocusedRowHandle;
                 int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewWorker.GetFocusedRowCellValue("Id"));
                 Worker selectedWorker = WorkerProvider.Instance.GetItem(id);
                 selectedWorker.IsActive = false;

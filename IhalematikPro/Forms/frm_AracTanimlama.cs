@@ -172,6 +172,7 @@ namespace IhalematikPro.Forms
             DialogResult result = MessageBox.Show("Silmek Istediginzden emin misiniz?", "Sil", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result.Equals(DialogResult.OK))
             {
+                this.FocusedRowHandle = gridViewVehicle.FocusedRowHandle;
                 int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewVehicle.GetFocusedRowCellValue("Id"));
                 Vehicle selectedVehicle = VehicleProvider.Instance.GetItem(id);
                 selectedVehicle.IsActive = false;
