@@ -12,6 +12,8 @@ using IhalematikPro.Model;
 using IhalematikPro.Manager;
 using IhalematikProUI.Forms;
 using System.Threading;
+using IhalematikProBL.Provider;
+using IhalematikProBL.Entity;
 
 namespace IhalematikPro.Forms
 {
@@ -39,13 +41,24 @@ namespace IhalematikPro.Forms
         public void LoadGrid()
         {
             List<VehicleModel> models = UIVehicleManager.Instance.GetVehicles();
-            grdVehicle.DataSource = models;
+
+            if (cmbAktivePasive.SelectedIndex == 0)
+            {
+                grdVehicle.DataSource = models.Where(p => p.IsActive);
+                colEdit.Visible = true;
+            }
+            else if (cmbAktivePasive.SelectedIndex == 1)
+            {
+                grdVehicle.DataSource = models.Where(p => !p.IsActive);
+                //gridViewVehicle.Columns[colEdit.].Visible = false;
+                colEdit.Visible = false;
+            }
         }
         private void frm_AracTanimlama_Load(object sender, EventArgs e)
         {
             LoadGrid();
             this.KeyPreview = true;
-            this.KeyDown += new KeyEventHandler(Frm_AracTanimlama_KeyDown);  
+            this.KeyDown += new KeyEventHandler(Frm_AracTanimlama_KeyDown);
         }
 
         private void Frm_AracTanimlama_KeyDown(object sender, KeyEventArgs e)
@@ -62,6 +75,7 @@ namespace IhalematikPro.Forms
         {
             VehicleModel model = new VehicleModel();
             model.TitleId = ((VehicleTitleModel)ddlVehicleTitle.SelectedItem).Id.Value;
+            model.IsActive = true;
             if (rbCompanyVehicle.Checked)
             {
                 model.IsCompanyVehicle = true;
@@ -93,20 +107,10 @@ namespace IhalematikPro.Forms
                 model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtRentFuelOilDay.Text);
                 model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentDriverFare.Text);
                 model.RentFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentFare.Text);
-                //model.MaintenanceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMaintenanceFare.Text);
-                //model.ServiceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtServiceFare.Text);
                 model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentGeneralFare.Text);
                 model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentOtherFare.Text);
             }
 
-           
-            //model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtFuelOilFare.Text);
-            //model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtFuelOilDay.Text);
-            //model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtDriverFare.Text);
-            //model.MaintenanceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMaintenanceFare.Text);
-            //model.ServiceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtServiceFare.Text);
-            //model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtGeneralFare.Text);
-            //model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtOtherFare.Text);
             model.Save();
             LoadGrid();
             frm_MesajFormu mf = new frm_MesajFormu();
@@ -120,23 +124,17 @@ namespace IhalematikPro.Forms
             frm.ShowDialog();
         }
 
-        private void btnListele_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void rbCompanyVehicle_CheckedChanged(object sender, EventArgs e)
         {
             PanelSirket.Visible = true;
             PanelKira.Visible = false;
-          
         }
 
         private void rbAsgariUcret_CheckedChanged(object sender, EventArgs e)
         {
             PanelKira.Visible = true;
             PanelSirket.Visible = false;
-            PanelKira.Location = PanelSirket.Location;   
+            PanelKira.Location = PanelSirket.Location;
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -145,31 +143,12 @@ namespace IhalematikPro.Forms
             frm.ShowDialog();
         }
 
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            
-        }
-
-        private void güncelleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        
-        }
-
-        private void panelControl2_MouseMove(object sender, MouseEventArgs e)
-        {
-            
-        }
-
         private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-
             frm_Arac_Guncelleme frm = new frm_Arac_Guncelleme(this);
 
             int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewVehicle.GetFocusedRowCellValue("Id"));
             frm.CurrentVehicleId = id;
-
-            // frm.Location = new Point(5, 215);
             KayitMenusu.Visible = false;
             this.Opacity = 10;
             this.Enabled = false;
@@ -179,9 +158,26 @@ namespace IhalematikPro.Forms
             KayitMenusu.Visible = true;
         }
 
-        private void grdVehicle_Load(object sender, EventArgs e)
+        private void btnSil_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Silmek Istediginzden emin misiniz?", "Sil", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.OK))
+            {
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewVehicle.GetFocusedRowCellValue("Id"));
+                Vehicle selectedVehicle = VehicleProvider.Instance.GetItem(id);
+                selectedVehicle.IsActive = false;
+                VehicleProvider.Instance.Save(selectedVehicle);
+                this.LoadGrid();
+            }
+            else
+            {
 
+            }
+        }
+
+        private void cmbAktivePasive_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.LoadGrid();
         }
     }
 }

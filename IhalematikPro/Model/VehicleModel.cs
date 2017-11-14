@@ -68,6 +68,8 @@ namespace IhalematikPro.Model
 
         public RentTypesEnum RentType { get; set; }
 
+        public bool IsActive { get; set; }
+
         public double HourPrice
         {
             get
@@ -137,6 +139,7 @@ namespace IhalematikPro.Model
             this.OtherFare = Vehicle.OtherFare;
             this.RentFare = Vehicle.RentFare;
             this.RentType = Vehicle.RentType;
+            this.IsActive = Vehicle.IsActive;
         }
         public override EntityBase ToEntity()
         {
@@ -157,6 +160,7 @@ namespace IhalematikPro.Model
             vehicle.OtherFare = this.OtherFare;
             vehicle.RentFare = this.RentFare;
             vehicle.RentType = this.RentType;
+            vehicle.IsActive = this.IsActive;
             return vehicle;
         }
 

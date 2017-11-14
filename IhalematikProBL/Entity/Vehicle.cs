@@ -85,5 +85,7 @@ namespace IhalematikProBL.Entity
         public double OtherFare { get; set; }
         public RentTypesEnum RentType { get; set; }
         public double RentFare { get; set; }
+
+        public bool IsActive { get; set; }
     }
 }

@@ -12,6 +12,10 @@ namespace IhalematikProBL.Provider
 {
     public class VehicleProvider : CustomEntityBaseProvider<Vehicle, VehicleProvider>
     {
+        public VehicleProvider()
+        {
+            this.EnableCaching = false;
+        }
         protected override Hashtable GetCommonParameters(Vehicle t)
         {
             Hashtable parameters = base.GetCommonParameters(t);
@@ -26,7 +30,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("ServiceFare", t.ServiceFare);
             parameters.Add("RentType", t.RentType);
             parameters.Add("RentFare", t.RentFare);
-
+            parameters.Add("IsActive", t.IsActive);
 
             return parameters;
         }
@@ -45,6 +49,7 @@ namespace IhalematikProBL.Provider
             t.RentType = dr.GetValue<RentTypesEnum>("RentType");
             t.ServiceFare = dr.GetValue<double>("ServiceFare");
             t.RentFare = dr.GetValue<double>("RentFare");
+            t.IsActive = dr.GetValue<bool>("IsActive");
         }
 
     }
