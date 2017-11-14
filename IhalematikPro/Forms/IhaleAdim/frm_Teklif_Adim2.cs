@@ -63,7 +63,10 @@ namespace IhalematikPro.Forms
         {
             List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
             List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(items);
+            models[0].IsSelected = true;
+            this.SelectedGroupId = models[0].Id.Value;
             grdTenderGroup.DataSource = models;
+            this.LoadTenderMaterialList();
         }
 
         private void btnTumuneUygula_Click(object sender, EventArgs e)
@@ -167,24 +170,26 @@ namespace IhalematikPro.Forms
 
         private void gridViewTenderGroup_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            this.gridviewTenderGroupSelectedRow();
-        }
-
-        private void rpstColId_CheckedChanged(object sender, EventArgs e)
-        {
-            this.gridviewTenderGroupSelectedRow();
-        }
-
-        private void gridviewTenderGroupSelectedRow()
-        {
             for (int i = 0; i < gridViewTenderGroup.RowCount; i++)
             {
-                gridViewTenderGroup.SetRowCellValue(i, colSelectedId, false);
+                gridViewTenderGroup.SetRowCellValue(i, colIsSelected, false);
             }
-            gridViewTenderGroup.SetFocusedRowCellValue("SelectedId", true);
+            gridViewTenderGroup.SetFocusedRowCellValue(colIsSelected, true);
             this.SelectedGroupId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewTenderGroup.GetFocusedRowCellValue("Id"));
             this.LoadTenderMaterialList();
         }
+
+     
+        //private void gridviewTenderGroupSelectedRow()
+        //{
+        //    for (int i = 0; i < gridViewTenderGroup.RowCount; i++)
+        //    {
+        //        gridViewTenderGroup.SetRowCellValue(i, colIsSelected, false);
+        //    }
+        //    gridViewTenderGroup.SetFocusedRowCellValue("SelectedId", true);
+        //    this.SelectedGroupId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewTenderGroup.GetFocusedRowCellValue("Id"));
+        //    this.LoadTenderMaterialList();
+        //}
 
         public void LoadTenderMaterialList()
         {
@@ -194,6 +199,17 @@ namespace IhalematikPro.Forms
                 List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
                 grdMaterialListNonWorkship.DataSource = models;
             }
+        }
+
+        private void rpstColIsSelected_CheckedChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < gridViewTenderGroup.RowCount; i++)
+            {
+                gridViewTenderGroup.SetRowCellValue(i, colIsSelected, false);
+            }
+            gridViewTenderGroup.SetFocusedRowCellValue(colIsSelected, true);
+            this.SelectedGroupId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewTenderGroup.GetFocusedRowCellValue("Id"));
+            LoadTenderMaterialList();
         }
     }
 }

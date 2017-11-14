@@ -51,11 +51,25 @@ namespace IhalematikProUI.Forms
             {
                 TenderGroup item = new TenderGroup();
                 item.Description = txtTenderGroupDescription.Text;
-                item.Tender = CurrentManager.Instance.CurrentTender;
-                TenderGroupProvider.Instance.Save(item);
-                this.LoadGrid();
-                txtTenderGroupDescription.ResetText();
-                txtTenderGroupDescription.Focus();
+
+                if (CurrentManager.Instance.CurrentTender.Groups != null)
+                {
+                    List<TenderGroup> existingItems = CurrentManager.Instance.CurrentTender.Groups.Where(p => p.Description.Trim() == item.Description.Trim()).ToList();
+                    if (existingItems != null && existingItems.Count != 0)
+                    {
+                        frm_MesajFormu message = new frm_MesajFormu();
+                        message.lblMesaj.Text = "Bu grup adi zaten var.";
+                        message.ShowDialog();
+                    }
+                    else
+                    {
+                        item.Tender = CurrentManager.Instance.CurrentTender;
+                        TenderGroupProvider.Instance.Save(item);
+                        this.LoadGrid();
+                        txtTenderGroupDescription.ResetText();
+                        txtTenderGroupDescription.Focus();
+                    }
+                }
             }
         }
 

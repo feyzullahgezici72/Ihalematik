@@ -69,12 +69,12 @@ namespace IhalematikProBL.Entity
             }
         }
 
-        private List<TenderGroup> groups { get; set; }
+        private List<TenderGroup> groups = null;
         public List<TenderGroup> Groups
         {
             get
             {
-                if (this.groups == null)
+                if (this.groups == null || this.groups.Count == 0)
                 {
                     this.groups = TenderGroupProvider.Instance.GetItems("TenderId", this.Id);
                 }
