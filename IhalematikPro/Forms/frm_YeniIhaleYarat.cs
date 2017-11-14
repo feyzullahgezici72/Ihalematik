@@ -37,7 +37,7 @@ namespace IhalematikPro.Forms
 
             //grdVehicle.DataSource = CurrentManager.Vehicles;
             //grdWorker.DataSource = CurrentManager.Workers;
-            
+            pbControl.Visible = false;
         }
             
         private void a1_FormClosed(object sender, FormClosedEventArgs e)
@@ -67,6 +67,7 @@ namespace IhalematikPro.Forms
 
         private void btnIhaleOlustur_Click(object sender, EventArgs e)
         {
+            pbControl.Visible = true;
             Tender tender = new Tender();
             tender.Equipments = new List<TenderEquipment>();
             int lastTenderNumber = TenderManager.Instance.GetLastTenderNumber();
@@ -117,6 +118,7 @@ namespace IhalematikPro.Forms
             {
                 a1.Activate();
             }
+            pbControl.Visible = false;
         }
 
     }

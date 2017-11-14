@@ -90,10 +90,10 @@
             this.btnIhaleOlustur.Appearance.Options.UseFont = true;
             this.btnIhaleOlustur.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIhaleOlustur.Image = ((System.Drawing.Image)(resources.GetObject("btnIhaleOlustur.Image")));
-            this.btnIhaleOlustur.Location = new System.Drawing.Point(711, 408);
+            this.btnIhaleOlustur.Location = new System.Drawing.Point(717, 388);
             this.btnIhaleOlustur.Margin = new System.Windows.Forms.Padding(4);
             this.btnIhaleOlustur.Name = "btnIhaleOlustur";
-            this.btnIhaleOlustur.Size = new System.Drawing.Size(153, 76);
+            this.btnIhaleOlustur.Size = new System.Drawing.Size(143, 51);
             this.btnIhaleOlustur.TabIndex = 5;
             this.btnIhaleOlustur.Text = "Oluştur";
             this.btnIhaleOlustur.Click += new System.EventHandler(this.btnIhaleOlustur_Click);
@@ -237,7 +237,7 @@
             // 
             this.panel1.Controls.Add(this.pbControl);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 496);
+            this.panel1.Location = new System.Drawing.Point(0, 458);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(877, 31);
             this.panel1.TabIndex = 5;
@@ -283,7 +283,7 @@
             this.tabIhaleBilgileri.Location = new System.Drawing.Point(12, 75);
             this.tabIhaleBilgileri.Name = "tabIhaleBilgileri";
             this.tabIhaleBilgileri.SelectedTabPage = this.xtraTabPage1;
-            this.tabIhaleBilgileri.Size = new System.Drawing.Size(856, 326);
+            this.tabIhaleBilgileri.Size = new System.Drawing.Size(856, 306);
             this.tabIhaleBilgileri.TabIndex = 32;
             this.tabIhaleBilgileri.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -300,7 +300,7 @@
             this.xtraTabPage1.Controls.Add(this.textEdit1);
             this.xtraTabPage1.Controls.Add(this.txtAciklama);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(846, 284);
+            this.xtraTabPage1.Size = new System.Drawing.Size(846, 264);
             this.xtraTabPage1.Text = "İhale Bilgileri";
             // 
             // LastOfferDate
@@ -490,7 +490,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(877, 527);
+            this.ClientSize = new System.Drawing.Size(877, 489);
             this.ControlBox = false;
             this.Controls.Add(this.tabIhaleBilgileri);
             this.Controls.Add(this.panel1);
