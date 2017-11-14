@@ -211,6 +211,12 @@
     <Compile Include="Forms\frm_Calisan_Guncelleme.Designer.cs">
       <DependentUpon>frm_Calisan_Guncelleme.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frm_GenelBilgiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_GenelBilgiler.Designer.cs">
+      <DependentUpon>frm_GenelBilgiler.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frm_IhaleBilgisiDetay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -415,7 +421,6 @@
     <Compile Include="Forms\frm_YeniTeklifOlustur.Designer.cs">
       <DependentUpon>frm_YeniTeklifOlustur.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\grdVehicle.cs" />
     <Compile Include="Manager\CurrentManager.cs" />
     <Compile Include="Manager\UIMaterialListManager.cs" />
     <Compile Include="Manager\UIOBFManager.cs" />
@@ -462,6 +467,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_Calisan_Guncelleme.resx">
       <DependentUpon>frm_Calisan_Guncelleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_GenelBilgiler.resx">
+      <DependentUpon>frm_GenelBilgiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_IhaleBilgisiDetay.resx">
       <DependentUpon>frm_IhaleBilgisiDetay.cs</DependentUpon>
