@@ -33,27 +33,31 @@ namespace IhalematikPro.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Kontrol();
-            VehicleTitleModel model = new VehicleTitleModel();
-            model.Name = txtName.Text;
-            model.Save();
-            MessageBox.Show("Araç Kaydedildi...");
-            txtName.ResetText();
-            txtName.Focus();
-            this._owner.InitilalizeForm();
-            this.Close();
+            bool IsEmpty = Kontrol();
+            if (!IsEmpty)
+            {
+                VehicleTitleModel model = new VehicleTitleModel();
+                model.Name = txtName.Text;
+                model.Save();
+                MessageBox.Show("Araç Kaydedildi...");
+                txtName.ResetText();
+                txtName.Focus();
+                this._owner.InitilalizeForm();
+                this.Close();
+            }
         }
-        void Kontrol()
+        public bool Kontrol()
         {
             if (string.IsNullOrEmpty(txtName.Text.Trim()))
             {
                 dxErrorProvider1.SetError(txtName, "Boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
-                return;
+                return true;
             }
             else
             {
                 dxErrorProvider1.ClearErrors();
             }
+            return false;
         }
     }
 }
