@@ -267,19 +267,6 @@ namespace IhalematikPro.Forms
             frm.ShowDialog();
         }
 
-        private void güncelleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-
-            // frm.Location = new Point(5, 215);
-
-        }
-
-        private void kayitMenusu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             frm_Calisan_Guncelleme cg = new frm_Calisan_Guncelleme(this);
@@ -294,11 +281,6 @@ namespace IhalematikPro.Forms
             this.Enabled = true;
             this.Opacity = 100;
             kayitMenusu.Visible = true;
-        }
-
-        private void grdWorker_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnTemizle_Click(object sender, EventArgs e)

@@ -35,7 +35,7 @@ namespace IhalematikPro.Forms
             ddlVehicleTitle.Properties.Items.Clear();
             List<VehicleTitleModel> models = UIVehicleTitleManager.Instance.GetVehicleTitles();
             ddlVehicleTitle.Properties.Items.AddRange(models);
-            ddlVehicleTitle.SelectedIndex = 0;
+            //ddlVehicleTitle.SelectedIndex = 0;
         }
 
         public void LoadGrid()
@@ -178,6 +178,21 @@ namespace IhalematikPro.Forms
         private void cmbAktivePasive_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.LoadGrid();
+        }
+
+        private void ddlVehicleTitle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlVehicleTitle.SelectedItem == null)
+            {
+                return;
+            }
+            VehicleTitleModel selectedItem = (VehicleTitleModel)ddlVehicleTitle.SelectedItem;
+            List<Vehicle> vehicles = VehicleProvider.Instance.GetItems("TitleId", selectedItem.Id);
+            if (vehicles.Count != 0)
+            {
+                MessageBox.Show("Bu unvanda tanimli arac vardir");
+                ddlVehicleTitle.SelectedItem = null;
+            }
         }
     }
 }
