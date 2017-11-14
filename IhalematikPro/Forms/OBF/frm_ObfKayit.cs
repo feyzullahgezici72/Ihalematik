@@ -20,6 +20,7 @@ namespace IhalematikPro.Forms
         List<OBFModel> oBFModels = new List<OBFModel>();
 
         frm_Teklif_Adim1 _owner;
+        public int SelectedGroupId { get; set; }
         public frm_ObfKayit(frm_Teklif_Adim1 Owner)
         {
             _owner = Owner;
@@ -61,6 +62,7 @@ namespace IhalematikPro.Forms
                 materialList.IsPoz = false;
                 materialList.PozOBFId = pozModel.Id.Value;
                 materialList.Tender = currentTender;
+                materialList.TenderGroupId = this.SelectedGroupId;
 
                 List<MaterialList> items = currentTender.MaterialList.Where(p => p.PozOBFId == materialList.PozOBFId && !p.IsPoz).ToList();
 
@@ -70,7 +72,7 @@ namespace IhalematikPro.Forms
                 }
             }
 
-            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(currentTender.MaterialList.Where(p => !p.IsPoz).ToList());
+            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(currentTender.MaterialList.Where(p => !p.IsPoz && p.TenderGroupId == this.SelectedGroupId).ToList());
 
             grdAddedOBF.DataSource = null;
             grdAddedOBF.DataSource = models;
@@ -81,7 +83,7 @@ namespace IhalematikPro.Forms
             Tender currentTender = CurrentManager.Instance.CurrentTender;
             if (currentTender.MaterialList != null)
             {
-                List<MaterialList> items = currentTender.MaterialList.Where(p => !p.IsPoz).ToList();
+                List<MaterialList> items = currentTender.MaterialList.Where(p => !p.IsPoz && p.TenderGroupId == this.SelectedGroupId).ToList();
                 foreach (MaterialList item in items)
                 {
                     MaterialListProvider.Instance.Save(item);
@@ -116,7 +118,8 @@ namespace IhalematikPro.Forms
                 }
             }
 
-            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(currentTender.MaterialList.Where(p => !p.IsPoz).ToList());
+            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(currentTender.MaterialList.Where(p => !p.IsPoz && p.TenderGroupId == this.SelectedGroupId && !p.IsMarkedForDeletion).ToList());
+
 
             grdAddedOBF.DataSource = null;
             grdAddedOBF.DataSource = dataSource;

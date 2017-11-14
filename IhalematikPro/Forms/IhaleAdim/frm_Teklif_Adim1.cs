@@ -31,6 +31,7 @@ namespace IhalematikPro.Forms
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             Forms.frm_ObfKayit okf = new frm_ObfKayit(this);
+            okf.SelectedGroupId = this.SelectedGroupId;
             okf.ShowDialog();
         }
 
