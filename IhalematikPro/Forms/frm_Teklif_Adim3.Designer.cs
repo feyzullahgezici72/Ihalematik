@@ -108,7 +108,7 @@
             this.btnPanelKapat = new DevExpress.XtraEditors.SimpleButton();
             this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource(this.components);
-            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
+            this.panelGrup = new DevExpress.XtraEditors.PanelControl();
             this.grdTenderGroup = new DevExpress.XtraGrid.GridControl();
             this.gridViewTenderGroup = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -157,8 +157,8 @@
             this.panelControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddWorker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddVehicle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
-            this.panelControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelGrup)).BeginInit();
+            this.panelGrup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdTenderGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTenderGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstColId)).BeginInit();
@@ -1441,14 +1441,14 @@
             this.btnPanelKapat.TabIndex = 1;
             this.btnPanelKapat.Click += new System.EventHandler(this.btnPanelKapat_Click);
             // 
-            // panelControl6
+            // panelGrup
             // 
-            this.panelControl6.Controls.Add(this.grdTenderGroup);
-            this.panelControl6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl6.Location = new System.Drawing.Point(0, 130);
-            this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(386, 530);
-            this.panelControl6.TabIndex = 27;
+            this.panelGrup.Controls.Add(this.grdTenderGroup);
+            this.panelGrup.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelGrup.Location = new System.Drawing.Point(0, 130);
+            this.panelGrup.Name = "panelGrup";
+            this.panelGrup.Size = new System.Drawing.Size(386, 530);
+            this.panelGrup.TabIndex = 27;
             // 
             // grdTenderGroup
             // 
@@ -1666,7 +1666,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.isciAracGirisPaneli);
             this.Controls.Add(this.grdMaterialListIsWorkship);
-            this.Controls.Add(this.panelControl6);
+            this.Controls.Add(this.panelGrup);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
@@ -1723,8 +1723,8 @@
             this.panelControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddWorker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddVehicle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
-            this.panelControl6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelGrup)).EndInit();
+            this.panelGrup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdTenderGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTenderGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstColId)).EndInit();
@@ -1809,7 +1809,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colAddVehicleUnitTimeType;
         private DevExpress.XtraGrid.Columns.GridColumn colAddVehicleWorkerUnitPrice;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.PanelControl panelControl6;
+        private DevExpress.XtraEditors.PanelControl panelGrup;
         private DevExpress.XtraGrid.GridControl grdTenderGroup;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewTenderGroup;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
