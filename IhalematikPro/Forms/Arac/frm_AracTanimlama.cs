@@ -20,6 +20,7 @@ namespace IhalematikPro.Forms
     public partial class frm_AracTanimlama : DevExpress.XtraEditors.XtraForm
     {
         public int FocusedRowHandle = 0;
+        public int SelectedTitleId = 0;
         public frm_AracTanimlama()
         {
             InitializeComponent();
@@ -36,6 +37,12 @@ namespace IhalematikPro.Forms
             ddlVehicleTitle.Properties.Items.Clear();
             List<VehicleTitleModel> models = UIVehicleTitleManager.Instance.GetVehicleTitles();
             ddlVehicleTitle.Properties.Items.AddRange(models);
+            if (this.SelectedTitleId != 0)
+            {
+                VehicleTitleModel selectedTite = models.Where(p => p.Id == this.SelectedTitleId).FirstOrDefault();
+                int selectedIndex = models.IndexOf(selectedTite);
+                ddlVehicleTitle.SelectedIndex = selectedIndex;
+            }
             //ddlVehicleTitle.SelectedIndex = 0;
         }
 
