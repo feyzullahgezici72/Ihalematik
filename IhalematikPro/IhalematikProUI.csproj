@@ -181,244 +181,244 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\frm_Anaform.cs">
+    <Compile Include="Forms\Genel\frm_Anaform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_Anaform.Designer.cs">
+    <Compile Include="Forms\Genel\frm_Anaform.Designer.cs">
       <DependentUpon>frm_Anaform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_AracEkle.cs">
+    <Compile Include="Forms\Arac\frm_AracEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_AracEkle.Designer.cs">
+    <Compile Include="Forms\Arac\frm_AracEkle.Designer.cs">
       <DependentUpon>frm_AracEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_AracTanimlama.cs">
+    <Compile Include="Forms\Arac\frm_AracTanimlama.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_AracTanimlama.Designer.cs">
+    <Compile Include="Forms\Arac\frm_AracTanimlama.Designer.cs">
       <DependentUpon>frm_AracTanimlama.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_Arac_Guncelleme.cs">
+    <Compile Include="Forms\Arac\frm_Arac_Guncelleme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_Arac_Guncelleme.Designer.cs">
+    <Compile Include="Forms\Arac\frm_Arac_Guncelleme.Designer.cs">
       <DependentUpon>frm_Arac_Guncelleme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_Calisan_Guncelleme.cs">
+    <Compile Include="Forms\Calisan\frm_Calisan_Guncelleme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_Calisan_Guncelleme.Designer.cs">
+    <Compile Include="Forms\Calisan\frm_Calisan_Guncelleme.Designer.cs">
       <DependentUpon>frm_Calisan_Guncelleme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_GenelBilgiler.cs">
+    <Compile Include="Forms\Genel\frm_GenelBilgiler.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_GenelBilgiler.Designer.cs">
+    <Compile Include="Forms\Genel\frm_GenelBilgiler.Designer.cs">
       <DependentUpon>frm_GenelBilgiler.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_IhaleBilgisiDetay.cs">
+    <Compile Include="Forms\Ihale\frm_IhaleBilgisiDetay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_IhaleBilgisiDetay.Designer.cs">
+    <Compile Include="Forms\Ihale\frm_IhaleBilgisiDetay.Designer.cs">
       <DependentUpon>frm_IhaleBilgisiDetay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_IhaleGrup.cs">
+    <Compile Include="Forms\Ihale\frm_IhaleGrup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_IhaleGrup.Designer.cs">
+    <Compile Include="Forms\Ihale\frm_IhaleGrup.Designer.cs">
       <DependentUpon>frm_IhaleGrup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_IhaleGrupGuncelle.cs">
+    <Compile Include="Forms\Ihale\frm_IhaleGrupGuncelle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_IhaleGrupGuncelle.Designer.cs">
+    <Compile Include="Forms\Ihale\frm_IhaleGrupGuncelle.Designer.cs">
       <DependentUpon>frm_IhaleGrupGuncelle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_CalisanEkle.cs">
+    <Compile Include="Forms\Calisan\frm_CalisanEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_CalisanEkle.Designer.cs">
+    <Compile Include="Forms\Calisan\frm_CalisanEkle.Designer.cs">
       <DependentUpon>frm_CalisanEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_CalisanTanimlama.cs">
+    <Compile Include="Forms\Calisan\frm_CalisanTanimlama.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_CalisanTanimlama.Designer.cs">
+    <Compile Include="Forms\Calisan\frm_CalisanTanimlama.Designer.cs">
       <DependentUpon>frm_CalisanTanimlama.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_Cikis.cs">
+    <Compile Include="Forms\Genel\frm_Cikis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_Cikis.Designer.cs">
+    <Compile Include="Forms\Genel\frm_Cikis.Designer.cs">
       <DependentUpon>frm_Cikis.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_DevamEdenIhaleListesi.cs">
+    <Compile Include="Forms\Ihale\frm_DevamEdenIhaleListesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_DevamEdenIhaleListesi.Designer.cs">
+    <Compile Include="Forms\Ihale\frm_DevamEdenIhaleListesi.Designer.cs">
       <DependentUpon>frm_DevamEdenIhaleListesi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_DovizKurlari.cs">
+    <Compile Include="Forms\Genel\frm_DovizKurlari.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_DovizKurlari.Designer.cs">
+    <Compile Include="Forms\Genel\frm_DovizKurlari.Designer.cs">
       <DependentUpon>frm_DovizKurlari.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_FaalitetAlaniEkle.cs">
+    <Compile Include="Forms\Tedarikci\frm_FaalitetAlaniEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_FaalitetAlaniEkle.Designer.cs">
+    <Compile Include="Forms\Tedarikci\frm_FaalitetAlaniEkle.Designer.cs">
       <DependentUpon>frm_FaalitetAlaniEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_FirmaTanimlama.cs">
+    <Compile Include="Forms\Genel\frm_FirmaTanimlama.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_FirmaTanimlama.Designer.cs">
+    <Compile Include="Forms\Genel\frm_FirmaTanimlama.Designer.cs">
       <DependentUpon>frm_FirmaTanimlama.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_IscilikFirimFiyat.cs">
+    <Compile Include="Forms\IhaleAdim\frm_IscilikFirimFiyat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_IscilikFirimFiyat.Designer.cs">
+    <Compile Include="Forms\IhaleAdim\frm_IscilikFirimFiyat.Designer.cs">
       <DependentUpon>frm_IscilikFirimFiyat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_Kurallar.cs">
+    <Compile Include="Forms\Kural\frm_Kurallar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_Kurallar.Designer.cs">
+    <Compile Include="Forms\Kural\frm_Kurallar.Designer.cs">
       <DependentUpon>frm_Kurallar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_Kurallistesi.cs">
+    <Compile Include="Forms\Kural\frm_Kurallistesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_Kurallistesi.Designer.cs">
+    <Compile Include="Forms\Kural\frm_Kurallistesi.Designer.cs">
       <DependentUpon>frm_Kurallistesi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_MalzemeFiyatTeklifiOlustur.cs">
+    <Compile Include="Forms\Tedarikci\frm_MalzemeFiyatTeklifiOlustur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_MalzemeFiyatTeklifiOlustur.Designer.cs">
+    <Compile Include="Forms\Tedarikci\frm_MalzemeFiyatTeklifiOlustur.Designer.cs">
       <DependentUpon>frm_MalzemeFiyatTeklifiOlustur.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_MesajFormu.cs">
+    <Compile Include="Forms\Genel\frm_MesajFormu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_MesajFormu.Designer.cs">
+    <Compile Include="Forms\Genel\frm_MesajFormu.Designer.cs">
       <DependentUpon>frm_MesajFormu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_obfGuncelle.cs">
+    <Compile Include="Forms\OBF\frm_obfGuncelle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_obfGuncelle.Designer.cs">
+    <Compile Include="Forms\OBF\frm_obfGuncelle.Designer.cs">
       <DependentUpon>frm_obfGuncelle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_pozGuncelle.cs">
+    <Compile Include="Forms\Poz\frm_pozGuncelle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_pozGuncelle.Designer.cs">
+    <Compile Include="Forms\Poz\frm_pozGuncelle.Designer.cs">
       <DependentUpon>frm_pozGuncelle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_ProgramHakkinda.cs">
+    <Compile Include="Forms\Genel\frm_ProgramHakkinda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_ProgramHakkinda.Designer.cs">
+    <Compile Include="Forms\Genel\frm_ProgramHakkinda.Designer.cs">
       <DependentUpon>frm_ProgramHakkinda.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_TedarikcilerdenFiyatAl.cs">
+    <Compile Include="Forms\Tedarikci\frm_TedarikcilerdenFiyatAl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_TedarikcilerdenFiyatAl.Designer.cs">
+    <Compile Include="Forms\Tedarikci\frm_TedarikcilerdenFiyatAl.Designer.cs">
       <DependentUpon>frm_TedarikcilerdenFiyatAl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_TedarikciTanimlama.cs">
+    <Compile Include="Forms\Tedarikci\frm_TedarikciTanimlama.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_TedarikciTanimlama.Designer.cs">
+    <Compile Include="Forms\Tedarikci\frm_TedarikciTanimlama.Designer.cs">
       <DependentUpon>frm_TedarikciTanimlama.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_TeklifListesi.cs">
+    <Compile Include="Forms\Tedarikci\frm_TeklifListesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_TeklifListesi.Designer.cs">
+    <Compile Include="Forms\Tedarikci\frm_TeklifListesi.Designer.cs">
       <DependentUpon>frm_TeklifListesi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_TeklifAdimSon.cs">
+    <Compile Include="Forms\IhaleAdim\frm_TeklifAdimSon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_TeklifAdimSon.Designer.cs">
+    <Compile Include="Forms\IhaleAdim\frm_TeklifAdimSon.Designer.cs">
       <DependentUpon>frm_TeklifAdimSon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_Teklif_Adim2.cs">
+    <Compile Include="Forms\IhaleAdim\frm_Teklif_Adim2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_Teklif_Adim2.Designer.cs">
+    <Compile Include="Forms\IhaleAdim\frm_Teklif_Adim2.Designer.cs">
       <DependentUpon>frm_Teklif_Adim2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_Login.cs">
+    <Compile Include="Forms\Genel\frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_Login.Designer.cs">
+    <Compile Include="Forms\Genel\frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_ObfKayit.cs">
+    <Compile Include="Forms\OBF\frm_ObfKayit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_ObfKayit.Designer.cs">
+    <Compile Include="Forms\OBF\frm_ObfKayit.Designer.cs">
       <DependentUpon>frm_ObfKayit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_PozListesi.cs">
+    <Compile Include="Forms\Poz\frm_PozListesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_PozListesi.Designer.cs">
+    <Compile Include="Forms\Poz\frm_PozListesi.Designer.cs">
       <DependentUpon>frm_PozListesi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_PozluKayit.cs">
+    <Compile Include="Forms\Poz\frm_PozluKayit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_PozluKayit.Designer.cs">
+    <Compile Include="Forms\Poz\frm_PozluKayit.Designer.cs">
       <DependentUpon>frm_PozluKayit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_SplashScreen.cs">
+    <Compile Include="Forms\Genel\frm_SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_SplashScreen.Designer.cs">
+    <Compile Include="Forms\Genel\frm_SplashScreen.Designer.cs">
       <DependentUpon>frm_SplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_OzelStokListesi.cs">
+    <Compile Include="Forms\OBF\frm_OzelStokListesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_OzelStokListesi.Designer.cs">
+    <Compile Include="Forms\OBF\frm_OzelStokListesi.Designer.cs">
       <DependentUpon>frm_OzelStokListesi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_Teklif_Adim1.cs">
+    <Compile Include="Forms\IhaleAdim\frm_Teklif_Adim1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_Teklif_Adim1.Designer.cs">
+    <Compile Include="Forms\IhaleAdim\frm_Teklif_Adim1.Designer.cs">
       <DependentUpon>frm_Teklif_Adim1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_Teklif_Adim3.cs">
+    <Compile Include="Forms\IhaleAdim\frm_Teklif_Adim3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_Teklif_Adim3.Designer.cs">
+    <Compile Include="Forms\IhaleAdim\frm_Teklif_Adim3.Designer.cs">
       <DependentUpon>frm_Teklif_Adim3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_wait.cs">
+    <Compile Include="Forms\Genel\frm_wait.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_wait.Designer.cs">
+    <Compile Include="Forms\Genel\frm_wait.Designer.cs">
       <DependentUpon>frm_wait.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_YeniIhaleYarat.cs">
+    <Compile Include="Forms\IhaleAdim\frm_YeniIhaleYarat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_YeniIhaleYarat.Designer.cs">
+    <Compile Include="Forms\IhaleAdim\frm_YeniIhaleYarat.Designer.cs">
       <DependentUpon>frm_YeniIhaleYarat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_YeniTeklifOlustur.cs">
+    <Compile Include="Forms\Tedarikci\frm_YeniTeklifOlustur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frm_YeniTeklifOlustur.Designer.cs">
+    <Compile Include="Forms\Tedarikci\frm_YeniTeklifOlustur.Designer.cs">
       <DependentUpon>frm_YeniTeklifOlustur.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager\CurrentManager.cs" />
@@ -453,124 +453,124 @@
     <Compile Include="Report\MainReport.Designer.cs">
       <DependentUpon>MainReport.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\frm_Anaform.resx">
+    <EmbeddedResource Include="Forms\Genel\frm_Anaform.resx">
       <DependentUpon>frm_Anaform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_AracEkle.resx">
+    <EmbeddedResource Include="Forms\Arac\frm_AracEkle.resx">
       <DependentUpon>frm_AracEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_AracTanimlama.resx">
+    <EmbeddedResource Include="Forms\Arac\frm_AracTanimlama.resx">
       <DependentUpon>frm_AracTanimlama.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_Arac_Guncelleme.resx">
+    <EmbeddedResource Include="Forms\Arac\frm_Arac_Guncelleme.resx">
       <DependentUpon>frm_Arac_Guncelleme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_Calisan_Guncelleme.resx">
+    <EmbeddedResource Include="Forms\Calisan\frm_Calisan_Guncelleme.resx">
       <DependentUpon>frm_Calisan_Guncelleme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_GenelBilgiler.resx">
+    <EmbeddedResource Include="Forms\Genel\frm_GenelBilgiler.resx">
       <DependentUpon>frm_GenelBilgiler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_IhaleBilgisiDetay.resx">
+    <EmbeddedResource Include="Forms\Ihale\frm_IhaleBilgisiDetay.resx">
       <DependentUpon>frm_IhaleBilgisiDetay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_IhaleGrup.resx">
+    <EmbeddedResource Include="Forms\Ihale\frm_IhaleGrup.resx">
       <DependentUpon>frm_IhaleGrup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_IhaleGrupGuncelle.resx">
+    <EmbeddedResource Include="Forms\Ihale\frm_IhaleGrupGuncelle.resx">
       <DependentUpon>frm_IhaleGrupGuncelle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_CalisanEkle.resx">
+    <EmbeddedResource Include="Forms\Calisan\frm_CalisanEkle.resx">
       <DependentUpon>frm_CalisanEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_CalisanTanimlama.resx">
+    <EmbeddedResource Include="Forms\Calisan\frm_CalisanTanimlama.resx">
       <DependentUpon>frm_CalisanTanimlama.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_Cikis.resx">
+    <EmbeddedResource Include="Forms\Genel\frm_Cikis.resx">
       <DependentUpon>frm_Cikis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_DevamEdenIhaleListesi.resx">
+    <EmbeddedResource Include="Forms\Ihale\frm_DevamEdenIhaleListesi.resx">
       <DependentUpon>frm_DevamEdenIhaleListesi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_DovizKurlari.resx">
+    <EmbeddedResource Include="Forms\Genel\frm_DovizKurlari.resx">
       <DependentUpon>frm_DovizKurlari.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_FaalitetAlaniEkle.resx">
+    <EmbeddedResource Include="Forms\Tedarikci\frm_FaalitetAlaniEkle.resx">
       <DependentUpon>frm_FaalitetAlaniEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_FirmaTanimlama.resx">
+    <EmbeddedResource Include="Forms\Genel\frm_FirmaTanimlama.resx">
       <DependentUpon>frm_FirmaTanimlama.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_IscilikFirimFiyat.resx">
+    <EmbeddedResource Include="Forms\IhaleAdim\frm_IscilikFirimFiyat.resx">
       <DependentUpon>frm_IscilikFirimFiyat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_Kurallar.resx">
+    <EmbeddedResource Include="Forms\Kural\frm_Kurallar.resx">
       <DependentUpon>frm_Kurallar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_Kurallistesi.resx">
+    <EmbeddedResource Include="Forms\Kural\frm_Kurallistesi.resx">
       <DependentUpon>frm_Kurallistesi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_MalzemeFiyatTeklifiOlustur.resx">
+    <EmbeddedResource Include="Forms\Tedarikci\frm_MalzemeFiyatTeklifiOlustur.resx">
       <DependentUpon>frm_MalzemeFiyatTeklifiOlustur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_MesajFormu.resx">
+    <EmbeddedResource Include="Forms\Genel\frm_MesajFormu.resx">
       <DependentUpon>frm_MesajFormu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_obfGuncelle.resx">
+    <EmbeddedResource Include="Forms\OBF\frm_obfGuncelle.resx">
       <DependentUpon>frm_obfGuncelle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_pozGuncelle.resx">
+    <EmbeddedResource Include="Forms\Poz\frm_pozGuncelle.resx">
       <DependentUpon>frm_pozGuncelle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_ProgramHakkinda.resx">
+    <EmbeddedResource Include="Forms\Genel\frm_ProgramHakkinda.resx">
       <DependentUpon>frm_ProgramHakkinda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_TedarikcilerdenFiyatAl.resx">
+    <EmbeddedResource Include="Forms\Tedarikci\frm_TedarikcilerdenFiyatAl.resx">
       <DependentUpon>frm_TedarikcilerdenFiyatAl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_TedarikciTanimlama.resx">
+    <EmbeddedResource Include="Forms\Tedarikci\frm_TedarikciTanimlama.resx">
       <DependentUpon>frm_TedarikciTanimlama.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_TeklifListesi.resx">
+    <EmbeddedResource Include="Forms\Tedarikci\frm_TeklifListesi.resx">
       <DependentUpon>frm_TeklifListesi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_TeklifAdimSon.resx">
+    <EmbeddedResource Include="Forms\IhaleAdim\frm_TeklifAdimSon.resx">
       <DependentUpon>frm_TeklifAdimSon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_Teklif_Adim2.resx">
+    <EmbeddedResource Include="Forms\IhaleAdim\frm_Teklif_Adim2.resx">
       <DependentUpon>frm_Teklif_Adim2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_Login.resx">
+    <EmbeddedResource Include="Forms\Genel\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_ObfKayit.resx">
+    <EmbeddedResource Include="Forms\OBF\frm_ObfKayit.resx">
       <DependentUpon>frm_ObfKayit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_PozListesi.resx">
+    <EmbeddedResource Include="Forms\Poz\frm_PozListesi.resx">
       <DependentUpon>frm_PozListesi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_PozluKayit.resx">
+    <EmbeddedResource Include="Forms\Poz\frm_PozluKayit.resx">
       <DependentUpon>frm_PozluKayit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_SplashScreen.resx">
+    <EmbeddedResource Include="Forms\Genel\frm_SplashScreen.resx">
       <DependentUpon>frm_SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_OzelStokListesi.resx">
+    <EmbeddedResource Include="Forms\OBF\frm_OzelStokListesi.resx">
       <DependentUpon>frm_OzelStokListesi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_Teklif_Adim1.resx">
+    <EmbeddedResource Include="Forms\IhaleAdim\frm_Teklif_Adim1.resx">
       <DependentUpon>frm_Teklif_Adim1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_Teklif_Adim3.resx">
+    <EmbeddedResource Include="Forms\IhaleAdim\frm_Teklif_Adim3.resx">
       <DependentUpon>frm_Teklif_Adim3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_wait.resx">
+    <EmbeddedResource Include="Forms\Genel\frm_wait.resx">
       <DependentUpon>frm_wait.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_YeniIhaleYarat.resx">
+    <EmbeddedResource Include="Forms\IhaleAdim\frm_YeniIhaleYarat.resx">
       <DependentUpon>frm_YeniIhaleYarat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_YeniTeklifOlustur.resx">
+    <EmbeddedResource Include="Forms\Tedarikci\frm_YeniTeklifOlustur.resx">
       <DependentUpon>frm_YeniTeklifOlustur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
