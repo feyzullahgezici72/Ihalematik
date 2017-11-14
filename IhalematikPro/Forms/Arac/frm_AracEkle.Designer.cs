@@ -54,7 +54,7 @@
             // 
             // txtName
             // 
-            this.txtName.EnterMoveNextControl = true;
+            this.dxErrorProvider1.SetIconAlignment(this.txtName, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.txtName.Location = new System.Drawing.Point(93, 55);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
@@ -64,7 +64,7 @@
             this.txtName.Properties.Appearance.Options.UseBackColor = true;
             this.txtName.Properties.Appearance.Options.UseFont = true;
             this.txtName.Properties.Appearance.Options.UseForeColor = true;
-            this.txtName.Size = new System.Drawing.Size(524, 26);
+            this.txtName.Size = new System.Drawing.Size(499, 26);
             this.txtName.TabIndex = 0;
             // 
             // labelControl2

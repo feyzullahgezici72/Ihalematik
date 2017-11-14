@@ -32,41 +32,45 @@ namespace IhalematikPro.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Kontrol();
-            TitleModel model = new TitleModel();
-            model.Name = txtUnvan.Text;
-            List<Title> existingItems = TitleProvider.Instance.GetItems("Name", model.Name.Trim());
-            if (existingItems.Count == 0)
+            bool IsEmpty = IsEmptyKontrol();
+            if (!IsEmpty)
             {
-                model.Save();
-                txtUnvan.ResetText();
-                txtUnvan.Focus();
-                this._owner.InitilalizeForm();
-                this.Close();
-                frm_MesajFormu mf = new frm_MesajFormu();
-                mf.lblMesaj.Text = "Çalışan Ünvanı Kaydedildi...";
-                mf.ShowDialog();
+                TitleModel model = new TitleModel();
+                model.Name = txtUnvan.Text;
+                List<Title> existingItems = TitleProvider.Instance.GetItems("Name", model.Name.Trim());
+                if (existingItems.Count == 0)
+                {
+                    model.Save();
+                    txtUnvan.ResetText();
+                    txtUnvan.Focus();
+                    this._owner.InitilalizeForm();
+                    this.Close();
+                    frm_MesajFormu mf = new frm_MesajFormu();
+                    mf.lblMesaj.Text = "Çalışan Ünvanı Kaydedildi...";
+                    mf.ShowDialog();
 
 
-            }
-            else
-            {
-                MessageBox.Show("Bu unvan zaten mevcut");
-                txtUnvan.ResetText();
-                txtUnvan.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Bu unvan zaten mevcut");
+                    txtUnvan.ResetText();
+                    txtUnvan.Focus();
+                }
             }
         }
-        void Kontrol()
+        public bool IsEmptyKontrol()
         {
             if (string.IsNullOrEmpty(txtUnvan.Text.Trim()))
             {
                 dxErrorProvider1.SetError(txtUnvan, "Boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
-                return;
+                return true;
             }
             else
             {
                 dxErrorProvider1.ClearErrors();
             }
+            return false;
         }
     }
 }

@@ -54,7 +54,6 @@
             // 
             // txtUnvan
             // 
-            this.txtUnvan.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtUnvan, System.Windows.Forms.ErrorIconAlignment.BottomRight);
             this.txtUnvan.Location = new System.Drawing.Point(86, 55);
             this.txtUnvan.Margin = new System.Windows.Forms.Padding(4);
