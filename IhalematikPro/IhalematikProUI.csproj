@@ -181,6 +181,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Base\IhalematikBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Genel\frm_Anaform.cs">
       <SubType>Form</SubType>
     </Compile>

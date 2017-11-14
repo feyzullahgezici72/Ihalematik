@@ -11,10 +11,11 @@ using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikPro.Model;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikPro.Forms
 {
-    public partial class frm_AracEkle : DevExpress.XtraEditors.XtraForm
+    public partial class frm_AracEkle : IhalematikBaseForm
     {
         frm_AracTanimlama _owner = null;
 
@@ -33,7 +34,7 @@ namespace IhalematikPro.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            bool IsEmpty = Kontrol();
+            bool IsEmpty = IsEmptyKontrol();
             if (!IsEmpty)
             {
                 VehicleTitleModel model = new VehicleTitleModel();
@@ -46,7 +47,7 @@ namespace IhalematikPro.Forms
                 this.Close();
             }
         }
-        public bool Kontrol()
+        public bool IsEmptyKontrol()
         {
             if (string.IsNullOrEmpty(txtName.Text.Trim()))
             {
