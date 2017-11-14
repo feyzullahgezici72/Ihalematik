@@ -12,11 +12,14 @@ using IhalematikPro.Model;
 using IhalematikPro.Manager;
 using IhalematikProUI.Forms;
 using System.Threading;
+using IhalematikProBL.Entity;
+using IhalematikProBL.Provider;
 
 namespace IhalematikPro.Forms
 {
     public partial class frm_OzelStokListesi : DevExpress.XtraEditors.XtraForm
     {
+        public int FocusedRowHandle = 0;
         public frm_OzelStokListesi()
         {
             InitializeComponent();
@@ -36,22 +39,49 @@ namespace IhalematikPro.Forms
         public void LoadGrid()
         {
             List<OBFModel> items = UIOBFManager.Instance.GetOBFs();
-            grdOBFList.DataSource = items;
+      
+            if (cmbAktivePasive.SelectedIndex == 0)
+            {
+                grdOBFList.DataSource = items.Where(p => p.IsActive);
+                colEdit.Visible = true;
+            }
+            else if (cmbAktivePasive.SelectedIndex == 1)
+            {
+                grdOBFList.DataSource = items.Where(p => !p.IsActive);
+                colEdit.Visible = false;
+            }
+            if (this.FocusedRowHandle != 0)
+            {
+                gridViewOBFList.FocusedRowHandle = this.FocusedRowHandle;
+            }
         }
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-                OBFModel model = new OBFModel();
-                model.Description = txtDescription.Text;
-                model.Number = txtNumber.Text;
-                model.Unit = txtUnit.Text;
-                model.UnitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtUnitPrice.Text);
+            OBFModel model = new OBFModel();
+            model.Description = txtDescription.Text;
+            model.Number = txtNumber.Text;
+            model.IsActive = true;
+            model.Unit = txtUnit.Text;
+            model.UnitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtUnitPrice.Text);
+
+            List<OBF> existingOBFs = UIOBFManager.Instance.GetOBF(model.Number);
+            if (existingOBFs != null && existingOBFs.Count != 0)
+            {
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Bu OBF numarasi ile kayit bulunmaktadir";
+                mf.ShowDialog();
+                this.txtNumber.ResetText();
+                this.txtNumber.Focus();
+            }
+            else
+            {
                 model.Save();
-                FormClear();
-                LoadGrid();
                 frm_MesajFormu mf = new frm_MesajFormu();
                 mf.lblMesaj.Text = "Kayıt Yapıldı...";
                 mf.ShowDialog();
-             
+                FormClear();
+                LoadGrid();
+            }
         }
         private void FormClear()
         {
@@ -69,32 +99,12 @@ namespace IhalematikPro.Forms
         private void frmOzelStokListesi_Load(object sender, EventArgs e)
         {
             MesajVer();
-            LoadGrid();
+            this.LoadGrid();
         }
-
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
         private void btnYeni_Click(object sender, EventArgs e)
         {
             FormClear();
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupControl3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnListele_Click(object sender, EventArgs e)
-        {
-         
         }
 
         private void btnTemizle_Click(object sender, EventArgs e)
@@ -108,6 +118,7 @@ namespace IhalematikPro.Forms
 
         private void btnGncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            this.FocusedRowHandle = gridViewOBFList.FocusedRowHandle;
             frm_obfGuncelle frm = new frm_obfGuncelle(this);
             int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOBFList.GetFocusedRowCellValue("Id"));
             frm.CurrentOBFId = id;
@@ -117,6 +128,29 @@ namespace IhalematikPro.Forms
             frm.ShowDialog();
             pnlObfKayit.Visible = true;
             grdOBFList.Enabled = true;
+        }
+
+        private void cmbAktivePasive_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.LoadGrid();
+        }
+
+        private void btnSl_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Silmek Istediginzden emin misiniz?", "Sil", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.OK))
+            {
+                this.FocusedRowHandle = gridViewOBFList.FocusedRowHandle;
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOBFList.GetFocusedRowCellValue("Id"));
+                OBF selectedOBF = OBFProvider.Instance.GetItem(id);
+                selectedOBF.IsActive = false;
+                OBFProvider.Instance.Save(selectedOBF);
+                this.LoadGrid();
+            }
+            else
+            {
+
+            }
         }
     }
 }

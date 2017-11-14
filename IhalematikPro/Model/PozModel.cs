@@ -50,26 +50,7 @@ namespace IhalematikPro.Model
 
         protected override void SaveEntity(EntityBase Entity)
         {
-            Poz poz = (Poz)Entity;
-            
-            List<Poz> existingPozs = UIPozManager.Instance.GetPoz(poz.Number);
-            if (existingPozs != null)
-            {
-                Poz existingPoz = existingPozs.Where(p => p.Id != poz.Id).FirstOrDefault();
-                if (existingPoz != null)
-                {
-                    System.Windows.Forms.MessageBox.Show("Bu Poz numarasi ile kayit bulunmaktadir");
-                }
-                else
-                {
-                    OperationResult result = PozProvider.Instance.Save(Entity);
-                }
-
-            }
-            else
-            {
-                OperationResult result = PozProvider.Instance.Save(Entity);
-            }
+            PozProvider.Instance.Save(Entity);
         }
     }
 }
