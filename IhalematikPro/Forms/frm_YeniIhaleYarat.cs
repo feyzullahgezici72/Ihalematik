@@ -37,9 +37,9 @@ namespace IhalematikPro.Forms
 
             //grdVehicle.DataSource = CurrentManager.Vehicles;
             //grdWorker.DataSource = CurrentManager.Workers;
-            
+
         }
-            
+
         private void a1_FormClosed(object sender, FormClosedEventArgs e)
         {
             a1 = null;
@@ -57,9 +57,9 @@ namespace IhalematikPro.Forms
 
         private void frm_YeniIhaleYarat_FormClosed(object sender, FormClosedEventArgs e)
         {
-           
+
         }
-          
+
         private void frm_YeniIhaleYarat_FormClosing(object sender, FormClosingEventArgs e)
         {
 
@@ -73,6 +73,13 @@ namespace IhalematikPro.Forms
             tender.Number = lastTenderNumber + 1;
             tender.Description = txtAciklama.Text;
             tender.LastOfferDate = LastOfferDate.DateTime;
+            tender.CompanyName = txtcompanyName.Text;
+            tender.EkapNumber = txtEkapNumber.Text;
+            tender.Type = txtType.Text;
+            tender.Scope = txtScope.Text;
+            tender.Procedure = txtProcedure.Text;
+            tender.Place = txtPlace.Text;
+            tender.Management = txtManagement.Text;
             tender.IsActive = true;
 
             bool result = TenderManager.Instance.Save(tender);

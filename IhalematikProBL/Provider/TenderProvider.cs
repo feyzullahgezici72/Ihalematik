@@ -19,6 +19,13 @@ namespace IhalematikProBL.Provider
             parameters.Add("Number", t.Number);
             parameters.Add("LastOfferDate", t.LastOfferDate);
             parameters.Add("IsActive", t.IsActive);
+            parameters.Add("CompanyName", t.CompanyName);
+            parameters.Add("EkapNumber", t.EkapNumber);
+            parameters.Add("Type", t.Type);
+            parameters.Add("Scope", t.Scope);
+            parameters.Add("Procedure", t.Procedure);
+            parameters.Add("Place", t.Place);
+            parameters.Add("Management", t.Management);
             return parameters;
         }
 
@@ -29,11 +36,13 @@ namespace IhalematikProBL.Provider
             t.Description = dr.GetValue<string>("Description");
             t.LastOfferDate = dr.GetValue<DateTime?>("LastOfferDate");
             t.IsActive = dr.GetValue<bool>("IsActive");
-        }
-
-        public override OperationResult Save(Tender t)
-        {
-            return base.Save(t);
+            t.CompanyName = dr.GetValue<string>("CompanyName");
+            t.EkapNumber = dr.GetValue<string>("EkapNumber");
+            t.Type = dr.GetValue<string>("Type");
+            t.Scope = dr.GetValue<string>("Scope");
+            t.Procedure = dr.GetValue<string>("Procedure");
+            t.Place = dr.GetValue<string>("Place");
+            t.Management = dr.GetValue<string>("Management");
         }
     }
 }
