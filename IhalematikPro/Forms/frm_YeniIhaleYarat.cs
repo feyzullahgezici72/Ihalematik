@@ -67,65 +67,69 @@ namespace IhalematikPro.Forms
 
         private void btnIhaleOlustur_Click(object sender, EventArgs e)
         {
-            pbControl.Visible = true;
-            Tender tender = new Tender();
-            tender.Equipments = new List<TenderEquipment>();
-            int lastTenderNumber = TenderManager.Instance.GetLastTenderNumber();
-            tender.Number = lastTenderNumber + 1;
-            tender.Description = txtAciklama.Text;
-            tender.LastOfferDate = LastOfferDate.DateTime;
-            tender.CompanyName = txtcompanyName.Text;
-            tender.EkapNumber = txtEkapNumber.Text;
-            tender.Type = txtType.Text;
-            tender.Scope = txtScope.Text;
-            tender.Procedure = txtProcedure.Text;
-            tender.Place = txtPlace.Text;
-            tender.Management = txtManagement.Text;
-            tender.IsActive = true;
-
-            bool result = TenderManager.Instance.Save(tender);
-            if (!result)
+            DialogResult resultMsg = MessageBox.Show("Yeni İhale oluşturulsun mu?", "Yeni ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (resultMsg.Equals(DialogResult.Yes))
             {
-                //TODO feyzullahg hata olustuysa yonlendir
+                pbControl.Visible = true;
+                Tender tender = new Tender();
+                tender.Equipments = new List<TenderEquipment>();
+                int lastTenderNumber = TenderManager.Instance.GetLastTenderNumber();
+                tender.Number = lastTenderNumber + 1;
+                tender.Description = txtAciklama.Text;
+                tender.LastOfferDate = LastOfferDate.DateTime;
+                tender.CompanyName = txtcompanyName.Text;
+                tender.EkapNumber = txtEkapNumber.Text;
+                tender.Type = txtType.Text;
+                tender.Scope = txtScope.Text;
+                tender.Procedure = txtProcedure.Text;
+                tender.Place = txtPlace.Text;
+                tender.Management = txtManagement.Text;
+                tender.IsActive = true;
+
+                bool result = TenderManager.Instance.Save(tender);
+                if (!result)
+                {
+                    //TODO feyzullahg hata olustuysa yonlendir
+                }
+                else
+                {
+                    CurrentManager.Instance.CurrentTender = tender;
+                }
+
+                for (int i = 0; i < 101; i++)
+                {
+                    Thread.Sleep(0);
+                    pbControl.Position = i;
+                    Application.DoEvents();
+                }
+                this.Enabled = false;
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Yeni İhale Oluşturuldu";
+                mf.ShowDialog();
+
+
+
+
+                frm_IhaleGrup ig = new frm_IhaleGrup();
+                ig.ShowDialog();
+                this.Close();
+                frm_Teklif_Adim1 a1 = (frm_Teklif_Adim1)Application.OpenForms["frm_Teklif_Adim1"];
+                frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                if (a1 == null)
+                {
+                    a1 = new frm_Teklif_Adim1();
+                    a1.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                    a1.FormClosed += new FormClosedEventHandler(a1_FormClosed);
+                    af.MainPanel.Visible = false;
+                    a1.Show();
+
+                }
+                else
+                {
+                    a1.Activate();
+                }
+                pbControl.Visible = false;
             }
-            else
-            {
-                CurrentManager.Instance.CurrentTender = tender;
-            }
-
-            for (int i = 0; i < 101; i++)
-            {
-                Thread.Sleep(0);
-                pbControl.Position = i;
-                Application.DoEvents();
-            }
-            this.Enabled = false;
-            frm_MesajFormu mf = new frm_MesajFormu();
-            mf.lblMesaj.Text = "Yeni İhale Oluşturuldu";
-            mf.ShowDialog();
-
-
-
-
-            frm_IhaleGrup ig = new frm_IhaleGrup();
-            ig.ShowDialog();
-            this.Close();
-            frm_Teklif_Adim1 a1 = (frm_Teklif_Adim1)Application.OpenForms["frm_Teklif_Adim1"];
-            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-            if (a1 == null)
-            {
-                a1 = new frm_Teklif_Adim1();
-                a1.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                a1.FormClosed += new FormClosedEventHandler(a1_FormClosed);
-                af.MainPanel.Visible = false;
-                a1.Show();
-
-            }
-            else
-            {
-                a1.Activate();
-            }
-            pbControl.Visible = false;
         }
 
     }
