@@ -13,6 +13,7 @@ using IhalematikProBL.Provider;
 using IhalematikPro.Manager;
 using IhalematikPro.Model;
 using IhalematikProUI.Model;
+using IhalematikProUI.Forms;
 
 namespace IhalematikPro.Forms
 {
@@ -115,7 +116,7 @@ namespace IhalematikPro.Forms
                     MaterialListProvider.Instance.Save(materialList);// materialListModel.Save();
                 }
             }
-            frm_ihaleOlustuMesaj frm = new frm_ihaleOlustuMesaj();
+            frm_MesajFormu frm = new frm_MesajFormu();
             frm.lblMesaj.Text = "Malzemeler Kaydedildi...";
             frm.ShowDialog();
             this.Close();

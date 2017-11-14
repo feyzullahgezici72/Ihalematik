@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikPro.Manager;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Forms;
 
 namespace IhalematikPro.Forms
 {
@@ -89,6 +90,11 @@ namespace IhalematikPro.Forms
             CompanyProvider.Instance.Save(company);
 
             this._owner.frm_Anaform_Load(null, null);
+            frm_MesajFormu mf = new frm_MesajFormu();
+            mf.lblMesaj.Text = "Bilgiler Güncellendi";
+            mf.ShowDialog();
+            this.Close();
+
         }
     }
 }

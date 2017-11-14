@@ -13,6 +13,7 @@ using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Model;
 using IhalematikPro.Model;
+using IhalematikProUI.Forms;
 
 namespace IhalematikPro.Forms
 {
@@ -104,7 +105,7 @@ namespace IhalematikPro.Forms
         private void OpenForm2()
         {
             this.Enabled = false;
-            frm_ihaleOlustuMesaj frm = new frm_ihaleOlustuMesaj();
+            frm_MesajFormu frm = new frm_MesajFormu();
             frm.lblMesaj.Text = "Malzemeler Kaydedildi...";
             frm.ShowDialog();
             //MessageBox.Show("Malzemler Kaydedildi...");

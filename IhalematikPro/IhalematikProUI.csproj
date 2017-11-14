@@ -223,12 +223,6 @@
     <Compile Include="Forms\frm_IhaleGrupGuncelle.Designer.cs">
       <DependentUpon>frm_IhaleGrupGuncelle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_ihaleOlustuMesaj.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frm_ihaleOlustuMesaj.Designer.cs">
-      <DependentUpon>frm_ihaleOlustuMesaj.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\frm_CalisanEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -343,7 +337,6 @@
     <Compile Include="Forms\frm_TeklifAdimSon.Designer.cs">
       <DependentUpon>frm_TeklifAdimSon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frm_Teklif_Adim11.cs" />
     <Compile Include="Forms\frm_Teklif_Adim2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -469,9 +462,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_IhaleGrupGuncelle.resx">
       <DependentUpon>frm_IhaleGrupGuncelle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frm_ihaleOlustuMesaj.resx">
-      <DependentUpon>frm_ihaleOlustuMesaj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frm_CalisanEkle.resx">
       <DependentUpon>frm_CalisanEkle.cs</DependentUpon>

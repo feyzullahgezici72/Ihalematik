@@ -92,9 +92,10 @@ namespace IhalematikPro.Forms
                 Application.DoEvents();
             }
             this.Enabled = false;
-            frm_ihaleOlustuMesaj bk = new frm_ihaleOlustuMesaj();
-            bk.ShowDialog();
-            pbControl.Position = 0;
+            frm_MesajFormu mf = new frm_MesajFormu();
+            mf.lblMesaj.Text = "Yeni İhale Oluşturuldu";
+            mf.ShowDialog();
+
 
 
 

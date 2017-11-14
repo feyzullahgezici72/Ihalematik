@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMesaj = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -41,9 +43,9 @@
             // 
             this.btnTamam.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnTamam.Image = global::IhalematikProUI.Properties.Resources.Check_icon__1_;
-            this.btnTamam.Location = new System.Drawing.Point(538, 104);
+            this.btnTamam.Location = new System.Drawing.Point(499, 96);
             this.btnTamam.Name = "btnTamam";
-            this.btnTamam.Size = new System.Drawing.Size(100, 49);
+            this.btnTamam.Size = new System.Drawing.Size(139, 57);
             this.btnTamam.TabIndex = 11;
             this.btnTamam.Text = "Kapat";
             this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
@@ -82,6 +84,11 @@
             this.panelControl1.Size = new System.Drawing.Size(644, 39);
             this.panelControl1.TabIndex = 12;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 300;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frm_MesajFormu
             // 
             this.AcceptButton = this.btnTamam;
@@ -100,6 +107,7 @@
             this.MinimizeBox = false;
             this.Name = "frm_MesajFormu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Load += new System.EventHandler(this.frm_MesajFormu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -114,5 +122,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         public DevExpress.XtraEditors.LabelControl lblMesaj;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -171,7 +171,8 @@ namespace IhalematikPro.Forms
                 //    TenderMaterialListEquipmentProvider.Instance.Save(tenderMaterialListEquipment);
                 //}
             }
-            frm_ihaleOlustuMesaj msj = new frm_ihaleOlustuMesaj();
+
+            frm_MesajFormu msj = new frm_MesajFormu();
             msj.lblMesaj.Text = "Kaydedildi...";
             msj.ShowDialog();
             this.Close();
