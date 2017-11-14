@@ -44,7 +44,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("IncomeTaxFareCurrency", t.IncomeTaxFare.CurrencyType);
             parameters.Add("WorklesFonFareAmount", t.WorklesFonFare.Amount);
             parameters.Add("WorklesFonFareCurrency", t.WorklesFonFare.CurrencyType);
-
+            parameters.Add("IsActive", t.IsActive);
 
             return parameters;
         }
@@ -66,6 +66,7 @@ namespace IhalematikProBL.Provider
             t.IncomeTaxFare = new Fare(dr.GetValue<double>("IncomeTaxFareAmount"));
             t.WorklesFonFare = new Fare(dr.GetValue<double>("WorklesFonFareAmount"));
             t.IsNormal = dr.GetValue<bool>("IsNormal");
+            t.IsActive = dr.GetValue<bool>("IsActive");
         }
     }
 }

@@ -77,6 +77,8 @@ namespace IhalematikPro.Model
         //Diger ucretler
         public Fare ExtraFare { get; set; }
 
+        public bool IsActive { get; internal set; }
+
         public Fare TotalFare
         {
             get
@@ -142,6 +144,7 @@ namespace IhalematikPro.Model
             this.SeveranceFare = Entity.SeveranceFare;
             this.IncomeTaxFare = Entity.IncomeTaxFare;
             this.WorklesFonFare = Entity.WorklesFonFare;
+            this.IsActive = Entity.IsActive;
         }
         public override EntityBase ToEntity()
         {
@@ -165,6 +168,7 @@ namespace IhalematikPro.Model
             worker.SeveranceFare = this.SeveranceFare;
             worker.IncomeTaxFare = this.IncomeTaxFare;
             worker.WorklesFonFare = this.WorklesFonFare;
+            worker.IsActive = this.IsActive;
             return worker;
         }
 

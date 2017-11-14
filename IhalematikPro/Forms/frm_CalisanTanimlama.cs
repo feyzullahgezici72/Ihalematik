@@ -132,13 +132,24 @@ namespace IhalematikPro.Forms
         public void LoadGrid()
         {
             List<WorkerModel> models = UIWorkerManager.Instance.GetWorkers();
-            grdWorker.DataSource = models;
+            
+            if (cmbAktivePasive.SelectedIndex == 0)
+            {
+                grdWorker.DataSource = models.Where(p => p.IsActive);
+                colEdit.Visible = true;
+            }
+            else if (cmbAktivePasive.SelectedIndex == 1)
+            {
+                grdWorker.DataSource = models.Where(p => !p.IsActive);
+                //gridViewVehicle.Columns[colEdit.].Visible = false;
+                colEdit.Visible = false;
+            }
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             WorkerModel model = new WorkerModel();
-            //model.Code = txtCode.Text;
+            model.IsActive = true;
             model.TitleId = ((TitleModel)ddlTitles.SelectedItem).Id.Value;
             model.IsNormal = rbNormal.Checked;
             model.BaseFare = new Fare(double.Parse(txtBaseFare.Text));
@@ -322,6 +333,28 @@ namespace IhalematikPro.Forms
             {
                 MessageBox.Show("Bu unvanda tanimla calisan vardir");
                 ddlTitles.SelectedItem = null;
+            }
+        }
+
+        private void cmbAktivePasive_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.LoadGrid();
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Silmek Istediginzden emin misiniz?", "Sil", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.OK))
+            {
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewWorker.GetFocusedRowCellValue("Id"));
+                Worker selectedWorker = WorkerProvider.Instance.GetItem(id);
+                selectedWorker.IsActive = false;
+                WorkerProvider.Instance.Save(selectedWorker);
+                this.LoadGrid();
+            }
+            else
+            {
+
             }
         }
     }

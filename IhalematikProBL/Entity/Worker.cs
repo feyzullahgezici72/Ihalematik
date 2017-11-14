@@ -102,5 +102,7 @@ namespace IhalematikProBL.Entity
                 return new Fare(Math.Round((this.HourFare.Amount / 60), 2));
             }
         }
+
+        public bool IsActive { get; set; }
     }
 }

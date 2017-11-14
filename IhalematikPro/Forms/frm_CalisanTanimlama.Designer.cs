@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CalisanTanimlama));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
@@ -45,7 +45,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEdit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnGuncelle = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -84,7 +84,7 @@
             this.rbNormal = new System.Windows.Forms.RadioButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.statusPanel = new System.Windows.Forms.Panel();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbAktivePasive = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -116,7 +116,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtFoodFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlTitles.Properties)).BeginInit();
             this.statusPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -152,7 +152,7 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2);
             this.pcWorld.Name = "pcWorld";
             this.pcWorld.Size = new System.Drawing.Size(47, 34);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -336,7 +336,7 @@
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6,
-            this.gridColumn1,
+            this.colEdit,
             this.gridColumn7});
             this.gridViewWorker.GridControl = this.grdWorker;
             this.gridViewWorker.Name = "gridViewWorker";
@@ -463,30 +463,30 @@
             this.gridColumn6.VisibleIndex = 4;
             this.gridColumn6.Width = 151;
             // 
-            // gridColumn1
+            // colEdit
             // 
-            this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridColumn1.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gridColumn1.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.gridColumn1.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn1.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn1.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn1.ColumnEdit = this.btnGuncelle;
-            this.gridColumn1.ImageAlignment = System.Drawing.StringAlignment.Center;
-            this.gridColumn1.MaxWidth = 30;
-            this.gridColumn1.MinWidth = 30;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 5;
-            this.gridColumn1.Width = 30;
+            this.colEdit.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colEdit.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colEdit.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colEdit.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colEdit.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.colEdit.AppearanceHeader.Options.UseBackColor = true;
+            this.colEdit.AppearanceHeader.Options.UseFont = true;
+            this.colEdit.AppearanceHeader.Options.UseForeColor = true;
+            this.colEdit.ColumnEdit = this.btnGuncelle;
+            this.colEdit.ImageAlignment = System.Drawing.StringAlignment.Center;
+            this.colEdit.MaxWidth = 30;
+            this.colEdit.MinWidth = 30;
+            this.colEdit.Name = "colEdit";
+            this.colEdit.Visible = true;
+            this.colEdit.VisibleIndex = 5;
+            this.colEdit.Width = 30;
             // 
             // btnGuncelle
             // 
             this.btnGuncelle.AutoHeight = false;
             this.btnGuncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnGuncelle.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -515,10 +515,11 @@
             // 
             this.btnSil.AutoHeight = false;
             this.btnSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnSil.Name = "btnSil";
             this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // kayitMenusu
             // 
@@ -588,7 +589,7 @@
             this.panelControl3.Controls.Add(this.btnTemizle);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl3.Location = new System.Drawing.Point(2, 430);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(286, 34);
             this.panelControl3.TabIndex = 123;
@@ -1002,7 +1003,7 @@
             this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.user_group_icon;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.simpleButton1.Location = new System.Drawing.Point(0, 0);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(290, 34);
             this.simpleButton1.TabIndex = 96;
@@ -1011,44 +1012,44 @@
             // 
             // statusPanel
             // 
-            this.statusPanel.Controls.Add(this.comboBoxEdit1);
+            this.statusPanel.Controls.Add(this.cmbAktivePasive);
             this.statusPanel.Controls.Add(this.lblRecordCount);
             this.statusPanel.Controls.Add(this.labelControl14);
             this.statusPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.statusPanel.Location = new System.Drawing.Point(290, 511);
-            this.statusPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.statusPanel.Margin = new System.Windows.Forms.Padding(2);
             this.statusPanel.Name = "statusPanel";
             this.statusPanel.Size = new System.Drawing.Size(576, 23);
             this.statusPanel.TabIndex = 34;
             // 
-            // comboBoxEdit1
+            // cmbAktivePasive
             // 
-            this.comboBoxEdit1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.comboBoxEdit1.EditValue = "Aktif Kayıtlar";
-            this.comboBoxEdit1.EnterMoveNextControl = true;
-            this.comboBoxEdit1.Location = new System.Drawing.Point(463, 0);
-            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cmbAktivePasive.Dock = System.Windows.Forms.DockStyle.Right;
+            this.cmbAktivePasive.EditValue = "Aktif Kayıtlar";
+            this.cmbAktivePasive.EnterMoveNextControl = true;
+            this.cmbAktivePasive.Location = new System.Drawing.Point(463, 0);
+            this.cmbAktivePasive.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbAktivePasive.Name = "cmbAktivePasive";
+            this.cmbAktivePasive.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbAktivePasive.Properties.Appearance.Options.UseFont = true;
+            this.cmbAktivePasive.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.cmbAktivePasive.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            this.cmbAktivePasive.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.cmbAktivePasive.Properties.Items.AddRange(new object[] {
             "Aktif Kayıtlar",
-            "Pasif Kayıtlar",
-            "Tüm Kayıtlar"});
-            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit1.Size = new System.Drawing.Size(113, 20);
-            this.comboBoxEdit1.TabIndex = 1;
+            "Pasif Kayıtlar"});
+            this.cmbAktivePasive.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmbAktivePasive.Size = new System.Drawing.Size(113, 20);
+            this.cmbAktivePasive.TabIndex = 1;
+            this.cmbAktivePasive.SelectedIndexChanged += new System.EventHandler(this.cmbAktivePasive_SelectedIndexChanged);
             // 
             // lblRecordCount
             // 
             this.lblRecordCount.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblRecordCount.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblRecordCount.Location = new System.Drawing.Point(67, 0);
-            this.lblRecordCount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblRecordCount.Margin = new System.Windows.Forms.Padding(2);
             this.lblRecordCount.Name = "lblRecordCount";
             this.lblRecordCount.Size = new System.Drawing.Size(12, 14);
             this.lblRecordCount.TabIndex = 0;
@@ -1059,7 +1060,7 @@
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl14.Dock = System.Windows.Forms.DockStyle.Left;
             this.labelControl14.Location = new System.Drawing.Point(0, 0);
-            this.labelControl14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(67, 14);
             this.labelControl14.TabIndex = 0;
@@ -1114,7 +1115,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ddlTitles.Properties)).EndInit();
             this.statusPanel.ResumeLayout(false);
             this.statusPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1133,7 +1134,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraEditors.SimpleButton btnListele;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn colEdit;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnGuncelle;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSil;
@@ -1174,7 +1175,7 @@
         private System.Windows.Forms.RadioButton rbNormal;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.Panel statusPanel;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbAktivePasive;
         private DevExpress.XtraEditors.LabelControl lblRecordCount;
         private DevExpress.XtraEditors.LabelControl labelControl14;
     }
