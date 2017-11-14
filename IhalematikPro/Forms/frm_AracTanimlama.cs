@@ -19,6 +19,8 @@ namespace IhalematikPro.Forms
 {
     public partial class frm_AracTanimlama : DevExpress.XtraEditors.XtraForm
     {
+
+        public int FocusedRowHandle = 0;
         public frm_AracTanimlama()
         {
             InitializeComponent();
@@ -35,7 +37,7 @@ namespace IhalematikPro.Forms
             ddlVehicleTitle.Properties.Items.Clear();
             List<VehicleTitleModel> models = UIVehicleTitleManager.Instance.GetVehicleTitles();
             ddlVehicleTitle.Properties.Items.AddRange(models);
-            ddlVehicleTitle.SelectedIndex = 0;
+            //ddlVehicleTitle.SelectedIndex = 0;
         }
 
         public void LoadGrid()
@@ -52,6 +54,11 @@ namespace IhalematikPro.Forms
                 grdVehicle.DataSource = models.Where(p => !p.IsActive);
                 //gridViewVehicle.Columns[colEdit.].Visible = false;
                 colEdit.Visible = false;
+            }
+
+            if (this.FocusedRowHandle != 0)
+            {
+                gridViewVehicle.FocusedRowHandle = this.FocusedRowHandle;
             }
         }
         private void frm_AracTanimlama_Load(object sender, EventArgs e)
@@ -148,6 +155,9 @@ namespace IhalematikPro.Forms
             frm_Arac_Guncelleme frm = new frm_Arac_Guncelleme(this);
 
             int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewVehicle.GetFocusedRowCellValue("Id"));
+
+            this.FocusedRowHandle = gridViewVehicle.FocusedRowHandle;
+
             frm.CurrentVehicleId = id;
             KayitMenusu.Visible = false;
             this.Opacity = 10;
@@ -178,6 +188,21 @@ namespace IhalematikPro.Forms
         private void cmbAktivePasive_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.LoadGrid();
+        }
+
+        private void ddlVehicleTitle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlVehicleTitle.SelectedItem == null)
+            {
+                return;
+            }
+            VehicleTitleModel selectedItem = (VehicleTitleModel)ddlVehicleTitle.SelectedItem;
+            List<Vehicle> vehicles = VehicleProvider.Instance.GetItems("TitleId", selectedItem.Id);
+            if (vehicles.Count != 0)
+            {
+                MessageBox.Show("Bu unvanda tanimli arac vardir");
+                ddlVehicleTitle.SelectedItem = null;
+            }
         }
     }
 }

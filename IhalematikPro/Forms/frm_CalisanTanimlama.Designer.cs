@@ -228,7 +228,6 @@
             this.grdWorker.TabIndex = 33;
             this.grdWorker.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewWorker});
-            this.grdWorker.Click += new System.EventHandler(this.grdWorker_Click);
             // 
             // gridViewWorker
             // 
@@ -572,7 +571,6 @@
             this.kayitMenusu.Size = new System.Drawing.Size(435, 730);
             this.kayitMenusu.TabIndex = 32;
             this.kayitMenusu.Text = "Menu";
-            this.kayitMenusu.Paint += new System.Windows.Forms.PaintEventHandler(this.kayitMenusu_Paint);
             // 
             // groupControl2
             // 
