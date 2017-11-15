@@ -246,7 +246,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click_1(object sender, EventArgs e)
         {
-            panelKapat();
+          
         }
 
         #endregion
@@ -519,6 +519,11 @@ namespace IhalematikPro.Forms
             gridViewTenderGroup.SetFocusedRowCellValue(colIsSelected, true);
             this.SelectedGroupId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewTenderGroup.GetFocusedRowCellValue("Id"));
             LoadTenderMaterialList();
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
