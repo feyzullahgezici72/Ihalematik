@@ -50,7 +50,6 @@ namespace IhalematikPro.Forms
         {
             InitializeComponent();
             base.ScreenMethod();
-            InitilalizeForm();
             //this._owner = this;
             //getExcel();
         }
@@ -128,7 +127,6 @@ namespace IhalematikPro.Forms
         }
         private void frm_CalisanTanimlama_Load(object sender, EventArgs e)
         {
-            LoadGrid();
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(Frm_CalisanTanimlama_KeyDown);
         }
@@ -146,16 +144,20 @@ namespace IhalematikPro.Forms
         public void LoadGrid()
         {
             List<WorkerModel> models = UIWorkerManager.Instance.GetWorkers();
-            
+
             if (cmbAktivePasive.SelectedIndex == 0)
             {
                 grdWorker.DataSource = models.Where(p => p.IsActive);
                 colEdit.Visible = true;
+                colPasive.Visible = true;
+                colActive.Visible = false;
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
                 grdWorker.DataSource = models.Where(p => !p.IsActive);
+                colPasive.Visible = false;
                 colEdit.Visible = false;
+                colActive.Visible = true;
             }
 
             if (this.FocusedRowHandle != 0)
@@ -203,7 +205,7 @@ namespace IhalematikPro.Forms
             {
                 dxErrorProvider1.ClearErrors();
             }
-           return false;
+            return false;
         }
         private void txtBaseFare_EditValueChanged(object sender, EventArgs e)
         {
@@ -303,7 +305,7 @@ namespace IhalematikPro.Forms
 
             int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewWorker.GetFocusedRowCellValue("Id"));
             cg.CurrentWorkerId = id;
-            
+
             kayitMenusu.Visible = false;
             this.Opacity = 10;
             this.Enabled = false;
@@ -353,15 +355,39 @@ namespace IhalematikPro.Forms
             this.LoadGrid();
         }
 
-        private void btnSil_Click(object sender, EventArgs e)
+        private void frm_CalisanTanimlama_Shown(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Silmek Istediginzden emin misiniz?", "Sil", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            this.InitilalizeForm();
+            this.LoadGrid();
+        }
+
+        private void btnPasive_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Pasif Istediginzden emin misiniz?", "Sil", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result.Equals(DialogResult.OK))
             {
                 this.FocusedRowHandle = gridViewWorker.FocusedRowHandle;
                 int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewWorker.GetFocusedRowCellValue("Id"));
                 Worker selectedWorker = WorkerProvider.Instance.GetItem(id);
                 selectedWorker.IsActive = false;
+                WorkerProvider.Instance.Save(selectedWorker);
+                this.LoadGrid();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void btnAktif_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Aktif yapmak istediginzden emin misiniz?", "Sil", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.OK))
+            {
+                this.FocusedRowHandle = gridViewWorker.FocusedRowHandle;
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewWorker.GetFocusedRowCellValue("Id"));
+                Worker selectedWorker = WorkerProvider.Instance.GetItem(id);
+                selectedWorker.IsActive = true;
                 WorkerProvider.Instance.Save(selectedWorker);
                 this.LoadGrid();
             }
