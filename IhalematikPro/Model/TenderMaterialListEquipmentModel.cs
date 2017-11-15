@@ -41,7 +41,7 @@ namespace IhalematikProUI.Model
                 this.equipment = value;
                 if (this.equipment != null)
                 {
-                    this.EquipmentId = this.equipment.Id; 
+                    this.EquipmentId = this.equipment.Id;
                 }
             }
         }
@@ -57,7 +57,7 @@ namespace IhalematikProUI.Model
                     return 0;
                 }
                 this.workerUnitPricea = 0;
-                double amount = ((Worker)this.Equipment.WorkerVehicle)== null ? 0 : ((Worker)this.Equipment.WorkerVehicle).TotalFare.Amount;
+                double amount = ((Worker)this.Equipment.WorkerVehicle) == null ? 0 : ((Worker)this.Equipment.WorkerVehicle).TotalFare.Amount;
                 if (this.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
                 {
                     this.workerUnitPricea += Math.Round((amount / (30 * 8 * 60)), 2) * this.UnitTime * this.Quantity;
@@ -136,13 +136,16 @@ namespace IhalematikProUI.Model
             this.UnitTime = Entity.UnitTime;
             this.UnitTimeType = Entity.UnitTimeType;
 
-            if (this.Equipment.IsWorker && this.Equipment.WorkerVehicle != null)
+            if (this.Equipment.WorkerVehicle != null)
             {
-                this.SelectedWorker = this.Equipment.WorkerVehicle.Id;
-            }
-            else
-            {
-                this.SelectedVehicle = this.Equipment.WorkerVehicle.Id;
+                if (this.Equipment.IsWorker)
+                {
+                    this.SelectedWorker = this.Equipment.WorkerVehicle.Id;
+                }
+                else
+                {
+                    this.SelectedVehicle = this.Equipment.WorkerVehicle.Id;
+                }
             }
         }
 

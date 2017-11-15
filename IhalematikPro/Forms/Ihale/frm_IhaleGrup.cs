@@ -18,6 +18,7 @@ namespace IhalematikProUI.Forms
 {
     public partial class frm_IhaleGrup : DevExpress.XtraEditors.XtraForm
     {
+        public int FocusedRowHandle = 0;
         public frm_IhaleGrup()
         {
             InitializeComponent();
@@ -41,7 +42,10 @@ namespace IhalematikProUI.Forms
 
         private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            frm_IhaleGrupGuncelle ig = new frm_IhaleGrupGuncelle();
+            int selectedGroupId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewTenderGroup.GetFocusedRowCellValue("Id"));
+            frm_IhaleGrupGuncelle ig = new frm_IhaleGrupGuncelle(this);
+            ig.SelectedGroupId = selectedGroupId;
+            this.FocusedRowHandle = gridViewTenderGroup.FocusedRowHandle;
             ig.ShowDialog();
         }
 
@@ -92,6 +96,10 @@ namespace IhalematikProUI.Forms
                 i++;
             }
             grdTenderGroup.DataSource = models;
+            if (this.FocusedRowHandle != 0)
+            {
+                gridViewTenderGroup.FocusedRowHandle = this.FocusedRowHandle;
+            }
         }
     }
 }
