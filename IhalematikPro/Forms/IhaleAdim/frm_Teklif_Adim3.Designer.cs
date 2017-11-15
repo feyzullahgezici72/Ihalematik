@@ -52,7 +52,6 @@
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtTotalAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -116,6 +115,7 @@
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnIscilikveAracGirisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -292,6 +292,7 @@
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            this.panelControl1.Controls.Add(this.isciAracGirisPaneli);
             this.panelControl1.Controls.Add(this.pictureBox1);
             this.panelControl1.Controls.Add(this.btnKapat);
             this.panelControl1.Controls.Add(this.txtAdimAciklama);
@@ -379,27 +380,12 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.btnKaydet);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(868, 0);
+            this.panel2.Location = new System.Drawing.Point(743, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(140, 118);
+            this.panel2.Size = new System.Drawing.Size(265, 118);
             this.panel2.TabIndex = 10;
-            // 
-            // btnKaydet
-            // 
-            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnKaydet.Appearance.Options.UseFont = true;
-            this.btnKaydet.Appearance.Options.UseForeColor = true;
-            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
-            this.btnKaydet.Location = new System.Drawing.Point(0, 0);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(6);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(136, 118);
-            this.btnKaydet.TabIndex = 3;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            this.panel2.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // panel6
             // 
@@ -774,7 +760,7 @@
             this.isciAracGirisPaneli.Controls.Add(this.groupControl1);
             this.isciAracGirisPaneli.Controls.Add(this.panelControl5);
             this.isciAracGirisPaneli.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.isciAracGirisPaneli.Location = new System.Drawing.Point(416, 164);
+            this.isciAracGirisPaneli.Location = new System.Drawing.Point(416, 15);
             this.isciAracGirisPaneli.Name = "isciAracGirisPaneli";
             this.isciAracGirisPaneli.Size = new System.Drawing.Size(957, 721);
             this.isciAracGirisPaneli.TabIndex = 26;
@@ -1641,6 +1627,21 @@
             this.gridView2.GridControl = this.grdTenderGroup;
             this.gridView2.Name = "gridView2";
             // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnKaydet.Appearance.Options.UseFont = true;
+            this.btnKaydet.Appearance.Options.UseForeColor = true;
+            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
+            this.btnKaydet.Location = new System.Drawing.Point(55, 0);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(210, 118);
+            this.btnKaydet.TabIndex = 4;
+            this.btnKaydet.Text = "Sonraki Adıma Git";
+            // 
             // frm_Teklif_Adim3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1648,7 +1649,6 @@
             this.CancelButton = this.btnKapat;
             this.ClientSize = new System.Drawing.Size(1376, 778);
             this.ControlBox = false;
-            this.Controls.Add(this.isciAracGirisPaneli);
             this.Controls.Add(this.grdMaterialListIsWorkship);
             this.Controls.Add(this.panelGrup);
             this.Controls.Add(this.panelControl3);
@@ -1726,7 +1726,6 @@
         private DevExpress.XtraEditors.LabelControl txtAdimAciklama;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private System.Windows.Forms.Panel panel6;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.TextEdit txtBaseAmount;
@@ -1801,5 +1800,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSil;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        public DevExpress.XtraEditors.SimpleButton btnKaydet;
     }
 }

@@ -83,6 +83,7 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
+            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -542,6 +543,7 @@
             this.panelControl4.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.panelControl4.Appearance.Options.UseBackColor = true;
             this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelControl4.Controls.Add(this.btnKaydet);
             this.panelControl4.Controls.Add(this.labelControl14);
             this.panelControl4.Controls.Add(this.labelControl15);
             this.panelControl4.Controls.Add(this.labelControl16);
@@ -960,6 +962,21 @@
             this.gridSplitContainer1.Size = new System.Drawing.Size(1376, 427);
             this.gridSplitContainer1.TabIndex = 23;
             // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnKaydet.Appearance.Options.UseFont = true;
+            this.btnKaydet.Appearance.Options.UseForeColor = true;
+            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
+            this.btnKaydet.Location = new System.Drawing.Point(1087, 3);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(154, 74);
+            this.btnKaydet.TabIndex = 11;
+            this.btnKaydet.Text = "Kaydet";
+            // 
             // frm_TeklifAdimSon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1071,5 +1088,6 @@
         private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
         private DevExpress.XtraEditors.LabelControl labelControl19;
         private System.Windows.Forms.PictureBox pcWorld;
+        public DevExpress.XtraEditors.SimpleButton btnKaydet;
     }
 }
