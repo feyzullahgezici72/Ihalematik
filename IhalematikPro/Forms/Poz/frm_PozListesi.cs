@@ -40,7 +40,7 @@ namespace IhalematikPro.Forms
 
         public void LoadGrid()
         {
-            List<PozModel> pozs = UIPozManager.Instance.GetPozs();
+            List<Poz> pozs = PozProvider.Instance.GetItems();
             grdPozList.DataSource = pozs;
 
 
