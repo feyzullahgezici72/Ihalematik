@@ -14,15 +14,17 @@ using IhalematikProUI.Forms;
 using System.Threading;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikPro.Forms
 {
-    public partial class frm_OzelStokListesi : DevExpress.XtraEditors.XtraForm
+    public partial class frm_OzelStokListesi : IhalematikBaseForm
     {
         public int FocusedRowHandle = 0;
         public frm_OzelStokListesi()
         {
             InitializeComponent();
+            base.ScreenMethod();
             LoadGrid();
         }
         public void LoadGrid()

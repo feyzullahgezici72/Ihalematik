@@ -15,10 +15,11 @@ using IhalematikProUI.Model;
 using IhalematikPro.Model;
 using IhalematikProUI.Forms;
 using System.Threading;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikPro.Forms
 {
-    public partial class frm_Teklif_Adim1 : DevExpress.XtraEditors.XtraForm
+    public partial class frm_Teklif_Adim1 : IhalematikBaseForm
     {
         private object a4;
 
@@ -27,6 +28,7 @@ namespace IhalematikPro.Forms
         public frm_Teklif_Adim1()
         {
             InitializeComponent();
+            base.ScreenMethod();
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)

@@ -13,14 +13,16 @@ using IhalematikProBL.Provider;
 using IhalematikPro.Manager;
 using IhalematikProUI.Forms;
 using System.Threading;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikPro.Forms
 {
-    public partial class frm_DevamEdenIhaleListesi : DevExpress.XtraEditors.XtraForm
+    public partial class frm_DevamEdenIhaleListesi : IhalematikBaseForm
     {
         public frm_DevamEdenIhaleListesi()
         {
             InitializeComponent();
+            base.ScreenMethod();
         }
 
         private void btnKapat_Click(object sender, EventArgs e)

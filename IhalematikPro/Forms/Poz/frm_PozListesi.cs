@@ -26,6 +26,7 @@ namespace IhalematikPro.Forms
         public frm_PozListesi()
         {
             InitializeComponent();
+            base.ScreenMethod();
         }
 
         private void btnKapat_Click(object sender, EventArgs e)

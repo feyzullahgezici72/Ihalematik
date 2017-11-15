@@ -23,10 +23,11 @@ using IhalematikProBL.Enum;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms;
 using SimpleApplicationBase.BL.Base;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikPro.Forms
 {
-    public partial class frm_Teklif_Adim3 : DevExpress.XtraEditors.XtraForm
+    public partial class frm_Teklif_Adim3 : IhalematikBaseForm
     {
         #region Variables
         private object a4;
@@ -39,6 +40,7 @@ namespace IhalematikPro.Forms
         public frm_Teklif_Adim3()
         {
             InitializeComponent();
+            base.ScreenMethod();
             bindingSourceAddWorker.DataSource = typeof(List<TenderMaterialListEquipmentModel>);
             grdAddWorker.DataSource = bindingSourceAddWorker;
             grdAddVehicle.DataSource = bindingSourceAddVehicle;

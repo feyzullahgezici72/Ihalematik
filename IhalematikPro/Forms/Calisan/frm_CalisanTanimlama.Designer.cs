@@ -397,8 +397,8 @@
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn3.Caption = "AYLIK MASRAFI";
-            this.gridColumn3.DisplayFormat.FormatString = "C2";
-            this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.gridColumn3.DisplayFormat.FormatString = "c2";
+            this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn3.FieldName = "TotalFare.Amount";
             this.gridColumn3.MinWidth = 10;
             this.gridColumn3.Name = "gridColumn3";
@@ -419,8 +419,8 @@
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn4.Caption = "GÜNLÜK ÜCRETİ";
-            this.gridColumn4.DisplayFormat.FormatString = "C2";
-            this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.gridColumn4.DisplayFormat.FormatString = "c2";
+            this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "DayFare.Amount";
             this.gridColumn4.MinWidth = 10;
             this.gridColumn4.Name = "gridColumn4";
@@ -442,8 +442,8 @@
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn5.Caption = "SAAT ÜCRETİ";
-            this.gridColumn5.DisplayFormat.FormatString = "C2";
-            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.gridColumn5.DisplayFormat.FormatString = "c2";
+            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn5.FieldName = "HourFare.Amount";
             this.gridColumn5.MinWidth = 10;
             this.gridColumn5.Name = "gridColumn5";
@@ -465,8 +465,8 @@
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn6.Caption = "DAKİKA ÜCRETİ";
-            this.gridColumn6.DisplayFormat.FormatString = "C2";
-            this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.gridColumn6.DisplayFormat.FormatString = "c2";
+            this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "MinuteFare.Amount";
             this.gridColumn6.MinWidth = 10;
             this.gridColumn6.Name = "gridColumn6";
