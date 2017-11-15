@@ -86,7 +86,7 @@ namespace IhalematikPro.Forms
         {
             //this.SaveMaterialListIsWorkship();
 
-            this.OpenForm2();
+           
         }
 
         private void SaveMaterialListIsWorkship()
@@ -198,6 +198,11 @@ namespace IhalematikPro.Forms
         private void frm_Teklif_Adim1_Shown(object sender, EventArgs e)
         {
             this.LoadTenderGroupGrid();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            this.OpenForm2();
         }
     }
 }
