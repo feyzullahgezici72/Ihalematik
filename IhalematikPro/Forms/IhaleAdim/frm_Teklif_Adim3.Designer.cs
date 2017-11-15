@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim3));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btnIscilikveAracGirisi = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
@@ -169,7 +169,7 @@
             // 
             this.btnIscilikveAracGirisi.AutoHeight = false;
             this.btnIscilikveAracGirisi.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Ekle", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnIscilikveAracGirisi.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Ekle", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnIscilikveAracGirisi.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnIscilikveAracGirisi.Name = "btnIscilikveAracGirisi";
             this.btnIscilikveAracGirisi.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -651,6 +651,7 @@
             this.gridColumn1.Caption = "POZ/ÖBF NO";
             this.gridColumn1.FieldName = "PozOBFNumber";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 143;
@@ -666,6 +667,7 @@
             this.gridColumn2.Caption = "AÇIKLAMA";
             this.gridColumn2.FieldName = "PozOBFDescription";
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             this.gridColumn2.Width = 756;
@@ -685,6 +687,7 @@
             this.clmEquipments.FieldName = "Id";
             this.clmEquipments.MinWidth = 80;
             this.clmEquipments.Name = "clmEquipments";
+            this.clmEquipments.OptionsFilter.AllowFilter = false;
             this.clmEquipments.Visible = true;
             this.clmEquipments.VisibleIndex = 2;
             this.clmEquipments.Width = 122;
@@ -693,7 +696,7 @@
             // 
             this.btnCalisanlarveAraclar.AutoHeight = false;
             this.btnCalisanlarveAraclar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCalisanlarveAraclar.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCalisanlarveAraclar.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnCalisanlarveAraclar.Name = "btnCalisanlarveAraclar";
             this.btnCalisanlarveAraclar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnCalisanlarveAraclar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnCalisanlarveAraclar_ButtonClick);
@@ -711,6 +714,7 @@
             this.gridColumn7.Caption = "KAR%";
             this.gridColumn7.FieldName = "WorkerPercentageMarkup";
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsFilter.AllowFilter = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 3;
             // 
@@ -725,6 +729,7 @@
             this.gridColumn3.Caption = "BİRİMİ";
             this.gridColumn3.FieldName = "PozOBFUnit";
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 4;
             this.gridColumn3.Width = 111;
@@ -740,6 +745,7 @@
             this.gridColumn4.Caption = "MİKTARI";
             this.gridColumn4.FieldName = "Quantity";
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 5;
             this.gridColumn4.Width = 103;
@@ -755,6 +761,7 @@
             this.gridColumn5.Caption = "BİRİM FİYAT";
             this.gridColumn5.FieldName = "WorkerUnitPrice";
             this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 6;
             this.gridColumn5.Width = 121;
@@ -935,6 +942,7 @@
             this.colAddVehicleVehicle.ColumnEdit = this.rpstVehicle;
             this.colAddVehicleVehicle.FieldName = "SelectedVehicle";
             this.colAddVehicleVehicle.Name = "colAddVehicleVehicle";
+            this.colAddVehicleVehicle.OptionsFilter.AllowFilter = false;
             this.colAddVehicleVehicle.Visible = true;
             this.colAddVehicleVehicle.VisibleIndex = 0;
             this.colAddVehicleVehicle.Width = 340;
@@ -959,6 +967,7 @@
             this.colAddVehicleQuantity.Caption = "SAYI";
             this.colAddVehicleQuantity.FieldName = "Quantity";
             this.colAddVehicleQuantity.Name = "colAddVehicleQuantity";
+            this.colAddVehicleQuantity.OptionsFilter.AllowFilter = false;
             this.colAddVehicleQuantity.Visible = true;
             this.colAddVehicleQuantity.VisibleIndex = 1;
             this.colAddVehicleQuantity.Width = 82;
@@ -976,6 +985,7 @@
             this.colAddVehicleUnitTime.Caption = "SÜRE";
             this.colAddVehicleUnitTime.FieldName = "UnitTime";
             this.colAddVehicleUnitTime.Name = "colAddVehicleUnitTime";
+            this.colAddVehicleUnitTime.OptionsFilter.AllowFilter = false;
             this.colAddVehicleUnitTime.Visible = true;
             this.colAddVehicleUnitTime.VisibleIndex = 3;
             this.colAddVehicleUnitTime.Width = 76;
@@ -993,6 +1003,7 @@
             this.colAddVehicleUnitTimeType.Caption = "ZAMAN TİPİ";
             this.colAddVehicleUnitTimeType.FieldName = "UnitTimeType";
             this.colAddVehicleUnitTimeType.Name = "colAddVehicleUnitTimeType";
+            this.colAddVehicleUnitTimeType.OptionsFilter.AllowFilter = false;
             this.colAddVehicleUnitTimeType.Visible = true;
             this.colAddVehicleUnitTimeType.VisibleIndex = 2;
             this.colAddVehicleUnitTimeType.Width = 140;
@@ -1012,6 +1023,7 @@
             this.colAddVehicleWorkerUnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAddVehicleWorkerUnitPrice.FieldName = "VehicleUnitPrice";
             this.colAddVehicleWorkerUnitPrice.Name = "colAddVehicleWorkerUnitPrice";
+            this.colAddVehicleWorkerUnitPrice.OptionsFilter.AllowFilter = false;
             this.colAddVehicleWorkerUnitPrice.Visible = true;
             this.colAddVehicleWorkerUnitPrice.VisibleIndex = 4;
             this.colAddVehicleWorkerUnitPrice.Width = 192;
@@ -1189,6 +1201,7 @@
             this.colAddWorkerWorker.ColumnEdit = this.rpstWorker;
             this.colAddWorkerWorker.FieldName = "SelectedWorker";
             this.colAddWorkerWorker.Name = "colAddWorkerWorker";
+            this.colAddWorkerWorker.OptionsFilter.AllowFilter = false;
             this.colAddWorkerWorker.Visible = true;
             this.colAddWorkerWorker.VisibleIndex = 0;
             this.colAddWorkerWorker.Width = 343;
@@ -1211,6 +1224,7 @@
             this.colAddWorkerQuantity.Caption = "SAYI";
             this.colAddWorkerQuantity.FieldName = "Quantity";
             this.colAddWorkerQuantity.Name = "colAddWorkerQuantity";
+            this.colAddWorkerQuantity.OptionsFilter.AllowFilter = false;
             this.colAddWorkerQuantity.Visible = true;
             this.colAddWorkerQuantity.VisibleIndex = 1;
             this.colAddWorkerQuantity.Width = 83;
@@ -1226,6 +1240,7 @@
             this.colAddWorkerUnitTime.Caption = "SÜRE";
             this.colAddWorkerUnitTime.FieldName = "UnitTime";
             this.colAddWorkerUnitTime.Name = "colAddWorkerUnitTime";
+            this.colAddWorkerUnitTime.OptionsFilter.AllowFilter = false;
             this.colAddWorkerUnitTime.Visible = true;
             this.colAddWorkerUnitTime.VisibleIndex = 3;
             this.colAddWorkerUnitTime.Width = 72;
@@ -1241,6 +1256,7 @@
             this.colAddWorkerUnitTimeType.Caption = "ZAMAN TİPİ";
             this.colAddWorkerUnitTimeType.FieldName = "UnitTimeType";
             this.colAddWorkerUnitTimeType.Name = "colAddWorkerUnitTimeType";
+            this.colAddWorkerUnitTimeType.OptionsFilter.AllowFilter = false;
             this.colAddWorkerUnitTimeType.Visible = true;
             this.colAddWorkerUnitTimeType.VisibleIndex = 2;
             this.colAddWorkerUnitTimeType.Width = 138;
@@ -1258,6 +1274,7 @@
             this.colAddWorkerWorkerUnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAddWorkerWorkerUnitPrice.FieldName = "WorkerUnitPricea";
             this.colAddWorkerWorkerUnitPrice.Name = "colAddWorkerWorkerUnitPrice";
+            this.colAddWorkerWorkerUnitPrice.OptionsFilter.AllowFilter = false;
             this.colAddWorkerWorkerUnitPrice.Visible = true;
             this.colAddWorkerWorkerUnitPrice.VisibleIndex = 4;
             this.colAddWorkerWorkerUnitPrice.Width = 196;
@@ -1605,7 +1622,7 @@
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject11, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.repositoryItemButtonEdit1.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -1614,7 +1631,7 @@
             // 
             this.btnSil.AutoHeight = false;
             this.btnSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject12, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnSil.Name = "btnSil";
             this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;

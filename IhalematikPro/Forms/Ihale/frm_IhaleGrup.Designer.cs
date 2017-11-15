@@ -322,6 +322,7 @@
             this.gridColumn7.Caption = "NO";
             this.gridColumn7.FieldName = "ItemNumber";
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsFilter.AllowFilter = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 0;
             // 
@@ -341,6 +342,7 @@
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.OptionsColumn.AllowFocus = false;
             this.gridColumn2.OptionsColumn.ReadOnly = true;
+            this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             this.gridColumn2.Width = 429;
@@ -356,6 +358,7 @@
             this.gridColumn1.MaxWidth = 30;
             this.gridColumn1.MinWidth = 30;
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 2;
             this.gridColumn1.Width = 30;
@@ -382,6 +385,7 @@
             this.gridColumn6.MaxWidth = 30;
             this.gridColumn6.MinWidth = 30;
             this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsFilter.AllowFilter = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 3;
             this.gridColumn6.Width = 30;

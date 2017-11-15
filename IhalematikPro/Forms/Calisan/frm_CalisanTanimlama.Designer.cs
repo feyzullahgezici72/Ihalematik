@@ -234,6 +234,7 @@
             // 
             // gridViewWorker
             // 
+            this.gridViewWorker.ActiveFilterEnabled = false;
             this.gridViewWorker.Appearance.ColumnFilterButton.BackColor = System.Drawing.Color.Silver;
             this.gridViewWorker.Appearance.ColumnFilterButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
             this.gridViewWorker.Appearance.ColumnFilterButton.BorderColor = System.Drawing.Color.Silver;
@@ -352,11 +353,36 @@
             this.colEdit,
             this.gridColumn7,
             this.colActive});
+            this.gridViewWorker.CustomizationFormBounds = new System.Drawing.Rectangle(1207, 740, 222, 242);
             this.gridViewWorker.GridControl = this.grdWorker;
             this.gridViewWorker.Name = "gridViewWorker";
+            this.gridViewWorker.OptionsFilter.AllowColumnMRUFilterList = false;
+            this.gridViewWorker.OptionsFilter.AllowFilterEditor = false;
+            this.gridViewWorker.OptionsFilter.AllowFilterIncrementalSearch = false;
+            this.gridViewWorker.OptionsFilter.AllowMRUFilterList = false;
+            this.gridViewWorker.OptionsFilter.AllowMultiSelectInCheckedFilterPopup = false;
+            this.gridViewWorker.OptionsFilter.FilterEditorUseMenuForOperandsAndOperators = false;
+            this.gridViewWorker.OptionsFilter.ShowAllTableValuesInCheckedFilterPopup = false;
+            this.gridViewWorker.OptionsFind.AllowFindPanel = false;
+            this.gridViewWorker.OptionsFind.ClearFindOnClose = false;
+            this.gridViewWorker.OptionsFind.FindFilterColumns = "";
+            this.gridViewWorker.OptionsFind.FindMode = DevExpress.XtraEditors.FindMode.Always;
+            this.gridViewWorker.OptionsFind.HighlightFindResults = false;
+            this.gridViewWorker.OptionsFind.ShowClearButton = false;
+            this.gridViewWorker.OptionsFind.ShowCloseButton = false;
+            this.gridViewWorker.OptionsFind.ShowFindButton = false;
+            this.gridViewWorker.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewWorker.OptionsView.AllowHtmlDrawGroups = false;
             this.gridViewWorker.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewWorker.OptionsView.EnableAppearanceOddRow = true;
+            this.gridViewWorker.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.Hidden;
+            this.gridViewWorker.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.SmartTag;
+            this.gridViewWorker.OptionsView.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowOnlyInEditor;
+            this.gridViewWorker.OptionsView.ShowDetailButtons = false;
+            this.gridViewWorker.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.gridViewWorker.OptionsView.ShowGroupExpandCollapseButtons = false;
             this.gridViewWorker.OptionsView.ShowGroupPanel = false;
+            this.gridViewWorker.OptionsView.ShowIndicator = false;
             this.gridViewWorker.PaintStyleName = "Web";
             // 
             // colId
@@ -382,6 +408,7 @@
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.OptionsColumn.AllowFocus = false;
             this.gridColumn2.OptionsColumn.AllowSize = false;
+            this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
             this.gridColumn2.Width = 210;
@@ -404,6 +431,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
+            this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
             this.gridColumn3.Width = 137;
@@ -427,6 +455,7 @@
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
             this.gridColumn4.OptionsColumn.AllowSize = false;
+            this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
             this.gridColumn4.Width = 128;
@@ -450,6 +479,7 @@
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.OptionsColumn.AllowFocus = false;
             this.gridColumn5.OptionsColumn.AllowSize = false;
+            this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
             this.gridColumn5.Width = 137;
@@ -473,6 +503,7 @@
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.OptionsColumn.AllowFocus = false;
             this.gridColumn6.OptionsColumn.AllowSize = false;
+            this.gridColumn6.OptionsFilter.AllowFilter = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 4;
             this.gridColumn6.Width = 151;
@@ -492,6 +523,7 @@
             this.colEdit.MaxWidth = 30;
             this.colEdit.MinWidth = 30;
             this.colEdit.Name = "colEdit";
+            this.colEdit.OptionsFilter.AllowFilter = false;
             this.colEdit.ToolTip = "Kaydı güncelle";
             this.colEdit.Visible = true;
             this.colEdit.VisibleIndex = 5;
@@ -545,6 +577,7 @@
             this.colActive.MaxWidth = 30;
             this.colActive.MinWidth = 30;
             this.colActive.Name = "colActive";
+            this.colActive.OptionsFilter.AllowFilter = false;
             this.colActive.ToolTip = "Kaydı aktif yap";
             this.colActive.Visible = true;
             this.colActive.VisibleIndex = 7;
