@@ -151,6 +151,7 @@ namespace IhalematikPro.Forms
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.barButtonItem28 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
@@ -231,10 +232,11 @@ namespace IhalematikPro.Forms
             this.barStaticItem3,
             this.barBtnDovizKurlar,
             this.barStaticItem5,
-            this.barStaticItem6});
+            this.barStaticItem6,
+            this.barButtonItem28});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 19;
+            this.ribbon.MaxItemId = 22;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsTouch.AffectOnlyRibbon = true;
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -937,6 +939,7 @@ namespace IhalematikPro.Forms
             this.Adimlar.ItemLinks.Add(this.btnAdimx4);
             this.Adimlar.ItemLinks.Add(this.btnAdimx3);
             this.Adimlar.ItemLinks.Add(this.btnAdimx5);
+            this.Adimlar.ItemLinks.Add(this.barButtonItem28);
             this.Adimlar.Name = "Adimlar";
             this.Adimlar.ShowCaptionButton = false;
             // 
@@ -1330,6 +1333,12 @@ namespace IhalematikPro.Forms
             this.timer1.Interval = 30;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
+            // barButtonItem28
+            // 
+            this.barButtonItem28.Caption = "Kaydet";
+            this.barButtonItem28.Id = 21;
+            this.barButtonItem28.Name = "barButtonItem28";
+            // 
             // frm_Anaform
             // 
             this.ActiveGlowColor = System.Drawing.Color.White;
@@ -1481,6 +1490,7 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem28;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }
