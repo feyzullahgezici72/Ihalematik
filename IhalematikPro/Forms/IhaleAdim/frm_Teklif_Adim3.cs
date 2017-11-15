@@ -41,54 +41,18 @@ namespace IhalematikPro.Forms
         {
             InitializeComponent();
             base.ScreenMethod();
-            bindingSourceAddWorker.DataSource = typeof(List<TenderMaterialListEquipmentModel>);
-            grdAddWorker.DataSource = bindingSourceAddWorker;
-            grdAddVehicle.DataSource = bindingSourceAddVehicle;
         }
         private void frm_Teklif_Adim3_Load(object sender, EventArgs e)
         {
-            //panel
-            isciAracGirisPaneli.Top = 0;
-            isciAracGirisPaneli.Left = (Screen.PrimaryScreen.WorkingArea.Width / 2) - (isciAracGirisPaneli.Width / 2);
-            //panel 
+            this.WorkerVehiclePanelCenter();
             lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
-            //List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
-            //List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            //grdMaterialListIsWorkship.DataSource = models;
+        }
 
-            #region repostryWorkers
-            List<DropDownModel> workers = UIWorkerManager.Instance.GetDropDownWorkers();
-            rpstWorker.DataSource = workers;
-            rpstWorker.DisplayMember = "Text";
-            rpstWorker.ValueMember = "Id";
-            rpstWorker.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
-            rpstWorker.NullText = string.Empty;
-            rpstWorker.ForceInitialize();
-            rpstWorker.PopulateColumns();
-            //rpstWorker2.GetDataSourceValue();
-            rpstWorker.Properties.Columns["Id"].Visible = false;
-            //rpstWorker2.Properties.Columns["Self"].Visible = false;
-            rpstWorker.ShowHeader = false;
-            #endregion
-
-            #region repostryVehicles
-            List<DropDownModel> vehicles = UIVehicleManager.Instance.GetDropDownVehicles();
-            rpstVehicle.DataSource = vehicles;
-            rpstVehicle.DisplayMember = "Text";
-            rpstVehicle.ValueMember = "Id";
-            rpstVehicle.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
-            rpstVehicle.NullText = string.Empty;
-            rpstVehicle.ForceInitialize();
-            rpstVehicle.PopulateColumns();
-            //rpstWorker2.GetDataSourceValue();
-            rpstVehicle.Properties.Columns["Id"].Visible = false;
-            //rpstWorker2.Properties.Columns["Self"].Visible = false;
-            rpstVehicle.ShowHeader = false;
-            #endregion
-
-            this.LoadTenderGroupGrid();
-            this.CalculateInnerValuesMarkup();
+        private void WorkerVehiclePanelCenter()
+        {
+            isciAracGirisPaneli.Top = 0;
+            isciAracGirisPaneli.Left = (Screen.PrimaryScreen.WorkingArea.Width / 2) - (isciAracGirisPaneli.Width / 2);
         }
 
         #endregion
@@ -130,11 +94,14 @@ namespace IhalematikPro.Forms
 
         private void CalculateInnerValuesMarkup()
         {
-            List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
-            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
-            txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
-            txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
+            List<MaterialListModel> models = gridViewMaterialListIsWorkship.DataSource as List<MaterialListModel>;
+
+            if (models != null)
+            {
+                txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
+                txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
+                txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
+            }
         }
 
         #endregion
@@ -236,7 +203,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click_1(object sender, EventArgs e)
         {
-          
+
         }
 
         #endregion
@@ -245,7 +212,7 @@ namespace IhalematikPro.Forms
         private void btnCalisanlarveAraclar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             bindingSourceAddWorker.DataSource = null;
-            int currentId = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Id"));
+            int currentId = Convert.ToInt32(gridViewMaterialListIsWorkship.GetFocusedRowCellValue("Id"));
             List<MaterialListModel> models = grdMaterialListIsWorkship.DataSource as List<MaterialListModel>;
             foreach (var item in models)
             {
@@ -444,7 +411,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-             this.Close();
+            this.Close();
 
             frm_IscilikFirimFiyat a5 = (frm_IscilikFirimFiyat)Application.OpenForms["frm_IscilikFirimFiyat"];
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
@@ -452,16 +419,16 @@ namespace IhalematikPro.Forms
             {
                 a5 = new frm_IscilikFirimFiyat();
                 a5.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                a5.FormClosed +=new FormClosedEventHandler(A5_FormClosed);
+                a5.FormClosed += new FormClosedEventHandler(A5_FormClosed);
                 af.MainPanel.Visible = false;
                 a5.Show();
-                
+
             }
             else
             {
                 a5.Activate();
             }
-           
+
         }
 
         private void A5_FormClosed(object sender, FormClosedEventArgs e)
@@ -496,6 +463,9 @@ namespace IhalematikPro.Forms
             {
                 List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
                 List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+                txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
+                txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
+                txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
                 grdMaterialListIsWorkship.DataSource = models;
             }
         }
@@ -514,6 +484,67 @@ namespace IhalematikPro.Forms
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frm_Teklif_Adim3_Shown(object sender, EventArgs e)
+        {
+            bindingSourceAddWorker.DataSource = typeof(List<TenderMaterialListEquipmentModel>);
+            grdAddWorker.DataSource = bindingSourceAddWorker;
+            grdAddVehicle.DataSource = bindingSourceAddVehicle;
+
+            this.RPSTWorkers();
+            this.RPSTVehicles();
+            this.LoadTenderGroupGrid();
+            //this.CalculateInnerValuesMarkup();
+        }
+
+        private void RPSTVehicles()
+        {
+            List<DropDownModel> vehicles = UIVehicleManager.Instance.GetDropDownVehicles();
+            rpstVehicle.DataSource = vehicles;
+            rpstVehicle.DisplayMember = "Text";
+            rpstVehicle.ValueMember = "Id";
+            rpstVehicle.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            rpstVehicle.NullText = string.Empty;
+            rpstVehicle.ForceInitialize();
+            rpstVehicle.PopulateColumns();
+            //rpstWorker2.GetDataSourceValue();
+            rpstVehicle.Properties.Columns["Id"].Visible = false;
+            //rpstWorker2.Properties.Columns["Self"].Visible = false;
+            rpstVehicle.ShowHeader = false;
+        }
+
+        private void RPSTWorkers()
+        {
+            List<DropDownModel> workers = UIWorkerManager.Instance.GetDropDownWorkers();
+            rpstWorker.DataSource = workers;
+            rpstWorker.DisplayMember = "Text";
+            rpstWorker.ValueMember = "Id";
+            rpstWorker.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            rpstWorker.NullText = string.Empty;
+            rpstWorker.ForceInitialize();
+            rpstWorker.PopulateColumns();
+            //rpstWorker2.GetDataSourceValue();
+            rpstWorker.Properties.Columns["Id"].Visible = false;
+            //rpstWorker2.Properties.Columns["Self"].Visible = false;
+            rpstWorker.ShowHeader = false;
+        }
+
+        private void gridViewMaterialListIsWorkship_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            if (e.Column == colMaterialListMarkup)
+            {
+                int currenMaterialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialListIsWorkship.GetFocusedRowCellValue("Id"));
+                foreach (var item in CurrentManager.Instance.CurrentTender.MaterialList)
+                {
+                    if (item.Id.Equals(currenMaterialId))
+                    {
+                        item.Markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
+                        break;
+                    }
+                }
+                this.CalculateInnerValuesMarkup();
+            }
         }
     }
 }
