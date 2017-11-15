@@ -7,6 +7,10 @@ namespace IhalematikProBL.Provider
 {
     public class PozProvider : CustomEntityBaseProvider<Poz, PozProvider>
     {
+        public PozProvider()
+        {
+            this.EnableCaching = true;
+        }
         protected override Hashtable GetCommonParameters(Poz t)
         {
             Hashtable parameters = base.GetCommonParameters(t);

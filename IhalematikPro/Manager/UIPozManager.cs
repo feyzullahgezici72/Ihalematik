@@ -12,11 +12,10 @@ namespace IhalematikPro.Manager
 {
     public class UIPozManager : SingletonBase<UIPozManager>
     {
-        public List<PozModel> GetPozs()
+        public List<Poz> GetPozs()
         {
             List<Poz> pozs = PozProvider.Instance.GetItems();
-            List<PozModel> models = CustomSaveableModelBase.GetModels<PozModel, Poz>(pozs);
-            return models;
+            return pozs;
         }
 
         public List<PozModel> GetPozs(string PozNumber)
@@ -34,6 +33,12 @@ namespace IhalematikPro.Manager
                 return pozs;
             }
             return null;
+        }
+        public List<Poz> GetPozs(bool IsActive)
+        {
+            List<Poz> pozs = PozProvider.Instance.GetItems("IsActive", IsActive);
+            //List<PozModel> models = CustomSaveableModelBase.GetModels<PozModel, Poz>(pozs);
+            return pozs;
         }
     }
 }

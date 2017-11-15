@@ -40,24 +40,24 @@ namespace IhalematikPro.Forms
 
         public void LoadGrid()
         {
-            List<Poz> pozs = PozProvider.Instance.GetItems();
-            grdPozList.DataSource = pozs;
-
+            List<Poz> pozs = new List<Poz>();
 
             if (cmbAktivePasive.SelectedIndex == 0)
             {
-                grdPozList.DataSource = pozs.Where(p => p.IsActive);
+                pozs = UIPozManager.Instance.GetPozs(true);
                 colEdit.Visible = true;
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
-                grdPozList.DataSource = pozs.Where(p => !p.IsActive);
+                pozs = UIPozManager.Instance.GetPozs(false);
                 colEdit.Visible = false;
             }
             if (this.FocusedRowHandle != 0)
             {
-                gridViewPozList.FocusedRowHandle = this.FocusedRowHandle;
+                pozs = UIPozManager.Instance.GetPozs();
             }
+            grdPozList.DataSource = pozs;
+            gridViewPozList.FocusedRowHandle = this.FocusedRowHandle;
         }
         private void btnKaydet_Click(object sender, EventArgs e)
         {
