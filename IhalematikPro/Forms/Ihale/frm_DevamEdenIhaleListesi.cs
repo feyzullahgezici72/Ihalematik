@@ -12,6 +12,7 @@ using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikPro.Manager;
 using IhalematikProUI.Forms;
+using System.Threading;
 
 namespace IhalematikPro.Forms
 {
@@ -26,9 +27,20 @@ namespace IhalematikPro.Forms
         {
             this.Close();
         }
-
+        public void wait()
+        {
+            Thread.Sleep(1000);
+        }
+        public void formLoading()
+        {
+            using (frm_wait frm = new frm_wait(wait))
+            {
+                frm.ShowDialog();
+            }
+        }
         private void frm_DevamEdenIhaleListesi_Load(object sender, EventArgs e)
         {
+            formLoading();
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
             lblRecordCount.Text = list.Count.ToString();
             grdActiveTenderList.DataSource = list;

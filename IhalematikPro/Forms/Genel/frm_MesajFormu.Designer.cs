@@ -103,7 +103,7 @@
             this.Controls.Add(this.lblMesaj);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.btnTamam);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_MesajFormu";

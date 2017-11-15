@@ -32,7 +32,7 @@ namespace IhalematikPro.Forms
 
         private void frm_PozListesi_Load(object sender, EventArgs e)
         {
-            MesajVer();
+            formLoading();
             LoadGrid();
         }
 
@@ -40,13 +40,13 @@ namespace IhalematikPro.Forms
         {
 
         }
-        public void bekleyiniz()
+        public void wait()
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(4000);
         }
-        public void MesajVer()
+        public void formLoading()
         {
-            using (frm_wait frm = new frm_wait(bekleyiniz))
+            using (frm_wait frm = new frm_wait(wait))
             {
                 frm.ShowDialog();
             }
