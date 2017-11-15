@@ -17,10 +17,11 @@ using System.IO;
 using ExcelDataReader;
 using IhalematikProUI.Forms;
 using System.Threading;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikPro.Forms
 {
-    public partial class frm_CalisanTanimlama : DevExpress.XtraEditors.XtraForm
+    public partial class frm_CalisanTanimlama : IhalematikBaseForm
     {
         List<Worker> workers = new List<Worker>();
 
@@ -48,6 +49,7 @@ namespace IhalematikPro.Forms
         public frm_CalisanTanimlama()
         {
             InitializeComponent();
+            base.ScreenMethod();
             InitilalizeForm();
             //this._owner = this;
             //getExcel();
