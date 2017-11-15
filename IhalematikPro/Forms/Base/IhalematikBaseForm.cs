@@ -30,7 +30,7 @@ namespace IhalematikProUI.Forms.Base
             // 
             // IhalematikBaseForm
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(875, 470);
             this.Name = "IhalematikBaseForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.ResumeLayout(false);

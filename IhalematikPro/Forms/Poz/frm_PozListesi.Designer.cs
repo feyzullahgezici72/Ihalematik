@@ -740,7 +740,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_PozListesi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_PozListesi_Load);
             this.Shown += new System.EventHandler(this.frm_PozListesi_Shown);

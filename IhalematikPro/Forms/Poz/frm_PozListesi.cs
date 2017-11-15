@@ -35,26 +35,9 @@ namespace IhalematikPro.Forms
 
         private void frm_PozListesi_Load(object sender, EventArgs e)
         {
-            // formLoading();
-            this.ShowLoading();
+            grdPozList.Hide();
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-        public void wait()
-        {
-            Thread.Sleep(4000);
-        }
-        public void formLoading()
-        {
-            //using (frm_wait frm = new frm_wait(wait))
-            //{
-            //    frm.ShowDialog();
-            //}
-            
-        }
         public void LoadGrid()
         {
             List<PozModel> pozs = UIPozManager.Instance.GetPozs();
@@ -69,7 +52,6 @@ namespace IhalematikPro.Forms
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
                 grdPozList.DataSource = pozs.Where(p => !p.IsActive);
-                //gridViewVehicle.Columns[colEdit.].Visible = false;
                 colEdit.Visible = false;
             }
             if (this.FocusedRowHandle != 0)
@@ -167,10 +149,8 @@ namespace IhalematikPro.Forms
             stopWatch.Start();
             LoadGrid();
             stopWatch.Stop();
-            // Get the elapsed time as a TimeSpan value.
             TimeSpan ts = stopWatch.Elapsed;
-            MessageBox.Show(ts.Milliseconds.ToString());
-            this.HideLoading();
+            grdPozList.Show();
         }
     }
 }
