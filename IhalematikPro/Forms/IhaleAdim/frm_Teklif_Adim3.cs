@@ -409,27 +409,7 @@ namespace IhalematikPro.Forms
             grdAddVehicle.Refresh();
         }
 
-        private void simpleButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
-            frm_IscilikFirimFiyat a5 = (frm_IscilikFirimFiyat)Application.OpenForms["frm_IscilikFirimFiyat"];
-            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-            if (a5 == null)
-            {
-                a5 = new frm_IscilikFirimFiyat();
-                a5.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                a5.FormClosed += new FormClosedEventHandler(A5_FormClosed);
-                af.MainPanel.Visible = false;
-                a5.Show();
-
-            }
-            else
-            {
-                a5.Activate();
-            }
-
-        }
+       
 
         private void A5_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -544,6 +524,32 @@ namespace IhalematikPro.Forms
                     }
                 }
                 this.CalculateInnerValuesMarkup();
+            }
+        }
+
+        private void btnKaydet_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            frm_IscilikFirimFiyat a5 = (frm_IscilikFirimFiyat)Application.OpenForms["frm_IscilikFirimFiyat"];
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            if (a5 == null)
+            {
+                a5 = new frm_IscilikFirimFiyat();
+                a5.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                a5.FormClosed += new FormClosedEventHandler(A5_FormClosed);
+                af.MainPanel.Visible = false;
+                a5.Show();
+
+            }
+            else
+            {
+                a5.Activate();
             }
         }
     }
