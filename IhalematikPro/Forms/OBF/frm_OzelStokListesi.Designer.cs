@@ -101,7 +101,7 @@
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl5.Location = new System.Drawing.Point(28, 155);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(85, 19);
             this.labelControl5.TabIndex = 14;
@@ -111,7 +111,7 @@
             // 
             this.txtUnit.EnterMoveNextControl = true;
             this.txtUnit.Location = new System.Drawing.Point(122, 118);
-            this.txtUnit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUnit.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUnit.Properties.Appearance.Options.UseBackColor = true;
@@ -123,7 +123,7 @@
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl4.Location = new System.Drawing.Point(68, 120);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(47, 19);
             this.labelControl4.TabIndex = 18;
@@ -133,7 +133,7 @@
             // 
             this.txtDescription.EnterMoveNextControl = true;
             this.txtDescription.Location = new System.Drawing.Point(122, 85);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtDescription.Properties.Appearance.Options.UseBackColor = true;
@@ -149,7 +149,7 @@
             0});
             this.txtUnitPrice.EnterMoveNextControl = true;
             this.txtUnitPrice.Location = new System.Drawing.Point(122, 153);
-            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUnitPrice.Properties.Appearance.Options.UseBackColor = true;
@@ -161,7 +161,7 @@
             // 
             this.txtNumber.EnterMoveNextControl = true;
             this.txtNumber.Location = new System.Drawing.Point(122, 51);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtNumber.Properties.Appearance.Options.UseBackColor = true;
@@ -174,7 +174,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl2.Location = new System.Drawing.Point(36, 50);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(78, 19);
             this.labelControl2.TabIndex = 22;
@@ -201,7 +201,7 @@
             this.pnlObfKayit.Controls.Add(this.labelControl2);
             this.pnlObfKayit.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlObfKayit.Location = new System.Drawing.Point(0, 50);
-            this.pnlObfKayit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlObfKayit.Margin = new System.Windows.Forms.Padding(4);
             this.pnlObfKayit.Name = "pnlObfKayit";
             this.pnlObfKayit.Size = new System.Drawing.Size(440, 730);
             this.pnlObfKayit.TabIndex = 40;
@@ -216,7 +216,7 @@
             this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
             this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnKaydet.Location = new System.Drawing.Point(170, 197);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(124, 50);
             toolTipTitleItem1.Text = "Kaydet";
@@ -235,7 +235,7 @@
             this.btnTemizle.Image = global::IhalematikProUI.Properties.Resources.Actions_edit_clear_icon;
             this.btnTemizle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnTemizle.Location = new System.Drawing.Point(302, 197);
-            this.btnTemizle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTemizle.Margin = new System.Windows.Forms.Padding(4);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(124, 50);
             toolTipTitleItem2.Text = "Temizle";
@@ -250,7 +250,7 @@
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl3.Location = new System.Drawing.Point(44, 85);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(70, 19);
             this.labelControl3.TabIndex = 19;
@@ -265,7 +265,7 @@
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.labelControl1.Location = new System.Drawing.Point(75, 6);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
             this.labelControl1.Size = new System.Drawing.Size(398, 37);
@@ -280,7 +280,7 @@
             this.panel2.Controls.Add(this.btnKapat);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1378, 50);
             this.panel2.TabIndex = 1;
@@ -303,7 +303,7 @@
             this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1316, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(62, 50);
             this.btnKapat.TabIndex = 19;
@@ -318,7 +318,7 @@
             this.panelControl1.Controls.Add(this.panel2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1378, 50);
             this.panelControl1.TabIndex = 39;
@@ -326,10 +326,10 @@
             // grdOBFList
             // 
             this.grdOBFList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdOBFList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdOBFList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdOBFList.Location = new System.Drawing.Point(440, 100);
             this.grdOBFList.MainView = this.gridViewOBFList;
-            this.grdOBFList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdOBFList.Margin = new System.Windows.Forms.Padding(4);
             this.grdOBFList.Name = "grdOBFList";
             this.grdOBFList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGncelle,
@@ -681,7 +681,7 @@
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton1.Location = new System.Drawing.Point(770, 13);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(50, 31);
             toolTipTitleItem3.Text = "Kaydet";
@@ -694,7 +694,7 @@
             // 
             this.textEdit2.EnterMoveNextControl = true;
             this.textEdit2.Location = new System.Drawing.Point(86, 12);
-            this.textEdit2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textEdit2.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit2.Properties.Appearance.Options.UseBackColor = true;
@@ -706,7 +706,7 @@
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl7.Location = new System.Drawing.Point(22, 13);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(57, 19);
             this.labelControl7.TabIndex = 22;
@@ -716,7 +716,7 @@
             // 
             this.textEdit1.EnterMoveNextControl = true;
             this.textEdit1.Location = new System.Drawing.Point(340, 15);
-            this.textEdit1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
@@ -728,7 +728,7 @@
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl6.Location = new System.Drawing.Point(266, 15);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(70, 19);
             this.labelControl6.TabIndex = 19;
@@ -746,11 +746,11 @@
             this.Controls.Add(this.statusPanel);
             this.Controls.Add(this.pnlObfKayit);
             this.Controls.Add(this.panelControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_OzelStokListesi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmOzelStokListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).EndInit();

@@ -43,6 +43,7 @@ namespace IhalematikPro.Forms
             {
                 gridViewOBFList.FocusedRowHandle = this.FocusedRowHandle;
             }
+            
         }
         private void btnKaydet_Click(object sender, EventArgs e)
         {

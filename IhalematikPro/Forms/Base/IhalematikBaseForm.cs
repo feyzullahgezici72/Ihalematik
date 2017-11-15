@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace IhalematikProUI.Forms.Base
 {
@@ -30,14 +31,25 @@ namespace IhalematikProUI.Forms.Base
             // 
             // IhalematikBaseForm
             // 
-            this.ClientSize = new System.Drawing.Size(875, 470);
-            this.Name = "IhalematikBaseForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            ScreenMethod();
+            this.Load += new System.EventHandler(this.IhalematikBaseForm_Load);
             this.ResumeLayout(false);
 
         }
 
+        public void ScreenMethod()
+        {
+            this.ClientSize = new System.Drawing.Size(Screen.PrimaryScreen.WorkingArea.Width, Screen.PrimaryScreen.WorkingArea.Height);
+            this.Name = "IhalematikBaseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+        }
+
         private void panelLoading_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IhalematikBaseForm_Load(object sender, EventArgs e)
         {
 
         }
