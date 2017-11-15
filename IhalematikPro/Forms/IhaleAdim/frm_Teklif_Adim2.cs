@@ -28,8 +28,6 @@ namespace IhalematikPro.Forms
         {
             InitializeComponent();
             base.ScreenMethod();
-            bindingSourceMaterialListNonWorkship.DataSource = typeof(List<MaterialListModel>);
-            grdMaterialListNonWorkship.DataSource = bindingSourceMaterialListNonWorkship;
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -46,8 +44,6 @@ namespace IhalematikPro.Forms
         {
             lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
-            this.LoadTenderGroupGrid();
-            this.CalculateTotalMarkup();
         }
         private void CalculateTotalMarkup()
         {
@@ -78,18 +74,25 @@ namespace IhalematikPro.Forms
             foreach (var item in items)
             {
                 item.Markup = markup;
-                MaterialListProvider.Instance.Save(item);
+                //MaterialListProvider.Instance.Save(item);
             }
-
-
-            this.CalculateTotalMarkup();
             this.LoadTenderMaterialList();
+            this.CalculateTotalMarkup();
         }
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
             if (e.Column == colMarkup)
             {
+                int currenMaterialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialListNonWorkship.GetFocusedRowCellValue("Id"));
+                foreach (var item in CurrentManager.Instance.CurrentTender.MaterialList)
+                {
+                    if (item.Id.Equals(currenMaterialId))
+                    {
+                        item.Markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
+                        break;
+                    }
+                }
                 double baseAmount = 0;
                 this.CalculateInnerValue(ref baseAmount);
             }
@@ -113,12 +116,13 @@ namespace IhalematikPro.Forms
         frm_TeklifAdimSon a4 = (frm_TeklifAdimSon)Application.OpenForms["frm_TeklifSonAdim"];
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListNonWorkship();
+            List<MaterialListModel> items = grdMaterialListNonWorkship.DataSource as List<MaterialListModel>;
             if (items != null)
             {
-                foreach (MaterialList materialList in items)
+                foreach (MaterialListModel materialList in items)
                 {
-                    MaterialListProvider.Instance.Save(materialList);// materialListModel.Save();
+                    materialList.Save();
+                    //MaterialListProvider.Instance.Save(materialList);// materialListModel.Save();
                 }
             }
             frm_MesajFormu frm = new frm_MesajFormu();
@@ -200,6 +204,14 @@ namespace IhalematikPro.Forms
             gridViewTenderGroup.SetFocusedRowCellValue(colIsSelected, true);
             this.SelectedGroupId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewTenderGroup.GetFocusedRowCellValue("Id"));
             LoadTenderMaterialList();
+        }
+
+        private void frm_Teklif_Adim2_Shown(object sender, EventArgs e)
+        {
+            bindingSourceMaterialListNonWorkship.DataSource = typeof(List<MaterialListModel>);
+            grdMaterialListNonWorkship.DataSource = bindingSourceMaterialListNonWorkship;
+            this.LoadTenderGroupGrid();
+            this.CalculateTotalMarkup();
         }
     }
 }

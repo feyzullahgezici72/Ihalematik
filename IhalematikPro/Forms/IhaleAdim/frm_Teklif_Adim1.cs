@@ -56,7 +56,6 @@ namespace IhalematikPro.Forms
             lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(Frm_Teklif_Adim1_KeyDown);
-            this.LoadTenderGroupGrid();
         }
         public void LoadTenderGroupGrid()
         {
@@ -92,7 +91,7 @@ namespace IhalematikPro.Forms
 
         private void SaveMaterialListIsWorkship()
         {
-            int[] selectedRows = grdMaterialList2.GetSelectedRows();
+            int[] selectedRows = gridViewMaterialList.GetSelectedRows();
 
             MaterialList[] items = CurrentManager.Instance.CurrentTender.MaterialList.ToArray();
 
@@ -147,6 +146,7 @@ namespace IhalematikPro.Forms
 
         private void grdMaterialList2_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
+            //MaterialList selectedItem = gridViewMaterialList.GetRow(e.RowHandle) as MaterialList;
             double baseAmount = CurrentManager.Instance.CurrentTender.MaterialList.Sum(p => p.TotalAmount);
             double baseKDVAmount = CurrentManager.Instance.CurrentTender.MaterialList.Sum(p => p.KDVAmount);
 
@@ -159,8 +159,8 @@ namespace IhalematikPro.Forms
         {
             if (this.SelectedGroupId != 0)
             {
-                grdMaterialList.DataSource = CurrentManager.Instance.CurrentTender.MaterialList.Where(p=> p.TenderGroupId == this.SelectedGroupId);
-                grdMaterialList.RefreshDataSource(); 
+                grdMaterialList.DataSource = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId);
+                grdMaterialList.RefreshDataSource();
             }
         }
 
@@ -179,7 +179,7 @@ namespace IhalematikPro.Forms
         {
             if (this.SelectedGroupId != 0 && CurrentManager.Instance.CurrentTender.MaterialList != null)
             {
-                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList(); 
+                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
                 grdMaterialList.DataSource = items;
             }
         }
@@ -193,6 +193,11 @@ namespace IhalematikPro.Forms
             gridViewTenderGroup.SetFocusedRowCellValue(colIsSelected, true);
             this.SelectedGroupId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewTenderGroup.GetFocusedRowCellValue("Id"));
             LoadTenderMaterialList();
+        }
+
+        private void frm_Teklif_Adim1_Shown(object sender, EventArgs e)
+        {
+            this.LoadTenderGroupGrid();
         }
     }
 }
