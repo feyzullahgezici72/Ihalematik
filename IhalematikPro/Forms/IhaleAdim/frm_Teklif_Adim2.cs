@@ -15,10 +15,11 @@ using IhalematikPro.Model;
 using IhalematikProUI.Model;
 using IhalematikProUI.Forms;
 using System.Threading;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikPro.Forms
 {
-    public partial class frm_Teklif_Adim2 : DevExpress.XtraEditors.XtraForm
+    public partial class frm_Teklif_Adim2 : IhalematikBaseForm
     {
         private object a3;
         public int SelectedGroupId { get; set; }
@@ -26,6 +27,7 @@ namespace IhalematikPro.Forms
         public frm_Teklif_Adim2()
         {
             InitializeComponent();
+            base.ScreenMethod();
             bindingSourceMaterialListNonWorkship.DataSource = typeof(List<MaterialListModel>);
             grdMaterialListNonWorkship.DataSource = bindingSourceMaterialListNonWorkship;
         }

@@ -8,14 +8,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikProUI.Forms
 {
-    public partial class frm_TeklifListesi : DevExpress.XtraEditors.XtraForm
+    public partial class frm_TeklifListesi : IhalematikBaseForm
     {
         public frm_TeklifListesi()
         {
             InitializeComponent();
+            base.ScreenMethod();
+
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -24,6 +27,11 @@ namespace IhalematikProUI.Forms
         }
 
         private void groupControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frm_TeklifListesi_Load(object sender, EventArgs e)
         {
 
         }

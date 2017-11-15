@@ -15,15 +15,17 @@ using IhalematikProUI.Report;
 using IhalematikProUI.Model;
 using DevExpress.XtraReports.UI;
 using System.Threading;
+using IhalematikProUI.Forms.Base;
 //using IhalematikProUI.Report;
 
 namespace IhalematikProUI.Forms
 {
-    public partial class frm_TeklifAdimSon : DevExpress.XtraEditors.XtraForm
+    public partial class frm_TeklifAdimSon : IhalematikBaseForm
     {
         public frm_TeklifAdimSon()
         {
             InitializeComponent();
+            base.ScreenMethod();
         }
 
         private void btnKapat_Click(object sender, EventArgs e)

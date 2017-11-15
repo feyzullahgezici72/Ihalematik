@@ -9,14 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Threading;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikProUI.Forms
 {
-    public partial class frm_TedarikciTanimlama : DevExpress.XtraEditors.XtraForm
+    public partial class frm_TedarikciTanimlama : IhalematikBaseForm
     {
         public frm_TedarikciTanimlama()
         {
             InitializeComponent();
+            base.ScreenMethod();
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
