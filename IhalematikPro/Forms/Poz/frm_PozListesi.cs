@@ -58,6 +58,7 @@ namespace IhalematikPro.Forms
             }
             grdPozList.DataSource = pozs;
             gridViewPozList.FocusedRowHandle = this.FocusedRowHandle;
+            lblRecordCount.Text = pozs.Count.ToString();
         }
         private void btnKaydet_Click(object sender, EventArgs e)
         {
