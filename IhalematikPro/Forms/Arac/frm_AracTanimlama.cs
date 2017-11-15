@@ -14,10 +14,11 @@ using IhalematikProUI.Forms;
 using System.Threading;
 using IhalematikProBL.Provider;
 using IhalematikProBL.Entity;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikPro.Forms
 {
-    public partial class frm_AracTanimlama : DevExpress.XtraEditors.XtraForm
+    public partial class frm_AracTanimlama : IhalematikBaseForm
     {
         public int FocusedRowHandle = 0;
         public int SelectedTitleId = 0;
@@ -34,38 +35,12 @@ namespace IhalematikPro.Forms
 
         public void InitilalizeForm()
         {
-            ddlVehicleTitle.Properties.Items.Clear();
-            List<VehicleTitleModel> models = UIVehicleTitleManager.Instance.GetVehicleTitles();
-            ddlVehicleTitle.Properties.Items.AddRange(models);
-            if (this.SelectedTitleId != 0)
-            {
-                VehicleTitleModel selectedTite = models.Where(p => p.Id == this.SelectedTitleId).FirstOrDefault();
-                int selectedIndex = models.IndexOf(selectedTite);
-                ddlVehicleTitle.SelectedIndex = selectedIndex;
-            }
             //ddlVehicleTitle.SelectedIndex = 0;
         }
 
         public void LoadGrid()
         {
-            List<VehicleModel> models = UIVehicleManager.Instance.GetVehicles();
-
-            if (cmbAktivePasive.SelectedIndex == 0)
-            {
-                grdVehicle.DataSource = models.Where(p => p.IsActive);
-                colEdit.Visible = true;
-            }
-            else if (cmbAktivePasive.SelectedIndex == 1)
-            {
-                grdVehicle.DataSource = models.Where(p => !p.IsActive);
-                //gridViewVehicle.Columns[colEdit.].Visible = false;
-                colEdit.Visible = false;
-            }
-
-            if (this.FocusedRowHandle != 0)
-            {
-                gridViewVehicle.FocusedRowHandle = this.FocusedRowHandle;
-            }
+            grdVehicle.Hide();
         }
         private void frm_AracTanimlama_Load(object sender, EventArgs e)
         {
@@ -233,6 +208,37 @@ namespace IhalematikPro.Forms
             txtRentGeneralFare.ResetText();
             txtRentOtherFare.ResetText();
             txtServiceFare.ResetText();
+        }
+
+        private void frm_AracTanimlama_Shown(object sender, EventArgs e)
+        {
+            List<Vehicle> models = UIVehicleManager.Instance.GetVehicles();
+
+            if (cmbAktivePasive.SelectedIndex == 0)
+            {
+                grdVehicle.DataSource = models.Where(p => p.IsActive);
+                colEdit.Visible = true;
+            }
+            else if (cmbAktivePasive.SelectedIndex == 1)
+            {
+                grdVehicle.DataSource = models.Where(p => !p.IsActive);
+                colEdit.Visible = false;
+            }
+
+            if (this.FocusedRowHandle != 0)
+            {
+                gridViewVehicle.FocusedRowHandle = this.FocusedRowHandle;
+            }
+            ddlVehicleTitle.Properties.Items.Clear();
+            List<VehicleTitle> modelVehicleTitles = UIVehicleTitleManager.Instance.GetVehicleTitles();
+            ddlVehicleTitle.Properties.Items.AddRange(modelVehicleTitles);
+            if (this.SelectedTitleId != 0)
+            {
+                VehicleTitle selectedTite = modelVehicleTitles.Where(p => p.Id == this.SelectedTitleId).FirstOrDefault();
+                int selectedIndex = modelVehicleTitles.IndexOf(selectedTite);
+                ddlVehicleTitle.SelectedIndex = selectedIndex;
+            }
+            grdVehicle.Show();
         }
     }
 }

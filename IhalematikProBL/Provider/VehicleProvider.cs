@@ -14,7 +14,7 @@ namespace IhalematikProBL.Provider
     {
         public VehicleProvider()
         {
-            this.EnableCaching = false;
+            this.EnableCaching = true;
         }
         protected override Hashtable GetCommonParameters(Vehicle t)
         {

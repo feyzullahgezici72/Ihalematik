@@ -12,6 +12,10 @@ namespace IhalematikProBL.Provider
 {
     public class VehicleTitleProvider : CustomEntityBaseProvider<VehicleTitle, VehicleTitleProvider>
     {
+        public VehicleTitleProvider()
+        {
+            this.EnableCaching = true;
+        }
         protected override Hashtable GetCommonParameters(VehicleTitle t)
         {
             Hashtable parameters = base.GetCommonParameters(t);

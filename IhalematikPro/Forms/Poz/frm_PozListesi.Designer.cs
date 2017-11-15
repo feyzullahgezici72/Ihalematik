@@ -108,7 +108,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(908, 34);
+            this.panelControl1.Size = new System.Drawing.Size(1362, 34);
             this.panelControl1.TabIndex = 18;
             // 
             // panel2
@@ -120,7 +120,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(908, 34);
+            this.panel2.Size = new System.Drawing.Size(1362, 34);
             this.panel2.TabIndex = 1;
             // 
             // pcWorld
@@ -141,7 +141,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(867, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1321, 0);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(41, 34);
             this.btnKapat.TabIndex = 19;
@@ -320,7 +320,7 @@
             this.grdPozList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGncelle,
             this.btnSl});
-            this.grdPozList.Size = new System.Drawing.Size(613, 382);
+            this.grdPozList.Size = new System.Drawing.Size(1067, 382);
             this.grdPozList.TabIndex = 38;
             this.grdPozList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPozList});
@@ -650,7 +650,7 @@
             this.panelControl2.Location = new System.Drawing.Point(295, 34);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(613, 34);
+            this.panelControl2.Size = new System.Drawing.Size(1067, 34);
             this.panelControl2.TabIndex = 39;
             // 
             // simpleButton1
@@ -678,7 +678,7 @@
             this.statusPanel.Location = new System.Drawing.Point(295, 427);
             this.statusPanel.Margin = new System.Windows.Forms.Padding(2);
             this.statusPanel.Name = "statusPanel";
-            this.statusPanel.Size = new System.Drawing.Size(613, 23);
+            this.statusPanel.Size = new System.Drawing.Size(1067, 23);
             this.statusPanel.TabIndex = 43;
             // 
             // cmbAktivePasive
@@ -686,7 +686,7 @@
             this.cmbAktivePasive.Dock = System.Windows.Forms.DockStyle.Right;
             this.cmbAktivePasive.EditValue = "Aktif Kayıtlar";
             this.cmbAktivePasive.EnterMoveNextControl = true;
-            this.cmbAktivePasive.Location = new System.Drawing.Point(500, 0);
+            this.cmbAktivePasive.Location = new System.Drawing.Point(954, 0);
             this.cmbAktivePasive.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAktivePasive.Name = "cmbAktivePasive";
             this.cmbAktivePasive.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -730,7 +730,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(908, 450);
+            this.ClientSize = new System.Drawing.Size(1362, 450);
             this.ControlBox = false;
             this.Controls.Add(this.statusPanel);
             this.Controls.Add(this.grdPozList);
@@ -743,11 +743,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_PozListesi_Load);
             this.Shown += new System.EventHandler(this.frm_PozListesi_Shown);
-            this.Controls.SetChildIndex(this.panelControl1, 0);
-            this.Controls.SetChildIndex(this.pozMenu, 0);
-            this.Controls.SetChildIndex(this.panelControl2, 0);
-            this.Controls.SetChildIndex(this.grdPozList, 0);
-            this.Controls.SetChildIndex(this.statusPanel, 0);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

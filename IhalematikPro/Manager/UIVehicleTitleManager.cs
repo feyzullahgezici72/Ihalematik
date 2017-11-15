@@ -12,11 +12,11 @@ namespace IhalematikPro.Manager
 {
     public class UIVehicleTitleManager : SingletonBase<UIVehicleTitleManager>
     {
-        public List<VehicleTitleModel> GetVehicleTitles()
+        public List<VehicleTitle> GetVehicleTitles()
         {
             List<VehicleTitle> items = VehicleTitleProvider.Instance.GetItems();
-            List<VehicleTitleModel> models = IhalematikModelBase.GetModels<VehicleTitleModel, VehicleTitle>(items);
-            return models;
+            //List<VehicleTitleModel> models = IhalematikModelBase.GetModels<VehicleTitleModel, VehicleTitle>(items);
+            return items;
         }
     }
 }

@@ -13,11 +13,11 @@ namespace IhalematikPro.Manager
 {
     public class UIVehicleManager : SingletonBase<UIVehicleManager>
     {
-        public List<VehicleModel> GetVehicles()
+        public List<Vehicle> GetVehicles()
         {
             List<Vehicle> items = VehicleProvider.Instance.GetItems();
-            List<VehicleModel> models = IhalematikModelBase.GetModels<VehicleModel, Vehicle>(items);
-            return models;
+            //List<VehicleModel> models = IhalematikModelBase.GetModels<VehicleModel, Vehicle>(items);
+            return items;
         }
         public List<DropDownModel> GetDropDownVehicles()
         {

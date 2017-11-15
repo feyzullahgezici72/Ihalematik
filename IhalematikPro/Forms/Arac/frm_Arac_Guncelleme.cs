@@ -59,7 +59,7 @@ namespace IhalematikProUI.Forms
 
         private void frm_Arac_Guncelleme_Load(object sender, EventArgs e)
         {
-            List<VehicleTitleModel> models = UIVehicleTitleManager.Instance.GetVehicleTitles();
+            List<VehicleTitle> models = UIVehicleTitleManager.Instance.GetVehicleTitles();
             ddlVehicleTitle.Properties.Items.AddRange(models);
             ddlVehicleTitle.ReadOnly = true;
             if (CurrentVehicle != null)
@@ -71,25 +71,23 @@ namespace IhalematikProUI.Forms
                 if (model.IsCompanyVehicle)
                 {
                     rbCompanyVehicle.Checked = true;
-                    txtCompanyFuelOilFare.Text = model.FuelOilFare.ToString();// = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>();
-                    txtCompanyFuelOilDay.Text = model.FuelOilDay.ToString(); //= SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>();
-                    txtCompanyDriverFare.Text = model.DriverFare.ToString(); //SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>();
-                    txtCompanyMaintenanceFare.Text = model.MaintenanceFare.ToString(); //= SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>();
-                    txtCompanyServiceFare.Text = model.ServiceFare.ToString();// = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>();
-                    txtCompanyGeneralFare.Text = model.GeneralFare.ToString(); //= SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>();
-                    txtCompanyOtherFare.Text = model.OtherFare.ToString(); //= SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>();
+                    txtCompanyFuelOilFare.Text = model.FuelOilFare.ToString();
+                    txtCompanyFuelOilDay.Text = model.FuelOilDay.ToString(); 
+                    txtCompanyDriverFare.Text = model.DriverFare.ToString(); 
+                    txtCompanyMaintenanceFare.Text = model.MaintenanceFare.ToString();
+                    txtCompanyServiceFare.Text = model.ServiceFare.ToString();
+                    txtCompanyGeneralFare.Text = model.GeneralFare.ToString();
+                    txtCompanyOtherFare.Text = model.OtherFare.ToString(); 
                 }
                 else
                 {
                     rbRentVehicle.Checked = true;
                     txtRentFare.Text = model.RentFare.ToString();
-                    txtRentFuelOilFare.Text = model.FuelOilFare.ToString();// = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>();
-                    txtRentFuelOilDay.Text = model.FuelOilDay.ToString(); //= SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>();
-                    txtRentDriverFare.Text = model.DriverFare.ToString(); //SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>();
-                    //txtCompanyMaintenanceFare.Text = model.MaintenanceFare.ToString(); //= SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>();
-                    //txtCompanyServiceFare.Text = model.ServiceFare.ToString();// = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>();
-                    txtRentGeneralFare.Text = model.GeneralFare.ToString(); //= SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>();
-                    txtRentOtherFare.Text = model.OtherFare.ToString(); //= SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>();
+                    txtRentFuelOilFare.Text = model.FuelOilFare.ToString();
+                    txtRentFuelOilDay.Text = model.FuelOilDay.ToString();
+                    txtRentDriverFare.Text = model.DriverFare.ToString();
+                    txtRentGeneralFare.Text = model.GeneralFare.ToString(); 
+                    txtRentOtherFare.Text = model.OtherFare.ToString(); 
                     if (CurrentVehicle.RentType == IhalematikProBL.Enum.RentTypesEnum.Day)
                     {
                         rdDay.Checked = true;
