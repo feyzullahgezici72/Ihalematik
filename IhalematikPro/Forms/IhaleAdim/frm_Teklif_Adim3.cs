@@ -43,20 +43,8 @@ namespace IhalematikPro.Forms
             grdAddWorker.DataSource = bindingSourceAddWorker;
             grdAddVehicle.DataSource = bindingSourceAddVehicle;
         }
-        public void wait()
-        {
-            Thread.Sleep(1000);
-        }
-        public void formLoading()
-        {
-            using (frm_wait frm = new frm_wait(wait))
-            {
-                frm.ShowDialog();
-            }
-        }
         private void frm_Teklif_Adim3_Load(object sender, EventArgs e)
         {
-            formLoading();
             //panel
             isciAracGirisPaneli.Top = 0;
             isciAracGirisPaneli.Left = (Screen.PrimaryScreen.WorkingArea.Width / 2) - (isciAracGirisPaneli.Width / 2);

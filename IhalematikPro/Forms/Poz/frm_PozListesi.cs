@@ -14,11 +14,14 @@ using IhalematikPro.Manager;
 using IhalematikProUI.Forms;
 using System.Threading;
 using IhalematikProBL.Provider;
+using System.Diagnostics;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikPro.Forms
 {
-    public partial class frm_PozListesi : DevExpress.XtraEditors.XtraForm
+    public partial class frm_PozListesi : IhalematikBaseForm
     {
+        //frm_wait frm = new frm_wait(0);
         public int FocusedRowHandle = 0;
         public frm_PozListesi()
         {
@@ -32,8 +35,8 @@ namespace IhalematikPro.Forms
 
         private void frm_PozListesi_Load(object sender, EventArgs e)
         {
-            formLoading();
-            LoadGrid();
+            // formLoading();
+            this.ShowLoading();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -46,10 +49,11 @@ namespace IhalematikPro.Forms
         }
         public void formLoading()
         {
-            using (frm_wait frm = new frm_wait(wait))
-            {
-                frm.ShowDialog();
-            }
+            //using (frm_wait frm = new frm_wait(wait))
+            //{
+            //    frm.ShowDialog();
+            //}
+            
         }
         public void LoadGrid()
         {
@@ -155,6 +159,18 @@ namespace IhalematikPro.Forms
             {
 
             }
+        }
+
+        private void frm_PozListesi_Shown(object sender, EventArgs e)
+        {
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            LoadGrid();
+            stopWatch.Stop();
+            // Get the elapsed time as a TimeSpan value.
+            TimeSpan ts = stopWatch.Elapsed;
+            MessageBox.Show(ts.Milliseconds.ToString());
+            this.HideLoading();
         }
     }
 }

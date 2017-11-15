@@ -13,18 +13,9 @@ namespace IhalematikProUI.Forms
 {
     public partial class frm_wait : DevExpress.XtraEditors.XtraForm
     {
-        public Action Worker { get; set; }
-        public frm_wait(Action worker)
+        public frm_wait()
         {
             InitializeComponent();
-            if (worker == null)
-                throw new ArgumentNullException();
-            Worker = worker;
-        }
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-            Task.Factory.StartNew(Worker).ContinueWith(t => { this.Close(); }, TaskScheduler.FromCurrentSynchronizationContext());
         }
     }
 }

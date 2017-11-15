@@ -67,20 +67,8 @@ namespace IhalematikPro.Forms
                 gridViewVehicle.FocusedRowHandle = this.FocusedRowHandle;
             }
         }
-        public void wait()
-        {
-            Thread.Sleep(1000);
-        }
-        public void formLoading()
-        {
-            using (frm_wait frm = new frm_wait(wait))
-            {
-                frm.ShowDialog();
-            }
-        }
         private void frm_AracTanimlama_Load(object sender, EventArgs e)
         {
-            formLoading();
             LoadGrid();
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(Frm_AracTanimlama_KeyDown);

@@ -28,20 +28,9 @@ namespace IhalematikProUI.Forms
         {
             
         }
-        public void wait()
-        {
-            Thread.Sleep(1000);
-        }
-        public void formLoading()
-        {
-            using (frm_wait frm = new frm_wait(wait))
-            {
-                frm.ShowDialog();
-            }
-        }
         private void frm_TedarikciTanimlama_Load(object sender, EventArgs e)
         {
-            formLoading();
+            
             this.KeyPreview = true;
             this.KeyDown +=new KeyEventHandler( Frm_TedarikciTanimlama_KeyDown);
         }

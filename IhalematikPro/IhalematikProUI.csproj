@@ -456,6 +456,9 @@
     <Compile Include="Report\MainReport.Designer.cs">
       <DependentUpon>MainReport.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Base\IhalematikBaseForm.resx">
+      <DependentUpon>IhalematikBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Genel\frm_Anaform.resx">
       <DependentUpon>frm_Anaform.cs</DependentUpon>
     </EmbeddedResource>
