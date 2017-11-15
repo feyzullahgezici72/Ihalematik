@@ -82,12 +82,7 @@ namespace IhalematikPro.Forms
             }
         }
 
-        private void btnKaydet_Click(object sender, EventArgs e)
-        {
-            //this.SaveMaterialListIsWorkship();
-
-           
-        }
+       
 
         private void SaveMaterialListIsWorkship()
         {
@@ -110,11 +105,10 @@ namespace IhalematikPro.Forms
 
         private void OpenForm2()
         {
-            this.Enabled = false;
-            frm_MesajFormu frm = new frm_MesajFormu();
-            frm.lblMesaj.Text = "Malzemeler Kaydedildi...";
-            frm.ShowDialog();
-            //MessageBox.Show("Malzemler Kaydedildi...");
+            //this.Enabled = false;
+            //frm_MesajFormu frm = new frm_MesajFormu();
+            //frm.lblMesaj.Text = "Sonraki Adım Açılıyor...";
+            //frm.ShowDialog();
             this.Close();
             frm_Teklif_Adim2 a4 = (frm_Teklif_Adim2)Application.OpenForms["frm_Teklif_Adim2"];
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];

@@ -116,54 +116,7 @@ namespace IhalematikPro.Forms
         frm_TeklifAdimSon a4 = (frm_TeklifAdimSon)Application.OpenForms["frm_TeklifSonAdim"];
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            List<MaterialListModel> items = grdMaterialListNonWorkship.DataSource as List<MaterialListModel>;
-            if (items != null)
-            {
-                foreach (MaterialListModel materialList in items)
-                {
-                    materialList.Save();
-                    //MaterialListProvider.Instance.Save(materialList);// materialListModel.Save();
-                }
-            }
-            frm_MesajFormu frm = new frm_MesajFormu();
-            frm.lblMesaj.Text = "Malzemeler Kaydedildi...";
-            frm.ShowDialog();
-            this.Close();
-            frm_Teklif_Adim3 a3 = (frm_Teklif_Adim3)Application.OpenForms["frm_Teklif_Adim3"];
-            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-
-            if (CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() == 0)
-            {
-                if (a4 == null)
-                {
-                    a4 = new frm_TeklifAdimSon();
-                    a4.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                    a4.FormClosed += new FormClosedEventHandler(a4_FormClosed);
-                    af.MainPanel.Visible = false;
-                    a4.Show();
-
-                }
-                else
-                {
-                    a4.Activate();
-                }
-            }
-            else
-            {
-                if (a3 == null)
-                {
-                    a3 = new frm_Teklif_Adim3();
-                    a3.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                    a3.FormClosed += new FormClosedEventHandler(a3_FormClosed);
-                    af.MainPanel.Visible = false;
-                    a3.Show();
-
-                }
-                else
-                {
-                    a3.Activate();
-                }
-            }
+           
         }
         private void a4_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -212,6 +165,47 @@ namespace IhalematikPro.Forms
             grdMaterialListNonWorkship.DataSource = bindingSourceMaterialListNonWorkship;
             this.LoadTenderGroupGrid();
             this.CalculateTotalMarkup();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frm_Teklif_Adim3 a3 = (frm_Teklif_Adim3)Application.OpenForms["frm_Teklif_Adim3"];
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+
+            if (CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() == 0)
+            {
+                if (a4 == null)
+                {
+                    a4 = new frm_TeklifAdimSon();
+                    a4.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                    a4.FormClosed += new FormClosedEventHandler(a4_FormClosed);
+                    af.MainPanel.Visible = false;
+                    a4.Show();
+
+                }
+                else
+                {
+                    a4.Activate();
+                }
+            }
+            else
+            {
+                if (a3 == null)
+                {
+                    a3 = new frm_Teklif_Adim3();
+                    a3.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                    a3.FormClosed += new FormClosedEventHandler(a3_FormClosed);
+                    af.MainPanel.Visible = false;
+                    a3.Show();
+
+                }
+                else
+                {
+                    a3.Activate();
+                }
+            }
+
         }
     }
 }
