@@ -50,23 +50,11 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim1_Load(object sender, EventArgs e)
         {
-            formLoading();
             lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(Frm_Teklif_Adim1_KeyDown);
             this.LoadTenderGroupGrid();
-        }
-        public void wait()
-        {
-            Thread.Sleep(1000);
-        }
-        public void formLoading()
-        {
-            using (frm_wait frm = new frm_wait(wait))
-            {
-                frm.ShowDialog();
-            }
         }
         public void LoadTenderGroupGrid()
         {

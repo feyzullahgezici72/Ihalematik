@@ -35,20 +35,8 @@ namespace IhalematikProUI.Forms
         {
 
         }
-        public void wait()
-        {
-            Thread.Sleep(1000);
-        }
-        public void formLoading()
-        {
-            using (frm_wait frm = new frm_wait(wait))
-            {
-                frm.ShowDialog();
-            }
-        }
         private void frm_TeklifSonAdim_Load(object sender, EventArgs e)
         {
-            formLoading();
             lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
             List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();

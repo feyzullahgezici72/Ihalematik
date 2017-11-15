@@ -42,22 +42,10 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim2_Load(object sender, EventArgs e)
         {
-            formLoading();
             lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
             this.LoadTenderGroupGrid();
             this.CalculateTotalMarkup();
-        }
-        public void wait()
-        {
-            Thread.Sleep(1000);
-        }
-        public void formLoading()
-        {
-            using (frm_wait frm = new frm_wait(wait))
-            {
-                frm.ShowDialog();
-            }
         }
         private void CalculateTotalMarkup()
         {

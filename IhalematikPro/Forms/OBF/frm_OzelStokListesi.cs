@@ -25,17 +25,6 @@ namespace IhalematikPro.Forms
             InitializeComponent();
             LoadGrid();
         }
-        public void bekleyiniz()
-        {
-            Thread.Sleep(1000);
-        }
-        public void MesajVer()
-        {
-            using (frm_wait frm = new frm_wait(bekleyiniz))
-            {
-                frm.ShowDialog();
-            }
-        }
         public void LoadGrid()
         {
             List<OBFModel> items = UIOBFManager.Instance.GetOBFs();
@@ -98,7 +87,6 @@ namespace IhalematikPro.Forms
 
         private void frmOzelStokListesi_Load(object sender, EventArgs e)
         {
-            MesajVer();
             this.LoadGrid();
         }
         

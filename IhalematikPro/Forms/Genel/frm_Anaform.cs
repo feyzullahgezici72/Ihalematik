@@ -17,6 +17,7 @@ namespace IhalematikPro.Forms
 {
     public partial class frm_Anaform : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+
         private const int CP_NOCLOSE_BUTTON = 0X200;// X buttonunu pasif yap
         protected override CreateParams CreateParams
         {
