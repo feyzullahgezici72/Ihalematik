@@ -460,9 +460,6 @@ namespace IhalematikPro.Forms
 
         }
 
-        private void frm_Anaform_MaximumSizeChanged(object sender, EventArgs e)
-        {
-        }
 
         private void barButtonItem27_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -656,6 +653,16 @@ namespace IhalematikPro.Forms
         private void labelControl2_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void skinRibbonGalleryBarItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+          
+        }
+
+        private void skin_ItemClick(object sender, ItemClickEventArgs e)
+        {
+             
         }
     }
 }

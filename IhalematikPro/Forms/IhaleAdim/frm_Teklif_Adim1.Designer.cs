@@ -126,7 +126,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1376, 50);
+            this.panelControl1.Size = new System.Drawing.Size(1412, 50);
             this.panelControl1.TabIndex = 19;
             // 
             // pcWorld
@@ -146,7 +146,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1312, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1348, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(64, 50);
@@ -187,7 +187,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 50);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1376, 89);
+            this.panelControl2.Size = new System.Drawing.Size(1412, 89);
             this.panelControl2.TabIndex = 20;
             // 
             // lblTenderDescription
@@ -250,7 +250,7 @@
             this.btnPozKayit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnPozKayit.Image = global::IhalematikProUI.Properties.Resources.Inventory_icon__1_;
             this.btnPozKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnPozKayit.Location = new System.Drawing.Point(937, 3);
+            this.btnPozKayit.Location = new System.Drawing.Point(973, 3);
             this.btnPozKayit.Margin = new System.Windows.Forms.Padding(4);
             this.btnPozKayit.Name = "btnPozKayit";
             this.btnPozKayit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -269,7 +269,7 @@
             this.btnObfKayit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnObfKayit.Image = global::IhalematikProUI.Properties.Resources.App_lists_icon__1_;
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnObfKayit.Location = new System.Drawing.Point(1147, 3);
+            this.btnObfKayit.Location = new System.Drawing.Point(1183, 3);
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4);
             this.btnObfKayit.Name = "btnObfKayit";
             this.btnObfKayit.Size = new System.Drawing.Size(226, 83);
@@ -289,7 +289,7 @@
             this.panelControl3.Location = new System.Drawing.Point(0, 592);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1376, 118);
+            this.panelControl3.Size = new System.Drawing.Size(1412, 118);
             this.panelControl3.TabIndex = 21;
             // 
             // simpleButton1
@@ -304,7 +304,7 @@
             this.simpleButton1.Location = new System.Drawing.Point(0, 0);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(471, 118);
+            this.simpleButton1.Size = new System.Drawing.Size(507, 118);
             this.simpleButton1.TabIndex = 12;
             this.simpleButton1.Text = "Fiyat Araştırmasından getir";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -316,7 +316,7 @@
             this.panel2.Controls.Add(this.btnYazdir);
             this.panel2.Controls.Add(this.btnKaydet);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(471, 0);
+            this.panel2.Location = new System.Drawing.Point(507, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(501, 118);
@@ -377,7 +377,7 @@
             this.panel6.Controls.Add(this.txtBaseAmount);
             this.panel6.Controls.Add(this.labelControl8);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(972, 0);
+            this.panel6.Location = new System.Drawing.Point(1008, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(404, 118);
@@ -689,7 +689,7 @@
             this.panelControl6.Location = new System.Drawing.Point(0, 139);
             this.panelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(1376, 453);
+            this.panelControl6.Size = new System.Drawing.Size(1412, 453);
             this.panelControl6.TabIndex = 24;
             // 
             // grdMaterialList
@@ -702,7 +702,7 @@
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstWorkship});
-            this.grdMaterialList.Size = new System.Drawing.Size(990, 453);
+            this.grdMaterialList.Size = new System.Drawing.Size(1026, 453);
             this.grdMaterialList.TabIndex = 0;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdMaterialList2});
@@ -1059,7 +1059,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(1376, 710);
+            this.ClientSize = new System.Drawing.Size(1412, 710);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl6);
             this.Controls.Add(this.panelControl2);
