@@ -13,7 +13,7 @@ namespace IhalematikProBL.Manager
     {
         public int GetLastTenderNumber()
         {
-            object tenderNumber = CustomDBConnectionManager.Instance.ExecuteScalar("Tender_GetLastNumber", new System.Collections.Hashtable());
+            object tenderNumber = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(CustomDBConnectionManager.Instance.ExecuteScalar("Tender_GetLastNumber", new System.Collections.Hashtable()));
             return (int)tenderNumber;
         }
 

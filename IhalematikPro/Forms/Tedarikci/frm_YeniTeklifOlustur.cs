@@ -11,6 +11,10 @@ using DevExpress.XtraEditors;
 using IhalematikPro.Forms;
 using System.Threading;
 using IhalematikProUI.Forms.Tedarikci;
+using IhalematikProBL.Manager;
+using IhalematikProBL.Entity;
+using IhalematikProBL.Provider;
+using IhalematikPro.Manager;
 
 namespace IhalematikProUI.Forms
 {
@@ -41,13 +45,19 @@ namespace IhalematikProUI.Forms
                 Application.DoEvents();
             }
             this.Enabled = false;
-            DialogResult resultMsg = MessageBox.Show("Yeni İhale oluşturulsun mu?", "Yeni ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult resultMsg = MessageBox.Show("Yeni Teklif oluşturulsun mu?", "Yeni ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (resultMsg.Equals(DialogResult.Yes))
             {
+                Offer offer = new Offer();
+                offer.Description = txtAciklama.Text.Trim();
+                offer.IsActive = true;
+                offer.Number = txtTeklifNo.Text;
+
+                OfferProvider.Instance.Save(offer);
+                CurrentManager.Instance.CurrentOffer = offer;
+
                 pbControl.Visible = true;
-
-
-
+                
                 this.Enabled = false;
                 for (int i = 0; i < 101; i++)
                 {
@@ -58,7 +68,6 @@ namespace IhalematikProUI.Forms
                 frm_MesajFormu mf = new frm_MesajFormu();
                 mf.lblMesaj.Text = "Yeni Teklif Oluşturuldu...";
                 mf.ShowDialog();
-
                 this.Close();
                 frm_TedarikcilereTeklifGonder tg = (frm_TedarikcilereTeklifGonder)Application.OpenForms["frm_TedarikcilereTeklifGonder"];
                 frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
@@ -82,6 +91,12 @@ namespace IhalematikProUI.Forms
         private void Tg_FormClosed(object sender, FormClosedEventArgs e)
         {
             tg = null;
+        }
+
+        private void frm_YeniTeklifOlustur_Load(object sender, EventArgs e)
+        {
+            int lastOfferNumber = OfferManager.Instance.GetLastOfferNumber();
+            txtTeklifNo.Text = string.Format("{0}", (lastOfferNumber + 1).ToString().PadLeft(8, '0'));
         }
     }
 }
