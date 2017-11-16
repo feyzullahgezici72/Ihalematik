@@ -120,6 +120,7 @@
     <Compile Include="Entity\OBF.cs" />
     <Compile Include="Entity\Poz.cs" />
     <Compile Include="Entity\Rule.cs" />
+    <Compile Include="Entity\Supplier.cs" />
     <Compile Include="Entity\SupplierSegment.cs" />
     <Compile Include="Entity\Tender.cs" />
     <Compile Include="Entity\TenderEquipment.cs" />
@@ -142,6 +143,7 @@
     <Compile Include="Provider\OBFProvider.cs" />
     <Compile Include="Provider\PozProvider.cs" />
     <Compile Include="Provider\RuleProvider.cs" />
+    <Compile Include="Provider\SupplierProvider.cs" />
     <Compile Include="Provider\SupplierSegmentProvider.cs" />
     <Compile Include="Provider\TenderEquipmentProvider.cs" />
     <Compile Include="Provider\TenderGroupProvider.cs" />
