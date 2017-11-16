@@ -28,7 +28,6 @@ namespace IhalematikPro.Forms
         {
             _owner = owner;
             InitializeComponent();
-            //grdPozList..MultiSelect = true;
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -43,16 +42,6 @@ namespace IhalematikPro.Forms
             pozModels = UIPozManager.Instance.GetPozs(pozNumber);
 
             grdPozList.DataSource = pozModels;
-        }
-
-        private void labelControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gridView1_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
-        {
-
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
