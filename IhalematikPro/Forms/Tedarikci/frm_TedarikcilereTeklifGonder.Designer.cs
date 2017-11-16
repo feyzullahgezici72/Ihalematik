@@ -47,6 +47,9 @@
             this.grdSupplier = new DevExpress.XtraGrid.GridControl();
             this.gridViewSupplier = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colCompanyName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rpstSupplierDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.gridViewMaterialList = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -57,10 +60,7 @@
             this.rpstWorkship = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.btnAktar = new DevExpress.XtraEditors.SimpleButton();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.rpstSupplierDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -71,6 +71,7 @@
             this.panelControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewSupplier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
@@ -78,7 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.rpstWorkship)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -155,7 +155,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 50);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1701, 60);
+            this.panelControl2.Size = new System.Drawing.Size(1701, 70);
             this.panelControl2.TabIndex = 21;
             // 
             // lblTenderDescription
@@ -221,7 +221,7 @@
             this.btnPozKayit.Margin = new System.Windows.Forms.Padding(6);
             this.btnPozKayit.Name = "btnPozKayit";
             this.btnPozKayit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnPozKayit.Size = new System.Drawing.Size(160, 54);
+            this.btnPozKayit.Size = new System.Drawing.Size(160, 64);
             this.btnPozKayit.TabIndex = 5;
             this.btnPozKayit.Text = "F1 : Poz Seç";
             this.btnPozKayit.Click += new System.EventHandler(this.btnPozKayit_Click);
@@ -238,7 +238,7 @@
             this.btnObfKayit.Location = new System.Drawing.Point(1538, 3);
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(6);
             this.btnObfKayit.Name = "btnObfKayit";
-            this.btnObfKayit.Size = new System.Drawing.Size(160, 54);
+            this.btnObfKayit.Size = new System.Drawing.Size(160, 64);
             this.btnObfKayit.TabIndex = 5;
             this.btnObfKayit.Text = "F2 : ÖBF Seç";
             // 
@@ -254,9 +254,9 @@
             // 
             this.panelControl5.Controls.Add(this.grdSupplier);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl5.Location = new System.Drawing.Point(984, 110);
+            this.panelControl5.Location = new System.Drawing.Point(984, 120);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(717, 522);
+            this.panelControl5.Size = new System.Drawing.Size(717, 512);
             this.panelControl5.TabIndex = 28;
             // 
             // grdSupplier
@@ -269,7 +269,7 @@
             this.grdSupplier.Name = "grdSupplier";
             this.grdSupplier.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstSupplierDetail});
-            this.grdSupplier.Size = new System.Drawing.Size(711, 516);
+            this.grdSupplier.Size = new System.Drawing.Size(711, 506);
             this.grdSupplier.TabIndex = 39;
             this.grdSupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSupplier});
@@ -415,13 +415,38 @@
             this.colCompanyName.VisibleIndex = 0;
             this.colCompanyName.Width = 175;
             // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "FAALİYET ALANI";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 1;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.ColumnEdit = this.rpstSupplierDetail;
+            this.gridColumn7.MaxWidth = 30;
+            this.gridColumn7.MinWidth = 30;
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 2;
+            this.gridColumn7.Width = 30;
+            // 
+            // rpstSupplierDetail
+            // 
+            this.rpstSupplierDetail.AutoHeight = false;
+            this.rpstSupplierDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstSupplierDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Detay", null, null, true)});
+            this.rpstSupplierDetail.Name = "rpstSupplierDetail";
+            this.rpstSupplierDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
             // panelControl7
             // 
             this.panelControl7.Controls.Add(this.grdMaterialList);
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl7.Location = new System.Drawing.Point(0, 110);
+            this.panelControl7.Location = new System.Drawing.Point(0, 120);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(919, 522);
+            this.panelControl7.Size = new System.Drawing.Size(919, 512);
             this.panelControl7.TabIndex = 26;
             // 
             // grdMaterialList
@@ -434,7 +459,7 @@
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstWorkship});
-            this.grdMaterialList.Size = new System.Drawing.Size(913, 516);
+            this.grdMaterialList.Size = new System.Drawing.Size(913, 506);
             this.grdMaterialList.TabIndex = 1;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
@@ -671,9 +696,9 @@
             // 
             this.panelControl4.Controls.Add(this.btnAktar);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl4.Location = new System.Drawing.Point(919, 110);
+            this.panelControl4.Location = new System.Drawing.Point(919, 120);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(65, 522);
+            this.panelControl4.Size = new System.Drawing.Size(65, 512);
             this.panelControl4.TabIndex = 29;
             // 
             // btnAktar
@@ -685,21 +710,6 @@
             this.btnAktar.Size = new System.Drawing.Size(54, 51);
             this.btnAktar.TabIndex = 0;
             // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "FAALİYET ALANI";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 1;
-            // 
-            // rpstSupplierDetail
-            // 
-            this.rpstSupplierDetail.AutoHeight = false;
-            this.rpstSupplierDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstSupplierDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Detay", null, null, true)});
-            this.rpstSupplierDetail.Name = "rpstSupplierDetail";
-            this.rpstSupplierDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "gridColumn6";
@@ -707,16 +717,6 @@
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 2;
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.ColumnEdit = this.rpstSupplierDetail;
-            this.gridColumn7.MaxWidth = 30;
-            this.gridColumn7.MinWidth = 30;
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 2;
-            this.gridColumn7.Width = 30;
             // 
             // frm_TedarikcilereTeklifGonder
             // 
@@ -747,6 +747,7 @@
             this.panelControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdSupplier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewSupplier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
@@ -754,7 +755,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.rpstWorkship)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail)).EndInit();
             this.ResumeLayout(false);
 
         }

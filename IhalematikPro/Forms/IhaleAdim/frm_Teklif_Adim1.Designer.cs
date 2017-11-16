@@ -187,7 +187,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 50);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1912, 60);
+            this.panelControl2.Size = new System.Drawing.Size(1912, 70);
             this.panelControl2.TabIndex = 20;
             // 
             // lblTenderDescription
@@ -253,7 +253,7 @@
             this.btnPozKayit.Margin = new System.Windows.Forms.Padding(6);
             this.btnPozKayit.Name = "btnPozKayit";
             this.btnPozKayit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnPozKayit.Size = new System.Drawing.Size(160, 54);
+            this.btnPozKayit.Size = new System.Drawing.Size(160, 64);
             this.btnPozKayit.TabIndex = 5;
             this.btnPozKayit.Text = "F1 : Poz Seç";
             this.btnPozKayit.Click += new System.EventHandler(this.simpleButton3_Click);
@@ -270,7 +270,7 @@
             this.btnObfKayit.Location = new System.Drawing.Point(1749, 3);
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(6);
             this.btnObfKayit.Name = "btnObfKayit";
-            this.btnObfKayit.Size = new System.Drawing.Size(160, 54);
+            this.btnObfKayit.Size = new System.Drawing.Size(160, 64);
             this.btnObfKayit.TabIndex = 5;
             this.btnObfKayit.Text = "F2 : ÖBF Seç";
             this.btnObfKayit.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -281,7 +281,7 @@
             this.grupPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.grupPanel.Location = new System.Drawing.Point(0, 0);
             this.grupPanel.Name = "grupPanel";
-            this.grupPanel.Size = new System.Drawing.Size(386, 928);
+            this.grupPanel.Size = new System.Drawing.Size(386, 918);
             this.grupPanel.TabIndex = 1;
             // 
             // grdTenderGroup
@@ -300,7 +300,7 @@
             this.btnSil,
             this.rpstColId,
             this.rpstSelected});
-            this.grdTenderGroup.Size = new System.Drawing.Size(380, 922);
+            this.grdTenderGroup.Size = new System.Drawing.Size(380, 912);
             this.grdTenderGroup.TabIndex = 40;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup,
@@ -507,10 +507,10 @@
             this.panelControl6.Controls.Add(this.grdMaterialList);
             this.panelControl6.Controls.Add(this.grupPanel);
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl6.Location = new System.Drawing.Point(0, 110);
+            this.panelControl6.Location = new System.Drawing.Point(0, 120);
             this.panelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(1912, 928);
+            this.panelControl6.Size = new System.Drawing.Size(1912, 918);
             this.panelControl6.TabIndex = 24;
             // 
             // panelControl3
@@ -520,7 +520,7 @@
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl3.Controls.Add(this.panel2);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl3.Location = new System.Drawing.Point(386, 824);
+            this.panelControl3.Location = new System.Drawing.Point(386, 814);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(1526, 104);
@@ -664,7 +664,7 @@
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstWorkship});
-            this.grdMaterialList.Size = new System.Drawing.Size(1526, 928);
+            this.grdMaterialList.Size = new System.Drawing.Size(1526, 918);
             this.grdMaterialList.TabIndex = 0;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
