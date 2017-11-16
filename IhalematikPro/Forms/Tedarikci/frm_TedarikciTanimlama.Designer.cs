@@ -495,7 +495,7 @@
             this.btnKaydet.Appearance.Options.UseFont = true;
             this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
-            this.btnKaydet.Location = new System.Drawing.Point(349, 7);
+            this.btnKaydet.Location = new System.Drawing.Point(247, 7);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(132, 50);
@@ -509,7 +509,7 @@
             this.btnTemizle.Appearance.Options.UseFont = true;
             this.btnTemizle.Appearance.Options.UseForeColor = true;
             this.btnTemizle.Image = global::IhalematikProUI.Properties.Resources.Actions_edit_clear_icon;
-            this.btnTemizle.Location = new System.Drawing.Point(482, 7);
+            this.btnTemizle.Location = new System.Drawing.Point(380, 7);
             this.btnTemizle.Margin = new System.Windows.Forms.Padding(4);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(132, 50);
@@ -762,7 +762,7 @@
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(540, 56);
             this.simpleButton2.TabIndex = 94;
-            this.simpleButton2.Text = "Tedarikçi Ekle > F1";
+            this.simpleButton2.Text = "Faaliyet Alanı Ekle > F1";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // statusPanel
