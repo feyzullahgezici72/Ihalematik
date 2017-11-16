@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TeklifListesi));
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtSumTender = new DevExpress.XtraEditors.LabelControl();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
@@ -62,10 +61,9 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.labelControl2.Location = new System.Drawing.Point(3, 3);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Location = new System.Drawing.Point(2, 2);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(248, 29);
+            this.labelControl2.Size = new System.Drawing.Size(174, 19);
             this.labelControl2.TabIndex = 94;
             this.labelControl2.Text = "Aktif Teklif Toplamı: ";
             // 
@@ -76,10 +74,9 @@
             this.panelControl3.Controls.Add(this.txtSumTender);
             this.panelControl3.Controls.Add(this.labelControl2);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl3.Location = new System.Drawing.Point(0, 682);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl3.Location = new System.Drawing.Point(0, 467);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1593, 60);
+            this.panelControl3.Size = new System.Drawing.Size(908, 41);
             this.panelControl3.TabIndex = 97;
             // 
             // simpleButton2
@@ -90,10 +87,9 @@
             this.simpleButton2.Appearance.Options.UseForeColor = true;
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.Image = global::IhalematikProUI.Properties.Resources.ok_icon__1_1;
-            this.simpleButton2.Location = new System.Drawing.Point(1182, 3);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton2.Location = new System.Drawing.Point(634, 2);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(200, 54);
+            this.simpleButton2.Size = new System.Drawing.Size(133, 37);
             this.simpleButton2.TabIndex = 97;
             this.simpleButton2.Text = "Aktif Teklifler";
             // 
@@ -105,10 +101,9 @@
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.Windows_Stand_By_icon__1_;
-            this.simpleButton1.Location = new System.Drawing.Point(1382, 3);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton1.Location = new System.Drawing.Point(767, 2);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(208, 54);
+            this.simpleButton1.Size = new System.Drawing.Size(139, 37);
             this.simpleButton1.TabIndex = 96;
             this.simpleButton1.Text = "Pasif Teklifler";
             // 
@@ -117,10 +112,9 @@
             this.txtSumTender.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSumTender.Appearance.ForeColor = System.Drawing.Color.Crimson;
             this.txtSumTender.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtSumTender.Location = new System.Drawing.Point(251, 3);
-            this.txtSumTender.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSumTender.Location = new System.Drawing.Point(176, 2);
             this.txtSumTender.Name = "txtSumTender";
-            this.txtSumTender.Size = new System.Drawing.Size(15, 29);
+            this.txtSumTender.Size = new System.Drawing.Size(10, 19);
             this.txtSumTender.TabIndex = 95;
             this.txtSumTender.Text = "0";
             // 
@@ -136,11 +130,10 @@
             this.lblTenderCaptin.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.lblTenderCaptin.LineColor = System.Drawing.Color.Red;
             this.lblTenderCaptin.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.lblTenderCaptin.Location = new System.Drawing.Point(67, 6);
-            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTenderCaptin.Location = new System.Drawing.Point(45, 4);
             this.lblTenderCaptin.Name = "lblTenderCaptin";
             this.lblTenderCaptin.ShowLineShadow = false;
-            this.lblTenderCaptin.Size = new System.Drawing.Size(240, 37);
+            this.lblTenderCaptin.Size = new System.Drawing.Size(157, 24);
             this.lblTenderCaptin.TabIndex = 0;
             this.lblTenderCaptin.Text = "TEKLİF LİSTESİ";
             this.lblTenderCaptin.UseMnemonic = false;
@@ -156,9 +149,8 @@
             this.panelControl2.Controls.Add(this.btnKapat);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1593, 50);
+            this.panelControl2.Size = new System.Drawing.Size(908, 34);
             this.panelControl2.TabIndex = 2;
             // 
             // pcWorld
@@ -166,8 +158,9 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pcWorld.Name = "pcWorld";
-            this.pcWorld.Size = new System.Drawing.Size(70, 50);
+            this.pcWorld.Size = new System.Drawing.Size(47, 34);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcWorld.TabIndex = 95;
             this.pcWorld.TabStop = false;
@@ -180,10 +173,9 @@
             this.btnOpen.Appearance.Options.UseForeColor = true;
             this.btnOpen.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnOpen.Image = global::IhalematikProUI.Properties.Resources.open_file_icon1;
-            this.btnOpen.Location = new System.Drawing.Point(1305, 0);
-            this.btnOpen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOpen.Location = new System.Drawing.Point(716, 0);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(226, 50);
+            this.btnOpen.Size = new System.Drawing.Size(151, 34);
             this.btnOpen.TabIndex = 94;
             this.btnOpen.Text = "Seçili Teklifi Aç";
             // 
@@ -193,10 +185,9 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1531, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Location = new System.Drawing.Point(867, 0);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(62, 50);
+            this.btnKapat.Size = new System.Drawing.Size(41, 34);
             this.btnKapat.TabIndex = 1;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
@@ -209,20 +200,17 @@
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1593, 50);
+            this.panelControl1.Size = new System.Drawing.Size(908, 34);
             this.panelControl1.TabIndex = 95;
             // 
             // grdActiveTenderList
             // 
             this.grdActiveTenderList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdActiveTenderList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdActiveTenderList.Location = new System.Drawing.Point(0, 50);
+            this.grdActiveTenderList.Location = new System.Drawing.Point(0, 34);
             this.grdActiveTenderList.MainView = this.gridView1;
-            this.grdActiveTenderList.Margin = new System.Windows.Forms.Padding(4);
             this.grdActiveTenderList.Name = "grdActiveTenderList";
-            this.grdActiveTenderList.Size = new System.Drawing.Size(1593, 632);
+            this.grdActiveTenderList.Size = new System.Drawing.Size(908, 433);
             this.grdActiveTenderList.TabIndex = 98;
             this.grdActiveTenderList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -414,15 +402,14 @@
             // frm_TeklifListesi
             // 
             this.AcceptButton = this.btnOpen;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(1593, 742);
+            this.ClientSize = new System.Drawing.Size(908, 508);
             this.ControlBox = false;
             this.Controls.Add(this.grdActiveTenderList);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TeklifListesi";

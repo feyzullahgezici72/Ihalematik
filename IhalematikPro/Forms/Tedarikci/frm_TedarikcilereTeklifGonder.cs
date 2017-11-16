@@ -1,6 +1,7 @@
 ﻿using System;
 using IhalematikPro.Forms;
 using IhalematikProUI.Forms.Base;
+using IhalematikPro.Manager;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -21,6 +22,12 @@ namespace IhalematikProUI.Forms.Tedarikci
             frm_PozluKayit pk = new frm_PozluKayit(this);
             pk.ShowDialog();
             
+        }
+
+        private void frm_TedarikcilereTeklifGonder_Shown(object sender, EventArgs e)
+        {
+            grdMaterialList.DataSource = CurrentManager.Instance.CurrentTender.MaterialList;
+            grdMaterialList.RefreshDataSource();
         }
     }
 }
