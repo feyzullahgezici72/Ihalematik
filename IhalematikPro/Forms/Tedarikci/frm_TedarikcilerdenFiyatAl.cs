@@ -22,12 +22,17 @@ namespace IhalematikProUI.Forms
 
         private void btnKapat_Click(object sender, EventArgs e)
         {
-            this.Close();
+           
         }
 
         private void frm_TedarikcilerdenFiyatAl_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnKapat_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
