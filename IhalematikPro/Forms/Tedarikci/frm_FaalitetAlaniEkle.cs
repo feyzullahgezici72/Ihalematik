@@ -22,6 +22,7 @@ namespace IhalematikProUI.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            IsEmptyKontrol();
             if (!string.IsNullOrEmpty(txtUnvan.Text.Trim()))
             {
                 SupplierSegment supplierSegment = new SupplierSegment();
@@ -38,6 +39,24 @@ namespace IhalematikProUI.Forms
                     MessageBox.Show("Ayni kayit vardir");
                 }
             }
+        }
+
+        private void frm_FaalitetAlaniEkle_Load(object sender, EventArgs e)
+        {
+
+        }
+        public bool IsEmptyKontrol()
+        {
+            if (string.IsNullOrEmpty(txtUnvan.Text.Trim()))
+            {
+                dxErrorProvider1.SetError(txtUnvan, "Faaliyet alanı boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                return true;
+            }
+            else
+            {
+                dxErrorProvider1.ClearErrors();
+            }
+            return false;
         }
     }
 }

@@ -208,6 +208,23 @@ namespace IhalematikProUI.Forms
             mf.ShowDialog();
             this.Close();
         }
-       
+        public bool IsEmptyKontrol()
+        {
+            if (ddlTitles.SelectedIndex < 0)
+            {
+                dxErrorProvider1.SetError(ddlTitles, "Ünvan seçilmelidir", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                return true;
+            }
+            if (txtBaseFare.Text == null)
+            {
+                dxErrorProvider1.SetError(txtBaseFare, "Net Maaşı belirtiniz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                return true;
+            }
+            else
+            {
+                dxErrorProvider1.ClearErrors();
+            }
+            return false;
+        }
     }
 }

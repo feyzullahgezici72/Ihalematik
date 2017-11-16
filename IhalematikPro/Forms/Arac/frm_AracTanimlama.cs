@@ -61,6 +61,7 @@ namespace IhalematikPro.Forms
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
+            IsEmptyKontrol();
             VehicleModel model = new VehicleModel();
             model.TitleId = ((VehicleTitleModel)ddlVehicleTitle.SelectedItem).Id.Value;
             model.IsActive = true;
@@ -182,7 +183,7 @@ namespace IhalematikPro.Forms
             List<Vehicle> vehicles = VehicleProvider.Instance.GetItems("TitleId", selectedItem.Id);
             if (vehicles.Count != 0)
             {
-                MessageBox.Show("Bu unvanda tanimli arac vardir");
+                MessageBox.Show("Bu tipte tanimli arac vardir");
                 ddlVehicleTitle.SelectedItem = null;
             }
         }
@@ -239,6 +240,19 @@ namespace IhalematikPro.Forms
                 ddlVehicleTitle.SelectedIndex = selectedIndex;
             }
             grdVehicle.Show();
+        }
+        public bool IsEmptyKontrol()
+        {
+            if (ddlVehicleTitle.SelectedIndex < 0)
+            {
+                dxErrorProvider1.SetError(ddlVehicleTitle, "Araç tipi seçilmelidir", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                return true;
+            }
+            else
+            {
+                dxErrorProvider1.ClearErrors();
+            }
+            return false;
         }
     }
 }

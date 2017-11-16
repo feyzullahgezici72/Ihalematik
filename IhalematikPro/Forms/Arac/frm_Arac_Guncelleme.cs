@@ -107,6 +107,7 @@ namespace IhalematikProUI.Forms
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+            IsEmptyKontrol();
             VehicleModel model = new VehicleModel(CurrentVehicle);
             model.TitleId = ((VehicleTitleModel)ddlVehicleTitle.SelectedItem).Id.Value;
             if (rbCompanyVehicle.Checked)
@@ -151,6 +152,19 @@ namespace IhalematikProUI.Forms
             frm_MesajFormu mf = new frm_MesajFormu();
             mf.lblMesaj.Text = "Güncelleme Yapıldı...";
             mf.ShowDialog();
+        }
+        public bool IsEmptyKontrol()
+        {
+            if (ddlVehicleTitle.SelectedIndex < 0)
+            {
+                dxErrorProvider1.SetError(ddlVehicleTitle, "Araç tipş seçilmelidir", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                return true;
+            }
+            else
+            {
+                dxErrorProvider1.ClearErrors();
+            }
+            return false;
         }
     }
 }

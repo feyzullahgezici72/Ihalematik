@@ -61,7 +61,7 @@ namespace IhalematikPro.Forms
         {
             if (string.IsNullOrEmpty(txtUnvan.Text.Trim()))
             {
-                dxErrorProvider1.SetError(txtUnvan, "Boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                dxErrorProvider1.SetError(txtUnvan, "Ünvan boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
                 return true;
             }
             else

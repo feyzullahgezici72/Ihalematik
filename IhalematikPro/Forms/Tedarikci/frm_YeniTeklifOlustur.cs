@@ -38,6 +38,7 @@ namespace IhalematikProUI.Forms
         frm_TedarikcilereTeklifGonder tg;
         private void simpleButton2_Click_1(object sender, EventArgs e)
         {
+            IsEmptyKontrol();
             for (int i = 0; i < 101; i++)
             {
                 Thread.Sleep(0);
@@ -97,6 +98,19 @@ namespace IhalematikProUI.Forms
         {
             int lastOfferNumber = OfferManager.Instance.GetLastOfferNumber();
             txtTeklifNo.Text = string.Format("{0}", (lastOfferNumber + 1).ToString().PadLeft(8, '0'));
+        }
+        public bool IsEmptyKontrol()
+        {
+            if (string.IsNullOrEmpty(txtTeklifNo.Text.Trim()))
+            {
+                dxErrorProvider1.SetError(txtAciklama, "Açıklama boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                return true;
+            }
+            else
+            {
+                dxErrorProvider1.ClearErrors();
+            }
+            return false;
         }
     }
 }

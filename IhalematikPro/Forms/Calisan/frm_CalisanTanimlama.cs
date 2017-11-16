@@ -201,6 +201,11 @@ namespace IhalematikPro.Forms
                 dxErrorProvider1.SetError(ddlTitles, "Ünvan seçilmelidir", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
                 return true;
             }
+            if (txtBaseFare.Text==null)
+            {
+                dxErrorProvider1.SetError(txtBaseFare, "Net Maaşı belirtiniz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                return true;
+            }
             else
             {
                 dxErrorProvider1.ClearErrors();
@@ -395,6 +400,11 @@ namespace IhalematikPro.Forms
             {
 
             }
+        }
+
+        private void btnListele_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

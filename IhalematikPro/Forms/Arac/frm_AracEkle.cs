@@ -35,6 +35,7 @@ namespace IhalematikPro.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            IsEmptyKontrol();
             bool IsEmpty = IsEmptyKontrol();
             if (!IsEmpty)
             {
@@ -65,7 +66,7 @@ namespace IhalematikPro.Forms
         {
             if (string.IsNullOrEmpty(txtName.Text.Trim()))
             {
-                dxErrorProvider1.SetError(txtName, "Boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                dxErrorProvider1.SetError(txtName, "Araç tipi boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
                 return true;
             }
             else

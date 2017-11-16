@@ -53,9 +53,38 @@ namespace IhalematikProUI.Forms
                 txtUnitPrice.Text = this.CurrentOBF.UnitPrice.ToString();
             }
         }
+        public bool IsEmptyKontrol()
+        {
+            if (string.IsNullOrEmpty(txtNumber.Text.Trim()))
+            {
+                dxErrorProvider1.SetError(txtNumber, "Poz no boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                return true;
+            }
+            if (string.IsNullOrEmpty(txtDescription.Text.Trim()))
+            {
+                dxErrorProvider1.SetError(txtNumber, "Açıklama boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                return true;
+            }
+            if (string.IsNullOrEmpty(txtUnit.Text.Trim()))
+            {
+                dxErrorProvider1.SetError(txtUnit, "Birim boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                return true;
+            }
+            if (string.IsNullOrEmpty(txtUnitPrice.Text.Trim()))
+            {
+                dxErrorProvider1.SetError(txtUnitPrice, "Birim fiyat boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                return true;
+            }
 
+            else
+            {
+                dxErrorProvider1.ClearErrors();
+            }
+            return false;
+        }
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+            IsEmptyKontrol();
             if (this.CurrentOBF != null)
             {
                 OBFModel model = new OBFModel(this.currentOBF);
