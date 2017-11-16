@@ -16,7 +16,7 @@ using IhalematikProUI.Forms.Base;
 
 namespace IhalematikPro.Forms
 {
-    public partial class frm_PozluKayit : DevExpress.XtraEditors.XtraForm
+    public partial class frm_PozluKayit : IhalematikBaseForm
     {
         List<PozModel> pozModels = new List<PozModel>();
 
@@ -38,9 +38,9 @@ namespace IhalematikPro.Forms
 
         private void btnBul_Click(object sender, EventArgs e)
         {
-            string pozNo = txtPozNumber.Text;
-
-            pozModels = UIPozManager.Instance.GetPozs(pozNo);
+            string pozNumber = txtPozNumber.Text;
+            
+            pozModels = UIPozManager.Instance.GetPozs(pozNumber);
 
             grdPozList.DataSource = pozModels;
         }
@@ -101,8 +101,11 @@ namespace IhalematikPro.Forms
                     MaterialListProvider.Instance.Save(item);
                 }
             }
-            _owner.RefreshDataGrid();
-            //this.RefreshDgv("", "", "");
+            if (this._owner is frm_Teklif_Adim1)
+            {
+                ((frm_Teklif_Adim1)_owner).RefreshDataGrid();
+            }
+            
             this.Close();
         }
 

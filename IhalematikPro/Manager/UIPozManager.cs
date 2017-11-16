@@ -20,7 +20,15 @@ namespace IhalematikPro.Manager
 
         public List<PozModel> GetPozs(string PozNumber)
         {
-            List<Poz> pozs = PozProvider.Instance.GetItems("Number", PozNumber);
+            List<Poz> pozs = new List<Poz>();
+            if (string.IsNullOrEmpty(PozNumber))
+            {
+                pozs = PozProvider.Instance.GetItems();
+            }
+            else
+            {
+                pozs = PozProvider.Instance.GetItems("Number", PozNumber); 
+            }
             List<PozModel> models = CustomSaveableModelBase.GetModels<PozModel, Poz>(pozs);
             return models;
         }

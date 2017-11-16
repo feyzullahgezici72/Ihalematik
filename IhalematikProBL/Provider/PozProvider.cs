@@ -9,7 +9,7 @@ namespace IhalematikProBL.Provider
     {
         public PozProvider()
         {
-            this.EnableCaching = true;
+            this.EnableCaching = false;
         }
         protected override Hashtable GetCommonParameters(Poz t)
         {
