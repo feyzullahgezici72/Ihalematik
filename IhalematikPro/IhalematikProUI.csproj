@@ -328,6 +328,12 @@
     <Compile Include="Forms\Tedarikci\frm_TedarikcilerdenFiyatAl.Designer.cs">
       <DependentUpon>frm_TedarikcilerdenFiyatAl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TedarikcilereTeklifGonder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TedarikcilereTeklifGonder.Designer.cs">
+      <DependentUpon>frm_TedarikcilereTeklifGonder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tedarikci\frm_TedarikciTanimlama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -524,6 +530,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_TedarikcilerdenFiyatAl.resx">
       <DependentUpon>frm_TedarikcilerdenFiyatAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tedarikci\frm_TedarikcilereTeklifGonder.resx">
+      <DependentUpon>frm_TedarikcilereTeklifGonder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_TedarikciTanimlama.resx">
       <DependentUpon>frm_TedarikciTanimlama.cs</DependentUpon>

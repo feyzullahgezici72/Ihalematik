@@ -40,8 +40,8 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.pbControl = new DevExpress.XtraEditors.ProgressBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeklifNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -49,6 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -189,32 +190,33 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.ShowLineShadow = false;
-            this.labelControl3.Size = new System.Drawing.Size(460, 37);
+            this.labelControl3.Size = new System.Drawing.Size(648, 37);
             this.labelControl3.TabIndex = 0;
-            this.labelControl3.Text = "YENİ FİYAT TEKLİFİ OLUŞTUR";
+            this.labelControl3.Text = "YENİ TEKLİF MALZEME LİSTESİ OLUŞTUR";
             this.labelControl3.UseMnemonic = false;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 258);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(794, 22);
-            this.statusStrip1.TabIndex = 40;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // simpleButton2
             // 
             this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.simpleButton2.Image = global::IhalematikProUI.Properties.Resources.Button_Add_icon__1_;
-            this.simpleButton2.Location = new System.Drawing.Point(642, 167);
+            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(642, 213);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(141, 54);
             this.simpleButton2.TabIndex = 41;
             this.simpleButton2.Text = "Oluştur";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click_1);
+            // 
+            // pbControl
+            // 
+            this.pbControl.Location = new System.Drawing.Point(12, 222);
+            this.pbControl.Name = "pbControl";
+            this.pbControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.pbControl.Properties.Step = 1;
+            this.pbControl.Size = new System.Drawing.Size(621, 31);
+            this.pbControl.TabIndex = 42;
             // 
             // frm_YeniTeklifOlustur
             // 
@@ -223,8 +225,8 @@
             this.CancelButton = this.btnIptal;
             this.ClientSize = new System.Drawing.Size(794, 280);
             this.ControlBox = false;
+            this.Controls.Add(this.pbControl);
             this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
@@ -247,6 +249,7 @@
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,8 +267,8 @@
         private DevExpress.XtraEditors.TextEdit txtTeklifNo;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private System.Windows.Forms.PictureBox pcWorld;
+        private DevExpress.XtraEditors.ProgressBarControl pbControl;
     }
 }
