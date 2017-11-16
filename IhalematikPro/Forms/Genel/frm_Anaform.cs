@@ -354,29 +354,29 @@ namespace IhalematikPro.Forms
             tl = null;
             RibonAktif();
         }
-        frm_MalzemeFiyatTeklifiOlustur mfto;
-        private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            RibonPasif();
-            if (mfto == null)
-            {
-                mfto = new frm_MalzemeFiyatTeklifiOlustur();
-                mfto.MdiParent = this;
-                mfto.FormClosed += new FormClosedEventHandler(Mfto_FormClosed);
-                mfto.Show();
-            }
-            else
-            {
-                mfto.Activate();
-            }
+        //frm_MalzemeFiyatTeklifiOlustur mfto;
+        //private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
+        //{
+        //    RibonPasif();
+        //    if (mfto == null)
+        //    {
+        //        mfto = new frm_MalzemeFiyatTeklifiOlustur();
+        //        mfto.MdiParent = this;
+        //        mfto.FormClosed += new FormClosedEventHandler(Mfto_FormClosed);
+        //        mfto.Show();
+        //    }
+        //    else
+        //    {
+        //        mfto.Activate();
+        //    }
 
-        }
+        //}
 
-        private void Mfto_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            mfto = null;
-            RibonAktif();
-        }
+        //private void Mfto_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    mfto = null;
+        //    RibonAktif();
+        //}
         frm_TedarikcilerdenFiyatAl tfa;
         private void barButtonItem15_ItemClick(object sender, ItemClickEventArgs e)
         {
