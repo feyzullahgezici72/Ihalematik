@@ -36,11 +36,7 @@
             this.txtNumber = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.timer1 = new System.Windows.Forms.Timer();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.lblGrupName = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.grdOBFList = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -60,14 +56,16 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.lblGrupName = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdOBFList)).BeginInit();
@@ -79,6 +77,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl2
@@ -188,19 +188,6 @@
             // 
             this.timer1.Interval = 10;
             // 
-            // btnKapat
-            // 
-            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
-            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1194, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(64, 50);
-            this.btnKapat.TabIndex = 1;
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
             // panelControl1
             // 
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
@@ -214,49 +201,6 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1258, 50);
             this.panelControl1.TabIndex = 30;
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Appearance.BackColor = System.Drawing.Color.SteelBlue;
-            this.panelControl2.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.panelControl2.Appearance.Options.UseBackColor = true;
-            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.lblGrupName);
-            this.panelControl2.Controls.Add(this.labelControl1);
-            this.panelControl2.Controls.Add(this.btnKapat);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1258, 50);
-            this.panelControl2.TabIndex = 2;
-            // 
-            // lblGrupName
-            // 
-            this.lblGrupName.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGrupName.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblGrupName.Location = new System.Drawing.Point(4, 8);
-            this.lblGrupName.Name = "lblGrupName";
-            this.lblGrupName.Size = new System.Drawing.Size(156, 35);
-            this.lblGrupName.TabIndex = 2;
-            this.lblGrupName.Text = "lblGrupName";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl1.LineColor = System.Drawing.Color.Red;
-            this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(4, 6);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(0, 37);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.UseMnemonic = false;
-            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // groupControl1
             // 
@@ -788,6 +732,62 @@
             this.statusStrip1.TabIndex = 34;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // btnKapat
+            // 
+            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
+            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnKapat.Location = new System.Drawing.Point(1194, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(64, 50);
+            this.btnKapat.TabIndex = 1;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.labelControl1.LineColor = System.Drawing.Color.Red;
+            this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.labelControl1.Location = new System.Drawing.Point(4, 6);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.ShowLineShadow = false;
+            this.labelControl1.Size = new System.Drawing.Size(0, 37);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.UseMnemonic = false;
+            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
+            // 
+            // lblGrupName
+            // 
+            this.lblGrupName.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGrupName.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblGrupName.Location = new System.Drawing.Point(4, 8);
+            this.lblGrupName.Name = "lblGrupName";
+            this.lblGrupName.Size = new System.Drawing.Size(156, 35);
+            this.lblGrupName.TabIndex = 2;
+            this.lblGrupName.Text = "lblGrupName";
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Appearance.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelControl2.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.lblGrupName);
+            this.panelControl2.Controls.Add(this.labelControl1);
+            this.panelControl2.Controls.Add(this.btnKapat);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(0, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(1258, 50);
+            this.panelControl2.TabIndex = 2;
+            // 
             // frm_ObfKayit
             // 
             this.AcceptButton = this.btnBul;
@@ -813,9 +813,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdOBFList)).EndInit();
@@ -827,6 +824,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -836,9 +836,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.SimpleButton btnKapat;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txtNumber;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
@@ -864,6 +861,9 @@
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.LabelControl lblGrupName;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SimpleButton btnKapat;
     }
 }

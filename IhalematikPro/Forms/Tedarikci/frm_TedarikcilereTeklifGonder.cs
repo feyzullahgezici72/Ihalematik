@@ -2,6 +2,7 @@
 using IhalematikPro.Forms;
 using IhalematikProUI.Forms.Base;
 using IhalematikPro.Manager;
+using IhalematikProUI.Forms.Tedarikci;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -19,8 +20,8 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnPozKayit_Click(object sender, EventArgs e)
         {
-            frm_PozluKayit pk = new frm_PozluKayit(this);
-            pk.ShowDialog();
+            frm_TedarikciPozluKayit poz = new frm_TedarikciPozluKayit();
+            poz.ShowDialog();
             
         }
 
@@ -28,6 +29,13 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
             grdMaterialList.DataSource = CurrentManager.Instance.CurrentTender.MaterialList;
             grdMaterialList.RefreshDataSource();
+        }
+
+        private void btnObfKayit_Click(object sender, EventArgs e)
+        {
+            frm_TedarikciOfbKayit obf = new frm_TedarikciOfbKayit();
+           obf.ShowDialog();
+
         }
     }
 }

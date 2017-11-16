@@ -334,6 +334,18 @@
     <Compile Include="Forms\Tedarikci\frm_TedarikcilereTeklifGonder.Designer.cs">
       <DependentUpon>frm_TedarikcilereTeklifGonder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TedarikciOfbKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TedarikciOfbKayit.Designer.cs">
+      <DependentUpon>frm_TedarikciOfbKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TedarikciPozluKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TedarikciPozluKayit.Designer.cs">
+      <DependentUpon>frm_TedarikciPozluKayit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tedarikci\frm_TedarikciTanimlama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -533,6 +545,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_TedarikcilereTeklifGonder.resx">
       <DependentUpon>frm_TedarikcilereTeklifGonder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tedarikci\frm_TedarikciOfbKayit.resx">
+      <DependentUpon>frm_TedarikciOfbKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tedarikci\frm_TedarikciPozluKayit.resx">
+      <DependentUpon>frm_TedarikciPozluKayit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_TedarikciTanimlama.resx">
       <DependentUpon>frm_TedarikciTanimlama.cs</DependentUpon>

@@ -39,12 +39,6 @@ namespace IhalematikProUI.Forms
         private void simpleButton2_Click_1(object sender, EventArgs e)
         {
             IsEmptyKontrol();
-            for (int i = 0; i < 101; i++)
-            {
-                Thread.Sleep(0);
-                pbControl.Position = i;
-                Application.DoEvents();
-            }
             this.Enabled = false;
             DialogResult resultMsg = MessageBox.Show("Yeni Teklif oluşturulsun mu?", "Yeni ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (resultMsg.Equals(DialogResult.Yes))

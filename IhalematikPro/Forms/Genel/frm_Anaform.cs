@@ -13,6 +13,8 @@ using IhalematikProUI.Forms;
 using IhalematikPro.Manager;
 using IhalematikProBL.Provider;
 using IhalematikProBL.Entity;
+using IhalematikProUI.Forms.Tedarikci;
+
 namespace IhalematikPro.Forms
 {
     public partial class frm_Anaform : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -32,7 +34,7 @@ namespace IhalematikPro.Forms
         public frm_Anaform()
         {
             InitializeComponent();
-             
+
         }
 
 
@@ -40,7 +42,7 @@ namespace IhalematikPro.Forms
         {
             DevExpress.UserSkins.BonusSkins.Register();
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
-            
+
             grdActiveTenderList.DataSource = list;
             this.WindowState = FormWindowState.Maximized;
             if (CurrentManager.Instance.CurrentCompany != null)
@@ -66,7 +68,7 @@ namespace IhalematikPro.Forms
         private void barBtnDovizKurlari_ItemClick(object sender, ItemClickEventArgs e)
         {
             //radialMenu.HidePopup();
-           
+
         }
 
         Forms.frm_PozListesi pl;
@@ -118,14 +120,14 @@ namespace IhalematikPro.Forms
             RibonAktif();
         }
 
-        
+
         private void barBtnTeklifHazirla_ItemClick(object sender, ItemClickEventArgs e)
         {
-         
-             
+
+
             frm_YeniIhaleYarat frm = new frm_YeniIhaleYarat();
             frm.Show();
-           
+
         }
         Forms.frm_Teklif_Adim1 ta1;
         private void btnAdimx1_ItemClick(object sender, ItemClickEventArgs e)
@@ -449,7 +451,7 @@ namespace IhalematikPro.Forms
         {
 
 
-            
+
 
 
         }
@@ -477,12 +479,12 @@ namespace IhalematikPro.Forms
         {
             //if (this.WindowState != FormWindowState.Minimized)
             //        this.WindowState = FormWindowState.Maximized;
-            
-        }
-        
-        
 
-       
+        }
+
+
+
+
 
         private void frm_Anaform_ResizeEnd(object sender, EventArgs e)
         {
@@ -491,7 +493,7 @@ namespace IhalematikPro.Forms
 
         private void frm_Anaform_Move(object sender, EventArgs e)
         {
-          
+
         }
 
         private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
@@ -526,7 +528,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
@@ -588,17 +590,17 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem20_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
+
         }
 
         private void barButtonItem21_ItemClick(object sender, ItemClickEventArgs e)
         {
-           
+
         }
 
         private void barButtonItem22_ItemClick(object sender, ItemClickEventArgs e)
         {
-           
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -640,29 +642,53 @@ namespace IhalematikPro.Forms
 
         private void panelControl1_MouseMove(object sender, MouseEventArgs e)
         {
-           
-            
-         
+
+
+
         }
 
         private void simpleButton1_Click_1(object sender, EventArgs e)
         {
-           
+
         }
 
         private void labelControl2_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void skinRibbonGalleryBarItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-          
+
         }
 
         private void skin_ItemClick(object sender, ItemClickEventArgs e)
         {
-             
+
+        }
+        frm_TedarikcilereTeklifGonder tg;
+        private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_TedarikcilereTeklifGonder tg = (frm_TedarikcilereTeklifGonder)Application.OpenForms["frm_TedarikcilereTeklifGonder"];
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            if (tg == null)
+            {
+                tg = new frm_TedarikcilereTeklifGonder();
+                tg.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                tg.FormClosed += new FormClosedEventHandler(Tg_FormClosed);
+                af.MainPanel.Visible = false;
+                tg.Show();
+
+            }
+            else
+            {
+                tg.Activate();
+            }
+        }
+
+        private void Tg_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            tg = null;
         }
     }
 }

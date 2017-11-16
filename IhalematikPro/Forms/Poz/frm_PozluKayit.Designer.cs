@@ -395,7 +395,6 @@
             this.gridView1.OptionsView.ShowDetailButtons = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.PaintStyleName = "Web";
-            this.gridView1.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gridView1_SelectionChanged);
             // 
             // gridColumn1
             // 
