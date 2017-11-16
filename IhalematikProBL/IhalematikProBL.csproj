@@ -118,6 +118,7 @@
     <Compile Include="Entity\Material.cs" />
     <Compile Include="Entity\MaterialList.cs" />
     <Compile Include="Entity\OBF.cs" />
+    <Compile Include="Entity\Offer.cs" />
     <Compile Include="Entity\Poz.cs" />
     <Compile Include="Entity\Rule.cs" />
     <Compile Include="Entity\Supplier.cs" />
@@ -135,12 +136,14 @@
     <Compile Include="Enum\RuleTypesEnum.cs" />
     <Compile Include="Enum\UnitTimeTypesEnum.cs" />
     <Compile Include="Manager\CustomDBConnectionManager.cs" />
+    <Compile Include="Manager\OfferManager.cs" />
     <Compile Include="Manager\TenderManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider\CompanyProvider.cs" />
     <Compile Include="Provider\CustomEntityBaseProvider.cs" />
     <Compile Include="Provider\MaterialListProvider.cs" />
     <Compile Include="Provider\OBFProvider.cs" />
+    <Compile Include="Provider\OfferProvider.cs" />
     <Compile Include="Provider\PozProvider.cs" />
     <Compile Include="Provider\RuleProvider.cs" />
     <Compile Include="Provider\SupplierProvider.cs" />
