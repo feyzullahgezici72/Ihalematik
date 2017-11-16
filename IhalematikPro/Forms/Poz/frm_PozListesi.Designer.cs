@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PozListesi));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
@@ -55,7 +54,7 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.xpPageSelector1 = new DevExpress.Xpo.XPPageSelector(this.components);
+            this.xpPageSelector1 = new DevExpress.Xpo.XPPageSelector();
             this.grdPozList = new DevExpress.XtraGrid.GridControl();
             this.gridViewPozList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -462,6 +461,7 @@
             this.gridColumn6});
             this.gridViewPozList.GridControl = this.grdPozList;
             this.gridViewPozList.Name = "gridViewPozList";
+            this.gridViewPozList.OptionsDetail.EnableDetailToolTip = true;
             this.gridViewPozList.OptionsFind.FindFilterColumns = "";
             this.gridViewPozList.OptionsFind.FindNullPrompt = "Poz No giriniz...";
             this.gridViewPozList.OptionsFind.SearchInPreview = true;

@@ -12,6 +12,7 @@ using IhalematikPro.Model;
 using IhalematikPro.Manager;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikPro.Forms
 {
@@ -19,11 +20,11 @@ namespace IhalematikPro.Forms
     {
         List<PozModel> pozModels = new List<PozModel>();
 
-        frm_Teklif_Adim1 _owner;
+        IhalematikBaseForm _owner;
 
         public int SelectedGroupId { get; set; }
 
-        public frm_PozluKayit(frm_Teklif_Adim1 owner)
+        public frm_PozluKayit(IhalematikBaseForm owner)
         {
             _owner = owner;
             InitializeComponent();
