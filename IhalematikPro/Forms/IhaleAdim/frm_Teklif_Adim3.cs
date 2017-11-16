@@ -129,48 +129,13 @@ namespace IhalematikPro.Forms
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
-            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            foreach (MaterialListModel materialListModel in models)
-            {
-                materialListModel.Save();
-
                 //foreach (TenderMaterialListEquipment tenderMaterialListEquipment in materialListModel.TenderMaterialListEquipment)
                 //{
                 //    TenderMaterialListEquipmentProvider.Instance.Save(tenderMaterialListEquipment);
                 //}
             }
 
-            frm_MesajFormu msj = new frm_MesajFormu();
-            msj.lblMesaj.Text = "Kaydedildi...";
-            msj.ShowDialog();
-            this.Close();
-
-
-            frm_TeklifAdimSon a4 = (frm_TeklifAdimSon)Application.OpenForms["frm_TeklifSonAdim"];
-            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-            if (a4 == null)
-            {
-                a4 = new frm_TeklifAdimSon();
-                a4.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                a4.FormClosed += new FormClosedEventHandler(a4_FormClosed);
-                af.MainPanel.Visible = false;
-                a4.Show();
-
-            }
-            else
-            {
-                a4.Activate();
-            }
-
-
-        }
-
-        private void a4_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            a4 = null;
-        }
-
+          
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -535,22 +500,24 @@ namespace IhalematikPro.Forms
         private void btnNext_Click(object sender, EventArgs e)
         {
             this.Close();
-
-            frm_IscilikFirimFiyat a5 = (frm_IscilikFirimFiyat)Application.OpenForms["frm_IscilikFirimFiyat"];
+            frm_TeklifAdimSon a4 = (frm_TeklifAdimSon)Application.OpenForms["frm_TeklifSonAdim"];
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-            if (a5 == null)
+            if (a4 == null)
             {
-                a5 = new frm_IscilikFirimFiyat();
-                a5.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                a5.FormClosed += new FormClosedEventHandler(A5_FormClosed);
+                a4 = new frm_TeklifAdimSon();
+                a4.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                a4.FormClosed += new FormClosedEventHandler(a4_FormClosed);
                 af.MainPanel.Visible = false;
-                a5.Show();
-
+                a4.Show();
             }
             else
             {
-                a5.Activate();
+                a4.Activate();
             }
+        }
+        private void a4_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            a4 = null;
         }
     }
 }
