@@ -119,6 +119,7 @@
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.lblTotalWorker = new DevExpress.XtraEditors.LabelControl();
+            this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnIscilikveAracGirisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -190,7 +191,7 @@
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Controls.Add(this.labelControl4);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(0, 50);
+            this.panelControl2.Location = new System.Drawing.Point(0, 35);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1668, 60);
@@ -295,6 +296,8 @@
             // panelControl1
             // 
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl1.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.BottomLeft;
@@ -305,47 +308,49 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1668, 50);
+            this.panelControl1.Size = new System.Drawing.Size(1668, 35);
             this.panelControl1.TabIndex = 21;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
             // btnKapat
             // 
+            this.btnKapat.AutoSize = true;
             this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
+            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1604, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1640, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(64, 50);
+            this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 3;
             this.btnKapat.TabStop = false;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // txtAdimAciklama
             // 
-            this.txtAdimAciklama.Appearance.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAdimAciklama.Appearance.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAdimAciklama.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
             this.txtAdimAciklama.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.txtAdimAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
             this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.txtAdimAciklama.Location = new System.Drawing.Point(72, 7);
+            this.txtAdimAciklama.Location = new System.Drawing.Point(53, 1);
             this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
-            this.txtAdimAciklama.Size = new System.Drawing.Size(341, 37);
+            this.txtAdimAciklama.Size = new System.Drawing.Size(307, 33);
             this.txtAdimAciklama.TabIndex = 0;
             this.txtAdimAciklama.Text = "İŞÇİLİK KEŞİF LİSTESİ";
             // 
@@ -367,13 +372,13 @@
             // 
             this.grdAddVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdAddVehicle.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdAddVehicle.Location = new System.Drawing.Point(3, 373);
+            this.grdAddVehicle.Location = new System.Drawing.Point(3, 361);
             this.grdAddVehicle.MainView = this.gridViewAddVehicle;
             this.grdAddVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddVehicle.Name = "grdAddVehicle";
             this.grdAddVehicle.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstVehicle});
-            this.grdAddVehicle.Size = new System.Drawing.Size(951, 345);
+            this.grdAddVehicle.Size = new System.Drawing.Size(951, 357);
             this.grdAddVehicle.TabIndex = 1;
             this.grdAddVehicle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewAddVehicle});
@@ -616,7 +621,7 @@
             this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.groupControl3.Controls.Add(this.grdAddWorker);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl3.Location = new System.Drawing.Point(3, 160);
+            this.groupControl3.Location = new System.Drawing.Point(3, 148);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(951, 213);
             this.groupControl3.TabIndex = 6;
@@ -865,6 +870,7 @@
             // groupControl1
             // 
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.groupControl1.Controls.Add(this.btnTamam);
             this.groupControl1.Controls.Add(this.txtCurrentDescription);
             this.groupControl1.Controls.Add(this.txtCurrentQuantity);
             this.groupControl1.Controls.Add(this.txtCurrentUnit);
@@ -874,7 +880,7 @@
             this.groupControl1.Controls.Add(this.labelControl10);
             this.groupControl1.Controls.Add(this.labelControl11);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(3, 50);
+            this.groupControl1.Location = new System.Drawing.Point(3, 38);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(951, 110);
             this.groupControl1.TabIndex = 5;
@@ -963,6 +969,7 @@
             // panelControl5
             // 
             this.panelControl5.Appearance.BackColor = System.Drawing.Color.Crimson;
+            this.panelControl5.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panelControl5.Appearance.Options.UseBackColor = true;
             this.panelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl5.Controls.Add(this.labelControl3);
@@ -971,7 +978,7 @@
             this.panelControl5.Location = new System.Drawing.Point(3, 3);
             this.panelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(951, 47);
+            this.panelControl5.Size = new System.Drawing.Size(951, 35);
             this.panelControl5.TabIndex = 4;
             // 
             // labelControl3
@@ -981,7 +988,7 @@
             this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.labelControl3.LineColor = System.Drawing.Color.Red;
             this.labelControl3.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl3.Location = new System.Drawing.Point(10, 10);
+            this.labelControl3.Location = new System.Drawing.Point(10, 3);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.ShowLineShadow = false;
@@ -996,26 +1003,27 @@
             this.btnPanelKapat.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnPanelKapat.Appearance.Options.UseFont = true;
             this.btnPanelKapat.Appearance.Options.UseForeColor = true;
+            this.btnPanelKapat.AutoSize = true;
             this.btnPanelKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnPanelKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPanelKapat.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
+            this.btnPanelKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnPanelKapat.Image")));
             this.btnPanelKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnPanelKapat.Location = new System.Drawing.Point(887, 0);
+            this.btnPanelKapat.Location = new System.Drawing.Point(923, 0);
             this.btnPanelKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnPanelKapat.Name = "btnPanelKapat";
-            this.btnPanelKapat.Size = new System.Drawing.Size(64, 47);
+            this.btnPanelKapat.Size = new System.Drawing.Size(28, 35);
             this.btnPanelKapat.TabIndex = 1;
             this.btnPanelKapat.Click += new System.EventHandler(this.btnPanelKapat_Click);
             // 
             // grdMaterialListIsWorkship
             // 
             this.grdMaterialListIsWorkship.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialListIsWorkship.Location = new System.Drawing.Point(386, 110);
+            this.grdMaterialListIsWorkship.Location = new System.Drawing.Point(386, 95);
             this.grdMaterialListIsWorkship.MainView = this.gridViewMaterialListIsWorkship;
             this.grdMaterialListIsWorkship.Name = "grdMaterialListIsWorkship";
             this.grdMaterialListIsWorkship.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnCalisanlarveAraclar});
-            this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(1282, 508);
+            this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(1282, 523);
             this.grdMaterialListIsWorkship.TabIndex = 0;
             this.grdMaterialListIsWorkship.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialListIsWorkship});
@@ -1288,9 +1296,9 @@
             // 
             this.panelGrup.Controls.Add(this.grdTenderGroup);
             this.panelGrup.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelGrup.Location = new System.Drawing.Point(0, 110);
+            this.panelGrup.Location = new System.Drawing.Point(0, 95);
             this.panelGrup.Name = "panelGrup";
-            this.panelGrup.Size = new System.Drawing.Size(386, 654);
+            this.panelGrup.Size = new System.Drawing.Size(386, 669);
             this.panelGrup.TabIndex = 27;
             // 
             // grdTenderGroup
@@ -1308,7 +1316,7 @@
             this.repositoryItemButtonEdit1,
             this.btnSil,
             this.rpstIsSelected});
-            this.grdTenderGroup.Size = new System.Drawing.Size(380, 648);
+            this.grdTenderGroup.Size = new System.Drawing.Size(380, 663);
             this.grdTenderGroup.TabIndex = 41;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup,
@@ -1684,6 +1692,16 @@
             this.lblTotalWorker.TabIndex = 14;
             this.lblTotalWorker.Text = "0 TL";
             // 
+            // btnTamam
+            // 
+            this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
+            this.btnTamam.Location = new System.Drawing.Point(818, 42);
+            this.btnTamam.Name = "btnTamam";
+            this.btnTamam.Size = new System.Drawing.Size(119, 52);
+            this.btnTamam.TabIndex = 2;
+            this.btnTamam.Text = "Tamam";
+            this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
+            // 
             // frm_Teklif_Adim3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1853,5 +1871,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.LabelControl lblTotalWorker;
+        private DevExpress.XtraEditors.SimpleButton btnTamam;
     }
 }

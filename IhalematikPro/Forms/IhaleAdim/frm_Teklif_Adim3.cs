@@ -519,5 +519,11 @@ namespace IhalematikPro.Forms
         {
             a4 = null;
         }
+
+        private void btnTamam_Click(object sender, EventArgs e)
+        {
+            panelKapat();
+            grdMaterialListIsWorkship.Refresh();
+        }
     }
 }
