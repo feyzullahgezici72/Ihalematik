@@ -84,30 +84,38 @@ namespace IhalematikProUI.Forms.Tedarikci
             List<OfferMaterialListModel> datasourceMaterialList = gridViewMaterialList.DataSource as List<OfferMaterialListModel>;
             List<SupplierModel> dataSoruceSupplier = gridViewSupplier.DataSource as List<SupplierModel>;
 
-            if (datasourceMaterialList != null)
+            if (datasourceMaterialList != null && dataSoruceSupplier != null)
             {
                 List<OfferMaterialListModel> seledtedMaterialLists = datasourceMaterialList.Where(p => p.IsSelected).ToList();
                 List<SupplierModel> seledtedSuppliers = dataSoruceSupplier.Where(p => p.IsSelected).ToList();
-
-                if (seledtedMaterialLists != null && seledtedMaterialLists.Count != 0)
+                if (seledtedSuppliers.Count != 0 && seledtedMaterialLists.Count != 0)
                 {
                     foreach (OfferMaterialListModel seledtedMaterialList in seledtedMaterialLists)
                     {
-                        if (seledtedSuppliers != null && seledtedSuppliers.Count != 0)
+                        OfferMaterialList items = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Id == seledtedMaterialList.Id).FirstOrDefault();
+                        items.IsSelected = true;
+                        foreach (var seledtedSupplier in seledtedSuppliers)
                         {
-                            foreach (var seledtedSupplier in seledtedSuppliers)
+                            SupplierMaterialList supplierMaterialList = new SupplierMaterialList();
+                            supplierMaterialList.Offer = CurrentManager.Instance.CurrentOffer;
+                            supplierMaterialList.SupplierId = seledtedSupplier.Id.Value;
+                            supplierMaterialList.MaterialListId = seledtedMaterialList.Id.Value;
+                            Dictionary<string, object> parameters = new Dictionary<string, object>();
+                            parameters.Add("OfferId", supplierMaterialList.OfferId);
+                            parameters.Add("SupplierId", supplierMaterialList.SupplierId);
+                            parameters.Add("MaterialListId", supplierMaterialList.MaterialListId);
+
+                            List<SupplierMaterialList> existingItems = SupplierMaterialListProvider.Instance.GetItems(parameters);
+
+                            if (existingItems.Count == 0)
                             {
-                                SupplierMaterialList supplierMaterialList = new SupplierMaterialList();
-                                supplierMaterialList.Offer = CurrentManager.Instance.CurrentOffer;
-                                supplierMaterialList.SupplierId = seledtedSupplier.Id.Value;
-                                supplierMaterialList.MaterialListId = seledtedMaterialList.Id.Value;
                                 SupplierMaterialListProvider.Instance.Save(supplierMaterialList);
                             }
                         }
                     }
+                    this.LoadMaterialGrid(datasourceMaterialList);
                 }
             }
-            this.LoadMaterialGrid(datasourceMaterialList);
         }
     }
 }

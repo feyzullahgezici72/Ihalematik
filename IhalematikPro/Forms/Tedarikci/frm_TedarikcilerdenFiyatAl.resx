@@ -164,6 +164,16 @@
         rkJggg==
 </value>
   </data>
+  <data name="rpstSupplierDetail.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAqdEVYdFRpdGxlAENvbnRhY3Q7Q2FyZDtJbmZvO0Rl
+        dGFpbDtQZXJzb247RWRpdOGxk1gAAADASURBVDhPY/j//z9FmKGlpeU/JRhsALmANgYcvnHxf/umJWAa
+        BkBqkDEMgNgYBoA0ly2fDqYJAaINAKlBxjAAYhPlBTTQCMTgKATqhUQjDNx49uj/kiO7/teungOmQXwQ
+        AKmB4kbfph3GQPwfio1RDJhzYAvY+TAM4iMBZM1wQ1AMaFw3H8UAEB8EsNgMNwQjDLAAbJrhhhAyAK9m
+        ICaYFxiQFKNoBhoOkmPAyF3oGFkTjEaSI8kAmCFgjRC8gwEAr9wNYP7r26wAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="simpleButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m

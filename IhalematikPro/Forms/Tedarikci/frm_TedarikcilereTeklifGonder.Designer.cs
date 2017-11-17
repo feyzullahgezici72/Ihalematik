@@ -71,6 +71,7 @@
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.btnAktar = new DevExpress.XtraEditors.SimpleButton();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -95,6 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedOfferMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -353,7 +355,8 @@
             this.grdSupplier.Size = new System.Drawing.Size(713, 321);
             this.grdSupplier.TabIndex = 39;
             this.grdSupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewSupplier});
+            this.gridViewSupplier,
+            this.gridView1});
             // 
             // gridViewSupplier
             // 
@@ -475,7 +478,6 @@
             this.gridViewSupplier.Name = "gridViewSupplier";
             this.gridViewSupplier.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewSupplier.OptionsView.EnableAppearanceOddRow = true;
-            this.gridViewSupplier.OptionsView.ShowDetailButtons = false;
             this.gridViewSupplier.OptionsView.ShowGroupPanel = false;
             this.gridViewSupplier.PaintStyleName = "Web";
             // 
@@ -845,6 +847,11 @@
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 2;
             // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.grdSupplier;
+            this.gridView1.Name = "gridView1";
+            // 
             // frm_TedarikcilereTeklifGonder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -890,6 +897,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedOfferMaterial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -937,5 +945,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colIsSelectedSupplier;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit rpstIsSelectedSupplier;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit rpstIsSelectedOfferMaterial;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }
