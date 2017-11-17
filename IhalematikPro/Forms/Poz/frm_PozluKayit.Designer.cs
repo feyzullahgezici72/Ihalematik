@@ -91,7 +91,6 @@
             this.txtPozNumber.Properties.Appearance.Options.UseForeColor = true;
             this.txtPozNumber.Size = new System.Drawing.Size(188, 36);
             this.txtPozNumber.TabIndex = 0;
-            this.txtPozNumber.EditValueChanged += new System.EventHandler(this.txtPozNumber_EditValueChanged);
             // 
             // groupControl2
             // 
@@ -159,7 +158,6 @@
             this.textEdit1.Properties.Appearance.Options.UseForeColor = true;
             this.textEdit1.Size = new System.Drawing.Size(622, 36);
             this.textEdit1.TabIndex = 1;
-            this.textEdit1.EditValueChanged += new System.EventHandler(this.txtPozNumber_EditValueChanged);
             // 
             // labelControl3
             // 

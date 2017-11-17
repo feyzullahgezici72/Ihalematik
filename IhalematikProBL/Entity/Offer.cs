@@ -13,14 +13,14 @@ namespace IhalematikProBL.Entity
         public string Description { get; set; }
         public bool IsActive { get; set; }
 
-        private List<MaterialList> materialList { get; set; }
-        public List<MaterialList> MaterialList
+        private List<OfferMaterialList> materialList { get; set; }
+        public List<OfferMaterialList> MaterialList
         {
             get
             {
                 if (this.materialList == null)
                 {
-                    this.materialList = MaterialListProvider.Instance.GetItems("TenderId", this.Id);
+                    this.materialList = OfferMaterialListProvider.Instance.GetItems("OfferId", this.Id);
                 }
 
                 return this.materialList;

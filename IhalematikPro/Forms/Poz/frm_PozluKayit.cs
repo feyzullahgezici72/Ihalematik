@@ -106,8 +106,6 @@ namespace IhalematikPro.Forms
 
             MaterialListModel[] selectedRowsItems = models.ToArray();
 
-            //currentTender.MaterialList.ForEach(p => p.Poz = p.PozOBFId);
-
             foreach (int item in selectedRows)
             {
                 MaterialListModel pozModel = selectedRowsItems[item];
@@ -116,22 +114,15 @@ namespace IhalematikPro.Forms
 
                 if (selectedItem != null)
                 {
-                    selectedItem.IsMarkedForDeletion = true;
-                    int index = currentTender.MaterialList.IndexOf(selectedItem);
-
-                    //currentTender.MaterialList.RemoveAt(index);
+                    int index = currentTender.MaterialList.FindIndex(p => p.PozOBFId == selectedItem.PozOBFId);
+                    currentTender.MaterialList.RemoveAt(index);
                 }
             }
 
-            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(currentTender.MaterialList.Where(p => p.IsPoz && p.TenderGroupId == this.SelectedGroupId && !p.IsMarkedForDeletion).ToList());
+            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(currentTender.MaterialList.Where(p => p.IsPoz && p.TenderGroupId == this.SelectedGroupId).ToList());
 
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = dataSource;
-        }
-
-        private void txtPozNumber_EditValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void frm_PozluKayit_Load(object sender, EventArgs e)
