@@ -760,7 +760,6 @@
             this.labelControl1.Size = new System.Drawing.Size(0, 37);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.UseMnemonic = false;
-            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // lblGrupName
             // 

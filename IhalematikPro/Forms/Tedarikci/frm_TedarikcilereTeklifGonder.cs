@@ -26,7 +26,6 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
             frm_TedarikciPozluKayit poz = new frm_TedarikciPozluKayit(this);
             poz.ShowDialog();
-
         }
 
         private void frm_TedarikcilereTeklifGonder_Shown(object sender, EventArgs e)
@@ -56,7 +55,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         }
         private void btnObfKayit_Click(object sender, EventArgs e)
         {
-            frm_TedarikciOfbKayit obf = new frm_TedarikciOfbKayit();
+            frm_TedarikciOfbKayit obf = new frm_TedarikciOfbKayit(this);
             obf.ShowDialog();
         }
 
