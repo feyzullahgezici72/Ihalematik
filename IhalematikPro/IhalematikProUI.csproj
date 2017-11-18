@@ -352,6 +352,12 @@
     <Compile Include="Forms\Tedarikci\frm_TedarikciTanimlama.Designer.cs">
       <DependentUpon>frm_TedarikciTanimlama.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TedarikciyeAktarilanMalzemeDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TedarikciyeAktarilanMalzemeDetay.Designer.cs">
+      <DependentUpon>frm_TedarikciyeAktarilanMalzemeDetay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tedarikci\frm_TeklifListesi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -556,6 +562,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_TedarikciTanimlama.resx">
       <DependentUpon>frm_TedarikciTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tedarikci\frm_TedarikciyeAktarilanMalzemeDetay.resx">
+      <DependentUpon>frm_TedarikciyeAktarilanMalzemeDetay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_TeklifListesi.resx">
       <DependentUpon>frm_TeklifListesi.cs</DependentUpon>

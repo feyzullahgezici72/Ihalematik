@@ -145,5 +145,11 @@ namespace IhalematikProUI.Forms.Tedarikci
             this.LoadMaterialGrid();
             this.LoadAddedMateriallistGrid();
         }
+
+        private void rpstIsSelectedSupplier_Click(object sender, EventArgs e)
+        {
+            frm_TedarikciyeAktarilanMalzemeDetay md = new frm_TedarikciyeAktarilanMalzemeDetay();
+            md.ShowDialog();
+        }
     }
 }
