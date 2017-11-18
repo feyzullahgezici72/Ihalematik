@@ -99,7 +99,7 @@
             this.panelControl3.Controls.Add(this.simpleButton2);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(120, 392);
             this.panelControl3.TabIndex = 0;
@@ -112,7 +112,7 @@
             this.simpleButton3.Image = global::IhalematikProUI.Properties.Resources.ok_icon__1_;
             this.simpleButton3.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.simpleButton3.Location = new System.Drawing.Point(3, 83);
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(114, 80);
             this.simpleButton3.TabIndex = 1;
@@ -127,7 +127,7 @@
             this.simpleButton2.Image = global::IhalematikProUI.Properties.Resources.Actions_trash_empty_icon__1_;
             this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.simpleButton2.Location = new System.Drawing.Point(3, 3);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(114, 80);
             this.simpleButton2.TabIndex = 0;
@@ -150,23 +150,23 @@
             this.gridView2.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridView2.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridView2.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridView2.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridView2.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.gridView2.Appearance.Empty.Options.UseBackColor = true;
-            this.gridView2.Appearance.EvenRow.BackColor = System.Drawing.Color.Silver;
+            this.gridView2.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridView2.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridView2.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
             this.gridView2.Appearance.EvenRow.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.gridView2.Appearance.EvenRow.Options.UseBackColor = true;
             this.gridView2.Appearance.EvenRow.Options.UseForeColor = true;
             this.gridView2.Appearance.FilterCloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.gridView2.Appearance.FilterCloseButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.gridView2.Appearance.FilterCloseButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(170)))), ((int)(((byte)(225)))));
             this.gridView2.Appearance.FilterCloseButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
             this.gridView2.Appearance.FilterCloseButton.ForeColor = System.Drawing.Color.Black;
             this.gridView2.Appearance.FilterCloseButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.gridView2.Appearance.FilterCloseButton.Options.UseBackColor = true;
             this.gridView2.Appearance.FilterCloseButton.Options.UseBorderColor = true;
             this.gridView2.Appearance.FilterCloseButton.Options.UseForeColor = true;
-            this.gridView2.Appearance.FilterPanel.BackColor = System.Drawing.Color.Black;
+            this.gridView2.Appearance.FilterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(80)))), ((int)(((byte)(135)))));
             this.gridView2.Appearance.FilterPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
             this.gridView2.Appearance.FilterPanel.ForeColor = System.Drawing.Color.White;
             this.gridView2.Appearance.FilterPanel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
@@ -174,9 +174,14 @@
             this.gridView2.Appearance.FilterPanel.Options.UseForeColor = true;
             this.gridView2.Appearance.FixedLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.gridView2.Appearance.FixedLine.Options.UseBackColor = true;
-            this.gridView2.Appearance.FocusedCell.BackColor = System.Drawing.Color.White;
+            this.gridView2.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
+            this.gridView2.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
             this.gridView2.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gridView2.Appearance.FocusedCell.Options.UseForeColor = true;
+            this.gridView2.Appearance.FocusedRow.BackColor = System.Drawing.Color.Navy;
+            this.gridView2.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(178)))));
             this.gridView2.Appearance.FocusedRow.ForeColor = System.Drawing.Color.White;
+            this.gridView2.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridView2.Appearance.FocusedRow.Options.UseForeColor = true;
             this.gridView2.Appearance.FooterPanel.BackColor = System.Drawing.Color.Silver;
             this.gridView2.Appearance.FooterPanel.BorderColor = System.Drawing.Color.Silver;
@@ -196,7 +201,7 @@
             this.gridView2.Appearance.GroupFooter.Options.UseBackColor = true;
             this.gridView2.Appearance.GroupFooter.Options.UseBorderColor = true;
             this.gridView2.Appearance.GroupFooter.Options.UseForeColor = true;
-            this.gridView2.Appearance.GroupPanel.BackColor = System.Drawing.Color.Black;
+            this.gridView2.Appearance.GroupPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
             this.gridView2.Appearance.GroupPanel.BackColor2 = System.Drawing.Color.White;
             this.gridView2.Appearance.GroupPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridView2.Appearance.GroupPanel.ForeColor = System.Drawing.Color.White;
@@ -227,9 +232,8 @@
             this.gridView2.Appearance.OddRow.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.gridView2.Appearance.OddRow.Options.UseBackColor = true;
             this.gridView2.Appearance.OddRow.Options.UseForeColor = true;
-            this.gridView2.Appearance.Preview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.gridView2.Appearance.Preview.BackColor2 = System.Drawing.Color.White;
-            this.gridView2.Appearance.Preview.ForeColor = System.Drawing.Color.Purple;
+            this.gridView2.Appearance.Preview.BackColor = System.Drawing.Color.White;
+            this.gridView2.Appearance.Preview.ForeColor = System.Drawing.Color.Navy;
             this.gridView2.Appearance.Preview.Options.UseBackColor = true;
             this.gridView2.Appearance.Preview.Options.UseForeColor = true;
             this.gridView2.Appearance.Row.BackColor = System.Drawing.Color.White;
@@ -237,9 +241,11 @@
             this.gridView2.Appearance.Row.Options.UseBackColor = true;
             this.gridView2.Appearance.Row.Options.UseForeColor = true;
             this.gridView2.Appearance.RowSeparator.BackColor = System.Drawing.Color.White;
-            this.gridView2.Appearance.RowSeparator.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridView2.Appearance.RowSeparator.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.gridView2.Appearance.RowSeparator.Options.UseBackColor = true;
+            this.gridView2.Appearance.SelectedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(138)))));
             this.gridView2.Appearance.SelectedRow.ForeColor = System.Drawing.Color.White;
+            this.gridView2.Appearance.SelectedRow.Options.UseBackColor = true;
             this.gridView2.Appearance.SelectedRow.Options.UseForeColor = true;
             this.gridView2.Appearance.VertLine.BackColor = System.Drawing.Color.Silver;
             this.gridView2.Appearance.VertLine.Options.UseBackColor = true;
@@ -350,10 +356,10 @@
             // 
             // grdAddedOBF
             // 
-            this.grdAddedOBF.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdAddedOBF.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddedOBF.Location = new System.Drawing.Point(120, 0);
             this.grdAddedOBF.MainView = this.gridView2;
-            this.grdAddedOBF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdAddedOBF.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddedOBF.Name = "grdAddedOBF";
             this.grdAddedOBF.Size = new System.Drawing.Size(1138, 392);
             this.grdAddedOBF.TabIndex = 23;
@@ -368,7 +374,7 @@
             this.groupControl3.Controls.Add(this.grdAddedOBF);
             this.groupControl3.Controls.Add(this.panelControl3);
             this.groupControl3.Location = new System.Drawing.Point(0, 406);
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(1258, 392);
             this.groupControl3.TabIndex = 38;
@@ -390,23 +396,23 @@
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridView1.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridView1.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.gridView1.Appearance.Empty.Options.UseBackColor = true;
-            this.gridView1.Appearance.EvenRow.BackColor = System.Drawing.Color.Silver;
+            this.gridView1.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridView1.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridView1.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
             this.gridView1.Appearance.EvenRow.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.gridView1.Appearance.EvenRow.Options.UseBackColor = true;
             this.gridView1.Appearance.EvenRow.Options.UseForeColor = true;
             this.gridView1.Appearance.FilterCloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
-            this.gridView1.Appearance.FilterCloseButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.gridView1.Appearance.FilterCloseButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(170)))), ((int)(((byte)(225)))));
             this.gridView1.Appearance.FilterCloseButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
             this.gridView1.Appearance.FilterCloseButton.ForeColor = System.Drawing.Color.Black;
             this.gridView1.Appearance.FilterCloseButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.gridView1.Appearance.FilterCloseButton.Options.UseBackColor = true;
             this.gridView1.Appearance.FilterCloseButton.Options.UseBorderColor = true;
             this.gridView1.Appearance.FilterCloseButton.Options.UseForeColor = true;
-            this.gridView1.Appearance.FilterPanel.BackColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.FilterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(80)))), ((int)(((byte)(135)))));
             this.gridView1.Appearance.FilterPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(208)))), ((int)(((byte)(200)))));
             this.gridView1.Appearance.FilterPanel.ForeColor = System.Drawing.Color.White;
             this.gridView1.Appearance.FilterPanel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
@@ -414,9 +420,14 @@
             this.gridView1.Appearance.FilterPanel.Options.UseForeColor = true;
             this.gridView1.Appearance.FixedLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.gridView1.Appearance.FixedLine.Options.UseBackColor = true;
-            this.gridView1.Appearance.FocusedCell.BackColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
+            this.gridView1.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
             this.gridView1.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gridView1.Appearance.FocusedCell.Options.UseForeColor = true;
+            this.gridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.Navy;
+            this.gridView1.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(178)))));
             this.gridView1.Appearance.FocusedRow.ForeColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridView1.Appearance.FocusedRow.Options.UseForeColor = true;
             this.gridView1.Appearance.FooterPanel.BackColor = System.Drawing.Color.Silver;
             this.gridView1.Appearance.FooterPanel.BorderColor = System.Drawing.Color.Silver;
@@ -436,7 +447,7 @@
             this.gridView1.Appearance.GroupFooter.Options.UseBackColor = true;
             this.gridView1.Appearance.GroupFooter.Options.UseBorderColor = true;
             this.gridView1.Appearance.GroupFooter.Options.UseForeColor = true;
-            this.gridView1.Appearance.GroupPanel.BackColor = System.Drawing.Color.Black;
+            this.gridView1.Appearance.GroupPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
             this.gridView1.Appearance.GroupPanel.BackColor2 = System.Drawing.Color.White;
             this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridView1.Appearance.GroupPanel.ForeColor = System.Drawing.Color.White;
@@ -467,9 +478,8 @@
             this.gridView1.Appearance.OddRow.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
             this.gridView1.Appearance.OddRow.Options.UseBackColor = true;
             this.gridView1.Appearance.OddRow.Options.UseForeColor = true;
-            this.gridView1.Appearance.Preview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.gridView1.Appearance.Preview.BackColor2 = System.Drawing.Color.White;
-            this.gridView1.Appearance.Preview.ForeColor = System.Drawing.Color.Purple;
+            this.gridView1.Appearance.Preview.BackColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.Preview.ForeColor = System.Drawing.Color.Navy;
             this.gridView1.Appearance.Preview.Options.UseBackColor = true;
             this.gridView1.Appearance.Preview.Options.UseForeColor = true;
             this.gridView1.Appearance.Row.BackColor = System.Drawing.Color.White;
@@ -477,9 +487,11 @@
             this.gridView1.Appearance.Row.Options.UseBackColor = true;
             this.gridView1.Appearance.Row.Options.UseForeColor = true;
             this.gridView1.Appearance.RowSeparator.BackColor = System.Drawing.Color.White;
-            this.gridView1.Appearance.RowSeparator.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.gridView1.Appearance.RowSeparator.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.gridView1.Appearance.RowSeparator.Options.UseBackColor = true;
+            this.gridView1.Appearance.SelectedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(138)))));
             this.gridView1.Appearance.SelectedRow.ForeColor = System.Drawing.Color.White;
+            this.gridView1.Appearance.SelectedRow.Options.UseBackColor = true;
             this.gridView1.Appearance.SelectedRow.Options.UseForeColor = true;
             this.gridView1.Appearance.VertLine.BackColor = System.Drawing.Color.Silver;
             this.gridView1.Appearance.VertLine.Options.UseBackColor = true;
@@ -583,10 +595,10 @@
             // grdOBFList
             // 
             this.grdOBFList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdOBFList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdOBFList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdOBFList.Location = new System.Drawing.Point(0, 0);
             this.grdOBFList.MainView = this.gridView1;
-            this.grdOBFList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdOBFList.Margin = new System.Windows.Forms.Padding(4);
             this.grdOBFList.Name = "grdOBFList";
             this.grdOBFList.Size = new System.Drawing.Size(1258, 325);
             this.grdOBFList.TabIndex = 22;
@@ -604,7 +616,7 @@
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.groupControl1.Controls.Add(this.grdOBFList);
             this.groupControl1.Location = new System.Drawing.Point(0, 81);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1258, 325);
             this.groupControl1.TabIndex = 37;
@@ -629,7 +641,7 @@
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.labelControl1.Location = new System.Drawing.Point(4, 6);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
             this.labelControl1.Size = new System.Drawing.Size(0, 37);
@@ -647,7 +659,7 @@
             this.panelControl2.Controls.Add(this.btnKapat);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1258, 35);
             this.panelControl2.TabIndex = 2;
@@ -660,7 +672,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1230, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 1;
@@ -668,16 +680,15 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.SteelBlue;
-            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl1.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1258, 35);
             this.panelControl1.TabIndex = 35;
@@ -705,7 +716,7 @@
             this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(0, 35);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(1258, 45);
             this.groupControl2.TabIndex = 40;
@@ -720,7 +731,7 @@
             this.btnBul.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnBul.Image = global::IhalematikProUI.Properties.Resources.search_icon__4_;
             this.btnBul.Location = new System.Drawing.Point(1024, 0);
-            this.btnBul.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBul.Margin = new System.Windows.Forms.Padding(4);
             this.btnBul.Name = "btnBul";
             this.btnBul.Size = new System.Drawing.Size(116, 45);
             this.btnBul.TabIndex = 2;
@@ -736,7 +747,7 @@
             this.btnEkle.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEkle.Image = global::IhalematikProUI.Properties.Resources.Button_Add_icon__1_;
             this.btnEkle.Location = new System.Drawing.Point(1140, 0);
-            this.btnEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(118, 45);
             this.btnEkle.TabIndex = 3;
@@ -746,7 +757,7 @@
             // textEdit1
             // 
             this.textEdit1.Location = new System.Drawing.Point(470, 8);
-            this.textEdit1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -762,7 +773,7 @@
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl3.Location = new System.Drawing.Point(379, 13);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(83, 21);
             this.labelControl3.TabIndex = 97;
@@ -771,7 +782,7 @@
             // txtNumber
             // 
             this.txtNumber.Location = new System.Drawing.Point(114, 8);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtNumber.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -787,7 +798,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl2.Location = new System.Drawing.Point(13, 13);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(91, 21);
             this.labelControl2.TabIndex = 97;

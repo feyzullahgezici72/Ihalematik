@@ -84,6 +84,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.btnGizliKapat);
             this.groupControl1.Controls.Add(this.dateEdit1);
             this.groupControl1.Controls.Add(this.btnYeni);

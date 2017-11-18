@@ -54,7 +54,6 @@
             this.btnAktif = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.kayitMenusu = new DevExpress.XtraEditors.GroupControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
             this.txtWorklesFonFare = new DevExpress.XtraEditors.TextEdit();
@@ -105,8 +104,6 @@
             this.kayitMenusu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
-            this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtWorklesFonFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSeveranceFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAGI.Properties)).BeginInit();
@@ -127,9 +124,8 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.SteelBlue;
-            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl1.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -169,7 +165,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -179,7 +175,7 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(300, 33);
+            this.labelControl1.Size = new System.Drawing.Size(255, 35);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "ÇALIŞAN TANIMLAMA";
             this.labelControl1.UseMnemonic = false;
@@ -600,7 +596,8 @@
             this.groupControl2.AppearanceCaption.ForeColor = System.Drawing.Color.Navy;
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl2.Controls.Add(this.panelControl3);
+            this.groupControl2.Controls.Add(this.btnKaydet);
+            this.groupControl2.Controls.Add(this.btnTemizle);
             this.groupControl2.Controls.Add(this.txtWorklesFonFare);
             this.groupControl2.Controls.Add(this.txtSeveranceFare);
             this.groupControl2.Controls.Add(this.txtAGI);
@@ -637,26 +634,14 @@
             this.groupControl2.TabIndex = 95;
             this.groupControl2.Text = "Çalışan Bilgileri";
             // 
-            // panelControl3
-            // 
-            this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl3.Controls.Add(this.btnKaydet);
-            this.panelControl3.Controls.Add(this.btnTemizle);
-            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl3.Location = new System.Drawing.Point(3, 626);
-            this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(429, 50);
-            this.panelControl3.TabIndex = 123;
-            // 
             // btnKaydet
             // 
             this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnKaydet.Appearance.Options.UseFont = true;
             this.btnKaydet.Appearance.Options.UseForeColor = true;
-            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Save_as_icon__1_;
-            this.btnKaydet.Location = new System.Drawing.Point(165, 0);
+            this.btnKaydet.Location = new System.Drawing.Point(158, 528);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(132, 50);
@@ -670,9 +655,8 @@
             this.btnTemizle.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnTemizle.Appearance.Options.UseFont = true;
             this.btnTemizle.Appearance.Options.UseForeColor = true;
-            this.btnTemizle.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnTemizle.Image = global::IhalematikProUI.Properties.Resources.Actions_edit_clear_icon;
-            this.btnTemizle.Location = new System.Drawing.Point(297, 0);
+            this.btnTemizle.Location = new System.Drawing.Point(290, 528);
             this.btnTemizle.Margin = new System.Windows.Forms.Padding(4);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(132, 50);
@@ -1184,8 +1168,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
-            this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtWorklesFonFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSeveranceFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAGI.Properties)).EndInit();
@@ -1228,7 +1210,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraEditors.GroupControl kayitMenusu;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.SimpleButton btnTemizle;
         private DevExpress.XtraEditors.TextEdit txtWorklesFonFare;
