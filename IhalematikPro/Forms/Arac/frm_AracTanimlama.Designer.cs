@@ -91,13 +91,13 @@
             this.btnGuncelle = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.statusPanel = new System.Windows.Forms.Panel();
             this.cmbAktivePasive = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -130,10 +130,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewVehicle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             this.statusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -1110,6 +1110,25 @@
             this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "gridColumn1";
+            this.gridColumn1.ColumnEdit = this.repositoryItemButtonEdit1;
+            this.gridColumn1.MaxWidth = 30;
+            this.gridColumn1.MinWidth = 30;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 6;
+            this.gridColumn1.Width = 30;
+            // 
+            // repositoryItemButtonEdit1
+            // 
+            this.repositoryItemButtonEdit1.AutoHeight = false;
+            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit1.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
+            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
             // statusPanel
             // 
             this.statusPanel.Controls.Add(this.cmbAktivePasive);
@@ -1166,30 +1185,10 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "gridColumn1";
-            this.gridColumn1.ColumnEdit = this.repositoryItemButtonEdit1;
-            this.gridColumn1.MaxWidth = 30;
-            this.gridColumn1.MinWidth = 30;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 6;
-            this.gridColumn1.Width = 30;
-            // 
-            // repositoryItemButtonEdit1
-            // 
-            this.repositoryItemButtonEdit1.AutoHeight = false;
-            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit1.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
-            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
-            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
             // frm_AracTanimlama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnKapat;
             this.ClientSize = new System.Drawing.Size(1414, 764);
             this.ControlBox = false;
             this.Controls.Add(this.grdVehicle);
@@ -1240,11 +1239,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewVehicle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             this.statusPanel.ResumeLayout(false);
             this.statusPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -70,6 +70,7 @@
             this.colAddWorkerUnitTimeType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAddWorkerWorkerUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
             this.txtCurrentDescription = new DevExpress.XtraEditors.TextEdit();
             this.txtCurrentQuantity = new DevExpress.XtraEditors.TextEdit();
             this.txtCurrentUnit = new DevExpress.XtraEditors.TextEdit();
@@ -119,7 +120,6 @@
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.lblTotalWorker = new DevExpress.XtraEditors.LabelControl();
-            this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnIscilikveAracGirisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -885,6 +885,16 @@
             this.groupControl1.Size = new System.Drawing.Size(951, 110);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "  ";
+            // 
+            // btnTamam
+            // 
+            this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
+            this.btnTamam.Location = new System.Drawing.Point(818, 42);
+            this.btnTamam.Name = "btnTamam";
+            this.btnTamam.Size = new System.Drawing.Size(119, 52);
+            this.btnTamam.TabIndex = 2;
+            this.btnTamam.Text = "Tamam";
+            this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
             // 
             // txtCurrentDescription
             // 
@@ -1692,21 +1702,10 @@
             this.lblTotalWorker.TabIndex = 14;
             this.lblTotalWorker.Text = "0 TL";
             // 
-            // btnTamam
-            // 
-            this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
-            this.btnTamam.Location = new System.Drawing.Point(818, 42);
-            this.btnTamam.Name = "btnTamam";
-            this.btnTamam.Size = new System.Drawing.Size(119, 52);
-            this.btnTamam.TabIndex = 2;
-            this.btnTamam.Text = "Tamam";
-            this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
-            // 
             // frm_Teklif_Adim3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnKapat;
             this.ClientSize = new System.Drawing.Size(1668, 764);
             this.ControlBox = false;
             this.Controls.Add(this.isciAracGirisPaneli);

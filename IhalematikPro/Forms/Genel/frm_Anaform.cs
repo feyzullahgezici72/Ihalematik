@@ -669,7 +669,7 @@ namespace IhalematikPro.Forms
         frm_TedarikcilereTeklifGonder tg;
         private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frm_TedarikcilereTeklifGonder tg = (frm_TedarikcilereTeklifGonder)Application.OpenForms["frm_TedarikcilereTeklifGonder"];
+            RibonPasif();
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             if (tg == null)
             {
@@ -689,6 +689,7 @@ namespace IhalematikPro.Forms
         private void Tg_FormClosed(object sender, FormClosedEventArgs e)
         {
             tg = null;
+            RibonAktif();
         }
     }
 }
