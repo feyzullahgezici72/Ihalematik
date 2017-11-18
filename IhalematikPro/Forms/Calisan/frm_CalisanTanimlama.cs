@@ -368,7 +368,7 @@ namespace IhalematikPro.Forms
 
         private void btnPasive_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Pasif Istediginzden emin misiniz?", "Sil", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Pasif yapmak istediğinizden emin misiniz?", "Pasif", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result.Equals(DialogResult.OK))
             {
                 this.FocusedRowHandle = gridViewWorker.FocusedRowHandle;

@@ -152,7 +152,7 @@ namespace IhalematikPro.Forms
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Silmek Istediginzden emin misiniz?", "Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Pasif yapmak istediğinz emin misiniz?", "Pasif", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (result.Equals(DialogResult.Yes))
             {
                 this.FocusedRowHandle = gridViewVehicle.FocusedRowHandle;
@@ -234,16 +234,23 @@ namespace IhalematikPro.Forms
             {
                 grdVehicle.DataSource = models.Where(p => p.IsActive);
                 colEdit.Visible = true;
+                colActive.Visible = false;
+                colPasive.Visible = true;
+                
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
                 grdVehicle.DataSource = models.Where(p => !p.IsActive);
-                colEdit.Visible = false;
+                colEdit.Visible = true;
+                colActive.Visible = true;
+                colPasive.Visible = false;
             }
 
             if (this.FocusedRowHandle != 0)
             {
                 gridViewVehicle.FocusedRowHandle = this.FocusedRowHandle;
+                colActive.Visible =false;
+                colPasive.Visible = false;
             }
         }
 
@@ -259,6 +266,24 @@ namespace IhalematikPro.Forms
                 dxErrorProvider1.ClearErrors();
             }
             return false;
+        }
+
+        private void btnActive_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Aktif yapmak istediğinz emin misiniz?", "Aktif", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.Yes))
+            {
+                this.FocusedRowHandle = gridViewVehicle.FocusedRowHandle;
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewVehicle.GetFocusedRowCellValue("Id"));
+                Vehicle selectedVehicle = VehicleProvider.Instance.GetItem(id);
+                selectedVehicle.IsActive = true;
+                VehicleProvider.Instance.Save(selectedVehicle);
+                this.LoadVehicleGrid();
+            }
+            else
+            {
+
+            }
         }
     }
 }
