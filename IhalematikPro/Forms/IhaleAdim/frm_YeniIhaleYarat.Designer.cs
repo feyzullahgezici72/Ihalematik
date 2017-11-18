@@ -97,7 +97,7 @@
             this.btnIhaleOlustur.Appearance.Options.UseFont = true;
             this.btnIhaleOlustur.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIhaleOlustur.Image = ((System.Drawing.Image)(resources.GetObject("btnIhaleOlustur.Image")));
-            this.btnIhaleOlustur.Location = new System.Drawing.Point(1214, 355);
+            this.btnIhaleOlustur.Location = new System.Drawing.Point(1148, 356);
             this.btnIhaleOlustur.Margin = new System.Windows.Forms.Padding(6);
             this.btnIhaleOlustur.Name = "btnIhaleOlustur";
             this.btnIhaleOlustur.Size = new System.Drawing.Size(133, 47);
@@ -116,7 +116,7 @@
             this.txtAciklama.Properties.Appearance.Options.UseFont = true;
             this.txtAciklama.Properties.Appearance.Options.UseForeColor = true;
             this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtAciklama.Size = new System.Drawing.Size(718, 28);
+            this.txtAciklama.Size = new System.Drawing.Size(594, 28);
             this.txtAciklama.TabIndex = 1;
             // 
             // txtTeklifNo
@@ -166,7 +166,7 @@
             this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
             this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnIptal.Location = new System.Drawing.Point(1339, 0);
+            this.btnIptal.Location = new System.Drawing.Point(1286, 0);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(28, 35);
@@ -186,7 +186,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1367, 35);
+            this.panelControl1.Size = new System.Drawing.Size(1314, 35);
             this.panelControl1.TabIndex = 31;
             this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
@@ -202,7 +202,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1367, 35);
+            this.panelControl2.Size = new System.Drawing.Size(1314, 35);
             this.panelControl2.TabIndex = 3;
             // 
             // pcWorld
@@ -235,11 +235,11 @@
             // 
             // pbControl
             // 
-            this.pbControl.Location = new System.Drawing.Point(485, 365);
+            this.pbControl.Location = new System.Drawing.Point(563, 361);
             this.pbControl.Name = "pbControl";
             this.pbControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.pbControl.Properties.Step = 1;
-            this.pbControl.Size = new System.Drawing.Size(711, 31);
+            this.pbControl.Size = new System.Drawing.Size(576, 31);
             this.pbControl.TabIndex = 33;
             // 
             // labelControl4
@@ -264,7 +264,7 @@
             this.txtcompanyName.Properties.Appearance.Options.UseFont = true;
             this.txtcompanyName.Properties.Appearance.Options.UseForeColor = true;
             this.txtcompanyName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtcompanyName.Size = new System.Drawing.Size(718, 28);
+            this.txtcompanyName.Size = new System.Drawing.Size(594, 28);
             this.txtcompanyName.TabIndex = 2;
             // 
             // labelControl5
@@ -280,10 +280,10 @@
             // 
             // tabIhaleBilgileri
             // 
-            this.tabIhaleBilgileri.Location = new System.Drawing.Point(485, 51);
+            this.tabIhaleBilgileri.Location = new System.Drawing.Point(563, 42);
             this.tabIhaleBilgileri.Name = "tabIhaleBilgileri";
             this.tabIhaleBilgileri.SelectedTabPage = this.xtraTabPage1;
-            this.tabIhaleBilgileri.Size = new System.Drawing.Size(870, 295);
+            this.tabIhaleBilgileri.Size = new System.Drawing.Size(743, 295);
             this.tabIhaleBilgileri.TabIndex = 32;
             this.tabIhaleBilgileri.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -332,7 +332,7 @@
             this.xtraTabPage2.Controls.Add(this.txtType);
             this.xtraTabPage2.Controls.Add(this.txtEkapNumber);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(860, 253);
+            this.xtraTabPage2.Size = new System.Drawing.Size(733, 253);
             this.xtraTabPage2.Text = "Detay          ";
             // 
             // labelControl12
@@ -412,7 +412,7 @@
             this.txtManagement.Properties.Appearance.Options.UseFont = true;
             this.txtManagement.Properties.Appearance.Options.UseForeColor = true;
             this.txtManagement.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtManagement.Size = new System.Drawing.Size(704, 28);
+            this.txtManagement.Size = new System.Drawing.Size(594, 28);
             this.txtManagement.TabIndex = 5;
             // 
             // txtPlace
@@ -426,7 +426,7 @@
             this.txtPlace.Properties.Appearance.Options.UseFont = true;
             this.txtPlace.Properties.Appearance.Options.UseForeColor = true;
             this.txtPlace.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtPlace.Size = new System.Drawing.Size(704, 28);
+            this.txtPlace.Size = new System.Drawing.Size(594, 28);
             this.txtPlace.TabIndex = 4;
             // 
             // txtProcedure
@@ -440,7 +440,7 @@
             this.txtProcedure.Properties.Appearance.Options.UseFont = true;
             this.txtProcedure.Properties.Appearance.Options.UseForeColor = true;
             this.txtProcedure.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtProcedure.Size = new System.Drawing.Size(704, 28);
+            this.txtProcedure.Size = new System.Drawing.Size(594, 28);
             this.txtProcedure.TabIndex = 3;
             // 
             // txtScope
@@ -454,7 +454,7 @@
             this.txtScope.Properties.Appearance.Options.UseFont = true;
             this.txtScope.Properties.Appearance.Options.UseForeColor = true;
             this.txtScope.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtScope.Size = new System.Drawing.Size(704, 28);
+            this.txtScope.Size = new System.Drawing.Size(594, 28);
             this.txtScope.TabIndex = 2;
             // 
             // txtType
@@ -468,7 +468,7 @@
             this.txtType.Properties.Appearance.Options.UseFont = true;
             this.txtType.Properties.Appearance.Options.UseForeColor = true;
             this.txtType.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtType.Size = new System.Drawing.Size(704, 28);
+            this.txtType.Size = new System.Drawing.Size(594, 28);
             this.txtType.TabIndex = 1;
             // 
             // txtEkapNumber
@@ -491,7 +491,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl3.Location = new System.Drawing.Point(0, 35);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(479, 383);
+            this.panelControl3.Size = new System.Drawing.Size(557, 383);
             this.panelControl3.TabIndex = 35;
             // 
             // grdActiveTenderList
@@ -502,7 +502,7 @@
             this.grdActiveTenderList.MainView = this.gridView1;
             this.grdActiveTenderList.Margin = new System.Windows.Forms.Padding(4);
             this.grdActiveTenderList.Name = "grdActiveTenderList";
-            this.grdActiveTenderList.Size = new System.Drawing.Size(473, 377);
+            this.grdActiveTenderList.Size = new System.Drawing.Size(551, 377);
             this.grdActiveTenderList.TabIndex = 99;
             this.grdActiveTenderList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -637,7 +637,7 @@
             this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn2.AppearanceHeader.Options.UseFont = true;
             this.gridColumn2.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn2.Caption = "TEKLİF TARIHI";
+            this.gridColumn2.Caption = "TEKLİF TARİHİ";
             this.gridColumn2.FieldName = "LastOfferDate";
             this.gridColumn2.MinWidth = 80;
             this.gridColumn2.Name = "gridColumn2";
@@ -646,7 +646,7 @@
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
-            this.gridColumn2.Width = 126;
+            this.gridColumn2.Width = 144;
             // 
             // gridColumn3
             // 
@@ -658,7 +658,7 @@
             this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn3.Caption = "ACIKLAMA";
+            this.gridColumn3.Caption = "AÇIKLAMA";
             this.gridColumn3.FieldName = "Description";
             this.gridColumn3.MinWidth = 80;
             this.gridColumn3.Name = "gridColumn3";
@@ -667,14 +667,14 @@
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 332;
+            this.gridColumn3.Width = 392;
             // 
             // frm_YeniIhaleYarat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(1367, 418);
+            this.ClientSize = new System.Drawing.Size(1314, 418);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.pbControl);

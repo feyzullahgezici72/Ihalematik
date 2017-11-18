@@ -52,5 +52,22 @@ namespace IhalematikProUI.Forms.Base
         {
 
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // IhalematikBaseForm
+           this.ClientSize = new System.Drawing.Size(Screen.PrimaryScreen.WorkingArea.Width,Screen.PrimaryScreen.WorkingArea.Height);
+            this.Name = "IhalematikBaseForm";
+            this.Load += new System.EventHandler(this.IhalematikBaseForm_Load_1);
+            this.ResumeLayout(false);
+
+        }
+
+        private void IhalematikBaseForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
