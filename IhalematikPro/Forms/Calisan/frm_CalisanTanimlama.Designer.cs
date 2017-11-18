@@ -1155,7 +1155,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnKapat;
             this.ClientSize = new System.Drawing.Size(1347, 764);
             this.ControlBox = false;
             this.Controls.Add(this.grdWorker);
