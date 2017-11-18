@@ -160,7 +160,7 @@ namespace IhalematikPro.Forms
                 Vehicle selectedVehicle = VehicleProvider.Instance.GetItem(id);
                 selectedVehicle.IsActive = false;
                 VehicleProvider.Instance.Save(selectedVehicle);
-                this.LoadGrid();
+                this.LoadVehicleGrid();
             }
             else
             {
@@ -170,7 +170,7 @@ namespace IhalematikPro.Forms
 
         private void cmbAktivePasive_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.LoadGrid();
+            this.LoadVehicleGrid();
         }
 
         private void ddlVehicleTitle_SelectedIndexChanged(object sender, EventArgs e)
@@ -213,6 +213,21 @@ namespace IhalematikPro.Forms
 
         private void frm_AracTanimlama_Shown(object sender, EventArgs e)
         {
+            LoadVehicleGrid();
+            ddlVehicleTitle.Properties.Items.Clear();
+            List<VehicleTitle> modelVehicleTitles = UIVehicleTitleManager.Instance.GetVehicleTitles();
+            ddlVehicleTitle.Properties.Items.AddRange(modelVehicleTitles);
+            if (this.SelectedTitleId != 0)
+            {
+                VehicleTitle selectedTite = modelVehicleTitles.Where(p => p.Id == this.SelectedTitleId).FirstOrDefault();
+                int selectedIndex = modelVehicleTitles.IndexOf(selectedTite);
+                ddlVehicleTitle.SelectedIndex = selectedIndex;
+            }
+            grdVehicle.Show();
+        }
+
+        private void LoadVehicleGrid()
+        {
             List<Vehicle> models = UIVehicleManager.Instance.GetVehicles();
 
             if (cmbAktivePasive.SelectedIndex == 0)
@@ -230,17 +245,8 @@ namespace IhalematikPro.Forms
             {
                 gridViewVehicle.FocusedRowHandle = this.FocusedRowHandle;
             }
-            ddlVehicleTitle.Properties.Items.Clear();
-            List<VehicleTitle> modelVehicleTitles = UIVehicleTitleManager.Instance.GetVehicleTitles();
-            ddlVehicleTitle.Properties.Items.AddRange(modelVehicleTitles);
-            if (this.SelectedTitleId != 0)
-            {
-                VehicleTitle selectedTite = modelVehicleTitles.Where(p => p.Id == this.SelectedTitleId).FirstOrDefault();
-                int selectedIndex = modelVehicleTitles.IndexOf(selectedTite);
-                ddlVehicleTitle.SelectedIndex = selectedIndex;
-            }
-            grdVehicle.Show();
         }
+
         public bool IsEmptyKontrol()
         {
             if (ddlVehicleTitle.SelectedIndex < 0)
