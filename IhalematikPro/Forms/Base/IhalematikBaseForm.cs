@@ -9,10 +9,9 @@ namespace IhalematikProUI.Forms.Base
 {
     public class IhalematikBaseForm : DevExpress.XtraEditors.XtraForm
     {
-
         public IhalematikBaseForm()
         {
-            InitializeComponent();
+            this.InitializeMethod();
         }
         public void ShowLoading()
         {
@@ -25,7 +24,7 @@ namespace IhalematikProUI.Forms.Base
             //loading.Hide();
         }
 
-        private void InitializeComponent()
+        private void InitializeMethod()
         {
             this.SuspendLayout();
             // 
