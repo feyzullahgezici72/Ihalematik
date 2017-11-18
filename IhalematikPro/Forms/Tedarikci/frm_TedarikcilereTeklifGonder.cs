@@ -32,6 +32,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
             this.LoadMaterialGrid();
             this.LoadSupplierGrid();
+            this.LoadAddedMateriallistGrid();
         }
 
         public void LoadSupplierGrid()
@@ -113,19 +114,36 @@ namespace IhalematikProUI.Forms.Tedarikci
                         }
                     }
                     this.LoadMaterialGrid(datasourceMaterialList);
-                    this.LoadGridAddedMateriallist(datasourceMaterialList);
+                    this.LoadAddedMateriallistGrid();
                 }
             }
         }
 
-        private void LoadGridAddedMateriallist(List<OfferMaterialListModel> Items)
+        private void LoadAddedMateriallistGrid()
         {
             grdAddedOfferMaterialList.DataSource = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.IsSelected);
         }
 
         private void rpstRemove_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            int materialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewAddedOfferMaterialList.GetFocusedRowCellValue("Id"));
+            OfferMaterialList selectedOfferMaterialList = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Id == materialId).FirstOrDefault();
+            selectedOfferMaterialList.IsSelected = false;
+            
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
+            parameters.Add("MaterialListId", materialId);
+            
+            List<SupplierMaterialList> items = SupplierMaterialListProvider.Instance.GetItems(parameters);
 
+            foreach (var item in items)
+            {
+                item.IsMarkedForDeletion = true;
+                SupplierMaterialListProvider.Instance.Save(item);
+            }
+
+            this.LoadMaterialGrid();
+            this.LoadAddedMateriallistGrid();
         }
     }
 }
