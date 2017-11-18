@@ -145,10 +145,11 @@ namespace IhalematikProUI.Forms.Tedarikci
             this.LoadMaterialGrid();
             this.LoadAddedMateriallistGrid();
         }
-
-        private void rpstIsSelectedSupplier_Click(object sender, EventArgs e)
+        private void rpstSupplierDetail_Click(object sender, EventArgs e)
         {
-            frm_TedarikciyeAktarilanMalzemeDetay md = new frm_TedarikciyeAktarilanMalzemeDetay();
+            frm_TedarikciyeAktarilanMalzemeDetay md = new frm_TedarikciyeAktarilanMalzemeDetay(this);
+            int selectedSupplierId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
+            md.SelectedSupplierId = selectedSupplierId;
             md.ShowDialog();
         }
     }

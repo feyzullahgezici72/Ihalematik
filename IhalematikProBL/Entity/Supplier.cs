@@ -9,7 +9,7 @@ namespace IhalematikProBL.Entity
 {
     public class Supplier : CustomEntityBase
     {
-        public List<SupplierSegment> segments { get; set; }
+        private List<SupplierSegment> segments { get; set; }
         public List<SupplierSegment> Segments
         {
             get

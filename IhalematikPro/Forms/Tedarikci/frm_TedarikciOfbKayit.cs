@@ -85,7 +85,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             {
                 OfferMaterialListModel pozModel = selectedRowsItems[item];
 
-                OfferMaterialList selectedItem = currentOffer.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
+                OfferMaterialList selectedItem = currentOffer.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).FirstOrDefault();
 
                 if (selectedItem != null)
                 {
