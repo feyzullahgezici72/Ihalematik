@@ -49,7 +49,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             }
             else
             {
-                grdMaterialList.DataSource = Items.Where(p => !p.IsSelected);
+                grdMaterialList.DataSource = Items.Where(p => !p.IsSelected).ToList();
             }
 
         }
@@ -113,8 +113,14 @@ namespace IhalematikProUI.Forms.Tedarikci
                         }
                     }
                     this.LoadMaterialGrid(datasourceMaterialList);
+                    this.LoadGridAddedMateriallist(datasourceMaterialList);
                 }
             }
+        }
+
+        private void LoadGridAddedMateriallist(List<OfferMaterialListModel> Items)
+        {
+            grdAddedOfferMaterialList.DataSource = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.IsSelected);
         }
     }
 }
