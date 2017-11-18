@@ -29,16 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DevamEdenIhaleListesi));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.pcWorld = new System.Windows.Forms.PictureBox();
-            this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.grdActiveTenderList = new DevExpress.XtraGrid.GridControl();
             this.gridViewActiveTenderList = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -59,11 +55,11 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
+            this.pcWorld = new System.Windows.Forms.PictureBox();
+            this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdActiveTenderList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewActiveTenderList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnIhaleAc)).BeginInit();
@@ -74,6 +70,7 @@
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -83,70 +80,15 @@
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.panelControl1.Controls.Add(this.panelControl2);
+            this.panelControl1.Controls.Add(this.pcWorld);
+            this.panelControl1.Controls.Add(this.lblTenderCaptin);
+            this.panelControl1.Controls.Add(this.btnKapat);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1224, 35);
             this.panelControl1.TabIndex = 37;
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl2.Appearance.Options.UseBackColor = true;
-            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.pcWorld);
-            this.panelControl2.Controls.Add(this.lblTenderCaptin);
-            this.panelControl2.Controls.Add(this.btnKapat);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1224, 35);
-            this.panelControl2.TabIndex = 2;
-            // 
-            // pcWorld
-            // 
-            this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
-            this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Name = "pcWorld";
-            this.pcWorld.Size = new System.Drawing.Size(50, 35);
-            this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcWorld.TabIndex = 16;
-            this.pcWorld.TabStop = false;
-            // 
-            // lblTenderCaptin
-            // 
-            this.lblTenderCaptin.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTenderCaptin.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
-            this.lblTenderCaptin.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.lblTenderCaptin.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblTenderCaptin.LineColor = System.Drawing.Color.Red;
-            this.lblTenderCaptin.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.lblTenderCaptin.Location = new System.Drawing.Point(56, 0);
-            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4);
-            this.lblTenderCaptin.Name = "lblTenderCaptin";
-            this.lblTenderCaptin.ShowLineShadow = false;
-            this.lblTenderCaptin.Size = new System.Drawing.Size(221, 35);
-            this.lblTenderCaptin.TabIndex = 0;
-            this.lblTenderCaptin.Text = "AÇIK TEKLİF LİSTESİ";
-            this.lblTenderCaptin.UseMnemonic = false;
-            // 
-            // btnKapat
-            // 
-            this.btnKapat.AutoSize = true;
-            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
-            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1196, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(28, 35);
-            this.btnKapat.TabIndex = 1;
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // timer1
             // 
@@ -374,6 +316,7 @@
             this.gridColumn4.MinWidth = 30;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsFilter.AllowFilter = false;
+            this.gridColumn4.ToolTip = "İhale Aç";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
             this.gridColumn4.Width = 30;
@@ -382,7 +325,7 @@
             // 
             this.btnIhaleAc.AutoHeight = false;
             this.btnIhaleAc.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnIhaleAc.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnIhaleAc.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnIhaleAc.Name = "btnIhaleAc";
             this.btnIhaleAc.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnIhaleAc.Click += new System.EventHandler(this.btnIhaleAc_Click);
@@ -396,6 +339,7 @@
             this.gridColumn5.MinWidth = 30;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsFilter.AllowFilter = false;
+            this.gridColumn5.ToolTip = "İhale Detayı Göster";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 30;
@@ -404,7 +348,7 @@
             // 
             this.btnDetay.AutoHeight = false;
             this.btnDetay.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.detail_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.detail_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnDetay.Name = "btnDetay";
             this.btnDetay.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDetay.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDetay_ButtonClick);
@@ -486,9 +430,9 @@
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(50, 30);
-            toolTipTitleItem2.Text = "Kaydet";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            this.simpleButton1.SuperTip = superToolTip2;
+            toolTipTitleItem1.Text = "Kaydet";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.simpleButton1.SuperTip = superToolTip1;
             this.simpleButton1.TabIndex = 26;
             this.simpleButton1.Text = "Bul";
             // 
@@ -536,6 +480,48 @@
             this.labelControl6.TabIndex = 19;
             this.labelControl6.Text = "Açıklama:";
             // 
+            // btnKapat
+            // 
+            this.btnKapat.AutoSize = true;
+            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnKapat.Location = new System.Drawing.Point(1196, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(28, 35);
+            this.btnKapat.TabIndex = 3;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            // 
+            // pcWorld
+            // 
+            this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
+            this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Name = "pcWorld";
+            this.pcWorld.Size = new System.Drawing.Size(50, 35);
+            this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcWorld.TabIndex = 18;
+            this.pcWorld.TabStop = false;
+            // 
+            // lblTenderCaptin
+            // 
+            this.lblTenderCaptin.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTenderCaptin.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
+            this.lblTenderCaptin.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.lblTenderCaptin.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblTenderCaptin.LineColor = System.Drawing.Color.Red;
+            this.lblTenderCaptin.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.lblTenderCaptin.Location = new System.Drawing.Point(57, 0);
+            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTenderCaptin.Name = "lblTenderCaptin";
+            this.lblTenderCaptin.ShowLineShadow = false;
+            this.lblTenderCaptin.Size = new System.Drawing.Size(221, 35);
+            this.lblTenderCaptin.TabIndex = 17;
+            this.lblTenderCaptin.Text = "AÇIK TEKLİF LİSTESİ";
+            this.lblTenderCaptin.UseMnemonic = false;
+            // 
             // frm_DevamEdenIhaleListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -555,10 +541,7 @@
             this.Load += new System.EventHandler(this.frm_DevamEdenIhaleListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
+            this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdActiveTenderList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewActiveTenderList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnIhaleAc)).EndInit();
@@ -571,6 +554,7 @@
             this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -579,10 +563,6 @@
 
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.Timer timer1;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.LabelControl lblTenderCaptin;
-        private DevExpress.XtraEditors.SimpleButton btnKapat;
-        private System.Windows.Forms.PictureBox pcWorld;
         private DevExpress.XtraGrid.GridControl grdActiveTenderList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewActiveTenderList;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
@@ -602,5 +582,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDetay;
+        private DevExpress.XtraEditors.SimpleButton btnKapat;
+        private System.Windows.Forms.PictureBox pcWorld;
+        private DevExpress.XtraEditors.LabelControl lblTenderCaptin;
     }
 }

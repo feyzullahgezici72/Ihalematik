@@ -60,9 +60,8 @@
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
@@ -84,8 +83,6 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             this.SuspendLayout();
             // 
@@ -427,6 +424,24 @@
             // 
             this.timer1.Interval = 10;
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.panelControl1.Controls.Add(this.pcWorld);
+            this.panelControl1.Controls.Add(this.labelControl1);
+            this.panelControl1.Controls.Add(this.btnKapat);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(886, 35);
+            this.panelControl1.TabIndex = 28;
+            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
+            // 
             // btnKapat
             // 
             this.btnKapat.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -442,39 +457,8 @@
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
-            this.btnKapat.TabIndex = 1;
+            this.btnKapat.TabIndex = 3;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
-            this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.panelControl1.Controls.Add(this.panelControl2);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(886, 35);
-            this.panelControl1.TabIndex = 28;
-            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl2.Appearance.Options.UseBackColor = true;
-            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.pcWorld);
-            this.panelControl2.Controls.Add(this.labelControl1);
-            this.panelControl2.Controls.Add(this.btnKapat);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(886, 35);
-            this.panelControl2.TabIndex = 2;
             // 
             // pcWorld
             // 
@@ -484,7 +468,7 @@
             this.pcWorld.Name = "pcWorld";
             this.pcWorld.Size = new System.Drawing.Size(50, 35);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcWorld.TabIndex = 16;
+            this.pcWorld.TabIndex = 18;
             this.pcWorld.TabStop = false;
             // 
             // labelControl1
@@ -494,12 +478,12 @@
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(47, 1);
+            this.labelControl1.Location = new System.Drawing.Point(55, 0);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
             this.labelControl1.Size = new System.Drawing.Size(245, 35);
-            this.labelControl1.TabIndex = 5;
+            this.labelControl1.TabIndex = 17;
             this.labelControl1.Text = " FİRMA TANIMLAMA ";
             this.labelControl1.UseMnemonic = false;
             // 
@@ -538,9 +522,7 @@
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
+            this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             this.ResumeLayout(false);
 
@@ -562,8 +544,6 @@
         private DevExpress.XtraEditors.TextEdit txtName;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.SimpleButton btnKapat;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.TextEdit txtTelephone2;
         private DevExpress.XtraEditors.LabelControl labelControl9;
@@ -580,8 +560,9 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private System.Windows.Forms.Timer timer1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.PictureBox pcWorld;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
+        private System.Windows.Forms.PictureBox pcWorld;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SimpleButton btnKapat;
     }
 }

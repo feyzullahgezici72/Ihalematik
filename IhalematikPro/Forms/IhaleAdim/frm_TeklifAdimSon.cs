@@ -16,6 +16,7 @@ using IhalematikProUI.Model;
 using DevExpress.XtraReports.UI;
 using System.Threading;
 using IhalematikProUI.Forms.Base;
+using IhalematikPro.Forms;
 //using IhalematikProUI.Report;
 
 namespace IhalematikProUI.Forms
@@ -31,6 +32,8 @@ namespace IhalematikProUI.Forms
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            af.RibonAktif();
         }
 
         private void panelControl1_Paint(object sender, PaintEventArgs e)

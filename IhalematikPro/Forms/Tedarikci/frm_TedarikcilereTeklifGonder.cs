@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using IhalematikProUI.Model;
 using IhalematikPro.Model;
 using System.Linq;
+using IhalematikPro.Forms;
+using System.Windows.Forms;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -20,6 +22,8 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            af.RibonAktif();
         }
 
         private void btnPozKayit_Click(object sender, EventArgs e)

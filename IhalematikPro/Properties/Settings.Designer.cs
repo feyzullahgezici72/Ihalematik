@@ -22,5 +22,17 @@ namespace IhalematikProUI.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int sayfa {
+            get {
+                return ((int)(this["sayfa"]));
+            }
+            set {
+                this["sayfa"] = value;
+            }
+        }
     }
 }

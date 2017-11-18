@@ -14,6 +14,7 @@ using IhalematikProUI.Model;
 using IhalematikProBL.Provider;
 using IhalematikPro.Model;
 using IhalematikPro.Manager;
+using IhalematikPro.Forms;
 
 namespace IhalematikProUI.Forms
 {
@@ -33,6 +34,8 @@ namespace IhalematikProUI.Forms
         private void btnKapat_Click_1(object sender, EventArgs e)
         {
             this.Close();
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            af.RibonAktif();
         }
 
         private void frm_TedarikcilerdenFiyatAl_Shown(object sender, EventArgs e)

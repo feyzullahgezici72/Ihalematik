@@ -48,6 +48,8 @@ namespace IhalematikPro.Forms
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            af.RibonAktif();
         }
 
         private void frm_Teklif_Adim1_Load(object sender, EventArgs e)

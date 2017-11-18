@@ -93,7 +93,7 @@
             // frm_MesajFormu
             // 
             this.AcceptButton = this.btnTamam;
-            this.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

@@ -29,15 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CalisanTanimlama));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CalisanTanimlama));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.grdWorker = new DevExpress.XtraGrid.GridControl();
             this.gridViewWorker = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -90,10 +88,9 @@
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdWorker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewWorker)).BeginInit();
@@ -129,28 +126,15 @@
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.panelControl1.Controls.Add(this.panelControl2);
+            this.panelControl1.Controls.Add(this.btnKapat);
+            this.panelControl1.Controls.Add(this.pcWorld);
+            this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1347, 35);
             this.panelControl1.TabIndex = 31;
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl2.Appearance.Options.UseBackColor = true;
-            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.pcWorld);
-            this.panelControl2.Controls.Add(this.labelControl1);
-            this.panelControl2.Controls.Add(this.btnKapat);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1347, 35);
-            this.panelControl2.TabIndex = 2;
             // 
             // pcWorld
             // 
@@ -160,7 +144,7 @@
             this.pcWorld.Name = "pcWorld";
             this.pcWorld.Size = new System.Drawing.Size(50, 35);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcWorld.TabIndex = 21;
+            this.pcWorld.TabIndex = 23;
             this.pcWorld.TabStop = false;
             // 
             // labelControl1
@@ -171,28 +155,14 @@
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(57, 0);
+            this.labelControl1.Location = new System.Drawing.Point(50, 0);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
             this.labelControl1.Size = new System.Drawing.Size(255, 35);
-            this.labelControl1.TabIndex = 0;
+            this.labelControl1.TabIndex = 22;
             this.labelControl1.Text = "ÇALIŞAN TANIMLAMA";
             this.labelControl1.UseMnemonic = false;
-            // 
-            // btnKapat
-            // 
-            this.btnKapat.AutoSize = true;
-            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
-            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1319, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(28, 35);
-            this.btnKapat.TabIndex = 19;
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // grdWorker
             // 
@@ -503,7 +473,7 @@
             this.colEdit.MinWidth = 30;
             this.colEdit.Name = "colEdit";
             this.colEdit.OptionsFilter.AllowFilter = false;
-            this.colEdit.ToolTip = "Kaydı güncelle";
+            this.colEdit.ToolTip = "Güncelle";
             this.colEdit.Visible = true;
             this.colEdit.VisibleIndex = 5;
             this.colEdit.Width = 30;
@@ -533,7 +503,7 @@
             this.colPasive.MaxWidth = 30;
             this.colPasive.MinWidth = 30;
             this.colPasive.Name = "colPasive";
-            this.colPasive.ToolTip = "Kaydı pasif yap";
+            this.colPasive.ToolTip = "Pasif Yap";
             this.colPasive.Visible = true;
             this.colPasive.VisibleIndex = 6;
             this.colPasive.Width = 30;
@@ -557,7 +527,7 @@
             this.colActive.MinWidth = 30;
             this.colActive.Name = "colActive";
             this.colActive.OptionsFilter.AllowFilter = false;
-            this.colActive.ToolTip = "Kaydı aktif yap";
+            this.colActive.ToolTip = "Aktif Yap";
             this.colActive.Visible = true;
             this.colActive.VisibleIndex = 7;
             this.colActive.Width = 30;
@@ -1135,6 +1105,21 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
+            // btnKapat
+            // 
+            this.btnKapat.AutoSize = true;
+            this.btnKapat.AutoWidthInLayoutControl = true;
+            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnKapat.Location = new System.Drawing.Point(1319, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(28, 35);
+            this.btnKapat.TabIndex = 24;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            // 
             // frm_CalisanTanimlama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1154,9 +1139,7 @@
             this.Shown += new System.EventHandler(this.frm_CalisanTanimlama_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
+            this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdWorker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewWorker)).EndInit();
@@ -1192,8 +1175,6 @@
         #endregion
 
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.GridControl grdWorker;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewWorker;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
@@ -1201,12 +1182,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraEditors.SimpleButton btnKapat;
         private DevExpress.XtraGrid.Columns.GridColumn colEdit;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnGuncelle;
         private DevExpress.XtraGrid.Columns.GridColumn colPasive;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnPasive;
-        private System.Windows.Forms.PictureBox pcWorld;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraEditors.GroupControl kayitMenusu;
         private DevExpress.XtraEditors.GroupControl groupControl2;
@@ -1248,5 +1227,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colActive;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnAktif;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
+        private System.Windows.Forms.PictureBox pcWorld;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SimpleButton btnKapat;
     }
 }

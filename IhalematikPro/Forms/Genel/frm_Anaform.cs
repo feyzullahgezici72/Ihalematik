@@ -533,7 +533,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Lilian";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Money Twins"; //"Lilian";
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
@@ -547,14 +547,14 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "McSkin"; //Office 2007 Blue
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Lilian"; //Office 2007 Blue
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
 
         private void barButtonItem16_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Silver";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Caramel";
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
@@ -583,7 +583,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)
         {
-            RibonPasif();
+           
             frm_Kurallistesi kl = new frm_Kurallistesi();
             kl.ShowDialog();
         }

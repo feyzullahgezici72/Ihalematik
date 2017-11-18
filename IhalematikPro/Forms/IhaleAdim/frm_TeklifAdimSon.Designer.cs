@@ -485,7 +485,7 @@
             // 
             this.lblTotalMarkupNonKDV.Appearance.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTotalMarkupNonKDV.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblTotalMarkupNonKDV.Location = new System.Drawing.Point(111, 66);
+            this.lblTotalMarkupNonKDV.Location = new System.Drawing.Point(31, 70);
             this.lblTotalMarkupNonKDV.Margin = new System.Windows.Forms.Padding(4);
             this.lblTotalMarkupNonKDV.Name = "lblTotalMarkupNonKDV";
             this.lblTotalMarkupNonKDV.Size = new System.Drawing.Size(53, 39);
@@ -528,7 +528,7 @@
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1202, 72);
+            this.panelControl4.Size = new System.Drawing.Size(1235, 72);
             this.panelControl4.TabIndex = 23;
             // 
             // btnKaydet
@@ -539,10 +539,10 @@
             this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(1045, 3);
+            this.btnKaydet.Location = new System.Drawing.Point(1100, 3);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(154, 66);
+            this.btnKaydet.Size = new System.Drawing.Size(132, 66);
             this.btnKaydet.TabIndex = 11;
             this.btnKaydet.Text = "Kaydet";
             // 
@@ -644,10 +644,10 @@
             this.btnObfKayit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnObfKayit.Image = global::IhalematikProUI.Properties.Resources.print_icon__1_;
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnObfKayit.Location = new System.Drawing.Point(1202, 0);
+            this.btnObfKayit.Location = new System.Drawing.Point(1235, 0);
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4);
             this.btnObfKayit.Name = "btnObfKayit";
-            this.btnObfKayit.Size = new System.Drawing.Size(174, 72);
+            this.btnObfKayit.Size = new System.Drawing.Size(141, 72);
             this.btnObfKayit.TabIndex = 5;
             this.btnObfKayit.Text = "Yazdır";
             this.btnObfKayit.Click += new System.EventHandler(this.btnObfKayit_Click);

@@ -640,10 +640,8 @@
             // 
             // btnNext
             // 
-            this.btnNext.Appearance.BackColor = System.Drawing.Color.Turquoise;
             this.btnNext.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnNext.Appearance.ForeColor = System.Drawing.Color.Blue;
-            this.btnNext.Appearance.Options.UseBackColor = true;
+            this.btnNext.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnNext.Appearance.Options.UseFont = true;
             this.btnNext.Appearance.Options.UseForeColor = true;
             this.btnNext.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
@@ -654,7 +652,7 @@
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(183, 83);
             this.btnNext.TabIndex = 3;
-            this.btnNext.Text = "Sonraki Adıma";
+            this.btnNext.Text = "Sonraki Adım";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // grdMaterialList

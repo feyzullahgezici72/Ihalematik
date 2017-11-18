@@ -140,6 +140,8 @@ namespace IhalematikPro.Forms
         {
             this.Close();
             grdMaterialListIsWorkship.Refresh();
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            af.RibonAktif();
         }
 
         private void btnTumuneUygula_Click(object sender, EventArgs e)
