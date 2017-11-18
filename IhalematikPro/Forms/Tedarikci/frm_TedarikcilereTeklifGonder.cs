@@ -116,5 +116,10 @@ namespace IhalematikProUI.Forms.Tedarikci
                 }
             }
         }
+
+        private void rpstRemove_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
+        }
     }
 }
