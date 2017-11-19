@@ -111,7 +111,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 35);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1258, 45);
+            this.groupControl2.Size = new System.Drawing.Size(1258, 50);
             this.groupControl2.TabIndex = 33;
             this.groupControl2.Text = "Malzeme Bilgileri";
             // 
@@ -126,7 +126,7 @@
             this.btnBul.Location = new System.Drawing.Point(1022, 0);
             this.btnBul.Margin = new System.Windows.Forms.Padding(6);
             this.btnBul.Name = "btnBul";
-            this.btnBul.Size = new System.Drawing.Size(118, 45);
+            this.btnBul.Size = new System.Drawing.Size(118, 50);
             this.btnBul.TabIndex = 2;
             this.btnBul.Text = "Bul";
             this.btnBul.Click += new System.EventHandler(this.btnBul_Click);
@@ -142,7 +142,7 @@
             this.btnEkle.Location = new System.Drawing.Point(1140, 0);
             this.btnEkle.Margin = new System.Windows.Forms.Padding(6);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(118, 45);
+            this.btnEkle.Size = new System.Drawing.Size(118, 50);
             this.btnEkle.TabIndex = 3;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
@@ -251,7 +251,7 @@
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.groupControl1.Controls.Add(this.grdPozList);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(0, 80);
+            this.groupControl1.Location = new System.Drawing.Point(0, 85);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1258, 323);
@@ -492,10 +492,10 @@
             this.groupControl3.Controls.Add(this.grdAddedPoz);
             this.groupControl3.Controls.Add(this.panelControl3);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl3.Location = new System.Drawing.Point(0, 403);
+            this.groupControl3.Location = new System.Drawing.Point(0, 408);
             this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1258, 373);
+            this.groupControl3.Size = new System.Drawing.Size(1258, 368);
             this.groupControl3.TabIndex = 35;
             this.groupControl3.Text = "Eklenen Malzemeler";
             // 
@@ -507,7 +507,7 @@
             this.grdAddedPoz.MainView = this.gridView2;
             this.grdAddedPoz.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddedPoz.Name = "grdAddedPoz";
-            this.grdAddedPoz.Size = new System.Drawing.Size(1138, 373);
+            this.grdAddedPoz.Size = new System.Drawing.Size(1138, 368);
             this.grdAddedPoz.TabIndex = 23;
             this.grdAddedPoz.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -733,7 +733,7 @@
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(120, 373);
+            this.panelControl3.Size = new System.Drawing.Size(120, 368);
             this.panelControl3.TabIndex = 0;
             // 
             // simpleButton3

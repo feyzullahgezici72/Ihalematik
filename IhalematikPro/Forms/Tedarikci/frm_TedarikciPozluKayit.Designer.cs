@@ -589,11 +589,11 @@
             // 
             this.grdPozList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdPozList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdPozList.Location = new System.Drawing.Point(0, 45);
+            this.grdPozList.Location = new System.Drawing.Point(0, 50);
             this.grdPozList.MainView = this.gridView1;
             this.grdPozList.Margin = new System.Windows.Forms.Padding(4);
             this.grdPozList.Name = "grdPozList";
-            this.grdPozList.Size = new System.Drawing.Size(1258, 278);
+            this.grdPozList.Size = new System.Drawing.Size(1258, 273);
             this.grdPozList.TabIndex = 22;
             this.grdPozList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -636,7 +636,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1258, 45);
+            this.groupControl2.Size = new System.Drawing.Size(1258, 50);
             this.groupControl2.TabIndex = 39;
             this.groupControl2.Text = "Malzeme Bilgileri";
             // 
@@ -651,7 +651,7 @@
             this.btnBul.Location = new System.Drawing.Point(1022, 0);
             this.btnBul.Margin = new System.Windows.Forms.Padding(6);
             this.btnBul.Name = "btnBul";
-            this.btnBul.Size = new System.Drawing.Size(118, 45);
+            this.btnBul.Size = new System.Drawing.Size(118, 50);
             this.btnBul.TabIndex = 2;
             this.btnBul.Text = "Bul";
             this.btnBul.Click += new System.EventHandler(this.btnBul_Click);
@@ -667,7 +667,7 @@
             this.btnEkle.Location = new System.Drawing.Point(1140, 0);
             this.btnEkle.Margin = new System.Windows.Forms.Padding(6);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(118, 45);
+            this.btnEkle.Size = new System.Drawing.Size(118, 50);
             this.btnEkle.TabIndex = 3;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
