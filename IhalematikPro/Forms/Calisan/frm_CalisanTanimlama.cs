@@ -151,6 +151,7 @@ namespace IhalematikPro.Forms
                 colEdit.Visible = true;
                 colPasive.Visible = true;
                 colActive.Visible = false;
+                lblRecordCount.Text = models.Count.ToString();
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
@@ -158,6 +159,7 @@ namespace IhalematikPro.Forms
                 colPasive.Visible = false;
                 colEdit.Visible = false;
                 colActive.Visible = true;
+                lblRecordCount.Text = models.Count.ToString();
             }
 
             if (this.FocusedRowHandle != 0)

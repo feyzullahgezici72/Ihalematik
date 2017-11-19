@@ -37,9 +37,14 @@ namespace IhalematikPro.Forms
 
         }
 
-
+        public void logoOrtala()
+        {
+            picLogo.Left = (pnlAna.Width / 2) - (picLogo.Width / 2);
+            picLogo.Top = (pnlAna.Height / 2) - (picLogo.Height / 2);
+        }
         public void frm_Anaform_Load(object sender, EventArgs e)
         {
+            logoOrtala();
             DevExpress.UserSkins.BonusSkins.Register();
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
 
@@ -690,6 +695,11 @@ namespace IhalematikPro.Forms
         {
             tg = null;
             RibonAktif();
+        }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

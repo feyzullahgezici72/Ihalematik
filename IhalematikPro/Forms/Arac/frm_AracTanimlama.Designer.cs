@@ -949,7 +949,6 @@
             this.gridViewVehicle.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewVehicle.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewVehicle.OptionsView.ShowGroupPanel = false;
-            this.gridViewVehicle.OptionsView.ShowIndicator = false;
             this.gridViewVehicle.PaintStyleName = "Web";
             // 
             // gridColumn2
