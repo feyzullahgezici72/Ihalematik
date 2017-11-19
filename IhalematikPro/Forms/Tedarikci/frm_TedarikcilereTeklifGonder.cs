@@ -46,7 +46,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             grdSupplier.DataSource = models;
         }
         public void LoadMaterialGrid(List<OfferMaterialListModel> Items = null)
-        {
+        { 
             if (Items == null)
             {
                 List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => !p.IsSelected).ToList());
@@ -157,6 +157,46 @@ namespace IhalematikProUI.Forms.Tedarikci
             md.SelectedSupplierId = selectedSupplierId;
             md.ShowDialog();
             this.Enabled = true;
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_TedarikcilereTeklifGonder_Load(object sender, EventArgs e)
+        {
+            pnlMalzemeListesi.Dock = DockStyle.Fill;
+        }
+
+        private void radioGroup1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (radioGroup1.SelectedIndex==0)
+            {
+                pnlMalzemeListesi.Enabled = true;
+                pnlUst.Enabled = true;
+                pnlFirma.Visible = false;
+                pnlAktarilanlar.Visible = false;
+                pnlMalzemeListesi.Dock = DockStyle.Fill;
+
+            }
+            if (radioGroup1.SelectedIndex==1)
+            {
+                
+                btnAktar.Enabled = true;
+                pnlMalzemeListesi.Enabled = true;
+                pnlMalzemeListesi.Dock = DockStyle.Left;
+                pnlUst.Enabled = true;
+                pnlFirma.Visible = true;
+                pnlAktarilanlar.Visible = true;
+
+            }
+             
+        }
+
+        private void panelControl4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
