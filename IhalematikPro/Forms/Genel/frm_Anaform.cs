@@ -538,7 +538,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Money Twins"; //"Lilian";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "iMaginary"; //"Money Twins"; //"Lilian";
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
@@ -566,7 +566,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Pink"; //London Liquid Sky
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Money Twins"; //London Liquid Sky
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
