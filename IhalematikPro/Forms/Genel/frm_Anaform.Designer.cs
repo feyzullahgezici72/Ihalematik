@@ -141,7 +141,8 @@ namespace IhalematikPro.Forms
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem4 = new DevExpress.XtraBars.BarStaticItem();
             this.MainPanel = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.pnlAna = new DevExpress.XtraEditors.PanelControl();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.lblCompanyName = new DevExpress.XtraEditors.LabelControl();
             this.pnIhaleListesi = new DevExpress.XtraEditors.PanelControl();
@@ -166,8 +167,9 @@ namespace IhalematikPro.Forms
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel)).BeginInit();
             this.MainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlAna)).BeginInit();
+            this.pnlAna.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnIhaleListesi)).BeginInit();
@@ -543,7 +545,7 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem12
             // 
-            this.barButtonItem12.Caption = "Yeni Teklif Oluştur";
+            this.barButtonItem12.Caption = "Yeni Teklif Yarat";
             this.barButtonItem12.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.Glyph")));
             this.barButtonItem12.Id = 9;
             this.barButtonItem12.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.LargeGlyph")));
@@ -1018,7 +1020,7 @@ namespace IhalematikPro.Forms
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem6);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 555);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 645);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbon;
             this.ribbonStatusBar1.Size = new System.Drawing.Size(1368, 43);
@@ -1069,26 +1071,39 @@ namespace IhalematikPro.Forms
             // 
             this.MainPanel.AutoSize = true;
             this.MainPanel.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.MainPanel.Controls.Add(this.panelControl1);
+            this.MainPanel.Controls.Add(this.pnlAna);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 205);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1368, 350);
+            this.MainPanel.Size = new System.Drawing.Size(1368, 440);
             this.MainPanel.TabIndex = 9;
             // 
-            // panelControl1
+            // pnlAna
             // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.Controls.Add(this.panelControl4);
-            this.panelControl1.Controls.Add(this.pnIhaleListesi);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(3, 3);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1362, 344);
-            this.panelControl1.TabIndex = 0;
-            this.panelControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelControl1_MouseMove);
+            this.pnlAna.Appearance.BackColor = System.Drawing.Color.White;
+            this.pnlAna.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.pnlAna.Appearance.Options.UseBackColor = true;
+            this.pnlAna.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlAna.Controls.Add(this.picLogo);
+            this.pnlAna.Controls.Add(this.panelControl4);
+            this.pnlAna.Controls.Add(this.pnIhaleListesi);
+            this.pnlAna.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAna.Location = new System.Drawing.Point(3, 3);
+            this.pnlAna.Name = "pnlAna";
+            this.pnlAna.Size = new System.Drawing.Size(1362, 434);
+            this.pnlAna.TabIndex = 0;
+            this.pnlAna.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
+            this.pnlAna.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelControl1_MouseMove);
+            // 
+            // picLogo
+            // 
+            this.picLogo.Image = global::IhalematikProUI.Properties.Resources.logomuz;
+            this.picLogo.Location = new System.Drawing.Point(434, 234);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(361, 141);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 3;
+            this.picLogo.TabStop = false;
             // 
             // panelControl4
             // 
@@ -1100,14 +1115,16 @@ namespace IhalematikPro.Forms
             this.panelControl4.Enabled = false;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(962, 30);
+            this.panelControl4.Size = new System.Drawing.Size(962, 29);
             this.panelControl4.TabIndex = 2;
             // 
             // lblCompanyName
             // 
             this.lblCompanyName.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCompanyName.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblCompanyName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblCompanyName.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.lblCompanyName.Appearance.ForeColor = System.Drawing.Color.Gray;
+            this.lblCompanyName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.lblCompanyName.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.lblCompanyName.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblCompanyName.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
             this.lblCompanyName.LineColor = System.Drawing.Color.WhiteSmoke;
@@ -1118,8 +1135,7 @@ namespace IhalematikPro.Forms
             this.lblCompanyName.LookAndFeel.SkinName = "Liquid Sky";
             this.lblCompanyName.LookAndFeel.UseWindowsXPTheme = true;
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.ShowLineShadow = false;
-            this.lblCompanyName.Size = new System.Drawing.Size(962, 30);
+            this.lblCompanyName.Size = new System.Drawing.Size(962, 29);
             this.lblCompanyName.TabIndex = 0;
             this.lblCompanyName.Text = "ASH Grup Ltd.Şti.";
             // 
@@ -1130,7 +1146,7 @@ namespace IhalematikPro.Forms
             this.pnIhaleListesi.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnIhaleListesi.Location = new System.Drawing.Point(962, 0);
             this.pnIhaleListesi.Name = "pnIhaleListesi";
-            this.pnIhaleListesi.Size = new System.Drawing.Size(400, 344);
+            this.pnIhaleListesi.Size = new System.Drawing.Size(400, 434);
             this.pnIhaleListesi.TabIndex = 0;
             this.pnIhaleListesi.Visible = false;
             // 
@@ -1145,7 +1161,7 @@ namespace IhalematikPro.Forms
             this.grdActiveTenderList.MainView = this.gridView1;
             this.grdActiveTenderList.Margin = new System.Windows.Forms.Padding(4);
             this.grdActiveTenderList.Name = "grdActiveTenderList";
-            this.grdActiveTenderList.Size = new System.Drawing.Size(400, 344);
+            this.grdActiveTenderList.Size = new System.Drawing.Size(400, 434);
             this.grdActiveTenderList.TabIndex = 3;
             this.grdActiveTenderList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -1235,7 +1251,7 @@ namespace IhalematikPro.Forms
             this.gridView1.Appearance.HideSelectionRow.Options.UseBackColor = true;
             this.gridView1.Appearance.HideSelectionRow.Options.UseBorderColor = true;
             this.gridView1.Appearance.HideSelectionRow.Options.UseForeColor = true;
-            this.gridView1.Appearance.HorzLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(184)))), ((int)(((byte)(251)))));
+            this.gridView1.Appearance.HorzLine.BackColor = System.Drawing.Color.White;
             this.gridView1.Appearance.HorzLine.Options.UseBackColor = true;
             this.gridView1.Appearance.OddRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.gridView1.Appearance.OddRow.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
@@ -1260,8 +1276,6 @@ namespace IhalematikPro.Forms
             this.gridView1.Appearance.SelectedRow.Options.UseForeColor = true;
             this.gridView1.Appearance.TopNewRow.BackColor = System.Drawing.Color.White;
             this.gridView1.Appearance.TopNewRow.Options.UseBackColor = true;
-            this.gridView1.Appearance.VertLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(184)))), ((int)(((byte)(251)))));
-            this.gridView1.Appearance.VertLine.Options.UseBackColor = true;
             this.gridView1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
@@ -1352,7 +1366,7 @@ namespace IhalematikPro.Forms
             this.Appearance.Options.UseTextOptions = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1368, 598);
+            this.ClientSize = new System.Drawing.Size(1368, 688);
             this.ControlBox = false;
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.ribbonStatusBar1);
@@ -1386,9 +1400,10 @@ namespace IhalematikPro.Forms
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel)).EndInit();
             this.MainPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlAna)).EndInit();
+            this.pnlAna.ResumeLayout(false);
+            this.pnlAna.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnIhaleListesi)).EndInit();
@@ -1477,7 +1492,7 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl1;
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem1;
         private DevExpress.XtraBars.PopupMenu popupMenu1;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.PanelControl pnlAna;
         private DevExpress.XtraEditors.PanelControl pnIhaleListesi;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
         private System.Windows.Forms.Timer timer1;
@@ -1489,6 +1504,7 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private System.Windows.Forms.PictureBox picLogo;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }

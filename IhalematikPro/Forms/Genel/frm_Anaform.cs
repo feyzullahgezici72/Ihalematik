@@ -37,9 +37,14 @@ namespace IhalematikPro.Forms
 
         }
 
-
+        public void logoOrtala()
+        {
+            picLogo.Left = (pnlAna.Width / 2) - (picLogo.Width / 2);
+            picLogo.Top = (pnlAna.Height / 2) - (picLogo.Height / 2);
+        }
         public void frm_Anaform_Load(object sender, EventArgs e)
         {
+            logoOrtala();
             DevExpress.UserSkins.BonusSkins.Register();
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
 
@@ -533,7 +538,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Money Twins"; //"Lilian";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "iMaginary"; //"Money Twins"; //"Lilian";
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
@@ -561,7 +566,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Pink"; //London Liquid Sky
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Money Twins"; //London Liquid Sky
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
@@ -690,6 +695,11 @@ namespace IhalematikPro.Forms
         {
             tg = null;
             RibonAktif();
+        }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
