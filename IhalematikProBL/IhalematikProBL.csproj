@@ -103,7 +103,9 @@
       <HintPath>..\External\Stonefish.Payment.BL.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -113,6 +115,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\Company.cs" />
+    <Compile Include="Mailing\EmailData.cs" />
+    <Compile Include="Mailing\EmailSetting.cs" />
     <Compile Include="Entity\EntityBase.cs" />
     <Compile Include="Entity\Fare.cs" />
     <Compile Include="Entity\Material.cs" />
@@ -137,7 +141,10 @@
     <Compile Include="Enum\RentTypesEnum.cs" />
     <Compile Include="Enum\RuleTypesEnum.cs" />
     <Compile Include="Enum\UnitTimeTypesEnum.cs" />
+    <Compile Include="Mailing\EmailHelper.cs" />
+    <Compile Include="Manager\CustomConfigurationManager.cs" />
     <Compile Include="Manager\CustomDBConnectionManager.cs" />
+    <Compile Include="Mailing\MailingManager.cs" />
     <Compile Include="Manager\OfferManager.cs" />
     <Compile Include="Manager\TenderManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
