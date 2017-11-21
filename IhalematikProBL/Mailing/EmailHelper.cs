@@ -97,6 +97,8 @@ namespace IhalematikProBL.Mailing
                         }
                     }
                 }
+                //if (attachmentFilename != null)
+                message.Attachments.Add(new Attachment("E:\\Development\\Clone\\IhalematikPro\\EmailFile\\Malzeme_Fiyat_Listesi-1.xlsx"));
 
                 SmtpClient client = new SmtpClient(SmtpServer, SmtpPort);
 
@@ -129,7 +131,6 @@ namespace IhalematikProBL.Mailing
                 //MailingManager.Instance.SendErrorEmail(ex);
             }
         }
-
         public void SendEmail(string sender, string displayName, List<string> recipients, string subject, string body, bool isBodyHtml)
         {
             foreach (string recipient in recipients)

@@ -45,7 +45,6 @@ namespace IhalematikPro.Forms
         }
         private void frm_AracTanimlama_Load(object sender, EventArgs e)
         {
-            MailingManager.Instance.SendTesEmail();
             LoadGrid();
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(Frm_AracTanimlama_KeyDown);

@@ -9,6 +9,7 @@ using IhalematikPro.Model;
 using System.Linq;
 using IhalematikPro.Forms;
 using System.Windows.Forms;
+using IhalematikProBL.Manager;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -46,7 +47,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             grdSupplier.DataSource = models;
         }
         public void LoadMaterialGrid(List<OfferMaterialListModel> Items = null)
-        { 
+        {
             if (Items == null)
             {
                 List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => !p.IsSelected).ToList());
@@ -133,11 +134,11 @@ namespace IhalematikProUI.Forms.Tedarikci
             int materialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewAddedOfferMaterialList.GetFocusedRowCellValue("Id"));
             OfferMaterialList selectedOfferMaterialList = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Id == materialId).FirstOrDefault();
             selectedOfferMaterialList.IsSelected = false;
-            
+
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
             parameters.Add("MaterialListId", materialId);
-            
+
             List<SupplierMaterialList> items = SupplierMaterialListProvider.Instance.GetItems(parameters);
 
             foreach (var item in items)
@@ -171,7 +172,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void radioGroup1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (radioGroup1.SelectedIndex==0)
+            if (radioGroup1.SelectedIndex == 0)
             {
                 pnlMalzemeListesi.Enabled = true;
                 pnlUst.Enabled = true;
@@ -180,9 +181,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                 pnlMalzemeListesi.Dock = DockStyle.Fill;
 
             }
-            if (radioGroup1.SelectedIndex==1)
+            if (radioGroup1.SelectedIndex == 1)
             {
-                
+
                 btnAktar.Enabled = true;
                 pnlMalzemeListesi.Enabled = true;
                 pnlMalzemeListesi.Dock = DockStyle.Left;
@@ -191,12 +192,67 @@ namespace IhalematikProUI.Forms.Tedarikci
                 pnlAktarilanlar.Visible = true;
 
             }
-             
+
         }
 
         private void panelControl4_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.UpdateExcel();
+        }
+
+        private void UpdateExcel()
+        {
+            Microsoft.Office.Interop.Excel.Application oXL = null;
+            Microsoft.Office.Interop.Excel._Workbook oWB = null;
+            Microsoft.Office.Interop.Excel._Worksheet oSheet = null;
+
+            try
+            {
+                oXL = new Microsoft.Office.Interop.Excel.Application();
+                oWB = oXL.Workbooks.Open("E:\\Development\\Clone\\IhalematikPro\\EmailFile\\Malzeme_Fiyat_Listesi-1.xlsx");
+                oSheet = String.IsNullOrEmpty("Sayfa1") ? (Microsoft.Office.Interop.Excel._Worksheet)oWB.ActiveSheet : (Microsoft.Office.Interop.Excel._Worksheet)oWB.Worksheets["Sayfa1"];
+
+                if (CurrentManager.Instance.CurrentOffer != null)
+                {
+                    if (CurrentManager.Instance.CurrentOffer.MaterialList != null)
+                    {
+                        int row = 2;
+                        int indexNumber = 1;
+                        
+                        foreach (OfferMaterialList materialList in CurrentManager.Instance.CurrentOffer.MaterialList)
+                        {
+                            oSheet.Cells[row, 1] = indexNumber;
+                            oSheet.Cells[row, 2] = CurrentManager.Instance.CurrentOffer.Id;
+                            oSheet.Cells[row, 3] = indexNumber;
+                            oSheet.Cells[row, 4] = materialList.Id;
+                            oSheet.Cells[row, 5] = materialList.PozOBF.Description;
+                            oSheet.Cells[row, 6] = materialList.Quantity;
+                            row++;
+                            indexNumber++;
+                        }
+                    }
+                }
+
+                oWB.Save();
+
+                // MessageBox.Show("Done!");
+            }
+            catch (Exception ex)
+            {
+                // MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                if (oWB != null)
+                    oWB.Close();
+                MailingManager.Instance.SendTesEmail();
+            }
+        }
+
     }
 }

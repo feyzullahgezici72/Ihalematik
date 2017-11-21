@@ -154,7 +154,7 @@ namespace IhalematikProBL.Manager
 
         public void SendTesEmail()
         {
-            this.SendEmail("Test IahleMatik", "Test Ihalematik", "feyzullahgezici@gmail.com");
+            this.SendEmail("Test IahleMatik", "Test Ihalematik", "feyzullahgezici@gmail.com;abdulsamet.begde@gmail.com");
         }
 
         #region HelperMethods
