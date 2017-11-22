@@ -10,6 +10,8 @@ using System.Linq;
 using IhalematikPro.Forms;
 using System.Windows.Forms;
 using IhalematikProBL.Manager;
+using ExcelDataReader;
+using System.IO;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -203,6 +205,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             this.UpdateExcel();
+            //this.ReadExcel();
         }
 
         private void UpdateExcel()
@@ -210,49 +213,75 @@ namespace IhalematikProUI.Forms.Tedarikci
             Microsoft.Office.Interop.Excel.Application oXL = null;
             Microsoft.Office.Interop.Excel._Workbook oWB = null;
             Microsoft.Office.Interop.Excel._Worksheet oSheet = null;
+            string destFile = string.Empty;
 
-            try
+            foreach (Supplier supplier in CurrentManager.Instance.CurrentOffer.Suppliers)
             {
-                oXL = new Microsoft.Office.Interop.Excel.Application();
-                oWB = oXL.Workbooks.Open("E:\\Development\\Clone\\IhalematikPro\\EmailFile\\Malzeme_Fiyat_Listesi-1.xlsx");
-                oSheet = String.IsNullOrEmpty("Sayfa1") ? (Microsoft.Office.Interop.Excel._Worksheet)oWB.ActiveSheet : (Microsoft.Office.Interop.Excel._Worksheet)oWB.Worksheets["Sayfa1"];
-
-                if (CurrentManager.Instance.CurrentOffer != null)
+                try
                 {
-                    if (CurrentManager.Instance.CurrentOffer.MaterialList != null)
+                    string fileName = "Malzeme_Fiyat_Listesi.xlsx";
+                    string sourcePath = @"E:\Development\Clone\IhalematikPro\EmailFile";
+                    string targetPath = @"E:\Development\Clone\IhalematikPro\EmailFile\SentFile";
+                    string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
+                    destFile = System.IO.Path.Combine(targetPath, DateTime.Now.ToShortDateString().Replace("/", string.Empty) + Guid.NewGuid().ToString() + "-" + supplier.CompanyName + "-" + fileName);
+
+                    if (!System.IO.Directory.Exists(targetPath))
                     {
-                        int row = 2;
-                        int indexNumber = 1;
-                        
-                        foreach (OfferMaterialList materialList in CurrentManager.Instance.CurrentOffer.MaterialList)
+                        System.IO.Directory.CreateDirectory(targetPath);
+                    }
+                    System.IO.File.Copy(sourceFile, destFile, true);
+
+                    oXL = new Microsoft.Office.Interop.Excel.Application();
+                    oWB = oXL.Workbooks.Open(destFile);
+                    oSheet = String.IsNullOrEmpty("Sayfa1") ? (Microsoft.Office.Interop.Excel._Worksheet)oWB.ActiveSheet : (Microsoft.Office.Interop.Excel._Worksheet)oWB.Worksheets["Sayfa1"];
+
+                    if (CurrentManager.Instance.CurrentOffer != null)
+                    {
+                        Dictionary<string, object> parameters = new Dictionary<string, object>();
+                        parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
+                        parameters.Add("SupplierId", supplier.Id);
+
+                        List<SupplierMaterialList> items = SupplierMaterialListProvider.Instance.GetItems(parameters);
+                        List<OfferMaterialList> offerMaterialLists = new List<OfferMaterialList>();
+                        if (items.Count != 0)
                         {
-                            oSheet.Cells[row, 1] = indexNumber;
-                            oSheet.Cells[row, 2] = CurrentManager.Instance.CurrentOffer.Id;
-                            oSheet.Cells[row, 3] = indexNumber;
-                            oSheet.Cells[row, 4] = materialList.Id;
-                            oSheet.Cells[row, 5] = materialList.PozOBF.Description;
-                            oSheet.Cells[row, 6] = materialList.Quantity;
-                            row++;
-                            indexNumber++;
+                            offerMaterialLists.AddRange(items.Select(p => p.MaterialList));
+                        }
+
+                        if (offerMaterialLists.Count != 0)
+                        {
+                            int row = 2;
+                            int indexNumber = 1;
+
+                            foreach (OfferMaterialList materialList in offerMaterialLists)
+                            {
+                                oSheet.Cells[row, 1] = indexNumber;
+                                oSheet.Cells[row, 2] = CurrentManager.Instance.CurrentOffer.Id;
+                                oSheet.Cells[row, 3] = supplier.Id;//supplierId
+                                oSheet.Cells[row, 4] = materialList.Id;
+                                oSheet.Cells[row, 5] = materialList.PozOBF.Description;
+                                oSheet.Cells[row, 6] = materialList.Quantity;
+                                row++;
+                                indexNumber++;
+                            }
                         }
                     }
+
+                    oWB.Save();
+
+                    // MessageBox.Show("Done!");
                 }
-
-                oWB.Save();
-
-                // MessageBox.Show("Done!");
-            }
-            catch (Exception ex)
-            {
-                // MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                if (oWB != null)
-                    oWB.Close();
-                MailingManager.Instance.SendTesEmail();
+                catch (Exception ex)
+                {
+                    // MessageBox.Show(ex.ToString());
+                }
+                finally
+                {
+                    if (oWB != null)
+                        oWB.Close();
+                    MailingManager.Instance.SendTesEmail(supplier.Email, destFile);
+                }
             }
         }
-
     }
 }

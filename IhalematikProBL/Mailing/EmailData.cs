@@ -19,5 +19,7 @@ namespace IhalematikProBL.Entity
         public string Body { get; set; }
         public bool IsBodyHtml { get; set; }
         public string BCC { get; set; }
+
+        public string AttachmentFileName { get; set; }
     }
 }

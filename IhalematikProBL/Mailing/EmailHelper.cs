@@ -59,7 +59,7 @@ namespace IhalematikProBL.Mailing
             //set { this.isAnonymous = value; }
         }
 
-        public void SendEmail(string sender, string displayName, string recipient, string subject, string body, bool isBodyHtml, string BCC = null)
+        public void SendEmail(string sender, string displayName, string recipient, string subject, string body, bool isBodyHtml, string BCC = null, string AttachmentFileName = null)
         {
             try
             {
@@ -97,8 +97,8 @@ namespace IhalematikProBL.Mailing
                         }
                     }
                 }
-                //if (attachmentFilename != null)
-                message.Attachments.Add(new Attachment("E:\\Development\\Clone\\IhalematikPro\\EmailFile\\Malzeme_Fiyat_Listesi-1.xlsx"));
+                if (AttachmentFileName != null)
+                message.Attachments.Add(new Attachment(AttachmentFileName));
 
                 SmtpClient client = new SmtpClient(SmtpServer, SmtpPort);
 

@@ -868,6 +868,7 @@
             this.gridViewMaterialList.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
             this.gridViewMaterialList.OptionsView.ShowGroupPanel = false;
             this.gridViewMaterialList.PaintStyleName = "Web";
+            this.gridViewMaterialList.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewMaterialList_CellValueChanged);
             // 
             // colId
             // 

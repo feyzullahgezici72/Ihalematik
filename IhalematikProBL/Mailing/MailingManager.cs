@@ -37,7 +37,7 @@ namespace IhalematikProBL.Manager
                         Subject = this.SubjectPrefix + Subject;
                     }
 
-                    this.EmailHelper.SendEmail(this.EmailHelper.MailSender, this.EmailHelper.MailSenderDisplayName, EMail.Recipient, Subject, EMail.Body, true);
+                    this.EmailHelper.SendEmail(this.EmailHelper.MailSender, this.EmailHelper.MailSenderDisplayName, EMail.Recipient, Subject, EMail.Body, true, null, EMail.AttachmentFileName);
                 }
 
                 else
@@ -52,12 +52,13 @@ namespace IhalematikProBL.Manager
             }
         }
 
-        protected void SendEmail(string Subject, string Body, string Recipient)
+        protected void SendEmail(string Subject, string Body, string Recipient, string AttachmentFilename = null)
         {
             EmailData emailData = new EmailData();
             emailData.Subject = Subject;
             emailData.Body = Body;
             emailData.Recipient = Recipient;
+            emailData.AttachmentFileName = AttachmentFilename;
             this.SendEmail(emailData);
         }
 
@@ -152,9 +153,9 @@ namespace IhalematikProBL.Manager
             return Template;
         }
 
-        public void SendTesEmail()
+        public void SendTesEmail(string Email, string AttachmentFilename)
         {
-            this.SendEmail("Test IahleMatik", "Test Ihalematik", "feyzullahgezici@gmail.com;abdulsamet.begde@gmail.com");
+            this.SendEmail("Test IahleMatik", "Test Ihalematik", Email, AttachmentFilename);
         }
 
         #region HelperMethods
