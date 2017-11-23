@@ -13,6 +13,7 @@ using IhalematikProUI.Forms.Base;
 using IhalematikProBL.Provider;
 using IhalematikProBL.Entity;
 using SimpleApplicationBase.BL.Base;
+using IhalematikProUI.Forms.Tedarikci;
 
 namespace IhalematikProUI.Forms
 {
@@ -98,6 +99,28 @@ namespace IhalematikProUI.Forms
         {
             List<Supplier> suppliers = SupplierProvider.Instance.GetItems();
             grdSupplier.DataSource = suppliers;
+        }
+
+        private void btnEdit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            this.pnlKayit.Visible = false;
+            this.Enabled = false;
+            frm_TedarikciGuncelleme tg = new Tedarikci.frm_TedarikciGuncelleme();
+            tg.ShowDialog();
+            pnlKayit.Visible = true;
+            this.Enabled = true;
+
+
+        }
+
+        private void btnPasive_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
+        }
+
+        private void btnActive_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
         }
     }
 }
