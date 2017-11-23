@@ -64,7 +64,7 @@ namespace IhalematikPro.Forms
         {
             IsEmptyKontrol();
             VehicleModel model = new VehicleModel();
-            model.TitleId = ((VehicleTitleModel)ddlVehicleTitle.SelectedItem).Id.Value;
+            model.TitleId = ((VehicleTitle)ddlVehicleTitle.SelectedItem).Id;
             model.IsActive = true;
             if (rbCompanyVehicle.Checked)
             {
@@ -180,7 +180,7 @@ namespace IhalematikPro.Forms
             {
                 return;
             }
-            VehicleTitleModel selectedItem = (VehicleTitleModel)ddlVehicleTitle.SelectedItem;
+            VehicleTitle selectedItem = (VehicleTitle)ddlVehicleTitle.SelectedItem;
             List<Vehicle> vehicles = VehicleProvider.Instance.GetItems("TitleId", selectedItem.Id);
             if (vehicles.Count != 0)
             {
