@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using IhalematikPro.Model;
 using IhalematikPro.Manager;
 using IhalematikProBL.Entity;
@@ -16,7 +11,6 @@ using IhalematikProBL.Provider;
 using System.IO;
 using ExcelDataReader;
 using IhalematikProUI.Forms;
-using System.Threading;
 using IhalematikProUI.Forms.Base;
 
 namespace IhalematikPro.Forms
@@ -77,36 +71,16 @@ namespace IhalematikPro.Forms
 
                     if (!string.IsNullOrEmpty(pozno) && !string.IsNullOrEmpty(description) && !string.IsNullOrEmpty(unit))
                     {
-
                         Poz poz = new Poz();
                         poz.Number = pozno;
                         poz.Description = description;
                         poz.Unit = unit;
                         poz.UnitPrice = unitprice;
-
-
-                        PozProvider.Instance.Save(poz);
+                       PozProvider.Instance.Save(poz);
                     }
-
-                    //List<Country> countries = CountryProvider.Instance.GetItems("Code", code);
-
-                    //foreach (Country country in countries)
-                    //{
-
-                    //    string PhoneAreacode = excelReader.GetString(1);
-                    //    string PassaportMandotry = excelReader.GetString(2);
-
-                    //    string turkce = excelReader.GetString(3);
-                    //    string ingilizce = excelReader.GetString(4);
-                    //    string hirvatca = excelReader.GetString(5);
-
-                    //    CountryProvider.Instance.Save(country);
-                    //}
-
                 }
                 i++;
             }
-
         }
         public void InitilalizeForm()
         {

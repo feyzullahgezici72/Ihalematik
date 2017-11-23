@@ -31,5 +31,19 @@ namespace IhalematikProBL.Entity
             }
         }
 
+        private List<Supplier> suppliers = new List<Supplier>();
+        public List<Supplier> Suppliers
+        {
+            get
+            {
+                List<SupplierMaterialList> items = SupplierMaterialListProvider.Instance.GetItems("OfferId", this.Id);
+                if (items.Count != 0)
+                {
+                    this.suppliers.AddRange(items.GroupBy(p => p.SupplierId).Select(p => p.FirstOrDefault().Supplier));
+                }
+                return this.suppliers;
+            }
+        }
+
     }
 }

@@ -15,6 +15,7 @@ using System.Threading;
 using IhalematikProBL.Provider;
 using IhalematikProBL.Entity;
 using IhalematikProUI.Forms.Base;
+using IhalematikProBL.Manager;
 
 namespace IhalematikPro.Forms
 {

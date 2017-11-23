@@ -9,6 +9,9 @@ using IhalematikPro.Model;
 using System.Linq;
 using IhalematikPro.Forms;
 using System.Windows.Forms;
+using IhalematikProBL.Manager;
+using ExcelDataReader;
+using System.IO;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -46,7 +49,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             grdSupplier.DataSource = models;
         }
         public void LoadMaterialGrid(List<OfferMaterialListModel> Items = null)
-        { 
+        {
             if (Items == null)
             {
                 List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => !p.IsSelected).ToList());
@@ -133,11 +136,11 @@ namespace IhalematikProUI.Forms.Tedarikci
             int materialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewAddedOfferMaterialList.GetFocusedRowCellValue("Id"));
             OfferMaterialList selectedOfferMaterialList = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Id == materialId).FirstOrDefault();
             selectedOfferMaterialList.IsSelected = false;
-            
+
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
             parameters.Add("MaterialListId", materialId);
-            
+
             List<SupplierMaterialList> items = SupplierMaterialListProvider.Instance.GetItems(parameters);
 
             foreach (var item in items)
@@ -171,7 +174,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void radioGroup1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (radioGroup1.SelectedIndex==0)
+            if (radioGroup1.SelectedIndex == 0)
             {
                 pnlMalzemeListesi.Enabled = true;
                 pnlUst.Enabled = true;
@@ -180,9 +183,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                 pnlMalzemeListesi.Dock = DockStyle.Fill;
 
             }
-            if (radioGroup1.SelectedIndex==1)
+            if (radioGroup1.SelectedIndex == 1)
             {
-                
+
                 btnAktar.Enabled = true;
                 pnlMalzemeListesi.Enabled = true;
                 pnlMalzemeListesi.Dock = DockStyle.Left;
@@ -191,12 +194,94 @@ namespace IhalematikProUI.Forms.Tedarikci
                 pnlAktarilanlar.Visible = true;
 
             }
-             
+
         }
 
         private void panelControl4_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.UpdateExcel();
+            //this.ReadExcel();
+        }
+
+        private void UpdateExcel()
+        {
+            Microsoft.Office.Interop.Excel.Application oXL = null;
+            Microsoft.Office.Interop.Excel._Workbook oWB = null;
+            Microsoft.Office.Interop.Excel._Worksheet oSheet = null;
+            string destFile = string.Empty;
+
+            foreach (Supplier supplier in CurrentManager.Instance.CurrentOffer.Suppliers)
+            {
+                try
+                {
+                    string fileName = "Malzeme_Fiyat_Listesi.xlsx";
+                    string sourcePath = @"E:\Development\Clone\IhalematikPro\EmailFile";
+                    string targetPath = @"E:\Development\Clone\IhalematikPro\EmailFile\SentFile";
+                    string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
+                    destFile = System.IO.Path.Combine(targetPath, DateTime.Now.ToShortDateString().Replace("/", string.Empty) + Guid.NewGuid().ToString() + "-" + supplier.CompanyName + "-" + fileName);
+
+                    if (!System.IO.Directory.Exists(targetPath))
+                    {
+                        System.IO.Directory.CreateDirectory(targetPath);
+                    }
+                    System.IO.File.Copy(sourceFile, destFile, true);
+
+                    oXL = new Microsoft.Office.Interop.Excel.Application();
+                    oWB = oXL.Workbooks.Open(destFile);
+                    oSheet = String.IsNullOrEmpty("Sayfa1") ? (Microsoft.Office.Interop.Excel._Worksheet)oWB.ActiveSheet : (Microsoft.Office.Interop.Excel._Worksheet)oWB.Worksheets["Sayfa1"];
+
+                    if (CurrentManager.Instance.CurrentOffer != null)
+                    {
+                        Dictionary<string, object> parameters = new Dictionary<string, object>();
+                        parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
+                        parameters.Add("SupplierId", supplier.Id);
+
+                        List<SupplierMaterialList> items = SupplierMaterialListProvider.Instance.GetItems(parameters);
+                        List<OfferMaterialList> offerMaterialLists = new List<OfferMaterialList>();
+                        if (items.Count != 0)
+                        {
+                            offerMaterialLists.AddRange(items.Select(p => p.MaterialList));
+                        }
+
+                        if (offerMaterialLists.Count != 0)
+                        {
+                            int row = 2;
+                            int indexNumber = 1;
+
+                            foreach (OfferMaterialList materialList in offerMaterialLists)
+                            {
+                                oSheet.Cells[row, 1] = indexNumber;
+                                oSheet.Cells[row, 2] = CurrentManager.Instance.CurrentOffer.Id;
+                                oSheet.Cells[row, 3] = supplier.Id;//supplierId
+                                oSheet.Cells[row, 4] = materialList.Id;
+                                oSheet.Cells[row, 5] = materialList.PozOBF.Description;
+                                oSheet.Cells[row, 6] = materialList.Quantity;
+                                row++;
+                                indexNumber++;
+                            }
+                        }
+                    }
+
+                    oWB.Save();
+
+                    // MessageBox.Show("Done!");
+                }
+                catch (Exception ex)
+                {
+                    // MessageBox.Show(ex.ToString());
+                }
+                finally
+                {
+                    if (oWB != null)
+                        oWB.Close();
+                    MailingManager.Instance.SendTesEmail(supplier.Email, destFile);
+                }
+            }
         }
     }
 }
