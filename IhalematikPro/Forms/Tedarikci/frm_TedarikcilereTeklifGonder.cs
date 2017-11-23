@@ -217,7 +217,8 @@ namespace IhalematikProUI.Forms.Tedarikci
             Microsoft.Office.Interop.Excel._Worksheet oSheet = null;
             string destFile = string.Empty;
 
-            foreach (Supplier supplier in CurrentManager.Instance.CurrentOffer.Suppliers)
+            List<Supplier> suppliers = CurrentManager.Instance.CurrentOffer.Suppliers;
+            foreach (Supplier supplier in suppliers)
             {
                 try
                 {
