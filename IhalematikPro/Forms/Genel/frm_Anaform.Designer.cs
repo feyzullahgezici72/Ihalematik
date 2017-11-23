@@ -1137,7 +1137,7 @@ namespace IhalematikPro.Forms
             this.lblCompanyName.Name = "lblCompanyName";
             this.lblCompanyName.Size = new System.Drawing.Size(962, 29);
             this.lblCompanyName.TabIndex = 0;
-            this.lblCompanyName.Text = "ASH Grup Ltd.Şti.";
+            this.lblCompanyName.Text = " ";
             // 
             // pnIhaleListesi
             // 

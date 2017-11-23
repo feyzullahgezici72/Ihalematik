@@ -309,6 +309,7 @@
             this.gridViewSupplier.Name = "gridViewSupplier";
             this.gridViewSupplier.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewSupplier.OptionsView.EnableAppearanceOddRow = true;
+            this.gridViewSupplier.OptionsView.ShowDetailButtons = false;
             this.gridViewSupplier.OptionsView.ShowGroupPanel = false;
             this.gridViewSupplier.PaintStyleName = "Web";
             // 
