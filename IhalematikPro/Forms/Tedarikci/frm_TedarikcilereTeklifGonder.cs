@@ -37,6 +37,8 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void frm_TedarikcilereTeklifGonder_Shown(object sender, EventArgs e)
         {
+            btnAktar.Visible = false;
+            pnlMalzemeListesi.Enabled = true;
             this.LoadMaterialGrid();
             this.LoadSupplierGrid();
             this.LoadAddedMateriallistGrid();
@@ -181,11 +183,11 @@ namespace IhalematikProUI.Forms.Tedarikci
                 pnlFirma.Visible = false;
                 pnlAktarilanlar.Visible = false;
                 pnlMalzemeListesi.Dock = DockStyle.Fill;
-
+                btnAktar.Visible = false;
             }
             if (radioGroup1.SelectedIndex == 1)
             {
-
+                btnAktar.Visible = true;
                 btnAktar.Enabled = true;
                 pnlMalzemeListesi.Enabled = true;
                 pnlMalzemeListesi.Dock = DockStyle.Left;
