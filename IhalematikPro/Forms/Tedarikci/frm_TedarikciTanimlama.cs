@@ -19,6 +19,8 @@ namespace IhalematikProUI.Forms
 {
     public partial class frm_TedarikciTanimlama : IhalematikBaseForm
     {
+        public int FocusedRowHandle = 0;
+
         public frm_TedarikciTanimlama()
         {
             InitializeComponent();
@@ -99,18 +101,29 @@ namespace IhalematikProUI.Forms
         {
             List<Supplier> suppliers = SupplierProvider.Instance.GetItems();
             grdSupplier.DataSource = suppliers;
+            if (this.FocusedRowHandle != 0)
+            {
+                gridViewSupplier.FocusedRowHandle = this.FocusedRowHandle;
+                //colActive.Visible = false;
+                //colPasive.Visible = false;
+            }
         }
 
         private void btnEdit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
+
+            this.FocusedRowHandle = gridViewSupplier.FocusedRowHandle;
+
             this.pnlKayit.Visible = false;
             this.Enabled = false;
-            frm_TedarikciGuncelleme tg = new Tedarikci.frm_TedarikciGuncelleme();
+            frm_TedarikciGuncelleme tg = new Tedarikci.frm_TedarikciGuncelleme(this);
+
+            tg.CurrentSupplierId = id;
+
             tg.ShowDialog();
             pnlKayit.Visible = true;
             this.Enabled = true;
-
-
         }
 
         private void btnPasive_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
