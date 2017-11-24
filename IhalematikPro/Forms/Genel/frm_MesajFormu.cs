@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Threading;
 
 namespace IhalematikProUI.Forms
 {
@@ -27,7 +28,7 @@ namespace IhalematikProUI.Forms
 
         private void frm_MesajFormu_Load(object sender, EventArgs e)
         {
-            timer1.Enabled = true;
+           // timer1.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -39,6 +40,17 @@ namespace IhalematikProUI.Forms
             else
             {
                 lblMesaj.Visible = true;
+            }
+        }
+
+        private void frm_MesajFormu_Shown(object sender, EventArgs e)
+        {
+            pbControl.Visible = true;
+            for (int i = 0; i < 101; i++)
+            {
+                Thread.Sleep(0);
+                pbControl.Position = i;
+                Application.DoEvents();
             }
         }
     }

@@ -35,9 +35,11 @@
             this.lblMesaj = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pbControl = new DevExpress.XtraEditors.ProgressBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTamam
@@ -75,7 +77,7 @@
             // panelControl1
             // 
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.Crimson;
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.Controls.Add(this.pictureBox1);
@@ -90,6 +92,16 @@
             this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pbControl
+            // 
+            this.pbControl.Location = new System.Drawing.Point(12, 122);
+            this.pbControl.Name = "pbControl";
+            this.pbControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.pbControl.Properties.Step = 1;
+            this.pbControl.Size = new System.Drawing.Size(458, 31);
+            this.pbControl.TabIndex = 100;
+            this.pbControl.Visible = false;
+            // 
             // frm_MesajFormu
             // 
             this.AcceptButton = this.btnTamam;
@@ -100,6 +112,7 @@
             this.CancelButton = this.btnTamam;
             this.ClientSize = new System.Drawing.Size(619, 175);
             this.ControlBox = false;
+            this.Controls.Add(this.pbControl);
             this.Controls.Add(this.lblMesaj);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.btnTamam);
@@ -109,9 +122,11 @@
             this.Name = "frm_MesajFormu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.frm_MesajFormu_Load);
+            this.Shown += new System.EventHandler(this.frm_MesajFormu_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +139,6 @@
         public DevExpress.XtraEditors.LabelControl lblMesaj;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.Timer timer1;
+        private DevExpress.XtraEditors.ProgressBarControl pbControl;
     }
 }

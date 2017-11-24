@@ -13,6 +13,7 @@ using IhalematikProBL.Provider;
 using IhalematikPro.Model;
 using IhalematikProUI.Forms.Base;
 using IhalematikProUI.Forms;
+using System.Threading;
 
 namespace IhalematikPro.Forms
 {
@@ -46,7 +47,7 @@ namespace IhalematikPro.Forms
                 {
                     VehicleTitleProvider.Instance.Save(model);
                     frm_MesajFormu mf = new frm_MesajFormu();
-                    mf.lblMesaj.Text = "Arac Ünvanı Kaydedildi...";
+                    mf.lblMesaj.Text = "Arac Kaydedildi...";
                     mf.ShowDialog();
                     this._owner.SelectedTitleId = model.Id;
                     this._owner.InitilalizeForm();
@@ -62,7 +63,7 @@ namespace IhalematikPro.Forms
 
             }
         }
-        public bool IsEmptyKontrol()
+         public bool IsEmptyKontrol()
         {
             if (string.IsNullOrEmpty(txtName.Text.Trim()))
             {

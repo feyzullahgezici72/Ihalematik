@@ -386,7 +386,7 @@
             this.btnTedarikciListesi.Name = "btnTedarikciListesi";
             this.btnTedarikciListesi.Size = new System.Drawing.Size(178, 44);
             this.btnTedarikciListesi.TabIndex = 6;
-            this.btnTedarikciListesi.Text = "Tedarikçi Listesi";
+            this.btnTedarikciListesi.Text = "Mail Gönder";
             this.btnTedarikciListesi.Click += new System.EventHandler(this.btnTedarikciListesi_Click);
             // 
             // btnTedaikcileregonder
@@ -404,7 +404,7 @@
             this.btnTedaikcileregonder.Name = "btnTedaikcileregonder";
             this.btnTedaikcileregonder.Size = new System.Drawing.Size(178, 47);
             this.btnTedaikcileregonder.TabIndex = 5;
-            this.btnTedaikcileregonder.Text = "Tedarikçilere Liste Gönder";
+            this.btnTedaikcileregonder.Text = "Malzeme Aktar";
             this.btnTedaikcileregonder.Click += new System.EventHandler(this.btnTedaikcileregonder_Click);
             // 
             // btnListeOlustur
@@ -1243,6 +1243,7 @@
             // 
             this.rpstIsSelectedSupplier.AutoHeight = false;
             this.rpstIsSelectedSupplier.Name = "rpstIsSelectedSupplier";
+            this.rpstIsSelectedSupplier.Click += new System.EventHandler(this.rpstSupplierDetail_Click);
             // 
             // colCompanyName
             // 
