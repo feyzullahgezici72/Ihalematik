@@ -37,8 +37,13 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void frm_TedarikcilereTeklifGonder_Shown(object sender, EventArgs e)
         {
-            btnAktar.Visible = false;
+            pnlMalzemeListesi.Dock = DockStyle.Fill;
             pnlMalzemeListesi.Enabled = true;
+            pnlUst.Enabled = true;
+            pnlFirma.Visible = false;
+            pnlAktarilanlar.Visible = false;
+            pnlAktarmaPaneli.Visible = false;
+            pnlMalzemeListesi.Dock = DockStyle.Fill;
             this.LoadMaterialGrid();
             this.LoadSupplierGrid();
             this.LoadAddedMateriallistGrid();
@@ -171,33 +176,33 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void frm_TedarikcilereTeklifGonder_Load(object sender, EventArgs e)
         {
-            pnlMalzemeListesi.Dock = DockStyle.Fill;
+           
         }
 
         private void radioGroup1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (radioGroup1.SelectedIndex == 0)
-            {
-                pnlMalzemeListesi.Enabled = true;
-                pnlUst.Enabled = true;
-                pnlFirma.Visible = false;
-                pnlAktarilanlar.Visible = false;
-                pnlMalzemeListesi.Dock = DockStyle.Fill;
-                btnAktar.Visible = false;
-            }
-            if (radioGroup1.SelectedIndex == 1)
-            {
-                btnAktar.Visible = true;
-                btnAktar.Enabled = true;
-                pnlMalzemeListesi.Enabled = true;
-                pnlMalzemeListesi.Dock = DockStyle.Left;
-                pnlUst.Enabled = true;
-                pnlFirma.Visible = true;
-                pnlAktarilanlar.Visible = true;
+            //if (radioGroup1.SelectedIndex == 0)
+            //{
+            //    pnlMalzemeListesi.Enabled = true;
+            //    pnlUst.Enabled = true;
+            //    pnlFirma.Visible = false;
+            //    pnlAktarilanlar.Visible = false;
+            //    pnlMalzemeListesi.Dock = DockStyle.Fill;
+            //    btnAktar.Visible = false;
+            //}
+            //if (radioGroup1.SelectedIndex == 1)
+            //{
+            //    btnAktar.Visible = true;
+            //    btnAktar.Enabled = true;
+            //    pnlMalzemeListesi.Enabled = true;
+            //    pnlMalzemeListesi.Dock = DockStyle.Left;
+            //    pnlUst.Enabled = true;
+            //    pnlFirma.Visible = true;
+            //    pnlAktarilanlar.Visible = true;
 
-            }
+            //}
 
-        }
+         }
 
         private void panelControl4_Paint(object sender, PaintEventArgs e)
         {
@@ -206,7 +211,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            this.UpdateExcel();
+            //this.UpdateExcel();
             //this.ReadExcel();
         }
 
@@ -284,6 +289,66 @@ namespace IhalematikProUI.Forms.Tedarikci
                     MailingManager.Instance.SendTesEmail(supplier.Email, destFile);
                 }
             }
+        }
+
+        private void btnListeOlustur_Click(object sender, EventArgs e)
+        {
+            pnlMalzemeListesi.Visible = true;
+            pnlUst.Enabled = true;
+            pnlFirma.Visible = false;
+            pnlAktarilanlar.Visible = false;
+            pnlAktarmaPaneli.Visible = false;
+            pnlMalzemeListesi.Dock = DockStyle.Fill;
+            
+             
+        }
+
+        private void simpleButton2_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnTedaikcileregonder_Click(object sender, EventArgs e)
+        {
+          
+
+            pnlAktarilanlar.Visible = false;
+            pnlMalzemeListesi.Visible = true;
+            pnlFirma.Visible = true;
+            pnlAktarmaPaneli.Visible = true;
+            pnlFirma.Dock = DockStyle.None;
+             
+            pnlFirma.Dock = DockStyle.Right;
+            pnlFirma.BringToFront();
+            pnlAktarmaPaneli.Dock = DockStyle.Right;
+            pnlAktarmaPaneli.BringToFront();
+            pnlMalzemeListesi.Dock = DockStyle.Fill;
+            pnlMalzemeListesi.BringToFront();
+            
+        }
+
+        private void btnTedarikciListesi_Click(object sender, EventArgs e)
+        {
+            pnlAktarilanlar.Visible = false;
+            pnlMalzemeListesi.Visible = false;
+            pnlAktarmaPaneli.Visible = false;
+            pnlAktarilanlar.Visible = false;
+            pnlFirma.Visible = true;
+            pnlFirma.Dock = DockStyle.Fill;
+            pnlFirma.BringToFront();
+            
+        }
+
+        private void btnGonderilenMalzemeListesi_Click(object sender, EventArgs e)
+        {
+            pnlMalzemeListesi.Visible = false;
+            pnlFirma.Visible = false;
+            pnlAktarilanlar.Visible = false;
+            pnlAktarmaPaneli.Visible = false;
+            pnlMalzemeListesi.Visible = false;
+            pnlAktarilanlar.Visible = true;
+            pnlAktarilanlar.Dock = DockStyle.Fill;
+            pnlAktarilanlar.BringToFront();
         }
     }
 }

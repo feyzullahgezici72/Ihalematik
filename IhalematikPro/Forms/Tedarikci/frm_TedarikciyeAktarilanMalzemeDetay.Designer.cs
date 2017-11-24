@@ -53,6 +53,10 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtCompanyName = new DevExpress.XtraEditors.TextEdit();
             this.memoEditSegment = new DevExpress.XtraEditors.MemoEdit();
+            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.MemoEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
@@ -69,6 +73,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCompanyName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditSegment.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
+            this.panelControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -77,7 +84,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 191);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1041, 429);
+            this.panelControl1.Size = new System.Drawing.Size(1041, 388);
             this.panelControl1.TabIndex = 0;
             // 
             // grdMaterialList
@@ -90,7 +97,7 @@
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstIsSelectedOfferMaterial});
-            this.grdMaterialList.Size = new System.Drawing.Size(1035, 423);
+            this.grdMaterialList.Size = new System.Drawing.Size(1035, 382);
             this.grdMaterialList.TabIndex = 2;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
@@ -530,14 +537,62 @@
             this.memoEditSegment.Size = new System.Drawing.Size(370, 127);
             this.memoEditSegment.TabIndex = 83;
             // 
+            // panelControl5
+            // 
+            this.panelControl5.Controls.Add(this.textEdit1);
+            this.panelControl5.Controls.Add(this.labelControl2);
+            this.panelControl5.Controls.Add(this.simpleButton1);
+            this.panelControl5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl5.Location = new System.Drawing.Point(0, 579);
+            this.panelControl5.Name = "panelControl5";
+            this.panelControl5.Size = new System.Drawing.Size(1041, 80);
+            this.panelControl5.TabIndex = 37;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textEdit1.Location = new System.Drawing.Point(159, 3);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(696, 74);
+            this.textEdit1.TabIndex = 8;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.labelControl2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelControl2.Location = new System.Drawing.Point(3, 3);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(133, 19);
+            this.labelControl2.TabIndex = 6;
+            this.labelControl2.Text = "Mail Açıklaması:";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.simpleButton1.Location = new System.Drawing.Point(855, 3);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(6);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(183, 74);
+            this.simpleButton1.TabIndex = 5;
+            this.simpleButton1.Text = "Mail Gönder";
+            // 
             // frm_TedarikciyeAktarilanMalzemeDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(1041, 620);
+            this.ClientSize = new System.Drawing.Size(1041, 659);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.panelControl5);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -565,6 +620,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCompanyName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditSegment.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
+            this.panelControl5.ResumeLayout(false);
+            this.panelControl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -595,5 +654,9 @@
         private DevExpress.XtraEditors.LabelControl label99;
         private DevExpress.XtraEditors.TextEdit txtEmail;
         private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.PanelControl panelControl5;
+        private DevExpress.XtraEditors.MemoEdit textEdit1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        public DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }
