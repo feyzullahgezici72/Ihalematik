@@ -46,8 +46,6 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtCompanyDriverFare = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.PanelKira = new DevExpress.XtraEditors.PanelControl();
             this.rdHour = new System.Windows.Forms.RadioButton();
             this.txtRentFare = new DevExpress.XtraEditors.TextEdit();
@@ -73,6 +71,7 @@
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PanelSirket)).BeginInit();
@@ -84,8 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCompanyOtherFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCompanyGeneralFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCompanyDriverFare.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PanelKira)).BeginInit();
             this.PanelKira.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtRentFare.Properties)).BeginInit();
@@ -107,8 +104,8 @@
             this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.groupControl2.Controls.Add(this.btnGuncelle);
             this.groupControl2.Controls.Add(this.PanelSirket);
-            this.groupControl2.Controls.Add(this.panelControl1);
             this.groupControl2.Controls.Add(this.PanelKira);
             this.groupControl2.Controls.Add(this.ddlVehicleTitle);
             this.groupControl2.Controls.Add(this.labelControl3);
@@ -337,34 +334,6 @@
             this.labelControl13.Size = new System.Drawing.Size(120, 19);
             this.labelControl13.TabIndex = 142;
             this.labelControl13.Text = "Şoför Yevmiyesi:";
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.Controls.Add(this.btnGuncelle);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(3, 446);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(438, 61);
-            this.panelControl1.TabIndex = 79;
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnGuncelle.Appearance.Options.UseFont = true;
-            this.btnGuncelle.Appearance.Options.UseForeColor = true;
-            this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.Location = new System.Drawing.Point(308, 0);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(130, 61);
-            this.btnGuncelle.TabIndex = 22;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // PanelKira
             // 
@@ -718,9 +687,23 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnGuncelle.Appearance.Options.UseFont = true;
+            this.btnGuncelle.Appearance.Options.UseForeColor = true;
+            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
+            this.btnGuncelle.Location = new System.Drawing.Point(307, 420);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(130, 61);
+            this.btnGuncelle.TabIndex = 82;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
             // frm_Arac_Guncelleme
             // 
-            this.AcceptButton = this.btnGuncelle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
@@ -749,8 +732,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCompanyOtherFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCompanyGeneralFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCompanyDriverFare.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PanelKira)).EndInit();
             this.PanelKira.ResumeLayout(false);
             this.PanelKira.PerformLayout();
@@ -793,8 +774,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private DevExpress.XtraEditors.TextEdit txtRentFuelOilFare;
         private DevExpress.XtraEditors.LabelControl labelControl23;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.SimpleButton btnGuncelle;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
@@ -814,5 +793,6 @@
         private DevExpress.XtraEditors.TextEdit txtCompanyDriverFare;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
+        private DevExpress.XtraEditors.SimpleButton btnGuncelle;
     }
 }

@@ -13,6 +13,7 @@ using IhalematikProBL.Entity;
 using IhalematikPro.Forms;
 using IhalematikPro.Model;
 using IhalematikPro.Manager;
+using System.Threading;
 
 namespace IhalematikProUI.Forms
 {
@@ -153,6 +154,7 @@ namespace IhalematikProUI.Forms
             mf.lblMesaj.Text = "Güncelleme Yapıldı...";
             mf.ShowDialog();
         }
+   
         public bool IsEmptyKontrol()
         {
             if (ddlVehicleTitle.SelectedIndex < 0)

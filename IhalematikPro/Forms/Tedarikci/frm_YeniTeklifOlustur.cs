@@ -50,16 +50,6 @@ namespace IhalematikProUI.Forms
 
                 OfferProvider.Instance.Save(offer);
                 CurrentManager.Instance.CurrentOffer = offer;
-
-                pbControl.Visible = true;
-                
-                this.Enabled = false;
-                for (int i = 0; i < 101; i++)
-                {
-                    Thread.Sleep(0);
-                    pbControl.Position = i;
-                    Application.DoEvents();
-                }
                 frm_MesajFormu mf = new frm_MesajFormu();
                 mf.lblMesaj.Text = "Yeni Teklif Oluşturuldu...";
                 mf.ShowDialog();
@@ -81,8 +71,6 @@ namespace IhalematikProUI.Forms
                     tg.Activate();
                    
                 }
-                pbControl.Visible = false;
-                
             }
         }
 

@@ -40,7 +40,6 @@
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.pbControl = new DevExpress.XtraEditors.ProgressBarControl();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeklifNo.Properties)).BeginInit();
@@ -49,7 +48,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -192,16 +190,6 @@
             this.simpleButton2.Text = "Oluştur";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click_1);
             // 
-            // pbControl
-            // 
-            this.pbControl.Location = new System.Drawing.Point(30, 156);
-            this.pbControl.Name = "pbControl";
-            this.pbControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.pbControl.Properties.Step = 1;
-            this.pbControl.Size = new System.Drawing.Size(567, 31);
-            this.pbControl.TabIndex = 42;
-            this.pbControl.Visible = false;
-            // 
             // dxErrorProvider1
             // 
             this.dxErrorProvider1.ContainerControl = this;
@@ -213,7 +201,6 @@
             this.CancelButton = this.btnIptal;
             this.ClientSize = new System.Drawing.Size(785, 239);
             this.ControlBox = false;
-            this.Controls.Add(this.pbControl);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.txtAciklama);
@@ -236,7 +223,6 @@
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -255,7 +241,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private System.Windows.Forms.PictureBox pcWorld;
-        private DevExpress.XtraEditors.ProgressBarControl pbControl;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
     }
 }

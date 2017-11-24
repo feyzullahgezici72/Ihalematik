@@ -162,12 +162,12 @@ namespace IhalematikProUI.Forms.Tedarikci
         }
         private void rpstSupplierDetail_Click(object sender, EventArgs e)
         {
-            this.Enabled = false;
-            frm_TedarikciyeAktarilanMalzemeDetay md = new frm_TedarikciyeAktarilanMalzemeDetay(this);
-            int selectedSupplierId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
-            md.SelectedSupplierId = selectedSupplierId;
-            md.ShowDialog();
-            this.Enabled = true;
+            //this.Enabled = false;
+            //frm_TedarikciyeAktarilanMalzemeDetay md = new frm_TedarikciyeAktarilanMalzemeDetay(this);
+            //int selectedSupplierId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
+            //md.SelectedSupplierId = selectedSupplierId;
+            //md.ShowDialog();
+            //this.Enabled = true;
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -331,6 +331,8 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlMalzemeListesi.Dock = DockStyle.Fill;
             pnlMalzemeListesi.BringToFront();
             colIsSelectedSupplier.Visible = true;
+            gridColumn7.Visible = false;
+
         }
 
         private void btnTedarikciListesi_Click(object sender, EventArgs e)
@@ -345,7 +347,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlFirma.Dock = DockStyle.Fill;
             pnlFirma.BringToFront();
             colIsSelectedSupplier.Visible = false;
-
+            gridColumn7.Visible = true;
 
         }
 
@@ -363,6 +365,16 @@ namespace IhalematikProUI.Forms.Tedarikci
             //pnlAktarilanlar.Visible = true;
             //pnlAktarilanlar.Dock = DockStyle.Fill;
             //pnlAktarilanlar.BringToFront();
+        }
+
+        private void rpstSupplierDetail_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            this.Enabled = false;
+            frm_TedarikciyeAktarilanMalzemeDetay md = new frm_TedarikciyeAktarilanMalzemeDetay(this);
+            int selectedSupplierId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
+            md.SelectedSupplierId = selectedSupplierId;
+            md.ShowDialog();
+            this.Enabled = true;
         }
     }
 }

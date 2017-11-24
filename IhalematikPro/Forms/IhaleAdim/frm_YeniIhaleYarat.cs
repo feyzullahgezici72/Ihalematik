@@ -37,7 +37,6 @@ namespace IhalematikPro.Forms
 
             //grdVehicle.DataSource = CurrentManager.Vehicles;
             //grdWorker.DataSource = CurrentManager.Workers;
-            pbControl.Visible = false;
         }
 
         private void a1_FormClosed(object sender, FormClosedEventArgs e)
@@ -70,7 +69,6 @@ namespace IhalematikPro.Forms
             DialogResult resultMsg = MessageBox.Show("Yeni İhale oluşturulsun mu?", "Yeni ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (resultMsg.Equals(DialogResult.Yes))
             {
-                pbControl.Visible = true;
                 Tender tender = new Tender();
                 tender.Equipments = new List<TenderEquipment>();
                 int lastTenderNumber = TenderManager.Instance.GetLastTenderNumber();
@@ -94,13 +92,6 @@ namespace IhalematikPro.Forms
                 else
                 {
                     CurrentManager.Instance.CurrentTender = tender;
-                }
-
-                for (int i = 0; i < 101; i++)
-                {
-                    Thread.Sleep(0);
-                    pbControl.Position = i;
-                    Application.DoEvents();
                 }
                 this.Enabled = false;
                 frm_MesajFormu mf = new frm_MesajFormu();
@@ -128,7 +119,6 @@ namespace IhalematikPro.Forms
                 {
                     a1.Activate();
                 }
-                pbControl.Visible = false;
             }
         }
 

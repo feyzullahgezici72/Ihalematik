@@ -40,6 +40,7 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.pbControl = new DevExpress.XtraEditors.ProgressBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
@@ -48,6 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -87,6 +89,7 @@
             this.groupControl2.AppearanceCaption.ForeColor = System.Drawing.Color.Navy;
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl2.Controls.Add(this.pbControl);
             this.groupControl2.Controls.Add(this.btnSave);
             this.groupControl2.Controls.Add(this.txtName);
             this.groupControl2.Controls.Add(this.labelControl2);
@@ -178,6 +181,16 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
+            // pbControl
+            // 
+            this.pbControl.Location = new System.Drawing.Point(93, 109);
+            this.pbControl.Name = "pbControl";
+            this.pbControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.pbControl.Properties.Step = 1;
+            this.pbControl.Size = new System.Drawing.Size(358, 31);
+            this.pbControl.TabIndex = 98;
+            this.pbControl.Visible = false;
+            // 
             // frm_AracEkle
             // 
             this.AcceptButton = this.btnSave;
@@ -203,6 +216,7 @@
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -219,5 +233,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
+        private DevExpress.XtraEditors.ProgressBarControl pbControl;
     }
 }

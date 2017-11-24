@@ -39,7 +39,6 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.pbControl = new DevExpress.XtraEditors.ProgressBarControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtcompanyName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -71,7 +70,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtcompanyName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabIhaleBilgileri)).BeginInit();
             this.tabIhaleBilgileri.SuspendLayout();
@@ -231,15 +229,6 @@
             this.labelControl3.TabIndex = 0;
             this.labelControl3.Text = "YENİ İHALE TEKLİFİ OLUŞTUR";
             this.labelControl3.UseMnemonic = false;
-            // 
-            // pbControl
-            // 
-            this.pbControl.Location = new System.Drawing.Point(563, 361);
-            this.pbControl.Name = "pbControl";
-            this.pbControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.pbControl.Properties.Step = 1;
-            this.pbControl.Size = new System.Drawing.Size(576, 31);
-            this.pbControl.TabIndex = 33;
             // 
             // labelControl4
             // 
@@ -676,7 +665,6 @@
             this.ClientSize = new System.Drawing.Size(1314, 418);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl3);
-            this.Controls.Add(this.pbControl);
             this.Controls.Add(this.tabIhaleBilgileri);
             this.Controls.Add(this.btnIhaleOlustur);
             this.Controls.Add(this.panelControl1);
@@ -696,7 +684,6 @@
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtcompanyName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabIhaleBilgileri)).EndInit();
             this.tabIhaleBilgileri.ResumeLayout(false);
@@ -730,7 +717,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.ProgressBarControl pbControl;
         private System.Windows.Forms.PictureBox pcWorld;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtcompanyName;
