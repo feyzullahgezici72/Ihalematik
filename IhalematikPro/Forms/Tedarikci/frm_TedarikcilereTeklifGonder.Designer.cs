@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikcilereTeklifGonder));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            this.rpstSupplierDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.rpstSupplierDetail1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
@@ -93,7 +93,7 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -133,13 +133,13 @@
             this.panelControl7.SuspendLayout();
             this.SuspendLayout();
             // 
-            // rpstSupplierDetail
+            // rpstSupplierDetail1
             // 
-            this.rpstSupplierDetail.AutoHeight = false;
-            this.rpstSupplierDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstSupplierDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Detay", null, null, true)});
-            this.rpstSupplierDetail.Name = "rpstSupplierDetail";
-            this.rpstSupplierDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.rpstSupplierDetail1.AutoHeight = false;
+            this.rpstSupplierDetail1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstSupplierDetail1.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Detay", null, null, true)});
+            this.rpstSupplierDetail1.Name = "rpstSupplierDetail1";
+            this.rpstSupplierDetail1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // panelControl1
             // 
@@ -154,7 +154,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(984, 24);
+            this.panelControl1.Size = new System.Drawing.Size(1224, 24);
             this.panelControl1.TabIndex = 20;
             // 
             // pcWorld
@@ -177,7 +177,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(958, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1198, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(6);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(26, 24);
@@ -218,14 +218,14 @@
             this.pnlUst.Location = new System.Drawing.Point(0, 24);
             this.pnlUst.Margin = new System.Windows.Forms.Padding(4);
             this.pnlUst.Name = "pnlUst";
-            this.pnlUst.Size = new System.Drawing.Size(984, 48);
+            this.pnlUst.Size = new System.Drawing.Size(1224, 48);
             this.pnlUst.TabIndex = 21;
             // 
             // pnlGonderilecekListe
             // 
             this.pnlGonderilecekListe.Controls.Add(this.btnGonderilenMalzemeListesi);
             this.pnlGonderilecekListe.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlGonderilecekListe.Location = new System.Drawing.Point(436, 2);
+            this.pnlGonderilecekListe.Location = new System.Drawing.Point(676, 2);
             this.pnlGonderilecekListe.Margin = new System.Windows.Forms.Padding(2);
             this.pnlGonderilecekListe.Name = "pnlGonderilecekListe";
             this.pnlGonderilecekListe.Size = new System.Drawing.Size(193, 44);
@@ -255,7 +255,7 @@
             this.pnlobfpozButtonpanel.Controls.Add(this.btnObfKayit);
             this.pnlobfpozButtonpanel.Controls.Add(this.btnPozKayit);
             this.pnlobfpozButtonpanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlobfpozButtonpanel.Location = new System.Drawing.Point(629, 2);
+            this.pnlobfpozButtonpanel.Location = new System.Drawing.Point(869, 2);
             this.pnlobfpozButtonpanel.Margin = new System.Windows.Forms.Padding(9);
             this.pnlobfpozButtonpanel.Name = "pnlobfpozButtonpanel";
             this.pnlobfpozButtonpanel.Size = new System.Drawing.Size(231, 44);
@@ -306,7 +306,7 @@
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
             this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnKaydet.Location = new System.Drawing.Point(860, 2);
+            this.btnKaydet.Location = new System.Drawing.Point(1100, 2);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(6);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(122, 44);
@@ -367,7 +367,7 @@
             this.panelControl4.Location = new System.Drawing.Point(0, 72);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(182, 494);
+            this.panelControl4.Size = new System.Drawing.Size(182, 574);
             this.panelControl4.TabIndex = 0;
             this.panelControl4.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl4_Paint);
             // 
@@ -428,7 +428,7 @@
             // gridColumn6
             // 
             this.gridColumn6.Caption = "gridColumn6";
-            this.gridColumn6.ColumnEdit = this.rpstSupplierDetail;
+            this.gridColumn6.ColumnEdit = this.rpstSupplierDetail1;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 2;
@@ -448,7 +448,7 @@
             this.pnlx.Location = new System.Drawing.Point(182, 72);
             this.pnlx.Margin = new System.Windows.Forms.Padding(2);
             this.pnlx.Name = "pnlx";
-            this.pnlx.Size = new System.Drawing.Size(802, 494);
+            this.pnlx.Size = new System.Drawing.Size(1042, 574);
             this.pnlx.TabIndex = 22;
             this.pnlx.Visible = false;
             // 
@@ -1090,7 +1090,7 @@
             this.grdSupplier.MainView = this.gridViewSupplier;
             this.grdSupplier.Name = "grdSupplier";
             this.grdSupplier.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.rpstSupplierDetail,
+            this.rpstSupplierDetail1,
             this.rpstIsSelectedSupplier});
             this.grdSupplier.Size = new System.Drawing.Size(471, 192);
             this.grdSupplier.TabIndex = 39;
@@ -1280,7 +1280,7 @@
             // 
             this.gridColumn7.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
             this.gridColumn7.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn7.ColumnEdit = this.rpstSupplierDetail;
+            this.gridColumn7.ColumnEdit = this.rpstSupplierDetail1;
             this.gridColumn7.MaxWidth = 30;
             this.gridColumn7.MinWidth = 30;
             this.gridColumn7.Name = "gridColumn7";
@@ -1325,7 +1325,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(984, 566);
+            this.ClientSize = new System.Drawing.Size(1224, 646);
             this.ControlBox = false;
             this.Controls.Add(this.pnlx);
             this.Controls.Add(this.panelControl4);
@@ -1339,7 +1339,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_TedarikcilereTeklifGonder_Load);
             this.Shown += new System.EventHandler(this.frm_TedarikcilereTeklifGonder_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -1446,7 +1446,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colCompanyName;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit rpstSupplierDetail;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit rpstSupplierDetail1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl5;
