@@ -110,7 +110,7 @@ namespace IhalematikProUI.Forms
         {
             IsEmptyKontrol();
             VehicleModel model = new VehicleModel(CurrentVehicle);
-            model.TitleId = ((VehicleTitleModel)ddlVehicleTitle.SelectedItem).Id.Value;
+            model.TitleId = ((VehicleTitle)ddlVehicleTitle.SelectedItem).Id;
             if (rbCompanyVehicle.Checked)
             {
                 model.IsCompanyVehicle = true;
