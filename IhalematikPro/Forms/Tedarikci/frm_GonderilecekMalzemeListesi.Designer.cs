@@ -61,8 +61,9 @@
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(810, 24);
+            this.panelControl2.Size = new System.Drawing.Size(1215, 35);
             this.panelControl2.TabIndex = 111;
             // 
             // btnKapat
@@ -72,9 +73,10 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(784, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1187, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(26, 24);
+            this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 21;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
@@ -86,10 +88,11 @@
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(3, 1);
+            this.labelControl1.Location = new System.Drawing.Point(4, 1);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(388, 23);
+            this.labelControl1.Size = new System.Drawing.Size(575, 35);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "TEDARİKÇİLERE GÖNDERİLECEK MALZEME LİSTESİ";
             this.labelControl1.UseMnemonic = false;
@@ -97,15 +100,15 @@
             // grdAddedOfferMaterialList
             // 
             this.grdAddedOfferMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdAddedOfferMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdAddedOfferMaterialList.Location = new System.Drawing.Point(0, 24);
+            this.grdAddedOfferMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.grdAddedOfferMaterialList.Location = new System.Drawing.Point(0, 35);
             this.grdAddedOfferMaterialList.MainView = this.gridViewAddedOfferMaterialList;
-            this.grdAddedOfferMaterialList.Margin = new System.Windows.Forms.Padding(4);
+            this.grdAddedOfferMaterialList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.grdAddedOfferMaterialList.Name = "grdAddedOfferMaterialList";
             this.grdAddedOfferMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1,
             this.rpstRemove});
-            this.grdAddedOfferMaterialList.Size = new System.Drawing.Size(810, 421);
+            this.grdAddedOfferMaterialList.Size = new System.Drawing.Size(1215, 615);
             this.grdAddedOfferMaterialList.TabIndex = 112;
             this.grdAddedOfferMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewAddedOfferMaterialList});
@@ -335,6 +338,8 @@
             this.gridColumn12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn12.FieldName = "Quantity";
             this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.AllowEdit = false;
+            this.gridColumn12.OptionsColumn.AllowFocus = false;
             this.gridColumn12.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn12.OptionsFilter.AllowFilter = false;
             this.gridColumn12.Visible = true;
@@ -347,6 +352,8 @@
             this.colRemoveAddEdMaterialList.AppearanceHeader.Options.UseBackColor = true;
             this.colRemoveAddEdMaterialList.Caption = " ";
             this.colRemoveAddEdMaterialList.ColumnEdit = this.rpstRemove;
+            this.colRemoveAddEdMaterialList.MaxWidth = 30;
+            this.colRemoveAddEdMaterialList.MinWidth = 30;
             this.colRemoveAddEdMaterialList.Name = "colRemoveAddEdMaterialList";
             this.colRemoveAddEdMaterialList.ToolTip = "Çıkar";
             this.colRemoveAddEdMaterialList.Visible = true;
@@ -357,7 +364,7 @@
             // 
             this.rpstRemove.AutoHeight = false;
             this.rpstRemove.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.Go_back_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Çıkar", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstRemove.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Çıkar", null, null, true)});
             this.rpstRemove.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
             this.rpstRemove.Name = "rpstRemove";
             this.rpstRemove.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -370,15 +377,14 @@
             // 
             // frm_GonderilecekMalzemeListesi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(810, 445);
+            this.ClientSize = new System.Drawing.Size(1215, 650);
             this.ControlBox = false;
             this.Controls.Add(this.grdAddedOfferMaterialList);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_GonderilecekMalzemeListesi";
