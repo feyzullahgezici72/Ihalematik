@@ -479,6 +479,7 @@
             this.btnAktar.Size = new System.Drawing.Size(140, 63);
             this.btnAktar.TabIndex = 0;
             this.btnAktar.Text = "Aktar";
+            this.btnAktar.Click += new System.EventHandler(this.btnAktar_Click);
             // 
             // pnlAktarilanlar
             // 
