@@ -77,7 +77,7 @@
             this.ddlSegments = new DevExpress.XtraEditors.ComboBoxEdit();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.statusPanel = new System.Windows.Forms.Panel();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbAktivePasive = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
@@ -108,7 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlSegments.Properties)).BeginInit();
             this.statusPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
@@ -147,7 +147,7 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2);
             this.pcWorld.Name = "pcWorld";
             this.pcWorld.Size = new System.Drawing.Size(33, 24);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -815,7 +815,7 @@
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
             this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.simpleButton2.Location = new System.Drawing.Point(0, 0);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(2);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(360, 38);
             this.simpleButton2.TabIndex = 94;
@@ -824,44 +824,44 @@
             // 
             // statusPanel
             // 
-            this.statusPanel.Controls.Add(this.comboBoxEdit1);
+            this.statusPanel.Controls.Add(this.cmbAktivePasive);
             this.statusPanel.Controls.Add(this.lblRecordCount);
             this.statusPanel.Controls.Add(this.labelControl14);
             this.statusPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.statusPanel.Location = new System.Drawing.Point(360, 500);
-            this.statusPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.statusPanel.Margin = new System.Windows.Forms.Padding(2);
             this.statusPanel.Name = "statusPanel";
             this.statusPanel.Size = new System.Drawing.Size(548, 23);
             this.statusPanel.TabIndex = 39;
             // 
-            // comboBoxEdit1
+            // cmbAktivePasive
             // 
-            this.comboBoxEdit1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.comboBoxEdit1.EditValue = "Aktif Kayıtlar";
-            this.comboBoxEdit1.EnterMoveNextControl = true;
-            this.comboBoxEdit1.Location = new System.Drawing.Point(435, 0);
-            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cmbAktivePasive.Dock = System.Windows.Forms.DockStyle.Right;
+            this.cmbAktivePasive.EditValue = "Aktif Kayıtlar";
+            this.cmbAktivePasive.EnterMoveNextControl = true;
+            this.cmbAktivePasive.Location = new System.Drawing.Point(435, 0);
+            this.cmbAktivePasive.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbAktivePasive.Name = "cmbAktivePasive";
+            this.cmbAktivePasive.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbAktivePasive.Properties.Appearance.Options.UseFont = true;
+            this.cmbAktivePasive.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.cmbAktivePasive.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            this.cmbAktivePasive.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.cmbAktivePasive.Properties.Items.AddRange(new object[] {
             "Aktif Kayıtlar",
-            "Pasif Kayıtlar",
-            "Tüm Kayıtlar"});
-            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit1.Size = new System.Drawing.Size(113, 20);
-            this.comboBoxEdit1.TabIndex = 1;
+            "Pasif Kayıtlar"});
+            this.cmbAktivePasive.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmbAktivePasive.Size = new System.Drawing.Size(113, 20);
+            this.cmbAktivePasive.TabIndex = 1;
+            this.cmbAktivePasive.SelectedIndexChanged += new System.EventHandler(this.cmbAktivePasive_SelectedIndexChanged);
             // 
             // lblRecordCount
             // 
             this.lblRecordCount.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblRecordCount.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblRecordCount.Location = new System.Drawing.Point(67, 0);
-            this.lblRecordCount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblRecordCount.Margin = new System.Windows.Forms.Padding(2);
             this.lblRecordCount.Name = "lblRecordCount";
             this.lblRecordCount.Size = new System.Drawing.Size(12, 14);
             this.lblRecordCount.TabIndex = 0;
@@ -872,7 +872,7 @@
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl14.Dock = System.Windows.Forms.DockStyle.Left;
             this.labelControl14.Location = new System.Drawing.Point(0, 0);
-            this.labelControl14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(67, 14);
             this.labelControl14.TabIndex = 0;
@@ -885,7 +885,7 @@
             this.panelControl4.Controls.Add(this.labelControl10);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(360, 24);
-            this.panelControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(548, 34);
             this.panelControl4.TabIndex = 40;
@@ -970,7 +970,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ddlSegments.Properties)).EndInit();
             this.statusPanel.ResumeLayout(false);
             this.statusPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
@@ -1014,7 +1014,7 @@
         private DevExpress.XtraEditors.MemoEdit txtAddress;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private System.Windows.Forms.Panel statusPanel;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbAktivePasive;
         private DevExpress.XtraEditors.LabelControl lblRecordCount;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.PanelControl panelControl4;

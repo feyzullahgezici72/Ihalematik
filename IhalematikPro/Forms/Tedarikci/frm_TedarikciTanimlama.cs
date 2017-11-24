@@ -100,12 +100,27 @@ namespace IhalematikProUI.Forms
         public void LoadGrid()
         {
             List<Supplier> suppliers = SupplierProvider.Instance.GetItems();
-            grdSupplier.DataSource = suppliers;
+            //grdSupplier.DataSource = suppliers;
+
+            if (cmbAktivePasive.SelectedIndex == 0)
+            {
+                grdSupplier.DataSource = suppliers.Where(p => p.IsActive);
+                colEdit.Visible = true;
+                colActive.Visible = false;
+                colPasive.Visible = true;
+
+            }
+            else if (cmbAktivePasive.SelectedIndex == 1)
+            {
+                grdSupplier.DataSource = suppliers.Where(p => !p.IsActive);
+                colEdit.Visible = true;
+                colActive.Visible = true;
+                colPasive.Visible = false;
+            }
+
             if (this.FocusedRowHandle != 0)
             {
                 gridViewSupplier.FocusedRowHandle = this.FocusedRowHandle;
-                //colActive.Visible = false;
-                //colPasive.Visible = false;
             }
         }
 
@@ -128,12 +143,43 @@ namespace IhalematikProUI.Forms
 
         private void btnPasive_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            DialogResult result = MessageBox.Show("Pasif yapmak istediğinz emin misiniz?", "Pasif", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.Yes))
+            {
+                this.FocusedRowHandle = gridViewSupplier.FocusedRowHandle;
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
+                Supplier selectedSupplier = SupplierProvider.Instance.GetItem(id);
+                selectedSupplier.IsActive = false;
+                SupplierProvider.Instance.Save(selectedSupplier);
+                this.LoadGrid();
+            }
+            else
+            {
 
+            }
         }
 
         private void btnActive_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            DialogResult result = MessageBox.Show("Aktif yapmak istediğinz emin misiniz?", "Aktif", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.Yes))
+            {
+                this.FocusedRowHandle = gridViewSupplier.FocusedRowHandle;
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
+                Supplier selectedSupplier = SupplierProvider.Instance.GetItem(id);
+                selectedSupplier.IsActive = true;
+                SupplierProvider.Instance.Save(selectedSupplier);
+                this.LoadGrid();
+            }
+            else
+            {
 
+            }
+        }
+
+        private void cmbAktivePasive_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.LoadGrid();
         }
     }
 }
