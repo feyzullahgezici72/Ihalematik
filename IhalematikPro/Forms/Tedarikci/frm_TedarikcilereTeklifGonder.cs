@@ -42,7 +42,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlMalzemeListesi.Enabled = true;
             pnlUst.Enabled = true;
             pnlFirma.Visible = false;
-            pnlAktarilanlar.Visible = false;
+            //pnlAktarilanlar.Visible = false;
             pnlAktarmaPaneli.Visible = false;
             pnlMalzemeListesi.Dock = DockStyle.Fill;
             this.LoadMaterialGrid();
@@ -136,30 +136,9 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void LoadAddedMateriallistGrid()
         {
-            grdAddedOfferMaterialList.DataSource = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.IsSelected);
+            //grdAddedOfferMaterialList.DataSource = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.IsSelected);
         }
 
-        private void rpstRemove_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            int materialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewAddedOfferMaterialList.GetFocusedRowCellValue("Id"));
-            OfferMaterialList selectedOfferMaterialList = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Id == materialId).FirstOrDefault();
-            selectedOfferMaterialList.IsSelected = false;
-
-            Dictionary<string, object> parameters = new Dictionary<string, object>();
-            parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
-            parameters.Add("MaterialListId", materialId);
-
-            List<SupplierMaterialList> items = SupplierMaterialListProvider.Instance.GetItems(parameters);
-
-            foreach (var item in items)
-            {
-                item.IsMarkedForDeletion = true;
-                SupplierMaterialListProvider.Instance.Save(item);
-            }
-
-            this.LoadMaterialGrid();
-            this.LoadAddedMateriallistGrid();
-        }
         private void rpstSupplierDetail_Click(object sender, EventArgs e)
         {
             //this.Enabled = false;
@@ -301,7 +280,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlMalzemeListesi.Visible = true;
             pnlUst.Enabled = true;
             pnlFirma.Visible = false;
-            pnlAktarilanlar.Visible = false;
+            //pnlAktarilanlar.Visible = false;
             pnlAktarmaPaneli.Visible = false;
             pnlMalzemeListesi.Dock = DockStyle.Fill;
             
@@ -318,7 +297,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlGonderilecekListe.Visible = true;
             pnlobfpozButtonpanel.Visible = false;
 
-            pnlAktarilanlar.Visible = false;
+            //pnlAktarilanlar.Visible = false;
             pnlMalzemeListesi.Visible = true;
             pnlFirma.Visible = true;
             pnlAktarmaPaneli.Visible = true;
@@ -339,10 +318,10 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
             pnlGonderilecekListe.Visible = false;
             pnlobfpozButtonpanel.Visible = false;
-            pnlAktarilanlar.Visible = false;
+            //pnlAktarilanlar.Visible = false;
             pnlMalzemeListesi.Visible = false;
             pnlAktarmaPaneli.Visible = false;
-            pnlAktarilanlar.Visible = false;
+            //pnlAktarilanlar.Visible = false;
             pnlFirma.Visible = true;
             pnlFirma.Dock = DockStyle.Fill;
             pnlFirma.BringToFront();
@@ -354,7 +333,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void btnGonderilenMalzemeListesi_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            frm_GonderilecekMalzemeListesi gml = new frm_GonderilecekMalzemeListesi();
+            frm_GonderilecekMalzemeListesi gml = new frm_GonderilecekMalzemeListesi(this);
             gml.ShowDialog();
             this.Enabled = true;
             //pnlMalzemeListesi.Visible = false;
