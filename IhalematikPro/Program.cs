@@ -16,7 +16,7 @@ namespace IhalematikPro
         [STAThread]
         static void Main()
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "iMaginary"; //"Money Twins";  //"Lilian";//
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Lilian"; //"Money Twins";  //"Lilian";//
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
