@@ -37,6 +37,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void frm_TedarikcilereTeklifGonder_Shown(object sender, EventArgs e)
         {
+            pnlx.Visible = true;
             pnlMalzemeListesi.Dock = DockStyle.Fill;
             pnlMalzemeListesi.Enabled = true;
             pnlUst.Enabled = true;
@@ -329,7 +330,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlAktarmaPaneli.BringToFront();
             pnlMalzemeListesi.Dock = DockStyle.Fill;
             pnlMalzemeListesi.BringToFront();
-            
+            colIsSelectedSupplier.Visible = true;
         }
 
         private void btnTedarikciListesi_Click(object sender, EventArgs e)
@@ -343,7 +344,9 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlFirma.Visible = true;
             pnlFirma.Dock = DockStyle.Fill;
             pnlFirma.BringToFront();
-            
+            colIsSelectedSupplier.Visible = false;
+
+
         }
 
         private void btnGonderilenMalzemeListesi_Click(object sender, EventArgs e)

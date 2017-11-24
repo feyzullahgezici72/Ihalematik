@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikcilereTeklifGonder));
+            DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            this.rpstSupplierDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
@@ -52,9 +53,11 @@
             this.btnTedarikciListesi = new DevExpress.XtraEditors.SimpleButton();
             this.btnTedaikcileregonder = new DevExpress.XtraEditors.SimpleButton();
             this.btnListeOlustur = new DevExpress.XtraEditors.SimpleButton();
-            this.btnAktar = new DevExpress.XtraEditors.SimpleButton();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpstIsSelectedOfferMaterial = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.pnlx = new DevExpress.XtraEditors.PanelControl();
+            this.pnlAktarmaPaneli = new DevExpress.XtraEditors.PanelControl();
+            this.btnAktar = new DevExpress.XtraEditors.SimpleButton();
             this.pnlAktarilanlar = new DevExpress.XtraEditors.PanelControl();
             this.grdAddedOfferMaterialList = new DevExpress.XtraGrid.GridControl();
             this.gridViewAddedOfferMaterialList = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -88,11 +91,10 @@
             this.colCompanyName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rpstSupplierDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.pnlAktarmaPaneli = new DevExpress.XtraEditors.PanelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -103,7 +105,12 @@
             this.pnlobfpozButtonpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedOfferMaterial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlx)).BeginInit();
+            this.pnlx.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlAktarmaPaneli)).BeginInit();
+            this.pnlAktarmaPaneli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlAktarilanlar)).BeginInit();
             this.pnlAktarilanlar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdAddedOfferMaterialList)).BeginInit();
@@ -123,21 +130,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdSupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewSupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedSupplier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlAktarmaPaneli)).BeginInit();
-            this.pnlAktarmaPaneli.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // rpstSupplierDetail
-            // 
-            this.rpstSupplierDetail.AutoHeight = false;
-            this.rpstSupplierDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstSupplierDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Detay", null, null, true)});
-            this.rpstSupplierDetail.Name = "rpstSupplierDetail";
-            this.rpstSupplierDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.rpstSupplierDetail.Click += new System.EventHandler(this.rpstSupplierDetail_Click);
             // 
             // panelControl1
             // 
@@ -153,7 +150,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1433, 35);
+            this.panelControl1.Size = new System.Drawing.Size(1584, 35);
             this.panelControl1.TabIndex = 20;
             // 
             // pcWorld
@@ -175,7 +172,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1405, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1556, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(9);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -217,14 +214,14 @@
             this.pnlUst.Location = new System.Drawing.Point(0, 35);
             this.pnlUst.Margin = new System.Windows.Forms.Padding(6);
             this.pnlUst.Name = "pnlUst";
-            this.pnlUst.Size = new System.Drawing.Size(1433, 70);
+            this.pnlUst.Size = new System.Drawing.Size(1584, 70);
             this.pnlUst.TabIndex = 21;
             // 
             // pnlGonderilecekListe
             // 
             this.pnlGonderilecekListe.Controls.Add(this.btnGonderilenMalzemeListesi);
             this.pnlGonderilecekListe.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlGonderilecekListe.Location = new System.Drawing.Point(612, 3);
+            this.pnlGonderilecekListe.Location = new System.Drawing.Point(763, 3);
             this.pnlGonderilecekListe.Name = "pnlGonderilecekListe";
             this.pnlGonderilecekListe.Size = new System.Drawing.Size(289, 64);
             this.pnlGonderilecekListe.TabIndex = 12;
@@ -253,7 +250,7 @@
             this.pnlobfpozButtonpanel.Controls.Add(this.btnObfKayit);
             this.pnlobfpozButtonpanel.Controls.Add(this.btnPozKayit);
             this.pnlobfpozButtonpanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlobfpozButtonpanel.Location = new System.Drawing.Point(901, 3);
+            this.pnlobfpozButtonpanel.Location = new System.Drawing.Point(1052, 3);
             this.pnlobfpozButtonpanel.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.pnlobfpozButtonpanel.Name = "pnlobfpozButtonpanel";
             this.pnlobfpozButtonpanel.Size = new System.Drawing.Size(346, 64);
@@ -304,7 +301,7 @@
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
             this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnKaydet.Location = new System.Drawing.Point(1247, 3);
+            this.btnKaydet.Location = new System.Drawing.Point(1398, 3);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(9);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(183, 64);
@@ -427,6 +424,47 @@
             this.btnListeOlustur.Text = "Malzeme Listesi Oluştur";
             this.btnListeOlustur.Click += new System.EventHandler(this.btnListeOlustur_Click);
             // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "gridColumn6";
+            repositoryItemButtonEdit1.AutoHeight = false;
+            repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit1.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Detay", null, null, true)});
+            repositoryItemButtonEdit1.Name = "rpstSupplierDetail";
+            repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.gridColumn6.ColumnEdit = repositoryItemButtonEdit1;
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 2;
+            // 
+            // rpstIsSelectedOfferMaterial
+            // 
+            this.rpstIsSelectedOfferMaterial.AutoHeight = false;
+            this.rpstIsSelectedOfferMaterial.Name = "rpstIsSelectedOfferMaterial";
+            // 
+            // pnlx
+            // 
+            this.pnlx.Controls.Add(this.pnlAktarmaPaneli);
+            this.pnlx.Controls.Add(this.pnlAktarilanlar);
+            this.pnlx.Controls.Add(this.pnlMalzemeListesi);
+            this.pnlx.Controls.Add(this.pnlFirma);
+            this.pnlx.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlx.Location = new System.Drawing.Point(273, 105);
+            this.pnlx.Name = "pnlx";
+            this.pnlx.Size = new System.Drawing.Size(1311, 573);
+            this.pnlx.TabIndex = 22;
+            this.pnlx.Visible = false;
+            // 
+            // pnlAktarmaPaneli
+            // 
+            this.pnlAktarmaPaneli.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.pnlAktarmaPaneli.Controls.Add(this.btnAktar);
+            this.pnlAktarmaPaneli.Location = new System.Drawing.Point(633, 5);
+            this.pnlAktarmaPaneli.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlAktarmaPaneli.Name = "pnlAktarmaPaneli";
+            this.pnlAktarmaPaneli.Size = new System.Drawing.Size(156, 864);
+            this.pnlAktarmaPaneli.TabIndex = 35;
+            // 
             // btnAktar
             // 
             this.btnAktar.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -440,44 +478,30 @@
             this.btnAktar.Size = new System.Drawing.Size(140, 63);
             this.btnAktar.TabIndex = 0;
             this.btnAktar.Text = "Aktar";
-            this.btnAktar.Click += new System.EventHandler(this.btnAktar_Click);
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "gridColumn6";
-            this.gridColumn6.ColumnEdit = this.rpstSupplierDetail;
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 2;
-            // 
-            // rpstIsSelectedOfferMaterial
-            // 
-            this.rpstIsSelectedOfferMaterial.AutoHeight = false;
-            this.rpstIsSelectedOfferMaterial.Name = "rpstIsSelectedOfferMaterial";
             // 
             // pnlAktarilanlar
             // 
             this.pnlAktarilanlar.Controls.Add(this.grdAddedOfferMaterialList);
             this.pnlAktarilanlar.Controls.Add(this.panelControl10);
-            this.pnlAktarilanlar.Location = new System.Drawing.Point(1127, 435);
+            this.pnlAktarilanlar.Location = new System.Drawing.Point(800, 330);
             this.pnlAktarilanlar.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAktarilanlar.Name = "pnlAktarilanlar";
             this.pnlAktarilanlar.Size = new System.Drawing.Size(709, 700);
-            this.pnlAktarilanlar.TabIndex = 24;
+            this.pnlAktarilanlar.TabIndex = 33;
             this.pnlAktarilanlar.Visible = false;
             // 
             // grdAddedOfferMaterialList
             // 
             this.grdAddedOfferMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdAddedOfferMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
-            this.grdAddedOfferMaterialList.Location = new System.Drawing.Point(3, 40);
+            this.grdAddedOfferMaterialList.Location = new System.Drawing.Point(3, 28);
             this.grdAddedOfferMaterialList.MainView = this.gridViewAddedOfferMaterialList;
             this.grdAddedOfferMaterialList.Margin = new System.Windows.Forms.Padding(6);
             this.grdAddedOfferMaterialList.Name = "grdAddedOfferMaterialList";
             this.grdAddedOfferMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1,
             this.rpstRemove});
-            this.grdAddedOfferMaterialList.Size = new System.Drawing.Size(703, 657);
+            this.grdAddedOfferMaterialList.Size = new System.Drawing.Size(703, 669);
             this.grdAddedOfferMaterialList.TabIndex = 1;
             this.grdAddedOfferMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewAddedOfferMaterialList});
@@ -729,17 +753,15 @@
             // 
             this.rpstRemove.AutoHeight = false;
             this.rpstRemove.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.Go_back_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "Çıkar", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstRemove.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "Çıkar", null, null, true)});
             this.rpstRemove.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
             this.rpstRemove.Name = "rpstRemove";
             this.rpstRemove.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.rpstRemove.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.rpstRemove_ButtonClick);
             // 
             // repositoryItemCheckEdit1
             // 
             this.repositoryItemCheckEdit1.AutoHeight = false;
             this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
-            this.repositoryItemCheckEdit1.Click += new System.EventHandler(this.rpstSupplierDetail_Click);
             // 
             // panelControl10
             // 
@@ -751,7 +773,7 @@
             this.panelControl10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl10.Location = new System.Drawing.Point(3, 3);
             this.panelControl10.Name = "panelControl10";
-            this.panelControl10.Size = new System.Drawing.Size(703, 37);
+            this.panelControl10.Size = new System.Drawing.Size(703, 25);
             this.panelControl10.TabIndex = 2;
             // 
             // labelControl3
@@ -769,11 +791,11 @@
             // 
             this.pnlMalzemeListesi.Controls.Add(this.grdMaterialList);
             this.pnlMalzemeListesi.Controls.Add(this.panelControl6);
-            this.pnlMalzemeListesi.Location = new System.Drawing.Point(340, 115);
+            this.pnlMalzemeListesi.Location = new System.Drawing.Point(13, 10);
             this.pnlMalzemeListesi.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMalzemeListesi.Name = "pnlMalzemeListesi";
             this.pnlMalzemeListesi.Size = new System.Drawing.Size(612, 590);
-            this.pnlMalzemeListesi.TabIndex = 2;
+            this.pnlMalzemeListesi.TabIndex = 32;
             // 
             // grdMaterialList
             // 
@@ -922,7 +944,6 @@
             this.gridViewMaterialList.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
             this.gridViewMaterialList.OptionsView.ShowGroupPanel = false;
             this.gridViewMaterialList.PaintStyleName = "Web";
-            this.gridViewMaterialList.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewMaterialList_CellValueChanged);
             // 
             // colId
             // 
@@ -1060,25 +1081,25 @@
             // 
             this.pnlFirma.Controls.Add(this.grdSupplier);
             this.pnlFirma.Controls.Add(this.panelControl7);
-            this.pnlFirma.Location = new System.Drawing.Point(1124, 118);
+            this.pnlFirma.Location = new System.Drawing.Point(797, 13);
             this.pnlFirma.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFirma.Name = "pnlFirma";
             this.pnlFirma.Size = new System.Drawing.Size(712, 312);
-            this.pnlFirma.TabIndex = 30;
+            this.pnlFirma.TabIndex = 34;
             this.pnlFirma.Visible = false;
             // 
             // grdSupplier
             // 
             this.grdSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdSupplier.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdSupplier.Location = new System.Drawing.Point(3, 40);
+            this.grdSupplier.Location = new System.Drawing.Point(3, 28);
             this.grdSupplier.MainView = this.gridViewSupplier;
             this.grdSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.grdSupplier.Name = "grdSupplier";
             this.grdSupplier.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstSupplierDetail,
             this.rpstIsSelectedSupplier});
-            this.grdSupplier.Size = new System.Drawing.Size(706, 269);
+            this.grdSupplier.Size = new System.Drawing.Size(706, 281);
             this.grdSupplier.TabIndex = 39;
             this.grdSupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSupplier,
@@ -1274,6 +1295,14 @@
             this.gridColumn7.VisibleIndex = 3;
             this.gridColumn7.Width = 30;
             // 
+            // rpstSupplierDetail
+            // 
+            this.rpstSupplierDetail.AutoHeight = false;
+            this.rpstSupplierDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstSupplierDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "Detay", null, null, true)});
+            this.rpstSupplierDetail.Name = "rpstSupplierDetail";
+            this.rpstSupplierDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
             // gridView1
             // 
             this.gridView1.GridControl = this.grdSupplier;
@@ -1289,7 +1318,7 @@
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl7.Location = new System.Drawing.Point(3, 3);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(706, 37);
+            this.panelControl7.Size = new System.Drawing.Size(706, 25);
             this.panelControl7.TabIndex = 40;
             // 
             // labelControl5
@@ -1303,28 +1332,15 @@
             this.labelControl5.TabIndex = 0;
             this.labelControl5.Text = "    TEDARİKÇİ LİSTESİ";
             // 
-            // pnlAktarmaPaneli
-            // 
-            this.pnlAktarmaPaneli.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.pnlAktarmaPaneli.Controls.Add(this.btnAktar);
-            this.pnlAktarmaPaneli.Location = new System.Drawing.Point(960, 110);
-            this.pnlAktarmaPaneli.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlAktarmaPaneli.Name = "pnlAktarmaPaneli";
-            this.pnlAktarmaPaneli.Size = new System.Drawing.Size(155, 864);
-            this.pnlAktarmaPaneli.TabIndex = 31;
-            // 
             // frm_TedarikcilereTeklifGonder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(1433, 678);
+            this.ClientSize = new System.Drawing.Size(1584, 678);
             this.ControlBox = false;
-            this.Controls.Add(this.pnlAktarmaPaneli);
-            this.Controls.Add(this.pnlAktarilanlar);
-            this.Controls.Add(this.pnlMalzemeListesi);
+            this.Controls.Add(this.pnlx);
             this.Controls.Add(this.panelControl4);
-            this.Controls.Add(this.pnlFirma);
             this.Controls.Add(this.pnlUst);
             this.Controls.Add(this.panelControl1);
             this.MaximizeBox = false;
@@ -1334,7 +1350,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_TedarikcilereTeklifGonder_Load);
             this.Shown += new System.EventHandler(this.frm_TedarikcilereTeklifGonder_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -1347,7 +1362,12 @@
             this.pnlobfpozButtonpanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedOfferMaterial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlx)).EndInit();
+            this.pnlx.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pnlAktarmaPaneli)).EndInit();
+            this.pnlAktarmaPaneli.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnlAktarilanlar)).EndInit();
             this.pnlAktarilanlar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdAddedOfferMaterialList)).EndInit();
@@ -1369,12 +1389,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdSupplier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewSupplier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedSupplier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
             this.panelControl7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlAktarmaPaneli)).EndInit();
-            this.pnlAktarmaPaneli.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1394,11 +1413,18 @@
         private DevExpress.XtraEditors.SimpleButton btnPozKayit;
         private DevExpress.XtraEditors.SimpleButton btnObfKayit;
         private DevExpress.XtraEditors.PanelControl panelControl4;
-        private DevExpress.XtraEditors.SimpleButton btnAktar;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private System.Windows.Forms.Panel pnlobfpozButtonpanel;
         public DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit rpstIsSelectedOfferMaterial;
+        public DevExpress.XtraEditors.SimpleButton btnListeOlustur;
+        public DevExpress.XtraEditors.SimpleButton btnTedarikciListesi;
+        public DevExpress.XtraEditors.SimpleButton btnTedaikcileregonder;
+        private DevExpress.XtraEditors.PanelControl pnlGonderilecekListe;
+        public DevExpress.XtraEditors.SimpleButton btnGonderilenMalzemeListesi;
+        private DevExpress.XtraEditors.PanelControl pnlx;
+        private DevExpress.XtraEditors.PanelControl pnlAktarmaPaneli;
+        private DevExpress.XtraEditors.SimpleButton btnAktar;
         private DevExpress.XtraEditors.PanelControl pnlAktarilanlar;
         public DevExpress.XtraGrid.GridControl grdAddedOfferMaterialList;
         public DevExpress.XtraGrid.Views.Grid.GridView gridViewAddedOfferMaterialList;
@@ -1436,11 +1462,5 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        public DevExpress.XtraEditors.SimpleButton btnListeOlustur;
-        private DevExpress.XtraEditors.PanelControl pnlAktarmaPaneli;
-        public DevExpress.XtraEditors.SimpleButton btnTedarikciListesi;
-        public DevExpress.XtraEditors.SimpleButton btnTedaikcileregonder;
-        private DevExpress.XtraEditors.PanelControl pnlGonderilecekListe;
-        public DevExpress.XtraEditors.SimpleButton btnGonderilenMalzemeListesi;
     }
 }

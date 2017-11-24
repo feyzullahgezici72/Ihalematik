@@ -701,5 +701,15 @@ namespace IhalematikPro.Forms
         {
 
         }
+
+        private void picLogo_LoadCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            
+        }
+
+        private void frm_Anaform_Shown(object sender, EventArgs e)
+        {
+            picLogo.Visible = true;
+        }
     }
 }

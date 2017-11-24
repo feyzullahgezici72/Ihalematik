@@ -1104,6 +1104,8 @@ namespace IhalematikPro.Forms
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 3;
             this.picLogo.TabStop = false;
+            this.picLogo.Visible = false;
+            this.picLogo.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.picLogo_LoadCompleted);
             // 
             // panelControl4
             // 
@@ -1384,6 +1386,7 @@ namespace IhalematikPro.Forms
             this.Text = "İhaleMatikPro 1.0.0.0";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_Anaform_Load);
+            this.Shown += new System.EventHandler(this.frm_Anaform_Shown);
             this.Resize += new System.EventHandler(this.frm_Anaform_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).EndInit();
