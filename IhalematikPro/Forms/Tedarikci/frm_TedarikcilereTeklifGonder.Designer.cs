@@ -37,7 +37,9 @@
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
             this.pnlUst = new DevExpress.XtraEditors.PanelControl();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlGonderilecekListe = new DevExpress.XtraEditors.PanelControl();
+            this.btnGonderilenMalzemeListesi = new DevExpress.XtraEditors.SimpleButton();
+            this.pnlobfpozButtonpanel = new System.Windows.Forms.Panel();
             this.btnObfKayit = new DevExpress.XtraEditors.SimpleButton();
             this.btnPozKayit = new DevExpress.XtraEditors.SimpleButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
@@ -47,7 +49,6 @@
             this.lblTederDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
-            this.btnGonderilenMalzemeListesi = new DevExpress.XtraEditors.SimpleButton();
             this.btnTedarikciListesi = new DevExpress.XtraEditors.SimpleButton();
             this.btnTedaikcileregonder = new DevExpress.XtraEditors.SimpleButton();
             this.btnListeOlustur = new DevExpress.XtraEditors.SimpleButton();
@@ -97,7 +98,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlUst)).BeginInit();
             this.pnlUst.SuspendLayout();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlGonderilecekListe)).BeginInit();
+            this.pnlGonderilecekListe.SuspendLayout();
+            this.pnlobfpozButtonpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedOfferMaterial)).BeginInit();
@@ -202,7 +205,8 @@
             this.pnlUst.Appearance.BackColor2 = System.Drawing.Color.White;
             this.pnlUst.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.pnlUst.Appearance.Options.UseBackColor = true;
-            this.pnlUst.Controls.Add(this.panel2);
+            this.pnlUst.Controls.Add(this.pnlGonderilecekListe);
+            this.pnlUst.Controls.Add(this.pnlobfpozButtonpanel);
             this.pnlUst.Controls.Add(this.btnKaydet);
             this.pnlUst.Controls.Add(this.lblTenderDescription);
             this.pnlUst.Controls.Add(this.labelControl2);
@@ -216,17 +220,44 @@
             this.pnlUst.Size = new System.Drawing.Size(1433, 70);
             this.pnlUst.TabIndex = 21;
             // 
-            // panel2
+            // pnlGonderilecekListe
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.btnObfKayit);
-            this.panel2.Controls.Add(this.btnPozKayit);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(825, 3);
-            this.panel2.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(422, 64);
-            this.panel2.TabIndex = 11;
+            this.pnlGonderilecekListe.Controls.Add(this.btnGonderilenMalzemeListesi);
+            this.pnlGonderilecekListe.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlGonderilecekListe.Location = new System.Drawing.Point(612, 3);
+            this.pnlGonderilecekListe.Name = "pnlGonderilecekListe";
+            this.pnlGonderilecekListe.Size = new System.Drawing.Size(289, 64);
+            this.pnlGonderilecekListe.TabIndex = 12;
+            this.pnlGonderilecekListe.Visible = false;
+            // 
+            // btnGonderilenMalzemeListesi
+            // 
+            this.btnGonderilenMalzemeListesi.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGonderilenMalzemeListesi.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnGonderilenMalzemeListesi.Appearance.Options.UseFont = true;
+            this.btnGonderilenMalzemeListesi.Appearance.Options.UseForeColor = true;
+            this.btnGonderilenMalzemeListesi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnGonderilenMalzemeListesi.Image = ((System.Drawing.Image)(resources.GetObject("btnGonderilenMalzemeListesi.Image")));
+            this.btnGonderilenMalzemeListesi.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnGonderilenMalzemeListesi.Location = new System.Drawing.Point(3, 3);
+            this.btnGonderilenMalzemeListesi.Margin = new System.Windows.Forms.Padding(9);
+            this.btnGonderilenMalzemeListesi.Name = "btnGonderilenMalzemeListesi";
+            this.btnGonderilenMalzemeListesi.Size = new System.Drawing.Size(283, 58);
+            this.btnGonderilenMalzemeListesi.TabIndex = 9;
+            this.btnGonderilenMalzemeListesi.Text = "Gönderilecek Malzeme Listesi";
+            this.btnGonderilenMalzemeListesi.Click += new System.EventHandler(this.btnGonderilenMalzemeListesi_Click);
+            // 
+            // pnlobfpozButtonpanel
+            // 
+            this.pnlobfpozButtonpanel.BackColor = System.Drawing.Color.Transparent;
+            this.pnlobfpozButtonpanel.Controls.Add(this.btnObfKayit);
+            this.pnlobfpozButtonpanel.Controls.Add(this.btnPozKayit);
+            this.pnlobfpozButtonpanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlobfpozButtonpanel.Location = new System.Drawing.Point(901, 3);
+            this.pnlobfpozButtonpanel.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
+            this.pnlobfpozButtonpanel.Name = "pnlobfpozButtonpanel";
+            this.pnlobfpozButtonpanel.Size = new System.Drawing.Size(346, 64);
+            this.pnlobfpozButtonpanel.TabIndex = 11;
             // 
             // btnObfKayit
             // 
@@ -332,34 +363,15 @@
             // 
             // panelControl4
             // 
-            this.panelControl4.Controls.Add(this.btnGonderilenMalzemeListesi);
             this.panelControl4.Controls.Add(this.btnTedarikciListesi);
             this.panelControl4.Controls.Add(this.btnTedaikcileregonder);
             this.panelControl4.Controls.Add(this.btnListeOlustur);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl4.Location = new System.Drawing.Point(0, 105);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(330, 573);
+            this.panelControl4.Size = new System.Drawing.Size(273, 573);
             this.panelControl4.TabIndex = 0;
             this.panelControl4.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl4_Paint);
-            // 
-            // btnGonderilenMalzemeListesi
-            // 
-            this.btnGonderilenMalzemeListesi.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGonderilenMalzemeListesi.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnGonderilenMalzemeListesi.Appearance.Options.UseFont = true;
-            this.btnGonderilenMalzemeListesi.Appearance.Options.UseForeColor = true;
-            this.btnGonderilenMalzemeListesi.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.btnGonderilenMalzemeListesi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGonderilenMalzemeListesi.Image = ((System.Drawing.Image)(resources.GetObject("btnGonderilenMalzemeListesi.Image")));
-            this.btnGonderilenMalzemeListesi.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnGonderilenMalzemeListesi.Location = new System.Drawing.Point(3, 202);
-            this.btnGonderilenMalzemeListesi.Margin = new System.Windows.Forms.Padding(9);
-            this.btnGonderilenMalzemeListesi.Name = "btnGonderilenMalzemeListesi";
-            this.btnGonderilenMalzemeListesi.Size = new System.Drawing.Size(324, 63);
-            this.btnGonderilenMalzemeListesi.TabIndex = 7;
-            this.btnGonderilenMalzemeListesi.Text = "Gönderilecek Malzeme Listesi";
-            this.btnGonderilenMalzemeListesi.Click += new System.EventHandler(this.btnGonderilenMalzemeListesi_Click);
             // 
             // btnTedarikciListesi
             // 
@@ -374,7 +386,7 @@
             this.btnTedarikciListesi.Location = new System.Drawing.Point(3, 138);
             this.btnTedarikciListesi.Margin = new System.Windows.Forms.Padding(9);
             this.btnTedarikciListesi.Name = "btnTedarikciListesi";
-            this.btnTedarikciListesi.Size = new System.Drawing.Size(324, 64);
+            this.btnTedarikciListesi.Size = new System.Drawing.Size(267, 64);
             this.btnTedarikciListesi.TabIndex = 6;
             this.btnTedarikciListesi.Text = "Tedarikçi Listesi";
             this.btnTedarikciListesi.Click += new System.EventHandler(this.btnTedarikciListesi_Click);
@@ -392,7 +404,7 @@
             this.btnTedaikcileregonder.Location = new System.Drawing.Point(3, 70);
             this.btnTedaikcileregonder.Margin = new System.Windows.Forms.Padding(9);
             this.btnTedaikcileregonder.Name = "btnTedaikcileregonder";
-            this.btnTedaikcileregonder.Size = new System.Drawing.Size(324, 68);
+            this.btnTedaikcileregonder.Size = new System.Drawing.Size(267, 68);
             this.btnTedaikcileregonder.TabIndex = 5;
             this.btnTedaikcileregonder.Text = "Tedarikçilere Liste Gönder";
             this.btnTedaikcileregonder.Click += new System.EventHandler(this.btnTedaikcileregonder_Click);
@@ -410,7 +422,7 @@
             this.btnListeOlustur.Location = new System.Drawing.Point(3, 3);
             this.btnListeOlustur.Margin = new System.Windows.Forms.Padding(9);
             this.btnListeOlustur.Name = "btnListeOlustur";
-            this.btnListeOlustur.Size = new System.Drawing.Size(324, 67);
+            this.btnListeOlustur.Size = new System.Drawing.Size(267, 67);
             this.btnListeOlustur.TabIndex = 4;
             this.btnListeOlustur.Text = "Malzeme Listesi Oluştur";
             this.btnListeOlustur.Click += new System.EventHandler(this.btnListeOlustur_Click);
@@ -1330,7 +1342,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlUst)).EndInit();
             this.pnlUst.ResumeLayout(false);
             this.pnlUst.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pnlGonderilecekListe)).EndInit();
+            this.pnlGonderilecekListe.ResumeLayout(false);
+            this.pnlobfpozButtonpanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedOfferMaterial)).EndInit();
@@ -1382,7 +1396,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.SimpleButton btnAktar;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlobfpozButtonpanel;
         public DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit rpstIsSelectedOfferMaterial;
         private DevExpress.XtraEditors.PanelControl pnlAktarilanlar;
@@ -1424,8 +1438,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         public DevExpress.XtraEditors.SimpleButton btnListeOlustur;
         private DevExpress.XtraEditors.PanelControl pnlAktarmaPaneli;
-        public DevExpress.XtraEditors.SimpleButton btnGonderilenMalzemeListesi;
         public DevExpress.XtraEditors.SimpleButton btnTedarikciListesi;
         public DevExpress.XtraEditors.SimpleButton btnTedaikcileregonder;
+        private DevExpress.XtraEditors.PanelControl pnlGonderilecekListe;
+        public DevExpress.XtraEditors.SimpleButton btnGonderilenMalzemeListesi;
     }
 }

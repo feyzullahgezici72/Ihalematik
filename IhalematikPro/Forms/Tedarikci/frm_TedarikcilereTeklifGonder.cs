@@ -294,6 +294,9 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnListeOlustur_Click(object sender, EventArgs e)
         {
+            pnlGonderilecekListe.Visible = false;
+            pnlobfpozButtonpanel.Visible = true;
+            
             pnlMalzemeListesi.Visible = true;
             pnlUst.Enabled = true;
             pnlFirma.Visible = false;
@@ -311,7 +314,8 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnTedaikcileregonder_Click(object sender, EventArgs e)
         {
-          
+            pnlGonderilecekListe.Visible = false;
+            pnlobfpozButtonpanel.Visible = false;
 
             pnlAktarilanlar.Visible = false;
             pnlMalzemeListesi.Visible = true;
@@ -330,6 +334,8 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnTedarikciListesi_Click(object sender, EventArgs e)
         {
+            pnlGonderilecekListe.Visible = true;
+            pnlobfpozButtonpanel.Visible = false;
             pnlAktarilanlar.Visible = false;
             pnlMalzemeListesi.Visible = false;
             pnlAktarmaPaneli.Visible = false;
@@ -342,14 +348,18 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnGonderilenMalzemeListesi_Click(object sender, EventArgs e)
         {
-            pnlMalzemeListesi.Visible = false;
-            pnlFirma.Visible = false;
-            pnlAktarilanlar.Visible = false;
-            pnlAktarmaPaneli.Visible = false;
-            pnlMalzemeListesi.Visible = false;
-            pnlAktarilanlar.Visible = true;
-            pnlAktarilanlar.Dock = DockStyle.Fill;
-            pnlAktarilanlar.BringToFront();
+            this.Enabled = false;
+            frm_GonderilecekMalzemeListesi gml = new frm_GonderilecekMalzemeListesi();
+            gml.ShowDialog();
+            this.Enabled = true;
+            //pnlMalzemeListesi.Visible = false;
+            //pnlFirma.Visible = false;
+            //pnlAktarilanlar.Visible = false;
+            //pnlAktarmaPaneli.Visible = false;
+            //pnlMalzemeListesi.Visible = false;
+            //pnlAktarilanlar.Visible = true;
+            //pnlAktarilanlar.Dock = DockStyle.Fill;
+            //pnlAktarilanlar.BringToFront();
         }
     }
 }
