@@ -378,9 +378,9 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(209, 35);
+            this.labelControl1.Size = new System.Drawing.Size(580, 35);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "MALZEME DETAYI";
+            this.labelControl1.Text = "TEDARİKÇİLERE GÖNDERİLECEK MALZEME DETAYI";
             this.labelControl1.UseMnemonic = false;
             // 
             // btnKapat
