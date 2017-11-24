@@ -315,7 +315,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnTedaikcileregonder_Click(object sender, EventArgs e)
         {
-            pnlGonderilecekListe.Visible = false;
+            pnlGonderilecekListe.Visible = true;
             pnlobfpozButtonpanel.Visible = false;
 
             pnlAktarilanlar.Visible = false;
@@ -337,7 +337,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnTedarikciListesi_Click(object sender, EventArgs e)
         {
-            pnlGonderilecekListe.Visible = true;
+            pnlGonderilecekListe.Visible = false;
             pnlobfpozButtonpanel.Visible = false;
             pnlAktarilanlar.Visible = false;
             pnlMalzemeListesi.Visible = false;
