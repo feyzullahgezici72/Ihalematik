@@ -153,9 +153,9 @@ namespace IhalematikProBL.Manager
             return Template;
         }
 
-        public void SendTesEmail(string Email, string AttachmentFilename)
+        public void SendMaterialToSupplier(string SupplierEmail, string Body, string AttachmentFilename)
         {
-            this.SendEmail("Test IahleMatik", "Test Ihalematik", Email, AttachmentFilename);
+            this.SendEmail("IhaleMatik", Body, SupplierEmail, AttachmentFilename);
         }
 
         #region HelperMethods
