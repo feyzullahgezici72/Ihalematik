@@ -46,35 +46,41 @@ namespace IhalematikProUI.Forms
         }
         public void LoadSupplierGrid()
         {
-            List<Supplier> suppliers = SupplierProvider.Instance.GetItems();
+            List<Supplier> suppliers = CurrentManager.Instance.CurrentOffer.Suppliers;
             List<SupplierModel> models = IhalematikModelBase.GetModels<SupplierModel, Supplier>(suppliers);
             grdSupplier.DataSource = models;
+            this.gridViewSupplier_RowClick(null, null);
         }
 
         private void gridViewSupplier_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
+            colSuppierName.Visible = false;
             int supplierId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
             parameters.Add("SupplierId", supplierId);
             List<SupplierMaterialList> supplierMaterialList = SupplierMaterialListProvider.Instance.GetItems(parameters);
 
-            grdMaterialList.DataSource = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(supplierMaterialList.Select(p => p.MaterialList).ToList());
+            List<OfferMaterialListModel> models = new List<OfferMaterialListModel>();
+            if (supplierMaterialList.Count != 0)
+            {
+                foreach (var item in supplierMaterialList)
+                {
+                    OfferMaterialListModel model = new OfferMaterialListModel(item.MaterialList);
+                    model.Price = item.Price;
+                    models.Add(model);
+                }
+            }
+            grdMaterialList.DataSource = models;
         }
 
         private void btnUploadFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            //dialog.Filter = "Text files | *.xlxs"; // file types, that will be allowed to upload
-            //dialog.Multiselect = false; // allow/deny user to upload more than one file at a time
             if (dialog.ShowDialog() == DialogResult.OK) // if user clicked OK
             {
                 String path = dialog.FileName; // get name of file
                 this.ReadExcel(path);
-                //using (StreamReader reader = new StreamReader(new FileStream(path, FileMode.Open), new UTF8Encoding())) // do anything you want, e.g. read it
-                //{
-                //    // ...
-                //}
             }
         }
 
@@ -112,6 +118,56 @@ namespace IhalematikProUI.Forms
                 }
                 i++;
             }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            List<OfferMaterialListModel> dataSoruce = new List<OfferMaterialListModel>();
+
+            if (rdSortPrice.SelectedIndex == 0)
+            {
+                List<SupplierMaterialList> supplierMaterialLists = SupplierMaterialListProvider.Instance.GetItems("OfferId", CurrentManager.Instance.CurrentOffer.Id);
+                var groupedMaterial = supplierMaterialLists.GroupBy(p => p.MaterialListId);
+
+                foreach (var item in groupedMaterial)
+                {
+                    SupplierMaterialList supplierMaterialList = item.Where(p => p.Price != 0).OrderBy(p => p.Price).First();
+
+                    OfferMaterialListModel model = new OfferMaterialListModel(supplierMaterialList.MaterialList);
+                    model.Price = supplierMaterialList.Price;
+                    model.SupplierName = supplierMaterialList.Supplier.CompanyName;
+                    dataSoruce.Add(model);
+                }
+            }
+            else if (rdSortPrice.SelectedIndex == 1)
+            {
+                List<SupplierMaterialList> supplierMaterialLists = SupplierMaterialListProvider.Instance.GetItems("OfferId", CurrentManager.Instance.CurrentOffer.Id);
+                var groupedMaterial = supplierMaterialLists.GroupBy(p => p.MaterialListId);
+
+                foreach (var item in groupedMaterial)
+                {
+                    List<SupplierMaterialList> items = item.Where(p => p.Price != 0).OrderBy(p => p.Price).ToList();
+                    SupplierMaterialList supplierMaterialList = new SupplierMaterialList();
+
+                    if (items.Count < 3)
+                    {
+                        supplierMaterialList = items.First();
+                    }
+                    else
+                    {
+                        double count = items.Count;
+                        count = (items.Count / 2) - 1;
+                        supplierMaterialList = items.ToArray()[(int)Math.Round(count)];
+                    }
+                    OfferMaterialListModel model = new OfferMaterialListModel(supplierMaterialList.MaterialList);
+                    model.Price = supplierMaterialList.Price;
+                    model.SupplierName = supplierMaterialList.Supplier.CompanyName;
+                    dataSoruce.Add(model);
+
+                }
+            }
+            grdMaterialList.DataSource = dataSoruce;
+            colSuppierName.Visible = true;
         }
     }
 }

@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikcilerdenFiyatAl));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtTotalAmount = new DevExpress.XtraEditors.TextEdit();
@@ -51,6 +50,8 @@
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSuppierName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.grupPanel = new DevExpress.XtraEditors.PanelControl();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
@@ -62,7 +63,7 @@
             this.rpstSupplierDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.rpstIsSelectedSupplier = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
-            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
+            this.rdSortPrice = new DevExpress.XtraEditors.RadioGroup();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.pcWorld = new System.Windows.Forms.PictureBox();
@@ -76,7 +77,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnUploadFile = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -102,7 +103,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedSupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
             this.panelControl8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdSortPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -395,7 +396,9 @@
             this.gridColumn7,
             this.gridColumn8,
             this.gridColumn9,
-            this.gridColumn10});
+            this.gridColumn10,
+            this.gridColumn1,
+            this.colSuppierName});
             this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView1.GridControl = this.grdMaterialList;
             this.gridView1.Name = "gridView1";
@@ -508,6 +511,20 @@
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 3;
             this.gridColumn10.Width = 105;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "FİYAT";
+            this.gridColumn1.FieldName = "Price";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 4;
+            // 
+            // colSuppierName
+            // 
+            this.colSuppierName.Caption = "Tedarikçi Adı";
+            this.colSuppierName.FieldName = "SupplierName";
+            this.colSuppierName.Name = "colSuppierName";
             // 
             // repositoryItemCheckEdit1
             // 
@@ -714,7 +731,7 @@
             // 
             this.rpstSupplierDetail.AutoHeight = false;
             this.rpstSupplierDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstSupplierDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "Detay", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstSupplierDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Detay", null, null, true)});
             this.rpstSupplierDetail.Name = "rpstSupplierDetail";
             this.rpstSupplierDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -725,7 +742,7 @@
             // 
             // panelControl8
             // 
-            this.panelControl8.Controls.Add(this.radioGroup1);
+            this.panelControl8.Controls.Add(this.rdSortPrice);
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl8.Location = new System.Drawing.Point(2, 307);
             this.panelControl8.Margin = new System.Windows.Forms.Padding(2);
@@ -733,18 +750,18 @@
             this.panelControl8.Size = new System.Drawing.Size(253, 68);
             this.panelControl8.TabIndex = 23;
             // 
-            // radioGroup1
+            // rdSortPrice
             // 
-            this.radioGroup1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioGroup1.Location = new System.Drawing.Point(2, 2);
-            this.radioGroup1.Margin = new System.Windows.Forms.Padding(2);
-            this.radioGroup1.Name = "radioGroup1";
-            this.radioGroup1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            this.rdSortPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rdSortPrice.Location = new System.Drawing.Point(2, 2);
+            this.rdSortPrice.Margin = new System.Windows.Forms.Padding(2);
+            this.rdSortPrice.Name = "rdSortPrice";
+            this.rdSortPrice.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.rdSortPrice.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "En düşük fiyata göre"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Ortalama fiyata göre")});
-            this.radioGroup1.Size = new System.Drawing.Size(249, 64);
-            this.radioGroup1.TabIndex = 23;
+            this.rdSortPrice.Size = new System.Drawing.Size(249, 64);
+            this.rdSortPrice.TabIndex = 23;
             // 
             // panelControl5
             // 
@@ -765,6 +782,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(247, 60);
             this.simpleButton1.TabIndex = 23;
             this.simpleButton1.Text = "Tabloya Aktar";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // pcWorld
             // 
@@ -950,7 +968,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedSupplier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
             this.panelControl8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdSortPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
@@ -982,7 +1000,7 @@
         public DevExpress.XtraEditors.PanelControl grupPanel;
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraEditors.PanelControl panelControl8;
-        private DevExpress.XtraEditors.RadioGroup radioGroup1;
+        private DevExpress.XtraEditors.RadioGroup rdSortPrice;
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.PictureBox pcWorld;
@@ -1013,5 +1031,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn colSuppierName;
     }
 }
