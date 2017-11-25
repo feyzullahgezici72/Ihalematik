@@ -29,7 +29,7 @@ namespace IhalematikProBL.Entity
                     {
                         OBF obf = OBFProvider.Instance.GetItem(this.PozOBFId);
                         this.pozOBF = new Material().CreateMaterial(obf);
-                    } 
+                    }
                 }
 
                 return this.pozOBF;
@@ -60,5 +60,6 @@ namespace IhalematikProBL.Entity
             }
         }
         public bool IsSelected { get; set; }
+
     }
 }

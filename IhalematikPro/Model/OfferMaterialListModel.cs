@@ -96,6 +96,9 @@ namespace IhalematikProUI.Model
         public float Quantity { get; set; }
         public bool IsSelected { get;  set; }
 
+        public double Price { get; set; }
+        public string SupplierName { get; set; }
+
         public OfferMaterialListModel(OfferMaterialList Entity)
         {
             this.IsPoz = Entity.IsPoz;
