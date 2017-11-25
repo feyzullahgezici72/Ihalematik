@@ -183,6 +183,7 @@
             // 
             this.grdWorker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdWorker.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.grdWorker.Font = new System.Drawing.Font("Calibri", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grdWorker.Location = new System.Drawing.Point(435, 35);
             this.grdWorker.MainView = this.gridViewWorker;
             this.grdWorker.Margin = new System.Windows.Forms.Padding(4);
@@ -213,8 +214,12 @@
             this.gridViewWorker.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridViewWorker.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridViewWorker.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
+            this.gridViewWorker.Appearance.DetailTip.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridViewWorker.Appearance.DetailTip.Options.UseFont = true;
             this.gridViewWorker.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.gridViewWorker.Appearance.Empty.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridViewWorker.Appearance.Empty.Options.UseBackColor = true;
+            this.gridViewWorker.Appearance.Empty.Options.UseFont = true;
             this.gridViewWorker.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridViewWorker.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridViewWorker.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
@@ -374,7 +379,7 @@
             this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
-            this.gridColumn2.Width = 210;
+            this.gridColumn2.Width = 225;
             // 
             // gridColumn3
             // 
@@ -397,7 +402,7 @@
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 137;
+            this.gridColumn3.Width = 144;
             // 
             // gridColumn4
             // 
@@ -421,7 +426,7 @@
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 128;
+            this.gridColumn4.Width = 134;
             // 
             // gridColumn5
             // 
@@ -445,7 +450,7 @@
             this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 137;
+            this.gridColumn5.Width = 144;
             // 
             // gridColumn6
             // 
@@ -469,7 +474,7 @@
             this.gridColumn6.OptionsFilter.AllowFilter = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 4;
-            this.gridColumn6.Width = 151;
+            this.gridColumn6.Width = 185;
             // 
             // colEdit
             // 
@@ -483,21 +488,20 @@
             this.colEdit.AppearanceHeader.Options.UseForeColor = true;
             this.colEdit.ColumnEdit = this.btnGuncelle;
             this.colEdit.ImageAlignment = System.Drawing.StringAlignment.Center;
-            this.colEdit.MaxWidth = 30;
-            this.colEdit.MinWidth = 30;
+            this.colEdit.MaxWidth = 20;
             this.colEdit.Name = "colEdit";
             this.colEdit.OptionsFilter.AllowFilter = false;
             this.colEdit.ToolTip = "Güncelle";
             this.colEdit.Visible = true;
             this.colEdit.VisibleIndex = 5;
-            this.colEdit.Width = 30;
+            this.colEdit.Width = 20;
             // 
             // btnGuncelle
             // 
             this.btnGuncelle.AutoHeight = false;
+            this.btnGuncelle.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnGuncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Güncelle", null, null, true)});
-            this.btnGuncelle.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnGuncelle.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnGuncelle_ButtonClick);
@@ -514,20 +518,19 @@
             this.colPasive.AppearanceHeader.Options.UseForeColor = true;
             this.colPasive.ColumnEdit = this.btnPasive;
             this.colPasive.ImageAlignment = System.Drawing.StringAlignment.Center;
-            this.colPasive.MaxWidth = 30;
-            this.colPasive.MinWidth = 30;
+            this.colPasive.MaxWidth = 20;
             this.colPasive.Name = "colPasive";
             this.colPasive.ToolTip = "Pasif Yap";
             this.colPasive.Visible = true;
             this.colPasive.VisibleIndex = 6;
-            this.colPasive.Width = 30;
+            this.colPasive.Width = 20;
             // 
             // btnPasive
             // 
             this.btnPasive.AutoHeight = false;
+            this.btnPasive.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnPasive.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnPasive.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "Pasif yap", null, null, true)});
-            this.btnPasive.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnPasive.Name = "btnPasive";
             this.btnPasive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnPasive.Click += new System.EventHandler(this.btnPasive_Click);
@@ -537,18 +540,18 @@
             this.colActive.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
             this.colActive.AppearanceHeader.Options.UseBackColor = true;
             this.colActive.ColumnEdit = this.btnAktif;
-            this.colActive.MaxWidth = 30;
-            this.colActive.MinWidth = 30;
+            this.colActive.MaxWidth = 20;
             this.colActive.Name = "colActive";
             this.colActive.OptionsFilter.AllowFilter = false;
             this.colActive.ToolTip = "Aktif Yap";
             this.colActive.Visible = true;
             this.colActive.VisibleIndex = 7;
-            this.colActive.Width = 30;
+            this.colActive.Width = 20;
             // 
             // btnAktif
             // 
             this.btnAktif.AutoHeight = false;
+            this.btnAktif.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnAktif.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAktif.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "Aktif yap", null, null, true)});
             this.btnAktif.Name = "btnAktif";

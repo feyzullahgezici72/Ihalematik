@@ -203,6 +203,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap activeData {
+            get {
+                object obj = ResourceManager.GetObject("activeData", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agency_icon {
             get {
                 object obj = ResourceManager.GetObject("agency-icon", resourceCulture);
@@ -786,6 +796,16 @@ namespace IhalematikProUI.Properties {
         internal static System.Drawing.Bitmap orangecar1 {
             get {
                 object obj = ResourceManager.GetObject("orangecar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PasiveData {
+            get {
+                object obj = ResourceManager.GetObject("PasiveData", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
