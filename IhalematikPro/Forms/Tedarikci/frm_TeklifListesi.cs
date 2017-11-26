@@ -35,5 +35,10 @@ namespace IhalematikProUI.Forms
         {
 
         }
+
+        private void btnOpen_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
+        }
     }
 }

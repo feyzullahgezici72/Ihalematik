@@ -33,9 +33,9 @@
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_OzelStokListesi));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
@@ -61,12 +61,12 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPasive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnPasive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colEdit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnGncelle = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnSl = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colActive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnActive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.statusPanel = new System.Windows.Forms.Panel();
             this.cmbAktivePasive = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
@@ -89,9 +89,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOBFList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOBFList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.colActive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnActive)).BeginInit();
             this.statusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -335,8 +335,8 @@
             this.grdOBFList.Name = "grdOBFList";
             this.grdOBFList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGncelle,
-            this.btnSl,
-            this.colActive});
+            this.btnPasive,
+            this.btnActive});
             this.grdOBFList.Size = new System.Drawing.Size(922, 645);
             this.grdOBFList.TabIndex = 41;
             this.grdOBFList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -459,8 +459,8 @@
             this.gridColumn3,
             this.gridColumn4,
             this.colEdit,
-            this.gridColumn6,
-            this.gridColumn5});
+            this.colPasive,
+            this.colActive});
             this.gridViewOBFList.GridControl = this.grdOBFList;
             this.gridViewOBFList.Name = "gridViewOBFList";
             this.gridViewOBFList.OptionsView.EnableAppearanceEvenRow = true;
@@ -557,6 +557,35 @@
             this.gridColumn4.VisibleIndex = 3;
             this.gridColumn4.Width = 98;
             // 
+            // colPasive
+            // 
+            this.colPasive.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colPasive.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colPasive.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colPasive.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colPasive.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.colPasive.AppearanceHeader.Options.UseBackColor = true;
+            this.colPasive.AppearanceHeader.Options.UseFont = true;
+            this.colPasive.AppearanceHeader.Options.UseForeColor = true;
+            this.colPasive.ColumnEdit = this.btnPasive;
+            this.colPasive.ImageAlignment = System.Drawing.StringAlignment.Center;
+            this.colPasive.MaxWidth = 20;
+            this.colPasive.Name = "colPasive";
+            this.colPasive.ToolTip = "Pasif Yap";
+            this.colPasive.Visible = true;
+            this.colPasive.VisibleIndex = 5;
+            this.colPasive.Width = 20;
+            // 
+            // btnPasive
+            // 
+            this.btnPasive.AutoHeight = false;
+            this.btnPasive.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnPasive.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnPasive.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "Pasif Yap", null, null, true)});
+            this.btnPasive.Name = "btnPasive";
+            this.btnPasive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnPasive.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnPasive_ButtonClick);
+            // 
             // colEdit
             // 
             this.colEdit.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
@@ -585,53 +614,24 @@
             this.btnGncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnGncelle.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnGncelle_ButtonClick);
             // 
-            // gridColumn6
-            // 
-            this.gridColumn6.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridColumn6.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gridColumn6.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.gridColumn6.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn6.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn6.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn6.ColumnEdit = this.btnSl;
-            this.gridColumn6.ImageAlignment = System.Drawing.StringAlignment.Center;
-            this.gridColumn6.MaxWidth = 20;
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.ToolTip = "Sil";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 20;
-            // 
-            // btnSl
-            // 
-            this.btnSl.AutoHeight = false;
-            this.btnSl.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnSl.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSl.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "Sil", null, null, true)});
-            this.btnSl.Name = "btnSl";
-            this.btnSl.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.btnSl.Click += new System.EventHandler(this.btnSl_Click);
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.ColumnEdit = this.colActive;
-            this.gridColumn5.ImageAlignment = System.Drawing.StringAlignment.Center;
-            this.gridColumn5.MaxWidth = 20;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 6;
-            this.gridColumn5.Width = 20;
-            // 
             // colActive
             // 
-            this.colActive.AutoHeight = false;
-            this.colActive.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.colActive.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.activeData, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            this.colActive.ColumnEdit = this.btnActive;
+            this.colActive.ImageAlignment = System.Drawing.StringAlignment.Center;
+            this.colActive.MaxWidth = 20;
             this.colActive.Name = "colActive";
-            this.colActive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.colActive.ToolTip = "Aktif Yap";
+            this.colActive.Width = 20;
+            // 
+            // btnActive
+            // 
+            this.btnActive.AutoHeight = false;
+            this.btnActive.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnActive.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.activeData, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "Aktif Yap", null, null, true)});
+            this.btnActive.Name = "btnActive";
+            this.btnActive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnActive.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnActive_ButtonClick);
             // 
             // statusPanel
             // 
@@ -794,9 +794,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOBFList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOBFList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.colActive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnActive)).EndInit();
             this.statusPanel.ResumeLayout(false);
             this.statusPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).EndInit();
@@ -831,8 +831,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn colEdit;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnGncelle;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSl;
+        private DevExpress.XtraGrid.Columns.GridColumn colPasive;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnPasive;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private System.Windows.Forms.Panel statusPanel;
         private DevExpress.XtraEditors.ComboBoxEdit cmbAktivePasive;
@@ -848,7 +848,7 @@
         private System.Windows.Forms.PictureBox pcWorld;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit colActive;
+        private DevExpress.XtraGrid.Columns.GridColumn colActive;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnActive;
     }
 }

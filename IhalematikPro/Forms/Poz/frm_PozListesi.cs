@@ -46,17 +46,21 @@ namespace IhalematikPro.Forms
             if (cmbAktivePasive.SelectedIndex == 0)
             {
                 pozs = UIPozManager.Instance.GetPozs(true);
+                colPasive.Visible = true;
                 colEdit.Visible = true;
+                colActive.Visible = false;
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
                 pozs = UIPozManager.Instance.GetPozs(false);
                 colEdit.Visible = false;
+                colPasive.Visible = false;
+                colActive.Visible = true;
             }
-            if (this.FocusedRowHandle != 0)
-            {
-                pozs = UIPozManager.Instance.GetPozs();
-            }
+            //if (this.FocusedRowHandle != 0)
+            //{
+            //    pozs = UIPozManager.Instance.GetPozs();
+            //}
             grdPozList.DataSource = pozs;
             gridViewPozList.FocusedRowHandle = this.FocusedRowHandle;
             lblRecordCount.Text = pozs.Count.ToString();
@@ -128,24 +132,6 @@ namespace IhalematikPro.Forms
             this.LoadGrid();
         }
 
-        private void btnSl_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Silmek Istediginzden emin misiniz?", "Sil", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            if (result.Equals(DialogResult.OK))
-            {
-                this.FocusedRowHandle = gridViewPozList.FocusedRowHandle;
-                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewPozList.GetFocusedRowCellValue("Id"));
-                Poz selectedVehicle = PozProvider.Instance.GetItem(id);
-                selectedVehicle.IsActive = false;
-                PozProvider.Instance.Save(selectedVehicle);
-                this.LoadGrid();
-            }
-            else
-            {
-
-            }
-        }
-
         private void frm_PozListesi_Shown(object sender, EventArgs e)
         {
             Stopwatch stopWatch = new Stopwatch();
@@ -183,6 +169,42 @@ namespace IhalematikPro.Forms
                 dxErrorProvider1.ClearErrors();
             }
             return false;
+        }
+
+        private void btnActive_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Aktif yapmak istediğinizden emin misiniz?", "Aktif Yap", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.OK))
+            {
+                this.FocusedRowHandle = gridViewPozList.FocusedRowHandle;
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewPozList.GetFocusedRowCellValue("Id"));
+                Poz selectedVehicle = PozProvider.Instance.GetItem(id);
+                selectedVehicle.IsActive = true;
+                PozProvider.Instance.Save(selectedVehicle);
+                this.LoadGrid();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void btnPasive_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Pasif yapmak istediginzden emin misiniz?", "Pasif Yap", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.OK))
+            {
+                this.FocusedRowHandle = gridViewPozList.FocusedRowHandle;
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewPozList.GetFocusedRowCellValue("Id"));
+                Poz selectedVehicle = PozProvider.Instance.GetItem(id);
+                selectedVehicle.IsActive = false;
+                PozProvider.Instance.Save(selectedVehicle);
+                this.LoadGrid();
+            }
+            else
+            {
+
+            }
         }
     }
 }

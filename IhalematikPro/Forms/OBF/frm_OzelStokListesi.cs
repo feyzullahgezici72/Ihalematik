@@ -34,17 +34,22 @@ namespace IhalematikPro.Forms
             if (cmbAktivePasive.SelectedIndex == 0)
             {
                 grdOBFList.DataSource = items.Where(p => p.IsActive);
+                colPasive.Visible = true;
                 colEdit.Visible = true;
+                colActive.Visible = false;
+                
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
                 grdOBFList.DataSource = items.Where(p => !p.IsActive);
                 colEdit.Visible = false;
+                colPasive.Visible = false;
+                colActive.Visible = true;
             }
-            if (this.FocusedRowHandle != 0)
-            {
-                gridViewOBFList.FocusedRowHandle = this.FocusedRowHandle;
-            }
+            //if (this.FocusedRowHandle != 0)
+            //{
+            //    gridViewOBFList.FocusedRowHandle = this.FocusedRowHandle;
+            //}
             
         }
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -157,7 +162,17 @@ namespace IhalematikPro.Forms
 
         private void btnSl_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Silmek Istediginzden emin misiniz?", "Sil", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+           
+        }
+
+        private void frm_OzelStokListesi_Shown(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPasive_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Pasif yapmak istediğinizden emin misiniz?", "Pasif Yap", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result.Equals(DialogResult.OK))
             {
                 this.FocusedRowHandle = gridViewOBFList.FocusedRowHandle;
@@ -173,9 +188,22 @@ namespace IhalematikPro.Forms
             }
         }
 
-        private void frm_OzelStokListesi_Shown(object sender, EventArgs e)
+        private void btnActive_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            DialogResult result = MessageBox.Show("Aktif yapmak istediğinizden emin misiniz?", "Aktif Yap", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.OK))
+            {
+                this.FocusedRowHandle = gridViewOBFList.FocusedRowHandle;
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOBFList.GetFocusedRowCellValue("Id"));
+                OBF selectedOBF = OBFProvider.Instance.GetItem(id);
+                selectedOBF.IsActive = true;
+                OBFProvider.Instance.Save(selectedOBF);
+                this.LoadGrid();
+            }
+            else
+            {
 
+            }
         }
     }
 }

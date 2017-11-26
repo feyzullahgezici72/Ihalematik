@@ -178,9 +178,9 @@
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUnitPrice.Properties.Appearance.Options.UseBackColor = true;
-            this.txtUnitPrice.Properties.DisplayFormat.FormatString = "N2";
+            this.txtUnitPrice.Properties.DisplayFormat.FormatString = "c2";
             this.txtUnitPrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtUnitPrice.Properties.EditFormat.FormatString = "N2";
+            this.txtUnitPrice.Properties.EditFormat.FormatString = "c2";
             this.txtUnitPrice.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtUnitPrice.Properties.Mask.EditMask = "c2";
             this.txtUnitPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;

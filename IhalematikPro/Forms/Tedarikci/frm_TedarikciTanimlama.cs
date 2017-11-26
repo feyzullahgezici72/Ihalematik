@@ -105,23 +105,24 @@ namespace IhalematikProUI.Forms
             if (cmbAktivePasive.SelectedIndex == 0)
             {
                 grdSupplier.DataSource = suppliers.Where(p => p.IsActive);
+                colPasive.Visible = true;
                 colEdit.Visible = true;
                 colActive.Visible = false;
-                colPasive.Visible = true;
+                
 
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
                 grdSupplier.DataSource = suppliers.Where(p => !p.IsActive);
-                colEdit.Visible = true;
+                colEdit.Visible = false;
                 colActive.Visible = true;
                 colPasive.Visible = false;
             }
 
-            if (this.FocusedRowHandle != 0)
-            {
-                gridViewSupplier.FocusedRowHandle = this.FocusedRowHandle;
-            }
+            //if (this.FocusedRowHandle != 0)
+            //{
+            //    gridViewSupplier.FocusedRowHandle = this.FocusedRowHandle;
+            //}
         }
 
         private void btnEdit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)

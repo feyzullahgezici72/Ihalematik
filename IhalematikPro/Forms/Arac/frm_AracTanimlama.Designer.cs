@@ -1082,8 +1082,6 @@
             this.colActive.MaxWidth = 20;
             this.colActive.Name = "colActive";
             this.colActive.ToolTip = "Aktif Yap";
-            this.colActive.Visible = true;
-            this.colActive.VisibleIndex = 6;
             this.colActive.Width = 20;
             // 
             // btnActive

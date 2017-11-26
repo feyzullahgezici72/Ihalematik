@@ -41,7 +41,8 @@ namespace IhalematikPro.Forms
 
         public void LoadGrid()
         {
-            grdVehicle.Hide();
+            //grdVehicle.Hide();
+            LoadVehicleGrid();
         }
         private void frm_AracTanimlama_Load(object sender, EventArgs e)
         {
@@ -103,7 +104,7 @@ namespace IhalematikPro.Forms
             model.Save();
             LoadGrid();
             frm_MesajFormu mf = new frm_MesajFormu();
-            mf.lblMesaj.Text = "Kayıt Yapıldı...";
+            mf.lblMesaj.Text = "Araç kaydedildi...";
             mf.ShowDialog();
         }
 
@@ -158,7 +159,7 @@ namespace IhalematikPro.Forms
                 this.FocusedRowHandle = gridViewVehicle.FocusedRowHandle;
                 int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewVehicle.GetFocusedRowCellValue("Id"));
                 Vehicle selectedVehicle = VehicleProvider.Instance.GetItem(id);
-                //selectedVehicle.IsActive = false;
+                selectedVehicle.IsActive = false;
                 VehicleProvider.Instance.Save(selectedVehicle);
                 this.LoadVehicleGrid();
             }
@@ -233,25 +234,24 @@ namespace IhalematikPro.Forms
             if (cmbAktivePasive.SelectedIndex == 0)
             {
                 grdVehicle.DataSource = models.Where(p => p.IsActive);
+                colPasive.Visible = true;
                 colEdit.Visible = true;
                 colActive.Visible = false;
-                colPasive.Visible = true;
-                
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
                 grdVehicle.DataSource = models.Where(p => !p.IsActive);
-                colEdit.Visible = true;
+                colEdit.Visible = false;
                 colActive.Visible = true;
                 colPasive.Visible = false;
             }
 
-            if (this.FocusedRowHandle != 0)
-            {
-                gridViewVehicle.FocusedRowHandle = this.FocusedRowHandle;
-                colActive.Visible =false;
-                colPasive.Visible = false;
-            }
+            //if (this.FocusedRowHandle != 0)
+            //{
+            //    gridViewVehicle.FocusedRowHandle = this.FocusedRowHandle;
+            //    colActive.Visible =false;
+            //    colPasive.Visible = false;
+            //}
         }
 
         public bool IsEmptyKontrol()
