@@ -43,6 +43,8 @@ namespace IhalematikProUI.Forms.Tedarikci
             OfferMaterialList selectedOfferMaterialList = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Id == materialId).FirstOrDefault();
             selectedOfferMaterialList.IsSelected = false;
 
+            OfferMaterialListProvider.Instance.Save(selectedOfferMaterialList);
+
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
             parameters.Add("MaterialListId", materialId);

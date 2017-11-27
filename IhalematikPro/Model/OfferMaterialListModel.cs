@@ -105,7 +105,7 @@ namespace IhalematikProUI.Model
             this.PozOBF = Entity.PozOBF;
             this.Quantity = Entity.Quantity;
             this.Id = Entity.Id;
-            this.IsSelected = false;
+            this.IsSelected = Entity.IsSelected;
         }
 
         public override EntityBase ToEntity()

@@ -13,6 +13,7 @@ using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms.Tedarikci;
 using IhalematikPro.Forms;
+using IhalematikPro.Manager;
 
 namespace IhalematikProUI.Forms
 {
@@ -42,16 +43,18 @@ namespace IhalematikProUI.Forms
         frm_TedarikcilereTeklifGonder teklifGonder;
         private void btnOpen_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-           
+            int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOffer.GetFocusedRowCellValue("Id"));
+
+            CurrentManager.Instance.CurrentOffer = OfferProvider.Instance.GetItem(id);
+
             this.Close();
-            //frm_TedarikcilereTeklifGonder teklifGonder = (frm_TedarikcilereTeklifGonder)Application.OpenForms["frm_TedarikcilereTeklifGonder"];
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             af.RibonPasif();
             if (teklifGonder == null)
             {
                 teklifGonder = new frm_TedarikcilereTeklifGonder();
                 teklifGonder.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                teklifGonder.FormClosed +=new FormClosedEventHandler(TeklifGonder_FormClosed);
+                teklifGonder.FormClosed += new FormClosedEventHandler(TeklifGonder_FormClosed);
                 af.MainPanel.Visible = false;
                 teklifGonder.Show();
             }

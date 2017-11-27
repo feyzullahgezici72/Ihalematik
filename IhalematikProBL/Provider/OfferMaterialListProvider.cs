@@ -18,6 +18,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("OfferId", t.OfferId);
             parameters.Add("PozOBFId", t.PozOBFId);
             parameters.Add("Quantity", t.Quantity);
+            parameters.Add("IsSelected", t.IsSelected);
             return parameters;
         }
 
@@ -28,6 +29,7 @@ namespace IhalematikProBL.Provider
             t.OfferId = dr.GetValue<int>("OfferId");
             t.PozOBFId = dr.GetValue<int>("PozOBFId");
             t.Quantity = dr.GetValue<float>("Quantity");
+            t.IsSelected = dr.GetValue<bool>("IsSelected");
         }
     }
 }
