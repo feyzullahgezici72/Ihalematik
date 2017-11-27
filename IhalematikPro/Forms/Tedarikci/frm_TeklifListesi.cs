@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using IhalematikProUI.Forms.Base;
+using IhalematikProBL.Entity;
+using IhalematikProBL.Provider;
 
 namespace IhalematikProUI.Forms
 {
@@ -39,6 +41,12 @@ namespace IhalematikProUI.Forms
         private void btnOpen_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
 
+        }
+
+        private void frm_TeklifListesi_Shown(object sender, EventArgs e)
+        {
+            List<Offer> items = OfferProvider.Instance.GetItems();
+            grdOffer.DataSource = items;
         }
     }
 }

@@ -13,6 +13,8 @@ namespace IhalematikProBL.Entity
         public string Description { get; set; }
         public bool IsActive { get; set; }
 
+        public DateTime DateTime { get; set; }
+
         private List<OfferMaterialList> materialList { get; set; }
         public List<OfferMaterialList> MaterialList
         {

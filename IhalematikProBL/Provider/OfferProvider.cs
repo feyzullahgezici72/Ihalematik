@@ -17,6 +17,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("Description", t.Description);
             parameters.Add("Number", t.Number);
             parameters.Add("IsActive", t.IsActive);
+            parameters.Add("DateTime", t.DateTime);
             return parameters;
         }
 
@@ -25,6 +26,7 @@ namespace IhalematikProBL.Provider
             base.Initialize(t, dr);
             t.Description = dr.GetValue<string>("Description");
             t.Number = dr.GetValue<string>("Number");
+            t.DateTime = dr.GetValue<DateTime>("DateTime");
             t.IsActive = dr.GetValue<bool>("IsActive");
         }
     }

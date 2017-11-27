@@ -47,6 +47,7 @@ namespace IhalematikProUI.Forms
                 offer.Description = txtAciklama.Text.Trim();
                 offer.IsActive = true;
                 offer.Number = txtTeklifNo.Text;
+                offer.DateTime = DateTime.Parse(txtDateTime.Text);
 
                 OfferProvider.Instance.Save(offer);
                 CurrentManager.Instance.CurrentOffer = offer;
