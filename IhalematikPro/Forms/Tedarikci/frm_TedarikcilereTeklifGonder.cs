@@ -147,6 +147,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlFirma.Visible = false;
             pnlAktarmaPaneli.Visible = false;
             pnlMalzemeListesi.Dock = DockStyle.Fill;
+            this.LoadMaterialGrid();
         }
 
         private void btnTedaikcileregonder_Click(object sender, EventArgs e)
