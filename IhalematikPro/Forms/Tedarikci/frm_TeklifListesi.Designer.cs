@@ -38,6 +38,7 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.grdOffer = new DevExpress.XtraGrid.GridControl();
             this.gridViewOffer = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,7 +48,6 @@
             this.cmbAktivePasive = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -269,6 +269,12 @@
             this.gridViewOffer.OptionsView.ShowGroupPanel = false;
             this.gridViewOffer.PaintStyleName = "Web";
             // 
+            // colId
+            // 
+            this.colId.Caption = "gridColumn4";
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            // 
             // gridColumn1
             // 
             this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
@@ -410,12 +416,6 @@
             this.labelControl14.Size = new System.Drawing.Size(67, 14);
             this.labelControl14.TabIndex = 0;
             this.labelControl14.Text = "Kayıt Sayısı : ";
-            // 
-            // colId
-            // 
-            this.colId.Caption = "gridColumn4";
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
             // 
             // frm_TeklifListesi
             // 
