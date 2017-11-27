@@ -52,6 +52,8 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSuppierName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.grupPanel = new DevExpress.XtraEditors.PanelControl();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
@@ -71,6 +73,10 @@
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.txtMarkup = new System.Windows.Forms.MaskedTextBox();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.btnTumuneUygula = new DevExpress.XtraEditors.SimpleButton();
             this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.lblTenderNumber = new DevExpress.XtraEditors.LabelControl();
@@ -79,12 +85,6 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
-            this.txtMarkup = new System.Windows.Forms.MaskedTextBox();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.btnTumuneUygula = new DevExpress.XtraEditors.SimpleButton();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalAmount.Properties)).BeginInit();
@@ -113,11 +113,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
-            this.panelControl4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -535,6 +535,30 @@
             this.colSuppierName.FieldName = "SupplierName";
             this.colSuppierName.Name = "colSuppierName";
             // 
+            // gridColumn2
+            // 
+            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn2.Caption = "RİSK%";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsFilter.AllowFilter = false;
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 5;
+            this.gridColumn2.Width = 70;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn3.Caption = "BİRİM FİYAT";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.OptionsColumn.AllowFocus = false;
+            this.gridColumn3.OptionsFilter.AllowFilter = false;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 6;
+            this.gridColumn3.Width = 85;
+            // 
             // repositoryItemCheckEdit1
             // 
             this.repositoryItemCheckEdit1.AutoHeight = false;
@@ -565,14 +589,14 @@
             // 
             this.grdSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdSupplier.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdSupplier.Location = new System.Drawing.Point(3, 64);
+            this.grdSupplier.Location = new System.Drawing.Point(3, 86);
             this.grdSupplier.MainView = this.gridViewSupplier;
             this.grdSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.grdSupplier.Name = "grdSupplier";
             this.grdSupplier.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstSupplierDetail,
             this.rpstIsSelectedSupplier});
-            this.grdSupplier.Size = new System.Drawing.Size(374, 380);
+            this.grdSupplier.Size = new System.Drawing.Size(374, 358);
             this.grdSupplier.TabIndex = 40;
             this.grdSupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSupplier});
@@ -756,18 +780,23 @@
             // 
             // btnUploadFile
             // 
+            this.btnUploadFile.Appearance.BorderColor = System.Drawing.Color.White;
             this.btnUploadFile.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUploadFile.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnUploadFile.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnUploadFile.Appearance.Options.UseBorderColor = true;
             this.btnUploadFile.Appearance.Options.UseFont = true;
             this.btnUploadFile.Appearance.Options.UseForeColor = true;
+            this.btnUploadFile.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnUploadFile.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUploadFile.Image = ((System.Drawing.Image)(resources.GetObject("btnUploadFile.Image")));
-            this.btnUploadFile.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
+            this.btnUploadFile.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnUploadFile.Location = new System.Drawing.Point(3, 3);
             this.btnUploadFile.Margin = new System.Windows.Forms.Padding(6);
             this.btnUploadFile.Name = "btnUploadFile";
             this.btnUploadFile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnUploadFile.Size = new System.Drawing.Size(374, 61);
+            this.btnUploadFile.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.btnUploadFile.Size = new System.Drawing.Size(374, 83);
             this.btnUploadFile.TabIndex = 5;
             this.btnUploadFile.Text = "Teklifleri Yükle";
             this.btnUploadFile.Click += new System.EventHandler(this.btnUploadFile_Click);
@@ -877,6 +906,59 @@
             this.panelControl2.Size = new System.Drawing.Size(1354, 70);
             this.panelControl2.TabIndex = 26;
             // 
+            // panelControl4
+            // 
+            this.panelControl4.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl4.Appearance.Options.UseBackColor = true;
+            this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl4.Controls.Add(this.txtMarkup);
+            this.panelControl4.Controls.Add(this.labelControl3);
+            this.panelControl4.Controls.Add(this.btnTumuneUygula);
+            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelControl4.Location = new System.Drawing.Point(945, 3);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(223, 64);
+            this.panelControl4.TabIndex = 46;
+            // 
+            // txtMarkup
+            // 
+            this.txtMarkup.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMarkup.Location = new System.Drawing.Point(139, 20);
+            this.txtMarkup.Mask = "00";
+            this.txtMarkup.Name = "txtMarkup";
+            this.txtMarkup.Size = new System.Drawing.Size(28, 27);
+            this.txtMarkup.TabIndex = 41;
+            this.txtMarkup.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.labelControl3.Location = new System.Drawing.Point(6, 24);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(126, 19);
+            this.labelControl3.TabIndex = 42;
+            this.labelControl3.Text = "Fiyat Risk Oranı:";
+            // 
+            // btnTumuneUygula
+            // 
+            this.btnTumuneUygula.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTumuneUygula.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTumuneUygula.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnTumuneUygula.Appearance.Options.UseFont = true;
+            this.btnTumuneUygula.Appearance.Options.UseForeColor = true;
+            this.btnTumuneUygula.AutoSize = true;
+            this.btnTumuneUygula.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
+            this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnTumuneUygula.Location = new System.Drawing.Point(173, 20);
+            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTumuneUygula.Name = "btnTumuneUygula";
+            this.btnTumuneUygula.Size = new System.Drawing.Size(39, 32);
+            this.btnTumuneUygula.TabIndex = 34;
+            // 
             // lblTenderDescription
             // 
             this.lblTenderDescription.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -948,83 +1030,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // panelControl4
-            // 
-            this.panelControl4.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl4.Appearance.Options.UseBackColor = true;
-            this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl4.Controls.Add(this.txtMarkup);
-            this.panelControl4.Controls.Add(this.labelControl3);
-            this.panelControl4.Controls.Add(this.btnTumuneUygula);
-            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl4.Location = new System.Drawing.Point(945, 3);
-            this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(223, 64);
-            this.panelControl4.TabIndex = 46;
-            // 
-            // txtMarkup
-            // 
-            this.txtMarkup.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMarkup.Location = new System.Drawing.Point(139, 20);
-            this.txtMarkup.Mask = "00";
-            this.txtMarkup.Name = "txtMarkup";
-            this.txtMarkup.Size = new System.Drawing.Size(28, 27);
-            this.txtMarkup.TabIndex = 41;
-            this.txtMarkup.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl3.Location = new System.Drawing.Point(6, 24);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(6);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(126, 19);
-            this.labelControl3.TabIndex = 42;
-            this.labelControl3.Text = "Fiyat Risk Oranı:";
-            // 
-            // btnTumuneUygula
-            // 
-            this.btnTumuneUygula.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTumuneUygula.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTumuneUygula.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnTumuneUygula.Appearance.Options.UseFont = true;
-            this.btnTumuneUygula.Appearance.Options.UseForeColor = true;
-            this.btnTumuneUygula.AutoSize = true;
-            this.btnTumuneUygula.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
-            this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(173, 20);
-            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTumuneUygula.Name = "btnTumuneUygula";
-            this.btnTumuneUygula.Size = new System.Drawing.Size(39, 32);
-            this.btnTumuneUygula.TabIndex = 34;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn2.Caption = "RİSK%";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.OptionsFilter.AllowFilter = false;
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 5;
-            this.gridColumn2.Width = 70;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn3.Caption = "BİRİM FİYAT";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsColumn.AllowEdit = false;
-            this.gridColumn3.OptionsColumn.AllowFocus = false;
-            this.gridColumn3.OptionsFilter.AllowFilter = false;
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 6;
-            this.gridColumn3.Width = 85;
-            // 
             // frm_TedarikcilerdenFiyatAl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1071,13 +1076,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
+            this.panelControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
-            this.panelControl4.ResumeLayout(false);
-            this.panelControl4.PerformLayout();
             this.ResumeLayout(false);
 
         }
