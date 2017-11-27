@@ -882,9 +882,9 @@
             this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
-            this.txtAdimAciklama.Size = new System.Drawing.Size(209, 35);
+            this.txtAdimAciklama.Size = new System.Drawing.Size(277, 35);
             this.txtAdimAciklama.TabIndex = 0;
-            this.txtAdimAciklama.Text = "TEKLİFLERİ AKTAR";
+            this.txtAdimAciklama.Text = "TEKLİFLERİ KARŞILAŞTIR";
             // 
             // panelControl2
             // 

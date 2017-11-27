@@ -711,5 +711,27 @@ namespace IhalematikPro.Forms
         {
             picLogo.Visible = true;
         }
+        frm_TeklifAktar teklifAktar;
+        private void barButtonItem28_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            RibonPasif();
+            if ( teklifAktar== null)
+            {
+                teklifAktar = new frm_TeklifAktar();
+                teklifAktar.MdiParent = this;
+                teklifAktar.FormClosed +=new FormClosedEventHandler( TeklifAktar_FormClosed);
+                teklifAktar.Show();
+            }
+            else
+            {
+                teklifAktar.Activate();
+            }
+        }
+
+        private void TeklifAktar_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            teklifAktar = null;
+            RibonAktif();
+        }
     }
 }
