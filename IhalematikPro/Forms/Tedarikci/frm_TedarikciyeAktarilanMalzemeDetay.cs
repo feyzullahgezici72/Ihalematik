@@ -18,6 +18,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 {
     public partial class frm_TedarikciyeAktarilanMalzemeDetay : DevExpress.XtraEditors.XtraForm
     {
+        public bool ShowMailPanel { get; set; }
         frm_TedarikcilereTeklifGonder _owner;
         public int SelectedSupplierId { get; set; }
         private Supplier supplier { get; set; }
@@ -49,6 +50,14 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void frm_TedarikciyeAktarilanMalzemeDetay_Shown(object sender, EventArgs e)
         {
+            if (this.ShowMailPanel)
+            {
+                pnlMail.Visible = true;
+            }
+            else
+            {
+                pnlMail.Visible = false;
+            }
             //Supplier supplier = SupplierProvider.Instance.GetItem(this.SelectedSupplierId);
             if (this.Supplier != null)
             {

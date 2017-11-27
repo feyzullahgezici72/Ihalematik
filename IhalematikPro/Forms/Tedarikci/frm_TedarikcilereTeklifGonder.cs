@@ -17,6 +17,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 {
     public partial class frm_TedarikcilereTeklifGonder : IhalematikBaseForm
     {
+        public bool ShowMailPanel { get; set; }
         public frm_TedarikcilereTeklifGonder()
         {
             InitializeComponent();
@@ -37,17 +38,17 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void frm_TedarikcilereTeklifGonder_Shown(object sender, EventArgs e)
         {
+            lblOfferDescription.Text = CurrentManager.Instance.CurrentOffer.Description;
+            lblTenderNumber.Text = CurrentManager.Instance.CurrentOffer.Number;
             pnlx.Visible = true;
             pnlMalzemeListesi.Dock = DockStyle.Fill;
             pnlMalzemeListesi.Enabled = true;
             pnlUst.Enabled = true;
             pnlFirma.Visible = false;
-            //pnlAktarilanlar.Visible = false;
             pnlAktarmaPaneli.Visible = false;
             pnlMalzemeListesi.Dock = DockStyle.Fill;
             this.LoadMaterialGrid();
             this.LoadSupplierGrid();
-            this.LoadAddedMateriallistGrid();
         }
 
         public void LoadSupplierGrid()
@@ -56,16 +57,19 @@ namespace IhalematikProUI.Forms.Tedarikci
             List<SupplierModel> models = IhalematikModelBase.GetModels<SupplierModel, Supplier>(suppliers);
             grdSupplier.DataSource = models;
         }
-        public void LoadMaterialGrid(List<OfferMaterialListModel> Items = null)
+        public void LoadMaterialGrid(List<OfferMaterialList> Items = null)
         {
             if (Items == null)
             {
-                List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => !p.IsSelected).ToList());
+                colIsSelectedOfferMaterial.Visible = false;
+                List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(CurrentManager.Instance.CurrentOffer.MaterialList.ToList());
                 grdMaterialList.DataSource = models;
             }
             else
             {
-                grdMaterialList.DataSource = Items.Where(p => !p.IsSelected).ToList();
+                List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(Items);
+                colIsSelectedOfferMaterial.Visible = true;
+                grdMaterialList.DataSource = models.Where(p => !p.IsSelected).ToList();
             }
 
         }
@@ -109,6 +113,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                     {
                         OfferMaterialList items = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Id == seledtedMaterialList.Id).FirstOrDefault();
                         items.IsSelected = true;
+                        OfferMaterialListProvider.Instance.Save(items);
                         foreach (var seledtedSupplier in seledtedSuppliers)
                         {
                             SupplierMaterialList supplierMaterialList = new SupplierMaterialList();
@@ -128,106 +133,30 @@ namespace IhalematikProUI.Forms.Tedarikci
                             }
                         }
                     }
-                    this.LoadMaterialGrid(datasourceMaterialList);
-                    this.LoadAddedMateriallistGrid();
+                    this.LoadMaterialGrid(CurrentManager.Instance.CurrentOffer.MaterialList.ToList());
                 }
             }
         }
-
-        private void LoadAddedMateriallistGrid()
-        {
-            //grdAddedOfferMaterialList.DataSource = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.IsSelected);
-        }
-
-        private void rpstSupplierDetail_Click(object sender, EventArgs e)
-        {
-            //this.Enabled = false;
-            //frm_TedarikciyeAktarilanMalzemeDetay md = new frm_TedarikciyeAktarilanMalzemeDetay(this);
-            //int selectedSupplierId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
-            //md.SelectedSupplierId = selectedSupplierId;
-            //md.ShowDialog();
-            //this.Enabled = true;
-        }
-
-        private void simpleButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frm_TedarikcilereTeklifGonder_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void radioGroup1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //if (radioGroup1.SelectedIndex == 0)
-            //{
-            //    pnlMalzemeListesi.Enabled = true;
-            //    pnlUst.Enabled = true;
-            //    pnlFirma.Visible = false;
-            //    pnlAktarilanlar.Visible = false;
-            //    pnlMalzemeListesi.Dock = DockStyle.Fill;
-            //    btnAktar.Visible = false;
-            //}
-            //if (radioGroup1.SelectedIndex == 1)
-            //{
-            //    btnAktar.Visible = true;
-            //    btnAktar.Enabled = true;
-            //    pnlMalzemeListesi.Enabled = true;
-            //    pnlMalzemeListesi.Dock = DockStyle.Left;
-            //    pnlUst.Enabled = true;
-            //    pnlFirma.Visible = true;
-            //    pnlAktarilanlar.Visible = true;
-
-            //}
-
-         }
-
-        private void panelControl4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            //this.UpdateExcel();
-            //this.ReadExcel();
-        }
-
-        
 
         private void btnListeOlustur_Click(object sender, EventArgs e)
         {
             pnlGonderilecekListe.Visible = false;
             pnlobfpozButtonpanel.Visible = true;
-            
             pnlMalzemeListesi.Visible = true;
             pnlUst.Enabled = true;
             pnlFirma.Visible = false;
-            //pnlAktarilanlar.Visible = false;
             pnlAktarmaPaneli.Visible = false;
             pnlMalzemeListesi.Dock = DockStyle.Fill;
-            
-             
-        }
-
-        private void simpleButton2_Click_1(object sender, EventArgs e)
-        {
-           
         }
 
         private void btnTedaikcileregonder_Click(object sender, EventArgs e)
         {
             pnlGonderilecekListe.Visible = true;
             pnlobfpozButtonpanel.Visible = false;
-
-            //pnlAktarilanlar.Visible = false;
             pnlMalzemeListesi.Visible = true;
             pnlFirma.Visible = true;
             pnlAktarmaPaneli.Visible = true;
             pnlFirma.Dock = DockStyle.None;
-             
             pnlFirma.Dock = DockStyle.Right;
             pnlFirma.BringToFront();
             pnlAktarmaPaneli.Dock = DockStyle.Right;
@@ -235,24 +164,22 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlMalzemeListesi.Dock = DockStyle.Fill;
             pnlMalzemeListesi.BringToFront();
             colIsSelectedSupplier.Visible = true;
-            gridColumn7.Visible = false;
-
+            this.ShowMailPanel = false;
+            this.LoadMaterialGrid(CurrentManager.Instance.CurrentOffer.MaterialList.ToList());
         }
 
         private void btnTedarikciListesi_Click(object sender, EventArgs e)
         {
             pnlGonderilecekListe.Visible = false;
             pnlobfpozButtonpanel.Visible = false;
-            //pnlAktarilanlar.Visible = false;
             pnlMalzemeListesi.Visible = false;
             pnlAktarmaPaneli.Visible = false;
-            //pnlAktarilanlar.Visible = false;
             pnlFirma.Visible = true;
             pnlFirma.Dock = DockStyle.Fill;
             pnlFirma.BringToFront();
             colIsSelectedSupplier.Visible = false;
-            gridColumn7.Visible = true;
-
+            colSupplierDetail.Visible = true;
+            this.ShowMailPanel = true;
         }
 
         private void btnGonderilenMalzemeListesi_Click(object sender, EventArgs e)
@@ -261,20 +188,13 @@ namespace IhalematikProUI.Forms.Tedarikci
             frm_GonderilecekMalzemeListesi gml = new frm_GonderilecekMalzemeListesi(this);
             gml.ShowDialog();
             this.Enabled = true;
-            //pnlMalzemeListesi.Visible = false;
-            //pnlFirma.Visible = false;
-            //pnlAktarilanlar.Visible = false;
-            //pnlAktarmaPaneli.Visible = false;
-            //pnlMalzemeListesi.Visible = false;
-            //pnlAktarilanlar.Visible = true;
-            //pnlAktarilanlar.Dock = DockStyle.Fill;
-            //pnlAktarilanlar.BringToFront();
         }
 
         private void rpstSupplierDetail_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             this.Enabled = false;
             frm_TedarikciyeAktarilanMalzemeDetay md = new frm_TedarikciyeAktarilanMalzemeDetay(this);
+            md.ShowMailPanel = this.ShowMailPanel;
             int selectedSupplierId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
             md.SelectedSupplierId = selectedSupplierId;
             md.ShowDialog();
