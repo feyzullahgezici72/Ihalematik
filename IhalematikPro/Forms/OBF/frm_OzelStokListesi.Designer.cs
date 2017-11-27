@@ -33,9 +33,9 @@
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_OzelStokListesi));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
@@ -44,9 +44,9 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtDescription = new DevExpress.XtraEditors.TextEdit();
             this.txtUnitPrice = new DevExpress.XtraEditors.TextEdit();
-            this.txtNumber = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.pnlObfKayit = new DevExpress.XtraEditors.GroupControl();
+            this.txtNumber = new DevExpress.XtraEditors.TextEdit();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -61,10 +61,10 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPasive = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnPasive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colEdit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnGncelle = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colPasive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnPasive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnActive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.statusPanel = new System.Windows.Forms.Panel();
@@ -81,16 +81,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlObfKayit)).BeginInit();
             this.pnlObfKayit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOBFList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOBFList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnActive)).BeginInit();
             this.statusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).BeginInit();
@@ -166,19 +166,6 @@
             this.txtUnitPrice.Size = new System.Drawing.Size(304, 26);
             this.txtUnitPrice.TabIndex = 3;
             // 
-            // txtNumber
-            // 
-            this.txtNumber.EnterMoveNextControl = true;
-            this.dxErrorProvider1.SetIconAlignment(this.txtNumber, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.txtNumber.Location = new System.Drawing.Point(122, 51);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtNumber.Properties.Appearance.Options.UseBackColor = true;
-            this.txtNumber.Properties.ReadOnly = true;
-            this.txtNumber.Size = new System.Drawing.Size(150, 26);
-            this.txtNumber.TabIndex = 0;
-            // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -186,9 +173,9 @@
             this.labelControl2.Location = new System.Drawing.Point(36, 50);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(78, 19);
+            this.labelControl2.Size = new System.Drawing.Size(76, 19);
             this.labelControl2.TabIndex = 22;
-            this.labelControl2.Text = "Stok Kodu:";
+            this.labelControl2.Text = "ÖBF Kodu:";
             // 
             // pnlObfKayit
             // 
@@ -199,6 +186,7 @@
             this.pnlObfKayit.AppearanceCaption.ForeColor = System.Drawing.Color.Maroon;
             this.pnlObfKayit.AppearanceCaption.Options.UseFont = true;
             this.pnlObfKayit.AppearanceCaption.Options.UseForeColor = true;
+            this.pnlObfKayit.Controls.Add(this.txtNumber);
             this.pnlObfKayit.Controls.Add(this.btnKaydet);
             this.pnlObfKayit.Controls.Add(this.btnTemizle);
             this.pnlObfKayit.Controls.Add(this.labelControl5);
@@ -207,7 +195,6 @@
             this.pnlObfKayit.Controls.Add(this.txtDescription);
             this.pnlObfKayit.Controls.Add(this.labelControl3);
             this.pnlObfKayit.Controls.Add(this.txtUnitPrice);
-            this.pnlObfKayit.Controls.Add(this.txtNumber);
             this.pnlObfKayit.Controls.Add(this.labelControl2);
             this.pnlObfKayit.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlObfKayit.Location = new System.Drawing.Point(0, 35);
@@ -216,6 +203,13 @@
             this.pnlObfKayit.Size = new System.Drawing.Size(440, 729);
             this.pnlObfKayit.TabIndex = 40;
             this.pnlObfKayit.Text = "Yeni Malzeme Ekle";
+            // 
+            // txtNumber
+            // 
+            this.txtNumber.Location = new System.Drawing.Point(122, 52);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(304, 26);
+            this.txtNumber.TabIndex = 0;
             // 
             // btnKaydet
             // 
@@ -251,7 +245,7 @@
             toolTipTitleItem3.Text = "Temizle";
             superToolTip3.Items.Add(toolTipTitleItem3);
             this.btnTemizle.SuperTip = superToolTip3;
-            this.btnTemizle.TabIndex = 29;
+            this.btnTemizle.TabIndex = 5;
             this.btnTemizle.Text = "Temizle";
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
@@ -557,6 +551,34 @@
             this.gridColumn4.VisibleIndex = 3;
             this.gridColumn4.Width = 98;
             // 
+            // colEdit
+            // 
+            this.colEdit.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colEdit.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colEdit.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colEdit.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colEdit.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.colEdit.AppearanceHeader.Options.UseBackColor = true;
+            this.colEdit.AppearanceHeader.Options.UseFont = true;
+            this.colEdit.AppearanceHeader.Options.UseForeColor = true;
+            this.colEdit.ColumnEdit = this.btnGncelle;
+            this.colEdit.MaxWidth = 20;
+            this.colEdit.Name = "colEdit";
+            this.colEdit.ToolTip = "Güncelle";
+            this.colEdit.Visible = true;
+            this.colEdit.VisibleIndex = 4;
+            this.colEdit.Width = 20;
+            // 
+            // btnGncelle
+            // 
+            this.btnGncelle.AutoHeight = false;
+            this.btnGncelle.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnGncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Güncelle", null, null, true)});
+            this.btnGncelle.Name = "btnGncelle";
+            this.btnGncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnGncelle.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnGncelle_ButtonClick);
+            // 
             // colPasive
             // 
             this.colPasive.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
@@ -585,34 +607,6 @@
             this.btnPasive.Name = "btnPasive";
             this.btnPasive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnPasive.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnPasive_ButtonClick);
-            // 
-            // colEdit
-            // 
-            this.colEdit.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colEdit.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.colEdit.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.colEdit.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.colEdit.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.colEdit.AppearanceHeader.Options.UseBackColor = true;
-            this.colEdit.AppearanceHeader.Options.UseFont = true;
-            this.colEdit.AppearanceHeader.Options.UseForeColor = true;
-            this.colEdit.ColumnEdit = this.btnGncelle;
-            this.colEdit.MaxWidth = 20;
-            this.colEdit.Name = "colEdit";
-            this.colEdit.ToolTip = "Güncelle";
-            this.colEdit.Visible = true;
-            this.colEdit.VisibleIndex = 4;
-            this.colEdit.Width = 20;
-            // 
-            // btnGncelle
-            // 
-            this.btnGncelle.AutoHeight = false;
-            this.btnGncelle.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnGncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Güncelle", null, null, true)});
-            this.btnGncelle.Name = "btnGncelle";
-            this.btnGncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.btnGncelle.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnGncelle_ButtonClick);
             // 
             // colActive
             // 
@@ -784,18 +778,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlObfKayit)).EndInit();
             this.pnlObfKayit.ResumeLayout(false);
             this.pnlObfKayit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOBFList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOBFList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnActive)).EndInit();
             this.statusPanel.ResumeLayout(false);
             this.statusPanel.PerformLayout();
@@ -816,7 +810,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtDescription;
         private DevExpress.XtraEditors.TextEdit txtUnitPrice;
-        private DevExpress.XtraEditors.TextEdit txtNumber;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.GroupControl pnlObfKayit;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -850,5 +843,6 @@
         private DevExpress.XtraEditors.SimpleButton btnKapat;
         private DevExpress.XtraGrid.Columns.GridColumn colActive;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnActive;
+        private DevExpress.XtraEditors.TextEdit txtNumber;
     }
 }
