@@ -201,19 +201,19 @@ namespace IhalematikPro.Forms
                 {
                     if (item.RuleType == RuleTypesEnum.IncomeTaxFare)
                     {
-                        txtIncomeTaxFare.Text = (minimumWage * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString();
+                        txtIncomeTaxFare.Text = (minimumWage * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString("c");
                     }
                     else if (item.RuleType == RuleTypesEnum.SGKPrimFare)
                     {
-                        txtSGKPrimFare.Text = (minimumWage * double.Parse(item.Value) / 100).ToString();
+                        txtSGKPrimFare.Text = (minimumWage * double.Parse(item.Value) / 100).ToString("c");
                     }
                     else if (item.RuleType == RuleTypesEnum.StampTaxFare)
                     {
-                        txtStampTaxFare.Text = (minimumWage * double.Parse(item.Value) / 100000).ToString();
+                        txtStampTaxFare.Text = (minimumWage * double.Parse(item.Value) / 100000).ToString("c");
                     }
                     else if (item.RuleType == RuleTypesEnum.WorklesFonFare)
                     {
-                        txtWorklesFonFare.Text = (minimumWage * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString();
+                        txtWorklesFonFare.Text = (minimumWage * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString("c");
                     }
                 }
                 if (!this.IsCalculatedMinimumWage)
@@ -236,19 +236,19 @@ namespace IhalematikPro.Forms
                     {
                         if (item.RuleType == RuleTypesEnum.IncomeTaxFare)
                         {
-                            txtIncomeTaxFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString();
+                            txtIncomeTaxFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString("c");
                         }
                         else if (item.RuleType == RuleTypesEnum.SGKPrimFare)
                         {
-                            txtSGKPrimFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString();
+                            txtSGKPrimFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString("c");
                         }
                         else if (item.RuleType == RuleTypesEnum.StampTaxFare)
                         {
-                            txtStampTaxFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100000).ToString();
+                            txtStampTaxFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100000).ToString("c");
                         }
                         else if (item.RuleType == RuleTypesEnum.WorklesFonFare)
                         {
-                            txtWorklesFonFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString();
+                            txtWorklesFonFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString("c");
                         }
                     }
                 }

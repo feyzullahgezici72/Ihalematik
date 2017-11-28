@@ -72,23 +72,23 @@ namespace IhalematikProUI.Forms
                 if (model.IsCompanyVehicle)
                 {
                     rbCompanyVehicle.Checked = true;
-                    txtCompanyFuelOilFare.Text = model.FuelOilFare.ToString();
-                    txtCompanyFuelOilDay.Text = model.FuelOilDay.ToString(); 
-                    txtCompanyDriverFare.Text = model.DriverFare.ToString(); 
-                    txtCompanyMaintenanceFare.Text = model.MaintenanceFare.ToString();
-                    txtCompanyServiceFare.Text = model.ServiceFare.ToString();
-                    txtCompanyGeneralFare.Text = model.GeneralFare.ToString();
-                    txtCompanyOtherFare.Text = model.OtherFare.ToString(); 
+                    txtCompanyFuelOilFare.Text = model.FuelOilFare.ToString("c");
+                    txtCompanyFuelOilDay.Text = model.FuelOilDay.ToString("c"); 
+                    txtCompanyDriverFare.Text = model.DriverFare.ToString("c"); 
+                    txtCompanyMaintenanceFare.Text = model.MaintenanceFare.ToString("c");
+                    txtCompanyServiceFare.Text = model.ServiceFare.ToString("c");
+                    txtCompanyGeneralFare.Text = model.GeneralFare.ToString("c");
+                    txtCompanyOtherFare.Text = model.OtherFare.ToString("c"); 
                 }
                 else
                 {
                     rbRentVehicle.Checked = true;
-                    txtRentFare.Text = model.RentFare.ToString();
-                    txtRentFuelOilFare.Text = model.FuelOilFare.ToString();
-                    txtRentFuelOilDay.Text = model.FuelOilDay.ToString();
-                    txtRentDriverFare.Text = model.DriverFare.ToString();
-                    txtRentGeneralFare.Text = model.GeneralFare.ToString(); 
-                    txtRentOtherFare.Text = model.OtherFare.ToString(); 
+                    txtRentFare.Text = model.RentFare.ToString("c");
+                    txtRentFuelOilFare.Text = model.FuelOilFare.ToString("c");
+                    txtRentFuelOilDay.Text = model.FuelOilDay.ToString("c");
+                    txtRentDriverFare.Text = model.DriverFare.ToString("c");
+                    txtRentGeneralFare.Text = model.GeneralFare.ToString("c"); 
+                    txtRentOtherFare.Text = model.OtherFare.ToString("c"); 
                     if (CurrentVehicle.RentType == IhalematikProBL.Enum.RentTypesEnum.Day)
                     {
                         rdDay.Checked = true;
@@ -159,7 +159,7 @@ namespace IhalematikProUI.Forms
         {
             if (ddlVehicleTitle.SelectedIndex < 0)
             {
-                dxErrorProvider1.SetError(ddlVehicleTitle, "Araç tipş seçilmelidir", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                dxErrorProvider1.SetError(ddlVehicleTitle, "Araç tipi seçilmelidir", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
                 return true;
             }
             else
