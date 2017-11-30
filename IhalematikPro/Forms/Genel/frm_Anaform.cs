@@ -79,6 +79,7 @@ namespace IhalematikPro.Forms
         Forms.frm_PozListesi pl;
         private void barBtnPozListesi_ItemClick(object sender, ItemClickEventArgs e)
         {
+            barBtnPozListesi.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             if (pl == null)
             {
@@ -98,11 +99,13 @@ namespace IhalematikPro.Forms
         {
             pl = null;
             RibonAktif();
+            barBtnPozListesi.ButtonStyle = BarButtonStyle.Default;
         }
 
         Forms.frm_OzelStokListesi osl;
         private void barBtnOzelStokListesi_ItemClick(object sender, ItemClickEventArgs e)
         {
+            barBtnOzelStokListesi.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             if (osl == null)
             {
@@ -123,20 +126,22 @@ namespace IhalematikPro.Forms
         {
             osl = null;
             RibonAktif();
+            barBtnOzelStokListesi.ButtonStyle = BarButtonStyle.Default;
         }
 
 
         private void barBtnTeklifHazirla_ItemClick(object sender, ItemClickEventArgs e)
         {
-
-
+            barBtnTeklifHazirla.ButtonStyle = BarButtonStyle.Check;
             frm_YeniIhaleYarat frm = new frm_YeniIhaleYarat();
-            frm.Show();
+            frm.ShowDialog();
+            barBtnTeklifHazirla.ButtonStyle = BarButtonStyle.Default;
 
         }
         Forms.frm_Teklif_Adim1 ta1;
         private void btnAdimx1_ItemClick(object sender, ItemClickEventArgs e)
         {
+            btnAdimx1.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             if (ta1 == null)
             {
@@ -156,6 +161,7 @@ namespace IhalematikPro.Forms
         {
             ta1 = null;
             RibonAktif();
+            btnAdimx1.ButtonStyle = BarButtonStyle.Default;
         }
 
         //Forms.frm_Teklif_Adim2 ta2;
@@ -184,6 +190,7 @@ namespace IhalematikPro.Forms
         Forms.frm_CalisanTanimlama ct;
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
+            barButtonItem2.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             if (ct == null)
             {
@@ -202,10 +209,12 @@ namespace IhalematikPro.Forms
         {
             ct = null;
             RibonAktif();
+            barButtonItem2.ButtonStyle = BarButtonStyle.Default;
         }
         Forms.frm_Teklif_Adim3 ta3;
         private void btnAdimx3_ItemClick(object sender, ItemClickEventArgs e)
         {
+            btnAdimx3.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             if (ta3 == null)
             {
@@ -224,11 +233,13 @@ namespace IhalematikPro.Forms
         {
             ta3 = null;
             RibonAktif();
+            btnAdimx3.ButtonStyle = BarButtonStyle.Default;
         }
 
         Forms.frm_Teklif_Adim2 ta4;
         private void btnAdimx4_ItemClick(object sender, ItemClickEventArgs e)
         {
+            btnAdimx4.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             if (ta4 == null)
             {
@@ -247,6 +258,7 @@ namespace IhalematikPro.Forms
         {
             ta4 = null;
             RibonAktif();
+            btnAdimx4.ButtonStyle = BarButtonStyle.Default;
         }
 
         private void barBtnProgramHakkinda_ItemClick(object sender, ItemClickEventArgs e)
@@ -262,6 +274,7 @@ namespace IhalematikPro.Forms
         frm_AracTanimlama at;
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
+            barButtonItem4.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             if (at == null)
             {
@@ -280,11 +293,13 @@ namespace IhalematikPro.Forms
         {
             at = null;
             RibonAktif();
+            barButtonItem4.ButtonStyle = BarButtonStyle.Default;
         }
 
         frm_DevamEdenIhaleListesi dei;
         private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
         {
+            barButtonItem6.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             if (dei == null)
             {
@@ -303,6 +318,7 @@ namespace IhalematikPro.Forms
         {
             dei = null;
             RibonAktif();
+            barButtonItem6.ButtonStyle = BarButtonStyle.Default;
         }
 
         private void pasif_ItemClick(object sender, ItemClickEventArgs e)
@@ -314,6 +330,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
         {
+            barButtonItem10.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             if (tt == null)
             {
@@ -332,16 +349,20 @@ namespace IhalematikPro.Forms
         {
             tt = null;
             RibonAktif();
+            barButtonItem10.ButtonStyle = BarButtonStyle.Default;
         }
 
         private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
         {
+            barButtonItem12.ButtonStyle = BarButtonStyle.Check;
             frm_YeniTeklifOlustur frm = new frm_YeniTeklifOlustur();
             frm.ShowDialog();
+            barButtonItem12.ButtonStyle = BarButtonStyle.Default;
         }
         frm_TeklifListesi tl;
         private void barButtonItem13_ItemClick(object sender, ItemClickEventArgs e)
         {
+            barButtonItem13.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             if (tl == null)
             {
@@ -360,33 +381,12 @@ namespace IhalematikPro.Forms
         {
             tl = null;
             RibonAktif();
+            barButtonItem13.ButtonStyle = BarButtonStyle.Check;
         }
-        //frm_MalzemeFiyatTeklifiOlustur mfto;
-        //private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
-        //{
-        //    RibonPasif();
-        //    if (mfto == null)
-        //    {
-        //        mfto = new frm_MalzemeFiyatTeklifiOlustur();
-        //        mfto.MdiParent = this;
-        //        mfto.FormClosed += new FormClosedEventHandler(Mfto_FormClosed);
-        //        mfto.Show();
-        //    }
-        //    else
-        //    {
-        //        mfto.Activate();
-        //    }
-
-        //}
-
-        //private void Mfto_FormClosed(object sender, FormClosedEventArgs e)
-        //{
-        //    mfto = null;
-        //    RibonAktif();
-        //}
         frm_TedarikcilerdenFiyatAl tfa;
         private void barButtonItem15_ItemClick(object sender, ItemClickEventArgs e)
         {
+            barButtonItem15.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             if (tfa == null)
             {
@@ -406,10 +406,12 @@ namespace IhalematikPro.Forms
         {
             tfa = null;
             RibonAktif();
+            barButtonItem15.ButtonStyle = BarButtonStyle.Default;
         }
         frm_TeklifAdimSon ts;
         private void btnAdimx5_ItemClick(object sender, ItemClickEventArgs e)
         {
+            btnAdimx5.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             if (ts == null)
             {
@@ -428,6 +430,7 @@ namespace IhalematikPro.Forms
         {
             ts = null;
             RibonAktif();
+            btnAdimx5.ButtonStyle = BarButtonStyle.Default;
         }
 
         private void barButtonItem23_ItemClick(object sender, ItemClickEventArgs e)
@@ -616,8 +619,10 @@ namespace IhalematikPro.Forms
 
         private void barBtnDovizKurlar_ItemClick(object sender, ItemClickEventArgs e)
         {
+            barBtnDovizKurlar.ButtonStyle = BarButtonStyle.Check;
             Forms.frm_DovizKurlari frm = new frm_DovizKurlari();
             frm.ShowDialog();
+            barBtnDovizKurlar.ButtonStyle = BarButtonStyle.Default;
         }
 
         private void MainPanel_Paint(object sender, PaintEventArgs e)
@@ -674,6 +679,7 @@ namespace IhalematikPro.Forms
         frm_TedarikcilereTeklifGonder tg;
         private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
         {
+            barButtonItem14.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             if (tg == null)
@@ -695,6 +701,7 @@ namespace IhalematikPro.Forms
         {
             tg = null;
             RibonAktif();
+            barButtonItem14.ButtonStyle = BarButtonStyle.Default;
         }
 
         private void panelControl1_Paint(object sender, PaintEventArgs e)
@@ -714,6 +721,7 @@ namespace IhalematikPro.Forms
         frm_TeklifAktar teklifAktar;
         private void barButtonItem28_ItemClick(object sender, ItemClickEventArgs e)
         {
+            barButtonItem28.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             if ( teklifAktar== null)
             {
@@ -732,6 +740,7 @@ namespace IhalematikPro.Forms
         {
             teklifAktar = null;
             RibonAktif();
+            barButtonItem28.ButtonStyle = BarButtonStyle.Default;
         }
     }
 }

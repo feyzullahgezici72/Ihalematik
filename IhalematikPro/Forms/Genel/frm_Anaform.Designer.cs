@@ -323,6 +323,7 @@ namespace IhalematikPro.Forms
             // 
             // barBtnPozListesi
             // 
+            this.barBtnPozListesi.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barBtnPozListesi.Caption = "Poz Listesi";
             this.barBtnPozListesi.DropDownEnabled = false;
             this.barBtnPozListesi.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnPozListesi.Glyph")));
@@ -344,6 +345,7 @@ namespace IhalematikPro.Forms
             // 
             // barBtnOzelStokListesi
             // 
+            this.barBtnOzelStokListesi.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barBtnOzelStokListesi.Caption = "ÖBF Malzeme Listesi";
             this.barBtnOzelStokListesi.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnOzelStokListesi.Glyph")));
             this.barBtnOzelStokListesi.Id = 4;
@@ -360,11 +362,12 @@ namespace IhalematikPro.Forms
             // 
             // barBtnTeklifHazirla
             // 
+            this.barBtnTeklifHazirla.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barBtnTeklifHazirla.Caption = "Yeni İhale Yarat";
             this.barBtnTeklifHazirla.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnTeklifHazirla.Glyph")));
             this.barBtnTeklifHazirla.Id = 5;
             this.barBtnTeklifHazirla.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnTeklifHazirla.LargeGlyph")));
-            this.barBtnTeklifHazirla.LargeWidth = 140;
+            this.barBtnTeklifHazirla.LargeWidth = 100;
             this.barBtnTeklifHazirla.Name = "barBtnTeklifHazirla";
             toolTipTitleItem3.Text = "İHALE TEKLİFİ";
             toolTipItem3.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
@@ -407,6 +410,7 @@ namespace IhalematikPro.Forms
             // 
             // btnAdimx1
             // 
+            this.btnAdimx1.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.btnAdimx1.Caption = "1.Adım\r\n";
             this.btnAdimx1.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx1.Glyph")));
             this.btnAdimx1.Id = 9;
@@ -426,6 +430,7 @@ namespace IhalematikPro.Forms
             // 
             // btnAdimx3
             // 
+            this.btnAdimx3.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.btnAdimx3.Caption = "3.Adım";
             this.btnAdimx3.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx3.Glyph")));
             this.btnAdimx3.Id = 11;
@@ -445,6 +450,7 @@ namespace IhalematikPro.Forms
             // 
             // btnAdimx4
             // 
+            this.btnAdimx4.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.btnAdimx4.Caption = "2.Adım";
             this.btnAdimx4.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx4.Glyph")));
             this.btnAdimx4.Id = 12;
@@ -464,6 +470,7 @@ namespace IhalematikPro.Forms
             // 
             // btnAdimx5
             // 
+            this.btnAdimx5.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.btnAdimx5.Caption = "4.Adım";
             this.btnAdimx5.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx5.Glyph")));
             this.btnAdimx5.Id = 13;
@@ -483,6 +490,7 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem2
             // 
+            this.barButtonItem2.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem2.Caption = "Çalışan Tanımlama";
             this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
             this.barButtonItem2.Id = 14;
@@ -503,6 +511,7 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem4
             // 
+            this.barButtonItem4.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem4.Caption = "Araç Tanımlama";
             this.barButtonItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.Glyph")));
             this.barButtonItem4.Id = 1;
@@ -523,6 +532,7 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem6
             // 
+            this.barButtonItem6.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem6.Caption = "Teklif Aşamasındaki İhaleler";
             this.barButtonItem6.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.Glyph")));
             this.barButtonItem6.Id = 2;
@@ -543,6 +553,7 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem10
             // 
+            this.barButtonItem10.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem10.Caption = "Tedarikçi Tanımlama";
             this.barButtonItem10.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.Glyph")));
             this.barButtonItem10.Id = 7;
@@ -562,6 +573,7 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem12
             // 
+            this.barButtonItem12.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem12.Caption = "Yeni Teklif Yarat";
             this.barButtonItem12.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.Glyph")));
             this.barButtonItem12.Id = 9;
@@ -581,11 +593,12 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem13
             // 
+            this.barButtonItem13.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem13.Caption = "Teklif Listeleri";
             this.barButtonItem13.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.Glyph")));
             this.barButtonItem13.Id = 10;
             this.barButtonItem13.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.LargeGlyph")));
-            this.barButtonItem13.LargeWidth = 130;
+            this.barButtonItem13.LargeWidth = 100;
             this.barButtonItem13.Name = "barButtonItem13";
             toolTipTitleItem12.Text = "TEKLİF LİSTELERİ";
             toolTipItem12.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image10")));
@@ -600,6 +613,7 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem14
             // 
+            this.barButtonItem14.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem14.Caption = "Tedarikçilere Malzeme Listesi Gönder";
             this.barButtonItem14.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.Glyph")));
             this.barButtonItem14.Id = 11;
@@ -618,6 +632,7 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem15
             // 
+            this.barButtonItem15.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem15.Caption = "Teklifleri Karşılaştır";
             this.barButtonItem15.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.Glyph")));
             this.barButtonItem15.Id = 12;
@@ -853,6 +868,7 @@ namespace IhalematikPro.Forms
             // 
             // barBtnDovizKurlar
             // 
+            this.barBtnDovizKurlar.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barBtnDovizKurlar.Caption = "Döviz Kurları";
             this.barBtnDovizKurlar.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnDovizKurlar.Glyph")));
             this.barBtnDovizKurlar.Id = 8;
@@ -888,6 +904,7 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem28
             // 
+            this.barButtonItem28.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem28.Caption = "Teklifleri Aktar";
             this.barButtonItem28.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem28.Glyph")));
             this.barButtonItem28.Id = 22;
@@ -1528,7 +1545,6 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem13;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem14;
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
@@ -1589,6 +1605,7 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private System.Windows.Forms.PictureBox picLogo;
         private DevExpress.XtraBars.BarButtonItem barButtonItem28;
+        public DevExpress.XtraBars.BarButtonItem barButtonItem14;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }

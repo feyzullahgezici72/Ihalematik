@@ -1032,7 +1032,7 @@
             this.grdMaterialListIsWorkship.Name = "grdMaterialListIsWorkship";
             this.grdMaterialListIsWorkship.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnCalisanlarveAraclar});
-            this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(1282, 523);
+            this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(1282, 537);
             this.grdMaterialListIsWorkship.TabIndex = 0;
             this.grdMaterialListIsWorkship.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialListIsWorkship});
@@ -1527,10 +1527,10 @@
             this.panelControl3.Controls.Add(this.panelControl6);
             this.panelControl3.Controls.Add(this.simpleButton2);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl3.Location = new System.Drawing.Point(386, 646);
+            this.panelControl3.Location = new System.Drawing.Point(386, 660);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1282, 118);
+            this.panelControl3.Size = new System.Drawing.Size(1282, 104);
             this.panelControl3.TabIndex = 28;
             // 
             // panel6
@@ -1544,10 +1544,10 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.ForeColor = System.Drawing.Color.Teal;
-            this.panel6.Location = new System.Drawing.Point(761, 0);
+            this.panel6.Location = new System.Drawing.Point(743, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(340, 118);
+            this.panel6.Size = new System.Drawing.Size(340, 104);
             this.panel6.TabIndex = 13;
             // 
             // labelControl7
@@ -1627,9 +1627,9 @@
             this.panelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl6.Controls.Add(this.btnNext);
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl6.Location = new System.Drawing.Point(1101, 0);
+            this.panelControl6.Location = new System.Drawing.Point(1083, 0);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(181, 118);
+            this.panelControl6.Size = new System.Drawing.Size(199, 104);
             this.panelControl6.TabIndex = 12;
             // 
             // btnNext
@@ -1641,7 +1641,7 @@
             this.btnNext.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btnNext.Location = new System.Drawing.Point(-2, 10);
+            this.btnNext.Location = new System.Drawing.Point(8, 14);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(183, 83);
@@ -1661,7 +1661,7 @@
             this.simpleButton2.Location = new System.Drawing.Point(0, 0);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(6);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(200, 118);
+            this.simpleButton2.Size = new System.Drawing.Size(200, 104);
             this.simpleButton2.TabIndex = 11;
             this.simpleButton2.Text = "İşçilik Birim Fiyata göre";
             // 
@@ -1671,7 +1671,7 @@
             this.panelControl7.Controls.Add(this.labelControl12);
             this.panelControl7.Controls.Add(this.lblTotalWorker);
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl7.Location = new System.Drawing.Point(386, 618);
+            this.panelControl7.Location = new System.Drawing.Point(386, 632);
             this.panelControl7.Name = "panelControl7";
             this.panelControl7.Size = new System.Drawing.Size(1282, 28);
             this.panelControl7.TabIndex = 33;
