@@ -139,6 +139,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                         List<OfferMaterialList> offerMaterialLists = new List<OfferMaterialList>();
                         if (items.Count != 0)
                         {
+                            Application.DoEvents();
                             offerMaterialLists.AddRange(items.Select(p => p.MaterialList));
                         }
 
@@ -146,7 +147,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                         {
                             int row = 2;
                             int indexNumber = 1;
-
+                            Application.DoEvents();
                             foreach (OfferMaterialList materialList in offerMaterialLists)
                             {
                                 oSheet.Cells[row, 1] = indexNumber;
@@ -196,6 +197,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             frm_MesajFormu mesajformu = new frm_MesajFormu();
             mesajformu.lblMesaj.Text = "Mail Gönderildi...";
             mesajformu.ShowDialog();
+            this.Close();
         }
 
         private void frm_TedarikciyeAktarilanMalzemeDetay_Load(object sender, EventArgs e)
