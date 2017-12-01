@@ -104,8 +104,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                 try
                 {
                     string fileName = "Malzeme_Fiyat_Listesi.xlsx";
-                    string sourcePath = @"E:\Development\Clone\IhalematikPro\EmailFile";
-                    string targetPath = @"E:\Development\Clone\IhalematikPro\EmailFile\SentFile";
+                    //string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "EmailFile");
+                    string sourcePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug\\", string.Empty), "EmailFile");
+                    string targetPath = Path.Combine(sourcePath, "SentFile");
                     string sourceFile = Path.Combine(sourcePath, fileName);
                     this.DestinationFile = Path.Combine(targetPath, DateTime.Now.ToShortDateString().Replace("/", string.Empty) + Guid.NewGuid().ToString() + "-" + this.Supplier.CompanyName + "-" + fileName);
 
@@ -171,7 +172,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             this.CreateExcel();
             if (File.Exists(this.DestinationFile))
             {
-                MailingManager.Instance.SendMaterialToSupplier(this.Supplier.Email,txtEmailBody.Text ,this.DestinationFile);
+                MailingManager.Instance.SendMaterialToSupplier(this.Supplier.Email, txtEmailBody.Text, this.DestinationFile);
             }
         }
     }
