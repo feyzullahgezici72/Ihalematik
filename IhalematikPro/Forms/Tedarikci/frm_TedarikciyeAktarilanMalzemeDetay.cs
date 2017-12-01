@@ -50,6 +50,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void frm_TedarikciyeAktarilanMalzemeDetay_Shown(object sender, EventArgs e)
         {
+            emailMesajPaneloOrtala();//mail mesaj formunu ortalar
             if (this.ShowMailPanel)
             {
                 pnlMail.Visible = true;
@@ -78,13 +79,17 @@ namespace IhalematikProUI.Forms.Tedarikci
                 grdMaterialList.DataSource = items.Select(p => p.MaterialList).ToList();
             }
         }
-
+        frm_wait fw = new frm_wait();//Mail gönderiliyor mesaj formu
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             List<OfferMaterialList> items = grdMaterialList.DataSource as List<OfferMaterialList>;
             if (items != null && items.Count != 0)
             {
+                
+                emailMesajPanel.Visible = true;
+                Application.DoEvents();
                 this.SendMail();
+                
             }
             else
             {
@@ -94,6 +99,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void CreateExcel()
         {
+            Application.DoEvents();
             Microsoft.Office.Interop.Excel.Application oXL = null;
             Microsoft.Office.Interop.Excel._Workbook oWB = null;
             Microsoft.Office.Interop.Excel._Worksheet oSheet = null;
@@ -103,6 +109,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             {
                 try
                 {
+                    Application.DoEvents();
                     string fileName = "Malzeme_Fiyat_Listesi.xlsx";
                     //string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "EmailFile");
                     string sourcePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug\\", string.Empty), "EmailFile");
@@ -114,7 +121,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                     {
                         Directory.CreateDirectory(targetPath);
                     }
-
+                    Application.DoEvents();
                     File.Copy(sourceFile, this.DestinationFile, true);
 
                     oXL = new Microsoft.Office.Interop.Excel.Application();
@@ -123,6 +130,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
                     if (CurrentManager.Instance.CurrentOffer != null)
                     {
+                        Application.DoEvents();
                         Dictionary<string, object> parameters = new Dictionary<string, object>();
                         parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
                         parameters.Add("SupplierId", this.Supplier.Id);
@@ -149,6 +157,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                                 oSheet.Cells[row, 6] = materialList.Quantity;
                                 row++;
                                 indexNumber++;
+                                Application.DoEvents();
                             }
                         }
                     }
@@ -166,14 +175,32 @@ namespace IhalematikProUI.Forms.Tedarikci
                 }
             }
         }
+         
+        public void emailMesajPaneloOrtala()
+        {
+            
+            emailMesajPanel.Left = (grdMaterialList.Width / 2) - (emailMesajPanel.Width / 2);
+            emailMesajPanel.Top = (grdMaterialList.Height / 2) - (emailMesajPanel.Height / 2);
+        }
 
         private void SendMail()
         {
+            Application.DoEvents();
             this.CreateExcel();
             if (File.Exists(this.DestinationFile))
             {
+                Application.DoEvents();
                 MailingManager.Instance.SendMaterialToSupplier(this.Supplier.Email, txtEmailBody.Text, this.DestinationFile);
             }
+            emailMesajPanel.Visible = false;
+            frm_MesajFormu mesajformu = new frm_MesajFormu();
+            mesajformu.lblMesaj.Text = "Mail Gönderildi...";
+            mesajformu.ShowDialog();
+        }
+
+        private void frm_TedarikciyeAktarilanMalzemeDetay_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

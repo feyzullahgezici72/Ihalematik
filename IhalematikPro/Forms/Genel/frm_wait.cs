@@ -17,5 +17,10 @@ namespace IhalematikProUI.Forms
         {
             InitializeComponent();
         }
+
+        private void frm_wait_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
