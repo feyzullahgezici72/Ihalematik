@@ -68,6 +68,8 @@ namespace IhalematikProUI.Forms
                 {
                     OfferMaterialListModel model = new OfferMaterialListModel(item.MaterialList);
                     model.Price = item.Price;
+                    model.Risk = item.Risk;
+                    model.SupplierMaterialListId = item.Id;
                     models.Add(model);
                 }
             }
@@ -76,7 +78,7 @@ namespace IhalematikProUI.Forms
 
         private void btnUploadFile_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -90,11 +92,18 @@ namespace IhalematikProUI.Forms
 
                 foreach (var item in groupedMaterial)
                 {
-                    SupplierMaterialList supplierMaterialList = item.Where(p => p.Price != 0).OrderBy(p => p.Price).First();
+                    SupplierMaterialList supplierMaterialList = item.Where(p => p.Price != 0).OrderBy(p => p.Price).FirstOrDefault();
 
+                    if (supplierMaterialList == null)
+                    {
+                        supplierMaterialList = item.First();
+                    }
                     OfferMaterialListModel model = new OfferMaterialListModel(supplierMaterialList.MaterialList);
                     model.Price = supplierMaterialList.Price;
                     model.SupplierName = supplierMaterialList.Supplier.CompanyName;
+                    model.SupplierMaterialList = supplierMaterialList;
+                    model.SupplierMaterialListId = supplierMaterialList.Id;
+                    model.Risk = supplierMaterialList.Risk;
                     dataSoruce.Add(model);
                 }
             }
@@ -108,7 +117,11 @@ namespace IhalematikProUI.Forms
                     List<SupplierMaterialList> items = item.Where(p => p.Price != 0).OrderBy(p => p.Price).ToList();
                     SupplierMaterialList supplierMaterialList = new SupplierMaterialList();
 
-                    if (items.Count < 3)
+                    if (items.Count == 0)
+                    {
+                        supplierMaterialList = item.FirstOrDefault();
+                    }
+                    else if (items.Count < 3)
                     {
                         supplierMaterialList = items.First();
                     }
@@ -119,6 +132,9 @@ namespace IhalematikProUI.Forms
                         supplierMaterialList = items.ToArray()[(int)Math.Round(count)];
                     }
                     OfferMaterialListModel model = new OfferMaterialListModel(supplierMaterialList.MaterialList);
+                    model.SupplierMaterialListId = supplierMaterialList.Id;
+                    model.Risk = supplierMaterialList.Risk;
+                    model.SupplierMaterialList = supplierMaterialList;
                     model.Price = supplierMaterialList.Price;
                     model.SupplierName = supplierMaterialList.Supplier.CompanyName;
                     dataSoruce.Add(model);
@@ -127,6 +143,31 @@ namespace IhalematikProUI.Forms
             }
             grdMaterialList.DataSource = dataSoruce;
             colSuppierName.Visible = true;
+        }
+
+        private void btnTumuneUygula_Click(object sender, EventArgs e)
+        {
+            List<OfferMaterialListModel> items = grdMaterialList.DataSource as List<OfferMaterialListModel>;
+            double risk = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRisk.Text);
+
+            foreach (var item in items)
+            {
+                item.Risk = risk;
+                SupplierMaterialList supplierMaterialList = item.SupplierMaterialList;
+                supplierMaterialList.Risk = risk;
+                SupplierMaterialListProvider.Instance.Save(supplierMaterialList);
+            }
+        }
+
+        private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            if (e.Column == colRisk)
+            {
+                int SupplierMaterialListId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridView1.GetFocusedRowCellValue("SupplierMaterialListId"));
+                SupplierMaterialList item = SupplierMaterialListProvider.Instance.GetItem(SupplierMaterialListId);
+                item.Risk = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
+                SupplierMaterialListProvider.Instance.Save(item);
+            }
         }
     }
 }

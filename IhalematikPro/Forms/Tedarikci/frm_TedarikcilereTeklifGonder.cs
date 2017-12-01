@@ -81,7 +81,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void gridViewMaterialList_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            if (e.Column == colQuantity)
+            if (e.Column == colMaterialListQuantity)
             {
                 int Id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialList.GetFocusedRowCellValue("Id"));
                 if (CurrentManager.Instance.CurrentOffer.MaterialList != null)
@@ -147,11 +147,17 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlFirma.Visible = false;
             pnlAktarmaPaneli.Visible = false;
             pnlMalzemeListesi.Dock = DockStyle.Fill;
+            colMaterialListQuantity.OptionsColumn.AllowEdit = true;
+            colMaterialListQuantity.OptionsColumn.AllowFocus = true;
+            colMaterialListQuantity.OptionsColumn.ReadOnly = false;
             this.LoadMaterialGrid();
         }
 
         private void btnTedaikcileregonder_Click(object sender, EventArgs e)
         {
+            colMaterialListQuantity.OptionsColumn.AllowEdit = false;
+            colMaterialListQuantity.OptionsColumn.AllowFocus = false;
+            colMaterialListQuantity.OptionsColumn.ReadOnly = false;
             pnlGonderilecekListe.Visible = true;
             pnlobfpozButtonpanel.Visible = false;
             pnlMalzemeListesi.Visible = true;
@@ -171,6 +177,9 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnTedarikciListesi_Click(object sender, EventArgs e)
         {
+            colMaterialListQuantity.OptionsColumn.AllowEdit = false;
+            colMaterialListQuantity.OptionsColumn.AllowFocus = false;
+            colMaterialListQuantity.OptionsColumn.ReadOnly = false;
             pnlGonderilecekListe.Visible = false;
             pnlobfpozButtonpanel.Visible = false;
             pnlMalzemeListesi.Visible = false;

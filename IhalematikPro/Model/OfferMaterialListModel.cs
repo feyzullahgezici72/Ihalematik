@@ -99,6 +99,11 @@ namespace IhalematikProUI.Model
         public double Price { get; set; }
         public string SupplierName { get; set; }
 
+        public double Risk { get; set; }
+
+        public int SupplierMaterialListId { get; set; }
+        public SupplierMaterialList SupplierMaterialList { get; set; }
+
         public OfferMaterialListModel(OfferMaterialList Entity)
         {
             this.IsPoz = Entity.IsPoz;
