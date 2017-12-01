@@ -944,7 +944,7 @@
             this.panel6.Controls.Add(this.txtBaseAmount);
             this.panel6.Controls.Add(this.labelControl8);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(460, 0);
+            this.panel6.Location = new System.Drawing.Point(445, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(335, 104);
@@ -1027,9 +1027,9 @@
             this.panelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl5.Controls.Add(this.btnNext);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl5.Location = new System.Drawing.Point(795, 0);
+            this.panelControl5.Location = new System.Drawing.Point(780, 0);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(181, 104);
+            this.panelControl5.Size = new System.Drawing.Size(196, 104);
             this.panelControl5.TabIndex = 11;
             // 
             // btnNext
@@ -1041,7 +1041,7 @@
             this.btnNext.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.btnNext.Location = new System.Drawing.Point(-2, 10);
+            this.btnNext.Location = new System.Drawing.Point(8, 10);
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(183, 83);

@@ -75,19 +75,19 @@ namespace IhalematikProUI.Forms
             
             if (CurrentWorker != null)
             {
-                txtAGI.Text = CurrentWorker.AGIFare.Amount.ToString();
-                txtBaseFare.Text = CurrentWorker.BaseFare.Amount.ToString();
-                this.BaseFare = CurrentWorker.BaseFare.Amount.ToString();
-                txtExtraFare.Text = CurrentWorker.ExtraFare.Amount.ToString();
-                txtFoodFare.Text = CurrentWorker.FoodFare.Amount.ToString();
-                txtHotelFare.Text = CurrentWorker.HotelFare.Amount.ToString();
-                txtIncomeTaxFare.Text = CurrentWorker.IncomeTaxFare.Amount.ToString();
-                txtISGFare.Text = CurrentWorker.ISGFare.Amount.ToString();
-                txtSeveranceFare.Text = CurrentWorker.SeveranceFare.Amount.ToString();
-                txtSGKPrimFare.Text = CurrentWorker.SGKPrimFare.Amount.ToString();
-                txtStampTaxFare.Text = CurrentWorker.StampTaxFare.Amount.ToString();
-                txtTravelFare.Text = CurrentWorker.TravelFare.Amount.ToString();
-                txtWorklesFonFare.Text = CurrentWorker.WorklesFonFare.Amount.ToString();
+                txtAGI.Text = CurrentWorker.AGIFare.Amount.ToString("c");
+                txtBaseFare.Text = CurrentWorker.BaseFare.Amount.ToString("c");
+                this.BaseFare = CurrentWorker.BaseFare.Amount.ToString("c");
+                txtExtraFare.Text = CurrentWorker.ExtraFare.Amount.ToString("c");
+                txtFoodFare.Text = CurrentWorker.FoodFare.Amount.ToString("c");
+                txtHotelFare.Text = CurrentWorker.HotelFare.Amount.ToString("c");
+                txtIncomeTaxFare.Text = CurrentWorker.IncomeTaxFare.Amount.ToString("c");
+                txtISGFare.Text = CurrentWorker.ISGFare.Amount.ToString("c");
+                txtSeveranceFare.Text = CurrentWorker.SeveranceFare.Amount.ToString("c");
+                txtSGKPrimFare.Text = CurrentWorker.SGKPrimFare.Amount.ToString("c");
+                txtStampTaxFare.Text = CurrentWorker.StampTaxFare.Amount.ToString("c");
+                txtTravelFare.Text = CurrentWorker.TravelFare.Amount.ToString("c");
+                txtWorklesFonFare.Text = CurrentWorker.WorklesFonFare.Amount.ToString("c");
                 int index = models.FindIndex(p => p.Id == CurrentWorker.Title.Id);
                 ddlTitles.SelectedIndex = index;//selectedTitle;
                 if (CurrentWorker.IsNormal)
@@ -115,19 +115,19 @@ namespace IhalematikProUI.Forms
                 {
                     if (item.RuleType == RuleTypesEnum.IncomeTaxFare)
                     {
-                        txtIncomeTaxFare.Text = (minimumWage * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString();
+                        txtIncomeTaxFare.Text = (minimumWage * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString("c");
                     }
                     else if (item.RuleType == RuleTypesEnum.SGKPrimFare)
                     {
-                        txtSGKPrimFare.Text = (minimumWage * double.Parse(item.Value) / 100).ToString();
+                        txtSGKPrimFare.Text = (minimumWage * double.Parse(item.Value) / 100).ToString("c");
                     }
                     else if (item.RuleType == RuleTypesEnum.StampTaxFare)
                     {
-                        txtStampTaxFare.Text = (minimumWage * double.Parse(item.Value) / 100000).ToString();
+                        txtStampTaxFare.Text = (minimumWage * double.Parse(item.Value) / 100000).ToString("c");
                     }
                     else if (item.RuleType == RuleTypesEnum.WorklesFonFare)
                     {
-                        txtWorklesFonFare.Text = (minimumWage * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString();
+                        txtWorklesFonFare.Text = (minimumWage * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString("c");
                     }
                 }
                 //if (!this.IsCalculatedMinimumWage)
@@ -150,19 +150,19 @@ namespace IhalematikProUI.Forms
                     {
                         if (item.RuleType == RuleTypesEnum.IncomeTaxFare)
                         {
-                            txtIncomeTaxFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString();
+                            txtIncomeTaxFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString("c");
                         }
                         else if (item.RuleType == RuleTypesEnum.SGKPrimFare)
                         {
-                            txtSGKPrimFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString();
+                            txtSGKPrimFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString("c");
                         }
                         else if (item.RuleType == RuleTypesEnum.StampTaxFare)
                         {
-                            txtStampTaxFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100000).ToString();
+                            txtStampTaxFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100000).ToString("c");
                         }
                         else if (item.RuleType == RuleTypesEnum.WorklesFonFare)
                         {
-                            txtWorklesFonFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString();
+                            txtWorklesFonFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString("c");
                         }
                     }
                 }

@@ -50,7 +50,7 @@ namespace IhalematikProUI.Forms
                 txtDescription.Text = this.CurrentOBF.Description;
                 txtNumber.Text = this.CurrentOBF.Number;
                 txtUnit.Text = this.CurrentOBF.Unit;
-                txtUnitPrice.Text = this.CurrentOBF.UnitPrice.ToString();
+                txtUnitPrice.Text = this.CurrentOBF.UnitPrice.ToString("c");
             }
         }
         public bool IsEmptyKontrol()

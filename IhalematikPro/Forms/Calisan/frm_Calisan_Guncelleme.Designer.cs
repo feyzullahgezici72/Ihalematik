@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Calisan_Guncelleme));
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
@@ -64,7 +65,7 @@
             this.rbNormal = new System.Windows.Forms.RadioButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -199,7 +200,7 @@
             this.txtWorklesFonFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtWorklesFonFare.Properties.EditFormat.FormatString = "N2";
             this.txtWorklesFonFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtWorklesFonFare.Properties.Mask.EditMask = "c2";
+            this.txtWorklesFonFare.Properties.Mask.EditMask = "c";
             this.txtWorklesFonFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtWorklesFonFare.Size = new System.Drawing.Size(224, 26);
             this.txtWorklesFonFare.TabIndex = 2;
@@ -216,7 +217,7 @@
             this.txtSeveranceFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtSeveranceFare.Properties.EditFormat.FormatString = "N2";
             this.txtSeveranceFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtSeveranceFare.Properties.Mask.EditMask = "c2";
+            this.txtSeveranceFare.Properties.Mask.EditMask = "c";
             this.txtSeveranceFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtSeveranceFare.Size = new System.Drawing.Size(224, 26);
             this.txtSeveranceFare.TabIndex = 6;
@@ -233,7 +234,7 @@
             this.txtAGI.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtAGI.Properties.EditFormat.FormatString = "N2";
             this.txtAGI.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtAGI.Properties.Mask.EditMask = "c2";
+            this.txtAGI.Properties.Mask.EditMask = "c";
             this.txtAGI.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAGI.Size = new System.Drawing.Size(224, 26);
             this.txtAGI.TabIndex = 5;
@@ -261,7 +262,7 @@
             this.txtExtraFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtExtraFare.Properties.EditFormat.FormatString = "N2";
             this.txtExtraFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtExtraFare.Properties.Mask.EditMask = "c2";
+            this.txtExtraFare.Properties.Mask.EditMask = "c";
             this.txtExtraFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtExtraFare.Size = new System.Drawing.Size(224, 26);
             this.txtExtraFare.TabIndex = 11;
@@ -275,11 +276,11 @@
             this.txtBaseFare.Name = "txtBaseFare";
             this.txtBaseFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBaseFare.Properties.Appearance.Options.UseBackColor = true;
-            this.txtBaseFare.Properties.DisplayFormat.FormatString = "N2";
-            this.txtBaseFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtBaseFare.Properties.EditFormat.FormatString = "N2";
-            this.txtBaseFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtBaseFare.Properties.Mask.EditMask = "c2";
+            this.txtBaseFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtBaseFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtBaseFare.Properties.EditFormat.FormatString = "c2";
+            this.txtBaseFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtBaseFare.Properties.Mask.EditMask = "c";
             this.txtBaseFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtBaseFare.Size = new System.Drawing.Size(224, 26);
             this.txtBaseFare.TabIndex = 0;
@@ -319,7 +320,7 @@
             this.txtISGFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtISGFare.Properties.EditFormat.FormatString = "N2";
             this.txtISGFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtISGFare.Properties.Mask.EditMask = "c2";
+            this.txtISGFare.Properties.Mask.EditMask = "c";
             this.txtISGFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtISGFare.Size = new System.Drawing.Size(224, 26);
             this.txtISGFare.TabIndex = 10;
@@ -336,7 +337,7 @@
             this.txtSGKPrimFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtSGKPrimFare.Properties.EditFormat.FormatString = "N2";
             this.txtSGKPrimFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtSGKPrimFare.Properties.Mask.EditMask = "c2";
+            this.txtSGKPrimFare.Properties.Mask.EditMask = "c";
             this.txtSGKPrimFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtSGKPrimFare.Size = new System.Drawing.Size(224, 26);
             this.txtSGKPrimFare.TabIndex = 1;
@@ -375,7 +376,7 @@
             this.txtHotelFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtHotelFare.Properties.EditFormat.FormatString = "N2";
             this.txtHotelFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtHotelFare.Properties.Mask.EditMask = "c2";
+            this.txtHotelFare.Properties.Mask.EditMask = "c";
             this.txtHotelFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtHotelFare.Size = new System.Drawing.Size(224, 26);
             this.txtHotelFare.TabIndex = 9;
@@ -414,7 +415,7 @@
             this.txtIncomeTaxFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtIncomeTaxFare.Properties.EditFormat.FormatString = "N2";
             this.txtIncomeTaxFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtIncomeTaxFare.Properties.Mask.EditMask = "c2";
+            this.txtIncomeTaxFare.Properties.Mask.EditMask = "c";
             this.txtIncomeTaxFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtIncomeTaxFare.Size = new System.Drawing.Size(224, 26);
             this.txtIncomeTaxFare.TabIndex = 3;
@@ -431,7 +432,7 @@
             this.txtTravelFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtTravelFare.Properties.EditFormat.FormatString = "N2";
             this.txtTravelFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtTravelFare.Properties.Mask.EditMask = "c2";
+            this.txtTravelFare.Properties.Mask.EditMask = "c";
             this.txtTravelFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTravelFare.Size = new System.Drawing.Size(224, 26);
             this.txtTravelFare.TabIndex = 8;
@@ -492,7 +493,7 @@
             this.txtStampTaxFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtStampTaxFare.Properties.EditFormat.FormatString = "N2";
             this.txtStampTaxFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtStampTaxFare.Properties.Mask.EditMask = "c2";
+            this.txtStampTaxFare.Properties.Mask.EditMask = "c";
             this.txtStampTaxFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtStampTaxFare.Size = new System.Drawing.Size(224, 26);
             this.txtStampTaxFare.TabIndex = 4;
@@ -509,7 +510,7 @@
             this.txtFoodFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtFoodFare.Properties.EditFormat.FormatString = "N2";
             this.txtFoodFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtFoodFare.Properties.Mask.EditMask = "c2";
+            this.txtFoodFare.Properties.Mask.EditMask = "c";
             this.txtFoodFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtFoodFare.Size = new System.Drawing.Size(224, 26);
             this.txtFoodFare.TabIndex = 7;

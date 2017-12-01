@@ -502,20 +502,9 @@ namespace IhalematikPro.Forms
         private void btnNext_Click(object sender, EventArgs e)
         {
             this.Close();
-            frm_TeklifAdimSon a4 = (frm_TeklifAdimSon)Application.OpenForms["frm_TeklifSonAdim"];
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-            if (a4 == null)
-            {
-                a4 = new frm_TeklifAdimSon();
-                a4.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                a4.FormClosed += new FormClosedEventHandler(a4_FormClosed);
-                af.MainPanel.Visible = false;
-                a4.Show();
-            }
-            else
-            {
-                a4.Activate();
-            }
+            af.RibonPasif();
+            af.btnAdimx5.PerformClick();
         }
         private void a4_FormClosed(object sender, FormClosedEventArgs e)
         {

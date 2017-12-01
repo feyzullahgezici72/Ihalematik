@@ -104,21 +104,9 @@ namespace IhalematikPro.Forms
                 frm_IhaleGrup ig = new frm_IhaleGrup();
                 ig.ShowDialog();
                 this.Close();
-                frm_Teklif_Adim1 a1 = (frm_Teklif_Adim1)Application.OpenForms["frm_Teklif_Adim1"];
                 frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                if (a1 == null)
-                {
-                    a1 = new frm_Teklif_Adim1();
-                    a1.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                    a1.FormClosed += new FormClosedEventHandler(a1_FormClosed);
-                    af.MainPanel.Visible = false;
-                    a1.Show();
-
-                }
-                else
-                {
-                    a1.Activate();
-                }
+                af.RibonPasif();
+                af.btnAdimx1.PerformClick();
             }
         }
 

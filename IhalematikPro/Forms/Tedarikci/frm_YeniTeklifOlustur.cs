@@ -55,23 +55,9 @@ namespace IhalematikProUI.Forms
                 mf.lblMesaj.Text = "Yeni Teklif Oluşturuldu...";
                 mf.ShowDialog();
                 this.Close();
-               // frm_TedarikcilereTeklifGonder tg = (frm_TedarikcilereTeklifGonder)Application.OpenForms["frm_TedarikcilereTeklifGonder"];
                 frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                if (tg == null)
-                {
-                    tg = new frm_TedarikcilereTeklifGonder();
-                    tg.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                    tg.FormClosed +=new FormClosedEventHandler(Tg_FormClosed);
-                    af.MainPanel.Visible = false;
-                    af.RibonPasif();
-                    tg.Show();
-
-                }
-                else
-                {
-                    tg.Activate();
-                   
-                }
+                af.RibonPasif();
+                af.barButtonItem14.PerformClick();
             }
         }
 
