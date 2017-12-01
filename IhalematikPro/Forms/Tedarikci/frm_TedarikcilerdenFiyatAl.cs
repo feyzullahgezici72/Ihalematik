@@ -28,11 +28,6 @@ namespace IhalematikProUI.Forms
             base.ScreenMethod();
         }
 
-        private void btnKapat_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnKapat_Click_1(object sender, EventArgs e)
         {
             this.Close();
@@ -74,11 +69,6 @@ namespace IhalematikProUI.Forms
                 }
             }
             grdMaterialList.DataSource = models;
-        }
-
-        private void btnUploadFile_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -167,6 +157,18 @@ namespace IhalematikProUI.Forms
                 SupplierMaterialList item = SupplierMaterialListProvider.Instance.GetItem(SupplierMaterialListId);
                 item.Risk = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
                 SupplierMaterialListProvider.Instance.Save(item);
+            }
+        }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            List<OfferMaterialListModel> items = grdMaterialList.DataSource as List<OfferMaterialListModel>;
+
+            foreach (var item in items)
+            {
+                SupplierMaterialList supplierMaterialList = item.SupplierMaterialList;
+                supplierMaterialList.IsSelected = true;
+                SupplierMaterialListProvider.Instance.Save(supplierMaterialList);
             }
         }
     }

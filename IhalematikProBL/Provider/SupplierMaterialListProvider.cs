@@ -20,6 +20,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("SupplierId", t.SupplierId);
             parameters.Add("Price", t.Price);
             parameters.Add("Risk", t.Risk);
+            parameters.Add("IsSelected", t.IsSelected);
             return parameters;
         }
 
@@ -32,6 +33,7 @@ namespace IhalematikProBL.Provider
             t.Price = dr.GetValue<double>("Price");
             t.Risk = dr.GetValue<double>("Risk");
             t.IsActive = dr.GetValue<bool>("IsActive");
+            t.IsSelected = dr.GetValue<bool>("IsSelected");
         }
     }
 }
