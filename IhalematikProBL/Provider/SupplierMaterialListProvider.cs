@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SimpleApplicationBase.Toolkit;
+using IhalematikProBL.Manager;
 
 namespace IhalematikProBL.Provider
 {
@@ -34,6 +35,13 @@ namespace IhalematikProBL.Provider
             t.Risk = dr.GetValue<double>("Risk");
             t.IsActive = dr.GetValue<bool>("IsActive");
             t.IsSelected = dr.GetValue<bool>("IsSelected");
+        }
+
+        public void SupplierMaterialListSelectedUpdate(int OfferId)
+        {
+            Hashtable param = new Hashtable();
+            param.Add("OfferId", OfferId);
+            CustomDBConnectionManager.Instance.ExecuteNonQuery("SupplierMaterialListSelectedUpdate", param);
         }
     }
 }

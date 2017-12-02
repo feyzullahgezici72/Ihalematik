@@ -164,11 +164,16 @@ namespace IhalematikProUI.Forms
         {
             List<OfferMaterialListModel> items = grdMaterialList.DataSource as List<OfferMaterialListModel>;
 
-            foreach (var item in items)
+            if (items != null)
             {
-                SupplierMaterialList supplierMaterialList = item.SupplierMaterialList;
-                supplierMaterialList.IsSelected = true;
-                SupplierMaterialListProvider.Instance.Save(supplierMaterialList);
+                SupplierMaterialListProvider.Instance.SupplierMaterialListSelectedUpdate(CurrentManager.Instance.CurrentOffer.Id);
+
+                foreach (var item in items)
+                {
+                    SupplierMaterialList supplierMaterialList = item.SupplierMaterialList;
+                    supplierMaterialList.IsSelected = true;
+                    SupplierMaterialListProvider.Instance.Save(supplierMaterialList);
+                } 
             }
         }
     }
