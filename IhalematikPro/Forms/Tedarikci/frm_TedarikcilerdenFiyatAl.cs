@@ -64,6 +64,7 @@ namespace IhalematikProUI.Forms
                     OfferMaterialListModel model = new OfferMaterialListModel(item.MaterialList);
                     model.Price = item.Price;
                     model.Risk = item.Risk;
+                    model.SupplierMaterialList = item;
                     model.SupplierMaterialListId = item.Id;
                     models.Add(model);
                 }
