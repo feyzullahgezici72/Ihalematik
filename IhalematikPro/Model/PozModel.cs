@@ -16,6 +16,7 @@ namespace IhalematikPro.Model
         public string Description { get; set; }
         public string Unit { get; set; }
         public double UnitPrice { get; set; }
+        public double OfferPrice { get; set; }
         public bool IsActive { get; set; }
 
         public PozModel(Poz Entity)

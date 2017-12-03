@@ -247,7 +247,7 @@ namespace IhalematikPro.Model
                     Dictionary<string, object> parameters = new Dictionary<string, object>();
                     parameters.Add("TenderId", this.Tender.Id);
                     parameters.Add("MaterialId", this.Id);
-                    
+
                     this.tenderMaterialListEquipment = TenderMaterialListEquipmentProvider.Instance.GetItems(parameters);
                 }
                 return this.tenderMaterialListEquipment;
@@ -284,6 +284,8 @@ namespace IhalematikPro.Model
         //BIRIM SURE
         public int UnitTime { get; set; }
 
+        public double OfferPrice { get; set; }
+
         public int TenderId { get; set; }
         private Tender tender { get; set; }
         public Tender Tender
@@ -319,6 +321,7 @@ namespace IhalematikPro.Model
             this.UnitTime = Entity.UnitTime;
             this.WorkerPercentageMarkup = Entity.WorkerMarkup;
             this.TenderMaterialListEquipment = Entity.TenderMaterialListEquipment;
+            this.OfferPrice = Entity.OfferPrice;
             //this.TenderMaterialListEquipment = IhalematikModelBase.GetModels<TenderMaterialListEquipmentModel, TenderMaterialListEquipment>(Entity.TenderMaterialListEquipment);
         }
 

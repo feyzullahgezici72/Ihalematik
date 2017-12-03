@@ -30,6 +30,7 @@ namespace IhalematikProBL.Provider
             t.PozOBFId = dr.GetValue<int>("PozOBFId");
             t.Quantity = dr.GetValue<float>("Quantity");
             t.IsSelected = dr.GetValue<bool>("IsSelected");
+            t.Price = dr.GetValue<double>("Price");
         }
     }
 }

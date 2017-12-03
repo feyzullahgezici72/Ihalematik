@@ -60,6 +60,6 @@ namespace IhalematikProBL.Entity
             }
         }
         public bool IsSelected { get; set; }
-
+        public double Price { get; set; }
     }
 }

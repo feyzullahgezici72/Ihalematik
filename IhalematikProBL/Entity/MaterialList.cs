@@ -105,6 +105,8 @@ namespace IhalematikProBL.Entity
         //BIRIM SURE
         public int UnitTime { get; set; }
 
+        public double OfferPrice { get; set; }
+
         private List<TenderEquipment> tenderEquipments = null;
 
         public List<TenderEquipment> TenderEquipments

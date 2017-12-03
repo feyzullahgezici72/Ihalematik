@@ -37,10 +37,57 @@ namespace IhalematikPro.Forms
 
         private void btnBul_Click(object sender, EventArgs e)
         {
-            string pozNumber = txtPozNumber.Text;
-            
-            pozModels = UIPozManager.Instance.GetPozs(pozNumber);
+            this.LoadMaterialListGrid();
+        }
 
+        private void LoadMaterialListGrid()
+        {
+            string pozNumber = txtPozNumber.Text;
+            pozModels = new List<PozModel>();
+            Offer offer = CurrentManager.Instance.CurrentTender.Offer;
+
+            if (offer == null)
+            {
+                pozModels = UIPozManager.Instance.GetPozs(pozNumber);
+            }
+
+            else
+            {
+                List<OfferMaterialList> items = offer.MaterialList.Where(p => p.IsPoz).ToList();
+                if (items != null && items.Count != 0)
+                {
+                    foreach (var item in items)
+                    {
+                        if (!string.IsNullOrEmpty(pozNumber))
+                        {
+                            if (item.PozOBF.Number.Contains(pozNumber))
+                            {
+                                PozModel model = new PozModel();
+                                model.Description = item.PozOBF.Description;
+                                model.Number = item.PozOBF.Number;
+                                model.Unit = item.PozOBF.Unit;
+                                model.UnitPrice = item.PozOBF.UnitPrice;
+                                model.OfferPrice = item.Price;
+                                model.Id = item.PozOBFId;
+                                pozModels.Add(model);
+                            }
+                        }
+                        else
+                        {
+                            PozModel model = new PozModel();
+                            model.Description = item.PozOBF.Description;
+                            model.Number = item.PozOBF.Number;
+                            model.Unit = item.PozOBF.Unit;
+                            model.UnitPrice = item.PozOBF.UnitPrice;
+                            model.OfferPrice = item.Price;
+                            model.Id = item.PozOBFId;
+                            pozModels.Add(model);
+                        }
+                    }
+                }
+
+            }
+            grdPozList.DataSource = null;
             grdPozList.DataSource = pozModels;
         }
 
@@ -60,6 +107,7 @@ namespace IhalematikPro.Forms
                 materialList.PozOBFId = pozModel.Id.Value;
                 materialList.Tender = currentTender;
                 materialList.TenderGroupId = this.SelectedGroupId;
+                materialList.OfferPrice = pozModel.OfferPrice;
                 List<MaterialList> items = currentTender.MaterialList.Where(p => p.PozOBFId == materialList.PozOBFId && p.IsPoz).ToList();
 
                 if (items.Count == 0)
@@ -94,7 +142,7 @@ namespace IhalematikPro.Forms
             {
                 ((frm_Teklif_Adim1)_owner).RefreshDataGrid();
             }
-            
+
             this.Close();
         }
 
@@ -127,6 +175,27 @@ namespace IhalematikPro.Forms
 
         private void frm_PozluKayit_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void frm_PozluKayit_Shown(object sender, EventArgs e)
+        {
+            if (CurrentManager.Instance.CurrentTender.Offer == null)
+            {
+                colOfferPrice.Visible = false;
+                colAddedPozOfferPrice.Visible = false;
+                colPrice.Visible = true;
+                colAddedPozPrice.Visible = true;
+            }
+            else
+            {
+                colOfferPrice.Visible = true;
+                colAddedPozOfferPrice.Visible = true;
+                colPrice.Visible = false;
+                colAddedPozPrice.Visible = false;
+            }
+
+            this.LoadMaterialListGrid();
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
             List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items).ToList();
             grdAddedPoz.DataSource = dataSource;
