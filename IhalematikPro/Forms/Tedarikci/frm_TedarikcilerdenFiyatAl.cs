@@ -17,6 +17,7 @@ using IhalematikPro.Manager;
 using IhalematikPro.Forms;
 using System.IO;
 using ExcelDataReader;
+using IhalematikProUI.Forms.Tedarikci;
 
 namespace IhalematikProUI.Forms
 {
@@ -176,6 +177,23 @@ namespace IhalematikProUI.Forms
                     SupplierMaterialListProvider.Instance.Save(supplierMaterialList);
                 } 
             }
+        }
+
+        private void rpstSupplierDetail_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            this.Enabled = false;
+            //Kuzen bu bağlantıyı yaparsın
+             //frm_TedarikciyeAktarilanMalzemeDetay tkfmd = new frm_TedarikciyeAktarilanMalzemeDetay();
+            this.Enabled = true;
+        }
+
+        private void rpstMeterialDetail_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            //Malzemeye hangi firma hangi fiyatı vermiş
+            this.Enabled = false;
+            frm_MalzemeBazindaTedarikciFiyatDetay mbtfd = new frm_MalzemeBazindaTedarikciFiyatDetay();
+            mbtfd.ShowDialog();
+            this.Enabled = true;
         }
     }
 }

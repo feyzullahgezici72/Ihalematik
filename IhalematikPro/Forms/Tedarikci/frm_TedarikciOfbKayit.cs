@@ -13,6 +13,7 @@ using IhalematikPro.Model;
 using IhalematikProBL.Entity;
 using IhalematikProUI.Model;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -20,9 +21,9 @@ namespace IhalematikProUI.Forms.Tedarikci
     {
         List<OBFModel> oBFModels = new List<OBFModel>();
 
-        frm_TedarikcilereTeklifGonder _owner;
-
-        public frm_TedarikciOfbKayit(frm_TedarikcilereTeklifGonder Owner)
+        IhalematikBaseForm _owner;
+      
+        public frm_TedarikciOfbKayit(IhalematikBaseForm Owner)
         {
             InitializeComponent();
             this._owner = Owner;
@@ -112,8 +113,11 @@ namespace IhalematikProUI.Forms.Tedarikci
                     OfferMaterialListProvider.Instance.Save(item);
                 }
             }
-
-            this._owner.LoadMaterialGrid();
+            if (this._owner is frm_TedarikcilereTeklifGonder)
+            {
+                ((frm_TedarikcilereTeklifGonder)this._owner).LoadMaterialGrid();
+            }
+           
             this.Close();
         }
 
@@ -122,6 +126,11 @@ namespace IhalematikProUI.Forms.Tedarikci
             List<OfferMaterialList> items = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => !p.IsPoz).ToList();
             List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(items).ToList();
             grdAddedOBF.DataSource = models;
+        }
+
+        private void frm_TedarikciOfbKayit_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

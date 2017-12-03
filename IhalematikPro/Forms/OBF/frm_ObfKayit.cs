@@ -119,5 +119,10 @@ namespace IhalematikPro.Forms
             grdAddedOBF.DataSource = null;
             grdAddedOBF.DataSource = dataSource;
         }
+
+        private void frm_ObfKayit_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

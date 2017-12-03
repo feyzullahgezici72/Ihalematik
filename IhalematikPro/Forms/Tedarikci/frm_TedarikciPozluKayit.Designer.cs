@@ -278,7 +278,7 @@
             this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 1;
-            this.gridColumn5.Width = 142;
+            this.gridColumn5.Width = 109;
             // 
             // gridColumn6
             // 
@@ -300,7 +300,7 @@
             this.gridColumn6.OptionsFilter.AllowFilter = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 2;
-            this.gridColumn6.Width = 603;
+            this.gridColumn6.Width = 780;
             // 
             // gridColumn7
             // 
@@ -322,7 +322,7 @@
             this.gridColumn7.OptionsFilter.AllowFilter = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 3;
-            this.gridColumn7.Width = 137;
+            this.gridColumn7.Width = 80;
             // 
             // gridColumn8
             // 
@@ -346,7 +346,7 @@
             this.gridColumn8.OptionsFilter.AllowFilter = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 4;
-            this.gridColumn8.Width = 160;
+            this.gridColumn8.Width = 124;
             // 
             // grdAddedPoz
             // 
@@ -523,7 +523,7 @@
             this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 130;
+            this.gridColumn1.Width = 131;
             // 
             // gridColumn2
             // 
@@ -545,7 +545,7 @@
             this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 783;
+            this.gridColumn2.Width = 876;
             // 
             // gridColumn3
             // 
@@ -567,7 +567,7 @@
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 120;
+            this.gridColumn3.Width = 80;
             // 
             // gridColumn4
             // 
@@ -591,7 +591,7 @@
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 4;
-            this.gridColumn4.Width = 168;
+            this.gridColumn4.Width = 126;
             // 
             // grdPozList
             // 

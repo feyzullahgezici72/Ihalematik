@@ -146,6 +146,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlUst.Enabled = true;
             pnlFirma.Visible = false;
             pnlAktarmaPaneli.Visible = false;
+            colBirimFiyat.Visible = false;
             pnlMalzemeListesi.Dock = DockStyle.Fill;
             colMaterialListQuantity.OptionsColumn.AllowEdit = true;
             colMaterialListQuantity.OptionsColumn.AllowFocus = true;
@@ -209,6 +210,13 @@ namespace IhalematikProUI.Forms.Tedarikci
             md.SelectedSupplierId = selectedSupplierId;
             md.ShowDialog();
             this.Enabled = true;
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            btnListeOlustur.PerformClick();
+            colBirimFiyat.Visible = true;
+
         }
     }
 }

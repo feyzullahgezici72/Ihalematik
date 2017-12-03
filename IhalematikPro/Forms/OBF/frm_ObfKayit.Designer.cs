@@ -808,6 +808,7 @@
             this.Name = "frm_ObfKayit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ÖBF\'Lİ MALZEME EKLE";
+            this.Load += new System.EventHandler(this.frm_ObfKayit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();

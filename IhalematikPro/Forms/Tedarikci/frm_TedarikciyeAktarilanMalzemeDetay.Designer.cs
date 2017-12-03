@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikciyeAktarilanMalzemeDetay));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.emailMesajPanel = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.gridViewMaterialList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -57,14 +63,15 @@
             this.txtEmailBody = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.emailMesajPanel = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.emailMesajPanel)).BeginInit();
+            this.emailMesajPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
+            this.panelControl7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
+            this.panelControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedOfferMaterial)).BeginInit();
@@ -82,13 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlMail)).BeginInit();
             this.pnlMail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmailBody.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emailMesajPanel)).BeginInit();
-            this.emailMesajPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
-            this.panelControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
-            this.panelControl7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -101,13 +101,87 @@
             this.panelControl1.Size = new System.Drawing.Size(1041, 388);
             this.panelControl1.TabIndex = 0;
             // 
+            // emailMesajPanel
+            // 
+            this.emailMesajPanel.Appearance.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.emailMesajPanel.Appearance.Options.UseBackColor = true;
+            this.emailMesajPanel.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.emailMesajPanel.Controls.Add(this.panelControl7);
+            this.emailMesajPanel.Controls.Add(this.panelControl6);
+            this.emailMesajPanel.Location = new System.Drawing.Point(345, 69);
+            this.emailMesajPanel.Name = "emailMesajPanel";
+            this.emailMesajPanel.Size = new System.Drawing.Size(389, 204);
+            this.emailMesajPanel.TabIndex = 3;
+            this.emailMesajPanel.Visible = false;
+            // 
+            // panelControl7
+            // 
+            this.panelControl7.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl7.Appearance.BackColor2 = System.Drawing.Color.Crimson;
+            this.panelControl7.Appearance.Options.UseBackColor = true;
+            this.panelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl7.Controls.Add(this.labelControl7);
+            this.panelControl7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl7.Location = new System.Drawing.Point(0, 0);
+            this.panelControl7.Name = "panelControl7";
+            this.panelControl7.Size = new System.Drawing.Size(389, 37);
+            this.panelControl7.TabIndex = 1;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl7.Location = new System.Drawing.Point(14, 6);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(162, 24);
+            this.labelControl7.TabIndex = 3;
+            this.labelControl7.Text = "e-mail Gönderiliyor";
+            // 
+            // panelControl6
+            // 
+            this.panelControl6.Appearance.BackColor = System.Drawing.Color.White;
+            this.panelControl6.Appearance.Options.UseBackColor = true;
+            this.panelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl6.Controls.Add(this.labelControl5);
+            this.panelControl6.Controls.Add(this.pictureEdit1);
+            this.panelControl6.Location = new System.Drawing.Point(14, 48);
+            this.panelControl6.Name = "panelControl6";
+            this.panelControl6.Size = new System.Drawing.Size(360, 145);
+            this.panelControl6.TabIndex = 0;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelControl5.Location = new System.Drawing.Point(182, 65);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(143, 22);
+            this.labelControl5.TabIndex = 3;
+            this.labelControl5.Text = "Lütfen Bekleyiniz...";
+            // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.EditValue = global::IhalematikProUI.Properties.Resources.kaydediliyor;
+            this.pictureEdit1.Location = new System.Drawing.Point(12, 14);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit1.Properties.InitialImage = global::IhalematikProUI.Properties.Resources.loading;
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEdit1.Properties.ZoomPercent = 75D;
+            this.pictureEdit1.Size = new System.Drawing.Size(152, 121);
+            this.pictureEdit1.TabIndex = 2;
+            // 
             // grdMaterialList
             // 
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Location = new System.Drawing.Point(3, 3);
             this.grdMaterialList.MainView = this.gridViewMaterialList;
-            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstIsSelectedOfferMaterial});
@@ -276,7 +350,7 @@
             this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 82;
+            this.gridColumn1.Width = 121;
             // 
             // gridColumn2
             // 
@@ -298,7 +372,7 @@
             this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 369;
+            this.gridColumn2.Width = 698;
             // 
             // gridColumn3
             // 
@@ -320,7 +394,7 @@
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 68;
+            this.gridColumn3.Width = 98;
             // 
             // colQuantity
             // 
@@ -363,7 +437,7 @@
             this.panelControl2.Controls.Add(this.panelControl3);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1041, 35);
             this.panelControl2.TabIndex = 35;
@@ -377,7 +451,7 @@
             this.panelControl3.Controls.Add(this.btnKapat);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(1041, 35);
             this.panelControl3.TabIndex = 2;
@@ -391,7 +465,7 @@
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.labelControl1.Location = new System.Drawing.Point(14, 0);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
             this.labelControl1.Size = new System.Drawing.Size(580, 35);
@@ -407,7 +481,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1013, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 19;
@@ -435,7 +509,7 @@
             // txtAuthorNameSurname
             // 
             this.txtAuthorNameSurname.Location = new System.Drawing.Point(150, 47);
-            this.txtAuthorNameSurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAuthorNameSurname.Margin = new System.Windows.Forms.Padding(4);
             this.txtAuthorNameSurname.Name = "txtAuthorNameSurname";
             this.txtAuthorNameSurname.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtAuthorNameSurname.Properties.Appearance.Options.UseBackColor = true;
@@ -451,7 +525,7 @@
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl6.Location = new System.Drawing.Point(12, 50);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(130, 19);
             this.labelControl6.TabIndex = 90;
@@ -460,7 +534,7 @@
             // txtScore
             // 
             this.txtScore.Location = new System.Drawing.Point(150, 115);
-            this.txtScore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtScore.Margin = new System.Windows.Forms.Padding(4);
             this.txtScore.Name = "txtScore";
             this.txtScore.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtScore.Properties.Appearance.Options.UseBackColor = true;
@@ -476,7 +550,7 @@
             this.label99.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label99.Appearance.ForeColor = System.Drawing.Color.Black;
             this.label99.Location = new System.Drawing.Point(15, 118);
-            this.label99.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label99.Margin = new System.Windows.Forms.Padding(4);
             this.label99.Name = "label99";
             this.label99.Size = new System.Drawing.Size(126, 19);
             this.label99.TabIndex = 91;
@@ -485,7 +559,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(150, 80);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtEmail.Properties.Appearance.Options.UseBackColor = true;
@@ -501,7 +575,7 @@
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl9.Location = new System.Drawing.Point(57, 83);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(84, 19);
             this.labelControl9.TabIndex = 92;
@@ -512,7 +586,7 @@
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl3.Location = new System.Drawing.Point(556, 16);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(100, 19);
             this.labelControl3.TabIndex = 84;
@@ -523,7 +597,7 @@
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl4.Location = new System.Drawing.Point(68, 16);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(75, 19);
             this.labelControl4.TabIndex = 82;
@@ -532,7 +606,7 @@
             // txtCompanyName
             // 
             this.txtCompanyName.Location = new System.Drawing.Point(150, 13);
-            this.txtCompanyName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCompanyName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtCompanyName.Properties.Appearance.Options.UseBackColor = true;
@@ -546,7 +620,7 @@
             // memoEditSegment
             // 
             this.memoEditSegment.Location = new System.Drawing.Point(664, 15);
-            this.memoEditSegment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.memoEditSegment.Margin = new System.Windows.Forms.Padding(4);
             this.memoEditSegment.Name = "memoEditSegment";
             this.memoEditSegment.Properties.AccessibleDescription = "Name";
             this.memoEditSegment.Properties.AccessibleName = "Id";
@@ -592,86 +666,12 @@
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton1.Location = new System.Drawing.Point(855, 3);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(6);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(183, 74);
             this.simpleButton1.TabIndex = 5;
             this.simpleButton1.Text = "Mail Gönder";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // emailMesajPanel
-            // 
-            this.emailMesajPanel.Appearance.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.emailMesajPanel.Appearance.Options.UseBackColor = true;
-            this.emailMesajPanel.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.emailMesajPanel.Controls.Add(this.panelControl7);
-            this.emailMesajPanel.Controls.Add(this.panelControl6);
-            this.emailMesajPanel.Location = new System.Drawing.Point(345, 69);
-            this.emailMesajPanel.Name = "emailMesajPanel";
-            this.emailMesajPanel.Size = new System.Drawing.Size(389, 204);
-            this.emailMesajPanel.TabIndex = 3;
-            this.emailMesajPanel.Visible = false;
-            // 
-            // panelControl6
-            // 
-            this.panelControl6.Appearance.BackColor = System.Drawing.Color.White;
-            this.panelControl6.Appearance.Options.UseBackColor = true;
-            this.panelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl6.Controls.Add(this.labelControl5);
-            this.panelControl6.Controls.Add(this.pictureEdit1);
-            this.panelControl6.Location = new System.Drawing.Point(14, 48);
-            this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(360, 145);
-            this.panelControl6.TabIndex = 0;
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelControl5.Location = new System.Drawing.Point(182, 65);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(143, 22);
-            this.labelControl5.TabIndex = 3;
-            this.labelControl5.Text = "Lütfen Bekleyiniz...";
-            // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.EditValue = global::IhalematikProUI.Properties.Resources.kaydediliyor;
-            this.pictureEdit1.Location = new System.Drawing.Point(12, 14);
-            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit1.Properties.InitialImage = global::IhalematikProUI.Properties.Resources.loading;
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.pictureEdit1.Properties.ZoomPercent = 75D;
-            this.pictureEdit1.Size = new System.Drawing.Size(152, 121);
-            this.pictureEdit1.TabIndex = 2;
-            // 
-            // panelControl7
-            // 
-            this.panelControl7.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl7.Appearance.BackColor2 = System.Drawing.Color.Crimson;
-            this.panelControl7.Appearance.Options.UseBackColor = true;
-            this.panelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl7.Controls.Add(this.labelControl7);
-            this.panelControl7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl7.Location = new System.Drawing.Point(0, 0);
-            this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(389, 37);
-            this.panelControl7.TabIndex = 1;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl7.Location = new System.Drawing.Point(14, 6);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(162, 24);
-            this.labelControl7.TabIndex = 3;
-            this.labelControl7.Text = "e-mail Gönderiliyor";
             // 
             // frm_TedarikciyeAktarilanMalzemeDetay
             // 
@@ -694,6 +694,15 @@
             this.Shown += new System.EventHandler(this.frm_TedarikciyeAktarilanMalzemeDetay_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.emailMesajPanel)).EndInit();
+            this.emailMesajPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
+            this.panelControl7.ResumeLayout(false);
+            this.panelControl7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
+            this.panelControl6.ResumeLayout(false);
+            this.panelControl6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedOfferMaterial)).EndInit();
@@ -714,15 +723,6 @@
             this.pnlMail.ResumeLayout(false);
             this.pnlMail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmailBody.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emailMesajPanel)).EndInit();
-            this.emailMesajPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
-            this.panelControl6.ResumeLayout(false);
-            this.panelControl6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
-            this.panelControl7.ResumeLayout(false);
-            this.panelControl7.PerformLayout();
             this.ResumeLayout(false);
 
         }
