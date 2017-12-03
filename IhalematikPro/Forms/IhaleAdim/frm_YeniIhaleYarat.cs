@@ -21,7 +21,7 @@ namespace IhalematikPro.Forms
     public partial class frm_YeniIhaleYarat : DevExpress.XtraEditors.XtraForm
     {
         private object a1;
-
+        public int SelectedOfferId { get; set; }
         public frm_YeniIhaleYarat()
         {
             InitializeComponent();
@@ -31,12 +31,6 @@ namespace IhalematikPro.Forms
         {
             int lastTenderNumber = TenderManager.Instance.GetLastTenderNumber();
             txtTeklifNo.Text = string.Format("{0}", (lastTenderNumber + 1).ToString().PadLeft(8, '0'));
-
-            //CurrentManager.Vehicles = UIVehicleManager.Instance.GetVehicles();
-            //CurrentManager.Workers = UIWorkerManager.Instance.GetWorkers();
-
-            //grdVehicle.DataSource = CurrentManager.Vehicles;
-            //grdWorker.DataSource = CurrentManager.Workers;
         }
 
         private void a1_FormClosed(object sender, FormClosedEventArgs e)
@@ -44,24 +38,9 @@ namespace IhalematikPro.Forms
             a1 = null;
         }
 
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void frm_YeniIhaleYarat_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
-        }
-
-        private void frm_YeniIhaleYarat_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
         }
 
         private void btnIhaleOlustur_Click(object sender, EventArgs e)
@@ -74,6 +53,7 @@ namespace IhalematikPro.Forms
                 int lastTenderNumber = TenderManager.Instance.GetLastTenderNumber();
                 tender.Number = lastTenderNumber + 1;
                 tender.Description = txtAciklama.Text;
+                tender.OfferId = this.SelectedOfferId;
                 tender.LastOfferDate = LastOfferDate.DateTime;
                 tender.CompanyName = txtcompanyName.Text;
                 tender.EkapNumber = txtEkapNumber.Text;
@@ -110,5 +90,35 @@ namespace IhalematikPro.Forms
             }
         }
 
+        private void frm_YeniIhaleYarat_Shown(object sender, EventArgs e)
+        {
+            this.LoadGridOffer();
+        }
+
+        private void LoadGridOffer()
+        {
+            List<Offer> offers = OfferProvider.Instance.GetItems();
+            grdOffer.DataSource = offers;
+        }
+
+        private void gridViewOffer_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            for (int i = 0; i < gridViewOffer.RowCount; i++)
+            {
+                gridViewOffer.SetRowCellValue(i, colIsSelected, false);
+            }
+            gridViewOffer.SetFocusedRowCellValue(colIsSelected, true);
+            this.SelectedOfferId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOffer.GetFocusedRowCellValue("Id"));
+        }
+
+        private void rpstSelected_CheckedChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < gridViewOffer.RowCount; i++)
+            {
+                gridViewOffer.SetRowCellValue(i, colIsSelected, false);
+            }
+            gridViewOffer.SetFocusedRowCellValue(colIsSelected, true);
+            this.SelectedOfferId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOffer.GetFocusedRowCellValue("Id"));
+        }
     }
 }

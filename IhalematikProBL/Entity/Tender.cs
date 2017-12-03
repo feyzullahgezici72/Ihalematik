@@ -56,6 +56,17 @@ namespace IhalematikProBL.Entity
         {
             get
             {
+                //if (this.Offer != null)
+                //{
+                //    this.materialList = new List<Entity.MaterialList>();
+
+                //    foreach (var item in this.Offer.MaterialList)
+                //    {
+                //        MaterialList materialList = new MaterialList().ToMaterialList(item);
+                //        this.materialList.Add(materialList);
+                //    }
+                //}
+
                 if (this.materialList == null)
                 {
                     this.materialList = MaterialListProvider.Instance.GetItems("TenderId", this.Id);
@@ -84,6 +95,20 @@ namespace IhalematikProBL.Entity
             set
             {
                 this.groups = value;
+            }
+        }
+
+        public int OfferId { get; set; }
+        private Offer offer { get; set; }
+        public Offer Offer
+        {
+            get
+            {
+                if (this.offer == null && this.OfferId != 0)
+                {
+                    this.offer = OfferProvider.Instance.GetItem(this.OfferId);
+                }
+                return this.offer;
             }
         }
     }

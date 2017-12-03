@@ -26,6 +26,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("Procedure", t.Procedure);
             parameters.Add("Place", t.Place);
             parameters.Add("Management", t.Management);
+            parameters.Add("OfferId", t.OfferId);
             return parameters;
         }
 
@@ -43,6 +44,7 @@ namespace IhalematikProBL.Provider
             t.Procedure = dr.GetValue<string>("Procedure");
             t.Place = dr.GetValue<string>("Place");
             t.Management = dr.GetValue<string>("Management");
+            t.OfferId = dr.GetValue<int>("OfferId");
         }
     }
 }
