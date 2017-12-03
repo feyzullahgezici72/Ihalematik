@@ -13,15 +13,16 @@ using IhalematikPro.Model;
 using IhalematikProBL.Entity;
 using IhalematikProUI.Model;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
-    public partial class frm_TedarikciPozluKayit : DevExpress.XtraEditors.XtraForm
+    public partial class frm_TedarikciPozluKayit : IhalematikBaseForm
     {
         List<PozModel> pozModels = new List<PozModel>();
-        frm_TedarikcilereTeklifGonder _owner;
-
-        public frm_TedarikciPozluKayit(frm_TedarikcilereTeklifGonder Owner)
+        IhalematikBaseForm _owner;
+        
+        public frm_TedarikciPozluKayit(IhalematikBaseForm Owner)
         {
             InitializeComponent();
             this._owner = Owner;
@@ -118,7 +119,16 @@ namespace IhalematikProUI.Forms.Tedarikci
                 }
             }
 
-            this._owner.LoadMaterialGrid();
+            if (this._owner is frm_TedarikcilereTeklifGonder)
+            {
+                ((frm_TedarikcilereTeklifGonder)this._owner).LoadMaterialGrid();
+            }
+
+            //if (this._owner is frm_TedarikciyeAktarilanMalzemeDetay)
+            //{
+            //   // ((frm_TedarikcilereGonderilmeyecekListeOlustur)this._owner).LoadMaterialGrid();
+            //}
+
             this.Close();
         }
     }

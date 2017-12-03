@@ -281,7 +281,7 @@
             this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn5.Caption = "ÖBF NO";
+            this.gridColumn5.Caption = "ÖBF KODU";
             this.gridColumn5.FieldName = "PozOBFNumber";
             this.gridColumn5.MinWidth = 80;
             this.gridColumn5.Name = "gridColumn5";
@@ -312,7 +312,7 @@
             this.gridColumn6.OptionsFilter.AllowFilter = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 2;
-            this.gridColumn6.Width = 688;
+            this.gridColumn6.Width = 757;
             // 
             // gridColumn7
             // 
@@ -333,7 +333,7 @@
             this.gridColumn7.OptionsFilter.AllowFilter = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 3;
-            this.gridColumn7.Width = 151;
+            this.gridColumn7.Width = 85;
             // 
             // gridColumn8
             // 
@@ -356,7 +356,7 @@
             this.gridColumn8.OptionsFilter.AllowFilter = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 4;
-            this.gridColumn8.Width = 127;
+            this.gridColumn8.Width = 124;
             // 
             // grdAddedOBF
             // 
@@ -554,7 +554,7 @@
             this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 807;
+            this.gridColumn2.Width = 884;
             // 
             // gridColumn3
             // 
@@ -575,7 +575,7 @@
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 159;
+            this.gridColumn3.Width = 85;
             // 
             // gridColumn4
             // 
@@ -598,7 +598,7 @@
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 4;
-            this.gridColumn4.Width = 120;
+            this.gridColumn4.Width = 117;
             // 
             // grdOBFList
             // 
@@ -829,6 +829,7 @@
             this.Name = "frm_TedarikciOfbKayit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ÖBF\'Lİ MALZEME EKLE";
+            this.Load += new System.EventHandler(this.frm_TedarikciOfbKayit_Load);
             this.Shown += new System.EventHandler(this.frm_TedarikciOfbKayit_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
