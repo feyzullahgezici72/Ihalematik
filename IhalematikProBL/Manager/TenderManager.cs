@@ -21,14 +21,14 @@ namespace IhalematikProBL.Manager
         {
             OperationResult result = TenderProvider.Instance.Save(Tender);
 
-            if (result.Success)
-            {
-                foreach (TenderEquipment item in Tender.Equipments)
-                {
-                    item.TenderId = Tender.Id;
-                    TenderEquipmentProvider.Instance.Save(item);
-                }
-            }
+            //if (result.Success)
+            //{
+            //    foreach (TenderEquipment item in Tender.Equipments)
+            //    {
+            //        item.TenderId = Tender.Id;
+            //        TenderEquipmentProvider.Instance.Save(item);
+            //    }
+            //}
             return result.Success;
         }
     }

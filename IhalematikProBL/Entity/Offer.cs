@@ -13,6 +13,8 @@ namespace IhalematikProBL.Entity
         public string Description { get; set; }
         public bool IsActive { get; set; }
 
+        public bool IsSelected { get; set; }
+
         public DateTime DateTime { get; set; }
 
         private List<OfferMaterialList> materialList { get; set; }
@@ -47,5 +49,25 @@ namespace IhalematikProBL.Entity
             }
         }
 
+        private List<SupplierMaterialList> supplierMaterialList { get; set; }
+        public List<SupplierMaterialList> SelectedSupplierMaterialList
+        {
+            get
+            {
+                if (this.supplierMaterialList == null)
+                {
+                    Dictionary<string, object> param = new Dictionary<string, object>();
+                    param.Add("OfferId", this.Id);
+                    param.Add("IsSelected", true);
+                    this.supplierMaterialList = SupplierMaterialListProvider.Instance.GetItems(param);
+                }
+
+                return this.supplierMaterialList;
+            }
+            set
+            {
+                this.supplierMaterialList = value;
+            }
+        }
     }
 }
