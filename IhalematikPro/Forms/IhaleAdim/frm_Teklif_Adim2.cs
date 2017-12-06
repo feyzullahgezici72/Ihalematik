@@ -37,11 +37,6 @@ namespace IhalematikPro.Forms
             af.RibonAktif();
         }
 
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void frm_Teklif_Adim2_Load(object sender, EventArgs e)
         {
             lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
@@ -116,10 +111,7 @@ namespace IhalematikPro.Forms
             }
         }
         frm_TeklifAdimSon a4 = (frm_TeklifAdimSon)Application.OpenForms["frm_TeklifSonAdim"];
-        private void btnKaydet_Click(object sender, EventArgs e)
-        {
-           
-        }
+      
         private void a4_FormClosed(object sender, FormClosedEventArgs e)
         {
             a4 = null;

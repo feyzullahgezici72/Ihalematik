@@ -20,7 +20,7 @@ namespace IhalematikPro
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            CurrentManager.Instance.CurrentTender = TenderProvider.Instance.GetItems().OrderByDescending(p=> p.InsertTime).FirstOrDefault();
+            CurrentManager.Instance.CurrentTender = TenderProvider.Instance.GetItem(1233);
             CurrentManager.Instance.CurrentCompany = CompanyProvider.Instance.GetItems().FirstOrDefault();
             CurrentManager.Instance.CurrentOffer = OfferProvider.Instance.GetItems().LastOrDefault();
             Application.Run(new Forms.frm_Anaform());

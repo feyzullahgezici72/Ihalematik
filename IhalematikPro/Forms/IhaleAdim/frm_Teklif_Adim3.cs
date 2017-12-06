@@ -376,7 +376,6 @@ namespace IhalematikPro.Forms
             grdAddVehicle.Refresh();
         }
 
-       
 
         private void A5_FormClosed(object sender, FormClosedEventArgs e)
         {

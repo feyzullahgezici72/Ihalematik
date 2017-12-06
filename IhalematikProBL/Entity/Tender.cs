@@ -1,4 +1,5 @@
-﻿using IhalematikProBL.Provider;
+﻿using IhalematikProBL.Manager;
+using IhalematikProBL.Provider;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,7 +63,8 @@ namespace IhalematikProBL.Entity
 
                 //    foreach (var item in this.Offer.MaterialList)
                 //    {
-                //        MaterialList materialList = new MaterialList().ToMaterialList(item);
+                //        MaterialList materialList = new MaterialList();
+                //        double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id);
                 //        this.materialList.Add(materialList);
                 //    }
                 //}

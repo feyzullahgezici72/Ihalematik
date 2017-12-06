@@ -43,7 +43,7 @@ namespace IhalematikProBL.Provider
             t.TenderId = dr.GetValue<int>("TenderId");
             t.UnitTime = dr.GetValue<int>("UnitTime");
             t.UnitTimeType = dr.GetValue<UnitTimeTypesEnum>("UnitTimeType");
-            t.TenderGroupId = dr.GetValue<int>("TenderGroupId");
+            t.TenderGroupId = dr.GetValue<int>("TenderGroupId"); 
         }
     }
 }

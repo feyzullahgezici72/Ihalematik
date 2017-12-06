@@ -18,6 +18,7 @@ namespace IhalematikPro.Model
         public string Unit { get; set; }
         public double UnitPrice { get; set; }
         public bool IsActive { get; set; }
+        public double OfferPrice { get; internal set; }
 
         public OBFModel(OBF Entity)
         {

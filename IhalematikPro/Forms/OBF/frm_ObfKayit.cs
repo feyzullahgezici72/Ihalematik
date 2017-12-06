@@ -12,6 +12,7 @@ using IhalematikPro.Manager;
 using IhalematikProBL.Entity;
 using IhalematikPro.Model;
 using IhalematikProBL.Provider;
+using IhalematikProBL.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -52,13 +53,13 @@ namespace IhalematikPro.Forms
 
             foreach (int item in selectedRows)
             {
-                OBFModel pozModel = selectedRowsItems[item];
+                OBFModel obfModel = selectedRowsItems[item];
                 MaterialList materialList = new MaterialList();
                 materialList.IsPoz = false;
-                materialList.PozOBFId = pozModel.Id.Value;
+                materialList.PozOBFId = obfModel.Id.Value;
                 materialList.Tender = currentTender;
                 materialList.TenderGroupId = this.SelectedGroupId;
-
+                materialList.OfferPrice = obfModel.OfferPrice;
                 List<MaterialList> items = currentTender.MaterialList.Where(p => p.PozOBFId == materialList.PozOBFId && !p.IsPoz).ToList();
 
                 if (items.Count == 0)
@@ -115,14 +116,115 @@ namespace IhalematikPro.Forms
 
             List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(currentTender.MaterialList.Where(p => !p.IsPoz && p.TenderGroupId == this.SelectedGroupId && !p.IsMarkedForDeletion).ToList());
 
-
             grdAddedOBF.DataSource = null;
             grdAddedOBF.DataSource = dataSource;
         }
 
-        private void frm_ObfKayit_Load(object sender, EventArgs e)
+        private void frm_ObfKayit_Shown(object sender, EventArgs e)
         {
+            if (CurrentManager.Instance.CurrentTender.Offer == null)
+            {
+                colOfferPrice.Visible = false;
+                colAddedOBFOfferPrice.Visible = false;
+                colPrice.Visible = true;
+                colAddedOBFPrice.Visible = true;
+            }
+            else
+            {
+                colOfferPrice.Visible = true;
+                colAddedOBFOfferPrice.Visible = true;
+                colPrice.Visible = false;
+                colAddedOBFPrice.Visible = false;
+            }
 
+            this.LoadMaterialListGrid();
+            this.LoadAddedOBFGrid();
+        }
+
+        private void LoadAddedOBFGrid()
+        {
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && !p.IsPoz).ToList();
+
+            Offer offer = CurrentManager.Instance.CurrentTender.Offer;
+            foreach (var item in items)
+            {
+                OfferMaterialList offerMaterialList = offer.MaterialList.Where(p => p.PozOBFId == item.PozOBFId && !p.IsPoz).FirstOrDefault();
+                if (offerMaterialList != null)
+                {
+                    item.OfferPrice = OfferManager.Instance.GetOfferMaterialListPrice(offerMaterialList.Id);
+                }
+            }
+
+            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items).ToList();
+            grdAddedOBF.DataSource = dataSource;
+        }
+
+        private void LoadMaterialListGrid()
+        {
+            string obfNumber = txtNumber.Text;
+            oBFModels = new List<OBFModel>();
+            Offer offer = CurrentManager.Instance.CurrentTender.Offer;
+            List<MaterialList> selectedMaterialLists = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && !p.IsPoz).ToList();
+
+            if (offer == null)
+            {
+                oBFModels = UIOBFManager.Instance.GetOBFs(obfNumber);
+            }
+
+            else
+            {
+                List<OfferMaterialList> items = offer.MaterialList.Where(p => !p.IsPoz && p.IsSelected).ToList();
+                if (items != null && items.Count != 0)
+                {
+                    foreach (var item in items)
+                    {
+                        bool isExist = false;
+
+                        foreach (var selectedMaterialList in selectedMaterialLists)
+                        {
+                            if (selectedMaterialList.PozOBFId == item.PozOBFId)
+                            {
+                                isExist = true;
+                                break;
+                            }
+                        }
+
+                        if (!isExist)
+                        {
+                            if (!string.IsNullOrEmpty(obfNumber))
+                            {
+                                if (item.PozOBF.Number.Contains(obfNumber))
+                                {
+                                    OBFModel model = new OBFModel();
+                                    model.Description = item.PozOBF.Description;
+                                    model.Number = item.PozOBF.Number;
+                                    model.Unit = item.PozOBF.Unit;
+                                    model.UnitPrice = item.PozOBF.UnitPrice;
+                                    double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id);
+                                    model.OfferPrice = offerPrice;
+                                    model.Id = item.PozOBFId;
+                                    oBFModels.Add(model);
+                                }
+                            }
+                            else
+                            {
+                                OBFModel model = new OBFModel();
+                                model.Description = item.PozOBF.Description;
+                                model.Number = item.PozOBF.Number;
+                                model.Unit = item.PozOBF.Unit;
+                                model.UnitPrice = item.PozOBF.UnitPrice;
+                                double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id);
+                                model.OfferPrice = offerPrice;
+                                model.Id = item.PozOBFId;
+                                oBFModels.Add(model);
+                            }
+                        }
+                    }
+                }
+
+            }
+            grdOBFList.DataSource = null;
+            grdOBFList.DataSource = oBFModels;
         }
     }
 }

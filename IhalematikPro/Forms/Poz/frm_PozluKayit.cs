@@ -13,6 +13,7 @@ using IhalematikPro.Manager;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms.Base;
+using IhalematikProBL.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -45,6 +46,7 @@ namespace IhalematikPro.Forms
             string pozNumber = txtPozNumber.Text;
             pozModels = new List<PozModel>();
             Offer offer = CurrentManager.Instance.CurrentTender.Offer;
+            List<MaterialList> selectedMaterialLists = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsPoz).ToList();
 
             if (offer == null)
             {
@@ -58,30 +60,46 @@ namespace IhalematikPro.Forms
                 {
                     foreach (var item in items)
                     {
-                        if (!string.IsNullOrEmpty(pozNumber))
+                        bool isExist = false;
+
+                        foreach (var selectedMaterialList in selectedMaterialLists)
                         {
-                            if (item.PozOBF.Number.Contains(pozNumber))
+                            if (selectedMaterialList.PozOBFId == item.PozOBFId)
+                            {
+                                isExist = true;
+                                break;
+                            }
+                        }
+
+                        if (!isExist)
+                        {
+                            if (!string.IsNullOrEmpty(pozNumber))
+                            {
+                                if (item.PozOBF.Number.Contains(pozNumber))
+                                {
+                                    PozModel model = new PozModel();
+                                    model.Description = item.PozOBF.Description;
+                                    model.Number = item.PozOBF.Number;
+                                    model.Unit = item.PozOBF.Unit;
+                                    model.UnitPrice = item.PozOBF.UnitPrice;
+                                    double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id);
+                                    model.OfferPrice = offerPrice;
+                                    model.Id = item.PozOBFId;
+                                    pozModels.Add(model);
+                                }
+                            }
+                            else
                             {
                                 PozModel model = new PozModel();
                                 model.Description = item.PozOBF.Description;
                                 model.Number = item.PozOBF.Number;
                                 model.Unit = item.PozOBF.Unit;
                                 model.UnitPrice = item.PozOBF.UnitPrice;
-                                model.OfferPrice = item.Price;
+                                double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id);
+                                model.OfferPrice = offerPrice;
                                 model.Id = item.PozOBFId;
                                 pozModels.Add(model);
                             }
-                        }
-                        else
-                        {
-                            PozModel model = new PozModel();
-                            model.Description = item.PozOBF.Description;
-                            model.Number = item.PozOBF.Number;
-                            model.Unit = item.PozOBF.Unit;
-                            model.UnitPrice = item.PozOBF.UnitPrice;
-                            model.OfferPrice = item.Price;
-                            model.Id = item.PozOBFId;
-                            pozModels.Add(model);
                         }
                     }
                 }
@@ -196,7 +214,24 @@ namespace IhalematikPro.Forms
             }
 
             this.LoadMaterialListGrid();
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
+
+            this.LoadAddedPozGrid();
+        }
+
+        private void LoadAddedPozGrid()
+        {
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsPoz).ToList();
+
+            Offer offer = CurrentManager.Instance.CurrentTender.Offer;
+            foreach (var item in items)
+            {
+                OfferMaterialList offerMaterialList = offer.MaterialList.Where(p => p.PozOBFId == item.PozOBFId && p.IsPoz).FirstOrDefault();
+                if (offerMaterialList != null)
+                {
+                    item.OfferPrice = OfferManager.Instance.GetOfferMaterialListPrice(offerMaterialList.Id);
+                }
+            }
+
             List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items).ToList();
             grdAddedPoz.DataSource = dataSource;
         }

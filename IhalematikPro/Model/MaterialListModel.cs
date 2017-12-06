@@ -10,6 +10,7 @@ using System.Dynamic;
 using IhalematikProUI.Model;
 using IhalematikPro.Manager;
 using System.Collections;
+using IhalematikProBL.Manager;
 
 namespace IhalematikPro.Model
 {
@@ -24,7 +25,7 @@ namespace IhalematikPro.Model
                 {
                     return 0;
                 }
-                return Math.Round((this.KDVPercentage * this.pozOBF.UnitPrice / 100 * this.Quantity), 2);
+                return Math.Round((this.KDVPercentage * this.PozOBFUnitPrice / 100 * this.Quantity), 2);
             }
         }
 
@@ -32,11 +33,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                if (this.pozOBF == null)
-                {
-                    return 0;
-                }
-                return Math.Round(this.pozOBF.UnitPrice * this.Quantity, 2);
+                return Math.Round(this.PozOBFUnitPrice * this.Quantity, 2);
             }
         }
         public bool IsPoz { get; set; }
@@ -102,15 +99,20 @@ namespace IhalematikPro.Model
             }
         }
 
+        private double pozOBFUnitPrice { get; set; }
         public double PozOBFUnitPrice
         {
             get
             {
-                if (this.PozOBF != null)
+                if (this.Tender.Offer == null && this.PozOBF != null)
                 {
-                    return this.PozOBF.UnitPrice;
+                    this.pozOBFUnitPrice = this.PozOBF.UnitPrice;
                 }
-                return 0;
+                return this.pozOBFUnitPrice;
+            }
+            set
+            {
+                this.pozOBFUnitPrice = value;
             }
         }
 
@@ -129,7 +131,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                return Math.Round(this.Markup * this.PozOBF.UnitPrice / 100, 2);
+                return Math.Round(this.Markup * this.PozOBFUnitPrice / 100, 2);
             }
         }
 
@@ -149,7 +151,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                return Math.Round(this.PozOBF.UnitPrice + this.UnitMarkup, 2);
+                return Math.Round(this.PozOBFUnitPrice + this.UnitMarkup, 2);
             }
         }
 
@@ -283,7 +285,6 @@ namespace IhalematikPro.Model
 
         //BIRIM SURE
         public int UnitTime { get; set; }
-
         public double OfferPrice { get; set; }
 
         public int TenderId { get; set; }
@@ -313,15 +314,21 @@ namespace IhalematikPro.Model
             this.KDVPercentage = Entity.KDVPercentage;
             this.PozOBFId = Entity.PozOBFId;
             this.Quantity = Entity.Quantity;
-            this.Id = Entity.Id;
-            this.IsPoz = Entity.IsPoz;
-            this.Markup = Entity.Markup;
             this.TenderId = Entity.TenderId;
+            this.Id = Entity.Id;
+            this.Markup = Entity.Markup;
             this.UnitTimeType = new UnitTimeTypesModel().Create(Entity.UnitTimeType);
             this.UnitTime = Entity.UnitTime;
             this.WorkerPercentageMarkup = Entity.WorkerMarkup;
             this.TenderMaterialListEquipment = Entity.TenderMaterialListEquipment;
             this.OfferPrice = Entity.OfferPrice;
+            this.IsPoz = Entity.IsPoz;
+            OfferMaterialList offerMaterialList = OfferManager.Instance.GetOfferMaterialListPrice(this.Tender.OfferId, this.PozOBFId, this.IsPoz);
+            this.PozOBFUnitPrice = offerMaterialList.Price;
+            if (this.Tender.Offer != null)
+            {
+                this.Quantity = offerMaterialList.Quantity; 
+            }
             //this.TenderMaterialListEquipment = IhalematikModelBase.GetModels<TenderMaterialListEquipmentModel, TenderMaterialListEquipment>(Entity.TenderMaterialListEquipment);
         }
 

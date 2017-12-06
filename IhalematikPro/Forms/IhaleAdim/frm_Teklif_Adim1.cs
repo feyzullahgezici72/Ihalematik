@@ -107,30 +107,10 @@ namespace IhalematikPro.Forms
 
         private void OpenForm2()
         {
-            //this.Enabled = false;
-            //frm_MesajFormu frm = new frm_MesajFormu();
-            //frm.lblMesaj.Text = "Sonraki Adım Açılıyor...";
-            //frm.ShowDialog();
             this.Close();
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             af.RibonPasif();
             af.btnAdimx4.PerformClick();
-
-            //frm_Teklif_Adim2 a4 = (frm_Teklif_Adim2)Application.OpenForms["frm_Teklif_Adim2"];
-            //frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-            //if (a4 == null)
-            //{
-            //    a4 = new frm_Teklif_Adim2();
-            //    a4.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-            //    a4.FormClosed += new FormClosedEventHandler(a4_FormClosed);
-            //    af.MainPanel.Visible = false;
-            //    a4.Show();
-
-            //}
-            //else
-            //{
-            //    a4.Activate();
-            //}
         }
 
         private void a4_FormClosed(object sender, FormClosedEventArgs e)
@@ -180,7 +160,14 @@ namespace IhalematikPro.Forms
             if (this.SelectedGroupId != 0 && CurrentManager.Instance.CurrentTender.MaterialList != null)
             {
                 List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
-                grdMaterialList.DataSource = items;
+                List<MaterialListModel> models = new List<MaterialListModel>();
+                foreach (var item in items)
+                {
+                    MaterialListModel model = new MaterialListModel(item);
+                    models.Add(model);
+                }
+                
+                grdMaterialList.DataSource = models;
             }
         }
 
