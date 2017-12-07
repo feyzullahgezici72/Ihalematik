@@ -23,7 +23,6 @@ namespace IhalematikPro.Manager
         }
         public List<MaterialList> GetMaterialListIsWorkship()
         {
-
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("IsWorkship", true);
             parameters.Add("TenderId", CurrentManager.Instance.CurrentTender.Id);

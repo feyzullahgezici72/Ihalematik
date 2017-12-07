@@ -129,13 +129,13 @@ namespace IhalematikPro.Forms
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-                //foreach (TenderMaterialListEquipment tenderMaterialListEquipment in materialListModel.TenderMaterialListEquipment)
-                //{
-                //    TenderMaterialListEquipmentProvider.Instance.Save(tenderMaterialListEquipment);
-                //}
-            }
+            //foreach (TenderMaterialListEquipment tenderMaterialListEquipment in materialListModel.TenderMaterialListEquipment)
+            //{
+            //    TenderMaterialListEquipmentProvider.Instance.Save(tenderMaterialListEquipment);
+            //}
+        }
 
-          
+
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -147,30 +147,21 @@ namespace IhalematikPro.Forms
         private void btnTumuneUygula_Click(object sender, EventArgs e)
         {
             double markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtWorkerMarkup.Text.Replace("%", ""));
-            List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
-            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            models.ForEach(p => p.Markup = markup);
-            foreach (var item in items)
+            List<MaterialListModel> models = grdMaterialListIsWorkship.DataSource as List<MaterialListModel>;
+            models.ForEach(p => p.WorkerPercentageMarkup = markup);
+            foreach (var model in models)
             {
+                MaterialList item = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.Id == model.Id).FirstOrDefault();
                 item.WorkerMarkup = markup;
-                OperationResult result = MaterialListProvider.Instance.Save(item);
-                if (!result.Success)
-                {
-                    //TODO feyzullahg
-                }
             }
-            this.frm_Teklif_Adim3_Load(null, null);
+            grdMaterialListIsWorkship.DataSource = null;
+            grdMaterialListIsWorkship.DataSource = models;
         }
 
         private void btnPanelKapat_Click(object sender, EventArgs e)
         {
             panelKapat();
             grdMaterialListIsWorkship.Refresh();
-        }
-
-        private void simpleButton1_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         #endregion
@@ -485,7 +476,7 @@ namespace IhalematikPro.Forms
                 {
                     if (item.Id.Equals(currenMaterialId))
                     {
-                        item.Markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
+                        item.WorkerMarkup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
                         break;
                     }
                 }

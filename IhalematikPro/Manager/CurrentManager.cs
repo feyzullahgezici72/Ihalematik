@@ -15,5 +15,7 @@ namespace IhalematikPro.Manager
         public Tender CurrentTender { get; set; }
         public Company CurrentCompany { get; set; }
         public Offer CurrentOffer { get; set; }
+
+        public List<MaterialListModel> CurrentMaterialListModel { get; set; }
     }
 }

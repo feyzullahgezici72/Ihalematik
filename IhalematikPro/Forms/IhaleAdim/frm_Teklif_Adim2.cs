@@ -170,13 +170,13 @@ namespace IhalematikPro.Forms
             {
                 frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
                 af.RibonPasif();
-                af.btnAdimx3.PerformClick();
+                af.btnAdimx5.PerformClick();
             }
             else
             {
                 frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
                 af.RibonPasif();
-                af.btnAdimx5.PerformClick();
+                af.btnAdimx3.PerformClick();
             }
 
         }

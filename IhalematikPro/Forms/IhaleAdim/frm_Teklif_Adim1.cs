@@ -84,27 +84,6 @@ namespace IhalematikPro.Forms
             }
         }
 
-       
-
-        private void SaveMaterialListIsWorkship()
-        {
-            int[] selectedRows = gridViewMaterialList.GetSelectedRows();
-
-            MaterialList[] items = CurrentManager.Instance.CurrentTender.MaterialList.ToArray();
-
-            foreach (int rowIndex in selectedRows)
-            {
-                MaterialList item = items[rowIndex];
-                item.IsWorkship = true;
-            }
-
-            foreach (MaterialList item in CurrentManager.Instance.CurrentTender.MaterialList)
-            {
-                item.TenderId = CurrentManager.Instance.CurrentTender.Id;
-                MaterialListProvider.Instance.Save(item);
-            }
-        }
-
         private void OpenForm2()
         {
             this.Close();
@@ -146,6 +125,7 @@ namespace IhalematikPro.Forms
 
         private void gridViewTenderGroup_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
+            this.SaveMaterialListIsWorkship();
             for (int i = 0; i < gridViewTenderGroup.RowCount; i++)
             {
                 gridViewTenderGroup.SetRowCellValue(i, colIsSelected, false);
@@ -153,6 +133,21 @@ namespace IhalematikPro.Forms
             gridViewTenderGroup.SetFocusedRowCellValue(colIsSelected, true);
             this.SelectedGroupId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewTenderGroup.GetFocusedRowCellValue("Id"));
             this.LoadTenderMaterialList();
+        }
+
+        private void SaveMaterialListIsWorkship()
+        {
+            List<MaterialListModel> models = grdMaterialList.DataSource as List<MaterialListModel>;
+
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+
+            foreach (MaterialListModel model in models)
+            {
+                MaterialList item = items.Where(p => p.Id == model.Id).FirstOrDefault();
+                item.Quantity = model.Quantity;
+                item.KDVPercentage = model.KDVPercentage;
+                item.IsWorkship = model.IsWorkship;
+            }
         }
 
         public void LoadTenderMaterialList()
@@ -166,7 +161,7 @@ namespace IhalematikPro.Forms
                     MaterialListModel model = new MaterialListModel(item);
                     models.Add(model);
                 }
-                
+
                 grdMaterialList.DataSource = models;
             }
         }
@@ -189,6 +184,7 @@ namespace IhalematikPro.Forms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            this.SaveMaterialListIsWorkship();
             this.OpenForm2();
         }
     }
