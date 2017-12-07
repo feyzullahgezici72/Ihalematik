@@ -171,7 +171,8 @@ namespace IhalematikPro.Forms
         {
             bindingSourceAddWorker.DataSource = null;
             int currentId = Convert.ToInt32(gridViewMaterialListIsWorkship.GetFocusedRowCellValue("Id"));
-            List<MaterialListModel> models = grdMaterialListIsWorkship.DataSource as List<MaterialListModel>;
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
+            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             foreach (var item in models)
             {
                 if (item.Id == currentId)
@@ -504,7 +505,7 @@ namespace IhalematikPro.Forms
         private void btnTamam_Click(object sender, EventArgs e)
         {
             panelKapat();
-            grdMaterialListIsWorkship.Refresh();
+            this.LoadTenderMaterialList();
         }
     }
 }

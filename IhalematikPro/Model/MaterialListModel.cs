@@ -243,15 +243,15 @@ namespace IhalematikPro.Model
         {
             get
             {
-                if (this.tenderMaterialListEquipment == null)
-                {
+                //if (this.tenderMaterialListEquipment == null)
+                //{
                     this.tenderMaterialListEquipment = new List<IhalematikProBL.Entity.TenderMaterialListEquipment>();
                     Dictionary<string, object> parameters = new Dictionary<string, object>();
                     parameters.Add("TenderId", this.Tender.Id);
                     parameters.Add("MaterialId", this.Id);
 
                     this.tenderMaterialListEquipment = TenderMaterialListEquipmentProvider.Instance.GetItems(parameters);
-                }
+                //}
                 return this.tenderMaterialListEquipment;
             }
             set
