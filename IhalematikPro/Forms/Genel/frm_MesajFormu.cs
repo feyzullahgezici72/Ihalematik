@@ -48,12 +48,12 @@ namespace IhalematikProUI.Forms
             pbControl.Visible = true;
             for (int i = 0; i < 101; i++)
             {
-                Thread.Sleep(5);
+                Thread.Sleep(0);
                 pbControl.Position = i;
                 Application.DoEvents();
             }
-            timer1.Enabled = false;
-            this.Close();
+            //timer1.Enabled = false;
+            //this.Close();
         }
     }
 }

@@ -273,7 +273,7 @@
             // 
             // txtUnitPrice
             // 
-            this.txtUnitPrice.EditValue = "";
+            this.txtUnitPrice.EditValue = "0,00 TL";
             this.txtUnitPrice.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtUnitPrice, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.txtUnitPrice.Location = new System.Drawing.Point(102, 149);
@@ -281,11 +281,11 @@
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUnitPrice.Properties.Appearance.Options.UseBackColor = true;
-            this.txtUnitPrice.Properties.DisplayFormat.FormatString = "N2";
-            this.txtUnitPrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtUnitPrice.Properties.EditFormat.FormatString = "N2";
-            this.txtUnitPrice.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtUnitPrice.Properties.Mask.EditMask = "c2";
+            this.txtUnitPrice.Properties.DisplayFormat.FormatString = "c";
+            this.txtUnitPrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtUnitPrice.Properties.EditFormat.FormatString = "c";
+            this.txtUnitPrice.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtUnitPrice.Properties.Mask.EditMask = "c";
             this.txtUnitPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtUnitPrice.Size = new System.Drawing.Size(314, 26);
             this.txtUnitPrice.TabIndex = 3;
