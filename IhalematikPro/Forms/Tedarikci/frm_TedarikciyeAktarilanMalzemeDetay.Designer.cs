@@ -386,6 +386,8 @@
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn3.Caption = "BİRİMİ";
             this.gridColumn3.FieldName = "PozOBF.Unit";
+            this.gridColumn3.MaxWidth = 80;
+            this.gridColumn3.MinWidth = 80;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
@@ -394,7 +396,7 @@
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 98;
+            this.gridColumn3.Width = 80;
             // 
             // colQuantity
             // 
@@ -413,6 +415,8 @@
             this.colQuantity.Caption = "MİKTARI";
             this.colQuantity.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colQuantity.FieldName = "Quantity";
+            this.colQuantity.MaxWidth = 80;
+            this.colQuantity.MinWidth = 80;
             this.colQuantity.Name = "colQuantity";
             this.colQuantity.OptionsColumn.AllowEdit = false;
             this.colQuantity.OptionsColumn.AllowFocus = false;
@@ -420,7 +424,7 @@
             this.colQuantity.OptionsFilter.AllowFilter = false;
             this.colQuantity.Visible = true;
             this.colQuantity.VisibleIndex = 3;
-            this.colQuantity.Width = 105;
+            this.colQuantity.Width = 80;
             // 
             // rpstIsSelectedOfferMaterial
             // 

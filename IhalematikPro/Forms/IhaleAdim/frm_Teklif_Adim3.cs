@@ -63,6 +63,12 @@ namespace IhalematikPro.Forms
             isciAracGirisPaneli.Top = 0;
             isciAracGirisPaneli.Visible = false;
             grdMaterialListIsWorkship.Enabled = true;
+            panelControl1.Enabled = true;
+            grdMaterialListIsWorkship.EmbeddedNavigator.Enabled = true;
+            panelControl1.Enabled = true;
+            panelGrup.Enabled = true;
+            panelControl3.Enabled = true;
+            panelControl3.Enabled = true;
         }
         public void panelAc()
         {
@@ -169,6 +175,15 @@ namespace IhalematikPro.Forms
         #region GridMaterialList
         private void btnCalisanlarveAraclar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            //Panellerin enabled özelliklerini false yap
+            panelControl1.Enabled = false;
+            grdMaterialListIsWorkship.EmbeddedNavigator.Enabled = false;
+            panelControl1.Enabled = false;
+            panelGrup.Enabled = false;
+            panelControl3.Enabled = false;
+            panelControl4.Enabled = false;
+            //Panellerin enabled özelliklerini false yap
+
             bindingSourceAddWorker.DataSource = null;
             int currentId = Convert.ToInt32(gridViewMaterialListIsWorkship.GetFocusedRowCellValue("Id"));
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
@@ -183,6 +198,7 @@ namespace IhalematikPro.Forms
                     break;
                 }
             }
+
         }
         #endregion
 

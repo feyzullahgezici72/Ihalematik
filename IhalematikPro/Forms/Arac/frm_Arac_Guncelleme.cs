@@ -153,6 +153,7 @@ namespace IhalematikProUI.Forms
             frm_MesajFormu mf = new frm_MesajFormu();
             mf.lblMesaj.Text = "Güncelleme Yapıldı...";
             mf.ShowDialog();
+            this.Close();
         }
    
         public bool IsEmptyKontrol()
