@@ -235,5 +235,13 @@ namespace IhalematikPro.Forms
             List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items).ToList();
             grdAddedPoz.DataSource = dataSource;
         }
+
+        private void txtPozNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btnBul.PerformClick();
+            }
+        }
     }
 }

@@ -312,7 +312,7 @@
             this.gridColumn6.OptionsFilter.AllowFilter = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 2;
-            this.gridColumn6.Width = 757;
+            this.gridColumn6.Width = 760;
             // 
             // gridColumn7
             // 
@@ -325,7 +325,8 @@
             this.gridColumn7.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn7.Caption = "BİRİMİ";
             this.gridColumn7.FieldName = "PozOBFUnit";
-            this.gridColumn7.MinWidth = 80;
+            this.gridColumn7.MaxWidth = 60;
+            this.gridColumn7.MinWidth = 60;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.OptionsColumn.AllowFocus = false;
@@ -333,7 +334,7 @@
             this.gridColumn7.OptionsFilter.AllowFilter = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 3;
-            this.gridColumn7.Width = 85;
+            this.gridColumn7.Width = 60;
             // 
             // gridColumn8
             // 
@@ -345,10 +346,11 @@
             this.gridColumn8.AppearanceHeader.Options.UseFont = true;
             this.gridColumn8.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn8.Caption = "BİRİM FİYATI";
-            this.gridColumn8.DisplayFormat.FormatString = "N2";
-            this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.gridColumn8.DisplayFormat.FormatString = "c";
+            this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn8.FieldName = "PozOBFUnitPrice";
-            this.gridColumn8.MinWidth = 80;
+            this.gridColumn8.MaxWidth = 100;
+            this.gridColumn8.MinWidth = 100;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.OptionsColumn.AllowFocus = false;
@@ -356,7 +358,7 @@
             this.gridColumn8.OptionsFilter.AllowFilter = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 4;
-            this.gridColumn8.Width = 124;
+            this.gridColumn8.Width = 100;
             // 
             // grdAddedOBF
             // 
@@ -554,7 +556,7 @@
             this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 884;
+            this.gridColumn2.Width = 887;
             // 
             // gridColumn3
             // 
@@ -567,7 +569,8 @@
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn3.Caption = "BİRİMİ";
             this.gridColumn3.FieldName = "Unit";
-            this.gridColumn3.MinWidth = 80;
+            this.gridColumn3.MaxWidth = 60;
+            this.gridColumn3.MinWidth = 60;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
@@ -575,7 +578,7 @@
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 85;
+            this.gridColumn3.Width = 60;
             // 
             // gridColumn4
             // 
@@ -587,10 +590,11 @@
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn4.Caption = "BİRİM FİYATI";
-            this.gridColumn4.DisplayFormat.FormatString = "N2";
-            this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.gridColumn4.DisplayFormat.FormatString = "c";
+            this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "UnitPrice";
-            this.gridColumn4.MinWidth = 80;
+            this.gridColumn4.MaxWidth = 100;
+            this.gridColumn4.MinWidth = 100;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
@@ -598,7 +602,7 @@
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 4;
-            this.gridColumn4.Width = 117;
+            this.gridColumn4.Width = 100;
             // 
             // grdOBFList
             // 
@@ -800,6 +804,7 @@
             this.txtNumber.Properties.Appearance.Options.UseForeColor = true;
             this.txtNumber.Size = new System.Drawing.Size(250, 30);
             this.txtNumber.TabIndex = 0;
+            this.txtNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumber_KeyPress);
             // 
             // labelControl2
             // 
@@ -814,6 +819,7 @@
             // 
             // frm_TedarikciOfbKayit
             // 
+            this.AcceptButton = this.btnBul;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;

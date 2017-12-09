@@ -131,5 +131,13 @@ namespace IhalematikProUI.Forms.Tedarikci
 
             this.Close();
         }
+
+        private void txtPozNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btnBul.PerformClick();
+            }
+        }
     }
 }

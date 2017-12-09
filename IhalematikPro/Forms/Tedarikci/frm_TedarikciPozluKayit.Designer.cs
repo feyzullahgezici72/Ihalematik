@@ -314,7 +314,8 @@
             this.gridColumn7.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn7.Caption = "BİRİMİ";
             this.gridColumn7.FieldName = "PozOBFUnit";
-            this.gridColumn7.MinWidth = 80;
+            this.gridColumn7.MaxWidth = 60;
+            this.gridColumn7.MinWidth = 60;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.OptionsColumn.AllowFocus = false;
@@ -322,7 +323,7 @@
             this.gridColumn7.OptionsFilter.AllowFilter = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 3;
-            this.gridColumn7.Width = 80;
+            this.gridColumn7.Width = 60;
             // 
             // gridColumn8
             // 
@@ -335,10 +336,11 @@
             this.gridColumn8.AppearanceHeader.Options.UseFont = true;
             this.gridColumn8.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn8.Caption = "BİRİM FİYATI";
-            this.gridColumn8.DisplayFormat.FormatString = "N2";
-            this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.gridColumn8.DisplayFormat.FormatString = "c";
+            this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn8.FieldName = "PozOBFUnitPrice";
-            this.gridColumn8.MinWidth = 80;
+            this.gridColumn8.MaxWidth = 100;
+            this.gridColumn8.MinWidth = 100;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.OptionsColumn.AllowFocus = false;
@@ -346,7 +348,7 @@
             this.gridColumn8.OptionsFilter.AllowFilter = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 4;
-            this.gridColumn8.Width = 124;
+            this.gridColumn8.Width = 100;
             // 
             // grdAddedPoz
             // 
@@ -559,7 +561,8 @@
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn3.Caption = "BİRİMİ";
             this.gridColumn3.FieldName = "Unit";
-            this.gridColumn3.MinWidth = 80;
+            this.gridColumn3.MaxWidth = 60;
+            this.gridColumn3.MinWidth = 60;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
@@ -567,7 +570,7 @@
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 80;
+            this.gridColumn3.Width = 60;
             // 
             // gridColumn4
             // 
@@ -580,10 +583,11 @@
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn4.Caption = "BİRİM FİYATI";
-            this.gridColumn4.DisplayFormat.FormatString = "N2";
-            this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.gridColumn4.DisplayFormat.FormatString = "c";
+            this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "UnitPrice";
-            this.gridColumn4.MinWidth = 80;
+            this.gridColumn4.MaxWidth = 100;
+            this.gridColumn4.MinWidth = 100;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
@@ -591,7 +595,7 @@
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 4;
-            this.gridColumn4.Width = 126;
+            this.gridColumn4.Width = 100;
             // 
             // grdPozList
             // 
@@ -719,6 +723,7 @@
             this.txtPozNumber.Properties.Appearance.Options.UseForeColor = true;
             this.txtPozNumber.Size = new System.Drawing.Size(188, 30);
             this.txtPozNumber.TabIndex = 0;
+            this.txtPozNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPozNumber_KeyPress);
             // 
             // labelControl2
             // 
@@ -790,6 +795,7 @@
             // 
             // frm_TedarikciPozluKayit
             // 
+            this.AcceptButton = this.btnBul;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
