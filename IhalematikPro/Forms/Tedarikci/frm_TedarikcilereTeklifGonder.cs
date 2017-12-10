@@ -214,8 +214,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            btnListeOlustur.PerformClick();
-            colBirimFiyat.Visible = true;
+           
 
         }
     }

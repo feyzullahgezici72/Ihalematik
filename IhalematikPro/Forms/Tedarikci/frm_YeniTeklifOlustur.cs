@@ -40,7 +40,7 @@ namespace IhalematikProUI.Forms
         {
             IsEmptyKontrol();
             this.Enabled = false;
-            DialogResult resultMsg = MessageBox.Show("Yeni Teklif oluşturulsun mu?", "Yeni ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult resultMsg = MessageBox.Show("Yeni Teklif oluşturulsun mu? ", "Yeni Teklif Oluştur ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (resultMsg.Equals(DialogResult.Yes))
             {
                 Offer offer = new Offer();

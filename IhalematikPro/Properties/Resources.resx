@@ -166,6 +166,9 @@
   <data name="edit16-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\edit16-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tick-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tick-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user-group-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\user-group-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -199,9 +202,6 @@
   <data name="logoR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoR.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="worker-green-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pic\worker-green-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="print-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\print-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -226,8 +226,14 @@
   <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Check-icon (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Check-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Actions-edit-clear-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\Actions-edit-clear-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Check-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Check-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Actions-trash-empty-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\Actions-trash-empty-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -283,6 +289,9 @@
   <data name="worker-green-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\worker-green-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PasiveData" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PasiveData.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ihale" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\ihale.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -307,8 +316,8 @@
   <data name="System-Info-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\System-Info-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="yukleniyor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pic\yukleniyor.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="worker-green-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\worker-green-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="License-manager-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\License-manager-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -318,6 +327,9 @@
   </data>
   <data name="ok-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\ok-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="activeData" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\activeData.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\edit-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -397,6 +409,9 @@
   <data name="email-send-icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\email-send-icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="yukleniyor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pic\yukleniyor.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="k-get-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\k-get-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -424,10 +439,7 @@
   <data name="worker-green-icon (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pic\worker-green-icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="activeData" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\activeData.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PasiveData" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PasiveData.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mail-send-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mail-send-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

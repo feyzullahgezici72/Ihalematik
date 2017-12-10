@@ -175,7 +175,7 @@
             // 
             this.btnUploadFile.Appearance.BorderColor = System.Drawing.Color.White;
             this.btnUploadFile.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUploadFile.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnUploadFile.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnUploadFile.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnUploadFile.Appearance.Options.UseBorderColor = true;
             this.btnUploadFile.Appearance.Options.UseFont = true;
@@ -673,7 +673,6 @@
             this.AcceptButton = this.btnUploadFile;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnKapat;
             this.ClientSize = new System.Drawing.Size(1300, 700);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl6);

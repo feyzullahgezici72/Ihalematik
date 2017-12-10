@@ -50,6 +50,7 @@ namespace IhalematikProUI.Forms
 
         private void gridViewSupplier_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
+            colRisk.Visible = false;
             colSuppierName.Visible = false;
             int supplierId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
             Dictionary<string, object> parameters = new Dictionary<string, object>();
@@ -75,6 +76,7 @@ namespace IhalematikProUI.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            colRisk.Visible = true;
             List<OfferMaterialListModel> dataSoruce = new List<OfferMaterialListModel>();
 
             if (rdSortPrice.SelectedIndex == 0)
@@ -175,7 +177,11 @@ namespace IhalematikProUI.Forms
                     SupplierMaterialList supplierMaterialList = item.SupplierMaterialList;
                     supplierMaterialList.IsSelected = true;
                     SupplierMaterialListProvider.Instance.Save(supplierMaterialList);
-                } 
+                }
+                frm_MesajFormu mesajform = new frm_MesajFormu();
+                mesajform.lblMesaj.Text = "Teklif Kaydedildi...";
+                mesajform.ShowDialog();
+
             }
         }
 
@@ -194,6 +200,11 @@ namespace IhalematikProUI.Forms
             frm_MalzemeBazindaTedarikciFiyatDetay mbtfd = new frm_MalzemeBazindaTedarikciFiyatDetay();
             mbtfd.ShowDialog();
             this.Enabled = true;
+        }
+
+        private void grdSupplier_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

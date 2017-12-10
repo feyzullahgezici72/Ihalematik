@@ -333,6 +333,26 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Check_icon__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("Check-icon (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Check_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Check-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap coin_add_icon {
             get {
                 object obj = ResourceManager.GetObject("coin-add-icon", resourceCulture);
@@ -673,6 +693,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mail_send_icon {
+            get {
+                object obj = ResourceManager.GetObject("mail-send-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mavi {
             get {
                 object obj = ResourceManager.GetObject("mavi", resourceCulture);
@@ -976,6 +1006,16 @@ namespace IhalematikProUI.Properties {
         internal static System.Drawing.Bitmap System_recycling_bin_empty_icon {
             get {
                 object obj = ResourceManager.GetObject("System-recycling-bin-empty-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tick_icon {
+            get {
+                object obj = ResourceManager.GetObject("tick-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
