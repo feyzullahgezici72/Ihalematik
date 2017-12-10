@@ -47,14 +47,14 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOpen = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnOpen = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnActive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colPasive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnPasive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.statusPanel = new System.Windows.Forms.Panel();
             this.cmbAktivePasive = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPasive = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnActive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.btnPasive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -63,10 +63,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdOffer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOffer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpen)).BeginInit();
-            this.statusPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnActive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).BeginInit();
+            this.statusPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -284,6 +284,7 @@
             this.gridViewOffer.Name = "gridViewOffer";
             this.gridViewOffer.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewOffer.OptionsView.EnableAppearanceOddRow = true;
+            this.gridViewOffer.OptionsView.ShowDetailButtons = false;
             this.gridViewOffer.OptionsView.ShowGroupPanel = false;
             this.gridViewOffer.PaintStyleName = "Web";
             // 
@@ -380,6 +381,46 @@
             this.btnOpen.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnOpen.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnOpen_ButtonClick);
             // 
+            // colActive
+            // 
+            this.colActive.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colActive.AppearanceHeader.Options.UseBackColor = true;
+            this.colActive.ColumnEdit = this.btnActive;
+            this.colActive.MaxWidth = 20;
+            this.colActive.Name = "colActive";
+            this.colActive.OptionsFilter.AllowFilter = false;
+            this.colActive.Visible = true;
+            this.colActive.VisibleIndex = 4;
+            this.colActive.Width = 20;
+            // 
+            // btnActive
+            // 
+            this.btnActive.AutoHeight = false;
+            this.btnActive.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.activeData, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "Aktif Yap", null, null, true)});
+            this.btnActive.Name = "btnActive";
+            this.btnActive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // colPasive
+            // 
+            this.colPasive.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colPasive.AppearanceHeader.Options.UseBackColor = true;
+            this.colPasive.ColumnEdit = this.btnPasive;
+            this.colPasive.MaxWidth = 20;
+            this.colPasive.Name = "colPasive";
+            this.colPasive.OptionsFilter.AllowFilter = false;
+            this.colPasive.Visible = true;
+            this.colPasive.VisibleIndex = 5;
+            this.colPasive.Width = 20;
+            // 
+            // btnPasive
+            // 
+            this.btnPasive.AutoHeight = false;
+            this.btnPasive.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.PasiveData, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "Pasif Yap", null, null, true)});
+            this.btnPasive.Name = "btnPasive";
+            this.btnPasive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
             // statusPanel
             // 
             this.statusPanel.Controls.Add(this.cmbAktivePasive);
@@ -431,46 +472,6 @@
             this.labelControl14.TabIndex = 0;
             this.labelControl14.Text = "Kayıt Sayısı : ";
             // 
-            // colActive
-            // 
-            this.colActive.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colActive.AppearanceHeader.Options.UseBackColor = true;
-            this.colActive.ColumnEdit = this.btnActive;
-            this.colActive.MaxWidth = 20;
-            this.colActive.Name = "colActive";
-            this.colActive.OptionsFilter.AllowFilter = false;
-            this.colActive.Visible = true;
-            this.colActive.VisibleIndex = 4;
-            this.colActive.Width = 20;
-            // 
-            // colPasive
-            // 
-            this.colPasive.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colPasive.AppearanceHeader.Options.UseBackColor = true;
-            this.colPasive.ColumnEdit = this.btnPasive;
-            this.colPasive.MaxWidth = 20;
-            this.colPasive.Name = "colPasive";
-            this.colPasive.OptionsFilter.AllowFilter = false;
-            this.colPasive.Visible = true;
-            this.colPasive.VisibleIndex = 5;
-            this.colPasive.Width = 20;
-            // 
-            // btnActive
-            // 
-            this.btnActive.AutoHeight = false;
-            this.btnActive.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.activeData, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "Aktif Yap", null, null, true)});
-            this.btnActive.Name = "btnActive";
-            this.btnActive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // btnPasive
-            // 
-            this.btnPasive.AutoHeight = false;
-            this.btnPasive.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.PasiveData, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "Pasif Yap", null, null, true)});
-            this.btnPasive.Name = "btnPasive";
-            this.btnPasive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
             // frm_TeklifListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -497,11 +498,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdOffer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOffer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnActive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).EndInit();
             this.statusPanel.ResumeLayout(false);
             this.statusPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnActive)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).EndInit();
             this.ResumeLayout(false);
 
         }
