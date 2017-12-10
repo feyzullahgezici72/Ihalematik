@@ -57,7 +57,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                 SupplierMaterialListProvider.Instance.Save(item);
             }
 
-            this._owner.LoadMaterialGrid();
+            this._owner.LoadMaterialGrid(CurrentManager.Instance.CurrentOffer.MaterialList);
             this.LoadAddedMateriallistGrid();
         }
     }
