@@ -112,7 +112,10 @@ namespace IhalematikProUI.Model
             this.Id = Entity.Id;
             this.IsSelected = Entity.IsSelected;
         }
+        public OfferMaterialListModel()
+        {
 
+        }
         public override EntityBase ToEntity()
         {
             throw new NotImplementedException();

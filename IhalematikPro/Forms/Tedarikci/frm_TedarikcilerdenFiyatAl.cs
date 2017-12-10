@@ -157,7 +157,7 @@ namespace IhalematikProUI.Forms
         {
             if (e.Column == colRisk)
             {
-                int SupplierMaterialListId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridView1.GetFocusedRowCellValue("SupplierMaterialListId"));
+                int SupplierMaterialListId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialList.GetFocusedRowCellValue("SupplierMaterialListId"));
                 SupplierMaterialList item = SupplierMaterialListProvider.Instance.GetItem(SupplierMaterialListId);
                 item.Risk = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
                 SupplierMaterialListProvider.Instance.Save(item);
@@ -189,22 +189,24 @@ namespace IhalematikProUI.Forms
         {
             this.Enabled = false;
             //Kuzen bu bağlantıyı yaparsın
-             //frm_TedarikciyeAktarilanMalzemeDetay tkfmd = new frm_TedarikciyeAktarilanMalzemeDetay();
+            //frm_TedarikciyeAktarilanMalzemeDetay tkfmd = new frm_TedarikciyeAktarilanMalzemeDetay();
             this.Enabled = true;
         }
 
         private void rpstMeterialDetail_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             //Malzemeye hangi firma hangi fiyatı vermiş
+            int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialList.GetFocusedRowCellValue("Id"));
             this.Enabled = false;
             frm_MalzemeBazindaTedarikciFiyatDetay mbtfd = new frm_MalzemeBazindaTedarikciFiyatDetay();
+            mbtfd.SelectedOfferMaterialListId = id;
             mbtfd.ShowDialog();
             this.Enabled = true;
         }
 
         private void grdSupplier_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
