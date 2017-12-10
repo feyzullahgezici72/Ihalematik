@@ -85,11 +85,28 @@ namespace IhalematikProUI.Forms.Tedarikci
             List<OfferMaterialList> items = grdMaterialList.DataSource as List<OfferMaterialList>;
             if (items != null && items.Count != 0)
             {
-                
                 emailMesajPanel.Visible = true;
-                Application.DoEvents();
-                this.SendMail();
-                
+                Task task = new Task(() =>
+                {
+                    this.SendMail();
+                });
+                task.Start();
+                //while (done)
+                //{
+                //    emailMesajPanel.Visible = false;
+                //    frm_MesajFormu mesajformu = new frm_MesajFormu();
+                //    mesajformu.lblMesaj.Text = "Mail Gönderildi...";
+                //    mesajformu.ShowDialog();
+                //    this.Close();
+                //}
+                //if (task.IsCompleted)
+                //{
+                //    emailMesajPanel.Visible = false;
+                //    frm_MesajFormu mesajformu = new frm_MesajFormu();
+                //    mesajformu.lblMesaj.Text = "Mail Gönderildi...";
+                //    mesajformu.ShowDialog();
+                //    this.Close();
+                //}
             }
             else
             {
@@ -99,7 +116,6 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void CreateExcel()
         {
-            Application.DoEvents();
             Microsoft.Office.Interop.Excel.Application oXL = null;
             Microsoft.Office.Interop.Excel._Workbook oWB = null;
             Microsoft.Office.Interop.Excel._Worksheet oSheet = null;
@@ -109,7 +125,6 @@ namespace IhalematikProUI.Forms.Tedarikci
             {
                 try
                 {
-                    Application.DoEvents();
                     string fileName = "Malzeme_Fiyat_Listesi.xlsx";
                     //string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "EmailFile");
                     string sourcePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug\\", string.Empty), "EmailFile");
@@ -121,7 +136,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                     {
                         Directory.CreateDirectory(targetPath);
                     }
-                    Application.DoEvents();
                     File.Copy(sourceFile, this.DestinationFile, true);
 
                     oXL = new Microsoft.Office.Interop.Excel.Application();
@@ -130,7 +144,6 @@ namespace IhalematikProUI.Forms.Tedarikci
 
                     if (CurrentManager.Instance.CurrentOffer != null)
                     {
-                        Application.DoEvents();
                         Dictionary<string, object> parameters = new Dictionary<string, object>();
                         parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
                         parameters.Add("SupplierId", this.Supplier.Id);
@@ -139,7 +152,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                         List<OfferMaterialList> offerMaterialLists = new List<OfferMaterialList>();
                         if (items.Count != 0)
                         {
-                            Application.DoEvents();
                             offerMaterialLists.AddRange(items.Select(p => p.MaterialList));
                         }
 
@@ -147,7 +159,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                         {
                             int row = 2;
                             int indexNumber = 1;
-                            Application.DoEvents();
                             foreach (OfferMaterialList materialList in offerMaterialLists)
                             {
                                 oSheet.Cells[row, 1] = indexNumber;
@@ -158,7 +169,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                                 oSheet.Cells[row, 6] = materialList.Quantity;
                                 row++;
                                 indexNumber++;
-                                Application.DoEvents();
                             }
                         }
                     }
@@ -176,33 +186,27 @@ namespace IhalematikProUI.Forms.Tedarikci
                 }
             }
         }
-         
+
         public void emailMesajPaneloOrtala()
         {
-            
+
             emailMesajPanel.Left = (grdMaterialList.Width / 2) - (emailMesajPanel.Width / 2);
             emailMesajPanel.Top = (grdMaterialList.Height / 2) - (emailMesajPanel.Height / 2);
         }
 
         private void SendMail()
         {
-            Application.DoEvents();
             this.CreateExcel();
             if (File.Exists(this.DestinationFile))
             {
-                Application.DoEvents();
                 MailingManager.Instance.SendMaterialToSupplier(this.Supplier.Email, txtEmailBody.Text, this.DestinationFile);
             }
-            emailMesajPanel.Visible = false;
-            frm_MesajFormu mesajformu = new frm_MesajFormu();
-            mesajformu.lblMesaj.Text = "Mail Gönderildi...";
-            mesajformu.ShowDialog();
-            this.Close();
+
         }
 
         private void frm_TedarikciyeAktarilanMalzemeDetay_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

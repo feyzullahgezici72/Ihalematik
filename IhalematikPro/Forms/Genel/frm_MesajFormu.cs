@@ -50,7 +50,6 @@ namespace IhalematikProUI.Forms
             {
                 Thread.Sleep(0);
                 pbControl.Position = i;
-                Application.DoEvents();
             }
             //timer1.Enabled = false;
             //this.Close();
