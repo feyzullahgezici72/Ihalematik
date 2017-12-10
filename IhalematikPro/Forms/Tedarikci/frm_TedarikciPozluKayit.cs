@@ -21,7 +21,7 @@ namespace IhalematikProUI.Forms.Tedarikci
     {
         List<PozModel> pozModels = new List<PozModel>();
         IhalematikBaseForm _owner;
-        
+
         public frm_TedarikciPozluKayit(IhalematikBaseForm Owner)
         {
             InitializeComponent();
@@ -36,7 +36,9 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void btnBul_Click(object sender, EventArgs e)
         {
             string pozNumber = txtPozNumber.Text;
-            pozModels = UIPozManager.Instance.GetPozs(pozNumber);
+            string pozDescription = txtDescription.Text;
+
+            pozModels = UIPozManager.Instance.GetPozs(pozNumber, pozDescription);
             grdPozList.DataSource = pozModels;
         }
 

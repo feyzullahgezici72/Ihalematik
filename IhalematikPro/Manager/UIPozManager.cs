@@ -18,17 +18,13 @@ namespace IhalematikPro.Manager
             return pozs;
         }
 
-        public List<PozModel> GetPozs(string PozNumber)
+        public List<PozModel> GetPozs(string PozNumber, string PozDescription)
         {
             List<Poz> pozs = new List<Poz>();
-            if (string.IsNullOrEmpty(PozNumber))
-            {
-                pozs = PozProvider.Instance.GetItems();
-            }
-            else
-            {
-                pozs = PozProvider.Instance.GetItems("Number", PozNumber); 
-            }
+            Dictionary<string, object> param = new Dictionary<string, object>();
+            param.Add("Number", PozNumber);
+            param.Add("Description", PozDescription);
+            pozs = PozProvider.Instance.GetItems(param);
             List<PozModel> models = CustomSaveableModelBase.GetModels<PozModel, Poz>(pozs);
             return models;
         }

@@ -22,7 +22,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         List<OBFModel> oBFModels = new List<OBFModel>();
 
         IhalematikBaseForm _owner;
-      
+
         public frm_TedarikciOfbKayit(IhalematikBaseForm Owner)
         {
             InitializeComponent();
@@ -37,8 +37,9 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void btnBul_Click(object sender, EventArgs e)
         {
             string obfNo = txtNumber.Text;
+            string obfDescription = txtDescription.Text;
 
-            oBFModels = UIOBFManager.Instance.GetOBFs(obfNo);
+            oBFModels = UIOBFManager.Instance.GetOBFs(obfNo, obfDescription);
 
             grdOBFList.DataSource = oBFModels;
         }
@@ -58,7 +59,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                 materialList.IsPoz = false;
                 materialList.PozOBFId = pozModel.Id.Value;
                 materialList.Offer = currentOffer;
-                
+
                 List<OfferMaterialList> items = currentOffer.MaterialList.Where(p => p.PozOBFId == materialList.PozOBFId && !p.IsPoz).ToList();
 
                 if (items.Count == 0)
@@ -117,7 +118,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             {
                 ((frm_TedarikcilereTeklifGonder)this._owner).LoadMaterialGrid();
             }
-           
+
             this.Close();
         }
 

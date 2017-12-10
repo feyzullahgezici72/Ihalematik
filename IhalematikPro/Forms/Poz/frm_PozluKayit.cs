@@ -44,13 +44,14 @@ namespace IhalematikPro.Forms
         private void LoadMaterialListGrid()
         {
             string pozNumber = txtPozNumber.Text;
+            string pozDescription = txtDescription.Text.Trim();
             pozModels = new List<PozModel>();
             Offer offer = CurrentManager.Instance.CurrentTender.Offer;
             List<MaterialList> selectedMaterialLists = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsPoz).ToList();
 
             if (offer == null)
             {
-                pozModels = UIPozManager.Instance.GetPozs(pozNumber);
+                pozModels = UIPozManager.Instance.GetPozs(pozNumber, pozDescription);
             }
 
             else

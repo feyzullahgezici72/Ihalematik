@@ -36,9 +36,9 @@ namespace IhalematikPro.Forms
 
         private void btnBul_Click(object sender, EventArgs e)
         {
-            string obfNo = txtNumber.Text;
-
-            oBFModels = UIOBFManager.Instance.GetOBFs(obfNo);
+            string obfNo = txtNumber.Text.Trim();
+            string obfDescription = txtDescription.Text.Trim();
+            oBFModels = UIOBFManager.Instance.GetOBFs(obfNo, obfDescription);
 
             grdOBFList.DataSource = oBFModels;
         }
@@ -162,13 +162,15 @@ namespace IhalematikPro.Forms
         private void LoadMaterialListGrid()
         {
             string obfNumber = txtNumber.Text;
+            string obfDescription = txtDescription.Text;
+
             oBFModels = new List<OBFModel>();
             Offer offer = CurrentManager.Instance.CurrentTender.Offer;
             List<MaterialList> selectedMaterialLists = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && !p.IsPoz).ToList();
 
             if (offer == null)
             {
-                oBFModels = UIOBFManager.Instance.GetOBFs(obfNumber);
+                oBFModels = UIOBFManager.Instance.GetOBFs(obfNumber, obfDescription);
             }
 
             else
@@ -229,7 +231,7 @@ namespace IhalematikPro.Forms
 
         private void txtNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13)
             {
                 btnBul.PerformClick();
             }

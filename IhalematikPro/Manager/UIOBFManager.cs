@@ -13,9 +13,12 @@ namespace IhalematikPro.Manager
     public class UIOBFManager : SingletonBase<UIOBFManager>
     {
 
-        public List<OBFModel> GetOBFs(string OBFNumber)
+        public List<OBFModel> GetOBFs(string OBFNumber, string OBFDescription)
         {
-            List<OBF> obfs = OBFProvider.Instance.GetItems("Number", OBFNumber);
+            Dictionary<string, object> param = new Dictionary<string, object>();
+            param.Add("Number", OBFNumber);
+            param.Add("Description", OBFDescription);
+            List<OBF> obfs = OBFProvider.Instance.GetItems(param);
             List<OBFModel> models = CustomSaveableModelBase.GetModels<OBFModel, OBF>(obfs);
             return models;
         }
