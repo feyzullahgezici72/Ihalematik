@@ -395,9 +395,6 @@
             this.gridViewAddVehicle.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridViewAddVehicle.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridViewAddVehicle.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridViewAddVehicle.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(250)))), ((int)(((byte)(240)))));
-            this.gridViewAddVehicle.Appearance.Empty.BackColor2 = System.Drawing.Color.White;
-            this.gridViewAddVehicle.Appearance.Empty.Options.UseBackColor = true;
             this.gridViewAddVehicle.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
             this.gridViewAddVehicle.Appearance.EvenRow.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
             this.gridViewAddVehicle.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
@@ -662,9 +659,6 @@
             this.gridViewAddWorker.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridViewAddWorker.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridViewAddWorker.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridViewAddWorker.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(236)))));
-            this.gridViewAddWorker.Appearance.Empty.BackColor2 = System.Drawing.Color.White;
-            this.gridViewAddWorker.Appearance.Empty.Options.UseBackColor = true;
             this.gridViewAddWorker.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(227)))), ((int)(((byte)(245)))));
             this.gridViewAddWorker.Appearance.EvenRow.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(227)))), ((int)(((byte)(245)))));
             this.gridViewAddWorker.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
@@ -1068,8 +1062,6 @@
             this.gridViewMaterialListIsWorkship.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridViewMaterialListIsWorkship.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridViewMaterialListIsWorkship.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridViewMaterialListIsWorkship.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.gridViewMaterialListIsWorkship.Appearance.Empty.Options.UseBackColor = true;
             this.gridViewMaterialListIsWorkship.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridViewMaterialListIsWorkship.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridViewMaterialListIsWorkship.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
@@ -1371,9 +1363,6 @@
             this.gridViewTenderGroup.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridViewTenderGroup.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridViewTenderGroup.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridViewTenderGroup.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(236)))));
-            this.gridViewTenderGroup.Appearance.Empty.BackColor2 = System.Drawing.Color.White;
-            this.gridViewTenderGroup.Appearance.Empty.Options.UseBackColor = true;
             this.gridViewTenderGroup.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(227)))), ((int)(((byte)(245)))));
             this.gridViewTenderGroup.Appearance.EvenRow.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(227)))), ((int)(((byte)(245)))));
             this.gridViewTenderGroup.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;

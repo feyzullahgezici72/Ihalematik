@@ -129,8 +129,6 @@
             this.gridViewAddedOfferMaterialList.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridViewAddedOfferMaterialList.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridViewAddedOfferMaterialList.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridViewAddedOfferMaterialList.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.gridViewAddedOfferMaterialList.Appearance.Empty.Options.UseBackColor = true;
             this.gridViewAddedOfferMaterialList.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridViewAddedOfferMaterialList.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridViewAddedOfferMaterialList.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;

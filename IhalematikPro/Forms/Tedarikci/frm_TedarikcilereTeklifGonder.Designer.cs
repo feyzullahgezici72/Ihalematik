@@ -564,8 +564,6 @@
             this.gridViewMaterialList.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridViewMaterialList.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridViewMaterialList.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridViewMaterialList.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.gridViewMaterialList.Appearance.Empty.Options.UseBackColor = true;
             this.gridViewMaterialList.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridViewMaterialList.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridViewMaterialList.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
@@ -845,7 +843,7 @@
             this.pnlFirma.Location = new System.Drawing.Point(796, 13);
             this.pnlFirma.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFirma.Name = "pnlFirma";
-            this.pnlFirma.Size = new System.Drawing.Size(712, 311);
+            this.pnlFirma.Size = new System.Drawing.Size(712, 587);
             this.pnlFirma.TabIndex = 34;
             this.pnlFirma.Visible = false;
             // 
@@ -860,7 +858,7 @@
             this.grdSupplier.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstSupplierDetail1,
             this.rpstIsSelectedSupplier});
-            this.grdSupplier.Size = new System.Drawing.Size(706, 280);
+            this.grdSupplier.Size = new System.Drawing.Size(706, 556);
             this.grdSupplier.TabIndex = 39;
             this.grdSupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSupplier,
@@ -882,8 +880,6 @@
             this.gridViewSupplier.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridViewSupplier.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridViewSupplier.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridViewSupplier.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.gridViewSupplier.Appearance.Empty.Options.UseBackColor = true;
             this.gridViewSupplier.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridViewSupplier.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridViewSupplier.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;

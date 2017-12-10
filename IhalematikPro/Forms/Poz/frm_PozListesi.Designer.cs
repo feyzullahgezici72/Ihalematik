@@ -357,8 +357,6 @@
             this.gridViewPozList.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridViewPozList.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridViewPozList.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridViewPozList.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.gridViewPozList.Appearance.Empty.Options.UseBackColor = true;
             this.gridViewPozList.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridViewPozList.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridViewPozList.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;

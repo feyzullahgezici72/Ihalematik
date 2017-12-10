@@ -309,8 +309,6 @@
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridView1.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridView1.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.gridView1.Appearance.Empty.Options.UseBackColor = true;
             this.gridView1.Appearance.EvenRow.BackColor = System.Drawing.Color.Silver;
             this.gridView1.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridView1.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
@@ -562,8 +560,6 @@
             this.gridView2.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridView2.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridView2.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridView2.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.gridView2.Appearance.Empty.Options.UseBackColor = true;
             this.gridView2.Appearance.EvenRow.BackColor = System.Drawing.Color.Silver;
             this.gridView2.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridView2.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
