@@ -50,7 +50,6 @@ namespace IhalematikProUI.Forms
 
         private void gridViewSupplier_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            colSuppierName.Visible = false;
             int supplierId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
@@ -134,7 +133,6 @@ namespace IhalematikProUI.Forms
                 }
             }
             grdMaterialList.DataSource = dataSoruce;
-            colSuppierName.Visible = true;
         }
 
         private void btnTumuneUygula_Click(object sender, EventArgs e)

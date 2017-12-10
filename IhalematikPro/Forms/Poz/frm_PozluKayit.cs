@@ -158,7 +158,7 @@ namespace IhalematikPro.Forms
             }
             if (this._owner is frm_Teklif_Adim1)
             {
-                ((frm_Teklif_Adim1)_owner).RefreshDataGrid();
+                ((frm_Teklif_Adim1)_owner).LoadTenderMaterialList();
             }
 
             this.Close();

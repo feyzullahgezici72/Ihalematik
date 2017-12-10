@@ -44,7 +44,7 @@ namespace IhalematikProUI.Forms
         {
             lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
-            List<MaterialList> items = UIMaterialListManager.Instance.GetMaterialListIsWorkship();
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
             List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
 
             grdMaterialList.DataSource = models;

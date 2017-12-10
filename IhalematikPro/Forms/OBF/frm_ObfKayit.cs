@@ -86,7 +86,7 @@ namespace IhalematikPro.Forms
                 }
             }
 
-            this._owner.RefreshDataGrid();
+            this._owner.LoadTenderMaterialList();
             this.Close();
         }
 
