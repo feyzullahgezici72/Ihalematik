@@ -61,9 +61,11 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.txtMailPass = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTitle.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMailAddress.Properties)).BeginInit();
@@ -84,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMailPass.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // textEdit3
@@ -344,6 +347,8 @@
             this.groupControl3.AppearanceCaption.ForeColor = System.Drawing.Color.Maroon;
             this.groupControl3.AppearanceCaption.Options.UseFont = true;
             this.groupControl3.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl3.Controls.Add(this.txtMailPass);
+            this.groupControl3.Controls.Add(this.labelControl15);
             this.groupControl3.Controls.Add(this.txtMailAddress);
             this.groupControl3.Controls.Add(this.labelControl12);
             this.groupControl3.Controls.Add(this.txtWebAddress);
@@ -361,7 +366,7 @@
             this.groupControl3.Location = new System.Drawing.Point(4, 260);
             this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(886, 270);
+            this.groupControl3.Size = new System.Drawing.Size(886, 301);
             this.groupControl3.TabIndex = 88;
             this.groupControl3.Text = "İletişim Bilgileri";
             // 
@@ -391,7 +396,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 35);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(886, 608);
+            this.groupControl2.Size = new System.Drawing.Size(886, 649);
             this.groupControl2.TabIndex = 29;
             this.groupControl2.Text = "Firma Bilgileri";
             this.groupControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl2_Paint);
@@ -403,11 +408,11 @@
             this.btnKaydet.Appearance.Options.UseFont = true;
             this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnKaydet.Location = new System.Drawing.Point(729, 539);
+            this.btnKaydet.Location = new System.Drawing.Point(719, 582);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(138, 54);
-            this.btnKaydet.TabIndex = 89;
+            this.btnKaydet.TabIndex = 6;
             this.btnKaydet.Text = "Güncelle";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
@@ -442,24 +447,6 @@
             this.panelControl1.TabIndex = 28;
             this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
-            // btnKapat
-            // 
-            this.btnKapat.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKapat.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnKapat.Appearance.Options.UseFont = true;
-            this.btnKapat.Appearance.Options.UseForeColor = true;
-            this.btnKapat.AutoSize = true;
-            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
-            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(858, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(28, 35);
-            this.btnKapat.TabIndex = 3;
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
             // pcWorld
             // 
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
@@ -487,11 +474,50 @@
             this.labelControl1.Text = " FİRMA TANIMLAMA ";
             this.labelControl1.UseMnemonic = false;
             // 
+            // btnKapat
+            // 
+            this.btnKapat.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKapat.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnKapat.Appearance.Options.UseFont = true;
+            this.btnKapat.Appearance.Options.UseForeColor = true;
+            this.btnKapat.AutoSize = true;
+            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnKapat.Location = new System.Drawing.Point(858, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(28, 35);
+            this.btnKapat.TabIndex = 3;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Location = new System.Drawing.Point(38, 263);
+            this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(82, 19);
+            this.labelControl15.TabIndex = 102;
+            this.labelControl15.Text = "Mail Şifresi:";
+            // 
+            // txtMailPass
+            // 
+            this.txtMailPass.EnterMoveNextControl = true;
+            this.txtMailPass.Location = new System.Drawing.Point(130, 260);
+            this.txtMailPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMailPass.Name = "txtMailPass";
+            this.txtMailPass.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtMailPass.Properties.Appearance.Options.UseBackColor = true;
+            this.txtMailPass.Properties.PasswordChar = '*';
+            this.txtMailPass.Size = new System.Drawing.Size(226, 26);
+            this.txtMailPass.TabIndex = 7;
+            // 
             // frm_FirmaTanimlama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 643);
+            this.ClientSize = new System.Drawing.Size(886, 684);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl1);
@@ -524,6 +550,7 @@
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMailPass.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -564,5 +591,7 @@
         private System.Windows.Forms.PictureBox pcWorld;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
+        private DevExpress.XtraEditors.TextEdit txtMailPass;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
     }
 }

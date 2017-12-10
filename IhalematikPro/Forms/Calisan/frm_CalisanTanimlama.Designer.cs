@@ -216,9 +216,7 @@
             this.gridViewWorker.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
             this.gridViewWorker.Appearance.DetailTip.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridViewWorker.Appearance.DetailTip.Options.UseFont = true;
-            this.gridViewWorker.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.gridViewWorker.Appearance.Empty.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridViewWorker.Appearance.Empty.Options.UseBackColor = true;
             this.gridViewWorker.Appearance.Empty.Options.UseFont = true;
             this.gridViewWorker.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridViewWorker.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
@@ -520,6 +518,7 @@
             this.colPasive.ImageAlignment = System.Drawing.StringAlignment.Center;
             this.colPasive.MaxWidth = 20;
             this.colPasive.Name = "colPasive";
+            this.colPasive.OptionsFilter.AllowFilter = false;
             this.colPasive.ToolTip = "Pasif Yap";
             this.colPasive.Visible = true;
             this.colPasive.VisibleIndex = 6;

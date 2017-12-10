@@ -831,8 +831,6 @@
             this.gridViewVehicle.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridViewVehicle.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridViewVehicle.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridViewVehicle.Appearance.Empty.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gridViewVehicle.Appearance.Empty.Options.UseBackColor = true;
             this.gridViewVehicle.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridViewVehicle.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridViewVehicle.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;

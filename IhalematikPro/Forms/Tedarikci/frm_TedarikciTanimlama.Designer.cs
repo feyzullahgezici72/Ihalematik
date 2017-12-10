@@ -220,8 +220,6 @@
             this.gridViewSupplier.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridViewSupplier.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridViewSupplier.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridViewSupplier.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.gridViewSupplier.Appearance.Empty.Options.UseBackColor = true;
             this.gridViewSupplier.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridViewSupplier.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridViewSupplier.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
@@ -962,7 +960,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnKapat;
             this.ClientSize = new System.Drawing.Size(1362, 764);
             this.ControlBox = false;
             this.Controls.Add(this.grdSupplier);

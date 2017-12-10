@@ -59,7 +59,7 @@
             // 
             this.dxErrorProvider1.SetIconAlignment(this.txtAciklama, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.txtAciklama.Location = new System.Drawing.Point(126, 94);
-            this.txtAciklama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAciklama.Properties.Appearance.ForeColor = System.Drawing.Color.Navy;
@@ -73,7 +73,7 @@
             // 
             this.txtTeklifNo.Enabled = false;
             this.txtTeklifNo.Location = new System.Drawing.Point(126, 58);
-            this.txtTeklifNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTeklifNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTeklifNo.Name = "txtTeklifNo";
             this.txtTeklifNo.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTeklifNo.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -89,7 +89,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl2.Location = new System.Drawing.Point(48, 99);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(70, 19);
             this.labelControl2.TabIndex = 35;
@@ -100,7 +100,7 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl1.Location = new System.Drawing.Point(46, 61);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(70, 19);
             this.labelControl1.TabIndex = 36;
@@ -116,7 +116,7 @@
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
             this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnIptal.Location = new System.Drawing.Point(772, 0);
-            this.btnIptal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(28, 35);
             this.btnIptal.TabIndex = 1;
@@ -132,7 +132,7 @@
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(800, 35);
             this.panelControl1.TabIndex = 38;
@@ -147,7 +147,7 @@
             this.panelControl2.Controls.Add(this.btnIptal);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(800, 35);
             this.panelControl2.TabIndex = 3;
@@ -172,7 +172,7 @@
             this.labelControl3.LineColor = System.Drawing.Color.Red;
             this.labelControl3.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.labelControl3.Location = new System.Drawing.Point(52, 1);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.ShowLineShadow = false;
             this.labelControl3.Size = new System.Drawing.Size(461, 35);
@@ -187,7 +187,7 @@
             this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
             this.simpleButton2.Location = new System.Drawing.Point(609, 210);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(141, 54);
             this.simpleButton2.TabIndex = 41;
@@ -217,7 +217,7 @@
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl5.Location = new System.Drawing.Point(74, 132);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(43, 19);
             this.labelControl5.TabIndex = 43;
@@ -239,7 +239,7 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_YeniTeklifOlustur";

@@ -682,8 +682,6 @@
             this.grdMaterialList2.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.grdMaterialList2.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.grdMaterialList2.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.grdMaterialList2.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.grdMaterialList2.Appearance.Empty.Options.UseBackColor = true;
             this.grdMaterialList2.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.grdMaterialList2.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.grdMaterialList2.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;

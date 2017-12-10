@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TeklifListesi));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -45,6 +47,10 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOpen = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnOpen = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnActive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colPasive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnPasive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.statusPanel = new System.Windows.Forms.Panel();
             this.cmbAktivePasive = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
@@ -57,6 +63,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdOffer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOffer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnActive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).BeginInit();
             this.statusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +82,7 @@
             this.lblTenderCaptin.LineColor = System.Drawing.Color.Red;
             this.lblTenderCaptin.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.lblTenderCaptin.Location = new System.Drawing.Point(51, 1);
-            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderCaptin.Name = "lblTenderCaptin";
             this.lblTenderCaptin.ShowLineShadow = false;
             this.lblTenderCaptin.Size = new System.Drawing.Size(161, 35);
@@ -92,7 +100,7 @@
             this.panelControl2.Controls.Add(this.btnKapat);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1362, 35);
             this.panelControl2.TabIndex = 2;
@@ -116,7 +124,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1334, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 1;
@@ -132,7 +140,7 @@
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1362, 35);
             this.panelControl1.TabIndex = 95;
@@ -140,13 +148,15 @@
             // grdOffer
             // 
             this.grdOffer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdOffer.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdOffer.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdOffer.Location = new System.Drawing.Point(0, 35);
             this.grdOffer.MainView = this.gridViewOffer;
-            this.grdOffer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdOffer.Margin = new System.Windows.Forms.Padding(4);
             this.grdOffer.Name = "grdOffer";
             this.grdOffer.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btnOpen});
+            this.btnOpen,
+            this.btnActive,
+            this.btnPasive});
             this.grdOffer.Size = new System.Drawing.Size(1362, 707);
             this.grdOffer.TabIndex = 98;
             this.grdOffer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -168,8 +178,6 @@
             this.gridViewOffer.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridViewOffer.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridViewOffer.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridViewOffer.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.gridViewOffer.Appearance.Empty.Options.UseBackColor = true;
             this.gridViewOffer.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridViewOffer.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridViewOffer.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
@@ -267,11 +275,14 @@
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
-            this.colOpen});
+            this.colOpen,
+            this.colActive,
+            this.colPasive});
             this.gridViewOffer.GridControl = this.grdOffer;
             this.gridViewOffer.Name = "gridViewOffer";
             this.gridViewOffer.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewOffer.OptionsView.EnableAppearanceOddRow = true;
+            this.gridViewOffer.OptionsView.ShowDetailButtons = false;
             this.gridViewOffer.OptionsView.ShowGroupPanel = false;
             this.gridViewOffer.PaintStyleName = "Web";
             // 
@@ -368,6 +379,46 @@
             this.btnOpen.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnOpen.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnOpen_ButtonClick);
             // 
+            // colActive
+            // 
+            this.colActive.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colActive.AppearanceHeader.Options.UseBackColor = true;
+            this.colActive.ColumnEdit = this.btnActive;
+            this.colActive.MaxWidth = 20;
+            this.colActive.Name = "colActive";
+            this.colActive.OptionsFilter.AllowFilter = false;
+            this.colActive.Visible = true;
+            this.colActive.VisibleIndex = 4;
+            this.colActive.Width = 20;
+            // 
+            // btnActive
+            // 
+            this.btnActive.AutoHeight = false;
+            this.btnActive.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.activeData, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "Aktif Yap", null, null, true)});
+            this.btnActive.Name = "btnActive";
+            this.btnActive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // colPasive
+            // 
+            this.colPasive.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colPasive.AppearanceHeader.Options.UseBackColor = true;
+            this.colPasive.ColumnEdit = this.btnPasive;
+            this.colPasive.MaxWidth = 20;
+            this.colPasive.Name = "colPasive";
+            this.colPasive.OptionsFilter.AllowFilter = false;
+            this.colPasive.Visible = true;
+            this.colPasive.VisibleIndex = 5;
+            this.colPasive.Width = 20;
+            // 
+            // btnPasive
+            // 
+            this.btnPasive.AutoHeight = false;
+            this.btnPasive.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.PasiveData, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "Pasif Yap", null, null, true)});
+            this.btnPasive.Name = "btnPasive";
+            this.btnPasive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
             // statusPanel
             // 
             this.statusPanel.Controls.Add(this.cmbAktivePasive);
@@ -429,7 +480,7 @@
             this.Controls.Add(this.statusPanel);
             this.Controls.Add(this.grdOffer);
             this.Controls.Add(this.panelControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TeklifListesi";
@@ -445,6 +496,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdOffer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOffer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnActive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).EndInit();
             this.statusPanel.ResumeLayout(false);
             this.statusPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).EndInit();
@@ -471,5 +524,9 @@
         private DevExpress.XtraEditors.LabelControl lblRecordCount;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraGrid.Columns.GridColumn colActive;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnActive;
+        private DevExpress.XtraGrid.Columns.GridColumn colPasive;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnPasive;
     }
 }

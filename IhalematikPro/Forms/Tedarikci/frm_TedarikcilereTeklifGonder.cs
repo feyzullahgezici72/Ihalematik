@@ -156,32 +156,24 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnTedaikcileregonder_Click(object sender, EventArgs e)
         {
-            int zeroQuantityCount = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Quantity == 0).Count();
-            if (zeroQuantityCount == 0)
-            {
-                colMaterialListQuantity.OptionsColumn.AllowEdit = false;
-                colMaterialListQuantity.OptionsColumn.AllowFocus = false;
-                colMaterialListQuantity.OptionsColumn.ReadOnly = false;
-                pnlGonderilecekListe.Visible = true;
-                pnlobfpozButtonpanel.Visible = false;
-                pnlMalzemeListesi.Visible = true;
-                pnlFirma.Visible = true;
-                pnlAktarmaPaneli.Visible = true;
-                pnlFirma.Dock = DockStyle.None;
-                pnlFirma.Dock = DockStyle.Right;
-                pnlFirma.BringToFront();
-                pnlAktarmaPaneli.Dock = DockStyle.Right;
-                pnlAktarmaPaneli.BringToFront();
-                pnlMalzemeListesi.Dock = DockStyle.Fill;
-                pnlMalzemeListesi.BringToFront();
-                colIsSelectedSupplier.Visible = true;
-                this.ShowMailPanel = false;
-                this.LoadMaterialGrid(CurrentManager.Instance.CurrentOffer.MaterialList.ToList());
-            }
-            else
-            {
-                MessageBox.Show("Miktari 0(sifir) olan kayit var.");
-            }
+            colMaterialListQuantity.OptionsColumn.AllowEdit = false;
+            colMaterialListQuantity.OptionsColumn.AllowFocus = false;
+            colMaterialListQuantity.OptionsColumn.ReadOnly = false;
+            pnlGonderilecekListe.Visible = true;
+            pnlobfpozButtonpanel.Visible = false;
+            pnlMalzemeListesi.Visible = true;
+            pnlFirma.Visible = true;
+            pnlAktarmaPaneli.Visible = true;
+            pnlFirma.Dock = DockStyle.None;
+            pnlFirma.Dock = DockStyle.Right;
+            pnlFirma.BringToFront();
+            pnlAktarmaPaneli.Dock = DockStyle.Right;
+            pnlAktarmaPaneli.BringToFront();
+            pnlMalzemeListesi.Dock = DockStyle.Fill;
+            pnlMalzemeListesi.BringToFront();
+            colIsSelectedSupplier.Visible = true;
+            this.ShowMailPanel = false;
+            this.LoadMaterialGrid(CurrentManager.Instance.CurrentOffer.MaterialList.ToList());
         }
 
         private void btnTedarikciListesi_Click(object sender, EventArgs e)
@@ -218,6 +210,12 @@ namespace IhalematikProUI.Forms.Tedarikci
             md.SelectedSupplierId = selectedSupplierId;
             md.ShowDialog();
             this.Enabled = true;
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+           
+
         }
     }
 }

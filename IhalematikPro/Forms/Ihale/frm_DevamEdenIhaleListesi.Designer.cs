@@ -29,12 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DevamEdenIhaleListesi));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DevamEdenIhaleListesi));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.pcWorld = new System.Windows.Forms.PictureBox();
+            this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.grdActiveTenderList = new DevExpress.XtraGrid.GridControl();
             this.gridViewActiveTenderList = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -55,11 +58,9 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.pcWorld = new System.Windows.Forms.PictureBox();
-            this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdActiveTenderList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewActiveTenderList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnIhaleAc)).BeginInit();
@@ -70,7 +71,6 @@
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -89,6 +89,48 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1224, 35);
             this.panelControl1.TabIndex = 37;
+            // 
+            // pcWorld
+            // 
+            this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
+            this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Name = "pcWorld";
+            this.pcWorld.Size = new System.Drawing.Size(50, 35);
+            this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcWorld.TabIndex = 18;
+            this.pcWorld.TabStop = false;
+            // 
+            // lblTenderCaptin
+            // 
+            this.lblTenderCaptin.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTenderCaptin.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
+            this.lblTenderCaptin.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.lblTenderCaptin.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblTenderCaptin.LineColor = System.Drawing.Color.Red;
+            this.lblTenderCaptin.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.lblTenderCaptin.Location = new System.Drawing.Point(57, 0);
+            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTenderCaptin.Name = "lblTenderCaptin";
+            this.lblTenderCaptin.ShowLineShadow = false;
+            this.lblTenderCaptin.Size = new System.Drawing.Size(221, 35);
+            this.lblTenderCaptin.TabIndex = 17;
+            this.lblTenderCaptin.Text = "AÇIK TEKLİF LİSTESİ";
+            this.lblTenderCaptin.UseMnemonic = false;
+            // 
+            // btnKapat
+            // 
+            this.btnKapat.AutoSize = true;
+            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnKapat.Location = new System.Drawing.Point(1196, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(28, 35);
+            this.btnKapat.TabIndex = 3;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // timer1
             // 
@@ -126,8 +168,6 @@
             this.gridViewActiveTenderList.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridViewActiveTenderList.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridViewActiveTenderList.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridViewActiveTenderList.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.gridViewActiveTenderList.Appearance.Empty.Options.UseBackColor = true;
             this.gridViewActiveTenderList.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridViewActiveTenderList.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridViewActiveTenderList.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
@@ -480,48 +520,6 @@
             this.labelControl6.TabIndex = 19;
             this.labelControl6.Text = "Açıklama:";
             // 
-            // btnKapat
-            // 
-            this.btnKapat.AutoSize = true;
-            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
-            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1196, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(28, 35);
-            this.btnKapat.TabIndex = 3;
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
-            // pcWorld
-            // 
-            this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
-            this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Name = "pcWorld";
-            this.pcWorld.Size = new System.Drawing.Size(50, 35);
-            this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcWorld.TabIndex = 18;
-            this.pcWorld.TabStop = false;
-            // 
-            // lblTenderCaptin
-            // 
-            this.lblTenderCaptin.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTenderCaptin.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
-            this.lblTenderCaptin.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.lblTenderCaptin.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblTenderCaptin.LineColor = System.Drawing.Color.Red;
-            this.lblTenderCaptin.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.lblTenderCaptin.Location = new System.Drawing.Point(57, 0);
-            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4);
-            this.lblTenderCaptin.Name = "lblTenderCaptin";
-            this.lblTenderCaptin.ShowLineShadow = false;
-            this.lblTenderCaptin.Size = new System.Drawing.Size(221, 35);
-            this.lblTenderCaptin.TabIndex = 17;
-            this.lblTenderCaptin.Text = "AÇIK TEKLİF LİSTESİ";
-            this.lblTenderCaptin.UseMnemonic = false;
-            // 
             // frm_DevamEdenIhaleListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -542,6 +540,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdActiveTenderList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewActiveTenderList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnIhaleAc)).EndInit();
@@ -554,7 +553,6 @@
             this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             this.ResumeLayout(false);
 
         }

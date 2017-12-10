@@ -187,5 +187,10 @@ namespace IhalematikPro.Forms
             this.SaveMaterialListIsWorkship();
             this.OpenForm2();
         }
+
+        private void rpstWorkship_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

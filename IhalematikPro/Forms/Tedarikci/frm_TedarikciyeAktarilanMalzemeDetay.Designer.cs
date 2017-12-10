@@ -206,8 +206,6 @@
             this.gridViewMaterialList.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
             this.gridViewMaterialList.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
             this.gridViewMaterialList.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
-            this.gridViewMaterialList.Appearance.Empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.gridViewMaterialList.Appearance.Empty.Options.UseBackColor = true;
             this.gridViewMaterialList.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(223)))), ((int)(((byte)(223)))));
             this.gridViewMaterialList.Appearance.EvenRow.BackColor2 = System.Drawing.Color.GhostWhite;
             this.gridViewMaterialList.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;

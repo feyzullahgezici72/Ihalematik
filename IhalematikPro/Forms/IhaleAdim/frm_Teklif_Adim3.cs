@@ -68,7 +68,7 @@ namespace IhalematikPro.Forms
             panelControl1.Enabled = true;
             panelGrup.Enabled = true;
             panelControl3.Enabled = true;
-            panelControl3.Enabled = true;
+            panelControl4.Enabled = true;
         }
         public void panelAc()
         {
