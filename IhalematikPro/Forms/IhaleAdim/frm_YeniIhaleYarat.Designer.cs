@@ -571,7 +571,7 @@
             this.gridViewOffer.Appearance.FilterPanel.Options.UseForeColor = true;
             this.gridViewOffer.Appearance.FixedLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(148)))));
             this.gridViewOffer.Appearance.FixedLine.Options.UseBackColor = true;
-            this.gridViewOffer.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(180)))), ((int)(((byte)(191)))));
+            this.gridViewOffer.Appearance.FocusedRow.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridViewOffer.Appearance.FocusedRow.ForeColor = System.Drawing.Color.Black;
             this.gridViewOffer.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridViewOffer.Appearance.FocusedRow.Options.UseForeColor = true;
@@ -687,8 +687,10 @@
             // rpstSelected
             // 
             this.rpstSelected.AutoHeight = false;
-            this.rpstSelected.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.rpstSelected.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.UserDefined;
             this.rpstSelected.Name = "rpstSelected";
+            this.rpstSelected.PictureChecked = global::IhalematikProUI.Properties.Resources.tick_icon;
+            this.rpstSelected.PictureUnchecked = global::IhalematikProUI.Properties.Resources.ui_check_box_uncheck_icon;
             this.rpstSelected.CheckedChanged += new System.EventHandler(this.rpstSelected_CheckedChanged);
             // 
             // colId

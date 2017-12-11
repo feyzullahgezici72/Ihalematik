@@ -443,8 +443,10 @@
             // rpstSelected
             // 
             this.rpstSelected.AutoHeight = false;
-            this.rpstSelected.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.Radio;
+            this.rpstSelected.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.UserDefined;
             this.rpstSelected.Name = "rpstSelected";
+            this.rpstSelected.PictureChecked = global::IhalematikProUI.Properties.Resources.tick_icon;
+            this.rpstSelected.PictureUnchecked = global::IhalematikProUI.Properties.Resources.ui_check_box_uncheck_icon;
             this.rpstSelected.CheckedChanged += new System.EventHandler(this.rpstSelected_CheckedChanged);
             // 
             // colId1
@@ -1014,6 +1016,7 @@
             this.rpstWorkship.Name = "rpstWorkship";
             this.rpstWorkship.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
             this.rpstWorkship.PictureChecked = global::IhalematikProUI.Properties.Resources.tick_icon;
+            this.rpstWorkship.PictureUnchecked = global::IhalematikProUI.Properties.Resources.ui_check_box_uncheck_icon;
             this.rpstWorkship.Click += new System.EventHandler(this.rpstWorkship_Click);
             // 
             // colId

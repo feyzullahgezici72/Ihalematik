@@ -1494,6 +1494,7 @@
             this.rpstIsSelected.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.UserDefined;
             this.rpstIsSelected.Name = "rpstIsSelected";
             this.rpstIsSelected.PictureChecked = global::IhalematikProUI.Properties.Resources.tick_icon;
+            this.rpstIsSelected.PictureUnchecked = global::IhalematikProUI.Properties.Resources.ui_check_box_uncheck_icon;
             this.rpstIsSelected.Click += new System.EventHandler(this.rpstIsSelected_Click);
             // 
             // gridColumn10
