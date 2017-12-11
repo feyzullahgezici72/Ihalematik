@@ -48,7 +48,6 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlAktarmaPaneli.Visible = false;
             pnlMalzemeListesi.Dock = DockStyle.Fill;
             this.LoadMaterialGrid();
-            this.LoadSupplierGrid();
         }
 
         public void LoadSupplierGrid()
@@ -57,6 +56,15 @@ namespace IhalematikProUI.Forms.Tedarikci
             List<SupplierModel> models = IhalematikModelBase.GetModels<SupplierModel, Supplier>(suppliers);
             grdSupplier.DataSource = models;
         }
+
+        //Malzeme eklenen Tedarikciler
+        public void LoadAddedMaterialSupplierGrid()
+        {
+            List<Supplier> suppliers = CurrentManager.Instance.CurrentOffer.Suppliers;
+            List<SupplierModel> models = IhalematikModelBase.GetModels<SupplierModel, Supplier>(suppliers);
+            grdSupplier.DataSource = models;
+        }
+
         public void LoadMaterialGrid(List<OfferMaterialList> Items = null)
         {
             if (Items == null)
@@ -156,6 +164,8 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnTedaikcileregonder_Click(object sender, EventArgs e)
         {
+            this.LoadSupplierGrid();
+            this.LoadMaterialGrid(CurrentManager.Instance.CurrentOffer.MaterialList.ToList());
             colMaterialListQuantity.OptionsColumn.AllowEdit = false;
             colMaterialListQuantity.OptionsColumn.AllowFocus = false;
             colMaterialListQuantity.OptionsColumn.ReadOnly = false;
@@ -173,11 +183,11 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlMalzemeListesi.BringToFront();
             colIsSelectedSupplier.Visible = true;
             this.ShowMailPanel = false;
-            this.LoadMaterialGrid(CurrentManager.Instance.CurrentOffer.MaterialList.ToList());
         }
 
         private void btnTedarikciListesi_Click(object sender, EventArgs e)
         {
+            this.LoadAddedMaterialSupplierGrid();
             colMaterialListQuantity.OptionsColumn.AllowEdit = false;
             colMaterialListQuantity.OptionsColumn.AllowFocus = false;
             colMaterialListQuantity.OptionsColumn.ReadOnly = false;
