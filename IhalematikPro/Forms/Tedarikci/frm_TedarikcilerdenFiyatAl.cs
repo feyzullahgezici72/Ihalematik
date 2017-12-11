@@ -138,6 +138,7 @@ namespace IhalematikProUI.Forms
                 }
             }
             grdMaterialList.DataSource = dataSoruce;
+            this.CalculateInnerValues();
         }
 
         private void btnTumuneUygula_Click(object sender, EventArgs e)
@@ -209,6 +210,17 @@ namespace IhalematikProUI.Forms
         private void grdSupplier_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CalculateInnerValues()
+        {
+            List<OfferMaterialListModel> dataSoruce = grdMaterialList.DataSource as List<OfferMaterialListModel>;
+
+            double baseAmount = Math.Round(dataSoruce.Sum(p => p.PriceWithRisk), 2);
+            double baseKDVamount = 0;
+            txtBaseAmount.Text = baseAmount.ToString("c");
+            txtBaseKDVAmount.Text = baseKDVamount.ToString("c");
+            txtTotalAmount.Text = (baseKDVamount + baseAmount).ToString("c");
         }
     }
 }
