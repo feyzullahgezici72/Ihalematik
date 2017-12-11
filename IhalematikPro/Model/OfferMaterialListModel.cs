@@ -94,13 +94,20 @@ namespace IhalematikProUI.Model
         }
 
         public float Quantity { get; set; }
-        public bool IsSelected { get;  set; }
+        public bool IsSelected { get; set; }
 
         public double Price { get; set; }
         public string SupplierName { get; set; }
 
         public double Risk { get; set; }
 
+        public double PriceWithRisk
+        {
+            get
+            {
+                return Math.Round(this.Price + (this.Price * this.Risk / 100), 2);
+            }
+        }
         public int SupplierMaterialListId { get; set; }
         public SupplierMaterialList SupplierMaterialList { get; set; }
 

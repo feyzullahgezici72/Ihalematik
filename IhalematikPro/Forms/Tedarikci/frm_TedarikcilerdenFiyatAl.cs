@@ -51,7 +51,7 @@ namespace IhalematikProUI.Forms
         private void gridViewSupplier_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             colRisk.Visible = false;
-            colSuppierName.Visible = false;
+            colPriceWithRisk.Visible = false;
             int supplierId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
@@ -77,6 +77,8 @@ namespace IhalematikProUI.Forms
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             colRisk.Visible = true;
+            colPriceWithRisk.Visible = true;
+
             List<OfferMaterialListModel> dataSoruce = new List<OfferMaterialListModel>();
 
             if (rdSortPrice.SelectedIndex == 0)
@@ -136,7 +138,6 @@ namespace IhalematikProUI.Forms
                 }
             }
             grdMaterialList.DataSource = dataSoruce;
-            colSuppierName.Visible = true;
         }
 
         private void btnTumuneUygula_Click(object sender, EventArgs e)
@@ -151,6 +152,7 @@ namespace IhalematikProUI.Forms
                 supplierMaterialList.Risk = risk;
                 SupplierMaterialListProvider.Instance.Save(supplierMaterialList);
             }
+            this.simpleButton1_Click(null, null);
         }
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)

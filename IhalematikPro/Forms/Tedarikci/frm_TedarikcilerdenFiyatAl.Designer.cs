@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikcilerdenFiyatAl));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtTotalAmount = new DevExpress.XtraEditors.TextEdit();
@@ -51,8 +51,7 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colRisk = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSuppierName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPriceWithRisk = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMeterialDetail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpstMeterialDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
@@ -124,7 +123,7 @@
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(651, 71);
             this.panel2.TabIndex = 10;
@@ -139,7 +138,7 @@
             this.panel6.Controls.Add(this.labelControl8);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(416, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(235, 71);
             this.panel6.TabIndex = 11;
@@ -387,8 +386,7 @@
             this.gridColumn10,
             this.gridColumn1,
             this.colRisk,
-            this.colSuppierName,
-            this.gridColumn3,
+            this.colPriceWithRisk,
             this.colMeterialDetail});
             this.gridViewMaterialList.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridViewMaterialList.GridControl = this.grdMaterialList;
@@ -528,27 +526,23 @@
             this.colRisk.FieldName = "Risk";
             this.colRisk.Name = "colRisk";
             this.colRisk.OptionsFilter.AllowFilter = false;
+            this.colRisk.Visible = true;
+            this.colRisk.VisibleIndex = 5;
             this.colRisk.Width = 86;
             // 
-            // colSuppierName
+            // colPriceWithRisk
             // 
-            this.colSuppierName.Caption = "Tedarikçi Adı";
-            this.colSuppierName.FieldName = "SupplierName";
-            this.colSuppierName.Name = "colSuppierName";
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn3.Caption = "BİRİM FİYAT";
-            this.gridColumn3.FieldName = "Price";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsColumn.AllowEdit = false;
-            this.gridColumn3.OptionsColumn.AllowFocus = false;
-            this.gridColumn3.OptionsFilter.AllowFilter = false;
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 5;
-            this.gridColumn3.Width = 117;
+            this.colPriceWithRisk.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colPriceWithRisk.AppearanceHeader.Options.UseBackColor = true;
+            this.colPriceWithRisk.Caption = "BİRİM FİYAT";
+            this.colPriceWithRisk.FieldName = "PriceWithRisk";
+            this.colPriceWithRisk.Name = "colPriceWithRisk";
+            this.colPriceWithRisk.OptionsColumn.AllowEdit = false;
+            this.colPriceWithRisk.OptionsColumn.AllowFocus = false;
+            this.colPriceWithRisk.OptionsFilter.AllowFilter = false;
+            this.colPriceWithRisk.Visible = true;
+            this.colPriceWithRisk.VisibleIndex = 6;
+            this.colPriceWithRisk.Width = 117;
             // 
             // colMeterialDetail
             // 
@@ -560,7 +554,7 @@
             this.colMeterialDetail.Name = "colMeterialDetail";
             this.colMeterialDetail.OptionsFilter.AllowFilter = false;
             this.colMeterialDetail.Visible = true;
-            this.colMeterialDetail.VisibleIndex = 6;
+            this.colMeterialDetail.VisibleIndex = 7;
             this.colMeterialDetail.Width = 25;
             // 
             // rpstMeterialDetail
@@ -568,7 +562,7 @@
             this.rpstMeterialDetail.AutoHeight = false;
             this.rpstMeterialDetail.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rpstMeterialDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.rpstMeterialDetail.Name = "rpstMeterialDetail";
             this.rpstMeterialDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rpstMeterialDetail.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.rpstMeterialDetail_ButtonClick);
@@ -585,7 +579,7 @@
             this.grupPanel.Controls.Add(this.panelControl5);
             this.grupPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.grupPanel.Location = new System.Drawing.Point(0, 0);
-            this.grupPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grupPanel.Margin = new System.Windows.Forms.Padding(2);
             this.grupPanel.Name = "grupPanel";
             this.grupPanel.Size = new System.Drawing.Size(257, 445);
             this.grupPanel.TabIndex = 1;
@@ -595,7 +589,7 @@
             this.panelControl7.Controls.Add(this.grdSupplier);
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl7.Location = new System.Drawing.Point(2, 2);
-            this.panelControl7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl7.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl7.Name = "panelControl7";
             this.panelControl7.Size = new System.Drawing.Size(253, 305);
             this.panelControl7.TabIndex = 23;
@@ -772,7 +766,7 @@
             this.panelControl8.Controls.Add(this.rdSortPrice);
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl8.Location = new System.Drawing.Point(2, 307);
-            this.panelControl8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl8.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl8.Name = "panelControl8";
             this.panelControl8.Size = new System.Drawing.Size(253, 68);
             this.panelControl8.TabIndex = 23;
@@ -781,7 +775,7 @@
             // 
             this.rdSortPrice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rdSortPrice.Location = new System.Drawing.Point(2, 2);
-            this.rdSortPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdSortPrice.Margin = new System.Windows.Forms.Padding(2);
             this.rdSortPrice.Name = "rdSortPrice";
             this.rdSortPrice.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rdSortPrice.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
@@ -799,7 +793,7 @@
             this.panelControl5.Controls.Add(this.simpleButton1);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl5.Location = new System.Drawing.Point(2, 375);
-            this.panelControl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl5.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl5.Name = "panelControl5";
             this.panelControl5.Size = new System.Drawing.Size(253, 68);
             this.panelControl5.TabIndex = 12;
@@ -810,7 +804,7 @@
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.Location = new System.Drawing.Point(4, 6);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(247, 60);
             this.simpleButton1.TabIndex = 23;
@@ -823,7 +817,7 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2);
             this.pcWorld.Name = "pcWorld";
             this.pcWorld.Size = new System.Drawing.Size(33, 24);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -838,7 +832,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(882, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(26, 24);
             this.btnKapat.TabIndex = 3;
@@ -889,7 +883,7 @@
             this.panelControl4.Controls.Add(this.btnTumuneUygula);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelControl4.Location = new System.Drawing.Point(601, 2);
-            this.panelControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(183, 44);
             this.panelControl4.TabIndex = 46;
@@ -898,7 +892,7 @@
             // 
             this.txtRisk.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtRisk.Location = new System.Drawing.Point(119, 14);
-            this.txtRisk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRisk.Margin = new System.Windows.Forms.Padding(2);
             this.txtRisk.Name = "txtRisk";
             this.txtRisk.Size = new System.Drawing.Size(29, 21);
             this.txtRisk.TabIndex = 41;
@@ -910,7 +904,7 @@
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl3.Location = new System.Drawing.Point(15, 17);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(99, 14);
             this.labelControl3.TabIndex = 42;
@@ -1098,9 +1092,8 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn colSuppierName;
         private DevExpress.XtraGrid.Columns.GridColumn colRisk;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn colPriceWithRisk;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private System.Windows.Forms.MaskedTextBox txtRisk;
         private DevExpress.XtraEditors.LabelControl labelControl3;
