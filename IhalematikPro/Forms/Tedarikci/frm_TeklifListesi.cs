@@ -19,11 +19,11 @@ namespace IhalematikProUI.Forms
 {
     public partial class frm_TeklifListesi : IhalematikBaseForm
     {
+        public int FocusedRowHandle { get; private set; }
         public frm_TeklifListesi()
         {
             InitializeComponent();
             base.ScreenMethod();
-
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -41,6 +41,7 @@ namespace IhalematikProUI.Forms
 
         }
         frm_TedarikcilereTeklifGonder teklifGonder;
+
         private void btnOpen_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOffer.GetFocusedRowCellValue("Id"));
@@ -74,8 +75,69 @@ namespace IhalematikProUI.Forms
 
         private void frm_TeklifListesi_Shown(object sender, EventArgs e)
         {
+            this.LoadOfferGrid();
+        }
+
+        private void LoadOfferGrid()
+        {
             List<Offer> items = OfferProvider.Instance.GetItems();
-            grdOffer.DataSource = items;
+           // grdOffer.DataSource = items;
+
+            if (cmbAktivePasive.SelectedIndex == 0)
+            {
+                grdOffer.DataSource = items.Where(p => p.IsActive);
+                colPasive.Visible = true;
+                colActive.Visible = false;
+                colOpen.Visible = true;
+            }
+            else if (cmbAktivePasive.SelectedIndex == 1)
+            {
+                grdOffer.DataSource = items.Where(p => !p.IsActive);
+                colActive.Visible = true;
+                colOpen.Visible = false;
+                colPasive.Visible = false;
+            }
+        }
+
+        private void btnActive_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Aktif yapmak istediğinz emin misiniz?", "Aktif", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.Yes))
+            {
+                this.FocusedRowHandle = gridViewOffer.FocusedRowHandle;
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOffer.GetFocusedRowCellValue("Id"));
+                Offer selectedOffer = OfferProvider.Instance.GetItem(id);
+                selectedOffer.IsActive = true;
+                OfferProvider.Instance.Save(selectedOffer);
+                this.LoadOfferGrid();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void btnPasive_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Pasif yapmak istediğinz emin misiniz?", "Pasif", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.Yes))
+            {
+                this.FocusedRowHandle = gridViewOffer.FocusedRowHandle;
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOffer.GetFocusedRowCellValue("Id"));
+                Offer selectedOffer = OfferProvider.Instance.GetItem(id);
+                selectedOffer.IsActive = false;
+                OfferProvider.Instance.Save(selectedOffer);
+                this.LoadOfferGrid();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void cmbAktivePasive_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.LoadOfferGrid();
         }
     }
 }
