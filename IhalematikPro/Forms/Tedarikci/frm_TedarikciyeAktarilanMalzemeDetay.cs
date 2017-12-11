@@ -18,6 +18,8 @@ namespace IhalematikProUI.Forms.Tedarikci
 {
     public partial class frm_TedarikciyeAktarilanMalzemeDetay : DevExpress.XtraEditors.XtraForm
     {
+        protected Task SendMailTask { get; set; }
+        public bool IsSendMail { get; set; }
         public bool ShowMailPanel { get; set; }
         frm_TedarikcilereTeklifGonder _owner;
         public int SelectedSupplierId { get; set; }
@@ -85,28 +87,15 @@ namespace IhalematikProUI.Forms.Tedarikci
             List<OfferMaterialList> items = grdMaterialList.DataSource as List<OfferMaterialList>;
             if (items != null && items.Count != 0)
             {
-                emailMesajPanel.Visible = true;
-                Task task = new Task(() =>
+                this.SendMailTask = new Task(() =>
                 {
+                    this.IsSendMail = false;
+                    this.CreateExcel();
                     this.SendMail();
                 });
-                task.Start();
-                //while (done)
-                //{
-                //    emailMesajPanel.Visible = false;
-                //    frm_MesajFormu mesajformu = new frm_MesajFormu();
-                //    mesajformu.lblMesaj.Text = "Mail Gönderildi...";
-                //    mesajformu.ShowDialog();
-                //    this.Close();
-                //}
-                //if (task.IsCompleted)
-                //{
-                //    emailMesajPanel.Visible = false;
-                //    frm_MesajFormu mesajformu = new frm_MesajFormu();
-                //    mesajformu.lblMesaj.Text = "Mail Gönderildi...";
-                //    mesajformu.ShowDialog();
-                //    this.Close();
-                //}
+                this.SendMailTask.Start();
+                emailMesajPanel.Visible = true;
+                this.SendInfoMessage();
             }
             else
             {
@@ -189,24 +178,57 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         public void emailMesajPaneloOrtala()
         {
-
             emailMesajPanel.Left = (grdMaterialList.Width / 2) - (emailMesajPanel.Width / 2);
             emailMesajPanel.Top = (grdMaterialList.Height / 2) - (emailMesajPanel.Height / 2);
         }
 
+        private void SendInfoMessage()
+        {
+            if (!this.IsSendMail)
+            {
+                if (this.SendMailTask == null)
+                {
+                    //throw new SessionExpiredException();
+                }
+
+                else
+                {
+                    try
+                    {
+                        this.SendMailTask.Wait();
+                        this.SendInfoMessage();
+                    }
+
+                    catch (Exception ex)
+                    {
+
+                    }
+                }
+            }
+            else
+            {
+                emailMesajPanel.Visible = false;
+                frm_MesajFormu mesajformu = new frm_MesajFormu();
+                mesajformu.lblMesaj.Text = "Mail Gönderildi...";
+                mesajformu.ShowDialog();
+                this.Close();
+            }
+        }
         private void SendMail()
         {
-            this.CreateExcel();
-            if (File.Exists(this.DestinationFile))
+            try
             {
-                MailingManager.Instance.SendMaterialToSupplier(this.Supplier.Email, txtEmailBody.Text, this.DestinationFile);
+                if (File.Exists(this.DestinationFile))
+                {
+                    MailingManager.Instance.SendMaterialToSupplier(this.Supplier.Email, txtEmailBody.Text, this.DestinationFile);
+                    this.IsSendMail = true;
+                }
             }
+            catch (Exception)
+            {
 
-        }
-
-        private void frm_TedarikciyeAktarilanMalzemeDetay_Load(object sender, EventArgs e)
-        {
-
+                throw;
+            }
         }
     }
 }

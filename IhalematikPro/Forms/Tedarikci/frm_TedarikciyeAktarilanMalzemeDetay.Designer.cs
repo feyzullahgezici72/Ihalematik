@@ -692,7 +692,6 @@
             this.Name = "frm_TedarikciyeAktarilanMalzemeDetay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = " ";
-            this.Load += new System.EventHandler(this.frm_TedarikciyeAktarilanMalzemeDetay_Load);
             this.Shown += new System.EventHandler(this.frm_TedarikciyeAktarilanMalzemeDetay_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
