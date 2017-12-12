@@ -523,5 +523,12 @@ namespace IhalematikPro.Forms
             panelKapat();
             this.LoadTenderMaterialList();
         }
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            af.RibonPasif();
+            af.btnAdimx4.PerformClick();
+        }
     }
 }
