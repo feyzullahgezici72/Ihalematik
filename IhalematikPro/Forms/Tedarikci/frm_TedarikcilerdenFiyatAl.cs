@@ -39,6 +39,8 @@ namespace IhalematikProUI.Forms
         private void frm_TedarikcilerdenFiyatAl_Shown(object sender, EventArgs e)
         {
             this.LoadSupplierGrid();
+            pnlrisk.Visible = false;
+            pnltoplam.Visible = false;
         }
         public void LoadSupplierGrid()
         {
@@ -79,7 +81,8 @@ namespace IhalematikProUI.Forms
         {
             colRisk.Visible = true;
             colPriceWithRisk.Visible = true;
-
+            pnlrisk.Visible = true;
+            pnltoplam.Visible = true;
             List<OfferMaterialListModel> dataSoruce = new List<OfferMaterialListModel>();
 
             if (rdSortPrice.SelectedIndex == 0)
@@ -212,7 +215,8 @@ namespace IhalematikProUI.Forms
 
         private void grdSupplier_Click(object sender, EventArgs e)
         {
-
+            pnlrisk.Visible = false;
+            pnltoplam.Visible = false;
         }
 
         private void CalculateInnerValues()
@@ -224,6 +228,12 @@ namespace IhalematikProUI.Forms
             txtBaseAmount.Text = baseAmount.ToString("c");
             txtBaseKDVAmount.Text = baseKDVamount.ToString("c");
             txtTotalAmount.Text = (baseKDVamount + baseAmount).ToString("c");
+        }
+
+        private void rdSortPrice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pnlrisk.Visible = false;
+            pnltoplam.Visible = false;
         }
     }
 }

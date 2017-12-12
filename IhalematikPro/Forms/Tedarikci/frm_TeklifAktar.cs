@@ -102,6 +102,9 @@ namespace IhalematikProUI.Forms.Tedarikci
             lblOfferDescription.Text = this.OfferDescription;
             lblOfferNumber.Text = this.OfferNumber;
             lblSupplierName.Text = this.SupplierName;
+            frm_MesajFormu mf = new frm_MesajFormu();
+            mf.lblMesaj.Text = "Teklif dosyası aktarıldı...";
+            mf.ShowDialog();
         }
     }
 }

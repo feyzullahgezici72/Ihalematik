@@ -142,6 +142,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                         }
                     }
                     this.LoadMaterialGrid(CurrentManager.Instance.CurrentOffer.MaterialList.ToList());
+                    frm_MesajFormu mf = new frm_MesajFormu();
+                    mf.lblMesaj.Text = "Seçili Malzemeler Firmaya aktarıldı...";
+                    mf.ShowDialog();
                 }
             }
         }
