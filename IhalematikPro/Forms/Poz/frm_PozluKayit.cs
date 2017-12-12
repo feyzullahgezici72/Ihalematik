@@ -83,7 +83,7 @@ namespace IhalematikPro.Forms
                                     model.Number = item.PozOBF.Number;
                                     model.Unit = item.PozOBF.Unit;
                                     model.UnitPrice = item.PozOBF.UnitPrice;
-                                    double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id);
+                                    double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
                                     model.OfferPrice = offerPrice;
                                     model.Id = item.PozOBFId;
                                     pozModels.Add(model);
@@ -96,7 +96,7 @@ namespace IhalematikPro.Forms
                                 model.Number = item.PozOBF.Number;
                                 model.Unit = item.PozOBF.Unit;
                                 model.UnitPrice = item.PozOBF.UnitPrice;
-                                double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id);
+                                double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
                                 model.OfferPrice = offerPrice;
                                 model.Id = item.PozOBFId;
                                 pozModels.Add(model);
@@ -229,7 +229,7 @@ namespace IhalematikPro.Forms
                 OfferMaterialList offerMaterialList = offer.MaterialList.Where(p => p.PozOBFId == item.PozOBFId && p.IsPoz).FirstOrDefault();
                 if (offerMaterialList != null)
                 {
-                    item.OfferPrice = OfferManager.Instance.GetOfferMaterialListPrice(offerMaterialList.Id);
+                    item.OfferPrice = OfferManager.Instance.GetOfferMaterialListPrice(offerMaterialList.Id).Price;
                 }
             }
 

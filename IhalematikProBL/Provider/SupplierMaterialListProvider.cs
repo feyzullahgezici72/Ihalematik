@@ -22,6 +22,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("Price", t.Price);
             parameters.Add("Risk", t.Risk);
             parameters.Add("IsSelected", t.IsSelected);
+            parameters.Add("KDV", t.KDV);
             return parameters;
         }
 
@@ -35,6 +36,7 @@ namespace IhalematikProBL.Provider
             t.Risk = dr.GetValue<double>("Risk");
             t.IsActive = dr.GetValue<bool>("IsActive");
             t.IsSelected = dr.GetValue<bool>("IsSelected");
+            t.KDV = dr.GetValue<double>("KDV");
         }
 
         public void SupplierMaterialListSelectedUpdate(int OfferId)

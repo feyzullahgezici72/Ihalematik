@@ -18,7 +18,7 @@ namespace IhalematikProBL.Manager
             return (int)offerNumber;
         }
 
-        public double GetOfferMaterialListPrice(int OfferMaterialListId)
+        public SupplierMaterialList GetOfferMaterialListPrice(int OfferMaterialListId)
         {
             Dictionary<string, object> param = new Dictionary<string, object>();
             param.Add("MaterialListId", OfferMaterialListId);
@@ -26,9 +26,9 @@ namespace IhalematikProBL.Manager
             List<SupplierMaterialList> supplierMaterialLists = SupplierMaterialListProvider.Instance.GetItems(param);
             if (supplierMaterialLists.FirstOrDefault() == null)
             {
-                return 0;
+                return new SupplierMaterialList();
             }
-            return supplierMaterialLists.FirstOrDefault().Price;
+            return supplierMaterialLists.FirstOrDefault();
         }
 
         public OfferMaterialList GetOfferMaterialListPrice(int OfferId, int PozOBFId, bool IsPoz)
@@ -43,8 +43,9 @@ namespace IhalematikProBL.Manager
             if (offerMaterialLists.FirstOrDefault() != null)
             {
                 result = offerMaterialLists.FirstOrDefault();
-                double price = this.GetOfferMaterialListPrice(offerMaterialLists.FirstOrDefault().Id);
-                result.Price = price;
+                SupplierMaterialList supplierMaterialList = this.GetOfferMaterialListPrice(offerMaterialLists.FirstOrDefault().Id);
+                result.Price = supplierMaterialList.Price;
+                result.OfferKDV = supplierMaterialList.KDV;
             }
 
             return result;

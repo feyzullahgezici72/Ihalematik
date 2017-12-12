@@ -324,10 +324,12 @@ namespace IhalematikPro.Model
             this.OfferPrice = Entity.OfferPrice;
             this.IsPoz = Entity.IsPoz;
             OfferMaterialList offerMaterialList = OfferManager.Instance.GetOfferMaterialListPrice(this.Tender.OfferId, this.PozOBFId, this.IsPoz);
-            this.PozOBFUnitPrice = offerMaterialList.Price;
+            
             if (this.Tender.Offer != null)
             {
-                this.Quantity = offerMaterialList.Quantity; 
+                this.Quantity = offerMaterialList.Quantity;
+                this.PozOBFUnitPrice = offerMaterialList.Price;
+                this.KDVPercentage = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(offerMaterialList.OfferKDV);
             }
             //this.TenderMaterialListEquipment = IhalematikModelBase.GetModels<TenderMaterialListEquipmentModel, TenderMaterialListEquipment>(Entity.TenderMaterialListEquipment);
         }

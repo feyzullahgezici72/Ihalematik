@@ -72,5 +72,6 @@ namespace IhalematikProBL.Entity
         public double Price { get; set; }
 
         public double Risk { get; set; }
+        public double KDV { get; set; }
     }
 }

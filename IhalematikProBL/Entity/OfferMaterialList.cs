@@ -61,5 +61,6 @@ namespace IhalematikProBL.Entity
         }
         public bool IsSelected { get; set; }
         public double Price { get; set; }
+        public double OfferKDV { get; internal set; }
     }
 }

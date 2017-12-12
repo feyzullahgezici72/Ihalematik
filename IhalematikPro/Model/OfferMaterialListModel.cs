@@ -101,6 +101,8 @@ namespace IhalematikProUI.Model
 
         public double Risk { get; set; }
 
+        public double KDV { get; set; }
+
         public double PriceWithRisk
         {
             get

@@ -62,7 +62,8 @@ namespace IhalematikProUI.Forms.Tedarikci
 
                     string description = excelReader.GetString(4);
                     double quantity = excelReader.GetDouble(5);
-                    double price = excelReader.GetDouble(6);
+                    double kdv = excelReader.GetDouble(6);
+                    double price = excelReader.GetDouble(7);
 
                     Dictionary<string, object> parameters = new Dictionary<string, object>();
                     parameters.Add("SupplierId", supplierId);
@@ -73,10 +74,12 @@ namespace IhalematikProUI.Forms.Tedarikci
                     if (supplierMaterialList != null)
                     {
                         supplierMaterialList.Price = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(price);
+                        supplierMaterialList.KDV = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(kdv);
                         SupplierMaterialListProvider.Instance.Save(supplierMaterialList);
 
                         OfferMaterialListModel offerMaterialList = new OfferMaterialListModel(supplierMaterialList.MaterialList);
                         offerMaterialList.Price = supplierMaterialList.Price;
+                        offerMaterialList.KDV = supplierMaterialList.KDV;
                         this.MaterialLists.Add(offerMaterialList);
 
                         if (string.IsNullOrEmpty(this.SupplierName))

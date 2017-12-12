@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikcilerdenFiyatAl));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtTotalAmount = new DevExpress.XtraEditors.TextEdit();
@@ -80,8 +81,9 @@
             this.lblTederDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.colKDV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalAmount.Properties)).BeginInit();
@@ -384,6 +386,7 @@
             this.gridColumn8,
             this.gridColumn9,
             this.gridColumn10,
+            this.colKDV,
             this.gridColumn1,
             this.colRisk,
             this.colPriceWithRisk,
@@ -515,7 +518,7 @@
             this.gridColumn1.OptionsColumn.AllowFocus = false;
             this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 4;
+            this.gridColumn1.VisibleIndex = 5;
             this.gridColumn1.Width = 110;
             // 
             // colRisk
@@ -527,7 +530,7 @@
             this.colRisk.Name = "colRisk";
             this.colRisk.OptionsFilter.AllowFilter = false;
             this.colRisk.Visible = true;
-            this.colRisk.VisibleIndex = 5;
+            this.colRisk.VisibleIndex = 6;
             this.colRisk.Width = 86;
             // 
             // colPriceWithRisk
@@ -541,7 +544,7 @@
             this.colPriceWithRisk.OptionsColumn.AllowFocus = false;
             this.colPriceWithRisk.OptionsFilter.AllowFilter = false;
             this.colPriceWithRisk.Visible = true;
-            this.colPriceWithRisk.VisibleIndex = 6;
+            this.colPriceWithRisk.VisibleIndex = 7;
             this.colPriceWithRisk.Width = 117;
             // 
             // colMeterialDetail
@@ -554,7 +557,7 @@
             this.colMeterialDetail.Name = "colMeterialDetail";
             this.colMeterialDetail.OptionsFilter.AllowFilter = false;
             this.colMeterialDetail.Visible = true;
-            this.colMeterialDetail.VisibleIndex = 7;
+            this.colMeterialDetail.VisibleIndex = 8;
             this.colMeterialDetail.Width = 25;
             // 
             // rpstMeterialDetail
@@ -562,7 +565,7 @@
             this.rpstMeterialDetail.AutoHeight = false;
             this.rpstMeterialDetail.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rpstMeterialDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.rpstMeterialDetail.Name = "rpstMeterialDetail";
             this.rpstMeterialDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rpstMeterialDetail.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.rpstMeterialDetail_ButtonClick);
@@ -992,6 +995,14 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // colKDV
+            // 
+            this.colKDV.Caption = "KDV(%)";
+            this.colKDV.FieldName = "KDV";
+            this.colKDV.Name = "colKDV";
+            this.colKDV.Visible = true;
+            this.colKDV.VisibleIndex = 4;
+            // 
             // frm_TedarikcilerdenFiyatAl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1100,5 +1111,6 @@
         private DevExpress.XtraEditors.SimpleButton btnTumuneUygula;
         private DevExpress.XtraGrid.Columns.GridColumn colMeterialDetail;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit rpstMeterialDetail;
+        private DevExpress.XtraGrid.Columns.GridColumn colKDV;
     }
 }

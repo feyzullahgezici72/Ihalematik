@@ -65,6 +65,7 @@ namespace IhalematikProUI.Forms
                 {
                     OfferMaterialListModel model = new OfferMaterialListModel(item.MaterialList);
                     model.Price = item.Price;
+                    model.KDV = item.KDV;
                     model.Risk = item.Risk;
                     model.SupplierMaterialList = item;
                     model.SupplierMaterialListId = item.Id;
@@ -95,6 +96,7 @@ namespace IhalematikProUI.Forms
                         supplierMaterialList = item.First();
                     }
                     OfferMaterialListModel model = new OfferMaterialListModel(supplierMaterialList.MaterialList);
+                    model.KDV = supplierMaterialList.KDV;
                     model.Price = supplierMaterialList.Price;
                     model.SupplierName = supplierMaterialList.Supplier.CompanyName;
                     model.SupplierMaterialList = supplierMaterialList;
@@ -129,6 +131,7 @@ namespace IhalematikProUI.Forms
                     }
                     OfferMaterialListModel model = new OfferMaterialListModel(supplierMaterialList.MaterialList);
                     model.SupplierMaterialListId = supplierMaterialList.Id;
+                    model.KDV = supplierMaterialList.KDV;
                     model.Risk = supplierMaterialList.Risk;
                     model.SupplierMaterialList = supplierMaterialList;
                     model.Price = supplierMaterialList.Price;
@@ -216,8 +219,8 @@ namespace IhalematikProUI.Forms
         {
             List<OfferMaterialListModel> dataSoruce = grdMaterialList.DataSource as List<OfferMaterialListModel>;
 
-            double baseAmount = Math.Round(dataSoruce.Sum(p => p.PriceWithRisk), 2);
-            double baseKDVamount = 0;
+            double baseAmount = Math.Round(dataSoruce.Sum(p => p.PriceWithRisk * p.Quantity), 2);
+            double baseKDVamount = Math.Round(dataSoruce.Sum(p => p.PriceWithRisk * p.Quantity * p.KDV / 100), 2); ;
             txtBaseAmount.Text = baseAmount.ToString("c");
             txtBaseKDVAmount.Text = baseKDVamount.ToString("c");
             txtTotalAmount.Text = (baseKDVamount + baseAmount).ToString("c");

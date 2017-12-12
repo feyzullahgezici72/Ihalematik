@@ -163,7 +163,7 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2);
             this.pcWorld.Name = "pcWorld";
             this.pcWorld.Size = new System.Drawing.Size(33, 24);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -178,7 +178,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(882, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(6);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(26, 24);
             this.btnKapat.TabIndex = 3;
@@ -215,7 +215,7 @@
             this.pnlUst.Controls.Add(this.labelControl1);
             this.pnlUst.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUst.Location = new System.Drawing.Point(0, 24);
-            this.pnlUst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlUst.Margin = new System.Windows.Forms.Padding(4);
             this.pnlUst.Name = "pnlUst";
             this.pnlUst.Size = new System.Drawing.Size(908, 48);
             this.pnlUst.TabIndex = 21;
@@ -225,7 +225,7 @@
             this.pnlGonderilecekListe.Controls.Add(this.btnGonderilenMalzemeListesi);
             this.pnlGonderilecekListe.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlGonderilecekListe.Location = new System.Drawing.Point(482, 2);
-            this.pnlGonderilecekListe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlGonderilecekListe.Margin = new System.Windows.Forms.Padding(2);
             this.pnlGonderilecekListe.Name = "pnlGonderilecekListe";
             this.pnlGonderilecekListe.Size = new System.Drawing.Size(193, 44);
             this.pnlGonderilecekListe.TabIndex = 12;
@@ -241,7 +241,7 @@
             this.btnGonderilenMalzemeListesi.Image = ((System.Drawing.Image)(resources.GetObject("btnGonderilenMalzemeListesi.Image")));
             this.btnGonderilenMalzemeListesi.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnGonderilenMalzemeListesi.Location = new System.Drawing.Point(2, 2);
-            this.btnGonderilenMalzemeListesi.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnGonderilenMalzemeListesi.Margin = new System.Windows.Forms.Padding(6);
             this.btnGonderilenMalzemeListesi.Name = "btnGonderilenMalzemeListesi";
             this.btnGonderilenMalzemeListesi.Size = new System.Drawing.Size(189, 40);
             toolTipTitleItem1.Text = "GÖNDERİLECEKLER";
@@ -264,7 +264,7 @@
             this.pnlobfpozButtonpanel.Controls.Add(this.btnPozKayit);
             this.pnlobfpozButtonpanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlobfpozButtonpanel.Location = new System.Drawing.Point(675, 2);
-            this.pnlobfpozButtonpanel.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.pnlobfpozButtonpanel.Margin = new System.Windows.Forms.Padding(9);
             this.pnlobfpozButtonpanel.Name = "pnlobfpozButtonpanel";
             this.pnlobfpozButtonpanel.Size = new System.Drawing.Size(231, 44);
             this.pnlobfpozButtonpanel.TabIndex = 11;
@@ -279,7 +279,7 @@
             this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnObfKayit.Location = new System.Drawing.Point(107, 0);
-            this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4);
             this.btnObfKayit.Name = "btnObfKayit";
             this.btnObfKayit.Size = new System.Drawing.Size(107, 44);
             toolTipTitleItem2.Text = "ÖBF";
@@ -305,7 +305,7 @@
             this.btnPozKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnPozKayit.Image")));
             this.btnPozKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnPozKayit.Location = new System.Drawing.Point(0, 0);
-            this.btnPozKayit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPozKayit.Margin = new System.Windows.Forms.Padding(4);
             this.btnPozKayit.Name = "btnPozKayit";
             this.btnPozKayit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnPozKayit.Size = new System.Drawing.Size(107, 44);
@@ -374,7 +374,7 @@
             this.panelControl4.Controls.Add(this.btnListeOlustur);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl4.Location = new System.Drawing.Point(0, 72);
-            this.panelControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(171, 445);
             this.panelControl4.TabIndex = 0;
@@ -390,7 +390,7 @@
             this.btnTedarikciListesi.Image = ((System.Drawing.Image)(resources.GetObject("btnTedarikciListesi.Image")));
             this.btnTedarikciListesi.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnTedarikciListesi.Location = new System.Drawing.Point(2, 112);
-            this.btnTedarikciListesi.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnTedarikciListesi.Margin = new System.Windows.Forms.Padding(6);
             this.btnTedarikciListesi.Name = "btnTedarikciListesi";
             this.btnTedarikciListesi.Size = new System.Drawing.Size(167, 55);
             toolTipTitleItem4.Text = "MAİL GÖNDER";
@@ -417,7 +417,7 @@
             this.btnTedaikcileregonder.Image = ((System.Drawing.Image)(resources.GetObject("btnTedaikcileregonder.Image")));
             this.btnTedaikcileregonder.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnTedaikcileregonder.Location = new System.Drawing.Point(2, 57);
-            this.btnTedaikcileregonder.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnTedaikcileregonder.Margin = new System.Windows.Forms.Padding(6);
             this.btnTedaikcileregonder.Name = "btnTedaikcileregonder";
             this.btnTedaikcileregonder.Size = new System.Drawing.Size(167, 55);
             toolTipTitleItem5.Text = "AKTAR";
@@ -444,7 +444,7 @@
             this.btnListeOlustur.Image = ((System.Drawing.Image)(resources.GetObject("btnListeOlustur.Image")));
             this.btnListeOlustur.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnListeOlustur.Location = new System.Drawing.Point(2, 2);
-            this.btnListeOlustur.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnListeOlustur.Margin = new System.Windows.Forms.Padding(6);
             this.btnListeOlustur.Name = "btnListeOlustur";
             this.btnListeOlustur.Size = new System.Drawing.Size(167, 55);
             toolTipTitleItem6.Text = "LİSTE";
@@ -483,7 +483,7 @@
             this.pnlx.Controls.Add(this.pnlFirma);
             this.pnlx.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlx.Location = new System.Drawing.Point(171, 72);
-            this.pnlx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlx.Margin = new System.Windows.Forms.Padding(2);
             this.pnlx.Name = "pnlx";
             this.pnlx.Size = new System.Drawing.Size(737, 445);
             this.pnlx.TabIndex = 22;
@@ -816,7 +816,7 @@
             this.panelControl6.Controls.Add(this.labelControl4);
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl6.Location = new System.Drawing.Point(2, 2);
-            this.panelControl6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl6.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl6.Name = "panelControl6";
             this.panelControl6.Size = new System.Drawing.Size(442, 17);
             this.panelControl6.TabIndex = 31;
@@ -827,7 +827,7 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl4.Location = new System.Drawing.Point(0, 0);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(100, 14);
             this.labelControl4.TabIndex = 0;
@@ -1066,7 +1066,7 @@
             this.panelControl7.Controls.Add(this.labelControl5);
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl7.Location = new System.Drawing.Point(2, 2);
-            this.panelControl7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl7.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl7.Name = "panelControl7";
             this.panelControl7.Size = new System.Drawing.Size(471, 17);
             this.panelControl7.TabIndex = 40;
@@ -1077,7 +1077,7 @@
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl5.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl5.Location = new System.Drawing.Point(0, 0);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(103, 14);
             this.labelControl5.TabIndex = 0;
@@ -1093,7 +1093,7 @@
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.pnlUst);
             this.Controls.Add(this.panelControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TedarikcilereTeklifGonder";
