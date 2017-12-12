@@ -100,14 +100,14 @@ namespace IhalematikPro.Forms
 
         private void CalculateInnerValuesMarkup()
         {
-            List<MaterialListModel> models = gridViewMaterialListIsWorkship.DataSource as List<MaterialListModel>;
+            //List<MaterialListModel> models = gridViewMaterialListIsWorkship.DataSource as List<MaterialListModel>;
 
-            if (models != null)
-            {
-                txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
-                txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
-                txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
-            }
+            //if (models != null)
+            //{
+            //    txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
+            //    txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
+            //    txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
+            //}
         }
 
         #endregion

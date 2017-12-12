@@ -97,18 +97,18 @@ namespace IhalematikPro.Forms
 
         private void CalculateInnerValue(ref double BaseAmount)
         {
-            List<MaterialListModel> items = grdMaterialListNonWorkship.DataSource as List<MaterialListModel>;//CurrentManager.CurrentTender.MaterialList;//.Instance.GetMaterialListNonWorkship();
-            if (items != null)
-            {
-                BaseAmount = items.Sum(p => p.Markup * p.Quantity);
-                double baseKDVAmount = items.Sum(p => p.KDVAmount);
+            //List<MaterialListModel> items = grdMaterialListNonWorkship.DataSource as List<MaterialListModel>;//CurrentManager.CurrentTender.MaterialList;//.Instance.GetMaterialListNonWorkship();
+            //if (items != null)
+            //{
+            //    BaseAmount = items.Sum(p => p.Markup * p.Quantity);
+            //    double baseKDVAmount = items.Sum(p => p.KDVAmount);
 
-                txtBaseAmount.Text = string.Format("{0:C2}", BaseAmount);
-                txtBaseKDVAmount.Text = string.Format("{0:C2}", baseKDVAmount);
-                txtTotalAmount.Text = string.Format("{0:C2}", Math.Round((baseKDVAmount + BaseAmount), 2));
+            //    txtBaseAmount.Text = string.Format("{0:C2}", BaseAmount);
+            //    txtBaseKDVAmount.Text = string.Format("{0:C2}", baseKDVAmount);
+            //    txtTotalAmount.Text = string.Format("{0:C2}", Math.Round((baseKDVAmount + BaseAmount), 2));
 
-                lblTotalMarkup.Text = (items.Sum(p => p.TotalMarkup)).ToString("C2");
-            }
+            //    lblTotalMarkup.Text = (items.Sum(p => p.TotalMarkup)).ToString("C2");
+            //}
         }
         frm_TeklifAdimSon a4 = (frm_TeklifAdimSon)Application.OpenForms["frm_TeklifSonAdim"];
       

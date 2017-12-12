@@ -106,12 +106,12 @@ namespace IhalematikPro.Forms
         private void grdMaterialList2_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
             //MaterialList selectedItem = gridViewMaterialList.GetRow(e.RowHandle) as MaterialList;
-            double baseAmount = CurrentManager.Instance.CurrentTender.MaterialList.Sum(p => p.TotalAmount);
-            double baseKDVAmount = CurrentManager.Instance.CurrentTender.MaterialList.Sum(p => p.KDVAmount);
+            //double baseAmount = CurrentManager.Instance.CurrentTender.MaterialList.Sum(p => p.TotalAmount);
+            //double baseKDVAmount = CurrentManager.Instance.CurrentTender.MaterialList.Sum(p => p.KDVAmount);
 
-            txtBaseAmount.Text = string.Format("{0:C2}", baseAmount);
-            txtBaseKDVAmount.Text = string.Format("{0:C2}", baseKDVAmount);
-            txtTotalAmount.Text = string.Format("{0:C2}", Math.Round((baseKDVAmount + baseAmount), 2));
+            //txtBaseAmount.Text = string.Format("{0:C2}", baseAmount);
+            //txtBaseKDVAmount.Text = string.Format("{0:C2}", baseKDVAmount);
+            //txtTotalAmount.Text = string.Format("{0:C2}", Math.Round((baseKDVAmount + baseAmount), 2));
         }
 
         public void RefreshDataGrid()
