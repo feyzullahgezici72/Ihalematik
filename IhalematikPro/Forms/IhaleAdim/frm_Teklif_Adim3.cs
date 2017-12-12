@@ -417,9 +417,9 @@ namespace IhalematikPro.Forms
             {
                 List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
                 List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-                txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
-                txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
-                txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
+                //txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
+                //txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
+                //txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
                 grdMaterialListIsWorkship.DataSource = models;
             }
         }
