@@ -12,6 +12,7 @@ using IhalematikPro.Manager;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Model;
+using IhalematikPro.Model;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -30,6 +31,11 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void frm_MalzemeBazindaTedarikciFiyatDetay_Shown(object sender, EventArgs e)
         {
+            OfferMaterialList offerMaterialList = OfferMaterialListProvider.Instance.GetItem(this.SelectedOfferMaterialListId);
+            txtNumber.Text = offerMaterialList.PozOBF.Number;
+            txtDescription.Text = offerMaterialList.PozOBF.Description;
+            txtUnit.Text = offerMaterialList.PozOBF.Unit;
+
             Dictionary<string, object> param = new Dictionary<string, object>();
             param.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
             param.Add("MaterialListId", this.SelectedOfferMaterialListId);
