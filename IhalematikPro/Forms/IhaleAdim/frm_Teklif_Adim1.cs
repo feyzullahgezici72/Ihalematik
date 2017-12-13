@@ -182,6 +182,16 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim1_Shown(object sender, EventArgs e)
         {
+            if (CurrentManager.Instance.CurrentTender.Offer != null)
+            {
+                colQuantity.OptionsColumn.AllowEdit = false;
+                colQuantity.OptionsColumn.AllowFocus = false;
+                colQuantity.OptionsColumn.ReadOnly = true;
+
+                colKDV.OptionsColumn.AllowEdit = false;
+                colKDV.OptionsColumn.AllowFocus = false;
+                colKDV.OptionsColumn.ReadOnly = true;
+            }
             this.LoadTenderGroupGrid();
         }
 
