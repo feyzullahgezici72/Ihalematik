@@ -89,6 +89,21 @@ namespace IhalematikPro.Forms
                                     pozModels.Add(model);
                                 }
                             }
+                            else if (!string.IsNullOrEmpty(pozDescription))
+                            {
+                                if (item.PozOBF.Description.Contains(pozDescription))
+                                {
+                                    PozModel model = new PozModel();
+                                    model.Description = item.PozOBF.Description;
+                                    model.Number = item.PozOBF.Number;
+                                    model.Unit = item.PozOBF.Unit;
+                                    model.UnitPrice = item.PozOBF.UnitPrice;
+                                    double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
+                                    model.OfferPrice = offerPrice;
+                                    model.Id = item.PozOBFId;
+                                    pozModels.Add(model);
+                                }
+                            }
                             else
                             {
                                 PozModel model = new PozModel();

@@ -36,11 +36,7 @@ namespace IhalematikPro.Forms
 
         private void btnBul_Click(object sender, EventArgs e)
         {
-            string obfNo = txtNumber.Text.Trim();
-            string obfDescription = txtDescription.Text.Trim();
-            oBFModels = UIOBFManager.Instance.GetOBFs(obfNo, obfDescription);
-
-            grdOBFList.DataSource = oBFModels;
+            this.LoadMaterialListGrid();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -196,6 +192,21 @@ namespace IhalematikPro.Forms
                             if (!string.IsNullOrEmpty(obfNumber))
                             {
                                 if (item.PozOBF.Number.Contains(obfNumber))
+                                {
+                                    OBFModel model = new OBFModel();
+                                    model.Description = item.PozOBF.Description;
+                                    model.Number = item.PozOBF.Number;
+                                    model.Unit = item.PozOBF.Unit;
+                                    model.UnitPrice = item.PozOBF.UnitPrice;
+                                    double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
+                                    model.OfferPrice = offerPrice;
+                                    model.Id = item.PozOBFId;
+                                    oBFModels.Add(model);
+                                }
+                            }
+                            else if (!string.IsNullOrEmpty(obfDescription))
+                            {
+                                if (item.PozOBF.Description.Contains(obfDescription))
                                 {
                                     OBFModel model = new OBFModel();
                                     model.Description = item.PozOBF.Description;
