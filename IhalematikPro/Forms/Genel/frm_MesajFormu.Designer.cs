@@ -38,7 +38,6 @@
             this.pbControl = new DevExpress.XtraEditors.ProgressBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +45,7 @@
             // 
             this.btnTamam.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
-            this.btnTamam.Location = new System.Drawing.Point(476, 113);
+            this.btnTamam.Location = new System.Drawing.Point(534, 132);
             this.btnTamam.Name = "btnTamam";
             this.btnTamam.Size = new System.Drawing.Size(131, 50);
             this.btnTamam.TabIndex = 11;
@@ -55,11 +54,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.Status_dialog_information_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 45);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(134, 137);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -68,23 +67,25 @@
             // 
             this.lblMesaj.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblMesaj.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblMesaj.Location = new System.Drawing.Point(39, 56);
+            this.lblMesaj.LineColor = System.Drawing.Color.Red;
+            this.lblMesaj.LineVisible = true;
+            this.lblMesaj.Location = new System.Drawing.Point(152, 54);
+            this.lblMesaj.LookAndFeel.SkinName = "Coffee";
             this.lblMesaj.Name = "lblMesaj";
-            this.lblMesaj.Size = new System.Drawing.Size(7, 27);
+            this.lblMesaj.Size = new System.Drawing.Size(113, 27);
             this.lblMesaj.TabIndex = 9;
-            this.lblMesaj.Text = ".";
+            this.lblMesaj.Text = "    Mesaj    ";
             // 
             // panelControl1
             // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.Crimson;
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.Black;
+            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.Controls.Add(this.pictureBox1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(619, 39);
+            this.panelControl1.Size = new System.Drawing.Size(677, 39);
             this.panelControl1.TabIndex = 12;
             // 
             // timer1
@@ -95,11 +96,17 @@
             // 
             // pbControl
             // 
-            this.pbControl.Location = new System.Drawing.Point(12, 122);
+            this.pbControl.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pbControl.Location = new System.Drawing.Point(0, 200);
             this.pbControl.Name = "pbControl";
-            this.pbControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.pbControl.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.pbControl.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.pbControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pbControl.Properties.ShowTitle = true;
             this.pbControl.Properties.Step = 1;
-            this.pbControl.Size = new System.Drawing.Size(458, 31);
+            this.pbControl.Properties.TextOrientation = DevExpress.Utils.Drawing.TextOrientation.Horizontal;
+            this.pbControl.ShowProgressInTaskBar = true;
+            this.pbControl.Size = new System.Drawing.Size(677, 31);
             this.pbControl.TabIndex = 100;
             this.pbControl.Visible = false;
             // 
@@ -111,8 +118,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnTamam;
-            this.ClientSize = new System.Drawing.Size(619, 175);
+            this.ClientSize = new System.Drawing.Size(677, 231);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pbControl);
             this.Controls.Add(this.lblMesaj);
             this.Controls.Add(this.panelControl1);
@@ -126,7 +134,6 @@
             this.Shown += new System.EventHandler(this.frm_MesajFormu_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

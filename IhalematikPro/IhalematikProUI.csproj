@@ -998,6 +998,27 @@
   <ItemGroup>
     <None Include="Resources\check-box-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chhh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yukle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yer.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

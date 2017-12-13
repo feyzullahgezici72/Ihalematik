@@ -1055,7 +1055,7 @@
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.user_group_icon;
+            this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.worker;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.simpleButton1.Location = new System.Drawing.Point(0, 0);
             this.simpleButton1.Name = "simpleButton1";

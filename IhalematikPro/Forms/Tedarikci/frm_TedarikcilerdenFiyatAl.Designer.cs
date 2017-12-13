@@ -520,9 +520,12 @@
             // 
             // colKDV
             // 
+            this.colKDV.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colKDV.AppearanceHeader.Options.UseBackColor = true;
             this.colKDV.Caption = "KDV(%)";
             this.colKDV.FieldName = "KDV";
             this.colKDV.Name = "colKDV";
+            this.colKDV.OptionsFilter.AllowFilter = false;
             this.colKDV.Visible = true;
             this.colKDV.VisibleIndex = 4;
             // 
@@ -549,7 +552,7 @@
             this.colRisk.Name = "colRisk";
             this.colRisk.OptionsFilter.AllowFilter = false;
             this.colRisk.Visible = true;
-            this.colRisk.VisibleIndex = 7;
+            this.colRisk.VisibleIndex = 6;
             this.colRisk.Width = 86;
             // 
             // colPriceWithRisk
@@ -563,7 +566,7 @@
             this.colPriceWithRisk.OptionsColumn.AllowFocus = false;
             this.colPriceWithRisk.OptionsFilter.AllowFilter = false;
             this.colPriceWithRisk.Visible = true;
-            this.colPriceWithRisk.VisibleIndex = 6;
+            this.colPriceWithRisk.VisibleIndex = 7;
             this.colPriceWithRisk.Width = 117;
             // 
             // colMeterialDetail
@@ -823,9 +826,10 @@
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(6, 9);
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.simpleButton1.Location = new System.Drawing.Point(6, 3);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(370, 88);
+            this.simpleButton1.Size = new System.Drawing.Size(370, 94);
             this.simpleButton1.TabIndex = 23;
             this.simpleButton1.Text = "Listele";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);

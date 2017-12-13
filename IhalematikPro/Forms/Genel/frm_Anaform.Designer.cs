@@ -328,6 +328,8 @@ namespace IhalematikPro.Forms
             this.barBtnPozListesi.DropDownEnabled = false;
             this.barBtnPozListesi.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnPozListesi.Glyph")));
             this.barBtnPozListesi.Id = 3;
+            this.barBtnPozListesi.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.barBtnPozListesi.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barBtnPozListesi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnPozListesi.LargeGlyph")));
             this.barBtnPozListesi.LargeWidth = 100;
             this.barBtnPozListesi.Name = "barBtnPozListesi";
@@ -349,6 +351,8 @@ namespace IhalematikPro.Forms
             this.barBtnOzelStokListesi.Caption = "ÖBF Malzeme Listesi";
             this.barBtnOzelStokListesi.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnOzelStokListesi.Glyph")));
             this.barBtnOzelStokListesi.Id = 4;
+            this.barBtnOzelStokListesi.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.barBtnOzelStokListesi.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barBtnOzelStokListesi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnOzelStokListesi.LargeGlyph")));
             this.barBtnOzelStokListesi.LargeWidth = 120;
             this.barBtnOzelStokListesi.Name = "barBtnOzelStokListesi";
@@ -366,6 +370,8 @@ namespace IhalematikPro.Forms
             this.barBtnTeklifHazirla.Caption = "Yeni İhale Yarat";
             this.barBtnTeklifHazirla.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnTeklifHazirla.Glyph")));
             this.barBtnTeklifHazirla.Id = 5;
+            this.barBtnTeklifHazirla.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.barBtnTeklifHazirla.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barBtnTeklifHazirla.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnTeklifHazirla.LargeGlyph")));
             this.barBtnTeklifHazirla.LargeWidth = 100;
             this.barBtnTeklifHazirla.Name = "barBtnTeklifHazirla";
@@ -414,6 +420,8 @@ namespace IhalematikPro.Forms
             this.btnAdimx1.Caption = "1.Adım\r\n";
             this.btnAdimx1.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx1.Glyph")));
             this.btnAdimx1.Id = 9;
+            this.btnAdimx1.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.btnAdimx1.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.btnAdimx1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx1.LargeGlyph")));
             this.btnAdimx1.LargeWidth = 100;
             this.btnAdimx1.Name = "btnAdimx1";
@@ -434,6 +442,8 @@ namespace IhalematikPro.Forms
             this.btnAdimx3.Caption = "3.Adım";
             this.btnAdimx3.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx3.Glyph")));
             this.btnAdimx3.Id = 11;
+            this.btnAdimx3.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.btnAdimx3.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.btnAdimx3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx3.LargeGlyph")));
             this.btnAdimx3.LargeWidth = 100;
             this.btnAdimx3.Name = "btnAdimx3";
@@ -454,6 +464,8 @@ namespace IhalematikPro.Forms
             this.btnAdimx4.Caption = "2.Adım";
             this.btnAdimx4.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx4.Glyph")));
             this.btnAdimx4.Id = 12;
+            this.btnAdimx4.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.btnAdimx4.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.btnAdimx4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx4.LargeGlyph")));
             this.btnAdimx4.LargeWidth = 100;
             this.btnAdimx4.Name = "btnAdimx4";
@@ -474,6 +486,8 @@ namespace IhalematikPro.Forms
             this.btnAdimx5.Caption = "4.Adım";
             this.btnAdimx5.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx5.Glyph")));
             this.btnAdimx5.Id = 13;
+            this.btnAdimx5.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.btnAdimx5.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.btnAdimx5.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx5.LargeGlyph")));
             this.btnAdimx5.LargeWidth = 100;
             this.btnAdimx5.Name = "btnAdimx5";
@@ -494,6 +508,8 @@ namespace IhalematikPro.Forms
             this.barButtonItem2.Caption = "Çalışan Tanımlama";
             this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
             this.barButtonItem2.Id = 14;
+            this.barButtonItem2.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.barButtonItem2.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
             this.barButtonItem2.LargeWidth = 100;
             this.barButtonItem2.Name = "barButtonItem2";
@@ -515,6 +531,8 @@ namespace IhalematikPro.Forms
             this.barButtonItem4.Caption = "Araç Tanımlama";
             this.barButtonItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.Glyph")));
             this.barButtonItem4.Id = 1;
+            this.barButtonItem4.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.barButtonItem4.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barButtonItem4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.LargeGlyph")));
             this.barButtonItem4.LargeWidth = 100;
             this.barButtonItem4.Name = "barButtonItem4";
@@ -536,6 +554,8 @@ namespace IhalematikPro.Forms
             this.barButtonItem6.Caption = "Teklif Aşamasındaki İhaleler";
             this.barButtonItem6.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.Glyph")));
             this.barButtonItem6.Id = 2;
+            this.barButtonItem6.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.barButtonItem6.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barButtonItem6.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.LargeGlyph")));
             this.barButtonItem6.LargeWidth = 160;
             this.barButtonItem6.Name = "barButtonItem6";
@@ -546,6 +566,8 @@ namespace IhalematikPro.Forms
             this.barButtonItem7.Caption = "Teklif Sunulan İhaleler";
             this.barButtonItem7.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.Glyph")));
             this.barButtonItem7.Id = 3;
+            this.barButtonItem7.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.barButtonItem7.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barButtonItem7.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.LargeGlyph")));
             this.barButtonItem7.LargeWidth = 160;
             this.barButtonItem7.Name = "barButtonItem7";
@@ -557,6 +579,8 @@ namespace IhalematikPro.Forms
             this.barButtonItem10.Caption = "Tedarikçi Tanımlama";
             this.barButtonItem10.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.Glyph")));
             this.barButtonItem10.Id = 7;
+            this.barButtonItem10.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.barButtonItem10.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barButtonItem10.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.LargeGlyph")));
             this.barButtonItem10.LargeWidth = 100;
             this.barButtonItem10.Name = "barButtonItem10";
@@ -577,6 +601,8 @@ namespace IhalematikPro.Forms
             this.barButtonItem12.Caption = "Yeni Teklif Yarat";
             this.barButtonItem12.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.Glyph")));
             this.barButtonItem12.Id = 9;
+            this.barButtonItem12.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.barButtonItem12.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barButtonItem12.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.LargeGlyph")));
             this.barButtonItem12.LargeWidth = 100;
             this.barButtonItem12.Name = "barButtonItem12";
@@ -597,6 +623,8 @@ namespace IhalematikPro.Forms
             this.barButtonItem13.Caption = "Teklif Listeleri";
             this.barButtonItem13.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.Glyph")));
             this.barButtonItem13.Id = 10;
+            this.barButtonItem13.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.barButtonItem13.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barButtonItem13.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.LargeGlyph")));
             this.barButtonItem13.LargeWidth = 100;
             this.barButtonItem13.Name = "barButtonItem13";
@@ -617,6 +645,8 @@ namespace IhalematikPro.Forms
             this.barButtonItem14.Caption = "Tedarikçilere Malzeme Listesi Gönder";
             this.barButtonItem14.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.Glyph")));
             this.barButtonItem14.Id = 11;
+            this.barButtonItem14.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.barButtonItem14.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barButtonItem14.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.LargeGlyph")));
             this.barButtonItem14.Name = "barButtonItem14";
             toolTipTitleItem13.Text = "TEDARİKÇİLERE LİSTE GÖNDER";
@@ -636,6 +666,8 @@ namespace IhalematikPro.Forms
             this.barButtonItem15.Caption = "Teklifleri Karşılaştır";
             this.barButtonItem15.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.Glyph")));
             this.barButtonItem15.Id = 12;
+            this.barButtonItem15.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.barButtonItem15.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barButtonItem15.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.LargeGlyph")));
             this.barButtonItem15.LargeWidth = 130;
             this.barButtonItem15.Name = "barButtonItem15";
@@ -872,6 +904,8 @@ namespace IhalematikPro.Forms
             this.barBtnDovizKurlar.Caption = "Döviz Kurları";
             this.barBtnDovizKurlar.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnDovizKurlar.Glyph")));
             this.barBtnDovizKurlar.Id = 8;
+            this.barBtnDovizKurlar.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.barBtnDovizKurlar.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barBtnDovizKurlar.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnDovizKurlar.LargeGlyph")));
             this.barBtnDovizKurlar.LargeWidth = 120;
             this.barBtnDovizKurlar.Name = "barBtnDovizKurlar";
@@ -908,6 +942,8 @@ namespace IhalematikPro.Forms
             this.barButtonItem28.Caption = "Teklifleri Aktar";
             this.barButtonItem28.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem28.Glyph")));
             this.barButtonItem28.Id = 22;
+            this.barButtonItem28.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Red;
+            this.barButtonItem28.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barButtonItem28.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem28.LargeGlyph")));
             this.barButtonItem28.LargeWidth = 100;
             this.barButtonItem28.Name = "barButtonItem28";

@@ -24,6 +24,7 @@ using IhalematikProBL.Provider;
 using IhalematikProUI.Forms;
 using SimpleApplicationBase.BL.Base;
 using IhalematikProUI.Forms.Base;
+using DevExpress.XtraBars;
 
 namespace IhalematikPro.Forms
 {
@@ -526,6 +527,7 @@ namespace IhalematikPro.Forms
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
+            this.Close();
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             af.RibonPasif();
             af.btnAdimx4.PerformClick();
