@@ -89,6 +89,21 @@ namespace IhalematikPro.Forms
                                     pozModels.Add(model);
                                 }
                             }
+                            else if (!string.IsNullOrEmpty(pozDescription))
+                            {
+                                if (item.PozOBF.Description.Contains(pozDescription))
+                                {
+                                    PozModel model = new PozModel();
+                                    model.Description = item.PozOBF.Description;
+                                    model.Number = item.PozOBF.Number;
+                                    model.Unit = item.PozOBF.Unit;
+                                    model.UnitPrice = item.PozOBF.UnitPrice;
+                                    double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
+                                    model.OfferPrice = offerPrice;
+                                    model.Id = item.PozOBFId;
+                                    pozModels.Add(model);
+                                }
+                            }
                             else
                             {
                                 PozModel model = new PozModel();
@@ -132,6 +147,8 @@ namespace IhalematikPro.Forms
                 if (items.Count == 0)
                 {
                     currentTender.MaterialList.Add(materialList);
+                    int index = pozModels.FindIndex(p => p.Id == pozModel.Id);
+                    pozModels.RemoveAt(index);
                 }
             }
 
@@ -139,6 +156,8 @@ namespace IhalematikPro.Forms
 
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = models;
+            grdPozList.DataSource = null;
+            grdPozList.DataSource = pozModels;
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
