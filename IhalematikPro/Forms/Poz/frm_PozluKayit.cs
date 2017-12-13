@@ -147,6 +147,8 @@ namespace IhalematikPro.Forms
                 if (items.Count == 0)
                 {
                     currentTender.MaterialList.Add(materialList);
+                    int index = pozModels.FindIndex(p => p.Id == pozModel.Id);
+                    pozModels.RemoveAt(index);
                 }
             }
 
@@ -154,6 +156,8 @@ namespace IhalematikPro.Forms
 
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = models;
+            grdPozList.DataSource = null;
+            grdPozList.DataSource = pozModels;
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)

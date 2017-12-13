@@ -61,6 +61,8 @@ namespace IhalematikPro.Forms
                 if (items.Count == 0)
                 {
                     currentTender.MaterialList.Add(materialList);
+                    int index = oBFModels.FindIndex(p => p.Id == obfModel.Id);
+                    oBFModels.RemoveAt(index);
                 }
             }
 
@@ -68,6 +70,8 @@ namespace IhalematikPro.Forms
 
             grdAddedOBF.DataSource = null;
             grdAddedOBF.DataSource = models;
+            grdOBFList.DataSource = null;
+            grdOBFList.DataSource = oBFModels;
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
@@ -162,7 +166,7 @@ namespace IhalematikPro.Forms
 
             oBFModels = new List<OBFModel>();
             Offer offer = CurrentManager.Instance.CurrentTender.Offer;
-            List<MaterialList> selectedMaterialLists = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && !p.IsPoz).ToList();
+            List<MaterialList> selectedMaterialLists = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => !p.IsPoz).ToList();
 
             if (offer == null)
             {
