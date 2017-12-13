@@ -44,6 +44,7 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dataGrid1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -54,6 +55,7 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // dateEdit1
@@ -99,14 +101,14 @@
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(440, 162);
+            this.groupControl1.Size = new System.Drawing.Size(757, 162);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Kur Bilgileri";
             // 
             // btnGizliKapat
             // 
             this.btnGizliKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnGizliKapat.Location = new System.Drawing.Point(448, 0);
+            this.btnGizliKapat.Location = new System.Drawing.Point(803, 76);
             this.btnGizliKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnGizliKapat.Name = "btnGizliKapat";
             this.btnGizliKapat.Size = new System.Drawing.Size(112, 34);
@@ -190,12 +192,13 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.dataGrid1);
             this.groupControl2.Controls.Add(this.gridControl1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 162);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(440, 516);
+            this.groupControl2.Size = new System.Drawing.Size(757, 516);
             this.groupControl2.TabIndex = 3;
             this.groupControl2.Text = "Kurlar";
             // 
@@ -207,7 +210,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(434, 483);
+            this.gridControl1.Size = new System.Drawing.Size(751, 483);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -382,12 +385,22 @@
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
             // 
+            // dataGrid1
+            // 
+            this.dataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGrid1.Location = new System.Drawing.Point(3, 30);
+            this.dataGrid1.Name = "dataGrid1";
+            this.dataGrid1.RowTemplate.Height = 28;
+            this.dataGrid1.Size = new System.Drawing.Size(751, 483);
+            this.dataGrid1.TabIndex = 4;
+            // 
             // frm_DovizKurlari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnGizliKapat;
-            this.ClientSize = new System.Drawing.Size(440, 678);
+            this.ClientSize = new System.Drawing.Size(757, 678);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -409,6 +422,7 @@
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -431,5 +445,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraEditors.SimpleButton btnGizliKapat;
+        private System.Windows.Forms.DataGridView dataGrid1;
     }
 }
