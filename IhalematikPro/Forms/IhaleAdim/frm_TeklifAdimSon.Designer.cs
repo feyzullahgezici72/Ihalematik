@@ -237,7 +237,6 @@
             // 
             // txtMarkupAmount
             // 
-            this.txtMarkupAmount.Enabled = false;
             this.txtMarkupAmount.Location = new System.Drawing.Point(84, 111);
             this.txtMarkupAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarkupAmount.Name = "txtMarkupAmount";
@@ -245,12 +244,12 @@
             this.txtMarkupAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtMarkupAmount.Properties.Mask.EditMask = "c";
             this.txtMarkupAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtMarkupAmount.Properties.ReadOnly = true;
             this.txtMarkupAmount.Size = new System.Drawing.Size(218, 26);
             this.txtMarkupAmount.TabIndex = 19;
             // 
             // txtMarkupWorkerAmount
             // 
-            this.txtMarkupWorkerAmount.Enabled = false;
             this.txtMarkupWorkerAmount.Location = new System.Drawing.Point(84, 77);
             this.txtMarkupWorkerAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarkupWorkerAmount.Name = "txtMarkupWorkerAmount";
@@ -258,12 +257,12 @@
             this.txtMarkupWorkerAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtMarkupWorkerAmount.Properties.Mask.EditMask = "c";
             this.txtMarkupWorkerAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtMarkupWorkerAmount.Properties.ReadOnly = true;
             this.txtMarkupWorkerAmount.Size = new System.Drawing.Size(218, 26);
             this.txtMarkupWorkerAmount.TabIndex = 19;
             // 
             // txtMarkupMaterialTotal
             // 
-            this.txtMarkupMaterialTotal.Enabled = false;
             this.txtMarkupMaterialTotal.Location = new System.Drawing.Point(84, 43);
             this.txtMarkupMaterialTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarkupMaterialTotal.Name = "txtMarkupMaterialTotal";
@@ -271,6 +270,7 @@
             this.txtMarkupMaterialTotal.Properties.Appearance.Options.UseBackColor = true;
             this.txtMarkupMaterialTotal.Properties.Mask.EditMask = "c";
             this.txtMarkupMaterialTotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtMarkupMaterialTotal.Properties.ReadOnly = true;
             this.txtMarkupMaterialTotal.Size = new System.Drawing.Size(218, 26);
             this.txtMarkupMaterialTotal.TabIndex = 19;
             // 
@@ -315,7 +315,6 @@
             // 
             // txtWorkerAmount
             // 
-            this.txtWorkerAmount.Enabled = false;
             this.txtWorkerAmount.Location = new System.Drawing.Point(478, 110);
             this.txtWorkerAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtWorkerAmount.Name = "txtWorkerAmount";
@@ -323,6 +322,7 @@
             this.txtWorkerAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtWorkerAmount.Properties.Mask.EditMask = "c";
             this.txtWorkerAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtWorkerAmount.Properties.ReadOnly = true;
             this.txtWorkerAmount.Size = new System.Drawing.Size(188, 26);
             this.txtWorkerAmount.TabIndex = 17;
             // 
@@ -350,7 +350,6 @@
             // 
             // txtWorkerKDVAmount
             // 
-            this.txtWorkerKDVAmount.Enabled = false;
             this.txtWorkerKDVAmount.Location = new System.Drawing.Point(478, 77);
             this.txtWorkerKDVAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtWorkerKDVAmount.Name = "txtWorkerKDVAmount";
@@ -358,12 +357,12 @@
             this.txtWorkerKDVAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtWorkerKDVAmount.Properties.Mask.EditMask = "c";
             this.txtWorkerKDVAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtWorkerKDVAmount.Properties.ReadOnly = true;
             this.txtWorkerKDVAmount.Size = new System.Drawing.Size(188, 26);
             this.txtWorkerKDVAmount.TabIndex = 18;
             // 
             // txtWorkerCostAmount
             // 
-            this.txtWorkerCostAmount.Enabled = false;
             this.txtWorkerCostAmount.Location = new System.Drawing.Point(478, 43);
             this.txtWorkerCostAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtWorkerCostAmount.Name = "txtWorkerCostAmount";
@@ -371,6 +370,7 @@
             this.txtWorkerCostAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtWorkerCostAmount.Properties.Mask.EditMask = "c";
             this.txtWorkerCostAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtWorkerCostAmount.Properties.ReadOnly = true;
             this.txtWorkerCostAmount.Size = new System.Drawing.Size(188, 26);
             this.txtWorkerCostAmount.TabIndex = 19;
             // 
@@ -387,7 +387,6 @@
             // 
             // txtTotalAmount
             // 
-            this.txtTotalAmount.Enabled = false;
             this.txtTotalAmount.Location = new System.Drawing.Point(153, 110);
             this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalAmount.Name = "txtTotalAmount";
@@ -395,6 +394,7 @@
             this.txtTotalAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtTotalAmount.Properties.Mask.EditMask = "c";
             this.txtTotalAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtTotalAmount.Properties.ReadOnly = true;
             this.txtTotalAmount.Size = new System.Drawing.Size(171, 26);
             this.txtTotalAmount.TabIndex = 11;
             // 
@@ -422,7 +422,6 @@
             // 
             // txtMaterialkdvTotalAmount
             // 
-            this.txtMaterialkdvTotalAmount.Enabled = false;
             this.txtMaterialkdvTotalAmount.Location = new System.Drawing.Point(153, 76);
             this.txtMaterialkdvTotalAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaterialkdvTotalAmount.Name = "txtMaterialkdvTotalAmount";
@@ -430,12 +429,12 @@
             this.txtMaterialkdvTotalAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtMaterialkdvTotalAmount.Properties.Mask.EditMask = "c";
             this.txtMaterialkdvTotalAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtMaterialkdvTotalAmount.Properties.ReadOnly = true;
             this.txtMaterialkdvTotalAmount.Size = new System.Drawing.Size(171, 26);
             this.txtMaterialkdvTotalAmount.TabIndex = 12;
             // 
             // txtMaterialCostAmount
             // 
-            this.txtMaterialCostAmount.Enabled = false;
             this.txtMaterialCostAmount.Location = new System.Drawing.Point(153, 42);
             this.txtMaterialCostAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaterialCostAmount.Name = "txtMaterialCostAmount";
@@ -443,6 +442,7 @@
             this.txtMaterialCostAmount.Properties.Appearance.Options.UseBackColor = true;
             this.txtMaterialCostAmount.Properties.Mask.EditMask = "c";
             this.txtMaterialCostAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtMaterialCostAmount.Properties.ReadOnly = true;
             this.txtMaterialCostAmount.Size = new System.Drawing.Size(171, 26);
             this.txtMaterialCostAmount.TabIndex = 13;
             // 
