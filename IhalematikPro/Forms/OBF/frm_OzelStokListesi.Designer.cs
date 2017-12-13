@@ -479,7 +479,6 @@
             this.gridViewOBFList.OptionsFind.ShowClearButton = false;
             this.gridViewOBFList.OptionsFind.ShowCloseButton = false;
             this.gridViewOBFList.OptionsFind.ShowFindButton = false;
-            this.gridViewOBFList.OptionsView.ColumnAutoWidth = false;
             this.gridViewOBFList.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewOBFList.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewOBFList.OptionsView.ShowGroupPanel = false;
