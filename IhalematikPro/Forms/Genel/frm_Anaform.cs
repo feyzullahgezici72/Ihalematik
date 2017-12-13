@@ -598,7 +598,8 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem20_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            frm_GenelBilgiler gb = new frm_GenelBilgiler();
+            gb.ShowDialog();
         }
 
         private void barButtonItem21_ItemClick(object sender, ItemClickEventArgs e)

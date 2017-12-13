@@ -22,5 +22,20 @@ namespace IhalematikProUI.Forms
         {
 
         }
+
+        private void richEditControl1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnIptal_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
