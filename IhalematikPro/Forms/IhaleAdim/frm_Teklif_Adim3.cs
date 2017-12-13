@@ -393,8 +393,21 @@ namespace IhalematikPro.Forms
 
         public void LoadTenderGroupGrid()
         {
-            List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
-            List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(items);
+            //List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
+            List<TenderGroup> tenderGroupItems = new List<TenderGroup>();
+
+            var items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).GroupBy(p => p.TenderGroup).ToList();
+
+            if (items != null)
+            {
+                foreach (var item in items)
+                {
+                    TenderGroup tenderGroup = item.Key as TenderGroup;
+                    tenderGroupItems.Add(tenderGroup);
+                }
+            }
+
+            List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(tenderGroupItems);
             grdTenderGroup.DataSource = models;
             models[0].IsSelected = true;
             this.SelectedGroupId = models[0].Id.Value;
