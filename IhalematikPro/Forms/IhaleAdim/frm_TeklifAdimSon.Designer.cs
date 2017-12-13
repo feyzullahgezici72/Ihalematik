@@ -808,6 +808,8 @@
             this.gridColumn1.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn1.Caption = "ÖBF/POZ NO";
             this.gridColumn1.FieldName = "PozOBFNumber";
+            this.gridColumn1.MaxWidth = 80;
+            this.gridColumn1.MinWidth = 80;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.OptionsColumn.AllowFocus = false;
@@ -815,7 +817,7 @@
             this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 135;
+            this.gridColumn1.Width = 80;
             // 
             // gridColumn2
             // 
@@ -850,6 +852,8 @@
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn3.Caption = "BİRİMİ";
             this.gridColumn3.FieldName = "PozOBFUnit";
+            this.gridColumn3.MaxWidth = 60;
+            this.gridColumn3.MinWidth = 60;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
@@ -857,7 +861,7 @@
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 151;
+            this.gridColumn3.Width = 60;
             // 
             // gridColumn4
             // 
@@ -874,6 +878,8 @@
             this.gridColumn4.Caption = "MİKTARI";
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "Quantity";
+            this.gridColumn4.MaxWidth = 80;
+            this.gridColumn4.MinWidth = 80;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
@@ -881,7 +887,7 @@
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 156;
+            this.gridColumn4.Width = 80;
             // 
             // gridColumn5
             // 
@@ -897,6 +903,8 @@
             this.gridColumn5.DisplayFormat.FormatString = "c2";
             this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn5.FieldName = "UnitTotalFare";
+            this.gridColumn5.MaxWidth = 80;
+            this.gridColumn5.MinWidth = 80;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.OptionsColumn.AllowFocus = false;
@@ -904,7 +912,7 @@
             this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 153;
+            this.gridColumn5.Width = 80;
             // 
             // gridColumn8
             // 
@@ -920,6 +928,8 @@
             this.gridColumn8.DisplayFormat.FormatString = "c2";
             this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn8.FieldName = "TotalFare";
+            this.gridColumn8.MaxWidth = 100;
+            this.gridColumn8.MinWidth = 100;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.OptionsColumn.AllowFocus = false;
@@ -927,7 +937,7 @@
             this.gridColumn8.OptionsFilter.AllowFilter = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 5;
-            this.gridColumn8.Width = 254;
+            this.gridColumn8.Width = 100;
             // 
             // gridSplitContainer1
             // 

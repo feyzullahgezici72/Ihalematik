@@ -357,6 +357,7 @@
             this.colRemoveAddEdMaterialList.MaxWidth = 30;
             this.colRemoveAddEdMaterialList.MinWidth = 30;
             this.colRemoveAddEdMaterialList.Name = "colRemoveAddEdMaterialList";
+            this.colRemoveAddEdMaterialList.OptionsFilter.AllowFilter = false;
             this.colRemoveAddEdMaterialList.ToolTip = "Çıkar";
             this.colRemoveAddEdMaterialList.Visible = true;
             this.colRemoveAddEdMaterialList.VisibleIndex = 4;

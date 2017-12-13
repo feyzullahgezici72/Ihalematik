@@ -214,6 +214,7 @@
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.OptionsColumn.AllowFocus = false;
             this.gridColumn2.OptionsColumn.AllowSize = false;
+            this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
             this.gridColumn2.Width = 210;
@@ -236,6 +237,7 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
+            this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
             this.gridColumn3.Width = 137;
@@ -255,6 +257,7 @@
             this.gridColumn1.MaxWidth = 30;
             this.gridColumn1.MinWidth = 30;
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.ToolTip = "Güncelle";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 2;

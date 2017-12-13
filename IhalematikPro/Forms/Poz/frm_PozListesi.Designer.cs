@@ -461,6 +461,11 @@
             this.gridViewPozList.GridControl = this.grdPozList;
             this.gridViewPozList.Name = "gridViewPozList";
             this.gridViewPozList.OptionsDetail.EnableDetailToolTip = true;
+            this.gridViewPozList.OptionsFilter.AllowColumnMRUFilterList = false;
+            this.gridViewPozList.OptionsFilter.ColumnFilterPopupRowCount = 4;
+            this.gridViewPozList.OptionsFilter.MRUColumnFilterListCount = 0;
+            this.gridViewPozList.OptionsFilter.MRUFilterListCount = 0;
+            this.gridViewPozList.OptionsFilter.MRUFilterListPopupCount = 0;
             this.gridViewPozList.OptionsFind.FindFilterColumns = "";
             this.gridViewPozList.OptionsFind.FindNullPrompt = "Poz No giriniz...";
             this.gridViewPozList.OptionsFind.SearchInPreview = true;
@@ -531,6 +536,7 @@
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn3.Caption = "BİRİMİ";
             this.gridColumn3.FieldName = "Unit";
+            this.gridColumn3.MaxWidth = 80;
             this.gridColumn3.MinWidth = 80;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
@@ -539,7 +545,7 @@
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 204;
+            this.gridColumn3.Width = 80;
             // 
             // gridColumn4
             // 
@@ -555,7 +561,8 @@
             this.gridColumn4.DisplayFormat.FormatString = "c2";
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "UnitPrice";
-            this.gridColumn4.MinWidth = 80;
+            this.gridColumn4.MaxWidth = 100;
+            this.gridColumn4.MinWidth = 100;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
@@ -563,7 +570,7 @@
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 108;
+            this.gridColumn4.Width = 100;
             // 
             // colEdit
             // 

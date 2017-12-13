@@ -33,6 +33,7 @@
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_OzelStokListesi));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -326,6 +327,9 @@
             // 
             this.grdOBFList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdOBFList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            gridLevelNode1.RelationName = "Level1";
+            this.grdOBFList.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
             this.grdOBFList.Location = new System.Drawing.Point(440, 85);
             this.grdOBFList.MainView = this.gridViewOBFList;
             this.grdOBFList.Margin = new System.Windows.Forms.Padding(4);
@@ -458,6 +462,24 @@
             this.colActive});
             this.gridViewOBFList.GridControl = this.grdOBFList;
             this.gridViewOBFList.Name = "gridViewOBFList";
+            this.gridViewOBFList.OptionsFilter.AllowColumnMRUFilterList = false;
+            this.gridViewOBFList.OptionsFilter.AllowFilterEditor = false;
+            this.gridViewOBFList.OptionsFilter.AllowFilterIncrementalSearch = false;
+            this.gridViewOBFList.OptionsFilter.AllowMRUFilterList = false;
+            this.gridViewOBFList.OptionsFilter.AllowMultiSelectInCheckedFilterPopup = false;
+            this.gridViewOBFList.OptionsFilter.ColumnFilterPopupRowCount = 4;
+            this.gridViewOBFList.OptionsFilter.FilterEditorUseMenuForOperandsAndOperators = false;
+            this.gridViewOBFList.OptionsFilter.MRUColumnFilterListCount = 0;
+            this.gridViewOBFList.OptionsFilter.MRUFilterListCount = 0;
+            this.gridViewOBFList.OptionsFilter.MRUFilterListPopupCount = 0;
+            this.gridViewOBFList.OptionsFilter.ShowAllTableValuesInCheckedFilterPopup = false;
+            this.gridViewOBFList.OptionsFind.AllowFindPanel = false;
+            this.gridViewOBFList.OptionsFind.ClearFindOnClose = false;
+            this.gridViewOBFList.OptionsFind.HighlightFindResults = false;
+            this.gridViewOBFList.OptionsFind.ShowClearButton = false;
+            this.gridViewOBFList.OptionsFind.ShowCloseButton = false;
+            this.gridViewOBFList.OptionsFind.ShowFindButton = false;
+            this.gridViewOBFList.OptionsView.ColumnAutoWidth = false;
             this.gridViewOBFList.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewOBFList.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewOBFList.OptionsView.ShowGroupPanel = false;
@@ -485,6 +507,7 @@
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.OptionsColumn.AllowFocus = false;
             this.gridColumn1.OptionsColumn.ReadOnly = true;
+            this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 110;
@@ -505,9 +528,10 @@
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.OptionsColumn.AllowFocus = false;
             this.gridColumn2.OptionsColumn.ReadOnly = true;
+            this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 474;
+            this.gridColumn2.Width = 516;
             // 
             // gridColumn3
             // 
@@ -521,13 +545,16 @@
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn3.Caption = "BİRİMİ";
             this.gridColumn3.FieldName = "Unit";
+            this.gridColumn3.MaxWidth = 80;
+            this.gridColumn3.MinWidth = 80;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
             this.gridColumn3.OptionsColumn.ReadOnly = true;
+            this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 155;
+            this.gridColumn3.Width = 80;
             // 
             // gridColumn4
             // 
@@ -544,13 +571,16 @@
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "UnitPrice";
             this.gridColumn4.ImageAlignment = System.Drawing.StringAlignment.Center;
+            this.gridColumn4.MaxWidth = 100;
+            this.gridColumn4.MinWidth = 100;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
             this.gridColumn4.OptionsColumn.ReadOnly = true;
+            this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 98;
+            this.gridColumn4.Width = 100;
             // 
             // colEdit
             // 
@@ -565,6 +595,7 @@
             this.colEdit.ColumnEdit = this.btnGncelle;
             this.colEdit.MaxWidth = 20;
             this.colEdit.Name = "colEdit";
+            this.colEdit.OptionsFilter.AllowFilter = false;
             this.colEdit.ToolTip = "Güncelle";
             this.colEdit.Visible = true;
             this.colEdit.VisibleIndex = 4;
@@ -594,6 +625,7 @@
             this.colPasive.ImageAlignment = System.Drawing.StringAlignment.Center;
             this.colPasive.MaxWidth = 20;
             this.colPasive.Name = "colPasive";
+            this.colPasive.OptionsFilter.AllowFilter = false;
             this.colPasive.ToolTip = "Pasif Yap";
             this.colPasive.Visible = true;
             this.colPasive.VisibleIndex = 5;

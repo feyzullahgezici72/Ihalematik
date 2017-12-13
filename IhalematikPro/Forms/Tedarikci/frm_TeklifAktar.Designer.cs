@@ -514,9 +514,12 @@
             // 
             // colKDV
             // 
+            this.colKDV.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colKDV.AppearanceHeader.Options.UseBackColor = true;
             this.colKDV.Caption = "KDV(%)";
             this.colKDV.FieldName = "KDV";
             this.colKDV.Name = "colKDV";
+            this.colKDV.OptionsFilter.AllowFilter = false;
             this.colKDV.Visible = true;
             this.colKDV.VisibleIndex = 4;
             this.colKDV.Width = 65;
@@ -530,6 +533,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.OptionsColumn.AllowFocus = false;
+            this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 5;
             this.gridColumn1.Width = 71;
