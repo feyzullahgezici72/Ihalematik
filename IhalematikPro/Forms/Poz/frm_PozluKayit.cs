@@ -47,7 +47,7 @@ namespace IhalematikPro.Forms
             string pozDescription = txtDescription.Text.Trim();
             pozModels = new List<PozModel>();
             Offer offer = CurrentManager.Instance.CurrentTender.Offer;
-            List<MaterialList> selectedMaterialLists = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsPoz).ToList();
+            List<MaterialList> selectedMaterialLists = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsPoz).ToList();
 
             if (offer == null)
             {
@@ -190,6 +190,7 @@ namespace IhalematikPro.Forms
 
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = dataSource;
+            this.LoadMaterialListGrid();
         }
 
         private void frm_PozluKayit_Load(object sender, EventArgs e)

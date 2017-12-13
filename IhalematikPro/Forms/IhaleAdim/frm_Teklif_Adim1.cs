@@ -144,9 +144,12 @@ namespace IhalematikPro.Forms
             foreach (MaterialListModel model in models)
             {
                 MaterialList item = items.Where(p => p.Id == model.Id).FirstOrDefault();
-                item.Quantity = model.Quantity;
-                item.KDVPercentage = model.KDVPercentage;
-                item.IsWorkship = model.IsWorkship;
+                if (item != null)
+                {
+                    item.Quantity = model.Quantity;
+                    item.KDVPercentage = model.KDVPercentage;
+                    item.IsWorkship = model.IsWorkship;
+                }
             }
         }
 
@@ -190,7 +193,7 @@ namespace IhalematikPro.Forms
 
         private void rpstWorkship_Click(object sender, EventArgs e)
         {
-          
+
         }
     }
 }
