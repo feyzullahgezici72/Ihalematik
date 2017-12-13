@@ -144,9 +144,12 @@ namespace IhalematikPro.Forms
             foreach (MaterialListModel model in models)
             {
                 MaterialList item = items.Where(p => p.Id == model.Id).FirstOrDefault();
-                item.Quantity = model.Quantity;
-                item.KDVPercentage = model.KDVPercentage;
-                item.IsWorkship = model.IsWorkship;
+                if (item != null)
+                {
+                    item.Quantity = model.Quantity;
+                    item.KDVPercentage = model.KDVPercentage;
+                    item.IsWorkship = model.IsWorkship;
+                }
             }
         }
 
@@ -179,6 +182,16 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim1_Shown(object sender, EventArgs e)
         {
+            if (CurrentManager.Instance.CurrentTender.Offer != null)
+            {
+                colQuantity.OptionsColumn.AllowEdit = false;
+                colQuantity.OptionsColumn.AllowFocus = false;
+                colQuantity.OptionsColumn.ReadOnly = true;
+
+                colKDV.OptionsColumn.AllowEdit = false;
+                colKDV.OptionsColumn.AllowFocus = false;
+                colKDV.OptionsColumn.ReadOnly = true;
+            }
             this.LoadTenderGroupGrid();
         }
 
@@ -190,7 +203,7 @@ namespace IhalematikPro.Forms
 
         private void rpstWorkship_Click(object sender, EventArgs e)
         {
-          
+
         }
     }
 }
