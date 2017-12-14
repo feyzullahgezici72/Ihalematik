@@ -70,9 +70,7 @@
             // btnGuncelle
             // 
             this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnGuncelle.Appearance.Options.UseFont = true;
-            this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
             this.btnGuncelle.Location = new System.Drawing.Point(309, 90);
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);

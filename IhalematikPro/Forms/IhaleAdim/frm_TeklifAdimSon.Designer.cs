@@ -56,7 +56,6 @@
             this.txtMaterialCostAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.lblTotalMarkupNonKDV = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
@@ -247,6 +246,7 @@
             this.txtMarkupAmount.Properties.ReadOnly = true;
             this.txtMarkupAmount.Size = new System.Drawing.Size(218, 26);
             this.txtMarkupAmount.TabIndex = 19;
+            this.txtMarkupAmount.TabStop = false;
             // 
             // txtMarkupWorkerAmount
             // 
@@ -260,6 +260,7 @@
             this.txtMarkupWorkerAmount.Properties.ReadOnly = true;
             this.txtMarkupWorkerAmount.Size = new System.Drawing.Size(218, 26);
             this.txtMarkupWorkerAmount.TabIndex = 19;
+            this.txtMarkupWorkerAmount.TabStop = false;
             // 
             // txtMarkupMaterialTotal
             // 
@@ -273,6 +274,7 @@
             this.txtMarkupMaterialTotal.Properties.ReadOnly = true;
             this.txtMarkupMaterialTotal.Size = new System.Drawing.Size(218, 26);
             this.txtMarkupMaterialTotal.TabIndex = 19;
+            this.txtMarkupMaterialTotal.TabStop = false;
             // 
             // groupControl2
             // 
@@ -325,6 +327,7 @@
             this.txtWorkerAmount.Properties.ReadOnly = true;
             this.txtWorkerAmount.Size = new System.Drawing.Size(188, 26);
             this.txtWorkerAmount.TabIndex = 17;
+            this.txtWorkerAmount.TabStop = false;
             // 
             // labelControl3
             // 
@@ -360,6 +363,7 @@
             this.txtWorkerKDVAmount.Properties.ReadOnly = true;
             this.txtWorkerKDVAmount.Size = new System.Drawing.Size(188, 26);
             this.txtWorkerKDVAmount.TabIndex = 18;
+            this.txtWorkerKDVAmount.TabStop = false;
             // 
             // txtWorkerCostAmount
             // 
@@ -373,6 +377,7 @@
             this.txtWorkerCostAmount.Properties.ReadOnly = true;
             this.txtWorkerCostAmount.Size = new System.Drawing.Size(188, 26);
             this.txtWorkerCostAmount.TabIndex = 19;
+            this.txtWorkerCostAmount.TabStop = false;
             // 
             // labelControl5
             // 
@@ -397,6 +402,7 @@
             this.txtTotalAmount.Properties.ReadOnly = true;
             this.txtTotalAmount.Size = new System.Drawing.Size(171, 26);
             this.txtTotalAmount.TabIndex = 11;
+            this.txtTotalAmount.TabStop = false;
             // 
             // labelControl7
             // 
@@ -432,6 +438,7 @@
             this.txtMaterialkdvTotalAmount.Properties.ReadOnly = true;
             this.txtMaterialkdvTotalAmount.Size = new System.Drawing.Size(171, 26);
             this.txtMaterialkdvTotalAmount.TabIndex = 12;
+            this.txtMaterialkdvTotalAmount.TabStop = false;
             // 
             // txtMaterialCostAmount
             // 
@@ -445,6 +452,7 @@
             this.txtMaterialCostAmount.Properties.ReadOnly = true;
             this.txtMaterialCostAmount.Size = new System.Drawing.Size(171, 26);
             this.txtMaterialCostAmount.TabIndex = 13;
+            this.txtMaterialCostAmount.TabStop = false;
             // 
             // labelControl8
             // 
@@ -461,8 +469,6 @@
             // 
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
-            this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.groupControl1.Controls.Add(this.labelControl19);
             this.groupControl1.Controls.Add(this.lblTotalMarkupNonKDV);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupControl1.Location = new System.Drawing.Point(1118, 0);
@@ -472,20 +478,11 @@
             this.groupControl1.TabIndex = 12;
             this.groupControl1.Text = "Kdv Hariç Toplam Tutar";
             // 
-            // labelControl19
-            // 
-            this.labelControl19.Appearance.Font = new System.Drawing.Font("Calibri", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl19.Location = new System.Drawing.Point(27, 39);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(200, 24);
-            this.labelControl19.TabIndex = 1;
-            this.labelControl19.Text = "KDV hariç Toplam Tutar";
-            // 
             // lblTotalMarkupNonKDV
             // 
             this.lblTotalMarkupNonKDV.Appearance.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTotalMarkupNonKDV.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblTotalMarkupNonKDV.Location = new System.Drawing.Point(31, 70);
+            this.lblTotalMarkupNonKDV.Location = new System.Drawing.Point(28, 66);
             this.lblTotalMarkupNonKDV.Margin = new System.Windows.Forms.Padding(4);
             this.lblTotalMarkupNonKDV.Name = "lblTotalMarkupNonKDV";
             this.lblTotalMarkupNonKDV.Size = new System.Drawing.Size(53, 39);
@@ -539,10 +536,10 @@
             this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(1100, 3);
+            this.btnKaydet.Location = new System.Drawing.Point(1099, 4);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(132, 66);
+            this.btnKaydet.Size = new System.Drawing.Size(132, 64);
             this.btnKaydet.TabIndex = 11;
             this.btnKaydet.Text = "Kaydet";
             // 
@@ -1056,7 +1053,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
-        private DevExpress.XtraEditors.LabelControl labelControl19;
         private System.Windows.Forms.PictureBox pcWorld;
         public DevExpress.XtraEditors.SimpleButton btnKaydet;
     }
