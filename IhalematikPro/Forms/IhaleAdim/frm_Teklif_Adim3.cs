@@ -30,6 +30,8 @@ namespace IhalematikPro.Forms
 {
     public partial class frm_Teklif_Adim3 : IhalematikBaseForm
     {
+        public int FocusedRowHandle = 0;
+
         #region Variables
         private object a4;
         public MaterialListModel SelectedMaterial = null;
@@ -199,7 +201,7 @@ namespace IhalematikPro.Forms
                     break;
                 }
             }
-
+            this.FocusedRowHandle = gridViewMaterialListIsWorkship.FocusedRowHandle;
         }
         #endregion
 
@@ -408,10 +410,13 @@ namespace IhalematikPro.Forms
             }
 
             List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(tenderGroupItems);
-            grdTenderGroup.DataSource = models;
-            models[0].IsSelected = true;
-            this.SelectedGroupId = models[0].Id.Value;
-            this.LoadTenderMaterialList();
+            if (models != null)
+            {
+                grdTenderGroup.DataSource = models;
+                models[0].IsSelected = true;
+                this.SelectedGroupId = models[0].Id.Value;
+                this.LoadTenderMaterialList();
+            }
         }
 
         private void gridViewTenderGroup_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -435,6 +440,7 @@ namespace IhalematikPro.Forms
                 //txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
                 //txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
                 grdMaterialListIsWorkship.DataSource = models;
+                gridViewMaterialListIsWorkship.FocusedRowHandle = this.FocusedRowHandle;
             }
         }
 
