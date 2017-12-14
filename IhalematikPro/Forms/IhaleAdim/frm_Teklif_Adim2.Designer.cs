@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim2));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -60,7 +59,7 @@
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
-            this.bindingSourceMaterialListNonWorkship = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceMaterialListNonWorkship = new System.Windows.Forms.BindingSource();
             this.grupPanel = new DevExpress.XtraEditors.PanelControl();
             this.grdTenderGroup = new DevExpress.XtraGrid.GridControl();
             this.gridViewTenderGroup = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -589,7 +588,7 @@
             this.btnTumuneUygula.Location = new System.Drawing.Point(124, 14);
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
-            this.btnTumuneUygula.Size = new System.Drawing.Size(39, 32);
+            this.btnTumuneUygula.Size = new System.Drawing.Size(26, 22);
             this.btnTumuneUygula.TabIndex = 34;
             this.btnTumuneUygula.Click += new System.EventHandler(this.btnTumuneUygula_Click);
             // 
@@ -936,7 +935,6 @@
             this.btnPrev.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnPrev.Appearance.Options.UseFont = true;
             this.btnPrev.Appearance.Options.UseForeColor = true;
-            this.btnPrev.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnPrev.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPrev.Image = ((System.Drawing.Image)(resources.GetObject("btnPrev.Image")));
             this.btnPrev.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
@@ -964,7 +962,6 @@
             this.btnNext.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnNext.Appearance.Options.UseFont = true;
             this.btnNext.Appearance.Options.UseForeColor = true;
-            this.btnNext.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
@@ -1033,6 +1030,8 @@
             this.Controls.Add(this.grupPanel);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

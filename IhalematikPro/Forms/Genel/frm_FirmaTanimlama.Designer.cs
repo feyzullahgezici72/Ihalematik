@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_FirmaTanimlama));
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.txtTitle = new DevExpress.XtraEditors.TextEdit();
@@ -56,16 +55,16 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.txtMailPass = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.txtMailPass = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTitle.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMailAddress.Properties)).BeginInit();
@@ -81,12 +80,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMailPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMailPass.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // textEdit3
@@ -370,6 +369,27 @@
             this.groupControl3.TabIndex = 88;
             this.groupControl3.Text = "İletişim Bilgileri";
             // 
+            // txtMailPass
+            // 
+            this.txtMailPass.EnterMoveNextControl = true;
+            this.txtMailPass.Location = new System.Drawing.Point(130, 260);
+            this.txtMailPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMailPass.Name = "txtMailPass";
+            this.txtMailPass.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtMailPass.Properties.Appearance.Options.UseBackColor = true;
+            this.txtMailPass.Properties.PasswordChar = '*';
+            this.txtMailPass.Size = new System.Drawing.Size(226, 26);
+            this.txtMailPass.TabIndex = 7;
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Location = new System.Drawing.Point(38, 263);
+            this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(82, 19);
+            this.labelControl15.TabIndex = 102;
+            this.labelControl15.Text = "Mail Şifresi:";
+            // 
             // groupControl2
             // 
             this.groupControl2.Appearance.BackColor = System.Drawing.Color.White;
@@ -492,27 +512,6 @@
             this.btnKapat.TabIndex = 3;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
-            // labelControl15
-            // 
-            this.labelControl15.Location = new System.Drawing.Point(38, 263);
-            this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(82, 19);
-            this.labelControl15.TabIndex = 102;
-            this.labelControl15.Text = "Mail Şifresi:";
-            // 
-            // txtMailPass
-            // 
-            this.txtMailPass.EnterMoveNextControl = true;
-            this.txtMailPass.Location = new System.Drawing.Point(130, 260);
-            this.txtMailPass.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMailPass.Name = "txtMailPass";
-            this.txtMailPass.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtMailPass.Properties.Appearance.Options.UseBackColor = true;
-            this.txtMailPass.Properties.PasswordChar = '*';
-            this.txtMailPass.Size = new System.Drawing.Size(226, 26);
-            this.txtMailPass.TabIndex = 7;
-            // 
             // frm_FirmaTanimlama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -522,6 +521,8 @@
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_FirmaTanimlama";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -543,6 +544,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMailPass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
@@ -550,7 +552,6 @@
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMailPass.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -28,28 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_AracEkle));
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.pbControl = new DevExpress.XtraEditors.ProgressBarControl();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.pbControl = new DevExpress.XtraEditors.ProgressBarControl();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -100,6 +99,16 @@
             this.groupControl2.Size = new System.Drawing.Size(622, 180);
             this.groupControl2.TabIndex = 36;
             this.groupControl2.Text = "Araç Bilgileri";
+            // 
+            // pbControl
+            // 
+            this.pbControl.Location = new System.Drawing.Point(93, 109);
+            this.pbControl.Name = "pbControl";
+            this.pbControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.pbControl.Properties.Step = 1;
+            this.pbControl.Size = new System.Drawing.Size(358, 31);
+            this.pbControl.TabIndex = 98;
+            this.pbControl.Visible = false;
             // 
             // btnSave
             // 
@@ -181,16 +190,6 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
-            // pbControl
-            // 
-            this.pbControl.Location = new System.Drawing.Point(93, 109);
-            this.pbControl.Name = "pbControl";
-            this.pbControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.pbControl.Properties.Step = 1;
-            this.pbControl.Size = new System.Drawing.Size(358, 31);
-            this.pbControl.TabIndex = 98;
-            this.pbControl.Visible = false;
-            // 
             // frm_AracEkle
             // 
             this.AcceptButton = this.btnSave;
@@ -202,6 +201,8 @@
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_AracEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -210,13 +211,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

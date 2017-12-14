@@ -28,24 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MesajFormu));
             this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMesaj = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pbControl = new DevExpress.XtraEditors.ProgressBarControl();
+            this.timer1 = new System.Windows.Forms.Timer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTamam
             // 
             this.btnTamam.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
-            this.btnTamam.Location = new System.Drawing.Point(534, 132);
+            this.btnTamam.Location = new System.Drawing.Point(534, 122);
             this.btnTamam.Name = "btnTamam";
             this.btnTamam.Size = new System.Drawing.Size(131, 50);
             this.btnTamam.TabIndex = 11;
@@ -56,7 +51,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.Status_dialog_information_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(134, 137);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -69,46 +64,18 @@
             this.lblMesaj.Appearance.ForeColor = System.Drawing.Color.Black;
             this.lblMesaj.LineColor = System.Drawing.Color.Red;
             this.lblMesaj.LineVisible = true;
-            this.lblMesaj.Location = new System.Drawing.Point(152, 54);
+            this.lblMesaj.Location = new System.Drawing.Point(152, 12);
             this.lblMesaj.LookAndFeel.SkinName = "Coffee";
             this.lblMesaj.Name = "lblMesaj";
             this.lblMesaj.Size = new System.Drawing.Size(113, 27);
             this.lblMesaj.TabIndex = 9;
             this.lblMesaj.Text = "    Mesaj    ";
             // 
-            // panelControl1
-            // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.Black;
-            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
-            this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(677, 39);
-            this.panelControl1.TabIndex = 12;
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pbControl
-            // 
-            this.pbControl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pbControl.Location = new System.Drawing.Point(0, 200);
-            this.pbControl.Name = "pbControl";
-            this.pbControl.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.pbControl.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.pbControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pbControl.Properties.ShowTitle = true;
-            this.pbControl.Properties.Step = 1;
-            this.pbControl.Properties.TextOrientation = DevExpress.Utils.Drawing.TextOrientation.Horizontal;
-            this.pbControl.ShowProgressInTaskBar = true;
-            this.pbControl.Size = new System.Drawing.Size(677, 31);
-            this.pbControl.TabIndex = 100;
-            this.pbControl.Visible = false;
             // 
             // frm_MesajFormu
             // 
@@ -118,23 +85,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnTamam;
-            this.ClientSize = new System.Drawing.Size(677, 231);
+            this.ClientSize = new System.Drawing.Size(677, 183);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pbControl);
             this.Controls.Add(this.lblMesaj);
-            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.btnTamam);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_MesajFormu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Bilgi ";
             this.Load += new System.EventHandler(this.frm_MesajFormu_Load);
             this.Shown += new System.EventHandler(this.frm_MesajFormu_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbControl.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,8 +111,6 @@
         private DevExpress.XtraEditors.SimpleButton btnTamam;
         private System.Windows.Forms.PictureBox pictureBox1;
         public DevExpress.XtraEditors.LabelControl lblMesaj;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.Timer timer1;
-        private DevExpress.XtraEditors.ProgressBarControl pbControl;
     }
 }

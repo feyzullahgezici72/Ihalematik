@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_YeniTeklifOlustur));
             this.txtAciklama = new DevExpress.XtraEditors.TextEdit();
             this.txtTeklifNo = new DevExpress.XtraEditors.TextEdit();
@@ -40,7 +39,7 @@
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
             this.txtDateTime = new DevExpress.XtraEditors.DateEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
@@ -66,7 +65,7 @@
             this.txtAciklama.Properties.Appearance.Options.UseFont = true;
             this.txtAciklama.Properties.Appearance.Options.UseForeColor = true;
             this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtAciklama.Size = new System.Drawing.Size(642, 28);
+            this.txtAciklama.Size = new System.Drawing.Size(592, 28);
             this.txtAciklama.TabIndex = 33;
             // 
             // txtTeklifNo
@@ -115,7 +114,7 @@
             this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
             this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnIptal.Location = new System.Drawing.Point(772, 0);
+            this.btnIptal.Location = new System.Drawing.Point(708, 0);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(28, 35);
@@ -134,7 +133,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(800, 35);
+            this.panelControl1.Size = new System.Drawing.Size(736, 35);
             this.panelControl1.TabIndex = 38;
             // 
             // panelControl2
@@ -149,7 +148,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(800, 35);
+            this.panelControl2.Size = new System.Drawing.Size(736, 35);
             this.panelControl2.TabIndex = 3;
             // 
             // pcWorld
@@ -186,7 +185,7 @@
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(609, 210);
+            this.simpleButton2.Location = new System.Drawing.Point(577, 208);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(141, 54);
@@ -209,7 +208,7 @@
             this.txtDateTime.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDateTime.Properties.Mask.EditMask = "f";
-            this.txtDateTime.Size = new System.Drawing.Size(594, 26);
+            this.txtDateTime.Size = new System.Drawing.Size(594, 28);
             this.txtDateTime.TabIndex = 42;
             // 
             // labelControl5
@@ -228,7 +227,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(800, 290);
+            this.ClientSize = new System.Drawing.Size(736, 290);
             this.ControlBox = false;
             this.Controls.Add(this.txtDateTime);
             this.Controls.Add(this.labelControl5);
@@ -239,6 +238,8 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

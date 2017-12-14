@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikcilerdenFiyatAl));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.pnltoplam = new System.Windows.Forms.Panel();
@@ -82,7 +81,7 @@
             this.lblTederDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pnltoplam.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -121,7 +120,7 @@
             // 
             // pnltoplam
             // 
-            this.pnltoplam.BackColor = System.Drawing.SystemColors.Control;
+            this.pnltoplam.BackColor = System.Drawing.Color.Transparent;
             this.pnltoplam.Controls.Add(this.panel6);
             this.pnltoplam.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnltoplam.Location = new System.Drawing.Point(0, 0);
@@ -939,7 +938,7 @@
             this.btnTumuneUygula.Location = new System.Drawing.Point(226, 18);
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
-            this.btnTumuneUygula.Size = new System.Drawing.Size(39, 32);
+            this.btnTumuneUygula.Size = new System.Drawing.Size(26, 22);
             this.btnTumuneUygula.TabIndex = 34;
             this.btnTumuneUygula.Click += new System.EventHandler(this.btnTumuneUygula_Click);
             // 
@@ -1023,6 +1022,8 @@
             this.Controls.Add(this.panelControl6);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -582,24 +582,23 @@
             this.btnTemizle.Appearance.Options.UseFont = true;
             this.btnTemizle.Appearance.Options.UseForeColor = true;
             this.btnTemizle.Image = ((System.Drawing.Image)(resources.GetObject("btnTemizle.Image")));
-            this.btnTemizle.Location = new System.Drawing.Point(400, 463);
+            this.btnTemizle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnTemizle.Location = new System.Drawing.Point(469, 471);
             this.btnTemizle.Margin = new System.Windows.Forms.Padding(4);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(132, 50);
+            this.btnTemizle.Size = new System.Drawing.Size(48, 58);
             this.btnTemizle.TabIndex = 10;
-            this.btnTemizle.Text = "Temizle";
             // 
             // btnKaydet
             // 
             this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnKaydet.Appearance.Options.UseFont = true;
-            this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
-            this.btnKaydet.Location = new System.Drawing.Point(252, 463);
+            this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnKaydet.Location = new System.Drawing.Point(329, 471);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(132, 50);
+            this.btnKaydet.Size = new System.Drawing.Size(132, 58);
             this.btnKaydet.TabIndex = 9;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
@@ -836,7 +835,7 @@
             this.ddlSegments.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ddlSegments.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.ddlSegments.Size = new System.Drawing.Size(370, 26);
+            this.ddlSegments.Size = new System.Drawing.Size(370, 28);
             this.ddlSegments.TabIndex = 0;
             // 
             // simpleButton2
@@ -967,6 +966,8 @@
             this.Controls.Add(this.statusPanel);
             this.Controls.Add(this.pnlKayit);
             this.Controls.Add(this.panelControl1);
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

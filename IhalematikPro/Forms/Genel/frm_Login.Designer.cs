@@ -150,7 +150,6 @@
             // 
             // btnGiris
             // 
-            this.btnGiris.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnGiris.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnGiris.Image = global::IhalematikProUI.Properties.Resources.ok_icon__1_;
             this.btnGiris.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
@@ -164,7 +163,6 @@
             // 
             // btnIptal
             // 
-            this.btnIptal.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnIptal.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
@@ -179,7 +177,6 @@
             // 
             // btnSetting
             // 
-            this.btnSetting.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnSetting.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
             this.btnSetting.Location = new System.Drawing.Point(0, 174);
@@ -208,7 +205,7 @@
             // frm_Login
             // 
             this.AcceptButton = this.btnGiris;
-            this.Appearance.BackColor = System.Drawing.Color.Teal;
+            this.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -224,6 +221,8 @@
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.InactiveGlowColor = System.Drawing.Color.Yellow;
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Login";
             this.RightToLeftLayout = true;

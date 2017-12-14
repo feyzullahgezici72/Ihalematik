@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_IhaleBilgisiDetay));
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             this.tabIhaleBilgileri = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.txtTeklifNo = new DevExpress.XtraEditors.TextEdit();
@@ -104,7 +104,7 @@
             this.xtraTabPage1.Controls.Add(this.textEdit1);
             this.xtraTabPage1.Controls.Add(this.txtAciklama);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(846, 284);
+            this.xtraTabPage1.Size = new System.Drawing.Size(852, 291);
             this.xtraTabPage1.Text = "İhale Bilgileri";
             // 
             // txtTeklifNo
@@ -469,9 +469,9 @@
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(134, 50);
-            toolTipTitleItem2.Text = "Güncelle";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            this.btnGuncelle.SuperTip = superToolTip2;
+            toolTipTitleItem1.Text = "Güncelle";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.btnGuncelle.SuperTip = superToolTip1;
             this.btnGuncelle.TabIndex = 109;
             this.btnGuncelle.Text = "Güncelle";
             // 
@@ -485,6 +485,8 @@
             this.Controls.Add(this.tabIhaleBilgileri);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_IhaleBilgisiDetay";

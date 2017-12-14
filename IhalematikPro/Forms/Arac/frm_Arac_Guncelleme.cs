@@ -48,14 +48,14 @@ namespace IhalematikProUI.Forms
         {
             PanelSirket.Visible = true;
             PanelKira.Visible = false;
-            PanelSirket.Location = new Point(13, 72);
+            PanelSirket.Location = new Point(13, 111);
         }
 
         private void rbAsgariUcret_CheckedChanged(object sender, EventArgs e)
         {
             PanelKira.Visible = true;
             PanelSirket.Visible = false;
-            PanelKira.Location = new Point(13, 72);
+            PanelKira.Location = new Point(13, 111);
         }
 
         private void frm_Arac_Guncelleme_Load(object sender, EventArgs e)

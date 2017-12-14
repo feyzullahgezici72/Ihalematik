@@ -44,7 +44,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(716, 77);
+            this.groupControl1.Size = new System.Drawing.Size(626, 84);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "Grup Adı";
             // 
@@ -53,7 +53,7 @@
             this.txtDescription.EnterMoveNextControl = true;
             this.txtDescription.Location = new System.Drawing.Point(6, 41);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(723, 26);
+            this.txtDescription.Size = new System.Drawing.Size(606, 26);
             this.txtDescription.TabIndex = 0;
             // 
             // btnGuncelle
@@ -63,8 +63,8 @@
             this.btnGuncelle.Appearance.Options.UseFont = true;
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.Location = new System.Drawing.Point(574, 91);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuncelle.Location = new System.Drawing.Point(482, 93);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(130, 54);
             this.btnGuncelle.TabIndex = 149;
@@ -74,20 +74,22 @@
             // frm_IhaleGrupGuncelle
             // 
             this.AcceptButton = this.btnGuncelle;
-            this.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 164);
+            this.ClientSize = new System.Drawing.Size(626, 160);
             this.ControlBox = false;
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frm_IhaleGrupGuncelle";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = " ";
+            this.Text = "Grup Ekle";
             this.Load += new System.EventHandler(this.frm_IhaleGrupGuncelle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

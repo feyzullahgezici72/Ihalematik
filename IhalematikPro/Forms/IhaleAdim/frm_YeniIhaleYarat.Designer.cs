@@ -318,7 +318,7 @@
             this.xtraTabPage1.Controls.Add(this.txtcompanyName);
             this.xtraTabPage1.Controls.Add(this.txtAciklama);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(732, 253);
+            this.xtraTabPage1.Size = new System.Drawing.Size(738, 260);
             this.xtraTabPage1.Text = "İhale Bilgileri";
             // 
             // LastOfferDate
@@ -332,7 +332,7 @@
             this.LastOfferDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.LastOfferDate.Properties.Mask.EditMask = "f";
-            this.LastOfferDate.Size = new System.Drawing.Size(594, 26);
+            this.LastOfferDate.Size = new System.Drawing.Size(594, 28);
             this.LastOfferDate.TabIndex = 3;
             // 
             // xtraTabPage2
@@ -791,7 +791,6 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton1.Location = new System.Drawing.Point(321, 16);
@@ -809,7 +808,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Size = new System.Drawing.Size(134, 26);
+            this.dateEdit2.Size = new System.Drawing.Size(134, 28);
             this.dateEdit2.TabIndex = 2;
             // 
             // dateEdit1
@@ -821,7 +820,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(162, 26);
+            this.dateEdit1.Size = new System.Drawing.Size(162, 28);
             this.dateEdit1.TabIndex = 2;
             // 
             // textEdit1
@@ -869,6 +868,8 @@
             this.Controls.Add(this.btnIhaleOlustur);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

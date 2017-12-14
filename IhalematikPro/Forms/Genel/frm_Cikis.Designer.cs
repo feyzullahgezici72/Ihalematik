@@ -74,10 +74,11 @@
             // 
             this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(403, 0);
+            this.pictureEdit1.Location = new System.Drawing.Point(422, 0);
             this.pictureEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit1.Properties.PictureAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEdit1.Size = new System.Drawing.Size(208, 158);
@@ -91,13 +92,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnHayir;
-            this.ClientSize = new System.Drawing.Size(611, 158);
+            this.ClientSize = new System.Drawing.Size(630, 158);
             this.ControlBox = false;
             this.Controls.Add(this.btnHayir);
             this.Controls.Add(this.btnEvet);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.pictureEdit1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Cikis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

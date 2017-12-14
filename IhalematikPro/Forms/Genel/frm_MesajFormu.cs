@@ -45,12 +45,12 @@ namespace IhalematikProUI.Forms
 
         private void frm_MesajFormu_Shown(object sender, EventArgs e)
         {
-            pbControl.Visible = true;
-            for (int i = 0; i < 101; i++)
-            {
-                Thread.Sleep(0);
-                pbControl.Position = i;
-            }
+            //pbControl.Visible = true;
+            //for (int i = 0; i < 101; i++)
+            //{
+            //    Thread.Sleep(0);
+            //    pbControl.Position = i;
+            //}
             //timer1.Enabled = false;
             //this.Close();
         }

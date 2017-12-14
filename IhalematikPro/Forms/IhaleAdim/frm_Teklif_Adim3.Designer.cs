@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim3));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -82,7 +81,7 @@
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.btnPanelKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             this.grdMaterialListIsWorkship = new DevExpress.XtraGrid.GridControl();
             this.gridViewMaterialListIsWorkship = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -96,8 +95,8 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource();
+            this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource();
             this.panelGrup = new DevExpress.XtraEditors.PanelControl();
             this.isciAracGirisPaneli = new DevExpress.XtraEditors.PanelControl();
             this.grdTenderGroup = new DevExpress.XtraGrid.GridControl();
@@ -223,7 +222,7 @@
             this.btnTumuneUygula.Location = new System.Drawing.Point(120, 12);
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
-            this.btnTumuneUygula.Size = new System.Drawing.Size(39, 32);
+            this.btnTumuneUygula.Size = new System.Drawing.Size(26, 22);
             this.btnTumuneUygula.TabIndex = 34;
             this.btnTumuneUygula.Click += new System.EventHandler(this.btnTumuneUygula_Click);
             // 
@@ -1343,7 +1342,6 @@
             // 
             // panelGrup
             // 
-            this.panelGrup.Controls.Add(this.isciAracGirisPaneli);
             this.panelGrup.Controls.Add(this.grdTenderGroup);
             this.panelGrup.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelGrup.Location = new System.Drawing.Point(0, 95);
@@ -1357,7 +1355,7 @@
             this.isciAracGirisPaneli.Appearance.Options.UseBackColor = true;
             this.isciAracGirisPaneli.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.isciAracGirisPaneli.Controls.Add(this.isciAracGirisPanelix);
-            this.isciAracGirisPaneli.Location = new System.Drawing.Point(356, 65);
+            this.isciAracGirisPaneli.Location = new System.Drawing.Point(420, 134);
             this.isciAracGirisPaneli.Name = "isciAracGirisPaneli";
             this.isciAracGirisPaneli.Size = new System.Drawing.Size(968, 649);
             this.isciAracGirisPaneli.TabIndex = 34;
@@ -1599,7 +1597,6 @@
             this.btnPrev.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnPrev.Appearance.Options.UseFont = true;
             this.btnPrev.Appearance.Options.UseForeColor = true;
-            this.btnPrev.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnPrev.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPrev.Image = ((System.Drawing.Image)(resources.GetObject("btnPrev.Image")));
             this.btnPrev.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
@@ -1627,7 +1624,6 @@
             this.btnNext.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnNext.Appearance.Options.UseFont = true;
             this.btnNext.Appearance.Options.UseForeColor = true;
-            this.btnNext.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
@@ -1706,12 +1702,15 @@
             this.CancelButton = this.btnPanelKapat;
             this.ClientSize = new System.Drawing.Size(1631, 764);
             this.ControlBox = false;
+            this.Controls.Add(this.isciAracGirisPaneli);
             this.Controls.Add(this.grdMaterialListIsWorkship);
             this.Controls.Add(this.panelControl7);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelGrup);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

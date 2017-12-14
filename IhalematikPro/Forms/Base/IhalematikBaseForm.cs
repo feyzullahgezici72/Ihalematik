@@ -58,7 +58,10 @@ namespace IhalematikProUI.Forms.Base
             this.SuspendLayout();
             // 
             // IhalematikBaseForm
-           this.ClientSize = new System.Drawing.Size(Screen.PrimaryScreen.WorkingArea.Width,Screen.PrimaryScreen.WorkingArea.Height);
+            // 
+            this.ClientSize = new System.Drawing.Size(1912, 1020);
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "IhalematikBaseForm";
             this.Load += new System.EventHandler(this.IhalematikBaseForm_Load_1);
             this.ResumeLayout(false);

@@ -109,6 +109,8 @@
             this.emailMesajPanel.Controls.Add(this.panelControl7);
             this.emailMesajPanel.Controls.Add(this.panelControl6);
             this.emailMesajPanel.Location = new System.Drawing.Point(345, 69);
+            this.emailMesajPanel.LookAndFeel.SkinName = "Money Twins";
+            this.emailMesajPanel.LookAndFeel.UseDefaultLookAndFeel = false;
             this.emailMesajPanel.Name = "emailMesajPanel";
             this.emailMesajPanel.Size = new System.Drawing.Size(389, 204);
             this.emailMesajPanel.TabIndex = 3;
@@ -687,6 +689,8 @@
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TedarikciyeAktarilanMalzemeDetay";

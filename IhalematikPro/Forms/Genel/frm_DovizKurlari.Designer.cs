@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DovizKurlari));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dataGrid1 = new System.Windows.Forms.DataGridView();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.btnGizliKapat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
@@ -50,13 +50,12 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl1.Controls.Add(this.dataGrid1);
-            this.groupControl1.Controls.Add(this.statusStrip1);
             this.groupControl1.Controls.Add(this.btnGizliKapat);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 39);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(693, 635);
+            this.groupControl1.Size = new System.Drawing.Size(693, 627);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "TC.Merkez Bankası Verilerine Göre";
             // 
@@ -67,9 +66,17 @@
             this.dataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGrid1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid1.GridColor = System.Drawing.Color.White;
-            this.dataGrid1.Location = new System.Drawing.Point(3, 30);
+            this.dataGrid1.Location = new System.Drawing.Point(2, 33);
             this.dataGrid1.MultiSelect = false;
             this.dataGrid1.Name = "dataGrid1";
             this.dataGrid1.ReadOnly = true;
@@ -80,17 +87,8 @@
             this.dataGrid1.ShowCellToolTips = false;
             this.dataGrid1.ShowEditingIcon = false;
             this.dataGrid1.ShowRowErrors = false;
-            this.dataGrid1.Size = new System.Drawing.Size(687, 580);
+            this.dataGrid1.Size = new System.Drawing.Size(689, 592);
             this.dataGrid1.TabIndex = 9;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.statusStrip1.Location = new System.Drawing.Point(3, 610);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(687, 22);
-            this.statusStrip1.TabIndex = 10;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // btnGizliKapat
             // 
@@ -148,11 +146,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(693, 674);
+            this.ClientSize = new System.Drawing.Size(693, 666);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -163,7 +163,6 @@
             this.Load += new System.EventHandler(this.frm_DovizKurlari_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -179,6 +178,5 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btnIptal;
-        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }

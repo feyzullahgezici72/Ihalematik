@@ -102,6 +102,7 @@
             this.grdAddedOfferMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdAddedOfferMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
             this.grdAddedOfferMaterialList.Location = new System.Drawing.Point(0, 35);
+            this.grdAddedOfferMaterialList.LookAndFeel.SkinName = "Money Twins";
             this.grdAddedOfferMaterialList.MainView = this.gridViewAddedOfferMaterialList;
             this.grdAddedOfferMaterialList.Margin = new System.Windows.Forms.Padding(6);
             this.grdAddedOfferMaterialList.Name = "grdAddedOfferMaterialList";
@@ -110,6 +111,7 @@
             this.rpstRemove});
             this.grdAddedOfferMaterialList.Size = new System.Drawing.Size(1215, 615);
             this.grdAddedOfferMaterialList.TabIndex = 112;
+            this.grdAddedOfferMaterialList.UseDisabledStatePainter = false;
             this.grdAddedOfferMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewAddedOfferMaterialList});
             // 
@@ -387,6 +389,8 @@
             this.Controls.Add(this.grdAddedOfferMaterialList);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_GonderilecekMalzemeListesi";

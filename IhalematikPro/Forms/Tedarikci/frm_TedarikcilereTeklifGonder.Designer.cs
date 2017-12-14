@@ -389,7 +389,6 @@
             this.btnTedarikciListesi.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnTedarikciListesi.Appearance.Options.UseFont = true;
             this.btnTedarikciListesi.Appearance.Options.UseForeColor = true;
-            this.btnTedarikciListesi.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnTedarikciListesi.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTedarikciListesi.Image = ((System.Drawing.Image)(resources.GetObject("btnTedarikciListesi.Image")));
             this.btnTedarikciListesi.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
@@ -416,7 +415,6 @@
             this.btnTedaikcileregonder.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnTedaikcileregonder.Appearance.Options.UseFont = true;
             this.btnTedaikcileregonder.Appearance.Options.UseForeColor = true;
-            this.btnTedaikcileregonder.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnTedaikcileregonder.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTedaikcileregonder.Image = ((System.Drawing.Image)(resources.GetObject("btnTedaikcileregonder.Image")));
             this.btnTedaikcileregonder.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
@@ -443,7 +441,6 @@
             this.btnListeOlustur.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnListeOlustur.Appearance.Options.UseFont = true;
             this.btnListeOlustur.Appearance.Options.UseForeColor = true;
-            this.btnListeOlustur.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnListeOlustur.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnListeOlustur.Image = ((System.Drawing.Image)(resources.GetObject("btnListeOlustur.Image")));
             this.btnListeOlustur.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
@@ -506,7 +503,6 @@
             // 
             this.btnAktar.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAktar.Appearance.Options.UseFont = true;
-            this.btnAktar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnAktar.Image = ((System.Drawing.Image)(resources.GetObject("btnAktar.Image")));
             this.btnAktar.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnAktar.Location = new System.Drawing.Point(6, 335);
@@ -1100,6 +1096,8 @@
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.pnlUst);
             this.Controls.Add(this.panelControl1);
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TedarikcilereTeklifGonder";
