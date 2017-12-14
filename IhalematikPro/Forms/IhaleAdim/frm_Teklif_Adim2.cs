@@ -190,5 +190,13 @@ namespace IhalematikPro.Forms
             af.RibonPasif();
             af.btnAdimx1.PerformClick();
         }
+
+        private void txtMarkup_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                btnTumuneUygula.PerformClick();
+            }
+        }
     }
 }
