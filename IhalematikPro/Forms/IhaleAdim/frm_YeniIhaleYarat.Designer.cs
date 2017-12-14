@@ -350,7 +350,7 @@
             this.xtraTabPage2.Controls.Add(this.txtType);
             this.xtraTabPage2.Controls.Add(this.txtEkapNumber);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(732, 253);
+            this.xtraTabPage2.Size = new System.Drawing.Size(738, 260);
             this.xtraTabPage2.Text = "Detay          ";
             // 
             // labelControl12
@@ -520,7 +520,7 @@
             gridLevelNode1.RelationName = "Level1";
             this.grdOffer.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.grdOffer.Location = new System.Drawing.Point(3, 90);
+            this.grdOffer.Location = new System.Drawing.Point(4, 91);
             this.grdOffer.MainView = this.gridViewOffer;
             this.grdOffer.Margin = new System.Windows.Forms.Padding(4);
             this.grdOffer.Name = "grdOffer";
@@ -529,7 +529,7 @@
             this.btnSil,
             this.rpstColId,
             this.rpstSelected});
-            this.grdOffer.Size = new System.Drawing.Size(550, 295);
+            this.grdOffer.Size = new System.Drawing.Size(548, 293);
             this.grdOffer.TabIndex = 101;
             this.grdOffer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOffer,
@@ -784,9 +784,9 @@
             this.panelControl4.Controls.Add(this.labelControl13);
             this.panelControl4.Controls.Add(this.labelControl6);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl4.Location = new System.Drawing.Point(3, 3);
+            this.panelControl4.Location = new System.Drawing.Point(4, 4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(550, 87);
+            this.panelControl4.Size = new System.Drawing.Size(548, 87);
             this.panelControl4.TabIndex = 100;
             // 
             // simpleButton1
@@ -827,7 +827,6 @@
             // 
             this.textEdit1.Location = new System.Drawing.Point(151, 16);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textEdit1.Size = new System.Drawing.Size(162, 26);
             this.textEdit1.TabIndex = 1;
             // 

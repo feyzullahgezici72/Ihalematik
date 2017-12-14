@@ -125,6 +125,13 @@ namespace IhalematikProUI.Forms
 
         }
 
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            frm_MesajFormu mf = new frm_MesajFormu();
+            mf.lblMesaj.Text = "İhale Kaydedildi...";
+            mf.ShowDialog();
+        }
+
         //private void Rapor_Click(object sender, EventArgs e)
         //{
         //    //MainReportcs.
