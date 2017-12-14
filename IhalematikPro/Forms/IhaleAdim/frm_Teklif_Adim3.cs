@@ -410,7 +410,7 @@ namespace IhalematikPro.Forms
             }
 
             List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(tenderGroupItems);
-            if (models != null)
+            if (models.Count != 0)
             {
                 grdTenderGroup.DataSource = models;
                 models[0].IsSelected = true;
@@ -436,9 +436,6 @@ namespace IhalematikPro.Forms
             {
                 List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
                 List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-                //txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
-                //txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
-                //txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
                 grdMaterialListIsWorkship.DataSource = models;
                 gridViewMaterialListIsWorkship.FocusedRowHandle = this.FocusedRowHandle;
             }

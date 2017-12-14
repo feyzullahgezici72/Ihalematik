@@ -29,6 +29,7 @@ namespace IhalematikPro.Model
             }
         }
 
+        //Malzeme Toplam Fiyat
         public double TotalAmount
         {
             get
@@ -155,12 +156,29 @@ namespace IhalematikPro.Model
             }
         }
 
+        //Iscilikli Toplam Fiyat
+        public double WorkerTotalAmount
+        {
+            get
+            {
+                return Math.Round(this.WorkerUnitPrice * this.Quantity, 2);
+            }
+        }
         //Iscilikli Birim Kar
         public double WorkerMarkup
         {
             get
             {
                 return Math.Round(this.WorkerUnitPrice * this.WorkerPercentageMarkup / 100, 2);
+            }
+        }
+
+        // Karli Iscilikli birim fiyat
+        public double WorkerMarkupUnitPrice
+        {
+            get
+            {
+                return Math.Round(this.WorkerUnitPrice + this.WorkerMarkup, 2);
             }
         }
 
@@ -245,12 +263,12 @@ namespace IhalematikPro.Model
             {
                 //if (this.tenderMaterialListEquipment == null)
                 //{
-                    this.tenderMaterialListEquipment = new List<IhalematikProBL.Entity.TenderMaterialListEquipment>();
-                    Dictionary<string, object> parameters = new Dictionary<string, object>();
-                    parameters.Add("TenderId", this.Tender.Id);
-                    parameters.Add("MaterialId", this.Id);
+                this.tenderMaterialListEquipment = new List<IhalematikProBL.Entity.TenderMaterialListEquipment>();
+                Dictionary<string, object> parameters = new Dictionary<string, object>();
+                parameters.Add("TenderId", this.Tender.Id);
+                parameters.Add("MaterialId", this.Id);
 
-                    this.tenderMaterialListEquipment = TenderMaterialListEquipmentProvider.Instance.GetItems(parameters);
+                this.tenderMaterialListEquipment = TenderMaterialListEquipmentProvider.Instance.GetItems(parameters);
                 //}
                 return this.tenderMaterialListEquipment;
             }
@@ -324,7 +342,7 @@ namespace IhalematikPro.Model
             this.OfferPrice = Entity.OfferPrice;
             this.IsPoz = Entity.IsPoz;
             OfferMaterialList offerMaterialList = OfferManager.Instance.GetOfferMaterialListPrice(this.Tender.OfferId, this.PozOBFId, this.IsPoz);
-            
+
             if (this.Tender.Offer != null)
             {
                 this.Quantity = offerMaterialList.Quantity;
