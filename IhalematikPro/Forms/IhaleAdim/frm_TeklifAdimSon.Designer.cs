@@ -60,13 +60,7 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
-            this.lblTenderNumber = new DevExpress.XtraEditors.LabelControl();
             this.lblTederDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnObfKayit = new DevExpress.XtraEditors.SimpleButton();
@@ -80,6 +74,10 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
+            this.lblTenderNumber = new DevExpress.XtraEditors.LabelControl();
+            this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -496,8 +494,6 @@
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl2.ContentImage = ((System.Drawing.Image)(resources.GetObject("panelControl2.ContentImage")));
             this.panelControl2.Controls.Add(this.panelControl4);
-            this.panelControl2.Controls.Add(this.lblTenderDescription);
-            this.panelControl2.Controls.Add(this.lblTenderNumber);
             this.panelControl2.Controls.Add(this.lblTederDescription);
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Controls.Add(this.btnObfKayit);
@@ -515,12 +511,12 @@
             this.panelControl4.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.panelControl4.Appearance.Options.UseBackColor = true;
             this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelControl4.Controls.Add(this.lblTenderNumber);
+            this.panelControl4.Controls.Add(this.lblTenderDescription);
+            this.panelControl4.Controls.Add(this.labelControl2);
+            this.panelControl4.Controls.Add(this.labelControl9);
             this.panelControl4.Controls.Add(this.btnKaydet);
-            this.panelControl4.Controls.Add(this.labelControl14);
-            this.panelControl4.Controls.Add(this.labelControl15);
-            this.panelControl4.Controls.Add(this.labelControl16);
             this.panelControl4.Controls.Add(this.labelControl17);
-            this.panelControl4.Controls.Add(this.labelControl18);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(4);
@@ -544,35 +540,6 @@
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // labelControl14
-            // 
-            this.labelControl14.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl14.Location = new System.Drawing.Point(94, 44);
-            this.labelControl14.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(0, 19);
-            this.labelControl14.TabIndex = 10;
-            // 
-            // labelControl15
-            // 
-            this.labelControl15.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl15.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl15.Location = new System.Drawing.Point(15, 44);
-            this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(70, 19);
-            this.labelControl15.TabIndex = 9;
-            this.labelControl15.Text = "Açıklama :";
-            // 
-            // labelControl16
-            // 
-            this.labelControl16.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl16.Location = new System.Drawing.Point(94, 12);
-            this.labelControl16.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(0, 19);
-            this.labelControl16.TabIndex = 8;
-            // 
             // labelControl17
             // 
             this.labelControl17.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -582,35 +549,6 @@
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(0, 34);
             this.labelControl17.TabIndex = 7;
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl18.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl18.Location = new System.Drawing.Point(15, 12);
-            this.labelControl18.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(69, 19);
-            this.labelControl18.TabIndex = 6;
-            this.labelControl18.Text = "İhale No  :";
-            // 
-            // lblTenderDescription
-            // 
-            this.lblTenderDescription.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenderDescription.Location = new System.Drawing.Point(232, 53);
-            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4);
-            this.lblTenderDescription.Name = "lblTenderDescription";
-            this.lblTenderDescription.Size = new System.Drawing.Size(0, 34);
-            this.lblTenderDescription.TabIndex = 10;
-            // 
-            // lblTenderNumber
-            // 
-            this.lblTenderNumber.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenderNumber.Location = new System.Drawing.Point(153, 13);
-            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4);
-            this.lblTenderNumber.Name = "lblTenderNumber";
-            this.lblTenderNumber.Size = new System.Drawing.Size(0, 34);
-            this.lblTenderNumber.TabIndex = 8;
             // 
             // lblTederDescription
             // 
@@ -947,6 +885,48 @@
             this.gridSplitContainer1.Size = new System.Drawing.Size(1376, 527);
             this.gridSplitContainer1.TabIndex = 23;
             // 
+            // lblTenderNumber
+            // 
+            this.lblTenderNumber.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTenderNumber.Appearance.ForeColor = System.Drawing.Color.Crimson;
+            this.lblTenderNumber.Location = new System.Drawing.Point(103, 13);
+            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTenderNumber.Name = "lblTenderNumber";
+            this.lblTenderNumber.Size = new System.Drawing.Size(0, 19);
+            this.lblTenderNumber.TabIndex = 44;
+            // 
+            // lblTenderDescription
+            // 
+            this.lblTenderDescription.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTenderDescription.Appearance.ForeColor = System.Drawing.Color.Crimson;
+            this.lblTenderDescription.Location = new System.Drawing.Point(103, 40);
+            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTenderDescription.Name = "lblTenderDescription";
+            this.lblTenderDescription.Size = new System.Drawing.Size(0, 19);
+            this.lblTenderDescription.TabIndex = 43;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.labelControl2.Location = new System.Drawing.Point(13, 40);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(79, 19);
+            this.labelControl2.TabIndex = 41;
+            this.labelControl2.Text = "Açıklama :";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.labelControl9.Location = new System.Drawing.Point(13, 12);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(76, 19);
+            this.labelControl9.TabIndex = 42;
+            this.labelControl9.Text = "İhale No  :";
+            // 
             // frm_TeklifAdimSon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1010,8 +990,6 @@
         private DevExpress.XtraEditors.LabelControl txtAdimAciklama;
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.LabelControl lblTenderDescription;
-        private DevExpress.XtraEditors.LabelControl lblTenderNumber;
         private DevExpress.XtraEditors.LabelControl lblTederDescription;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btnObfKayit;
@@ -1040,11 +1018,7 @@
         private DevExpress.XtraEditors.TextEdit txtMaterialCostAmount;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.PanelControl panelControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl14;
-        private DevExpress.XtraEditors.LabelControl labelControl15;
-        private DevExpress.XtraEditors.LabelControl labelControl16;
         private DevExpress.XtraEditors.LabelControl labelControl17;
-        private DevExpress.XtraEditors.LabelControl labelControl18;
         public DevExpress.XtraGrid.GridControl grdMaterialList;
         public DevExpress.XtraGrid.Views.Grid.GridView grdMaterialList2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
@@ -1056,5 +1030,9 @@
         private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
         private System.Windows.Forms.PictureBox pcWorld;
         public DevExpress.XtraEditors.SimpleButton btnKaydet;
+        private DevExpress.XtraEditors.LabelControl lblTenderNumber;
+        private DevExpress.XtraEditors.LabelControl lblTenderDescription;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
     }
 }
