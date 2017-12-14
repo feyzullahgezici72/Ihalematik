@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikcilerdenFiyatAl));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.pnltoplam = new System.Windows.Forms.Panel();
@@ -81,7 +82,7 @@
             this.lblTederDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pnltoplam.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -223,10 +224,10 @@
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
             this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnKaydet.Location = new System.Drawing.Point(1176, 3);
+            this.btnKaydet.Location = new System.Drawing.Point(1175, 4);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(183, 64);
+            this.btnKaydet.Size = new System.Drawing.Size(183, 62);
             this.btnKaydet.TabIndex = 3;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
@@ -611,22 +612,22 @@
             // 
             this.panelControl7.Controls.Add(this.grdSupplier);
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl7.Location = new System.Drawing.Point(3, 3);
+            this.panelControl7.Location = new System.Drawing.Point(4, 4);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(380, 447);
+            this.panelControl7.Size = new System.Drawing.Size(378, 445);
             this.panelControl7.TabIndex = 23;
             // 
             // grdSupplier
             // 
             this.grdSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdSupplier.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdSupplier.Location = new System.Drawing.Point(3, 3);
+            this.grdSupplier.Location = new System.Drawing.Point(4, 4);
             this.grdSupplier.MainView = this.gridViewSupplier;
             this.grdSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.grdSupplier.Name = "grdSupplier";
             this.grdSupplier.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstIsSelectedSupplier});
-            this.grdSupplier.Size = new System.Drawing.Size(374, 441);
+            this.grdSupplier.Size = new System.Drawing.Size(370, 437);
             this.grdSupplier.TabIndex = 40;
             this.grdSupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSupplier});
@@ -782,15 +783,15 @@
             // 
             this.panelControl8.Controls.Add(this.rdSortPrice);
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl8.Location = new System.Drawing.Point(3, 450);
+            this.panelControl8.Location = new System.Drawing.Point(4, 449);
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(380, 99);
+            this.panelControl8.Size = new System.Drawing.Size(378, 99);
             this.panelControl8.TabIndex = 23;
             // 
             // rdSortPrice
             // 
             this.rdSortPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rdSortPrice.Location = new System.Drawing.Point(3, 3);
+            this.rdSortPrice.Location = new System.Drawing.Point(4, 4);
             this.rdSortPrice.Name = "rdSortPrice";
             this.rdSortPrice.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rdSortPrice.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
@@ -800,7 +801,7 @@
             this.rdSortPrice.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "En düşük fiyata göre"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Ortalama fiyata göre")});
-            this.rdSortPrice.Size = new System.Drawing.Size(374, 93);
+            this.rdSortPrice.Size = new System.Drawing.Size(370, 91);
             this.rdSortPrice.TabIndex = 23;
             this.rdSortPrice.SelectedIndexChanged += new System.EventHandler(this.rdSortPrice_SelectedIndexChanged);
             // 
@@ -808,9 +809,9 @@
             // 
             this.panelControl5.Controls.Add(this.simpleButton1);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl5.Location = new System.Drawing.Point(3, 549);
+            this.panelControl5.Location = new System.Drawing.Point(4, 548);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(380, 99);
+            this.panelControl5.Size = new System.Drawing.Size(378, 99);
             this.panelControl5.TabIndex = 12;
             // 
             // simpleButton1
@@ -898,26 +899,27 @@
             this.pnlrisk.Controls.Add(this.labelControl3);
             this.pnlrisk.Controls.Add(this.btnTumuneUygula);
             this.pnlrisk.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlrisk.Location = new System.Drawing.Point(902, 3);
+            this.pnlrisk.Location = new System.Drawing.Point(901, 4);
             this.pnlrisk.Name = "pnlrisk";
-            this.pnlrisk.Size = new System.Drawing.Size(274, 64);
+            this.pnlrisk.Size = new System.Drawing.Size(274, 62);
             this.pnlrisk.TabIndex = 46;
             // 
             // txtRisk
             // 
             this.txtRisk.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtRisk.Location = new System.Drawing.Point(178, 21);
+            this.txtRisk.Location = new System.Drawing.Point(178, 20);
             this.txtRisk.Name = "txtRisk";
             this.txtRisk.Size = new System.Drawing.Size(42, 27);
             this.txtRisk.TabIndex = 41;
             this.txtRisk.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRisk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRisk_KeyPress);
             // 
             // labelControl3
             // 
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl3.Location = new System.Drawing.Point(22, 25);
+            this.labelControl3.Location = new System.Drawing.Point(22, 24);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(146, 19);
@@ -935,7 +937,7 @@
             this.btnTumuneUygula.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
             this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(226, 18);
+            this.btnTumuneUygula.Location = new System.Drawing.Point(227, 21);
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
             this.btnTumuneUygula.Size = new System.Drawing.Size(26, 22);

@@ -235,5 +235,13 @@ namespace IhalematikProUI.Forms
             pnlrisk.Visible = false;
             pnltoplam.Visible = false;
         }
+
+        private void txtRisk_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                btnTumuneUygula.PerformClick();
+            }
+        }
     }
 }

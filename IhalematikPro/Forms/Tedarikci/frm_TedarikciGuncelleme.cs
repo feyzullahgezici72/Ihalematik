@@ -53,7 +53,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             txtAuthorNameSurname.Text = this.CurrentSupplier.AuthorNameSurname;
             txtCompanyName.Text = this.CurrentSupplier.CompanyName;
             txtCountry.Text = this.CurrentSupplier.Country;
-            txtEmail.Text = this.CurrentSupplier.Country;
+            txtEmail.Text = this.CurrentSupplier.Email;
             txtGSM.Text = this.CurrentSupplier.GSM;
             txtScore.Text = this.CurrentSupplier.Score;
             txtTelephone.Text = this.CurrentSupplier.Telephone;

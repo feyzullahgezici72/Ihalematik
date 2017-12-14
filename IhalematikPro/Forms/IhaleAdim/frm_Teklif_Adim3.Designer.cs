@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim3));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -81,7 +82,7 @@
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.btnPanelKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.grdMaterialListIsWorkship = new DevExpress.XtraGrid.GridControl();
             this.gridViewMaterialListIsWorkship = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -95,10 +96,9 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource();
-            this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource();
+            this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource(this.components);
             this.panelGrup = new DevExpress.XtraEditors.PanelControl();
-            this.isciAracGirisPaneli = new DevExpress.XtraEditors.PanelControl();
             this.grdTenderGroup = new DevExpress.XtraGrid.GridControl();
             this.gridViewTenderGroup = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -108,6 +108,7 @@
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.isciAracGirisPaneli = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl9 = new DevExpress.XtraEditors.PanelControl();
             this.btnPrev = new DevExpress.XtraEditors.SimpleButton();
@@ -152,14 +153,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddVehicle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelGrup)).BeginInit();
             this.panelGrup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.isciAracGirisPaneli)).BeginInit();
-            this.isciAracGirisPaneli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdTenderGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTenderGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelected)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.isciAracGirisPaneli)).BeginInit();
+            this.isciAracGirisPaneli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).BeginInit();
@@ -369,13 +370,13 @@
             // 
             this.grdAddVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdAddVehicle.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdAddVehicle.Location = new System.Drawing.Point(3, 361);
+            this.grdAddVehicle.Location = new System.Drawing.Point(4, 362);
             this.grdAddVehicle.MainView = this.gridViewAddVehicle;
             this.grdAddVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddVehicle.Name = "grdAddVehicle";
             this.grdAddVehicle.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstVehicle});
-            this.grdAddVehicle.Size = new System.Drawing.Size(951, 270);
+            this.grdAddVehicle.Size = new System.Drawing.Size(949, 268);
             this.grdAddVehicle.TabIndex = 1;
             this.grdAddVehicle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewAddVehicle});
@@ -534,6 +535,8 @@
             this.rpstVehicle.AutoHeight = false;
             this.rpstVehicle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.rpstVehicle.LookAndFeel.SkinName = "Money Twins";
+            this.rpstVehicle.LookAndFeel.UseDefaultLookAndFeel = false;
             this.rpstVehicle.Name = "rpstVehicle";
             // 
             // colAddVehicleQuantity
@@ -623,9 +626,9 @@
             this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.groupControl3.Controls.Add(this.grdAddWorker);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl3.Location = new System.Drawing.Point(3, 148);
+            this.groupControl3.Location = new System.Drawing.Point(4, 149);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(951, 213);
+            this.groupControl3.Size = new System.Drawing.Size(949, 213);
             this.groupControl3.TabIndex = 6;
             this.groupControl3.Text = "groupControl3";
             // 
@@ -639,7 +642,7 @@
             this.grdAddWorker.Name = "grdAddWorker";
             this.grdAddWorker.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstWorker});
-            this.grdAddWorker.Size = new System.Drawing.Size(951, 206);
+            this.grdAddWorker.Size = new System.Drawing.Size(949, 206);
             this.grdAddWorker.TabIndex = 0;
             this.grdAddWorker.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewAddWorker});
@@ -798,6 +801,8 @@
             this.rpstWorker.AutoHeight = false;
             this.rpstWorker.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.rpstWorker.LookAndFeel.SkinName = "Money Twins";
+            this.rpstWorker.LookAndFeel.UseDefaultLookAndFeel = false;
             this.rpstWorker.Name = "rpstWorker";
             // 
             // colAddWorkerQuantity
@@ -887,9 +892,9 @@
             this.groupControl1.Controls.Add(this.labelControl10);
             this.groupControl1.Controls.Add(this.labelControl11);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(3, 38);
+            this.groupControl1.Location = new System.Drawing.Point(4, 39);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(951, 110);
+            this.groupControl1.Size = new System.Drawing.Size(949, 110);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "  ";
             // 
@@ -992,10 +997,10 @@
             this.panelControl5.Controls.Add(this.labelControl3);
             this.panelControl5.Controls.Add(this.btnPanelKapat);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl5.Location = new System.Drawing.Point(3, 3);
+            this.panelControl5.Location = new System.Drawing.Point(4, 4);
             this.panelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(951, 35);
+            this.panelControl5.Size = new System.Drawing.Size(949, 35);
             this.panelControl5.TabIndex = 4;
             // 
             // labelControl3
@@ -1025,7 +1030,7 @@
             this.btnPanelKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnPanelKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnPanelKapat.Image")));
             this.btnPanelKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnPanelKapat.Location = new System.Drawing.Point(923, 0);
+            this.btnPanelKapat.Location = new System.Drawing.Point(921, 0);
             this.btnPanelKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnPanelKapat.Name = "btnPanelKapat";
             this.btnPanelKapat.Size = new System.Drawing.Size(28, 35);
@@ -1349,18 +1354,6 @@
             this.panelGrup.Size = new System.Drawing.Size(386, 669);
             this.panelGrup.TabIndex = 27;
             // 
-            // isciAracGirisPaneli
-            // 
-            this.isciAracGirisPaneli.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.isciAracGirisPaneli.Appearance.Options.UseBackColor = true;
-            this.isciAracGirisPaneli.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.isciAracGirisPaneli.Controls.Add(this.isciAracGirisPanelix);
-            this.isciAracGirisPaneli.Location = new System.Drawing.Point(420, 134);
-            this.isciAracGirisPaneli.Name = "isciAracGirisPaneli";
-            this.isciAracGirisPaneli.Size = new System.Drawing.Size(968, 649);
-            this.isciAracGirisPaneli.TabIndex = 34;
-            this.isciAracGirisPaneli.Visible = false;
-            // 
             // grdTenderGroup
             // 
             this.grdTenderGroup.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1368,7 +1361,7 @@
             gridLevelNode1.RelationName = "Level1";
             this.grdTenderGroup.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.grdTenderGroup.Location = new System.Drawing.Point(3, 3);
+            this.grdTenderGroup.Location = new System.Drawing.Point(4, 4);
             this.grdTenderGroup.MainView = this.gridViewTenderGroup;
             this.grdTenderGroup.Margin = new System.Windows.Forms.Padding(4);
             this.grdTenderGroup.Name = "grdTenderGroup";
@@ -1376,7 +1369,7 @@
             this.repositoryItemButtonEdit1,
             this.btnSil,
             this.rpstIsSelected});
-            this.grdTenderGroup.Size = new System.Drawing.Size(380, 663);
+            this.grdTenderGroup.Size = new System.Drawing.Size(378, 661);
             this.grdTenderGroup.TabIndex = 41;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup,
@@ -1565,6 +1558,18 @@
             // 
             this.gridView2.GridControl = this.grdTenderGroup;
             this.gridView2.Name = "gridView2";
+            // 
+            // isciAracGirisPaneli
+            // 
+            this.isciAracGirisPaneli.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.isciAracGirisPaneli.Appearance.Options.UseBackColor = true;
+            this.isciAracGirisPaneli.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.isciAracGirisPaneli.Controls.Add(this.isciAracGirisPanelix);
+            this.isciAracGirisPaneli.Location = new System.Drawing.Point(420, 134);
+            this.isciAracGirisPaneli.Name = "isciAracGirisPaneli";
+            this.isciAracGirisPaneli.Size = new System.Drawing.Size(968, 649);
+            this.isciAracGirisPaneli.TabIndex = 34;
+            this.isciAracGirisPaneli.Visible = false;
             // 
             // panelControl3
             // 
@@ -1758,14 +1763,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddVehicle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelGrup)).EndInit();
             this.panelGrup.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.isciAracGirisPaneli)).EndInit();
-            this.isciAracGirisPaneli.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdTenderGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTenderGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelected)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.isciAracGirisPaneli)).EndInit();
+            this.isciAracGirisPaneli.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).EndInit();

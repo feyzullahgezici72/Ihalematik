@@ -225,9 +225,9 @@
             // 
             this.pnlGonderilecekListe.Controls.Add(this.btnGonderilenMalzemeListesi);
             this.pnlGonderilecekListe.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlGonderilecekListe.Location = new System.Drawing.Point(723, 3);
+            this.pnlGonderilecekListe.Location = new System.Drawing.Point(722, 4);
             this.pnlGonderilecekListe.Name = "pnlGonderilecekListe";
-            this.pnlGonderilecekListe.Size = new System.Drawing.Size(290, 64);
+            this.pnlGonderilecekListe.Size = new System.Drawing.Size(290, 62);
             this.pnlGonderilecekListe.TabIndex = 12;
             this.pnlGonderilecekListe.Visible = false;
             // 
@@ -240,10 +240,10 @@
             this.btnGonderilenMalzemeListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnGonderilenMalzemeListesi.Image = ((System.Drawing.Image)(resources.GetObject("btnGonderilenMalzemeListesi.Image")));
             this.btnGonderilenMalzemeListesi.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnGonderilenMalzemeListesi.Location = new System.Drawing.Point(3, 3);
+            this.btnGonderilenMalzemeListesi.Location = new System.Drawing.Point(4, 4);
             this.btnGonderilenMalzemeListesi.Margin = new System.Windows.Forms.Padding(9);
             this.btnGonderilenMalzemeListesi.Name = "btnGonderilenMalzemeListesi";
-            this.btnGonderilenMalzemeListesi.Size = new System.Drawing.Size(284, 58);
+            this.btnGonderilenMalzemeListesi.Size = new System.Drawing.Size(282, 54);
             toolTipTitleItem1.Text = "GÖNDERİLECEKLER";
             toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             toolTipItem1.Appearance.Options.UseImage = true;
@@ -263,10 +263,10 @@
             this.pnlobfpozButtonpanel.Controls.Add(this.btnObfKayit);
             this.pnlobfpozButtonpanel.Controls.Add(this.btnPozKayit);
             this.pnlobfpozButtonpanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlobfpozButtonpanel.Location = new System.Drawing.Point(1013, 3);
+            this.pnlobfpozButtonpanel.Location = new System.Drawing.Point(1012, 4);
             this.pnlobfpozButtonpanel.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.pnlobfpozButtonpanel.Name = "pnlobfpozButtonpanel";
-            this.pnlobfpozButtonpanel.Size = new System.Drawing.Size(346, 64);
+            this.pnlobfpozButtonpanel.Size = new System.Drawing.Size(346, 62);
             this.pnlobfpozButtonpanel.TabIndex = 11;
             // 
             // btnObfKayit
@@ -281,7 +281,7 @@
             this.btnObfKayit.Location = new System.Drawing.Point(160, 0);
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(6);
             this.btnObfKayit.Name = "btnObfKayit";
-            this.btnObfKayit.Size = new System.Drawing.Size(160, 64);
+            this.btnObfKayit.Size = new System.Drawing.Size(160, 62);
             toolTipTitleItem2.Text = "ÖBF";
             toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             toolTipItem2.Appearance.Options.UseImage = true;
@@ -308,7 +308,7 @@
             this.btnPozKayit.Margin = new System.Windows.Forms.Padding(6);
             this.btnPozKayit.Name = "btnPozKayit";
             this.btnPozKayit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnPozKayit.Size = new System.Drawing.Size(160, 64);
+            this.btnPozKayit.Size = new System.Drawing.Size(160, 62);
             toolTipTitleItem3.Text = "POZ";
             toolTipItem3.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             toolTipItem3.Appearance.Options.UseImage = true;
@@ -392,10 +392,10 @@
             this.btnTedarikciListesi.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTedarikciListesi.Image = ((System.Drawing.Image)(resources.GetObject("btnTedarikciListesi.Image")));
             this.btnTedarikciListesi.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnTedarikciListesi.Location = new System.Drawing.Point(3, 163);
+            this.btnTedarikciListesi.Location = new System.Drawing.Point(4, 164);
             this.btnTedarikciListesi.Margin = new System.Windows.Forms.Padding(9);
             this.btnTedarikciListesi.Name = "btnTedarikciListesi";
-            this.btnTedarikciListesi.Size = new System.Drawing.Size(250, 80);
+            this.btnTedarikciListesi.Size = new System.Drawing.Size(248, 80);
             toolTipTitleItem4.Text = "MAİL GÖNDER";
             toolTipItem4.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             toolTipItem4.Appearance.Options.UseImage = true;
@@ -418,10 +418,10 @@
             this.btnTedaikcileregonder.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTedaikcileregonder.Image = ((System.Drawing.Image)(resources.GetObject("btnTedaikcileregonder.Image")));
             this.btnTedaikcileregonder.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnTedaikcileregonder.Location = new System.Drawing.Point(3, 83);
+            this.btnTedaikcileregonder.Location = new System.Drawing.Point(4, 84);
             this.btnTedaikcileregonder.Margin = new System.Windows.Forms.Padding(9);
             this.btnTedaikcileregonder.Name = "btnTedaikcileregonder";
-            this.btnTedaikcileregonder.Size = new System.Drawing.Size(250, 80);
+            this.btnTedaikcileregonder.Size = new System.Drawing.Size(248, 80);
             toolTipTitleItem5.Text = "AKTAR";
             toolTipItem5.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             toolTipItem5.Appearance.Options.UseImage = true;
@@ -444,10 +444,10 @@
             this.btnListeOlustur.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnListeOlustur.Image = ((System.Drawing.Image)(resources.GetObject("btnListeOlustur.Image")));
             this.btnListeOlustur.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnListeOlustur.Location = new System.Drawing.Point(3, 3);
+            this.btnListeOlustur.Location = new System.Drawing.Point(4, 4);
             this.btnListeOlustur.Margin = new System.Windows.Forms.Padding(9);
             this.btnListeOlustur.Name = "btnListeOlustur";
-            this.btnListeOlustur.Size = new System.Drawing.Size(250, 80);
+            this.btnListeOlustur.Size = new System.Drawing.Size(248, 80);
             toolTipTitleItem6.Text = "LİSTE";
             toolTipItem6.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             toolTipItem6.Appearance.Options.UseImage = true;
@@ -536,11 +536,11 @@
             // 
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdMaterialList.Location = new System.Drawing.Point(3, 28);
+            this.grdMaterialList.Location = new System.Drawing.Point(4, 29);
             this.grdMaterialList.MainView = this.gridViewMaterialList;
             this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
-            this.grdMaterialList.Size = new System.Drawing.Size(663, 559);
+            this.grdMaterialList.Size = new System.Drawing.Size(661, 557);
             this.grdMaterialList.TabIndex = 1;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
@@ -819,9 +819,9 @@
             this.panelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl6.Controls.Add(this.labelControl4);
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl6.Location = new System.Drawing.Point(3, 3);
+            this.panelControl6.Location = new System.Drawing.Point(4, 4);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(663, 25);
+            this.panelControl6.Size = new System.Drawing.Size(661, 25);
             this.panelControl6.TabIndex = 31;
             // 
             // labelControl4
@@ -850,14 +850,14 @@
             // 
             this.grdSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdSupplier.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdSupplier.Location = new System.Drawing.Point(3, 28);
+            this.grdSupplier.Location = new System.Drawing.Point(4, 29);
             this.grdSupplier.MainView = this.gridViewSupplier;
             this.grdSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.grdSupplier.Name = "grdSupplier";
             this.grdSupplier.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstSupplierDetail1,
             this.rpstIsSelectedSupplier});
-            this.grdSupplier.Size = new System.Drawing.Size(706, 557);
+            this.grdSupplier.Size = new System.Drawing.Size(704, 555);
             this.grdSupplier.TabIndex = 39;
             this.grdSupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSupplier,
@@ -1070,9 +1070,9 @@
             this.panelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl7.Controls.Add(this.labelControl5);
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl7.Location = new System.Drawing.Point(3, 3);
+            this.panelControl7.Location = new System.Drawing.Point(4, 4);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(706, 25);
+            this.panelControl7.Size = new System.Drawing.Size(704, 25);
             this.panelControl7.TabIndex = 40;
             // 
             // labelControl5
