@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Xml;
+using IhalematikProUI.Forms;
+
 namespace IhalematikPro.Forms
 {
     public partial class frm_DovizKurlari : DevExpress.XtraEditors.XtraForm
@@ -20,7 +22,21 @@ namespace IhalematikPro.Forms
 
         private void frm_DovizKurlari_Load(object sender, EventArgs e)
         {
-            dataGrid1.DataSource = source();
+            try
+            {
+                dataGrid1.DataSource = source();
+            }
+            catch (Exception )
+            {
+
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "İnternet Bağlantınız olmadığından\n Döviz kurları alınamadı...";
+
+                mf.ShowDialog();
+
+
+            }
+           
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
