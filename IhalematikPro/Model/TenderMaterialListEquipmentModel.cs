@@ -127,6 +127,7 @@ namespace IhalematikProUI.Model
 
         public int SelectedWorker { get; set; }
         public int SelectedVehicle { get; set; }
+        public int SelectedUnitTimeType { get; set; }
 
         public TenderMaterialListEquipmentModel(TenderMaterialListEquipment Entity)
         {
@@ -135,7 +136,7 @@ namespace IhalematikProUI.Model
             this.Id = Entity.Id;
             this.UnitTime = Entity.UnitTime;
             this.UnitTimeType = Entity.UnitTimeType;
-
+            this.SelectedUnitTimeType = (int)this.UnitTimeType;
             if (this.Equipment.WorkerVehicle != null)
             {
                 if (this.Equipment.IsWorker)
