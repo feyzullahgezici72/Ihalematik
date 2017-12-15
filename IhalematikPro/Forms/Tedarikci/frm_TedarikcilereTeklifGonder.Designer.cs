@@ -1103,6 +1103,7 @@
             this.Name = "frm_TedarikcilereTeklifGonder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frm_TedarikcilereTeklifGonder_Load);
             this.Shown += new System.EventHandler(this.frm_TedarikcilereTeklifGonder_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

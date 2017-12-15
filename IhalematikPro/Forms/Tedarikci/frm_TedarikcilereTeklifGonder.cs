@@ -38,6 +38,8 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void frm_TedarikcilereTeklifGonder_Shown(object sender, EventArgs e)
         {
+            grdMaterialList.TabIndex = 0; //samet
+            grdSupplier.TabIndex = 0;//samet
             lblOfferDescription.Text = CurrentManager.Instance.CurrentOffer.Description;
             lblTenderNumber.Text = CurrentManager.Instance.CurrentOffer.Number;
             pnlx.Visible = true;
@@ -229,6 +231,11 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
            
 
+        }
+
+        private void frm_TedarikcilereTeklifGonder_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
