@@ -46,7 +46,6 @@
             this.btnTamam.Size = new System.Drawing.Size(131, 50);
             this.btnTamam.TabIndex = 11;
             this.btnTamam.Text = "Tamam";
-            this.btnTamam.Visible = false;
             this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
             // 
             // pictureBox1
