@@ -377,7 +377,7 @@
             this.grdAddVehicle.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstVehicle});
             this.grdAddVehicle.Size = new System.Drawing.Size(949, 268);
-            this.grdAddVehicle.TabIndex = 1;
+            this.grdAddVehicle.TabIndex = 0;
             this.grdAddVehicle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewAddVehicle});
             // 
@@ -1370,7 +1370,7 @@
             this.btnSil,
             this.rpstIsSelected});
             this.grdTenderGroup.Size = new System.Drawing.Size(378, 661);
-            this.grdTenderGroup.TabIndex = 41;
+            this.grdTenderGroup.TabIndex = 0;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup,
             this.gridView2});

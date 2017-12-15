@@ -541,7 +541,7 @@
             this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.Size = new System.Drawing.Size(661, 557);
-            this.grdMaterialList.TabIndex = 1;
+            this.grdMaterialList.TabIndex = 0;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
             // 
@@ -858,7 +858,7 @@
             this.rpstSupplierDetail1,
             this.rpstIsSelectedSupplier});
             this.grdSupplier.Size = new System.Drawing.Size(704, 555);
-            this.grdSupplier.TabIndex = 39;
+            this.grdSupplier.TabIndex = 0;
             this.grdSupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSupplier,
             this.gridView1});

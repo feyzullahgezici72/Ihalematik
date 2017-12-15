@@ -202,7 +202,7 @@
             this.btnPasive,
             this.btnActive});
             this.grdSupplier.Size = new System.Drawing.Size(822, 645);
-            this.grdSupplier.TabIndex = 38;
+            this.grdSupplier.TabIndex = 0;
             this.grdSupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSupplier});
             this.grdSupplier.Click += new System.EventHandler(this.grdWorker_Click);

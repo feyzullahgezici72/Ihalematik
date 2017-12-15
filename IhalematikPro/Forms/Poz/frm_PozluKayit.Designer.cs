@@ -269,7 +269,7 @@
             this.grdPozList.Margin = new System.Windows.Forms.Padding(4);
             this.grdPozList.Name = "grdPozList";
             this.grdPozList.Size = new System.Drawing.Size(1258, 323);
-            this.grdPozList.TabIndex = 22;
+            this.grdPozList.TabIndex = 0;
             this.grdPozList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -535,7 +535,7 @@
             this.grdAddedPoz.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddedPoz.Name = "grdAddedPoz";
             this.grdAddedPoz.Size = new System.Drawing.Size(1138, 304);
-            this.grdAddedPoz.TabIndex = 23;
+            this.grdAddedPoz.TabIndex = 0;
             this.grdAddedPoz.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 

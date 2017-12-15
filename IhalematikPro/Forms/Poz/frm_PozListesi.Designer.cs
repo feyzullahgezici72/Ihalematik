@@ -334,7 +334,7 @@
             this.btnPasive,
             this.btnActive});
             this.grdPozList.Size = new System.Drawing.Size(920, 573);
-            this.grdPozList.TabIndex = 38;
+            this.grdPozList.TabIndex = 0;
             this.grdPozList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPozList});
             // 

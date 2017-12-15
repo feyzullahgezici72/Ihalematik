@@ -278,7 +278,7 @@
             this.repositoryItemCheckEdit1,
             this.rpstMeterialDetail});
             this.grdMaterialList.Size = new System.Drawing.Size(976, 547);
-            this.grdMaterialList.TabIndex = 23;
+            this.grdMaterialList.TabIndex = 0;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
             // 
@@ -628,7 +628,7 @@
             this.grdSupplier.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstIsSelectedSupplier});
             this.grdSupplier.Size = new System.Drawing.Size(370, 437);
-            this.grdSupplier.TabIndex = 40;
+            this.grdSupplier.TabIndex = 0;
             this.grdSupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSupplier});
             this.grdSupplier.Click += new System.EventHandler(this.grdSupplier_Click);

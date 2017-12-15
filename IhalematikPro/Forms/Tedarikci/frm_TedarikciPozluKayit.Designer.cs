@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikciPozluKayit));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
@@ -58,7 +59,7 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.timer1 = new System.Windows.Forms.Timer();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
@@ -95,7 +96,7 @@
             this.panelControl3.Controls.Add(this.btnListedenCikar);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(120, 383);
             this.panelControl3.TabIndex = 0;
@@ -107,10 +108,10 @@
             this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Top;
             this.simpleButton3.Image = global::IhalematikProUI.Properties.Resources.ok_icon__1_;
             this.simpleButton3.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton3.Location = new System.Drawing.Point(3, 83);
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton3.Location = new System.Drawing.Point(4, 84);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(114, 80);
+            this.simpleButton3.Size = new System.Drawing.Size(112, 80);
             this.simpleButton3.TabIndex = 1;
             this.simpleButton3.Text = "Tamam";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
@@ -122,10 +123,10 @@
             this.btnListedenCikar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnListedenCikar.Image = global::IhalematikProUI.Properties.Resources.Actions_trash_empty_icon__1_;
             this.btnListedenCikar.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnListedenCikar.Location = new System.Drawing.Point(3, 3);
-            this.btnListedenCikar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnListedenCikar.Location = new System.Drawing.Point(4, 4);
+            this.btnListedenCikar.Margin = new System.Windows.Forms.Padding(4);
             this.btnListedenCikar.Name = "btnListedenCikar";
-            this.btnListedenCikar.Size = new System.Drawing.Size(114, 80);
+            this.btnListedenCikar.Size = new System.Drawing.Size(112, 80);
             this.btnListedenCikar.TabIndex = 0;
             this.btnListedenCikar.Text = "Çıkar";
             this.btnListedenCikar.Click += new System.EventHandler(this.btnListedenCikar_Click);
@@ -350,13 +351,13 @@
             // grdAddedPoz
             // 
             this.grdAddedPoz.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdAddedPoz.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdAddedPoz.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddedPoz.Location = new System.Drawing.Point(120, 0);
             this.grdAddedPoz.MainView = this.gridView2;
-            this.grdAddedPoz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdAddedPoz.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddedPoz.Name = "grdAddedPoz";
             this.grdAddedPoz.Size = new System.Drawing.Size(1138, 383);
-            this.grdAddedPoz.TabIndex = 23;
+            this.grdAddedPoz.TabIndex = 0;
             this.grdAddedPoz.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
@@ -369,7 +370,7 @@
             this.groupControl3.Controls.Add(this.panelControl3);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 358);
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(1258, 383);
             this.groupControl3.TabIndex = 40;
@@ -595,13 +596,13 @@
             // grdPozList
             // 
             this.grdPozList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdPozList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdPozList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdPozList.Location = new System.Drawing.Point(0, 50);
             this.grdPozList.MainView = this.gridView1;
-            this.grdPozList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdPozList.Margin = new System.Windows.Forms.Padding(4);
             this.grdPozList.Name = "grdPozList";
             this.grdPozList.Size = new System.Drawing.Size(1258, 273);
-            this.grdPozList.TabIndex = 22;
+            this.grdPozList.TabIndex = 0;
             this.grdPozList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -618,7 +619,7 @@
             this.groupControl1.Controls.Add(this.groupControl2);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 35);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1258, 323);
             this.groupControl1.TabIndex = 39;
@@ -641,7 +642,7 @@
             this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(1258, 50);
             this.groupControl2.TabIndex = 39;
@@ -654,7 +655,7 @@
             this.btnBul.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnBul.Image = global::IhalematikProUI.Properties.Resources.search_icon__4_;
             this.btnBul.Location = new System.Drawing.Point(1022, 0);
-            this.btnBul.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnBul.Margin = new System.Windows.Forms.Padding(6);
             this.btnBul.Name = "btnBul";
             this.btnBul.Size = new System.Drawing.Size(118, 50);
             this.btnBul.TabIndex = 2;
@@ -668,7 +669,7 @@
             this.btnEkle.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEkle.Image = global::IhalematikProUI.Properties.Resources.Button_Add_icon__1_;
             this.btnEkle.Location = new System.Drawing.Point(1140, 0);
-            this.btnEkle.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnEkle.Margin = new System.Windows.Forms.Padding(6);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(118, 50);
             this.btnEkle.TabIndex = 3;
@@ -678,7 +679,7 @@
             // txtDescription
             // 
             this.txtDescription.Location = new System.Drawing.Point(390, 6);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtDescription.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -694,7 +695,7 @@
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl3.Location = new System.Drawing.Point(298, 7);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(83, 21);
             this.labelControl3.TabIndex = 97;
@@ -704,7 +705,7 @@
             // 
             this.txtPozNumber.EnterMoveNextControl = true;
             this.txtPozNumber.Location = new System.Drawing.Point(87, 6);
-            this.txtPozNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPozNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPozNumber.Name = "txtPozNumber";
             this.txtPozNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtPozNumber.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -721,7 +722,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl2.Location = new System.Drawing.Point(14, 7);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(66, 21);
             this.labelControl2.TabIndex = 97;
@@ -746,7 +747,7 @@
             this.panelControl2.Controls.Add(this.btnKapat);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1258, 35);
             this.panelControl2.TabIndex = 2;
@@ -759,7 +760,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1230, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 1;
@@ -775,7 +776,7 @@
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1258, 35);
             this.panelControl1.TabIndex = 37;

@@ -181,14 +181,14 @@
             // 
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdMaterialList.Location = new System.Drawing.Point(3, 3);
+            this.grdMaterialList.Location = new System.Drawing.Point(4, 4);
             this.grdMaterialList.MainView = this.gridViewMaterialList;
             this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstIsSelectedOfferMaterial});
-            this.grdMaterialList.Size = new System.Drawing.Size(1035, 382);
-            this.grdMaterialList.TabIndex = 2;
+            this.grdMaterialList.Size = new System.Drawing.Size(1033, 380);
+            this.grdMaterialList.TabIndex = 0;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
             // 
@@ -645,9 +645,9 @@
             // txtEmailBody
             // 
             this.txtEmailBody.Dock = System.Windows.Forms.DockStyle.Right;
-            this.txtEmailBody.Location = new System.Drawing.Point(159, 3);
+            this.txtEmailBody.Location = new System.Drawing.Point(158, 4);
             this.txtEmailBody.Name = "txtEmailBody";
-            this.txtEmailBody.Size = new System.Drawing.Size(696, 74);
+            this.txtEmailBody.Size = new System.Drawing.Size(696, 72);
             this.txtEmailBody.TabIndex = 8;
             // 
             // labelControl2
@@ -669,10 +669,10 @@
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton1.Location = new System.Drawing.Point(855, 3);
+            this.simpleButton1.Location = new System.Drawing.Point(854, 4);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(6);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(183, 74);
+            this.simpleButton1.Size = new System.Drawing.Size(183, 72);
             this.simpleButton1.TabIndex = 5;
             this.simpleButton1.Text = "Mail Gönder";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);

@@ -284,7 +284,7 @@
             this.grdMaterialListIsWorkship.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnCalisanlarveAraclar});
             this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(947, 496);
-            this.grdMaterialListIsWorkship.TabIndex = 24;
+            this.grdMaterialListIsWorkship.TabIndex = 0;
             this.grdMaterialListIsWorkship.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -675,7 +675,7 @@
             gridLevelNode1.RelationName = "Level1";
             this.grdTenderGroup.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.grdTenderGroup.Location = new System.Drawing.Point(3, 3);
+            this.grdTenderGroup.Location = new System.Drawing.Point(4, 4);
             this.grdTenderGroup.MainView = this.gridViewTenderGroup;
             this.grdTenderGroup.Margin = new System.Windows.Forms.Padding(4);
             this.grdTenderGroup.Name = "grdTenderGroup";
@@ -683,8 +683,8 @@
             this.repositoryItemButtonEdit1,
             this.btnSil,
             this.rpstColId});
-            this.grdTenderGroup.Size = new System.Drawing.Size(380, 490);
-            this.grdTenderGroup.TabIndex = 41;
+            this.grdTenderGroup.Size = new System.Drawing.Size(378, 488);
+            this.grdTenderGroup.TabIndex = 0;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup,
             this.gridView2});

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Kurallistesi));
@@ -42,7 +43,7 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.bindingSourceRules = new System.Windows.Forms.BindingSource();
+            this.bindingSourceRules = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grdRules)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewRules)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).BeginInit();
@@ -64,7 +65,7 @@
             this.btnGuncelle,
             this.btnSil});
             this.grdRules.Size = new System.Drawing.Size(512, 604);
-            this.grdRules.TabIndex = 34;
+            this.grdRules.TabIndex = 0;
             this.grdRules.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewRules});
             // 

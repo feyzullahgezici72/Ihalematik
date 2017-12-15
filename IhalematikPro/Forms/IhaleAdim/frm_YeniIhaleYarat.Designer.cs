@@ -530,7 +530,7 @@
             this.rpstColId,
             this.rpstSelected});
             this.grdOffer.Size = new System.Drawing.Size(548, 293);
-            this.grdOffer.TabIndex = 101;
+            this.grdOffer.TabIndex = 0;
             this.grdOffer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOffer,
             this.gridView1});

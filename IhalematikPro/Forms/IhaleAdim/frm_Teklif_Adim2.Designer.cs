@@ -720,7 +720,7 @@
             this.btnSil,
             this.rpstColIsSelected});
             this.grdTenderGroup.Size = new System.Drawing.Size(378, 655);
-            this.grdTenderGroup.TabIndex = 41;
+            this.grdTenderGroup.TabIndex = 0;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup,
             this.gridView2});

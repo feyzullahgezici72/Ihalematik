@@ -110,7 +110,7 @@
             this.repositoryItemCheckEdit1,
             this.rpstRemove});
             this.grdAddedOfferMaterialList.Size = new System.Drawing.Size(1215, 615);
-            this.grdAddedOfferMaterialList.TabIndex = 112;
+            this.grdAddedOfferMaterialList.TabIndex = 0;
             this.grdAddedOfferMaterialList.UseDisabledStatePainter = false;
             this.grdAddedOfferMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewAddedOfferMaterialList});
