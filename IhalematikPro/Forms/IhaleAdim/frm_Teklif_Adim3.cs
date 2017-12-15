@@ -87,32 +87,49 @@ namespace IhalematikPro.Forms
             //grdAddWorker.DataSource = CurrentItem.TenderMaterialListEquipment;
         }
 
-        private List<UnitTimeTypesModel> GetUnitTimes()
+        private List<DropDownModel> GetUnitTimes()
         {
-            List<UnitTimeTypesModel> models = new List<UnitTimeTypesModel>();
+            List<DropDownModel> models = new List<DropDownModel>();
 
             foreach (UnitTimeTypesEnum unitTimeType in Enum.GetValues(typeof(UnitTimeTypesEnum)))
             {
-                UnitTimeTypesModel model = new UnitTimeTypesModel().Create(unitTimeType);
+                DropDownModel model = new DropDownModel();//.Create(unitTimeType);
+                model.Id = (int)unitTimeType;
+                model.Text = this.GetUnitTimeTypesDisplayText(unitTimeType);
                 models.Add(model);
             }
 
             return models;
         }
-
-
-        private void CalculateInnerValuesMarkup()
+        private string GetUnitTimeTypesDisplayText(UnitTimeTypesEnum UnitTimeType)
         {
-            //List<MaterialListModel> models = gridViewMaterialListIsWorkship.DataSource as List<MaterialListModel>;
+            string displayText = string.Empty;
+            switch (UnitTimeType)
+            {
+                case UnitTimeTypesEnum.Minute:
+                    displayText = "Dakika";
+                    break;
+                case UnitTimeTypesEnum.Hour:
+                    displayText = "Saat";
+                    break;
+                case UnitTimeTypesEnum.Day:
+                    displayText = "Gün";
+                    break;
+                case UnitTimeTypesEnum.Week:
+                    displayText = "Hafta";
+                    break;
+                case UnitTimeTypesEnum.Month:
+                    displayText = "Ay";
+                    break;
+                case UnitTimeTypesEnum.Year:
+                    displayText = "Yıl";
+                    break;
+                default:
+                    break;
+            }
 
-            //if (models != null)
-            //{
-            //    txtBaseAmount.Text = models.Sum(p => p.Quantity * p.WorkerUnitPrice).ToString("c2");
-            //    txtMarkupAmount.Text = models.Sum(p => p.MarkupUnitPrice).ToString("c2");
-            //    txtTotalAmount.Text = models.Sum(p => (p.Quantity * p.WorkerUnitPrice) + p.MarkupUnitPrice).ToString("c2");
-            //}
+            return displayText;
         }
-
         #endregion
 
         #region Form Event
@@ -465,6 +482,8 @@ namespace IhalematikPro.Forms
 
             this.RPSTWorkers();
             this.RPSTVehicles();
+            this.RPSTWorkerUnitTimeTypes();
+            this.RPSTVehicleUnitTimeTypes();
             this.LoadTenderGroupGrid();
             //this.CalculateInnerValuesMarkup();
         }
@@ -483,6 +502,38 @@ namespace IhalematikPro.Forms
             rpstVehicle.Properties.Columns["Id"].Visible = false;
             //rpstWorker2.Properties.Columns["Self"].Visible = false;
             rpstVehicle.ShowHeader = false;
+        }
+
+        private void RPSTVehicleUnitTimeTypes()
+        {
+            List<DropDownModel> unitTimes = this.GetUnitTimes();
+            rpstVehicleUnitTimeTypes.DataSource = unitTimes;
+            rpstVehicleUnitTimeTypes.DisplayMember = "Text";
+            rpstVehicleUnitTimeTypes.ValueMember = "Id";
+            rpstVehicleUnitTimeTypes.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            rpstVehicleUnitTimeTypes.NullText = string.Empty;
+            rpstVehicleUnitTimeTypes.ForceInitialize();
+            rpstVehicleUnitTimeTypes.PopulateColumns();
+            //rpstWorker2.GetDataSourceValue();
+            rpstVehicleUnitTimeTypes.Properties.Columns["Id"].Visible = false;
+            //rpstWorker2.Properties.Columns["Self"].Visible = false;
+            rpstVehicleUnitTimeTypes.ShowHeader = false;
+        }
+
+        private void RPSTWorkerUnitTimeTypes()
+        {
+            List<DropDownModel> unitTimes = this.GetUnitTimes();
+            rpstUnitTimeTypes.DataSource = unitTimes;
+            rpstUnitTimeTypes.DisplayMember = "Text";
+            rpstUnitTimeTypes.ValueMember = "Id";
+            rpstUnitTimeTypes.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            rpstUnitTimeTypes.NullText = string.Empty;
+            rpstUnitTimeTypes.ForceInitialize();
+            rpstUnitTimeTypes.PopulateColumns();
+            //rpstWorker2.GetDataSourceValue();
+            rpstUnitTimeTypes.Properties.Columns["Id"].Visible = false;
+            //rpstWorker2.Properties.Columns["Self"].Visible = false;
+            rpstUnitTimeTypes.ShowHeader = false;
         }
 
         private void RPSTWorkers()
@@ -514,7 +565,6 @@ namespace IhalematikPro.Forms
                         break;
                     }
                 }
-                this.CalculateInnerValuesMarkup();
             }
         }
 
