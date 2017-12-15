@@ -68,7 +68,9 @@ namespace IhalematikPro.Forms
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             IsEmptyKontrol();
-            PozModel model = new PozModel();
+            if (!string.IsNullOrEmpty(txtNumber.Text.Trim()))//samet ekledi
+            {
+                PozModel model = new PozModel();
             model.Description = txtDescription.Text;
             model.Number = txtNumber.Text;
             model.Unit = txtUnit.Text;
@@ -89,9 +91,10 @@ namespace IhalematikPro.Forms
                 FormClear();
                 LoadGrid();
                 frm_MesajFormu mf = new frm_MesajFormu();
-                mf.lblMesaj.Text = "Kayıt Yapıldı...";
+                mf.lblMesaj.Text = "Malzeme Kaydedildi...";
                 mf.ShowDialog();
             }
+         }
         }
         private void FormClear()
         {

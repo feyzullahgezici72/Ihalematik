@@ -74,26 +74,35 @@ namespace IhalematikProUI.Forms
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            Supplier suplier = new Supplier();
-            suplier.Address = txtAddress.Text.Trim();
-            suplier.AuthorNameSurname = txtAuthorNameSurname.Text.Trim();
-            suplier.CompanyName = txtCompanyName.Text.Trim();
-            suplier.Email = txtEmail.Text.Trim();
-            suplier.GSM = txtGSM.Text.Trim();
-            suplier.IsActive = true;
-            suplier.Score = txtScore.Text.Trim();
-            suplier.Telephone = txtTelephone.Text.Trim();
-            suplier.Country = txtCountry.Text.Trim();
+            IsEmptyKontrol();//samet ekledi
+            if ((!string.IsNullOrEmpty(ddlSegments.Text.Trim()) & !string.IsNullOrEmpty(txtCompanyName.Text.Trim())))//samet ekledi
+            {
+                Supplier suplier = new Supplier();
+                suplier.Address = txtAddress.Text.Trim();
+                suplier.AuthorNameSurname = txtAuthorNameSurname.Text.Trim();
+                suplier.CompanyName = txtCompanyName.Text.Trim();
+                suplier.Email = txtEmail.Text.Trim();
+                suplier.GSM = txtGSM.Text.Trim();
+                suplier.IsActive = true;
+                suplier.Score = txtScore.Text.Trim();
+                suplier.Telephone = txtTelephone.Text.Trim();
+                suplier.Country = txtCountry.Text.Trim();
 
-            OperationResult result = SupplierProvider.Instance.Save(suplier);
-            if (result.Success)
-            {
-                MessageBox.Show("Kaydedildi");
-                this.LoadGrid();
-            }
-            else
-            {
-                MessageBox.Show("Kayit sirasinda hata olustu");
+                OperationResult result = SupplierProvider.Instance.Save(suplier);
+                if (result.Success)
+                {
+                    this.LoadGrid();
+                    frm_MesajFormu mf = new frm_MesajFormu();
+                    mf.lblMesaj.Text = "Tedarikçi Kaydedildi...";
+                    mf.ShowDialog();
+
+                }
+                else
+                {
+                    frm_MesajFormu mf = new frm_MesajFormu();
+                    mf.lblMesaj.Text = "Kayıt Sırasında Bir Hata Oluştu...";
+                    mf.ShowDialog();
+                }
             }
         }
 
@@ -177,10 +186,42 @@ namespace IhalematikProUI.Forms
 
             }
         }
-
+        public bool IsEmptyKontrol()
+        {
+            if (string.IsNullOrEmpty(ddlSegments.Text))
+            {
+                dxErrorProvider1.SetError(ddlSegments, "Faaliyet alanı boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                return true;
+            }
+            if (string.IsNullOrEmpty(txtCompanyName.Text))
+            {
+                dxErrorProvider1.SetError(txtCompanyName, "Firma Adı boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                return true;
+            }
+            
+            else
+            {
+                dxErrorProvider1.ClearErrors();
+               
+            }
+            return false;
+        }
         private void cmbAktivePasive_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.LoadGrid();
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            ddlSegments.SelectedIndex = -1;
+            txtCompanyName.ResetText();
+            txtAuthorNameSurname.ResetText();
+            txtCountry.ResetText();
+            txtEmail.ResetText();
+            txtGSM.ResetText();
+            txtScore.ResetText();
+            txtTelephone.ResetText();
+            txtAddress.ResetText();
         }
     }
 }

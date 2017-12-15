@@ -264,5 +264,10 @@ namespace IhalematikPro.Forms
                 btnBul.PerformClick();
             }
         }
+
+        private void txtPozNumber_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

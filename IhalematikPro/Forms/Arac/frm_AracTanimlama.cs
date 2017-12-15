@@ -63,49 +63,53 @@ namespace IhalematikPro.Forms
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             IsEmptyKontrol();
-            VehicleModel model = new VehicleModel();
-            model.TitleId = ((VehicleTitle)ddlVehicleTitle.SelectedItem).Id;
-            model.IsActive = true;
-            if (rbCompanyVehicle.Checked)
+            if (!string.IsNullOrEmpty(ddlVehicleTitle.Text.Trim()))//samet ekledi
             {
-                model.IsCompanyVehicle = true;
-                model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtFuelOilFare.Text.Replace("TL", string.Empty));
-                model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtFuelOilDay.Text.Replace("TL", string.Empty));
-                model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtDriverFare.Text.Replace("TL", string.Empty));
-                model.MaintenanceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMaintenanceFare.Text.Replace("TL", string.Empty));
-                model.ServiceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtServiceFare.Text.Replace("TL", string.Empty));
-                model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtGeneralFare.Text.Replace("TL", string.Empty));
-                model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtOtherFare.Text.Replace("TL", string.Empty));
-            }
-            else
-            {
-                model.IsCompanyVehicle = false;
 
-                if (rdHour.Checked)
+                VehicleModel model = new VehicleModel();
+                model.TitleId = ((VehicleTitle)ddlVehicleTitle.SelectedItem).Id;
+                model.IsActive = true;
+                if (rbCompanyVehicle.Checked)
                 {
-                    model.RentType = IhalematikProBL.Enum.RentTypesEnum.Hour;
+                    model.IsCompanyVehicle = true;
+                    model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtFuelOilFare.Text.Replace("TL", string.Empty));
+                    model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtFuelOilDay.Text.Replace("TL", string.Empty));
+                    model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtDriverFare.Text.Replace("TL", string.Empty));
+                    model.MaintenanceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMaintenanceFare.Text.Replace("TL", string.Empty));
+                    model.ServiceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtServiceFare.Text.Replace("TL", string.Empty));
+                    model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtGeneralFare.Text.Replace("TL", string.Empty));
+                    model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtOtherFare.Text.Replace("TL", string.Empty));
                 }
-                else if (rdDay.Checked)
+                else
                 {
-                    model.RentType = IhalematikProBL.Enum.RentTypesEnum.Day;
-                }
-                else if (rdMonth.Checked)
-                {
-                    model.RentType = IhalematikProBL.Enum.RentTypesEnum.Month;
-                }
-                model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentFuelOilFare.Text.Replace("TL", string.Empty));
-                model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtRentFuelOilDay.Text.Replace("TL", string.Empty));
-                model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentDriverFare.Text.Replace("TL", string.Empty));
-                model.RentFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentFare.Text.Replace("TL", string.Empty));
-                model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentGeneralFare.Text.Replace("TL", string.Empty));
-                model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentOtherFare.Text.Replace("TL", string.Empty));
-            }
+                    model.IsCompanyVehicle = false;
 
-            model.Save();
-            LoadGrid();
-            frm_MesajFormu mf = new frm_MesajFormu();
-            mf.lblMesaj.Text = "Araç kaydedildi...";
-            mf.ShowDialog();
+                    if (rdHour.Checked)
+                    {
+                        model.RentType = IhalematikProBL.Enum.RentTypesEnum.Hour;
+                    }
+                    else if (rdDay.Checked)
+                    {
+                        model.RentType = IhalematikProBL.Enum.RentTypesEnum.Day;
+                    }
+                    else if (rdMonth.Checked)
+                    {
+                        model.RentType = IhalematikProBL.Enum.RentTypesEnum.Month;
+                    }
+                    model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentFuelOilFare.Text.Replace("TL", string.Empty));
+                    model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtRentFuelOilDay.Text.Replace("TL", string.Empty));
+                    model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentDriverFare.Text.Replace("TL", string.Empty));
+                    model.RentFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentFare.Text.Replace("TL", string.Empty));
+                    model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentGeneralFare.Text.Replace("TL", string.Empty));
+                    model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentOtherFare.Text.Replace("TL", string.Empty));
+                }
+
+                model.Save();
+                LoadGrid();
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Araç kaydedildi...";
+                mf.ShowDialog();
+            }
         }
 
         private void yeniAraçEkleToolStripMenuItem_Click(object sender, EventArgs e)
