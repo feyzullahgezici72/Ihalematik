@@ -169,6 +169,15 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnTedaikcileregonder_Click(object sender, EventArgs e)
         {
+            int quantityZeroCount = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Quantity == 0).Count();
+
+            if (quantityZeroCount > 0)
+            {
+                //todo feyzullahg
+                MessageBox.Show("Miktari sifir olan malzeme olmamali...");
+                return;
+            }
+
             this.LoadSupplierGrid();
             this.LoadMaterialGrid(CurrentManager.Instance.CurrentOffer.MaterialList.ToList());
             colMaterialListQuantity.OptionsColumn.AllowEdit = false;
@@ -192,6 +201,14 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnTedarikciListesi_Click(object sender, EventArgs e)
         {
+            int quantityZeroCount = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Quantity == 0).Count();
+
+            if (quantityZeroCount > 0)
+            {
+                //todo feyzullahg
+                MessageBox.Show("Miktari sifir olan malzeme olmamali...");
+                return;
+            }
             this.LoadAddedMaterialSupplierGrid();
             colMaterialListQuantity.OptionsColumn.AllowEdit = false;
             colMaterialListQuantity.OptionsColumn.AllowFocus = false;
@@ -229,13 +246,13 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-           
+
 
         }
 
         private void frm_TedarikcilereTeklifGonder_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
