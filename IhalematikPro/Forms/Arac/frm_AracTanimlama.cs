@@ -218,7 +218,13 @@ namespace IhalematikPro.Forms
 
         private void frm_AracTanimlama_Shown(object sender, EventArgs e)
         {
-            LoadVehicleGrid();
+            this.LoadVehicleGrid();
+            this.LoadVehicleTitle();
+            grdVehicle.Show();
+        }
+
+        protected internal void LoadVehicleTitle()
+        {
             ddlVehicleTitle.Properties.Items.Clear();
             List<VehicleTitle> modelVehicleTitles = UIVehicleTitleManager.Instance.GetVehicleTitles();
             ddlVehicleTitle.Properties.Items.AddRange(modelVehicleTitles);
@@ -228,7 +234,6 @@ namespace IhalematikPro.Forms
                 int selectedIndex = modelVehicleTitles.IndexOf(selectedTite);
                 ddlVehicleTitle.SelectedIndex = selectedIndex;
             }
-            grdVehicle.Show();
         }
 
         private void LoadVehicleGrid()

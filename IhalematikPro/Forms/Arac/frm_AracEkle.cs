@@ -50,7 +50,7 @@ namespace IhalematikPro.Forms
                     mf.lblMesaj.Text = "Arac Kaydedildi...";
                     mf.ShowDialog();
                     this._owner.SelectedTitleId = model.Id;
-                    this._owner.InitilalizeForm();
+                    this._owner.LoadVehicleTitle();
                     this.Close();
                 }
                 else
