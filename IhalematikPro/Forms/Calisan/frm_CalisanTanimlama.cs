@@ -378,9 +378,6 @@ namespace IhalematikPro.Forms
             }
         }
 
-        private void btnListele_Click_1(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

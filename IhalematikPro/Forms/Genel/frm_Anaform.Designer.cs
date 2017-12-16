@@ -168,6 +168,10 @@ namespace IhalematikPro.Forms
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.barBtnCalisanRapor = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnAracRapor = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnTedarikciRapor = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
@@ -250,10 +254,13 @@ namespace IhalematikPro.Forms
             this.barBtnDovizKurlar,
             this.barStaticItem5,
             this.barStaticItem6,
-            this.barButtonItem28});
+            this.barButtonItem28,
+            this.barBtnCalisanRapor,
+            this.barBtnAracRapor,
+            this.barBtnTedarikciRapor});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 23;
+            this.ribbon.MaxItemId = 26;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsTouch.AffectOnlyRibbon = true;
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -1091,7 +1098,8 @@ namespace IhalematikPro.Forms
             this.ribbonPage4.Appearance.Options.UseForeColor = true;
             this.ribbonPage4.Appearance.Options.UseTextOptions = true;
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4});
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup5});
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "Raporlar";
             // 
@@ -1496,6 +1504,35 @@ namespace IhalematikPro.Forms
             this.timer1.Interval = 30;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
+            // barBtnCalisanRapor
+            // 
+            this.barBtnCalisanRapor.Caption = "Çalışan Raporu";
+            this.barBtnCalisanRapor.Glyph = global::IhalematikProUI.Properties.Resources.Untitled2;
+            this.barBtnCalisanRapor.Id = 23;
+            this.barBtnCalisanRapor.Name = "barBtnCalisanRapor";
+            // 
+            // barBtnAracRapor
+            // 
+            this.barBtnAracRapor.Caption = "Araç Raporu";
+            this.barBtnAracRapor.Glyph = global::IhalematikProUI.Properties.Resources.icons8_digger;
+            this.barBtnAracRapor.Id = 24;
+            this.barBtnAracRapor.Name = "barBtnAracRapor";
+            // 
+            // barBtnTedarikciRapor
+            // 
+            this.barBtnTedarikciRapor.Caption = "Tedarikçi Raporu";
+            this.barBtnTedarikciRapor.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnTedarikciRapor.Glyph")));
+            this.barBtnTedarikciRapor.Id = 25;
+            this.barBtnTedarikciRapor.Name = "barBtnTedarikciRapor";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.barBtnCalisanRapor);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barBtnAracRapor);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barBtnTedarikciRapor);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "Yazdır";
+            // 
             // frm_Anaform
             // 
             this.ActiveGlowColor = System.Drawing.Color.White;
@@ -1650,6 +1687,10 @@ namespace IhalematikPro.Forms
         private System.Windows.Forms.PictureBox picLogo;
         private DevExpress.XtraBars.BarButtonItem barButtonItem28;
         public DevExpress.XtraBars.BarButtonItem barButtonItem14;
+        private DevExpress.XtraBars.BarButtonItem barBtnCalisanRapor;
+        private DevExpress.XtraBars.BarButtonItem barBtnAracRapor;
+        private DevExpress.XtraBars.BarButtonItem barBtnTedarikciRapor;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }

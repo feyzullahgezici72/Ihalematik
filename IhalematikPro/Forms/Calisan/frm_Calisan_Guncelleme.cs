@@ -14,7 +14,7 @@ using IhalematikPro.Model;
 using IhalematikPro.Manager;
 using IhalematikPro.Forms;
 using IhalematikProBL.Enum;
-
+using IhalematikProUI.Forms.Base;
 namespace IhalematikProUI.Forms
 {
     public partial class frm_Calisan_Guncelleme : DevExpress.XtraEditors.XtraForm
@@ -207,6 +207,7 @@ namespace IhalematikProUI.Forms
             mf.lblMesaj.Text = "Kayıt Güncellendi...";
             mf.ShowDialog();
             this.Close();
+          
         }
         public bool IsEmptyKontrol()
         {
