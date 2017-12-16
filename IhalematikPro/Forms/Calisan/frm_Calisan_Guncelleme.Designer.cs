@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Calisan_Guncelleme));
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
@@ -64,7 +65,7 @@
             this.rbNormal = new System.Windows.Forms.RadioButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -195,6 +196,8 @@
             this.txtWorklesFonFare.Name = "txtWorklesFonFare";
             this.txtWorklesFonFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtWorklesFonFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtWorklesFonFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtWorklesFonFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtWorklesFonFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtWorklesFonFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtWorklesFonFare.Properties.EditFormat.FormatString = "N2";
@@ -212,6 +215,8 @@
             this.txtSeveranceFare.Name = "txtSeveranceFare";
             this.txtSeveranceFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSeveranceFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSeveranceFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtSeveranceFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSeveranceFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtSeveranceFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtSeveranceFare.Properties.EditFormat.FormatString = "N2";
@@ -229,6 +234,8 @@
             this.txtAGI.Name = "txtAGI";
             this.txtAGI.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtAGI.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAGI.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtAGI.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtAGI.Properties.DisplayFormat.FormatString = "N2";
             this.txtAGI.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtAGI.Properties.EditFormat.FormatString = "N2";
@@ -257,6 +264,8 @@
             this.txtExtraFare.Name = "txtExtraFare";
             this.txtExtraFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtExtraFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtExtraFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtExtraFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtExtraFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtExtraFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtExtraFare.Properties.EditFormat.FormatString = "N2";
@@ -275,6 +284,8 @@
             this.txtBaseFare.Name = "txtBaseFare";
             this.txtBaseFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBaseFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBaseFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtBaseFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtBaseFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtBaseFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtBaseFare.Properties.EditFormat.FormatString = "c2";
@@ -315,6 +326,8 @@
             this.txtISGFare.Name = "txtISGFare";
             this.txtISGFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtISGFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtISGFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtISGFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtISGFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtISGFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtISGFare.Properties.EditFormat.FormatString = "N2";
@@ -332,6 +345,8 @@
             this.txtSGKPrimFare.Name = "txtSGKPrimFare";
             this.txtSGKPrimFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSGKPrimFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSGKPrimFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtSGKPrimFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSGKPrimFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtSGKPrimFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtSGKPrimFare.Properties.EditFormat.FormatString = "N2";
@@ -371,6 +386,8 @@
             this.txtHotelFare.Name = "txtHotelFare";
             this.txtHotelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtHotelFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtHotelFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtHotelFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtHotelFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtHotelFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtHotelFare.Properties.EditFormat.FormatString = "N2";
@@ -410,6 +427,8 @@
             this.txtIncomeTaxFare.Name = "txtIncomeTaxFare";
             this.txtIncomeTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtIncomeTaxFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtIncomeTaxFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtIncomeTaxFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtIncomeTaxFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtIncomeTaxFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtIncomeTaxFare.Properties.EditFormat.FormatString = "N2";
@@ -427,6 +446,8 @@
             this.txtTravelFare.Name = "txtTravelFare";
             this.txtTravelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTravelFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTravelFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTravelFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTravelFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtTravelFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtTravelFare.Properties.EditFormat.FormatString = "N2";
@@ -488,6 +509,8 @@
             this.txtStampTaxFare.Name = "txtStampTaxFare";
             this.txtStampTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtStampTaxFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtStampTaxFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtStampTaxFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtStampTaxFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtStampTaxFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtStampTaxFare.Properties.EditFormat.FormatString = "N2";
@@ -505,6 +528,8 @@
             this.txtFoodFare.Name = "txtFoodFare";
             this.txtFoodFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtFoodFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFoodFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtFoodFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtFoodFare.Properties.DisplayFormat.FormatString = "N2";
             this.txtFoodFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtFoodFare.Properties.EditFormat.FormatString = "N2";
@@ -534,8 +559,8 @@
             this.ddlTitles.Name = "ddlTitles";
             this.ddlTitles.Properties.AccessibleDescription = "Name";
             this.ddlTitles.Properties.AccessibleName = "Id";
-            this.ddlTitles.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ddlTitles.Properties.Appearance.Options.UseBackColor = true;
+            this.ddlTitles.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.ddlTitles.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.ddlTitles.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ddlTitles.Size = new System.Drawing.Size(330, 28);
@@ -605,10 +630,10 @@
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.Location = new System.Drawing.Point(313, 3);
+            this.btnGuncelle.Location = new System.Drawing.Point(312, 4);
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(130, 55);
+            this.btnGuncelle.Size = new System.Drawing.Size(130, 53);
             this.btnGuncelle.TabIndex = 24;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);

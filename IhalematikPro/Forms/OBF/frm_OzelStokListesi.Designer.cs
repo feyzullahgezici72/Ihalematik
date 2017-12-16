@@ -122,6 +122,8 @@
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUnit.Properties.Appearance.Options.UseBackColor = true;
+            this.txtUnit.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtUnit.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtUnit.Size = new System.Drawing.Size(291, 26);
             this.txtUnit.TabIndex = 2;
             // 
@@ -145,6 +147,8 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtDescription.Properties.Appearance.Options.UseBackColor = true;
+            this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Size = new System.Drawing.Size(291, 26);
             this.txtDescription.TabIndex = 1;
             // 
@@ -162,6 +166,8 @@
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUnitPrice.Properties.Appearance.Options.UseBackColor = true;
+            this.txtUnitPrice.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtUnitPrice.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtUnitPrice.Properties.DisplayFormat.FormatString = "c";
             this.txtUnitPrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtUnitPrice.Properties.Mask.EditMask = "c";
@@ -213,6 +219,8 @@
             this.dxErrorProvider1.SetIconAlignment(this.txtNumber, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.txtNumber.Location = new System.Drawing.Point(122, 52);
             this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtNumber.Size = new System.Drawing.Size(291, 26);
             this.txtNumber.TabIndex = 0;
             // 
@@ -747,6 +755,8 @@
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit2.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit2.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit2.Size = new System.Drawing.Size(150, 26);
             this.textEdit2.TabIndex = 0;
             // 
@@ -769,6 +779,8 @@
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit1.Size = new System.Drawing.Size(422, 26);
             this.textEdit1.TabIndex = 1;
             // 

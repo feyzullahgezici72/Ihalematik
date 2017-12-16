@@ -121,6 +121,8 @@
             this.txtTeklifNo.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txtTeklifNo.Properties.Appearance.Options.UseFont = true;
             this.txtTeklifNo.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTeklifNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTeklifNo.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTeklifNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtTeklifNo.Properties.Mask.BeepOnError = true;
             this.txtTeklifNo.Size = new System.Drawing.Size(188, 30);
@@ -212,6 +214,8 @@
             this.textEdit1.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
             this.textEdit1.Properties.Appearance.Options.UseForeColor = true;
+            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.textEdit1.Size = new System.Drawing.Size(719, 28);
             this.textEdit1.TabIndex = 2;
@@ -226,6 +230,8 @@
             this.txtAciklama.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtAciklama.Properties.Appearance.Options.UseFont = true;
             this.txtAciklama.Properties.Appearance.Options.UseForeColor = true;
+            this.txtAciklama.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtAciklama.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtAciklama.Size = new System.Drawing.Size(719, 28);
             this.txtAciklama.TabIndex = 1;
@@ -324,6 +330,8 @@
             this.textEdit7.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.textEdit7.Properties.Appearance.Options.UseFont = true;
             this.textEdit7.Properties.Appearance.Options.UseForeColor = true;
+            this.textEdit7.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit7.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit7.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.textEdit7.Size = new System.Drawing.Size(703, 28);
             this.textEdit7.TabIndex = 10;
@@ -338,6 +346,8 @@
             this.textEdit6.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.textEdit6.Properties.Appearance.Options.UseFont = true;
             this.textEdit6.Properties.Appearance.Options.UseForeColor = true;
+            this.textEdit6.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit6.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.textEdit6.Size = new System.Drawing.Size(703, 28);
             this.textEdit6.TabIndex = 10;
@@ -352,6 +362,8 @@
             this.textEdit5.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.textEdit5.Properties.Appearance.Options.UseFont = true;
             this.textEdit5.Properties.Appearance.Options.UseForeColor = true;
+            this.textEdit5.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit5.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit5.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.textEdit5.Size = new System.Drawing.Size(703, 28);
             this.textEdit5.TabIndex = 10;
@@ -366,6 +378,8 @@
             this.textEdit4.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.textEdit4.Properties.Appearance.Options.UseFont = true;
             this.textEdit4.Properties.Appearance.Options.UseForeColor = true;
+            this.textEdit4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit4.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.textEdit4.Size = new System.Drawing.Size(703, 28);
             this.textEdit4.TabIndex = 10;
@@ -380,6 +394,8 @@
             this.textEdit3.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.textEdit3.Properties.Appearance.Options.UseFont = true;
             this.textEdit3.Properties.Appearance.Options.UseForeColor = true;
+            this.textEdit3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit3.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.textEdit3.Size = new System.Drawing.Size(703, 28);
             this.textEdit3.TabIndex = 10;
@@ -394,6 +410,8 @@
             this.textEdit2.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.textEdit2.Properties.Appearance.Options.UseFont = true;
             this.textEdit2.Properties.Appearance.Options.UseForeColor = true;
+            this.textEdit2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit2.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.textEdit2.Size = new System.Drawing.Size(350, 28);
             this.textEdit2.TabIndex = 10;

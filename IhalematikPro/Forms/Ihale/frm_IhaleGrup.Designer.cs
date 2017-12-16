@@ -175,6 +175,8 @@
             this.txtTenderGroupDescription.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTenderGroupDescription.Properties.Appearance.Options.UseBackColor = true;
             this.txtTenderGroupDescription.Properties.Appearance.Options.UseFont = true;
+            this.txtTenderGroupDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTenderGroupDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTenderGroupDescription.Size = new System.Drawing.Size(603, 28);
             this.txtTenderGroupDescription.TabIndex = 0;
             // 

@@ -517,6 +517,8 @@
             this.txtAuthorNameSurname.Name = "txtAuthorNameSurname";
             this.txtAuthorNameSurname.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtAuthorNameSurname.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAuthorNameSurname.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtAuthorNameSurname.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtAuthorNameSurname.Properties.DisplayFormat.FormatString = "N2";
             this.txtAuthorNameSurname.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtAuthorNameSurname.Properties.EditFormat.FormatString = "N2";
@@ -542,6 +544,8 @@
             this.txtScore.Name = "txtScore";
             this.txtScore.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtScore.Properties.Appearance.Options.UseBackColor = true;
+            this.txtScore.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtScore.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtScore.Properties.DisplayFormat.FormatString = "N2";
             this.txtScore.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtScore.Properties.EditFormat.FormatString = "N2";
@@ -567,6 +571,8 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtEmail.Properties.Appearance.Options.UseBackColor = true;
+            this.txtEmail.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtEmail.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtEmail.Properties.DisplayFormat.FormatString = "N2";
             this.txtEmail.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtEmail.Properties.EditFormat.FormatString = "N2";
@@ -614,6 +620,8 @@
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtCompanyName.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCompanyName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtCompanyName.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCompanyName.Properties.DisplayFormat.FormatString = "N2";
             this.txtCompanyName.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtCompanyName.Properties.EditFormat.FormatString = "N2";
@@ -628,6 +636,8 @@
             this.memoEditSegment.Name = "memoEditSegment";
             this.memoEditSegment.Properties.AccessibleDescription = "Name";
             this.memoEditSegment.Properties.AccessibleName = "Id";
+            this.memoEditSegment.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.memoEditSegment.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.memoEditSegment.Size = new System.Drawing.Size(370, 127);
             this.memoEditSegment.TabIndex = 83;
             // 

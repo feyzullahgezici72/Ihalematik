@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CalisanTanimlama));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.pcWorld = new System.Windows.Forms.PictureBox();
@@ -499,7 +499,7 @@
             this.btnGuncelle.AutoHeight = false;
             this.btnGuncelle.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnGuncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "Güncelle", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Güncelle", null, null, true)});
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnGuncelle.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnGuncelle_ButtonClick);
@@ -529,7 +529,7 @@
             this.btnPasive.AutoHeight = false;
             this.btnPasive.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnPasive.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnPasive.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "Pasif yap", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnPasive.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "Pasif yap", null, null, true)});
             this.btnPasive.Name = "btnPasive";
             this.btnPasive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnPasive.Click += new System.EventHandler(this.btnPasive_Click);
@@ -552,7 +552,7 @@
             this.btnAktif.AutoHeight = false;
             this.btnAktif.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnAktif.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAktif.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "Aktif yap", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnAktif.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "Aktif yap", null, null, true)});
             this.btnAktif.Name = "btnAktif";
             this.btnAktif.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnAktif.Click += new System.EventHandler(this.btnAktif_Click);
@@ -656,6 +656,8 @@
             this.txtWorklesFonFare.Name = "txtWorklesFonFare";
             this.txtWorklesFonFare.Properties.Appearance.BackColor = System.Drawing.Color.OldLace;
             this.txtWorklesFonFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtWorklesFonFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtWorklesFonFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtWorklesFonFare.Properties.DisplayFormat.FormatString = "c";
             this.txtWorklesFonFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtWorklesFonFare.Properties.EditFormat.FormatString = "c";
@@ -674,6 +676,8 @@
             this.txtSeveranceFare.Name = "txtSeveranceFare";
             this.txtSeveranceFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSeveranceFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSeveranceFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtSeveranceFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSeveranceFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtSeveranceFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtSeveranceFare.Properties.EditFormat.FormatString = "c2";
@@ -691,6 +695,8 @@
             this.txtAGI.Name = "txtAGI";
             this.txtAGI.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtAGI.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAGI.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtAGI.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtAGI.Properties.DisplayFormat.FormatString = "c2";
             this.txtAGI.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtAGI.Properties.EditFormat.FormatString = "c2";
@@ -719,6 +725,8 @@
             this.txtExtraFare.Name = "txtExtraFare";
             this.txtExtraFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtExtraFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtExtraFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtExtraFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtExtraFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtExtraFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtExtraFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -736,6 +744,8 @@
             this.txtBaseFare.Name = "txtBaseFare";
             this.txtBaseFare.Properties.Appearance.BackColor = System.Drawing.Color.OldLace;
             this.txtBaseFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBaseFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtBaseFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtBaseFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtBaseFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtBaseFare.Properties.EditFormat.FormatString = "c2";
@@ -777,6 +787,8 @@
             this.txtISGFare.Name = "txtISGFare";
             this.txtISGFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtISGFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtISGFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtISGFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtISGFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtISGFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtISGFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -792,6 +804,8 @@
             this.txtSGKPrimFare.Name = "txtSGKPrimFare";
             this.txtSGKPrimFare.Properties.Appearance.BackColor = System.Drawing.Color.OldLace;
             this.txtSGKPrimFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSGKPrimFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtSGKPrimFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSGKPrimFare.Properties.DisplayFormat.FormatString = "c";
             this.txtSGKPrimFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtSGKPrimFare.Properties.EditFormat.FormatString = "c";
@@ -832,6 +846,8 @@
             this.txtHotelFare.Name = "txtHotelFare";
             this.txtHotelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtHotelFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtHotelFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtHotelFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtHotelFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtHotelFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtHotelFare.Properties.EditFormat.FormatString = "c2";
@@ -870,6 +886,8 @@
             this.txtIncomeTaxFare.Name = "txtIncomeTaxFare";
             this.txtIncomeTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.OldLace;
             this.txtIncomeTaxFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtIncomeTaxFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtIncomeTaxFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtIncomeTaxFare.Properties.DisplayFormat.FormatString = "c";
             this.txtIncomeTaxFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtIncomeTaxFare.Properties.EditFormat.FormatString = "c";
@@ -888,6 +906,8 @@
             this.txtTravelFare.Name = "txtTravelFare";
             this.txtTravelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTravelFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTravelFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTravelFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTravelFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtTravelFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtTravelFare.Properties.EditFormat.FormatString = "c2";
@@ -948,6 +968,8 @@
             this.txtStampTaxFare.Name = "txtStampTaxFare";
             this.txtStampTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.OldLace;
             this.txtStampTaxFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtStampTaxFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtStampTaxFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtStampTaxFare.Properties.DisplayFormat.FormatString = "c";
             this.txtStampTaxFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtStampTaxFare.Properties.EditFormat.FormatString = "c";
@@ -966,6 +988,8 @@
             this.txtFoodFare.Name = "txtFoodFare";
             this.txtFoodFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtFoodFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFoodFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtFoodFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtFoodFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtFoodFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtFoodFare.Properties.EditFormat.FormatString = "c2";
@@ -995,8 +1019,8 @@
             this.ddlTitles.Name = "ddlTitles";
             this.ddlTitles.Properties.AccessibleDescription = "Name";
             this.ddlTitles.Properties.AccessibleName = "Id";
-            this.ddlTitles.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ddlTitles.Properties.Appearance.Options.UseBackColor = true;
+            this.ddlTitles.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.ddlTitles.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.ddlTitles.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ddlTitles.Size = new System.Drawing.Size(262, 28);

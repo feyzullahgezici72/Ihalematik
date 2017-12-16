@@ -95,6 +95,8 @@
             this.cmbInputType.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cmbInputType.Properties.Appearance.Options.UseFont = true;
             this.cmbInputType.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbInputType.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.cmbInputType.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.cmbInputType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbInputType.Properties.Items.AddRange(new object[] {
@@ -111,6 +113,8 @@
             this.txtUserPassword.Location = new System.Drawing.Point(144, 111);
             this.txtUserPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserPassword.Name = "txtUserPassword";
+            this.txtUserPassword.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtUserPassword.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtUserPassword.Properties.PasswordChar = '*';
             this.txtUserPassword.Size = new System.Drawing.Size(222, 26);
             this.txtUserPassword.TabIndex = 2;
@@ -121,6 +125,8 @@
             this.txtUserName.Location = new System.Drawing.Point(144, 73);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtUserName.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtUserName.Size = new System.Drawing.Size(222, 26);
             this.txtUserName.TabIndex = 1;
             // 

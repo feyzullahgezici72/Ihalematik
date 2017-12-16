@@ -93,6 +93,8 @@
             this.txtPozNumber.Properties.Appearance.Options.UseBackColor = true;
             this.txtPozNumber.Properties.Appearance.Options.UseFont = true;
             this.txtPozNumber.Properties.Appearance.Options.UseForeColor = true;
+            this.txtPozNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtPozNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtPozNumber.Size = new System.Drawing.Size(188, 30);
             this.txtPozNumber.TabIndex = 0;
             this.txtPozNumber.EditValueChanged += new System.EventHandler(this.txtPozNumber_EditValueChanged);
@@ -158,6 +160,8 @@
             this.txtDescription.Properties.Appearance.Options.UseBackColor = true;
             this.txtDescription.Properties.Appearance.Options.UseFont = true;
             this.txtDescription.Properties.Appearance.Options.UseForeColor = true;
+            this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Size = new System.Drawing.Size(622, 30);
             this.txtDescription.TabIndex = 1;
             // 

@@ -98,6 +98,8 @@
             this.txtRuleValue.Name = "txtRuleValue";
             this.txtRuleValue.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtRuleValue.Properties.Appearance.Options.UseBackColor = true;
+            this.txtRuleValue.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtRuleValue.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtRuleValue.Properties.DisplayFormat.FormatString = "N2";
             this.txtRuleValue.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtRuleValue.Properties.EditFormat.FormatString = "N2";

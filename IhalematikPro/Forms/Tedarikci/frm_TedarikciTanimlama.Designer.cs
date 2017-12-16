@@ -626,6 +626,8 @@
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtCountry.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCountry.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtCountry.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCountry.Properties.DisplayFormat.FormatString = "N2";
             this.txtCountry.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtCountry.Properties.EditFormat.FormatString = "N2";
@@ -641,6 +643,8 @@
             this.txtAuthorNameSurname.Name = "txtAuthorNameSurname";
             this.txtAuthorNameSurname.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtAuthorNameSurname.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAuthorNameSurname.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtAuthorNameSurname.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtAuthorNameSurname.Properties.DisplayFormat.FormatString = "N2";
             this.txtAuthorNameSurname.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtAuthorNameSurname.Properties.EditFormat.FormatString = "N2";
@@ -679,6 +683,8 @@
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtCompanyName.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCompanyName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtCompanyName.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCompanyName.Properties.DisplayFormat.FormatString = "N2";
             this.txtCompanyName.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtCompanyName.Properties.EditFormat.FormatString = "N2";
@@ -727,6 +733,8 @@
             this.txtGSM.Name = "txtGSM";
             this.txtGSM.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtGSM.Properties.Appearance.Options.UseBackColor = true;
+            this.txtGSM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtGSM.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtGSM.Properties.DisplayFormat.FormatString = "N2";
             this.txtGSM.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtGSM.Properties.EditFormat.FormatString = "N2";
@@ -742,6 +750,8 @@
             this.txtScore.Name = "txtScore";
             this.txtScore.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtScore.Properties.Appearance.Options.UseBackColor = true;
+            this.txtScore.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtScore.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtScore.Properties.DisplayFormat.FormatString = "N2";
             this.txtScore.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtScore.Properties.EditFormat.FormatString = "N2";
@@ -779,6 +789,8 @@
             this.txtTelephone.Name = "txtTelephone";
             this.txtTelephone.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTelephone.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTelephone.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTelephone.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTelephone.Properties.DisplayFormat.FormatString = "N2";
             this.txtTelephone.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtTelephone.Properties.EditFormat.FormatString = "N2";
@@ -795,6 +807,8 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtEmail.Properties.Appearance.Options.UseBackColor = true;
+            this.txtEmail.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtEmail.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtEmail.Properties.DisplayFormat.FormatString = "N2";
             this.txtEmail.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtEmail.Properties.EditFormat.FormatString = "N2";
@@ -821,6 +835,8 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtAddress.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAddress.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtAddress.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtAddress.Properties.DisplayFormat.FormatString = "N2";
             this.txtAddress.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtAddress.Properties.EditFormat.FormatString = "N2";
@@ -837,8 +853,8 @@
             this.ddlSegments.Name = "ddlSegments";
             this.ddlSegments.Properties.AccessibleDescription = "Name";
             this.ddlSegments.Properties.AccessibleName = "Id";
-            this.ddlSegments.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ddlSegments.Properties.Appearance.Options.UseBackColor = true;
+            this.ddlSegments.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.ddlSegments.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.ddlSegments.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ddlSegments.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
@@ -948,6 +964,8 @@
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit1.Size = new System.Drawing.Size(422, 26);
             this.textEdit1.TabIndex = 1;
             // 

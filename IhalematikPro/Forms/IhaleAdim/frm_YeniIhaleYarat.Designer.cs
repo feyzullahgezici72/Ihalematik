@@ -144,6 +144,8 @@
             this.txtAciklama.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtAciklama.Properties.Appearance.Options.UseFont = true;
             this.txtAciklama.Properties.Appearance.Options.UseForeColor = true;
+            this.txtAciklama.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtAciklama.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtAciklama.Size = new System.Drawing.Size(594, 28);
             this.txtAciklama.TabIndex = 1;
@@ -159,6 +161,8 @@
             this.txtTeklifNo.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txtTeklifNo.Properties.Appearance.Options.UseFont = true;
             this.txtTeklifNo.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTeklifNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTeklifNo.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTeklifNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtTeklifNo.Properties.Mask.BeepOnError = true;
             this.txtTeklifNo.Size = new System.Drawing.Size(188, 30);
@@ -281,6 +285,8 @@
             this.txtcompanyName.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtcompanyName.Properties.Appearance.Options.UseFont = true;
             this.txtcompanyName.Properties.Appearance.Options.UseForeColor = true;
+            this.txtcompanyName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtcompanyName.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtcompanyName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtcompanyName.Size = new System.Drawing.Size(594, 28);
             this.txtcompanyName.TabIndex = 2;
@@ -326,6 +332,8 @@
             this.LastOfferDate.EditValue = new System.DateTime(2017, 11, 14, 14, 49, 43, 0);
             this.LastOfferDate.Location = new System.Drawing.Point(104, 142);
             this.LastOfferDate.Name = "LastOfferDate";
+            this.LastOfferDate.Properties.AppearanceDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.LastOfferDate.Properties.AppearanceDropDown.Options.UseBackColor = true;
             this.LastOfferDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.LastOfferDate.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
@@ -429,6 +437,8 @@
             this.txtManagement.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtManagement.Properties.Appearance.Options.UseFont = true;
             this.txtManagement.Properties.Appearance.Options.UseForeColor = true;
+            this.txtManagement.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtManagement.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtManagement.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtManagement.Size = new System.Drawing.Size(594, 28);
             this.txtManagement.TabIndex = 5;
@@ -443,6 +453,8 @@
             this.txtPlace.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtPlace.Properties.Appearance.Options.UseFont = true;
             this.txtPlace.Properties.Appearance.Options.UseForeColor = true;
+            this.txtPlace.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtPlace.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtPlace.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtPlace.Size = new System.Drawing.Size(594, 28);
             this.txtPlace.TabIndex = 4;
@@ -457,6 +469,8 @@
             this.txtProcedure.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtProcedure.Properties.Appearance.Options.UseFont = true;
             this.txtProcedure.Properties.Appearance.Options.UseForeColor = true;
+            this.txtProcedure.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtProcedure.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtProcedure.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtProcedure.Size = new System.Drawing.Size(594, 28);
             this.txtProcedure.TabIndex = 3;
@@ -471,6 +485,8 @@
             this.txtScope.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtScope.Properties.Appearance.Options.UseFont = true;
             this.txtScope.Properties.Appearance.Options.UseForeColor = true;
+            this.txtScope.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtScope.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtScope.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtScope.Size = new System.Drawing.Size(594, 28);
             this.txtScope.TabIndex = 2;
@@ -485,6 +501,8 @@
             this.txtType.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtType.Properties.Appearance.Options.UseFont = true;
             this.txtType.Properties.Appearance.Options.UseForeColor = true;
+            this.txtType.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtType.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtType.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtType.Size = new System.Drawing.Size(594, 28);
             this.txtType.TabIndex = 1;
@@ -499,6 +517,8 @@
             this.txtEkapNumber.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtEkapNumber.Properties.Appearance.Options.UseFont = true;
             this.txtEkapNumber.Properties.Appearance.Options.UseForeColor = true;
+            this.txtEkapNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtEkapNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtEkapNumber.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtEkapNumber.Size = new System.Drawing.Size(350, 28);
             this.txtEkapNumber.TabIndex = 0;
@@ -804,6 +824,8 @@
             this.dateEdit2.EditValue = new System.DateTime(2017, 12, 2, 0, 49, 29, 0);
             this.dateEdit2.Location = new System.Drawing.Point(321, 53);
             this.dateEdit2.Name = "dateEdit2";
+            this.dateEdit2.Properties.AppearanceDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.dateEdit2.Properties.AppearanceDropDown.Options.UseBackColor = true;
             this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -816,6 +838,8 @@
             this.dateEdit1.EditValue = new System.DateTime(2017, 12, 2, 0, 49, 29, 0);
             this.dateEdit1.Location = new System.Drawing.Point(151, 53);
             this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.AppearanceDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.dateEdit1.Properties.AppearanceDropDown.Options.UseBackColor = true;
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -827,6 +851,8 @@
             // 
             this.textEdit1.Location = new System.Drawing.Point(151, 16);
             this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit1.Size = new System.Drawing.Size(162, 26);
             this.textEdit1.TabIndex = 1;
             // 

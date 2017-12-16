@@ -65,6 +65,8 @@
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUnit.Properties.Appearance.Options.UseBackColor = true;
+            this.txtUnit.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtUnit.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtUnit.Size = new System.Drawing.Size(150, 26);
             this.txtUnit.TabIndex = 112;
             // 
@@ -87,6 +89,8 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtDescription.Properties.Appearance.Options.UseBackColor = true;
+            this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Size = new System.Drawing.Size(651, 26);
             this.txtDescription.TabIndex = 111;
             // 
@@ -109,6 +113,8 @@
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtNumber.Properties.Appearance.Options.UseBackColor = true;
+            this.txtNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtNumber.Properties.ReadOnly = true;
             this.txtNumber.Size = new System.Drawing.Size(150, 26);
             this.txtNumber.TabIndex = 110;

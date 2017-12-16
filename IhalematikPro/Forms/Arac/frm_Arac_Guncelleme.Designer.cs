@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Arac_Guncelleme));
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
@@ -70,7 +71,7 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PanelSirket)).BeginInit();
@@ -113,7 +114,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 35);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(454, 510);
+            this.groupControl2.Size = new System.Drawing.Size(450, 510);
             this.groupControl2.TabIndex = 93;
             this.groupControl2.Text = "Araç Bilgileri";
             // 
@@ -164,6 +165,8 @@
             this.txtCompanyMaintenanceFare.Name = "txtCompanyMaintenanceFare";
             this.txtCompanyMaintenanceFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtCompanyMaintenanceFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCompanyMaintenanceFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtCompanyMaintenanceFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCompanyMaintenanceFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtCompanyMaintenanceFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCompanyMaintenanceFare.Properties.EditFormat.FormatString = "c2";
@@ -181,6 +184,8 @@
             this.txtCompanyFuelOilDay.Name = "txtCompanyFuelOilDay";
             this.txtCompanyFuelOilDay.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtCompanyFuelOilDay.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCompanyFuelOilDay.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtCompanyFuelOilDay.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCompanyFuelOilDay.Properties.DisplayFormat.FormatString = "c2";
             this.txtCompanyFuelOilDay.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCompanyFuelOilDay.Properties.EditFormat.FormatString = "c2";
@@ -242,6 +247,8 @@
             this.txtCompanyServiceFare.Name = "txtCompanyServiceFare";
             this.txtCompanyServiceFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtCompanyServiceFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCompanyServiceFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtCompanyServiceFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCompanyServiceFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtCompanyServiceFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCompanyServiceFare.Properties.EditFormat.FormatString = "c2";
@@ -259,6 +266,8 @@
             this.txtCompanyFuelOilFare.Name = "txtCompanyFuelOilFare";
             this.txtCompanyFuelOilFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtCompanyFuelOilFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCompanyFuelOilFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtCompanyFuelOilFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCompanyFuelOilFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtCompanyFuelOilFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCompanyFuelOilFare.Properties.EditFormat.FormatString = "c2";
@@ -276,6 +285,8 @@
             this.txtCompanyOtherFare.Name = "txtCompanyOtherFare";
             this.txtCompanyOtherFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtCompanyOtherFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCompanyOtherFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtCompanyOtherFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCompanyOtherFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtCompanyOtherFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCompanyOtherFare.Properties.EditFormat.FormatString = "c2";
@@ -304,6 +315,8 @@
             this.txtCompanyGeneralFare.Name = "txtCompanyGeneralFare";
             this.txtCompanyGeneralFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtCompanyGeneralFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCompanyGeneralFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtCompanyGeneralFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCompanyGeneralFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtCompanyGeneralFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCompanyGeneralFare.Properties.EditFormat.FormatString = "c2";
@@ -332,6 +345,8 @@
             this.txtCompanyDriverFare.Name = "txtCompanyDriverFare";
             this.txtCompanyDriverFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtCompanyDriverFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCompanyDriverFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtCompanyDriverFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCompanyDriverFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtCompanyDriverFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCompanyDriverFare.Properties.EditFormat.FormatString = "c2";
@@ -400,6 +415,8 @@
             this.txtRentFare.Name = "txtRentFare";
             this.txtRentFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtRentFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtRentFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtRentFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtRentFare.Properties.AppearanceFocused.Options.UseTextOptions = true;
             this.txtRentFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtRentFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -453,6 +470,8 @@
             this.txtRentDriverFare.Name = "txtRentDriverFare";
             this.txtRentDriverFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtRentDriverFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtRentDriverFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtRentDriverFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtRentDriverFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtRentDriverFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtRentDriverFare.Properties.EditFormat.FormatString = "c2";
@@ -492,6 +511,8 @@
             this.txtRentGeneralFare.Name = "txtRentGeneralFare";
             this.txtRentGeneralFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtRentGeneralFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtRentGeneralFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtRentGeneralFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtRentGeneralFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtRentGeneralFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtRentGeneralFare.Properties.EditFormat.FormatString = "c2";
@@ -509,6 +530,8 @@
             this.txtRentFuelOilDay.Name = "txtRentFuelOilDay";
             this.txtRentFuelOilDay.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtRentFuelOilDay.Properties.Appearance.Options.UseBackColor = true;
+            this.txtRentFuelOilDay.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtRentFuelOilDay.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtRentFuelOilDay.Properties.DisplayFormat.FormatString = "c2";
             this.txtRentFuelOilDay.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtRentFuelOilDay.Properties.EditFormat.FormatString = "c2";
@@ -548,6 +571,8 @@
             this.txtRentOtherFare.Name = "txtRentOtherFare";
             this.txtRentOtherFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtRentOtherFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtRentOtherFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtRentOtherFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtRentOtherFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtRentOtherFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtRentOtherFare.Properties.EditFormat.FormatString = "c2";
@@ -576,6 +601,8 @@
             this.txtRentFuelOilFare.Name = "txtRentFuelOilFare";
             this.txtRentFuelOilFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtRentFuelOilFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtRentFuelOilFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtRentFuelOilFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtRentFuelOilFare.Properties.DisplayFormat.FormatString = "c2";
             this.txtRentFuelOilFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtRentFuelOilFare.Properties.EditFormat.FormatString = "c2";
@@ -608,6 +635,8 @@
             this.ddlVehicleTitle.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ddlVehicleTitle.Properties.Appearance.Options.UseBackColor = true;
             this.ddlVehicleTitle.Properties.Appearance.Options.UseFont = true;
+            this.ddlVehicleTitle.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.ddlVehicleTitle.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.ddlVehicleTitle.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ddlVehicleTitle.Size = new System.Drawing.Size(224, 30);
@@ -666,7 +695,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(452, 35);
+            this.panelControl2.Size = new System.Drawing.Size(451, 35);
             this.panelControl2.TabIndex = 95;
             // 
             // btnKapat
@@ -676,7 +705,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(424, 0);
+            this.btnKapat.Location = new System.Drawing.Point(423, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -709,7 +738,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(452, 545);
+            this.ClientSize = new System.Drawing.Size(451, 545);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl2);

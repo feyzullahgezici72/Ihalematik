@@ -487,6 +487,8 @@
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit2.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit2.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit2.Size = new System.Drawing.Size(150, 26);
             this.textEdit2.TabIndex = 0;
             // 
@@ -509,6 +511,8 @@
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit1.Size = new System.Drawing.Size(421, 26);
             this.textEdit1.TabIndex = 1;
             // 

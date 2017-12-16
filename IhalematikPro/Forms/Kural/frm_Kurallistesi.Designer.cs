@@ -105,7 +105,7 @@
             this.gridViewRules.Appearance.FilterPanel.Options.UseForeColor = true;
             this.gridViewRules.Appearance.FixedLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(148)))));
             this.gridViewRules.Appearance.FixedLine.Options.UseBackColor = true;
-            this.gridViewRules.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(180)))), ((int)(((byte)(191)))));
+            this.gridViewRules.Appearance.FocusedRow.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridViewRules.Appearance.FocusedRow.ForeColor = System.Drawing.Color.Black;
             this.gridViewRules.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridViewRules.Appearance.FocusedRow.Options.UseForeColor = true;

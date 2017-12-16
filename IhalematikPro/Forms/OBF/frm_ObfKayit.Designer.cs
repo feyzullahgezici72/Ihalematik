@@ -145,6 +145,8 @@
             this.txtDescription.Properties.Appearance.Options.UseBackColor = true;
             this.txtDescription.Properties.Appearance.Options.UseFont = true;
             this.txtDescription.Properties.Appearance.Options.UseForeColor = true;
+            this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Size = new System.Drawing.Size(546, 30);
             this.txtDescription.TabIndex = 1;
             // 
@@ -170,6 +172,8 @@
             this.txtNumber.Properties.Appearance.Options.UseBackColor = true;
             this.txtNumber.Properties.Appearance.Options.UseFont = true;
             this.txtNumber.Properties.Appearance.Options.UseForeColor = true;
+            this.txtNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtNumber.Size = new System.Drawing.Size(250, 30);
             this.txtNumber.TabIndex = 0;
             this.txtNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumber_KeyPress);

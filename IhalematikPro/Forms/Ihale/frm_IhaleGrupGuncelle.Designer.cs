@@ -44,7 +44,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(622, 84);
+            this.groupControl1.Size = new System.Drawing.Size(618, 84);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "Grup Adı";
             // 
@@ -53,6 +53,8 @@
             this.txtDescription.EnterMoveNextControl = true;
             this.txtDescription.Location = new System.Drawing.Point(6, 41);
             this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Size = new System.Drawing.Size(606, 26);
             this.txtDescription.TabIndex = 0;
             // 
@@ -78,7 +80,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 156);
+            this.ClientSize = new System.Drawing.Size(618, 152);
             this.ControlBox = false;
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.groupControl1);

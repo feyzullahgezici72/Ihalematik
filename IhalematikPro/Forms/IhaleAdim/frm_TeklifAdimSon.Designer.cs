@@ -239,6 +239,8 @@
             this.txtMarkupAmount.Name = "txtMarkupAmount";
             this.txtMarkupAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMarkupAmount.Properties.Appearance.Options.UseBackColor = true;
+            this.txtMarkupAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtMarkupAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtMarkupAmount.Properties.Mask.EditMask = "c";
             this.txtMarkupAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMarkupAmount.Properties.ReadOnly = true;
@@ -253,6 +255,8 @@
             this.txtMarkupWorkerAmount.Name = "txtMarkupWorkerAmount";
             this.txtMarkupWorkerAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMarkupWorkerAmount.Properties.Appearance.Options.UseBackColor = true;
+            this.txtMarkupWorkerAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtMarkupWorkerAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtMarkupWorkerAmount.Properties.Mask.EditMask = "c";
             this.txtMarkupWorkerAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMarkupWorkerAmount.Properties.ReadOnly = true;
@@ -267,6 +271,8 @@
             this.txtMarkupMaterialTotal.Name = "txtMarkupMaterialTotal";
             this.txtMarkupMaterialTotal.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMarkupMaterialTotal.Properties.Appearance.Options.UseBackColor = true;
+            this.txtMarkupMaterialTotal.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtMarkupMaterialTotal.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtMarkupMaterialTotal.Properties.Mask.EditMask = "c";
             this.txtMarkupMaterialTotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMarkupMaterialTotal.Properties.ReadOnly = true;
@@ -320,6 +326,8 @@
             this.txtWorkerAmount.Name = "txtWorkerAmount";
             this.txtWorkerAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtWorkerAmount.Properties.Appearance.Options.UseBackColor = true;
+            this.txtWorkerAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtWorkerAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtWorkerAmount.Properties.Mask.EditMask = "c";
             this.txtWorkerAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtWorkerAmount.Properties.ReadOnly = true;
@@ -356,6 +364,8 @@
             this.txtWorkerKDVAmount.Name = "txtWorkerKDVAmount";
             this.txtWorkerKDVAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtWorkerKDVAmount.Properties.Appearance.Options.UseBackColor = true;
+            this.txtWorkerKDVAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtWorkerKDVAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtWorkerKDVAmount.Properties.Mask.EditMask = "c";
             this.txtWorkerKDVAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtWorkerKDVAmount.Properties.ReadOnly = true;
@@ -370,6 +380,8 @@
             this.txtWorkerCostAmount.Name = "txtWorkerCostAmount";
             this.txtWorkerCostAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtWorkerCostAmount.Properties.Appearance.Options.UseBackColor = true;
+            this.txtWorkerCostAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtWorkerCostAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtWorkerCostAmount.Properties.Mask.EditMask = "c";
             this.txtWorkerCostAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtWorkerCostAmount.Properties.ReadOnly = true;
@@ -395,6 +407,8 @@
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTotalAmount.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTotalAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTotalAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTotalAmount.Properties.Mask.EditMask = "c";
             this.txtTotalAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTotalAmount.Properties.ReadOnly = true;
@@ -431,6 +445,8 @@
             this.txtMaterialkdvTotalAmount.Name = "txtMaterialkdvTotalAmount";
             this.txtMaterialkdvTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMaterialkdvTotalAmount.Properties.Appearance.Options.UseBackColor = true;
+            this.txtMaterialkdvTotalAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtMaterialkdvTotalAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtMaterialkdvTotalAmount.Properties.Mask.EditMask = "c";
             this.txtMaterialkdvTotalAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMaterialkdvTotalAmount.Properties.ReadOnly = true;
@@ -445,6 +461,8 @@
             this.txtMaterialCostAmount.Name = "txtMaterialCostAmount";
             this.txtMaterialCostAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMaterialCostAmount.Properties.Appearance.Options.UseBackColor = true;
+            this.txtMaterialCostAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtMaterialCostAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtMaterialCostAmount.Properties.Mask.EditMask = "c";
             this.txtMaterialCostAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMaterialCostAmount.Properties.ReadOnly = true;

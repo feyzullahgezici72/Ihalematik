@@ -627,7 +627,7 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.groupControl2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(241)))), ((int)(((byte)(254)))));
             this.groupControl2.Appearance.Options.UseBackColor = true;
             this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupControl2.AppearanceCaption.ForeColor = System.Drawing.Color.Navy;
@@ -678,7 +678,7 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(390, 6);
+            this.txtDescription.Location = new System.Drawing.Point(390, 12);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -687,6 +687,8 @@
             this.txtDescription.Properties.Appearance.Options.UseBackColor = true;
             this.txtDescription.Properties.Appearance.Options.UseFont = true;
             this.txtDescription.Properties.Appearance.Options.UseForeColor = true;
+            this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Size = new System.Drawing.Size(622, 30);
             this.txtDescription.TabIndex = 1;
             // 
@@ -694,7 +696,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl3.Location = new System.Drawing.Point(298, 7);
+            this.labelControl3.Location = new System.Drawing.Point(299, 18);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(83, 21);
@@ -704,7 +706,7 @@
             // txtPozNumber
             // 
             this.txtPozNumber.EnterMoveNextControl = true;
-            this.txtPozNumber.Location = new System.Drawing.Point(87, 6);
+            this.txtPozNumber.Location = new System.Drawing.Point(87, 12);
             this.txtPozNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPozNumber.Name = "txtPozNumber";
             this.txtPozNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -713,6 +715,8 @@
             this.txtPozNumber.Properties.Appearance.Options.UseBackColor = true;
             this.txtPozNumber.Properties.Appearance.Options.UseFont = true;
             this.txtPozNumber.Properties.Appearance.Options.UseForeColor = true;
+            this.txtPozNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtPozNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtPozNumber.Size = new System.Drawing.Size(188, 30);
             this.txtPozNumber.TabIndex = 0;
             this.txtPozNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPozNumber_KeyPress);
@@ -721,7 +725,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl2.Location = new System.Drawing.Point(14, 7);
+            this.labelControl2.Location = new System.Drawing.Point(15, 18);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(66, 21);
