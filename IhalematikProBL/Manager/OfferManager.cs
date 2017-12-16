@@ -44,7 +44,7 @@ namespace IhalematikProBL.Manager
             {
                 result = offerMaterialLists.FirstOrDefault();
                 SupplierMaterialList supplierMaterialList = this.GetOfferMaterialListPrice(offerMaterialLists.FirstOrDefault().Id);
-                result.Price = supplierMaterialList.Price;
+                result.Price = supplierMaterialList.PriceWithRisk;
                 result.OfferKDV = supplierMaterialList.KDV;
             }
 
