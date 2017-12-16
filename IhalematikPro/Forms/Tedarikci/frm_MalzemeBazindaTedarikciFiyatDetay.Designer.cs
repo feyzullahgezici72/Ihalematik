@@ -248,7 +248,9 @@
             this.gridViewMaterialList.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
             this.gridViewMaterialList.Appearance.FocusedCell.Options.UseBackColor = true;
             this.gridViewMaterialList.Appearance.FocusedCell.Options.UseForeColor = true;
+            this.gridViewMaterialList.Appearance.FocusedRow.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridViewMaterialList.Appearance.FocusedRow.ForeColor = System.Drawing.Color.White;
+            this.gridViewMaterialList.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridViewMaterialList.Appearance.FocusedRow.Options.UseForeColor = true;
             this.gridViewMaterialList.Appearance.FooterPanel.BackColor = System.Drawing.Color.Silver;
             this.gridViewMaterialList.Appearance.FooterPanel.BorderColor = System.Drawing.Color.Silver;
@@ -371,6 +373,8 @@
             this.gridColumn4.Caption = "BİRİM FİYAT";
             this.gridColumn4.FieldName = "Price";
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.AllowEdit = false;
+            this.gridColumn4.OptionsColumn.AllowFocus = false;
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 1;
