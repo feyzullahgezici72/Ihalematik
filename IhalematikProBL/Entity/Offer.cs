@@ -45,6 +45,10 @@ namespace IhalematikProBL.Entity
                 {
                     this.suppliers.AddRange(items.GroupBy(p => p.SupplierId).Select(p => p.FirstOrDefault().Supplier));
                 }
+                else
+                {
+                    this.suppliers = new List<Supplier>();
+                }
                 return this.suppliers;
             }
         }
