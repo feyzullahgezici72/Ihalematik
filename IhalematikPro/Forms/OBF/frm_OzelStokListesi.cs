@@ -30,14 +30,14 @@ namespace IhalematikPro.Forms
         public void LoadGrid()
         {
             List<OBFModel> items = UIOBFManager.Instance.GetOBFs();
-      
+
             if (cmbAktivePasive.SelectedIndex == 0)
             {
                 grdOBFList.DataSource = items.Where(p => p.IsActive);
                 colPasive.Visible = true;
                 colEdit.Visible = true;
                 colActive.Visible = false;
-                
+
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
@@ -50,7 +50,7 @@ namespace IhalematikPro.Forms
             //{
             //    gridViewOBFList.FocusedRowHandle = this.FocusedRowHandle;
             //}
-            
+
         }
         private void btnKaydet_Click(object sender, EventArgs e)
         {
@@ -60,7 +60,7 @@ namespace IhalematikPro.Forms
             model.Number = txtNumber.Text;
             model.IsActive = true;
             model.Unit = txtUnit.Text;
-            model.UnitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtUnitPrice.Text);
+            model.UnitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtUnitPrice.Text.Replace("TL", string.Empty));
 
             List<OBF> existingOBFs = UIOBFManager.Instance.GetOBF(model.Number);
             if (existingOBFs != null && existingOBFs.Count != 0)
@@ -162,7 +162,7 @@ namespace IhalematikPro.Forms
 
         private void btnSl_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void frm_OzelStokListesi_Shown(object sender, EventArgs e)
