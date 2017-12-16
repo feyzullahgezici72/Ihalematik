@@ -335,7 +335,7 @@
             this.gridViewTenderGroup.Appearance.FilterPanel.Options.UseForeColor = true;
             this.gridViewTenderGroup.Appearance.FixedLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(148)))));
             this.gridViewTenderGroup.Appearance.FixedLine.Options.UseBackColor = true;
-            this.gridViewTenderGroup.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(180)))), ((int)(((byte)(191)))));
+            this.gridViewTenderGroup.Appearance.FocusedRow.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridViewTenderGroup.Appearance.FocusedRow.ForeColor = System.Drawing.Color.Black;
             this.gridViewTenderGroup.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridViewTenderGroup.Appearance.FocusedRow.Options.UseForeColor = true;

@@ -33,6 +33,9 @@ namespace IhalematikProUI.Forms
                 {
                     SupplierSegmentProvider.Instance.Save(supplierSegment);
                     this.Close();
+                    frm_MesajFormu mf = new frm_MesajFormu();
+                    mf.lblMesaj.Text = "Faaliyet alanı eklendi...";
+                    mf.ShowDialog();
                 }
                 else
                 {

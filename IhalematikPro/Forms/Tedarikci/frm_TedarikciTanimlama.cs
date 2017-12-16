@@ -91,6 +91,7 @@ namespace IhalematikProUI.Forms
                 OperationResult result = SupplierProvider.Instance.Save(suplier);
                 if (result.Success)
                 {
+                    btnTemizle.PerformClick();
                     this.LoadGrid();
                     frm_MesajFormu mf = new frm_MesajFormu();
                     mf.lblMesaj.Text = "Tedarikçi Kaydedildi...";

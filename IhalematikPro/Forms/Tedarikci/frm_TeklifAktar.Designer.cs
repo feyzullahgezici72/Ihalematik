@@ -152,9 +152,9 @@
             this.labelControl4.Location = new System.Drawing.Point(8, 69);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(113, 19);
+            this.labelControl4.Size = new System.Drawing.Size(109, 19);
             this.labelControl4.TabIndex = 12;
-            this.labelControl4.Text = "Tedarikci Adi  :";
+            this.labelControl4.Text = "Tedarikci Adi :";
             // 
             // btnUploadFile
             // 

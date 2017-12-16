@@ -50,6 +50,7 @@ namespace IhalematikPro.Forms
                 txtTelephone2.Text = company.Telephone2;
                 txtTitle.Text = company.Title;
                 txtWebAddress.Text = company.WebAddress;
+                txtMailPassword.Text = company.MailPassword;//samet ekledi
             }
         }
 

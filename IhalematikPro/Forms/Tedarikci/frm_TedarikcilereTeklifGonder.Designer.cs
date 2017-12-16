@@ -155,7 +155,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1362, 35);
+            this.panelControl1.Size = new System.Drawing.Size(1762, 35);
             this.panelControl1.TabIndex = 20;
             // 
             // pcWorld
@@ -177,7 +177,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1334, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1734, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(9);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -218,14 +218,14 @@
             this.pnlUst.Location = new System.Drawing.Point(0, 35);
             this.pnlUst.Margin = new System.Windows.Forms.Padding(6);
             this.pnlUst.Name = "pnlUst";
-            this.pnlUst.Size = new System.Drawing.Size(1362, 70);
+            this.pnlUst.Size = new System.Drawing.Size(1762, 70);
             this.pnlUst.TabIndex = 21;
             // 
             // pnlGonderilecekListe
             // 
             this.pnlGonderilecekListe.Controls.Add(this.btnGonderilenMalzemeListesi);
             this.pnlGonderilecekListe.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlGonderilecekListe.Location = new System.Drawing.Point(722, 4);
+            this.pnlGonderilecekListe.Location = new System.Drawing.Point(1122, 4);
             this.pnlGonderilecekListe.Name = "pnlGonderilecekListe";
             this.pnlGonderilecekListe.Size = new System.Drawing.Size(290, 62);
             this.pnlGonderilecekListe.TabIndex = 12;
@@ -263,7 +263,7 @@
             this.pnlobfpozButtonpanel.Controls.Add(this.btnObfKayit);
             this.pnlobfpozButtonpanel.Controls.Add(this.btnPozKayit);
             this.pnlobfpozButtonpanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlobfpozButtonpanel.Location = new System.Drawing.Point(1012, 4);
+            this.pnlobfpozButtonpanel.Location = new System.Drawing.Point(1412, 4);
             this.pnlobfpozButtonpanel.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.pnlobfpozButtonpanel.Name = "pnlobfpozButtonpanel";
             this.pnlobfpozButtonpanel.Size = new System.Drawing.Size(346, 62);
@@ -485,7 +485,7 @@
             this.pnlx.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlx.Location = new System.Drawing.Point(256, 105);
             this.pnlx.Name = "pnlx";
-            this.pnlx.Size = new System.Drawing.Size(1106, 651);
+            this.pnlx.Size = new System.Drawing.Size(1506, 651);
             this.pnlx.TabIndex = 22;
             this.pnlx.Visible = false;
             // 
@@ -1052,6 +1052,7 @@
             this.colSupplierDetail.MaxWidth = 30;
             this.colSupplierDetail.MinWidth = 30;
             this.colSupplierDetail.Name = "colSupplierDetail";
+            this.colSupplierDetail.OptionsFilter.AllowFilter = false;
             this.colSupplierDetail.ToolTip = "Detay Göster";
             this.colSupplierDetail.Visible = true;
             this.colSupplierDetail.VisibleIndex = 3;
@@ -1090,7 +1091,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 756);
+            this.ClientSize = new System.Drawing.Size(1762, 756);
             this.ControlBox = false;
             this.Controls.Add(this.pnlx);
             this.Controls.Add(this.panelControl4);

@@ -81,7 +81,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                         offerMaterialList.Price = supplierMaterialList.Price;
                         offerMaterialList.KDV = supplierMaterialList.KDV;
                         this.MaterialLists.Add(offerMaterialList);
-
                         if (string.IsNullOrEmpty(this.SupplierName))
                         {
                             this.SupplierName = supplierMaterialList.Supplier.CompanyName;
@@ -99,11 +98,11 @@ namespace IhalematikProUI.Forms.Tedarikci
                 i++;
             }
             grdMaterialList.DataSource = this.MaterialLists;
-            lblOfferDescription.Text = this.OfferDescription;
-            lblOfferNumber.Text = this.OfferNumber;
-            lblSupplierName.Text = this.SupplierName;
+            lblSupplierName.Text = this.SupplierName; 
+            lblOfferNumber.Text = this.OfferNumber; 
+            lblOfferDescription.Text = this.OfferDescription; 
             frm_MesajFormu mf = new frm_MesajFormu();
-            mf.lblMesaj.Text = "Teklif dosyası aktarıldı...";
+            mf.lblMesaj.Text = lblSupplierName.Text + " Firmasının \nTeklif dosyası aktarıldı...";
             mf.ShowDialog();
         }
     }

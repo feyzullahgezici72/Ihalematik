@@ -324,7 +324,9 @@
             this.gridViewMaterialList.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
             this.gridViewMaterialList.Appearance.FocusedCell.Options.UseBackColor = true;
             this.gridViewMaterialList.Appearance.FocusedCell.Options.UseForeColor = true;
+            this.gridViewMaterialList.Appearance.FocusedRow.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridViewMaterialList.Appearance.FocusedRow.ForeColor = System.Drawing.Color.White;
+            this.gridViewMaterialList.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridViewMaterialList.Appearance.FocusedRow.Options.UseForeColor = true;
             this.gridViewMaterialList.Appearance.FooterPanel.BackColor = System.Drawing.Color.Silver;
             this.gridViewMaterialList.Appearance.FooterPanel.BorderColor = System.Drawing.Color.Silver;
@@ -669,7 +671,7 @@
             this.gridViewSupplier.Appearance.FilterPanel.Options.UseForeColor = true;
             this.gridViewSupplier.Appearance.FixedLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(124)))), ((int)(((byte)(148)))));
             this.gridViewSupplier.Appearance.FixedLine.Options.UseBackColor = true;
-            this.gridViewSupplier.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(180)))), ((int)(((byte)(191)))));
+            this.gridViewSupplier.Appearance.FocusedRow.BackColor = System.Drawing.Color.DodgerBlue;
             this.gridViewSupplier.Appearance.FocusedRow.ForeColor = System.Drawing.Color.Black;
             this.gridViewSupplier.Appearance.FocusedRow.Options.UseBackColor = true;
             this.gridViewSupplier.Appearance.FocusedRow.Options.UseForeColor = true;
