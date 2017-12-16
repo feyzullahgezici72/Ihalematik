@@ -51,6 +51,8 @@ namespace IhalematikPro.Forms
                 txtTitle.Text = company.Title;
                 txtWebAddress.Text = company.WebAddress;
                 txtMailPassword.Text = company.MailPassword;//samet ekledi
+                txtTaxOffice.Text = company.TaxOffice;
+                txtTaxNumber.Text = company.TaxNumber;
             }
         }
 
@@ -73,6 +75,8 @@ namespace IhalematikPro.Forms
             company.Telephone2 = txtTelephone2.Text;
             company.Title = txtTitle.Text;
             company.WebAddress = txtWebAddress.Text;
+            company.TaxNumber = txtTaxNumber.Text;
+            company.TaxOffice = txtTaxOffice.Text;
             if (!string.IsNullOrEmpty(txtMailPassword.Text.Trim()))
             {
                 company.MailPassword = txtMailPassword.Text.Trim();
