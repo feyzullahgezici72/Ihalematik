@@ -173,6 +173,14 @@ namespace IhalematikPro.Model
             }
         }
 
+        // Iscilikli Toplam Kar
+        public double TotalWorkerMarkup
+        {
+            get
+            {
+                return Math.Round(this.WorkerMarkup * this.Quantity, 2);
+            }
+        }
         // Karli Iscilikli birim fiyat
         public double WorkerMarkupUnitPrice
         {

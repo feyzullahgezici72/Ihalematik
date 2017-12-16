@@ -182,6 +182,7 @@ namespace IhalematikPro.Forms
             }
             grdMaterialListIsWorkship.DataSource = null;
             grdMaterialListIsWorkship.DataSource = models;
+            this.CalculateInnerValuesMarkup(models);
         }
 
         private void btnPanelKapat_Click(object sender, EventArgs e)
@@ -455,6 +456,8 @@ namespace IhalematikPro.Forms
                 List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
                 grdMaterialListIsWorkship.DataSource = models;
                 gridViewMaterialListIsWorkship.FocusedRowHandle = this.FocusedRowHandle;
+
+                this.CalculateInnerValuesMarkup(models);
             }
         }
 
@@ -485,7 +488,12 @@ namespace IhalematikPro.Forms
             this.RPSTWorkerUnitTimeTypes();
             this.RPSTVehicleUnitTimeTypes();
             this.LoadTenderGroupGrid();
-            //this.CalculateInnerValuesMarkup();
+
+        }
+
+        private void CalculateInnerValuesMarkup(List<MaterialListModel> items)
+        {
+            lblKarToplam.Text = (Math.Round(items.Sum(p => p.TotalWorkerMarkup), 2)).ToString("c");
         }
 
         private void RPSTVehicles()
@@ -562,6 +570,9 @@ namespace IhalematikPro.Forms
                     if (item.Id.Equals(currenMaterialId))
                     {
                         item.WorkerMarkup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
+                        List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
+                        List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+                        this.CalculateInnerValuesMarkup(models);
                         break;
                     }
                 }
@@ -601,7 +612,7 @@ namespace IhalematikPro.Forms
 
         private void txtWorkerMarkup_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13)
             {
                 btnTumuneUygula.PerformClick();
             }
