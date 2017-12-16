@@ -114,7 +114,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 35);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(450, 510);
+            this.groupControl2.Size = new System.Drawing.Size(454, 510);
             this.groupControl2.TabIndex = 93;
             this.groupControl2.Text = "Araç Bilgileri";
             // 
@@ -186,9 +186,7 @@
             this.txtCompanyFuelOilDay.Properties.Appearance.Options.UseBackColor = true;
             this.txtCompanyFuelOilDay.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtCompanyFuelOilDay.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtCompanyFuelOilDay.Properties.DisplayFormat.FormatString = "c2";
             this.txtCompanyFuelOilDay.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCompanyFuelOilDay.Properties.EditFormat.FormatString = "c2";
             this.txtCompanyFuelOilDay.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCompanyFuelOilDay.Properties.Mask.EditMask = "c2";
             this.txtCompanyFuelOilDay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
@@ -532,9 +530,7 @@
             this.txtRentFuelOilDay.Properties.Appearance.Options.UseBackColor = true;
             this.txtRentFuelOilDay.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtRentFuelOilDay.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRentFuelOilDay.Properties.DisplayFormat.FormatString = "c2";
             this.txtRentFuelOilDay.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRentFuelOilDay.Properties.EditFormat.FormatString = "c2";
             this.txtRentFuelOilDay.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtRentFuelOilDay.Properties.Mask.EditMask = "c2";
             this.txtRentFuelOilDay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
@@ -695,7 +691,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(451, 35);
+            this.panelControl2.Size = new System.Drawing.Size(453, 35);
             this.panelControl2.TabIndex = 95;
             // 
             // btnKapat
@@ -705,7 +701,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(423, 0);
+            this.btnKapat.Location = new System.Drawing.Point(425, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -738,7 +734,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(451, 545);
+            this.ClientSize = new System.Drawing.Size(453, 545);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl2);
