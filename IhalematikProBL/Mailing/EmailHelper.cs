@@ -43,14 +43,14 @@ namespace IhalematikProBL.Mailing
 
         public string Password
         {
-            get { return CustomConfigurationManager.Instance.SmtpPassword; }
+            get { return CompanyManager.Instance.CurrentCompany.MailPassword; }
             //set { this.password = value; }
         }
 
         public string UserName
         {
-            get { return CustomConfigurationManager.Instance.SmtpUserName; }
-            //set { this.userName = value; }
+            get { return CompanyManager.Instance.CurrentCompany.MailAddress; }
+            //set { this.userName = value; 
         }
 
         public bool IsAnonymous
@@ -98,7 +98,7 @@ namespace IhalematikProBL.Mailing
                     }
                 }
                 if (AttachmentFileName != null)
-                message.Attachments.Add(new Attachment(AttachmentFileName));
+                    message.Attachments.Add(new Attachment(AttachmentFileName));
 
                 SmtpClient client = new SmtpClient(SmtpServer, SmtpPort);
 

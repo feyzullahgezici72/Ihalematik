@@ -147,6 +147,7 @@
     <Compile Include="Enum\RuleTypesEnum.cs" />
     <Compile Include="Enum\UnitTimeTypesEnum.cs" />
     <Compile Include="Mailing\EmailHelper.cs" />
+    <Compile Include="Manager\CompanyManager.cs" />
     <Compile Include="Manager\CustomConfigurationManager.cs" />
     <Compile Include="Manager\CustomDBConnectionManager.cs" />
     <Compile Include="Mailing\MailingManager.cs" />
