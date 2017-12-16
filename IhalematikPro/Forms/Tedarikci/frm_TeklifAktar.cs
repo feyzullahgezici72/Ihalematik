@@ -45,6 +45,9 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void ReadExcel(string path)
         {
+            this.SupplierName = string.Empty;
+            this.OfferNumber = string.Empty;
+            this.OfferDescription = string.Empty;
             this.MaterialLists = new List<OfferMaterialListModel>();
             FileStream stream = System.IO.File.Open(@"" + path + "", FileMode.Open, FileAccess.Read);
 
@@ -102,7 +105,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             lblOfferNumber.Text = this.OfferNumber; 
             lblOfferDescription.Text = this.OfferDescription; 
             frm_MesajFormu mf = new frm_MesajFormu();
-            mf.lblMesaj.Text = lblSupplierName.Text + " Firmasının \nTeklif dosyası aktarıldı...";
+            mf.lblMesaj.Text = this.SupplierName + " Firmasının \nTeklif dosyası aktarıldı...";
             mf.ShowDialog();
         }
     }
