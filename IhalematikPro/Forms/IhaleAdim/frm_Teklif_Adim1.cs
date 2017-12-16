@@ -105,8 +105,13 @@ namespace IhalematikPro.Forms
 
         private void grdMaterialList2_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            //MaterialList selectedItem = gridViewMaterialList.GetRow(e.RowHandle) as MaterialList;
-            //double baseAmount = CurrentManager.Instance.CurrentTender.MaterialList.Sum(p => p.TotalAmount);
+            MaterialListModel selectedItem = gridViewMaterialList.GetRow(e.RowHandle) as MaterialListModel;
+
+            //if (e.Column == colIsWorker)
+            //{
+            //    selectedItem.IsWorkship = true;
+            //    MaterialListProvider.Instance.Save(selectedItem);
+            //}//double baseAmount = CurrentManager.Instance.CurrentTender.MaterialList.Sum(p => p.TotalAmount);
             //double baseKDVAmount = CurrentManager.Instance.CurrentTender.MaterialList.Sum(p => p.KDVAmount);
 
             //txtBaseAmount.Text = string.Format("{0:C2}", baseAmount);
@@ -149,6 +154,7 @@ namespace IhalematikPro.Forms
                     item.Quantity = model.Quantity;
                     item.KDVPercentage = model.KDVPercentage;
                     item.IsWorkship = model.IsWorkship;
+                    MaterialListProvider.Instance.Save(item);
                 }
             }
         }
