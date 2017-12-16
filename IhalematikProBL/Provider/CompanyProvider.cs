@@ -25,6 +25,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("Telephone2", t.Telephone2);
             parameters.Add("MailAddress", t.MailAddress);
             parameters.Add("WebAddress", t.WebAddress);
+            parameters.Add("MailPassword", t.MailPassword);
 
             return parameters;
         }
@@ -42,6 +43,7 @@ namespace IhalematikProBL.Provider
             t.Telephone2 = dr.GetValue<string>("Telephone2");
             t.Title = dr.GetValue<string>("Title");
             t.WebAddress = dr.GetValue<string>("WebAddress");
+            t.MailPassword = dr.GetValue<string>("MailPassword");
         }
 
     }

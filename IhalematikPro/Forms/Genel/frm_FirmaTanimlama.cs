@@ -30,21 +30,6 @@ namespace IhalematikPro.Forms
 
         }
 
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textEdit3_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupControl2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void frm_FirmaTanimlama_Load(object sender, EventArgs e)
         {
             Company company = CurrentManager.Instance.CurrentCompany;
@@ -87,6 +72,10 @@ namespace IhalematikPro.Forms
             company.Telephone2 = txtTelephone2.Text;
             company.Title = txtTitle.Text;
             company.WebAddress = txtWebAddress.Text;
+            if (!string.IsNullOrEmpty(txtMailPassword.Text.Trim()))
+            {
+                company.MailPassword = txtMailPassword.Text.Trim();
+            }
             CompanyProvider.Instance.Save(company);
 
             this._owner.frm_Anaform_Load(null, null);

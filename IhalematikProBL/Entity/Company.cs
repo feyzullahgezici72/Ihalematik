@@ -19,5 +19,6 @@ namespace IhalematikProBL.Entity
         public string Address { get; set; }
         public string WebAddress { get; set; }
         public string MailAddress { get; set; }
+        public string MailPassword { get; set; }
     }
 }
