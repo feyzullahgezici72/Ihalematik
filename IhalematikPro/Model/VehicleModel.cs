@@ -77,6 +77,7 @@ namespace IhalematikPro.Model
                 return Math.Round(this.DayPrice / 8);
             }
         }
+
         public double DayPrice
         {
             get
@@ -96,7 +97,7 @@ namespace IhalematikPro.Model
                     if (this.IsCompanyVehicle)
                     {
 
-                        this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.DriverFare + this.GeneralFare + this.MaintenanceFare + this.OtherFare + this.ServiceFare) * 30, 2);
+                        this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.DriverFare + this.GeneralFare + this.MaintenanceFare + this.OtherFare + this.ServiceFare), 2);
                     }
                     else
                     {
