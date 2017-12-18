@@ -254,5 +254,9 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
 
         }
+
+        private void gridLookUpEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+                    }
     }
 }
