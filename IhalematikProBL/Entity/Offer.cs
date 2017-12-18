@@ -40,8 +40,9 @@ namespace IhalematikProBL.Entity
         {
             get
             {
+                this.suppliers = new List<Supplier>();
                 List<SupplierMaterialList> items = SupplierMaterialListProvider.Instance.GetItems("OfferId", this.Id);
-                if (this.suppliers.Count == 0 && items.Count != 0)
+                if (items.Count != 0)
                 {
                     this.suppliers.AddRange(items.GroupBy(p => p.SupplierId).Select(p => p.FirstOrDefault().Supplier));
                 }
