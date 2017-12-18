@@ -20,6 +20,19 @@ namespace IhalematikProBL.Entity
         public int Number { get; set; }
         public string Description { get; set; }
         public DateTime? LastOfferDate { get; set; }
+
+        public double LastOfferDay
+        {
+            get
+            {
+                if (this.LastOfferDate != null)
+                {
+                    return Math.Round(this.LastOfferDate.Value.Subtract(DateTime.Now).TotalDays, 0);
+                }
+                return 0;
+            }
+        }
+
         public bool IsActive { get; set; }
 
         public string CompanyName { get; set; }

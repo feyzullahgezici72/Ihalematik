@@ -48,7 +48,7 @@ namespace IhalematikPro.Forms
             DevExpress.UserSkins.BonusSkins.Register();
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
 
-            grdActiveTenderList.DataSource = list;
+            grdActiveTenderList.DataSource = list.Where(p => p.LastOfferDate == null || p.LastOfferDate.Value >= DateTime.Now).ToList();
             this.WindowState = FormWindowState.Maximized;
             if (CurrentManager.Instance.CurrentCompany != null)
             {
@@ -591,7 +591,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)
         {
-           
+
             frm_Kurallistesi kl = new frm_Kurallistesi();
             kl.ShowDialog();
         }
@@ -712,7 +712,7 @@ namespace IhalematikPro.Forms
 
         private void picLogo_LoadCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            
+
         }
 
         private void frm_Anaform_Shown(object sender, EventArgs e)
@@ -724,11 +724,11 @@ namespace IhalematikPro.Forms
         {
             barButtonItem28.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
-            if ( teklifAktar== null)
+            if (teklifAktar == null)
             {
                 teklifAktar = new frm_TeklifAktar();
                 teklifAktar.MdiParent = this;
-                teklifAktar.FormClosed +=new FormClosedEventHandler( TeklifAktar_FormClosed);
+                teklifAktar.FormClosed += new FormClosedEventHandler(TeklifAktar_FormClosed);
                 teklifAktar.Show();
             }
             else
