@@ -53,49 +53,59 @@ namespace IhalematikProUI.Forms.Tedarikci
 
             IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
 
-            int i = 0;
+            int i = 1;
             while (excelReader.Read())
             {
-                if (i >= 1)
+                if (i >= 8)
                 {
-                    double indexNumber = excelReader.GetDouble(0);
-                    double offerId = excelReader.GetDouble(1);
-                    double supplierId = excelReader.GetDouble(2);
-                    double materialId = excelReader.GetDouble(3);
-
-                    string description = excelReader.GetString(4);
-                    double quantity = excelReader.GetDouble(5);
-                    double kdv = excelReader.GetDouble(6);
-                    double price = excelReader.GetDouble(7);
-
-                    Dictionary<string, object> parameters = new Dictionary<string, object>();
-                    parameters.Add("SupplierId", supplierId);
-                    parameters.Add("MaterialListId", materialId);
-                    parameters.Add("OfferId", offerId);
-
-                    SupplierMaterialList supplierMaterialList = SupplierMaterialListProvider.Instance.GetItems(parameters).FirstOrDefault();
-                    if (supplierMaterialList != null)
+                    try
                     {
-                        supplierMaterialList.Price = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(price);
-                        supplierMaterialList.KDV = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(kdv);
-                        SupplierMaterialListProvider.Instance.Save(supplierMaterialList);
+                        double offerId = excelReader.GetDouble(1);
 
-                        OfferMaterialListModel offerMaterialList = new OfferMaterialListModel(supplierMaterialList.MaterialList);
-                        offerMaterialList.Price = supplierMaterialList.Price;
-                        offerMaterialList.KDV = supplierMaterialList.KDV;
-                        this.MaterialLists.Add(offerMaterialList);
-                        if (string.IsNullOrEmpty(this.SupplierName))
+                        double supplierId = excelReader.GetDouble(2);
+                        double materialId = excelReader.GetDouble(3);
+
+                        string description = excelReader.GetString(5);
+                        string unit = excelReader.GetString(6);
+
+                        double quantity = excelReader.GetDouble(7);
+                        double kdv = excelReader.GetDouble(8);
+                        double price = excelReader.GetDouble(9);
+
+                        Dictionary<string, object> parameters = new Dictionary<string, object>();
+                        parameters.Add("SupplierId", supplierId);
+                        parameters.Add("MaterialListId", materialId);
+                        parameters.Add("OfferId", offerId);
+
+                        SupplierMaterialList supplierMaterialList = SupplierMaterialListProvider.Instance.GetItems(parameters).FirstOrDefault();
+                        if (supplierMaterialList != null)
                         {
-                            this.SupplierName = supplierMaterialList.Supplier.CompanyName;
+                            supplierMaterialList.Price = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(price);
+                            supplierMaterialList.KDV = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(kdv);
+                            SupplierMaterialListProvider.Instance.Save(supplierMaterialList);
+
+                            OfferMaterialListModel offerMaterialList = new OfferMaterialListModel(supplierMaterialList.MaterialList);
+                            offerMaterialList.Price = supplierMaterialList.Price;
+                            offerMaterialList.KDV = supplierMaterialList.KDV;
+                            this.MaterialLists.Add(offerMaterialList);
+                            if (string.IsNullOrEmpty(this.SupplierName))
+                            {
+                                this.SupplierName = supplierMaterialList.Supplier.CompanyName;
+                            }
+                            if (string.IsNullOrEmpty(this.OfferNumber))
+                            {
+                                this.OfferNumber = supplierMaterialList.Offer.Number;
+                            }
+                            if (string.IsNullOrEmpty(this.OfferDescription))
+                            {
+                                this.OfferDescription = supplierMaterialList.Offer.Description;
+                            }
                         }
-                        if (string.IsNullOrEmpty(this.OfferNumber))
-                        {
-                            this.OfferNumber = supplierMaterialList.Offer.Number;
-                        }
-                        if (string.IsNullOrEmpty(this.OfferDescription))
-                        {
-                            this.OfferDescription = supplierMaterialList.Offer.Description;
-                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        //TODO feyzullahg hata olustu mesaji gostermek lazim.
+                        break;
                     }
                 }
                 i++;

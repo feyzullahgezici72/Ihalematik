@@ -146,16 +146,24 @@ namespace IhalematikProUI.Forms.Tedarikci
 
                         if (offerMaterialLists.Count != 0)
                         {
-                            int row = 2;
+                            int row = 8;
                             int indexNumber = 1;
+                            oSheet.Cells[1, 5] = CurrentManager.Instance.CurrentCompany.Name;
+                            oSheet.Cells[2, 5] = CurrentManager.Instance.CurrentCompany.Address;
+                            oSheet.Cells[2, 10] = DateTime.Now.ToShortDateString() ;
+
+                            oSheet.Cells[4, 6] = this.Supplier.CompanyName;
+
                             foreach (OfferMaterialList materialList in offerMaterialLists)
                             {
-                                oSheet.Cells[row, 1] = indexNumber;
+                                
                                 oSheet.Cells[row, 2] = CurrentManager.Instance.CurrentOffer.Id;
                                 oSheet.Cells[row, 3] = this.Supplier.Id;//supplierId
                                 oSheet.Cells[row, 4] = materialList.Id;
-                                oSheet.Cells[row, 5] = materialList.PozOBF.Description;
-                                oSheet.Cells[row, 6] = materialList.Quantity;
+                                oSheet.Cells[row, 5] = indexNumber;
+                                oSheet.Cells[row, 6] = materialList.PozOBF.Description;
+                                oSheet.Cells[row, 7] = materialList.PozOBF.Unit;
+                                oSheet.Cells[row, 8] = materialList.Quantity;
                                 row++;
                                 indexNumber++;
                             }
