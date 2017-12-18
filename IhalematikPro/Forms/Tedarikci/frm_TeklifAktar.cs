@@ -69,7 +69,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                         string unit = excelReader.GetString(6);
 
                         double quantity = excelReader.GetDouble(7);
-                        double kdv = excelReader.GetDouble(8);
+                        double kdv = excelReader.GetDouble(8) * 100;
                         double price = excelReader.GetDouble(9);
 
                         Dictionary<string, object> parameters = new Dictionary<string, object>();
