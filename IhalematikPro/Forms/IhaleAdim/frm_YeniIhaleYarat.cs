@@ -98,6 +98,7 @@ namespace IhalematikPro.Forms
         private void LoadGridOffer()
         {
             List<Offer> offers = OfferProvider.Instance.GetItems();
+            //offers.Where(p=> p.)
             grdOffer.DataSource = offers;
         }
 
@@ -119,6 +120,27 @@ namespace IhalematikPro.Forms
             }
             gridViewOffer.SetFocusedRowCellValue(colIsSelected, true);
             this.SelectedOfferId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOffer.GetFocusedRowCellValue("Id"));
+        }
+
+        private void simpleButton1_Click_1(object sender, EventArgs e)
+        {
+            List<Offer> offers = OfferProvider.Instance.GetItems();
+            string offerNumber = txtOfferNumber.Text.Trim();
+            offers = offers.Where(p => p.Number.Contains(offerNumber)).ToList();
+            DateTime? start = dateStart.DateTime.Date;
+            DateTime? end = dateEnd.DateTime.Date;
+
+            if (start != null && start != DateTime.MinValue)
+            {
+                offers = offers.Where(p => p.DateTime >= start).ToList();
+            }
+            if (end != null && end != DateTime.MinValue)
+            {
+                offers = offers.Where(p => p.DateTime <= end).ToList();
+            }
+
+            grdOffer.DataSource = null;
+            grdOffer.DataSource = offers;
         }
     }
 }
