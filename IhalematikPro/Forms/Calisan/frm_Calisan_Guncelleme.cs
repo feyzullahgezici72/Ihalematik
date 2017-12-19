@@ -200,7 +200,7 @@ namespace IhalematikProUI.Forms
             model.TravelFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtTravelFare.Text.Replace("TL", string.Empty)));
             model.HotelFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtHotelFare.Text.Replace("TL", string.Empty)));
             model.ISGFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtISGFare.Text.Replace("TL", string.Empty)));
-            model.ExtraFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtExtraFare.Text));
+            model.ExtraFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtExtraFare.Text.Replace("TL", string.Empty))); //.Replace("TL", string.Empty) SAMET ekledi
 
             model.Save();
             frm_MesajFormu mf = new frm_MesajFormu();

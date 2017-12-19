@@ -41,6 +41,7 @@ namespace IhalematikProUI.Forms
             this.LoadSupplierGrid();
             pnlrisk.Visible = false;
             pnltoplam.Visible = false;
+            btnKaydet.Visible = false;
         }
         public void LoadSupplierGrid()
         {
@@ -81,6 +82,7 @@ namespace IhalematikProUI.Forms
         {
             colRisk.Visible = true;
             colPriceWithRisk.Visible = true;
+            btnKaydet.Visible = true;
             pnlrisk.Visible = true;
             pnltoplam.Visible = true;
             List<OfferMaterialListModel> dataSoruce = new List<OfferMaterialListModel>();
@@ -217,6 +219,7 @@ namespace IhalematikProUI.Forms
         {
             pnlrisk.Visible = false;
             pnltoplam.Visible = false;
+            btnKaydet.Visible = false;
         }
 
         private void CalculateInnerValues()
@@ -234,6 +237,7 @@ namespace IhalematikProUI.Forms
         {
             pnlrisk.Visible = false;
             pnltoplam.Visible = false;
+            btnKaydet.Visible = false;
         }
 
         private void txtRisk_KeyPress(object sender, KeyPressEventArgs e)

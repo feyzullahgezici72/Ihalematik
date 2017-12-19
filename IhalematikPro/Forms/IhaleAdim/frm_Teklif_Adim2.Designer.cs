@@ -561,6 +561,7 @@
             this.txtMarkup.Size = new System.Drawing.Size(46, 27);
             this.txtMarkup.TabIndex = 41;
             this.txtMarkup.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtMarkup.TextChanged += new System.EventHandler(this.txtMarkup_TextChanged);
             this.txtMarkup.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMarkup_KeyPress);
             // 
             // labelControl2

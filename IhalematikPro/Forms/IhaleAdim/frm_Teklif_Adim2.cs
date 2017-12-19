@@ -112,7 +112,7 @@ namespace IhalematikPro.Forms
             //}
         }
         frm_TeklifAdimSon a4 = (frm_TeklifAdimSon)Application.OpenForms["frm_TeklifSonAdim"];
-      
+
         private void a4_FormClosed(object sender, FormClosedEventArgs e)
         {
             a4 = null;
@@ -165,7 +165,7 @@ namespace IhalematikPro.Forms
         private void btnNext_Click(object sender, EventArgs e)
         {
             this.Close();
-          
+
 
             if (CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() == 0)
             {
@@ -193,9 +193,27 @@ namespace IhalematikPro.Forms
 
         private void txtMarkup_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13)
             {
                 btnTumuneUygula.PerformClick();
+            }
+        }
+
+        private void txtMarkup_TextChanged(object sender, EventArgs e)
+        {
+            //SAMET ekledi
+            {
+                string tString = txtMarkup.Text;
+                if (tString.Trim() == "") return;
+                for (int i = 0; i < tString.Length; i++)
+                {
+                    if (!char.IsNumber(tString[i]))
+                    {
+                        MessageBox.Show("Lütfen Sadece Rakam Giriniz...");
+                        txtMarkup.Text = "";
+                        return;
+                    }
+                }
             }
         }
     }

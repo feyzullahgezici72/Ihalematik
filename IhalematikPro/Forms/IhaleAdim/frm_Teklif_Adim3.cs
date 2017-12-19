@@ -617,5 +617,23 @@ namespace IhalematikPro.Forms
                 btnTumuneUygula.PerformClick();
             }
         }
+
+        private void txtWorkerMarkup_TextChanged(object sender, EventArgs e)
+        {
+            //SAMET ekledi
+            {
+                string tString = txtWorkerMarkup.Text;
+                if (tString.Trim() == "") return;
+                for (int i = 0; i < tString.Length; i++)
+                {
+                    if (!char.IsNumber(tString[i]))
+                    {
+                        MessageBox.Show("Lütfen Sadece Rakam Giriniz...");
+                        txtWorkerMarkup.Text = "";
+                        return;
+                    }
+                }
+            }
+        }
     }
 }

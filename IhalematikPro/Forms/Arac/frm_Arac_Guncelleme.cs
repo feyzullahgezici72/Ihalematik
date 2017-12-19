@@ -102,7 +102,7 @@ namespace IhalematikProUI.Forms
                         rdMonth.Checked = true;
                     }
                 }
-                //model.Save();
+                 //model.Save();
             }
         }
 

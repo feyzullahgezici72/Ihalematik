@@ -142,5 +142,23 @@ namespace IhalematikPro.Forms
             grdOffer.DataSource = null;
             grdOffer.DataSource = offers;
         }
+
+        private void txtOfferNumber_EditValueChanged(object sender, EventArgs e)
+        {
+            //SAMET ekledi
+            {
+                string tString = txtOfferNumber.Text;
+                if (tString.Trim() == "") return;
+                for (int i = 0; i < tString.Length; i++)
+                {
+                    if (!char.IsNumber(tString[i]))
+                    {
+                        MessageBox.Show("Lütfen Sadece Rakam Giriniz...");
+                        txtOfferNumber.Text = "";
+                        return;
+                    }
+                }
+            }
+        }
     }
 }
