@@ -14,6 +14,7 @@ using IhalematikPro.Manager;
 using IhalematikProBL.Provider;
 using IhalematikProBL.Entity;
 using IhalematikProUI.Forms.Tedarikci;
+using IhalematikProUI.Forms.Genel;
 
 namespace IhalematikPro.Forms
 {
@@ -742,6 +743,12 @@ namespace IhalematikPro.Forms
             teklifAktar = null;
             RibonAktif();
             barButtonItem28.ButtonStyle = BarButtonStyle.Default;
+        }
+
+        private void barButtonItem21_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            frm_PozlariOnlineGuncelle pg = new frm_PozlariOnlineGuncelle();
+            pg.ShowDialog();
         }
     }
 }

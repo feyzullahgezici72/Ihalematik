@@ -1,0 +1,188 @@
+﻿namespace IhalematikProUI.Forms.Genel
+{
+    partial class frm_PozlariOnlineGuncelle
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PozlariOnlineGuncelle));
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.lblAck = new DevExpress.XtraEditors.LabelControl();
+            this.progressBarControl1 = new DevExpress.XtraEditors.ProgressBarControl();
+            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblBekle = new DevExpress.XtraEditors.LabelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl2.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.btnKapat);
+            this.panelControl2.Controls.Add(this.labelControl1);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl2.Location = new System.Drawing.Point(0, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(639, 35);
+            this.panelControl2.TabIndex = 104;
+            // 
+            // btnKapat
+            // 
+            this.btnKapat.AutoSize = true;
+            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
+            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnKapat.Location = new System.Drawing.Point(611, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(28, 35);
+            this.btnKapat.TabIndex = 21;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.labelControl1.LineColor = System.Drawing.Color.Red;
+            this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.labelControl1.Location = new System.Drawing.Point(5, 1);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.ShowLineShadow = false;
+            this.labelControl1.Size = new System.Drawing.Size(382, 35);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "TÜM POZLARI ONLİNE GÜNCELLE";
+            this.labelControl1.UseMnemonic = false;
+            // 
+            // lblAck
+            // 
+            this.lblAck.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.lblAck.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
+            this.lblAck.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Horizontal;
+            this.lblAck.Location = new System.Drawing.Point(12, 80);
+            this.lblAck.Name = "lblAck";
+            this.lblAck.Size = new System.Drawing.Size(287, 38);
+            this.lblAck.TabIndex = 108;
+            this.lblAck.Text = "Bu işlem İnternet hızınıza bağlı olarak 5-10 dakika sürebilir.";
+            // 
+            // progressBarControl1
+            // 
+            this.progressBarControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.progressBarControl1.Location = new System.Drawing.Point(0, 323);
+            this.progressBarControl1.Name = "progressBarControl1";
+            this.progressBarControl1.Properties.FlowAnimationDelay = 100;
+            this.progressBarControl1.Properties.FlowAnimationEnabled = true;
+            this.progressBarControl1.Size = new System.Drawing.Size(639, 27);
+            this.progressBarControl1.TabIndex = 107;
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.Appearance.Options.UseFont = true;
+            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.network_icon;
+            this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnGuncelle.Location = new System.Drawing.Point(12, 124);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(330, 139);
+            this.btnGuncelle.TabIndex = 106;
+            this.btnGuncelle.Text = "Güncellemeye Başla";
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.loading;
+            this.pictureBox1.Location = new System.Drawing.Point(435, 61);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(192, 193);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 105;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // lblBekle
+            // 
+            this.lblBekle.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lblBekle.Location = new System.Drawing.Point(458, 260);
+            this.lblBekle.Name = "lblBekle";
+            this.lblBekle.Size = new System.Drawing.Size(133, 19);
+            this.lblBekle.TabIndex = 109;
+            this.lblBekle.Text = "Lütfen Bekleyiniz...";
+            this.lblBekle.Visible = false;
+            // 
+            // frm_PozlariOnlineGuncelle
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnKapat;
+            this.ClientSize = new System.Drawing.Size(639, 350);
+            this.ControlBox = false;
+            this.Controls.Add(this.lblBekle);
+            this.Controls.Add(this.panelControl2);
+            this.Controls.Add(this.lblAck);
+            this.Controls.Add(this.progressBarControl1);
+            this.Controls.Add(this.btnGuncelle);
+            this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frm_PozlariOnlineGuncelle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private DevExpress.XtraEditors.SimpleButton btnKapat;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl lblAck;
+        private DevExpress.XtraEditors.ProgressBarControl progressBarControl1;
+        private DevExpress.XtraEditors.SimpleButton btnGuncelle;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraEditors.LabelControl lblBekle;
+    }
+}

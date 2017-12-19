@@ -783,6 +783,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap network_icon32 {
+            get {
+                object obj = ResourceManager.GetObject("network-icon32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ok_icon {
             get {
                 object obj = ResourceManager.GetObject("ok-icon", resourceCulture);
