@@ -165,9 +165,9 @@
             this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
-            this.txtAdimAciklama.Size = new System.Drawing.Size(154, 35);
+            this.txtAdimAciklama.Size = new System.Drawing.Size(228, 35);
             this.txtAdimAciklama.TabIndex = 0;
-            this.txtAdimAciklama.Text = "TEKLİF ÖZETİ ";
+            this.txtAdimAciklama.Text = "İHALE TEKLİF ÖZETİ ";
             // 
             // panel1
             // 

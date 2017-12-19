@@ -428,7 +428,7 @@ namespace IhalematikPro.Forms
             // btnAdimx1
             // 
             this.btnAdimx1.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.btnAdimx1.Caption = "Malzeme Keşif Listesi Oluştur";
+            this.btnAdimx1.Caption = "Malzeme Keşif Listesi";
             this.btnAdimx1.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx1.Glyph")));
             this.btnAdimx1.Id = 9;
             this.btnAdimx1.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Green;
@@ -450,7 +450,7 @@ namespace IhalematikPro.Forms
             // btnAdimx3
             // 
             this.btnAdimx3.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.btnAdimx3.Caption = "İşçilik Maliyet Hesapla";
+            this.btnAdimx3.Caption = "İşçilik Keşif Listesi";
             this.btnAdimx3.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx3.Glyph")));
             this.btnAdimx3.Id = 11;
             this.btnAdimx3.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Green;
@@ -472,7 +472,7 @@ namespace IhalematikPro.Forms
             // btnAdimx4
             // 
             this.btnAdimx4.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.btnAdimx4.Caption = "Malzemeye Kar Uygula";
+            this.btnAdimx4.Caption = "Malzemeye Karı Hesapla";
             this.btnAdimx4.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx4.Glyph")));
             this.btnAdimx4.Id = 12;
             this.btnAdimx4.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Green;
@@ -494,7 +494,7 @@ namespace IhalematikPro.Forms
             // btnAdimx5
             // 
             this.btnAdimx5.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.btnAdimx5.Caption = "İhale Teklif Mizanı";
+            this.btnAdimx5.Caption = "İhale Teklif Özeti";
             this.btnAdimx5.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx5.Glyph")));
             this.btnAdimx5.Id = 13;
             this.btnAdimx5.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Green;
