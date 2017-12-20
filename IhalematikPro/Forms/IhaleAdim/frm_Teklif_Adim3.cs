@@ -586,10 +586,26 @@ namespace IhalematikPro.Forms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            this.Close();
-            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-            af.RibonPasif();
-            af.btnAdimx5.PerformClick();
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.WorkerMarkup == 0 && p.IsWorkship).ToList();
+
+            if (items != null && items.Count != 0)
+            {
+                DialogResult resultMsg = MessageBox.Show("İşçilik kari belirtmediginiz malzemeler var emin misiniz? ", "Yeni ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (resultMsg.Equals(DialogResult.Yes))
+                {
+                    this.Close();
+                    frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                    af.RibonPasif();
+                    af.btnAdimx5.PerformClick();
+                }
+            }
+            else
+            {
+                this.Close();
+                frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                af.RibonPasif();
+                af.btnAdimx5.PerformClick();
+            }
         }
         private void a4_FormClosed(object sender, FormClosedEventArgs e)
         {
