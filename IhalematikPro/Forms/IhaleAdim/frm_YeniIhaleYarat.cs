@@ -92,6 +92,7 @@ namespace IhalematikPro.Forms
 
         private void frm_YeniIhaleYarat_Shown(object sender, EventArgs e)
         {
+            LastOfferDate.DateTime = DateTime.Now;
             this.LoadGridOffer();
         }
 
