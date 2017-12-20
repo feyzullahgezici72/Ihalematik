@@ -164,22 +164,44 @@ namespace IhalematikPro.Forms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            this.Close();
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.Markup == 0).ToList();
 
-
-            if (CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() == 0)
+            if (items != null && items.Count != 0)
             {
-                frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                af.RibonPasif();
-                af.btnAdimx5.PerformClick();
+                DialogResult resultMsg = MessageBox.Show("Malzeme kari belirtmediginiz malzemeler var emin misiniz? ", "Yeni ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (resultMsg.Equals(DialogResult.Yes))
+                {
+                    this.Close();
+                    if (CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() == 0)
+                    {
+                        frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                        af.RibonPasif();
+                        af.btnAdimx5.PerformClick();
+                    }
+                    else
+                    {
+                        frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                        af.RibonPasif();
+                        af.btnAdimx3.PerformClick();
+                    }
+                }
             }
             else
             {
-                frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                af.RibonPasif();
-                af.btnAdimx3.PerformClick();
+                this.Close();
+                if (CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() == 0)
+                {
+                    frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                    af.RibonPasif();
+                    af.btnAdimx5.PerformClick();
+                }
+                else
+                {
+                    frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                    af.RibonPasif();
+                    af.btnAdimx3.PerformClick();
+                }
             }
-
         }
 
         private void btnPrev_Click(object sender, EventArgs e)

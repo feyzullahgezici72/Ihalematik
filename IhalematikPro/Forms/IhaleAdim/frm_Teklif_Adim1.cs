@@ -215,6 +215,10 @@ namespace IhalematikPro.Forms
                     this.OpenForm2();
                 }
             }
+            else
+            {
+                this.OpenForm2();
+            }
         }
 
         private void rpstWorkship_Click(object sender, EventArgs e)
