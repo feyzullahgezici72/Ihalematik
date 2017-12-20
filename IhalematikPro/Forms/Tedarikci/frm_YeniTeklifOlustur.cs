@@ -73,6 +73,7 @@ namespace IhalematikProUI.Forms
         {
             int lastOfferNumber = OfferManager.Instance.GetLastOfferNumber();
             txtTeklifNo.Text = string.Format("{0}", (lastOfferNumber + 1).ToString().PadLeft(8, '0'));
+            txtDateTime.DateTime = DateTime.Now;
         }
         public bool IsEmptyKontrol()
         {

@@ -104,7 +104,7 @@ namespace IhalematikPro.Model
 
                         if (this.RentType == RentTypesEnum.Day)
                         {
-                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare + ) * 30, 2);
+                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare ) * 30, 2);
                         }
                         else if (this.RentType == RentTypesEnum.Hour)
                         {
