@@ -97,22 +97,22 @@ namespace IhalematikPro.Model
                     if (this.IsCompanyVehicle)
                     {
 
-                        this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.DriverFare + this.GeneralFare + this.MaintenanceFare + this.OtherFare + this.ServiceFare), 2);
+                        this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare * 30) + (this.DriverFare * 30) + this.GeneralFare + this.MaintenanceFare + this.OtherFare + this.ServiceFare), 2);
                     }
                     else
                     {
 
                         if (this.RentType == RentTypesEnum.Day)
                         {
-                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare + this.ServiceFare) * 30, 2);
+                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare + ) * 30, 2);
                         }
                         else if (this.RentType == RentTypesEnum.Hour)
                         {
-                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare + this.ServiceFare) * 30 * 8, 2);
+                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare / 8) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare) * 30 * 8, 2);
                         }
                         else if (this.RentType == RentTypesEnum.Month)
                         {
-                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare + this.ServiceFare), 2);
+                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare * 30) + this.RentFare + (this.DriverFare * 30) + this.GeneralFare + this.OtherFare), 2);
                         }
                     }
                 }
