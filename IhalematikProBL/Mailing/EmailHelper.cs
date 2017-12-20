@@ -1,5 +1,6 @@
 ﻿using IhalematikProBL.Entity;
 using IhalematikProBL.Manager;
+using SimpleApplicationBase.BL.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,13 +60,14 @@ namespace IhalematikProBL.Mailing
             //set { this.isAnonymous = value; }
         }
 
-        public void SendEmail(string sender, string displayName, string recipient, string subject, string body, bool isBodyHtml, string BCC = null, string AttachmentFileName = null)
+        public OperationResult SendEmail(string sender, string displayName, string recipient, string subject, string body, bool isBodyHtml, string BCC = null, string AttachmentFileName = null)
         {
+            OperationResult result = new OperationResult();
             try
             {
                 if (string.IsNullOrEmpty(this.SmtpServer))
                 {
-                    return;
+                    return result;
                 }
 
                 MailMessage message = new MailMessage();
@@ -123,13 +125,25 @@ namespace IhalematikProBL.Mailing
                 }
 
                 client.Send(message);
+                result.Success = true;
             }
             catch (System.Exception ex)
             {
+                result.Success = false;
+                if (ex.InnerException.Message.Contains("The remote name could not be resolved"))
+                {
+                    result.ValidationResults.Add("The remote name could not be resolved", "NoInternetconnection");
+                }
+                else if (ex.InnerException.Message.Contains("The SMTP server requires a secure connection or the client was not authenticated"))
+                {
+                    result.ValidationResults.Add("The SMTP server requires a secure connection or the client was not authenticated", "GmailLessSecureApps");
+                }
+                return result;
                 //CustomLoggingManager.Instance.Log(ex);
 
                 //MailingManager.Instance.SendErrorEmail(ex);
             }
+            return result;
         }
         public void SendEmail(string sender, string displayName, List<string> recipients, string subject, string body, bool isBodyHtml)
         {

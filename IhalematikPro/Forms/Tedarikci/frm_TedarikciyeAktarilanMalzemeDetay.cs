@@ -13,6 +13,7 @@ using IhalematikProBL.Provider;
 using IhalematikPro.Manager;
 using IhalematikProBL.Manager;
 using System.IO;
+using SimpleApplicationBase.BL.Base;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -87,15 +88,37 @@ namespace IhalematikProUI.Forms.Tedarikci
             List<OfferMaterialList> items = grdMaterialList.DataSource as List<OfferMaterialList>;
             if (items != null && items.Count != 0)
             {
-                this.SendMailTask = new Task(() =>
+                //this.SendMailTask = new Task(() =>
+                //{
+                this.IsSendMail = false;
+                this.CreateExcel();
+                OperationResult result = this.SendMail();
+                //});
+                //this.SendMailTask.Start();
+                if (result.Success)
                 {
-                    this.IsSendMail = false;
-                    this.CreateExcel();
-                    this.SendMail();
-                });
-                this.SendMailTask.Start();
-                emailMesajPanel.Visible = true;
-                this.SendInfoMessage();
+                    emailMesajPanel.Visible = true;
+                    this.SendInfoMessage();
+                }
+                else
+                {
+                    if (result.ValidationResults.Count > 0)
+                    {
+                        if (result.ValidationResults.FirstOrDefault().PropertyName == "NoInternetconnection")
+                        {
+                            MessageBox.Show("Internet baglantinizi kontrol ediniz");
+                        }
+                        else if (result.ValidationResults.FirstOrDefault().PropertyName == "GmailLessSecureApps")
+                        {
+                            MessageBox.Show("Lutfen firma bilgileri bolumunden Gmail kullanici adi(email) ve sifrenizi kontrol ediniz veya /https://myaccount.google.com/lesssecureapps/ mail gonderilebilmesi icin izin verdiginizden emin olun");
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Mail gonderirken hata olustur lutfen daha sonra tekrar deneyiniz");
+                    }
+                }
             }
             else
             {
@@ -150,13 +173,13 @@ namespace IhalematikProUI.Forms.Tedarikci
                             int indexNumber = 1;
                             oSheet.Cells[1, 5] = CurrentManager.Instance.CurrentCompany.Name;
                             oSheet.Cells[2, 5] = CurrentManager.Instance.CurrentCompany.Address;
-                            oSheet.Cells[2, 10] = DateTime.Now.ToShortDateString() ;
+                            oSheet.Cells[2, 10] = DateTime.Now.ToShortDateString();
 
                             oSheet.Cells[4, 6] = this.Supplier.CompanyName;
 
                             foreach (OfferMaterialList materialList in offerMaterialLists)
                             {
-                                
+
                                 oSheet.Cells[row, 2] = CurrentManager.Instance.CurrentOffer.Id;
                                 oSheet.Cells[row, 3] = this.Supplier.Id;//supplierId
                                 oSheet.Cells[row, 4] = materialList.Id;
@@ -222,21 +245,26 @@ namespace IhalematikProUI.Forms.Tedarikci
                 this.Close();
             }
         }
-        private void SendMail()
+        private OperationResult SendMail()
         {
+            OperationResult result = new OperationResult();
             try
             {
                 if (File.Exists(this.DestinationFile))
                 {
-                    MailingManager.Instance.SendMaterialToSupplier(this.Supplier.Email, txtEmailBody.Text, this.DestinationFile);
-                    this.IsSendMail = true;
+                    result = MailingManager.Instance.SendMaterialToSupplier(this.Supplier.Email, txtEmailBody.Text, this.DestinationFile);
+                    if (result.Success)
+                    {
+                        this.IsSendMail = true;
+                    }
                 }
             }
             catch (Exception)
             {
-
-                throw;
+                //   throw;
             }
+
+            return result;
         }
     }
 }

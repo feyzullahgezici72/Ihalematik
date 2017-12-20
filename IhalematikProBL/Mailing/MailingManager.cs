@@ -22,8 +22,9 @@ namespace IhalematikProBL.Manager
             this.EmailHelper = new EmailHelper();
         }
 
-        protected void SendEmail(EmailData EMail)
+        protected OperationResult SendEmail(EmailData EMail)
         {
+            OperationResult result = new OperationResult();
             try
             {
                 bool isValid = EMail != null;//&& validationResults.Count == 0;
@@ -37,7 +38,7 @@ namespace IhalematikProBL.Manager
                         Subject = this.SubjectPrefix + Subject;
                     }
 
-                    this.EmailHelper.SendEmail(this.EmailHelper.MailSender, this.EmailHelper.MailSenderDisplayName, EMail.Recipient, Subject, EMail.Body, true, null, EMail.AttachmentFileName);
+                    result = this.EmailHelper.SendEmail(this.EmailHelper.MailSender, this.EmailHelper.MailSenderDisplayName, EMail.Recipient, Subject, EMail.Body, true, null, EMail.AttachmentFileName);
                 }
 
                 else
@@ -48,18 +49,21 @@ namespace IhalematikProBL.Manager
 
             catch (Exception ex)
             {
-                MailingManager.Instance.SendErrorEmail(ex);
+                //MailingManager.Instance.SendErrorEmail(ex);
             }
+
+            return result;
         }
 
-        protected void SendEmail(string Subject, string Body, string Recipient, string AttachmentFilename = null)
+        protected OperationResult SendEmail(string Subject, string Body, string Recipient, string AttachmentFilename = null)
         {
             EmailData emailData = new EmailData();
             emailData.Subject = Subject;
             emailData.Body = Body;
             emailData.Recipient = Recipient;
             emailData.AttachmentFileName = AttachmentFilename;
-            this.SendEmail(emailData);
+            OperationResult result = this.SendEmail(emailData);
+            return result;
         }
 
         private void SendEmail(string Code, Hashtable Parameters, string EmailAddress, string CultureCode)
@@ -153,9 +157,10 @@ namespace IhalematikProBL.Manager
             return Template;
         }
 
-        public void SendMaterialToSupplier(string SupplierEmail, string Body, string AttachmentFilename)
+        public OperationResult SendMaterialToSupplier(string SupplierEmail, string Body, string AttachmentFilename)
         {
-            this.SendEmail("IhaleMatik", Body, SupplierEmail, AttachmentFilename);
+            OperationResult result = this.SendEmail("IhaleMatik", Body, SupplierEmail, AttachmentFilename);
+            return result;
         }
 
         #region HelperMethods
