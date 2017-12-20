@@ -77,10 +77,7 @@ namespace IhalematikPro.Forms
                 frm_MesajFormu mf = new frm_MesajFormu();
                 mf.lblMesaj.Text = "Yeni İhale Oluşturuldu";
                 mf.ShowDialog();
-
-
-
-
+                
                 frm_IhaleGrup ig = new frm_IhaleGrup();
                 ig.ShowDialog();
                 this.Close();

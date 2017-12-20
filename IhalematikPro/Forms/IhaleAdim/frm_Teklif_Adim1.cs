@@ -204,7 +204,17 @@ namespace IhalematikPro.Forms
         private void btnNext_Click(object sender, EventArgs e)
         {
             this.SaveMaterialListIsWorkship();
-            this.OpenForm2();
+
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).ToList();
+
+            if (items != null && items.Count == 0)
+            {
+                DialogResult resultMsg = MessageBox.Show("Hiç işçilikli malzeme seçmediniz eminmisiniz?", "Yeni ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (resultMsg.Equals(DialogResult.Yes))
+                {
+                    this.OpenForm2();
+                }
+            }
         }
 
         private void rpstWorkship_Click(object sender, EventArgs e)
