@@ -36,6 +36,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void btnUploadFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
             if (dialog.ShowDialog() == DialogResult.OK) // if user clicked OK
             {
                 String path = dialog.FileName; // get name of file
