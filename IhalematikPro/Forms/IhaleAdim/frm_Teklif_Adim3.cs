@@ -651,5 +651,22 @@ namespace IhalematikPro.Forms
                 }
             }
         }
+
+        private void cmbAdamSaat_Click(object sender, EventArgs e)
+        {
+            clmEquipments.Visible = true;
+            gridColumn5.OptionsColumn.AllowEdit = false;
+            gridColumn5.OptionsColumn.AllowFocus = false;
+             
+        }
+
+        private void cmbBirimFiyat_Click(object sender, EventArgs e)
+        {
+            clmEquipments.Visible = false;
+            gridColumn5.OptionsColumn.AllowEdit = true;
+            gridColumn5.OptionsColumn.AllowFocus = true;
+            
+
+        }
     }
 }

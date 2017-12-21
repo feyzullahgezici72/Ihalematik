@@ -40,8 +40,10 @@ namespace IhalematikProUI.Forms
         {
 
         }
+      
         private void frm_TeklifSonAdim_Load(object sender, EventArgs e)
         {
+           
             lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
@@ -130,6 +132,22 @@ namespace IhalematikProUI.Forms
             frm_MesajFormu mf = new frm_MesajFormu();
             mf.lblMesaj.Text = "İhale Kaydedildi...";
             mf.ShowDialog();
+        }
+
+        private void btnDetail_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnPanelKapat_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void frm_TeklifAdimSon_Shown(object sender, EventArgs e)
+        {
+            isciAracGirisPaneli.Visible = true;
+
         }
 
         //private void Rapor_Click(object sender, EventArgs e)
