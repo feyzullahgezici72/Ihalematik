@@ -1666,6 +1666,7 @@
             this.cmbAdamSaat.TabStop = true;
             this.cmbAdamSaat.Text = "Adam Saate Göre";
             this.cmbAdamSaat.UseVisualStyleBackColor = true;
+            this.cmbAdamSaat.CheckedChanged += new System.EventHandler(this.cmbAdamSaat_CheckedChanged);
             this.cmbAdamSaat.Click += new System.EventHandler(this.cmbAdamSaat_Click);
             // 
             // panelControl9

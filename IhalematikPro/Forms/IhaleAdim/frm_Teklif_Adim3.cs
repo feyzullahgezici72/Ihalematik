@@ -657,7 +657,7 @@ namespace IhalematikPro.Forms
             clmEquipments.Visible = true;
             gridColumn5.OptionsColumn.AllowEdit = false;
             gridColumn5.OptionsColumn.AllowFocus = false;
-             
+            gridColumn5.OptionsColumn.ReadOnly = false;
         }
 
         private void cmbBirimFiyat_Click(object sender, EventArgs e)
@@ -665,7 +665,12 @@ namespace IhalematikPro.Forms
             clmEquipments.Visible = false;
             gridColumn5.OptionsColumn.AllowEdit = true;
             gridColumn5.OptionsColumn.AllowFocus = true;
-            
+            gridColumn5.OptionsColumn.ReadOnly = true;
+
+        }
+
+        private void cmbAdamSaat_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }
