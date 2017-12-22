@@ -47,6 +47,8 @@ namespace IhalematikProBL.Entity
         //Ust Idare
         public string Management { get; set; }
 
+        public double NearlyTotalAmount { get; set; }
+
         private List<TenderEquipment> equipments { get; set; }
         public List<TenderEquipment> Equipments
         {

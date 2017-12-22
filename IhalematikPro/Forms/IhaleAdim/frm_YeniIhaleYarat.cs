@@ -64,6 +64,11 @@ namespace IhalematikPro.Forms
                 tender.Management = txtManagement.Text;
                 tender.IsActive = true;
 
+                if (!string.IsNullOrEmpty(txtTenderNearlyTotalAmount.Text))
+                {
+                    tender.NearlyTotalAmount = double.Parse(txtTenderNearlyTotalAmount.Text.Replace("TL", string.Empty).Trim());
+                }
+
                 bool result = TenderManager.Instance.Save(tender);
                 if (!result)
                 {
@@ -77,7 +82,7 @@ namespace IhalematikPro.Forms
                 frm_MesajFormu mf = new frm_MesajFormu();
                 mf.lblMesaj.Text = "Yeni İhale Oluşturuldu";
                 mf.ShowDialog();
-                
+
                 frm_IhaleGrup ig = new frm_IhaleGrup();
                 ig.ShowDialog();
                 this.Close();
@@ -89,8 +94,11 @@ namespace IhalematikPro.Forms
 
         private void frm_YeniIhaleYarat_Shown(object sender, EventArgs e)
         {
+           // dateStart.DateTime = null;
+
             LastOfferDate.DateTime = DateTime.Now;
             this.LoadGridOffer();
+
         }
 
         private void LoadGridOffer()

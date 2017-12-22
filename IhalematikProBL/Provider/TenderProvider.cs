@@ -27,6 +27,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("Place", t.Place);
             parameters.Add("Management", t.Management);
             parameters.Add("OfferId", t.OfferId);
+            parameters.Add("NearlyTotalAmount", t.NearlyTotalAmount);
             return parameters;
         }
 
@@ -45,6 +46,7 @@ namespace IhalematikProBL.Provider
             t.Place = dr.GetValue<string>("Place");
             t.Management = dr.GetValue<string>("Management");
             t.OfferId = dr.GetValue<int>("OfferId");
+            t.NearlyTotalAmount = dr.GetValue<double>("NearlyTotalAmount");
         }
     }
 }

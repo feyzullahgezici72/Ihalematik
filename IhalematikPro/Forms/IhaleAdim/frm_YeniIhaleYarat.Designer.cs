@@ -47,9 +47,9 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.tabIhaleBilgileri = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.txtTenderNearlyTotalAmount = new DevExpress.XtraEditors.TextEdit();
             this.LastOfferDate = new DevExpress.XtraEditors.DateEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
@@ -95,9 +95,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabIhaleBilgileri)).BeginInit();
             this.tabIhaleBilgileri.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderNearlyTotalAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtManagement.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlace.Properties)).BeginInit();
@@ -130,7 +130,7 @@
             this.btnIhaleOlustur.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIhaleOlustur.Image = ((System.Drawing.Image)(resources.GetObject("btnIhaleOlustur.Image")));
             this.btnIhaleOlustur.Location = new System.Drawing.Point(761, 244);
-            this.btnIhaleOlustur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIhaleOlustur.Margin = new System.Windows.Forms.Padding(4);
             this.btnIhaleOlustur.Name = "btnIhaleOlustur";
             this.btnIhaleOlustur.Size = new System.Drawing.Size(89, 32);
             this.btnIhaleOlustur.TabIndex = 0;
@@ -237,7 +237,7 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2);
             this.pcWorld.Name = "pcWorld";
             this.pcWorld.Size = new System.Drawing.Size(33, 24);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -298,7 +298,7 @@
             // tabIhaleBilgileri
             // 
             this.tabIhaleBilgileri.Location = new System.Drawing.Point(375, 36);
-            this.tabIhaleBilgileri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIhaleBilgileri.Margin = new System.Windows.Forms.Padding(2);
             this.tabIhaleBilgileri.Name = "tabIhaleBilgileri";
             this.tabIhaleBilgileri.SelectedTabPage = this.xtraTabPage1;
             this.tabIhaleBilgileri.Size = new System.Drawing.Size(532, 202);
@@ -309,6 +309,7 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.txtTenderNearlyTotalAmount);
             this.xtraTabPage1.Controls.Add(this.LastOfferDate);
             this.xtraTabPage1.Controls.Add(this.txtTeklifNo);
             this.xtraTabPage1.Controls.Add(this.labelControl1);
@@ -316,19 +317,36 @@
             this.xtraTabPage1.Controls.Add(this.labelControl15);
             this.xtraTabPage1.Controls.Add(this.labelControl4);
             this.xtraTabPage1.Controls.Add(this.labelControl5);
-            this.xtraTabPage1.Controls.Add(this.textEdit1);
             this.xtraTabPage1.Controls.Add(this.txtcompanyName);
             this.xtraTabPage1.Controls.Add(this.txtAciklama);
-            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(530, 179);
             this.xtraTabPage1.Text = "İhale Bilgileri";
+            // 
+            // txtTenderNearlyTotalAmount
+            // 
+            this.txtTenderNearlyTotalAmount.EnterMoveNextControl = true;
+            this.txtTenderNearlyTotalAmount.Location = new System.Drawing.Point(98, 124);
+            this.txtTenderNearlyTotalAmount.Name = "txtTenderNearlyTotalAmount";
+            this.txtTenderNearlyTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtTenderNearlyTotalAmount.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTenderNearlyTotalAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTenderNearlyTotalAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTenderNearlyTotalAmount.Properties.DisplayFormat.FormatString = "c2";
+            this.txtTenderNearlyTotalAmount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTenderNearlyTotalAmount.Properties.EditFormat.FormatString = "c2";
+            this.txtTenderNearlyTotalAmount.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTenderNearlyTotalAmount.Properties.Mask.EditMask = "c";
+            this.txtTenderNearlyTotalAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtTenderNearlyTotalAmount.Size = new System.Drawing.Size(149, 20);
+            this.txtTenderNearlyTotalAmount.TabIndex = 121;
             // 
             // LastOfferDate
             // 
             this.LastOfferDate.EditValue = new System.DateTime(2017, 11, 14, 14, 49, 43, 0);
             this.LastOfferDate.Location = new System.Drawing.Point(98, 99);
-            this.LastOfferDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LastOfferDate.Margin = new System.Windows.Forms.Padding(2);
             this.LastOfferDate.Name = "LastOfferDate";
             this.LastOfferDate.Properties.AppearanceDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.LastOfferDate.Properties.AppearanceDropDown.Options.UseBackColor = true;
@@ -351,27 +369,6 @@
             this.labelControl15.TabIndex = 9;
             this.labelControl15.Text = "Muhammen Bedeli:";
             // 
-            // textEdit1
-            // 
-            this.textEdit1.EditValue = "";
-            this.textEdit1.EnterMoveNextControl = true;
-            this.textEdit1.Location = new System.Drawing.Point(98, 123);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit1.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit1.Properties.DisplayFormat.FormatString = "c";
-            this.textEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.textEdit1.Properties.EditFormat.FormatString = "c";
-            this.textEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.textEdit1.Properties.Mask.EditMask = "c";
-            this.textEdit1.Size = new System.Drawing.Size(125, 22);
-            this.textEdit1.TabIndex = 2;
-            // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.labelControl12);
@@ -386,7 +383,7 @@
             this.xtraTabPage2.Controls.Add(this.txtScope);
             this.xtraTabPage2.Controls.Add(this.txtType);
             this.xtraTabPage2.Controls.Add(this.txtEkapNumber);
-            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(530, 179);
             this.xtraTabPage2.Text = "Detay          ";
@@ -547,7 +544,7 @@
             this.panelControl3.Controls.Add(this.panelControl4);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl3.Location = new System.Drawing.Point(0, 24);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(371, 437);
             this.panelControl3.TabIndex = 35;
@@ -822,7 +819,7 @@
             this.panelControl4.Controls.Add(this.labelControl6);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(3, 3);
-            this.panelControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(365, 60);
             this.panelControl4.TabIndex = 100;
@@ -832,7 +829,7 @@
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton1.Location = new System.Drawing.Point(214, 11);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(89, 21);
             this.simpleButton1.TabIndex = 3;
@@ -841,9 +838,9 @@
             // 
             // dateEnd
             // 
-            this.dateEnd.EditValue = new System.DateTime(2017, 12, 2, 0, 49, 29, 0);
+            this.dateEnd.EditValue = null;
             this.dateEnd.Location = new System.Drawing.Point(214, 36);
-            this.dateEnd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateEnd.Margin = new System.Windows.Forms.Padding(2);
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Properties.AppearanceDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dateEnd.Properties.AppearanceDropDown.Options.UseBackColor = true;
@@ -856,9 +853,9 @@
             // 
             // dateStart
             // 
-            this.dateStart.EditValue = new System.DateTime(2017, 12, 2, 0, 49, 29, 0);
+            this.dateStart.EditValue = null;
             this.dateStart.Location = new System.Drawing.Point(101, 36);
-            this.dateStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateStart.Margin = new System.Windows.Forms.Padding(2);
             this.dateStart.Name = "dateStart";
             this.dateStart.Properties.AppearanceDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dateStart.Properties.AppearanceDropDown.Options.UseBackColor = true;
@@ -872,7 +869,7 @@
             // txtOfferNumber
             // 
             this.txtOfferNumber.Location = new System.Drawing.Point(101, 11);
-            this.txtOfferNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOfferNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtOfferNumber.Name = "txtOfferNumber";
             this.txtOfferNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtOfferNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -884,7 +881,7 @@
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl14.Location = new System.Drawing.Point(209, 36);
-            this.labelControl14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(6, 18);
             this.labelControl14.TabIndex = 0;
@@ -893,7 +890,7 @@
             // labelControl13
             // 
             this.labelControl13.Location = new System.Drawing.Point(69, 38);
-            this.labelControl13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(28, 13);
             this.labelControl13.TabIndex = 0;
@@ -902,7 +899,7 @@
             // labelControl6
             // 
             this.labelControl6.Location = new System.Drawing.Point(50, 14);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(45, 13);
             this.labelControl6.TabIndex = 0;
@@ -942,9 +939,9 @@
             this.tabIhaleBilgileri.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderNearlyTotalAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtManagement.Properties)).EndInit();
@@ -1026,6 +1023,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraEditors.LabelControl labelControl15;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtTenderNearlyTotalAmount;
     }
 }

@@ -40,10 +40,10 @@ namespace IhalematikProUI.Forms
         {
 
         }
-      
+
         private void frm_TeklifSonAdim_Load(object sender, EventArgs e)
         {
-           
+
             lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
@@ -136,18 +136,34 @@ namespace IhalematikProUI.Forms
 
         private void btnDetail_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnPanelKapat_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void frm_TeklifAdimSon_Shown(object sender, EventArgs e)
         {
+            Tender tender = CurrentManager.Instance.CurrentTender;
             isciAracGirisPaneli.Visible = true;
+            txtTenderNumber.Text = string.Format("{0}", (tender.Number).ToString().PadLeft(8, '0'));
+            txtTenderDescription.Text = tender.Description;
+            txtTenderLastOfferDate.Text = tender.LastOfferDate.Value.ToShortDateString();
+            txtTenderNearlyTotalAmount.Text = tender.NearlyTotalAmount.ToString("c");
+            txtMaterialCount.Text = tender.MaterialList.Count().ToString();
+            txtMaterialIsNonWorkshipcount.Text = tender.MaterialList.Where(p => !p.IsWorkship).Count().ToString();
+            txtMaterialWorksipCount.Text = tender.MaterialList.Where(p => p.IsWorkship).Count().ToString();
+            txtMaterialTotalAmount.Text = txtMaterialCostAmount.Text;
+            txtWorkerTotalAmount.Text = txtWorkerCostAmount.Text;
+            txtTotalMaterialAndWorkerAmount.Text = (double.Parse(txtWorkerCostAmount.Text.Replace("TL", "")) + double.Parse(txtMaterialTotalAmount.Text.Replace("TL", ""))).ToString("c");
+            txtGeneralMarkupWorkerAmount.Text = txtMarkupWorkerAmount.Text;
+            txtTotalMarkupAmount.Text = txtMarkupAmount.Text;
 
+            txtOfferTotalAmount.Text = (double.Parse(txtTotalMaterialAndWorkerAmount.Text.Replace("TL", "")) + double.Parse(txtGeneralMarkupWorkerAmount.Text.Replace("TL", "")) + double.Parse(txtTotalMarkupAmount.Text.Replace("TL", ""))).ToString("c");
+
+            txtKirim.Text = (tender.NearlyTotalAmount - double.Parse(txtOfferTotalAmount.Text.Replace("TL", ""))).ToString("c");
         }
 
         //private void Rapor_Click(object sender, EventArgs e)
