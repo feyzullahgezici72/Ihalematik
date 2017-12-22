@@ -210,27 +210,27 @@ namespace IhalematikPro.Model
                         {
                             amount = ((Vehicle)item.Equipment.WorkerVehicle) == null ? 0 : ((Vehicle)item.Equipment.WorkerVehicle).TotalFare.Amount;
                         }
-                        if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
+                        if (item.UnitTimeType== IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
                         {
                             this.workerUnitPrice += Math.Round((amount / (30 * 8 * 60)), 2) * item.UnitTime * item.Quantity;
                         }
-                        else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Hour)
+                        else if (item.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Hour)
                         {
                             this.workerUnitPrice += Math.Round((amount / (30 * 8)), 2) * item.UnitTime * item.Quantity;
                         }
-                        else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Day)
+                        else if (item.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Day)
                         {
                             this.workerUnitPrice += Math.Round((amount / (30)), 2) * item.UnitTime * item.Quantity;
                         }
-                        else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Week)
+                        else if (item.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Week)
                         {
                             this.workerUnitPrice += Math.Round((amount / 4), 2) * item.UnitTime * item.Quantity;
                         }
-                        else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Month)
+                        else if (item.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Month)
                         {
                             this.workerUnitPrice += Math.Round((amount), 2) * item.UnitTime * item.Quantity;
                         }
-                        else if (this.UnitTimeType.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Year)
+                        else if (item.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Year)
                         {
                             this.workerUnitPrice += Math.Round(amount, 2) * 12 * item.UnitTime * item.Quantity;
                         }

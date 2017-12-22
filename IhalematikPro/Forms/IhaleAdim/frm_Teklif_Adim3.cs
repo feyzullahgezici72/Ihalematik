@@ -196,30 +196,7 @@ namespace IhalematikPro.Forms
         #region GridMaterialList
         private void btnCalisanlarveAraclar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            //Panellerin enabled özelliklerini false yap
-            panelControl1.Enabled = false;
-            grdMaterialListIsWorkship.EmbeddedNavigator.Enabled = false;
-            panelControl1.Enabled = false;
-            panelGrup.Enabled = false;
-            panelControl3.Enabled = false;
-            panelControl4.Enabled = false;
-            //Panellerin enabled özelliklerini false yap
-
-            bindingSourceAddWorker.DataSource = null;
-            int currentId = Convert.ToInt32(gridViewMaterialListIsWorkship.GetFocusedRowCellValue("Id"));
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
-            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            foreach (var item in models)
-            {
-                if (item.Id == currentId)
-                {
-                    this.SelectedMaterial = item;
-                    this.panelAc();
-                    LoadWorkerMateriallistGrid();
-                    break;
-                }
-            }
-            this.FocusedRowHandle = gridViewMaterialListIsWorkship.FocusedRowHandle;
+            
         }
         #endregion
 
@@ -655,16 +632,16 @@ namespace IhalematikPro.Forms
         private void cmbAdamSaat_Click(object sender, EventArgs e)
         {
             clmEquipments.Visible = true;
-            gridColumn5.OptionsColumn.AllowEdit = false;
-            gridColumn5.OptionsColumn.AllowFocus = false;
+            //gridColumn5.OptionsColumn.AllowEdit = false;
+            //gridColumn5.OptionsColumn.AllowFocus = false;
             gridColumn5.OptionsColumn.ReadOnly = false;
         }
 
         private void cmbBirimFiyat_Click(object sender, EventArgs e)
         {
             clmEquipments.Visible = false;
-            gridColumn5.OptionsColumn.AllowEdit = true;
-            gridColumn5.OptionsColumn.AllowFocus = true;
+            //gridColumn5.OptionsColumn.AllowEdit = true;
+            //gridColumn5.OptionsColumn.AllowFocus = true;
             gridColumn5.OptionsColumn.ReadOnly = true;
 
         }
@@ -672,6 +649,34 @@ namespace IhalematikPro.Forms
         private void cmbAdamSaat_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCalisanlarveAraclar_Click(object sender, EventArgs e)
+        {
+            //Panellerin enabled özelliklerini false yap
+            panelControl1.Enabled = false;
+            grdMaterialListIsWorkship.EmbeddedNavigator.Enabled = false;
+            panelControl1.Enabled = false;
+            panelGrup.Enabled = false;
+            panelControl3.Enabled = false;
+            panelControl4.Enabled = false;
+            //Panellerin enabled özelliklerini false yap
+
+            bindingSourceAddWorker.DataSource = null;
+            int currentId = Convert.ToInt32(gridViewMaterialListIsWorkship.GetFocusedRowCellValue("Id"));
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
+            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            foreach (var item in models)
+            {
+                if (item.Id == currentId)
+                {
+                    this.SelectedMaterial = item;
+                    this.panelAc();
+                    LoadWorkerMateriallistGrid();
+                    break;
+                }
+            }
+            this.FocusedRowHandle = gridViewMaterialListIsWorkship.FocusedRowHandle;
         }
     }
 }

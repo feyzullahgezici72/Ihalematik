@@ -14,6 +14,7 @@ using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms.Base;
 using IhalematikProBL.Manager;
+using IhalematikProUI.Forms;
 
 namespace IhalematikPro.Forms
 {
@@ -24,7 +25,18 @@ namespace IhalematikPro.Forms
         IhalematikBaseForm _owner;
 
         public int SelectedGroupId { get; set; }
-
+        private TenderGroup tenderGroup { get; set; }
+        public TenderGroup SelectedGroup
+        {
+            get
+            {
+                if (this.tenderGroup == null)
+                {
+                    this.tenderGroup = TenderGroupProvider.Instance.GetItem(this.SelectedGroupId);
+                }
+                return this.tenderGroup;
+            }
+        }
         public frm_PozluKayit(IhalematikBaseForm owner)
         {
             _owner = owner;
@@ -52,6 +64,13 @@ namespace IhalematikPro.Forms
             if (offer == null)
             {
                 pozModels = UIPozManager.Instance.GetPozs(pozNumber, pozDescription);
+                if (pozModels == null || pozModels.Count == 0)
+                {
+                    frm_MesajFormu mf = new frm_MesajFormu();
+                    mf.lblMesaj.Text = "Kayıt Bulunmadı";
+                    mf.ShowDialog();
+                    txtPozNumber.Focus();
+                }
             }
 
             else
@@ -122,7 +141,7 @@ namespace IhalematikPro.Forms
 
             }
             grdPozList.DataSource = null;
-            grdPozList.DataSource = pozModels;
+            grdPozList.DataSource = pozModels.Where(p => p.IsActive);
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
@@ -209,7 +228,7 @@ namespace IhalematikPro.Forms
 
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = dataSource;
-            this.LoadMaterialListGrid();
+            //this.LoadMaterialListGrid();
         }
 
         private void frm_PozluKayit_Load(object sender, EventArgs e)
@@ -219,6 +238,7 @@ namespace IhalematikPro.Forms
 
         private void frm_PozluKayit_Shown(object sender, EventArgs e)
         {
+            lblGrupName.Text = this.SelectedGroup.Description;
             if (CurrentManager.Instance.CurrentTender.Offer == null)
             {
                 colOfferPrice.Visible = false;
@@ -232,9 +252,8 @@ namespace IhalematikPro.Forms
                 colAddedPozOfferPrice.Visible = true;
                 colPrice.Visible = false;
                 colAddedPozPrice.Visible = false;
+                this.LoadMaterialListGrid();
             }
-
-            this.LoadMaterialListGrid();
 
             this.LoadAddedPozGrid();
         }
@@ -244,12 +263,15 @@ namespace IhalematikPro.Forms
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsPoz).ToList();
 
             Offer offer = CurrentManager.Instance.CurrentTender.Offer;
-            foreach (var item in items)
+            if (offer != null)
             {
-                OfferMaterialList offerMaterialList = offer.MaterialList.Where(p => p.PozOBFId == item.PozOBFId && p.IsPoz).FirstOrDefault();
-                if (offerMaterialList != null)
+                foreach (var item in items)
                 {
-                    item.OfferPrice = OfferManager.Instance.GetOfferMaterialListPrice(offerMaterialList.Id).Price;
+                    OfferMaterialList offerMaterialList = offer.MaterialList.Where(p => p.PozOBFId == item.PozOBFId && p.IsPoz).FirstOrDefault();
+                    if (offerMaterialList != null)
+                    {
+                        item.OfferPrice = OfferManager.Instance.GetOfferMaterialListPrice(offerMaterialList.Id).Price;
+                    }
                 }
             }
 

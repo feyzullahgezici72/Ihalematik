@@ -22,7 +22,7 @@ namespace IhalematikPro.Manager
 
         public List<DropDownModel> GetDropDownWorkers()
         {
-            List<Worker> workers = WorkerProvider.Instance.GetItems();
+            List<Worker> workers = WorkerProvider.Instance.GetItems().Where(p=> p.IsActive).ToList();
             List<DropDownModel> models = new List<DropDownModel>();
             foreach (var item in workers)
             {

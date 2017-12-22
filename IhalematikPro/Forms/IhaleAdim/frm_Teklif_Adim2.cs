@@ -72,7 +72,7 @@ namespace IhalematikPro.Forms
             foreach (var item in items)
             {
                 item.Markup = markup;
-                //MaterialListProvider.Instance.Save(item);
+                MaterialListProvider.Instance.Save(item);
             }
             this.LoadTenderMaterialList();
             this.CalculateTotalMarkup();

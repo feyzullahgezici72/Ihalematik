@@ -55,13 +55,40 @@ namespace IhalematikProBL.Entity
             }
         }
 
+        private double monthPrice = 0;
         public double MonthPrice
         {
             get
             {
-                return Math.Round(this.DriverFare + (this.FuelOilDay * this.FuelOilFare * 30) + this.GeneralFare + this.MaintenanceFare + this.OtherFare + this.ServiceFare);
+                if (this.monthPrice == 0)
+                {
+                    if (this.IsCompanyVehicle)
+                    {
+
+                        this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare * 30) + (this.DriverFare * 30) + this.GeneralFare + this.MaintenanceFare + this.OtherFare + this.ServiceFare), 2);
+                    }
+                    else
+                    {
+
+                        if (this.RentType == RentTypesEnum.Day)
+                        {
+                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare) * 30, 2);
+                        }
+                        else if (this.RentType == RentTypesEnum.Hour)
+                        {
+                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare / 8) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare) * 30 * 8, 2);
+                        }
+                        else if (this.RentType == RentTypesEnum.Month)
+                        {
+                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare * 30) + this.RentFare + (this.DriverFare * 30) + this.GeneralFare + this.OtherFare), 2);
+                        }
+                    }
+                }
+
+                return this.monthPrice;
             }
         }
+
 
         //Gunluk yakit(LT)
         public float FuelOilDay { get; set; }

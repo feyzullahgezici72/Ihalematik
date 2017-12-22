@@ -22,6 +22,19 @@ namespace IhalematikPro.Forms
 
         frm_Teklif_Adim1 _owner;
         public int SelectedGroupId { get; set; }
+
+        private TenderGroup tenderGroup { get; set; }
+        public TenderGroup SelectedGroup
+        {
+            get
+            {
+                if (this.tenderGroup == null)
+                {
+                    this.tenderGroup = TenderGroupProvider.Instance.GetItem(this.SelectedGroupId);
+                }
+                return this.tenderGroup;
+            }
+        }
         public frm_ObfKayit(frm_Teklif_Adim1 Owner)
         {
             _owner = Owner;
@@ -98,7 +111,7 @@ namespace IhalematikPro.Forms
 
             MaterialListModel[] selectedRowsItems = models.ToArray();
 
-            currentTender.MaterialList.ForEach(p => p.Id = p.PozOBFId);
+           // currentTender.MaterialList.ForEach(p => p.Id = p.PozOBFId);
 
             foreach (int item in selectedRows)
             {
@@ -108,8 +121,7 @@ namespace IhalematikPro.Forms
 
                 if (selectedItem != null)
                 {
-                    int index = currentTender.MaterialList.IndexOf(selectedItem);
-
+                    int index = currentTender.MaterialList.FindIndex(p => p.PozOBFId == selectedItem.PozOBFId);
                     currentTender.MaterialList.RemoveAt(index);
                 }
             }
@@ -122,6 +134,7 @@ namespace IhalematikPro.Forms
 
         private void frm_ObfKayit_Shown(object sender, EventArgs e)
         {
+            lblGrupName.Text = this.SelectedGroup.Description;
             if (CurrentManager.Instance.CurrentTender.Offer == null)
             {
                 colOfferPrice.Visible = false;
@@ -135,9 +148,8 @@ namespace IhalematikPro.Forms
                 colAddedOBFOfferPrice.Visible = true;
                 colPrice.Visible = false;
                 colAddedOBFPrice.Visible = false;
+                this.LoadMaterialListGrid();
             }
-
-            this.LoadMaterialListGrid();
             this.LoadAddedOBFGrid();
         }
 
@@ -146,13 +158,16 @@ namespace IhalematikPro.Forms
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && !p.IsPoz).ToList();
 
             Offer offer = CurrentManager.Instance.CurrentTender.Offer;
-            foreach (var item in items)
+            if (offer != null)
             {
-                OfferMaterialList offerMaterialList = offer.MaterialList.Where(p => p.PozOBFId == item.PozOBFId && !p.IsPoz).FirstOrDefault();
-                if (offerMaterialList != null)
+                foreach (var item in items)
                 {
-                    item.OfferPrice = OfferManager.Instance.GetOfferMaterialListPrice(offerMaterialList.Id).Price;
-                }
+                    OfferMaterialList offerMaterialList = offer.MaterialList.Where(p => p.PozOBFId == item.PozOBFId && !p.IsPoz).FirstOrDefault();
+                    if (offerMaterialList != null)
+                    {
+                        item.OfferPrice = OfferManager.Instance.GetOfferMaterialListPrice(offerMaterialList.Id).Price;
+                    }
+                } 
             }
 
             List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items).ToList();
@@ -170,7 +185,7 @@ namespace IhalematikPro.Forms
 
             if (offer == null)
             {
-                oBFModels = UIOBFManager.Instance.GetOBFs(obfNumber, obfDescription);
+                oBFModels = UIOBFManager.Instance.GetOBFs(obfNumber, obfDescription).Where(p=> p.IsActive).ToList();
             }
 
             else
@@ -241,7 +256,7 @@ namespace IhalematikPro.Forms
 
             }
             grdOBFList.DataSource = null;
-            grdOBFList.DataSource = oBFModels;
+            grdOBFList.DataSource = oBFModels.Where(p => p.IsActive);
         }
 
         private void txtNumber_KeyPress(object sender, KeyPressEventArgs e)

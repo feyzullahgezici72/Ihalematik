@@ -68,7 +68,7 @@ namespace IhalematikProUI.Forms
                 materialCostAmount += item.PozOBF.UnitPrice * item.Quantity;
                 materialkdvTotalAmount += item.KDVAmount;
                 workerCostAmount += item.WorkerUnitPrice * item.Quantity;
-                markupMaterialAmount += item.MarkupUnitPrice * item.Quantity; ;
+                markupMaterialAmount += item.UnitMarkup * item.Quantity; ;
                 markupWorkerAmount += item.WorkerUnitPrice * item.Quantity * (item.Markup / 100);
                 totalMarkupNonKDV += item.TotalFare;
             }

@@ -21,7 +21,7 @@ namespace IhalematikPro.Manager
         }
         public List<DropDownModel> GetDropDownVehicles()
         {
-            List<Vehicle> vehicles = VehicleProvider.Instance.GetItems();
+            List<Vehicle> vehicles = VehicleProvider.Instance.GetItems().Where(p=> p.IsActive).ToList();
             List<DropDownModel> models = new List<DropDownModel>();
             foreach (var item in vehicles)
             {
