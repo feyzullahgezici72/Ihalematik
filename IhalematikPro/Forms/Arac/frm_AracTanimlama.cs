@@ -238,8 +238,8 @@ namespace IhalematikPro.Forms
 
         private void LoadVehicleGrid()
         {
-            List<Vehicle> models = UIVehicleManager.Instance.GetVehicles();
-
+            List<Vehicle> items = UIVehicleManager.Instance.GetVehicles();
+            List<VehicleModel> models = IhalematikModelBase.GetModels<VehicleModel, Vehicle>(items); 
             if (cmbAktivePasive.SelectedIndex == 0)
             {
                 grdVehicle.DataSource = models.Where(p => p.IsActive);

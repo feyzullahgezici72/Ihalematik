@@ -73,12 +73,12 @@ namespace IhalematikProUI.Forms
                 {
                     rbCompanyVehicle.Checked = true;
                     txtCompanyFuelOilFare.Text = model.FuelOilFare.ToString("c");
-                    txtCompanyFuelOilDay.Text = model.FuelOilDay.ToString("c"); 
-                    txtCompanyDriverFare.Text = model.DriverFare.ToString("c"); 
+                    txtCompanyFuelOilDay.Text = model.FuelOilDay.ToString("c");
+                    txtCompanyDriverFare.Text = model.DriverFare.ToString("c");
                     txtCompanyMaintenanceFare.Text = model.MaintenanceFare.ToString("c");
                     txtCompanyServiceFare.Text = model.ServiceFare.ToString("c");
                     txtCompanyGeneralFare.Text = model.GeneralFare.ToString("c");
-                    txtCompanyOtherFare.Text = model.OtherFare.ToString("c"); 
+                    txtCompanyOtherFare.Text = model.OtherFare.ToString("c");
                 }
                 else
                 {
@@ -87,8 +87,8 @@ namespace IhalematikProUI.Forms
                     txtRentFuelOilFare.Text = model.FuelOilFare.ToString("c");
                     txtRentFuelOilDay.Text = model.FuelOilDay.ToString("c");
                     txtRentDriverFare.Text = model.DriverFare.ToString("c");
-                    txtRentGeneralFare.Text = model.GeneralFare.ToString("c"); 
-                    txtRentOtherFare.Text = model.OtherFare.ToString("c"); 
+                    txtRentGeneralFare.Text = model.GeneralFare.ToString("c");
+                    txtRentOtherFare.Text = model.OtherFare.ToString("c");
                     if (CurrentVehicle.RentType == IhalematikProBL.Enum.RentTypesEnum.Day)
                     {
                         rdDay.Checked = true;
@@ -102,7 +102,7 @@ namespace IhalematikProUI.Forms
                         rdMonth.Checked = true;
                     }
                 }
-                 //model.Save();
+                //model.Save();
             }
         }
 
@@ -114,13 +114,34 @@ namespace IhalematikProUI.Forms
             if (rbCompanyVehicle.Checked)
             {
                 model.IsCompanyVehicle = true;
-                model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtCompanyFuelOilFare.Text.Replace("TL", string.Empty));
-                model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtCompanyFuelOilDay.Text.Replace("TL", string.Empty));
-                model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtCompanyDriverFare.Text.Replace("TL", string.Empty));
-                model.MaintenanceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtCompanyMaintenanceFare.Text.Replace("TL", string.Empty));
-                model.ServiceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtCompanyServiceFare.Text.Replace("TL", string.Empty));
-                model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtCompanyGeneralFare.Text.Replace("TL", string.Empty));
-                model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtCompanyOtherFare.Text.Replace("TL", string.Empty));
+                if (!string.IsNullOrEmpty(txtCompanyFuelOilFare.Text))
+                {
+                    model.FuelOilFare = double.Parse(txtCompanyFuelOilFare.Text.Replace("TL", string.Empty));
+                }
+                if (!string.IsNullOrEmpty(txtCompanyFuelOilDay.Text))
+                {
+                    model.FuelOilDay = float.Parse(txtCompanyFuelOilDay.Text.Replace("TL", string.Empty));
+                }
+                if (!string.IsNullOrEmpty(txtCompanyDriverFare.Text))
+                {
+                    model.DriverFare = double.Parse(txtCompanyDriverFare.Text.Replace("TL", string.Empty));
+                }
+                if (!string.IsNullOrEmpty(txtCompanyMaintenanceFare.Text))
+                {
+                    model.MaintenanceFare = double.Parse(txtCompanyMaintenanceFare.Text.Replace("TL", string.Empty));
+                }
+                if (!string.IsNullOrEmpty(txtCompanyServiceFare.Text))
+                {
+                    model.ServiceFare = double.Parse(txtCompanyServiceFare.Text.Replace("TL", string.Empty));
+                }
+                if (!string.IsNullOrEmpty(txtCompanyGeneralFare.Text))
+                {
+                    model.GeneralFare = double.Parse(txtCompanyGeneralFare.Text.Replace("TL", string.Empty));
+                }
+                if (!string.IsNullOrEmpty(txtCompanyOtherFare.Text))
+                {
+                    model.OtherFare = double.Parse(txtCompanyOtherFare.Text.Replace("TL", string.Empty));
+                }
             }
             else
             {
@@ -138,24 +159,41 @@ namespace IhalematikProUI.Forms
                 {
                     model.RentType = IhalematikProBL.Enum.RentTypesEnum.Month;
                 }
-                model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentFuelOilFare.Text.Replace("TL", string.Empty));
-                model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtRentFuelOilDay.Text.Replace("TL", string.Empty));
-                model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentDriverFare.Text.Replace("TL", string.Empty));
-                model.RentFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentFare.Text.Replace("TL", string.Empty));
-                //model.MaintenanceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMaintenanceFare.Text);
-                //model.ServiceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtServiceFare.Text);
-                model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentGeneralFare.Text.Replace("TL", string.Empty));
-                model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentOtherFare.Text.Replace("TL", string.Empty));
+                if (!string.IsNullOrEmpty(txtRentFuelOilFare.Text))
+                {
+                    model.FuelOilFare = double.Parse(txtRentFuelOilFare.Text.Replace("TL", string.Empty));
+                }
+
+                if (!string.IsNullOrEmpty(txtRentFuelOilDay.Text))
+                {
+                    model.FuelOilDay = float.Parse(txtRentFuelOilDay.Text.Replace("TL", string.Empty));
+                }
+                if (!string.IsNullOrEmpty(txtRentDriverFare.Text))
+                {
+                    model.DriverFare = double.Parse(txtRentDriverFare.Text.Replace("TL", string.Empty));
+                }
+                if (!string.IsNullOrEmpty(txtRentFare.Text))
+                {
+                    model.RentFare = double.Parse(txtRentFare.Text.Replace("TL", string.Empty));
+                }
+                if (!string.IsNullOrEmpty(txtRentGeneralFare.Text))
+                {
+                    model.GeneralFare = double.Parse(txtRentGeneralFare.Text.Replace("TL", string.Empty));
+                }
+                if (!string.IsNullOrEmpty(txtRentOtherFare.Text))
+                {
+                    model.OtherFare = double.Parse(txtRentOtherFare.Text.Replace("TL", string.Empty));
+                }
             }
-            
-           model.Save();
-           this._owner.LoadGrid();
+
+            model.Save();
+            this._owner.LoadGrid();
             frm_MesajFormu mf = new frm_MesajFormu();
             mf.lblMesaj.Text = "Güncelleme Yapıldı...";
             mf.ShowDialog();
             this.Close();
         }
-   
+
         public bool IsEmptyKontrol()
         {
             if (ddlVehicleTitle.SelectedIndex < 0)
