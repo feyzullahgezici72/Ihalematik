@@ -91,13 +91,14 @@ namespace IhalematikProUI.Forms.Tedarikci
 
                 if (selectedItem != null)
                 {
-                    int index = currentOffer.MaterialList.FindIndex(p => p.PozOBFId == selectedItem.PozOBFId);
-                    currentOffer.MaterialList.RemoveAt(index);
+                    selectedItem.IsMarkedForDeletion = true;
+                    //int index = currentOffer.MaterialList.FindIndex(p => p.PozOBFId == selectedItem.PozOBFId);
+                    //currentOffer.MaterialList.RemoveAt(index);
                 }
             }
 
-            List<OfferMaterialListModel> dataSource = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(currentOffer.MaterialList.Where(p => !p.IsPoz).ToList());
-
+            List<OfferMaterialList> items = currentOffer.MaterialList.Where(p => !p.IsPoz && !p.IsMarkedForDeletion).ToList();
+            List <OfferMaterialListModel> dataSource = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(items).ToList();
 
             grdAddedOBF.DataSource = null;
             grdAddedOBF.DataSource = dataSource;
@@ -111,6 +112,10 @@ namespace IhalematikProUI.Forms.Tedarikci
                 List<OfferMaterialList> items = currentOffer.MaterialList.Where(p => !p.IsPoz).ToList();
                 foreach (OfferMaterialList item in items)
                 {
+                    if (item.IsMarkedForDeletion)
+                    {
+                        currentOffer.MaterialList.Remove(item);
+                    }
                     OfferMaterialListProvider.Instance.Save(item);
                 }
             }

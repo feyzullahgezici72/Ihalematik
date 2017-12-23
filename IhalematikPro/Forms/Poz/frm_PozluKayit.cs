@@ -219,16 +219,19 @@ namespace IhalematikPro.Forms
 
                 if (selectedItem != null)
                 {
-                    int index = currentTender.MaterialList.FindIndex(p => p.PozOBFId == selectedItem.PozOBFId);
-                    currentTender.MaterialList.RemoveAt(index);
+                    //int index = currentTender.MaterialList.FindIndex(p => p.PozOBFId == selectedItem.PozOBFId);
+                    //currentTender.MaterialList.RemoveAt(index);
+                    selectedItem.IsMarkedForDeletion = true;
                 }
             }
 
-            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(currentTender.MaterialList.Where(p => p.IsPoz && p.TenderGroupId == this.SelectedGroupId).ToList());
+            List<MaterialList> items = currentTender.MaterialList.Where(p => p.IsPoz && p.TenderGroupId == this.SelectedGroupId && !p.IsMarkedForDeletion).ToList();
+
+            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items).ToList();
 
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = dataSource;
-            //this.LoadMaterialListGrid();
+            this.LoadMaterialListGrid();
         }
 
         private void frm_PozluKayit_Load(object sender, EventArgs e)

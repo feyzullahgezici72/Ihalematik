@@ -95,6 +95,10 @@ namespace IhalematikPro.Forms
                 List<MaterialList> items = currentTender.MaterialList.Where(p => !p.IsPoz && p.TenderGroupId == this.SelectedGroupId).ToList();
                 foreach (MaterialList item in items)
                 {
+                    if (item.IsMarkedForDeletion)
+                    {
+                        currentTender.MaterialList.Remove(item);
+                    }
                     MaterialListProvider.Instance.Save(item);
                 }
             }
@@ -116,20 +120,20 @@ namespace IhalematikPro.Forms
             foreach (int item in selectedRows)
             {
                 MaterialListModel pozModel = selectedRowsItems[item];
-
                 MaterialList selectedItem = currentTender.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
 
                 if (selectedItem != null)
                 {
-                    int index = currentTender.MaterialList.FindIndex(p => p.PozOBFId == selectedItem.PozOBFId);
-                    currentTender.MaterialList.RemoveAt(index);
+                    selectedItem.IsMarkedForDeletion = true;
                 }
             }
 
-            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(currentTender.MaterialList.Where(p => !p.IsPoz && p.TenderGroupId == this.SelectedGroupId && !p.IsMarkedForDeletion).ToList());
+            List<MaterialList> items = currentTender.MaterialList.Where(p => !p.IsPoz && p.TenderGroupId == this.SelectedGroupId && !p.IsMarkedForDeletion).ToList();
+            List <MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items).ToList();
 
             grdAddedOBF.DataSource = null;
             grdAddedOBF.DataSource = dataSource;
+            this.LoadMaterialListGrid();
         }
 
         private void frm_ObfKayit_Shown(object sender, EventArgs e)

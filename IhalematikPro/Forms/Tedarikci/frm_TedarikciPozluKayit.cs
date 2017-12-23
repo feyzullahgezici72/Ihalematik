@@ -68,6 +68,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
                 if (items.Count == 0)
                 {
+
                     currentOffer.MaterialList.Add(materialList);
                 }
             }
@@ -98,12 +99,14 @@ namespace IhalematikProUI.Forms.Tedarikci
 
                 if (selectedItem != null)
                 {
-                    int index = currentOffer.MaterialList.FindIndex(p => p.PozOBFId == selectedItem.PozOBFId);
-                    currentOffer.MaterialList.RemoveAt(index);
+                    selectedItem.IsMarkedForDeletion = true;
+                    //int index = currentOffer.MaterialList.FindIndex(p => p.PozOBFId == selectedItem.PozOBFId);
+                    //currentOffer.MaterialList.RemoveAt(index);
                 }
             }
 
-            List<OfferMaterialListModel> dataSource = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(currentOffer.MaterialList.Where(p => p.IsPoz).ToList());
+            List<OfferMaterialList> items = currentOffer.MaterialList.Where(p => p.IsPoz && !p.IsMarkedForDeletion).ToList();
+            List <OfferMaterialListModel> dataSource = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(items).ToList();
 
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = dataSource;
@@ -111,12 +114,16 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            Offer currentTender = CurrentManager.Instance.CurrentOffer;
-            if (currentTender.MaterialList != null)
+            Offer currentOffer = CurrentManager.Instance.CurrentOffer;
+            if (currentOffer.MaterialList != null)
             {
-                List<OfferMaterialList> items = currentTender.MaterialList.Where(p => p.IsPoz).ToList();
+                List<OfferMaterialList> items = currentOffer.MaterialList.Where(p => p.IsPoz).ToList();
                 foreach (OfferMaterialList item in items)
                 {
+                    if (item.IsMarkedForDeletion)
+                    {
+                        currentOffer.MaterialList.Remove(item);
+                    }
                     OfferMaterialListProvider.Instance.Save(item);
                 }
             }
