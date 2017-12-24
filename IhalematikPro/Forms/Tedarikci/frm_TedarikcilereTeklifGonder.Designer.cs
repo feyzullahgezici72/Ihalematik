@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikcilereTeklifGonder));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
@@ -51,6 +52,8 @@
             DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.rpstSupplierDetail1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
@@ -80,6 +83,10 @@
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.gridViewMaterialList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colChangeMetreialName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnChangeMeterialName = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colResetMeterialName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnResetMeterialName = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colIsSelectedOfferMaterial = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -100,6 +107,7 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -120,6 +128,8 @@
             this.pnlMalzemeListesi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChangeMeterialName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnResetMeterialName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlFirma)).BeginInit();
@@ -130,6 +140,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // rpstSupplierDetail1
@@ -137,6 +148,8 @@
             this.rpstSupplierDetail1.AutoHeight = false;
             this.rpstSupplierDetail1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstSupplierDetail1.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Detay", null, null, true)});
+            this.rpstSupplierDetail1.LookAndFeel.SkinName = "Sharp Plus";
+            this.rpstSupplierDetail1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.rpstSupplierDetail1.Name = "rpstSupplierDetail1";
             this.rpstSupplierDetail1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rpstSupplierDetail1.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.rpstSupplierDetail_ButtonClick);
@@ -153,7 +166,7 @@
             this.panelControl1.Controls.Add(this.txtAdimAciklama);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1370, 35);
             this.panelControl1.TabIndex = 20;
@@ -178,7 +191,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1342, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(9);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 3;
@@ -194,7 +207,7 @@
             this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
             this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.txtAdimAciklama.Location = new System.Drawing.Point(52, 1);
-            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
             this.txtAdimAciklama.Size = new System.Drawing.Size(579, 35);
@@ -216,7 +229,7 @@
             this.pnlUst.Controls.Add(this.labelControl1);
             this.pnlUst.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUst.Location = new System.Drawing.Point(0, 35);
-            this.pnlUst.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pnlUst.Margin = new System.Windows.Forms.Padding(6);
             this.pnlUst.Name = "pnlUst";
             this.pnlUst.Size = new System.Drawing.Size(1370, 70);
             this.pnlUst.TabIndex = 21;
@@ -241,7 +254,7 @@
             this.btnGonderilenMalzemeListesi.Image = ((System.Drawing.Image)(resources.GetObject("btnGonderilenMalzemeListesi.Image")));
             this.btnGonderilenMalzemeListesi.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnGonderilenMalzemeListesi.Location = new System.Drawing.Point(4, 4);
-            this.btnGonderilenMalzemeListesi.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.btnGonderilenMalzemeListesi.Margin = new System.Windows.Forms.Padding(9);
             this.btnGonderilenMalzemeListesi.Name = "btnGonderilenMalzemeListesi";
             this.btnGonderilenMalzemeListesi.Size = new System.Drawing.Size(282, 54);
             toolTipTitleItem1.Text = "GÖNDERİLECEKLER";
@@ -279,7 +292,7 @@
             this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnObfKayit.Location = new System.Drawing.Point(160, 0);
-            this.btnObfKayit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnObfKayit.Margin = new System.Windows.Forms.Padding(6);
             this.btnObfKayit.Name = "btnObfKayit";
             this.btnObfKayit.Size = new System.Drawing.Size(160, 62);
             toolTipTitleItem2.Text = "ÖBF";
@@ -305,7 +318,7 @@
             this.btnPozKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnPozKayit.Image")));
             this.btnPozKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnPozKayit.Location = new System.Drawing.Point(0, 0);
-            this.btnPozKayit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnPozKayit.Margin = new System.Windows.Forms.Padding(6);
             this.btnPozKayit.Name = "btnPozKayit";
             this.btnPozKayit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnPozKayit.Size = new System.Drawing.Size(160, 62);
@@ -326,7 +339,7 @@
             // 
             this.lblTenderDescription.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTenderDescription.Location = new System.Drawing.Point(102, 39);
-            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderDescription.Name = "lblTenderDescription";
             this.lblTenderDescription.Size = new System.Drawing.Size(0, 19);
             this.lblTenderDescription.TabIndex = 10;
@@ -336,7 +349,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl2.Location = new System.Drawing.Point(15, 39);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(79, 19);
             this.labelControl2.TabIndex = 9;
@@ -346,7 +359,7 @@
             // 
             this.lblTenderNumber.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTenderNumber.Location = new System.Drawing.Point(102, 13);
-            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderNumber.Name = "lblTenderNumber";
             this.lblTenderNumber.Size = new System.Drawing.Size(0, 19);
             this.lblTenderNumber.TabIndex = 8;
@@ -356,7 +369,7 @@
             this.lblOfferDescription.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOfferDescription.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.lblOfferDescription.Location = new System.Drawing.Point(15, 75);
-            this.lblOfferDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblOfferDescription.Margin = new System.Windows.Forms.Padding(4);
             this.lblOfferDescription.Name = "lblOfferDescription";
             this.lblOfferDescription.Size = new System.Drawing.Size(0, 34);
             this.lblOfferDescription.TabIndex = 7;
@@ -366,7 +379,7 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl1.Location = new System.Drawing.Point(15, 13);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(77, 19);
             this.labelControl1.TabIndex = 6;
@@ -393,7 +406,7 @@
             this.btnTedarikciListesi.Image = ((System.Drawing.Image)(resources.GetObject("btnTedarikciListesi.Image")));
             this.btnTedarikciListesi.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnTedarikciListesi.Location = new System.Drawing.Point(4, 164);
-            this.btnTedarikciListesi.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.btnTedarikciListesi.Margin = new System.Windows.Forms.Padding(9);
             this.btnTedarikciListesi.Name = "btnTedarikciListesi";
             this.btnTedarikciListesi.Size = new System.Drawing.Size(248, 80);
             toolTipTitleItem4.Text = "MAİL GÖNDER";
@@ -419,7 +432,7 @@
             this.btnTedaikcileregonder.Image = ((System.Drawing.Image)(resources.GetObject("btnTedaikcileregonder.Image")));
             this.btnTedaikcileregonder.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnTedaikcileregonder.Location = new System.Drawing.Point(4, 84);
-            this.btnTedaikcileregonder.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.btnTedaikcileregonder.Margin = new System.Windows.Forms.Padding(9);
             this.btnTedaikcileregonder.Name = "btnTedaikcileregonder";
             this.btnTedaikcileregonder.Size = new System.Drawing.Size(248, 80);
             toolTipTitleItem5.Text = "AKTAR";
@@ -445,7 +458,7 @@
             this.btnListeOlustur.Image = ((System.Drawing.Image)(resources.GetObject("btnListeOlustur.Image")));
             this.btnListeOlustur.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnListeOlustur.Location = new System.Drawing.Point(4, 4);
-            this.btnListeOlustur.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.btnListeOlustur.Margin = new System.Windows.Forms.Padding(9);
             this.btnListeOlustur.Name = "btnListeOlustur";
             this.btnListeOlustur.Size = new System.Drawing.Size(248, 80);
             toolTipTitleItem6.Text = "LİSTE";
@@ -471,11 +484,9 @@
             // 
             // rpstIsSelectedOfferMaterial
             // 
-            this.rpstIsSelectedOfferMaterial.AutoHeight = false;
-            this.rpstIsSelectedOfferMaterial.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.UserDefined;
+            this.rpstIsSelectedOfferMaterial.LookAndFeel.SkinName = "Sharp Plus";
+            this.rpstIsSelectedOfferMaterial.LookAndFeel.UseDefaultLookAndFeel = false;
             this.rpstIsSelectedOfferMaterial.Name = "rpstIsSelectedOfferMaterial";
-            this.rpstIsSelectedOfferMaterial.PictureChecked = global::IhalematikProUI.Properties.Resources.check_box_icon;
-            this.rpstIsSelectedOfferMaterial.PictureUnchecked = global::IhalematikProUI.Properties.Resources.ui_check_box_uncheck_icon;
             // 
             // pnlx
             // 
@@ -494,7 +505,7 @@
             this.pnlAktarmaPaneli.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.pnlAktarmaPaneli.Controls.Add(this.btnAktar);
             this.pnlAktarmaPaneli.Location = new System.Drawing.Point(686, 4);
-            this.pnlAktarmaPaneli.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlAktarmaPaneli.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAktarmaPaneli.Name = "pnlAktarmaPaneli";
             this.pnlAktarmaPaneli.Size = new System.Drawing.Size(104, 864);
             this.pnlAktarmaPaneli.TabIndex = 35;
@@ -506,7 +517,7 @@
             this.btnAktar.Image = ((System.Drawing.Image)(resources.GetObject("btnAktar.Image")));
             this.btnAktar.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnAktar.Location = new System.Drawing.Point(6, 335);
-            this.btnAktar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAktar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAktar.Name = "btnAktar";
             this.btnAktar.Size = new System.Drawing.Size(93, 80);
             toolTipTitleItem7.Text = "MALZEME AKTAR";
@@ -527,7 +538,7 @@
             this.pnlMalzemeListesi.Controls.Add(this.grdMaterialList);
             this.pnlMalzemeListesi.Controls.Add(this.panelControl6);
             this.pnlMalzemeListesi.Location = new System.Drawing.Point(14, 10);
-            this.pnlMalzemeListesi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlMalzemeListesi.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMalzemeListesi.Name = "pnlMalzemeListesi";
             this.pnlMalzemeListesi.Size = new System.Drawing.Size(669, 590);
             this.pnlMalzemeListesi.TabIndex = 32;
@@ -535,11 +546,14 @@
             // grdMaterialList
             // 
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Location = new System.Drawing.Point(4, 29);
             this.grdMaterialList.MainView = this.gridViewMaterialList;
-            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
+            this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.btnChangeMeterialName,
+            this.btnResetMeterialName});
             this.grdMaterialList.Size = new System.Drawing.Size(661, 557);
             this.grdMaterialList.TabIndex = 0;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -656,6 +670,8 @@
             this.gridViewMaterialList.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gridViewMaterialList.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
+            this.colChangeMetreialName,
+            this.colResetMeterialName,
             this.colIsSelectedOfferMaterial,
             this.gridColumn1,
             this.gridColumn2,
@@ -686,6 +702,51 @@
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
             // 
+            // colChangeMetreialName
+            // 
+            this.colChangeMetreialName.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colChangeMetreialName.AppearanceHeader.Options.UseBackColor = true;
+            this.colChangeMetreialName.ColumnEdit = this.btnChangeMeterialName;
+            this.colChangeMetreialName.MaxWidth = 30;
+            this.colChangeMetreialName.MinWidth = 30;
+            this.colChangeMetreialName.Name = "colChangeMetreialName";
+            this.colChangeMetreialName.Visible = true;
+            this.colChangeMetreialName.VisibleIndex = 1;
+            this.colChangeMetreialName.Width = 30;
+            // 
+            // btnChangeMeterialName
+            // 
+            this.btnChangeMeterialName.AutoHeight = false;
+            this.btnChangeMeterialName.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnChangeMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.btnChangeMeterialName.LookAndFeel.SkinName = "Sharp Plus";
+            this.btnChangeMeterialName.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnChangeMeterialName.Name = "btnChangeMeterialName";
+            this.btnChangeMeterialName.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnChangeMeterialName.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnChangeMeterialName_ButtonClick);
+            // 
+            // colResetMeterialName
+            // 
+            this.colResetMeterialName.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colResetMeterialName.AppearanceHeader.Options.UseBackColor = true;
+            this.colResetMeterialName.ColumnEdit = this.btnResetMeterialName;
+            this.colResetMeterialName.MaxWidth = 30;
+            this.colResetMeterialName.MinWidth = 30;
+            this.colResetMeterialName.Name = "colResetMeterialName";
+            this.colResetMeterialName.Visible = true;
+            this.colResetMeterialName.VisibleIndex = 2;
+            this.colResetMeterialName.Width = 30;
+            // 
+            // btnResetMeterialName
+            // 
+            this.btnResetMeterialName.AutoHeight = false;
+            this.btnResetMeterialName.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnResetMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            this.btnResetMeterialName.LookAndFeel.SkinName = "Sharp Plus";
+            this.btnResetMeterialName.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnResetMeterialName.Name = "btnResetMeterialName";
+            this.btnResetMeterialName.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
             // colIsSelectedOfferMaterial
             // 
             this.colIsSelectedOfferMaterial.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
@@ -693,14 +754,14 @@
             this.colIsSelectedOfferMaterial.Caption = " ";
             this.colIsSelectedOfferMaterial.ColumnEdit = this.rpstIsSelectedOfferMaterial;
             this.colIsSelectedOfferMaterial.FieldName = "IsSelected";
-            this.colIsSelectedOfferMaterial.MaxWidth = 40;
-            this.colIsSelectedOfferMaterial.MinWidth = 40;
+            this.colIsSelectedOfferMaterial.MaxWidth = 30;
+            this.colIsSelectedOfferMaterial.MinWidth = 30;
             this.colIsSelectedOfferMaterial.Name = "colIsSelectedOfferMaterial";
             this.colIsSelectedOfferMaterial.OptionsFilter.AllowFilter = false;
             this.colIsSelectedOfferMaterial.UnboundType = DevExpress.Data.UnboundColumnType.Boolean;
             this.colIsSelectedOfferMaterial.Visible = true;
             this.colIsSelectedOfferMaterial.VisibleIndex = 0;
-            this.colIsSelectedOfferMaterial.Width = 40;
+            this.colIsSelectedOfferMaterial.Width = 30;
             // 
             // gridColumn1
             // 
@@ -721,8 +782,8 @@
             this.gridColumn1.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 69;
+            this.gridColumn1.VisibleIndex = 3;
+            this.gridColumn1.Width = 73;
             // 
             // gridColumn2
             // 
@@ -743,8 +804,8 @@
             this.gridColumn2.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 304;
+            this.gridColumn2.VisibleIndex = 4;
+            this.gridColumn2.Width = 345;
             // 
             // gridColumn3
             // 
@@ -767,7 +828,7 @@
             this.gridColumn3.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 3;
+            this.gridColumn3.VisibleIndex = 5;
             this.gridColumn3.Width = 60;
             // 
             // colMaterialListQuantity
@@ -795,7 +856,7 @@
             this.colMaterialListQuantity.OptionsFilter.AllowAutoFilter = false;
             this.colMaterialListQuantity.OptionsFilter.AllowFilter = false;
             this.colMaterialListQuantity.Visible = true;
-            this.colMaterialListQuantity.VisibleIndex = 4;
+            this.colMaterialListQuantity.VisibleIndex = 6;
             this.colMaterialListQuantity.Width = 80;
             // 
             // colBirimFiyat
@@ -840,7 +901,7 @@
             this.pnlFirma.Controls.Add(this.grdSupplier);
             this.pnlFirma.Controls.Add(this.panelControl7);
             this.pnlFirma.Location = new System.Drawing.Point(796, 13);
-            this.pnlFirma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlFirma.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFirma.Name = "pnlFirma";
             this.pnlFirma.Size = new System.Drawing.Size(712, 588);
             this.pnlFirma.TabIndex = 34;
@@ -849,10 +910,10 @@
             // grdSupplier
             // 
             this.grdSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdSupplier.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdSupplier.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdSupplier.Location = new System.Drawing.Point(4, 29);
             this.grdSupplier.MainView = this.gridViewSupplier;
-            this.grdSupplier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.grdSupplier.Name = "grdSupplier";
             this.grdSupplier.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstSupplierDetail1,
@@ -1006,10 +1067,9 @@
             // rpstIsSelectedSupplier
             // 
             this.rpstIsSelectedSupplier.AutoHeight = false;
-            this.rpstIsSelectedSupplier.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.UserDefined;
+            this.rpstIsSelectedSupplier.LookAndFeel.SkinName = "Sharp Plus";
+            this.rpstIsSelectedSupplier.LookAndFeel.UseDefaultLookAndFeel = false;
             this.rpstIsSelectedSupplier.Name = "rpstIsSelectedSupplier";
-            this.rpstIsSelectedSupplier.PictureChecked = global::IhalematikProUI.Properties.Resources.check_box_icon;
-            this.rpstIsSelectedSupplier.PictureUnchecked = global::IhalematikProUI.Properties.Resources.ui_check_box_uncheck_icon;
             // 
             // colCompanyName
             // 
@@ -1087,6 +1147,10 @@
             this.labelControl5.TabIndex = 0;
             this.labelControl5.Text = "    TEDARİKÇİ LİSTESİ";
             // 
+            // popupMenu1
+            // 
+            this.popupMenu1.Name = "popupMenu1";
+            // 
             // frm_TedarikcilereTeklifGonder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1128,6 +1192,8 @@
             this.pnlMalzemeListesi.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChangeMeterialName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnResetMeterialName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
             this.panelControl6.ResumeLayout(false);
             this.panelControl6.PerformLayout();
@@ -1140,6 +1206,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
             this.panelControl7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1195,5 +1262,10 @@
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraGrid.Columns.GridColumn colBirimFiyat;
+        private DevExpress.XtraGrid.Columns.GridColumn colChangeMetreialName;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnChangeMeterialName;
+        private DevExpress.XtraGrid.Columns.GridColumn colResetMeterialName;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnResetMeterialName;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
     }
 }

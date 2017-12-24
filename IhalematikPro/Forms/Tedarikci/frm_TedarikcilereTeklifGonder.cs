@@ -42,6 +42,8 @@ namespace IhalematikProUI.Forms.Tedarikci
             grdSupplier.TabIndex = 0;//samet
             lblOfferDescription.Text = CurrentManager.Instance.CurrentOffer.Description;
             lblTenderNumber.Text = CurrentManager.Instance.CurrentOffer.Number;
+            colChangeMetreialName.Visible = true;
+            colResetMeterialName.Visible = true;
             pnlx.Visible = true;
             pnlMalzemeListesi.Dock = DockStyle.Fill;
             pnlMalzemeListesi.Enabled = true;
@@ -164,6 +166,8 @@ namespace IhalematikProUI.Forms.Tedarikci
             colMaterialListQuantity.OptionsColumn.AllowEdit = true;
             colMaterialListQuantity.OptionsColumn.AllowFocus = true;
             colMaterialListQuantity.OptionsColumn.ReadOnly = false;
+            colChangeMetreialName.Visible = true;
+            colResetMeterialName.Visible = true;
             this.LoadMaterialGrid();
         }
 
@@ -196,6 +200,8 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlMalzemeListesi.Dock = DockStyle.Fill;
             pnlMalzemeListesi.BringToFront();
             colIsSelectedSupplier.Visible = true;
+            colChangeMetreialName.Visible = false;
+            colResetMeterialName.Visible = false;
             this.ShowMailPanel = false;
         }
 
@@ -222,6 +228,8 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlFirma.BringToFront();
             colIsSelectedSupplier.Visible = false;
             colSupplierDetail.Visible = true;
+            colChangeMetreialName.Visible = false;
+            colResetMeterialName.Visible = false;
             this.ShowMailPanel = true;
         }
 
@@ -258,5 +266,11 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void gridLookUpEdit1_EditValueChanged(object sender, EventArgs e)
         {
                     }
+
+        private void btnChangeMeterialName_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            frm_MalzemeAdlandir ma = new frm_MalzemeAdlandir();
+            ma.ShowDialog();
+        }
     }
 }

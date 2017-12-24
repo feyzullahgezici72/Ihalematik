@@ -803,6 +803,8 @@
             this.rdSortPrice.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "En düşük fiyata göre"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Ortalama fiyata göre")});
+            this.rdSortPrice.Properties.LookAndFeel.SkinName = "McSkin";
+            this.rdSortPrice.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.rdSortPrice.Size = new System.Drawing.Size(370, 91);
             this.rdSortPrice.TabIndex = 23;
             this.rdSortPrice.SelectedIndexChanged += new System.EventHandler(this.rdSortPrice_SelectedIndexChanged);
