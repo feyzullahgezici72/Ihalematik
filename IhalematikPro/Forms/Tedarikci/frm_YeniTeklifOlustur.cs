@@ -15,6 +15,7 @@ using IhalematikProBL.Manager;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikPro.Manager;
+using DevExpress.LookAndFeel;
 
 namespace IhalematikProUI.Forms
 {
@@ -40,7 +41,12 @@ namespace IhalematikProUI.Forms
         {
             IsEmptyKontrol();
             this.Enabled = false;
-            DialogResult resultMsg = MessageBox.Show("Yeni Teklif oluşturulsun mu? ", "Yeni Teklif Oluştur ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            UserLookAndFeel u = new UserLookAndFeel(this);
+            u.UseDefaultLookAndFeel = false;
+            u.UseWindowsXPTheme = false;
+            u.Style = LookAndFeelStyle.Skin;
+            u.SkinName = "McSkin";
+            DialogResult resultMsg = XtraMessageBox.Show(u,"    Yeni Teklif oluşturulsun mu?              ", "Oluştur ",  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultMsg.Equals(DialogResult.Yes))
             {
                 Offer offer = new Offer();
