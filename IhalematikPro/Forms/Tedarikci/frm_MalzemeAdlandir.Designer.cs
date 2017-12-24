@@ -32,10 +32,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtNewMeterialName = new DevExpress.XtraEditors.TextEdit();
             this.btnChangeName = new DevExpress.XtraEditors.SimpleButton();
-            this.trcBar = new DevExpress.XtraEditors.TrackBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtNewMeterialName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trcBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trcBar.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -48,40 +45,32 @@
             // 
             // txtNewMeterialName
             // 
+            this.txtNewMeterialName.EditValue = "Viko Meridian R Dimmer RL 600 Watt Krem - 90971320";
             this.txtNewMeterialName.Location = new System.Drawing.Point(115, 27);
             this.txtNewMeterialName.Name = "txtNewMeterialName";
+            this.txtNewMeterialName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtNewMeterialName.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtNewMeterialName.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtNewMeterialName.Properties.AppearanceFocused.Options.UseFont = true;
             this.txtNewMeterialName.Size = new System.Drawing.Size(865, 26);
             this.txtNewMeterialName.TabIndex = 1;
             // 
             // btnChangeName
             // 
             this.btnChangeName.Image = ((System.Drawing.Image)(resources.GetObject("btnChangeName.Image")));
-            this.btnChangeName.Location = new System.Drawing.Point(880, 134);
+            this.btnChangeName.Location = new System.Drawing.Point(880, 74);
             this.btnChangeName.Name = "btnChangeName";
             this.btnChangeName.Size = new System.Drawing.Size(100, 34);
             this.btnChangeName.TabIndex = 2;
             this.btnChangeName.Text = "Değiştir";
             this.btnChangeName.Click += new System.EventHandler(this.btnChangeName_Click);
             // 
-            // trcBar
-            // 
-            this.trcBar.Location = new System.Drawing.Point(107, 59);
-            this.trcBar.Name = "trcBar";
-            this.trcBar.Properties.LabelAppearance.Options.UseTextOptions = true;
-            this.trcBar.Properties.LabelAppearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.trcBar.Properties.LargeChange = 1;
-            this.trcBar.Properties.LookAndFeel.SkinName = "McSkin";
-            this.trcBar.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.trcBar.Size = new System.Drawing.Size(879, 69);
-            this.trcBar.TabIndex = 3;
-            // 
             // frm_MalzemeAdlandir
             // 
             this.AcceptButton = this.btnChangeName;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 180);
-            this.Controls.Add(this.trcBar);
+            this.ClientSize = new System.Drawing.Size(1009, 124);
             this.Controls.Add(this.btnChangeName);
             this.Controls.Add(this.txtNewMeterialName);
             this.Controls.Add(this.labelControl1);
@@ -96,8 +85,6 @@
             this.Text = "MALZEMEYİ YENİDEN ADLANDIR";
             this.Load += new System.EventHandler(this.frm_MalzemeAdlandir_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtNewMeterialName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trcBar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trcBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,6 +95,5 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txtNewMeterialName;
         private DevExpress.XtraEditors.SimpleButton btnChangeName;
-        private DevExpress.XtraEditors.TrackBarControl trcBar;
     }
 }

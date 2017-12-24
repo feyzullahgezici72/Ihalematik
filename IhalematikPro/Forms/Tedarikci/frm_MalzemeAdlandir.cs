@@ -20,12 +20,26 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnChangeName_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (txtNewMeterialName.Text!=null)
+            {
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Malzeme Adını Belirtiniz...");
+                txtNewMeterialName.Focus();
+            }
         }
 
         private void frm_MalzemeAdlandir_Load(object sender, EventArgs e)
         {
-            trcBar.MaximumSize = txtNewMeterialName.MaximumSize;
+         int uzunluk =int.Parse(txtNewMeterialName.Text.Length.ToString());
+           
+        }
+
+        private void trcBar_EditValueChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
