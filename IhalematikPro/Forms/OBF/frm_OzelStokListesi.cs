@@ -205,5 +205,10 @@ namespace IhalematikPro.Forms
 
             }
         }
+
+        private void txtDescription_EditValueChanged(object sender, EventArgs e)
+        {
+            txtDescription2.Text = txtDescription.Text;
+        }
     }
 }

@@ -31,8 +31,14 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_OzelStokListesi));
@@ -47,6 +53,8 @@
             this.txtUnitPrice = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.pnlObfKayit = new DevExpress.XtraEditors.GroupControl();
+            this.txtDescription2 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txtNumber = new DevExpress.XtraEditors.TextEdit();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
@@ -84,6 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlObfKayit)).BeginInit();
             this.pnlObfKayit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescription2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -106,7 +115,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl5.Location = new System.Drawing.Point(28, 155);
+            this.labelControl5.Location = new System.Drawing.Point(28, 190);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(85, 19);
@@ -117,21 +126,21 @@
             // 
             this.txtUnit.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtUnit, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.txtUnit.Location = new System.Drawing.Point(122, 118);
+            this.txtUnit.Location = new System.Drawing.Point(122, 153);
             this.txtUnit.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUnit.Properties.Appearance.Options.UseBackColor = true;
             this.txtUnit.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtUnit.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtUnit.Size = new System.Drawing.Size(291, 26);
-            this.txtUnit.TabIndex = 2;
+            this.txtUnit.Size = new System.Drawing.Size(380, 26);
+            this.txtUnit.TabIndex = 3;
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Location = new System.Drawing.Point(68, 120);
+            this.labelControl4.Location = new System.Drawing.Point(68, 155);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(47, 19);
@@ -149,8 +158,9 @@
             this.txtDescription.Properties.Appearance.Options.UseBackColor = true;
             this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtDescription.Size = new System.Drawing.Size(291, 26);
+            this.txtDescription.Size = new System.Drawing.Size(380, 26);
             this.txtDescription.TabIndex = 1;
+            this.txtDescription.EditValueChanged += new System.EventHandler(this.txtDescription_EditValueChanged);
             // 
             // txtUnitPrice
             // 
@@ -161,7 +171,7 @@
             0});
             this.txtUnitPrice.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtUnitPrice, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.txtUnitPrice.Location = new System.Drawing.Point(122, 153);
+            this.txtUnitPrice.Location = new System.Drawing.Point(122, 188);
             this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -172,8 +182,8 @@
             this.txtUnitPrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtUnitPrice.Properties.Mask.EditMask = "c";
             this.txtUnitPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtUnitPrice.Size = new System.Drawing.Size(291, 26);
-            this.txtUnitPrice.TabIndex = 3;
+            this.txtUnitPrice.Size = new System.Drawing.Size(380, 26);
+            this.txtUnitPrice.TabIndex = 4;
             // 
             // labelControl2
             // 
@@ -195,6 +205,8 @@
             this.pnlObfKayit.AppearanceCaption.ForeColor = System.Drawing.Color.Maroon;
             this.pnlObfKayit.AppearanceCaption.Options.UseFont = true;
             this.pnlObfKayit.AppearanceCaption.Options.UseForeColor = true;
+            this.pnlObfKayit.Controls.Add(this.txtDescription2);
+            this.pnlObfKayit.Controls.Add(this.labelControl8);
             this.pnlObfKayit.Controls.Add(this.txtNumber);
             this.pnlObfKayit.Controls.Add(this.btnKaydet);
             this.pnlObfKayit.Controls.Add(this.btnTemizle);
@@ -211,9 +223,52 @@
             this.pnlObfKayit.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlObfKayit.Margin = new System.Windows.Forms.Padding(4);
             this.pnlObfKayit.Name = "pnlObfKayit";
-            this.pnlObfKayit.Size = new System.Drawing.Size(440, 729);
+            this.pnlObfKayit.Size = new System.Drawing.Size(527, 729);
             this.pnlObfKayit.TabIndex = 40;
             this.pnlObfKayit.Text = "Yeni Malzeme Ekle";
+            // 
+            // txtDescription2
+            // 
+            this.txtDescription2.EnterMoveNextControl = true;
+            this.dxErrorProvider1.SetIconAlignment(this.txtDescription2, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.txtDescription2.Location = new System.Drawing.Point(122, 119);
+            this.txtDescription2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescription2.Name = "txtDescription2";
+            this.txtDescription2.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtDescription2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtDescription2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtDescription2.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtDescription2.Size = new System.Drawing.Size(380, 26);
+            toolTipTitleItem2.Text = "AÇIKLAMA";
+            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            toolTipItem1.Appearance.Options.UseImage = true;
+            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Tedarikçilere gönderilecek işçilikli malzemenin adı";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem1);
+            this.txtDescription2.SuperTip = superToolTip2;
+            this.txtDescription2.TabIndex = 2;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl8.Location = new System.Drawing.Point(13, 122);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(101, 19);
+            toolTipTitleItem3.Text = "AÇIKLAMA";
+            toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            toolTipItem2.Appearance.Options.UseImage = true;
+            toolTipItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem2.Image")));
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Tedarikçilere gönderilecek işçilikli malzemenin adı";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            superToolTip3.Items.Add(toolTipItem2);
+            this.labelControl8.SuperTip = superToolTip3;
+            this.labelControl8.TabIndex = 29;
+            this.labelControl8.Text = "T.G.Açıklama:";
             // 
             // txtNumber
             // 
@@ -223,7 +278,7 @@
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtNumber.Size = new System.Drawing.Size(291, 26);
+            this.txtNumber.Size = new System.Drawing.Size(380, 26);
             this.txtNumber.TabIndex = 0;
             // 
             // btnKaydet
@@ -232,14 +287,14 @@
             this.btnKaydet.Appearance.Options.UseFont = true;
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
             this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnKaydet.Location = new System.Drawing.Point(231, 207);
+            this.btnKaydet.Location = new System.Drawing.Point(231, 242);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(124, 58);
-            toolTipTitleItem2.Text = "Kaydet";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            this.btnKaydet.SuperTip = superToolTip2;
-            this.btnKaydet.TabIndex = 4;
+            toolTipTitleItem4.Text = "Kaydet";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            this.btnKaydet.SuperTip = superToolTip4;
+            this.btnKaydet.TabIndex = 5;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
@@ -251,13 +306,13 @@
             this.btnTemizle.Appearance.Options.UseForeColor = true;
             this.btnTemizle.Image = global::IhalematikProUI.Properties.Resources.Actions_edit_clear_icon;
             this.btnTemizle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnTemizle.Location = new System.Drawing.Point(363, 207);
+            this.btnTemizle.Location = new System.Drawing.Point(363, 242);
             this.btnTemizle.Margin = new System.Windows.Forms.Padding(4);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(48, 58);
-            toolTipTitleItem3.Text = "Temizle";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            this.btnTemizle.SuperTip = superToolTip3;
+            toolTipTitleItem5.Text = "Temizle";
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            this.btnTemizle.SuperTip = superToolTip5;
             this.btnTemizle.TabIndex = 5;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
@@ -338,7 +393,7 @@
             gridLevelNode1.RelationName = "Level1";
             this.grdOBFList.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.grdOBFList.Location = new System.Drawing.Point(440, 85);
+            this.grdOBFList.Location = new System.Drawing.Point(527, 85);
             this.grdOBFList.MainView = this.gridViewOBFList;
             this.grdOBFList.Margin = new System.Windows.Forms.Padding(4);
             this.grdOBFList.Name = "grdOBFList";
@@ -346,7 +401,7 @@
             this.btnGncelle,
             this.btnPasive,
             this.btnActive});
-            this.grdOBFList.Size = new System.Drawing.Size(922, 645);
+            this.grdOBFList.Size = new System.Drawing.Size(835, 645);
             this.grdOBFList.TabIndex = 0;
             this.grdOBFList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOBFList});
@@ -673,9 +728,9 @@
             this.statusPanel.Controls.Add(this.lblRecordCount);
             this.statusPanel.Controls.Add(this.labelControl14);
             this.statusPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusPanel.Location = new System.Drawing.Point(440, 730);
+            this.statusPanel.Location = new System.Drawing.Point(527, 730);
             this.statusPanel.Name = "statusPanel";
-            this.statusPanel.Size = new System.Drawing.Size(922, 34);
+            this.statusPanel.Size = new System.Drawing.Size(835, 34);
             this.statusPanel.TabIndex = 42;
             // 
             // cmbAktivePasive
@@ -683,7 +738,7 @@
             this.cmbAktivePasive.Dock = System.Windows.Forms.DockStyle.Right;
             this.cmbAktivePasive.EditValue = "Aktif Kayıtlar";
             this.cmbAktivePasive.EnterMoveNextControl = true;
-            this.cmbAktivePasive.Location = new System.Drawing.Point(752, 0);
+            this.cmbAktivePasive.Location = new System.Drawing.Point(665, 0);
             this.cmbAktivePasive.Name = "cmbAktivePasive";
             this.cmbAktivePasive.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbAktivePasive.Properties.Appearance.Options.UseFont = true;
@@ -727,10 +782,10 @@
             this.panelControl2.Controls.Add(this.textEdit1);
             this.panelControl2.Controls.Add(this.labelControl6);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(440, 35);
+            this.panelControl2.Location = new System.Drawing.Point(527, 35);
             this.panelControl2.LookAndFeel.SkinName = "High Contrast";
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(922, 50);
+            this.panelControl2.Size = new System.Drawing.Size(835, 50);
             this.panelControl2.TabIndex = 43;
             // 
             // simpleButton1
@@ -828,6 +883,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlObfKayit)).EndInit();
             this.pnlObfKayit.ResumeLayout(false);
             this.pnlObfKayit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescription2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -891,5 +947,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colActive;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnActive;
         private DevExpress.XtraEditors.TextEdit txtNumber;
+        private DevExpress.XtraEditors.TextEdit txtDescription2;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
     }
 }
