@@ -207,6 +207,8 @@
             this.pnlObfKayit.Controls.Add(this.labelControl2);
             this.pnlObfKayit.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlObfKayit.Location = new System.Drawing.Point(0, 35);
+            this.pnlObfKayit.LookAndFeel.SkinName = "Foggy";
+            this.pnlObfKayit.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlObfKayit.Margin = new System.Windows.Forms.Padding(4);
             this.pnlObfKayit.Name = "pnlObfKayit";
             this.pnlObfKayit.Size = new System.Drawing.Size(440, 729);
@@ -726,6 +728,7 @@
             this.panelControl2.Controls.Add(this.labelControl6);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(440, 35);
+            this.panelControl2.LookAndFeel.SkinName = "High Contrast";
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(922, 50);
             this.panelControl2.TabIndex = 43;

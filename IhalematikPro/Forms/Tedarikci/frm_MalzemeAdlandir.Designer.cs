@@ -52,13 +52,13 @@
             this.txtNewMeterialName.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtNewMeterialName.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtNewMeterialName.Properties.AppearanceFocused.Options.UseFont = true;
-            this.txtNewMeterialName.Size = new System.Drawing.Size(865, 26);
+            this.txtNewMeterialName.Size = new System.Drawing.Size(733, 26);
             this.txtNewMeterialName.TabIndex = 1;
             // 
             // btnChangeName
             // 
             this.btnChangeName.Image = ((System.Drawing.Image)(resources.GetObject("btnChangeName.Image")));
-            this.btnChangeName.Location = new System.Drawing.Point(880, 74);
+            this.btnChangeName.Location = new System.Drawing.Point(748, 78);
             this.btnChangeName.Name = "btnChangeName";
             this.btnChangeName.Size = new System.Drawing.Size(100, 34);
             this.btnChangeName.TabIndex = 2;
@@ -70,7 +70,7 @@
             this.AcceptButton = this.btnChangeName;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1009, 124);
+            this.ClientSize = new System.Drawing.Size(858, 124);
             this.Controls.Add(this.btnChangeName);
             this.Controls.Add(this.txtNewMeterialName);
             this.Controls.Add(this.labelControl1);

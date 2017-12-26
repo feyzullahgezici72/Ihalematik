@@ -15,6 +15,7 @@ using IhalematikPro.Model;
 using IhalematikPro.Manager;
 using System.Threading;
 using IhalematikProUI.Forms;
+using DevExpress.LookAndFeel;
 
 namespace IhalematikPro.Forms
 {
@@ -45,7 +46,13 @@ namespace IhalematikPro.Forms
 
         private void btnIhaleOlustur_Click(object sender, EventArgs e)
         {
-            DialogResult resultMsg = MessageBox.Show("Yeni İhale oluşturulsun mu?", "Yeni ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            UserLookAndFeel u = new UserLookAndFeel(this);
+            u.UseDefaultLookAndFeel = false;
+            u.UseWindowsXPTheme = false;
+            u.Style = LookAndFeelStyle.Skin;
+            u.SkinName = "McSkin";
+
+            DialogResult resultMsg = XtraMessageBox.Show("Yeni İhale oluşturulsun mu?", "Yeni ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultMsg.Equals(DialogResult.Yes))
             {
                 Tender tender = new Tender();
@@ -130,23 +137,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click_1(object sender, EventArgs e)
         {
-            List<Offer> offers = OfferProvider.Instance.GetItems();
-            string offerNumber = txtOfferNumber.Text.Trim();
-            offers = offers.Where(p => p.Number.Contains(offerNumber)).ToList();
-            DateTime? start = dateStart.DateTime.Date;
-            DateTime? end = dateEnd.DateTime.Date;
-
-            if (start != null && start != DateTime.MinValue)
-            {
-                offers = offers.Where(p => p.DateTime >= start).ToList();
-            }
-            if (end != null && end != DateTime.MinValue)
-            {
-                offers = offers.Where(p => p.DateTime <= end).ToList();
-            }
-
-            grdOffer.DataSource = null;
-            grdOffer.DataSource = offers;
+            
         }
 
         private void txtOfferNumber_EditValueChanged(object sender, EventArgs e)
@@ -165,6 +156,27 @@ namespace IhalematikPro.Forms
                     }
                 }
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            List<Offer> offers = OfferProvider.Instance.GetItems();
+            string offerNumber = txtOfferNumber.Text.Trim();
+            offers = offers.Where(p => p.Number.Contains(offerNumber)).ToList();
+            DateTime? start = dateStart.DateTime.Date;
+            DateTime? end = dateEnd.DateTime.Date;
+
+            if (start != null && start != DateTime.MinValue)
+            {
+                offers = offers.Where(p => p.DateTime >= start).ToList();
+            }
+            if (end != null && end != DateTime.MinValue)
+            {
+                offers = offers.Where(p => p.DateTime <= end).ToList();
+            }
+
+            grdOffer.DataSource = null;
+            grdOffer.DataSource = offers;
         }
     }
 }

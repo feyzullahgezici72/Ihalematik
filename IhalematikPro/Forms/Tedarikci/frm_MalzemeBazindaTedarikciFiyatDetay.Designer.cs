@@ -188,20 +188,20 @@
             this.panelControl1.Enabled = false;
             this.panelControl1.Location = new System.Drawing.Point(0, 35);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(800, 118);
+            this.panelControl1.Size = new System.Drawing.Size(800, 126);
             this.panelControl1.TabIndex = 119;
             // 
             // grdMaterialList
             // 
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdMaterialList.Location = new System.Drawing.Point(0, 153);
+            this.grdMaterialList.Location = new System.Drawing.Point(0, 161);
             this.grdMaterialList.MainView = this.gridViewMaterialList;
             this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstIsSelectedOfferMaterial});
-            this.grdMaterialList.Size = new System.Drawing.Size(800, 389);
+            this.grdMaterialList.Size = new System.Drawing.Size(800, 381);
             this.grdMaterialList.TabIndex = 0;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});

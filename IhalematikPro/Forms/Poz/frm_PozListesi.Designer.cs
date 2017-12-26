@@ -30,27 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PozListesi));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.pozMenu = new DevExpress.XtraEditors.GroupControl();
-            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.txtNumber = new DevExpress.XtraEditors.TextEdit();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -90,8 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pozMenu)).BeginInit();
             this.pozMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
-            this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).BeginInit();
@@ -178,7 +169,6 @@
             this.pozMenu.AppearanceCaption.ForeColor = System.Drawing.Color.Navy;
             this.pozMenu.AppearanceCaption.Options.UseFont = true;
             this.pozMenu.AppearanceCaption.Options.UseForeColor = true;
-            this.pozMenu.Controls.Add(this.panelControl3);
             this.pozMenu.Controls.Add(this.txtNumber);
             this.pozMenu.Controls.Add(this.btnKaydet);
             this.pozMenu.Controls.Add(this.labelControl2);
@@ -191,66 +181,13 @@
             this.pozMenu.Controls.Add(this.labelControl3);
             this.pozMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pozMenu.Location = new System.Drawing.Point(0, 35);
+            this.pozMenu.LookAndFeel.SkinName = "Foggy";
+            this.pozMenu.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pozMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pozMenu.Name = "pozMenu";
             this.pozMenu.Size = new System.Drawing.Size(442, 623);
             this.pozMenu.TabIndex = 37;
             this.pozMenu.Text = "Yeni Poz Ekle";
-            // 
-            // panelControl3
-            // 
-            this.panelControl3.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl3.Appearance.Options.UseBackColor = true;
-            this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl3.Controls.Add(this.simpleButton2);
-            this.panelControl3.Controls.Add(this.labelControl8);
-            this.panelControl3.Controls.Add(this.progressBar1);
-            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl3.Location = new System.Drawing.Point(2, 398);
-            this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(438, 223);
-            this.panelControl3.TabIndex = 26;
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.simpleButton2.Image = global::IhalematikProUI.Properties.Resources.network_icon;
-            this.simpleButton2.Location = new System.Drawing.Point(0, 49);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(438, 147);
-            toolTipTitleItem1.Text = "POZ GÜNCELLE";
-            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipItem1.Appearance.Options.UseImage = true;
-            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Yıllık olarak yayınlanan tüm kurum pozlarını otomatik olarak veritabanına aktarır" +
-    "";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            this.simpleButton2.SuperTip = superToolTip1;
-            this.simpleButton2.TabIndex = 2;
-            this.simpleButton2.Text = "Güncellemeyi Başlat";
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl8.Location = new System.Drawing.Point(4, 10);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(276, 29);
-            this.labelControl8.TabIndex = 1;
-            this.labelControl8.Text = "Poz Listesini Toplu Güncelle";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.progressBar1.Location = new System.Drawing.Point(0, 196);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(438, 27);
-            this.progressBar1.Step = 1;
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBar1.TabIndex = 0;
             // 
             // txtNumber
             // 
@@ -276,9 +213,9 @@
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(124, 58);
-            toolTipTitleItem3.Text = "Kaydet";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            this.btnKaydet.SuperTip = superToolTip3;
+            toolTipTitleItem2.Text = "Kaydet";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.btnKaydet.SuperTip = superToolTip2;
             this.btnKaydet.TabIndex = 4;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
@@ -317,9 +254,9 @@
             this.btnTemizle.Margin = new System.Windows.Forms.Padding(4);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(48, 58);
-            toolTipTitleItem4.Text = "Temizle";
-            superToolTip4.Items.Add(toolTipTitleItem4);
-            this.btnTemizle.SuperTip = superToolTip4;
+            toolTipTitleItem3.Text = "Temizle";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            this.btnTemizle.SuperTip = superToolTip3;
             this.btnTemizle.TabIndex = 25;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
@@ -791,9 +728,9 @@
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(50, 31);
-            toolTipTitleItem2.Text = "Kaydet";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            this.simpleButton1.SuperTip = superToolTip2;
+            toolTipTitleItem1.Text = "Kaydet";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.simpleButton1.SuperTip = superToolTip1;
             this.simpleButton1.TabIndex = 27;
             this.simpleButton1.Text = "Bul";
             // 
@@ -882,9 +819,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pozMenu)).EndInit();
             this.pozMenu.ResumeLayout(false);
             this.pozMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
-            this.panelControl3.ResumeLayout(false);
-            this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).EndInit();
@@ -948,9 +882,5 @@
         private DevExpress.XtraEditors.SimpleButton btnKapat;
         private DevExpress.XtraGrid.Columns.GridColumn colActive;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnActive;
-        private DevExpress.XtraEditors.PanelControl panelControl3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
-        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
