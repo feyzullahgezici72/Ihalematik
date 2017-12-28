@@ -750,5 +750,10 @@ namespace IhalematikPro.Forms
             frm_PozlariOnlineGuncelle pg = new frm_PozlariOnlineGuncelle();
             pg.ShowDialog();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
