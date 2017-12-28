@@ -191,7 +191,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1370, 35);
+            this.panelControl1.Size = new System.Drawing.Size(1377, 35);
             this.panelControl1.TabIndex = 20;
             this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
@@ -214,7 +214,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1342, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1349, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -251,7 +251,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 35);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1370, 72);
+            this.panelControl2.Size = new System.Drawing.Size(1377, 72);
             this.panelControl2.TabIndex = 22;
             // 
             // panelControl4
@@ -275,7 +275,7 @@
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1370, 72);
+            this.panelControl4.Size = new System.Drawing.Size(1377, 72);
             this.panelControl4.TabIndex = 23;
             // 
             // panelControl8
@@ -286,7 +286,7 @@
             this.panelControl8.Controls.Add(this.txtFuelOilFare);
             this.panelControl8.Controls.Add(this.labelControl18);
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl8.Location = new System.Drawing.Point(483, 3);
+            this.panelControl8.Location = new System.Drawing.Point(490, 3);
             this.panelControl8.LookAndFeel.SkinName = "Office 2007 Pink";
             this.panelControl8.Name = "panelControl8";
             this.panelControl8.Size = new System.Drawing.Size(157, 66);
@@ -331,7 +331,7 @@
             this.groupControl4.Controls.Add(this.checkEdit2);
             this.groupControl4.Controls.Add(this.checkEdit1);
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl4.Location = new System.Drawing.Point(640, 3);
+            this.groupControl4.Location = new System.Drawing.Point(647, 3);
             this.groupControl4.LookAndFeel.SkinName = "The Asphalt World";
             this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl4.Name = "groupControl4";
@@ -382,7 +382,7 @@
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
             this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnKaydet.Location = new System.Drawing.Point(962, 3);
+            this.btnKaydet.Location = new System.Drawing.Point(969, 3);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(132, 66);
@@ -399,7 +399,7 @@
             this.btnObfKayit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnObfKayit.Location = new System.Drawing.Point(1094, 3);
+            this.btnObfKayit.Location = new System.Drawing.Point(1101, 3);
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4);
             this.btnObfKayit.Name = "btnObfKayit";
             this.btnObfKayit.Size = new System.Drawing.Size(141, 66);
@@ -416,7 +416,7 @@
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(1235, 3);
+            this.simpleButton1.Location = new System.Drawing.Point(1242, 3);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(132, 66);
@@ -505,7 +505,7 @@
             this.grdMaterialList.MainView = this.grdMaterialList2;
             this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
-            this.grdMaterialList.Size = new System.Drawing.Size(808, 520);
+            this.grdMaterialList.Size = new System.Drawing.Size(815, 520);
             this.grdMaterialList.TabIndex = 0;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdMaterialList2});
@@ -792,7 +792,7 @@
             this.gridSplitContainer1.Panel1.Controls.Add(this.grdMaterialList);
             this.gridSplitContainer1.Panel1.Controls.Add(this.panel1);
             this.gridSplitContainer1.Panel1.Controls.Add(this.isciAracGirisPaneli);
-            this.gridSplitContainer1.Size = new System.Drawing.Size(1370, 665);
+            this.gridSplitContainer1.Size = new System.Drawing.Size(1377, 665);
             this.gridSplitContainer1.TabIndex = 23;
             // 
             // panel1
@@ -805,7 +805,7 @@
             this.panel1.Location = new System.Drawing.Point(562, 520);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(808, 145);
+            this.panel1.Size = new System.Drawing.Size(815, 145);
             this.panel1.TabIndex = 36;
             // 
             // groupControl3
@@ -1118,7 +1118,7 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.lblTotalMarkupNonKDV);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl1.Location = new System.Drawing.Point(550, 0);
+            this.groupControl1.Location = new System.Drawing.Point(557, 0);
             this.groupControl1.LookAndFeel.SkinName = "Coffee";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
@@ -1582,7 +1582,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 772);
+            this.ClientSize = new System.Drawing.Size(1377, 772);
             this.ControlBox = false;
             this.Controls.Add(this.gridSplitContainer1);
             this.Controls.Add(this.panelControl2);
