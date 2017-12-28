@@ -51,6 +51,7 @@ namespace IhalematikProUI.Forms
                 txtNumber.Text = this.CurrentOBF.Number;
                 txtUnit.Text = this.CurrentOBF.Unit;
                 txtUnitPrice.Text = this.CurrentOBF.UnitPrice.ToString("c");
+                txtDescriptionForSupplier.Text = this.CurrentOBF.DescriptionForSupplier;
             }
         }
         public bool IsEmptyKontrol()
@@ -92,6 +93,7 @@ namespace IhalematikProUI.Forms
                 model.Number = txtNumber.Text;
                 model.Unit = txtUnit.Text;
                 model.UnitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtUnitPrice.Text);
+                model.DescriptionForSupplier = txtDescriptionForSupplier.Text;
                 model.Save();
                 frm_MesajFormu mf = new frm_MesajFormu();
                 mf.lblMesaj.Text = "Kayıt Güncellendi...";

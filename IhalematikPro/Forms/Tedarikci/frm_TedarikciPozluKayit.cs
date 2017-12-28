@@ -73,7 +73,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                 }
             }
 
-            List<OfferMaterialList> offerMaterialLists = currentOffer.MaterialList;
+            List<OfferMaterialList> offerMaterialLists = currentOffer.MaterialList.Where(p => p.IsPoz).ToList();
             List<OfferMaterialListModel> models = new List<OfferMaterialListModel>();
             foreach (OfferMaterialList item in offerMaterialLists)
             {
@@ -106,7 +106,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             }
 
             List<OfferMaterialList> items = currentOffer.MaterialList.Where(p => p.IsPoz && !p.IsMarkedForDeletion).ToList();
-            List <OfferMaterialListModel> dataSource = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(items).ToList();
+            List<OfferMaterialListModel> dataSource = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(items).ToList();
 
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = dataSource;

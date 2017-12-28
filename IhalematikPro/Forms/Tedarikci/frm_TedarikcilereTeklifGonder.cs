@@ -18,6 +18,8 @@ namespace IhalematikProUI.Forms.Tedarikci
     public partial class frm_TedarikcilereTeklifGonder : IhalematikBaseForm
     {
         public bool ShowMailPanel { get; set; }
+        public int FocusedRowHandle { get; private set; }
+
         public frm_TedarikcilereTeklifGonder()
         {
             InitializeComponent();
@@ -82,6 +84,10 @@ namespace IhalematikProUI.Forms.Tedarikci
                 List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(Items);
                 colIsSelectedOfferMaterial.Visible = true;
                 grdMaterialList.DataSource = models.Where(p => !p.IsSelected).ToList();
+            }
+            if (this.FocusedRowHandle != 0)
+            {
+                gridViewMaterialList.FocusedRowHandle = this.FocusedRowHandle;
             }
 
         }
@@ -265,12 +271,20 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void gridLookUpEdit1_EditValueChanged(object sender, EventArgs e)
         {
-                    }
+        }
 
         private void btnChangeMeterialName_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            frm_MalzemeAdlandir ma = new frm_MalzemeAdlandir();
-            ma.ShowDialog();
+            frm_MalzemeAdlandir frm = new frm_MalzemeAdlandir(this);
+
+            int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialList.GetFocusedRowCellValue("PozOBFId"));
+            bool IsPoz = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<bool>(gridViewMaterialList.GetFocusedRowCellValue("IsPoz"));
+
+            this.FocusedRowHandle = gridViewMaterialList.FocusedRowHandle;
+
+            frm.currentPozOBFId = id;
+            frm.IsPoz = IsPoz;
+            frm.ShowDialog();
         }
     }
 }

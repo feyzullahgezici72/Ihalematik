@@ -61,7 +61,7 @@ namespace IhalematikPro.Forms
             model.IsActive = true;
             model.Unit = txtUnit.Text;
             model.UnitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtUnitPrice.Text.Replace("TL", string.Empty));
-
+            model.DescriptionForSupplier = txtDescriptionForSupplier.Text;
             List<OBF> existingOBFs = UIOBFManager.Instance.GetOBF(model.Number);
             if (existingOBFs != null && existingOBFs.Count != 0)
             {
@@ -208,7 +208,7 @@ namespace IhalematikPro.Forms
 
         private void txtDescription_EditValueChanged(object sender, EventArgs e)
         {
-            txtDescription2.Text = txtDescription.Text;
+            txtDescriptionForSupplier.Text = txtDescription.Text;
         }
     }
 }

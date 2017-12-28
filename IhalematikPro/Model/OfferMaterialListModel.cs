@@ -20,8 +20,8 @@ namespace IhalematikProUI.Model
         {
             get
             {
-                if (this.pozOBF == null)
-                {
+                //if (this.pozOBF == null)
+                //{
                     if (this.IsPoz)
                     {
                         Poz poz = PozProvider.Instance.GetItem(this.PozOBFId);
@@ -34,7 +34,7 @@ namespace IhalematikProUI.Model
                         this.pozOBF = new Material().CreateMaterial(obf);
                     }
 
-                }
+                //}
                 return this.pozOBF;
             }
 
@@ -51,6 +51,10 @@ namespace IhalematikProUI.Model
             {
                 if (this.PozOBF != null)
                 {
+                    if (!string.IsNullOrEmpty(this.PozOBF.DescriptionForSupplier))
+                    {
+                        return this.PozOBF.DescriptionForSupplier;
+                    }
                     return this.PozOBF.Description;
                 }
                 return string.Empty;

@@ -19,6 +19,7 @@ namespace IhalematikPro.Model
         public double UnitPrice { get; set; }
         public bool IsActive { get; set; }
         public double OfferPrice { get; internal set; }
+        public string DescriptionForSupplier { get; internal set; }
 
         public OBFModel(OBF Entity)
         {
@@ -28,6 +29,7 @@ namespace IhalematikPro.Model
             this.Description = Entity.Description;
             this.Id = Entity.Id;
             this.IsActive = Entity.IsActive;
+            this.DescriptionForSupplier = Entity.DescriptionForSupplier;
         }
 
         public OBFModel()
@@ -47,6 +49,7 @@ namespace IhalematikPro.Model
             OBF.Unit = this.Unit;
             OBF.UnitPrice = this.UnitPrice;
             OBF.IsActive = this.IsActive;
+            OBF.DescriptionForSupplier = this.DescriptionForSupplier;
             return OBF;
         }
 

@@ -11,6 +11,7 @@ namespace IhalematikProBL.Entity
     {
         public string Number { get; set; }
         public string Description { get; set; }
+        public string DescriptionForSupplier { get; set; }
         public string Unit { get; set; }
 
         public double UnitPrice { get; set; }
@@ -25,6 +26,7 @@ namespace IhalematikProBL.Entity
                 material.Unit = item.Unit;
                 material.UnitPrice = item.UnitPrice;
                 material.Description = item.Description;
+                material.DescriptionForSupplier = item.DescriptionForSupplier;
                 material.Id = item.Id;
             }
             else if (Entity is OBF)
@@ -36,6 +38,7 @@ namespace IhalematikProBL.Entity
                 material.UnitPrice = item.UnitPrice;
                 material.Description = item.Description;
                 material.Id = item.Id;
+                material.DescriptionForSupplier = item.DescriptionForSupplier;
             }
 
             return material;
