@@ -55,7 +55,7 @@
             this.groupControl1.Location = new System.Drawing.Point(0, 39);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(693, 627);
+            this.groupControl1.Size = new System.Drawing.Size(689, 623);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "TC.Merkez Bankası Verilerine Göre";
             // 
@@ -87,7 +87,7 @@
             this.dataGrid1.ShowCellToolTips = false;
             this.dataGrid1.ShowEditingIcon = false;
             this.dataGrid1.ShowRowErrors = false;
-            this.dataGrid1.Size = new System.Drawing.Size(689, 592);
+            this.dataGrid1.Size = new System.Drawing.Size(685, 588);
             this.dataGrid1.TabIndex = 9;
             // 
             // btnGizliKapat
@@ -112,7 +112,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(693, 39);
+            this.panelControl1.Size = new System.Drawing.Size(689, 39);
             this.panelControl1.TabIndex = 13;
             // 
             // btnIptal
@@ -124,7 +124,7 @@
             this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
             this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnIptal.Location = new System.Drawing.Point(665, 0);
+            this.btnIptal.Location = new System.Drawing.Point(661, 0);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(28, 39);
@@ -146,12 +146,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(693, 666);
+            this.ClientSize = new System.Drawing.Size(689, 662);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;

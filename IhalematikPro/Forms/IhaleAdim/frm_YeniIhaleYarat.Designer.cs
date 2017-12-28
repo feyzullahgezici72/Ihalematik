@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_YeniIhaleYarat));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btnIhaleOlustur = new DevExpress.XtraEditors.SimpleButton();
             this.txtAciklama = new DevExpress.XtraEditors.TextEdit();
             this.txtTeklifNo = new DevExpress.XtraEditors.TextEdit();
@@ -72,6 +72,7 @@
             this.rpstColId = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
             this.dateEnd = new DevExpress.XtraEditors.DateEdit();
             this.dateStart = new DevExpress.XtraEditors.DateEdit();
             this.txtOfferNumber = new DevExpress.XtraEditors.TextEdit();
@@ -83,7 +84,10 @@
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeklifNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtcompanyName.Properties)).BeginInit();
@@ -121,6 +125,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
+            this.panelControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnIhaleOlustur
@@ -129,10 +136,11 @@
             this.btnIhaleOlustur.Appearance.Options.UseFont = true;
             this.btnIhaleOlustur.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIhaleOlustur.Image = ((System.Drawing.Image)(resources.GetObject("btnIhaleOlustur.Image")));
-            this.btnIhaleOlustur.Location = new System.Drawing.Point(1098, 382);
+            this.btnIhaleOlustur.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnIhaleOlustur.Location = new System.Drawing.Point(1048, 435);
             this.btnIhaleOlustur.Margin = new System.Windows.Forms.Padding(6);
             this.btnIhaleOlustur.Name = "btnIhaleOlustur";
-            this.btnIhaleOlustur.Size = new System.Drawing.Size(134, 47);
+            this.btnIhaleOlustur.Size = new System.Drawing.Size(182, 90);
             this.btnIhaleOlustur.TabIndex = 0;
             this.btnIhaleOlustur.Text = "Oluştur";
             this.btnIhaleOlustur.Click += new System.EventHandler(this.btnIhaleOlustur_Click);
@@ -234,11 +242,11 @@
             // tabIhaleBilgileri
             // 
             this.tabIhaleBilgileri.Location = new System.Drawing.Point(493, 60);
-            this.tabIhaleBilgileri.LookAndFeel.SkinName = "Glass Oceans";
+            this.tabIhaleBilgileri.LookAndFeel.SkinName = "London Liquid Sky";
             this.tabIhaleBilgileri.LookAndFeel.UseDefaultLookAndFeel = false;
             this.tabIhaleBilgileri.Name = "tabIhaleBilgileri";
             this.tabIhaleBilgileri.SelectedTabPage = this.xtraTabPage1;
-            this.tabIhaleBilgileri.Size = new System.Drawing.Size(750, 295);
+            this.tabIhaleBilgileri.Size = new System.Drawing.Size(750, 332);
             this.tabIhaleBilgileri.TabIndex = 32;
             this.tabIhaleBilgileri.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -257,7 +265,7 @@
             this.xtraTabPage1.Controls.Add(this.txtcompanyName);
             this.xtraTabPage1.Controls.Add(this.txtAciklama);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(740, 256);
+            this.xtraTabPage1.Size = new System.Drawing.Size(744, 297);
             this.xtraTabPage1.Text = "İhale Bilgileri";
             // 
             // txtTenderNearlyTotalAmount
@@ -299,15 +307,17 @@
             // 
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl15.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl15.Location = new System.Drawing.Point(4, 184);
+            this.labelControl15.Location = new System.Drawing.Point(34, 184);
             this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(136, 19);
+            this.labelControl15.Size = new System.Drawing.Size(106, 19);
             this.labelControl15.TabIndex = 9;
-            this.labelControl15.Text = "Muhammen Bedeli:";
+            this.labelControl15.Text = "Yaklaşık Bedel:";
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.labelControl17);
+            this.xtraTabPage2.Controls.Add(this.textEdit1);
             this.xtraTabPage2.Controls.Add(this.labelControl12);
             this.xtraTabPage2.Controls.Add(this.labelControl11);
             this.xtraTabPage2.Controls.Add(this.labelControl10);
@@ -321,7 +331,7 @@
             this.xtraTabPage2.Controls.Add(this.txtType);
             this.xtraTabPage2.Controls.Add(this.txtEkapNumber);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(740, 256);
+            this.xtraTabPage2.Size = new System.Drawing.Size(744, 297);
             this.xtraTabPage2.Text = "Detay          ";
             // 
             // labelControl12
@@ -500,10 +510,10 @@
             // 
             this.grdOffer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdOffer.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.grdOffer.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
-            this.grdOffer.Location = new System.Drawing.Point(4, 103);
+            gridLevelNode1});
+            this.grdOffer.Location = new System.Drawing.Point(3, 102);
             this.grdOffer.MainView = this.gridViewOffer;
             this.grdOffer.Margin = new System.Windows.Forms.Padding(4);
             this.grdOffer.Name = "grdOffer";
@@ -512,7 +522,7 @@
             this.btnSil,
             this.rpstColId,
             this.rpstSelected});
-            this.grdOffer.Size = new System.Drawing.Size(479, 603);
+            this.grdOffer.Size = new System.Drawing.Size(481, 605);
             this.grdOffer.TabIndex = 0;
             this.grdOffer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOffer,
@@ -731,7 +741,7 @@
             // 
             this.btnGuncelle.AutoHeight = false;
             this.btnGuncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnGuncelle.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -740,7 +750,7 @@
             // 
             this.btnSil.AutoHeight = false;
             this.btnSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnSil.Name = "btnSil";
             this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -766,12 +776,22 @@
             this.panelControl4.Controls.Add(this.labelControl13);
             this.panelControl4.Controls.Add(this.labelControl6);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl4.Location = new System.Drawing.Point(4, 4);
+            this.panelControl4.Location = new System.Drawing.Point(3, 3);
             this.panelControl4.LookAndFeel.SkinName = "VS2010";
             this.panelControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(479, 99);
+            this.panelControl4.Size = new System.Drawing.Size(481, 99);
             this.panelControl4.TabIndex = 100;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(295, 13);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(131, 34);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Bul";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dateEnd
             // 
@@ -910,15 +930,49 @@
             this.btnIptal.TabIndex = 1;
             this.btnIptal.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // btnSearch
+            // panelControl5
             // 
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(295, 16);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(131, 28);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "Bul";
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.panelControl5.Controls.Add(this.labelControl16);
+            this.panelControl5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl5.Location = new System.Drawing.Point(487, 658);
+            this.panelControl5.Name = "panelControl5";
+            this.panelControl5.Size = new System.Drawing.Size(780, 52);
+            this.panelControl5.TabIndex = 37;
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Location = new System.Drawing.Point(6, 21);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(343, 19);
+            this.labelControl16.TabIndex = 0;
+            this.labelControl16.Text = "İhale oluşturduktan sonra adımları takip ediniz...";
+            // 
+            // labelControl17
+            // 
+            this.labelControl17.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl17.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl17.Location = new System.Drawing.Point(19, 248);
+            this.labelControl17.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(95, 19);
+            this.labelControl17.TabIndex = 13;
+            this.labelControl17.Text = "Email Adresi:";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.EnterMoveNextControl = true;
+            this.textEdit1.Location = new System.Drawing.Point(126, 244);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textEdit1.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.textEdit1.Properties.Appearance.Options.UseFont = true;
+            this.textEdit1.Properties.Appearance.Options.UseForeColor = true;
+            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.textEdit1.Size = new System.Drawing.Size(594, 28);
+            this.textEdit1.TabIndex = 12;
             // 
             // frm_YeniIhaleYarat
             // 
@@ -926,12 +980,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 710);
             this.ControlBox = false;
+            this.Controls.Add(this.panelControl5);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.tabIhaleBilgileri);
             this.Controls.Add(this.btnIhaleOlustur);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -982,6 +1037,10 @@
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
+            this.panelControl5.ResumeLayout(false);
+            this.panelControl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1039,5 +1098,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.SimpleButton btnIptal;
         private DevExpress.XtraEditors.SimpleButton btnSearch;
+        private DevExpress.XtraEditors.PanelControl panelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl16;
+        private DevExpress.XtraEditors.LabelControl labelControl17;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
     }
 }

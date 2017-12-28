@@ -87,5 +87,10 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
 
         }
+
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

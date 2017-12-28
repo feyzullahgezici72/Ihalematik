@@ -274,7 +274,7 @@
             this.gridColumn9.OptionsFilter.AllowFilter = false;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 0;
-            this.gridColumn9.Width = 36;
+            this.gridColumn9.Width = 117;
             // 
             // gridColumn10
             // 
@@ -296,7 +296,7 @@
             this.gridColumn10.OptionsFilter.AllowFilter = false;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 1;
-            this.gridColumn10.Width = 162;
+            this.gridColumn10.Width = 915;
             // 
             // gridColumn11
             // 
@@ -356,14 +356,13 @@
             this.colRemoveAddEdMaterialList.AppearanceHeader.Options.UseBackColor = true;
             this.colRemoveAddEdMaterialList.Caption = " ";
             this.colRemoveAddEdMaterialList.ColumnEdit = this.rpstRemove;
-            this.colRemoveAddEdMaterialList.MaxWidth = 30;
-            this.colRemoveAddEdMaterialList.MinWidth = 30;
+            this.colRemoveAddEdMaterialList.MaxWidth = 20;
             this.colRemoveAddEdMaterialList.Name = "colRemoveAddEdMaterialList";
             this.colRemoveAddEdMaterialList.OptionsFilter.AllowFilter = false;
             this.colRemoveAddEdMaterialList.ToolTip = "Çıkar";
             this.colRemoveAddEdMaterialList.Visible = true;
             this.colRemoveAddEdMaterialList.VisibleIndex = 4;
-            this.colRemoveAddEdMaterialList.Width = 30;
+            this.colRemoveAddEdMaterialList.Width = 20;
             // 
             // rpstRemove
             // 
@@ -389,7 +388,7 @@
             this.Controls.Add(this.grdAddedOfferMaterialList);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

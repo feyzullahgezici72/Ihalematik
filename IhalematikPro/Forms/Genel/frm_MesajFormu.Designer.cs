@@ -56,7 +56,7 @@
             this.groupControl1.LookAndFeel.SkinName = "London Liquid Sky";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(677, 183);
+            this.groupControl1.Size = new System.Drawing.Size(677, 190);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Bilgi";
             // 
@@ -103,11 +103,11 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 183);
+            this.ClientSize = new System.Drawing.Size(677, 190);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -44,7 +44,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(618, 84);
+            this.groupControl1.Size = new System.Drawing.Size(614, 84);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "Grup Adı";
             // 
@@ -76,16 +76,16 @@
             // frm_IhaleGrupGuncelle
             // 
             this.AcceptButton = this.btnGuncelle;
-            this.Appearance.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 152);
+            this.ClientSize = new System.Drawing.Size(614, 148);
             this.ControlBox = false;
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frm_IhaleGrupGuncelle";
             this.ShowIcon = false;

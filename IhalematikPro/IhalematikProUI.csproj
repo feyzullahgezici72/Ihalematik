@@ -231,6 +231,12 @@
     <Compile Include="Forms\Genel\frm_PozlariOnlineGuncelle.Designer.cs">
       <DependentUpon>frm_PozlariOnlineGuncelle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_Iscilik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_Iscilik.Designer.cs">
+      <DependentUpon>frm_Iscilik.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Ihale\frm_IhaleBilgisiDetay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -540,6 +546,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Genel\frm_PozlariOnlineGuncelle.resx">
       <DependentUpon>frm_PozlariOnlineGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IhaleAdim\frm_Iscilik.resx">
+      <DependentUpon>frm_Iscilik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Ihale\frm_IhaleBilgisiDetay.resx">
       <DependentUpon>frm_IhaleBilgisiDetay.cs</DependentUpon>

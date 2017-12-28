@@ -166,6 +166,11 @@ namespace IhalematikProUI.Forms
             txtKirim.Text = (tender.NearlyTotalAmount - double.Parse(txtOfferTotalAmount.Text.Replace("TL", ""))).ToString("c");
         }
 
+        private void isciAracGirisPaneli_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         //private void Rapor_Click(object sender, EventArgs e)
         //{
         //    //MainReportcs.

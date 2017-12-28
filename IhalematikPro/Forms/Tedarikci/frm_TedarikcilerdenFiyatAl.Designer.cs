@@ -224,10 +224,10 @@
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
             this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnKaydet.Location = new System.Drawing.Point(1175, 4);
+            this.btnKaydet.Location = new System.Drawing.Point(1216, 3);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(183, 62);
+            this.btnKaydet.Size = new System.Drawing.Size(143, 64);
             this.btnKaydet.TabIndex = 3;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
@@ -903,15 +903,15 @@
             this.pnlrisk.Controls.Add(this.labelControl3);
             this.pnlrisk.Controls.Add(this.btnTumuneUygula);
             this.pnlrisk.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlrisk.Location = new System.Drawing.Point(901, 4);
+            this.pnlrisk.Location = new System.Drawing.Point(942, 3);
             this.pnlrisk.Name = "pnlrisk";
-            this.pnlrisk.Size = new System.Drawing.Size(274, 62);
+            this.pnlrisk.Size = new System.Drawing.Size(274, 64);
             this.pnlrisk.TabIndex = 46;
             // 
             // txtRisk
             // 
             this.txtRisk.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtRisk.Location = new System.Drawing.Point(178, 20);
+            this.txtRisk.Location = new System.Drawing.Point(178, 21);
             this.txtRisk.Name = "txtRisk";
             this.txtRisk.Size = new System.Drawing.Size(42, 27);
             this.txtRisk.TabIndex = 41;
@@ -923,7 +923,7 @@
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl3.Location = new System.Drawing.Point(22, 24);
+            this.labelControl3.Location = new System.Drawing.Point(22, 25);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(146, 19);
@@ -941,7 +941,7 @@
             this.btnTumuneUygula.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
             this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(227, 21);
+            this.btnTumuneUygula.Location = new System.Drawing.Point(227, 22);
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
             this.btnTumuneUygula.Size = new System.Drawing.Size(26, 22);
@@ -1028,7 +1028,7 @@
             this.Controls.Add(this.panelControl6);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;

@@ -48,6 +48,12 @@
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
+            this.txtFuelOilFare = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.pnlrisk = new DevExpress.XtraEditors.PanelControl();
+            this.txtRisk = new System.Windows.Forms.MaskedTextBox();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.txtMarkup = new System.Windows.Forms.MaskedTextBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -84,6 +90,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialListNonWorkship)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
+            this.panelControl8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFuelOilFare.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlrisk)).BeginInit();
+            this.pnlrisk.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -527,6 +538,8 @@
             this.panelControl2.Appearance.BackColor2 = System.Drawing.Color.White;
             this.panelControl2.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.panelControl2.Controls.Add(this.panelControl8);
+            this.panelControl2.Controls.Add(this.pnlrisk);
             this.panelControl2.Controls.Add(this.panelControl4);
             this.panelControl2.Controls.Add(this.lblTenderNumber);
             this.panelControl2.Controls.Add(this.lblTenderDescription);
@@ -539,6 +552,85 @@
             this.panelControl2.Size = new System.Drawing.Size(1362, 66);
             this.panelControl2.TabIndex = 27;
             // 
+            // panelControl8
+            // 
+            this.panelControl8.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl8.Appearance.Options.UseBackColor = true;
+            this.panelControl8.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl8.Controls.Add(this.txtFuelOilFare);
+            this.panelControl8.Controls.Add(this.labelControl6);
+            this.panelControl8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelControl8.Location = new System.Drawing.Point(803, 3);
+            this.panelControl8.LookAndFeel.SkinName = "Office 2007 Pink";
+            this.panelControl8.Name = "panelControl8";
+            this.panelControl8.Size = new System.Drawing.Size(228, 60);
+            this.panelControl8.TabIndex = 48;
+            // 
+            // txtFuelOilFare
+            // 
+            this.txtFuelOilFare.EnterMoveNextControl = true;
+            this.txtFuelOilFare.Location = new System.Drawing.Point(79, 17);
+            this.txtFuelOilFare.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFuelOilFare.Name = "txtFuelOilFare";
+            this.txtFuelOilFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtFuelOilFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFuelOilFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtFuelOilFare.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtFuelOilFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtFuelOilFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtFuelOilFare.Properties.EditFormat.FormatString = "c2";
+            this.txtFuelOilFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtFuelOilFare.Properties.Mask.EditMask = "c2";
+            this.txtFuelOilFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtFuelOilFare.Size = new System.Drawing.Size(142, 26);
+            this.txtFuelOilFare.TabIndex = 43;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.labelControl6.Location = new System.Drawing.Point(10, 21);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(62, 19);
+            this.labelControl6.TabIndex = 42;
+            this.labelControl6.Text = "Nakliye:";
+            // 
+            // pnlrisk
+            // 
+            this.pnlrisk.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pnlrisk.Appearance.Options.UseBackColor = true;
+            this.pnlrisk.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlrisk.Controls.Add(this.txtRisk);
+            this.pnlrisk.Controls.Add(this.labelControl5);
+            this.pnlrisk.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlrisk.Location = new System.Drawing.Point(1031, 3);
+            this.pnlrisk.Name = "pnlrisk";
+            this.pnlrisk.Size = new System.Drawing.Size(156, 60);
+            this.pnlrisk.TabIndex = 47;
+            // 
+            // txtRisk
+            // 
+            this.txtRisk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtRisk.Location = new System.Drawing.Point(106, 17);
+            this.txtRisk.Name = "txtRisk";
+            this.txtRisk.Size = new System.Drawing.Size(42, 27);
+            this.txtRisk.TabIndex = 41;
+            this.txtRisk.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.labelControl5.Location = new System.Drawing.Point(3, 21);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(94, 19);
+            this.labelControl5.TabIndex = 42;
+            this.labelControl5.Text = "Mlz.Riski %:";
+            // 
             // panelControl4
             // 
             this.panelControl4.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -548,15 +640,15 @@
             this.panelControl4.Controls.Add(this.labelControl2);
             this.panelControl4.Controls.Add(this.btnTumuneUygula);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl4.Location = new System.Drawing.Point(1186, 4);
+            this.panelControl4.Location = new System.Drawing.Point(1187, 3);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(172, 58);
+            this.panelControl4.Size = new System.Drawing.Size(172, 60);
             this.panelControl4.TabIndex = 45;
             // 
             // txtMarkup
             // 
             this.txtMarkup.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMarkup.Location = new System.Drawing.Point(72, 16);
+            this.txtMarkup.Location = new System.Drawing.Point(72, 17);
             this.txtMarkup.Name = "txtMarkup";
             this.txtMarkup.Size = new System.Drawing.Size(46, 27);
             this.txtMarkup.TabIndex = 41;
@@ -569,7 +661,7 @@
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl2.Location = new System.Drawing.Point(6, 20);
+            this.labelControl2.Location = new System.Drawing.Point(6, 21);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(57, 19);
@@ -584,13 +676,12 @@
             this.btnTumuneUygula.Appearance.Options.UseFont = true;
             this.btnTumuneUygula.Appearance.Options.UseForeColor = true;
             this.btnTumuneUygula.AutoSize = true;
-            this.btnTumuneUygula.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
             this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(124, 16);
+            this.btnTumuneUygula.Location = new System.Drawing.Point(125, 14);
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
-            this.btnTumuneUygula.Size = new System.Drawing.Size(26, 22);
+            this.btnTumuneUygula.Size = new System.Drawing.Size(28, 32);
             this.btnTumuneUygula.TabIndex = 34;
             this.btnTumuneUygula.Click += new System.EventHandler(this.btnTumuneUygula_Click);
             // 
@@ -712,7 +803,7 @@
             gridLevelNode1.RelationName = "Level1";
             this.grdTenderGroup.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.grdTenderGroup.Location = new System.Drawing.Point(4, 4);
+            this.grdTenderGroup.Location = new System.Drawing.Point(3, 3);
             this.grdTenderGroup.MainView = this.gridViewTenderGroup;
             this.grdTenderGroup.Margin = new System.Windows.Forms.Padding(4);
             this.grdTenderGroup.Name = "grdTenderGroup";
@@ -720,7 +811,7 @@
             this.btnGuncelle,
             this.btnSil,
             this.rpstColIsSelected});
-            this.grdTenderGroup.Size = new System.Drawing.Size(378, 655);
+            this.grdTenderGroup.Size = new System.Drawing.Size(380, 657);
             this.grdTenderGroup.TabIndex = 0;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup,
@@ -1033,7 +1124,7 @@
             this.Controls.Add(this.grupPanel);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -1048,6 +1139,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
+            this.panelControl8.ResumeLayout(false);
+            this.panelControl8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFuelOilFare.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlrisk)).EndInit();
+            this.pnlrisk.ResumeLayout(false);
+            this.pnlrisk.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
@@ -1125,5 +1223,11 @@
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private System.Windows.Forms.Panel panel6;
         public DevExpress.XtraEditors.SimpleButton btnPrev;
+        private DevExpress.XtraEditors.PanelControl panelControl8;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.PanelControl pnlrisk;
+        private System.Windows.Forms.MaskedTextBox txtRisk;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.TextEdit txtFuelOilFare;
     }
 }

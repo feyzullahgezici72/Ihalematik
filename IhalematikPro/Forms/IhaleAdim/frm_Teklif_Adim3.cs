@@ -25,6 +25,7 @@ using IhalematikProUI.Forms;
 using SimpleApplicationBase.BL.Base;
 using IhalematikProUI.Forms.Base;
 using DevExpress.XtraBars;
+using IhalematikProUI.Forms.IhaleAdim;
 
 namespace IhalematikPro.Forms
 {
@@ -653,14 +654,18 @@ namespace IhalematikPro.Forms
 
         private void btnCalisanlarveAraclar_Click(object sender, EventArgs e)
         {
-            //Panellerin enabled özelliklerini false yap
-            panelControl1.Enabled = false;
-            grdMaterialListIsWorkship.EmbeddedNavigator.Enabled = false;
-            panelControl1.Enabled = false;
-            panelGrup.Enabled = false;
-            panelControl3.Enabled = false;
-            panelControl4.Enabled = false;
-            //Panellerin enabled özelliklerini false yap
+            this.Enabled = false;
+            frm_Iscilik iscilik = new frm_Iscilik();
+            iscilik.ShowDialog();
+            this.Enabled = true;
+            ////Panellerin enabled özelliklerini false yap
+            //panelControl1.Enabled = false;
+            //grdMaterialListIsWorkship.EmbeddedNavigator.Enabled = false;
+            //panelControl1.Enabled = false;
+            //panelGrup.Enabled = false;
+            //panelControl3.Enabled = false;
+            //panelControl4.Enabled = false;
+            ////Panellerin enabled özelliklerini false yap
 
             bindingSourceAddWorker.DataSource = null;
             int currentId = Convert.ToInt32(gridViewMaterialListIsWorkship.GetFocusedRowCellValue("Id"));

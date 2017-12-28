@@ -182,7 +182,6 @@
             this.pozMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pozMenu.Location = new System.Drawing.Point(0, 35);
             this.pozMenu.LookAndFeel.SkinName = "Foggy";
-            this.pozMenu.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pozMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pozMenu.Name = "pozMenu";
             this.pozMenu.Size = new System.Drawing.Size(442, 623);
@@ -802,7 +801,7 @@
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.pozMenu);
             this.Controls.Add(this.panelControl1);
-            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;

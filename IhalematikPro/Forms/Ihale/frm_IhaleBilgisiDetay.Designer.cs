@@ -107,7 +107,7 @@
             this.xtraTabPage1.Controls.Add(this.textEdit1);
             this.xtraTabPage1.Controls.Add(this.txtAciklama);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(852, 291);
+            this.xtraTabPage1.Size = new System.Drawing.Size(850, 291);
             this.xtraTabPage1.Text = "İhale Bilgileri";
             // 
             // txtTeklifNo
@@ -510,7 +510,7 @@
             this.Controls.Add(this.tabIhaleBilgileri);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -78,7 +78,7 @@
             this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.labelControl3.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             this.labelControl3.LineVisible = true;
-            this.labelControl3.Location = new System.Drawing.Point(90, 114);
+            this.labelControl3.Location = new System.Drawing.Point(91, 130);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(43, 24);
@@ -88,7 +88,7 @@
             // cmbInputType
             // 
             this.cmbInputType.EditValue = "Personel";
-            this.cmbInputType.Location = new System.Drawing.Point(144, 34);
+            this.cmbInputType.Location = new System.Drawing.Point(145, 50);
             this.cmbInputType.Margin = new System.Windows.Forms.Padding(4);
             this.cmbInputType.Name = "cmbInputType";
             this.cmbInputType.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -110,7 +110,7 @@
             // txtUserPassword
             // 
             this.txtUserPassword.EditValue = "Admin";
-            this.txtUserPassword.Location = new System.Drawing.Point(144, 111);
+            this.txtUserPassword.Location = new System.Drawing.Point(145, 127);
             this.txtUserPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserPassword.Name = "txtUserPassword";
             this.txtUserPassword.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -122,7 +122,7 @@
             // txtUserName
             // 
             this.txtUserName.EditValue = "User";
-            this.txtUserName.Location = new System.Drawing.Point(144, 73);
+            this.txtUserName.Location = new System.Drawing.Point(145, 89);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -135,7 +135,7 @@
             this.labelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl2.Location = new System.Drawing.Point(33, 76);
+            this.labelControl2.Location = new System.Drawing.Point(34, 92);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(110, 24);
@@ -147,7 +147,7 @@
             this.labelControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl1.Location = new System.Drawing.Point(60, 38);
+            this.labelControl1.Location = new System.Drawing.Point(61, 54);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(80, 24);
@@ -227,7 +227,7 @@
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.InactiveGlowColor = System.Drawing.Color.Yellow;
-            this.LookAndFeel.SkinName = "Money Twins";
+            this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Login";
