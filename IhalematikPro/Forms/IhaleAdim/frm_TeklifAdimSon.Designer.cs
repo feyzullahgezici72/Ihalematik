@@ -35,6 +35,13 @@
             this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
+            this.txtFuelOilFare = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.btnTumuneUygula = new DevExpress.XtraEditors.SimpleButton();
+            this.checkEdit2 = new DevExpress.XtraEditors.CheckEdit();
+            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnObfKayit = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -114,10 +121,6 @@
             this.txtMaterialCount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit4 = new DevExpress.XtraEditors.MemoEdit();
-            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit2 = new DevExpress.XtraEditors.CheckEdit();
-            this.btnTumuneUygula = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -125,6 +128,13 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
+            this.panelControl8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFuelOilFare.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
@@ -165,10 +175,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMaterialIsNonWorkshipcount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaterialCount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
-            this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -255,6 +261,7 @@
             this.panelControl4.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.panelControl4.Appearance.Options.UseBackColor = true;
             this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelControl4.Controls.Add(this.panelControl8);
             this.panelControl4.Controls.Add(this.groupControl4);
             this.panelControl4.Controls.Add(this.btnKaydet);
             this.panelControl4.Controls.Add(this.btnObfKayit);
@@ -270,6 +277,101 @@
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(1370, 72);
             this.panelControl4.TabIndex = 23;
+            // 
+            // panelControl8
+            // 
+            this.panelControl8.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl8.Appearance.Options.UseBackColor = true;
+            this.panelControl8.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl8.Controls.Add(this.txtFuelOilFare);
+            this.panelControl8.Controls.Add(this.labelControl18);
+            this.panelControl8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelControl8.Location = new System.Drawing.Point(483, 3);
+            this.panelControl8.LookAndFeel.SkinName = "Office 2007 Pink";
+            this.panelControl8.Name = "panelControl8";
+            this.panelControl8.Size = new System.Drawing.Size(157, 66);
+            this.panelControl8.TabIndex = 49;
+            // 
+            // txtFuelOilFare
+            // 
+            this.txtFuelOilFare.EnterMoveNextControl = true;
+            this.txtFuelOilFare.Location = new System.Drawing.Point(8, 30);
+            this.txtFuelOilFare.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFuelOilFare.Name = "txtFuelOilFare";
+            this.txtFuelOilFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtFuelOilFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFuelOilFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtFuelOilFare.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtFuelOilFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtFuelOilFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtFuelOilFare.Properties.EditFormat.FormatString = "c2";
+            this.txtFuelOilFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtFuelOilFare.Properties.Mask.EditMask = "c2";
+            this.txtFuelOilFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtFuelOilFare.Size = new System.Drawing.Size(142, 26);
+            this.txtFuelOilFare.TabIndex = 43;
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl18.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl18.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.labelControl18.Location = new System.Drawing.Point(8, 6);
+            this.labelControl18.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(108, 19);
+            this.labelControl18.TabIndex = 42;
+            this.labelControl18.Text = "Nakliye Bedeli";
+            // 
+            // groupControl4
+            // 
+            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl4.AppearanceCaption.Options.UseFont = true;
+            this.groupControl4.Controls.Add(this.btnTumuneUygula);
+            this.groupControl4.Controls.Add(this.checkEdit2);
+            this.groupControl4.Controls.Add(this.checkEdit1);
+            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupControl4.Location = new System.Drawing.Point(640, 3);
+            this.groupControl4.LookAndFeel.SkinName = "The Asphalt World";
+            this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(322, 66);
+            this.groupControl4.TabIndex = 48;
+            this.groupControl4.Text = "Teminat Tutarı Ekle";
+            // 
+            // btnTumuneUygula
+            // 
+            this.btnTumuneUygula.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTumuneUygula.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnTumuneUygula.Appearance.Options.UseFont = true;
+            this.btnTumuneUygula.Appearance.Options.UseForeColor = true;
+            this.btnTumuneUygula.AutoSize = true;
+            this.btnTumuneUygula.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
+            this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnTumuneUygula.Location = new System.Drawing.Point(291, 33);
+            this.btnTumuneUygula.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnTumuneUygula.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTumuneUygula.Name = "btnTumuneUygula";
+            this.btnTumuneUygula.Size = new System.Drawing.Size(28, 30);
+            this.btnTumuneUygula.TabIndex = 35;
+            // 
+            // checkEdit2
+            // 
+            this.checkEdit2.Location = new System.Drawing.Point(150, 40);
+            this.checkEdit2.Name = "checkEdit2";
+            this.checkEdit2.Properties.Caption = "Kesin Teminat";
+            this.checkEdit2.Size = new System.Drawing.Size(134, 23);
+            this.checkEdit2.TabIndex = 1;
+            // 
+            // checkEdit1
+            // 
+            this.checkEdit1.Location = new System.Drawing.Point(10, 40);
+            this.checkEdit1.Name = "checkEdit1";
+            this.checkEdit1.Properties.Caption = "Geçici Teminat";
+            this.checkEdit1.Size = new System.Drawing.Size(134, 23);
+            this.checkEdit1.TabIndex = 0;
             // 
             // btnKaydet
             // 
@@ -1087,7 +1189,7 @@
             // 
             // txtTenderNumber
             // 
-            this.txtTenderNumber.EditValue = "000000002";
+            this.txtTenderNumber.EditValue = "";
             this.txtTenderNumber.Location = new System.Drawing.Point(184, 12);
             this.txtTenderNumber.Name = "txtTenderNumber";
             this.txtTenderNumber.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1110,7 +1212,7 @@
             // 
             // txtTenderDescription
             // 
-            this.txtTenderDescription.EditValue = "Batman Üniversitesi Kamera İşi";
+            this.txtTenderDescription.EditValue = "";
             this.txtTenderDescription.Location = new System.Drawing.Point(184, 42);
             this.txtTenderDescription.Name = "txtTenderDescription";
             this.txtTenderDescription.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1133,7 +1235,7 @@
             // 
             // txtTenderLastOfferDate
             // 
-            this.txtTenderLastOfferDate.EditValue = "15.02.2018";
+            this.txtTenderLastOfferDate.EditValue = "";
             this.txtTenderLastOfferDate.Location = new System.Drawing.Point(184, 75);
             this.txtTenderLastOfferDate.Name = "txtTenderLastOfferDate";
             this.txtTenderLastOfferDate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1156,7 +1258,7 @@
             // 
             // txtTotalMaterialAndWorkerAmount
             // 
-            this.txtTotalMaterialAndWorkerAmount.EditValue = "1.500.000,00 TL";
+            this.txtTotalMaterialAndWorkerAmount.EditValue = "";
             this.txtTotalMaterialAndWorkerAmount.Location = new System.Drawing.Point(184, 430);
             this.txtTotalMaterialAndWorkerAmount.Name = "txtTotalMaterialAndWorkerAmount";
             this.txtTotalMaterialAndWorkerAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1169,7 +1271,7 @@
             // 
             // txtKirim
             // 
-            this.txtKirim.EditValue = "400.000,00 TL";
+            this.txtKirim.EditValue = "";
             this.txtKirim.Location = new System.Drawing.Point(186, 589);
             this.txtKirim.Name = "txtKirim";
             this.txtKirim.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1182,7 +1284,7 @@
             // 
             // txtOfferTotalAmount
             // 
-            this.txtOfferTotalAmount.EditValue = "2.100.000,00 TL";
+            this.txtOfferTotalAmount.EditValue = "";
             this.txtOfferTotalAmount.Location = new System.Drawing.Point(184, 557);
             this.txtOfferTotalAmount.Name = "txtOfferTotalAmount";
             this.txtOfferTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1195,7 +1297,7 @@
             // 
             // txtTotalMarkupAmount
             // 
-            this.txtTotalMarkupAmount.EditValue = "600.000,00 TL";
+            this.txtTotalMarkupAmount.EditValue = "";
             this.txtTotalMarkupAmount.Location = new System.Drawing.Point(186, 525);
             this.txtTotalMarkupAmount.Name = "txtTotalMarkupAmount";
             this.txtTotalMarkupAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1238,7 +1340,7 @@
             // 
             // txtGeneralMarkupWorkerAmount
             // 
-            this.txtGeneralMarkupWorkerAmount.EditValue = "100.000,00 TL";
+            this.txtGeneralMarkupWorkerAmount.EditValue = "";
             this.txtGeneralMarkupWorkerAmount.Location = new System.Drawing.Point(184, 493);
             this.txtGeneralMarkupWorkerAmount.Name = "txtGeneralMarkupWorkerAmount";
             this.txtGeneralMarkupWorkerAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1261,7 +1363,7 @@
             // 
             // txtWorkerTotalAmount
             // 
-            this.txtWorkerTotalAmount.EditValue = "250.000,00 TL";
+            this.txtWorkerTotalAmount.EditValue = "";
             this.txtWorkerTotalAmount.Location = new System.Drawing.Point(184, 398);
             this.txtWorkerTotalAmount.Name = "txtWorkerTotalAmount";
             this.txtWorkerTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1294,7 +1396,7 @@
             // 
             // textEdit12
             // 
-            this.textEdit12.EditValue = "500.000,00 TL";
+            this.textEdit12.EditValue = "";
             this.textEdit12.Location = new System.Drawing.Point(184, 460);
             this.textEdit12.Name = "textEdit12";
             this.textEdit12.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1317,7 +1419,7 @@
             // 
             // txtMaterialTotalAmount
             // 
-            this.txtMaterialTotalAmount.EditValue = "1.250.000,00 TL";
+            this.txtMaterialTotalAmount.EditValue = "";
             this.txtMaterialTotalAmount.Location = new System.Drawing.Point(184, 365);
             this.txtMaterialTotalAmount.Name = "txtMaterialTotalAmount";
             this.txtMaterialTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1340,7 +1442,7 @@
             // 
             // txtTenderNearlyTotalAmount
             // 
-            this.txtTenderNearlyTotalAmount.EditValue = "2.500.000,00 TL";
+            this.txtTenderNearlyTotalAmount.EditValue = "";
             this.txtTenderNearlyTotalAmount.Location = new System.Drawing.Point(184, 333);
             this.txtTenderNearlyTotalAmount.Name = "txtTenderNearlyTotalAmount";
             this.txtTenderNearlyTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1386,7 +1488,7 @@
             // 
             // txtMaterialWorksipCount
             // 
-            this.txtMaterialWorksipCount.EditValue = "44";
+            this.txtMaterialWorksipCount.EditValue = "";
             this.txtMaterialWorksipCount.Location = new System.Drawing.Point(184, 171);
             this.txtMaterialWorksipCount.Name = "txtMaterialWorksipCount";
             this.txtMaterialWorksipCount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1419,7 +1521,7 @@
             // 
             // txtMaterialIsNonWorkshipcount
             // 
-            this.txtMaterialIsNonWorkshipcount.EditValue = "237";
+            this.txtMaterialIsNonWorkshipcount.EditValue = "";
             this.txtMaterialIsNonWorkshipcount.Location = new System.Drawing.Point(184, 139);
             this.txtMaterialIsNonWorkshipcount.Name = "txtMaterialIsNonWorkshipcount";
             this.txtMaterialIsNonWorkshipcount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1442,7 +1544,7 @@
             // 
             // txtMaterialCount
             // 
-            this.txtMaterialCount.EditValue = "281";
+            this.txtMaterialCount.EditValue = "";
             this.txtMaterialCount.Location = new System.Drawing.Point(184, 107);
             this.txtMaterialCount.Name = "txtMaterialCount";
             this.txtMaterialCount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1476,56 +1578,6 @@
             this.textEdit4.Size = new System.Drawing.Size(364, 92);
             this.textEdit4.TabIndex = 46;
             // 
-            // groupControl4
-            // 
-            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupControl4.AppearanceCaption.Options.UseFont = true;
-            this.groupControl4.Controls.Add(this.btnTumuneUygula);
-            this.groupControl4.Controls.Add(this.checkEdit2);
-            this.groupControl4.Controls.Add(this.checkEdit1);
-            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl4.Location = new System.Drawing.Point(650, 3);
-            this.groupControl4.LookAndFeel.SkinName = "The Asphalt World";
-            this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(312, 66);
-            this.groupControl4.TabIndex = 48;
-            this.groupControl4.Text = "Teminat Tutarı Ekle";
-            // 
-            // checkEdit1
-            // 
-            this.checkEdit1.Location = new System.Drawing.Point(10, 40);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Caption = "Geçici Teminat";
-            this.checkEdit1.Size = new System.Drawing.Size(134, 23);
-            this.checkEdit1.TabIndex = 0;
-            // 
-            // checkEdit2
-            // 
-            this.checkEdit2.Location = new System.Drawing.Point(150, 40);
-            this.checkEdit2.Name = "checkEdit2";
-            this.checkEdit2.Properties.Caption = "Kesin Teminat";
-            this.checkEdit2.Size = new System.Drawing.Size(134, 23);
-            this.checkEdit2.TabIndex = 1;
-            // 
-            // btnTumuneUygula
-            // 
-            this.btnTumuneUygula.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTumuneUygula.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnTumuneUygula.Appearance.Options.UseFont = true;
-            this.btnTumuneUygula.Appearance.Options.UseForeColor = true;
-            this.btnTumuneUygula.AutoSize = true;
-            this.btnTumuneUygula.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
-            this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(281, 33);
-            this.btnTumuneUygula.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnTumuneUygula.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTumuneUygula.Name = "btnTumuneUygula";
-            this.btnTumuneUygula.Size = new System.Drawing.Size(28, 30);
-            this.btnTumuneUygula.TabIndex = 35;
-            // 
             // frm_TeklifAdimSon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1554,6 +1606,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
+            this.panelControl8.ResumeLayout(false);
+            this.panelControl8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFuelOilFare.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
+            this.groupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
@@ -1598,11 +1659,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMaterialIsNonWorkshipcount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaterialCount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
-            this.groupControl4.ResumeLayout(false);
-            this.groupControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1698,5 +1754,8 @@
         private DevExpress.XtraEditors.CheckEdit checkEdit2;
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
         private DevExpress.XtraEditors.SimpleButton btnTumuneUygula;
+        private DevExpress.XtraEditors.PanelControl panelControl8;
+        private DevExpress.XtraEditors.TextEdit txtFuelOilFare;
+        private DevExpress.XtraEditors.LabelControl labelControl18;
     }
 }

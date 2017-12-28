@@ -48,9 +48,6 @@
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
-            this.txtFuelOilFare = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.pnlrisk = new DevExpress.XtraEditors.PanelControl();
             this.txtRisk = new System.Windows.Forms.MaskedTextBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -90,9 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialListNonWorkship)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
-            this.panelControl8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFuelOilFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlrisk)).BeginInit();
             this.pnlrisk.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
@@ -538,7 +532,6 @@
             this.panelControl2.Appearance.BackColor2 = System.Drawing.Color.White;
             this.panelControl2.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.panelControl2.Appearance.Options.UseBackColor = true;
-            this.panelControl2.Controls.Add(this.panelControl8);
             this.panelControl2.Controls.Add(this.pnlrisk);
             this.panelControl2.Controls.Add(this.panelControl4);
             this.panelControl2.Controls.Add(this.lblTenderNumber);
@@ -551,51 +544,6 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1362, 66);
             this.panelControl2.TabIndex = 27;
-            // 
-            // panelControl8
-            // 
-            this.panelControl8.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl8.Appearance.Options.UseBackColor = true;
-            this.panelControl8.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl8.Controls.Add(this.txtFuelOilFare);
-            this.panelControl8.Controls.Add(this.labelControl6);
-            this.panelControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl8.Location = new System.Drawing.Point(803, 3);
-            this.panelControl8.LookAndFeel.SkinName = "Office 2007 Pink";
-            this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(228, 60);
-            this.panelControl8.TabIndex = 48;
-            // 
-            // txtFuelOilFare
-            // 
-            this.txtFuelOilFare.EnterMoveNextControl = true;
-            this.txtFuelOilFare.Location = new System.Drawing.Point(79, 17);
-            this.txtFuelOilFare.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFuelOilFare.Name = "txtFuelOilFare";
-            this.txtFuelOilFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtFuelOilFare.Properties.Appearance.Options.UseBackColor = true;
-            this.txtFuelOilFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtFuelOilFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtFuelOilFare.Properties.DisplayFormat.FormatString = "c2";
-            this.txtFuelOilFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtFuelOilFare.Properties.EditFormat.FormatString = "c2";
-            this.txtFuelOilFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtFuelOilFare.Properties.Mask.EditMask = "c2";
-            this.txtFuelOilFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtFuelOilFare.Size = new System.Drawing.Size(142, 26);
-            this.txtFuelOilFare.TabIndex = 43;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl6.Location = new System.Drawing.Point(10, 21);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(6);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(62, 19);
-            this.labelControl6.TabIndex = 42;
-            this.labelControl6.Text = "Nakliye:";
             // 
             // pnlrisk
             // 
@@ -1139,10 +1087,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
-            this.panelControl8.ResumeLayout(false);
-            this.panelControl8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFuelOilFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlrisk)).EndInit();
             this.pnlrisk.ResumeLayout(false);
             this.pnlrisk.PerformLayout();
@@ -1223,11 +1167,8 @@
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private System.Windows.Forms.Panel panel6;
         public DevExpress.XtraEditors.SimpleButton btnPrev;
-        private DevExpress.XtraEditors.PanelControl panelControl8;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.PanelControl pnlrisk;
         private System.Windows.Forms.MaskedTextBox txtRisk;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit txtFuelOilFare;
     }
 }
