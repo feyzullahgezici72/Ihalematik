@@ -70,12 +70,6 @@ namespace IhalematikPro.Forms
                 tender.Place = txtPlace.Text;
                 tender.Management = txtManagement.Text;
                 tender.IsActive = true;
-
-                if (!string.IsNullOrEmpty(txtTenderNearlyTotalAmount.Text))
-                {
-                    tender.NearlyTotalAmount = double.Parse(txtTenderNearlyTotalAmount.Text.Replace("TL", string.Empty).Trim());
-                }
-
                 bool result = TenderManager.Instance.Save(tender);
                 if (!result)
                 {

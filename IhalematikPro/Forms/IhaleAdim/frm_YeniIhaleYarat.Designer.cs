@@ -42,9 +42,7 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.tabIhaleBilgileri = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.txtTenderNearlyTotalAmount = new DevExpress.XtraEditors.TextEdit();
             this.LastOfferDate = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
@@ -86,15 +84,12 @@
             this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeklifNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtcompanyName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabIhaleBilgileri)).BeginInit();
             this.tabIhaleBilgileri.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenderNearlyTotalAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
@@ -127,7 +122,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnIhaleOlustur
@@ -137,7 +131,7 @@
             this.btnIhaleOlustur.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIhaleOlustur.Image = ((System.Drawing.Image)(resources.GetObject("btnIhaleOlustur.Image")));
             this.btnIhaleOlustur.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnIhaleOlustur.Location = new System.Drawing.Point(1048, 435);
+            this.btnIhaleOlustur.Location = new System.Drawing.Point(1055, 381);
             this.btnIhaleOlustur.Margin = new System.Windows.Forms.Padding(6);
             this.btnIhaleOlustur.Name = "btnIhaleOlustur";
             this.btnIhaleOlustur.Size = new System.Drawing.Size(182, 90);
@@ -246,7 +240,7 @@
             this.tabIhaleBilgileri.LookAndFeel.UseDefaultLookAndFeel = false;
             this.tabIhaleBilgileri.Name = "tabIhaleBilgileri";
             this.tabIhaleBilgileri.SelectedTabPage = this.xtraTabPage1;
-            this.tabIhaleBilgileri.Size = new System.Drawing.Size(750, 332);
+            this.tabIhaleBilgileri.Size = new System.Drawing.Size(750, 297);
             this.tabIhaleBilgileri.TabIndex = 32;
             this.tabIhaleBilgileri.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -254,38 +248,17 @@
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.txtTenderNearlyTotalAmount);
             this.xtraTabPage1.Controls.Add(this.LastOfferDate);
             this.xtraTabPage1.Controls.Add(this.txtTeklifNo);
             this.xtraTabPage1.Controls.Add(this.labelControl1);
             this.xtraTabPage1.Controls.Add(this.labelControl2);
-            this.xtraTabPage1.Controls.Add(this.labelControl15);
             this.xtraTabPage1.Controls.Add(this.labelControl4);
             this.xtraTabPage1.Controls.Add(this.labelControl5);
             this.xtraTabPage1.Controls.Add(this.txtcompanyName);
             this.xtraTabPage1.Controls.Add(this.txtAciklama);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(744, 297);
+            this.xtraTabPage1.Size = new System.Drawing.Size(744, 262);
             this.xtraTabPage1.Text = "İhale Bilgileri";
-            // 
-            // txtTenderNearlyTotalAmount
-            // 
-            this.txtTenderNearlyTotalAmount.EnterMoveNextControl = true;
-            this.txtTenderNearlyTotalAmount.Location = new System.Drawing.Point(147, 181);
-            this.txtTenderNearlyTotalAmount.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTenderNearlyTotalAmount.Name = "txtTenderNearlyTotalAmount";
-            this.txtTenderNearlyTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtTenderNearlyTotalAmount.Properties.Appearance.Options.UseBackColor = true;
-            this.txtTenderNearlyTotalAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtTenderNearlyTotalAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtTenderNearlyTotalAmount.Properties.DisplayFormat.FormatString = "c2";
-            this.txtTenderNearlyTotalAmount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtTenderNearlyTotalAmount.Properties.EditFormat.FormatString = "c2";
-            this.txtTenderNearlyTotalAmount.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtTenderNearlyTotalAmount.Properties.Mask.EditMask = "c";
-            this.txtTenderNearlyTotalAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtTenderNearlyTotalAmount.Size = new System.Drawing.Size(224, 26);
-            this.txtTenderNearlyTotalAmount.TabIndex = 121;
             // 
             // LastOfferDate
             // 
@@ -303,21 +276,8 @@
             this.LastOfferDate.Size = new System.Drawing.Size(594, 28);
             this.LastOfferDate.TabIndex = 3;
             // 
-            // labelControl15
-            // 
-            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl15.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl15.Location = new System.Drawing.Point(34, 184);
-            this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(106, 19);
-            this.labelControl15.TabIndex = 9;
-            this.labelControl15.Text = "Yaklaşık Bedel:";
-            // 
             // xtraTabPage2
             // 
-            this.xtraTabPage2.Controls.Add(this.labelControl17);
-            this.xtraTabPage2.Controls.Add(this.textEdit1);
             this.xtraTabPage2.Controls.Add(this.labelControl12);
             this.xtraTabPage2.Controls.Add(this.labelControl11);
             this.xtraTabPage2.Controls.Add(this.labelControl10);
@@ -331,7 +291,7 @@
             this.xtraTabPage2.Controls.Add(this.txtType);
             this.xtraTabPage2.Controls.Add(this.txtEkapNumber);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(744, 297);
+            this.xtraTabPage2.Size = new System.Drawing.Size(744, 262);
             this.xtraTabPage2.Text = "Detay          ";
             // 
             // labelControl12
@@ -947,33 +907,6 @@
             this.labelControl16.TabIndex = 0;
             this.labelControl16.Text = "İhale oluşturduktan sonra adımları takip ediniz...";
             // 
-            // labelControl17
-            // 
-            this.labelControl17.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl17.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl17.Location = new System.Drawing.Point(19, 248);
-            this.labelControl17.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(95, 19);
-            this.labelControl17.TabIndex = 13;
-            this.labelControl17.Text = "Email Adresi:";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.EnterMoveNextControl = true;
-            this.textEdit1.Location = new System.Drawing.Point(126, 244);
-            this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit1.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.textEdit1.Size = new System.Drawing.Size(594, 28);
-            this.textEdit1.TabIndex = 12;
-            // 
             // frm_YeniIhaleYarat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1003,7 +936,6 @@
             this.tabIhaleBilgileri.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenderNearlyTotalAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
@@ -1040,7 +972,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
             this.panelControl5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1090,8 +1021,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraEditors.LabelControl labelControl15;
-        private DevExpress.XtraEditors.TextEdit txtTenderNearlyTotalAmount;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private System.Windows.Forms.PictureBox pcWorld;
@@ -1100,7 +1029,5 @@
         private DevExpress.XtraEditors.SimpleButton btnSearch;
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl16;
-        private DevExpress.XtraEditors.LabelControl labelControl17;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
     }
 }
