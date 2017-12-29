@@ -184,7 +184,14 @@ namespace IhalematikProUI.Forms.Tedarikci
                                 oSheet.Cells[row, 3] = this.Supplier.Id;//supplierId
                                 oSheet.Cells[row, 4] = materialList.Id;
                                 oSheet.Cells[row, 5] = indexNumber;
-                                oSheet.Cells[row, 6] = materialList.PozOBF.Description;
+                                if (!string.IsNullOrEmpty(materialList.PozOBF.DescriptionForSupplier))
+                                {
+                                    oSheet.Cells[row, 6] = materialList.PozOBF.DescriptionForSupplier;
+                                }
+                                else
+                                {
+                                    oSheet.Cells[row, 6] = materialList.PozOBF.Description;
+                                }
                                 oSheet.Cells[row, 7] = materialList.PozOBF.Unit;
                                 oSheet.Cells[row, 8] = materialList.Quantity;
                                 row++;

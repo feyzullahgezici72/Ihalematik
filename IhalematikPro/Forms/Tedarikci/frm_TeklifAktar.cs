@@ -47,6 +47,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void ReadExcel(string path)
         {
+            bool isException = false;
             this.SupplierName = string.Empty;
             this.OfferNumber = string.Empty;
             this.OfferDescription = string.Empty;
@@ -54,7 +55,11 @@ namespace IhalematikProUI.Forms.Tedarikci
             FileStream stream = System.IO.File.Open(@"" + path + "", FileMode.Open, FileAccess.Read);
 
             IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
-
+            if (CurrentManager.Instance.CurrentOffer == null)
+            {
+                MessageBox.Show("Lütfen yüklemek istediğiniz teklifi aktif hale getiriniz.");
+                return;
+            }
             int i = 1;
             while (excelReader.Read())
             {
@@ -70,6 +75,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                             {
                                 Offer offer = OfferProvider.Instance.GetItem((int)offerId);
                                 MessageBox.Show("Yüklemeye çalıştığınız teklif aktif teklife ait değildir." + offer.Number + " Nolu teklifi aktif hale getirip yükleyiniz");
+                                return;
                             }
                         }
 
@@ -117,22 +123,26 @@ namespace IhalematikProUI.Forms.Tedarikci
                     {
                         MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
                         //TODO feyzullahg hata olustu mesaji gostermek lazim.
+                        isException = true;
                         break;
-                    }
-                    if (this.MaterialLists == null || this.MaterialLists.Count == 0)
-                    {
-                        MessageBox.Show("Dosyada yüklenecek malzeme bulunamadı.");
-                    }
-                    else
-                    {
-                        frm_MesajFormu mf = new frm_MesajFormu();
-                        mf.lblMesaj.Text = this.SupplierName + " Firmasının \nTeklif dosyası aktarıldı...";
-                        mf.ShowDialog();
                     }
                 }
                 i++;
             }
             stream.Close();
+            if (!isException)
+            {
+                if (this.MaterialLists == null || this.MaterialLists.Count == 0)
+                {
+                    MessageBox.Show("Dosyada yüklenecek malzeme bulunamadı.");
+                }
+                else
+                {
+                    frm_MesajFormu mf = new frm_MesajFormu();
+                    mf.lblMesaj.Text = this.SupplierName + " Firmasının \nTeklif dosyası aktarıldı...";
+                    mf.ShowDialog();
+                } 
+            }
             grdMaterialList.DataSource = this.MaterialLists;
             lblSupplierName.Text = this.SupplierName;
             lblOfferNumber.Text = this.OfferNumber;

@@ -51,10 +51,10 @@ namespace IhalematikProUI.Model
             {
                 if (this.PozOBF != null)
                 {
-                    if (!string.IsNullOrEmpty(this.PozOBF.DescriptionForSupplier))
-                    {
-                        return this.PozOBF.DescriptionForSupplier;
-                    }
+                    //if (!string.IsNullOrEmpty(this.PozOBF.DescriptionForSupplier))
+                    //{
+                    //    return this.PozOBF.DescriptionForSupplier;
+                    //}
                     return this.PozOBF.Description;
                 }
                 return string.Empty;
