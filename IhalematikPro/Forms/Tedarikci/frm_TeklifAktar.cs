@@ -13,6 +13,7 @@ using System.IO;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Model;
+using IhalematikPro.Manager;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -63,6 +64,15 @@ namespace IhalematikProUI.Forms.Tedarikci
                     {
                         double offerId = excelReader.GetDouble(1);
 
+                        if (CurrentManager.Instance.CurrentOffer != null)
+                        {
+                            if (CurrentManager.Instance.CurrentOffer.Id != offerId)
+                            {
+                                Offer offer = OfferProvider.Instance.GetItem((int)offerId);
+                                MessageBox.Show("Yüklemeye çalıştığınız teklif aktif teklife ait değildir." + offer.Number + " Nolu teklifi aktif hale getirip yükleyiniz");
+                            }
+                        }
+
                         double supplierId = excelReader.GetDouble(2);
                         double materialId = excelReader.GetDouble(3);
 
@@ -105,19 +115,28 @@ namespace IhalematikProUI.Forms.Tedarikci
                     }
                     catch (Exception ex)
                     {
+                        MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
                         //TODO feyzullahg hata olustu mesaji gostermek lazim.
                         break;
+                    }
+                    if (this.MaterialLists == null || this.MaterialLists.Count == 0)
+                    {
+                        MessageBox.Show("Dosyada yüklenecek malzeme bulunamadı.");
+                    }
+                    else
+                    {
+                        frm_MesajFormu mf = new frm_MesajFormu();
+                        mf.lblMesaj.Text = this.SupplierName + " Firmasının \nTeklif dosyası aktarıldı...";
+                        mf.ShowDialog();
                     }
                 }
                 i++;
             }
+            stream.Close();
             grdMaterialList.DataSource = this.MaterialLists;
-            lblSupplierName.Text = this.SupplierName; 
-            lblOfferNumber.Text = this.OfferNumber; 
-            lblOfferDescription.Text = this.OfferDescription; 
-            frm_MesajFormu mf = new frm_MesajFormu();
-            mf.lblMesaj.Text = this.SupplierName + " Firmasının \nTeklif dosyası aktarıldı...";
-            mf.ShowDialog();
+            lblSupplierName.Text = this.SupplierName;
+            lblOfferNumber.Text = this.OfferNumber;
+            lblOfferDescription.Text = this.OfferDescription;
         }
     }
 }
