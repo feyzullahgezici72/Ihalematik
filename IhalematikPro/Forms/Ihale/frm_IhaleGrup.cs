@@ -101,5 +101,28 @@ namespace IhalematikProUI.Forms
                 gridViewTenderGroup.FocusedRowHandle = this.FocusedRowHandle;
             }
         }
+
+        private void grdTenderGroup_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Silmek  istediğinz emin misiniz?", "Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.Yes))
+            {
+                int selectedGroupId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewTenderGroup.GetFocusedRowCellValue("Id"));
+                TenderGroup tenderGroup = TenderGroupProvider.Instance.GetItem(selectedGroupId);
+                tenderGroup.IsMarkedForDeletion = true;
+                TenderGroupProvider.Instance.Save(tenderGroup);
+                this.LoadGrid();
+            }
+            else
+            {
+
+            }
+           
+        }
     }
 }

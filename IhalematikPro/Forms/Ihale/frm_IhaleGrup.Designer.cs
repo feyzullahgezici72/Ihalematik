@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_IhaleGrup));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -56,7 +55,7 @@
             this.txtTenderNumber = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.bindingSourceTenderGroup = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceTenderGroup = new System.Windows.Forms.BindingSource();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -84,9 +83,8 @@
             this.panelControl2.Controls.Add(this.btnIptal);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(838, 35);
+            this.panelControl2.Size = new System.Drawing.Size(559, 24);
             this.panelControl2.TabIndex = 4;
             // 
             // labelControl3
@@ -97,11 +95,10 @@
             this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl3.LineColor = System.Drawing.Color.Red;
             this.labelControl3.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl3.Location = new System.Drawing.Point(7, 0);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Location = new System.Drawing.Point(5, 0);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.ShowLineShadow = false;
-            this.labelControl3.Size = new System.Drawing.Size(112, 35);
+            this.labelControl3.Size = new System.Drawing.Size(76, 23);
             this.labelControl3.TabIndex = 0;
             this.labelControl3.Text = "GRUPLAR";
             this.labelControl3.UseMnemonic = false;
@@ -115,10 +112,9 @@
             this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
             this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnIptal.Location = new System.Drawing.Point(810, 0);
-            this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIptal.Location = new System.Drawing.Point(533, 0);
             this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(28, 35);
+            this.btnIptal.Size = new System.Drawing.Size(26, 24);
             this.btnIptal.TabIndex = 1;
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
             // 
@@ -133,9 +129,10 @@
             this.groupControl1.Controls.Add(this.btnEkle);
             this.groupControl1.Controls.Add(this.txtTenderGroupDescription);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(0, 196);
+            this.groupControl1.Location = new System.Drawing.Point(0, 134);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(838, 63);
+            this.groupControl1.Size = new System.Drawing.Size(559, 43);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Grup Adı";
             // 
@@ -148,9 +145,10 @@
             this.labelControl5.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Horizontal;
             this.labelControl5.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.labelControl5.LineVisible = true;
-            this.labelControl5.Location = new System.Drawing.Point(16, 20);
+            this.labelControl5.Location = new System.Drawing.Point(11, 14);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(87, 19);
+            this.labelControl5.Size = new System.Drawing.Size(57, 13);
             this.labelControl5.TabIndex = 3;
             this.labelControl5.Text = "Grup Adı : ";
             // 
@@ -159,17 +157,17 @@
             this.btnEkle.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEkle.Appearance.Options.UseFont = true;
             this.btnEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnEkle.Image")));
-            this.btnEkle.Location = new System.Drawing.Point(724, 10);
+            this.btnEkle.Location = new System.Drawing.Point(483, 7);
+            this.btnEkle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(102, 39);
+            this.btnEkle.Size = new System.Drawing.Size(68, 27);
             this.btnEkle.TabIndex = 1;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // txtTenderGroupDescription
             // 
-            this.txtTenderGroupDescription.Location = new System.Drawing.Point(106, 18);
-            this.txtTenderGroupDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenderGroupDescription.Location = new System.Drawing.Point(71, 12);
             this.txtTenderGroupDescription.Name = "txtTenderGroupDescription";
             this.txtTenderGroupDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTenderGroupDescription.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -177,27 +175,26 @@
             this.txtTenderGroupDescription.Properties.Appearance.Options.UseFont = true;
             this.txtTenderGroupDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtTenderGroupDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtTenderGroupDescription.Size = new System.Drawing.Size(603, 28);
+            this.txtTenderGroupDescription.Size = new System.Drawing.Size(402, 20);
             this.txtTenderGroupDescription.TabIndex = 0;
             // 
             // grdTenderGroup
             // 
             this.grdTenderGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdTenderGroup.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             gridLevelNode1.RelationName = "Level1";
             this.grdTenderGroup.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.grdTenderGroup.Location = new System.Drawing.Point(0, 259);
+            this.grdTenderGroup.Location = new System.Drawing.Point(0, 177);
             this.grdTenderGroup.MainView = this.gridViewTenderGroup;
-            this.grdTenderGroup.Margin = new System.Windows.Forms.Padding(4);
             this.grdTenderGroup.Name = "grdTenderGroup";
             this.grdTenderGroup.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGuncelle,
             this.btnSil});
-            this.grdTenderGroup.Size = new System.Drawing.Size(838, 447);
+            this.grdTenderGroup.Size = new System.Drawing.Size(559, 306);
             this.grdTenderGroup.TabIndex = 0;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup});
+            this.grdTenderGroup.Click += new System.EventHandler(this.grdTenderGroup_Click);
             // 
             // gridViewTenderGroup
             // 
@@ -405,6 +402,7 @@
             this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnSil.Name = "btnSil";
             this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // groupControl2
             // 
@@ -420,54 +418,52 @@
             this.groupControl2.Controls.Add(this.labelControl1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Enabled = false;
-            this.groupControl2.Location = new System.Drawing.Point(0, 35);
+            this.groupControl2.Location = new System.Drawing.Point(0, 24);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(838, 161);
+            this.groupControl2.Size = new System.Drawing.Size(559, 110);
             this.groupControl2.TabIndex = 40;
             this.groupControl2.Text = "İhale Bilgisi";
             // 
             // txtTenderCompanyName
             // 
-            this.txtTenderCompanyName.Location = new System.Drawing.Point(106, 120);
-            this.txtTenderCompanyName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenderCompanyName.Location = new System.Drawing.Point(71, 82);
             this.txtTenderCompanyName.Name = "txtTenderCompanyName";
             this.txtTenderCompanyName.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTenderCompanyName.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtTenderCompanyName.Properties.Appearance.Options.UseFont = true;
             this.txtTenderCompanyName.Properties.Appearance.Options.UseForeColor = true;
             this.txtTenderCompanyName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtTenderCompanyName.Size = new System.Drawing.Size(718, 28);
+            this.txtTenderCompanyName.Size = new System.Drawing.Size(479, 22);
             this.txtTenderCompanyName.TabIndex = 13;
             // 
             // txtTenderDescription
             // 
-            this.txtTenderDescription.Location = new System.Drawing.Point(106, 83);
-            this.txtTenderDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenderDescription.Location = new System.Drawing.Point(71, 57);
             this.txtTenderDescription.Name = "txtTenderDescription";
             this.txtTenderDescription.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTenderDescription.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtTenderDescription.Properties.Appearance.Options.UseFont = true;
             this.txtTenderDescription.Properties.Appearance.Options.UseForeColor = true;
             this.txtTenderDescription.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtTenderDescription.Size = new System.Drawing.Size(718, 28);
+            this.txtTenderDescription.Size = new System.Drawing.Size(479, 22);
             this.txtTenderDescription.TabIndex = 12;
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Location = new System.Drawing.Point(15, 129);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl4.Location = new System.Drawing.Point(10, 88);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(82, 19);
+            this.labelControl4.Size = new System.Drawing.Size(52, 13);
             this.labelControl4.TabIndex = 14;
             this.labelControl4.Text = "Kurum Adı:";
             // 
             // txtTenderNumber
             // 
             this.txtTenderNumber.Enabled = false;
-            this.txtTenderNumber.Location = new System.Drawing.Point(106, 48);
-            this.txtTenderNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenderNumber.Location = new System.Drawing.Point(71, 33);
             this.txtTenderNumber.Name = "txtTenderNumber";
             this.txtTenderNumber.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTenderNumber.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -475,17 +471,17 @@
             this.txtTenderNumber.Properties.Appearance.Options.UseForeColor = true;
             this.txtTenderNumber.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtTenderNumber.Properties.Mask.BeepOnError = true;
-            this.txtTenderNumber.Size = new System.Drawing.Size(188, 28);
+            this.txtTenderNumber.Size = new System.Drawing.Size(125, 22);
             this.txtTenderNumber.TabIndex = 11;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(27, 91);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl2.Location = new System.Drawing.Point(18, 62);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(70, 19);
+            this.labelControl2.Size = new System.Drawing.Size(46, 13);
             this.labelControl2.TabIndex = 15;
             this.labelControl2.Text = "İhale Adı:";
             // 
@@ -493,20 +489,20 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl1.Location = new System.Drawing.Point(32, 53);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl1.Location = new System.Drawing.Point(21, 36);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(66, 19);
+            this.labelControl1.Size = new System.Drawing.Size(44, 13);
             this.labelControl1.TabIndex = 16;
             this.labelControl1.Text = "İhale No:";
             // 
             // frm_IhaleGrup
             // 
             this.AcceptButton = this.btnEkle;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(838, 706);
+            this.ClientSize = new System.Drawing.Size(559, 483);
             this.ControlBox = false;
             this.Controls.Add(this.grdTenderGroup);
             this.Controls.Add(this.groupControl1);
@@ -515,6 +511,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_IhaleGrup";
