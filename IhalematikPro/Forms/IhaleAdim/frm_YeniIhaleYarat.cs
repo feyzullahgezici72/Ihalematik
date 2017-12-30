@@ -121,12 +121,23 @@ namespace IhalematikPro.Forms
 
         private void rpstSelected_CheckedChanged(object sender, EventArgs e)
         {
+            bool isSelected = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<bool>(gridViewOffer.GetFocusedRowCellValue("IsSelected"));
             for (int i = 0; i < gridViewOffer.RowCount; i++)
             {
                 gridViewOffer.SetRowCellValue(i, colIsSelected, false);
             }
-            gridViewOffer.SetFocusedRowCellValue(colIsSelected, true);
-            this.SelectedOfferId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOffer.GetFocusedRowCellValue("Id"));
+            
+            if (isSelected)
+            {
+                gridViewOffer.SetFocusedRowCellValue(colIsSelected, false);
+                this.SelectedOfferId = 0;
+            }
+            else
+            {
+                gridViewOffer.SetFocusedRowCellValue(colIsSelected, true);
+                this.SelectedOfferId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOffer.GetFocusedRowCellValue("Id"));
+            }
+            
         }
 
         private void simpleButton1_Click_1(object sender, EventArgs e)
