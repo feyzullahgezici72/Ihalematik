@@ -73,14 +73,14 @@
             // 
             // lblMesaj
             // 
-            this.lblMesaj.Appearance.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMesaj.Appearance.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblMesaj.Appearance.ForeColor = System.Drawing.Color.Black;
             this.lblMesaj.LineColor = System.Drawing.Color.Red;
             this.lblMesaj.LineVisible = true;
             this.lblMesaj.Location = new System.Drawing.Point(146, 40);
             this.lblMesaj.LookAndFeel.SkinName = "Coffee";
             this.lblMesaj.Name = "lblMesaj";
-            this.lblMesaj.Size = new System.Drawing.Size(113, 27);
+            this.lblMesaj.Size = new System.Drawing.Size(96, 27);
             this.lblMesaj.TabIndex = 12;
             this.lblMesaj.Text = "    Mesaj    ";
             // 

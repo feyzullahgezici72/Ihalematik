@@ -755,5 +755,11 @@ namespace IhalematikPro.Forms
         {
             
         }
+
+        private void barButtonItem25_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_LisansSozlesmesi ls = new frm_LisansSozlesmesi();
+            ls.ShowDialog();
+        }
     }
 }
