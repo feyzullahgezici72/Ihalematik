@@ -63,11 +63,14 @@ namespace IhalematikPro.Forms
         {
             List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
             List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(items);
-            models[0].IsSelected = true;
-            grdTenderGroup.DataSource = models;
+            if (models != null && models.Count != 0)
+            {
+                models[0].IsSelected = true;
+                grdTenderGroup.DataSource = models;
 
-            this.SelectedGroupId = models[0].Id.Value;
-            this.LoadTenderMaterialList();
+                this.SelectedGroupId = models[0].Id.Value;
+                this.LoadTenderMaterialList();
+            }
         }
 
         private void Frm_Teklif_Adim1_KeyDown(object sender, KeyEventArgs e)

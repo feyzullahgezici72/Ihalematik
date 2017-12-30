@@ -33,7 +33,7 @@ namespace IhalematikPro.Forms
         {
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
             lblRecordCount.Text = list.Count.ToString();
-            grdActiveTenderList.DataSource = list;
+            grdActiveTenderList.DataSource = list.OrderByDescending(p => p.InsertTime).ToList();
 
         }
 
@@ -50,13 +50,13 @@ namespace IhalematikPro.Forms
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             //aktifler
-           
+
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             //pasifler
-            
+
         }
 
         private void btnIhaleAc_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -88,7 +88,7 @@ namespace IhalematikPro.Forms
                 ta1.Activate();
             }
         }
-             private void Ta1_FormClosed(object sender, FormClosedEventArgs e)
+        private void Ta1_FormClosed(object sender, FormClosedEventArgs e)
         {
             ta1 = null;
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
@@ -97,27 +97,27 @@ namespace IhalematikPro.Forms
 
         private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxEdit1.SelectedIndex==0)
+            if (comboBoxEdit1.SelectedIndex == 0)
             {
                 List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
                 lblRecordCount.Text = list.Count.ToString();
-                grdActiveTenderList.DataSource = list;
+                grdActiveTenderList.DataSource = list.OrderByDescending(p => p.InsertTime).ToList();
                 lblTenderCaptin.Text = "AÇIK TEKLİF LİSTESİ";
-                 
+
 
             }
-            if (comboBoxEdit1.SelectedIndex==1)
+            if (comboBoxEdit1.SelectedIndex == 1)
             {
                 List<Tender> list = TenderProvider.Instance.GetItems("IsActive", false);
                 lblRecordCount.Text = list.Count.ToString();
-                grdActiveTenderList.DataSource = list;
+                grdActiveTenderList.DataSource = list.OrderByDescending(p => p.InsertTime).ToList();
                 lblTenderCaptin.Text = "KAPALI TEKLİF LİSTESİ";
             }
             if (comboBoxEdit1.SelectedIndex == 2)
             {
                 List<Tender> list = TenderProvider.Instance.GetItems();
                 lblRecordCount.Text = list.Count.ToString();
-                grdActiveTenderList.DataSource = list;
+                grdActiveTenderList.DataSource = list.OrderByDescending(p => p.InsertTime).ToList();
                 lblTenderCaptin.Text = "TÜM TEKLİF LİSTESİ";
             }
         }
@@ -125,9 +125,8 @@ namespace IhalematikPro.Forms
         private void btnDetay_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             frm_IhaleBilgisiDetay ibd = new frm_IhaleBilgisiDetay();
+            ibd.TenderId = (int)gridViewActiveTenderList.GetFocusedRowCellValue("Id");
             ibd.ShowDialog();
-
         }
     }
- }
-    
+}
