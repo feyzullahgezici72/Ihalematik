@@ -210,6 +210,13 @@ namespace IhalematikPro.Forms
 
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).ToList();
 
+            List<MaterialList> zeroAmountItems = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.Quantity == 0).ToList();
+
+            if (zeroAmountItems != null && zeroAmountItems.Count != 0)
+            {
+                MessageBox.Show("Miktarı 0 olan malzeme bıraktınız. Lütfen miktar belirtiniz?");
+                return;
+            }
             if (items != null && items.Count == 0)
             {
                 DialogResult resultMsg = MessageBox.Show("Hiç işçilikli malzeme seçmediniz eminmisiniz?", "Yeni ", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
