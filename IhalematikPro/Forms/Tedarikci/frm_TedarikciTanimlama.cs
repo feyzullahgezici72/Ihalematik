@@ -47,29 +47,30 @@ namespace IhalematikProUI.Forms
         {
             if (e.KeyCode.ToString() == "F1")
             {
-                frm_FaalitetAlaniEkle frm = new frm_FaalitetAlaniEkle();
+                frm_FaalitetAlaniEkle frm = new frm_FaalitetAlaniEkle(this);
                 frm.ShowDialog();
             }
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            frm_FaalitetAlaniEkle FAE = new frm_FaalitetAlaniEkle();
+            frm_FaalitetAlaniEkle FAE = new frm_FaalitetAlaniEkle(this);
             FAE.ShowDialog();
-        }
-
-        private void grdWorker_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void frm_TedarikciTanimlama_Shown(object sender, EventArgs e)
         {
-            List<SupplierSegment> supplierSegments = SupplierSegmentProvider.Instance.GetItems();
-            ddlSegments.Properties.Items.AddRange(supplierSegments);
+            this.LoadSupplierSegments();
             this.LoadGrid();
             //comboBox1.DataSource = supplierSegments;
             //checkedComboBoxEdit1.Properties.Items.AddRange(supplierSegments);
+        }
+
+        public void LoadSupplierSegments()
+        {
+            ddlSegments.Properties.Items.Clear();// = null;
+            List<SupplierSegment> supplierSegments = SupplierSegmentProvider.Instance.GetItems();
+            ddlSegments.Properties.Items.AddRange(supplierSegments);
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -118,7 +119,7 @@ namespace IhalematikProUI.Forms
                 colPasive.Visible = true;
                 colEdit.Visible = true;
                 colActive.Visible = false;
-                
+
 
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
@@ -199,11 +200,11 @@ namespace IhalematikProUI.Forms
                 dxErrorProvider1.SetError(txtCompanyName, "Firma Adı boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
                 return true;
             }
-            
+
             else
             {
                 dxErrorProvider1.ClearErrors();
-               
+
             }
             return false;
         }

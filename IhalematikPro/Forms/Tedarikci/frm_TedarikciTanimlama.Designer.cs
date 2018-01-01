@@ -205,7 +205,6 @@
             this.grdSupplier.TabIndex = 0;
             this.grdSupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSupplier});
-            this.grdSupplier.Click += new System.EventHandler(this.grdWorker_Click);
             // 
             // gridViewSupplier
             // 

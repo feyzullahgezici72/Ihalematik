@@ -200,7 +200,6 @@
             this.Name = "frm_FaalitetAlaniEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            this.Load += new System.EventHandler(this.frm_FaalitetAlaniEkle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtUnvan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);

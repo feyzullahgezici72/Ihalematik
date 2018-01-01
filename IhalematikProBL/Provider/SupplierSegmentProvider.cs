@@ -11,10 +11,6 @@ namespace IhalematikProBL.Provider
 {
     public class SupplierSegmentProvider : CustomEntityBaseProvider<SupplierSegment, SupplierSegmentProvider>
     {
-        public SupplierSegmentProvider()
-        {
-            this.EnableCaching = true;
-        }
         protected override Hashtable GetCommonParameters(SupplierSegment t)
         {
             Hashtable parameters = base.GetCommonParameters(t);

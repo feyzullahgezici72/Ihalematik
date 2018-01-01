@@ -15,8 +15,11 @@ namespace IhalematikProUI.Forms
 {
     public partial class frm_FaalitetAlaniEkle : DevExpress.XtraEditors.XtraForm
     {
-        public frm_FaalitetAlaniEkle()
+        frm_TedarikciTanimlama _owner = null;
+
+        public frm_FaalitetAlaniEkle(frm_TedarikciTanimlama Owner)
         {
+            this._owner = Owner;
             InitializeComponent();
         }
 
@@ -32,10 +35,11 @@ namespace IhalematikProUI.Forms
                 if (existingItem.Count == 0)
                 {
                     SupplierSegmentProvider.Instance.Save(supplierSegment);
-                    this.Close();
                     frm_MesajFormu mf = new frm_MesajFormu();
                     mf.lblMesaj.Text = "Faaliyet alanı eklendi...";
                     mf.ShowDialog();
+                    this._owner.LoadSupplierSegments();
+                    this.Close();
                 }
                 else
                 {
@@ -44,10 +48,6 @@ namespace IhalematikProUI.Forms
             }
         }
 
-        private void frm_FaalitetAlaniEkle_Load(object sender, EventArgs e)
-        {
-
-        }
         public bool IsEmptyKontrol()
         {
             if (string.IsNullOrEmpty(txtUnvan.Text.Trim()))
