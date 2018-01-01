@@ -64,6 +64,8 @@
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.btnPanelKapat = new DevExpress.XtraEditors.SimpleButton();
+            this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource();
+            this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource();
             ((System.ComponentModel.ISupportInitialize)(this.isciAracGirisPanelix)).BeginInit();
             this.isciAracGirisPanelix.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdAddVehicle)).BeginInit();
@@ -84,6 +86,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCurrentNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddWorker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddVehicle)).BeginInit();
             this.SuspendLayout();
             // 
             // isciAracGirisPanelix
@@ -96,22 +100,21 @@
             this.isciAracGirisPanelix.Dock = System.Windows.Forms.DockStyle.Fill;
             this.isciAracGirisPanelix.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.isciAracGirisPanelix.Location = new System.Drawing.Point(0, 0);
+            this.isciAracGirisPanelix.Margin = new System.Windows.Forms.Padding(2);
             this.isciAracGirisPanelix.Name = "isciAracGirisPanelix";
-            this.isciAracGirisPanelix.Size = new System.Drawing.Size(961, 626);
+            this.isciAracGirisPanelix.Size = new System.Drawing.Size(641, 428);
             this.isciAracGirisPanelix.TabIndex = 27;
             // 
             // grdAddVehicle
             // 
             this.grdAddVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdAddVehicle.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdAddVehicle.Location = new System.Drawing.Point(3, 361);
+            this.grdAddVehicle.Location = new System.Drawing.Point(2, 247);
             this.grdAddVehicle.MainView = this.gridViewAddVehicle;
-            this.grdAddVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddVehicle.Name = "grdAddVehicle";
             this.grdAddVehicle.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstVehicle,
             this.rpstVehicleUnitTimeTypes});
-            this.grdAddVehicle.Size = new System.Drawing.Size(955, 262);
+            this.grdAddVehicle.Size = new System.Drawing.Size(637, 179);
             this.grdAddVehicle.TabIndex = 0;
             this.grdAddVehicle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewAddVehicle});
@@ -239,6 +242,7 @@
             this.gridViewAddVehicle.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gridViewAddVehicle.OptionsView.ShowGroupPanel = false;
             this.gridViewAddVehicle.PaintStyleName = "Web";
+            this.gridViewAddVehicle.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewAddVehicle_CellValueChanged);
             // 
             // colAddVehicleId
             // 
@@ -368,24 +372,23 @@
             this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.groupControl3.Controls.Add(this.grdAddWorker);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl3.Location = new System.Drawing.Point(3, 148);
+            this.groupControl3.Location = new System.Drawing.Point(2, 101);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(955, 213);
+            this.groupControl3.Size = new System.Drawing.Size(637, 146);
             this.groupControl3.TabIndex = 6;
             this.groupControl3.Text = "groupControl3";
             // 
             // grdAddWorker
             // 
             this.grdAddWorker.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grdAddWorker.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddWorker.Location = new System.Drawing.Point(0, 0);
             this.grdAddWorker.MainView = this.gridViewAddWorker;
-            this.grdAddWorker.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddWorker.Name = "grdAddWorker";
             this.grdAddWorker.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstWorker,
             this.rpstUnitTimeTypes});
-            this.grdAddWorker.Size = new System.Drawing.Size(955, 206);
+            this.grdAddWorker.Size = new System.Drawing.Size(637, 141);
             this.grdAddWorker.TabIndex = 0;
             this.grdAddWorker.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewAddWorker});
@@ -515,6 +518,7 @@
             this.gridViewAddWorker.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gridViewAddWorker.OptionsView.ShowGroupPanel = false;
             this.gridViewAddWorker.PaintStyleName = "Web";
+            this.gridViewAddWorker.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewAddWorker_CellValueChanged);
             // 
             // colAddWorkerId
             // 
@@ -642,78 +646,87 @@
             this.groupControl1.Controls.Add(this.labelControl10);
             this.groupControl1.Controls.Add(this.labelControl11);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(3, 38);
+            this.groupControl1.Location = new System.Drawing.Point(2, 26);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(955, 110);
+            this.groupControl1.Size = new System.Drawing.Size(637, 75);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "  ";
             // 
             // btnTamam
             // 
             this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
-            this.btnTamam.Location = new System.Drawing.Point(818, 42);
+            this.btnTamam.Location = new System.Drawing.Point(545, 29);
+            this.btnTamam.Margin = new System.Windows.Forms.Padding(2);
             this.btnTamam.Name = "btnTamam";
-            this.btnTamam.Size = new System.Drawing.Size(118, 53);
+            this.btnTamam.Size = new System.Drawing.Size(79, 36);
             this.btnTamam.TabIndex = 2;
             this.btnTamam.Text = "Tamam";
+            this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
             // 
             // txtCurrentDescription
             // 
             this.txtCurrentDescription.Enabled = false;
-            this.txtCurrentDescription.Location = new System.Drawing.Point(100, 39);
+            this.txtCurrentDescription.Location = new System.Drawing.Point(67, 27);
+            this.txtCurrentDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtCurrentDescription.Name = "txtCurrentDescription";
             this.txtCurrentDescription.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtCurrentDescription.Properties.Appearance.Options.UseFont = true;
-            this.txtCurrentDescription.Size = new System.Drawing.Size(579, 26);
+            this.txtCurrentDescription.Size = new System.Drawing.Size(386, 20);
             this.txtCurrentDescription.TabIndex = 1;
             // 
             // txtCurrentQuantity
             // 
             this.txtCurrentQuantity.Enabled = false;
-            this.txtCurrentQuantity.Location = new System.Drawing.Point(398, 72);
+            this.txtCurrentQuantity.Location = new System.Drawing.Point(265, 49);
+            this.txtCurrentQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.txtCurrentQuantity.Name = "txtCurrentQuantity";
             this.txtCurrentQuantity.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtCurrentQuantity.Properties.Appearance.Options.UseFont = true;
-            this.txtCurrentQuantity.Size = new System.Drawing.Size(282, 26);
+            this.txtCurrentQuantity.Size = new System.Drawing.Size(188, 20);
             this.txtCurrentQuantity.TabIndex = 1;
             // 
             // txtCurrentUnit
             // 
             this.txtCurrentUnit.Enabled = false;
-            this.txtCurrentUnit.Location = new System.Drawing.Point(100, 72);
+            this.txtCurrentUnit.Location = new System.Drawing.Point(67, 49);
+            this.txtCurrentUnit.Margin = new System.Windows.Forms.Padding(2);
             this.txtCurrentUnit.Name = "txtCurrentUnit";
             this.txtCurrentUnit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtCurrentUnit.Properties.Appearance.Options.UseFont = true;
-            this.txtCurrentUnit.Size = new System.Drawing.Size(219, 26);
+            this.txtCurrentUnit.Size = new System.Drawing.Size(146, 20);
             this.txtCurrentUnit.TabIndex = 1;
             // 
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl5.Location = new System.Drawing.Point(339, 75);
+            this.labelControl5.Location = new System.Drawing.Point(226, 51);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(50, 19);
+            this.labelControl5.Size = new System.Drawing.Size(34, 13);
             this.labelControl5.TabIndex = 0;
             this.labelControl5.Text = "Miktar:";
             // 
             // txtCurrentNumber
             // 
             this.txtCurrentNumber.Enabled = false;
-            this.txtCurrentNumber.Location = new System.Drawing.Point(100, 7);
+            this.txtCurrentNumber.Location = new System.Drawing.Point(67, 5);
+            this.txtCurrentNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtCurrentNumber.Name = "txtCurrentNumber";
             this.txtCurrentNumber.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtCurrentNumber.Properties.Appearance.Options.UseFont = true;
-            this.txtCurrentNumber.Size = new System.Drawing.Size(138, 26);
+            this.txtCurrentNumber.Size = new System.Drawing.Size(92, 20);
             this.txtCurrentNumber.TabIndex = 1;
             // 
             // labelControl9
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl9.Location = new System.Drawing.Point(50, 75);
+            this.labelControl9.Location = new System.Drawing.Point(33, 51);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(44, 19);
+            this.labelControl9.Size = new System.Drawing.Size(31, 13);
             this.labelControl9.TabIndex = 0;
             this.labelControl9.Text = "Birimi:";
             // 
@@ -721,9 +734,10 @@
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl10.Location = new System.Drawing.Point(28, 42);
+            this.labelControl10.Location = new System.Drawing.Point(19, 29);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(66, 19);
+            this.labelControl10.Size = new System.Drawing.Size(45, 13);
             this.labelControl10.TabIndex = 0;
             this.labelControl10.Text = "Açıklama:";
             // 
@@ -731,9 +745,10 @@
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl11.Location = new System.Drawing.Point(10, 12);
+            this.labelControl11.Location = new System.Drawing.Point(7, 8);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(84, 19);
+            this.labelControl11.Size = new System.Drawing.Size(55, 13);
             this.labelControl11.TabIndex = 0;
             this.labelControl11.Text = "Poz/Öbf No:";
             // 
@@ -746,10 +761,9 @@
             this.panelControl5.Controls.Add(this.labelControl3);
             this.panelControl5.Controls.Add(this.btnPanelKapat);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl5.Location = new System.Drawing.Point(3, 3);
-            this.panelControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl5.Location = new System.Drawing.Point(2, 2);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(955, 35);
+            this.panelControl5.Size = new System.Drawing.Size(637, 24);
             this.panelControl5.TabIndex = 4;
             // 
             // labelControl3
@@ -759,11 +773,10 @@
             this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.labelControl3.LineColor = System.Drawing.Color.Red;
             this.labelControl3.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl3.Location = new System.Drawing.Point(10, 1);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Location = new System.Drawing.Point(7, 1);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.ShowLineShadow = false;
-            this.labelControl3.Size = new System.Drawing.Size(322, 35);
+            this.labelControl3.Size = new System.Drawing.Size(220, 23);
             this.labelControl3.TabIndex = 5;
             this.labelControl3.Text = "İŞÇİLİK / ARAÇ KAYIT İŞLEMİ";
             this.labelControl3.UseMnemonic = false;
@@ -779,30 +792,31 @@
             this.btnPanelKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnPanelKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnPanelKapat.Image")));
             this.btnPanelKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnPanelKapat.Location = new System.Drawing.Point(927, 0);
-            this.btnPanelKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPanelKapat.Location = new System.Drawing.Point(611, 0);
             this.btnPanelKapat.Name = "btnPanelKapat";
-            this.btnPanelKapat.Size = new System.Drawing.Size(28, 35);
+            this.btnPanelKapat.Size = new System.Drawing.Size(26, 24);
             this.btnPanelKapat.TabIndex = 1;
             this.btnPanelKapat.Click += new System.EventHandler(this.btnPanelKapat_Click);
             // 
             // frm_Iscilik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnPanelKapat;
-            this.ClientSize = new System.Drawing.Size(961, 626);
+            this.ClientSize = new System.Drawing.Size(641, 428);
             this.ControlBox = false;
             this.Controls.Add(this.isciAracGirisPanelix);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.LookAndFeel.SkinName = "McSkin";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Iscilik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.frm_Iscilik_Load);
+            this.Shown += new System.EventHandler(this.frm_Iscilik_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.isciAracGirisPanelix)).EndInit();
             this.isciAracGirisPanelix.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdAddVehicle)).EndInit();
@@ -825,6 +839,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
             this.panelControl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddWorker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddVehicle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -866,5 +882,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.SimpleButton btnPanelKapat;
+        private System.Windows.Forms.BindingSource bindingSourceAddWorker;
+        private System.Windows.Forms.BindingSource bindingSourceAddVehicle;
     }
 }

@@ -458,13 +458,13 @@ namespace IhalematikPro.Forms
         private void frm_Teklif_Adim3_Shown(object sender, EventArgs e)
         {
             bindingSourceAddWorker.DataSource = typeof(List<TenderMaterialListEquipmentModel>);
-            grdAddWorker.DataSource = bindingSourceAddWorker;
-            grdAddVehicle.DataSource = bindingSourceAddVehicle;
+            //grdAddWorker.DataSource = bindingSourceAddWorker;
+            //grdAddVehicle.DataSource = bindingSourceAddVehicle;
 
-            this.RPSTWorkers();
-            this.RPSTVehicles();
-            this.RPSTWorkerUnitTimeTypes();
-            this.RPSTVehicleUnitTimeTypes();
+            //this.RPSTWorkers();
+            //this.RPSTVehicles();
+            //this.RPSTWorkerUnitTimeTypes();
+            //this.RPSTVehicleUnitTimeTypes();
             this.LoadTenderGroupGrid();
 
         }
@@ -655,8 +655,8 @@ namespace IhalematikPro.Forms
         private void btnCalisanlarveAraclar_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            frm_Iscilik iscilik = new frm_Iscilik();
-            iscilik.ShowDialog();
+            frm_Iscilik iscilik = new frm_Iscilik(this);
+           
             this.Enabled = true;
             ////Panellerin enabled özelliklerini false yap
             //panelControl1.Enabled = false;
@@ -676,12 +676,14 @@ namespace IhalematikPro.Forms
                 if (item.Id == currentId)
                 {
                     this.SelectedMaterial = item;
-                    this.panelAc();
+                    //this.panelAc();
                     LoadWorkerMateriallistGrid();
                     break;
                 }
             }
             this.FocusedRowHandle = gridViewMaterialListIsWorkship.FocusedRowHandle;
+            iscilik.SelectedMaterial = this.SelectedMaterial;
+            iscilik.ShowDialog();
         }
     }
 }
