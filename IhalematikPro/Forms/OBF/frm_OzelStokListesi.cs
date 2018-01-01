@@ -210,5 +210,35 @@ namespace IhalematikPro.Forms
         {
             txtDescriptionForSupplier.Text = txtDescription.Text;
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            string obfNo = txtSearchNumber.Text.Trim();
+            string obfDesc = txtSearchDescription.Text.Trim();
+
+            List<OBFModel> items = UIOBFManager.Instance.GetOBFs();
+
+            if (cmbAktivePasive.SelectedIndex == 0)
+            {
+                items = items.Where(p => p.IsActive).ToList();
+            }
+            else if (cmbAktivePasive.SelectedIndex == 1)
+            {
+                items = items.Where(p => !p.IsActive).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(obfNo))
+            {
+                items = items.Where(p => p.Number.Contains(obfNo)).ToList();
+            }
+            if (!string.IsNullOrEmpty(obfDesc))
+            {
+                items = items.Where(p => p.Description.Contains(obfDesc)).ToList();
+            }
+
+            grdOBFList.DataSource = null;
+            grdOBFList.DataSource = items;
+            lblRecordCount.Text = items.Count.ToString();
+        }
     }
 }

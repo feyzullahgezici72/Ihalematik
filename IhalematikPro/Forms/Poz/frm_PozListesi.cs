@@ -71,30 +71,30 @@ namespace IhalematikPro.Forms
             if (!string.IsNullOrEmpty(txtNumber.Text.Trim()))//samet ekledi
             {
                 PozModel model = new PozModel();
-            model.Description = txtDescription.Text;
-            model.Number = txtNumber.Text;
-            model.Unit = txtUnit.Text;
-            model.IsActive = true;
-            model.UnitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtUnitPrice.Text);
+                model.Description = txtDescription.Text;
+                model.Number = txtNumber.Text;
+                model.Unit = txtUnit.Text;
+                model.IsActive = true;
+                model.UnitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtUnitPrice.Text);
 
-            List<Poz> existingPozs = UIPozManager.Instance.GetPoz(model.Number);
-            if (existingPozs != null && existingPozs.Count != 0)
-            {
-                frm_MesajFormu mf = new frm_MesajFormu();
-                mf.lblMesaj.Text = "Bu Poz numarasi ile kayit bulunmaktadir";
-                mf.ShowDialog();
-                this.txtNumber.ResetText();
+                List<Poz> existingPozs = UIPozManager.Instance.GetPoz(model.Number);
+                if (existingPozs != null && existingPozs.Count != 0)
+                {
+                    frm_MesajFormu mf = new frm_MesajFormu();
+                    mf.lblMesaj.Text = "Bu Poz numarasi ile kayit bulunmaktadir";
+                    mf.ShowDialog();
+                    this.txtNumber.ResetText();
+                }
+                else
+                {
+                    model.Save();
+                    FormClear();
+                    LoadGrid();
+                    frm_MesajFormu mf = new frm_MesajFormu();
+                    mf.lblMesaj.Text = "Malzeme Kaydedildi...";
+                    mf.ShowDialog();
+                }
             }
-            else
-            {
-                model.Save();
-                FormClear();
-                LoadGrid();
-                frm_MesajFormu mf = new frm_MesajFormu();
-                mf.lblMesaj.Text = "Malzeme Kaydedildi...";
-                mf.ShowDialog();
-            }
-         }
         }
         private void FormClear()
         {
@@ -208,6 +208,35 @@ namespace IhalematikPro.Forms
             {
 
             }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            string pozNo = txtSearchNumber.Text.Trim();
+            string pozDesc = txtSearchDescription.Text.Trim();
+            List<Poz> items = new List<Poz>();
+
+            if (cmbAktivePasive.SelectedIndex == 0)
+            {
+                items = UIPozManager.Instance.GetPozs(true);
+            }
+            else if (cmbAktivePasive.SelectedIndex == 1)
+            {
+                items = UIPozManager.Instance.GetPozs(false);
+            }
+            
+            if (!string.IsNullOrEmpty(pozNo))
+            {
+                items = items.Where(p => p.Number.Contains(pozNo)).ToList();
+            }
+            if (!string.IsNullOrEmpty(pozDesc))
+            {
+                items = items.Where(p => p.Description.Contains(pozDesc)).ToList();
+            }
+
+            grdPozList.DataSource = null;
+            grdPozList.DataSource = items;
+            lblRecordCount.Text = items.Count.ToString();
         }
     }
 }
