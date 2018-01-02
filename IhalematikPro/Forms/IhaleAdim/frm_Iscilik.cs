@@ -348,5 +348,15 @@ namespace IhalematikProUI.Forms.IhaleAdim
             this._owner.LoadTenderMaterialList();
             this.Close();
         }
+
+        private void btnCikar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
+        }
+
+        private void btnAracCikar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
+        }
     }
 }

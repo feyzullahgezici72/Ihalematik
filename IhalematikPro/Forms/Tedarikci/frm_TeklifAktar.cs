@@ -148,5 +148,10 @@ namespace IhalematikProUI.Forms.Tedarikci
             lblOfferNumber.Text = this.OfferNumber;
             lblOfferDescription.Text = this.OfferDescription;
         }
+
+        private void frm_TeklifAktar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
