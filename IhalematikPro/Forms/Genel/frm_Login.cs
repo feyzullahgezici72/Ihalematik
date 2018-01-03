@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Threading;
-using IhalematikPro.Manager;
-using IhalematikProBL.Provider;
+using IhalematikPro.Forms;
+using System.Net;
 
-namespace IhalematikPro.Forms
+namespace IhalematikProUI.Forms.Genel
 {
     public partial class frm_Login : DevExpress.XtraEditors.XtraForm
     {
@@ -23,39 +23,25 @@ namespace IhalematikPro.Forms
 
         private void frm_Login_Load(object sender, EventArgs e)
         {
-            //Thread.Sleep(1500);
+            string bilgisayarAdi = Dns.GetHostName();
+            lblPcName.Text = bilgisayarAdi;
+            string ipAdresi = Dns.GetHostByName(bilgisayarAdi).AddressList[0].ToString();
+            lblIpNumber.Text = ipAdresi;
+            Thread.Sleep(1500);
         }
 
-      
+     
+
         private void btnIptal_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+           Application.Exit();
         }
 
-        private void btnGiris_Click(object sender, EventArgs e)
+        private void btnTamam_Click(object sender, EventArgs e)
         {
-            Forms.frm_Anaform frm = new frm_Anaform();
+            frm_Anaform af = new frm_Anaform();
             this.Hide();
-            frm.Show();
-            //GlobalVeriablesManager.CurrentTender = TenderProvider.Instance.GetItem(160);
-
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbInputType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbInputType.SelectedIndex==1)
-            {
-                btnSetting.Visible = true;
-            }
-            else
-            {
-                btnSetting.Visible = false;
-            }
+            af.ShowDialog();
         }
     }
 }

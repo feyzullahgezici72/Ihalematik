@@ -237,6 +237,12 @@
     <Compile Include="Forms\Genel\frm_LisasnKontrolFormu.Designer.cs">
       <DependentUpon>frm_LisasnKontrolFormu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Genel\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Genel\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Genel\frm_PozlariOnlineGuncelle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -435,12 +441,6 @@
     <Compile Include="Forms\IhaleAdim\frm_Teklif_Adim2.Designer.cs">
       <DependentUpon>frm_Teklif_Adim2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Genel\frm_Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Genel\frm_Login.Designer.cs">
-      <DependentUpon>frm_Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\OBF\frm_ObfKayit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -562,6 +562,9 @@
     <EmbeddedResource Include="Forms\Genel\frm_LisasnKontrolFormu.resx">
       <DependentUpon>frm_LisasnKontrolFormu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Genel\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Genel\frm_PozlariOnlineGuncelle.resx">
       <DependentUpon>frm_PozlariOnlineGuncelle.cs</DependentUpon>
     </EmbeddedResource>
@@ -660,9 +663,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IhaleAdim\frm_Teklif_Adim2.resx">
       <DependentUpon>frm_Teklif_Adim2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Genel\frm_Login.resx">
-      <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OBF\frm_ObfKayit.resx">
       <DependentUpon>frm_ObfKayit.cs</DependentUpon>
@@ -1075,6 +1075,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cross-script-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-button-png-0.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

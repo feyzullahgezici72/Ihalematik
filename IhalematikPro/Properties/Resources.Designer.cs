@@ -673,6 +673,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap login_button_png_0 {
+            get {
+                object obj = ResourceManager.GetObject("login-button-png-0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Login_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("Login-icon (1)", resourceCulture);
