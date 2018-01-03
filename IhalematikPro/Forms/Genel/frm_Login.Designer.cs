@@ -31,29 +31,33 @@
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::IhalematikPro.Forms.frm_SplashScreen), true, true);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.lblPcName = new DevExpress.XtraEditors.LabelControl();
             this.lblIpNumber = new DevExpress.XtraEditors.LabelControl();
-            this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
-            this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // splashScreenManager1
+            // 
+            splashScreenManager1.ClosingDelay = 1500;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.login_button_png_0;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(202, 214);
+            this.pictureBox1.Size = new System.Drawing.Size(207, 207);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -78,16 +82,35 @@
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Giriş";
             // 
-            // textEdit1
+            // labelControl2
             // 
-            this.textEdit1.EditValue = "Demo";
-            this.textEdit1.EnterMoveNextControl = true;
-            this.textEdit1.Location = new System.Drawing.Point(114, 48);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.textEdit1.Size = new System.Drawing.Size(272, 26);
-            this.textEdit1.TabIndex = 0;
+            this.labelControl2.Location = new System.Drawing.Point(70, 83);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(38, 19);
+            this.labelControl2.TabIndex = 1;
+            this.labelControl2.Text = "Şifre:";
+            // 
+            // btnIptal
+            // 
+            this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnIptal.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
+            this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnIptal.Location = new System.Drawing.Point(258, 123);
+            this.btnIptal.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnIptal.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnIptal.Name = "btnIptal";
+            this.btnIptal.Size = new System.Drawing.Size(128, 79);
+            this.btnIptal.TabIndex = 3;
+            this.btnIptal.Text = "İptal";
+            this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(15, 51);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(93, 19);
+            this.labelControl1.TabIndex = 1;
+            this.labelControl1.Text = "Kullanıcı Adı:";
             // 
             // textEdit2
             // 
@@ -101,21 +124,29 @@
             this.textEdit2.Size = new System.Drawing.Size(272, 26);
             this.textEdit2.TabIndex = 1;
             // 
-            // labelControl1
+            // btnTamam
             // 
-            this.labelControl1.Location = new System.Drawing.Point(15, 51);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(93, 19);
-            this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "Kullanıcı Adı:";
+            this.btnTamam.Image = global::IhalematikProUI.Properties.Resources.ok_icon__1_;
+            this.btnTamam.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnTamam.Location = new System.Drawing.Point(114, 123);
+            this.btnTamam.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnTamam.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnTamam.Name = "btnTamam";
+            this.btnTamam.Size = new System.Drawing.Size(128, 79);
+            this.btnTamam.TabIndex = 2;
+            this.btnTamam.Text = "Tamam";
+            this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
             // 
-            // labelControl2
+            // textEdit1
             // 
-            this.labelControl2.Location = new System.Drawing.Point(70, 83);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(38, 19);
-            this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "Şifre:";
+            this.textEdit1.EditValue = "Demo";
+            this.textEdit1.EnterMoveNextControl = true;
+            this.textEdit1.Location = new System.Drawing.Point(114, 48);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textEdit1.Size = new System.Drawing.Size(272, 26);
+            this.textEdit1.TabIndex = 0;
             // 
             // labelControl3
             // 
@@ -157,37 +188,6 @@
             this.lblIpNumber.TabIndex = 2;
             this.lblIpNumber.Text = " ";
             // 
-            // btnTamam
-            // 
-            this.btnTamam.Image = global::IhalematikProUI.Properties.Resources.ok_icon__1_;
-            this.btnTamam.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnTamam.Location = new System.Drawing.Point(114, 123);
-            this.btnTamam.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnTamam.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnTamam.Name = "btnTamam";
-            this.btnTamam.Size = new System.Drawing.Size(128, 79);
-            this.btnTamam.TabIndex = 2;
-            this.btnTamam.Text = "Tamam";
-            this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
-            // 
-            // btnIptal
-            // 
-            this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnIptal.Image = global::IhalematikProUI.Properties.Resources.Actions_dialog_close_icon;
-            this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnIptal.Location = new System.Drawing.Point(258, 123);
-            this.btnIptal.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnIptal.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(128, 79);
-            this.btnIptal.TabIndex = 3;
-            this.btnIptal.Text = "İptal";
-            this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
-            // 
-            // splashScreenManager1
-            // 
-            splashScreenManager1.ClosingDelay = 1500;
-            // 
             // frm_Login
             // 
             this.AcceptButton = this.btnTamam;
@@ -205,7 +205,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelControl3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "Seven Classic";
+            this.LookAndFeel.SkinName = "Office 2007 Green";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -217,8 +217,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
