@@ -45,6 +45,7 @@ namespace IhalematikPro.Forms
         }
         public void frm_Anaform_Load(object sender, EventArgs e)
         {
+            
             logoOrtala();
             DevExpress.UserSkins.BonusSkins.Register();
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
@@ -542,14 +543,14 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Lilian"; //"Money Twins"; //"Lilian";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Green"; //"Money Twins"; //"Lilian";
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
 
         private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Green";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Lilian";
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
