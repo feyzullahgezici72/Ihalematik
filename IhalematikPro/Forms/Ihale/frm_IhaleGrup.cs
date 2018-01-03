@@ -68,6 +68,7 @@ namespace IhalematikProUI.Forms
                     else
                     {
                         item.Tender = CurrentManager.Instance.CurrentTender;
+                        CurrentManager.Instance.CurrentTender.Groups.Add(item);
                         TenderGroupProvider.Instance.Save(item);
                         this.LoadGrid();
                         txtTenderGroupDescription.ResetText();
@@ -116,6 +117,7 @@ namespace IhalematikProUI.Forms
                 TenderGroup tenderGroup = TenderGroupProvider.Instance.GetItem(selectedGroupId);
                 tenderGroup.IsMarkedForDeletion = true;
                 TenderGroupProvider.Instance.Save(tenderGroup);
+                CurrentManager.Instance.CurrentTender.Groups.Remove(tenderGroup);
                 this.LoadGrid();
             }
             else
