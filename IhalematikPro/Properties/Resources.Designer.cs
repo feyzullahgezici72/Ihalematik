@@ -403,6 +403,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cross_script_icon {
+            get {
+                object obj = ResourceManager.GetObject("cross-script-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap data_apply_icon {
             get {
                 object obj = ResourceManager.GetObject("data-apply-icon", resourceCulture);

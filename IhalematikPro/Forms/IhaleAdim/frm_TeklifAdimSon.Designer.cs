@@ -36,6 +36,8 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
             this.txtFuelOilFare = new DevExpress.XtraEditors.TextEdit();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
@@ -121,8 +123,6 @@
             this.txtMaterialCount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit4 = new DevExpress.XtraEditors.MemoEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -132,6 +132,7 @@
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
             this.panelControl8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFuelOilFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
@@ -177,7 +178,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMaterialIsNonWorkshipcount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaterialCount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -291,16 +291,47 @@
             this.panelControl8.Controls.Add(this.txtFuelOilFare);
             this.panelControl8.Controls.Add(this.labelControl18);
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl8.Location = new System.Drawing.Point(399, 3);
+            this.panelControl8.Location = new System.Drawing.Point(355, 3);
             this.panelControl8.LookAndFeel.SkinName = "Office 2007 Pink";
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(248, 66);
+            this.panelControl8.Size = new System.Drawing.Size(292, 66);
             this.panelControl8.TabIndex = 49;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.EnterMoveNextControl = true;
+            this.textEdit1.Location = new System.Drawing.Point(162, 37);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textEdit1.Properties.DisplayFormat.FormatString = "c2";
+            this.textEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit1.Properties.EditFormat.FormatString = "c2";
+            this.textEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit1.Properties.Mask.EditMask = "c2";
+            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEdit1.Size = new System.Drawing.Size(123, 26);
+            this.textEdit1.TabIndex = 45;
+            // 
+            // labelControl32
+            // 
+            this.labelControl32.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl32.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl32.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.labelControl32.Location = new System.Drawing.Point(37, 39);
+            this.labelControl32.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl32.Name = "labelControl32";
+            this.labelControl32.Size = new System.Drawing.Size(115, 19);
+            this.labelControl32.TabIndex = 44;
+            this.labelControl32.Text = "Muhasebe Gideri:";
             // 
             // txtFuelOilFare
             // 
             this.txtFuelOilFare.EnterMoveNextControl = true;
-            this.txtFuelOilFare.Location = new System.Drawing.Point(118, 7);
+            this.txtFuelOilFare.Location = new System.Drawing.Point(162, 6);
             this.txtFuelOilFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtFuelOilFare.Name = "txtFuelOilFare";
             this.txtFuelOilFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -321,7 +352,7 @@
             this.labelControl18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl18.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl18.Location = new System.Drawing.Point(20, 11);
+            this.labelControl18.Location = new System.Drawing.Point(55, 9);
             this.labelControl18.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(97, 19);
@@ -331,13 +362,15 @@
             // groupControl4
             // 
             this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl4.AppearanceCaption.ForeColor = System.Drawing.Color.Maroon;
             this.groupControl4.AppearanceCaption.Options.UseFont = true;
+            this.groupControl4.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl4.Controls.Add(this.btnTumuneUygula);
             this.groupControl4.Controls.Add(this.checkEdit2);
             this.groupControl4.Controls.Add(this.checkEdit1);
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupControl4.Location = new System.Drawing.Point(647, 3);
-            this.groupControl4.LookAndFeel.SkinName = "The Asphalt World";
+            this.groupControl4.LookAndFeel.SkinName = "Foggy";
             this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(322, 66);
@@ -361,6 +394,7 @@
             this.btnTumuneUygula.Name = "btnTumuneUygula";
             this.btnTumuneUygula.Size = new System.Drawing.Size(28, 30);
             this.btnTumuneUygula.TabIndex = 35;
+            this.btnTumuneUygula.ToolTip = "Tümünü Uygula";
             // 
             // checkEdit2
             // 
@@ -381,9 +415,7 @@
             // btnKaydet
             // 
             this.btnKaydet.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnKaydet.Appearance.Options.UseFont = true;
-            this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
             this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
@@ -398,9 +430,7 @@
             // btnObfKayit
             // 
             this.btnObfKayit.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnObfKayit.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnObfKayit.Appearance.Options.UseFont = true;
-            this.btnObfKayit.Appearance.Options.UseForeColor = true;
             this.btnObfKayit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
@@ -415,9 +445,7 @@
             // simpleButton1
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
@@ -1583,37 +1611,6 @@
             this.textEdit4.Size = new System.Drawing.Size(364, 92);
             this.textEdit4.TabIndex = 46;
             // 
-            // textEdit1
-            // 
-            this.textEdit1.EnterMoveNextControl = true;
-            this.textEdit1.Location = new System.Drawing.Point(118, 37);
-            this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.textEdit1.Properties.DisplayFormat.FormatString = "c2";
-            this.textEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.textEdit1.Properties.EditFormat.FormatString = "c2";
-            this.textEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.textEdit1.Properties.Mask.EditMask = "c2";
-            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEdit1.Size = new System.Drawing.Size(123, 26);
-            this.textEdit1.TabIndex = 45;
-            // 
-            // labelControl32
-            // 
-            this.labelControl32.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl32.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl32.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl32.Location = new System.Drawing.Point(2, 41);
-            this.labelControl32.Margin = new System.Windows.Forms.Padding(6);
-            this.labelControl32.Name = "labelControl32";
-            this.labelControl32.Size = new System.Drawing.Size(115, 19);
-            this.labelControl32.TabIndex = 44;
-            this.labelControl32.Text = "Muhasebe Gideri:";
-            // 
             // frm_TeklifAdimSon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1645,6 +1642,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
             this.panelControl8.ResumeLayout(false);
             this.panelControl8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFuelOilFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
@@ -1695,7 +1693,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMaterialIsNonWorkshipcount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaterialCount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

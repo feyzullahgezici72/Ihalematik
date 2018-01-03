@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Iscilik));
             this.isciAracGirisPanelix = new DevExpress.XtraEditors.PanelControl();
             this.grdAddVehicle = new DevExpress.XtraGrid.GridControl();
@@ -118,6 +118,8 @@
             this.grdAddVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdAddVehicle.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddVehicle.Location = new System.Drawing.Point(3, 361);
+            this.grdAddVehicle.LookAndFeel.SkinName = "VS2010";
+            this.grdAddVehicle.LookAndFeel.UseDefaultLookAndFeel = false;
             this.grdAddVehicle.MainView = this.gridViewAddVehicle;
             this.grdAddVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddVehicle.Name = "grdAddVehicle";
@@ -268,10 +270,9 @@
             // 
             // btnAracCikar
             // 
-            this.btnAracCikar.AutoHeight = false;
-            this.btnAracCikar.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.btnAracCikar.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnAracCikar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnAracCikar.Name = "btnAracCikar";
             this.btnAracCikar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnAracCikar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnAracCikar_ButtonClick);
@@ -417,6 +418,8 @@
             this.grdAddWorker.Dock = System.Windows.Forms.DockStyle.Top;
             this.grdAddWorker.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddWorker.Location = new System.Drawing.Point(0, 0);
+            this.grdAddWorker.LookAndFeel.SkinName = "McSkin";
+            this.grdAddWorker.LookAndFeel.UseDefaultLookAndFeel = false;
             this.grdAddWorker.MainView = this.gridViewAddWorker;
             this.grdAddWorker.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddWorker.Name = "grdAddWorker";
@@ -569,10 +572,9 @@
             // 
             // btnIsciCikar
             // 
-            this.btnIsciCikar.AutoHeight = false;
             this.btnIsciCikar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
-            this.btnIsciCikar.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            this.btnIsciCikar.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnIsciCikar.Name = "btnIsciCikar";
             this.btnIsciCikar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnIsciCikar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnCikar_ButtonClick);
@@ -714,9 +716,10 @@
             // btnTamam
             // 
             this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
-            this.btnTamam.Location = new System.Drawing.Point(818, 42);
+            this.btnTamam.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnTamam.Location = new System.Drawing.Point(818, 32);
             this.btnTamam.Name = "btnTamam";
-            this.btnTamam.Size = new System.Drawing.Size(118, 53);
+            this.btnTamam.Size = new System.Drawing.Size(118, 63);
             this.btnTamam.TabIndex = 2;
             this.btnTamam.Text = "Tamam";
             this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
