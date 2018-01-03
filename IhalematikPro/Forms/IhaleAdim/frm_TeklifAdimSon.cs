@@ -17,12 +17,18 @@ using DevExpress.XtraReports.UI;
 using System.Threading;
 using IhalematikProUI.Forms.Base;
 using IhalematikPro.Forms;
+using IhalematikProBL.Provider;
 //using IhalematikProUI.Report;
 
 namespace IhalematikProUI.Forms
 {
     public partial class frm_TeklifAdimSon : IhalematikBaseForm
     {
+        public List<MaterialListModel> DataSource { get; set; }
+
+        private double TotalMarkupNonKDV = 0;
+
+        private double OtherTotalAmount = 0;
         public frm_TeklifAdimSon()
         {
             InitializeComponent();
@@ -36,21 +42,9 @@ namespace IhalematikProUI.Forms
             af.RibonAktif();
         }
 
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        private void CalculateFooterInnerValues(List<MaterialListModel> models)
         {
-
-        }
-
-        private void frm_TeklifSonAdim_Load(object sender, EventArgs e)
-        {
-
-            lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
-            lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
-            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-
-            grdMaterialList.DataSource = models;
-
+            this.TotalMarkupNonKDV = 0;
             double materialCostAmount = 0; // Malzeme Maliyet fiyat
             double materialkdvTotalAmount = 0; // Malzeme Toplam KDV
             double totalAmount = 0; // Malzeme Toplam Fiyat
@@ -61,7 +55,6 @@ namespace IhalematikProUI.Forms
             double markupWorkerAmount = 0;
 
             //KDV haric toplam kar
-            double totalMarkupNonKDV = 0;
 
             foreach (MaterialListModel item in models)
             {
@@ -70,32 +63,30 @@ namespace IhalematikProUI.Forms
                 workerCostAmount += item.WorkerUnitPrice * item.Quantity;
                 markupMaterialAmount += item.UnitMarkup * item.Quantity; ;
                 markupWorkerAmount += item.WorkerUnitPrice * item.Quantity * (item.Markup / 100);
-                totalMarkupNonKDV += item.TotalFare;
+                TotalMarkupNonKDV += item.TotalFare;
             }
             totalAmount = materialCostAmount + materialkdvTotalAmount;
-
             txtMaterialCostAmount.Text = materialCostAmount.ToString("c2");
             txtMaterialkdvTotalAmount.Text = materialkdvTotalAmount.ToString("c2");
             txtTotalAmount.Text = totalAmount.ToString("c2");
-
             txtWorkerCostAmount.Text = workerCostAmount.ToString("c2");
             txtWorkerKDVAmount.Text = 0.ToString("c2");
             txtWorkerAmount.Text = workerCostAmount.ToString("c2");
-
             txtMarkupMaterialTotal.Text = markupMaterialAmount.ToString("c2");
             txtMarkupWorkerAmount.Text = markupWorkerAmount.ToString("c2");
             txtMarkupAmount.Text = (markupWorkerAmount + markupMaterialAmount).ToString("c2");
 
-            lblTotalMarkupNonKDV.Text = totalMarkupNonKDV.ToString("c2");
+            lblTotalMarkupNonKDV.Text = this.TotalMarkupNonKDV.ToString("c2");
         }
 
         private void btnObfKayit_Click(object sender, EventArgs e)
         {
             MainReport ms = new MainReport();
 
+
             List<ReportModel> models = new List<ReportModel>();
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
-            List<MaterialListModel> materialModels = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            List<MaterialListModel> materialModels = grdMaterialList.DataSource as List<MaterialListModel>; //IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             double totalAmount = 0;
             if (materialModels != null)
             {
@@ -108,9 +99,9 @@ namespace IhalematikProUI.Forms
                     model.ItemNumber = i.ToString();
                     model.Quantity = item.Quantity.ToString();
                     totalAmount += Math.Round((item.MarkupUnitPrice + item.WorkerUnitPrice) * item.Quantity, 2);
-                    model.Total = Math.Round((item.MarkupUnitPrice + item.WorkerUnitPrice) * item.Quantity, 2).ToString("c2");
+                    model.Total = Math.Round(item.OtherTotalFare, 2).ToString("c2");
                     model.Unit = item.PozOBFUnit;
-                    model.UnitPrice = item.PozOBFUnitPrice.ToString("C2");
+                    model.UnitPrice = item.OtherUnitTotalFare.ToString("C2");
                     models.Add(model);
                     i++;
                 }
@@ -134,17 +125,25 @@ namespace IhalematikProUI.Forms
             mf.ShowDialog();
         }
 
-        private void btnDetail_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPanelKapat_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frm_TeklifAdimSon_Shown(object sender, EventArgs e)
+        {
+            lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
+            lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+            this.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            this.TotalMarkupNonKDV = this.DataSource.Sum(p => p.TotalFare);
+            grdMaterialList.DataSource = this.DataSource;
+
+            this.CalculateFooterInnerValues(this.DataSource);
+            this.CalculateLeftPanelValues();
+            colOtherTotalFare.Visible = false;
+            colOtherUnitTotalFare.Visible = false;
+
+            colUnitTotalFare.Visible = true;
+            colTotalFare.Visible = true;
+        }
+
+        private void CalculateLeftPanelValues()
         {
             Tender tender = CurrentManager.Instance.CurrentTender;
             isciAracGirisPaneli.Visible = true;
@@ -166,14 +165,42 @@ namespace IhalematikProUI.Forms
             txtKirim.Text = (tender.NearlyTotalAmount - double.Parse(txtOfferTotalAmount.Text.Replace("TL", ""))).ToString("c");
         }
 
-        private void isciAracGirisPaneli_Paint(object sender, PaintEventArgs e)
+
+        private void btnTumuneUygula_Click(object sender, EventArgs e)
         {
+            IhalematikProBL.Entity.Rule provisionalBond = RuleProvider.Instance.GetItems("Code", "ProvisionalBond").FirstOrDefault();
+            IhalematikProBL.Entity.Rule completionBond = RuleProvider.Instance.GetItems("Code", "CompletionBond").FirstOrDefault();
+            double carriage = double.Parse(string.IsNullOrEmpty(txtCarriage.Text) ? "0" : txtCarriage.Text.Replace("TL", string.Empty));
+            double accountingCosts = double.Parse(string.IsNullOrEmpty(txtAccountingCosts.Text) ? "0" : txtAccountingCosts.Text.Replace("TL", string.Empty));
 
+            if (!chckCompletionBond.Checked)
+            {
+                completionBond.Value = "0";
+            }
+            if (!chckProvisionalBond.Checked)
+            {
+                provisionalBond.Value = "0";
+            }
+
+            this.OtherTotalAmount = (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(provisionalBond.Value) / 100) + (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 100) + carriage + accountingCosts;
+
+            double increaseAmount = Math.Round((this.OtherTotalAmount / this.TotalMarkupNonKDV), 2);
+            //birim fiyat unittotalFare
+            //Toplam fiyat TotalFare
+            foreach (MaterialListModel item in this.DataSource)
+            {
+                double increaseOtherFare = Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 2);
+                item.OtherUnitTotalFare = Math.Round((item.UnitTotalFare + increaseOtherFare), 2);
+            }
+
+            grdMaterialList.DataSource = null;
+            grdMaterialList.DataSource = this.DataSource;
+            colOtherUnitTotalFare.Visible = true;
+            colOtherTotalFare.Visible = true;
+            colTotalFare.Visible = false;
+            colUnitTotalFare.Visible = false;
+
+            lblTotalMarkupNonKDV.Text = Math.Round((this.TotalMarkupNonKDV + this.OtherTotalAmount), 2).ToString("c2");
         }
-
-        //private void Rapor_Click(object sender, EventArgs e)
-        //{
-        //    //MainReportcs.
-        //}
     }
 }

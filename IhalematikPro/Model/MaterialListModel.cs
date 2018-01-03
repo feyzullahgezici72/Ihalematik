@@ -210,7 +210,7 @@ namespace IhalematikPro.Model
                         {
                             amount = ((Vehicle)item.Equipment.WorkerVehicle) == null ? 0 : ((Vehicle)item.Equipment.WorkerVehicle).TotalFare.Amount;
                         }
-                        if (item.UnitTimeType== IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
+                        if (item.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
                         {
                             this.workerUnitPrice += Math.Round((amount / (30 * 8 * 60)), 2) * item.UnitTime * item.Quantity;
                         }
@@ -295,6 +295,29 @@ namespace IhalematikPro.Model
             }
         }
 
+        private double otherUnitTotalFare = 0;
+        public double OtherUnitTotalFare
+        {
+            get
+            {
+                if (otherUnitTotalFare == 0)
+                {
+                    this.otherUnitTotalFare = this.UnitTotalFare;
+                }
+                return this.otherUnitTotalFare;
+            }
+            set
+            {
+                this.otherUnitTotalFare = value;
+            }
+        }
+        public double OtherTotalFare
+        {
+            get
+            {
+                return Math.Round(this.OtherUnitTotalFare * this.Quantity, 2);
+            }
+        }
         //4. adim Toplam birim fiyat
         public double TotalFare
         {
