@@ -12,6 +12,8 @@ namespace IhalematikProBL.Enum
         SGKPrimFare,
         WorklesFonFare,
         IncomeTaxFare,
-        StampTaxFare
+        StampTaxFare,
+        ProvisionalBond,
+        CompletionBond
     }
 }

@@ -43,6 +43,12 @@ namespace IhalematikProBL.Entity
                     case RuleTypesEnum.StampTaxFare:
                         this.text = string.Format("‰{0}", this.Value);
                         break;
+                    case RuleTypesEnum.CompletionBond:
+                        this.text = string.Format("‰{0}", this.Value);
+                        break;
+                    case RuleTypesEnum.ProvisionalBond:
+                        this.text = string.Format("‰{0}", this.Value);
+                        break;
                     default:
                         break;
                 }
