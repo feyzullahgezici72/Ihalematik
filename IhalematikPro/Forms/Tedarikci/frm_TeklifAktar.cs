@@ -72,6 +72,11 @@ namespace IhalematikProUI.Forms.Tedarikci
                         if (CurrentManager.Instance.CurrentOffer == null)
                         {
                             Offer offer = OfferProvider.Instance.GetItem((int)offerId);
+                            if (offer == null)
+                            {
+                                MessageBox.Show("Yüklemeye çalıştığınız teklif bulunamadi.");
+                                return;
+                            }
                             MessageBox.Show("Yüklemeye çalıştığınız teklif aktif teklife ait değildir." + offer.Number + " Nolu teklifi aktif hale getirip yükleyiniz");
                             stream.Close();
                             return;
