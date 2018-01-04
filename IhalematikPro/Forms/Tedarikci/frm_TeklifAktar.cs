@@ -55,11 +55,11 @@ namespace IhalematikProUI.Forms.Tedarikci
             FileStream stream = System.IO.File.Open(@"" + path + "", FileMode.Open, FileAccess.Read);
 
             IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
-            if (CurrentManager.Instance.CurrentOffer == null)
-            {
-                MessageBox.Show("Lütfen yüklemek istediğiniz teklifi aktif hale getiriniz.");
-                return;
-            }
+            //if (CurrentManager.Instance.CurrentOffer == null)
+            //{
+            //    MessageBox.Show("Lütfen yüklemek istediğiniz teklifi aktif hale getiriniz.");
+            //    return;
+            //}
             int i = 1;
             while (excelReader.Read())
             {
@@ -68,6 +68,13 @@ namespace IhalematikProUI.Forms.Tedarikci
                     try
                     {
                         double offerId = excelReader.GetDouble(1);
+
+                        if (CurrentManager.Instance.CurrentOffer == null)
+                        {
+                            Offer offer = OfferProvider.Instance.GetItem((int)offerId);
+                            MessageBox.Show("Yüklemeye çalıştığınız teklif aktif teklife ait değildir." + offer.Number + " Nolu teklifi aktif hale getirip yükleyiniz");
+                            return;
+                        }
 
                         if (CurrentManager.Instance.CurrentOffer != null)
                         {
