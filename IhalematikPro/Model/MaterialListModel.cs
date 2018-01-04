@@ -291,7 +291,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                return Math.Round(this.WorkerUnitPrice + this.MarkupUnitPrice, 2);
+                return Math.Round(this.WorkerMarkupUnitPrice + this.MarkupUnitPrice, 2);
             }
         }
 
