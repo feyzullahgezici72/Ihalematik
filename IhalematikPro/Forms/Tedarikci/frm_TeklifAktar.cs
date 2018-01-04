@@ -73,6 +73,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                         {
                             Offer offer = OfferProvider.Instance.GetItem((int)offerId);
                             MessageBox.Show("Yüklemeye çalıştığınız teklif aktif teklife ait değildir." + offer.Number + " Nolu teklifi aktif hale getirip yükleyiniz");
+                            stream.Close();
                             return;
                         }
 
@@ -82,6 +83,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                             {
                                 Offer offer = OfferProvider.Instance.GetItem((int)offerId);
                                 MessageBox.Show("Yüklemeye çalıştığınız teklif aktif teklife ait değildir." + offer.Number + " Nolu teklifi aktif hale getirip yükleyiniz");
+                                stream.Close();
                                 return;
                             }
                         }
