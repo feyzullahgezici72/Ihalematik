@@ -202,5 +202,18 @@ namespace IhalematikProUI.Forms
 
             lblTotalMarkupNonKDV.Text = Math.Round((this.TotalMarkupNonKDV + this.OtherTotalAmount), 2).ToString("c2");
         }
+
+        private void btnCalc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("calc.exe");
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hesap Makinesi Yüklü değil...");
+            }
+        }
     }
 }
