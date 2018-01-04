@@ -180,6 +180,7 @@ namespace IhalematikPro.Forms
             {
                 MaterialList item = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.Id == model.Id).FirstOrDefault();
                 item.WorkerMarkup = markup;
+                MaterialListProvider.Instance.Save(item);
             }
             grdMaterialListIsWorkship.DataSource = null;
             grdMaterialListIsWorkship.DataSource = models;
@@ -549,6 +550,10 @@ namespace IhalematikPro.Forms
                     {
                         item.WorkerMarkup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
                         List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
+                        foreach (var materialList in items)
+                        {
+                            MaterialListProvider.Instance.Save(materialList);
+                        }
                         List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
                         this.CalculateInnerValuesMarkup(models);
                         break;
