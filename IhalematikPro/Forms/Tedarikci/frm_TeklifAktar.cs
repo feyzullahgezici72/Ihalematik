@@ -77,7 +77,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                                 MessageBox.Show("Yüklemeye çalıştığınız teklif bulunamadi.");
                                 return;
                             }
-                            MessageBox.Show("Yüklemeye çalıştığınız teklif aktif teklife ait değildir." + offer.Number + " Nolu teklifi aktif hale getirip yükleyiniz");
+                            MessageBox.Show("Yüklemeye çalıştığınız teklif aktif teklife ait değildir." + offer.Number + " ve nolu" + offer.Description + "adlı teklifi aktif hale getirip yükleyiniz");
                             stream.Close();
                             return;
                         }
@@ -87,7 +87,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                             if (CurrentManager.Instance.CurrentOffer.Id != offerId)
                             {
                                 Offer offer = OfferProvider.Instance.GetItem((int)offerId);
-                                MessageBox.Show("Yüklemeye çalıştığınız teklif aktif teklife ait değildir." + offer.Number + " Nolu teklifi aktif hale getirip yükleyiniz");
+                                MessageBox.Show("Yüklemeye çalıştığınız teklif aktif teklife ait değildir." + offer.Number + " ve nolu" + offer.Description + "adlı teklifi aktif hale getirip yükleyiniz");
                                 stream.Close();
                                 return;
                             }
@@ -155,7 +155,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                     frm_MesajFormu mf = new frm_MesajFormu();
                     mf.lblMesaj.Text = this.SupplierName + " Firmasının \nTeklif dosyası aktarıldı...";
                     mf.ShowDialog();
-                } 
+                }
             }
             grdMaterialList.DataSource = this.MaterialLists;
             lblSupplierName.Text = this.SupplierName;
