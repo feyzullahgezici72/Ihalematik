@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TeklifAdimSon));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
+            this.cmbSecim = new DevExpress.XtraEditors.ComboBoxEdit();
             this.btnCalc = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
@@ -93,6 +96,7 @@
             this.lblTotalMarkupNonKDV = new DevExpress.XtraEditors.LabelControl();
             this.isciAracGirisPaneli = new DevExpress.XtraEditors.PanelControl();
             this.txtTenderNumber = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl33 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.txtTenderDescription = new DevExpress.XtraEditors.TextEdit();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
@@ -128,7 +132,9 @@
             this.textEdit4 = new DevExpress.XtraEditors.MemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSecim.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
@@ -190,6 +196,7 @@
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            this.panelControl1.Controls.Add(this.panelControl5);
             this.panelControl1.Controls.Add(this.pcWorld);
             this.panelControl1.Controls.Add(this.btnKapat);
             this.panelControl1.Controls.Add(this.txtAdimAciklama);
@@ -199,6 +206,17 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1860, 35);
             this.panelControl1.TabIndex = 20;
+            // 
+            // panelControl5
+            // 
+            this.panelControl5.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl5.Appearance.Options.UseBackColor = true;
+            this.panelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelControl5.Location = new System.Drawing.Point(1725, 0);
+            this.panelControl5.Name = "panelControl5";
+            this.panelControl5.Size = new System.Drawing.Size(107, 35);
+            this.panelControl5.TabIndex = 17;
             // 
             // pcWorld
             // 
@@ -242,6 +260,26 @@
             this.txtAdimAciklama.Size = new System.Drawing.Size(228, 35);
             this.txtAdimAciklama.TabIndex = 0;
             this.txtAdimAciklama.Text = "İHALE TEKLİF ÖZETİ ";
+            // 
+            // cmbSecim
+            // 
+            this.cmbSecim.EditValue = "İnsan Saate Göre";
+            this.cmbSecim.Location = new System.Drawing.Point(182, 8);
+            this.cmbSecim.Name = "cmbSecim";
+            this.cmbSecim.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbSecim.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.cmbSecim.Properties.Appearance.Options.UseFont = true;
+            this.cmbSecim.Properties.Appearance.Options.UseForeColor = true;
+            this.cmbSecim.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("cmbSecim.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.cmbSecim.Properties.Items.AddRange(new object[] {
+            "İnsan Saate Göre",
+            "Birim Fiyata Göre"});
+            this.cmbSecim.Properties.LookAndFeel.SkinName = "London Liquid Sky";
+            this.cmbSecim.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.cmbSecim.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmbSecim.Size = new System.Drawing.Size(324, 30);
+            this.cmbSecim.TabIndex = 18;
             // 
             // btnCalc
             // 
@@ -331,7 +369,7 @@
             this.txtAccountingCosts.Properties.Mask.EditMask = "c2";
             this.txtAccountingCosts.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAccountingCosts.Size = new System.Drawing.Size(111, 26);
-            this.txtAccountingCosts.TabIndex = 46;
+            this.txtAccountingCosts.TabIndex = 1;
             // 
             // txtCarriage
             // 
@@ -350,7 +388,7 @@
             this.txtCarriage.Properties.Mask.EditMask = "c2";
             this.txtCarriage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCarriage.Size = new System.Drawing.Size(111, 26);
-            this.txtCarriage.TabIndex = 45;
+            this.txtCarriage.TabIndex = 0;
             // 
             // labelControl32
             // 
@@ -410,7 +448,7 @@
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
             this.btnTumuneUygula.Size = new System.Drawing.Size(28, 30);
-            this.btnTumuneUygula.TabIndex = 35;
+            this.btnTumuneUygula.TabIndex = 4;
             this.btnTumuneUygula.ToolTip = "Tümünü Uygula";
             this.btnTumuneUygula.Click += new System.EventHandler(this.btnTumuneUygula_Click);
             // 
@@ -420,7 +458,7 @@
             this.chckCompletionBond.Name = "chckCompletionBond";
             this.chckCompletionBond.Properties.Caption = "Kesin Teminat";
             this.chckCompletionBond.Size = new System.Drawing.Size(134, 23);
-            this.chckCompletionBond.TabIndex = 1;
+            this.chckCompletionBond.TabIndex = 3;
             // 
             // chckProvisionalBond
             // 
@@ -428,7 +466,7 @@
             this.chckProvisionalBond.Name = "chckProvisionalBond";
             this.chckProvisionalBond.Properties.Caption = "Geçici Teminat";
             this.chckProvisionalBond.Size = new System.Drawing.Size(134, 23);
-            this.chckProvisionalBond.TabIndex = 0;
+            this.chckProvisionalBond.TabIndex = 2;
             // 
             // btnKaydet
             // 
@@ -1225,7 +1263,9 @@
             this.isciAracGirisPaneli.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.isciAracGirisPaneli.Appearance.Options.UseBackColor = true;
             this.isciAracGirisPaneli.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.isciAracGirisPaneli.Controls.Add(this.cmbSecim);
             this.isciAracGirisPaneli.Controls.Add(this.txtTenderNumber);
+            this.isciAracGirisPaneli.Controls.Add(this.labelControl33);
             this.isciAracGirisPaneli.Controls.Add(this.labelControl22);
             this.isciAracGirisPaneli.Controls.Add(this.txtTenderDescription);
             this.isciAracGirisPaneli.Controls.Add(this.labelControl21);
@@ -1270,7 +1310,7 @@
             // txtTenderNumber
             // 
             this.txtTenderNumber.EditValue = "";
-            this.txtTenderNumber.Location = new System.Drawing.Point(184, 12);
+            this.txtTenderNumber.Location = new System.Drawing.Point(182, 45);
             this.txtTenderNumber.Name = "txtTenderNumber";
             this.txtTenderNumber.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTenderNumber.Properties.Appearance.Options.UseFont = true;
@@ -1280,10 +1320,21 @@
             this.txtTenderNumber.Size = new System.Drawing.Size(204, 26);
             this.txtTenderNumber.TabIndex = 52;
             // 
+            // labelControl33
+            // 
+            this.labelControl33.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl33.Location = new System.Drawing.Point(11, 11);
+            this.labelControl33.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl33.Name = "labelControl33";
+            this.labelControl33.Size = new System.Drawing.Size(165, 18);
+            this.labelControl33.TabIndex = 51;
+            this.labelControl33.Text = "İşçilik Hesaplama Şekli:";
+            this.labelControl33.Click += new System.EventHandler(this.labelControl33_Click);
+            // 
             // labelControl22
             // 
             this.labelControl22.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl22.Location = new System.Drawing.Point(112, 15);
+            this.labelControl22.Location = new System.Drawing.Point(110, 48);
             this.labelControl22.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl22.Name = "labelControl22";
             this.labelControl22.Size = new System.Drawing.Size(60, 18);
@@ -1293,7 +1344,7 @@
             // txtTenderDescription
             // 
             this.txtTenderDescription.EditValue = "";
-            this.txtTenderDescription.Location = new System.Drawing.Point(184, 42);
+            this.txtTenderDescription.Location = new System.Drawing.Point(182, 75);
             this.txtTenderDescription.Name = "txtTenderDescription";
             this.txtTenderDescription.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTenderDescription.Properties.Appearance.Options.UseFont = true;
@@ -1306,7 +1357,7 @@
             // labelControl21
             // 
             this.labelControl21.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl21.Location = new System.Drawing.Point(114, 47);
+            this.labelControl21.Location = new System.Drawing.Point(112, 80);
             this.labelControl21.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl21.Name = "labelControl21";
             this.labelControl21.Size = new System.Drawing.Size(63, 18);
@@ -1316,7 +1367,7 @@
             // txtTenderLastOfferDate
             // 
             this.txtTenderLastOfferDate.EditValue = "";
-            this.txtTenderLastOfferDate.Location = new System.Drawing.Point(184, 75);
+            this.txtTenderLastOfferDate.Location = new System.Drawing.Point(182, 108);
             this.txtTenderLastOfferDate.Name = "txtTenderLastOfferDate";
             this.txtTenderLastOfferDate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTenderLastOfferDate.Properties.Appearance.Options.UseFont = true;
@@ -1329,7 +1380,7 @@
             // labelControl20
             // 
             this.labelControl20.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl20.Location = new System.Drawing.Point(98, 79);
+            this.labelControl20.Location = new System.Drawing.Point(96, 112);
             this.labelControl20.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl20.Name = "labelControl20";
             this.labelControl20.Size = new System.Drawing.Size(79, 18);
@@ -1339,7 +1390,7 @@
             // txtTotalMaterialAndWorkerAmount
             // 
             this.txtTotalMaterialAndWorkerAmount.EditValue = "";
-            this.txtTotalMaterialAndWorkerAmount.Location = new System.Drawing.Point(184, 430);
+            this.txtTotalMaterialAndWorkerAmount.Location = new System.Drawing.Point(182, 463);
             this.txtTotalMaterialAndWorkerAmount.Name = "txtTotalMaterialAndWorkerAmount";
             this.txtTotalMaterialAndWorkerAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTotalMaterialAndWorkerAmount.Properties.Appearance.Options.UseFont = true;
@@ -1352,7 +1403,7 @@
             // txtKirim
             // 
             this.txtKirim.EditValue = "";
-            this.txtKirim.Location = new System.Drawing.Point(184, 590);
+            this.txtKirim.Location = new System.Drawing.Point(182, 623);
             this.txtKirim.Name = "txtKirim";
             this.txtKirim.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtKirim.Properties.Appearance.Options.UseFont = true;
@@ -1366,7 +1417,7 @@
             // txtOfferTotalAmount
             // 
             this.txtOfferTotalAmount.EditValue = "";
-            this.txtOfferTotalAmount.Location = new System.Drawing.Point(184, 557);
+            this.txtOfferTotalAmount.Location = new System.Drawing.Point(182, 590);
             this.txtOfferTotalAmount.Name = "txtOfferTotalAmount";
             this.txtOfferTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtOfferTotalAmount.Properties.Appearance.Options.UseFont = true;
@@ -1379,7 +1430,7 @@
             // txtTotalMarkupAmount
             // 
             this.txtTotalMarkupAmount.EditValue = "";
-            this.txtTotalMarkupAmount.Location = new System.Drawing.Point(184, 525);
+            this.txtTotalMarkupAmount.Location = new System.Drawing.Point(182, 558);
             this.txtTotalMarkupAmount.Name = "txtTotalMarkupAmount";
             this.txtTotalMarkupAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTotalMarkupAmount.Properties.Appearance.Options.UseFont = true;
@@ -1392,7 +1443,7 @@
             // labelControl31
             // 
             this.labelControl31.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl31.Location = new System.Drawing.Point(80, 593);
+            this.labelControl31.Location = new System.Drawing.Point(78, 626);
             this.labelControl31.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl31.Name = "labelControl31";
             this.labelControl31.Size = new System.Drawing.Size(98, 18);
@@ -1403,7 +1454,7 @@
             // labelControl29
             // 
             this.labelControl29.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl29.Location = new System.Drawing.Point(66, 433);
+            this.labelControl29.Location = new System.Drawing.Point(64, 466);
             this.labelControl29.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl29.Name = "labelControl29";
             this.labelControl29.Size = new System.Drawing.Size(112, 18);
@@ -1413,7 +1464,7 @@
             // labelControl30
             // 
             this.labelControl30.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl30.Location = new System.Drawing.Point(16, 561);
+            this.labelControl30.Location = new System.Drawing.Point(14, 594);
             this.labelControl30.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl30.Name = "labelControl30";
             this.labelControl30.Size = new System.Drawing.Size(162, 18);
@@ -1423,7 +1474,7 @@
             // txtGeneralMarkupWorkerAmount
             // 
             this.txtGeneralMarkupWorkerAmount.EditValue = "";
-            this.txtGeneralMarkupWorkerAmount.Location = new System.Drawing.Point(184, 493);
+            this.txtGeneralMarkupWorkerAmount.Location = new System.Drawing.Point(182, 526);
             this.txtGeneralMarkupWorkerAmount.Name = "txtGeneralMarkupWorkerAmount";
             this.txtGeneralMarkupWorkerAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtGeneralMarkupWorkerAmount.Properties.Appearance.Options.UseFont = true;
@@ -1436,7 +1487,7 @@
             // labelControl28
             // 
             this.labelControl28.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl28.Location = new System.Drawing.Point(92, 529);
+            this.labelControl28.Location = new System.Drawing.Point(90, 562);
             this.labelControl28.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl28.Name = "labelControl28";
             this.labelControl28.Size = new System.Drawing.Size(88, 18);
@@ -1446,7 +1497,7 @@
             // txtWorkerTotalAmount
             // 
             this.txtWorkerTotalAmount.EditValue = "";
-            this.txtWorkerTotalAmount.Location = new System.Drawing.Point(184, 398);
+            this.txtWorkerTotalAmount.Location = new System.Drawing.Point(182, 431);
             this.txtWorkerTotalAmount.Name = "txtWorkerTotalAmount";
             this.txtWorkerTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtWorkerTotalAmount.Properties.Appearance.Options.UseFont = true;
@@ -1459,7 +1510,7 @@
             // labelControl27
             // 
             this.labelControl27.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl27.Location = new System.Drawing.Point(104, 497);
+            this.labelControl27.Location = new System.Drawing.Point(102, 530);
             this.labelControl27.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl27.Name = "labelControl27";
             this.labelControl27.Size = new System.Drawing.Size(74, 18);
@@ -1469,7 +1520,7 @@
             // labelControl25
             // 
             this.labelControl25.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl25.Location = new System.Drawing.Point(80, 400);
+            this.labelControl25.Location = new System.Drawing.Point(78, 433);
             this.labelControl25.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl25.Name = "labelControl25";
             this.labelControl25.Size = new System.Drawing.Size(99, 18);
@@ -1479,7 +1530,7 @@
             // textEdit12
             // 
             this.textEdit12.EditValue = "";
-            this.textEdit12.Location = new System.Drawing.Point(184, 460);
+            this.textEdit12.Location = new System.Drawing.Point(182, 493);
             this.textEdit12.Name = "textEdit12";
             this.textEdit12.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textEdit12.Properties.Appearance.Options.UseFont = true;
@@ -1492,7 +1543,7 @@
             // labelControl26
             // 
             this.labelControl26.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl26.Location = new System.Drawing.Point(80, 465);
+            this.labelControl26.Location = new System.Drawing.Point(78, 498);
             this.labelControl26.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl26.Name = "labelControl26";
             this.labelControl26.Size = new System.Drawing.Size(99, 18);
@@ -1502,7 +1553,7 @@
             // txtMaterialTotalAmount
             // 
             this.txtMaterialTotalAmount.EditValue = "";
-            this.txtMaterialTotalAmount.Location = new System.Drawing.Point(184, 365);
+            this.txtMaterialTotalAmount.Location = new System.Drawing.Point(182, 398);
             this.txtMaterialTotalAmount.Name = "txtMaterialTotalAmount";
             this.txtMaterialTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtMaterialTotalAmount.Properties.Appearance.Options.UseFont = true;
@@ -1515,7 +1566,7 @@
             // labelControl24
             // 
             this.labelControl24.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl24.Location = new System.Drawing.Point(54, 368);
+            this.labelControl24.Location = new System.Drawing.Point(52, 401);
             this.labelControl24.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl24.Name = "labelControl24";
             this.labelControl24.Size = new System.Drawing.Size(124, 18);
@@ -1525,7 +1576,7 @@
             // txtTenderNearlyTotalAmount
             // 
             this.txtTenderNearlyTotalAmount.EditValue = "";
-            this.txtTenderNearlyTotalAmount.Location = new System.Drawing.Point(184, 333);
+            this.txtTenderNearlyTotalAmount.Location = new System.Drawing.Point(182, 366);
             this.txtTenderNearlyTotalAmount.Name = "txtTenderNearlyTotalAmount";
             this.txtTenderNearlyTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTenderNearlyTotalAmount.Properties.Appearance.Options.UseFont = true;
@@ -1538,7 +1589,7 @@
             // labelControl23
             // 
             this.labelControl23.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl23.Location = new System.Drawing.Point(67, 337);
+            this.labelControl23.Location = new System.Drawing.Point(65, 370);
             this.labelControl23.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl23.Name = "labelControl23";
             this.labelControl23.Size = new System.Drawing.Size(106, 18);
@@ -1548,7 +1599,7 @@
             // textEdit5
             // 
             this.textEdit5.EditValue = "";
-            this.textEdit5.Location = new System.Drawing.Point(184, 301);
+            this.textEdit5.Location = new System.Drawing.Point(182, 334);
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textEdit5.Properties.Appearance.Options.UseFont = true;
@@ -1561,7 +1612,7 @@
             // labelControl19
             // 
             this.labelControl19.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl19.Location = new System.Drawing.Point(24, 305);
+            this.labelControl19.Location = new System.Drawing.Point(22, 338);
             this.labelControl19.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(149, 18);
@@ -1571,7 +1622,7 @@
             // txtMaterialWorksipCount
             // 
             this.txtMaterialWorksipCount.EditValue = "";
-            this.txtMaterialWorksipCount.Location = new System.Drawing.Point(184, 171);
+            this.txtMaterialWorksipCount.Location = new System.Drawing.Point(182, 204);
             this.txtMaterialWorksipCount.Name = "txtMaterialWorksipCount";
             this.txtMaterialWorksipCount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtMaterialWorksipCount.Properties.Appearance.Options.UseFont = true;
@@ -1584,7 +1635,7 @@
             // labelControl16
             // 
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl16.Location = new System.Drawing.Point(4, 206);
+            this.labelControl16.Location = new System.Drawing.Point(2, 239);
             this.labelControl16.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Size = new System.Drawing.Size(173, 18);
@@ -1594,7 +1645,7 @@
             // labelControl15
             // 
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl15.Location = new System.Drawing.Point(16, 174);
+            this.labelControl15.Location = new System.Drawing.Point(14, 207);
             this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(161, 18);
@@ -1604,7 +1655,7 @@
             // txtMaterialIsNonWorkshipcount
             // 
             this.txtMaterialIsNonWorkshipcount.EditValue = "";
-            this.txtMaterialIsNonWorkshipcount.Location = new System.Drawing.Point(184, 139);
+            this.txtMaterialIsNonWorkshipcount.Location = new System.Drawing.Point(182, 172);
             this.txtMaterialIsNonWorkshipcount.Name = "txtMaterialIsNonWorkshipcount";
             this.txtMaterialIsNonWorkshipcount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtMaterialIsNonWorkshipcount.Properties.Appearance.Options.UseFont = true;
@@ -1617,7 +1668,7 @@
             // labelControl14
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl14.Location = new System.Drawing.Point(4, 143);
+            this.labelControl14.Location = new System.Drawing.Point(2, 176);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(173, 18);
@@ -1627,7 +1678,7 @@
             // txtMaterialCount
             // 
             this.txtMaterialCount.EditValue = "";
-            this.txtMaterialCount.Location = new System.Drawing.Point(184, 107);
+            this.txtMaterialCount.Location = new System.Drawing.Point(182, 140);
             this.txtMaterialCount.Name = "txtMaterialCount";
             this.txtMaterialCount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtMaterialCount.Properties.Appearance.Options.UseFont = true;
@@ -1640,7 +1691,7 @@
             // labelControl10
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl10.Location = new System.Drawing.Point(64, 111);
+            this.labelControl10.Location = new System.Drawing.Point(62, 144);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(112, 18);
@@ -1650,7 +1701,7 @@
             // textEdit4
             // 
             this.textEdit4.EditValue = "";
-            this.textEdit4.Location = new System.Drawing.Point(184, 203);
+            this.textEdit4.Location = new System.Drawing.Point(182, 236);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textEdit4.Properties.Appearance.Options.UseFont = true;
@@ -1680,7 +1731,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSecim.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
@@ -1844,5 +1897,8 @@
         private DevExpress.XtraEditors.TextEdit txtMaterialkdvTotalAmount;
         private DevExpress.XtraEditors.TextEdit txtMaterialCostAmount;
         private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbSecim;
+        private DevExpress.XtraEditors.PanelControl panelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl33;
     }
 }

@@ -215,5 +215,10 @@ namespace IhalematikProUI.Forms
                 MessageBox.Show("Hesap Makinesi Yüklü değil...");
             }
         }
+
+        private void labelControl33_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
