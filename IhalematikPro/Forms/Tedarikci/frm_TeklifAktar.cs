@@ -77,7 +77,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                                 MessageBox.Show("Yüklemeye çalıştığınız teklif bulunamadi.");
                                 return;
                             }
-                            MessageBox.Show("Yüklemeye çalıştığınız teklif aktif teklife ait değildir." + offer.Number + " ve nolu" + offer.Description + "adlı teklifi aktif hale getirip yükleyiniz");
+                            MessageBox.Show("Yüklemeye çalıştığınız teklif aktif teklife ait değildir." + offer.Number + "nolu ve " + offer.Description + "adlı teklifi aktif hale getirip yükleyiniz");
                             stream.Close();
                             return;
                         }
@@ -87,7 +87,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                             if (CurrentManager.Instance.CurrentOffer.Id != offerId)
                             {
                                 Offer offer = OfferProvider.Instance.GetItem((int)offerId);
-                                MessageBox.Show("Yüklemeye çalıştığınız teklif aktif teklife ait değildir." + offer.Number + " ve nolu" + offer.Description + "adlı teklifi aktif hale getirip yükleyiniz");
+                                MessageBox.Show("Yüklemeye çalıştığınız teklif aktif teklife ait değildir." + offer.Number + " nolu ve " + offer.Description + "adlı teklifi aktif hale getirip yükleyiniz");
                                 stream.Close();
                                 return;
                             }
