@@ -50,6 +50,8 @@ namespace IhalematikProUI.Forms
 
             this.Close();
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            af.ribbonPage8.Ribbon.SelectedPage = af.ribbonPage8;
+           // af.barButtonItem14.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             af.RibonPasif();
             if (teklifGonder == null)
             {

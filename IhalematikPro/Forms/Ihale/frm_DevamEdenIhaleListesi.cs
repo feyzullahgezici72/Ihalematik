@@ -75,6 +75,7 @@ namespace IhalematikPro.Forms
             CurrentManager.Instance.CurrentTender = TenderProvider.Instance.GetItem(Id);
             this.Close();
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            af.ribbonPage7.Ribbon.SelectedPage = af.ribbonPage7;
             af.RibonPasif();
             if (ta1 == null)
             {

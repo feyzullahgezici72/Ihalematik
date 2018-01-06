@@ -1650,18 +1650,15 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.BarButtonItem barBtnYardimKonulari;
         private DevExpress.XtraBars.BarButtonItem barBtnProgramHakkinda;
         private DevExpress.XtraBars.BarButtonItem barBtnLisansIslemleri;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         public DevExpress.XtraBars.BarButtonItem btnAdimx3;
         public DevExpress.XtraBars.BarButtonItem btnAdimx4;
         public DevExpress.XtraBars.BarButtonItem btnAdimx5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage7;
         public DevExpress.XtraBars.BarButtonItem btnAdimx1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem13;
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
@@ -1738,6 +1735,9 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit1;
+        public DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
+        public DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage8;
+        public DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage7;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }

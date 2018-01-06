@@ -383,7 +383,7 @@ namespace IhalematikPro.Forms
         {
             tl = null;
             RibonAktif();
-            barButtonItem13.ButtonStyle = BarButtonStyle.Check;
+            barButtonItem13.ButtonStyle = BarButtonStyle.Default;
         }
         frm_TedarikcilerdenFiyatAl tfa;
         private void barButtonItem15_ItemClick(object sender, ItemClickEventArgs e)
