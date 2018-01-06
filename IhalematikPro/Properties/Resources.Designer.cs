@@ -673,6 +673,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap login {
+            get {
+                object obj = ResourceManager.GetObject("login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_button_png_0 {
             get {
                 object obj = ResourceManager.GetObject("login-button-png-0", resourceCulture);
@@ -906,6 +916,16 @@ namespace IhalematikProUI.Properties {
         internal static System.Drawing.Bitmap PasiveData {
             get {
                 object obj = ResourceManager.GetObject("PasiveData", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap password_icon {
+            get {
+                object obj = ResourceManager.GetObject("password-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -762,5 +762,13 @@ namespace IhalematikPro.Forms
             frm_LisansSozlesmesi ls = new frm_LisansSozlesmesi();
             ls.ShowDialog();
         }
+
+        private void barButtonItem24_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            frm_LoginGuncelle lg = new frm_LoginGuncelle();
+            this.Enabled = false;
+            lg.ShowDialog();
+            this.Enabled = true;
+        }
     }
 }
