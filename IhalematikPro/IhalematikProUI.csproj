@@ -321,12 +321,6 @@
     <Compile Include="Forms\Genel\frm_FirmaTanimlama.Designer.cs">
       <DependentUpon>frm_FirmaTanimlama.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\IhaleAdim\frm_IscilikFirimFiyat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\IhaleAdim\frm_IscilikFirimFiyat.Designer.cs">
-      <DependentUpon>frm_IscilikFirimFiyat.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Kural\frm_Kurallar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -609,9 +603,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Genel\frm_FirmaTanimlama.resx">
       <DependentUpon>frm_FirmaTanimlama.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\IhaleAdim\frm_IscilikFirimFiyat.resx">
-      <DependentUpon>frm_IscilikFirimFiyat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Kural\frm_Kurallar.resx">
       <DependentUpon>frm_Kurallar.cs</DependentUpon>

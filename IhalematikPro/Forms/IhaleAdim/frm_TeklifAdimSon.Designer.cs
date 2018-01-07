@@ -286,8 +286,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("cmbSecim.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.cmbSecim.Properties.Items.AddRange(new object[] {
             "İnsan Saate Göre",
-            "Birim Fiyata Göre",
-            "Detay Göster"});
+            "Birim Fiyata Göre"});
             this.cmbSecim.Properties.LookAndFeel.SkinName = "Glass Oceans";
             this.cmbSecim.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cmbSecim.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
@@ -407,7 +406,7 @@
             // 
             this.labelControl32.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl32.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl32.Location = new System.Drawing.Point(38, 39);
+            this.labelControl32.Location = new System.Drawing.Point(34, 39);
             this.labelControl32.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl32.Name = "labelControl32";
             this.labelControl32.Size = new System.Drawing.Size(120, 19);
@@ -418,7 +417,7 @@
             // 
             this.labelControl18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl18.Location = new System.Drawing.Point(56, 9);
+            this.labelControl18.Location = new System.Drawing.Point(52, 9);
             this.labelControl18.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(101, 19);
