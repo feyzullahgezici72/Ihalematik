@@ -14,6 +14,7 @@ using IhalematikProBL.Provider;
 using IhalematikProBL.Entity;
 using SimpleApplicationBase.BL.Base;
 using IhalematikProUI.Forms.Tedarikci;
+using IhalematikProUI.Model;
 
 namespace IhalematikProUI.Forms
 {
@@ -38,7 +39,6 @@ namespace IhalematikProUI.Forms
         }
         private void frm_TedarikciTanimlama_Load(object sender, EventArgs e)
         {
-
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(Frm_TedarikciTanimlama_KeyDown);
         }
@@ -68,15 +68,31 @@ namespace IhalematikProUI.Forms
 
         public void LoadSupplierSegments()
         {
-            ddlSegments.Properties.Items.Clear();// = null;
             List<SupplierSegment> supplierSegments = SupplierSegmentProvider.Instance.GetItems();
-            ddlSegments.Properties.Items.AddRange(supplierSegments);
+            List<DropDownModel> models = new List<DropDownModel>();
+            foreach (SupplierSegment item in supplierSegments)
+            {
+                DropDownModel model = new DropDownModel();
+                model.Id = item.Id;
+                model.Text = item.Name;
+                models.Add(model);
+            }
+            checkedComboboxEditSupplierSegments.Properties.DataSource = models;
+            checkedComboboxEditSupplierSegments.Properties.DisplayMember = "Text";
+            checkedComboboxEditSupplierSegments.Properties.ValueMember = "Id";
+            checkedComboboxEditSupplierSegments.Properties.NullText = string.Empty;
+            checkedComboboxEditSupplierSegments.Properties.SeparatorChar = ';';
+
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
+            object items = checkedComboboxEditSupplierSegments.Properties.GetCheckedItems();
+
+            string[] selectedSegments = items.ToString().Split(';');
+
             IsEmptyKontrol();//samet ekledi
-            if ((!string.IsNullOrEmpty(ddlSegments.Text.Trim()) & !string.IsNullOrEmpty(txtCompanyName.Text.Trim())))//samet ekledi
+            if (selectedSegments != null && selectedSegments.Count() != 0 && !string.IsNullOrEmpty(txtCompanyName.Text.Trim()))//samet ekledi
             {
                 Supplier suplier = new Supplier();
                 suplier.Address = txtAddress.Text.Trim();
@@ -88,7 +104,14 @@ namespace IhalematikProUI.Forms
                 suplier.Score = txtScore.Text.Trim();
                 suplier.Telephone = txtTelephone.Text.Trim();
                 suplier.Country = txtCountry.Text.Trim();
-
+                if (selectedSegments != null && selectedSegments.Count() != 0)
+                {
+                    suplier.Segments = new List<SupplierSegment>();
+                    foreach (var item in selectedSegments)
+                    {
+                        suplier.Segments.Add(new SupplierSegment() { Id = int.Parse(item) });
+                    }
+                }
                 OperationResult result = SupplierProvider.Instance.Save(suplier);
                 if (result.Success)
                 {
@@ -190,9 +213,13 @@ namespace IhalematikProUI.Forms
         }
         public bool IsEmptyKontrol()
         {
-            if (string.IsNullOrEmpty(ddlSegments.Text))
+            object items = checkedComboboxEditSupplierSegments.Properties.GetCheckedItems();
+
+            string[] selectedSegments = items.ToString().Split(';');
+
+            if (selectedSegments== null || selectedSegments.Count() == 0)
             {
-                dxErrorProvider1.SetError(ddlSegments, "Faaliyet alanı boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                dxErrorProvider1.SetError(checkedComboboxEditSupplierSegments, "Faaliyet alanı boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
                 return true;
             }
             if (string.IsNullOrEmpty(txtCompanyName.Text))
@@ -215,7 +242,7 @@ namespace IhalematikProUI.Forms
 
         private void btnTemizle_Click(object sender, EventArgs e)
         {
-            ddlSegments.SelectedIndex = -1;
+           // ddlSegments.SelectedIndex = -1;
             txtCompanyName.ResetText();
             txtAuthorNameSurname.ResetText();
             txtCountry.ResetText();

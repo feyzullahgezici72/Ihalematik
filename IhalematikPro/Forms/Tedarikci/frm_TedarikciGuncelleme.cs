@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using SimpleApplicationBase.BL.Base;
+using IhalematikProUI.Model;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -44,11 +45,21 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void frm_TedarikciGuncelleme_Shown(object sender, EventArgs e)
         {
             List<SupplierSegment> supplierSegments = SupplierSegmentProvider.Instance.GetItems();
-            ddlSegments.Properties.Items.AddRange(supplierSegments);
+            List<DropDownModel> models = new List<DropDownModel>();
+            foreach (SupplierSegment item in supplierSegments)
+            {
+                DropDownModel model = new DropDownModel();
+                model.Id = item.Id;
+                model.Text = item.Name;
+                models.Add(model);
+            }
+            checkedComboboxEditSupplierSegments.Properties.DataSource = models;
+            checkedComboboxEditSupplierSegments.Properties.DisplayMember = "Text";
+            checkedComboboxEditSupplierSegments.Properties.ValueMember = "Id";
+            checkedComboboxEditSupplierSegments.Properties.NullText = string.Empty;
+            checkedComboboxEditSupplierSegments.Properties.SeparatorChar = ';';
 
-            //SupplierSegment model = new SupplierSegment(currentVehicle);
-            int index = supplierSegments.FindIndex(p => p.Id == this.CurrentSupplier.Segments.FirstOrDefault().Id);
-            ddlSegments.SelectedIndex = index;//selectedTitle;
+
             txtAddress.Text = this.CurrentSupplier.Address;
             txtAuthorNameSurname.Text = this.CurrentSupplier.AuthorNameSurname;
             txtCompanyName.Text = this.CurrentSupplier.CompanyName;
@@ -57,6 +68,11 @@ namespace IhalematikProUI.Forms.Tedarikci
             txtGSM.Text = this.CurrentSupplier.GSM;
             txtScore.Text = this.CurrentSupplier.Score;
             txtTelephone.Text = this.CurrentSupplier.Telephone;
+            if (this.CurrentSupplier.Segments != null)
+            {
+                string selectedSuppliersSegments = string.Join(";", this.CurrentSupplier.Segments.Select(p => p.Id));
+                checkedComboboxEditSupplierSegments.SetEditValue(selectedSuppliersSegments); 
+            }
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -70,6 +86,17 @@ namespace IhalematikProUI.Forms.Tedarikci
             this.CurrentSupplier.IsActive = true;
             this.CurrentSupplier.Score = txtScore.Text;
             this.CurrentSupplier.Telephone = txtScore.Text;
+
+            object items = checkedComboboxEditSupplierSegments.Properties.GetCheckedItems();
+            string[] selectedSegments = items.ToString().Split(';');
+            if (selectedSegments != null && selectedSegments.Count() != 0)
+            {
+                this.CurrentSupplier.Segments = new List<SupplierSegment>();
+                foreach (var item in selectedSegments)
+                {
+                    this.CurrentSupplier.Segments.Add(new SupplierSegment() { Id = int.Parse(item) });
+                }
+            }
 
             OperationResult result = SupplierProvider.Instance.Save(this.CurrentSupplier);
 

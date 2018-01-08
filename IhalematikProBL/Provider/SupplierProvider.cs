@@ -23,7 +23,11 @@ namespace IhalematikProBL.Provider
             parameters.Add("Telephone", t.Telephone);
             parameters.Add("IsActive", t.IsActive);
             parameters.Add("Country", t.Country);
-
+            if (t.Segments != null && t.Segments.Count != 0)
+            {
+                string segments = string.Join(";", t.Segments.Select(p => p.Id));
+                parameters.Add("SupplierSegment", segments);
+            }
             return parameters;
         }
         protected override void Initialize(Supplier t, Dictionary<string, object> dr)
@@ -38,6 +42,21 @@ namespace IhalematikProBL.Provider
             t.Telephone = dr.GetValue<string>("Telephone");
             t.Country = dr.GetValue<string>("Country");
             t.IsActive = dr.GetValue<bool>("IsActive");
+
+            string segments = dr.GetValue<string>("SupplierSegment");
+            if (!string.IsNullOrEmpty(segments))
+            {
+                string[] segmentIds = segments.Split(';');
+                if (segmentIds != null && segmentIds.Count() != 0)
+                {
+                    t.Segments = new List<SupplierSegment>();
+                    foreach (var id in segmentIds)
+                    {
+                        SupplierSegment supplierSegment = SupplierSegmentProvider.Instance.GetItem(int.Parse(id));
+                        t.Segments.Add(supplierSegment);
+                    }
+                }
+            }
         }
     }
 }

@@ -9,19 +9,21 @@ namespace IhalematikProBL.Entity
 {
     public class Supplier : CustomEntityBase
     {
-        private List<SupplierSegment> segments { get; set; }
+        //private List<SupplierSegment> segments { get; set; }
         public List<SupplierSegment> Segments
         {
-            get
-            {
-                if (this.segments == null)
-                {
-                    this.segments = SupplierSegmentProvider.Instance.GetItems();
-                }
-                return this.segments;
-            }
+            get; set;
+            //get
+            //{
+            //    if (this.segments == null)
+            //    {
+            //        this.segments = SupplierSegmentProvider.Instance.GetItems();
+            //    }
+            //    return this.segments;
+            //}
+
         }
-        
+
         public string CompanyName { get; set; }
         public string AuthorNameSurname { get; set; }
         public string GSM { get; set; }
