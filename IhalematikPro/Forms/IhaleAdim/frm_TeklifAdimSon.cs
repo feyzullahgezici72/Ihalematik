@@ -44,6 +44,10 @@ namespace IhalematikProUI.Forms
 
         private void CalculateFooterInnerValues(List<MaterialListModel> models)
         {
+            if (models == null)
+            {
+                models = grdMaterialList.DataSource as List<MaterialListModel>;
+            }
             this.TotalMarkupNonKDV = 0;
             double materialCostAmount = 0; // Malzeme Maliyet fiyat
             double materialkdvTotalAmount = 0; // Malzeme Toplam KDV
@@ -56,14 +60,29 @@ namespace IhalematikProUI.Forms
 
             //KDV haric toplam kar
 
-            foreach (MaterialListModel item in models)
+            if (ddlCalculateWorkerType.SelectedIndex == 0)
             {
-                materialCostAmount += item.PozOBF.UnitPrice * item.Quantity;
-                materialkdvTotalAmount += item.KDVAmount;
-                workerCostAmount += item.WorkerUnitPrice * item.Quantity;
-                markupMaterialAmount += item.UnitMarkup * item.Quantity; ;
-                markupWorkerAmount += item.WorkerUnitPrice * item.Quantity * (item.Markup / 100);
-                TotalMarkupNonKDV += item.TotalFare;
+                foreach (MaterialListModel item in models)
+                {
+                    materialCostAmount += item.PozOBF.UnitPrice * item.Quantity;
+                    materialkdvTotalAmount += item.KDVAmount;
+                    workerCostAmount += item.WorkerUnitPrice * item.Quantity;
+                    markupMaterialAmount += item.UnitMarkup * item.Quantity; ;
+                    markupWorkerAmount += item.WorkerUnitPrice * item.Quantity * (item.Markup / 100);
+                    TotalMarkupNonKDV += item.TotalFare;
+                } 
+            }
+            else
+            {
+                foreach (MaterialListModel item in models)
+                {
+                    materialCostAmount += item.PozOBF.UnitPrice * item.Quantity;
+                    materialkdvTotalAmount += item.KDVAmount;
+                    workerCostAmount += item.CustomWorkerUnitPrice * item.Quantity;
+                    markupMaterialAmount += item.UnitMarkup * item.Quantity; ;
+                    markupWorkerAmount += item.CustomWorkerUnitPrice * item.Quantity * (item.Markup / 100);
+                    TotalMarkupNonKDV += item.CustomTotalFare;
+                }
             }
             totalAmount = materialCostAmount + materialkdvTotalAmount;
             txtMaterialCostAmount.Text = materialCostAmount.ToString("c2");
@@ -190,7 +209,14 @@ namespace IhalematikProUI.Forms
             foreach (MaterialListModel item in this.DataSource)
             {
                 double increaseOtherFare = Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 2);
-                item.OtherUnitTotalFare = Math.Round((item.UnitTotalFare + increaseOtherFare), 2);
+                if (ddlCalculateWorkerType.SelectedIndex == 1)
+                {
+                    item.OtherUnitTotalFare = Math.Round((item.CustomUnitTotalFare + increaseOtherFare), 2);
+                }
+                else
+                {
+                    item.OtherUnitTotalFare = Math.Round((item.UnitTotalFare + increaseOtherFare), 2);
+                }
             }
 
             grdMaterialList.DataSource = null;
@@ -216,9 +242,23 @@ namespace IhalematikProUI.Forms
             }
         }
 
-        private void labelControl33_Click(object sender, EventArgs e)
+        private void ddlCalculateWorkerType_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (ddlCalculateWorkerType.SelectedIndex == 0)
+            {
+                colUnitTotalFare.Visible = true;
+                colTotalFare.Visible = true;
+                colCustomUnitTotalFare.Visible = false;
+                colCustomTotalFare.Visible = false;
+            }
+            else
+            {
+                colUnitTotalFare.Visible = false;
+                colTotalFare.Visible = false;
+                colCustomUnitTotalFare.Visible = true;
+                colCustomTotalFare.Visible = true;
+            }
+            this.CalculateFooterInnerValues(null);
         }
     }
 }

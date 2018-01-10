@@ -242,6 +242,37 @@ namespace IhalematikPro.Model
             }
         }
 
+        //Custom ISCILIK(MALZEME) BIRIM FIYAT
+        public double CustomWorkerUnitPrice { get; set; }
+
+        //Custom Iscilikli Toplam Fiyat
+        public double CustomWorkerTotalAmount
+        {
+            get
+            {
+                return Math.Round(this.CustomWorkerUnitPrice * this.Quantity, 2);
+            }
+        }
+
+
+        //Custom Karli Iscilikli birim fiyat
+        public double CustomWorkerMarkupUnitPrice
+        {
+            get
+            {
+                return Math.Round(this.CustomWorkerUnitPrice + this.CustomWorkerMarkup, 2);
+            }
+        }
+
+        //Custom Iscilikli Birim Kar
+        public double CustomWorkerMarkup
+        {
+            get
+            {
+                return Math.Round(this.CustomWorkerUnitPrice * this.WorkerPercentageMarkup / 100, 2);
+            }
+        }
+
         private List<TenderEquipment> tenderEquipments = null;
 
         public List<TenderEquipment> TenderEquipments
@@ -294,6 +325,29 @@ namespace IhalematikPro.Model
                 return Math.Round(this.WorkerMarkupUnitPrice + this.MarkupUnitPrice, 2);
             }
         }
+        public double CustomUnitTotalFare
+        {
+            get
+            {
+                return Math.Round(this.CustomWorkerMarkupUnitPrice + this.MarkupUnitPrice, 2);
+            }
+        }
+
+        public double TotalFare
+        {
+            get
+            {
+                return Math.Round(this.UnitTotalFare * this.Quantity, 2);
+            }
+        }
+
+        public double CustomTotalFare
+        {
+            get
+            {
+                return Math.Round(this.CustomUnitTotalFare * this.Quantity, 2);
+            }
+        }
 
         private double otherUnitTotalFare = 0;
         public double OtherUnitTotalFare
@@ -319,13 +373,6 @@ namespace IhalematikPro.Model
             }
         }
         //4. adim Toplam birim fiyat
-        public double TotalFare
-        {
-            get
-            {
-                return Math.Round(this.UnitTotalFare * this.Quantity, 2);
-            }
-        }
 
         #endregion
 
@@ -372,6 +419,7 @@ namespace IhalematikPro.Model
             this.TenderMaterialListEquipment = Entity.TenderMaterialListEquipment;
             this.OfferPrice = Entity.OfferPrice;
             this.IsPoz = Entity.IsPoz;
+            this.CustomWorkerUnitPrice = Entity.CustomWorkerUnitPrice;
             OfferMaterialList offerMaterialList = OfferManager.Instance.GetOfferMaterialListPrice(this.Tender.OfferId, this.PozOBFId, this.IsPoz);
 
             if (this.Tender.Offer != null)

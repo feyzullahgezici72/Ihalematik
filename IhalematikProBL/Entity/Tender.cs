@@ -72,18 +72,6 @@ namespace IhalematikProBL.Entity
         {
             get
             {
-                //if (this.Offer != null)
-                //{
-                //    this.materialList = new List<Entity.MaterialList>();
-
-                //    foreach (var item in this.Offer.MaterialList)
-                //    {
-                //        MaterialList materialList = new MaterialList();
-                //        double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id);
-                //        this.materialList.Add(materialList);
-                //    }
-                //}
-
                 if (this.materialList == null)
                 {
                     this.materialList = MaterialListProvider.Instance.GetItems("TenderId", this.Id);

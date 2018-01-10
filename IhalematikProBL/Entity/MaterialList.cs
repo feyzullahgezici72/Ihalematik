@@ -107,6 +107,8 @@ namespace IhalematikProBL.Entity
 
         public double OfferPrice { get; set; }
 
+        public double CustomWorkerUnitPrice { get; set; }
+
         private List<TenderEquipment> tenderEquipments = null;
 
         public List<TenderEquipment> TenderEquipments
