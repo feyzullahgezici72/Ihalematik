@@ -865,5 +865,11 @@ namespace IhalematikPro.Forms
             Forms.frm_Cikis frm = new frm_Cikis();
             frm.ShowDialog();
         }
+
+        private void barButtonItem1_ItemClick_2(object sender, ItemClickEventArgs e)
+        {
+            frm_Duyurular duyurular = new frm_Duyurular();
+            duyurular.ShowDialog();
+        }
     }
 }
