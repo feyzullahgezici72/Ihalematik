@@ -459,11 +459,6 @@ namespace IhalematikPro.Forms
         PopupMenu pm;
         private void barButtonItem1_ItemClick_1(object sender, ItemClickEventArgs e)
         {
-
-
-
-
-
         }
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
@@ -635,7 +630,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            popupMenu1.ShowPopup(Control.MousePosition);
+           
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
@@ -766,9 +761,109 @@ namespace IhalematikPro.Forms
         private void barButtonItem24_ItemClick_1(object sender, ItemClickEventArgs e)
         {
             frm_LoginGuncelle lg = new frm_LoginGuncelle();
-            this.Enabled = false;
             lg.ShowDialog();
-            this.Enabled = true;
+        }
+
+        private void barButtonItem7_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            frm_PozlariOnlineGuncelle pg = new frm_PozlariOnlineGuncelle();
+            pg.ShowDialog();
+        }
+
+        private void barButtonItem29_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            
+        }
+
+        private void barButtonItem39_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_Kurallistesi kl = new frm_Kurallistesi();
+            kl.ShowDialog();
+        }
+
+        private void barButtonItem30_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_LoginGuncelle lg = new frm_LoginGuncelle();
+            lg.ShowDialog();
+        }
+
+        private void barButtonItem31_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_LisansSozlesmesi ls = new frm_LisansSozlesmesi();
+            ls.ShowDialog();
+        }
+
+        private void barButtonItem32_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Green"; //"Money Twins"; //"Lilian";
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
+        }
+
+        private void barButtonItem33_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Lilian";
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
+        }
+
+        private void barButtonItem34_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "iMaginary"; //Office 2007 Blue
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
+        }
+
+        private void barButtonItem36_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Caramel";
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
+        }
+
+        private void barButtonItem38_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Money Twins"; //London Liquid Sky
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
+        }
+
+        private void barButtonItem19_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            Forms.frm_FirmaTanimlama frm = new frm_FirmaTanimlama(this);
+            frm.ShowDialog();
+        }
+
+        private void barButtonItem21_ItemClick_2(object sender, ItemClickEventArgs e)
+        {
+            if (pnIhaleListesi.Visible == false)
+            {
+                pnIhaleListesi.Visible = true;
+                barButtonItem18.ButtonStyle = BarButtonStyle.Check;
+            }
+            else
+            {
+                pnIhaleListesi.Visible = false;
+                barButtonItem18.ButtonStyle = BarButtonStyle.Default;
+            }
+        }
+
+        private void barButtonItem25_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            Forms.frm_ProgramHakkinda ph = new frm_ProgramHakkinda();
+            ph.ShowDialog();
+        }
+
+        private void barButtonItem24_ItemClick_2(object sender, ItemClickEventArgs e)
+        {
+            frm_GenelBilgiler gb = new frm_GenelBilgiler();
+            gb.ShowDialog();
+        }
+
+        private void barButtonItem42_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Forms.frm_Cikis frm = new frm_Cikis();
+            frm.ShowDialog();
         }
     }
 }

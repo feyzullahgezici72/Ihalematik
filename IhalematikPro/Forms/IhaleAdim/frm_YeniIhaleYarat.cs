@@ -46,13 +46,7 @@ namespace IhalematikPro.Forms
 
         private void btnIhaleOlustur_Click(object sender, EventArgs e)
         {
-            UserLookAndFeel u = new UserLookAndFeel(this);
-            u.UseDefaultLookAndFeel = false;
-            u.UseWindowsXPTheme = false;
-            u.Style = LookAndFeelStyle.Skin;
-            u.SkinName = "McSkin";
-
-            DialogResult resultMsg = XtraMessageBox.Show("Yeni İhale oluşturulsun mu?", "Yeni ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultMsg = MessageBox.Show("Yeni İhale oluşturulsun mu?", "Yeni ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultMsg.Equals(DialogResult.Yes))
             {
                 Tender tender = new Tender();

@@ -32,54 +32,54 @@ namespace IhalematikPro.Forms
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Anaform));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem14 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip15 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem15 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip16 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem16 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem16 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip161 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem161 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem161 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip162 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem162 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem162 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip163 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem163 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem163 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip164 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem164 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem164 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip165 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem165 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem165 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip166 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem166 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem166 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip167 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem167 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem167 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip168 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem168 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem168 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip169 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem169 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem169 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip170 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem170 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem170 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip171 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem171 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem171 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip172 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem172 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem172 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip173 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem173 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem173 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip174 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem174 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem174 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip175 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem175 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem175 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip176 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem176 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem176 = new DevExpress.Utils.ToolTipItem();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.backstageViewControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
@@ -105,16 +105,10 @@ namespace IhalematikPro.Forms
             this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
             this.barbtnCikisx = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
@@ -132,6 +126,19 @@ namespace IhalematikPro.Forms
             this.barBtnCalisanRapor = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnAracRapor = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnTedarikciRapor = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem31 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem33 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem34 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem36 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem38 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem35 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem37 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem39 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -151,6 +158,8 @@ namespace IhalematikPro.Forms
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemPopupContainerEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit();
             this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.repositoryItemRatingControl1 = new DevExpress.XtraEditors.Repository.RepositoryItemRatingControl();
@@ -178,10 +187,19 @@ namespace IhalematikPro.Forms
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barBtnKuralllar = new DevExpress.XtraBars.BarButtonItem();
+            this.barMenu = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem40 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem42 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).BeginInit();
@@ -238,12 +256,9 @@ namespace IhalematikPro.Forms
             this.barButtonItem14,
             this.barButtonItem15,
             this.barButtonItem23,
-            this.barButtonItem24,
-            this.barButtonItem25,
             this.barButtonItem26,
             this.barButtonItem27,
             this.barbtnCikisx,
-            this.barButtonItem1,
             this.barButtonItem3,
             this.barButtonItem8,
             this.barButtonItem9,
@@ -251,9 +266,7 @@ namespace IhalematikPro.Forms
             this.barButtonItem16,
             this.barButtonItem17,
             this.barButtonItem18,
-            this.barButtonItem19,
             this.barButtonItem20,
-            this.barButtonItem21,
             this.barButtonItem22,
             this.barSubItem1,
             this.barStaticItem3,
@@ -263,10 +276,30 @@ namespace IhalematikPro.Forms
             this.barButtonItem28,
             this.barBtnCalisanRapor,
             this.barBtnAracRapor,
-            this.barBtnTedarikciRapor});
+            this.barBtnTedarikciRapor,
+            this.barButtonItem7,
+            this.barButtonItem30,
+            this.barButtonItem31,
+            this.barSubItem2,
+            this.barButtonItem32,
+            this.barButtonItem33,
+            this.barButtonItem34,
+            this.barButtonItem35,
+            this.barButtonItem36,
+            this.barButtonItem37,
+            this.barButtonItem38,
+            this.barButtonItem39,
+            this.barSubItem3,
+            this.barMenu,
+            this.barButtonItem19,
+            this.barButtonItem21,
+            this.barButtonItem24,
+            this.barButtonItem25,
+            this.barButtonItem40,
+            this.barButtonItem42});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 30;
+            this.ribbon.MaxItemId = 54;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsTouch.AffectOnlyRibbon = true;
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -276,7 +309,8 @@ namespace IhalematikPro.Forms
             this.ribbonPage1,
             this.ribbonPage8,
             this.ribbonPage7,
-            this.ribbonPage4});
+            this.ribbonPage4,
+            this.ribbonPage2});
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemPopupContainerEdit1,
             this.repositoryItemDateEdit1,
@@ -296,7 +330,9 @@ namespace IhalematikPro.Forms
             this.ribbon.ShowToolbarCustomizeItem = false;
             this.ribbon.Size = new System.Drawing.Size(1368, 205);
             this.ribbon.StatusBar = this.ribbonStatusBar1;
-            this.ribbon.Toolbar.ItemLinks.Add(this.barButtonItem1);
+            this.ribbon.Toolbar.ItemLinks.Add(this.barButtonItem23);
+            this.ribbon.Toolbar.ItemLinks.Add(this.barButtonItem18);
+            this.ribbon.Toolbar.ItemLinks.Add(this.barMenu);
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             // 
             // backstageViewControl1
@@ -347,16 +383,13 @@ namespace IhalematikPro.Forms
             this.barBtnPozListesi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnPozListesi.LargeGlyph")));
             this.barBtnPozListesi.LargeWidth = 120;
             this.barBtnPozListesi.Name = "barBtnPozListesi";
-            toolTipTitleItem1.Text = "POZLU MALZEMELER";
-            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipItem1.Appearance.Options.UseImage = true;
-            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Devlet tarafından belirlenen mevcut tüm pozların kaydedildiği ve listelendiği For" +
+            toolTipTitleItem161.Text = "POZLU MALZEMELER";
+            toolTipItem161.LeftIndent = 6;
+            toolTipItem161.Text = "Devlet tarafından belirlenen mevcut tüm pozların kaydedildiği ve listelendiği For" +
     "m";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            this.barBtnPozListesi.SuperTip = superToolTip1;
+            superToolTip161.Items.Add(toolTipTitleItem161);
+            superToolTip161.Items.Add(toolTipItem161);
+            this.barBtnPozListesi.SuperTip = superToolTip161;
             this.barBtnPozListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnPozListesi_ItemClick);
             // 
             // barBtnOzelStokListesi
@@ -370,12 +403,12 @@ namespace IhalematikPro.Forms
             this.barBtnOzelStokListesi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnOzelStokListesi.LargeGlyph")));
             this.barBtnOzelStokListesi.LargeWidth = 120;
             this.barBtnOzelStokListesi.Name = "barBtnOzelStokListesi";
-            toolTipTitleItem2.Text = "ÖBF\'Lİ MALZEMELER";
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "Öbf \'li malzeme kayıt ve listeleme formu";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            this.barBtnOzelStokListesi.SuperTip = superToolTip2;
+            toolTipTitleItem162.Text = "ÖBF\'Lİ MALZEMELER";
+            toolTipItem162.LeftIndent = 6;
+            toolTipItem162.Text = "Öbf \'li malzeme kayıt ve listeleme formu";
+            superToolTip162.Items.Add(toolTipTitleItem162);
+            superToolTip162.Items.Add(toolTipItem162);
+            this.barBtnOzelStokListesi.SuperTip = superToolTip162;
             this.barBtnOzelStokListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnOzelStokListesi_ItemClick);
             // 
             // barBtnTeklifHazirla
@@ -389,15 +422,12 @@ namespace IhalematikPro.Forms
             this.barBtnTeklifHazirla.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnTeklifHazirla.LargeGlyph")));
             this.barBtnTeklifHazirla.LargeWidth = 120;
             this.barBtnTeklifHazirla.Name = "barBtnTeklifHazirla";
-            toolTipTitleItem3.Text = "İHALE TEKLİFİ";
-            toolTipItem3.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            toolTipItem3.Appearance.Options.UseImage = true;
-            toolTipItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem3.Image")));
-            toolTipItem3.LeftIndent = 6;
-            toolTipItem3.Text = "İhale Teklifi Oluşturma formu";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            superToolTip3.Items.Add(toolTipItem3);
-            this.barBtnTeklifHazirla.SuperTip = superToolTip3;
+            toolTipTitleItem163.Text = "İHALE TEKLİFİ";
+            toolTipItem163.LeftIndent = 6;
+            toolTipItem163.Text = "İhale Teklifi Oluşturma formu";
+            superToolTip163.Items.Add(toolTipTitleItem163);
+            superToolTip163.Items.Add(toolTipItem163);
+            this.barBtnTeklifHazirla.SuperTip = superToolTip163;
             this.barBtnTeklifHazirla.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnTeklifHazirla_ItemClick);
             // 
             // barBtnYardimKonulari
@@ -439,15 +469,12 @@ namespace IhalematikPro.Forms
             this.btnAdimx1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx1.LargeGlyph")));
             this.btnAdimx1.LargeWidth = 120;
             this.btnAdimx1.Name = "btnAdimx1";
-            toolTipTitleItem4.Text = "KEŞİF LİSTESİ";
-            toolTipItem4.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            toolTipItem4.Appearance.Options.UseImage = true;
-            toolTipItem4.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem4.Image")));
-            toolTipItem4.LeftIndent = 6;
-            toolTipItem4.Text = "Keşif Listesi Oluşturma İşlemleri";
-            superToolTip4.Items.Add(toolTipTitleItem4);
-            superToolTip4.Items.Add(toolTipItem4);
-            this.btnAdimx1.SuperTip = superToolTip4;
+            toolTipTitleItem164.Text = "KEŞİF LİSTESİ";
+            toolTipItem164.LeftIndent = 6;
+            toolTipItem164.Text = "Keşif Listesi Oluşturma İşlemleri";
+            superToolTip164.Items.Add(toolTipTitleItem164);
+            superToolTip164.Items.Add(toolTipItem164);
+            this.btnAdimx1.SuperTip = superToolTip164;
             this.btnAdimx1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdimx1_ItemClick);
             // 
             // btnAdimx3
@@ -461,15 +488,12 @@ namespace IhalematikPro.Forms
             this.btnAdimx3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx3.LargeGlyph")));
             this.btnAdimx3.LargeWidth = 120;
             this.btnAdimx3.Name = "btnAdimx3";
-            toolTipTitleItem5.Text = "İŞÇİLİK";
-            toolTipItem5.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
-            toolTipItem5.Appearance.Options.UseImage = true;
-            toolTipItem5.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem5.Image")));
-            toolTipItem5.LeftIndent = 6;
-            toolTipItem5.Text = "İşçilik ve İş Süresi belirleme ve İşçilik Kar Oranları İşlemleri";
-            superToolTip5.Items.Add(toolTipTitleItem5);
-            superToolTip5.Items.Add(toolTipItem5);
-            this.btnAdimx3.SuperTip = superToolTip5;
+            toolTipTitleItem165.Text = "İŞÇİLİK";
+            toolTipItem165.LeftIndent = 6;
+            toolTipItem165.Text = "İşçilik ve İş Süresi belirleme ve İşçilik Kar Oranları İşlemleri";
+            superToolTip165.Items.Add(toolTipTitleItem165);
+            superToolTip165.Items.Add(toolTipItem165);
+            this.btnAdimx3.SuperTip = superToolTip165;
             this.btnAdimx3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdimx3_ItemClick);
             // 
             // btnAdimx4
@@ -483,15 +507,12 @@ namespace IhalematikPro.Forms
             this.btnAdimx4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx4.LargeGlyph")));
             this.btnAdimx4.LargeWidth = 120;
             this.btnAdimx4.Name = "btnAdimx4";
-            toolTipTitleItem6.Text = "MALZEMELER";
-            toolTipItem6.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
-            toolTipItem6.Appearance.Options.UseImage = true;
-            toolTipItem6.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem6.Image")));
-            toolTipItem6.LeftIndent = 6;
-            toolTipItem6.Text = "Tüm Malzeme Keşif ve Kar Oranı İşlemleri";
-            superToolTip6.Items.Add(toolTipTitleItem6);
-            superToolTip6.Items.Add(toolTipItem6);
-            this.btnAdimx4.SuperTip = superToolTip6;
+            toolTipTitleItem166.Text = "MALZEMELER";
+            toolTipItem166.LeftIndent = 6;
+            toolTipItem166.Text = "Tüm Malzeme Keşif ve Kar Oranı İşlemleri";
+            superToolTip166.Items.Add(toolTipTitleItem166);
+            superToolTip166.Items.Add(toolTipItem166);
+            this.btnAdimx4.SuperTip = superToolTip166;
             this.btnAdimx4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdimx4_ItemClick);
             // 
             // btnAdimx5
@@ -505,15 +526,12 @@ namespace IhalematikPro.Forms
             this.btnAdimx5.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnAdimx5.LargeGlyph")));
             this.btnAdimx5.LargeWidth = 120;
             this.btnAdimx5.Name = "btnAdimx5";
-            toolTipTitleItem7.Text = "GENEL MALİYET";
-            toolTipItem7.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
-            toolTipItem7.Appearance.Options.UseImage = true;
-            toolTipItem7.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem7.Image")));
-            toolTipItem7.LeftIndent = 6;
-            toolTipItem7.Text = "Maliyet ve Karlılık Analizi Durumu";
-            superToolTip7.Items.Add(toolTipTitleItem7);
-            superToolTip7.Items.Add(toolTipItem7);
-            this.btnAdimx5.SuperTip = superToolTip7;
+            toolTipTitleItem167.Text = "GENEL MALİYET";
+            toolTipItem167.LeftIndent = 6;
+            toolTipItem167.Text = "Maliyet ve Karlılık Analizi Durumu";
+            superToolTip167.Items.Add(toolTipTitleItem167);
+            superToolTip167.Items.Add(toolTipItem167);
+            this.btnAdimx5.SuperTip = superToolTip167;
             this.btnAdimx5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdimx5_ItemClick);
             // 
             // barButtonItem2
@@ -527,16 +545,13 @@ namespace IhalematikPro.Forms
             this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
             this.barButtonItem2.LargeWidth = 120;
             this.barButtonItem2.Name = "barButtonItem2";
-            toolTipTitleItem8.Text = "ÇALIŞANLAR";
-            toolTipItem8.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
-            toolTipItem8.Appearance.Options.UseImage = true;
-            toolTipItem8.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem8.Image")));
-            toolTipItem8.LeftIndent = 6;
-            toolTipItem8.Text = "Çalışanların Şirkete olan maliyetlerini hesaplama formu.\r\nMasrafları Aylık,Günlük" +
+            toolTipTitleItem168.Text = "ÇALIŞANLAR";
+            toolTipItem168.LeftIndent = 6;
+            toolTipItem168.Text = "Çalışanların Şirkete olan maliyetlerini hesaplama formu.\r\nMasrafları Aylık,Günlük" +
     ", Saatlik ve Dakika olarak hesaplar";
-            superToolTip8.Items.Add(toolTipTitleItem8);
-            superToolTip8.Items.Add(toolTipItem8);
-            this.barButtonItem2.SuperTip = superToolTip8;
+            superToolTip168.Items.Add(toolTipTitleItem168);
+            superToolTip168.Items.Add(toolTipItem168);
+            this.barButtonItem2.SuperTip = superToolTip168;
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // barButtonItem4
@@ -550,16 +565,13 @@ namespace IhalematikPro.Forms
             this.barButtonItem4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.LargeGlyph")));
             this.barButtonItem4.LargeWidth = 120;
             this.barButtonItem4.Name = "barButtonItem4";
-            toolTipTitleItem9.Text = "ARAÇLAR";
-            toolTipItem9.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
-            toolTipItem9.Appearance.Options.UseImage = true;
-            toolTipItem9.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem9.Image")));
-            toolTipItem9.LeftIndent = 6;
-            toolTipItem9.Text = "Araçların Şirkete olan maliyetlerini hesaplama formu.\r\nMasrafları Aylık,Günlük, S" +
+            toolTipTitleItem169.Text = "ARAÇLAR";
+            toolTipItem169.LeftIndent = 6;
+            toolTipItem169.Text = "Araçların Şirkete olan maliyetlerini hesaplama formu.\r\nMasrafları Aylık,Günlük, S" +
     "aatlik olarak hesaplar";
-            superToolTip9.Items.Add(toolTipTitleItem9);
-            superToolTip9.Items.Add(toolTipItem9);
-            this.barButtonItem4.SuperTip = superToolTip9;
+            superToolTip169.Items.Add(toolTipTitleItem169);
+            superToolTip169.Items.Add(toolTipItem169);
+            this.barButtonItem4.SuperTip = superToolTip169;
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // barButtonItem6
@@ -586,15 +598,12 @@ namespace IhalematikPro.Forms
             this.barButtonItem10.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.LargeGlyph")));
             this.barButtonItem10.LargeWidth = 120;
             this.barButtonItem10.Name = "barButtonItem10";
-            toolTipTitleItem10.Text = "TEDARİKÇİLER";
-            toolTipItem10.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
-            toolTipItem10.Appearance.Options.UseImage = true;
-            toolTipItem10.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem10.Image")));
-            toolTipItem10.LeftIndent = 6;
-            toolTipItem10.Text = "Kendisinden Malzeme aldığımız firmaları tanımlama formu";
-            superToolTip10.Items.Add(toolTipTitleItem10);
-            superToolTip10.Items.Add(toolTipItem10);
-            this.barButtonItem10.SuperTip = superToolTip10;
+            toolTipTitleItem170.Text = "TEDARİKÇİLER";
+            toolTipItem170.LeftIndent = 6;
+            toolTipItem170.Text = "Kendisinden Malzeme aldığımız firmaları tanımlama formu";
+            superToolTip170.Items.Add(toolTipTitleItem170);
+            superToolTip170.Items.Add(toolTipItem170);
+            this.barButtonItem10.SuperTip = superToolTip170;
             this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
             // 
             // barButtonItem12
@@ -608,15 +617,12 @@ namespace IhalematikPro.Forms
             this.barButtonItem12.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.LargeGlyph")));
             this.barButtonItem12.LargeWidth = 120;
             this.barButtonItem12.Name = "barButtonItem12";
-            toolTipTitleItem11.Text = "TEKLİF";
-            toolTipItem11.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
-            toolTipItem11.Appearance.Options.UseImage = true;
-            toolTipItem11.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem11.Image")));
-            toolTipItem11.LeftIndent = 6;
-            toolTipItem11.Text = "Yeni teklif oluşturur";
-            superToolTip11.Items.Add(toolTipTitleItem11);
-            superToolTip11.Items.Add(toolTipItem11);
-            this.barButtonItem12.SuperTip = superToolTip11;
+            toolTipTitleItem171.Text = "TEKLİF";
+            toolTipItem171.LeftIndent = 6;
+            toolTipItem171.Text = "Yeni teklif oluşturur";
+            superToolTip171.Items.Add(toolTipTitleItem171);
+            superToolTip171.Items.Add(toolTipItem171);
+            this.barButtonItem12.SuperTip = superToolTip171;
             this.barButtonItem12.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick);
             // 
             // barButtonItem13
@@ -630,15 +636,12 @@ namespace IhalematikPro.Forms
             this.barButtonItem13.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.LargeGlyph")));
             this.barButtonItem13.LargeWidth = 120;
             this.barButtonItem13.Name = "barButtonItem13";
-            toolTipTitleItem12.Text = "TEKLİF LİSTELERİ";
-            toolTipItem12.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image10")));
-            toolTipItem12.Appearance.Options.UseImage = true;
-            toolTipItem12.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem12.Image")));
-            toolTipItem12.LeftIndent = 6;
-            toolTipItem12.Text = "Veri tabanına kayıtlı teklifleri listeler ";
-            superToolTip12.Items.Add(toolTipTitleItem12);
-            superToolTip12.Items.Add(toolTipItem12);
-            this.barButtonItem13.SuperTip = superToolTip12;
+            toolTipTitleItem172.Text = "TEKLİF LİSTELERİ";
+            toolTipItem172.LeftIndent = 6;
+            toolTipItem172.Text = "Veri tabanına kayıtlı teklifleri listeler ";
+            superToolTip172.Items.Add(toolTipTitleItem172);
+            superToolTip172.Items.Add(toolTipItem172);
+            this.barButtonItem13.SuperTip = superToolTip172;
             this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
             // 
             // barButtonItem14
@@ -652,15 +655,12 @@ namespace IhalematikPro.Forms
             this.barButtonItem14.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.LargeGlyph")));
             this.barButtonItem14.LargeWidth = 120;
             this.barButtonItem14.Name = "barButtonItem14";
-            toolTipTitleItem13.Text = "TEDARİKÇİLERE LİSTE GÖNDER";
-            toolTipItem13.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image11")));
-            toolTipItem13.Appearance.Options.UseImage = true;
-            toolTipItem13.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem13.Image")));
-            toolTipItem13.LeftIndent = 6;
-            toolTipItem13.Text = "Malzeme listesi oluşturup tedarikçilere email gönderir";
-            superToolTip13.Items.Add(toolTipTitleItem13);
-            superToolTip13.Items.Add(toolTipItem13);
-            this.barButtonItem14.SuperTip = superToolTip13;
+            toolTipTitleItem173.Text = "TEDARİKÇİLERE LİSTE GÖNDER";
+            toolTipItem173.LeftIndent = 6;
+            toolTipItem173.Text = "Malzeme listesi oluşturup tedarikçilere email gönderir";
+            superToolTip173.Items.Add(toolTipTitleItem173);
+            superToolTip173.Items.Add(toolTipItem173);
+            this.barButtonItem14.SuperTip = superToolTip173;
             this.barButtonItem14.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem14_ItemClick);
             // 
             // barButtonItem15
@@ -674,44 +674,23 @@ namespace IhalematikPro.Forms
             this.barButtonItem15.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.LargeGlyph")));
             this.barButtonItem15.LargeWidth = 120;
             this.barButtonItem15.Name = "barButtonItem15";
-            toolTipTitleItem14.Text = "TEKLİFLERİ KARŞILAŞTIR";
-            toolTipItem14.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image12")));
-            toolTipItem14.Appearance.Options.UseImage = true;
-            toolTipItem14.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem14.Image")));
-            toolTipItem14.LeftIndent = 6;
-            toolTipItem14.Text = "Tedarikçilerin gönderdikleri fiyat listelerini En düşük fiyata göre yada Fiyat or" +
+            toolTipTitleItem174.Text = "TEKLİFLERİ KARŞILAŞTIR";
+            toolTipItem174.LeftIndent = 6;
+            toolTipItem174.Text = "Tedarikçilerin gönderdikleri fiyat listelerini En düşük fiyata göre yada Fiyat or" +
     "talamasına göre karşılaştırarak son listeyi oluşturur";
-            superToolTip14.Items.Add(toolTipTitleItem14);
-            superToolTip14.Items.Add(toolTipItem14);
-            this.barButtonItem15.SuperTip = superToolTip14;
+            superToolTip174.Items.Add(toolTipTitleItem174);
+            superToolTip174.Items.Add(toolTipItem174);
+            this.barButtonItem15.SuperTip = superToolTip174;
             this.barButtonItem15.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem15_ItemClick);
             // 
             // barButtonItem23
             // 
-            this.barButtonItem23.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem23.Caption = "Firma Bilgileri";
-            this.barButtonItem23.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem23.Glyph")));
+            this.barButtonItem23.Glyph = global::IhalematikProUI.Properties.Resources.agency_icon__1_;
             this.barButtonItem23.Id = 24;
+            this.barButtonItem23.LargeWidth = 50;
             this.barButtonItem23.Name = "barButtonItem23";
             this.barButtonItem23.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem23_ItemClick_1);
-            // 
-            // barButtonItem24
-            // 
-            this.barButtonItem24.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.barButtonItem24.Caption = "Giriş Şifresi Değiştir";
-            this.barButtonItem24.Glyph = global::IhalematikProUI.Properties.Resources.password_icon;
-            this.barButtonItem24.Id = 25;
-            this.barButtonItem24.Name = "barButtonItem24";
-            this.barButtonItem24.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem24_ItemClick_1);
-            // 
-            // barButtonItem25
-            // 
-            this.barButtonItem25.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.barButtonItem25.Caption = "Lisans İşlemleri";
-            this.barButtonItem25.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem25.Glyph")));
-            this.barButtonItem25.Id = 26;
-            this.barButtonItem25.Name = "barButtonItem25";
-            this.barButtonItem25.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem25_ItemClick);
             // 
             // barButtonItem26
             // 
@@ -740,53 +719,8 @@ namespace IhalematikPro.Forms
             this.barbtnCikisx.Name = "barbtnCikisx";
             this.barbtnCikisx.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnCikisx_ItemClick);
             // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.AllowAllUp = true;
-            this.barButtonItem1.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.barButtonItem1.Caption = "Menü";
-            this.barButtonItem1.CloseRadialMenuOnItemClick = true;
-            this.barButtonItem1.DropDownControl = this.popupMenu1;
-            this.barButtonItem1.DropDownEnabled = false;
-            this.barButtonItem1.Glyph = global::IhalematikProUI.Properties.Resources.Menu_icon;
-            this.barButtonItem1.Id = 2;
-            this.barButtonItem1.ItemAppearance.Pressed.BackColor = System.Drawing.SystemColors.Control;
-            this.barButtonItem1.ItemAppearance.Pressed.Options.UseBackColor = true;
-            this.barButtonItem1.LargeGlyph = global::IhalematikProUI.Properties.Resources.Menu_icon;
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
-            // 
-            // popupMenu1
-            // 
-            this.popupMenu1.ItemLinks.Add(this.barButtonItem23);
-            this.popupMenu1.ItemLinks.Add(this.barButtonItem21);
-            this.popupMenu1.ItemLinks.Add(this.barButtonItem18);
-            this.popupMenu1.ItemLinks.Add(this.barButtonItem24);
-            this.popupMenu1.ItemLinks.Add(this.barButtonItem19);
-            this.popupMenu1.ItemLinks.Add(this.barButtonItem25);
-            this.popupMenu1.ItemLinks.Add(this.barButtonItem27);
-            this.popupMenu1.ItemLinks.Add(this.barSubItem1);
-            this.popupMenu1.ItemLinks.Add(this.barButtonItem20, true);
-            this.popupMenu1.ItemLinks.Add(this.barButtonItem26);
-            this.popupMenu1.ItemLinks.Add(this.barbtnCikisx, true);
-            this.popupMenu1.Name = "popupMenu1";
-            this.popupMenu1.Ribbon = this.ribbon;
-            // 
-            // barButtonItem21
-            // 
-            this.barButtonItem21.Caption = "Online Poz Güncelle";
-            this.barButtonItem21.Glyph = global::IhalematikProUI.Properties.Resources.network_icon32;
-            this.barButtonItem21.Id = 27;
-            this.barButtonItem21.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem21.LargeGlyph")));
-            this.barButtonItem21.LargeWidth = 120;
-            this.barButtonItem21.Name = "barButtonItem21";
-            this.barButtonItem21.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem21_ItemClick_1);
-            // 
             // barButtonItem18
             // 
-            this.barButtonItem18.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barButtonItem18.Caption = "İhale Panosu ";
             this.barButtonItem18.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.Glyph")));
             this.barButtonItem18.Id = 19;
@@ -794,16 +728,6 @@ namespace IhalematikPro.Forms
             this.barButtonItem18.LargeWidth = 120;
             this.barButtonItem18.Name = "barButtonItem18";
             this.barButtonItem18.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem18_ItemClick);
-            // 
-            // barButtonItem19
-            // 
-            this.barButtonItem19.Caption = "Kurallar";
-            this.barButtonItem19.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem19.Glyph")));
-            this.barButtonItem19.Id = 20;
-            this.barButtonItem19.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem19.LargeGlyph")));
-            this.barButtonItem19.LargeWidth = 120;
-            this.barButtonItem19.Name = "barButtonItem19";
-            this.barButtonItem19.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem19_ItemClick);
             // 
             // barSubItem1
             // 
@@ -925,15 +849,12 @@ namespace IhalematikPro.Forms
             this.barBtnDovizKurlar.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnDovizKurlar.LargeGlyph")));
             this.barBtnDovizKurlar.LargeWidth = 120;
             this.barBtnDovizKurlar.Name = "barBtnDovizKurlar";
-            toolTipTitleItem15.Text = "KURLAR";
-            toolTipItem15.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image13")));
-            toolTipItem15.Appearance.Options.UseImage = true;
-            toolTipItem15.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem15.Image")));
-            toolTipItem15.LeftIndent = 6;
-            toolTipItem15.Text = "Aktif döviz kurlarını tanımlama ve listeleme formu";
-            superToolTip15.Items.Add(toolTipTitleItem15);
-            superToolTip15.Items.Add(toolTipItem15);
-            this.barBtnDovizKurlar.SuperTip = superToolTip15;
+            toolTipTitleItem175.Text = "KURLAR";
+            toolTipItem175.LeftIndent = 6;
+            toolTipItem175.Text = "Aktif döviz kurlarını tanımlama ve listeleme formu";
+            superToolTip175.Items.Add(toolTipTitleItem175);
+            superToolTip175.Items.Add(toolTipItem175);
+            this.barBtnDovizKurlar.SuperTip = superToolTip175;
             this.barBtnDovizKurlar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnDovizKurlar_ItemClick);
             // 
             // barStaticItem5
@@ -963,16 +884,13 @@ namespace IhalematikPro.Forms
             this.barButtonItem28.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem28.LargeGlyph")));
             this.barButtonItem28.LargeWidth = 120;
             this.barButtonItem28.Name = "barButtonItem28";
-            toolTipTitleItem16.Text = "TEKLİFLERİ AKTAR";
-            toolTipItem16.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image14")));
-            toolTipItem16.Appearance.Options.UseImage = true;
-            toolTipItem16.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem16.Image")));
-            toolTipItem16.LeftIndent = 6;
-            toolTipItem16.Text = "Tedarikçilere mail ile gönderilen teklif listelerinin tedarikçilerden gelen liste" +
+            toolTipTitleItem176.Text = "TEKLİFLERİ AKTAR";
+            toolTipItem176.LeftIndent = 6;
+            toolTipItem176.Text = "Tedarikçilere mail ile gönderilen teklif listelerinin tedarikçilerden gelen liste" +
     "lerinin veri tabanına yüklenmesi işlemi";
-            superToolTip16.Items.Add(toolTipTitleItem16);
-            superToolTip16.Items.Add(toolTipItem16);
-            this.barButtonItem28.SuperTip = superToolTip16;
+            superToolTip176.Items.Add(toolTipTitleItem176);
+            superToolTip176.Items.Add(toolTipItem176);
+            this.barButtonItem28.SuperTip = superToolTip176;
             this.barButtonItem28.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem28_ItemClick);
             // 
             // barBtnCalisanRapor
@@ -1001,6 +919,123 @@ namespace IhalematikPro.Forms
             this.barBtnTedarikciRapor.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnTedarikciRapor.LargeGlyph")));
             this.barBtnTedarikciRapor.LargeWidth = 120;
             this.barBtnTedarikciRapor.Name = "barBtnTedarikciRapor";
+            // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "Online Poz Güncelleme";
+            this.barButtonItem7.Id = 30;
+            this.barButtonItem7.LargeGlyph = global::IhalematikProUI.Properties.Resources.network_icon;
+            this.barButtonItem7.LargeWidth = 120;
+            this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick_1);
+            // 
+            // barButtonItem30
+            // 
+            this.barButtonItem30.Caption = "Şifre Değiştir";
+            this.barButtonItem30.Id = 32;
+            this.barButtonItem30.LargeGlyph = global::IhalematikProUI.Properties.Resources.password_icon;
+            this.barButtonItem30.LargeWidth = 120;
+            this.barButtonItem30.Name = "barButtonItem30";
+            this.barButtonItem30.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem30_ItemClick);
+            // 
+            // barButtonItem31
+            // 
+            this.barButtonItem31.Caption = "Lisan İşlemleri";
+            this.barButtonItem31.Id = 33;
+            this.barButtonItem31.LargeGlyph = global::IhalematikProUI.Properties.Resources.License_manager_icon__1_;
+            this.barButtonItem31.LargeWidth = 120;
+            this.barButtonItem31.Name = "barButtonItem31";
+            this.barButtonItem31.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem31_ItemClick);
+            // 
+            // barSubItem2
+            // 
+            this.barSubItem2.Caption = "Temalar";
+            this.barSubItem2.Id = 36;
+            this.barSubItem2.LargeGlyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barSubItem2.LargeWidth = 120;
+            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem32),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem33),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem34),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem36),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem38)});
+            this.barSubItem2.Name = "barSubItem2";
+            // 
+            // barButtonItem32
+            // 
+            this.barButtonItem32.Caption = "Temal-1";
+            this.barButtonItem32.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem32.Id = 37;
+            this.barButtonItem32.Name = "barButtonItem32";
+            this.barButtonItem32.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem32_ItemClick);
+            // 
+            // barButtonItem33
+            // 
+            this.barButtonItem33.Caption = "Tema-2";
+            this.barButtonItem33.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem33.Id = 38;
+            this.barButtonItem33.Name = "barButtonItem33";
+            this.barButtonItem33.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem33_ItemClick);
+            // 
+            // barButtonItem34
+            // 
+            this.barButtonItem34.Caption = "Tema-3";
+            this.barButtonItem34.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem34.Id = 39;
+            this.barButtonItem34.Name = "barButtonItem34";
+            this.barButtonItem34.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem34_ItemClick);
+            // 
+            // barButtonItem36
+            // 
+            this.barButtonItem36.Caption = "Tema-4";
+            this.barButtonItem36.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem36.Id = 41;
+            this.barButtonItem36.Name = "barButtonItem36";
+            this.barButtonItem36.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem36_ItemClick);
+            // 
+            // barButtonItem38
+            // 
+            this.barButtonItem38.Caption = "Tema-5";
+            this.barButtonItem38.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem38.Id = 43;
+            this.barButtonItem38.Name = "barButtonItem38";
+            this.barButtonItem38.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem38_ItemClick);
+            // 
+            // barButtonItem35
+            // 
+            this.barButtonItem35.Caption = "Tema-4";
+            this.barButtonItem35.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem35.Id = 40;
+            this.barButtonItem35.Name = "barButtonItem35";
+            // 
+            // barButtonItem37
+            // 
+            this.barButtonItem37.Caption = "Tema-5";
+            this.barButtonItem37.Id = 42;
+            this.barButtonItem37.Name = "barButtonItem37";
+            // 
+            // barButtonItem39
+            // 
+            this.barButtonItem39.Caption = "Kurallar";
+            this.barButtonItem39.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem39.Glyph")));
+            this.barButtonItem39.Id = 44;
+            this.barButtonItem39.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem39.LargeGlyph")));
+            this.barButtonItem39.LargeWidth = 120;
+            this.barButtonItem39.Name = "barButtonItem39";
+            this.barButtonItem39.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem39_ItemClick);
+            // 
+            // barSubItem3
+            // 
+            this.barSubItem3.Caption = "Yazdır";
+            this.barSubItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem3.Glyph")));
+            this.barSubItem3.Id = 45;
+            this.barSubItem3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem3.LargeGlyph")));
+            this.barSubItem3.LargeWidth = 120;
+            this.barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barBtnCalisanRapor),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barBtnAracRapor),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barBtnTedarikciRapor)});
+            this.barSubItem3.Name = "barSubItem3";
             // 
             // ribbonPageCategory1
             // 
@@ -1174,11 +1209,28 @@ namespace IhalematikPro.Forms
             // 
             // ribbonPageGroup5
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.barBtnCalisanRapor);
-            this.ribbonPageGroup5.ItemLinks.Add(this.barBtnAracRapor);
-            this.ribbonPageGroup5.ItemLinks.Add(this.barBtnTedarikciRapor);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barSubItem3);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Yazdır";
+            // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Appearance.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            this.ribbonPage2.Appearance.Options.UseFont = true;
+            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup17});
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "İşlemler";
+            // 
+            // ribbonPageGroup17
+            // 
+            this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem7);
+            this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem39);
+            this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem30);
+            this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem31);
+            this.ribbonPageGroup17.ItemLinks.Add(this.barSubItem2);
+            this.ribbonPageGroup17.Name = "ribbonPageGroup17";
+            this.ribbonPageGroup17.Text = "İşlemler Menüsü";
             // 
             // repositoryItemPopupContainerEdit1
             // 
@@ -1570,9 +1622,89 @@ namespace IhalematikPro.Forms
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Interval = 30;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // ribbonPageGroup16
+            // 
+            this.ribbonPageGroup16.Name = "ribbonPageGroup16";
+            this.ribbonPageGroup16.Text = "İşlemler Menüsü";
+            // 
+            // ribbonPageGroup15
+            // 
+            this.ribbonPageGroup15.Name = "ribbonPageGroup15";
+            this.ribbonPageGroup15.Text = "İşlemler Menüsü";
+            // 
+            // barBtnKuralllar
+            // 
+            this.barBtnKuralllar.Caption = "Kurallar";
+            this.barBtnKuralllar.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnKuralllar.Glyph")));
+            this.barBtnKuralllar.Id = 31;
+            this.barBtnKuralllar.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnKuralllar.LargeGlyph")));
+            this.barBtnKuralllar.LargeWidth = 120;
+            this.barBtnKuralllar.Name = "barBtnKuralllar";
+            // 
+            // barMenu
+            // 
+            this.barMenu.Caption = "barSubItem4";
+            this.barMenu.Glyph = global::IhalematikProUI.Properties.Resources.Menu_icon;
+            this.barMenu.Id = 46;
+            this.barMenu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem19),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem21),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem25),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem24),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem40),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem42)});
+            this.barMenu.Name = "barMenu";
+            // 
+            // barButtonItem19
+            // 
+            this.barButtonItem19.Caption = "Firma Bilgileri";
+            this.barButtonItem19.Glyph = global::IhalematikProUI.Properties.Resources.agency_icon__1_;
+            this.barButtonItem19.Id = 47;
+            this.barButtonItem19.LargeGlyph = global::IhalematikProUI.Properties.Resources.agency_icon__1_;
+            this.barButtonItem19.Name = "barButtonItem19";
+            this.barButtonItem19.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem19_ItemClick_1);
+            // 
+            // barButtonItem21
+            // 
+            this.barButtonItem21.Caption = "İhale Panosu";
+            this.barButtonItem21.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem21.Glyph")));
+            this.barButtonItem21.Id = 48;
+            this.barButtonItem21.Name = "barButtonItem21";
+            this.barButtonItem21.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem21_ItemClick_2);
+            // 
+            // barButtonItem24
+            // 
+            this.barButtonItem24.Caption = "İhale Sözlüğü";
+            this.barButtonItem24.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem24.Glyph")));
+            this.barButtonItem24.Id = 49;
+            this.barButtonItem24.Name = "barButtonItem24";
+            this.barButtonItem24.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem24_ItemClick_2);
+            // 
+            // barButtonItem25
+            // 
+            this.barButtonItem25.Caption = "Program Hakkında";
+            this.barButtonItem25.Glyph = global::IhalematikProUI.Properties.Resources.System_Info_icon__1_;
+            this.barButtonItem25.Id = 50;
+            this.barButtonItem25.Name = "barButtonItem25";
+            this.barButtonItem25.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem25_ItemClick_1);
+            // 
+            // barButtonItem40
+            // 
+            this.barButtonItem40.Caption = "Yardım";
+            this.barButtonItem40.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem40.Glyph")));
+            this.barButtonItem40.Id = 51;
+            this.barButtonItem40.Name = "barButtonItem40";
+            // 
+            // barButtonItem42
+            // 
+            this.barButtonItem42.Caption = "Çıkış";
+            this.barButtonItem42.Glyph = global::IhalematikProUI.Properties.Resources.Login_icon__1_;
+            this.barButtonItem42.Id = 53;
+            this.barButtonItem42.Name = "barButtonItem42";
+            this.barButtonItem42.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem42_ItemClick);
             // 
             // frm_Anaform
             // 
@@ -1610,7 +1742,6 @@ namespace IhalematikPro.Forms
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).EndInit();
             this.backstageViewControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();
@@ -1664,15 +1795,12 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.BarButtonItem barButtonItem23;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem24;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem25;
         private DevExpress.XtraBars.BarButtonItem barButtonItem26;
         private DevExpress.XtraBars.BarButtonItem barButtonItem27;
         private DevExpress.XtraBars.BarButtonItem barbtnCikisx;
         private DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit repositoryItemPopupContainerEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemRatingControl repositoryItemRatingControl1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit repositoryItemPopupContainerEdit2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         public DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
@@ -1684,9 +1812,7 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;
         private DevExpress.XtraBars.BarButtonItem barButtonItem17;
         private DevExpress.XtraBars.BarButtonItem barButtonItem18;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem19;
         private DevExpress.XtraBars.BarButtonItem barButtonItem20;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem21;
         private DevExpress.XtraBars.BarButtonItem barButtonItem22;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
@@ -1705,7 +1831,6 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.Ribbon.BackstageViewControl backstageViewControl1;
         private DevExpress.XtraBars.Ribbon.BackstageViewClientControl backstageViewClientControl1;
         private DevExpress.XtraBars.Ribbon.BackstageViewTabItem backstageViewTabItem1;
-        private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraEditors.PanelControl pnlAna;
         private DevExpress.XtraEditors.PanelControl pnIhaleListesi;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
@@ -1738,6 +1863,32 @@ namespace IhalematikPro.Forms
         public DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         public DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage8;
         public DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage7;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem29;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem30;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem31;
+        private DevExpress.XtraBars.BarSubItem barSubItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem32;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem33;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem34;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem36;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem38;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem35;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem37;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup17;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
+        private DevExpress.XtraBars.BarButtonItem barBtnKuralllar;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem39;
+        private DevExpress.XtraBars.BarSubItem barSubItem3;
+        private DevExpress.XtraBars.BarSubItem barMenu;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem19;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem21;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem24;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem25;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem40;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem42;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }

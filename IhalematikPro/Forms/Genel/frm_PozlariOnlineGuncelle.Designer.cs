@@ -94,7 +94,7 @@
             this.lblAck.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
             this.lblAck.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
             this.lblAck.LineOrientation = DevExpress.XtraEditors.LabelLineOrientation.Horizontal;
-            this.lblAck.Location = new System.Drawing.Point(12, 80);
+            this.lblAck.Location = new System.Drawing.Point(23, 80);
             this.lblAck.Name = "lblAck";
             this.lblAck.Size = new System.Drawing.Size(287, 38);
             this.lblAck.TabIndex = 108;
@@ -114,11 +114,13 @@
             // 
             this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGuncelle.Appearance.Options.UseFont = true;
-            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.network_icon;
+            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.network_icon32;
             this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnGuncelle.Location = new System.Drawing.Point(12, 124);
+            this.btnGuncelle.Location = new System.Drawing.Point(40, 124);
+            this.btnGuncelle.LookAndFeel.SkinName = "McSkin";
+            this.btnGuncelle.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(330, 139);
+            this.btnGuncelle.Size = new System.Drawing.Size(220, 111);
             this.btnGuncelle.TabIndex = 106;
             this.btnGuncelle.Text = "Güncellemeye Başla";
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
