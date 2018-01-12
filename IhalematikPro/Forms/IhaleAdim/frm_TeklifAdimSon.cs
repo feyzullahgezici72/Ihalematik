@@ -246,17 +246,26 @@ namespace IhalematikProUI.Forms
         {
             if (ddlCalculateWorkerType.SelectedIndex == 0)
             {
+                colUnitTotalFare.VisibleIndex = 4;
+                colTotalFare.VisibleIndex = 5;
                 colUnitTotalFare.Visible = true;
                 colTotalFare.Visible = true;
+
                 colCustomUnitTotalFare.Visible = false;
                 colCustomTotalFare.Visible = false;
             }
             else
             {
+                colCustomUnitTotalFare.VisibleIndex = 4;
+                colCustomTotalFare.VisibleIndex = 5;
                 colUnitTotalFare.Visible = false;
                 colTotalFare.Visible = false;
+
                 colCustomUnitTotalFare.Visible = true;
                 colCustomTotalFare.Visible = true;
+
+
+
             }
             this.CalculateFooterInnerValues(null);
         }
