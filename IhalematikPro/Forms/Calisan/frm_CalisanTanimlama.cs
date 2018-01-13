@@ -323,11 +323,26 @@ namespace IhalematikPro.Forms
                 return;
             }
             TitleModel selectedItem = (TitleModel)ddlTitles.SelectedItem;
-            List<Worker> workers = WorkerProvider.Instance.GetItems("TitleId", selectedItem.Id);
-            if (workers.Count != 0)
+            Worker worker = WorkerProvider.Instance.GetItems("TitleId", selectedItem.Id).FirstOrDefault();
+            if (worker != null)
             {
-                MessageBox.Show("Bu unvanda tanimla calisan vardir");
-                ddlTitles.SelectedItem = null;
+                if (!worker.IsActive)
+                {
+                    DialogResult result = MessageBox.Show("Tanımlamaya çalıştığınız ünvan pasif'e ayırmışsınız. Aktifleştirmek istermisiniz?", "Pasif", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    if (result.Equals(DialogResult.OK))
+                    {
+                        worker.IsActive = true;
+                        WorkerProvider.Instance.Save(worker);
+                        this.LoadGrid();
+                    }
+                    ddlTitles.SelectedItem = null;
+                }
+                else
+                {
+                    MessageBox.Show("Tanımlamaya çalıştığınız ünvan zaten tanımlı. Güncelleme yapabilirsiniz.");
+                    ddlTitles.SelectedItem = null;
+                }
+
             }
         }
 
@@ -377,7 +392,5 @@ namespace IhalematikPro.Forms
 
             }
         }
-
-       
     }
 }
