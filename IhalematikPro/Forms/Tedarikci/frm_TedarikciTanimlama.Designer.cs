@@ -639,7 +639,6 @@
             this.txtCountry.Properties.Appearance.Options.UseBackColor = true;
             this.txtCountry.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtCountry.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtCountry.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCountry.Properties.DisplayFormat.FormatString = "N2";
             this.txtCountry.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtCountry.Properties.EditFormat.FormatString = "N2";
@@ -657,7 +656,6 @@
             this.txtAuthorNameSurname.Properties.Appearance.Options.UseBackColor = true;
             this.txtAuthorNameSurname.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtAuthorNameSurname.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtAuthorNameSurname.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAuthorNameSurname.Properties.DisplayFormat.FormatString = "N2";
             this.txtAuthorNameSurname.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtAuthorNameSurname.Properties.EditFormat.FormatString = "N2";
@@ -698,7 +696,6 @@
             this.txtCompanyName.Properties.Appearance.Options.UseBackColor = true;
             this.txtCompanyName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtCompanyName.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtCompanyName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCompanyName.Properties.DisplayFormat.FormatString = "N2";
             this.txtCompanyName.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtCompanyName.Properties.EditFormat.FormatString = "N2";
@@ -753,7 +750,7 @@
             this.txtGSM.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtGSM.Properties.EditFormat.FormatString = "N2";
             this.txtGSM.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtGSM.Properties.Mask.EditMask = "(999) 000 00 00";
+            this.txtGSM.Properties.Mask.EditMask = "999 000 00 00";
             this.txtGSM.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.txtGSM.Size = new System.Drawing.Size(224, 26);
             this.txtGSM.TabIndex = 4;
@@ -811,7 +808,7 @@
             this.txtTelephone.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtTelephone.Properties.EditFormat.FormatString = "N2";
             this.txtTelephone.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtTelephone.Properties.Mask.EditMask = "(999) 000 00 00";
+            this.txtTelephone.Properties.Mask.EditMask = "999 000 00 00";
             this.txtTelephone.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.txtTelephone.Size = new System.Drawing.Size(224, 26);
             this.txtTelephone.TabIndex = 5;
@@ -856,7 +853,6 @@
             this.txtAddress.Properties.Appearance.Options.UseBackColor = true;
             this.txtAddress.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtAddress.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtAddress.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress.Properties.DisplayFormat.FormatString = "N2";
             this.txtAddress.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtAddress.Properties.EditFormat.FormatString = "N2";
