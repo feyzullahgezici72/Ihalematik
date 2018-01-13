@@ -185,10 +185,24 @@ namespace IhalematikPro.Forms
                 return;
             }
             VehicleTitle selectedItem = (VehicleTitle)ddlVehicleTitle.SelectedItem;
-            List<Vehicle> vehicles = VehicleProvider.Instance.GetItems("TitleId", selectedItem.Id);
-            if (vehicles.Count != 0)
+            Vehicle vehicle = VehicleProvider.Instance.GetItems("TitleId", selectedItem.Id).FirstOrDefault();
+            if (vehicle != null)
             {
-                MessageBox.Show("Bu tipte tanimli arac vardir");
+                if (!vehicle.IsActive)
+                {
+                    DialogResult result = MessageBox.Show("Tanımlamaya çalıştığınız ünvan pasif'e ayırmışsınız. Aktifleştirmek istermisiniz?", "Pasif", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    if (result.Equals(DialogResult.OK))
+                    {
+                        vehicle.IsActive = true;
+                        VehicleProvider.Instance.Save(vehicle);
+                        this.LoadGrid();
+                    }
+                    ddlVehicleTitle.SelectedItem = null;
+                }
+                else
+                {
+                    MessageBox.Show("Bu tipte tanimli arac vardir");
+                }
                 ddlVehicleTitle.SelectedItem = null;
             }
         }
@@ -242,19 +256,22 @@ namespace IhalematikPro.Forms
             List<VehicleModel> models = IhalematikModelBase.GetModels<VehicleModel, Vehicle>(items); 
             if (cmbAktivePasive.SelectedIndex == 0)
             {
-                grdVehicle.DataSource = models.Where(p => p.IsActive);
+                models = models.Where(p => p.IsActive).ToList();
+                grdVehicle.DataSource = models;
                 colPasive.Visible = true;
                 colEdit.Visible = true;
                 colActive.Visible = false;
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
-                grdVehicle.DataSource = models.Where(p => !p.IsActive);
+                models = models.Where(p => !p.IsActive).ToList();
+                grdVehicle.DataSource = models;
                 colEdit.Visible = false;
                 colActive.Visible = true;
                 colPasive.Visible = false;
             }
 
+            lblRecordCount.Text = models.Count.ToString();
             //if (this.FocusedRowHandle != 0)
             //{
             //    gridViewVehicle.FocusedRowHandle = this.FocusedRowHandle;

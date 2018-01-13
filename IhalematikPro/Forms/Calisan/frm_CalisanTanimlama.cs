@@ -121,7 +121,8 @@ namespace IhalematikPro.Forms
 
             if (cmbAktivePasive.SelectedIndex == 0)
             {
-                grdWorker.DataSource = models.Where(p => p.IsActive);
+                models = models.Where(p => p.IsActive).ToList();
+                grdWorker.DataSource = models;
                 colEdit.Visible = true;
                 colPasive.Visible = true;
                 colActive.Visible = false;
@@ -129,7 +130,8 @@ namespace IhalematikPro.Forms
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
-                grdWorker.DataSource = models.Where(p => !p.IsActive);
+                models = models.Where(p => !p.IsActive).ToList();
+                grdWorker.DataSource = models;
                 colPasive.Visible = false;
                 colEdit.Visible = false;
                 colActive.Visible = true;
