@@ -69,6 +69,7 @@
             this.txtName.Properties.Appearance.Options.UseForeColor = true;
             this.txtName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtName.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtName.Size = new System.Drawing.Size(500, 26);
             this.txtName.TabIndex = 0;
             // 

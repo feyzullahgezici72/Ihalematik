@@ -377,7 +377,7 @@
             this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
-            this.gridColumn2.Width = 225;
+            this.gridColumn2.Width = 417;
             // 
             // gridColumn3
             // 
@@ -393,14 +393,15 @@
             this.gridColumn3.DisplayFormat.FormatString = "c2";
             this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn3.FieldName = "TotalFare.Amount";
-            this.gridColumn3.MinWidth = 10;
+            this.gridColumn3.MaxWidth = 100;
+            this.gridColumn3.MinWidth = 100;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 144;
+            this.gridColumn3.Width = 100;
             // 
             // gridColumn4
             // 
@@ -416,7 +417,8 @@
             this.gridColumn4.DisplayFormat.FormatString = "c2";
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "DayFare.Amount";
-            this.gridColumn4.MinWidth = 10;
+            this.gridColumn4.MaxWidth = 100;
+            this.gridColumn4.MinWidth = 100;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
@@ -424,7 +426,7 @@
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 134;
+            this.gridColumn4.Width = 100;
             // 
             // gridColumn5
             // 
@@ -440,7 +442,8 @@
             this.gridColumn5.DisplayFormat.FormatString = "c2";
             this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn5.FieldName = "HourFare.Amount";
-            this.gridColumn5.MinWidth = 10;
+            this.gridColumn5.MaxWidth = 100;
+            this.gridColumn5.MinWidth = 100;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.OptionsColumn.AllowFocus = false;
@@ -448,7 +451,7 @@
             this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 144;
+            this.gridColumn5.Width = 100;
             // 
             // gridColumn6
             // 
@@ -464,7 +467,8 @@
             this.gridColumn6.DisplayFormat.FormatString = "c2";
             this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "MinuteFare.Amount";
-            this.gridColumn6.MinWidth = 10;
+            this.gridColumn6.MaxWidth = 100;
+            this.gridColumn6.MinWidth = 100;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.OptionsColumn.AllowFocus = false;
@@ -472,7 +476,7 @@
             this.gridColumn6.OptionsFilter.AllowFilter = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 4;
-            this.gridColumn6.Width = 185;
+            this.gridColumn6.Width = 100;
             // 
             // colEdit
             // 
@@ -634,6 +638,7 @@
             this.btnKaydet.Size = new System.Drawing.Size(132, 58);
             this.btnKaydet.TabIndex = 25;
             this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.ToolTip = "Kaydet";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnTemizle
@@ -649,6 +654,7 @@
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(48, 58);
             this.btnTemizle.TabIndex = 22;
+            this.btnTemizle.ToolTip = "Formu Temizle";
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // txtWorklesFonFare
@@ -656,8 +662,6 @@
             this.txtWorklesFonFare.Location = new System.Drawing.Point(183, 178);
             this.txtWorklesFonFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtWorklesFonFare.Name = "txtWorklesFonFare";
-            this.txtWorklesFonFare.Properties.Appearance.BackColor = System.Drawing.Color.OldLace;
-            this.txtWorklesFonFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtWorklesFonFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtWorklesFonFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtWorklesFonFare.Properties.DisplayFormat.FormatString = "c";
@@ -673,7 +677,7 @@
             // txtSeveranceFare
             // 
             this.txtSeveranceFare.EnterMoveNextControl = true;
-            this.txtSeveranceFare.Location = new System.Drawing.Point(182, 314);
+            this.txtSeveranceFare.Location = new System.Drawing.Point(183, 314);
             this.txtSeveranceFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtSeveranceFare.Name = "txtSeveranceFare";
             this.txtSeveranceFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -692,7 +696,7 @@
             // txtAGI
             // 
             this.txtAGI.EnterMoveNextControl = true;
-            this.txtAGI.Location = new System.Drawing.Point(182, 281);
+            this.txtAGI.Location = new System.Drawing.Point(183, 281);
             this.txtAGI.Margin = new System.Windows.Forms.Padding(4);
             this.txtAGI.Name = "txtAGI";
             this.txtAGI.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -722,7 +726,7 @@
             // txtExtraFare
             // 
             this.txtExtraFare.EnterMoveNextControl = true;
-            this.txtExtraFare.Location = new System.Drawing.Point(182, 484);
+            this.txtExtraFare.Location = new System.Drawing.Point(183, 484);
             this.txtExtraFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtExtraFare.Name = "txtExtraFare";
             this.txtExtraFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -744,8 +748,6 @@
             this.txtBaseFare.Location = new System.Drawing.Point(183, 110);
             this.txtBaseFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtBaseFare.Name = "txtBaseFare";
-            this.txtBaseFare.Properties.Appearance.BackColor = System.Drawing.Color.OldLace;
-            this.txtBaseFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtBaseFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtBaseFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtBaseFare.Properties.DisplayFormat.FormatString = "c2";
@@ -784,7 +786,7 @@
             // txtISGFare
             // 
             this.txtISGFare.EnterMoveNextControl = true;
-            this.txtISGFare.Location = new System.Drawing.Point(184, 450);
+            this.txtISGFare.Location = new System.Drawing.Point(183, 450);
             this.txtISGFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtISGFare.Name = "txtISGFare";
             this.txtISGFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -804,8 +806,6 @@
             this.txtSGKPrimFare.Location = new System.Drawing.Point(183, 145);
             this.txtSGKPrimFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtSGKPrimFare.Name = "txtSGKPrimFare";
-            this.txtSGKPrimFare.Properties.Appearance.BackColor = System.Drawing.Color.OldLace;
-            this.txtSGKPrimFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtSGKPrimFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtSGKPrimFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSGKPrimFare.Properties.DisplayFormat.FormatString = "c";
@@ -843,7 +843,7 @@
             // txtHotelFare
             // 
             this.txtHotelFare.EnterMoveNextControl = true;
-            this.txtHotelFare.Location = new System.Drawing.Point(184, 417);
+            this.txtHotelFare.Location = new System.Drawing.Point(183, 417);
             this.txtHotelFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtHotelFare.Name = "txtHotelFare";
             this.txtHotelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -883,11 +883,9 @@
             // 
             // txtIncomeTaxFare
             // 
-            this.txtIncomeTaxFare.Location = new System.Drawing.Point(182, 212);
+            this.txtIncomeTaxFare.Location = new System.Drawing.Point(183, 212);
             this.txtIncomeTaxFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtIncomeTaxFare.Name = "txtIncomeTaxFare";
-            this.txtIncomeTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.OldLace;
-            this.txtIncomeTaxFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtIncomeTaxFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtIncomeTaxFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtIncomeTaxFare.Properties.DisplayFormat.FormatString = "c";
@@ -903,7 +901,7 @@
             // txtTravelFare
             // 
             this.txtTravelFare.EnterMoveNextControl = true;
-            this.txtTravelFare.Location = new System.Drawing.Point(184, 381);
+            this.txtTravelFare.Location = new System.Drawing.Point(183, 381);
             this.txtTravelFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtTravelFare.Name = "txtTravelFare";
             this.txtTravelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -968,8 +966,6 @@
             this.txtStampTaxFare.Location = new System.Drawing.Point(183, 246);
             this.txtStampTaxFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtStampTaxFare.Name = "txtStampTaxFare";
-            this.txtStampTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.OldLace;
-            this.txtStampTaxFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtStampTaxFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtStampTaxFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtStampTaxFare.Properties.DisplayFormat.FormatString = "c";
@@ -985,7 +981,7 @@
             // txtFoodFare
             // 
             this.txtFoodFare.EnterMoveNextControl = true;
-            this.txtFoodFare.Location = new System.Drawing.Point(182, 348);
+            this.txtFoodFare.Location = new System.Drawing.Point(183, 348);
             this.txtFoodFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtFoodFare.Name = "txtFoodFare";
             this.txtFoodFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1035,7 +1031,7 @@
             this.rbAsgariUcret.BackColor = System.Drawing.Color.Transparent;
             this.rbAsgariUcret.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbAsgariUcret.ForeColor = System.Drawing.Color.Maroon;
-            this.rbAsgariUcret.Location = new System.Drawing.Point(248, 76);
+            this.rbAsgariUcret.Location = new System.Drawing.Point(267, 76);
             this.rbAsgariUcret.Margin = new System.Windows.Forms.Padding(4);
             this.rbAsgariUcret.Name = "rbAsgariUcret";
             this.rbAsgariUcret.Size = new System.Drawing.Size(145, 23);
@@ -1063,7 +1059,7 @@
             this.rbNormal.Checked = true;
             this.rbNormal.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbNormal.ForeColor = System.Drawing.Color.Maroon;
-            this.rbNormal.Location = new System.Drawing.Point(158, 76);
+            this.rbNormal.Location = new System.Drawing.Point(165, 76);
             this.rbNormal.Margin = new System.Windows.Forms.Padding(4);
             this.rbNormal.Name = "rbNormal";
             this.rbNormal.Size = new System.Drawing.Size(93, 23);

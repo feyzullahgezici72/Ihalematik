@@ -68,6 +68,7 @@
             this.txtUnvan.Properties.Appearance.Options.UseForeColor = true;
             this.txtUnvan.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtUnvan.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtUnvan.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUnvan.Size = new System.Drawing.Size(504, 26);
             this.txtUnvan.TabIndex = 0;
             // 
