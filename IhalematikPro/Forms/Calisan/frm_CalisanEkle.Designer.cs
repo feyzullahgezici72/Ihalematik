@@ -41,7 +41,7 @@
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.btnGuncelle = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -53,7 +53,7 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdTenderGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTenderGroup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -124,7 +124,7 @@
             this.grdTenderGroup.Margin = new System.Windows.Forms.Padding(4);
             this.grdTenderGroup.Name = "grdTenderGroup";
             this.grdTenderGroup.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btnSil});
+            this.btnGuncelle});
             this.grdTenderGroup.Size = new System.Drawing.Size(604, 373);
             this.grdTenderGroup.TabIndex = 98;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -279,7 +279,7 @@
             this.gridColumn6.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn6.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn6.ColumnEdit = this.btnSil;
+            this.gridColumn6.ColumnEdit = this.btnGuncelle;
             this.gridColumn6.ImageAlignment = System.Drawing.StringAlignment.Center;
             this.gridColumn6.MaxWidth = 30;
             this.gridColumn6.MinWidth = 30;
@@ -290,14 +290,15 @@
             this.gridColumn6.VisibleIndex = 1;
             this.gridColumn6.Width = 30;
             // 
-            // btnSil
+            // btnGuncelle
             // 
-            this.btnSil.AutoHeight = false;
-            this.btnSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
-            this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnSil.Name = "btnSil";
-            this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnGuncelle.AutoHeight = false;
+            this.btnGuncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnGuncelle.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.btnGuncelle.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnGuncelle.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnGuncelle_ButtonClick);
             // 
             // btnSave
             // 
@@ -400,7 +401,7 @@
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdTenderGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTenderGroup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
@@ -428,6 +429,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnSil;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnGuncelle;
     }
 }

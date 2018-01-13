@@ -14,6 +14,7 @@ using IhalematikPro.Model;
 using IhalematikProUI.Forms.Base;
 using IhalematikProUI.Forms;
 using System.Threading;
+using IhalematikProUI.Forms.Arac;
 
 namespace IhalematikPro.Forms
 {
@@ -80,6 +81,14 @@ namespace IhalematikPro.Forms
         private void timer1_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            this.Hide();
+            frm_CarGuncelle cg = new frm_CarGuncelle();
+            cg.ShowDialog();
+            this.Show();
         }
     }
 }

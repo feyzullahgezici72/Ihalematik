@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Forms.Tedarikci;
 
 namespace IhalematikProUI.Forms
 {
@@ -60,6 +61,14 @@ namespace IhalematikProUI.Forms
                 dxErrorProvider1.ClearErrors();
             }
             return false;
+        }
+
+        private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            this.Hide();
+            frm_activityGuncelle ag = new frm_activityGuncelle();
+            ag.ShowDialog();
+            this.Show();
         }
     }
 }

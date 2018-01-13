@@ -12,6 +12,7 @@ using IhalematikPro.Model;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms;
+using IhalematikProUI.Forms.Calisan;
 
 namespace IhalematikPro.Forms
 {
@@ -69,6 +70,14 @@ namespace IhalematikPro.Forms
                 dxErrorProvider1.ClearErrors();
             }
             return false;
+        }
+
+        private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            this.Hide();
+            frm_WorkerGuncelle wg = new frm_WorkerGuncelle();
+            wg.ShowDialog();
+            this.Show();
         }
     }
 }
