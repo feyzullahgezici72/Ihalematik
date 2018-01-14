@@ -71,7 +71,10 @@ namespace IhalematikProUI.Forms.Tedarikci
                 txtScore.Text = this.Supplier.Score;
                 if (this.Supplier.Segments != null)
                 {
-                    memoEditSegment.Lines = this.Supplier.Segments.Select(p => p.Name) as string[];
+                    foreach (var item in this.Supplier.Segments)
+                    {
+                        memoEditSupplierSegment.Text += item.Name + Environment.NewLine;
+                    }
                 }
                 Dictionary<string, object> parameters = new Dictionary<string, object>();
                 parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
