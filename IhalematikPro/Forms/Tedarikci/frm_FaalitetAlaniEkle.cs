@@ -65,10 +65,10 @@ namespace IhalematikProUI.Forms
 
         private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            this.Hide();
+           
             frm_activityGuncelle ag = new frm_activityGuncelle();
             ag.ShowDialog();
-            this.Show();
+        
         }
     }
 }
