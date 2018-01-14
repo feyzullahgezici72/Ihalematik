@@ -43,8 +43,9 @@ namespace IhalematikPro.Forms
             {
                 VehicleTitle model = new VehicleTitle();
                 model.Name = txtName.Text;
-                List<VehicleTitle> existingItems = VehicleTitleProvider.Instance.GetItems("Name", model.Name.Trim());
-                if (existingItems.Count == 0)
+                VehicleTitle existingItem = VehicleTitleProvider.Instance.GetItems("Name", model.Name.Trim()).FirstOrDefault();
+                //Vehicle vehicle = VehicleProvider.Instance.GetItems("TitleId", existingItem.Id).FirstOrDefault();
+                if (existingItem == null)
                 {
                     VehicleTitleProvider.Instance.Save(model);
                     frm_MesajFormu mf = new frm_MesajFormu();
@@ -56,6 +57,10 @@ namespace IhalematikPro.Forms
                 }
                 else
                 {
+                    //if (existingItem.)
+                    //{
+
+                    //}
                     MessageBox.Show("Bu arac zaten mevcut");
                     txtName.ResetText();
                     txtName.Focus();
@@ -64,7 +69,7 @@ namespace IhalematikPro.Forms
 
             }
         }
-         public bool IsEmptyKontrol()
+        public bool IsEmptyKontrol()
         {
             if (string.IsNullOrEmpty(txtName.Text.Trim()))
             {
