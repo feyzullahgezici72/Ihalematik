@@ -128,6 +128,12 @@ namespace IhalematikProUI.Forms.Tedarikci
             List<OfferMaterialListModel> datasourceMaterialList = gridViewMaterialList.DataSource as List<OfferMaterialListModel>;
             List<SupplierModel> dataSoruceSupplier = gridViewSupplier.DataSource as List<SupplierModel>;
 
+            if (dataSoruceSupplier == null)
+            {
+                MessageBox.Show(" Aktif yada tanımlı tedarikçi bulunamadı.");
+                return;
+            }
+
             if (datasourceMaterialList != null && dataSoruceSupplier != null)
             {
                 List<OfferMaterialListModel> seledtedMaterialLists = datasourceMaterialList.Where(p => p.IsSelected).ToList();

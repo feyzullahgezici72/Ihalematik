@@ -41,7 +41,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
             oBFModels = UIOBFManager.Instance.GetOBFs(obfNo, obfDescription);
 
-            grdOBFList.DataSource = oBFModels;
+            grdOBFList.DataSource = oBFModels.Where(p=> p.IsActive).ToList();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
