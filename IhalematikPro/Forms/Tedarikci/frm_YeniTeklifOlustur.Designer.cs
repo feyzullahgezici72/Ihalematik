@@ -58,7 +58,7 @@
             // txtAciklama
             // 
             this.dxErrorProvider1.SetIconAlignment(this.txtAciklama, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.txtAciklama.Location = new System.Drawing.Point(126, 94);
+            this.txtAciklama.Location = new System.Drawing.Point(124, 94);
             this.txtAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -74,7 +74,7 @@
             // txtTeklifNo
             // 
             this.txtTeklifNo.Enabled = false;
-            this.txtTeklifNo.Location = new System.Drawing.Point(126, 58);
+            this.txtTeklifNo.Location = new System.Drawing.Point(124, 58);
             this.txtTeklifNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTeklifNo.Name = "txtTeklifNo";
             this.txtTeklifNo.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));

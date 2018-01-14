@@ -1929,6 +1929,7 @@
             this.MinimizeBox = false;
             this.Name = "frm_TeklifAdimSon";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frm_TeklifAdimSon_Load);
             this.Shown += new System.EventHandler(this.frm_TeklifAdimSon_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

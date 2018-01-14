@@ -269,5 +269,10 @@ namespace IhalematikProUI.Forms
             }
             this.CalculateFooterInnerValues(null);
         }
+
+        private void frm_TeklifAdimSon_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

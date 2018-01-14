@@ -45,7 +45,6 @@ namespace IhalematikProUI.Forms.Tedarikci
             lblOfferDescription.Text = CurrentManager.Instance.CurrentOffer.Description;
             lblTenderNumber.Text = CurrentManager.Instance.CurrentOffer.Number;
             colChangeMetreialName.Visible = true;
-            colResetMeterialName.Visible = true;
             pnlx.Visible = true;
             pnlMalzemeListesi.Dock = DockStyle.Fill;
             pnlMalzemeListesi.Enabled = true;
@@ -173,7 +172,6 @@ namespace IhalematikProUI.Forms.Tedarikci
             colMaterialListQuantity.OptionsColumn.AllowFocus = true;
             colMaterialListQuantity.OptionsColumn.ReadOnly = false;
             colChangeMetreialName.Visible = true;
-            colResetMeterialName.Visible = true;
             this.LoadMaterialGrid();
         }
 
@@ -207,7 +205,6 @@ namespace IhalematikProUI.Forms.Tedarikci
             pnlMalzemeListesi.BringToFront();
             colIsSelectedSupplier.Visible = true;
             colChangeMetreialName.Visible = false;
-            colResetMeterialName.Visible = false;
             this.ShowMailPanel = false;
         }
 
@@ -235,7 +232,6 @@ namespace IhalematikProUI.Forms.Tedarikci
             colIsSelectedSupplier.Visible = false;
             colSupplierDetail.Visible = true;
             colChangeMetreialName.Visible = false;
-            colResetMeterialName.Visible = false;
             this.ShowMailPanel = true;
         }
 
