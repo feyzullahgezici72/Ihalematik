@@ -223,13 +223,15 @@ namespace IhalematikProUI.Forms
             //Toplam fiyat TotalFare
             foreach (MaterialListModel item in this.DataSource)
             {
-                double increaseOtherFare = Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 2);
+                double increaseOtherFare = 0; //Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 2);
                 if (ddlCalculateWorkerType.SelectedIndex == 1)
                 {
+                    increaseOtherFare = Math.Round(((increaseAmount * item.CustomTotalFare) / item.Quantity), 2);
                     item.OtherUnitTotalFare = Math.Round((item.CustomUnitTotalFare + increaseOtherFare), 2);
                 }
                 else
                 {
+                    increaseOtherFare = Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 2);
                     item.OtherUnitTotalFare = Math.Round((item.UnitTotalFare + increaseOtherFare), 2);
                 }
             }
@@ -240,6 +242,8 @@ namespace IhalematikProUI.Forms
             colOtherTotalFare.Visible = true;
             colTotalFare.Visible = false;
             colUnitTotalFare.Visible = false;
+            colCustomTotalFare.Visible = false;
+            colCustomUnitTotalFare.Visible = false;
 
             lblTotalMarkupNonKDV.Text = Math.Round((this.TotalMarkupNonKDV + this.OtherTotalAmount), 2).ToString("c2");
         }
@@ -265,7 +269,6 @@ namespace IhalematikProUI.Forms
                 colTotalFare.VisibleIndex = 5;
                 colUnitTotalFare.Visible = true;
                 colTotalFare.Visible = true;
-
                 colCustomUnitTotalFare.Visible = false;
                 colCustomTotalFare.Visible = false;
             }
@@ -275,13 +278,11 @@ namespace IhalematikProUI.Forms
                 colCustomTotalFare.VisibleIndex = 5;
                 colUnitTotalFare.Visible = false;
                 colTotalFare.Visible = false;
-
                 colCustomUnitTotalFare.Visible = true;
                 colCustomTotalFare.Visible = true;
-
-
-
             }
+            colOtherTotalFare.Visible = false;
+            colOtherUnitTotalFare.Visible = false;
             this.CalculateFooterInnerValues(null);
         }
 
