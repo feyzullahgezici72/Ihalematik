@@ -126,7 +126,7 @@
             this.btnGuncelle.Appearance.Options.UseFont = true;
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.Location = new System.Drawing.Point(309, 436);
+            this.btnGuncelle.Location = new System.Drawing.Point(291, 436);
             this.btnGuncelle.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnGuncelle.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
@@ -692,7 +692,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(456, 35);
+            this.panelControl2.Size = new System.Drawing.Size(445, 35);
             this.panelControl2.TabIndex = 95;
             // 
             // btnKapat
@@ -702,7 +702,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(428, 0);
+            this.btnKapat.Location = new System.Drawing.Point(417, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -735,7 +735,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(456, 545);
+            this.ClientSize = new System.Drawing.Size(445, 545);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl2);
