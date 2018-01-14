@@ -71,42 +71,60 @@ namespace IhalematikProUI.Forms.Tedarikci
             if (this.CurrentSupplier.Segments != null)
             {
                 string selectedSuppliersSegments = string.Join(";", this.CurrentSupplier.Segments.Select(p => p.Id));
-                checkedComboboxEditSupplierSegments.SetEditValue(selectedSuppliersSegments); 
+                checkedComboboxEditSupplierSegments.SetEditValue(selectedSuppliersSegments);
             }
         }
-
+        public bool IsEmptyKontrol()
+        {
+            object items = checkedComboboxEditSupplierSegments.Properties.GetCheckedItems();
+          if (string.IsNullOrEmpty((string)items))
+            {
+                dxErrorProvider1.SetError(checkedComboboxEditSupplierSegments, "En az bir Faaliyet alanı seçilmelidir ", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
+                return true;
+            }
+            else
+            {
+                dxErrorProvider1.ClearErrors();
+            }
+            return false;
+        }
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            this.CurrentSupplier.Address = txtAddress.Text;
-            this.CurrentSupplier.AuthorNameSurname = txtAuthorNameSurname.Text;
-            this.CurrentSupplier.CompanyName = txtCompanyName.Text;
-            this.CurrentSupplier.Country = txtCountry.Text;
-            this.CurrentSupplier.Email = txtEmail.Text;
-            this.CurrentSupplier.GSM = txtGSM.Text;
-            this.CurrentSupplier.IsActive = true;
-            this.CurrentSupplier.Score = txtScore.Text;
-            this.CurrentSupplier.Telephone = txtScore.Text;
-
-            object items = checkedComboboxEditSupplierSegments.Properties.GetCheckedItems();
-            string[] selectedSegments = items.ToString().Split(';');
-            if (selectedSegments != null && selectedSegments.Count() != 0)
+            object items1 = checkedComboboxEditSupplierSegments.Properties.GetCheckedItems();
+            if (!string.IsNullOrEmpty((string)items1))
             {
-                this.CurrentSupplier.Segments = new List<SupplierSegment>();
-                foreach (var item in selectedSegments)
+                IsEmptyKontrol();
+                this.CurrentSupplier.Address = txtAddress.Text;
+                this.CurrentSupplier.AuthorNameSurname = txtAuthorNameSurname.Text;
+                this.CurrentSupplier.CompanyName = txtCompanyName.Text;
+                this.CurrentSupplier.Country = txtCountry.Text;
+                this.CurrentSupplier.Email = txtEmail.Text;
+                this.CurrentSupplier.GSM = txtGSM.Text;
+                this.CurrentSupplier.IsActive = true;
+                this.CurrentSupplier.Score = txtScore.Text;
+                this.CurrentSupplier.Telephone = txtTelephone.Text;
+
+                object items = checkedComboboxEditSupplierSegments.Properties.GetCheckedItems();
+                string[] selectedSegments = items.ToString().Split(';');
+                if (selectedSegments != null && selectedSegments.Count() != 0)
                 {
-                    this.CurrentSupplier.Segments.Add(new SupplierSegment() { Id = int.Parse(item) });
+                    this.CurrentSupplier.Segments = new List<SupplierSegment>();
+                    foreach (var item in selectedSegments)
+                    {
+                        this.CurrentSupplier.Segments.Add(new SupplierSegment() { Id = int.Parse(item) });
+                    }
                 }
-            }
 
-            OperationResult result = SupplierProvider.Instance.Save(this.CurrentSupplier);
+                OperationResult result = SupplierProvider.Instance.Save(this.CurrentSupplier);
 
-            if (result.Success)
-            {
-                this._owner.LoadGrid();
-                frm_MesajFormu mf = new frm_MesajFormu();
-                mf.lblMesaj.Text = "Güncelleme Yapıldı...";
-                mf.ShowDialog();
-                this.Close();
+                if (result.Success)
+                {
+                    this._owner.LoadGrid();
+                    frm_MesajFormu mf = new frm_MesajFormu();
+                    mf.lblMesaj.Text = "Güncelleme Yapıldı...";
+                    mf.ShowDialog();
+                    this.Close();
+                }
             }
         }
     }
