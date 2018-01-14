@@ -88,7 +88,13 @@ namespace IhalematikPro.Forms
             this.Hide();
             frm_CarGuncelle cg = new frm_CarGuncelle();
             cg.ShowDialog();
-            this.Show();
+            //this.Show();
+        }
+
+        private void frm_AracEkle_Shown(object sender, EventArgs e)
+        {
+            List<VehicleTitle> vehicleTitles = VehicleTitleProvider.Instance.GetItems();
+            grdVehicleTitle.DataSource = vehicleTitles;
         }
     }
 }
