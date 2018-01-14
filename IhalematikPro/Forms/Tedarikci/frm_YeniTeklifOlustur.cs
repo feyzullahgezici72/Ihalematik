@@ -41,12 +41,7 @@ namespace IhalematikProUI.Forms
         {
             IsEmptyKontrol();
             this.Enabled = false;
-            UserLookAndFeel u = new UserLookAndFeel(this);
-            u.UseDefaultLookAndFeel = false;
-            u.UseWindowsXPTheme = false;
-            u.Style = LookAndFeelStyle.Skin;
-            u.SkinName = "McSkin";
-            DialogResult resultMsg = XtraMessageBox.Show(u,"    Yeni Teklif oluşturulsun mu?              ", "Oluştur ",  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultMsg = MessageBox.Show("Yeni Teklif oluşturulsun mu?              ", "Teklif Oluştur ",  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultMsg.Equals(DialogResult.Yes))
             {
                 Offer offer = new Offer();

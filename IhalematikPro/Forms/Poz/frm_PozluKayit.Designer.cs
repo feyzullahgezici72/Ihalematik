@@ -393,6 +393,9 @@
             this.colOfferPrice});
             this.gridView1.GridControl = this.grdPozList;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsMenu.EnableColumnMenu = false;
+            this.gridView1.OptionsMenu.EnableFooterMenu = false;
+            this.gridView1.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridView1.OptionsSelection.CheckBoxSelectorColumnWidth = 30;
             this.gridView1.OptionsSelection.MultiSelect = true;
             this.gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
@@ -659,6 +662,9 @@
             this.colAddedPozOfferPrice});
             this.gridView2.GridControl = this.grdAddedPoz;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsMenu.EnableColumnMenu = false;
+            this.gridView2.OptionsMenu.EnableFooterMenu = false;
+            this.gridView2.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridView2.OptionsSelection.CheckBoxSelectorColumnWidth = 30;
             this.gridView2.OptionsSelection.MultiSelect = true;
             this.gridView2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
@@ -797,10 +803,10 @@
             this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Top;
             this.simpleButton3.Image = global::IhalematikProUI.Properties.Resources.ok_icon__1_;
             this.simpleButton3.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton3.Location = new System.Drawing.Point(4, 84);
+            this.simpleButton3.Location = new System.Drawing.Point(3, 83);
             this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(112, 80);
+            this.simpleButton3.Size = new System.Drawing.Size(114, 80);
             this.simpleButton3.TabIndex = 1;
             this.simpleButton3.Text = "Tamam";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
@@ -812,10 +818,10 @@
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Top;
             this.simpleButton2.Image = global::IhalematikProUI.Properties.Resources.Actions_trash_empty_icon__1_;
             this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(4, 4);
+            this.simpleButton2.Location = new System.Drawing.Point(3, 3);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(112, 80);
+            this.simpleButton2.Size = new System.Drawing.Size(114, 80);
             this.simpleButton2.TabIndex = 0;
             this.simpleButton2.Text = "Çıkar";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);

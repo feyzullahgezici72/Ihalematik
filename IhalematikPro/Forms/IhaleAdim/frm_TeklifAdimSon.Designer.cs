@@ -750,6 +750,9 @@
             this.grdMaterialList2.GridControl = this.grdMaterialList;
             this.grdMaterialList2.Name = "grdMaterialList2";
             this.grdMaterialList2.OptionsDetail.AllowExpandEmptyDetails = true;
+            this.grdMaterialList2.OptionsMenu.EnableColumnMenu = false;
+            this.grdMaterialList2.OptionsMenu.EnableFooterMenu = false;
+            this.grdMaterialList2.OptionsMenu.EnableGroupPanelMenu = false;
             this.grdMaterialList2.OptionsNavigation.AutoFocusNewRow = true;
             this.grdMaterialList2.OptionsNavigation.EnterMoveNextColumn = true;
             this.grdMaterialList2.OptionsSelection.CheckBoxSelectorColumnWidth = 60;
@@ -1929,6 +1932,7 @@
             this.MinimizeBox = false;
             this.Name = "frm_TeklifAdimSon";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frm_TeklifAdimSon_Load);
             this.Shown += new System.EventHandler(this.frm_TeklifAdimSon_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

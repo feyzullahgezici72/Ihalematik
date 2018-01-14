@@ -325,6 +325,9 @@
             this.gridViewMaterialList.GridControl = this.grdMaterialList;
             this.gridViewMaterialList.Name = "gridViewMaterialList";
             this.gridViewMaterialList.OptionsDetail.AllowExpandEmptyDetails = true;
+            this.gridViewMaterialList.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewMaterialList.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewMaterialList.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewMaterialList.OptionsNavigation.AutoFocusNewRow = true;
             this.gridViewMaterialList.OptionsNavigation.EnterMoveNextColumn = true;
             this.gridViewMaterialList.OptionsSelection.CheckBoxSelectorColumnWidth = 60;
@@ -372,13 +375,15 @@
             this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.Caption = "BİRİM FİYAT";
             this.gridColumn4.FieldName = "Price";
+            this.gridColumn4.MaxWidth = 100;
+            this.gridColumn4.MinWidth = 100;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 1;
-            this.gridColumn4.Width = 149;
+            this.gridColumn4.Width = 100;
             // 
             // rpstIsSelectedOfferMaterial
             // 

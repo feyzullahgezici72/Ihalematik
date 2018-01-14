@@ -180,6 +180,9 @@
             this.gridColumn1});
             this.gridViewRules.GridControl = this.grdRules;
             this.gridViewRules.Name = "gridViewRules";
+            this.gridViewRules.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewRules.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewRules.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewRules.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewRules.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewRules.OptionsView.ShowGroupPanel = false;

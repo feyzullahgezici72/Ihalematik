@@ -110,7 +110,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                         }
                         else if (result.ValidationResults.FirstOrDefault().PropertyName == "GmailLessSecureApps")
                         {
-                            MessageBox.Show("Lutfen firma bilgileri bolumunden Gmail kullanici adi(email) ve sifrenizi kontrol ediniz veya /https://myaccount.google.com/lesssecureapps/ mail gonderilebilmesi icin izin verdiginizden emin olun");
+                            MessageBox.Show("Lutfen firma bilgileri bolumunden email kullanici adi(email) ve sifrenizi kontrol ediniz veya /https://myaccount.google.com/lesssecureapps/ mail gonderilebilmesi icin izin verdiginizden emin olun");
                         }
                     }
 
@@ -272,6 +272,11 @@ namespace IhalematikProUI.Forms.Tedarikci
             }
 
             return result;
+        }
+
+        private void frm_TedarikciyeAktarilanMalzemeDetay_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

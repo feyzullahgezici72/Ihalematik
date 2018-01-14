@@ -316,6 +316,9 @@
             this.gridColumn12});
             this.gridViewMaterialListNonWorkship.GridControl = this.grdMaterialListNonWorkship;
             this.gridViewMaterialListNonWorkship.Name = "gridViewMaterialListNonWorkship";
+            this.gridViewMaterialListNonWorkship.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewMaterialListNonWorkship.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewMaterialListNonWorkship.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewMaterialListNonWorkship.OptionsNavigation.AutoFocusNewRow = true;
             this.gridViewMaterialListNonWorkship.OptionsNavigation.EnterMoveNextColumn = true;
             this.gridViewMaterialListNonWorkship.OptionsView.EnableAppearanceEvenRow = true;
@@ -875,6 +878,9 @@
             this.gridColumn9});
             this.gridViewTenderGroup.GridControl = this.grdTenderGroup;
             this.gridViewTenderGroup.Name = "gridViewTenderGroup";
+            this.gridViewTenderGroup.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewTenderGroup.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewTenderGroup.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewTenderGroup.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewTenderGroup.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewTenderGroup.OptionsView.ShowGroupPanel = false;
