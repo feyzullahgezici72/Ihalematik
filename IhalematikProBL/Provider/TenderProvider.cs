@@ -28,6 +28,12 @@ namespace IhalematikProBL.Provider
             parameters.Add("Management", t.Management);
             parameters.Add("OfferId", t.OfferId);
             parameters.Add("NearlyTotalAmount", t.NearlyTotalAmount);
+
+            parameters.Add("Carriage", t.Carriage);
+            parameters.Add("AccountingCosts", t.AccountingCosts);
+            parameters.Add("CompletionBond", t.CompletionBond);
+            parameters.Add("ProvisionalBond", t.ProvisionalBond);
+
             return parameters;
         }
 
@@ -47,6 +53,11 @@ namespace IhalematikProBL.Provider
             t.Management = dr.GetValue<string>("Management");
             t.OfferId = dr.GetValue<int>("OfferId");
             t.NearlyTotalAmount = dr.GetValue<double>("NearlyTotalAmount");
+            t.Carriage = dr.GetValue<double>("Carriage");
+            t.AccountingCosts = dr.GetValue<double>("AccountingCosts");
+            t.CompletionBond = dr.GetValue<bool>("CompletionBond");
+            t.ProvisionalBond = dr.GetValue<bool>("ProvisionalBond");
+
         }
     }
 }

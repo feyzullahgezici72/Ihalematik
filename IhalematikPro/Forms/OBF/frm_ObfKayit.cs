@@ -260,7 +260,7 @@ namespace IhalematikPro.Forms
 
             }
             grdOBFList.DataSource = null;
-            grdOBFList.DataSource = oBFModels.Where(p => p.IsActive);
+            grdOBFList.DataSource = oBFModels;
         }
 
         private void txtNumber_KeyPress(object sender, KeyPressEventArgs e)

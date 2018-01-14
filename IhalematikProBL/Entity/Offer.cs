@@ -17,6 +17,8 @@ namespace IhalematikProBL.Entity
 
         public DateTime DateTime { get; set; }
 
+        public bool IsCompleated { get; set; }
+
         private List<OfferMaterialList> materialList { get; set; }
         public List<OfferMaterialList> MaterialList
         {

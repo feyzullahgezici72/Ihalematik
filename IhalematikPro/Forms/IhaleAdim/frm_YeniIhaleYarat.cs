@@ -89,7 +89,7 @@ namespace IhalematikPro.Forms
 
         private void frm_YeniIhaleYarat_Shown(object sender, EventArgs e)
         {
-           // dateStart.DateTime = null;
+            // dateStart.DateTime = null;
 
             LastOfferDate.DateTime = DateTime.Now;
             this.LoadGridOffer();
@@ -100,7 +100,7 @@ namespace IhalematikPro.Forms
         {
             List<Offer> offers = OfferProvider.Instance.GetItems();
             //offers.Where(p=> p.)
-            grdOffer.DataSource = offers;
+            grdOffer.DataSource = offers.Where(p => p.IsCompleated).ToList();
         }
 
         private void gridViewOffer_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -120,7 +120,7 @@ namespace IhalematikPro.Forms
             {
                 gridViewOffer.SetRowCellValue(i, colIsSelected, false);
             }
-            
+
             if (isSelected)
             {
                 gridViewOffer.SetFocusedRowCellValue(colIsSelected, false);
@@ -131,12 +131,12 @@ namespace IhalematikPro.Forms
                 gridViewOffer.SetFocusedRowCellValue(colIsSelected, true);
                 this.SelectedOfferId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOffer.GetFocusedRowCellValue("Id"));
             }
-            
+
         }
 
         private void simpleButton1_Click_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtOfferNumber_EditValueChanged(object sender, EventArgs e)

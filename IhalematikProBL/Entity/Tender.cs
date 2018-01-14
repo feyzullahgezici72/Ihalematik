@@ -116,5 +116,10 @@ namespace IhalematikProBL.Entity
                 return this.offer;
             }
         }
+
+        public double Carriage { get; set; }
+        public double AccountingCosts { get; set; }
+        public bool CompletionBond { get; set; }
+        public bool ProvisionalBond { get; set; }
     }
 }

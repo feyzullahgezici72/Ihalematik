@@ -70,7 +70,7 @@ namespace IhalematikProUI.Forms
                     markupMaterialAmount += item.UnitMarkup * item.Quantity; ;
                     markupWorkerAmount += item.WorkerUnitPrice * item.Quantity * (item.Markup / 100);
                     TotalMarkupNonKDV += item.TotalFare;
-                } 
+                }
             }
             else
             {
@@ -139,6 +139,8 @@ namespace IhalematikProUI.Forms
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
+            TenderProvider.Instance.Save(CurrentManager.Instance.CurrentTender);
+            
             frm_MesajFormu mf = new frm_MesajFormu();
             mf.lblMesaj.Text = "İhale Kaydedildi...";
             mf.ShowDialog();
@@ -146,6 +148,12 @@ namespace IhalematikProUI.Forms
 
         private void frm_TeklifAdimSon_Shown(object sender, EventArgs e)
         {
+            Tender currentTender = CurrentManager.Instance.CurrentTender;
+            txtCarriage.Text = currentTender.Carriage.ToString("c");
+            txtAccountingCosts.Text = currentTender.AccountingCosts.ToString("c");
+            chckCompletionBond.Checked = currentTender.CompletionBond;
+            chckProvisionalBond.Checked = currentTender.ProvisionalBond;
+
             lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
@@ -160,6 +168,7 @@ namespace IhalematikProUI.Forms
 
             colUnitTotalFare.Visible = true;
             colTotalFare.Visible = true;
+
         }
 
         private void CalculateLeftPanelValues()
@@ -187,10 +196,16 @@ namespace IhalematikProUI.Forms
 
         private void btnTumuneUygula_Click(object sender, EventArgs e)
         {
+            Tender currentTender = CurrentManager.Instance.CurrentTender;
             IhalematikProBL.Entity.Rule provisionalBond = RuleProvider.Instance.GetItems("Code", "ProvisionalBond").FirstOrDefault();
             IhalematikProBL.Entity.Rule completionBond = RuleProvider.Instance.GetItems("Code", "CompletionBond").FirstOrDefault();
             double carriage = double.Parse(string.IsNullOrEmpty(txtCarriage.Text) ? "0" : txtCarriage.Text.Replace("TL", string.Empty));
             double accountingCosts = double.Parse(string.IsNullOrEmpty(txtAccountingCosts.Text) ? "0" : txtAccountingCosts.Text.Replace("TL", string.Empty));
+
+            currentTender.Carriage = carriage;
+            currentTender.AccountingCosts = accountingCosts;
+            currentTender.CompletionBond = chckCompletionBond.Checked;
+            currentTender.ProvisionalBond = chckProvisionalBond.Checked;
 
             if (!chckCompletionBond.Checked)
             {

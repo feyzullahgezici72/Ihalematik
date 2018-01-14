@@ -17,7 +17,15 @@ namespace IhalematikProBL.Provider
             parameters.Add("Description", t.Description);
             parameters.Add("Number", t.Number);
             parameters.Add("IsActive", t.IsActive);
-            parameters.Add("DateTime", t.DateTime);
+            if (t.DateTime == DateTime.MinValue)
+            {
+                parameters.Add("DateTime", DateTime.Now.AddDays(200));
+            }
+            else
+            {
+                parameters.Add("DateTime", t.DateTime);
+            }
+            parameters.Add("IsCompleated", t.IsCompleated);
             return parameters;
         }
 
@@ -28,6 +36,7 @@ namespace IhalematikProBL.Provider
             t.Number = dr.GetValue<string>("Number");
             t.DateTime = dr.GetValue<DateTime>("DateTime");
             t.IsActive = dr.GetValue<bool>("IsActive");
+            t.IsCompleated = dr.GetValue<bool>("IsCompleated");
         }
     }
 }

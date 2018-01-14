@@ -66,13 +66,16 @@ namespace IhalematikProUI.Forms
             {
                 foreach (var item in supplierMaterialList)
                 {
-                    OfferMaterialListModel model = new OfferMaterialListModel(item.MaterialList);
-                    model.Price = item.Price;
-                    model.KDV = item.KDV;
-                    model.Risk = item.Risk;
-                    model.SupplierMaterialList = item;
-                    model.SupplierMaterialListId = item.Id;
-                    models.Add(model);
+                    if (item.Price != 0)
+                    {
+                        OfferMaterialListModel model = new OfferMaterialListModel(item.MaterialList);
+                        model.Price = item.Price;
+                        model.KDV = item.KDV;
+                        model.Risk = item.Risk;
+                        model.SupplierMaterialList = item;
+                        model.SupplierMaterialListId = item.Id;
+                        models.Add(model);
+                    }
                 }
             }
             grdMaterialList.DataSource = models;
@@ -100,14 +103,17 @@ namespace IhalematikProUI.Forms
                     {
                         supplierMaterialList = item.First();
                     }
-                    OfferMaterialListModel model = new OfferMaterialListModel(supplierMaterialList.MaterialList);
-                    model.KDV = supplierMaterialList.KDV;
-                    model.Price = supplierMaterialList.Price;
-                    model.SupplierName = supplierMaterialList.Supplier.CompanyName;
-                    model.SupplierMaterialList = supplierMaterialList;
-                    model.SupplierMaterialListId = supplierMaterialList.Id;
-                    model.Risk = supplierMaterialList.Risk;
-                    dataSoruce.Add(model);
+                    if (supplierMaterialList.Price != 0)
+                    {
+                        OfferMaterialListModel model = new OfferMaterialListModel(supplierMaterialList.MaterialList);
+                        model.KDV = supplierMaterialList.KDV;
+                        model.Price = supplierMaterialList.Price;
+                        model.SupplierName = supplierMaterialList.Supplier.CompanyName;
+                        model.SupplierMaterialList = supplierMaterialList;
+                        model.SupplierMaterialListId = supplierMaterialList.Id;
+                        model.Risk = supplierMaterialList.Risk;
+                        dataSoruce.Add(model); 
+                    }
                 }
             }
             else if (rdSortPrice.SelectedIndex == 1)
@@ -193,6 +199,8 @@ namespace IhalematikProUI.Forms
                 mesajform.lblMesaj.Text = "Teklif Kaydedildi...";
                 mesajform.ShowDialog();
 
+                CurrentManager.Instance.CurrentOffer.IsCompleated = true;
+                OfferProvider.Instance.Save(CurrentManager.Instance.CurrentOffer);
             }
         }
 
@@ -242,7 +250,7 @@ namespace IhalematikProUI.Forms
 
         private void txtRisk_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13)
             {
                 btnTumuneUygula.PerformClick();
             }

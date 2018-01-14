@@ -33,7 +33,8 @@ namespace IhalematikPro.Forms
 
             if (cmbAktivePasive.SelectedIndex == 0)
             {
-                grdOBFList.DataSource = items.Where(p => p.IsActive);
+                items = items.Where(p => p.IsActive).ToList();
+                grdOBFList.DataSource = items;
                 colPasive.Visible = true;
                 colEdit.Visible = true;
                 colActive.Visible = false;
@@ -41,11 +42,13 @@ namespace IhalematikPro.Forms
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
-                grdOBFList.DataSource = items.Where(p => !p.IsActive);
+                items = items.Where(p => !p.IsActive).ToList();
+                grdOBFList.DataSource = items;
                 colEdit.Visible = false;
                 colPasive.Visible = false;
                 colActive.Visible = true;
             }
+            lblRecordCount.Text = items.Count.ToString();
             //if (this.FocusedRowHandle != 0)
             //{
             //    gridViewOBFList.FocusedRowHandle = this.FocusedRowHandle;

@@ -138,21 +138,21 @@ namespace IhalematikProUI.Forms
 
             if (cmbAktivePasive.SelectedIndex == 0)
             {
-                grdSupplier.DataSource = suppliers.Where(p => p.IsActive);
+                suppliers = suppliers.Where(p => p.IsActive).ToList();
+                grdSupplier.DataSource = suppliers;
                 colPasive.Visible = true;
                 colEdit.Visible = true;
                 colActive.Visible = false;
-
-
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
-                grdSupplier.DataSource = suppliers.Where(p => !p.IsActive);
+                suppliers = suppliers.Where(p => !p.IsActive).ToList();
+                grdSupplier.DataSource = suppliers;
                 colEdit.Visible = false;
                 colActive.Visible = true;
                 colPasive.Visible = false;
             }
-
+            lblRecordCount.Text = suppliers.Count.ToString();
             //if (this.FocusedRowHandle != 0)
             //{
             //    gridViewSupplier.FocusedRowHandle = this.FocusedRowHandle;
@@ -217,7 +217,7 @@ namespace IhalematikProUI.Forms
 
             string[] selectedSegments = items.ToString().Split(';');
 
-            if (selectedSegments== null || selectedSegments.Count() == 0)
+            if (selectedSegments == null || selectedSegments.Count() == 0)
             {
                 dxErrorProvider1.SetError(checkedComboboxEditSupplierSegments, "Faaliyet alanı boş bırakılamaz", DevExpress.XtraEditors.DXErrorProvider.ErrorType.User3);
                 return true;
@@ -242,7 +242,7 @@ namespace IhalematikProUI.Forms
 
         private void btnTemizle_Click(object sender, EventArgs e)
         {
-           // ddlSegments.SelectedIndex = -1;
+            // ddlSegments.SelectedIndex = -1;
             txtCompanyName.ResetText();
             txtAuthorNameSurname.ResetText();
             txtCountry.ResetText();
