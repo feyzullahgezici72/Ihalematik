@@ -42,8 +42,11 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
             grdMaterialList.TabIndex = 0; //samet
             grdSupplier.TabIndex = 0;//samet
-            lblOfferDescription.Text = CurrentManager.Instance.CurrentOffer.Description;
-            lblTenderNumber.Text = CurrentManager.Instance.CurrentOffer.Number;
+            if (CurrentManager.Instance.CurrentOffer != null)
+            {
+                lblOfferDescription.Text = CurrentManager.Instance.CurrentOffer.Description;
+                lblTenderNumber.Text = CurrentManager.Instance.CurrentOffer.Number;
+            }
             colChangeMetreialName.Visible = true;
             colResetMeterialName.Visible = true;
             pnlx.Visible = true;
@@ -59,6 +62,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         public void LoadSupplierGrid()
         {
             List<Supplier> suppliers = SupplierProvider.Instance.GetItems();
+            suppliers = suppliers.Where(p => p.IsActive).ToList();
             List<SupplierModel> models = IhalematikModelBase.GetModels<SupplierModel, Supplier>(suppliers);
             grdSupplier.DataSource = models;
         }
@@ -76,8 +80,11 @@ namespace IhalematikProUI.Forms.Tedarikci
             if (Items == null)
             {
                 colIsSelectedOfferMaterial.Visible = false;
-                List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(CurrentManager.Instance.CurrentOffer.MaterialList.ToList());
-                grdMaterialList.DataSource = models;
+                if (CurrentManager.Instance.CurrentOffer != null)
+                {
+                    List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(CurrentManager.Instance.CurrentOffer.MaterialList.ToList());
+                    grdMaterialList.DataSource = models;
+                }
             }
             else
             {
@@ -179,6 +186,10 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnTedaikcileregonder_Click(object sender, EventArgs e)
         {
+            if (CurrentManager.Instance.CurrentOffer == null)
+            {
+                return;
+            }
             int quantityZeroCount = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Quantity == 0).Count();
 
             if (quantityZeroCount > 0)
