@@ -242,11 +242,11 @@
             this.btnPozKayit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnPozKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnPozKayit.Image")));
             this.btnPozKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnPozKayit.Location = new System.Drawing.Point(1038, 4);
+            this.btnPozKayit.Location = new System.Drawing.Point(1039, 3);
             this.btnPozKayit.Margin = new System.Windows.Forms.Padding(6);
             this.btnPozKayit.Name = "btnPozKayit";
             this.btnPozKayit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnPozKayit.Size = new System.Drawing.Size(160, 62);
+            this.btnPozKayit.Size = new System.Drawing.Size(160, 64);
             this.btnPozKayit.TabIndex = 5;
             this.btnPozKayit.Text = "F1 : Poz Seç";
             this.btnPozKayit.Click += new System.EventHandler(this.simpleButton3_Click);
@@ -260,10 +260,10 @@
             this.btnObfKayit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnObfKayit.Location = new System.Drawing.Point(1198, 4);
+            this.btnObfKayit.Location = new System.Drawing.Point(1199, 3);
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(6);
             this.btnObfKayit.Name = "btnObfKayit";
-            this.btnObfKayit.Size = new System.Drawing.Size(160, 62);
+            this.btnObfKayit.Size = new System.Drawing.Size(160, 64);
             this.btnObfKayit.TabIndex = 5;
             this.btnObfKayit.Text = "F2 : ÖBF Seç";
             this.btnObfKayit.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -284,7 +284,7 @@
             gridLevelNode1.RelationName = "Level1";
             this.grdTenderGroup.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.grdTenderGroup.Location = new System.Drawing.Point(4, 4);
+            this.grdTenderGroup.Location = new System.Drawing.Point(3, 3);
             this.grdTenderGroup.MainView = this.gridViewTenderGroup;
             this.grdTenderGroup.Margin = new System.Windows.Forms.Padding(4);
             this.grdTenderGroup.Name = "grdTenderGroup";
@@ -293,7 +293,7 @@
             this.btnSil,
             this.rpstColId,
             this.rpstSelected});
-            this.grdTenderGroup.Size = new System.Drawing.Size(378, 651);
+            this.grdTenderGroup.Size = new System.Drawing.Size(380, 653);
             this.grdTenderGroup.TabIndex = 0;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup,
@@ -409,6 +409,9 @@
             this.gridColumn10});
             this.gridViewTenderGroup.GridControl = this.grdTenderGroup;
             this.gridViewTenderGroup.Name = "gridViewTenderGroup";
+            this.gridViewTenderGroup.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewTenderGroup.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewTenderGroup.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewTenderGroup.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewTenderGroup.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewTenderGroup.OptionsView.ShowGroupPanel = false;
@@ -701,6 +704,9 @@
             this.gridViewMaterialList.GridControl = this.grdMaterialList;
             this.gridViewMaterialList.Name = "gridViewMaterialList";
             this.gridViewMaterialList.OptionsDetail.AllowExpandEmptyDetails = true;
+            this.gridViewMaterialList.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewMaterialList.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewMaterialList.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewMaterialList.OptionsNavigation.AutoFocusNewRow = true;
             this.gridViewMaterialList.OptionsNavigation.EnterMoveNextColumn = true;
             this.gridViewMaterialList.OptionsSelection.CheckBoxSelectorColumnWidth = 60;

@@ -690,6 +690,9 @@
             this.gridViewMaterialList.GridControl = this.grdMaterialList;
             this.gridViewMaterialList.Name = "gridViewMaterialList";
             this.gridViewMaterialList.OptionsDetail.AllowExpandEmptyDetails = true;
+            this.gridViewMaterialList.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewMaterialList.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewMaterialList.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewMaterialList.OptionsNavigation.AutoFocusNewRow = true;
             this.gridViewMaterialList.OptionsNavigation.EnterMoveNextColumn = true;
             this.gridViewMaterialList.OptionsSelection.CheckBoxSelectorColumnWidth = 60;
@@ -1065,6 +1068,9 @@
             this.colSupplierDetail});
             this.gridViewSupplier.GridControl = this.grdSupplier;
             this.gridViewSupplier.Name = "gridViewSupplier";
+            this.gridViewSupplier.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewSupplier.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewSupplier.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewSupplier.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewSupplier.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewSupplier.OptionsView.ShowDetailButtons = false;

@@ -241,6 +241,9 @@
             this.gridColumn6});
             this.gridViewTenderGroup.GridControl = this.grdTenderGroup;
             this.gridViewTenderGroup.Name = "gridViewTenderGroup";
+            this.gridViewTenderGroup.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewTenderGroup.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewTenderGroup.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewTenderGroup.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewTenderGroup.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewTenderGroup.OptionsView.ShowGroupPanel = false;

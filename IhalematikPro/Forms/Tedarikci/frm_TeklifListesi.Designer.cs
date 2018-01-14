@@ -280,6 +280,9 @@
             this.colPasive});
             this.gridViewOffer.GridControl = this.grdOffer;
             this.gridViewOffer.Name = "gridViewOffer";
+            this.gridViewOffer.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewOffer.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewOffer.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewOffer.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewOffer.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewOffer.OptionsView.ShowDetailButtons = false;

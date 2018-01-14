@@ -311,6 +311,9 @@
             this.gridViewMaterialList.GridControl = this.grdMaterialList;
             this.gridViewMaterialList.Name = "gridViewMaterialList";
             this.gridViewMaterialList.OptionsDetail.AllowExpandEmptyDetails = true;
+            this.gridViewMaterialList.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewMaterialList.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewMaterialList.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewMaterialList.OptionsNavigation.AutoFocusNewRow = true;
             this.gridViewMaterialList.OptionsNavigation.EnterMoveNextColumn = true;
             this.gridViewMaterialList.OptionsSelection.CheckBoxSelectorColumnWidth = 60;

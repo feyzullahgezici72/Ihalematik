@@ -615,6 +615,9 @@
             this.gridViewOffer.OptionsFind.HighlightFindResults = false;
             this.gridViewOffer.OptionsFind.ShowCloseButton = false;
             this.gridViewOffer.OptionsFind.ShowFindButton = false;
+            this.gridViewOffer.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewOffer.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewOffer.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewOffer.OptionsMenu.ShowAutoFilterRowItem = false;
             this.gridViewOffer.OptionsMenu.ShowSplitItem = false;
             this.gridViewOffer.OptionsView.EnableAppearanceEvenRow = true;

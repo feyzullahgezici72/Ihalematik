@@ -235,6 +235,9 @@
             this.gridViewAddedOfferMaterialList.GridControl = this.grdAddedOfferMaterialList;
             this.gridViewAddedOfferMaterialList.Name = "gridViewAddedOfferMaterialList";
             this.gridViewAddedOfferMaterialList.OptionsDetail.AllowExpandEmptyDetails = true;
+            this.gridViewAddedOfferMaterialList.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewAddedOfferMaterialList.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewAddedOfferMaterialList.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewAddedOfferMaterialList.OptionsNavigation.AutoFocusNewRow = true;
             this.gridViewAddedOfferMaterialList.OptionsNavigation.EnterMoveNextColumn = true;
             this.gridViewAddedOfferMaterialList.OptionsSelection.CheckBoxSelectorColumnWidth = 60;

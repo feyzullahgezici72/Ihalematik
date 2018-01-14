@@ -408,6 +408,9 @@
             this.gridViewMaterialList.GridControl = this.grdMaterialList;
             this.gridViewMaterialList.Name = "gridViewMaterialList";
             this.gridViewMaterialList.OptionsDetail.AllowExpandEmptyDetails = true;
+            this.gridViewMaterialList.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewMaterialList.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewMaterialList.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewMaterialList.OptionsNavigation.AutoFocusNewRow = true;
             this.gridViewMaterialList.OptionsNavigation.EnterMoveNextColumn = true;
             this.gridViewMaterialList.OptionsSelection.CheckBoxSelectorColumnWidth = 60;
@@ -614,22 +617,22 @@
             // 
             this.panelControl7.Controls.Add(this.grdSupplier);
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl7.Location = new System.Drawing.Point(4, 4);
+            this.panelControl7.Location = new System.Drawing.Point(3, 3);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(378, 445);
+            this.panelControl7.Size = new System.Drawing.Size(380, 447);
             this.panelControl7.TabIndex = 23;
             // 
             // grdSupplier
             // 
             this.grdSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdSupplier.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdSupplier.Location = new System.Drawing.Point(4, 4);
+            this.grdSupplier.Location = new System.Drawing.Point(3, 3);
             this.grdSupplier.MainView = this.gridViewSupplier;
             this.grdSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.grdSupplier.Name = "grdSupplier";
             this.grdSupplier.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstIsSelectedSupplier});
-            this.grdSupplier.Size = new System.Drawing.Size(370, 437);
+            this.grdSupplier.Size = new System.Drawing.Size(374, 441);
             this.grdSupplier.TabIndex = 0;
             this.grdSupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSupplier});
@@ -744,6 +747,9 @@
             this.colCompanyName});
             this.gridViewSupplier.GridControl = this.grdSupplier;
             this.gridViewSupplier.Name = "gridViewSupplier";
+            this.gridViewSupplier.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewSupplier.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewSupplier.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewSupplier.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewSupplier.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewSupplier.OptionsView.ShowDetailButtons = false;
@@ -785,15 +791,15 @@
             // 
             this.panelControl8.Controls.Add(this.rdSortPrice);
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl8.Location = new System.Drawing.Point(4, 449);
+            this.panelControl8.Location = new System.Drawing.Point(3, 450);
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(378, 99);
+            this.panelControl8.Size = new System.Drawing.Size(380, 99);
             this.panelControl8.TabIndex = 23;
             // 
             // rdSortPrice
             // 
             this.rdSortPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rdSortPrice.Location = new System.Drawing.Point(4, 4);
+            this.rdSortPrice.Location = new System.Drawing.Point(3, 3);
             this.rdSortPrice.Name = "rdSortPrice";
             this.rdSortPrice.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rdSortPrice.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
@@ -805,7 +811,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Ortalama fiyata göre")});
             this.rdSortPrice.Properties.LookAndFeel.SkinName = "McSkin";
             this.rdSortPrice.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.rdSortPrice.Size = new System.Drawing.Size(370, 91);
+            this.rdSortPrice.Size = new System.Drawing.Size(374, 93);
             this.rdSortPrice.TabIndex = 23;
             this.rdSortPrice.SelectedIndexChanged += new System.EventHandler(this.rdSortPrice_SelectedIndexChanged);
             // 
@@ -813,9 +819,9 @@
             // 
             this.panelControl5.Controls.Add(this.simpleButton1);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl5.Location = new System.Drawing.Point(4, 548);
+            this.panelControl5.Location = new System.Drawing.Point(3, 549);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(378, 99);
+            this.panelControl5.Size = new System.Drawing.Size(380, 99);
             this.panelControl5.TabIndex = 12;
             // 
             // simpleButton1

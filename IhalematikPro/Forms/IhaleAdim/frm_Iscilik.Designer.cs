@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Iscilik));
             this.isciAracGirisPanelix = new DevExpress.XtraEditors.PanelControl();
             this.grdAddVehicle = new DevExpress.XtraGrid.GridControl();
@@ -251,6 +251,9 @@
             this.colAddVehicleWorkerUnitPrice});
             this.gridViewAddVehicle.GridControl = this.grdAddVehicle;
             this.gridViewAddVehicle.Name = "gridViewAddVehicle";
+            this.gridViewAddVehicle.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewAddVehicle.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewAddVehicle.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewAddVehicle.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewAddVehicle.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewAddVehicle.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
@@ -272,7 +275,7 @@
             // 
             this.btnAracCikar.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnAracCikar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnAracCikar.Name = "btnAracCikar";
             this.btnAracCikar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnAracCikar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnAracCikar_ButtonClick);
@@ -553,6 +556,9 @@
             this.gridViewAddWorker.OptionsFind.ShowClearButton = false;
             this.gridViewAddWorker.OptionsFind.ShowCloseButton = false;
             this.gridViewAddWorker.OptionsFind.ShowFindButton = false;
+            this.gridViewAddWorker.OptionsMenu.EnableColumnMenu = false;
+            this.gridViewAddWorker.OptionsMenu.EnableFooterMenu = false;
+            this.gridViewAddWorker.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewAddWorker.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewAddWorker.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewAddWorker.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
@@ -573,7 +579,7 @@
             // btnIsciCikar
             // 
             this.btnIsciCikar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnIsciCikar.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnIsciCikar.Name = "btnIsciCikar";
             this.btnIsciCikar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
