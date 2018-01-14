@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikciGuncelleme));
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
@@ -52,6 +53,7 @@
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.txtAddress = new DevExpress.XtraEditors.MemoEdit();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -65,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTelephone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -148,6 +151,7 @@
             // 
             // checkedComboboxEditSupplierSegments
             // 
+            this.dxErrorProvider1.SetIconAlignment(this.checkedComboboxEditSupplierSegments, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.checkedComboboxEditSupplierSegments.Location = new System.Drawing.Point(150, 42);
             this.checkedComboboxEditSupplierSegments.Margin = new System.Windows.Forms.Padding(4);
             this.checkedComboboxEditSupplierSegments.Name = "checkedComboboxEditSupplierSegments";
@@ -415,6 +419,10 @@
             this.txtAddress.Size = new System.Drawing.Size(370, 108);
             this.txtAddress.TabIndex = 8;
             // 
+            // dxErrorProvider1
+            // 
+            this.dxErrorProvider1.ContainerControl = this;
+            // 
             // frm_TedarikciGuncelleme
             // 
             this.AcceptButton = this.btnGuncelle;
@@ -449,6 +457,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTelephone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -478,5 +487,6 @@
         private DevExpress.XtraEditors.MemoEdit txtAddress;
         private DevExpress.XtraEditors.SimpleButton btnGuncelle;
         private DevExpress.XtraEditors.CheckedComboBoxEdit checkedComboboxEditSupplierSegments;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
     }
 }
