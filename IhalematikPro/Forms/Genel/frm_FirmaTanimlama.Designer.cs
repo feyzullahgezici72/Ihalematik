@@ -187,6 +187,8 @@
             this.txtGSM.Properties.Appearance.Options.UseBackColor = true;
             this.txtGSM.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtGSM.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtGSM.Properties.Mask.EditMask = "999 000 00 00";
+            this.txtGSM.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.txtGSM.Size = new System.Drawing.Size(224, 26);
             this.txtGSM.TabIndex = 3;
             // 
@@ -209,6 +211,8 @@
             this.txtFax.Properties.Appearance.Options.UseBackColor = true;
             this.txtFax.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtFax.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtFax.Properties.Mask.EditMask = "999 000 00 00";
+            this.txtFax.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.txtFax.Size = new System.Drawing.Size(224, 26);
             this.txtFax.TabIndex = 2;
             // 
@@ -253,6 +257,8 @@
             this.txtTelephone2.Properties.Appearance.Options.UseBackColor = true;
             this.txtTelephone2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtTelephone2.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTelephone2.Properties.Mask.EditMask = "999 000 00 00";
+            this.txtTelephone2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.txtTelephone2.Size = new System.Drawing.Size(224, 26);
             this.txtTelephone2.TabIndex = 1;
             // 
@@ -293,6 +299,8 @@
             this.txtTelephone1.Properties.Appearance.Options.UseBackColor = true;
             this.txtTelephone1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtTelephone1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTelephone1.Properties.Mask.EditMask = "999 000 00 00";
+            this.txtTelephone1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.txtTelephone1.Size = new System.Drawing.Size(224, 26);
             this.txtTelephone1.TabIndex = 0;
             // 

@@ -777,6 +777,8 @@
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn3.Caption = "BİRİMİ";
             this.gridColumn3.FieldName = "PozOBFUnit";
+            this.gridColumn3.MaxWidth = 50;
+            this.gridColumn3.MinWidth = 50;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
@@ -785,7 +787,7 @@
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 60;
+            this.gridColumn3.Width = 50;
             // 
             // colKDV
             // 
