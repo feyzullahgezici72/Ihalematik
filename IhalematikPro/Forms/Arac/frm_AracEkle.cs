@@ -21,7 +21,7 @@ namespace IhalematikPro.Forms
     public partial class frm_AracEkle : IhalematikBaseForm
     {
         frm_AracTanimlama _owner = null;
-
+        public int FocusedRowHandle = 0;
         public frm_AracEkle(frm_AracTanimlama Owner)
         {
             InitializeComponent();
@@ -90,13 +90,20 @@ namespace IhalematikPro.Forms
 
         private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-        
-            frm_CarGuncelle cg = new frm_CarGuncelle();
-            cg.ShowDialog();
+            int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewVehicleTitle.GetFocusedRowCellValue("Id"));
+            frm_CarGuncelle wg = new frm_CarGuncelle(this);
+            this.FocusedRowHandle = gridViewVehicleTitle.FocusedRowHandle;
+            wg.CurrentVehicleTitleId = id;
+            wg.ShowDialog();
             //this.Show();
         }
 
         private void frm_AracEkle_Shown(object sender, EventArgs e)
+        {
+            this.LoadGrid();
+        }
+
+        public void LoadGrid()
         {
             List<VehicleTitle> vehicleTitles = VehicleTitleProvider.Instance.GetItems();
             grdVehicleTitle.DataSource = vehicleTitles;

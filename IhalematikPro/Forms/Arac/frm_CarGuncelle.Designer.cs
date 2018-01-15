@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CarGuncelle));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtName = new DevExpress.XtraEditors.TextEdit();
+            this.txtVehicleTitleName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.txtVehicleTitleName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -54,30 +54,28 @@
             // 
             this.timer1.Interval = 10;
             // 
-            // txtName
+            // txtVehicleTitleName
             // 
-            this.dxErrorProvider1.SetIconAlignment(this.txtName, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.txtName.Location = new System.Drawing.Point(93, 56);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtName.Name = "txtName";
-            this.txtName.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtName.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtName.Properties.Appearance.Options.UseBackColor = true;
-            this.txtName.Properties.Appearance.Options.UseFont = true;
-            this.txtName.Properties.Appearance.Options.UseForeColor = true;
-            this.txtName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtName.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtName.Size = new System.Drawing.Size(480, 26);
-            this.txtName.TabIndex = 0;
+            this.dxErrorProvider1.SetIconAlignment(this.txtVehicleTitleName, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.txtVehicleTitleName.Location = new System.Drawing.Point(62, 38);
+            this.txtVehicleTitleName.Name = "txtVehicleTitleName";
+            this.txtVehicleTitleName.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtVehicleTitleName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtVehicleTitleName.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtVehicleTitleName.Properties.Appearance.Options.UseBackColor = true;
+            this.txtVehicleTitleName.Properties.Appearance.Options.UseFont = true;
+            this.txtVehicleTitleName.Properties.Appearance.Options.UseForeColor = true;
+            this.txtVehicleTitleName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtVehicleTitleName.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtVehicleTitleName.Size = new System.Drawing.Size(320, 20);
+            this.txtVehicleTitleName.TabIndex = 0;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Location = new System.Drawing.Point(15, 58);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Location = new System.Drawing.Point(10, 40);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(67, 19);
+            this.labelControl2.Size = new System.Drawing.Size(44, 13);
             this.labelControl2.TabIndex = 97;
             this.labelControl2.Text = "Araç Adı:";
             // 
@@ -90,15 +88,27 @@
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl2.Controls.Add(this.btnGuncelle);
-            this.groupControl2.Controls.Add(this.txtName);
+            this.groupControl2.Controls.Add(this.txtVehicleTitleName);
             this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(0, 35);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupControl2.Location = new System.Drawing.Point(0, 24);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(607, 169);
+            this.groupControl2.Size = new System.Drawing.Size(405, 116);
             this.groupControl2.TabIndex = 38;
             this.groupControl2.Text = "Araç Bilgileri";
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuncelle.Appearance.Options.UseFont = true;
+            this.btnGuncelle.Image = ((System.Drawing.Image)(resources.GetObject("btnGuncelle.Image")));
+            this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnGuncelle.Location = new System.Drawing.Point(319, 69);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(77, 36);
+            this.btnGuncelle.TabIndex = 93;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // panelControl1
             // 
@@ -110,9 +120,8 @@
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(607, 35);
+            this.panelControl1.Size = new System.Drawing.Size(405, 24);
             this.panelControl1.TabIndex = 37;
             // 
             // panelControl2
@@ -124,9 +133,8 @@
             this.panelControl2.Controls.Add(this.btnKapat);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(607, 35);
+            this.panelControl2.Size = new System.Drawing.Size(405, 24);
             this.panelControl2.TabIndex = 2;
             // 
             // labelControl1
@@ -137,31 +145,13 @@
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(4, 1);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Location = new System.Drawing.Point(3, 1);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(192, 35);
+            this.labelControl1.Size = new System.Drawing.Size(130, 23);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "ARAÇ GÜNCELLE";
             this.labelControl1.UseMnemonic = false;
-            // 
-            // dxErrorProvider1
-            // 
-            this.dxErrorProvider1.ContainerControl = this;
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuncelle.Appearance.Options.UseFont = true;
-            this.btnGuncelle.Image = ((System.Drawing.Image)(resources.GetObject("btnGuncelle.Image")));
-            this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnGuncelle.Location = new System.Drawing.Point(478, 101);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(115, 52);
-            this.btnGuncelle.TabIndex = 93;
-            this.btnGuncelle.Text = "Güncelle";
             // 
             // btnKapat
             // 
@@ -170,27 +160,32 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(579, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Location = new System.Drawing.Point(379, 0);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(28, 35);
+            this.btnKapat.Size = new System.Drawing.Size(26, 24);
             this.btnKapat.TabIndex = 1;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
-            // frm_Guncelle
+            // dxErrorProvider1
+            // 
+            this.dxErrorProvider1.ContainerControl = this;
+            // 
+            // frm_CarGuncelle
             // 
             this.AcceptButton = this.btnGuncelle;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(607, 204);
+            this.ClientSize = new System.Drawing.Size(405, 140);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frm_Guncelle";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "frm_CarGuncelle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            this.Shown += new System.EventHandler(this.frm_CarGuncelle_Shown);
+            ((System.ComponentModel.ISupportInitialize)(this.txtVehicleTitleName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
@@ -207,7 +202,7 @@
         #endregion
 
         private System.Windows.Forms.Timer timer1;
-        private DevExpress.XtraEditors.TextEdit txtName;
+        private DevExpress.XtraEditors.TextEdit txtVehicleTitleName;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.SimpleButton btnGuncelle;
