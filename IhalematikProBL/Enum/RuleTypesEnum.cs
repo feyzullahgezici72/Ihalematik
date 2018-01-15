@@ -14,6 +14,8 @@ namespace IhalematikProBL.Enum
         IncomeTaxFare,
         StampTaxFare,
         ProvisionalBond,
-        CompletionBond
+        CompletionBond,
+        HourPerDayValue,
+        DayPerMonthValue
     }
 }
