@@ -31,6 +31,7 @@ namespace IhalematikPro.Forms
         {
             this.Close();
             this._owner.LoadGrid();
+            this._owner.LoadWorkerTitles();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace IhalematikPro.Forms
                     mf.lblMesaj.Text = "Çalışan Ünvanı Kaydedildi...";
                     mf.ShowDialog();
                     this._owner.SelectedTitleId = model.Id;
-                    this._owner.InitilalizeForm();
+                    this._owner.LoadWorkerTitles();
                     this.Close();
                 }
                 else

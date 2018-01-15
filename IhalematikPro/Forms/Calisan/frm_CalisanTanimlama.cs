@@ -84,6 +84,11 @@ namespace IhalematikPro.Forms
         }
         public void InitilalizeForm()
         {
+            this.LoadWorkerTitles();
+        }
+
+        public void LoadWorkerTitles()
+        {
             ddlTitles.Properties.Items.Clear();
             List<TitleModel> models = UITitleManager.Instance.GetTitles();
             ddlTitles.Properties.Items.AddRange(models);

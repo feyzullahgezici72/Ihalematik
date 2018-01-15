@@ -88,6 +88,7 @@ namespace IhalematikProUI.Forms
         {
             this.Close();
             this._owner.LoadGrid();
+            this._owner.LoadSupplierSegments();
         }
     }
 }
