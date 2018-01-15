@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_FaalitetAlaniEkle));
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.txtUnvan = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.grdTenderGroup = new DevExpress.XtraGrid.GridControl();
+            this.grdSupplierSegment = new DevExpress.XtraGrid.GridControl();
             this.gridViewTenderGroup = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,11 +46,11 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnvan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdTenderGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSupplierSegment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTenderGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -69,8 +68,7 @@
             // 
             this.txtUnvan.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtUnvan, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.txtUnvan.Location = new System.Drawing.Point(123, 50);
-            this.txtUnvan.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUnvan.Location = new System.Drawing.Point(82, 34);
             this.txtUnvan.Name = "txtUnvan";
             this.txtUnvan.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUnvan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -80,17 +78,16 @@
             this.txtUnvan.Properties.Appearance.Options.UseForeColor = true;
             this.txtUnvan.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtUnvan.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtUnvan.Size = new System.Drawing.Size(516, 26);
+            this.txtUnvan.Size = new System.Drawing.Size(344, 20);
             this.txtUnvan.TabIndex = 0;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(15, 54);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Location = new System.Drawing.Point(10, 37);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(100, 19);
+            this.labelControl2.Size = new System.Drawing.Size(68, 13);
             this.labelControl2.TabIndex = 97;
             this.labelControl2.Text = "Faaliyet Alanı:";
             // 
@@ -102,33 +99,30 @@
             this.groupControl2.AppearanceCaption.ForeColor = System.Drawing.Color.Navy;
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl2.Controls.Add(this.grdTenderGroup);
+            this.groupControl2.Controls.Add(this.grdSupplierSegment);
             this.groupControl2.Controls.Add(this.btnSave);
             this.groupControl2.Controls.Add(this.txtUnvan);
             this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(0, 35);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupControl2.Location = new System.Drawing.Point(0, 24);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(674, 550);
+            this.groupControl2.Size = new System.Drawing.Size(449, 376);
             this.groupControl2.TabIndex = 36;
             this.groupControl2.Text = "Faaliyet Bilgileri";
             // 
-            // grdTenderGroup
+            // grdSupplierSegment
             // 
-            this.grdTenderGroup.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             gridLevelNode1.RelationName = "Level1";
-            this.grdTenderGroup.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            this.grdSupplierSegment.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.grdTenderGroup.Location = new System.Drawing.Point(6, 153);
-            this.grdTenderGroup.MainView = this.gridViewTenderGroup;
-            this.grdTenderGroup.Margin = new System.Windows.Forms.Padding(4);
-            this.grdTenderGroup.Name = "grdTenderGroup";
-            this.grdTenderGroup.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.grdSupplierSegment.Location = new System.Drawing.Point(4, 105);
+            this.grdSupplierSegment.MainView = this.gridViewTenderGroup;
+            this.grdSupplierSegment.Name = "grdSupplierSegment";
+            this.grdSupplierSegment.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGuncelle});
-            this.grdTenderGroup.Size = new System.Drawing.Size(668, 390);
-            this.grdTenderGroup.TabIndex = 99;
-            this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdSupplierSegment.Size = new System.Drawing.Size(445, 267);
+            this.grdSupplierSegment.TabIndex = 99;
+            this.grdSupplierSegment.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup});
             // 
             // gridViewTenderGroup
@@ -239,7 +233,7 @@
             this.colId,
             this.gridColumn2,
             this.gridColumn6});
-            this.gridViewTenderGroup.GridControl = this.grdTenderGroup;
+            this.gridViewTenderGroup.GridControl = this.grdSupplierSegment;
             this.gridViewTenderGroup.Name = "gridViewTenderGroup";
             this.gridViewTenderGroup.OptionsMenu.EnableColumnMenu = false;
             this.gridViewTenderGroup.OptionsMenu.EnableFooterMenu = false;
@@ -264,7 +258,7 @@
             this.gridColumn2.AppearanceHeader.Options.UseBorderColor = true;
             this.gridColumn2.AppearanceHeader.Options.UseFont = true;
             this.gridColumn2.Caption = "FAALİYET ALANI";
-            this.gridColumn2.FieldName = "Description";
+            this.gridColumn2.FieldName = "Name";
             this.gridColumn2.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.Value;
             this.gridColumn2.MinWidth = 80;
             this.gridColumn2.Name = "gridColumn2";
@@ -312,10 +306,9 @@
             this.btnSave.Appearance.Options.UseForeColor = true;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnSave.Location = new System.Drawing.Point(511, 84);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Location = new System.Drawing.Point(341, 57);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(128, 61);
+            this.btnSave.Size = new System.Drawing.Size(85, 42);
             this.btnSave.TabIndex = 93;
             this.btnSave.Text = "Kaydet";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -327,10 +320,9 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(646, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Location = new System.Drawing.Point(423, 0);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(28, 35);
+            this.btnKapat.Size = new System.Drawing.Size(26, 24);
             this.btnKapat.TabIndex = 1;
             // 
             // panelControl1
@@ -343,9 +335,8 @@
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(674, 35);
+            this.panelControl1.Size = new System.Drawing.Size(449, 24);
             this.panelControl1.TabIndex = 35;
             // 
             // panelControl2
@@ -357,9 +348,8 @@
             this.panelControl2.Controls.Add(this.btnKapat);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(674, 35);
+            this.panelControl2.Size = new System.Drawing.Size(449, 24);
             this.panelControl2.TabIndex = 2;
             // 
             // labelControl1
@@ -370,11 +360,10 @@
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(6, 0);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Location = new System.Drawing.Point(4, 0);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(247, 35);
+            this.labelControl1.Size = new System.Drawing.Size(168, 23);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "FAALİYET ALANI EKLE";
             this.labelControl1.UseMnemonic = false;
@@ -386,27 +375,27 @@
             // frm_FaalitetAlaniEkle
             // 
             this.AcceptButton = this.btnSave;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(674, 585);
+            this.ClientSize = new System.Drawing.Size(449, 400);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_FaalitetAlaniEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.Shown += new System.EventHandler(this.frm_FaalitetAlaniEkle_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.txtUnvan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdTenderGroup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSupplierSegment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTenderGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuncelle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -431,7 +420,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
-        private DevExpress.XtraGrid.GridControl grdTenderGroup;
+        private DevExpress.XtraGrid.GridControl grdSupplierSegment;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewTenderGroup;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;

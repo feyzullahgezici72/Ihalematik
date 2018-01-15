@@ -32,7 +32,7 @@ namespace IhalematikPro.Forms
         {
             this.Close();
             frm_AracTanimlama frm = new frm_AracTanimlama();
-            frm.Refresh();
+            this._owner.LoadGrid(); ;
         }
 
         private void btnSave_Click(object sender, EventArgs e)

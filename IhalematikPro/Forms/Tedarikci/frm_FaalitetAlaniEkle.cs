@@ -70,5 +70,11 @@ namespace IhalematikProUI.Forms
             ag.ShowDialog();
         
         }
+
+        private void frm_FaalitetAlaniEkle_Shown(object sender, EventArgs e)
+        {
+            List<SupplierSegment> supplierSegments = SupplierSegmentProvider.Instance.GetItems();
+            grdSupplierSegment.DataSource = supplierSegments;
+        }
     }
 }

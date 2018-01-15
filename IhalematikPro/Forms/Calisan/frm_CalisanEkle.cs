@@ -18,6 +18,7 @@ namespace IhalematikPro.Forms
 {
     public partial class frm_CalisanEkle : DevExpress.XtraEditors.XtraForm
     {
+        public int FocusedRowHandle = 0;
 
         frm_CalisanTanimlama _owner = null;
         public frm_CalisanEkle(frm_CalisanTanimlama Owner)
@@ -29,6 +30,7 @@ namespace IhalematikPro.Forms
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
+            this._owner.LoadGrid();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -74,10 +76,23 @@ namespace IhalematikPro.Forms
 
         private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            
-            frm_WorkerGuncelle wg = new frm_WorkerGuncelle();
+            int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewWorkerTitle.GetFocusedRowCellValue("Id"));
+            frm_WorkerGuncelle wg = new frm_WorkerGuncelle(this);
+            this.FocusedRowHandle = gridViewWorkerTitle.FocusedRowHandle;
+            wg.CurrentWorkerTitleId = id;
+
             wg.ShowDialog();
-         
+        }
+
+        private void frm_CalisanEkle_Shown(object sender, EventArgs e)
+        {
+            this.LoadGrid();
+        }
+
+        public void LoadGrid()
+        {
+            List<Title> workerTitles = TitleProvider.Instance.GetItems();
+            grdWorkerTitle.DataSource = workerTitles;
         }
     }
 }
