@@ -17,7 +17,7 @@ namespace IhalematikProUI.Forms
     public partial class frm_FaalitetAlaniEkle : DevExpress.XtraEditors.XtraForm
     {
         frm_TedarikciTanimlama _owner = null;
-
+        public int FocusedRowHandle = 0;
         public frm_FaalitetAlaniEkle(frm_TedarikciTanimlama Owner)
         {
             this._owner = Owner;
@@ -65,16 +65,29 @@ namespace IhalematikProUI.Forms
 
         private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-           
-            frm_activityGuncelle ag = new frm_activityGuncelle();
+            int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplierSegment.GetFocusedRowCellValue("Id"));
+            frm_activityGuncelle ag = new frm_activityGuncelle(this);
+            this.FocusedRowHandle = gridViewSupplierSegment.FocusedRowHandle;
+            ag.CurrentSupplierSegmentId = id;
             ag.ShowDialog();
-        
+
         }
 
         private void frm_FaalitetAlaniEkle_Shown(object sender, EventArgs e)
         {
+            this.LoadGrid();
+        }
+
+        public void LoadGrid()
+        {
             List<SupplierSegment> supplierSegments = SupplierSegmentProvider.Instance.GetItems();
             grdSupplierSegment.DataSource = supplierSegments;
+        }
+
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this._owner.LoadGrid();
         }
     }
 }

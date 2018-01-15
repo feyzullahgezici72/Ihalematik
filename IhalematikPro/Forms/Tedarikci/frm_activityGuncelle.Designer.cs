@@ -33,21 +33,21 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtSupplierSegment = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.txtUnvan = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSupplierSegment.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUnvan.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -58,11 +58,10 @@
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(4, 1);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Location = new System.Drawing.Point(3, 1);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(313, 35);
+            this.labelControl1.Size = new System.Drawing.Size(213, 23);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "FAALİYET ALANI GÜNCELLE";
             this.labelControl1.UseMnemonic = false;
@@ -79,16 +78,42 @@
             this.groupControl2.AppearanceCaption.ForeColor = System.Drawing.Color.Navy;
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl2.Controls.Add(this.txtUnvan);
+            this.groupControl2.Controls.Add(this.txtSupplierSegment);
             this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Controls.Add(this.btnGuncelle);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(0, 35);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupControl2.Location = new System.Drawing.Point(0, 24);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(657, 162);
+            this.groupControl2.Size = new System.Drawing.Size(438, 111);
             this.groupControl2.TabIndex = 40;
             this.groupControl2.Text = "Faaliyet Bilgileri";
+            // 
+            // txtSupplierSegment
+            // 
+            this.txtSupplierSegment.EnterMoveNextControl = true;
+            this.dxErrorProvider1.SetIconAlignment(this.txtSupplierSegment, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.txtSupplierSegment.Location = new System.Drawing.Point(76, 34);
+            this.txtSupplierSegment.Name = "txtSupplierSegment";
+            this.txtSupplierSegment.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtSupplierSegment.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSupplierSegment.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtSupplierSegment.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSupplierSegment.Properties.Appearance.Options.UseFont = true;
+            this.txtSupplierSegment.Properties.Appearance.Options.UseForeColor = true;
+            this.txtSupplierSegment.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtSupplierSegment.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtSupplierSegment.Size = new System.Drawing.Size(344, 20);
+            this.txtSupplierSegment.TabIndex = 98;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl2.Location = new System.Drawing.Point(4, 36);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(68, 13);
+            this.labelControl2.TabIndex = 99;
+            this.labelControl2.Text = "Faaliyet Alanı:";
             // 
             // btnGuncelle
             // 
@@ -96,12 +121,12 @@
             this.btnGuncelle.Appearance.Options.UseFont = true;
             this.btnGuncelle.Image = ((System.Drawing.Image)(resources.GetObject("btnGuncelle.Image")));
             this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnGuncelle.Location = new System.Drawing.Point(515, 93);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuncelle.Location = new System.Drawing.Point(343, 64);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(115, 52);
+            this.btnGuncelle.Size = new System.Drawing.Size(77, 36);
             this.btnGuncelle.TabIndex = 93;
             this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // panelControl1
             // 
@@ -113,9 +138,8 @@
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(657, 35);
+            this.panelControl1.Size = new System.Drawing.Size(438, 24);
             this.panelControl1.TabIndex = 39;
             // 
             // panelControl2
@@ -127,9 +151,8 @@
             this.panelControl2.Controls.Add(this.btnKapat);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(657, 35);
+            this.panelControl2.Size = new System.Drawing.Size(438, 24);
             this.panelControl2.TabIndex = 2;
             // 
             // btnKapat
@@ -139,10 +162,9 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(629, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Location = new System.Drawing.Point(412, 0);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(28, 35);
+            this.btnKapat.Size = new System.Drawing.Size(26, 24);
             this.btnKapat.TabIndex = 1;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
@@ -150,58 +172,31 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
-            // txtUnvan
-            // 
-            this.txtUnvan.EnterMoveNextControl = true;
-            this.dxErrorProvider1.SetIconAlignment(this.txtUnvan, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.txtUnvan.Location = new System.Drawing.Point(114, 49);
-            this.txtUnvan.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUnvan.Name = "txtUnvan";
-            this.txtUnvan.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtUnvan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUnvan.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtUnvan.Properties.Appearance.Options.UseBackColor = true;
-            this.txtUnvan.Properties.Appearance.Options.UseFont = true;
-            this.txtUnvan.Properties.Appearance.Options.UseForeColor = true;
-            this.txtUnvan.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtUnvan.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtUnvan.Size = new System.Drawing.Size(516, 26);
-            this.txtUnvan.TabIndex = 98;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(6, 53);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(100, 19);
-            this.labelControl2.TabIndex = 99;
-            this.labelControl2.Text = "Faaliyet Alanı:";
-            // 
             // frm_activityGuncelle
             // 
             this.AcceptButton = this.btnGuncelle;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(657, 197);
+            this.ClientSize = new System.Drawing.Size(438, 135);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_activityGuncelle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Shown += new System.EventHandler(this.frm_activityGuncelle_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSupplierSegment.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUnvan.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -216,7 +211,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
-        private DevExpress.XtraEditors.TextEdit txtUnvan;
+        private DevExpress.XtraEditors.TextEdit txtSupplierSegment;
         private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }
