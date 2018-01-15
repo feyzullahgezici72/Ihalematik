@@ -380,26 +380,28 @@ namespace IhalematikPro.Forms
         private void cmbAdamSaat_Click(object sender, EventArgs e)
         {
             clmEquipments.Visible = true;
+            colWorkerUnitPrice.VisibleIndex = 6;
+            colWorkerTotalAmount.VisibleIndex = 7;
+            colWorkerMarkupUnitPrice.VisibleIndex = 8;
             colCustomWorkerUnitPrice.Visible = false;
             colCustomWorkerTotalAmount.Visible = false;
             colCustomWorkerMarkupUnitPrice.Visible = false;
-
             colWorkerUnitPrice.Visible = true;
             colWorkerTotalAmount.Visible = true;
             colWorkerMarkupUnitPrice.Visible = true;
+           
 
         }
 
         private void cmbBirimFiyat_Click(object sender, EventArgs e)
         {
+            colCustomWorkerUnitPrice.VisibleIndex = 6;
+            colCustomWorkerTotalAmount.VisibleIndex = 7;
+            colCustomWorkerMarkupUnitPrice.VisibleIndex = 8;
             clmEquipments.Visible = false;
             colCustomWorkerUnitPrice.Visible = true;
-            colCustomWorkerUnitPrice.VisibleIndex = 6;
             colCustomWorkerTotalAmount.Visible = true;
-            colCustomWorkerTotalAmount.VisibleIndex = 7;
             colCustomWorkerMarkupUnitPrice.Visible = true;
-            colCustomWorkerMarkupUnitPrice.VisibleIndex = 8;
-
             colWorkerUnitPrice.Visible = false;
             colWorkerTotalAmount.Visible = false;
             colWorkerMarkupUnitPrice.Visible = false;
