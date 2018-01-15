@@ -526,6 +526,7 @@
       <DependentUpon>frm_YeniTeklifOlustur.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager\CurrentManager.cs" />
+    <Compile Include="Manager\RuleManager.cs" />
     <Compile Include="Manager\UIMaterialListManager.cs" />
     <Compile Include="Manager\UIOBFManager.cs" />
     <Compile Include="Manager\UIPozManager.cs" />

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SimpleApplicationBase.BL.Base;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Manager;
 
 namespace IhalematikPro.Model
 {
@@ -93,7 +94,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                return new Fare(Math.Round((this.TotalFare.Amount / 30), 2));
+                return new Fare(Math.Round((this.TotalFare.Amount / RuleManager.Instance.DayPerMonthValue), 2));
             }
         }
 
@@ -101,7 +102,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                return new Fare(Math.Round((this.DayFare.Amount / 8), 2));
+                return new Fare(Math.Round((this.DayFare.Amount / RuleManager.Instance.HourPerDayValue), 2));
             }
         }
 
