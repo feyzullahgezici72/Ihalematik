@@ -95,9 +95,9 @@
             this.labelControl34 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl35 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl36 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtDifference = new DevExpress.XtraEditors.TextEdit();
+            this.txtTotalUnitPrice = new DevExpress.XtraEditors.TextEdit();
+            this.txtTotalPersonHour = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.lblTotalMarkupNonKDV = new DevExpress.XtraEditors.LabelControl();
             this.isciAracGirisPaneli = new DevExpress.XtraEditors.PanelControl();
@@ -174,9 +174,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMaterialCostAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDifference.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalUnitPrice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalPersonHour.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.isciAracGirisPaneli)).BeginInit();
@@ -1219,9 +1219,9 @@
             this.groupControl5.Controls.Add(this.labelControl34);
             this.groupControl5.Controls.Add(this.labelControl35);
             this.groupControl5.Controls.Add(this.labelControl36);
-            this.groupControl5.Controls.Add(this.textEdit1);
-            this.groupControl5.Controls.Add(this.textEdit2);
-            this.groupControl5.Controls.Add(this.textEdit3);
+            this.groupControl5.Controls.Add(this.txtDifference);
+            this.groupControl5.Controls.Add(this.txtTotalUnitPrice);
+            this.groupControl5.Controls.Add(this.txtTotalPersonHour);
             this.groupControl5.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl5.Location = new System.Drawing.Point(0, 0);
             this.groupControl5.LookAndFeel.SkinName = "Office 2007 Blue";
@@ -1261,56 +1261,56 @@
             this.labelControl36.TabIndex = 23;
             this.labelControl36.Text = "İnsan Saate Göre:";
             // 
-            // textEdit1
+            // txtDifference
             // 
-            this.textEdit1.Location = new System.Drawing.Point(89, 75);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.textEdit1.Properties.Mask.EditMask = "c";
-            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEdit1.Properties.ReadOnly = true;
-            this.textEdit1.Size = new System.Drawing.Size(93, 20);
-            this.textEdit1.TabIndex = 19;
-            this.textEdit1.TabStop = false;
+            this.txtDifference.Location = new System.Drawing.Point(89, 75);
+            this.txtDifference.Name = "txtDifference";
+            this.txtDifference.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtDifference.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtDifference.Properties.Appearance.Options.UseBackColor = true;
+            this.txtDifference.Properties.Appearance.Options.UseFont = true;
+            this.txtDifference.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtDifference.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtDifference.Properties.Mask.EditMask = "c";
+            this.txtDifference.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtDifference.Properties.ReadOnly = true;
+            this.txtDifference.Size = new System.Drawing.Size(93, 20);
+            this.txtDifference.TabIndex = 19;
+            this.txtDifference.TabStop = false;
             // 
-            // textEdit2
+            // txtTotalUnitPrice
             // 
-            this.textEdit2.Location = new System.Drawing.Point(89, 53);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit2.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textEdit2.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.textEdit2.Properties.Mask.EditMask = "c";
-            this.textEdit2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEdit2.Properties.ReadOnly = true;
-            this.textEdit2.Size = new System.Drawing.Size(93, 20);
-            this.textEdit2.TabIndex = 19;
-            this.textEdit2.TabStop = false;
+            this.txtTotalUnitPrice.Location = new System.Drawing.Point(89, 53);
+            this.txtTotalUnitPrice.Name = "txtTotalUnitPrice";
+            this.txtTotalUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtTotalUnitPrice.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTotalUnitPrice.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTotalUnitPrice.Properties.Appearance.Options.UseFont = true;
+            this.txtTotalUnitPrice.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTotalUnitPrice.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTotalUnitPrice.Properties.Mask.EditMask = "c";
+            this.txtTotalUnitPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtTotalUnitPrice.Properties.ReadOnly = true;
+            this.txtTotalUnitPrice.Size = new System.Drawing.Size(93, 20);
+            this.txtTotalUnitPrice.TabIndex = 19;
+            this.txtTotalUnitPrice.TabStop = false;
             // 
-            // textEdit3
+            // txtTotalPersonHour
             // 
-            this.textEdit3.Location = new System.Drawing.Point(89, 31);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit3.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textEdit3.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.textEdit3.Properties.Mask.EditMask = "c";
-            this.textEdit3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEdit3.Properties.ReadOnly = true;
-            this.textEdit3.Size = new System.Drawing.Size(93, 20);
-            this.textEdit3.TabIndex = 19;
-            this.textEdit3.TabStop = false;
+            this.txtTotalPersonHour.Location = new System.Drawing.Point(89, 31);
+            this.txtTotalPersonHour.Name = "txtTotalPersonHour";
+            this.txtTotalPersonHour.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtTotalPersonHour.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTotalPersonHour.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTotalPersonHour.Properties.Appearance.Options.UseFont = true;
+            this.txtTotalPersonHour.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTotalPersonHour.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTotalPersonHour.Properties.Mask.EditMask = "c";
+            this.txtTotalPersonHour.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtTotalPersonHour.Properties.ReadOnly = true;
+            this.txtTotalPersonHour.Size = new System.Drawing.Size(93, 20);
+            this.txtTotalPersonHour.TabIndex = 19;
+            this.txtTotalPersonHour.TabStop = false;
             // 
             // groupControl1
             // 
@@ -1878,9 +1878,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
             this.groupControl5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDifference.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalUnitPrice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalPersonHour.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -2012,8 +2012,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl34;
         private DevExpress.XtraEditors.LabelControl labelControl35;
         private DevExpress.XtraEditors.LabelControl labelControl36;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtDifference;
+        private DevExpress.XtraEditors.TextEdit txtTotalUnitPrice;
+        private DevExpress.XtraEditors.TextEdit txtTotalPersonHour;
     }
 }

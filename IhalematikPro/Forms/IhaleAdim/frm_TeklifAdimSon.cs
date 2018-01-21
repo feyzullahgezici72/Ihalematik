@@ -60,6 +60,10 @@ namespace IhalematikProUI.Forms
 
             //KDV haric toplam kar
 
+
+            double totalPersonHour = 0;
+            double totalUnitPrice = 0;
+
             if (models != null)
             {
                 foreach (MaterialListModel item in models)
@@ -70,6 +74,8 @@ namespace IhalematikProUI.Forms
                     markupMaterialAmount += item.UnitMarkup * item.Quantity; ;
                     markupWorkerAmount += item.WorkerUnitPrice * item.Quantity * (item.Markup / 100);
                     TotalMarkupNonKDV += item.TotalFare;
+                    totalPersonHour += Math.Round(item.WorkerMarkupUnitPrice + item.MarkupUnitPrice, 2);
+                    totalUnitPrice += Math.Round(item.CustomWorkerMarkupUnitPrice + item.MarkupUnitPrice, 2);
                 }
             }
 
@@ -84,7 +90,9 @@ namespace IhalematikProUI.Forms
             txtMarkupMaterialTotal.Text = markupMaterialAmount.ToString("c2");
             txtMarkupWorkerAmount.Text = markupWorkerAmount.ToString("c2");
             txtMarkupAmount.Text = (markupWorkerAmount + markupMaterialAmount).ToString("c2");
-
+            txtTotalPersonHour.Text = totalPersonHour.ToString("c2");
+            txtTotalUnitPrice.Text = totalUnitPrice.ToString("c2");
+            txtDifference.Text = Math.Round((totalPersonHour - totalUnitPrice), 2).ToString("c2");
             lblTotalMarkupNonKDV.Text = this.TotalMarkupNonKDV.ToString("c2");
         }
 
