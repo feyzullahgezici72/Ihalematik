@@ -33,6 +33,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("AccountingCosts", t.AccountingCosts);
             parameters.Add("CompletionBond", t.CompletionBond);
             parameters.Add("ProvisionalBond", t.ProvisionalBond);
+            parameters.Add("PersonHour", t.PersonHour);
 
             return parameters;
         }
@@ -57,7 +58,7 @@ namespace IhalematikProBL.Provider
             t.AccountingCosts = dr.GetValue<double>("AccountingCosts");
             t.CompletionBond = dr.GetValue<bool>("CompletionBond");
             t.ProvisionalBond = dr.GetValue<bool>("ProvisionalBond");
-
+            t.PersonHour = dr.GetValue<bool>("PersonHour");
         }
     }
 }

@@ -60,7 +60,7 @@ namespace IhalematikProUI.Forms
 
             //KDV haric toplam kar
 
-            if (ddlCalculateWorkerType.SelectedIndex == 0)
+            if (models != null)
             {
                 foreach (MaterialListModel item in models)
                 {
@@ -72,18 +72,8 @@ namespace IhalematikProUI.Forms
                     TotalMarkupNonKDV += item.TotalFare;
                 }
             }
-            else
-            {
-                foreach (MaterialListModel item in models)
-                {
-                    materialCostAmount += item.PozOBF.UnitPrice * item.Quantity;
-                    materialkdvTotalAmount += item.KDVAmount;
-                    workerCostAmount += item.CustomWorkerUnitPrice * item.Quantity;
-                    markupMaterialAmount += item.UnitMarkup * item.Quantity; ;
-                    markupWorkerAmount += item.CustomWorkerUnitPrice * item.Quantity * (item.Markup / 100);
-                    TotalMarkupNonKDV += item.CustomTotalFare;
-                }
-            }
+
+
             totalAmount = materialCostAmount + materialkdvTotalAmount;
             txtMaterialCostAmount.Text = materialCostAmount.ToString("c2");
             txtMaterialkdvTotalAmount.Text = materialkdvTotalAmount.ToString("c2");
@@ -118,9 +108,9 @@ namespace IhalematikProUI.Forms
                     model.ItemNumber = i.ToString();
                     model.Quantity = item.Quantity.ToString();
                     totalAmount += Math.Round((item.MarkupUnitPrice + item.WorkerUnitPrice) * item.Quantity, 2);
-                    model.Total = Math.Round(item.OtherTotalFare, 2).ToString("c2");
+                    model.Total = Math.Round(item.TotalFare, 2).ToString("c2");
                     model.Unit = item.PozOBFUnit;
-                    model.UnitPrice = item.OtherUnitTotalFare.ToString("C2");
+                    model.UnitPrice = item.UnitTotalFare.ToString("C2");
                     models.Add(model);
                     i++;
                 }
@@ -139,8 +129,16 @@ namespace IhalematikProUI.Forms
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
+            if (ddlCalculateWorkerType.SelectedIndex == 0)
+            {
+                CurrentManager.Instance.CurrentTender.PersonHour = true;
+            }
+            else
+            {
+                CurrentManager.Instance.CurrentTender.PersonHour = false;
+            }
             TenderProvider.Instance.Save(CurrentManager.Instance.CurrentTender);
-            
+
             frm_MesajFormu mf = new frm_MesajFormu();
             mf.lblMesaj.Text = "İhale Kaydedildi...";
             mf.ShowDialog();
@@ -154,17 +152,28 @@ namespace IhalematikProUI.Forms
             chckCompletionBond.Checked = currentTender.CompletionBond;
             chckProvisionalBond.Checked = currentTender.ProvisionalBond;
 
+            if (currentTender.PersonHour)
+            {
+                ddlCalculateWorkerType.SelectedIndex = 0;
+            }
+            else
+            {
+                ddlCalculateWorkerType.SelectedIndex = 1;
+            }
+
             lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
             lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
-            this.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            this.TotalMarkupNonKDV = this.DataSource.Sum(p => p.TotalFare);
-            grdMaterialList.DataSource = this.DataSource;
+            //List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
 
-            this.CalculateFooterInnerValues(this.DataSource);
+            //this.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            //grdMaterialList.DataSource = this.DataSource;
+
+            this.LoadGrid();
+
+            //this.TotalMarkupNonKDV = this.DataSource.Sum(p => p.TotalFare);
+
+            this.CalculateFooterInnerValues(null);
             this.CalculateLeftPanelValues();
-            colOtherTotalFare.Visible = false;
-            colOtherUnitTotalFare.Visible = false;
 
             colUnitTotalFare.Visible = true;
             colTotalFare.Visible = true;
@@ -196,6 +205,15 @@ namespace IhalematikProUI.Forms
 
         private void btnTumuneUygula_Click(object sender, EventArgs e)
         {
+            this.LoadGrid();
+        }
+
+        private void LoadGrid()
+        {
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+
+            this.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            this.TotalMarkupNonKDV = this.DataSource.Sum(p => p.TotalFare);
             Tender currentTender = CurrentManager.Instance.CurrentTender;
             IhalematikProBL.Entity.Rule provisionalBond = RuleProvider.Instance.GetItems("Code", "ProvisionalBond").FirstOrDefault();
             IhalematikProBL.Entity.Rule completionBond = RuleProvider.Instance.GetItems("Code", "CompletionBond").FirstOrDefault();
@@ -206,6 +224,7 @@ namespace IhalematikProUI.Forms
             currentTender.AccountingCosts = accountingCosts;
             currentTender.CompletionBond = chckCompletionBond.Checked;
             currentTender.ProvisionalBond = chckProvisionalBond.Checked;
+            currentTender.PersonHour = ddlCalculateWorkerType.SelectedIndex == 0 ? true : false;
 
             if (!chckCompletionBond.Checked)
             {
@@ -224,26 +243,13 @@ namespace IhalematikProUI.Forms
             foreach (MaterialListModel item in this.DataSource)
             {
                 double increaseOtherFare = 0; //Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 2);
-                if (ddlCalculateWorkerType.SelectedIndex == 1)
-                {
-                    increaseOtherFare = Math.Round(((increaseAmount * item.CustomTotalFare) / item.Quantity), 2);
-                    item.OtherUnitTotalFare = Math.Round((item.CustomUnitTotalFare + increaseOtherFare), 2);
-                }
-                else
-                {
-                    increaseOtherFare = Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 2);
-                    item.OtherUnitTotalFare = Math.Round((item.UnitTotalFare + increaseOtherFare), 2);
-                }
+                increaseOtherFare = Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 2);
+                item.UnitTotalFarePreview = Math.Round((item.UnitTotalFare + increaseOtherFare), 2);
             }
 
             grdMaterialList.DataSource = null;
             grdMaterialList.DataSource = this.DataSource;
-            colOtherUnitTotalFare.Visible = true;
-            colOtherTotalFare.Visible = true;
-            colTotalFare.Visible = false;
-            colUnitTotalFare.Visible = false;
-            colCustomTotalFare.Visible = false;
-            colCustomUnitTotalFare.Visible = false;
+
 
             lblTotalMarkupNonKDV.Text = Math.Round((this.TotalMarkupNonKDV + this.OtherTotalAmount), 2).ToString("c2");
         }
@@ -263,26 +269,6 @@ namespace IhalematikProUI.Forms
 
         private void ddlCalculateWorkerType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ddlCalculateWorkerType.SelectedIndex == 0)
-            {
-                colUnitTotalFare.VisibleIndex = 4;
-                colTotalFare.VisibleIndex = 5;
-                colUnitTotalFare.Visible = true;
-                colTotalFare.Visible = true;
-                colCustomUnitTotalFare.Visible = false;
-                colCustomTotalFare.Visible = false;
-            }
-            else
-            {
-                colCustomUnitTotalFare.VisibleIndex = 4;
-                colCustomTotalFare.VisibleIndex = 5;
-                colUnitTotalFare.Visible = false;
-                colTotalFare.Visible = false;
-                colCustomUnitTotalFare.Visible = true;
-                colCustomTotalFare.Visible = true;
-            }
-            colOtherTotalFare.Visible = false;
-            colOtherUnitTotalFare.Visible = false;
             this.CalculateFooterInnerValues(null);
         }
 

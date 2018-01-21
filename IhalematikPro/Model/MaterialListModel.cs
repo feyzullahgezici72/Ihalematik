@@ -318,18 +318,20 @@ namespace IhalematikPro.Model
         }
         #region 4. adim
         //4. adim birim fiyat
+
         public double UnitTotalFare
         {
             get
             {
-                return Math.Round(this.WorkerMarkupUnitPrice + this.MarkupUnitPrice, 2);
-            }
-        }
-        public double CustomUnitTotalFare
-        {
-            get
-            {
-                return Math.Round(this.CustomWorkerMarkupUnitPrice + this.MarkupUnitPrice, 2);
+                if (!CurrentManager.Instance.CurrentTender.PersonHour)
+                {
+                    return Math.Round(this.CustomWorkerMarkupUnitPrice + this.MarkupUnitPrice, 2);
+                }
+                else
+                {
+
+                    return Math.Round(this.WorkerMarkupUnitPrice + this.MarkupUnitPrice, 2);
+                }
             }
         }
 
@@ -341,38 +343,14 @@ namespace IhalematikPro.Model
             }
         }
 
-        public double CustomTotalFare
+        public double UnitTotalFarePreview { get; set; }
+        public double TotalFarePreview
         {
             get
             {
-                return Math.Round(this.CustomUnitTotalFare * this.Quantity, 2);
+                return Math.Round(this.UnitTotalFarePreview * this.Quantity, 2);
             }
         }
-
-        private double otherUnitTotalFare = 0;
-        public double OtherUnitTotalFare
-        {
-            get
-            {
-                if (otherUnitTotalFare == 0)
-                {
-                    this.otherUnitTotalFare = this.UnitTotalFare;
-                }
-                return this.otherUnitTotalFare;
-            }
-            set
-            {
-                this.otherUnitTotalFare = value;
-            }
-        }
-        public double OtherTotalFare
-        {
-            get
-            {
-                return Math.Round(this.OtherUnitTotalFare * this.Quantity, 2);
-            }
-        }
-        //4. adim Toplam birim fiyat
 
         #endregion
 
@@ -420,6 +398,7 @@ namespace IhalematikPro.Model
             this.OfferPrice = Entity.OfferPrice;
             this.IsPoz = Entity.IsPoz;
             this.CustomWorkerUnitPrice = Entity.CustomWorkerUnitPrice;
+
             OfferMaterialList offerMaterialList = OfferManager.Instance.GetOfferMaterialListPrice(this.Tender.OfferId, this.PozOBFId, this.IsPoz);
 
             if (this.Tender.Offer != null)

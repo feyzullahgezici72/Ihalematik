@@ -121,5 +121,7 @@ namespace IhalematikProBL.Entity
         public double AccountingCosts { get; set; }
         public bool CompletionBond { get; set; }
         public bool ProvisionalBond { get; set; }
+
+        public bool PersonHour { get; set; }
     }
 }
