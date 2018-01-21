@@ -269,6 +269,7 @@ namespace IhalematikProUI.Forms
 
         private void ddlCalculateWorkerType_SelectedIndexChanged(object sender, EventArgs e)
         {
+            this.LoadGrid();
             this.CalculateFooterInnerValues(null);
         }
 
