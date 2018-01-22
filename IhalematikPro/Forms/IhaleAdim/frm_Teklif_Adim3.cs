@@ -168,7 +168,7 @@ namespace IhalematikPro.Forms
         #region GridMaterialList
         private void btnCalisanlarveAraclar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            
+
         }
         #endregion
 
@@ -265,11 +265,34 @@ namespace IhalematikPro.Forms
         {
             bindingSourceAddWorker.DataSource = typeof(List<TenderMaterialListEquipmentModel>);
             this.LoadTenderGroupGrid();
+            if (CurrentManager.Instance.CurrentTender.PersonHour)
+            {
+                cmbAdamSaat.PerformClick();
+            }
+            else
+            {
+                cmbBirimFiyat.PerformClick();
+            }
         }
 
         private void CalculateInnerValuesMarkup(List<MaterialListModel> items)
         {
-            lblKarToplam.Text = (Math.Round(items.Sum(p => p.TotalWorkerMarkup), 2)).ToString("c");
+            if (items == null)
+            {
+                items = grdMaterialListIsWorkship.DataSource as List<MaterialListModel>;
+            }
+            if (items == null)
+            {
+                return;
+            }
+            if (cmbAdamSaat.Checked)
+            {
+                lblKarToplam.Text = (Math.Round(items.Sum(p => p.TotalWorkerMarkup), 2)).ToString("c");
+            }
+            else
+            {
+                lblKarToplam.Text = (Math.Round(items.Sum(p => p.CustomWorkerMarkup * p.Quantity), 2)).ToString("c");
+            }
         }
 
         private void gridViewMaterialListIsWorkship_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -326,6 +349,11 @@ namespace IhalematikPro.Forms
             }
             else
             {
+                bool personHour = cmbAdamSaat.Checked ? true : false;
+
+                CurrentManager.Instance.CurrentTender.PersonHour = personHour;
+                TenderProvider.Instance.Save(CurrentManager.Instance.CurrentTender);
+
                 this.Close();
                 frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
                 af.RibonPasif();
@@ -389,8 +417,7 @@ namespace IhalematikPro.Forms
             colWorkerUnitPrice.Visible = true;
             colWorkerTotalAmount.Visible = true;
             colWorkerMarkupUnitPrice.Visible = true;
-           
-
+            this.CalculateInnerValuesMarkup(null);
         }
 
         private void cmbBirimFiyat_Click(object sender, EventArgs e)
@@ -405,15 +432,16 @@ namespace IhalematikPro.Forms
             colWorkerUnitPrice.Visible = false;
             colWorkerTotalAmount.Visible = false;
             colWorkerMarkupUnitPrice.Visible = false;
+            this.CalculateInnerValuesMarkup(null);
         }
 
         private void btnCalisanlarveAraclar_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
             frm_Iscilik iscilik = new frm_Iscilik(this);
-           
+
             this.Enabled = true;
-            
+
             bindingSourceAddWorker.DataSource = null;
             int currentId = Convert.ToInt32(gridViewMaterialListIsWorkship.GetFocusedRowCellValue("Id"));
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
