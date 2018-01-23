@@ -175,6 +175,10 @@ namespace IhalematikPro.Forms
 
                 model.Save();
                 LoadGrid();
+                btnTemizle.PerformClick();
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Çalışan kaydı yapıldı...";
+                mf.ShowDialog();
             }
         }
         public bool IsEmptyKontrol()

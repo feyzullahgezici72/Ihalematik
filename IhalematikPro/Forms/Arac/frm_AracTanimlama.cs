@@ -106,6 +106,7 @@ namespace IhalematikPro.Forms
 
                 model.Save();
                 LoadGrid();
+                btnTemizle.PerformClick();
                 frm_MesajFormu mf = new frm_MesajFormu();
                 mf.lblMesaj.Text = "Araç kaydedildi...";
                 mf.ShowDialog();
