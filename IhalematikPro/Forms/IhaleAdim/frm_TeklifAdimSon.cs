@@ -245,13 +245,13 @@ namespace IhalematikProUI.Forms
 
             this.OtherTotalAmount = (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(provisionalBond.Value) / 100) + (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 100) + carriage + accountingCosts;
 
-            double increaseAmount = Math.Round((this.OtherTotalAmount / this.TotalMarkupNonKDV), 2);
+            double increaseAmount = Math.Round((this.OtherTotalAmount / this.TotalMarkupNonKDV), 4);
             //birim fiyat unittotalFare
             //Toplam fiyat TotalFare
             foreach (MaterialListModel item in this.DataSource)
             {
                 double increaseOtherFare = 0; //Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 2);
-                increaseOtherFare = Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 2);
+                increaseOtherFare = Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 4);
                 item.UnitTotalFarePreview = Math.Round((item.UnitTotalFare + increaseOtherFare), 2);
             }
 
