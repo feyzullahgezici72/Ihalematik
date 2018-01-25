@@ -72,13 +72,13 @@ namespace IhalematikPro.Forms
                 if (rbCompanyVehicle.Checked)
                 {
                     model.IsCompanyVehicle = true;
-                    model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtFuelOilFare.Text.Replace("TL", string.Empty));
-                    model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtFuelOilDay.Text.Replace("TL", string.Empty));
-                    model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtDriverFare.Text.Replace("TL", string.Empty));
-                    model.MaintenanceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMaintenanceFare.Text.Replace("TL", string.Empty));
-                    model.ServiceFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtServiceFare.Text.Replace("TL", string.Empty));
-                    model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtGeneralFare.Text.Replace("TL", string.Empty));
-                    model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtOtherFare.Text.Replace("TL", string.Empty));
+                    model.FuelOilFare = double.Parse(txtFuelOilFare.Text.Replace("TL", string.Empty));
+                    model.FuelOilDay = float.Parse(txtFuelOilDay.Text.Replace("TL", string.Empty));
+                    model.DriverFare = double.Parse(txtDriverFare.Text.Replace("TL", string.Empty));
+                    model.MaintenanceFare = double.Parse(txtMaintenanceFare.Text.Replace("TL", string.Empty));
+                    model.ServiceFare = double.Parse(txtServiceFare.Text.Replace("TL", string.Empty));
+                    model.GeneralFare = double.Parse(txtGeneralFare.Text.Replace("TL", string.Empty));
+                    model.OtherFare = double.Parse(txtOtherFare.Text.Replace("TL", string.Empty));
                 }
                 else
                 {
@@ -96,12 +96,12 @@ namespace IhalematikPro.Forms
                     {
                         model.RentType = IhalematikProBL.Enum.RentTypesEnum.Month;
                     }
-                    model.FuelOilFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentFuelOilFare.Text.Replace("TL", string.Empty));
-                    model.FuelOilDay = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<float>(txtRentFuelOilDay.Text.Replace("TL", string.Empty));
-                    model.DriverFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentDriverFare.Text.Replace("TL", string.Empty));
-                    model.RentFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentFare.Text.Replace("TL", string.Empty));
-                    model.GeneralFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentGeneralFare.Text.Replace("TL", string.Empty));
-                    model.OtherFare = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRentOtherFare.Text.Replace("TL", string.Empty));
+                    model.FuelOilFare = double.Parse(txtRentFuelOilFare.Text.Replace("TL", string.Empty));
+                    model.FuelOilDay = float.Parse(txtRentFuelOilDay.Text.Replace("TL", string.Empty));
+                    model.DriverFare = double.Parse(txtRentDriverFare.Text.Replace("TL", string.Empty));
+                    model.RentFare = double.Parse(txtRentFare.Text.Replace("TL", string.Empty));
+                    model.GeneralFare = double.Parse(txtRentGeneralFare.Text.Replace("TL", string.Empty));
+                    model.OtherFare = double.Parse(txtRentOtherFare.Text.Replace("TL", string.Empty));
                 }
 
                 model.Save();
