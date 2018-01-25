@@ -243,7 +243,7 @@ namespace IhalematikProUI.Forms
                 provisionalBond.Value = "0";
             }
 
-            this.OtherTotalAmount = (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(provisionalBond.Value) / 100) + (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 100) + carriage + accountingCosts;
+            this.OtherTotalAmount = (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(provisionalBond.Value) / 1000) + (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 1000) + carriage + accountingCosts;
 
             double increaseAmount = Math.Round((this.OtherTotalAmount / this.TotalMarkupNonKDV), 4);
             //birim fiyat unittotalFare
