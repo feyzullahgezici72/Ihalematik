@@ -159,19 +159,19 @@ namespace IhalematikPro.Forms
                 model.TitleId = ((TitleModel)ddlTitles.SelectedItem).Id.Value;
                 model.IsNormal = rbNormal.Checked;
                 model.BaseFare = new Fare(double.Parse(txtBaseFare.Text.Replace("TL", string.Empty)));
-                model.SGKPrimFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtSGKPrimFare.Text.Replace("TL", string.Empty)));
+                model.SGKPrimFare = new Fare(double.Parse(txtSGKPrimFare.Text.Replace("TL", string.Empty)));
 
-                model.WorklesFonFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtWorklesFonFare.Text.Replace("TL", string.Empty)));
-                model.IncomeTaxFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtIncomeTaxFare.Text.Replace("TL", string.Empty)));
-                model.SeveranceFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtSeveranceFare.Text.Replace("TL", string.Empty)));
+                model.WorklesFonFare = new Fare(double.Parse(txtWorklesFonFare.Text.Replace("TL", string.Empty)));
+                model.IncomeTaxFare = new Fare(double.Parse(txtIncomeTaxFare.Text.Replace("TL", string.Empty)));
+                model.SeveranceFare = new Fare(double.Parse(txtSeveranceFare.Text.Replace("TL", string.Empty)));
 
-                model.StampTaxFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtStampTaxFare.Text.Replace("TL", string.Empty)));
-                model.AGIFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtAGI.Text.Replace("TL", string.Empty)));
-                model.FoodFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtFoodFare.Text.Replace("TL", string.Empty)));
-                model.TravelFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtTravelFare.Text.Replace("TL", string.Empty)));
-                model.HotelFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtHotelFare.Text.Replace("TL", string.Empty)));
-                model.ISGFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtISGFare.Text.Replace("TL", string.Empty)));
-                model.ExtraFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtExtraFare.Text.Replace("TL", string.Empty)));
+                model.StampTaxFare = new Fare(double.Parse(txtStampTaxFare.Text.Replace("TL", string.Empty)));
+                model.AGIFare = new Fare(double.Parse(txtAGI.Text.Replace("TL", string.Empty)));
+                model.FoodFare = new Fare(double.Parse(txtFoodFare.Text.Replace("TL", string.Empty)));
+                model.TravelFare = new Fare(double.Parse(txtTravelFare.Text.Replace("TL", string.Empty)));
+                model.HotelFare = new Fare(double.Parse(txtHotelFare.Text.Replace("TL", string.Empty)));
+                model.ISGFare = new Fare(double.Parse(txtISGFare.Text.Replace("TL", string.Empty)));
+                model.ExtraFare = new Fare(double.Parse(txtExtraFare.Text.Replace("TL", string.Empty)));
 
                 model.Save();
                 LoadGrid();
