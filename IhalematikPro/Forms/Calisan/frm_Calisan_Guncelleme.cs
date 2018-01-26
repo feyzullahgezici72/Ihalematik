@@ -115,7 +115,7 @@ namespace IhalematikProUI.Forms
                 {
                     if (item.RuleType == RuleTypesEnum.IncomeTaxFare)
                     {
-                        txtIncomeTaxFare.Text = (minimumWage * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString("c");
+                        txtIncomeTaxFare.Text = (minimumWage * double.Parse(item.Value) / 100).ToString("c");
                     }
                     else if (item.RuleType == RuleTypesEnum.SGKPrimFare)
                     {
@@ -127,7 +127,7 @@ namespace IhalematikProUI.Forms
                     }
                     else if (item.RuleType == RuleTypesEnum.WorklesFonFare)
                     {
-                        txtWorklesFonFare.Text = (minimumWage * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString("c");
+                        txtWorklesFonFare.Text = (minimumWage * double.Parse(item.Value) / 100).ToString("c");
                     }
                 }
                 //if (!this.IsCalculatedMinimumWage)
@@ -150,19 +150,19 @@ namespace IhalematikProUI.Forms
                     {
                         if (item.RuleType == RuleTypesEnum.IncomeTaxFare)
                         {
-                            txtIncomeTaxFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString("c");
+                            txtIncomeTaxFare.Text = (double.Parse(minimumWage.Value) * double.Parse(item.Value) / 100).ToString("c");
                         }
                         else if (item.RuleType == RuleTypesEnum.SGKPrimFare)
                         {
-                            txtSGKPrimFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString("c");
+                            txtSGKPrimFare.Text = (double.Parse(minimumWage.Value) * double.Parse(item.Value) / 100).ToString("c");
                         }
                         else if (item.RuleType == RuleTypesEnum.StampTaxFare)
                         {
-                            txtStampTaxFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100000).ToString("c");
+                            txtStampTaxFare.Text = (double.Parse(minimumWage.Value) * double.Parse(item.Value) / 100000).ToString("c");
                         }
                         else if (item.RuleType == RuleTypesEnum.WorklesFonFare)
                         {
-                            txtWorklesFonFare.Text = (SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(minimumWage.Value) * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(item.Value) / 100).ToString("c");
+                            txtWorklesFonFare.Text = (double.Parse(minimumWage.Value) * double.Parse(item.Value) / 100).ToString("c");
                         }
                     }
                 }
@@ -188,19 +188,19 @@ namespace IhalematikProUI.Forms
             model.TitleId = ((TitleModel)ddlTitles.SelectedItem).Id.Value;
             model.IsNormal = rbNormal.Checked;
             model.BaseFare = new Fare(double.Parse(txtBaseFare.Text.Replace("TL", string.Empty)));
-            model.SGKPrimFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtSGKPrimFare.Text.Replace("TL", string.Empty)));
+            model.SGKPrimFare = new Fare(double.Parse(txtSGKPrimFare.Text.Replace("TL", string.Empty)));
 
-            model.WorklesFonFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtWorklesFonFare.Text.Replace("TL", string.Empty)));
-            model.IncomeTaxFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtIncomeTaxFare.Text.Replace("TL", string.Empty)));
-            model.SeveranceFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtSeveranceFare.Text.Replace("TL", string.Empty)));
+            model.WorklesFonFare = new Fare(double.Parse(txtWorklesFonFare.Text.Replace("TL", string.Empty)));
+            model.IncomeTaxFare = new Fare(double.Parse(txtIncomeTaxFare.Text.Replace("TL", string.Empty)));
+            model.SeveranceFare = new Fare(double.Parse(txtSeveranceFare.Text.Replace("TL", string.Empty)));
 
-            model.StampTaxFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtStampTaxFare.Text.Replace("TL", string.Empty)));
-            model.AGIFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtAGI.Text.Replace("TL", string.Empty)));
-            model.FoodFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtFoodFare.Text.Replace("TL", string.Empty)));
-            model.TravelFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtTravelFare.Text.Replace("TL", string.Empty)));
-            model.HotelFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtHotelFare.Text.Replace("TL", string.Empty)));
-            model.ISGFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtISGFare.Text.Replace("TL", string.Empty)));
-            model.ExtraFare = new Fare(SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtExtraFare.Text.Replace("TL", string.Empty))); //.Replace("TL", string.Empty) SAMET ekledi
+            model.StampTaxFare = new Fare(double.Parse(txtStampTaxFare.Text.Replace("TL", string.Empty)));
+            model.AGIFare = new Fare(double.Parse(txtAGI.Text.Replace("TL", string.Empty)));
+            model.FoodFare = new Fare(double.Parse(txtFoodFare.Text.Replace("TL", string.Empty)));
+            model.TravelFare = new Fare(double.Parse(txtTravelFare.Text.Replace("TL", string.Empty)));
+            model.HotelFare = new Fare(double.Parse(txtHotelFare.Text.Replace("TL", string.Empty)));
+            model.ISGFare = new Fare(double.Parse(txtISGFare.Text.Replace("TL", string.Empty)));
+            model.ExtraFare = new Fare(double.Parse(txtExtraFare.Text.Replace("TL", string.Empty))); //.Replace("TL", string.Empty) SAMET ekledi
 
             model.Save();
             frm_MesajFormu mf = new frm_MesajFormu();
