@@ -73,7 +73,7 @@ namespace IhalematikProUI.Forms
                     workerCostAmount += item.WorkerUnitPrice * item.Quantity;
                     markupMaterialAmount += item.UnitMarkup * item.Quantity; ;
                     markupWorkerAmount += item.WorkerUnitPrice * item.Quantity * (item.Markup / 100);
-                    TotalMarkupNonKDV += item.TotalFare;
+                    TotalMarkupNonKDV += item.TotalFarePreview;
                     totalPersonHour += Math.Round(item.WorkerMarkupUnitPrice, 2);
                     totalUnitPrice += Math.Round(item.CustomWorkerMarkupUnitPrice, 2);
                 }
