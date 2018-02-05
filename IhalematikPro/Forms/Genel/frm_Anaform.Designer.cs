@@ -1488,7 +1488,7 @@ namespace IhalematikPro.Forms
             // picLogo
             // 
             this.picLogo.Image = global::IhalematikProUI.Properties.Resources.logomuz;
-            this.picLogo.Location = new System.Drawing.Point(434, 234);
+            this.picLogo.Location = new System.Drawing.Point(428, 221);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(361, 141);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
