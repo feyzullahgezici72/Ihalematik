@@ -27,5 +27,10 @@ namespace IhalematikProUI.Forms.Genel
         {
             this.Close();
         }
+
+        private void btnLisansla_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
