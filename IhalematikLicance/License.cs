@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace IhalematikLicance
 {
-    public partial class Licance : Form
+    public partial class License : DevExpress.XtraEditors.XtraForm
     {
-        public Licance()
+        public License()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnIptal_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("hello");
+            this.Close();
         }
     }
 }

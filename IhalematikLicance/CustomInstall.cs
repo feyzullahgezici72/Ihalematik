@@ -12,7 +12,7 @@ namespace IhalematikLicance
     {
         public override void Install(System.Collections.IDictionary stateSaver)
         {
-            Licance frm = new Licance();
+            LicenseAgreement frm = new LicenseAgreement();
             frm.ShowDialog();
             if (true)
             {
