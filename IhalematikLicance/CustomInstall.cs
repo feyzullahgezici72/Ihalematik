@@ -19,7 +19,7 @@ namespace IhalematikLicance
                 base.Uninstall(stateSaver);
             }
             else
-            {
+            {   
                 base.Install(stateSaver);
             }
         }
