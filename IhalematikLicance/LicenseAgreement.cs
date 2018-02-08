@@ -20,9 +20,10 @@ namespace IhalematikLicance
 
         private void btnLisansla_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             License license = new License();
             license.ShowDialog();
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
