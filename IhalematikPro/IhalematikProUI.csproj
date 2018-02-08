@@ -1122,6 +1122,18 @@
   <ItemGroup>
     <None Include="Resources\password-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoW.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prg_logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_xx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_L.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
