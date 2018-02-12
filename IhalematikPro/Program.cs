@@ -35,8 +35,10 @@ namespace IhalematikPro
 
             //Console.WriteLine("Continuing with the application");
             //Console.ReadKey();
-
-
+            
+            string guid = Guid.NewGuid().ToString();
+            SimpleApplicationBase.Toolkit.Encryption.InitVector = "LifeTreeSoftware1!.";
+            string a = SimpleApplicationBase.Toolkit.Encryption.Encrypt(guid, "LifeTreeSoftware1!.");
             DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Green"; //"Money Twins";  //"Lilian";//
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
