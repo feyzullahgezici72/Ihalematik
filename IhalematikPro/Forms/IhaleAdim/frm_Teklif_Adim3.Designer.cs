@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim3));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -87,7 +86,7 @@
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.btnPanelKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             this.grdMaterialListIsWorkship = new DevExpress.XtraGrid.GridControl();
             this.gridViewMaterialListIsWorkship = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -104,8 +103,8 @@
             this.colCustomWorkerUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCustomWorkerTotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCustomWorkerMarkupUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource();
+            this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource();
             this.panelGrup = new DevExpress.XtraEditors.PanelControl();
             this.grdTenderGroup = new DevExpress.XtraGrid.GridControl();
             this.gridViewTenderGroup = new DevExpress.XtraGrid.Views.Grid.GridView();

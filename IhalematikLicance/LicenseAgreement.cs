@@ -13,15 +13,17 @@ namespace IhalematikLicance
 {
     public partial class LicenseAgreement : DevExpress.XtraEditors.XtraForm
     {
-        public LicenseAgreement()
+        public CustomInstall _owner;
+        public LicenseAgreement(CustomInstall Owner)
         {
+            this._owner = Owner;
             InitializeComponent();
         }
 
         private void btnLisansla_Click(object sender, EventArgs e)
         {
             this.Hide();
-            License license = new License();
+            License license = new License(this._owner);
             license.ShowDialog();
             this.Close();
         }

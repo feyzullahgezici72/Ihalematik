@@ -54,22 +54,28 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim1_Load(object sender, EventArgs e)
         {
-            lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
-            lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
-            this.KeyPreview = true;
-            this.KeyDown += new KeyEventHandler(Frm_Teklif_Adim1_KeyDown);
+            if (CurrentManager.Instance.CurrentTender != null)
+            {
+                lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
+                lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
+                this.KeyPreview = true;
+                this.KeyDown += new KeyEventHandler(Frm_Teklif_Adim1_KeyDown);
+            }
         }
         public void LoadTenderGroupGrid()
         {
-            List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
-            List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(items);
-            if (models != null && models.Count != 0)
+            if (CurrentManager.Instance.CurrentTender != null)
             {
-                models[0].IsSelected = true;
-                grdTenderGroup.DataSource = models;
+                List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
+                List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(items);
+                if (models != null && models.Count != 0)
+                {
+                    models[0].IsSelected = true;
+                    grdTenderGroup.DataSource = models;
 
-                this.SelectedGroupId = models[0].Id.Value;
-                this.LoadTenderMaterialList();
+                    this.SelectedGroupId = models[0].Id.Value;
+                    this.LoadTenderMaterialList();
+                }
             }
         }
 
@@ -191,7 +197,7 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim1_Shown(object sender, EventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender.Offer != null)
+            if (CurrentManager.Instance.CurrentTender != null && CurrentManager.Instance.CurrentTender.Offer != null)
             {
                 colQuantity.OptionsColumn.AllowEdit = false;
                 colQuantity.OptionsColumn.AllowFocus = false;

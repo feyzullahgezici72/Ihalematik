@@ -48,9 +48,12 @@ namespace IhalematikPro.Forms
         }
         private void frm_Teklif_Adim3_Load(object sender, EventArgs e)
         {
-            this.WorkerVehiclePanelCenter();
-            lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
-            lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
+            if (CurrentManager.Instance.CurrentTender != null)
+            {
+                this.WorkerVehiclePanelCenter();
+                lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
+                lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
+            }
         }
 
         private void WorkerVehiclePanelCenter()

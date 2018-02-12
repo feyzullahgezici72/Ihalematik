@@ -40,8 +40,11 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim2_Load(object sender, EventArgs e)
         {
-            lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
-            lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
+            if (CurrentManager.Instance.CurrentTender != null)
+            {
+                lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
+                lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
+            }
         }
         private void CalculateTotalMarkup()
         {
@@ -57,12 +60,15 @@ namespace IhalematikPro.Forms
 
         public void LoadTenderGroupGrid()
         {
-            List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
-            List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(items);
-            models[0].IsSelected = true;
-            this.SelectedGroupId = models[0].Id.Value;
-            grdTenderGroup.DataSource = models;
-            this.LoadTenderMaterialList();
+            if (CurrentManager.Instance.CurrentTender != null)
+            {
+                List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
+                List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(items);
+                models[0].IsSelected = true;
+                this.SelectedGroupId = models[0].Id.Value;
+                grdTenderGroup.DataSource = models;
+                this.LoadTenderMaterialList();
+            }
         }
 
         private void btnTumuneUygula_Click(object sender, EventArgs e)

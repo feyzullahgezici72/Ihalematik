@@ -154,38 +154,40 @@ namespace IhalematikProUI.Forms
 
         private void frm_TeklifAdimSon_Shown(object sender, EventArgs e)
         {
-            Tender currentTender = CurrentManager.Instance.CurrentTender;
-            txtCarriage.Text = currentTender.Carriage.ToString("c");
-            txtAccountingCosts.Text = currentTender.AccountingCosts.ToString("c");
-            chckCompletionBond.Checked = currentTender.CompletionBond;
-            chckProvisionalBond.Checked = currentTender.ProvisionalBond;
-
-            if (currentTender.PersonHour)
+            if (CurrentManager.Instance.CurrentTender != null)
             {
-                ddlCalculateWorkerType.SelectedIndex = 0;
+                Tender currentTender = CurrentManager.Instance.CurrentTender;
+                txtCarriage.Text = currentTender.Carriage.ToString("c");
+                txtAccountingCosts.Text = currentTender.AccountingCosts.ToString("c");
+                chckCompletionBond.Checked = currentTender.CompletionBond;
+                chckProvisionalBond.Checked = currentTender.ProvisionalBond;
+
+                if (currentTender.PersonHour)
+                {
+                    ddlCalculateWorkerType.SelectedIndex = 0;
+                }
+                else
+                {
+                    ddlCalculateWorkerType.SelectedIndex = 1;
+                }
+
+                lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
+                lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
+                //List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+
+                //this.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+                //grdMaterialList.DataSource = this.DataSource;
+
+                this.LoadGrid();
+
+                //this.TotalMarkupNonKDV = this.DataSource.Sum(p => p.TotalFare);
+
+                this.CalculateFooterInnerValues(null);
+                this.CalculateLeftPanelValues();
+
+                colUnitTotalFare.Visible = true;
+                colTotalFare.Visible = true;
             }
-            else
-            {
-                ddlCalculateWorkerType.SelectedIndex = 1;
-            }
-
-            lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
-            lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
-            //List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
-
-            //this.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            //grdMaterialList.DataSource = this.DataSource;
-
-            this.LoadGrid();
-
-            //this.TotalMarkupNonKDV = this.DataSource.Sum(p => p.TotalFare);
-
-            this.CalculateFooterInnerValues(null);
-            this.CalculateLeftPanelValues();
-
-            colUnitTotalFare.Visible = true;
-            colTotalFare.Visible = true;
-
         }
 
         private void CalculateLeftPanelValues()
