@@ -83,7 +83,7 @@ namespace IhalematikPro.Forms
                     frm_MesajFormu mf = new frm_MesajFormu();
                     mf.lblMesaj.Text = "Bu Poz numarasi ile kayit bulunmaktadir";
                     mf.ShowDialog();
-                    this.txtNumber.ResetText();
+                    this.txtNumber.Text="";
                 }
                 else
                 {
@@ -98,19 +98,19 @@ namespace IhalematikPro.Forms
         }
         private void FormClear()
         {
-            this.txtNumber.ResetText();
-            this.txtDescription.ResetText();
-            this.txtUnit.ResetText();
-            this.txtUnitPrice.ResetText();
+            this.txtNumber.Text="";
+            this.txtDescription.Text="";
+            this.txtUnit.Text="";
+            this.txtUnitPrice.Text="";
             this.txtNumber.Focus();
         }
 
         private void btnTemizle_Click(object sender, EventArgs e)
         {
-            txtDescription.ResetText();
-            txtNumber.ResetText();
-            txtUnit.ResetText();
-            txtUnitPrice.ResetText();
+            txtDescription.Text="";
+            txtNumber.Text="";
+            txtUnit.Text="";
+            txtUnitPrice.Text="";
             txtNumber.Focus();
         }
 

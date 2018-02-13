@@ -312,18 +312,18 @@ namespace IhalematikPro.Forms
             ddlTitles.SelectedIndex = -1;
             rbNormal.Checked = false;
             rbAsgariUcret.Checked = false;
-            txtAGI.ResetText();
-            txtBaseFare.ResetText();
-            txtExtraFare.ResetText();
-            txtFoodFare.ResetText();
-            txtHotelFare.ResetText();
-            txtIncomeTaxFare.ResetText();
-            txtISGFare.ResetText();
-            txtSeveranceFare.ResetText();
-            txtSGKPrimFare.ResetText();
-            txtStampTaxFare.ResetText();
-            txtTravelFare.ResetText();
-            txtWorklesFonFare.ResetText();
+            txtAGI.Text="";
+            txtBaseFare.Text="";
+            txtExtraFare.Text="";
+            txtFoodFare.Text="";
+            txtHotelFare.Text="";
+            txtIncomeTaxFare.Text="";
+            txtISGFare.Text="";
+            txtSeveranceFare.Text="";
+            txtSGKPrimFare.Text="";
+            txtStampTaxFare.Text="";
+            txtTravelFare.Text="";
+            txtWorklesFonFare.Text="";
 
         }
 

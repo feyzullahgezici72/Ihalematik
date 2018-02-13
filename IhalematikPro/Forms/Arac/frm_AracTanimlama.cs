@@ -216,19 +216,19 @@ namespace IhalematikPro.Forms
             rdDay.Checked = false;
             rdHour.Checked = false;
             rdMonth.Checked = false;
-            txtDriverFare.ResetText();
-            txtFuelOilDay.ResetText();
-            txtFuelOilFare.ResetText();
-            txtGeneralFare.ResetText();
-            txtMaintenanceFare.ResetText();
-            txtOtherFare.ResetText();
-            txtRentDriverFare.ResetText();
-            txtRentFare.ResetText();
-            txtRentFuelOilDay.ResetText();
-            txtRentFuelOilFare.ResetText();
-            txtRentGeneralFare.ResetText();
-            txtRentOtherFare.ResetText();
-            txtServiceFare.ResetText();
+            txtDriverFare.Text="";
+            txtFuelOilDay.Text="";
+            txtFuelOilFare.Text="";
+            txtGeneralFare.Text="";
+            txtMaintenanceFare.Text="";
+            txtOtherFare.Text="";
+            txtRentDriverFare.Text="";
+            txtRentFare.Text="";
+            txtRentFuelOilDay.Text="";
+            txtRentFuelOilFare.Text="";
+            txtRentGeneralFare.Text="";
+            txtRentOtherFare.Text="";
+            txtServiceFare.Text="";
         }
 
         private void frm_AracTanimlama_Shown(object sender, EventArgs e)

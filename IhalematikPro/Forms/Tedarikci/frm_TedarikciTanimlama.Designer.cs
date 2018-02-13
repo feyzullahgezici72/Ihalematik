@@ -574,12 +574,12 @@
             // 
             // checkedComboboxEditSupplierSegments
             // 
-            this.checkedComboboxEditSupplierSegments.Location = new System.Drawing.Point(150, 47);
+            this.checkedComboboxEditSupplierSegments.Location = new System.Drawing.Point(149, 53);
             this.checkedComboboxEditSupplierSegments.Margin = new System.Windows.Forms.Padding(4);
             this.checkedComboboxEditSupplierSegments.Name = "checkedComboboxEditSupplierSegments";
             this.checkedComboboxEditSupplierSegments.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.checkedComboboxEditSupplierSegments.Size = new System.Drawing.Size(366, 28);
+            this.checkedComboboxEditSupplierSegments.Size = new System.Drawing.Size(369, 28);
             this.checkedComboboxEditSupplierSegments.TabIndex = 93;
             // 
             // btnTemizle
@@ -726,7 +726,7 @@
             // txtGSM
             // 
             this.txtGSM.EnterMoveNextControl = true;
-            this.txtGSM.Location = new System.Drawing.Point(148, 193);
+            this.txtGSM.Location = new System.Drawing.Point(147, 193);
             this.txtGSM.Margin = new System.Windows.Forms.Padding(4);
             this.txtGSM.Name = "txtGSM";
             this.txtGSM.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -745,7 +745,7 @@
             // txtScore
             // 
             this.txtScore.EnterMoveNextControl = true;
-            this.txtScore.Location = new System.Drawing.Point(148, 295);
+            this.txtScore.Location = new System.Drawing.Point(147, 295);
             this.txtScore.Margin = new System.Windows.Forms.Padding(4);
             this.txtScore.Name = "txtScore";
             this.txtScore.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -804,7 +804,7 @@
             // 
             this.txtEmail.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtEmail, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.txtEmail.Location = new System.Drawing.Point(148, 262);
+            this.txtEmail.Location = new System.Drawing.Point(147, 262);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -833,7 +833,7 @@
             // txtAddress
             // 
             this.txtAddress.EnterMoveNextControl = true;
-            this.txtAddress.Location = new System.Drawing.Point(148, 329);
+            this.txtAddress.Location = new System.Drawing.Point(147, 329);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.Appearance.BackColor = System.Drawing.Color.White;

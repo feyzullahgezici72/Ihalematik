@@ -71,7 +71,7 @@ namespace IhalematikProUI.Forms
                         CurrentManager.Instance.CurrentTender.Groups.Add(item);
                         TenderGroupProvider.Instance.Save(item);
                         this.LoadGrid();
-                        txtTenderGroupDescription.ResetText();
+                        txtTenderGroupDescription.Text="";
                         txtTenderGroupDescription.Focus();
                     }
                 }

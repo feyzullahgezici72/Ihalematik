@@ -128,7 +128,6 @@ namespace IhalematikPro.Forms
             this.barBtnTedarikciRapor = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem31 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem32 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem33 = new DevExpress.XtraBars.BarButtonItem();
@@ -291,7 +290,6 @@ namespace IhalematikPro.Forms
             this.barBtnTedarikciRapor,
             this.barButtonItem7,
             this.barButtonItem30,
-            this.barButtonItem31,
             this.barSubItem2,
             this.barButtonItem32,
             this.barButtonItem33,
@@ -959,15 +957,6 @@ namespace IhalematikPro.Forms
             this.barButtonItem30.Name = "barButtonItem30";
             this.barButtonItem30.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem30_ItemClick);
             // 
-            // barButtonItem31
-            // 
-            this.barButtonItem31.Caption = "Lisan İşlemleri";
-            this.barButtonItem31.Id = 33;
-            this.barButtonItem31.LargeGlyph = global::IhalematikProUI.Properties.Resources.License_manager_icon__1_;
-            this.barButtonItem31.LargeWidth = 120;
-            this.barButtonItem31.Name = "barButtonItem31";
-            this.barButtonItem31.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem31_ItemClick);
-            // 
             // barSubItem2
             // 
             this.barSubItem2.Caption = "Temalar";
@@ -1343,7 +1332,6 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem7);
             this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem39);
             this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem30);
-            this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem31);
             this.ribbonPageGroup17.ItemLinks.Add(this.barSubItem2);
             this.ribbonPageGroup17.Name = "ribbonPageGroup17";
             this.ribbonPageGroup17.Text = "İşlemler Menüsü";
@@ -1948,7 +1936,6 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem29;
         private DevExpress.XtraBars.BarButtonItem barButtonItem30;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem31;
         private DevExpress.XtraBars.BarSubItem barSubItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem32;
         private DevExpress.XtraBars.BarButtonItem barButtonItem33;

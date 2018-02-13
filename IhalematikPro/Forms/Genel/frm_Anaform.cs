@@ -755,8 +755,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem25_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frm_LisansSozlesmesi ls = new frm_LisansSozlesmesi();
-            ls.ShowDialog();
+
         }
 
         private void barButtonItem24_ItemClick_1(object sender, ItemClickEventArgs e)
@@ -790,8 +789,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem31_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frm_LisansSozlesmesi ls = new frm_LisansSozlesmesi();
-            ls.ShowDialog();
+           
         }
 
         private void barButtonItem32_ItemClick(object sender, ItemClickEventArgs e)

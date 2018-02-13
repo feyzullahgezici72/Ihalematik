@@ -56,7 +56,7 @@ namespace IhalematikPro.Forms
                 else
                 {
                     MessageBox.Show("Bu unvan zaten mevcut");
-                    txtUnvan.ResetText();
+                    txtUnvan.Text="";
                     txtUnvan.Focus();
                 }
             }

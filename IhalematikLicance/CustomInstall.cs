@@ -13,12 +13,12 @@ namespace IhalematikLicance
         public bool IsLicenceAktivated { get; set; }
         public override void Install(System.Collections.IDictionary stateSaver)
         {
-            LicenseAgreement frm = new LicenseAgreement(this);
-            frm.ShowDialog();
+            //LicenseKey frm = new LicenseKey(this);
+            //frm.ShowDialog();
 
             if (this.IsLicenceAktivated)
             {
-                frm.Close();
+                //frm.Close();
                 Administrator administrator = new Administrator();
                 administrator.ShowDialog();
             }

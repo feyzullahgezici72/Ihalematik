@@ -5487,12 +5487,6 @@
         8j91kUbX3K/WKgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="labelControl5.Text" xml:space="preserve">
-    <value>Açılan pencerede lisans numaranızı yazmanız gerekmektedir daha sonra "Vereceğiniz Şifre" bölümündeki harf ve rakamları
-LifeTreeSoftware’e bildirmeniz durumunda LifeTreeSoftware ’den size verilecek harf ve rakamları "Karşılık Şifre" bölümüne
-yazınız ve Lisansla butonuna basınız karşınıza "Lisans İşleminiz Başarıyla Tamamlanmıştır" mesajı gelecek ve lisans işleminiz tamamlanmış olacaktır. 
-</value>
-  </data>
   <data name="btnLisansla.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABJ0RVh0VGl0

@@ -63,7 +63,7 @@ namespace IhalematikPro.Forms
 
                     //}
                     MessageBox.Show("Bu arac zaten mevcut");
-                    txtName.ResetText();
+                    txtName.Text="";
                     txtName.Focus();
                 }
                 //model.Save();
