@@ -201,9 +201,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::IhalematikProUI.Properties.Resources.logo_L;
-            this.pictureBox2.Location = new System.Drawing.Point(445, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(416, -32);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(222, 84);
+            this.pictureBox2.Size = new System.Drawing.Size(251, 116);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;

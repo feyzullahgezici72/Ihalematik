@@ -651,10 +651,6 @@
             this.txtAuthorNameSurname.Properties.Appearance.Options.UseBackColor = true;
             this.txtAuthorNameSurname.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtAuthorNameSurname.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtAuthorNameSurname.Properties.DisplayFormat.FormatString = "N2";
-            this.txtAuthorNameSurname.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtAuthorNameSurname.Properties.EditFormat.FormatString = "N2";
-            this.txtAuthorNameSurname.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtAuthorNameSurname.Size = new System.Drawing.Size(370, 26);
             this.txtAuthorNameSurname.TabIndex = 2;
             // 
@@ -691,10 +687,6 @@
             this.txtCompanyName.Properties.Appearance.Options.UseBackColor = true;
             this.txtCompanyName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtCompanyName.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtCompanyName.Properties.DisplayFormat.FormatString = "N2";
-            this.txtCompanyName.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtCompanyName.Properties.EditFormat.FormatString = "N2";
-            this.txtCompanyName.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtCompanyName.Size = new System.Drawing.Size(370, 26);
             this.txtCompanyName.TabIndex = 1;
             // 

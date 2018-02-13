@@ -115,7 +115,7 @@
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(477, 510);
+            this.groupControl2.Size = new System.Drawing.Size(891, 510);
             this.groupControl2.TabIndex = 93;
             this.groupControl2.Text = "Araç Bilgileri";
             // 
@@ -174,8 +174,6 @@
             this.txtCompanyMaintenanceFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCompanyMaintenanceFare.Properties.EditFormat.FormatString = "c2";
             this.txtCompanyMaintenanceFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCompanyMaintenanceFare.Properties.Mask.EditMask = "c2";
-            this.txtCompanyMaintenanceFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCompanyMaintenanceFare.Size = new System.Drawing.Size(224, 26);
             this.txtCompanyMaintenanceFare.TabIndex = 132;
             // 
@@ -191,8 +189,8 @@
             this.txtCompanyFuelOilDay.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtCompanyFuelOilDay.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCompanyFuelOilDay.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCompanyFuelOilDay.Properties.Mask.EditMask = "c2";
-            this.txtCompanyFuelOilDay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtCompanyFuelOilDay.Properties.Mask.EditMask = "\\d{0,3}";
+            this.txtCompanyFuelOilDay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtCompanyFuelOilDay.Size = new System.Drawing.Size(224, 26);
             this.txtCompanyFuelOilDay.TabIndex = 129;
             // 
@@ -254,8 +252,6 @@
             this.txtCompanyServiceFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCompanyServiceFare.Properties.EditFormat.FormatString = "c2";
             this.txtCompanyServiceFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCompanyServiceFare.Properties.Mask.EditMask = "c2";
-            this.txtCompanyServiceFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCompanyServiceFare.Size = new System.Drawing.Size(224, 26);
             this.txtCompanyServiceFare.TabIndex = 133;
             // 
@@ -273,8 +269,6 @@
             this.txtCompanyFuelOilFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCompanyFuelOilFare.Properties.EditFormat.FormatString = "c2";
             this.txtCompanyFuelOilFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCompanyFuelOilFare.Properties.Mask.EditMask = "c2";
-            this.txtCompanyFuelOilFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCompanyFuelOilFare.Size = new System.Drawing.Size(224, 26);
             this.txtCompanyFuelOilFare.TabIndex = 130;
             // 
@@ -292,8 +286,6 @@
             this.txtCompanyOtherFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCompanyOtherFare.Properties.EditFormat.FormatString = "c2";
             this.txtCompanyOtherFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCompanyOtherFare.Properties.Mask.EditMask = "c2";
-            this.txtCompanyOtherFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCompanyOtherFare.Size = new System.Drawing.Size(224, 26);
             this.txtCompanyOtherFare.TabIndex = 135;
             // 
@@ -322,8 +314,6 @@
             this.txtCompanyGeneralFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCompanyGeneralFare.Properties.EditFormat.FormatString = "c2";
             this.txtCompanyGeneralFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCompanyGeneralFare.Properties.Mask.EditMask = "c2";
-            this.txtCompanyGeneralFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCompanyGeneralFare.Size = new System.Drawing.Size(224, 26);
             this.txtCompanyGeneralFare.TabIndex = 134;
             // 
@@ -352,8 +342,6 @@
             this.txtCompanyDriverFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCompanyDriverFare.Properties.EditFormat.FormatString = "c2";
             this.txtCompanyDriverFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCompanyDriverFare.Properties.Mask.EditMask = "c2";
-            this.txtCompanyDriverFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCompanyDriverFare.Size = new System.Drawing.Size(224, 26);
             this.txtCompanyDriverFare.TabIndex = 131;
             // 
@@ -422,8 +410,6 @@
             this.txtRentFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtRentFare.Properties.EditFormat.FormatString = "c2";
             this.txtRentFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRentFare.Properties.Mask.EditMask = "c2";
-            this.txtRentFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtRentFare.Size = new System.Drawing.Size(224, 26);
             this.txtRentFare.TabIndex = 3;
             // 
@@ -476,8 +462,6 @@
             this.txtRentDriverFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtRentDriverFare.Properties.EditFormat.FormatString = "c2";
             this.txtRentDriverFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRentDriverFare.Properties.Mask.EditMask = "c2";
-            this.txtRentDriverFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtRentDriverFare.Size = new System.Drawing.Size(224, 26);
             this.txtRentDriverFare.TabIndex = 6;
             // 
@@ -517,8 +501,6 @@
             this.txtRentGeneralFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtRentGeneralFare.Properties.EditFormat.FormatString = "c2";
             this.txtRentGeneralFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRentGeneralFare.Properties.Mask.EditMask = "c2";
-            this.txtRentGeneralFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtRentGeneralFare.Size = new System.Drawing.Size(224, 26);
             this.txtRentGeneralFare.TabIndex = 7;
             // 
@@ -534,8 +516,8 @@
             this.txtRentFuelOilDay.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtRentFuelOilDay.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtRentFuelOilDay.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRentFuelOilDay.Properties.Mask.EditMask = "c2";
-            this.txtRentFuelOilDay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtRentFuelOilDay.Properties.Mask.EditMask = "\\d{0,3}";
+            this.txtRentFuelOilDay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtRentFuelOilDay.Size = new System.Drawing.Size(224, 26);
             this.txtRentFuelOilDay.TabIndex = 4;
             // 
@@ -575,8 +557,6 @@
             this.txtRentOtherFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtRentOtherFare.Properties.EditFormat.FormatString = "c2";
             this.txtRentOtherFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRentOtherFare.Properties.Mask.EditMask = "c2";
-            this.txtRentOtherFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtRentOtherFare.Size = new System.Drawing.Size(224, 26);
             this.txtRentOtherFare.TabIndex = 8;
             // 
@@ -605,8 +585,6 @@
             this.txtRentFuelOilFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtRentFuelOilFare.Properties.EditFormat.FormatString = "c2";
             this.txtRentFuelOilFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRentFuelOilFare.Properties.Mask.EditMask = "c2";
-            this.txtRentFuelOilFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtRentFuelOilFare.Size = new System.Drawing.Size(224, 26);
             this.txtRentFuelOilFare.TabIndex = 5;
             // 
@@ -655,7 +633,7 @@
             this.rbRentVehicle.AutoSize = true;
             this.rbRentVehicle.BackColor = System.Drawing.Color.Transparent;
             this.rbRentVehicle.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbRentVehicle.Location = new System.Drawing.Point(278, 110);
+            this.rbRentVehicle.Location = new System.Drawing.Point(289, 110);
             this.rbRentVehicle.Margin = new System.Windows.Forms.Padding(4);
             this.rbRentVehicle.Name = "rbRentVehicle";
             this.rbRentVehicle.Size = new System.Drawing.Size(132, 25);
@@ -692,7 +670,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(445, 35);
+            this.panelControl2.Size = new System.Drawing.Size(449, 35);
             this.panelControl2.TabIndex = 95;
             // 
             // btnKapat
@@ -702,7 +680,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(417, 0);
+            this.btnKapat.Location = new System.Drawing.Point(421, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -735,7 +713,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(445, 545);
+            this.ClientSize = new System.Drawing.Size(449, 545);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl2);

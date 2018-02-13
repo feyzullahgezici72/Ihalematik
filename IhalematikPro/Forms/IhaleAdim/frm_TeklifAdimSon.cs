@@ -94,6 +94,7 @@ namespace IhalematikProUI.Forms
             txtTotalUnitPrice.Text = totalUnitPrice.ToString("c2");
             txtDifference.Text = Math.Round((totalPersonHour - totalUnitPrice), 2).ToString("c2");
             lblTotalMarkupNonKDV.Text = this.TotalMarkupNonKDV.ToString("c2");
+            txtPanelMarkupMaterialTotal.Text = txtMarkupMaterialTotal.Text; // a.samet ekledi
         }
 
         private void btnObfKayit_Click(object sender, EventArgs e)

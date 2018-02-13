@@ -157,6 +157,7 @@ namespace IhalematikProUI.Forms
             //{
             //    gridViewSupplier.FocusedRowHandle = this.FocusedRowHandle;
             //}
+            
         }
 
         private void btnEdit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -251,6 +252,7 @@ namespace IhalematikProUI.Forms
             txtScore.ResetText();
             txtTelephone.ResetText();
             txtAddress.ResetText();
+
         }
     }
 }

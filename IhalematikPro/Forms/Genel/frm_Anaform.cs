@@ -15,6 +15,7 @@ using IhalematikProBL.Provider;
 using IhalematikProBL.Entity;
 using IhalematikProUI.Forms.Tedarikci;
 using IhalematikProUI.Forms.Genel;
+using IhalematikProUI.Forms.IhaleAdim;
 
 namespace IhalematikPro.Forms
 {
@@ -870,6 +871,30 @@ namespace IhalematikPro.Forms
         {
             frm_Duyurular duyurular = new frm_Duyurular();
             duyurular.ShowDialog();
+        }
+        frm_BirimFiyatHistory bfh;
+        private void barButtonItem43_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            barButtonItem43.ButtonStyle = BarButtonStyle.Check;
+            RibonPasif();
+            if (bfh == null)
+            {
+                bfh = new frm_BirimFiyatHistory();
+                bfh.MdiParent = this;
+                bfh.FormClosed +=new FormClosedEventHandler(Bfh_FormClosed);
+                bfh.Show();
+            }
+            else
+            {
+                bfh.Activate();
+            }
+        }
+
+        private void Bfh_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            bfh = null;
+            RibonAktif();
+            barButtonItem43.ButtonStyle = BarButtonStyle.Default;
         }
     }
 }
