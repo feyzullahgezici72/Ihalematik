@@ -9,9 +9,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("IhalematikPro V.1.0.0.0")]
 [assembly: AssemblyDescription("Program hakkında ayrıntılı bilgi için lütfen www.ihalematikpro.com web sitemizi ziyaret ediniz. Programın Lisanssız kullanılması suçtur. Programın tüm hakları saklıdır.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Saskom Yazilim 1996-2017")]
+[assembly: AssemblyCompany("LifeTreeSoftware 1996-2017")]
 [assembly: AssemblyProduct("IhalematikPro")]
-[assembly: AssemblyCopyright("Copyright © Saskom Yazılım 2017")]
+[assembly: AssemblyCopyright("Copyright © LifeTreeSoftware  Yazılım 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -35,5 +35,5 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: NeutralResourcesLanguage("")]
+[assembly: NeutralResourcesLanguage("tr-TR")]
 

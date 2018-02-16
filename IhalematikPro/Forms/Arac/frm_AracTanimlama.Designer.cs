@@ -318,7 +318,6 @@
             this.txtFuelOilDay.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtFuelOilDay.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtFuelOilDay.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtFuelOilDay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtFuelOilDay.Size = new System.Drawing.Size(224, 26);
             this.txtFuelOilDay.TabIndex = 0;
             // 
@@ -731,7 +730,6 @@
             this.txtRentFuelOilDay.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtRentFuelOilDay.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtRentFuelOilDay.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRentFuelOilDay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtRentFuelOilDay.Size = new System.Drawing.Size(224, 26);
             this.txtRentFuelOilDay.TabIndex = 4;
             // 

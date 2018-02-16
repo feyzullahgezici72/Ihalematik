@@ -158,20 +158,102 @@ namespace IhalematikPro.Forms
                 model.IsActive = true;
                 model.TitleId = ((TitleModel)ddlTitles.SelectedItem).Id.Value;
                 model.IsNormal = rbNormal.Checked;
-                model.BaseFare = new Fare(double.Parse(txtBaseFare.Text.Replace("TL", string.Empty)));
-                model.SGKPrimFare = new Fare(double.Parse(txtSGKPrimFare.Text.Replace("TL", string.Empty)));
-
-                model.WorklesFonFare = new Fare(double.Parse(txtWorklesFonFare.Text.Replace("TL", string.Empty)));
-                model.IncomeTaxFare = new Fare(double.Parse(txtIncomeTaxFare.Text.Replace("TL", string.Empty)));
-                model.SeveranceFare = new Fare(double.Parse(txtSeveranceFare.Text.Replace("TL", string.Empty)));
-
-                model.StampTaxFare = new Fare(double.Parse(txtStampTaxFare.Text.Replace("TL", string.Empty)));
-                model.AGIFare = new Fare(double.Parse(txtAGI.Text.Replace("TL", string.Empty)));
-                model.FoodFare = new Fare(double.Parse(txtFoodFare.Text.Replace("TL", string.Empty)));
-                model.TravelFare = new Fare(double.Parse(txtTravelFare.Text.Replace("TL", string.Empty)));
-                model.HotelFare = new Fare(double.Parse(txtHotelFare.Text.Replace("TL", string.Empty)));
-                model.ISGFare = new Fare(double.Parse(txtISGFare.Text.Replace("TL", string.Empty)));
-                model.ExtraFare = new Fare(double.Parse(txtExtraFare.Text.Replace("TL", string.Empty)));
+                if (txtBaseFare.Text!="")
+                {
+                    model.BaseFare = new Fare(double.Parse(txtBaseFare.Text.Replace("TL", string.Empty)));
+                }
+                else
+                {
+                    model.BaseFare = new Fare(0);
+                }
+                if (txtSGKPrimFare.Text!="")
+                {
+                    model.SGKPrimFare = new Fare(double.Parse(txtSGKPrimFare.Text.Replace("TL", string.Empty)));
+                }
+                else
+                {
+                    model.SGKPrimFare = new Fare(0);
+                }
+                if (txtWorklesFonFare.Text!="")
+                {
+                    model.WorklesFonFare = new Fare(double.Parse(txtWorklesFonFare.Text.Replace("TL", string.Empty)));
+                }
+                else
+                {
+                    model.WorklesFonFare = new Fare(0);
+                }
+                if (txtIncomeTaxFare.Text!="")
+                {
+                    model.IncomeTaxFare = new Fare(double.Parse(txtIncomeTaxFare.Text.Replace("TL", string.Empty)));
+                }
+                else
+                {
+                    model.IncomeTaxFare = new Fare(0);
+                }
+                if (txtSeveranceFare.Text!="")
+                {
+                    model.SeveranceFare = new Fare(double.Parse(txtSeveranceFare.Text.Replace("TL", string.Empty)));
+                }
+                else
+                {
+                    model.SeveranceFare = new Fare(0);
+                }
+                if (txtStampTaxFare.Text!="")
+                {
+                    model.StampTaxFare = new Fare(double.Parse(txtStampTaxFare.Text.Replace("TL", string.Empty)));
+                }
+                else
+                {
+                    model.StampTaxFare = new Fare(0);
+                }
+                if (txtAGI.Text!="")
+                {
+                    model.AGIFare = new Fare(double.Parse(txtAGI.Text.Replace("TL", string.Empty)));
+                }
+                else
+                {
+                    model.AGIFare = new Fare(0);
+                }
+                if (txtFoodFare.Text!="")
+                {
+                    model.FoodFare = new Fare(double.Parse(txtFoodFare.Text.Replace("TL", string.Empty)));
+                }
+               else
+                {
+                    model.FoodFare = new Fare(0);
+                }
+                if (txtTravelFare.Text!="")
+                {
+                    model.TravelFare = new Fare(double.Parse(txtTravelFare.Text.Replace("TL", string.Empty)));
+                }
+                else
+                {
+                    model.TravelFare = new Fare(0);
+                }
+                if (txtHotelFare.Text!="")
+                {
+                    model.HotelFare = new Fare(double.Parse(txtHotelFare.Text.Replace("TL", string.Empty)));
+                }
+                else
+                {
+                    model.HotelFare = new Fare(0);
+                }
+                if (txtISGFare.Text!="")
+                {
+                    model.ISGFare = new Fare(double.Parse(txtISGFare.Text.Replace("TL", string.Empty)));
+                }
+                else
+                {
+                    model.ISGFare = new Fare(0);
+                }
+                if (txtExtraFare.Text!="")
+                {
+                    model.ExtraFare = new Fare(double.Parse(txtExtraFare.Text.Replace("TL", string.Empty)));
+                }
+               else
+                {
+                    model.ExtraFare = new Fare(0);
+                }
 
                 model.Save();
                 LoadGrid();

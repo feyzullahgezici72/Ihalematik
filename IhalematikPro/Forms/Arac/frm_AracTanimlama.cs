@@ -72,13 +72,64 @@ namespace IhalematikPro.Forms
                 if (rbCompanyVehicle.Checked)
                 {
                     model.IsCompanyVehicle = true;
-                    model.FuelOilFare = double.Parse(txtFuelOilFare.Text.Replace("TL", string.Empty));
-                    model.FuelOilDay = float.Parse(txtFuelOilDay.Text.Replace("TL", string.Empty));
-                    model.DriverFare = double.Parse(txtDriverFare.Text.Replace("TL", string.Empty));
-                    model.MaintenanceFare = double.Parse(txtMaintenanceFare.Text.Replace("TL", string.Empty));
-                    model.ServiceFare = double.Parse(txtServiceFare.Text.Replace("TL", string.Empty));
-                    model.GeneralFare = double.Parse(txtGeneralFare.Text.Replace("TL", string.Empty));
-                    model.OtherFare = double.Parse(txtOtherFare.Text.Replace("TL", string.Empty));
+                    if (txtFuelOilFare.Text!="")
+                    {
+                        model.FuelOilFare = double.Parse(txtFuelOilFare.Text.Replace("TL", string.Empty));
+                    }
+                    else
+                    {
+                        model.FuelOilFare = 0;
+                    }
+                    if (txtFuelOilDay.Text!="")
+                    {
+                        model.FuelOilDay = float.Parse(txtFuelOilDay.Text.Replace("TL", string.Empty));
+                    }
+                    else
+                    {
+                        model.FuelOilDay = 0;
+                    }
+                    if (txtDriverFare.Text!="")
+                    {
+                        model.DriverFare = double.Parse(txtDriverFare.Text.Replace("TL", string.Empty));
+                    }
+                   else
+                    {
+                        model.DriverFare = 0;
+                    }
+
+                    if (txtMaintenanceFare.Text!="")
+                    {
+                        model.MaintenanceFare = double.Parse(txtMaintenanceFare.Text.Replace("TL", string.Empty));
+                    }
+                    else
+                    {
+                        model.MaintenanceFare = 0;
+                    }
+                    if (txtServiceFare.Text!="")
+                    {
+                        model.ServiceFare = double.Parse(txtServiceFare.Text.Replace("TL", string.Empty));
+                    }
+                    else
+                    {
+                        model.ServiceFare = 0;
+                    }
+                    if (txtGeneralFare.Text!="")
+                    {
+                        model.GeneralFare = double.Parse(txtGeneralFare.Text.Replace("TL", string.Empty));
+                    }
+                    else
+                    {
+                        model.GeneralFare = 0;
+                    }
+                    if (txtOtherFare.Text!="")
+                    {
+                        model.OtherFare = double.Parse(txtOtherFare.Text.Replace("TL", string.Empty));
+                    }
+                    else
+                    {
+                        model.OtherFare = 0;
+                    }
+                    
                 }
                 else
                 {
@@ -96,12 +147,54 @@ namespace IhalematikPro.Forms
                     {
                         model.RentType = IhalematikProBL.Enum.RentTypesEnum.Month;
                     }
-                    model.FuelOilFare = double.Parse(txtRentFuelOilFare.Text.Replace("TL", string.Empty));
-                    model.FuelOilDay = float.Parse(txtRentFuelOilDay.Text.Replace("TL", string.Empty));
-                    model.DriverFare = double.Parse(txtRentDriverFare.Text.Replace("TL", string.Empty));
-                    model.RentFare = double.Parse(txtRentFare.Text.Replace("TL", string.Empty));
-                    model.GeneralFare = double.Parse(txtRentGeneralFare.Text.Replace("TL", string.Empty));
-                    model.OtherFare = double.Parse(txtRentOtherFare.Text.Replace("TL", string.Empty));
+                    if (txtRentFuelOilFare.Text!="")
+                    {
+                        model.FuelOilFare = double.Parse(txtRentFuelOilFare.Text.Replace("TL", string.Empty));
+                    }
+                    else
+                    {
+                        model.FuelOilFare = 0;
+                    }
+                    if (txtRentFuelOilDay.Text!="")
+                    {
+                        model.FuelOilDay = float.Parse(txtRentFuelOilDay.Text.Replace("TL", string.Empty));
+                    }
+                    else
+                    {
+                        model.FuelOilDay = 0;
+                    }
+                    if (txtRentDriverFare.Text!="")
+                    {
+                        model.DriverFare = double.Parse(txtRentDriverFare.Text.Replace("TL", string.Empty));
+                    }
+                    else
+                    {
+                        model.DriverFare = 0;
+                    }
+                    if (txtRentFare.Text!="")
+                    {
+                        model.RentFare = double.Parse(txtRentFare.Text.Replace("TL", string.Empty));
+                    }
+                    else
+                    {
+                        model.RentFare = 0;
+                    }
+                    if (txtRentGeneralFare.Text!="")
+                    {
+                        model.GeneralFare = double.Parse(txtRentGeneralFare.Text.Replace("TL", string.Empty));
+                    }
+                    else
+                    {
+                        model.GeneralFare = 0;
+                    }
+                    if (txtRentOtherFare.Text!="")
+                    {
+                        model.OtherFare = double.Parse(txtRentOtherFare.Text.Replace("TL", string.Empty));
+                    }
+                    else
+                    {
+                        model.OtherFare = 0;
+                    }
                 }
 
                 model.Save();
@@ -312,5 +405,7 @@ namespace IhalematikPro.Forms
 
             }
         }
+
+        
     }
 }

@@ -166,7 +166,6 @@
             this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnIptal.Location = new System.Drawing.Point(496, 164);
             this.btnIptal.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnIptal.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(100, 55);
             this.btnIptal.TabIndex = 9;
@@ -181,7 +180,6 @@
             this.btnTamam.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnTamam.Location = new System.Drawing.Point(390, 164);
             this.btnTamam.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnTamam.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnTamam.Name = "btnTamam";
             this.btnTamam.Size = new System.Drawing.Size(100, 55);
             this.btnTamam.TabIndex = 8;
