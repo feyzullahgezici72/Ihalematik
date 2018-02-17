@@ -243,18 +243,6 @@
     <Compile Include="Forms\Genel\frm_GenelBilgiler.Designer.cs">
       <DependentUpon>frm_GenelBilgiler.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Genel\frm_LisansSozlesmesi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Genel\frm_LisansSozlesmesi.Designer.cs">
-      <DependentUpon>frm_LisansSozlesmesi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Genel\frm_LisasnKontrolFormu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Genel\frm_LisasnKontrolFormu.Designer.cs">
-      <DependentUpon>frm_LisasnKontrolFormu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Genel\frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +260,12 @@
     </Compile>
     <Compile Include="Forms\Genel\frm_PozlariOnlineGuncelle.Designer.cs">
       <DependentUpon>frm_PozlariOnlineGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_BirimFiyatHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_BirimFiyatHistory.Designer.cs">
+      <DependentUpon>frm_BirimFiyatHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\IhaleAdim\frm_Iscilik.cs">
       <SubType>Form</SubType>
@@ -590,12 +584,6 @@
     <EmbeddedResource Include="Forms\Genel\frm_GenelBilgiler.resx">
       <DependentUpon>frm_GenelBilgiler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Genel\frm_LisansSozlesmesi.resx">
-      <DependentUpon>frm_LisansSozlesmesi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Genel\frm_LisasnKontrolFormu.resx">
-      <DependentUpon>frm_LisasnKontrolFormu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Genel\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -604,6 +592,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Genel\frm_PozlariOnlineGuncelle.resx">
       <DependentUpon>frm_PozlariOnlineGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IhaleAdim\frm_BirimFiyatHistory.resx">
+      <DependentUpon>frm_BirimFiyatHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IhaleAdim\frm_Iscilik.resx">
       <DependentUpon>frm_Iscilik.cs</DependentUpon>

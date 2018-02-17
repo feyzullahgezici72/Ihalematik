@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Iscilik));
             this.isciAracGirisPanelix = new DevExpress.XtraEditors.PanelControl();
             this.grdAddVehicle = new DevExpress.XtraGrid.GridControl();
@@ -275,7 +275,7 @@
             // 
             this.btnAracCikar.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnAracCikar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnAracCikar.Name = "btnAracCikar";
             this.btnAracCikar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnAracCikar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnAracCikar_ButtonClick);
@@ -324,6 +324,7 @@
             this.colAddVehicleQuantity.AppearanceHeader.Options.UseFont = true;
             this.colAddVehicleQuantity.AppearanceHeader.Options.UseForeColor = true;
             this.colAddVehicleQuantity.Caption = "SAYI";
+            this.colAddVehicleQuantity.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAddVehicleQuantity.FieldName = "Quantity";
             this.colAddVehicleQuantity.MaxWidth = 60;
             this.colAddVehicleQuantity.MinWidth = 60;
@@ -344,6 +345,7 @@
             this.colAddVehicleUnitTime.AppearanceHeader.Options.UseFont = true;
             this.colAddVehicleUnitTime.AppearanceHeader.Options.UseForeColor = true;
             this.colAddVehicleUnitTime.Caption = "SÜRE";
+            this.colAddVehicleUnitTime.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAddVehicleUnitTime.FieldName = "UnitTime";
             this.colAddVehicleUnitTime.MaxWidth = 60;
             this.colAddVehicleUnitTime.MinWidth = 60;
@@ -365,6 +367,7 @@
             this.colAddVehicleUnitTimeType.AppearanceHeader.Options.UseForeColor = true;
             this.colAddVehicleUnitTimeType.Caption = "ZAMAN TİPİ";
             this.colAddVehicleUnitTimeType.ColumnEdit = this.rpstVehicleUnitTimeTypes;
+            this.colAddVehicleUnitTimeType.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAddVehicleUnitTimeType.FieldName = "SelectedUnitTimeType";
             this.colAddVehicleUnitTimeType.MaxWidth = 70;
             this.colAddVehicleUnitTimeType.MinWidth = 70;
@@ -579,7 +582,7 @@
             // btnIsciCikar
             // 
             this.btnIsciCikar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnIsciCikar.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnIsciCikar.Name = "btnIsciCikar";
             this.btnIsciCikar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -625,6 +628,7 @@
             this.colAddWorkerQuantity.AppearanceHeader.Options.UseBackColor = true;
             this.colAddWorkerQuantity.AppearanceHeader.Options.UseFont = true;
             this.colAddWorkerQuantity.Caption = "SAYI";
+            this.colAddWorkerQuantity.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAddWorkerQuantity.FieldName = "Quantity";
             this.colAddWorkerQuantity.MaxWidth = 60;
             this.colAddWorkerQuantity.MinWidth = 60;
@@ -643,6 +647,7 @@
             this.colAddWorkerUnitTime.AppearanceHeader.Options.UseBackColor = true;
             this.colAddWorkerUnitTime.AppearanceHeader.Options.UseFont = true;
             this.colAddWorkerUnitTime.Caption = "SÜRE";
+            this.colAddWorkerUnitTime.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAddWorkerUnitTime.FieldName = "UnitTime";
             this.colAddWorkerUnitTime.MaxWidth = 60;
             this.colAddWorkerUnitTime.MinWidth = 60;
@@ -662,6 +667,7 @@
             this.colAddWorkerUnitTimeType.AppearanceHeader.Options.UseFont = true;
             this.colAddWorkerUnitTimeType.Caption = "ZAMAN TİPİ";
             this.colAddWorkerUnitTimeType.ColumnEdit = this.rpstUnitTimeTypes;
+            this.colAddWorkerUnitTimeType.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAddWorkerUnitTimeType.FieldName = "SelectedUnitTimeType";
             this.colAddWorkerUnitTimeType.MaxWidth = 70;
             this.colAddWorkerUnitTimeType.MinWidth = 70;
@@ -836,9 +842,9 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.ShowLineShadow = false;
-            this.labelControl3.Size = new System.Drawing.Size(322, 35);
+            this.labelControl3.Size = new System.Drawing.Size(316, 35);
             this.labelControl3.TabIndex = 5;
-            this.labelControl3.Text = "İŞÇİLİK / ARAÇ KAYIT İŞLEMİ";
+            this.labelControl3.Text = "İŞÇİLİK / ARAÇ KEŞİF İŞLEMİ";
             this.labelControl3.UseMnemonic = false;
             // 
             // btnPanelKapat

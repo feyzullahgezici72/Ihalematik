@@ -698,6 +698,8 @@
             // 
             // colActive
             // 
+            this.colActive.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colActive.AppearanceHeader.Options.UseBackColor = true;
             this.colActive.ColumnEdit = this.btnActive;
             this.colActive.ImageAlignment = System.Drawing.StringAlignment.Center;
             this.colActive.MaxWidth = 20;

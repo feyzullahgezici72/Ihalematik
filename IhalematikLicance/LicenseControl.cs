@@ -11,26 +11,23 @@ using DevExpress.XtraEditors;
 
 namespace IhalematikLicance
 {
-    public partial class LicenseAgreement : DevExpress.XtraEditors.XtraForm
+    public partial class LicenseControl : DevExpress.XtraEditors.XtraForm
     {
         public CustomInstall _owner;
-        public LicenseAgreement(CustomInstall Owner)
+        public LicenseControl(CustomInstall CustomInstall)
         {
-            this._owner = Owner;
+            this._owner = CustomInstall;
             InitializeComponent();
+        }
+
+        private void btnIptal_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void btnLisansla_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            License license = new License(this._owner);
-            license.ShowDialog();
-            this.Close();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            this._owner.IsLicenceAktivated = true;
         }
     }
 }

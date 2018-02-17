@@ -117,8 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="memoEdit1.EditValue" xml:space="preserve">
+    <value>
+1 - LifeTreeSoftware , paket programlarının, izinsiz kullanımı, kopyalanması, devri vb. tasarruf ve eylemler, 5846 sayılı Fikir  Ve Sanat Eserleri Kanunu ve Türk Ceza Kanunu'nun 525-a,525-b,525-c maddelerine göre hukuka aykırıdır.
+
+2 - LifeTreeSoftware  ile Kullanıcı arasında düzenlenen bu sözleşme;LifeTreeSoftware  paket programlarını sadece kullanma hakkı veren bir Lisans Sözleşmesidir. Bu sözleşme, LifeTreeSoftware 'ın programlar üzerindeki fikri mülkiyet hakkını asla kaldırmaz, daraltmaz, sınırlamaz, hiçbir şekilde tasarruf hakkını etkilemez. O nedenle;  LifeTreeSoftware  paket programları izinsiz satılamaz, kopyalanamaz, başkasına devredilemez, adi veya ticari şekilde kiralanamaz, yedekleme amacı dışında izinsiz çoğaltılamaz, elektronik veya optik olarak transfer edilemez, kaynak kod haline dönüştürülemez, programlardan esinlenerek başka programlar yapılamaz. Buna rağmen çoğaltılan, transfer edilen, kaynak haline dönüştürülen "esinlenme ile yapılan" tüm programlar zabıt ve imha ettirilir. Failler hakkında cezai ve hukuki işlemler başlatılır.
+
+3 - Bu sözleşme, LifeTreeSoftware  Paket Programlarının, faturada yazılı adres dışında kullanılması, yeni bir sözleşmenin düzenlenmesini zorunlu kılar. Sözleşmenin yapılmaması  halinde kullanıcı; paket programlara ait lisans sözleşmesinin geçerliliğini kaybeder. Program kopya konumundaymış gibi işleme tabii tutulur.
+
+4 - LifeTreeSoftware , programlarında kullanıcının özel isteklerini karşılayabileceğini taahhüt etmez. LifeTreeSoftware  Paket Programları, faturaya bağlanmasıyla Kullanıcı tarafından OLDUĞU HALİYLE kabul edilmiş sayılır.
+
+5 - LifeTreeSoftware , Paket Programların kullanılması, uygulanması ve kuruluşu esnasında doğrudan veya dolaylı olarak doğabilecek maddi, manevi, mali ve hukuki sonuçlardan, bu nedenlerle oluşabilecek kazanç veya kayıplardan, daha önce yapılmış bir uyarı olsa dahi hiçbir şekilde sorumlu değildir.
+
+6 - LifeTreeSoftware  satıştan sonra eğitim veya herhangi bir hizmet desteği vermek zorunda değildir.. Ancak LifeTreeSoftware , zamanlaması ve kapsamı kendi inisiyatifinde olmak üzere, paket programlarındaki olası hataları gidermek, paket programları geliştirmek, günün şartlarına ve/veya yapılan yeni yasal düzenlemelere uyarlamak amacıyla programlarında değişiklikler yapabilir ve/veya yeni versiyonlar çıkarabilir. Bu değişikliklerin ve/veya yeni versiyon paket programlarının kullanım hakkı, Lisans Sözleşmesi olan Kullanıcılara, istekleri üzerine ve versiyon değiştirme bedeli karşılığında verilir.
+
+7 - LifeTreeSoftware , paket programlarının ya da bilgisi dışında çıkartılan paket program kopyalarının kullanılmasından, herhangi bir kurum veya resmi mercie verilmesinden doğabilecek sonuçlardan sorumlu tutulamaz. Böyle bir durumda LifeTreeSoftware , gerek göreceği yasal işlemleri yaptırma hakkına sahiptir.
+
+8 - LifeTreeSoftware , paket programlarının yedeklenmesi ve saklanması kullanıcıya aittir.
+
+9 - LifeTreeSoftware , faturada yazılı adresi kullanım yeri, yazışma ve tebligat adresi olarak kabul eder.
+
+10 - LifeTreeSoftware , süresiz olan bu sözleşmeyi, beliren ihtiyaç ve yeni koşullara göre her zaman değiştirme ve güncelleştirme hakkını saklı tutar.
+
+11 - LifeTreeSoftware   faturada yazılı satış miktarını ödemeyen veya geciktiren kullanıcıların lisanlarını tek taraflı fesih etme hakkına sahiptir.
+
+12 - LifeTreeSoftware   paket programlarının yasa ve bu sözleşme hükümlerine aykırı olarak kullanılması, satışı, kiralanması, kopyalanması, devri ve benzeri tasarruflara konu edilmesi halinde; tasarrufta bulunanlar hakkında alınacak zorlayıcı ve acil yasal tedbirlerin yanında, LifeTreeSoftware  tarafından;
+
+     - Lisans Sözleşmesi tek taraflı olarak iptal edilir,
+     - Kullanıcının şifresi geri alınır,
+     - Kullanıcı hakkında ceza kovuşturması başlatılır,
+     - Kullanıcı hakkında ayrıca gerekli hukuk davaları açılır,
+     - Maddi ve manevi tüm zararların talebi yoluna gidilir,
+
+13 - Programların kullanıcı tarafından diğer firma veya şahıslara devrinde geçerli fiyat listesi üzerinden program bedelinin %10'u talep edilir. Bu işlem gerekli resmi evrakın ibrazı ile yapılabilir. Bu işleme gerekli olabilecek versiyon yenileme ücreti  dahildir.
+
+14 - Hırsızlık ve doğal afetler sonucunda zayi olmuş programların tekrar yüklenmesi için, ilgili resmi evraklar ibraz edildikten sonra yeni set için servis ücreti talep edilir. 
+
+15 - Uyuşmazlıklarda yetkili mahkeme ve icra daireleri, Batman  Mahkeme ve İcra Daireleridir.</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnLisansla.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnTamam.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAhdEVYdFRpdGxlAEFwcGx5O09LO0NoZWNrO0JhcnM7UmliYm9uO2RjyGgAAAqwSURBVFhHlVcL
@@ -169,97 +207,5 @@
         Ldw/vWHq/EmC3qxRcyj2rwSumn/7cSHD5L8q4D+B2stC2EJ2hBOPJHB1Hw6Bx3y9+PvOp5xFDxP/Wm7G
         /9PUQviqcmK2lAUxEYPHPMfvOEYd/z+aEP8CrR1y7ZCy7FEAAAAASUVORK5CYII=
 </value>
-  </data>
-  <data name="btnCancel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAjdEVYdFRpdGxlAENhbmNlbDtTdG9wO0V4aXQ7QmFycztSaWJib247TJaWsgAACxVJREFUWEeV
-        lwdUVccWhsf3UnxBjMaudAVFBAtYKALSQcGGYokaRQ0RCTZAQKVYEBOxYyTGEoOiol5QUTTSRKkCF0Tg
-        UpTOpSqiyNW3/uw5F4h5K+u99fZa35q5c2b2/88+cw4HVrM/mNgtJ/RvoPFqaqtDOMGMos9/40WAP3se
-        4Mcqdvqy50SFvzcr9/Vi5du9WJnPVlbqvYVJtm1mkq2eNJ2iZl8Q+3fr825esA9/A0WPwD+IfxKfEJ/+
-        B3yMw6/zeX3e1z9j7+sL2fs6zlP2vqaAyWrETFadx4o8PWgKRdXeAPahpZyo+CtkiKJHWBDN9No8pXiH
-        b3DpLv9HZbv8cioC/D6U7/T9IPH3zpX4ej/O99q8J2HDegOa+xmfT8iNCOL5veKyqlxWuHEDXaKoDN7J
-        PjSXEWTiIyh6dvypePu2xSQoqfwxBM2xV9AhTsXbZ5mgeUQZ3hSm43VOMhqvR6JibyCebdssSXN3W05r
-        PycEIzJuoEouLqt8wvK/c6Nhiopdfux9o6SbUqGlEHad4O42usR/e3pN+BF05KXifX0ROovS0JF+F69T
-        b+Ll3Yt4eec3tCfdQHtKDN6KkyCrzkd7diIqwvZD7OGeeXbB/HGUi1dEqEbXi2zW9TyL5a1bSz8pyvy3
-        s/cNxb1QcPFP0j09rCU7tre23hOh60UeXj++TWKRcuIuoO02ces82mLPolV0Bq3XT6Ml+hRarp7Ey/iL
-        6CxOgzQmCvke7q0xS5c4UE5eDbmJ0jSWvXo1dSkkPtvo3jxlstpC/lMQT93wnY1kl39Xe1Yi3mT/Lhe6
-        Kaf15jm0xZwlSPTGLyT8M1qvRZDwT2i+fALNF4+h6bfDaDwfhvaEaLQ9jEOuh7vsuvPCXhOdxaksc8VK
-        rsdY0WZP1lWZx7tC2UXfrBhX6LOtuT3zAV5RghYuQvBWgARbuGA0F6UdXzlJwuFovnQcTZFH0HjhEBrP
-        /YjGMwcg/TlEqEprUiwyXF1bjllb65KGcDseL13GNRkTr1nNusqzeZeX57M8j42PpbFRVMYoNPPkV2hn
-        vXCxbsEo2i0XFXbcI3wQjWd/gPR0KBoi9qLh5G7UHQ8iY8dQHXkayS5L00mjH8EPJt8wY1kuS3gjlD55
-        7ZrlJcG70J4sQmPkUWFhDzURBxDnPBe/GkzF/a8Xo+HsQTT9SqJU6noSjHeZj9MT9CBysEZl2A7UnwhG
-        3dEA1B7egdqDvmihc5L1/UZcsnPgN78vwTfMWLrzIt7wH59nr18vabodBemFw5CSgPRcmEBN+D6I7G1w
-        zWsX7sQ8xNX1Hrg11wF1p0JQ99M+xMyxxeW17ogTpeCKpy+iTIxQEeKF2jA/VP/gg+rQbag+4I3ayFOI
-        d5pfRlr9id4qCLu/amtvJ97iSU7PUuJ9qI8IEWj4eT/uLHSCyDcIqVllKHveiKLSelxz88RNR3vcnGNH
-        4huRlFaMorJ6lDxvgoiMiqwtUBXqhaqQLajavQkvAjcKuVJXrcKxqYZOpNnzVAgGPouzm33o2c5tqNzt
-        iZqjgailEnLqiMvGRqivakBFdQva2rvQ9vodSsobBBOX13kg8XExislYc/s7NL/qRKu0BWd0J6Jqjyde
-        BH2P5wHuqPD/FuXersjduhEXppscJ00Fgr9hBRd9420dHkl2eqLE1QnF385H5Z5NqDm0AzWHdyJx1TI8
-        2rETne9kZOAdWl6RELXF5VKk51SguKIRTS87BficJC8fxM13lAvvcEPp1lV4tsYJRWscUeizAVHTZ/LD
-        yG9Dr4Ev4q3smiXe61C40g6FX9uicIUdStycUe7vhtrwPbi3aAHSAgMFAUGMdsrbxo/o7JThoZ8fYu2t
-        8SLUB6WbVqDYdZ6Q6+lyG8IWxVtccdnApIU0BxL8HAguFG5b2MgkHstR4GKNgqXWeLqMLyC4mVUOKPdz
-        Q9xsGyT7+kHa9gZSEpS2ve2lvrkDiT6+iLE0Q9l2vhEHQZDn4fnyXSwhXmyJYncXXJpsKCPNrwj+V1Qw
-        0C92pqWscPU8iJ1n0UQL5NNkvqhgiZU8ASW6bWmKG9964KlECmkLGWh5iwaijqht6sCtDZsQY2oIMc0v
-        WGqF/CXyHDxfnrM58haaoeCbObigO50bGPQXAzeMzJpzltgjbwFNXGBGk83JDLGIDC2ywC1zQ1ynx+/3
-        lCIUlEpR10yiAh2CeG3TW4iL63HVdQOuG+ojlwtyKFfuAlPkzptJmCLL2RpntfX5Leg1wM+AwiUDk8dp
-        c62QQxOfOJnQZA4tmj8Tdy2NccPte9xPeYZ82r1csANv3nahg6hp7EB1N3nPanFt7QbEGBtQLlM8mWuC
-        J47GyHY0EvIm2ZkhXHNiJmn2ngFu4F+n9aYdvW9ljmwnU2Q7zEDWHENkzzGihSRuaowySTXEJfWCWA2J
-        d7zpQkZQANIDA4R+lbRDoLLhNWqrpLioP0VYnzV7BjIpX6bddMpphFij6QhV0f6JNP/yFHy+V0vXKXqa
-        ETIcCJupyLSZhgy7aciihfH2lnh68gRedXRR6d8IglnBQbhjY444azPByGsa41Xhc/KOHsHNWSbC+kzK
-        lWFtgHQrfaTZTsd57YnYOkzdhTT5e4Bry9+ExJdntPXL7xtPESanW/J2CjKsDJC7bDbiSIybeNvQgKyg
-        QNy1nYWClY4oWOWIO9amyAjchTcN9cg7dhQiUyPkLLVHGq1Ps5iMtFmTkEb54qZOwGElbf6tN5Tgb8I+
-        7Nw4fWrl74I9auPXRepMRqr5JDwym4jH5gRfTIa4ifsOloidNRMP5lghb5mDYDSDEC+zxz17C0QbGyLO
-        iu47HeY0S30hxyNTPTyaqYcUEz1EqGtj62BVd9LqKX8f9ovmZGqFKvATOeCEhm7WDT0dpBhPQKqxLlJp
-        cepMXTwyn4zcxfQ4rpyLHGcrpJmRSVMuQCapn7OQHtcVjshdZE3Ck/DQRL7+oZEOkmeMR5SWJkKHjuEf
-        Hn/unkeEhh5LsOAfsvLDuGaw0oxwNZ3W2IlaSJqqLSxOmaGDh4bUGpIxo/FC0odGEz6CX+djdN1Qm+bz
-        NdpImj4OiQZauD5OA2FDR7ct6DfElDT494B89zzCVXXY/RkTBCj4Wei3eYjqwnBlbdk17dH4fYomEqeO
-        RTKROG0ckokkIqW7/ZOxAomcqVpIIO5N0sBlTVWEDdaQuSoOX0q5BxC80n1+GKhGDcXxUdrs7mRNFkdQ
-        9NyK/u5fKS86PFzrZaSGGm7rqOH+ZA08mDIGD/Q1BRJ6GYMEMpkgXCOof09PAzfHq+C8igpCv1J9tVph
-        KP/+4q9e/jnWRzRBnYX2V6UuxZERY1ksDcTqqPOf3ECPCcV5/QZP2z9IIzd8hDqi1JURO1YJtyjxPV01
-        Qh0PJlKFiHj6HT9BDXF0TaQ1CpGqo3B0sAqC+iuLbfsOMKJcfOeCOOealhLbp6hCXYqwIWOYiAaua41i
-        Is1RfKjHBL8d/Fkd4tF/pPu+gWqVhwarImKEEn5TGUkiIxE9ejiiNYYjUmUELiiPxKnho3BwoDL2KCpX
-        uSkM4/97DScUCaHsnCvqI9gV9eFsr4Iy/aT4cZAGi1Yfxq5pdEN9ih4T/LDwE8sfm2HLvhji6K048kSg
-        orI4WFGlJKS/CkIUaaf9lEoCFJTEW78YEe7Sd9BcmjuC4Lvm3358I0K+yypDWA97FZRoiOLAQHV2YIAa
-        C+V8qUotwdv+Qok+NsJLyCvCEw8h+O5GdsP7/PHi73d+yrnpXmEu9nf8P9FjhD+qPDEvKTfEhTi8z8f4
-        NT6nZ/7/CMb+AFWcml/bbQDGAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="memoEdit1.EditValue" xml:space="preserve">
-    <value>
-1 - LifeTreeSoftware , paket programlarının, izinsiz kullanımı, kopyalanması, devri vb. tasarruf ve eylemler, 5846 sayılı Fikir  Ve Sanat Eserleri Kanunu ve Türk Ceza Kanunu'nun 525-a,525-b,525-c maddelerine göre hukuka aykırıdır.
-
-2 - LifeTreeSoftware  ile Kullanıcı arasında düzenlenen bu sözleşme;LifeTreeSoftware  paket programlarını sadece kullanma hakkı veren bir Lisans Sözleşmesidir. Bu sözleşme, LifeTreeSoftware 'ın programlar üzerindeki fikri mülkiyet hakkını asla kaldırmaz, daraltmaz, sınırlamaz, hiçbir şekilde tasarruf hakkını etkilemez. O nedenle;  LifeTreeSoftware  paket programları izinsiz satılamaz, kopyalanamaz, başkasına devredilemez, adi veya ticari şekilde kiralanamaz, yedekleme amacı dışında izinsiz çoğaltılamaz, elektronik veya optik olarak transfer edilemez, kaynak kod haline dönüştürülemez, programlardan esinlenerek başka programlar yapılamaz. Buna rağmen çoğaltılan, transfer edilen, kaynak haline dönüştürülen "esinlenme ile yapılan" tüm programlar zabıt ve imha ettirilir. Failler hakkında cezai ve hukuki işlemler başlatılır.
-
-3 - Bu sözleşme, LifeTreeSoftware  Paket Programlarının, faturada yazılı adres dışında kullanılması, yeni bir sözleşmenin düzenlenmesini zorunlu kılar. Sözleşmenin yapılmaması  halinde kullanıcı; paket programlara ait lisans sözleşmesinin geçerliliğini kaybeder. Program kopya konumundaymış gibi işleme tabii tutulur.
-
-4 - LifeTreeSoftware , programlarında kullanıcının özel isteklerini karşılayabileceğini taahhüt etmez. LifeTreeSoftware  Paket Programları, faturaya bağlanmasıyla Kullanıcı tarafından OLDUĞU HALİYLE kabul edilmiş sayılır.
-
-5 - LifeTreeSoftware , Paket Programların kullanılması, uygulanması ve kuruluşu esnasında doğrudan veya dolaylı olarak doğabilecek maddi, manevi, mali ve hukuki sonuçlardan, bu nedenlerle oluşabilecek kazanç veya kayıplardan, daha önce yapılmış bir uyarı olsa dahi hiçbir şekilde sorumlu değildir.
-
-6 - LifeTreeSoftware  satıştan sonra eğitim veya herhangi bir hizmet desteği vermek zorunda değildir.. Ancak LifeTreeSoftware , zamanlaması ve kapsamı kendi inisiyatifinde olmak üzere, paket programlarındaki olası hataları gidermek, paket programları geliştirmek, günün şartlarına ve/veya yapılan yeni yasal düzenlemelere uyarlamak amacıyla programlarında değişiklikler yapabilir ve/veya yeni versiyonlar çıkarabilir. Bu değişikliklerin ve/veya yeni versiyon paket programlarının kullanım hakkı, Lisans Sözleşmesi olan Kullanıcılara, istekleri üzerine ve versiyon değiştirme bedeli karşılığında verilir.
-
-7 - LifeTreeSoftware , paket programlarının ya da bilgisi dışında çıkartılan paket program kopyalarının kullanılmasından, herhangi bir kurum veya resmi mercie verilmesinden doğabilecek sonuçlardan sorumlu tutulamaz. Böyle bir durumda LifeTreeSoftware , gerek göreceği yasal işlemleri yaptırma hakkına sahiptir.
-
-8 - LifeTreeSoftware , paket programlarının yedeklenmesi ve saklanması kullanıcıya aittir.
-
-9 - LifeTreeSoftware , faturada yazılı adresi kullanım yeri, yazışma ve tebligat adresi olarak kabul eder.
-
-10 - LifeTreeSoftware , süresiz olan bu sözleşmeyi, beliren ihtiyaç ve yeni koşullara göre her zaman değiştirme ve güncelleştirme hakkını saklı tutar.
-
-11 - LifeTreeSoftware   faturada yazılı satış miktarını ödemeyen veya geciktiren kullanıcıların lisanlarını tek taraflı fesih etme hakkına sahiptir.
-
-12 - LifeTreeSoftware   paket programlarının yasa ve bu sözleşme hükümlerine aykırı olarak kullanılması, satışı, kiralanması, kopyalanması, devri ve benzeri tasarruflara konu edilmesi halinde; tasarrufta bulunanlar hakkında alınacak zorlayıcı ve acil yasal tedbirlerin yanında, LifeTreeSoftware  tarafından;
-
-     - Lisans Sözleşmesi tek taraflı olarak iptal edilir,
-     - Kullanıcının şifresi geri alınır,
-     - Kullanıcı hakkında ceza kovuşturması başlatılır,
-     - Kullanıcı hakkında ayrıca gerekli hukuk davaları açılır,
-     - Maddi ve manevi tüm zararların talebi yoluna gidilir,
-
-13 - Programların kullanıcı tarafından diğer firma veya şahıslara devrinde geçerli fiyat listesi üzerinden program bedelinin %10'u talep edilir. Bu işlem gerekli resmi evrakın ibrazı ile yapılabilir. Bu işleme gerekli olabilecek versiyon yenileme ücreti  dahildir.
-
-14 - Hırsızlık ve doğal afetler sonucunda zayi olmuş programların tekrar yüklenmesi için, ilgili resmi evraklar ibraz edildikten sonra yeni set için servis ücreti talep edilir. 
-
-15 - Uyuşmazlıklarda yetkili mahkeme ve icra daireleri, Batman  Mahkeme ve İcra Daireleridir.</value>
   </data>
 </root>

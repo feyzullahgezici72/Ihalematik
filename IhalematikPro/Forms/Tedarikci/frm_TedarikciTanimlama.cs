@@ -157,6 +157,7 @@ namespace IhalematikProUI.Forms
             //{
             //    gridViewSupplier.FocusedRowHandle = this.FocusedRowHandle;
             //}
+            
         }
 
         private void btnEdit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -243,14 +244,15 @@ namespace IhalematikProUI.Forms
         private void btnTemizle_Click(object sender, EventArgs e)
         {
             // ddlSegments.SelectedIndex = -1;
-            txtCompanyName.ResetText();
-            txtAuthorNameSurname.ResetText();
-            txtCountry.ResetText();
-            txtEmail.ResetText();
-            txtGSM.ResetText();
-            txtScore.ResetText();
-            txtTelephone.ResetText();
-            txtAddress.ResetText();
+            txtCompanyName.Text="";
+            txtAuthorNameSurname.Text="";
+            txtCountry.Text="";
+            txtEmail.Text="";
+            txtGSM.Text="";
+            txtScore.Text="";
+            txtTelephone.Text="";
+            txtAddress.Text="";
+
         }
     }
 }
