@@ -12,9 +12,23 @@ namespace IhalematikLicance
 {
     public partial class Administrator : DevExpress.XtraEditors.XtraForm
     {
-        public Administrator()
+
+        public CustomInstall _owner;
+        public Administrator(CustomInstall Owner)
         {
             InitializeComponent();
+            this._owner = Owner;
+        }
+
+        private void btnTamam_Click(object sender, EventArgs e)
+        {
+            string userName = txtUserName.Text.Trim();
+            string passWord = txtPassword.Text.Trim();
+
+            if (userName.Equals("MariaGezici") && passWord.Equals("FG!Selcuk!86"))
+            {
+                this._owner.IsAdministratorLogin = true;
+            }
         }
     }
 }

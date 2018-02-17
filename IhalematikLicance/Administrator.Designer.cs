@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrator));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
+            this.txtPassword = new DevExpress.XtraEditors.TextEdit();
+            this.txtUserName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -52,71 +52,77 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl1.Controls.Add(this.btnTamam);
-            this.groupControl1.Controls.Add(this.textEdit2);
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.txtPassword);
+            this.groupControl1.Controls.Add(this.txtUserName);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(12, 12);
+            this.groupControl1.Location = new System.Drawing.Point(8, 8);
             this.groupControl1.LookAndFeel.SkinName = "Coffee";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(516, 202);
+            this.groupControl1.Size = new System.Drawing.Size(344, 138);
             this.groupControl1.TabIndex = 17;
             this.groupControl1.Text = "Administrator Login";
             // 
-            // textEdit2
+            // btnTamam
             // 
-            this.textEdit2.Enabled = false;
-            this.textEdit2.Location = new System.Drawing.Point(141, 102);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.PasswordChar = '*';
-            this.textEdit2.Size = new System.Drawing.Size(350, 26);
-            this.textEdit2.TabIndex = 1;
+            this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
+            this.btnTamam.Location = new System.Drawing.Point(241, 92);
+            this.btnTamam.LookAndFeel.SkinName = "Summer 2008";
+            this.btnTamam.LookAndFeel.UseWindowsXPTheme = true;
+            this.btnTamam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTamam.Name = "btnTamam";
+            this.btnTamam.Size = new System.Drawing.Size(87, 34);
+            this.btnTamam.TabIndex = 2;
+            this.btnTamam.Text = "Tamam";
+            this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
             // 
-            // textEdit1
+            // txtPassword
             // 
-            this.textEdit1.Enabled = false;
-            this.textEdit1.Location = new System.Drawing.Point(141, 66);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(350, 26);
-            this.textEdit1.TabIndex = 0;
+            this.txtPassword.Enabled = false;
+            this.txtPassword.Location = new System.Drawing.Point(94, 70);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Properties.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(233, 20);
+            this.txtPassword.TabIndex = 1;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Enabled = false;
+            this.txtUserName.Location = new System.Drawing.Point(94, 45);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(233, 20);
+            this.txtUserName.TabIndex = 0;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(97, 105);
+            this.labelControl2.Location = new System.Drawing.Point(65, 72);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(38, 19);
+            this.labelControl2.Size = new System.Drawing.Size(26, 13);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Şifre:";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(42, 69);
+            this.labelControl1.Location = new System.Drawing.Point(28, 47);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(93, 19);
+            this.labelControl1.Size = new System.Drawing.Size(59, 13);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Kullanıcı Adı:";
-            // 
-            // btnTamam
-            // 
-            this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
-            this.btnTamam.Location = new System.Drawing.Point(361, 134);
-            this.btnTamam.LookAndFeel.SkinName = "Summer 2008";
-            this.btnTamam.LookAndFeel.UseWindowsXPTheme = true;
-            this.btnTamam.Name = "btnTamam";
-            this.btnTamam.Size = new System.Drawing.Size(130, 50);
-            this.btnTamam.TabIndex = 2;
-            this.btnTamam.Text = "Tamam";
             // 
             // Administrator
             // 
             this.AcceptButton = this.btnTamam;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 226);
+            this.ClientSize = new System.Drawing.Size(358, 155);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Administrator";
@@ -126,8 +132,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -135,8 +141,8 @@
         #endregion
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtPassword;
+        private DevExpress.XtraEditors.TextEdit txtUserName;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btnTamam;

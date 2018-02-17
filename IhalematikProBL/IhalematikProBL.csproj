@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\Company.cs" />
+    <Compile Include="Entity\License.cs" />
     <Compile Include="Mailing\EmailData.cs" />
     <Compile Include="Mailing\EmailSetting.cs" />
     <Compile Include="Entity\EntityBase.cs" />
@@ -156,6 +157,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider\CompanyProvider.cs" />
     <Compile Include="Provider\CustomEntityBaseProvider.cs" />
+    <Compile Include="Provider\LicenseProvider.cs" />
     <Compile Include="Provider\MaterialListProvider.cs" />
     <Compile Include="Provider\OBFProvider.cs" />
     <Compile Include="Provider\OfferMaterialListProvider.cs" />

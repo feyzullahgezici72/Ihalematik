@@ -5,12 +5,13 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DDE316EB-06BB-4AD6-8A73-3A1E40DAED30}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>IhalematikLicance</RootNamespace>
     <AssemblyName>IhalematikLicance</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,11 +30,82 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation">
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet">
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms">
+      <HintPath>..\External\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\External\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\External\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\External\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\External\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\External\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core">
+      <HintPath>..\External\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Raverus.FiskalizacijaDEV">
+      <HintPath>..\External\Raverus.FiskalizacijaDEV.dll</HintPath>
+    </Reference>
+    <Reference Include="Raverus.FiskalizacijaDEV.XmlSerializers">
+      <HintPath>..\External\Raverus.FiskalizacijaDEV.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine">
+      <HintPath>..\External\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleApplicationBase.BL">
+      <HintPath>..\External\SimpleApplicationBase.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleApplicationBase.SocialToolkit">
+      <HintPath>..\External\SimpleApplicationBase.SocialToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleApplicationBase.Toolkit">
+      <HintPath>..\External\SimpleApplicationBase.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleApplicationBase.Web.BL">
+      <HintPath>..\External\SimpleApplicationBase.Web.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleApplicationBase.Web.Toolkit">
+      <HintPath>..\External\SimpleApplicationBase.Web.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Stonefish.Payment.BL">
+      <HintPath>..\External\Stonefish.Payment.BL.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
@@ -56,18 +128,19 @@
     <Compile Include="CustomInstall.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="LicenseControl.cs">
+    <Compile Include="LicenseInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LicenseControl.Designer.cs">
-      <DependentUpon>LicenseControl.cs</DependentUpon>
+    <Compile Include="LicenseInformation.Designer.cs">
+      <DependentUpon>LicenseInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="LicenseKey.cs">
+    <Compile Include="LicenseActivate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LicenseKey.Designer.cs">
-      <DependentUpon>LicenseKey.cs</DependentUpon>
+    <Compile Include="LicenseActivate.Designer.cs">
+      <DependentUpon>LicenseActivate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -79,11 +152,11 @@
     <EmbeddedResource Include="Administrator.resx">
       <DependentUpon>Administrator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LicenseControl.resx">
-      <DependentUpon>LicenseControl.cs</DependentUpon>
+    <EmbeddedResource Include="LicenseInformation.resx">
+      <DependentUpon>LicenseInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LicenseKey.resx">
-      <DependentUpon>LicenseKey.cs</DependentUpon>
+    <EmbeddedResource Include="LicenseActivate.resx">
+      <DependentUpon>LicenseActivate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -92,7 +165,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="Resources\logo_L.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IhalematikProBL\IhalematikProBL.csproj">
+      <Project>{0e0bef73-f7d6-4d3d-a02d-3b4ba085ca6a}</Project>
+      <Name>IhalematikProBL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
