@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using SimpleApplicationBase.Toolkit;
 using IhalematikProBL.Provider;
+using System.Data.SqlClient;
 
 namespace IhalematikLicance
 {
@@ -23,7 +24,7 @@ namespace IhalematikLicance
             }
             InitializeComponent();
         }
-     
+
         private void btnTamam_Click(object sender, EventArgs e)
         {
             string passPhrase = "LifeTreeSoftware!.1";
@@ -36,18 +37,49 @@ namespace IhalematikLicance
             Encryption.InitVector = "LifeTreeSoftware";
             string hashSerialNumber = Encryption.Encrypt(serialNumber, passPhrase);
 
-            IhalematikProBL.Entity.License license = LicenseProvider.Instance.GetOne("HashSerialNumber", hashSerialNumber);
+            IhalematikProBL.Entity.License license = this.CehckExistingLicense(hashSerialNumber);//LicenseProvider.Instance.GetOne("HashSerialNumber", hashSerialNumber);
             if (license != null && license.Id != 0 && !string.IsNullOrEmpty(license.HashSerialNumber) && license.HashSerialNumber.Equals(hashSerialNumber))
             {
                 MessageBox.Show(string.Format("Aktivasyon yapildi."));
                 this._owner.IsActivateSerialNumber = true;
                 this._owner.License = license;
+                this.Close();
             }
             else
             {
                 MessageBox.Show("Urun anahtari hatali.");
                 this._owner.IsActivateSerialNumber = false;
             }
+        }
+
+        private IhalematikProBL.Entity.License CehckExistingLicense(string HashSerialNumber)
+        {
+            IhalematikProBL.Entity.License license = new IhalematikProBL.Entity.License();
+
+
+            using (SqlConnection conn = new SqlConnection(@"server=.\MSSQLSErVER2014;user id=sa;password=Stonefish1;initial catalog=IhalematikDB"))
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand("License_Select", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@HashSerialNumber", HashSerialNumber));
+
+                using (SqlDataReader rdr = cmd.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        license.AuthorNameSurname = rdr["AuthorNameSurname"].ToString();
+                        license.CompanyName = rdr["CompanyName"].ToString();
+                        license.HashSerialNumber = rdr["HashSerialNumber"].ToString();
+                        license.Id = (int)rdr["Id"];
+                        //Console.WriteLine("Product: {0,-35} Total: {1,2}", rdr["ProductName"], rdr["Total"]);
+                    }
+                }
+            }
+
+
+            return license;
         }
     }
 }

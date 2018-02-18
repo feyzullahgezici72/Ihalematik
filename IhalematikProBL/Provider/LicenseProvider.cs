@@ -11,6 +11,11 @@ namespace IhalematikProBL.Provider
 {
     public class LicenseProvider : CustomEntityBaseProvider<License, LicenseProvider>
     {
+
+        public LicenseProvider()
+        {
+            this.EnableCaching = false;
+        }
         protected override Hashtable GetCommonParameters(License t)
         {
             Hashtable parameters = base.GetCommonParameters(t);
