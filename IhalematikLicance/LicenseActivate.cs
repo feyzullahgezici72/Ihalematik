@@ -44,6 +44,9 @@ namespace IhalematikLicance
                 this._owner.IsActivateSerialNumber = true;
                 this._owner.License = license;
                 this.Close();
+                LicenseInformation frmLicenseInformation = new LicenseInformation();
+                frmLicenseInformation.ShowDialog();
+
             }
             else
             {
@@ -56,8 +59,9 @@ namespace IhalematikLicance
         {
             IhalematikProBL.Entity.License license = new IhalematikProBL.Entity.License();
 
+            using (SqlConnection conn = new SqlConnection(@"server=L0720014;initial catalog=IhalematikDB; Integrated Security=true"))
 
-            using (SqlConnection conn = new SqlConnection(@"server=.\MSSQLSErVER2014;user id=sa;password=Stonefish1;initial catalog=IhalematikDB"))
+            //using (SqlConnection conn = new SqlConnection(@"server=.\MSSQLSErVER2014;user id=sa;password=Stonefish1;initial catalog=IhalematikDB"))
             {
                 conn.Open();
 
@@ -80,6 +84,38 @@ namespace IhalematikLicance
 
 
             return license;
+        }
+
+        private void txtSerialNumberPart1_EditValueChanged(object sender, EventArgs e)
+        {
+            if (txtSerialNumberPart1.Text.Length==5)
+            {
+                txtSerialNumberPart2.Focus();
+            }
+        }
+
+        private void txtSerialNumberPart2_EditValueChanged(object sender, EventArgs e)
+        {
+            if (txtSerialNumberPart2.Text.Length == 5)
+            {
+                txtSerialNumberPart3.Focus();
+            }
+        }
+
+        private void txtSerialNumberPart3_EditValueChanged(object sender, EventArgs e)
+        {
+            if (txtSerialNumberPart3.Text.Length == 5)
+            {
+                txtSerialNumberPart4.Focus();
+            }
+        }
+
+        private void txtSerialNumberPart4_EditValueChanged(object sender, EventArgs e)
+        {
+            if (txtSerialNumberPart4.Text.Length == 5)
+            {
+                btnTamam.Focus();
+            }
         }
     }
 }
