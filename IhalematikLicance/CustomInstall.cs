@@ -15,31 +15,14 @@ namespace IhalematikLicance
         public bool IsAdministratorLogin { get; internal set; }
 
         public License License { get; set; }
-
+        public static System.Collections.IDictionary StateSaver = null;
         public override void Install(System.Collections.IDictionary stateSaver)
         {
             try
             {
+                StateSaver = stateSaver;
                 LicenseActivate frmLicenseActivate = new LicenseActivate(this);
                 frmLicenseActivate.ShowDialog();
-
-                if (this.IsActivateSerialNumber)
-                {
-                    //frmLicenseActivate.Close();
-                    //LicenseInformation frmLicenseInformation = new LicenseInformation(this);
-                    //frmLicenseInformation.ShowDialog();
-
-                    //Administrator frmAdministrator = new Administrator(this);
-                    //frmLicenseActivate.ShowDialog();
-                    if (this.IsAdministratorLogin)
-                    {
-                        base.Install(stateSaver);
-                    }
-                }
-                else
-                {
-                    base.Uninstall(stateSaver);
-                }
             }
             catch (Exception ex)
             {
@@ -47,5 +30,56 @@ namespace IhalematikLicance
             }
         }
 
+        public void LicenseInformationForm()
+        {
+            try
+            {
+                if (this.IsActivateSerialNumber)
+                {
+                    LicenseInformation frmLicenseInformation = new LicenseInformation(this);
+                    frmLicenseInformation.ShowDialog();
+                }
+                else
+                {
+                    base.Uninstall(StateSaver);
+                }
+            }
+            catch (Exception)
+            {
+                base.Uninstall(StateSaver);
+            }
+        }
+
+        public void AdministratorForm()
+        {
+            try
+            {
+                Administrator frmAdministrator = new Administrator(this);
+                frmAdministrator.ShowDialog();
+            }
+            catch (Exception)
+            {
+                base.Uninstall(StateSaver);
+            }
+        }
+
+        public void CompleateInstall()
+        {
+            try
+            {
+                if (this.IsAdministratorLogin)
+                {
+                    base.Install(StateSaver);
+                }
+                else
+                {
+                    base.Uninstall(StateSaver);
+                }
+            }
+            catch (Exception)
+            {
+                base.Uninstall(StateSaver);
+            }
+        }
     }
 }

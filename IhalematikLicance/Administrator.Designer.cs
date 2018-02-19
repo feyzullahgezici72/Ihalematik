@@ -59,7 +59,7 @@
             this.groupControl1.Location = new System.Drawing.Point(8, 8);
             this.groupControl1.LookAndFeel.SkinName = "Coffee";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(344, 138);
             this.groupControl1.TabIndex = 17;
@@ -71,7 +71,7 @@
             this.btnTamam.Location = new System.Drawing.Point(241, 92);
             this.btnTamam.LookAndFeel.SkinName = "Summer 2008";
             this.btnTamam.LookAndFeel.UseWindowsXPTheme = true;
-            this.btnTamam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTamam.Margin = new System.Windows.Forms.Padding(2);
             this.btnTamam.Name = "btnTamam";
             this.btnTamam.Size = new System.Drawing.Size(87, 34);
             this.btnTamam.TabIndex = 2;
@@ -80,9 +80,8 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Enabled = false;
             this.txtPassword.Location = new System.Drawing.Point(94, 70);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(233, 20);
@@ -90,9 +89,8 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Enabled = false;
             this.txtUserName.Location = new System.Drawing.Point(94, 45);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(2);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(233, 20);
             this.txtUserName.TabIndex = 0;
@@ -100,7 +98,7 @@
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(65, 72);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(26, 13);
             this.labelControl2.TabIndex = 0;
@@ -109,7 +107,7 @@
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(28, 47);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(59, 13);
             this.labelControl1.TabIndex = 0;

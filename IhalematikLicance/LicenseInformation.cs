@@ -15,9 +15,9 @@ namespace IhalematikLicance
     public partial class LicenseInformation : DevExpress.XtraEditors.XtraForm
     {
         public CustomInstall _owner;
-        public LicenseInformation()
+        public LicenseInformation(CustomInstall CustomInstall)
         {
-            //this._owner = CustomInstall;
+            this._owner = CustomInstall;
             InitializeComponent();
         }
 
@@ -33,23 +33,8 @@ namespace IhalematikLicance
 
         private void btnLisansla_Click_1(object sender, EventArgs e)
         {
-            this.Close();
-            //string passPhrase = "LifeTreeSoftware!.1";
-            //string keyPart1 = txtSerialNumberPart1.Text.Trim();
-            //string keyPart2 = txtSerialNumberPart2.Text.Trim();
-            //string keyPart3 = txtSerialNumberPart3.Text.Trim();
-            //string keyPart4 = txtSerialNumberPart4.Text.Trim();
-
-            //string serialNumber = string.Join("-", new string[] { keyPart1, keyPart2, keyPart3, keyPart4 });
-            //Encryption.InitVector = "LifeTreeSoftware";
-            //string hashSerialNumber = Encryption.Encrypt(serialNumber, passPhrase);
-
-            //IhalematikProBL.Entity.License existingLicense = LicenseProvider.Instance.GetOne("HashSerialNumber", serialNumber);
-            //if (existingLicense != null && existingLicense.Id != 0 && !string.IsNullOrEmpty(existingLicense.HashSerialNumber) && existingLicense.HashSerialNumber.Equals(hashSerialNumber))
-            //{
-            //    MessageBox.Show(string.Format("Aktivasyon yapildi."));
-            //    this._owner.IsActivateSerialNumber = true;
-            //}
+            this.Hide();
+            this._owner.AdministratorForm();
         }
     }
 }

@@ -28,6 +28,8 @@ namespace IhalematikLicance
             if ((userName.Equals("MariaGezici") && passWord.Equals("FG!Selcuk!86")) || (userName.Equals("EyupCan") && passWord.Equals("01032013.sb")))
             {
                 this._owner.IsAdministratorLogin = true;
+                this.Hide();
+                this._owner.CompleateInstall();
             }
         }
     }
