@@ -25,7 +25,7 @@ namespace IhalematikLicance
             string userName = txtUserName.Text.Trim();
             string passWord = txtPassword.Text.Trim();
 
-            if (userName.Equals("MariaGezici") && passWord.Equals("FG!Selcuk!86"))
+            if ((userName.Equals("MariaGezici") && passWord.Equals("FG!Selcuk!86")) || (userName.Equals("EyupCan") && passWord.Equals("01032013.sb")))
             {
                 this._owner.IsAdministratorLogin = true;
             }

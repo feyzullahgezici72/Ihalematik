@@ -23,10 +23,10 @@ namespace IhalematikLicenceAdmin
                 return;
             }
             string passPhrase = "LifeTreeSoftware!.1";
-            string keyPart1 = this.RandomString(4);
-            string keyPart2 = this.RandomString(4);
-            string keyPart3 = this.RandomString(4);
-            string keyPart4 = this.RandomString(4);
+            string keyPart1 = this.RandomString(5);
+            string keyPart2 = this.RandomString(5);
+            string keyPart3 = this.RandomString(5);
+            string keyPart4 = this.RandomString(5);
 
             string serialNumber = string.Join("-", new string[] { keyPart1, keyPart2, keyPart3, keyPart4 });
             txtSerialNumber.Text = serialNumber;

@@ -15,9 +15,9 @@ namespace IhalematikLicance
     public partial class LicenseInformation : DevExpress.XtraEditors.XtraForm
     {
         public CustomInstall _owner;
-        public LicenseInformation(CustomInstall CustomInstall)
+        public LicenseInformation()
         {
-            this._owner = CustomInstall;
+            //this._owner = CustomInstall;
             InitializeComponent();
         }
 

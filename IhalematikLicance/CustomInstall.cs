@@ -25,12 +25,12 @@ namespace IhalematikLicance
 
                 if (this.IsActivateSerialNumber)
                 {
-                    frmLicenseActivate.Close();
-                    LicenseInformation frmLicenseInformation = new LicenseInformation(this);
-                    frmLicenseInformation.ShowDialog();
+                    //frmLicenseActivate.Close();
+                    //LicenseInformation frmLicenseInformation = new LicenseInformation(this);
+                    //frmLicenseInformation.ShowDialog();
 
-                    Administrator frmAdministrator = new Administrator(this);
-                    frmLicenseActivate.ShowDialog();
+                    //Administrator frmAdministrator = new Administrator(this);
+                    //frmLicenseActivate.ShowDialog();
                     if (this.IsAdministratorLogin)
                     {
                         base.Install(stateSaver);
