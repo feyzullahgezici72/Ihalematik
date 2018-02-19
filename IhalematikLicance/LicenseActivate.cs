@@ -57,9 +57,9 @@ namespace IhalematikLicance
         {
             IhalematikProBL.Entity.License license = new IhalematikProBL.Entity.License();
 
-            //using (SqlConnection conn = new SqlConnection(@"server=L0720014;initial catalog=IhalematikDB; Integrated Security=true"))
+            using (SqlConnection conn = new SqlConnection(@"server=L0720014;user id=sa;password=Stonefish1;initial catalog=IhalematikDB"))
 
-            using (SqlConnection conn = new SqlConnection(@"server=.\MSSQLSErVER2014;user id=sa;password=Stonefish1;initial catalog=IhalematikDB"))
+            //using (SqlConnection conn = new SqlConnection(@"server=.\MSSQLSErVER2014;user id=sa;password=Stonefish1;initial catalog=IhalematikDB"))
             {
                 conn.Open();
 

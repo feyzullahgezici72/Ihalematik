@@ -36,5 +36,11 @@ namespace IhalematikLicance
             this.Hide();
             this._owner.AdministratorForm();
         }
+
+        private void LicenseInformation_Load(object sender, EventArgs e)
+        {
+            this.Width = 844;
+            this.Height = 513;
+        }
     }
 }
