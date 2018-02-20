@@ -92,7 +92,7 @@ namespace IhalematikProUI.Forms
                 model.Description = txtDescription.Text;
                 model.Number = txtNumber.Text;
                 model.Unit = txtUnit.Text;
-                model.UnitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtUnitPrice.Text);
+                model.UnitPrice = model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty)); 
                 model.DescriptionForSupplier = txtDescriptionForSupplier.Text;
                 model.Save();
                 frm_MesajFormu mf = new frm_MesajFormu();
