@@ -51,7 +51,7 @@ namespace IhalematikLicenceAdmin
             OperationResult result = LicenseProvider.Instance.Save(license);
             if (result.Success)
             {
-                MessageBox.Show("Lisans Kaydedildi");
+                MessageBox.Show("Lisans Key Oluşturuldu");
             }
         }
 
@@ -61,6 +61,11 @@ namespace IhalematikLicenceAdmin
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
