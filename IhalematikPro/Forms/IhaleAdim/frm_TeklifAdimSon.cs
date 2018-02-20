@@ -85,7 +85,7 @@ namespace IhalematikProUI.Forms
             txtMaterialkdvTotalAmount.Text = materialkdvTotalAmount.ToString("c2");
             txtTotalAmount.Text = totalAmount.ToString("c2");
             txtWorkerCostAmount.Text = workerCostAmount.ToString("c2");
-            txtWorkerKDVAmount.Text = 0.ToString("c2");
+            txtWorkerKDVAmount.Text = Math.Round((workerCostAmount * 18 / 100), 2).ToString("c2");
             txtWorkerAmount.Text = workerCostAmount.ToString("c2");
             txtMarkupMaterialTotal.Text = markupMaterialAmount.ToString("c2");
             txtMarkupWorkerAmount.Text = markupWorkerAmount.ToString("c2");
