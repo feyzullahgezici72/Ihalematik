@@ -74,10 +74,13 @@ namespace IhalematikPro.Forms
         private void btnTumuneUygula_Click(object sender, EventArgs e)
         {
             double markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMarkup.Text.Replace("%", ""));
+            double risk = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRisk.Text.Replace("%", ""));
+
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
             foreach (var item in items)
             {
                 item.Markup = markup;
+                item.Risk = risk;
                 MaterialListProvider.Instance.Save(item);
             }
             this.LoadTenderMaterialList();
@@ -94,6 +97,20 @@ namespace IhalematikPro.Forms
                     if (item.Id.Equals(currenMaterialId))
                     {
                         item.Markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
+                        break;
+                    }
+                }
+                double baseAmount = 0;
+                this.CalculateInnerValue(ref baseAmount);
+            }
+            if (e.Column == colRisk)
+            {
+                int currenMaterialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialListNonWorkship.GetFocusedRowCellValue("Id"));
+                foreach (var item in CurrentManager.Instance.CurrentTender.MaterialList)
+                {
+                    if (item.Id.Equals(currenMaterialId))
+                    {
+                        item.Risk = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
                         break;
                     }
                 }

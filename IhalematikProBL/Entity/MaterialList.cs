@@ -11,6 +11,7 @@ namespace IhalematikProBL.Entity
     public class MaterialList : CustomEntityBase
     {
         public double Markup { get; set; }
+        public double Risk { get; set; }
 
         public double WorkerMarkup { get; set; }
 

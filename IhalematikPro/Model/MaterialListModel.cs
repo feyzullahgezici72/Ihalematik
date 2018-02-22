@@ -124,6 +124,8 @@ namespace IhalematikPro.Model
         //Malzeme birim kar yuzdesi
         public double Markup { get; set; }
 
+        public double Risk { get; set; }
+
         //Iscilik birim kar yuzdesi
         public double WorkerPercentageMarkup { get; set; }
 
@@ -133,6 +135,15 @@ namespace IhalematikPro.Model
             get
             {
                 return Math.Round(this.Markup * this.PozOBFUnitPrice / 100, 2);
+            }
+        }
+
+        //Unit Risk
+        public double UnitRisk
+        {
+            get
+            {
+                return Math.Round(this.Risk * this.PozOBFUnitPrice / 100, 2);
             }
         }
 
@@ -147,12 +158,13 @@ namespace IhalematikPro.Model
 
         public double MaterialMarkup { get; set; }
 
+
         //Karli Malzeme Birim Fiyat
         public double MarkupUnitPrice
         {
             get
             {
-                return Math.Round(this.PozOBFUnitPrice + this.UnitMarkup, 2);
+                return Math.Round(this.PozOBFUnitPrice + this.UnitMarkup + this.UnitRisk, 2);
             }
         }
 
@@ -391,6 +403,7 @@ namespace IhalematikPro.Model
             this.TenderId = Entity.TenderId;
             this.Id = Entity.Id;
             this.Markup = Entity.Markup;
+            this.Risk = Entity.Risk;
             this.UnitTimeType = new UnitTimeTypesModel().Create(Entity.UnitTimeType);
             this.UnitTime = Entity.UnitTime;
             this.WorkerPercentageMarkup = Entity.WorkerMarkup;
@@ -418,6 +431,7 @@ namespace IhalematikPro.Model
             materialList.IsWorkship = this.IsWorkship;
             materialList.KDVPercentage = this.KDVPercentage;
             materialList.Markup = this.Markup;
+            materialList.Risk = this.Risk;
             materialList.PozOBFId = this.PozOBFId;
             materialList.Quantity = this.Quantity;
             materialList.TenderId = this.TenderId;
