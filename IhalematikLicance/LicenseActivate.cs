@@ -33,7 +33,7 @@ namespace IhalematikLicance
             string keyPart3 = txtSerialNumberPart3.Text.Trim();
             string keyPart4 = txtSerialNumberPart4.Text.Trim();
 
-            string serialNumber = string.Join("-", new string[] { keyPart1, keyPart2, keyPart3, keyPart4 });
+            string serialNumber = string.Join("", new string[] { keyPart1, keyPart2, keyPart3, keyPart4 });
             Encryption.InitVector = "LifeTreeSoftware";
             string hashSerialNumber = Encryption.Encrypt(serialNumber, passPhrase);
 
@@ -57,9 +57,9 @@ namespace IhalematikLicance
         {
             IhalematikProBL.Entity.License license = new IhalematikProBL.Entity.License();
 
-            using (SqlConnection conn = new SqlConnection(@"server=L0720014;user id=sa;password=Stonefish1;initial catalog=IhalematikDB"))
+           // using (SqlConnection conn = new SqlConnection(@"server=L0720014;user id=sa;password=Stonefish1;initial catalog=IhalematikDB"))
 
-            //using (SqlConnection conn = new SqlConnection(@"server=.\MSSQLSErVER2014;user id=sa;password=Stonefish1;initial catalog=IhalematikDB"))
+            using (SqlConnection conn = new SqlConnection(@"server=.\MSSQLSErVER2014;user id=sa;password=Stonefish1;initial catalog=IhalematikDB"))
             {
                 conn.Open();
 
@@ -74,6 +74,10 @@ namespace IhalematikLicance
                         license.AuthorNameSurname = rdr["AuthorNameSurname"].ToString();
                         license.CompanyName = rdr["CompanyName"].ToString();
                         license.HashSerialNumber = rdr["HashSerialNumber"].ToString();
+                        license.Address = rdr["Address"].ToString();
+                        license.TaxNumber = rdr["TaxNumber"].ToString();
+                        license.TaxOffice = rdr["TaxOffice"].ToString();
+                        license.Telephone = rdr["Telephone"].ToString();
                         license.Id = (int)rdr["Id"];
                         //Console.WriteLine("Product: {0,-35} Total: {1,2}", rdr["ProductName"], rdr["Total"]);
                     }

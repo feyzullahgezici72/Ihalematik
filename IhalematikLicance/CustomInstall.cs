@@ -11,6 +11,10 @@ namespace IhalematikLicance
     [System.ComponentModel.RunInstaller(true)]
     public class CustomInstall : System.Configuration.Install.Installer
     {
+        public CustomInstall()
+        {
+
+        }
         public bool IsActivateSerialNumber { get; internal set; }
         public bool IsAdministratorLogin { get; internal set; }
 
@@ -28,6 +32,11 @@ namespace IhalematikLicance
             {
                 base.Uninstall(stateSaver);
             }
+        }
+
+        protected override void OnBeforeInstall(IDictionary savedState)
+        {
+            base.OnBeforeInstall(savedState);
         }
 
         public void LicenseInformationForm()

@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using SimpleApplicationBase.Toolkit;
 using IhalematikProBL.Provider;
+using IhalematikProBL.Entity;
 
 namespace IhalematikLicance
 {
@@ -41,6 +42,15 @@ namespace IhalematikLicance
         {
             this.Width = 844;
             this.Height = 513;
+
+            License license = this._owner.License;
+
+            txtAddress.Text = license.Address;
+            txtCompanyName.Text = license.CompanyName;
+            txtNameSurname.Text = license.AuthorNameSurname;
+            txtTaxNumber.Text = license.TaxNumber;
+            txtTaxOffice.Text = license.TaxOffice;
+            txtTelephone.Text = license.Telephone;
         }
     }
 }
