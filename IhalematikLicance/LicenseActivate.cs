@@ -48,7 +48,7 @@ namespace IhalematikLicance
             }
             else
             {
-                MessageBox.Show("Urun anahtari hatali.");
+                MessageBox.Show("Lisans Anahtarı hatalı.");
                 this._owner.IsActivateSerialNumber = false;
             }
         }
@@ -59,7 +59,7 @@ namespace IhalematikLicance
 
            // using (SqlConnection conn = new SqlConnection(@"server=L0720014;user id=sa;password=Stonefish1;initial catalog=IhalematikDB"))
 
-            using (SqlConnection conn = new SqlConnection(@"server=.\MSSQLSErVER2014;user id=sa;password=Stonefish1;initial catalog=IhalematikDB"))
+            using (SqlConnection conn = new SqlConnection(@"server=.\MSSQLSErVER2014;user id=sa;password=Stonefish1;initial catalog=IhalematikLicense"))
             {
                 conn.Open();
 
