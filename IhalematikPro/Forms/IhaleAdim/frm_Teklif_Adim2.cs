@@ -147,6 +147,7 @@ namespace IhalematikPro.Forms
                 List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
                 List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
                 grdMaterialListNonWorkship.DataSource = models;
+                this.CalculateTotalMarkup();
             }
         }
 
