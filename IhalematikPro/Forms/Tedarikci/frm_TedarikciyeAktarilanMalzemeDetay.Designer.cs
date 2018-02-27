@@ -63,6 +63,7 @@
             this.txtEmailBody = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.emailMesajPanel)).BeginInit();
@@ -89,15 +90,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlMail)).BeginInit();
             this.pnlMail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmailBody.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.pictureEdit2);
             this.panelControl1.Controls.Add(this.emailMesajPanel);
             this.panelControl1.Controls.Add(this.grdMaterialList);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 131);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(694, 265);
             this.panelControl1.TabIndex = 0;
@@ -112,7 +115,7 @@
             this.emailMesajPanel.Location = new System.Drawing.Point(230, 47);
             this.emailMesajPanel.LookAndFeel.SkinName = "Money Twins";
             this.emailMesajPanel.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.emailMesajPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.emailMesajPanel.Margin = new System.Windows.Forms.Padding(2);
             this.emailMesajPanel.Name = "emailMesajPanel";
             this.emailMesajPanel.Size = new System.Drawing.Size(259, 140);
             this.emailMesajPanel.TabIndex = 3;
@@ -127,7 +130,7 @@
             this.panelControl7.Controls.Add(this.labelControl7);
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl7.Location = new System.Drawing.Point(0, 0);
-            this.panelControl7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl7.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl7.Name = "panelControl7";
             this.panelControl7.Size = new System.Drawing.Size(259, 25);
             this.panelControl7.TabIndex = 1;
@@ -137,7 +140,7 @@
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl7.Location = new System.Drawing.Point(9, 4);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(105, 15);
             this.labelControl7.TabIndex = 3;
@@ -151,7 +154,7 @@
             this.panelControl6.Controls.Add(this.labelControl5);
             this.panelControl6.Controls.Add(this.pictureEdit1);
             this.panelControl6.Location = new System.Drawing.Point(9, 33);
-            this.panelControl6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl6.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl6.Name = "panelControl6";
             this.panelControl6.Size = new System.Drawing.Size(240, 99);
             this.panelControl6.TabIndex = 0;
@@ -161,7 +164,7 @@
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.labelControl5.Location = new System.Drawing.Point(121, 44);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(94, 14);
             this.labelControl5.TabIndex = 3;
@@ -508,7 +511,7 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Enabled = false;
             this.panelControl4.Location = new System.Drawing.Point(0, 24);
-            this.panelControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(694, 107);
             this.panelControl4.TabIndex = 36;
@@ -641,7 +644,7 @@
             this.pnlMail.Controls.Add(this.simpleButton1);
             this.pnlMail.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlMail.Location = new System.Drawing.Point(0, 396);
-            this.pnlMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlMail.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMail.Name = "pnlMail";
             this.pnlMail.Size = new System.Drawing.Size(694, 55);
             this.pnlMail.TabIndex = 37;
@@ -650,7 +653,7 @@
             // 
             this.txtEmailBody.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtEmailBody.Location = new System.Drawing.Point(106, 2);
-            this.txtEmailBody.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmailBody.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmailBody.Name = "txtEmailBody";
             this.txtEmailBody.Size = new System.Drawing.Size(464, 51);
             this.txtEmailBody.TabIndex = 8;
@@ -660,7 +663,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Maroon;
             this.labelControl2.Location = new System.Drawing.Point(13, 21);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(90, 13);
             this.labelControl2.TabIndex = 6;
@@ -676,12 +679,27 @@
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton1.Location = new System.Drawing.Point(570, 2);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(122, 51);
             this.simpleButton1.TabIndex = 5;
             this.simpleButton1.Text = "Mail Gönder";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // pictureEdit2
+            // 
+            this.pictureEdit2.EditValue = global::IhalematikProUI.Properties.Resources.kaydediliyor;
+            this.pictureEdit2.Location = new System.Drawing.Point(54, 90);
+            this.pictureEdit2.Name = "pictureEdit2";
+            this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit2.Properties.InitialImage = global::IhalematikProUI.Properties.Resources.loading;
+            this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEdit2.Properties.ZoomPercent = 75D;
+            this.pictureEdit2.Size = new System.Drawing.Size(101, 83);
+            this.pictureEdit2.TabIndex = 4;
             // 
             // frm_TedarikciyeAktarilanMalzemeDetay
             // 
@@ -697,7 +715,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TedarikciyeAktarilanMalzemeDetay";
@@ -736,6 +754,7 @@
             this.pnlMail.ResumeLayout(false);
             this.pnlMail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmailBody.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -776,5 +795,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit2;
     }
 }

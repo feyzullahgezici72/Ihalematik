@@ -124,13 +124,13 @@ namespace IhalematikProUI.Forms.Tedarikci
                     else
                     {
                         fw.Hide();
-                        MessageBox.Show("Mail gonderirken hata olustur lutfen daha sonra tekrar deneyiniz");
+                        MessageBox.Show("Mail gonderirken hata oluştu.Lütfen daha sonra tekrar deneyiniz");
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Gonderilecek malzeme listesi bos olamaz");
+                MessageBox.Show("Gönderilecek malzeme listesi boş olamaz");
             }
         }
 
