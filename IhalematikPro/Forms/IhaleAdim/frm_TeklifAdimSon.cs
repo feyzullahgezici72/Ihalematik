@@ -158,8 +158,8 @@ namespace IhalematikProUI.Forms
             if (CurrentManager.Instance.CurrentTender != null)
             {
                 Tender currentTender = CurrentManager.Instance.CurrentTender;
-                txtCarriage.Text = currentTender.Carriage.ToString("c");
-                txtAccountingCosts.Text = currentTender.AccountingCosts.ToString("c");
+                txtCarriage.Text = currentTender.Carriage.ToString("c2");
+                txtAccountingCosts.Text = currentTender.AccountingCosts.ToString("c2");
                 chckCompletionBond.Checked = currentTender.CompletionBond;
                 chckProvisionalBond.Checked = currentTender.ProvisionalBond;
 
@@ -198,19 +198,19 @@ namespace IhalematikProUI.Forms
             txtTenderNumber.Text = string.Format("{0}", (tender.Number).ToString().PadLeft(8, '0'));
             txtTenderDescription.Text = tender.Description;
             txtTenderLastOfferDate.Text = tender.LastOfferDate.Value.ToShortDateString();
-            txtTenderNearlyTotalAmount.Text = tender.NearlyTotalAmount.ToString("c");
+            txtTenderNearlyTotalAmount.Text = tender.NearlyTotalAmount.ToString("c2");
             txtMaterialCount.Text = tender.MaterialList.Count().ToString();
             txtMaterialIsNonWorkshipcount.Text = tender.MaterialList.Where(p => !p.IsWorkship).Count().ToString();
             txtMaterialWorksipCount.Text = tender.MaterialList.Where(p => p.IsWorkship).Count().ToString();
             txtMaterialTotalAmount.Text = txtMaterialCostAmount.Text;
             txtWorkerTotalAmount.Text = txtWorkerCostAmount.Text;
-            txtTotalMaterialAndWorkerAmount.Text = (double.Parse(txtWorkerCostAmount.Text.Replace("TL", "")) + double.Parse(txtMaterialTotalAmount.Text.Replace("TL", ""))).ToString("c");
+            txtTotalMaterialAndWorkerAmount.Text = (double.Parse(txtWorkerCostAmount.Text.Replace("TL", "")) + double.Parse(txtMaterialTotalAmount.Text.Replace("TL", ""))).ToString("c2");
             txtGeneralMarkupWorkerAmount.Text = txtMarkupWorkerAmount.Text;
             txtTotalMarkupAmount.Text = txtMarkupAmount.Text;
 
-            txtOfferTotalAmount.Text = (double.Parse(txtTotalMaterialAndWorkerAmount.Text.Replace("TL", "")) + double.Parse(txtGeneralMarkupWorkerAmount.Text.Replace("TL", "")) + double.Parse(txtTotalMarkupAmount.Text.Replace("TL", ""))).ToString("c");
+            txtOfferTotalAmount.Text = (double.Parse(txtTotalMaterialAndWorkerAmount.Text.Replace("TL", "")) + double.Parse(txtGeneralMarkupWorkerAmount.Text.Replace("TL", "")) + double.Parse(txtTotalMarkupAmount.Text.Replace("TL", ""))).ToString("c2");
 
-            txtKirim.Text = (tender.NearlyTotalAmount - double.Parse(txtOfferTotalAmount.Text.Replace("TL", ""))).ToString("c");
+            txtKirim.Text = (tender.NearlyTotalAmount - double.Parse(txtOfferTotalAmount.Text.Replace("TL", ""))).ToString("c2");
         }
 
 

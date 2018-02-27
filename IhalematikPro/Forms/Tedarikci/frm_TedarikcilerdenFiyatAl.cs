@@ -236,9 +236,9 @@ namespace IhalematikProUI.Forms
 
             double baseAmount = Math.Round(dataSoruce.Sum(p => p.PriceWithRisk * p.Quantity), 2);
             double baseKDVamount = Math.Round(dataSoruce.Sum(p => p.PriceWithRisk * p.Quantity * p.KDV / 100), 2); ;
-            txtBaseAmount.Text = baseAmount.ToString("c");
-            txtBaseKDVAmount.Text = baseKDVamount.ToString("c");
-            txtTotalAmount.Text = (baseKDVamount + baseAmount).ToString("c");
+            txtBaseAmount.Text = baseAmount.ToString("c2");
+            txtBaseKDVAmount.Text = baseKDVamount.ToString("c2");
+            txtTotalAmount.Text = (baseKDVamount + baseAmount).ToString("c2");
         }
 
         private void rdSortPrice_SelectedIndexChanged(object sender, EventArgs e)

@@ -228,7 +228,9 @@
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.LookAndFeel.SkinName = "VS2010";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;

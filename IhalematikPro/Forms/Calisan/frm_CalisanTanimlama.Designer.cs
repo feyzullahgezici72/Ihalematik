@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CalisanTanimlama));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -53,6 +52,7 @@
             this.btnAktif = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.kayitMenusu = new DevExpress.XtraEditors.GroupControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
             this.txtWorklesFonFare = new DevExpress.XtraEditors.TextEdit();
@@ -88,7 +88,7 @@
             this.cmbAktivePasive = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -588,6 +588,7 @@
             this.groupControl2.AppearanceCaption.ForeColor = System.Drawing.Color.Navy;
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl2.Controls.Add(this.radioButton1);
             this.groupControl2.Controls.Add(this.btnKaydet);
             this.groupControl2.Controls.Add(this.btnTemizle);
             this.groupControl2.Controls.Add(this.txtWorklesFonFare);
@@ -627,6 +628,20 @@
             this.groupControl2.Size = new System.Drawing.Size(435, 679);
             this.groupControl2.TabIndex = 95;
             this.groupControl2.Text = "Çalışan Bilgileri";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButton1.ForeColor = System.Drawing.Color.Maroon;
+            this.radioButton1.Location = new System.Drawing.Point(297, 71);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(115, 23);
+            this.radioButton1.TabIndex = 136;
+            this.radioButton1.Text = "Net Maaş ";
+            this.radioButton1.UseVisualStyleBackColor = false;
             // 
             // btnKaydet
             // 
@@ -1037,7 +1052,7 @@
             this.ddlTitles.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.ddlTitles.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ddlTitles.Size = new System.Drawing.Size(262, 28);
+            this.ddlTitles.Size = new System.Drawing.Size(262, 26);
             this.ddlTitles.TabIndex = 0;
             this.ddlTitles.SelectedIndexChanged += new System.EventHandler(this.ddlTitles_SelectedIndexChanged);
             // 
@@ -1047,12 +1062,11 @@
             this.rbAsgariUcret.BackColor = System.Drawing.Color.Transparent;
             this.rbAsgariUcret.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbAsgariUcret.ForeColor = System.Drawing.Color.Maroon;
-            this.rbAsgariUcret.Location = new System.Drawing.Point(267, 76);
+            this.rbAsgariUcret.Location = new System.Drawing.Point(144, 71);
             this.rbAsgariUcret.Margin = new System.Windows.Forms.Padding(4);
             this.rbAsgariUcret.Name = "rbAsgariUcret";
             this.rbAsgariUcret.Size = new System.Drawing.Size(145, 23);
             this.rbAsgariUcret.TabIndex = 2;
-            this.rbAsgariUcret.TabStop = true;
             this.rbAsgariUcret.Text = "Asgari Ücretli";
             this.rbAsgariUcret.UseVisualStyleBackColor = false;
             this.rbAsgariUcret.CheckedChanged += new System.EventHandler(this.rbAsgariUcret_CheckedChanged);
@@ -1075,7 +1089,7 @@
             this.rbNormal.Checked = true;
             this.rbNormal.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbNormal.ForeColor = System.Drawing.Color.Maroon;
-            this.rbNormal.Location = new System.Drawing.Point(165, 76);
+            this.rbNormal.Location = new System.Drawing.Point(42, 71);
             this.rbNormal.Margin = new System.Windows.Forms.Padding(4);
             this.rbNormal.Name = "rbNormal";
             this.rbNormal.Size = new System.Drawing.Size(93, 23);
@@ -1270,5 +1284,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
         public DevExpress.XtraGrid.GridControl grdWorker;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

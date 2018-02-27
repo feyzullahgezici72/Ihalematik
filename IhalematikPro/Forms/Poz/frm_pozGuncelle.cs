@@ -49,7 +49,7 @@ namespace IhalematikProUI.Forms
                 txtDescription.Text = this.CurrentPoz.Description;
                 txtNumber.Text = this.CurrentPoz.Number;
                 txtUnit.Text = this.CurrentPoz.Unit;
-                txtUnitPrice.Text = this.CurrentPoz.UnitPrice.ToString("c");
+                txtUnitPrice.Text = this.CurrentPoz.UnitPrice.ToString("c2");
             }
         }
 

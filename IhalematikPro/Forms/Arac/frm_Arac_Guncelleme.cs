@@ -72,23 +72,23 @@ namespace IhalematikProUI.Forms
                 if (model.IsCompanyVehicle)
                 {
                     rbCompanyVehicle.Checked = true;
-                    txtCompanyFuelOilFare.Text = model.FuelOilFare.ToString("c");
-                    txtCompanyFuelOilDay.Text = model.FuelOilDay.ToString("c");
-                    txtCompanyDriverFare.Text = model.DriverFare.ToString("c");
-                    txtCompanyMaintenanceFare.Text = model.MaintenanceFare.ToString("c");
-                    txtCompanyServiceFare.Text = model.ServiceFare.ToString("c");
-                    txtCompanyGeneralFare.Text = model.GeneralFare.ToString("c");
-                    txtCompanyOtherFare.Text = model.OtherFare.ToString("c");
+                    txtCompanyFuelOilFare.Text = model.FuelOilFare.ToString("c2");
+                    txtCompanyFuelOilDay.Text = model.FuelOilDay.ToString("c2");
+                    txtCompanyDriverFare.Text = model.DriverFare.ToString("c2");
+                    txtCompanyMaintenanceFare.Text = model.MaintenanceFare.ToString("c2");
+                    txtCompanyServiceFare.Text = model.ServiceFare.ToString("c2");
+                    txtCompanyGeneralFare.Text = model.GeneralFare.ToString("c2");
+                    txtCompanyOtherFare.Text = model.OtherFare.ToString("c2");
                 }
                 else
                 {
                     rbRentVehicle.Checked = true;
-                    txtRentFare.Text = model.RentFare.ToString("c");
-                    txtRentFuelOilFare.Text = model.FuelOilFare.ToString("c");
-                    txtRentFuelOilDay.Text = model.FuelOilDay.ToString("c");
-                    txtRentDriverFare.Text = model.DriverFare.ToString("c");
-                    txtRentGeneralFare.Text = model.GeneralFare.ToString("c");
-                    txtRentOtherFare.Text = model.OtherFare.ToString("c");
+                    txtRentFare.Text = model.RentFare.ToString("c2");
+                    txtRentFuelOilFare.Text = model.FuelOilFare.ToString("c2");
+                    txtRentFuelOilDay.Text = model.FuelOilDay.ToString("c2");
+                    txtRentDriverFare.Text = model.DriverFare.ToString("c2");
+                    txtRentGeneralFare.Text = model.GeneralFare.ToString("c2");
+                    txtRentOtherFare.Text = model.OtherFare.ToString("c2");
                     if (CurrentVehicle.RentType == IhalematikProBL.Enum.RentTypesEnum.Day)
                     {
                         rdDay.Checked = true;

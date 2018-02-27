@@ -290,11 +290,11 @@ namespace IhalematikPro.Forms
             }
             if (cmbAdamSaat.Checked)
             {
-                lblKarToplam.Text = (Math.Round(items.Sum(p => p.TotalWorkerMarkup), 2)).ToString("c");
+                lblKarToplam.Text = (Math.Round(items.Sum(p => p.TotalWorkerMarkup), 2)).ToString("c2");
             }
             else
             {
-                lblKarToplam.Text = (Math.Round(items.Sum(p => p.CustomWorkerMarkup * p.Quantity), 2)).ToString("c");
+                lblKarToplam.Text = (Math.Round(items.Sum(p => p.CustomWorkerMarkup * p.Quantity), 2)).ToString("c2");
             }
         }
 

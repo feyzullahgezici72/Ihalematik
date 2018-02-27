@@ -133,7 +133,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                             }
                         }
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
                         //TODO feyzullahg hata olustu mesaji gostermek lazim.
