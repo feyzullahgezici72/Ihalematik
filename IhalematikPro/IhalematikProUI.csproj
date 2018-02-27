@@ -325,6 +325,12 @@
     <Compile Include="Forms\Genel\frm_DovizKurlari.Designer.cs">
       <DependentUpon>frm_DovizKurlari.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\OBF\frm_TopluOBFekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OBF\frm_TopluOBFekle.Designer.cs">
+      <DependentUpon>frm_TopluOBFekle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tedarikci\frm_activityGuncelle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -626,6 +632,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Genel\frm_DovizKurlari.resx">
       <DependentUpon>frm_DovizKurlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OBF\frm_TopluOBFekle.resx">
+      <DependentUpon>frm_TopluOBFekle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_activityGuncelle.resx">
       <DependentUpon>frm_activityGuncelle.cs</DependentUpon>

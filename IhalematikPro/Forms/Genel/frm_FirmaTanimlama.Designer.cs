@@ -117,7 +117,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(70, 85);
+            this.labelControl3.Location = new System.Drawing.Point(71, 87);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(55, 19);
@@ -139,7 +139,7 @@
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(40, 229);
+            this.labelControl12.Location = new System.Drawing.Point(40, 230);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(84, 19);
@@ -161,7 +161,7 @@
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(38, 194);
+            this.labelControl11.Location = new System.Drawing.Point(37, 195);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(87, 19);
@@ -194,7 +194,7 @@
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(86, 161);
+            this.labelControl14.Location = new System.Drawing.Point(86, 162);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(38, 19);
@@ -231,7 +231,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(94, 53);
+            this.labelControl2.Location = new System.Drawing.Point(96, 53);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(30, 19);
@@ -240,7 +240,7 @@
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(94, 127);
+            this.labelControl10.Location = new System.Drawing.Point(94, 128);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(30, 19);
@@ -264,7 +264,7 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(51, 94);
+            this.labelControl9.Location = new System.Drawing.Point(51, 95);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(73, 19);
@@ -273,7 +273,7 @@
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(51, 58);
+            this.labelControl8.Location = new System.Drawing.Point(51, 59);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(73, 19);
@@ -282,7 +282,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(28, 118);
+            this.labelControl4.Location = new System.Drawing.Point(30, 121);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(96, 19);
@@ -332,7 +332,7 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(24, 216);
+            this.labelControl7.Location = new System.Drawing.Point(25, 223);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(101, 19);
@@ -354,7 +354,7 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(46, 184);
+            this.labelControl6.Location = new System.Drawing.Point(48, 189);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(78, 19);
@@ -422,7 +422,7 @@
             // txtMailPassword
             // 
             this.txtMailPassword.EnterMoveNextControl = true;
-            this.txtMailPassword.Location = new System.Drawing.Point(130, 260);
+            this.txtMailPassword.Location = new System.Drawing.Point(132, 260);
             this.txtMailPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtMailPassword.Name = "txtMailPassword";
             this.txtMailPassword.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -435,7 +435,7 @@
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(38, 263);
+            this.labelControl15.Location = new System.Drawing.Point(42, 264);
             this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(82, 19);
@@ -474,7 +474,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(10, 151);
+            this.labelControl5.Location = new System.Drawing.Point(11, 155);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(115, 19);

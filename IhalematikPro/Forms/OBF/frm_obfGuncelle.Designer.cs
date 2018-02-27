@@ -261,7 +261,7 @@
             // 
             // txtDescriptionForSupplier
             // 
-            this.txtDescriptionForSupplier.Location = new System.Drawing.Point(114, 126);
+            this.txtDescriptionForSupplier.Location = new System.Drawing.Point(112, 126);
             this.txtDescriptionForSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescriptionForSupplier.Name = "txtDescriptionForSupplier";
             this.txtDescriptionForSupplier.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));

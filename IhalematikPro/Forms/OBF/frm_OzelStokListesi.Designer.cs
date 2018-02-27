@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
@@ -79,7 +80,9 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtSearchDescription = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).BeginInit();
@@ -102,6 +105,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelControl5
@@ -196,6 +201,7 @@
             this.pnlObfKayit.AppearanceCaption.ForeColor = System.Drawing.Color.Maroon;
             this.pnlObfKayit.AppearanceCaption.Options.UseFont = true;
             this.pnlObfKayit.AppearanceCaption.Options.UseForeColor = true;
+            this.pnlObfKayit.Controls.Add(this.groupControl1);
             this.pnlObfKayit.Controls.Add(this.labelControl8);
             this.pnlObfKayit.Controls.Add(this.txtNumber);
             this.pnlObfKayit.Controls.Add(this.btnKaydet);
@@ -853,6 +859,30 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.simpleButton2);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupControl1.Location = new System.Drawing.Point(3, 625);
+            this.groupControl1.LookAndFeel.SkinName = "London Liquid Sky";
+            this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(520, 101);
+            this.groupControl1.TabIndex = 30;
+            this.groupControl1.Text = "Toplu Malzeme Ekle";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(369, 47);
+            this.simpleButton2.LookAndFeel.SkinName = "London Liquid Sky";
+            this.simpleButton2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(130, 51);
+            this.simpleButton2.TabIndex = 0;
+            this.simpleButton2.Text = "Ekle";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
             // frm_OzelStokListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -899,6 +929,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -945,5 +977,7 @@
         private DevExpress.XtraEditors.TextEdit txtNumber;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.MemoEdit txtDescriptionForSupplier;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }

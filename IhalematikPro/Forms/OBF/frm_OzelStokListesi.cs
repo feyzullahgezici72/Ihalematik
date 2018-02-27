@@ -15,6 +15,7 @@ using System.Threading;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms.Base;
+using IhalematikProUI.Forms.OBF;
 
 namespace IhalematikPro.Forms
 {
@@ -242,6 +243,13 @@ namespace IhalematikPro.Forms
             grdOBFList.DataSource = null;
             grdOBFList.DataSource = items;
             lblRecordCount.Text = items.Count.ToString();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            frm_TopluOBFekle toe = new frm_TopluOBFekle();
+            toe.ShowDialog();
+
         }
     }
 }

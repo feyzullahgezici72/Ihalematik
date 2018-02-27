@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CalisanTanimlama));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -55,40 +56,41 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
-            this.txtWorklesFonFare = new DevExpress.XtraEditors.TextEdit();
-            this.txtSeveranceFare = new DevExpress.XtraEditors.TextEdit();
-            this.txtAGI = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txtExtraFare = new DevExpress.XtraEditors.TextEdit();
             this.txtBaseFare = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.txtISGFare = new DevExpress.XtraEditors.TextEdit();
-            this.txtSGKPrimFare = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txtHotelFare = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.txtIncomeTaxFare = new DevExpress.XtraEditors.TextEdit();
-            this.txtTravelFare = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.label99 = new DevExpress.XtraEditors.LabelControl();
-            this.txtStampTaxFare = new DevExpress.XtraEditors.TextEdit();
-            this.txtFoodFare = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.ddlTitles = new DevExpress.XtraEditors.ComboBoxEdit();
             this.rbAsgariUcret = new System.Windows.Forms.RadioButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.rbNormal = new System.Windows.Forms.RadioButton();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.txtExtraFare = new DevExpress.XtraEditors.TextEdit();
+            this.txtSGKPrimFare = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.txtWorklesFonFare = new DevExpress.XtraEditors.TextEdit();
+            this.txtFoodFare = new DevExpress.XtraEditors.TextEdit();
+            this.txtSeveranceFare = new DevExpress.XtraEditors.TextEdit();
+            this.txtStampTaxFare = new DevExpress.XtraEditors.TextEdit();
+            this.txtAGI = new DevExpress.XtraEditors.TextEdit();
+            this.label99 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTravelFare = new DevExpress.XtraEditors.TextEdit();
+            this.txtISGFare = new DevExpress.XtraEditors.TextEdit();
+            this.txtIncomeTaxFare = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtHotelFare = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.statusPanel = new System.Windows.Forms.Panel();
             this.cmbAktivePasive = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -101,19 +103,21 @@
             this.kayitMenusu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWorklesFonFare.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeveranceFare.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAGI.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtExtraFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseFare.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtISGFare.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSGKPrimFare.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHotelFare.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIncomeTaxFare.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTravelFare.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStampTaxFare.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFoodFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlTitles.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtExtraFare.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSGKPrimFare.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWorklesFonFare.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFoodFare.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeveranceFare.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStampTaxFare.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAGI.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTravelFare.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtISGFare.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIncomeTaxFare.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHotelFare.Properties)).BeginInit();
             this.statusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
@@ -591,34 +595,13 @@
             this.groupControl2.Controls.Add(this.radioButton1);
             this.groupControl2.Controls.Add(this.btnKaydet);
             this.groupControl2.Controls.Add(this.btnTemizle);
-            this.groupControl2.Controls.Add(this.txtWorklesFonFare);
-            this.groupControl2.Controls.Add(this.txtSeveranceFare);
-            this.groupControl2.Controls.Add(this.txtAGI);
             this.groupControl2.Controls.Add(this.labelControl4);
-            this.groupControl2.Controls.Add(this.txtExtraFare);
             this.groupControl2.Controls.Add(this.txtBaseFare);
-            this.groupControl2.Controls.Add(this.labelControl13);
-            this.groupControl2.Controls.Add(this.labelControl5);
-            this.groupControl2.Controls.Add(this.txtISGFare);
-            this.groupControl2.Controls.Add(this.txtSGKPrimFare);
-            this.groupControl2.Controls.Add(this.labelControl12);
-            this.groupControl2.Controls.Add(this.labelControl6);
-            this.groupControl2.Controls.Add(this.txtHotelFare);
-            this.groupControl2.Controls.Add(this.labelControl7);
-            this.groupControl2.Controls.Add(this.labelControl11);
-            this.groupControl2.Controls.Add(this.txtIncomeTaxFare);
-            this.groupControl2.Controls.Add(this.txtTravelFare);
-            this.groupControl2.Controls.Add(this.labelControl10);
-            this.groupControl2.Controls.Add(this.labelControl2);
-            this.groupControl2.Controls.Add(this.labelControl8);
-            this.groupControl2.Controls.Add(this.label99);
-            this.groupControl2.Controls.Add(this.txtStampTaxFare);
-            this.groupControl2.Controls.Add(this.txtFoodFare);
-            this.groupControl2.Controls.Add(this.labelControl9);
             this.groupControl2.Controls.Add(this.ddlTitles);
             this.groupControl2.Controls.Add(this.rbAsgariUcret);
             this.groupControl2.Controls.Add(this.labelControl3);
             this.groupControl2.Controls.Add(this.rbNormal);
+            this.groupControl2.Controls.Add(this.panelControl2);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 50);
             this.groupControl2.LookAndFeel.SkinName = "Foggy";
@@ -642,6 +625,7 @@
             this.radioButton1.TabIndex = 136;
             this.radioButton1.Text = "Net Maaş ";
             this.radioButton1.UseVisualStyleBackColor = false;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // btnKaydet
             // 
@@ -674,64 +658,6 @@
             this.btnTemizle.ToolTip = "Formu Temizle";
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
-            // txtWorklesFonFare
-            // 
-            this.txtWorklesFonFare.Location = new System.Drawing.Point(183, 178);
-            this.txtWorklesFonFare.Margin = new System.Windows.Forms.Padding(4);
-            this.txtWorklesFonFare.Name = "txtWorklesFonFare";
-            this.txtWorklesFonFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtWorklesFonFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtWorklesFonFare.Properties.DisplayFormat.FormatString = "c2";
-            this.txtWorklesFonFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtWorklesFonFare.Properties.EditFormat.FormatString = "c2";
-            this.txtWorklesFonFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtWorklesFonFare.Properties.Mask.EditMask = "c2";
-            this.txtWorklesFonFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtWorklesFonFare.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtWorklesFonFare.Size = new System.Drawing.Size(224, 26);
-            this.txtWorklesFonFare.TabIndex = 5;
-            this.txtWorklesFonFare.TabStop = false;
-            // 
-            // txtSeveranceFare
-            // 
-            this.txtSeveranceFare.EnterMoveNextControl = true;
-            this.txtSeveranceFare.Location = new System.Drawing.Point(183, 314);
-            this.txtSeveranceFare.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSeveranceFare.Name = "txtSeveranceFare";
-            this.txtSeveranceFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtSeveranceFare.Properties.Appearance.Options.UseBackColor = true;
-            this.txtSeveranceFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtSeveranceFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtSeveranceFare.Properties.DisplayFormat.FormatString = "c2";
-            this.txtSeveranceFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtSeveranceFare.Properties.EditFormat.FormatString = "c2";
-            this.txtSeveranceFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtSeveranceFare.Properties.Mask.EditMask = "c2";
-            this.txtSeveranceFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtSeveranceFare.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtSeveranceFare.Size = new System.Drawing.Size(224, 26);
-            this.txtSeveranceFare.TabIndex = 9;
-            // 
-            // txtAGI
-            // 
-            this.txtAGI.EnterMoveNextControl = true;
-            this.txtAGI.Location = new System.Drawing.Point(183, 281);
-            this.txtAGI.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAGI.Name = "txtAGI";
-            this.txtAGI.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtAGI.Properties.Appearance.Options.UseBackColor = true;
-            this.txtAGI.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtAGI.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtAGI.Properties.DisplayFormat.FormatString = "c2";
-            this.txtAGI.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtAGI.Properties.EditFormat.FormatString = "c2";
-            this.txtAGI.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtAGI.Properties.Mask.EditMask = "c2";
-            this.txtAGI.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtAGI.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtAGI.Size = new System.Drawing.Size(224, 26);
-            this.txtAGI.TabIndex = 8;
-            // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -742,26 +668,6 @@
             this.labelControl4.Size = new System.Drawing.Size(74, 19);
             this.labelControl4.TabIndex = 124;
             this.labelControl4.Text = "Net Maaşı:";
-            // 
-            // txtExtraFare
-            // 
-            this.txtExtraFare.EnterMoveNextControl = true;
-            this.txtExtraFare.Location = new System.Drawing.Point(183, 484);
-            this.txtExtraFare.Margin = new System.Windows.Forms.Padding(4);
-            this.txtExtraFare.Name = "txtExtraFare";
-            this.txtExtraFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtExtraFare.Properties.Appearance.Options.UseBackColor = true;
-            this.txtExtraFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtExtraFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtExtraFare.Properties.DisplayFormat.FormatString = "c2";
-            this.txtExtraFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtExtraFare.Properties.EditFormat.FormatString = "c2";
-            this.txtExtraFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtExtraFare.Properties.Mask.EditMask = "c2";
-            this.txtExtraFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtExtraFare.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtExtraFare.Size = new System.Drawing.Size(224, 26);
-            this.txtExtraFare.TabIndex = 14;
             // 
             // txtBaseFare
             // 
@@ -784,261 +690,6 @@
             this.txtBaseFare.TabStop = false;
             this.txtBaseFare.EditValueChanged += new System.EventHandler(this.txtBaseFare_EditValueChanged);
             // 
-            // labelControl13
-            // 
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl13.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl13.Location = new System.Drawing.Point(124, 487);
-            this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(49, 19);
-            this.labelControl13.TabIndex = 133;
-            this.labelControl13.Text = "Diğer :";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl5.Location = new System.Drawing.Point(34, 148);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(139, 19);
-            this.labelControl5.TabIndex = 125;
-            this.labelControl5.Text = "SGK Primi Kesintisi:";
-            // 
-            // txtISGFare
-            // 
-            this.txtISGFare.EnterMoveNextControl = true;
-            this.txtISGFare.Location = new System.Drawing.Point(183, 450);
-            this.txtISGFare.Margin = new System.Windows.Forms.Padding(4);
-            this.txtISGFare.Name = "txtISGFare";
-            this.txtISGFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtISGFare.Properties.Appearance.Options.UseBackColor = true;
-            this.txtISGFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtISGFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtISGFare.Properties.DisplayFormat.FormatString = "c2";
-            this.txtISGFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtISGFare.Properties.EditFormat.FormatString = "c2";
-            this.txtISGFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtISGFare.Properties.Mask.EditMask = "c2";
-            this.txtISGFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtISGFare.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtISGFare.Size = new System.Drawing.Size(224, 26);
-            this.txtISGFare.TabIndex = 13;
-            // 
-            // txtSGKPrimFare
-            // 
-            this.txtSGKPrimFare.Location = new System.Drawing.Point(183, 145);
-            this.txtSGKPrimFare.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSGKPrimFare.Name = "txtSGKPrimFare";
-            this.txtSGKPrimFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtSGKPrimFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtSGKPrimFare.Properties.DisplayFormat.FormatString = "c2";
-            this.txtSGKPrimFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtSGKPrimFare.Properties.EditFormat.FormatString = "c2";
-            this.txtSGKPrimFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtSGKPrimFare.Properties.Mask.EditMask = "c2";
-            this.txtSGKPrimFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtSGKPrimFare.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtSGKPrimFare.Size = new System.Drawing.Size(224, 26);
-            this.txtSGKPrimFare.TabIndex = 4;
-            this.txtSGKPrimFare.TabStop = false;
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl12.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl12.Location = new System.Drawing.Point(99, 453);
-            this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(75, 19);
-            this.labelControl12.TabIndex = 128;
-            this.labelControl12.Text = "İsg Gideri:";
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl6.Location = new System.Drawing.Point(50, 181);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(125, 19);
-            this.labelControl6.TabIndex = 126;
-            this.labelControl6.Text = "İşsizlik Sig. Fonu:";
-            // 
-            // txtHotelFare
-            // 
-            this.txtHotelFare.EnterMoveNextControl = true;
-            this.txtHotelFare.Location = new System.Drawing.Point(183, 417);
-            this.txtHotelFare.Margin = new System.Windows.Forms.Padding(4);
-            this.txtHotelFare.Name = "txtHotelFare";
-            this.txtHotelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtHotelFare.Properties.Appearance.Options.UseBackColor = true;
-            this.txtHotelFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtHotelFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtHotelFare.Properties.DisplayFormat.FormatString = "c2";
-            this.txtHotelFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtHotelFare.Properties.EditFormat.FormatString = "c2";
-            this.txtHotelFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtHotelFare.Properties.Mask.EditMask = "c2";
-            this.txtHotelFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtHotelFare.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtHotelFare.Size = new System.Drawing.Size(224, 26);
-            this.txtHotelFare.TabIndex = 12;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl7.Location = new System.Drawing.Point(82, 215);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(92, 19);
-            this.labelControl7.TabIndex = 127;
-            this.labelControl7.Text = "Gelir Vergisi:";
-            // 
-            // labelControl11
-            // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl11.Location = new System.Drawing.Point(92, 419);
-            this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(83, 19);
-            this.labelControl11.TabIndex = 134;
-            this.labelControl11.Text = "Konaklama:";
-            // 
-            // txtIncomeTaxFare
-            // 
-            this.txtIncomeTaxFare.Location = new System.Drawing.Point(183, 212);
-            this.txtIncomeTaxFare.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIncomeTaxFare.Name = "txtIncomeTaxFare";
-            this.txtIncomeTaxFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtIncomeTaxFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtIncomeTaxFare.Properties.DisplayFormat.FormatString = "c2";
-            this.txtIncomeTaxFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtIncomeTaxFare.Properties.EditFormat.FormatString = "c2";
-            this.txtIncomeTaxFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtIncomeTaxFare.Properties.Mask.EditMask = "c2";
-            this.txtIncomeTaxFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtIncomeTaxFare.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtIncomeTaxFare.Size = new System.Drawing.Size(224, 26);
-            this.txtIncomeTaxFare.TabIndex = 6;
-            this.txtIncomeTaxFare.TabStop = false;
-            // 
-            // txtTravelFare
-            // 
-            this.txtTravelFare.EnterMoveNextControl = true;
-            this.txtTravelFare.Location = new System.Drawing.Point(183, 381);
-            this.txtTravelFare.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTravelFare.Name = "txtTravelFare";
-            this.txtTravelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtTravelFare.Properties.Appearance.Options.UseBackColor = true;
-            this.txtTravelFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtTravelFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtTravelFare.Properties.DisplayFormat.FormatString = "c2";
-            this.txtTravelFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtTravelFare.Properties.EditFormat.FormatString = "c2";
-            this.txtTravelFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtTravelFare.Properties.Mask.EditMask = "c2";
-            this.txtTravelFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtTravelFare.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtTravelFare.Size = new System.Drawing.Size(224, 26);
-            this.txtTravelFare.TabIndex = 11;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl10.Location = new System.Drawing.Point(50, 317);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(124, 19);
-            this.labelControl10.TabIndex = 129;
-            this.labelControl10.Text = "Kıdem Tazminatı:";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(144, 284);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(30, 19);
-            this.labelControl2.TabIndex = 130;
-            this.labelControl2.Text = "Agi:";
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl8.Location = new System.Drawing.Point(64, 248);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(109, 19);
-            this.labelControl8.TabIndex = 131;
-            this.labelControl8.Text = "Damga Vergisi:";
-            // 
-            // label99
-            // 
-            this.label99.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label99.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.label99.Location = new System.Drawing.Point(146, 384);
-            this.label99.Margin = new System.Windows.Forms.Padding(4);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(29, 19);
-            this.label99.TabIndex = 132;
-            this.label99.Text = "Yol:";
-            // 
-            // txtStampTaxFare
-            // 
-            this.txtStampTaxFare.Location = new System.Drawing.Point(183, 246);
-            this.txtStampTaxFare.Margin = new System.Windows.Forms.Padding(4);
-            this.txtStampTaxFare.Name = "txtStampTaxFare";
-            this.txtStampTaxFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtStampTaxFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtStampTaxFare.Properties.DisplayFormat.FormatString = "c2";
-            this.txtStampTaxFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtStampTaxFare.Properties.EditFormat.FormatString = "c2";
-            this.txtStampTaxFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtStampTaxFare.Properties.Mask.EditMask = "c2";
-            this.txtStampTaxFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtStampTaxFare.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtStampTaxFare.Size = new System.Drawing.Size(224, 26);
-            this.txtStampTaxFare.TabIndex = 7;
-            this.txtStampTaxFare.TabStop = false;
-            // 
-            // txtFoodFare
-            // 
-            this.txtFoodFare.EnterMoveNextControl = true;
-            this.txtFoodFare.Location = new System.Drawing.Point(183, 348);
-            this.txtFoodFare.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFoodFare.Name = "txtFoodFare";
-            this.txtFoodFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtFoodFare.Properties.Appearance.Options.UseBackColor = true;
-            this.txtFoodFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtFoodFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtFoodFare.Properties.DisplayFormat.FormatString = "c2";
-            this.txtFoodFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtFoodFare.Properties.EditFormat.FormatString = "c2";
-            this.txtFoodFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtFoodFare.Properties.Mask.EditMask = "c2";
-            this.txtFoodFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtFoodFare.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtFoodFare.Size = new System.Drawing.Size(224, 26);
-            this.txtFoodFare.TabIndex = 10;
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl9.Location = new System.Drawing.Point(120, 351);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(54, 19);
-            this.labelControl9.TabIndex = 135;
-            this.labelControl9.Text = "Yemek:";
-            // 
             // ddlTitles
             // 
             this.ddlTitles.EnterMoveNextControl = true;
@@ -1052,7 +703,7 @@
             this.ddlTitles.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.ddlTitles.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ddlTitles.Size = new System.Drawing.Size(262, 26);
+            this.ddlTitles.Size = new System.Drawing.Size(262, 28);
             this.ddlTitles.TabIndex = 0;
             this.ddlTitles.SelectedIndexChanged += new System.EventHandler(this.ddlTitles_SelectedIndexChanged);
             // 
@@ -1098,6 +749,369 @@
             this.rbNormal.Text = "Normal";
             this.rbNormal.UseVisualStyleBackColor = false;
             this.rbNormal.CheckedChanged += new System.EventHandler(this.rbNormal_CheckedChanged);
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.txtExtraFare);
+            this.panelControl2.Controls.Add(this.txtSGKPrimFare);
+            this.panelControl2.Controls.Add(this.labelControl9);
+            this.panelControl2.Controls.Add(this.txtWorklesFonFare);
+            this.panelControl2.Controls.Add(this.txtFoodFare);
+            this.panelControl2.Controls.Add(this.txtSeveranceFare);
+            this.panelControl2.Controls.Add(this.txtStampTaxFare);
+            this.panelControl2.Controls.Add(this.txtAGI);
+            this.panelControl2.Controls.Add(this.label99);
+            this.panelControl2.Controls.Add(this.labelControl8);
+            this.panelControl2.Controls.Add(this.labelControl2);
+            this.panelControl2.Controls.Add(this.labelControl13);
+            this.panelControl2.Controls.Add(this.labelControl10);
+            this.panelControl2.Controls.Add(this.labelControl5);
+            this.panelControl2.Controls.Add(this.txtTravelFare);
+            this.panelControl2.Controls.Add(this.txtISGFare);
+            this.panelControl2.Controls.Add(this.txtIncomeTaxFare);
+            this.panelControl2.Controls.Add(this.labelControl11);
+            this.panelControl2.Controls.Add(this.labelControl12);
+            this.panelControl2.Controls.Add(this.labelControl7);
+            this.panelControl2.Controls.Add(this.labelControl6);
+            this.panelControl2.Controls.Add(this.txtHotelFare);
+            this.panelControl2.Location = new System.Drawing.Point(12, 143);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(416, 383);
+            this.panelControl2.TabIndex = 137;
+            // 
+            // txtExtraFare
+            // 
+            this.txtExtraFare.EnterMoveNextControl = true;
+            this.txtExtraFare.Location = new System.Drawing.Point(171, 343);
+            this.txtExtraFare.Margin = new System.Windows.Forms.Padding(4);
+            this.txtExtraFare.Name = "txtExtraFare";
+            this.txtExtraFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtExtraFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtExtraFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtExtraFare.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtExtraFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtExtraFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtExtraFare.Properties.EditFormat.FormatString = "c2";
+            this.txtExtraFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtExtraFare.Properties.Mask.EditMask = "c2";
+            this.txtExtraFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtExtraFare.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtExtraFare.Size = new System.Drawing.Size(224, 26);
+            this.txtExtraFare.TabIndex = 14;
+            // 
+            // txtSGKPrimFare
+            // 
+            this.txtSGKPrimFare.Location = new System.Drawing.Point(171, 4);
+            this.txtSGKPrimFare.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSGKPrimFare.Name = "txtSGKPrimFare";
+            this.txtSGKPrimFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtSGKPrimFare.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtSGKPrimFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtSGKPrimFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtSGKPrimFare.Properties.EditFormat.FormatString = "c2";
+            this.txtSGKPrimFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtSGKPrimFare.Properties.Mask.EditMask = "c2";
+            this.txtSGKPrimFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtSGKPrimFare.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtSGKPrimFare.Size = new System.Drawing.Size(224, 26);
+            this.txtSGKPrimFare.TabIndex = 4;
+            this.txtSGKPrimFare.TabStop = false;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl9.Location = new System.Drawing.Point(108, 210);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(54, 19);
+            this.labelControl9.TabIndex = 135;
+            this.labelControl9.Text = "Yemek:";
+            // 
+            // txtWorklesFonFare
+            // 
+            this.txtWorklesFonFare.Location = new System.Drawing.Point(171, 37);
+            this.txtWorklesFonFare.Margin = new System.Windows.Forms.Padding(4);
+            this.txtWorklesFonFare.Name = "txtWorklesFonFare";
+            this.txtWorklesFonFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtWorklesFonFare.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtWorklesFonFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtWorklesFonFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtWorklesFonFare.Properties.EditFormat.FormatString = "c2";
+            this.txtWorklesFonFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtWorklesFonFare.Properties.Mask.EditMask = "c2";
+            this.txtWorklesFonFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtWorklesFonFare.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtWorklesFonFare.Size = new System.Drawing.Size(224, 26);
+            this.txtWorklesFonFare.TabIndex = 5;
+            this.txtWorklesFonFare.TabStop = false;
+            // 
+            // txtFoodFare
+            // 
+            this.txtFoodFare.EnterMoveNextControl = true;
+            this.txtFoodFare.Location = new System.Drawing.Point(171, 207);
+            this.txtFoodFare.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFoodFare.Name = "txtFoodFare";
+            this.txtFoodFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtFoodFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFoodFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtFoodFare.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtFoodFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtFoodFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtFoodFare.Properties.EditFormat.FormatString = "c2";
+            this.txtFoodFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtFoodFare.Properties.Mask.EditMask = "c2";
+            this.txtFoodFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtFoodFare.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtFoodFare.Size = new System.Drawing.Size(224, 26);
+            this.txtFoodFare.TabIndex = 10;
+            // 
+            // txtSeveranceFare
+            // 
+            this.txtSeveranceFare.EnterMoveNextControl = true;
+            this.txtSeveranceFare.Location = new System.Drawing.Point(171, 173);
+            this.txtSeveranceFare.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeveranceFare.Name = "txtSeveranceFare";
+            this.txtSeveranceFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtSeveranceFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSeveranceFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtSeveranceFare.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtSeveranceFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtSeveranceFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtSeveranceFare.Properties.EditFormat.FormatString = "c2";
+            this.txtSeveranceFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtSeveranceFare.Properties.Mask.EditMask = "c2";
+            this.txtSeveranceFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtSeveranceFare.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtSeveranceFare.Size = new System.Drawing.Size(224, 26);
+            this.txtSeveranceFare.TabIndex = 9;
+            // 
+            // txtStampTaxFare
+            // 
+            this.txtStampTaxFare.Location = new System.Drawing.Point(171, 105);
+            this.txtStampTaxFare.Margin = new System.Windows.Forms.Padding(4);
+            this.txtStampTaxFare.Name = "txtStampTaxFare";
+            this.txtStampTaxFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtStampTaxFare.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtStampTaxFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtStampTaxFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtStampTaxFare.Properties.EditFormat.FormatString = "c2";
+            this.txtStampTaxFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtStampTaxFare.Properties.Mask.EditMask = "c2";
+            this.txtStampTaxFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtStampTaxFare.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtStampTaxFare.Size = new System.Drawing.Size(224, 26);
+            this.txtStampTaxFare.TabIndex = 7;
+            this.txtStampTaxFare.TabStop = false;
+            // 
+            // txtAGI
+            // 
+            this.txtAGI.EnterMoveNextControl = true;
+            this.txtAGI.Location = new System.Drawing.Point(171, 140);
+            this.txtAGI.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAGI.Name = "txtAGI";
+            this.txtAGI.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtAGI.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAGI.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtAGI.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAGI.Properties.DisplayFormat.FormatString = "c2";
+            this.txtAGI.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtAGI.Properties.EditFormat.FormatString = "c2";
+            this.txtAGI.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtAGI.Properties.Mask.EditMask = "c2";
+            this.txtAGI.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtAGI.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtAGI.Size = new System.Drawing.Size(224, 26);
+            this.txtAGI.TabIndex = 8;
+            // 
+            // label99
+            // 
+            this.label99.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label99.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.label99.Location = new System.Drawing.Point(134, 243);
+            this.label99.Margin = new System.Windows.Forms.Padding(4);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(29, 19);
+            this.label99.TabIndex = 132;
+            this.label99.Text = "Yol:";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl8.Location = new System.Drawing.Point(52, 107);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(109, 19);
+            this.labelControl8.TabIndex = 131;
+            this.labelControl8.Text = "Damga Vergisi:";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl2.Location = new System.Drawing.Point(132, 143);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(30, 19);
+            this.labelControl2.TabIndex = 130;
+            this.labelControl2.Text = "Agi:";
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl13.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl13.Location = new System.Drawing.Point(112, 346);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(49, 19);
+            this.labelControl13.TabIndex = 133;
+            this.labelControl13.Text = "Diğer :";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl10.Location = new System.Drawing.Point(38, 176);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(124, 19);
+            this.labelControl10.TabIndex = 129;
+            this.labelControl10.Text = "Kıdem Tazminatı:";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl5.Location = new System.Drawing.Point(22, 7);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(139, 19);
+            this.labelControl5.TabIndex = 125;
+            this.labelControl5.Text = "SGK Primi Kesintisi:";
+            // 
+            // txtTravelFare
+            // 
+            this.txtTravelFare.EnterMoveNextControl = true;
+            this.txtTravelFare.Location = new System.Drawing.Point(171, 240);
+            this.txtTravelFare.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTravelFare.Name = "txtTravelFare";
+            this.txtTravelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtTravelFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTravelFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTravelFare.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTravelFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtTravelFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTravelFare.Properties.EditFormat.FormatString = "c2";
+            this.txtTravelFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTravelFare.Properties.Mask.EditMask = "c2";
+            this.txtTravelFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtTravelFare.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTravelFare.Size = new System.Drawing.Size(224, 26);
+            this.txtTravelFare.TabIndex = 11;
+            // 
+            // txtISGFare
+            // 
+            this.txtISGFare.EnterMoveNextControl = true;
+            this.txtISGFare.Location = new System.Drawing.Point(171, 309);
+            this.txtISGFare.Margin = new System.Windows.Forms.Padding(4);
+            this.txtISGFare.Name = "txtISGFare";
+            this.txtISGFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtISGFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtISGFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtISGFare.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtISGFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtISGFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtISGFare.Properties.EditFormat.FormatString = "c2";
+            this.txtISGFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtISGFare.Properties.Mask.EditMask = "c2";
+            this.txtISGFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtISGFare.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtISGFare.Size = new System.Drawing.Size(224, 26);
+            this.txtISGFare.TabIndex = 13;
+            // 
+            // txtIncomeTaxFare
+            // 
+            this.txtIncomeTaxFare.Location = new System.Drawing.Point(171, 71);
+            this.txtIncomeTaxFare.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIncomeTaxFare.Name = "txtIncomeTaxFare";
+            this.txtIncomeTaxFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtIncomeTaxFare.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtIncomeTaxFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtIncomeTaxFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtIncomeTaxFare.Properties.EditFormat.FormatString = "c2";
+            this.txtIncomeTaxFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtIncomeTaxFare.Properties.Mask.EditMask = "c2";
+            this.txtIncomeTaxFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtIncomeTaxFare.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtIncomeTaxFare.Size = new System.Drawing.Size(224, 26);
+            this.txtIncomeTaxFare.TabIndex = 6;
+            this.txtIncomeTaxFare.TabStop = false;
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl11.Location = new System.Drawing.Point(80, 278);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(83, 19);
+            this.labelControl11.TabIndex = 134;
+            this.labelControl11.Text = "Konaklama:";
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl12.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl12.Location = new System.Drawing.Point(87, 312);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(75, 19);
+            this.labelControl12.TabIndex = 128;
+            this.labelControl12.Text = "İsg Gideri:";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl7.Location = new System.Drawing.Point(70, 74);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(92, 19);
+            this.labelControl7.TabIndex = 127;
+            this.labelControl7.Text = "Gelir Vergisi:";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl6.Location = new System.Drawing.Point(38, 40);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(125, 19);
+            this.labelControl6.TabIndex = 126;
+            this.labelControl6.Text = "İşsizlik Sig. Fonu:";
+            // 
+            // txtHotelFare
+            // 
+            this.txtHotelFare.EnterMoveNextControl = true;
+            this.txtHotelFare.Location = new System.Drawing.Point(171, 276);
+            this.txtHotelFare.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHotelFare.Name = "txtHotelFare";
+            this.txtHotelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtHotelFare.Properties.Appearance.Options.UseBackColor = true;
+            this.txtHotelFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtHotelFare.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtHotelFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtHotelFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtHotelFare.Properties.EditFormat.FormatString = "c2";
+            this.txtHotelFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtHotelFare.Properties.Mask.EditMask = "c2";
+            this.txtHotelFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtHotelFare.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtHotelFare.Size = new System.Drawing.Size(224, 26);
+            this.txtHotelFare.TabIndex = 12;
             // 
             // simpleButton1
             // 
@@ -1205,19 +1219,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWorklesFonFare.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSeveranceFare.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAGI.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtExtraFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseFare.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtISGFare.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSGKPrimFare.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHotelFare.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIncomeTaxFare.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTravelFare.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStampTaxFare.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFoodFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlTitles.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtExtraFare.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSGKPrimFare.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWorklesFonFare.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFoodFare.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeveranceFare.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStampTaxFare.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAGI.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTravelFare.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtISGFare.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIncomeTaxFare.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHotelFare.Properties)).EndInit();
             this.statusPanel.ResumeLayout(false);
             this.statusPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAktivePasive.Properties)).EndInit();
@@ -1285,5 +1302,6 @@
         private DevExpress.XtraEditors.SimpleButton btnKapat;
         public DevExpress.XtraGrid.GridControl grdWorker;
         private System.Windows.Forms.RadioButton radioButton1;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
     }
 }

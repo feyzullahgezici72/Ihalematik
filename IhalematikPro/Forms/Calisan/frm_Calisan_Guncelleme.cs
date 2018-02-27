@@ -139,6 +139,7 @@ namespace IhalematikProUI.Forms
 
         private void rbAsgariUcret_CheckedChanged(object sender, EventArgs e)
         {
+            panel1.Visible = true;
             this.IsCalculatedMinimumWage = true;
             if (this.rbAsgariUcret.Checked)
             {
@@ -171,6 +172,7 @@ namespace IhalematikProUI.Forms
 
         private void rbNormal_CheckedChanged(object sender, EventArgs e)
         {
+            panel1.Visible = true;
             this.IsCalculatedMinimumWage = false;
             if (this.rbNormal.Checked)
             {
@@ -227,6 +229,11 @@ namespace IhalematikProUI.Forms
                 dxErrorProvider1.ClearErrors();
             }
             return false;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
         }
     }
 }
