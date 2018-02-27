@@ -75,7 +75,7 @@ namespace IhalematikPro.Forms
                 model.Number = txtNumber.Text;
                 model.Unit = txtUnit.Text;
                 model.IsActive = true;
-                model.UnitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtUnitPrice.Text);
+                model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty));
 
                 List<Poz> existingPozs = UIPozManager.Instance.GetPoz(model.Number);
                 if (existingPozs != null && existingPozs.Count != 0)
