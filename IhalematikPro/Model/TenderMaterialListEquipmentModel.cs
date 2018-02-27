@@ -59,7 +59,7 @@ namespace IhalematikProUI.Model
                 }
                 this.workerUnitPricea = 0;
                 double dayPerMonthValue = RuleManager.Instance.DayPerMonthValue == 0 ? 30 : RuleManager.Instance.DayPerMonthValue;
-                double hourPerDayValue = RuleManager.Instance.HourPerDayValue == 0 ? 8 : RuleManager.Instance.DayPerMonthValue;
+                double hourPerDayValue = RuleManager.Instance.HourPerDayValue == 0 ? 8 : RuleManager.Instance.HourPerDayValue;
 
                 double amount = ((Worker)this.Equipment.WorkerVehicle) == null ? 0 : ((Worker)this.Equipment.WorkerVehicle).TotalFare.Amount;
                 if (this.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
@@ -100,18 +100,21 @@ namespace IhalematikProUI.Model
                     return 0;
                 }
                 this.vehicleUnitPrice = 0;
+                double dayPerMonthValue = RuleManager.Instance.DayPerMonthValue == 0 ? 30 : RuleManager.Instance.DayPerMonthValue;
+                double hourPerDayValue = RuleManager.Instance.HourPerDayValue == 0 ? 8 : RuleManager.Instance.HourPerDayValue;
+
                 double amount = ((Vehicle)this.Equipment.WorkerVehicle) == null ? 0 : ((Vehicle)this.Equipment.WorkerVehicle).TotalFare.Amount;
                 if (this.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
                 {
-                    this.vehicleUnitPrice += Math.Round((amount / (30 * 8 * 60)), 2) * this.UnitTime * this.Quantity;
+                    this.vehicleUnitPrice += Math.Round((amount / (dayPerMonthValue * hourPerDayValue * 60)), 2) * this.UnitTime * this.Quantity;
                 }
                 else if (this.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Hour)
                 {
-                    this.vehicleUnitPrice += Math.Round((amount / (30 * 8)), 2) * this.UnitTime * this.Quantity;
+                    this.vehicleUnitPrice += Math.Round((amount / (dayPerMonthValue * hourPerDayValue)), 2) * this.UnitTime * this.Quantity;
                 }
                 else if (this.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Day)
                 {
-                    this.vehicleUnitPrice += Math.Round((amount / (30)), 2) * this.UnitTime * this.Quantity;
+                    this.vehicleUnitPrice += Math.Round((amount / (dayPerMonthValue)), 2) * this.UnitTime * this.Quantity;
                 }
                 else if (this.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Week)
                 {
