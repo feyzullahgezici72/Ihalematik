@@ -85,7 +85,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                 grdMaterialList.DataSource = items.Select(p => p.MaterialList).ToList();
             }
         }
-       
+
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             List<OfferMaterialList> items = grdMaterialList.DataSource as List<OfferMaterialList>;
@@ -150,7 +150,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                     string sourcePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug\\", string.Empty), "EmailFile");
                     string targetPath = Path.Combine(sourcePath, "SentFile");
                     string sourceFile = Path.Combine(sourcePath, fileName);
-                    this.DestinationFile = Path.Combine(targetPath, DateTime.Now.ToShortDateString().Replace("/", string.Empty) + Guid.NewGuid().ToString() + "-" + this.Supplier.CompanyName + "-" + fileName);
+                    this.DestinationFile = Path.Combine(targetPath, this.Supplier.CompanyName + "-" + fileName + "-" + DateTime.Now.ToShortDateString().Replace("/", string.Empty));
 
                     if (!Directory.Exists(targetPath))
                     {
@@ -276,7 +276,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             }
             catch (Exception ex)
             {
-               // throw ex;
+                // throw ex;
             }
 
             return result;
