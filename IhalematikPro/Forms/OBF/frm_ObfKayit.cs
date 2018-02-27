@@ -99,6 +99,7 @@ namespace IhalematikPro.Forms
                     {
                         currentTender.MaterialList.Remove(item);
                     }
+                    item.KDVPercentage = 18;
                     MaterialListProvider.Instance.Save(item);
                 }
             }

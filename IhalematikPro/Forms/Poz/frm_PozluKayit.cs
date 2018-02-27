@@ -192,6 +192,7 @@ namespace IhalematikPro.Forms
                         currentTender.MaterialList.Remove(item);
                     }
                     item.TenderGroupId = this.SelectedGroupId;
+                    item.KDVPercentage = 18;
                     MaterialListProvider.Instance.Save(item);
                 }
             }
