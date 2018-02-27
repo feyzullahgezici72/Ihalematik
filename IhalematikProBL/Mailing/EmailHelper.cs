@@ -14,13 +14,13 @@ namespace IhalematikProBL.Mailing
     {
         public string MailSender
         {
-            get { return CustomConfigurationManager.Instance.SmtpMailSender; }
+            get { return CompanyManager.Instance.CurrentCompany.MailAddress; }
             //set { this.mailSender = value; }
         }
 
         public string MailSenderDisplayName
         {
-            get { return CustomConfigurationManager.Instance.SmtpMailSenderDisplayName; }
+            get { return CompanyManager.Instance.CurrentCompany.Name; }
             //set { this.mailSenderDisplayName = value; }
         }
 
@@ -130,11 +130,11 @@ namespace IhalematikProBL.Mailing
             catch (System.Exception ex)
             {
                 result.Success = false;
-                if (ex.InnerException.Message.Contains("The remote name could not be resolved"))
+                if (ex.InnerException != null && ex.InnerException.Message.Contains("The remote name could not be resolved"))
                 {
                     result.ValidationResults.Add("The remote name could not be resolved", "NoInternetconnection");
                 }
-                else if (ex.InnerException.Message.Contains("The SMTP server requires a secure connection or the client was not authenticated"))
+                else if (ex.Message.Contains("The SMTP server requires a secure connection or the client was not authenticated"))
                 {
                     result.ValidationResults.Add("The SMTP server requires a secure connection or the client was not authenticated", "GmailLessSecureApps");
                 }

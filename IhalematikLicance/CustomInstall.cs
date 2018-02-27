@@ -19,7 +19,7 @@ namespace IhalematikLicance
         public bool IsAdministratorLogin { get; internal set; }
 
         public License License { get; set; }
-        public static System.Collections.IDictionary StateSaver = null;
+        public System.Collections.IDictionary StateSaver = null;
         public override void Install(System.Collections.IDictionary stateSaver)
         {
             try
@@ -32,11 +32,6 @@ namespace IhalematikLicance
             {
                 base.Uninstall(stateSaver);
             }
-        }
-
-        protected override void OnBeforeInstall(IDictionary savedState)
-        {
-            base.OnBeforeInstall(savedState);
         }
 
         public void LicenseInformationForm()

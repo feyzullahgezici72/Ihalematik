@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TeklifAdimSon));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.ddlCalculateWorkerType = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -213,9 +213,8 @@
             this.panelControl1.Controls.Add(this.txtAdimAciklama);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1803, 35);
+            this.panelControl1.Size = new System.Drawing.Size(913, 24);
             this.panelControl1.TabIndex = 20;
             // 
             // panelControl5
@@ -226,29 +225,31 @@
             this.panelControl5.Controls.Add(this.ddlCalculateWorkerType);
             this.panelControl5.Controls.Add(this.labelControl33);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl5.Location = new System.Drawing.Point(1351, 0);
+            this.panelControl5.Location = new System.Drawing.Point(604, 0);
+            this.panelControl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(424, 35);
+            this.panelControl5.Size = new System.Drawing.Size(283, 24);
             this.panelControl5.TabIndex = 17;
             // 
             // ddlCalculateWorkerType
             // 
             this.ddlCalculateWorkerType.EditValue = "İnsan Saate Göre";
-            this.ddlCalculateWorkerType.Location = new System.Drawing.Point(200, 4);
+            this.ddlCalculateWorkerType.Location = new System.Drawing.Point(133, 3);
+            this.ddlCalculateWorkerType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ddlCalculateWorkerType.Name = "ddlCalculateWorkerType";
             this.ddlCalculateWorkerType.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ddlCalculateWorkerType.Properties.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
             this.ddlCalculateWorkerType.Properties.Appearance.Options.UseFont = true;
             this.ddlCalculateWorkerType.Properties.Appearance.Options.UseForeColor = true;
             this.ddlCalculateWorkerType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("ddlCalculateWorkerType.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("ddlCalculateWorkerType.Properties.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.ddlCalculateWorkerType.Properties.Items.AddRange(new object[] {
             "İnsan Saate Göre",
             "Birim Fiyata Göre"});
             this.ddlCalculateWorkerType.Properties.LookAndFeel.SkinName = "Glass Oceans";
             this.ddlCalculateWorkerType.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.ddlCalculateWorkerType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.ddlCalculateWorkerType.Size = new System.Drawing.Size(189, 28);
+            this.ddlCalculateWorkerType.Size = new System.Drawing.Size(126, 20);
             this.ddlCalculateWorkerType.TabIndex = 18;
             this.ddlCalculateWorkerType.SelectedIndexChanged += new System.EventHandler(this.ddlCalculateWorkerType_SelectedIndexChanged);
             // 
@@ -256,10 +257,9 @@
             // 
             this.labelControl33.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl33.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl33.Location = new System.Drawing.Point(4, 7);
-            this.labelControl33.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl33.Location = new System.Drawing.Point(3, 5);
             this.labelControl33.Name = "labelControl33";
-            this.labelControl33.Size = new System.Drawing.Size(179, 19);
+            this.labelControl33.Size = new System.Drawing.Size(128, 14);
             this.labelControl33.TabIndex = 51;
             this.labelControl33.Text = "İşçilik Hesaplama Şekli:";
             // 
@@ -269,8 +269,9 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pcWorld.Name = "pcWorld";
-            this.pcWorld.Size = new System.Drawing.Size(50, 35);
+            this.pcWorld.Size = new System.Drawing.Size(33, 24);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcWorld.TabIndex = 16;
             this.pcWorld.TabStop = false;
@@ -282,10 +283,9 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1775, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Location = new System.Drawing.Point(887, 0);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(28, 35);
+            this.btnKapat.Size = new System.Drawing.Size(26, 24);
             this.btnKapat.TabIndex = 3;
             this.btnKapat.TabStop = false;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
@@ -298,11 +298,10 @@
             this.txtAdimAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
             this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.txtAdimAciklama.Location = new System.Drawing.Point(57, 0);
-            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdimAciklama.Location = new System.Drawing.Point(38, 0);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
-            this.txtAdimAciklama.Size = new System.Drawing.Size(228, 35);
+            this.txtAdimAciklama.Size = new System.Drawing.Size(153, 23);
             this.txtAdimAciklama.TabIndex = 0;
             this.txtAdimAciklama.Text = "İHALE TEKLİF ÖZETİ ";
             // 
@@ -311,11 +310,12 @@
             this.btnCalc.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnCalc.Image = ((System.Drawing.Image)(resources.GetObject("btnCalc.Image")));
             this.btnCalc.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnCalc.Location = new System.Drawing.Point(3, 107);
+            this.btnCalc.Location = new System.Drawing.Point(2, 73);
             this.btnCalc.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnCalc.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnCalc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCalc.Name = "btnCalc";
-            this.btnCalc.Size = new System.Drawing.Size(244, 35);
+            this.btnCalc.Size = new System.Drawing.Size(163, 24);
             this.btnCalc.TabIndex = 17;
             this.btnCalc.Text = "Hesap Makinesi";
             this.btnCalc.ToolTip = "Hesap Makinesini Aç";
@@ -331,10 +331,9 @@
             this.panelControl2.Controls.Add(this.lblTederDescription);
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(0, 35);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl2.Location = new System.Drawing.Point(0, 24);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1803, 72);
+            this.panelControl2.Size = new System.Drawing.Size(913, 49);
             this.panelControl2.TabIndex = 22;
             // 
             // panelControl4
@@ -356,9 +355,8 @@
             this.panelControl4.Controls.Add(this.labelControl17);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
-            this.panelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1803, 72);
+            this.panelControl4.Size = new System.Drawing.Size(913, 49);
             this.panelControl4.TabIndex = 23;
             // 
             // panelControl8
@@ -371,17 +369,17 @@
             this.panelControl8.Controls.Add(this.labelControl32);
             this.panelControl8.Controls.Add(this.labelControl18);
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl8.Location = new System.Drawing.Point(781, 3);
+            this.panelControl8.Location = new System.Drawing.Point(231, 2);
             this.panelControl8.LookAndFeel.SkinName = "Office 2007 Pink";
+            this.panelControl8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(292, 66);
+            this.panelControl8.Size = new System.Drawing.Size(195, 45);
             this.panelControl8.TabIndex = 49;
             // 
             // txtAccountingCosts
             // 
             this.txtAccountingCosts.EnterMoveNextControl = true;
-            this.txtAccountingCosts.Location = new System.Drawing.Point(158, 35);
-            this.txtAccountingCosts.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAccountingCosts.Location = new System.Drawing.Point(105, 24);
             this.txtAccountingCosts.Name = "txtAccountingCosts";
             this.txtAccountingCosts.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtAccountingCosts.Properties.Appearance.Options.UseBackColor = true;
@@ -394,14 +392,13 @@
             this.txtAccountingCosts.Properties.Mask.EditMask = "c2";
             this.txtAccountingCosts.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAccountingCosts.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtAccountingCosts.Size = new System.Drawing.Size(128, 26);
+            this.txtAccountingCosts.Size = new System.Drawing.Size(85, 20);
             this.txtAccountingCosts.TabIndex = 1;
             // 
             // txtCarriage
             // 
             this.txtCarriage.EnterMoveNextControl = true;
-            this.txtCarriage.Location = new System.Drawing.Point(158, 4);
-            this.txtCarriage.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCarriage.Location = new System.Drawing.Point(105, 3);
             this.txtCarriage.Name = "txtCarriage";
             this.txtCarriage.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtCarriage.Properties.Appearance.Options.UseBackColor = true;
@@ -414,17 +411,17 @@
             this.txtCarriage.Properties.Mask.EditMask = "c2";
             this.txtCarriage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCarriage.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtCarriage.Size = new System.Drawing.Size(128, 26);
+            this.txtCarriage.Size = new System.Drawing.Size(85, 20);
             this.txtCarriage.TabIndex = 0;
             // 
             // labelControl32
             // 
             this.labelControl32.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl32.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl32.Location = new System.Drawing.Point(28, 39);
-            this.labelControl32.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl32.Location = new System.Drawing.Point(19, 26);
+            this.labelControl32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl32.Name = "labelControl32";
-            this.labelControl32.Size = new System.Drawing.Size(120, 19);
+            this.labelControl32.Size = new System.Drawing.Size(83, 13);
             this.labelControl32.TabIndex = 44;
             this.labelControl32.Text = "Muhasebe Gideri:";
             // 
@@ -432,10 +429,10 @@
             // 
             this.labelControl18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl18.Location = new System.Drawing.Point(46, 9);
-            this.labelControl18.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl18.Location = new System.Drawing.Point(31, 6);
+            this.labelControl18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(101, 19);
+            this.labelControl18.Size = new System.Drawing.Size(69, 13);
             this.labelControl18.TabIndex = 42;
             this.labelControl18.Text = "Nakliye Bedeli:";
             // 
@@ -449,11 +446,12 @@
             this.groupControl4.Controls.Add(this.chckCompletionBond);
             this.groupControl4.Controls.Add(this.chckProvisionalBond);
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl4.Location = new System.Drawing.Point(1073, 3);
+            this.groupControl4.Location = new System.Drawing.Point(426, 2);
             this.groupControl4.LookAndFeel.SkinName = "Foggy";
             this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(322, 66);
+            this.groupControl4.Size = new System.Drawing.Size(215, 45);
             this.groupControl4.TabIndex = 48;
             this.groupControl4.Text = "Teminat Tutarı Ekle";
             // 
@@ -467,32 +465,33 @@
             this.btnTumuneUygula.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
             this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(291, 33);
+            this.btnTumuneUygula.Location = new System.Drawing.Point(187, 20);
             this.btnTumuneUygula.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnTumuneUygula.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
-            this.btnTumuneUygula.Size = new System.Drawing.Size(28, 30);
+            this.btnTumuneUygula.Size = new System.Drawing.Size(26, 23);
             this.btnTumuneUygula.TabIndex = 4;
             this.btnTumuneUygula.ToolTip = "Tümünü Uygula";
             this.btnTumuneUygula.Click += new System.EventHandler(this.btnTumuneUygula_Click);
             // 
             // chckCompletionBond
             // 
-            this.chckCompletionBond.Location = new System.Drawing.Point(150, 39);
+            this.chckCompletionBond.Location = new System.Drawing.Point(100, 27);
+            this.chckCompletionBond.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chckCompletionBond.Name = "chckCompletionBond";
             this.chckCompletionBond.Properties.Caption = "Kesin Teminat";
             this.chckCompletionBond.Properties.LookAndFeel.SkinName = "VS2010";
-            this.chckCompletionBond.Size = new System.Drawing.Size(134, 23);
+            this.chckCompletionBond.Size = new System.Drawing.Size(89, 19);
             this.chckCompletionBond.TabIndex = 3;
             // 
             // chckProvisionalBond
             // 
-            this.chckProvisionalBond.Location = new System.Drawing.Point(10, 39);
+            this.chckProvisionalBond.Location = new System.Drawing.Point(7, 27);
+            this.chckProvisionalBond.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chckProvisionalBond.Name = "chckProvisionalBond";
             this.chckProvisionalBond.Properties.Caption = "Geçici Teminat";
             this.chckProvisionalBond.Properties.LookAndFeel.SkinName = "Xmas 2008 Blue";
-            this.chckProvisionalBond.Size = new System.Drawing.Size(134, 23);
+            this.chckProvisionalBond.Size = new System.Drawing.Size(89, 19);
             this.chckProvisionalBond.TabIndex = 2;
             // 
             // btnKaydet
@@ -502,10 +501,9 @@
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
             this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnKaydet.Location = new System.Drawing.Point(1395, 3);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKaydet.Location = new System.Drawing.Point(641, 2);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(132, 66);
+            this.btnKaydet.Size = new System.Drawing.Size(88, 45);
             this.btnKaydet.TabIndex = 47;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
@@ -517,10 +515,9 @@
             this.btnObfKayit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnObfKayit.Location = new System.Drawing.Point(1527, 3);
-            this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnObfKayit.Location = new System.Drawing.Point(729, 2);
             this.btnObfKayit.Name = "btnObfKayit";
-            this.btnObfKayit.Size = new System.Drawing.Size(141, 66);
+            this.btnObfKayit.Size = new System.Drawing.Size(94, 45);
             this.btnObfKayit.TabIndex = 46;
             this.btnObfKayit.Text = "Yazdır";
             this.btnObfKayit.Click += new System.EventHandler(this.btnObfKayit_Click);
@@ -532,10 +529,9 @@
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(1668, 3);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton1.Location = new System.Drawing.Point(823, 2);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(132, 66);
+            this.simpleButton1.Size = new System.Drawing.Size(88, 45);
             this.simpleButton1.TabIndex = 45;
             this.simpleButton1.Text = "Gönder";
             // 
@@ -543,30 +539,27 @@
             // 
             this.lblTenderNumber.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTenderNumber.Appearance.ForeColor = System.Drawing.Color.Crimson;
-            this.lblTenderNumber.Location = new System.Drawing.Point(104, 13);
-            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTenderNumber.Location = new System.Drawing.Point(69, 9);
             this.lblTenderNumber.Name = "lblTenderNumber";
-            this.lblTenderNumber.Size = new System.Drawing.Size(0, 19);
+            this.lblTenderNumber.Size = new System.Drawing.Size(0, 14);
             this.lblTenderNumber.TabIndex = 44;
             // 
             // lblTenderDescription
             // 
             this.lblTenderDescription.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTenderDescription.Appearance.ForeColor = System.Drawing.Color.Crimson;
-            this.lblTenderDescription.Location = new System.Drawing.Point(104, 39);
-            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTenderDescription.Location = new System.Drawing.Point(69, 27);
             this.lblTenderDescription.Name = "lblTenderDescription";
-            this.lblTenderDescription.Size = new System.Drawing.Size(0, 19);
+            this.lblTenderDescription.Size = new System.Drawing.Size(0, 14);
             this.lblTenderDescription.TabIndex = 43;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl2.Location = new System.Drawing.Point(14, 39);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Location = new System.Drawing.Point(9, 27);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(79, 19);
+            this.labelControl2.Size = new System.Drawing.Size(56, 14);
             this.labelControl2.TabIndex = 41;
             this.labelControl2.Text = "Açıklama :";
             // 
@@ -574,10 +567,9 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl9.Location = new System.Drawing.Point(14, 12);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl9.Location = new System.Drawing.Point(9, 8);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(76, 19);
+            this.labelControl9.Size = new System.Drawing.Size(52, 14);
             this.labelControl9.TabIndex = 42;
             this.labelControl9.Text = "İhale No  :";
             // 
@@ -585,30 +577,27 @@
             // 
             this.labelControl17.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl17.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl17.Location = new System.Drawing.Point(15, 75);
-            this.labelControl17.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl17.Location = new System.Drawing.Point(10, 51);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(0, 34);
+            this.labelControl17.Size = new System.Drawing.Size(0, 22);
             this.labelControl17.TabIndex = 7;
             // 
             // lblTederDescription
             // 
             this.lblTederDescription.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTederDescription.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.lblTederDescription.Location = new System.Drawing.Point(15, 75);
-            this.lblTederDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTederDescription.Location = new System.Drawing.Point(10, 51);
             this.lblTederDescription.Name = "lblTederDescription";
-            this.lblTederDescription.Size = new System.Drawing.Size(0, 34);
+            this.lblTederDescription.Size = new System.Drawing.Size(0, 22);
             this.lblTederDescription.TabIndex = 7;
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl1.Location = new System.Drawing.Point(15, 9);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Location = new System.Drawing.Point(10, 6);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(123, 34);
+            this.labelControl1.Size = new System.Drawing.Size(81, 22);
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "İhale No:";
             // 
@@ -616,12 +605,10 @@
             // 
             this.grdMaterialList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdMaterialList.Location = new System.Drawing.Point(412, 0);
+            this.grdMaterialList.Location = new System.Drawing.Point(275, 0);
             this.grdMaterialList.MainView = this.grdMaterialList2;
-            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
-            this.grdMaterialList.Size = new System.Drawing.Size(1391, 427);
+            this.grdMaterialList.Size = new System.Drawing.Size(638, 293);
             this.grdMaterialList.TabIndex = 0;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdMaterialList2});
@@ -906,12 +893,13 @@
             // 
             this.gridSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSplitContainer1.Grid = this.grdMaterialList;
-            this.gridSplitContainer1.Location = new System.Drawing.Point(0, 107);
+            this.gridSplitContainer1.Location = new System.Drawing.Point(0, 73);
+            this.gridSplitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridSplitContainer1.Name = "gridSplitContainer1";
             this.gridSplitContainer1.Panel1.Controls.Add(this.grdMaterialList);
             this.gridSplitContainer1.Panel1.Controls.Add(this.panel1);
             this.gridSplitContainer1.Panel1.Controls.Add(this.isciAracGirisPaneli);
-            this.gridSplitContainer1.Size = new System.Drawing.Size(1803, 572);
+            this.gridSplitContainer1.Size = new System.Drawing.Size(913, 392);
             this.gridSplitContainer1.TabIndex = 23;
             // 
             // panel1
@@ -922,10 +910,9 @@
             this.panel1.Controls.Add(this.groupControl5);
             this.panel1.Controls.Add(this.groupControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(412, 427);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(275, 293);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1391, 145);
+            this.panel1.Size = new System.Drawing.Size(638, 99);
             this.panel1.TabIndex = 36;
             // 
             // groupControl3
@@ -939,12 +926,11 @@
             this.groupControl3.Controls.Add(this.txtMarkupWorkerAmount);
             this.groupControl3.Controls.Add(this.txtMarkupMaterialTotal);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl3.Location = new System.Drawing.Point(842, 0);
+            this.groupControl3.Location = new System.Drawing.Point(561, 0);
             this.groupControl3.LookAndFeel.SkinName = "Office 2007 Pink";
             this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(249, 145);
+            this.groupControl3.Size = new System.Drawing.Size(166, 99);
             this.groupControl3.TabIndex = 17;
             this.groupControl3.Text = "Kar Toplamları";
             // 
@@ -952,10 +938,9 @@
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl13.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelControl13.Location = new System.Drawing.Point(14, 110);
-            this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl13.Location = new System.Drawing.Point(9, 75);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(55, 19);
+            this.labelControl13.Size = new System.Drawing.Size(37, 13);
             this.labelControl13.TabIndex = 23;
             this.labelControl13.Text = "Toplam:";
             // 
@@ -963,10 +948,9 @@
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl12.Appearance.ForeColor = System.Drawing.Color.Green;
-            this.labelControl12.Location = new System.Drawing.Point(28, 80);
-            this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl12.Location = new System.Drawing.Point(19, 55);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(41, 19);
+            this.labelControl12.Size = new System.Drawing.Size(29, 13);
             this.labelControl12.TabIndex = 23;
             this.labelControl12.Text = "İşçilik:";
             // 
@@ -974,17 +958,15 @@
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Navy;
-            this.labelControl11.Location = new System.Drawing.Point(4, 51);
-            this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl11.Location = new System.Drawing.Point(3, 35);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(65, 19);
+            this.labelControl11.Size = new System.Drawing.Size(46, 13);
             this.labelControl11.TabIndex = 23;
             this.labelControl11.Text = "Malzeme:";
             // 
             // txtMarkupAmount
             // 
-            this.txtMarkupAmount.Location = new System.Drawing.Point(75, 110);
-            this.txtMarkupAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMarkupAmount.Location = new System.Drawing.Point(50, 75);
             this.txtMarkupAmount.Name = "txtMarkupAmount";
             this.txtMarkupAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMarkupAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -995,14 +977,13 @@
             this.txtMarkupAmount.Properties.Mask.EditMask = "c";
             this.txtMarkupAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMarkupAmount.Properties.ReadOnly = true;
-            this.txtMarkupAmount.Size = new System.Drawing.Size(156, 26);
+            this.txtMarkupAmount.Size = new System.Drawing.Size(104, 20);
             this.txtMarkupAmount.TabIndex = 19;
             this.txtMarkupAmount.TabStop = false;
             // 
             // txtMarkupWorkerAmount
             // 
-            this.txtMarkupWorkerAmount.Location = new System.Drawing.Point(75, 77);
-            this.txtMarkupWorkerAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMarkupWorkerAmount.Location = new System.Drawing.Point(50, 53);
             this.txtMarkupWorkerAmount.Name = "txtMarkupWorkerAmount";
             this.txtMarkupWorkerAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMarkupWorkerAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1013,14 +994,13 @@
             this.txtMarkupWorkerAmount.Properties.Mask.EditMask = "c";
             this.txtMarkupWorkerAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMarkupWorkerAmount.Properties.ReadOnly = true;
-            this.txtMarkupWorkerAmount.Size = new System.Drawing.Size(156, 26);
+            this.txtMarkupWorkerAmount.Size = new System.Drawing.Size(104, 20);
             this.txtMarkupWorkerAmount.TabIndex = 19;
             this.txtMarkupWorkerAmount.TabStop = false;
             // 
             // txtMarkupMaterialTotal
             // 
-            this.txtMarkupMaterialTotal.Location = new System.Drawing.Point(75, 45);
-            this.txtMarkupMaterialTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMarkupMaterialTotal.Location = new System.Drawing.Point(50, 31);
             this.txtMarkupMaterialTotal.Name = "txtMarkupMaterialTotal";
             this.txtMarkupMaterialTotal.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMarkupMaterialTotal.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1031,7 +1011,7 @@
             this.txtMarkupMaterialTotal.Properties.Mask.EditMask = "c";
             this.txtMarkupMaterialTotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMarkupMaterialTotal.Properties.ReadOnly = true;
-            this.txtMarkupMaterialTotal.Size = new System.Drawing.Size(156, 26);
+            this.txtMarkupMaterialTotal.Size = new System.Drawing.Size(104, 20);
             this.txtMarkupMaterialTotal.TabIndex = 19;
             this.txtMarkupMaterialTotal.TabStop = false;
             // 
@@ -1057,12 +1037,11 @@
             this.groupControl2.Controls.Add(this.txtMaterialCostAmount);
             this.groupControl2.Controls.Add(this.labelControl8);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl2.Location = new System.Drawing.Point(282, 0);
+            this.groupControl2.Location = new System.Drawing.Point(188, 0);
             this.groupControl2.LookAndFeel.SkinName = "Office 2007 Green";
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(560, 145);
+            this.groupControl2.Size = new System.Drawing.Size(373, 99);
             this.groupControl2.TabIndex = 16;
             this.groupControl2.Text = "Maliyet Toplamları";
             // 
@@ -1070,16 +1049,14 @@
             // 
             this.panelControl3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.panelControl3.Appearance.Options.UseBackColor = true;
-            this.panelControl3.Location = new System.Drawing.Point(286, 37);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl3.Location = new System.Drawing.Point(191, 25);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(3, 238);
+            this.panelControl3.Size = new System.Drawing.Size(2, 163);
             this.panelControl3.TabIndex = 24;
             // 
             // txtWorkerAmount
             // 
-            this.txtWorkerAmount.Location = new System.Drawing.Point(404, 110);
-            this.txtWorkerAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtWorkerAmount.Location = new System.Drawing.Point(269, 75);
             this.txtWorkerAmount.Name = "txtWorkerAmount";
             this.txtWorkerAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtWorkerAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1090,7 +1067,7 @@
             this.txtWorkerAmount.Properties.Mask.EditMask = "c";
             this.txtWorkerAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtWorkerAmount.Properties.ReadOnly = true;
-            this.txtWorkerAmount.Size = new System.Drawing.Size(146, 26);
+            this.txtWorkerAmount.Size = new System.Drawing.Size(97, 20);
             this.txtWorkerAmount.TabIndex = 17;
             this.txtWorkerAmount.TabStop = false;
             // 
@@ -1098,10 +1075,9 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelControl3.Location = new System.Drawing.Point(302, 111);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Location = new System.Drawing.Point(201, 76);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(98, 19);
+            this.labelControl3.Size = new System.Drawing.Size(67, 13);
             this.labelControl3.TabIndex = 20;
             this.labelControl3.Text = "Genel Toplam:";
             // 
@@ -1109,17 +1085,15 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Navy;
-            this.labelControl4.Location = new System.Drawing.Point(296, 51);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl4.Location = new System.Drawing.Point(197, 35);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(100, 19);
+            this.labelControl4.Size = new System.Drawing.Size(68, 13);
             this.labelControl4.TabIndex = 21;
             this.labelControl4.Text = "İşçilik Toplamı:";
             // 
             // txtWorkerKDVAmount
             // 
-            this.txtWorkerKDVAmount.Location = new System.Drawing.Point(404, 77);
-            this.txtWorkerKDVAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtWorkerKDVAmount.Location = new System.Drawing.Point(269, 53);
             this.txtWorkerKDVAmount.Name = "txtWorkerKDVAmount";
             this.txtWorkerKDVAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtWorkerKDVAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1130,14 +1104,13 @@
             this.txtWorkerKDVAmount.Properties.Mask.EditMask = "c";
             this.txtWorkerKDVAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtWorkerKDVAmount.Properties.ReadOnly = true;
-            this.txtWorkerKDVAmount.Size = new System.Drawing.Size(146, 26);
+            this.txtWorkerKDVAmount.Size = new System.Drawing.Size(97, 20);
             this.txtWorkerKDVAmount.TabIndex = 18;
             this.txtWorkerKDVAmount.TabStop = false;
             // 
             // txtWorkerCostAmount
             // 
-            this.txtWorkerCostAmount.Location = new System.Drawing.Point(404, 45);
-            this.txtWorkerCostAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtWorkerCostAmount.Location = new System.Drawing.Point(269, 31);
             this.txtWorkerCostAmount.Name = "txtWorkerCostAmount";
             this.txtWorkerCostAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtWorkerCostAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1148,7 +1121,7 @@
             this.txtWorkerCostAmount.Properties.Mask.EditMask = "c";
             this.txtWorkerCostAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtWorkerCostAmount.Properties.ReadOnly = true;
-            this.txtWorkerCostAmount.Size = new System.Drawing.Size(146, 26);
+            this.txtWorkerCostAmount.Size = new System.Drawing.Size(97, 20);
             this.txtWorkerCostAmount.TabIndex = 19;
             this.txtWorkerCostAmount.TabStop = false;
             // 
@@ -1156,17 +1129,15 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Green;
-            this.labelControl5.Location = new System.Drawing.Point(310, 79);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl5.Location = new System.Drawing.Point(207, 54);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(89, 19);
+            this.labelControl5.Size = new System.Drawing.Size(59, 13);
             this.labelControl5.TabIndex = 22;
             this.labelControl5.Text = "Kdv Toplamı:";
             // 
             // txtTotalAmount
             // 
-            this.txtTotalAmount.Location = new System.Drawing.Point(135, 110);
-            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalAmount.Location = new System.Drawing.Point(90, 75);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1177,7 +1148,7 @@
             this.txtTotalAmount.Properties.Mask.EditMask = "c";
             this.txtTotalAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTotalAmount.Properties.ReadOnly = true;
-            this.txtTotalAmount.Size = new System.Drawing.Size(147, 26);
+            this.txtTotalAmount.Size = new System.Drawing.Size(98, 20);
             this.txtTotalAmount.TabIndex = 11;
             this.txtTotalAmount.TabStop = false;
             // 
@@ -1185,10 +1156,9 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelControl7.Location = new System.Drawing.Point(28, 113);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl7.Location = new System.Drawing.Point(19, 77);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(98, 19);
+            this.labelControl7.Size = new System.Drawing.Size(67, 13);
             this.labelControl7.TabIndex = 14;
             this.labelControl7.Text = "Genel Toplam:";
             // 
@@ -1196,17 +1166,15 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Navy;
-            this.labelControl6.Location = new System.Drawing.Point(4, 47);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl6.Location = new System.Drawing.Point(3, 32);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(124, 19);
+            this.labelControl6.Size = new System.Drawing.Size(85, 13);
             this.labelControl6.TabIndex = 15;
             this.labelControl6.Text = "Malzeme Toplamı:";
             // 
             // txtMaterialkdvTotalAmount
             // 
-            this.txtMaterialkdvTotalAmount.Location = new System.Drawing.Point(135, 77);
-            this.txtMaterialkdvTotalAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaterialkdvTotalAmount.Location = new System.Drawing.Point(90, 53);
             this.txtMaterialkdvTotalAmount.Name = "txtMaterialkdvTotalAmount";
             this.txtMaterialkdvTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMaterialkdvTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1217,14 +1185,13 @@
             this.txtMaterialkdvTotalAmount.Properties.Mask.EditMask = "c";
             this.txtMaterialkdvTotalAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMaterialkdvTotalAmount.Properties.ReadOnly = true;
-            this.txtMaterialkdvTotalAmount.Size = new System.Drawing.Size(147, 26);
+            this.txtMaterialkdvTotalAmount.Size = new System.Drawing.Size(98, 20);
             this.txtMaterialkdvTotalAmount.TabIndex = 12;
             this.txtMaterialkdvTotalAmount.TabStop = false;
             // 
             // txtMaterialCostAmount
             // 
-            this.txtMaterialCostAmount.Location = new System.Drawing.Point(135, 45);
-            this.txtMaterialCostAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaterialCostAmount.Location = new System.Drawing.Point(90, 31);
             this.txtMaterialCostAmount.Name = "txtMaterialCostAmount";
             this.txtMaterialCostAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMaterialCostAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1235,7 +1202,7 @@
             this.txtMaterialCostAmount.Properties.Mask.EditMask = "c";
             this.txtMaterialCostAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMaterialCostAmount.Properties.ReadOnly = true;
-            this.txtMaterialCostAmount.Size = new System.Drawing.Size(147, 26);
+            this.txtMaterialCostAmount.Size = new System.Drawing.Size(98, 20);
             this.txtMaterialCostAmount.TabIndex = 13;
             this.txtMaterialCostAmount.TabStop = false;
             // 
@@ -1243,10 +1210,9 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Green;
-            this.labelControl8.Location = new System.Drawing.Point(38, 80);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl8.Location = new System.Drawing.Point(25, 55);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(89, 19);
+            this.labelControl8.Size = new System.Drawing.Size(59, 13);
             this.labelControl8.TabIndex = 16;
             this.labelControl8.Text = "Kdv Toplamı:";
             // 
@@ -1264,9 +1230,8 @@
             this.groupControl5.Location = new System.Drawing.Point(0, 0);
             this.groupControl5.LookAndFeel.SkinName = "Office 2007 Blue";
             this.groupControl5.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl5.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(282, 145);
+            this.groupControl5.Size = new System.Drawing.Size(188, 99);
             this.groupControl5.TabIndex = 15;
             this.groupControl5.Text = "İşçilik Toplamı";
             // 
@@ -1274,10 +1239,9 @@
             // 
             this.labelControl34.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl34.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelControl34.Location = new System.Drawing.Point(90, 110);
-            this.labelControl34.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl34.Location = new System.Drawing.Point(60, 75);
             this.labelControl34.Name = "labelControl34";
-            this.labelControl34.Size = new System.Drawing.Size(33, 19);
+            this.labelControl34.Size = new System.Drawing.Size(22, 13);
             this.labelControl34.TabIndex = 23;
             this.labelControl34.Text = "Fark:";
             // 
@@ -1285,10 +1249,9 @@
             // 
             this.labelControl35.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl35.Appearance.ForeColor = System.Drawing.Color.Green;
-            this.labelControl35.Location = new System.Drawing.Point(4, 80);
-            this.labelControl35.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl35.Location = new System.Drawing.Point(3, 55);
             this.labelControl35.Name = "labelControl35";
-            this.labelControl35.Size = new System.Drawing.Size(122, 19);
+            this.labelControl35.Size = new System.Drawing.Size(82, 13);
             this.labelControl35.TabIndex = 23;
             this.labelControl35.Text = "Birim Fiyata Göre:";
             // 
@@ -1296,17 +1259,15 @@
             // 
             this.labelControl36.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl36.Appearance.ForeColor = System.Drawing.Color.Navy;
-            this.labelControl36.Location = new System.Drawing.Point(4, 53);
-            this.labelControl36.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl36.Location = new System.Drawing.Point(3, 36);
             this.labelControl36.Name = "labelControl36";
-            this.labelControl36.Size = new System.Drawing.Size(119, 19);
+            this.labelControl36.Size = new System.Drawing.Size(79, 13);
             this.labelControl36.TabIndex = 23;
             this.labelControl36.Text = "İnsan Saate Göre:";
             // 
             // txtDifference
             // 
-            this.txtDifference.Location = new System.Drawing.Point(134, 110);
-            this.txtDifference.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDifference.Location = new System.Drawing.Point(89, 75);
             this.txtDifference.Name = "txtDifference";
             this.txtDifference.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtDifference.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1317,14 +1278,13 @@
             this.txtDifference.Properties.Mask.EditMask = "c";
             this.txtDifference.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtDifference.Properties.ReadOnly = true;
-            this.txtDifference.Size = new System.Drawing.Size(140, 26);
+            this.txtDifference.Size = new System.Drawing.Size(93, 20);
             this.txtDifference.TabIndex = 19;
             this.txtDifference.TabStop = false;
             // 
             // txtTotalUnitPrice
             // 
-            this.txtTotalUnitPrice.Location = new System.Drawing.Point(134, 77);
-            this.txtTotalUnitPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalUnitPrice.Location = new System.Drawing.Point(89, 53);
             this.txtTotalUnitPrice.Name = "txtTotalUnitPrice";
             this.txtTotalUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTotalUnitPrice.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1335,14 +1295,13 @@
             this.txtTotalUnitPrice.Properties.Mask.EditMask = "c";
             this.txtTotalUnitPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTotalUnitPrice.Properties.ReadOnly = true;
-            this.txtTotalUnitPrice.Size = new System.Drawing.Size(140, 26);
+            this.txtTotalUnitPrice.Size = new System.Drawing.Size(93, 20);
             this.txtTotalUnitPrice.TabIndex = 19;
             this.txtTotalUnitPrice.TabStop = false;
             // 
             // txtTotalPersonHour
             // 
-            this.txtTotalPersonHour.Location = new System.Drawing.Point(134, 45);
-            this.txtTotalPersonHour.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalPersonHour.Location = new System.Drawing.Point(89, 31);
             this.txtTotalPersonHour.Name = "txtTotalPersonHour";
             this.txtTotalPersonHour.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTotalPersonHour.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1353,7 +1312,7 @@
             this.txtTotalPersonHour.Properties.Mask.EditMask = "c";
             this.txtTotalPersonHour.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTotalPersonHour.Properties.ReadOnly = true;
-            this.txtTotalPersonHour.Size = new System.Drawing.Size(140, 26);
+            this.txtTotalPersonHour.Size = new System.Drawing.Size(93, 20);
             this.txtTotalPersonHour.TabIndex = 19;
             this.txtTotalPersonHour.TabStop = false;
             // 
@@ -1364,12 +1323,11 @@
             this.groupControl1.Controls.Add(this.btnCalc);
             this.groupControl1.Controls.Add(this.lblTotalMarkupNonKDV);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl1.Location = new System.Drawing.Point(1141, 0);
+            this.groupControl1.Location = new System.Drawing.Point(471, 0);
             this.groupControl1.LookAndFeel.SkinName = "Coffee";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(250, 145);
+            this.groupControl1.Size = new System.Drawing.Size(167, 99);
             this.groupControl1.TabIndex = 12;
             this.groupControl1.Text = "Kdv Hariç Toplam Tutar";
             // 
@@ -1377,10 +1335,9 @@
             // 
             this.lblTotalMarkupNonKDV.Appearance.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTotalMarkupNonKDV.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblTotalMarkupNonKDV.Location = new System.Drawing.Point(24, 50);
-            this.lblTotalMarkupNonKDV.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTotalMarkupNonKDV.Location = new System.Drawing.Point(16, 34);
             this.lblTotalMarkupNonKDV.Name = "lblTotalMarkupNonKDV";
-            this.lblTotalMarkupNonKDV.Size = new System.Drawing.Size(53, 39);
+            this.lblTotalMarkupNonKDV.Size = new System.Drawing.Size(35, 26);
             this.lblTotalMarkupNonKDV.TabIndex = 0;
             this.lblTotalMarkupNonKDV.Text = "0 TL";
             // 
@@ -1427,14 +1384,16 @@
             this.isciAracGirisPaneli.Location = new System.Drawing.Point(0, 0);
             this.isciAracGirisPaneli.LookAndFeel.SkinName = "Black";
             this.isciAracGirisPaneli.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.isciAracGirisPaneli.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.isciAracGirisPaneli.Name = "isciAracGirisPaneli";
-            this.isciAracGirisPaneli.Size = new System.Drawing.Size(412, 572);
+            this.isciAracGirisPaneli.Size = new System.Drawing.Size(275, 392);
             this.isciAracGirisPaneli.TabIndex = 35;
             // 
             // txtTenderNumber
             // 
             this.txtTenderNumber.EditValue = "";
-            this.txtTenderNumber.Location = new System.Drawing.Point(519, 12);
+            this.txtTenderNumber.Location = new System.Drawing.Point(346, 8);
+            this.txtTenderNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTenderNumber.Name = "txtTenderNumber";
             this.txtTenderNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTenderNumber.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1443,17 +1402,16 @@
             this.txtTenderNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtTenderNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTenderNumber.Properties.ReadOnly = true;
-            this.txtTenderNumber.Size = new System.Drawing.Size(204, 26);
+            this.txtTenderNumber.Size = new System.Drawing.Size(136, 20);
             this.txtTenderNumber.TabIndex = 52;
             this.txtTenderNumber.Visible = false;
             // 
             // labelControl22
             // 
             this.labelControl22.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl22.Location = new System.Drawing.Point(453, 15);
-            this.labelControl22.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl22.Location = new System.Drawing.Point(302, 10);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(58, 19);
+            this.labelControl22.Size = new System.Drawing.Size(42, 13);
             this.labelControl22.TabIndex = 51;
             this.labelControl22.Text = "İhale No:";
             this.labelControl22.Visible = false;
@@ -1461,7 +1419,8 @@
             // txtTenderDescription
             // 
             this.txtTenderDescription.EditValue = "";
-            this.txtTenderDescription.Location = new System.Drawing.Point(519, 42);
+            this.txtTenderDescription.Location = new System.Drawing.Point(346, 29);
+            this.txtTenderDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTenderDescription.Name = "txtTenderDescription";
             this.txtTenderDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTenderDescription.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1470,17 +1429,16 @@
             this.txtTenderDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtTenderDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTenderDescription.Properties.ReadOnly = true;
-            this.txtTenderDescription.Size = new System.Drawing.Size(204, 26);
+            this.txtTenderDescription.Size = new System.Drawing.Size(136, 20);
             this.txtTenderDescription.TabIndex = 52;
             this.txtTenderDescription.Visible = false;
             // 
             // labelControl21
             // 
             this.labelControl21.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl21.Location = new System.Drawing.Point(449, 47);
-            this.labelControl21.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl21.Location = new System.Drawing.Point(299, 32);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(61, 19);
+            this.labelControl21.Size = new System.Drawing.Size(44, 13);
             this.labelControl21.TabIndex = 51;
             this.labelControl21.Text = "İhale Adı:";
             this.labelControl21.Visible = false;
@@ -1488,7 +1446,8 @@
             // txtTenderLastOfferDate
             // 
             this.txtTenderLastOfferDate.EditValue = "";
-            this.txtTenderLastOfferDate.Location = new System.Drawing.Point(192, 14);
+            this.txtTenderLastOfferDate.Location = new System.Drawing.Point(128, 10);
+            this.txtTenderLastOfferDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTenderLastOfferDate.Name = "txtTenderLastOfferDate";
             this.txtTenderLastOfferDate.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTenderLastOfferDate.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1497,24 +1456,24 @@
             this.txtTenderLastOfferDate.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtTenderLastOfferDate.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTenderLastOfferDate.Properties.ReadOnly = true;
-            this.txtTenderLastOfferDate.Size = new System.Drawing.Size(204, 26);
+            this.txtTenderLastOfferDate.Size = new System.Drawing.Size(136, 20);
             this.txtTenderLastOfferDate.TabIndex = 52;
             // 
             // labelControl20
             // 
             this.labelControl20.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl20.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl20.Location = new System.Drawing.Point(99, 15);
-            this.labelControl20.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl20.Location = new System.Drawing.Point(66, 10);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(77, 19);
+            this.labelControl20.Size = new System.Drawing.Size(56, 13);
             this.labelControl20.TabIndex = 51;
             this.labelControl20.Text = "İhale Tarihi:";
             // 
             // txtTotalMaterialAndWorkerAmount
             // 
             this.txtTotalMaterialAndWorkerAmount.EditValue = "";
-            this.txtTotalMaterialAndWorkerAmount.Location = new System.Drawing.Point(192, 337);
+            this.txtTotalMaterialAndWorkerAmount.Location = new System.Drawing.Point(128, 231);
+            this.txtTotalMaterialAndWorkerAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTotalMaterialAndWorkerAmount.Name = "txtTotalMaterialAndWorkerAmount";
             this.txtTotalMaterialAndWorkerAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTotalMaterialAndWorkerAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1523,13 +1482,14 @@
             this.txtTotalMaterialAndWorkerAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtTotalMaterialAndWorkerAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTotalMaterialAndWorkerAmount.Properties.ReadOnly = true;
-            this.txtTotalMaterialAndWorkerAmount.Size = new System.Drawing.Size(204, 26);
+            this.txtTotalMaterialAndWorkerAmount.Size = new System.Drawing.Size(136, 20);
             this.txtTotalMaterialAndWorkerAmount.TabIndex = 50;
             // 
             // txtKirim
             // 
             this.txtKirim.EditValue = "";
-            this.txtKirim.Location = new System.Drawing.Point(182, 590);
+            this.txtKirim.Location = new System.Drawing.Point(121, 404);
+            this.txtKirim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtKirim.Name = "txtKirim";
             this.txtKirim.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtKirim.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1538,14 +1498,15 @@
             this.txtKirim.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtKirim.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtKirim.Properties.ReadOnly = true;
-            this.txtKirim.Size = new System.Drawing.Size(204, 26);
+            this.txtKirim.Size = new System.Drawing.Size(136, 20);
             this.txtKirim.TabIndex = 50;
             this.txtKirim.Visible = false;
             // 
             // txtOfferTotalAmount
             // 
             this.txtOfferTotalAmount.EditValue = "";
-            this.txtOfferTotalAmount.Location = new System.Drawing.Point(192, 464);
+            this.txtOfferTotalAmount.Location = new System.Drawing.Point(128, 317);
+            this.txtOfferTotalAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtOfferTotalAmount.Name = "txtOfferTotalAmount";
             this.txtOfferTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtOfferTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1554,13 +1515,14 @@
             this.txtOfferTotalAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtOfferTotalAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtOfferTotalAmount.Properties.ReadOnly = true;
-            this.txtOfferTotalAmount.Size = new System.Drawing.Size(204, 26);
+            this.txtOfferTotalAmount.Size = new System.Drawing.Size(136, 20);
             this.txtOfferTotalAmount.TabIndex = 50;
             // 
             // txtTotalMarkupAmount
             // 
             this.txtTotalMarkupAmount.EditValue = "";
-            this.txtTotalMarkupAmount.Location = new System.Drawing.Point(192, 432);
+            this.txtTotalMarkupAmount.Location = new System.Drawing.Point(128, 296);
+            this.txtTotalMarkupAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTotalMarkupAmount.Name = "txtTotalMarkupAmount";
             this.txtTotalMarkupAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTotalMarkupAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1569,16 +1531,15 @@
             this.txtTotalMarkupAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtTotalMarkupAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTotalMarkupAmount.Properties.ReadOnly = true;
-            this.txtTotalMarkupAmount.Size = new System.Drawing.Size(204, 26);
+            this.txtTotalMarkupAmount.Size = new System.Drawing.Size(136, 20);
             this.txtTotalMarkupAmount.TabIndex = 50;
             // 
             // labelControl31
             // 
             this.labelControl31.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl31.Location = new System.Drawing.Point(78, 593);
-            this.labelControl31.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl31.Location = new System.Drawing.Point(52, 406);
             this.labelControl31.Name = "labelControl31";
-            this.labelControl31.Size = new System.Drawing.Size(98, 18);
+            this.labelControl31.Size = new System.Drawing.Size(65, 14);
             this.labelControl31.TabIndex = 49;
             this.labelControl31.Text = "Kırım Toplamı:";
             this.labelControl31.Visible = false;
@@ -1587,10 +1548,9 @@
             // 
             this.labelControl29.Appearance.Font = new System.Drawing.Font("Calibri", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl29.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl29.Location = new System.Drawing.Point(18, 340);
-            this.labelControl29.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl29.Location = new System.Drawing.Point(12, 233);
             this.labelControl29.Name = "labelControl29";
-            this.labelControl29.Size = new System.Drawing.Size(158, 19);
+            this.labelControl29.Size = new System.Drawing.Size(108, 13);
             this.labelControl29.TabIndex = 49;
             this.labelControl29.Text = "Genel Maliyet Toplamı:";
             // 
@@ -1598,17 +1558,17 @@
             // 
             this.labelControl30.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl30.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl30.Location = new System.Drawing.Point(26, 467);
-            this.labelControl30.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl30.Location = new System.Drawing.Point(17, 320);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(150, 19);
+            this.labelControl30.Size = new System.Drawing.Size(106, 13);
             this.labelControl30.TabIndex = 49;
             this.labelControl30.Text = "Teklif Edilecek Toplam:";
             // 
             // txtGeneralMarkupWorkerAmount
             // 
             this.txtGeneralMarkupWorkerAmount.EditValue = "";
-            this.txtGeneralMarkupWorkerAmount.Location = new System.Drawing.Point(192, 400);
+            this.txtGeneralMarkupWorkerAmount.Location = new System.Drawing.Point(128, 274);
+            this.txtGeneralMarkupWorkerAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtGeneralMarkupWorkerAmount.Name = "txtGeneralMarkupWorkerAmount";
             this.txtGeneralMarkupWorkerAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtGeneralMarkupWorkerAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1617,24 +1577,24 @@
             this.txtGeneralMarkupWorkerAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtGeneralMarkupWorkerAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtGeneralMarkupWorkerAmount.Properties.ReadOnly = true;
-            this.txtGeneralMarkupWorkerAmount.Size = new System.Drawing.Size(204, 26);
+            this.txtGeneralMarkupWorkerAmount.Size = new System.Drawing.Size(136, 20);
             this.txtGeneralMarkupWorkerAmount.TabIndex = 50;
             // 
             // labelControl28
             // 
             this.labelControl28.Appearance.Font = new System.Drawing.Font("Calibri", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl28.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl28.Location = new System.Drawing.Point(45, 435);
-            this.labelControl28.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl28.Location = new System.Drawing.Point(30, 298);
             this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(129, 19);
+            this.labelControl28.Size = new System.Drawing.Size(87, 13);
             this.labelControl28.TabIndex = 49;
             this.labelControl28.Text = "Genel Kar Toplamı:";
             // 
             // txtWorkerTotalAmount
             // 
             this.txtWorkerTotalAmount.EditValue = "";
-            this.txtWorkerTotalAmount.Location = new System.Drawing.Point(192, 305);
+            this.txtWorkerTotalAmount.Location = new System.Drawing.Point(128, 209);
+            this.txtWorkerTotalAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtWorkerTotalAmount.Name = "txtWorkerTotalAmount";
             this.txtWorkerTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtWorkerTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1643,17 +1603,16 @@
             this.txtWorkerTotalAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtWorkerTotalAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtWorkerTotalAmount.Properties.ReadOnly = true;
-            this.txtWorkerTotalAmount.Size = new System.Drawing.Size(204, 26);
+            this.txtWorkerTotalAmount.Size = new System.Drawing.Size(136, 20);
             this.txtWorkerTotalAmount.TabIndex = 50;
             // 
             // labelControl27
             // 
             this.labelControl27.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl27.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl27.Location = new System.Drawing.Point(53, 403);
-            this.labelControl27.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl27.Location = new System.Drawing.Point(35, 276);
             this.labelControl27.Name = "labelControl27";
-            this.labelControl27.Size = new System.Drawing.Size(121, 19);
+            this.labelControl27.Size = new System.Drawing.Size(87, 13);
             this.labelControl27.TabIndex = 49;
             this.labelControl27.Text = "İşçilik Kar Toplamı:";
             // 
@@ -1661,17 +1620,17 @@
             // 
             this.labelControl25.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl25.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl25.Location = new System.Drawing.Point(77, 307);
-            this.labelControl25.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl25.Location = new System.Drawing.Point(51, 210);
             this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(97, 19);
+            this.labelControl25.Size = new System.Drawing.Size(70, 13);
             this.labelControl25.TabIndex = 49;
             this.labelControl25.Text = "İşçilik Maliyeti:";
             // 
             // txtPanelMarkupMaterialTotal
             // 
             this.txtPanelMarkupMaterialTotal.EditValue = "";
-            this.txtPanelMarkupMaterialTotal.Location = new System.Drawing.Point(192, 367);
+            this.txtPanelMarkupMaterialTotal.Location = new System.Drawing.Point(128, 251);
+            this.txtPanelMarkupMaterialTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPanelMarkupMaterialTotal.Name = "txtPanelMarkupMaterialTotal";
             this.txtPanelMarkupMaterialTotal.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtPanelMarkupMaterialTotal.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1680,24 +1639,24 @@
             this.txtPanelMarkupMaterialTotal.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtPanelMarkupMaterialTotal.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtPanelMarkupMaterialTotal.Properties.ReadOnly = true;
-            this.txtPanelMarkupMaterialTotal.Size = new System.Drawing.Size(204, 26);
+            this.txtPanelMarkupMaterialTotal.Size = new System.Drawing.Size(136, 20);
             this.txtPanelMarkupMaterialTotal.TabIndex = 50;
             // 
             // labelControl26
             // 
             this.labelControl26.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl26.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl26.Location = new System.Drawing.Point(30, 371);
-            this.labelControl26.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl26.Location = new System.Drawing.Point(20, 254);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(144, 19);
+            this.labelControl26.Size = new System.Drawing.Size(104, 13);
             this.labelControl26.TabIndex = 49;
             this.labelControl26.Text = "Malzeme Kar Toplamı:";
             // 
             // txtMaterialTotalAmount
             // 
             this.txtMaterialTotalAmount.EditValue = "";
-            this.txtMaterialTotalAmount.Location = new System.Drawing.Point(192, 272);
+            this.txtMaterialTotalAmount.Location = new System.Drawing.Point(128, 186);
+            this.txtMaterialTotalAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMaterialTotalAmount.Name = "txtMaterialTotalAmount";
             this.txtMaterialTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMaterialTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1706,24 +1665,24 @@
             this.txtMaterialTotalAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtMaterialTotalAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtMaterialTotalAmount.Properties.ReadOnly = true;
-            this.txtMaterialTotalAmount.Size = new System.Drawing.Size(204, 26);
+            this.txtMaterialTotalAmount.Size = new System.Drawing.Size(136, 20);
             this.txtMaterialTotalAmount.TabIndex = 50;
             // 
             // labelControl24
             // 
             this.labelControl24.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl24.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl24.Location = new System.Drawing.Point(54, 275);
-            this.labelControl24.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl24.Location = new System.Drawing.Point(36, 188);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(120, 19);
+            this.labelControl24.Size = new System.Drawing.Size(87, 13);
             this.labelControl24.TabIndex = 49;
             this.labelControl24.Text = "Malzeme Maliyeti:";
             // 
             // txtTenderNearlyTotalAmount
             // 
             this.txtTenderNearlyTotalAmount.EditValue = "";
-            this.txtTenderNearlyTotalAmount.Location = new System.Drawing.Point(501, 486);
+            this.txtTenderNearlyTotalAmount.Location = new System.Drawing.Point(334, 333);
+            this.txtTenderNearlyTotalAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTenderNearlyTotalAmount.Name = "txtTenderNearlyTotalAmount";
             this.txtTenderNearlyTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTenderNearlyTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1732,7 +1691,7 @@
             this.txtTenderNearlyTotalAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtTenderNearlyTotalAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTenderNearlyTotalAmount.Properties.ReadOnly = true;
-            this.txtTenderNearlyTotalAmount.Size = new System.Drawing.Size(204, 26);
+            this.txtTenderNearlyTotalAmount.Size = new System.Drawing.Size(136, 20);
             this.txtTenderNearlyTotalAmount.TabIndex = 50;
             this.txtTenderNearlyTotalAmount.Visible = false;
             // 
@@ -1740,10 +1699,9 @@
             // 
             this.labelControl23.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl23.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl23.Location = new System.Drawing.Point(394, 492);
-            this.labelControl23.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl23.Location = new System.Drawing.Point(263, 337);
             this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(97, 19);
+            this.labelControl23.Size = new System.Drawing.Size(69, 13);
             this.labelControl23.TabIndex = 49;
             this.labelControl23.Text = "Yaklaşık Bedel:";
             this.labelControl23.Visible = false;
@@ -1751,7 +1709,8 @@
             // textEdit5
             // 
             this.textEdit5.EditValue = "";
-            this.textEdit5.Location = new System.Drawing.Point(192, 240);
+            this.textEdit5.Location = new System.Drawing.Point(128, 164);
+            this.textEdit5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1760,24 +1719,24 @@
             this.textEdit5.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.textEdit5.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit5.Properties.ReadOnly = true;
-            this.textEdit5.Size = new System.Drawing.Size(204, 26);
+            this.textEdit5.Size = new System.Drawing.Size(136, 20);
             this.textEdit5.TabIndex = 50;
             // 
             // labelControl19
             // 
             this.labelControl19.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl19.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl19.Location = new System.Drawing.Point(34, 243);
-            this.labelControl19.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl19.Location = new System.Drawing.Point(23, 166);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(140, 19);
+            this.labelControl19.Size = new System.Drawing.Size(99, 13);
             this.labelControl19.TabIndex = 49;
             this.labelControl19.Text = "Baz Alınan Fiyat Türü:";
             // 
             // txtMaterialWorksipCount
             // 
             this.txtMaterialWorksipCount.EditValue = "";
-            this.txtMaterialWorksipCount.Location = new System.Drawing.Point(192, 110);
+            this.txtMaterialWorksipCount.Location = new System.Drawing.Point(128, 75);
+            this.txtMaterialWorksipCount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMaterialWorksipCount.Name = "txtMaterialWorksipCount";
             this.txtMaterialWorksipCount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMaterialWorksipCount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1786,17 +1745,16 @@
             this.txtMaterialWorksipCount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtMaterialWorksipCount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtMaterialWorksipCount.Properties.ReadOnly = true;
-            this.txtMaterialWorksipCount.Size = new System.Drawing.Size(204, 26);
+            this.txtMaterialWorksipCount.Size = new System.Drawing.Size(136, 20);
             this.txtMaterialWorksipCount.TabIndex = 46;
             // 
             // labelControl16
             // 
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl16.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl16.Location = new System.Drawing.Point(11, 143);
-            this.labelControl16.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl16.Location = new System.Drawing.Point(7, 98);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(165, 19);
+            this.labelControl16.Size = new System.Drawing.Size(118, 13);
             this.labelControl16.TabIndex = 45;
             this.labelControl16.Text = "Teklif Alınan Tedarikçiler:";
             // 
@@ -1804,17 +1762,17 @@
             // 
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl15.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl15.Location = new System.Drawing.Point(24, 111);
-            this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl15.Location = new System.Drawing.Point(16, 76);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(152, 19);
+            this.labelControl15.Size = new System.Drawing.Size(109, 13);
             this.labelControl15.TabIndex = 45;
             this.labelControl15.Text = "İşçilikli Malzeme Sayısı:";
             // 
             // txtMaterialIsNonWorkshipcount
             // 
             this.txtMaterialIsNonWorkshipcount.EditValue = "";
-            this.txtMaterialIsNonWorkshipcount.Location = new System.Drawing.Point(192, 78);
+            this.txtMaterialIsNonWorkshipcount.Location = new System.Drawing.Point(128, 53);
+            this.txtMaterialIsNonWorkshipcount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMaterialIsNonWorkshipcount.Name = "txtMaterialIsNonWorkshipcount";
             this.txtMaterialIsNonWorkshipcount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMaterialIsNonWorkshipcount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1823,24 +1781,24 @@
             this.txtMaterialIsNonWorkshipcount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtMaterialIsNonWorkshipcount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtMaterialIsNonWorkshipcount.Properties.ReadOnly = true;
-            this.txtMaterialIsNonWorkshipcount.Size = new System.Drawing.Size(204, 26);
+            this.txtMaterialIsNonWorkshipcount.Size = new System.Drawing.Size(136, 20);
             this.txtMaterialIsNonWorkshipcount.TabIndex = 44;
             // 
             // labelControl14
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl14.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl14.Location = new System.Drawing.Point(15, 79);
-            this.labelControl14.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl14.Location = new System.Drawing.Point(10, 54);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(161, 19);
+            this.labelControl14.Size = new System.Drawing.Size(115, 13);
             this.labelControl14.TabIndex = 43;
             this.labelControl14.Text = "İşçiliksiz Malzeme Sayısı:";
             // 
             // txtMaterialCount
             // 
             this.txtMaterialCount.EditValue = "";
-            this.txtMaterialCount.Location = new System.Drawing.Point(192, 46);
+            this.txtMaterialCount.Location = new System.Drawing.Point(128, 31);
+            this.txtMaterialCount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMaterialCount.Name = "txtMaterialCount";
             this.txtMaterialCount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMaterialCount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1849,24 +1807,24 @@
             this.txtMaterialCount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtMaterialCount.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtMaterialCount.Properties.ReadOnly = true;
-            this.txtMaterialCount.Size = new System.Drawing.Size(204, 26);
+            this.txtMaterialCount.Size = new System.Drawing.Size(136, 20);
             this.txtMaterialCount.TabIndex = 44;
             // 
             // labelControl10
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl10.Location = new System.Drawing.Point(72, 47);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl10.Location = new System.Drawing.Point(48, 32);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(104, 19);
+            this.labelControl10.Size = new System.Drawing.Size(75, 13);
             this.labelControl10.TabIndex = 43;
             this.labelControl10.Text = "Malzeme Sayısı:";
             // 
             // textEdit4
             // 
             this.textEdit4.EditValue = "";
-            this.textEdit4.Location = new System.Drawing.Point(192, 142);
+            this.textEdit4.Location = new System.Drawing.Point(128, 97);
+            this.textEdit4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1875,22 +1833,21 @@
             this.textEdit4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.textEdit4.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.textEdit4.Properties.ReadOnly = true;
-            this.textEdit4.Size = new System.Drawing.Size(204, 92);
+            this.textEdit4.Size = new System.Drawing.Size(136, 63);
             this.textEdit4.TabIndex = 46;
             // 
             // frm_TeklifAdimSon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1803, 679);
+            this.ClientSize = new System.Drawing.Size(913, 465);
             this.ControlBox = false;
             this.Controls.Add(this.gridSplitContainer1);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TeklifAdimSon";

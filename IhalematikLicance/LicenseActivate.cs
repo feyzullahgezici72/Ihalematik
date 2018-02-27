@@ -119,5 +119,11 @@ namespace IhalematikLicance
                 btnTamam.Focus();
             }
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this._owner.IsActivateSerialNumber = false;
+            this._owner.LicenseInformationForm();
+        }
     }
 }
