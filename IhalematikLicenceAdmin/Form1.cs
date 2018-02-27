@@ -90,7 +90,7 @@ namespace IhalematikLicenceAdmin
 
             if (result.Success)
             {
-                MessageBox.Show("Lisans Key Oluşturuldu");
+                MessageBox.Show("Lisans Anahtarı Oluşturuldu");
                 this.LoadGrid();
             }
         }

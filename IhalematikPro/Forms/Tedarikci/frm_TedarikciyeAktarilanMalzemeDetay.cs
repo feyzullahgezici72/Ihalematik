@@ -85,7 +85,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                 grdMaterialList.DataSource = items.Select(p => p.MaterialList).ToList();
             }
         }
-        frm_wait fw = new frm_wait();//Mail gönderiliyor mesaj formu
+       
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             List<OfferMaterialList> items = grdMaterialList.DataSource as List<OfferMaterialList>;
@@ -95,7 +95,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                 //{
                 this.IsSendMail = false;
                 this.CreateExcel();
+                frm_wait fw = new frm_wait();//Mail gönderiliyor mesaj formu
                 OperationResult result = this.SendMail();
+                fw.Show();
                 //});
                 //this.SendMailTask.Start();
                 if (result.Success)
@@ -109,16 +111,19 @@ namespace IhalematikProUI.Forms.Tedarikci
                     {
                         if (result.ValidationResults.FirstOrDefault().PropertyName == "NoInternetconnection")
                         {
+                            fw.Hide();
                             MessageBox.Show("Internet baglantinizi kontrol ediniz");
                         }
                         else if (result.ValidationResults.FirstOrDefault().PropertyName == "GmailLessSecureApps")
                         {
+                            fw.Hide();
                             MessageBox.Show("Lutfen firma bilgileri bolumunden email kullanici adi(email) ve sifrenizi kontrol ediniz veya /https://myaccount.google.com/lesssecureapps/ mail gonderilebilmesi icin izin verdiginizden emin olun");
                         }
                     }
 
                     else
                     {
+                        fw.Hide();
                         MessageBox.Show("Mail gonderirken hata olustur lutfen daha sonra tekrar deneyiniz");
                     }
                 }
@@ -205,7 +210,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
                     oWB.Save();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     // MessageBox.Show(ex.ToString());
                 }
@@ -240,7 +245,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                         this.SendInfoMessage();
                     }
 
-                    catch (Exception ex)
+                    catch (Exception)
                     {
 
                     }

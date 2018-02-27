@@ -75,19 +75,19 @@ namespace IhalematikProUI.Forms
             
             if (CurrentWorker != null)
             {
-                txtAGI.Text = CurrentWorker.AGIFare.Amount.ToString("c");
-                txtBaseFare.Text = CurrentWorker.BaseFare.Amount.ToString("c");
-                this.BaseFare = CurrentWorker.BaseFare.Amount.ToString("c");
-                txtExtraFare.Text = CurrentWorker.ExtraFare.Amount.ToString("c");
-                txtFoodFare.Text = CurrentWorker.FoodFare.Amount.ToString("c");
-                txtHotelFare.Text = CurrentWorker.HotelFare.Amount.ToString("c");
-                txtIncomeTaxFare.Text = CurrentWorker.IncomeTaxFare.Amount.ToString("c");
-                txtISGFare.Text = CurrentWorker.ISGFare.Amount.ToString("c");
-                txtSeveranceFare.Text = CurrentWorker.SeveranceFare.Amount.ToString("c");
-                txtSGKPrimFare.Text = CurrentWorker.SGKPrimFare.Amount.ToString("c");
-                txtStampTaxFare.Text = CurrentWorker.StampTaxFare.Amount.ToString("c");
-                txtTravelFare.Text = CurrentWorker.TravelFare.Amount.ToString("c");
-                txtWorklesFonFare.Text = CurrentWorker.WorklesFonFare.Amount.ToString("c");
+                txtAGI.Text = CurrentWorker.AGIFare.Amount.ToString("c2");
+                txtBaseFare.Text = CurrentWorker.BaseFare.Amount.ToString("c2");
+                this.BaseFare = CurrentWorker.BaseFare.Amount.ToString("c2");
+                txtExtraFare.Text = CurrentWorker.ExtraFare.Amount.ToString("c2");
+                txtFoodFare.Text = CurrentWorker.FoodFare.Amount.ToString("c2");
+                txtHotelFare.Text = CurrentWorker.HotelFare.Amount.ToString("c2");
+                txtIncomeTaxFare.Text = CurrentWorker.IncomeTaxFare.Amount.ToString("c2");
+                txtISGFare.Text = CurrentWorker.ISGFare.Amount.ToString("c2");
+                txtSeveranceFare.Text = CurrentWorker.SeveranceFare.Amount.ToString("c2");
+                txtSGKPrimFare.Text = CurrentWorker.SGKPrimFare.Amount.ToString("c2");
+                txtStampTaxFare.Text = CurrentWorker.StampTaxFare.Amount.ToString("c2");
+                txtTravelFare.Text = CurrentWorker.TravelFare.Amount.ToString("c2");
+                txtWorklesFonFare.Text = CurrentWorker.WorklesFonFare.Amount.ToString("c2");
                 int index = models.FindIndex(p => p.Id == CurrentWorker.Title.Id);
                 ddlTitles.SelectedIndex = index;//selectedTitle;
                 if (CurrentWorker.IsNormal)
@@ -115,19 +115,19 @@ namespace IhalematikProUI.Forms
                 {
                     if (item.RuleType == RuleTypesEnum.IncomeTaxFare)
                     {
-                        txtIncomeTaxFare.Text = (minimumWage * double.Parse(item.Value) / 100).ToString("c");
+                        txtIncomeTaxFare.Text = (minimumWage * double.Parse(item.Value) / 100).ToString("c2");
                     }
                     else if (item.RuleType == RuleTypesEnum.SGKPrimFare)
                     {
-                        txtSGKPrimFare.Text = (minimumWage * double.Parse(item.Value) / 100).ToString("c");
+                        txtSGKPrimFare.Text = (minimumWage * double.Parse(item.Value) / 100).ToString("c2");
                     }
                     else if (item.RuleType == RuleTypesEnum.StampTaxFare)
                     {
-                        txtStampTaxFare.Text = (minimumWage * double.Parse(item.Value) / 100000).ToString("c");
+                        txtStampTaxFare.Text = (minimumWage * double.Parse(item.Value) / 100000).ToString("c2");
                     }
                     else if (item.RuleType == RuleTypesEnum.WorklesFonFare)
                     {
-                        txtWorklesFonFare.Text = (minimumWage * double.Parse(item.Value) / 100).ToString("c");
+                        txtWorklesFonFare.Text = (minimumWage * double.Parse(item.Value) / 100).ToString("c2");
                     }
                 }
                 //if (!this.IsCalculatedMinimumWage)
@@ -150,19 +150,19 @@ namespace IhalematikProUI.Forms
                     {
                         if (item.RuleType == RuleTypesEnum.IncomeTaxFare)
                         {
-                            txtIncomeTaxFare.Text = (double.Parse(minimumWage.Value) * double.Parse(item.Value) / 100).ToString("c");
+                            txtIncomeTaxFare.Text = (double.Parse(minimumWage.Value) * double.Parse(item.Value) / 100).ToString("c2");
                         }
                         else if (item.RuleType == RuleTypesEnum.SGKPrimFare)
                         {
-                            txtSGKPrimFare.Text = (double.Parse(minimumWage.Value) * double.Parse(item.Value) / 100).ToString("c");
+                            txtSGKPrimFare.Text = (double.Parse(minimumWage.Value) * double.Parse(item.Value) / 100).ToString("c2");
                         }
                         else if (item.RuleType == RuleTypesEnum.StampTaxFare)
                         {
-                            txtStampTaxFare.Text = (double.Parse(minimumWage.Value) * double.Parse(item.Value) / 100000).ToString("c");
+                            txtStampTaxFare.Text = (double.Parse(minimumWage.Value) * double.Parse(item.Value) / 100000).ToString("c2");
                         }
                         else if (item.RuleType == RuleTypesEnum.WorklesFonFare)
                         {
-                            txtWorklesFonFare.Text = (double.Parse(minimumWage.Value) * double.Parse(item.Value) / 100).ToString("c");
+                            txtWorklesFonFare.Text = (double.Parse(minimumWage.Value) * double.Parse(item.Value) / 100).ToString("c2");
                         }
                     }
                 }

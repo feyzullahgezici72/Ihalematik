@@ -186,7 +186,7 @@ namespace IhalematikProBL.Mailing
                 this.SendEmail(info);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //CustomLoggingManager.Instance.Log(Guid.NewGuid(), ex, string.Empty);
                 //MailingManager.Instance.SendErrorEmail(ex);

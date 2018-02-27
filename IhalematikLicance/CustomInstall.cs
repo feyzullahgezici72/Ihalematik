@@ -28,7 +28,7 @@ namespace IhalematikLicance
                 LicenseActivate frmLicenseActivate = new LicenseActivate(this);
                 frmLicenseActivate.ShowDialog();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 base.Uninstall(stateSaver);
             }

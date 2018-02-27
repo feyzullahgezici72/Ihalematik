@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim1));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -45,7 +44,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnPozKayit = new DevExpress.XtraEditors.SimpleButton();
             this.btnObfKayit = new DevExpress.XtraEditors.SimpleButton();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             this.grupPanel = new DevExpress.XtraEditors.PanelControl();
             this.grdTenderGroup = new DevExpress.XtraGrid.GridControl();
             this.gridViewTenderGroup = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -59,8 +58,8 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.btnKdv = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
@@ -509,6 +508,7 @@
             this.panelControl3.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.panelControl3.Appearance.Options.UseBackColor = true;
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl3.Controls.Add(this.btnKdv);
             this.panelControl3.Controls.Add(this.panel2);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl3.Location = new System.Drawing.Point(386, 589);
@@ -517,34 +517,36 @@
             this.panelControl3.Size = new System.Drawing.Size(976, 70);
             this.panelControl3.TabIndex = 22;
             // 
+            // btnKdv
+            // 
+            this.btnKdv.Appearance.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKdv.Appearance.Options.UseFont = true;
+            this.btnKdv.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnKdv.Location = new System.Drawing.Point(0, 3);
+            this.btnKdv.LookAndFeel.SkinName = "VS2010";
+            this.btnKdv.LookAndFeel.UseWindowsXPTheme = true;
+            this.btnKdv.Name = "btnKdv";
+            this.btnKdv.Size = new System.Drawing.Size(86, 36);
+            this.btnKdv.TabIndex = 11;
+            this.btnKdv.Text = "%18 Kdv";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panelControl4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(202, 0);
+            this.panel2.Location = new System.Drawing.Point(677, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(774, 70);
+            this.panel2.Size = new System.Drawing.Size(299, 70);
             this.panel2.TabIndex = 10;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(222, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(6);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(352, 70);
-            this.panel6.TabIndex = 11;
             // 
             // panelControl4
             // 
             this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl4.Controls.Add(this.btnNext);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl4.Location = new System.Drawing.Point(574, 0);
+            this.panelControl4.Location = new System.Drawing.Point(99, 0);
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(200, 70);
             this.panelControl4.TabIndex = 10;
@@ -741,7 +743,7 @@
             this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 99;
+            this.gridColumn1.Width = 73;
             // 
             // gridColumn2
             // 
@@ -763,7 +765,7 @@
             this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 556;
+            this.gridColumn2.Width = 415;
             // 
             // gridColumn3
             // 
@@ -812,7 +814,7 @@
             this.colKDV.OptionsFilter.AllowFilter = false;
             this.colKDV.Visible = true;
             this.colKDV.VisibleIndex = 4;
-            this.colKDV.Width = 70;
+            this.colKDV.Width = 83;
             // 
             // colQuantity
             // 
@@ -836,7 +838,7 @@
             this.colQuantity.OptionsFilter.AllowFilter = false;
             this.colQuantity.Visible = true;
             this.colQuantity.VisibleIndex = 5;
-            this.colQuantity.Width = 78;
+            this.colQuantity.Width = 52;
             // 
             // gridColumn5
             // 
@@ -853,14 +855,11 @@
             this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn5.FieldName = "PozOBFUnitPrice";
             this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.OptionsColumn.AllowEdit = false;
-            this.gridColumn5.OptionsColumn.AllowFocus = false;
-            this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 6;
-            this.gridColumn5.Width = 106;
+            this.gridColumn5.Width = 71;
             // 
             // gridColumn6
             // 
@@ -884,7 +883,7 @@
             this.gridColumn6.OptionsFilter.AllowFilter = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 7;
-            this.gridColumn6.Width = 107;
+            this.gridColumn6.Width = 71;
             // 
             // gridColumn8
             // 
@@ -908,7 +907,7 @@
             this.gridColumn8.OptionsFilter.AllowFilter = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 8;
-            this.gridColumn8.Width = 149;
+            this.gridColumn8.Width = 93;
             // 
             // colIsWorker
             // 
@@ -922,6 +921,7 @@
             this.colIsWorker.OptionsFilter.AllowFilter = false;
             this.colIsWorker.Visible = true;
             this.colIsWorker.VisibleIndex = 0;
+            this.colIsWorker.Width = 55;
             // 
             // rpstWorkship
             // 
@@ -1029,7 +1029,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private System.Windows.Forms.Panel panel2;
         public DevExpress.XtraEditors.SimpleButton btnNext;
-        private System.Windows.Forms.Panel panel6;
         private DevExpress.XtraEditors.PanelControl panelControl4;
+        private DevExpress.XtraEditors.SimpleButton btnKdv;
     }
 }
