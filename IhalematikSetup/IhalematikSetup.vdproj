@@ -4997,9 +4997,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:IhalematikSetup"
+        "ProductName" = "8:IhalematikPro V.1.0.0"
         "ProductCode" = "8:{4DF0B191-8F6F-468F-A972-38AE793751BE}"
-        "PackageCode" = "8:{EFBCE43C-6A66-405E-B1FE-60CD14C6B2A1}"
+        "PackageCode" = "8:{2772ED54-AD1D-4CD7-AC78-C0F5A565C798}"
         "UpgradeCode" = "8:{DB14AA50-2DCE-4581-92DD-5F4062828034}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

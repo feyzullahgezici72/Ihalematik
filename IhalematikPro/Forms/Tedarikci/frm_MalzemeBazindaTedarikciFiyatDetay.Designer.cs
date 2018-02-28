@@ -374,6 +374,8 @@
             this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
             this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.Caption = "BİRİM FİYAT";
+            this.gridColumn4.DisplayFormat.FormatString = "c2";
+            this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "Price";
             this.gridColumn4.MaxWidth = 100;
             this.gridColumn4.MinWidth = 100;

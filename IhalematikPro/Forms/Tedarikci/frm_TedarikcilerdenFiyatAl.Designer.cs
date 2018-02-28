@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikcilerdenFiyatAl));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.pnltoplam = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtTotalAmount = new DevExpress.XtraEditors.TextEdit();
@@ -528,6 +528,8 @@
             this.colKDV.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
             this.colKDV.AppearanceHeader.Options.UseBackColor = true;
             this.colKDV.Caption = "KDV(%)";
+            this.colKDV.DisplayFormat.FormatString = "{0:f0} %";
+            this.colKDV.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colKDV.FieldName = "KDV";
             this.colKDV.Name = "colKDV";
             this.colKDV.OptionsFilter.AllowFilter = false;
@@ -539,6 +541,8 @@
             this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
             this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn1.Caption = "ALINAN FİYAT";
+            this.gridColumn1.DisplayFormat.FormatString = "c2";
+            this.gridColumn1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn1.FieldName = "Price";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
@@ -565,6 +569,8 @@
             this.colPriceWithRisk.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
             this.colPriceWithRisk.AppearanceHeader.Options.UseBackColor = true;
             this.colPriceWithRisk.Caption = "BİRİM FİYAT";
+            this.colPriceWithRisk.DisplayFormat.FormatString = "c2";
+            this.colPriceWithRisk.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colPriceWithRisk.FieldName = "PriceWithRisk";
             this.colPriceWithRisk.Name = "colPriceWithRisk";
             this.colPriceWithRisk.OptionsColumn.AllowEdit = false;
@@ -592,7 +598,7 @@
             this.rpstMeterialDetail.AutoHeight = false;
             this.rpstMeterialDetail.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rpstMeterialDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.rpstMeterialDetail.Name = "rpstMeterialDetail";
             this.rpstMeterialDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rpstMeterialDetail.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.rpstMeterialDetail_ButtonClick);
@@ -913,6 +919,7 @@
             this.pnlrisk.Name = "pnlrisk";
             this.pnlrisk.Size = new System.Drawing.Size(274, 64);
             this.pnlrisk.TabIndex = 46;
+            this.pnlrisk.Visible = false;
             // 
             // txtRisk
             // 
