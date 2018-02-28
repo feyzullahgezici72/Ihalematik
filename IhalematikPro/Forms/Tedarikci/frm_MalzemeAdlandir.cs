@@ -34,7 +34,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
                     else
                     {
-                        OBF obf = OBFProvider.Instance.GetItem(this.currentPozOBFId);
+                        IhalematikProBL.Entity.OBF obf = OBFProvider.Instance.GetItem(this.currentPozOBFId);
                         this.pozOBF = new Material().CreateMaterial(obf);
                     }
 
@@ -61,7 +61,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                 }
                 else
                 {
-                    OBF obf = OBFProvider.Instance.GetItem(this.currentPozOBFId);
+                    IhalematikProBL.Entity.OBF obf = OBFProvider.Instance.GetItem(this.currentPozOBFId);
                     obf.DescriptionForSupplier = txtdescriptionForSupplier.Text.Trim();
                     OBFProvider.Instance.Save(obf);
                 }

@@ -19,8 +19,8 @@ namespace IhalematikProUI.Forms
     {
         frm_OzelStokListesi _owner = null;
         public int CurrentOBFId { get; set; }
-        public OBF currentOBF { get; set; }
-        public OBF CurrentOBF
+        public IhalematikProBL.Entity.OBF currentOBF { get; set; }
+        public IhalematikProBL.Entity.OBF CurrentOBF
         {
             get
             {
