@@ -12,6 +12,7 @@ using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikPro.Forms;
 using IhalematikPro.Model;
+using System.Globalization;
 
 namespace IhalematikProUI.Forms
 {
@@ -92,7 +93,7 @@ namespace IhalematikProUI.Forms
                 model.Description = txtDescription.Text;
                 model.Number = txtNumber.Text;
                 model.Unit = txtUnit.Text;
-                model.UnitPrice = model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty)); 
+                model.UnitPrice = model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty), CultureInfo.InvariantCulture); 
                 model.DescriptionForSupplier = txtDescriptionForSupplier.Text;
                 model.Save();
                 frm_MesajFormu mf = new frm_MesajFormu();

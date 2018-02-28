@@ -16,6 +16,7 @@ using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms.Base;
 using IhalematikProUI.Forms.OBF;
+using System.Globalization;
 
 namespace IhalematikPro.Forms
 {
@@ -64,7 +65,7 @@ namespace IhalematikPro.Forms
             model.Number = txtNumber.Text;
             model.IsActive = true;
             model.Unit = txtUnit.Text;
-            model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty));
+            model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty), CultureInfo.InvariantCulture);
             model.DescriptionForSupplier = txtDescriptionForSupplier.Text;
             List<OBF> existingOBFs = UIOBFManager.Instance.GetOBF(model.Number);
             if (existingOBFs != null && existingOBFs.Count != 0)

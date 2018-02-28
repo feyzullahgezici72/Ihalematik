@@ -16,6 +16,7 @@ using System.Threading;
 using IhalematikProBL.Provider;
 using System.Diagnostics;
 using IhalematikProUI.Forms.Base;
+using System.Globalization;
 
 namespace IhalematikPro.Forms
 {
@@ -75,7 +76,7 @@ namespace IhalematikPro.Forms
                 model.Number = txtNumber.Text;
                 model.Unit = txtUnit.Text;
                 model.IsActive = true;
-                model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty));
+                model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty), CultureInfo.InvariantCulture);
 
                 List<Poz> existingPozs = UIPozManager.Instance.GetPoz(model.Number);
                 if (existingPozs != null && existingPozs.Count != 0)
