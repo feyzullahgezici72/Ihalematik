@@ -1,4 +1,5 @@
-﻿using IhalematikProBL.Provider;
+﻿using IhalematikProBL.Enum;
+using IhalematikProBL.Provider;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,7 +35,7 @@ namespace IhalematikProBL.Entity
             }
         }
 
-        public bool IsNormal { get; set; }
+        public WorkerTypesEnum WorkerType { get; set; }
 
         //Net Maas
         public Fare BaseFare { get; set; }

@@ -157,8 +157,21 @@ namespace IhalematikPro.Forms
                 WorkerModel model = new WorkerModel();
                 model.IsActive = true;
                 model.TitleId = ((TitleModel)ddlTitles.SelectedItem).Id.Value;
-                model.IsNormal = rbNormal.Checked;
-                if (txtBaseFare.Text!="")
+                if (rbAsgariUcret.Checked)
+                {
+                    model.WorkerType = WorkerTypesEnum.MinimumSalary;
+                }
+                else if (rbNormal.Checked)
+                {
+                    model.WorkerType = WorkerTypesEnum.NormalSalary;
+                }
+
+                else
+                {
+                    model.WorkerType = WorkerTypesEnum.NetSalary;
+                }
+
+                if (txtBaseFare.Text != "")
                 {
                     model.BaseFare = new Fare(double.Parse(txtBaseFare.Text.Replace("TL", string.Empty)));
                 }
@@ -166,7 +179,7 @@ namespace IhalematikPro.Forms
                 {
                     model.BaseFare = new Fare(0);
                 }
-                if (txtSGKPrimFare.Text!="")
+                if (txtSGKPrimFare.Text != "")
                 {
                     model.SGKPrimFare = new Fare(double.Parse(txtSGKPrimFare.Text.Replace("TL", string.Empty)));
                 }
@@ -174,7 +187,7 @@ namespace IhalematikPro.Forms
                 {
                     model.SGKPrimFare = new Fare(0);
                 }
-                if (txtWorklesFonFare.Text!="")
+                if (txtWorklesFonFare.Text != "")
                 {
                     model.WorklesFonFare = new Fare(double.Parse(txtWorklesFonFare.Text.Replace("TL", string.Empty)));
                 }
@@ -182,7 +195,7 @@ namespace IhalematikPro.Forms
                 {
                     model.WorklesFonFare = new Fare(0);
                 }
-                if (txtIncomeTaxFare.Text!="")
+                if (txtIncomeTaxFare.Text != "")
                 {
                     model.IncomeTaxFare = new Fare(double.Parse(txtIncomeTaxFare.Text.Replace("TL", string.Empty)));
                 }
@@ -190,7 +203,7 @@ namespace IhalematikPro.Forms
                 {
                     model.IncomeTaxFare = new Fare(0);
                 }
-                if (txtSeveranceFare.Text!="")
+                if (txtSeveranceFare.Text != "")
                 {
                     model.SeveranceFare = new Fare(double.Parse(txtSeveranceFare.Text.Replace("TL", string.Empty)));
                 }
@@ -198,7 +211,7 @@ namespace IhalematikPro.Forms
                 {
                     model.SeveranceFare = new Fare(0);
                 }
-                if (txtStampTaxFare.Text!="")
+                if (txtStampTaxFare.Text != "")
                 {
                     model.StampTaxFare = new Fare(double.Parse(txtStampTaxFare.Text.Replace("TL", string.Empty)));
                 }
@@ -206,7 +219,7 @@ namespace IhalematikPro.Forms
                 {
                     model.StampTaxFare = new Fare(0);
                 }
-                if (txtAGI.Text!="")
+                if (txtAGI.Text != "")
                 {
                     model.AGIFare = new Fare(double.Parse(txtAGI.Text.Replace("TL", string.Empty)));
                 }
@@ -214,15 +227,15 @@ namespace IhalematikPro.Forms
                 {
                     model.AGIFare = new Fare(0);
                 }
-                if (txtFoodFare.Text!="")
+                if (txtFoodFare.Text != "")
                 {
                     model.FoodFare = new Fare(double.Parse(txtFoodFare.Text.Replace("TL", string.Empty)));
                 }
-               else
+                else
                 {
                     model.FoodFare = new Fare(0);
                 }
-                if (txtTravelFare.Text!="")
+                if (txtTravelFare.Text != "")
                 {
                     model.TravelFare = new Fare(double.Parse(txtTravelFare.Text.Replace("TL", string.Empty)));
                 }
@@ -230,7 +243,7 @@ namespace IhalematikPro.Forms
                 {
                     model.TravelFare = new Fare(0);
                 }
-                if (txtHotelFare.Text!="")
+                if (txtHotelFare.Text != "")
                 {
                     model.HotelFare = new Fare(double.Parse(txtHotelFare.Text.Replace("TL", string.Empty)));
                 }
@@ -238,7 +251,7 @@ namespace IhalematikPro.Forms
                 {
                     model.HotelFare = new Fare(0);
                 }
-                if (txtISGFare.Text!="")
+                if (txtISGFare.Text != "")
                 {
                     model.ISGFare = new Fare(double.Parse(txtISGFare.Text.Replace("TL", string.Empty)));
                 }
@@ -246,11 +259,11 @@ namespace IhalematikPro.Forms
                 {
                     model.ISGFare = new Fare(0);
                 }
-                if (txtExtraFare.Text!="")
+                if (txtExtraFare.Text != "")
                 {
                     model.ExtraFare = new Fare(double.Parse(txtExtraFare.Text.Replace("TL", string.Empty)));
                 }
-               else
+                else
                 {
                     model.ExtraFare = new Fare(0);
                 }
@@ -396,18 +409,18 @@ namespace IhalematikPro.Forms
             ddlTitles.SelectedIndex = -1;
             rbNormal.Checked = false;
             rbAsgariUcret.Checked = false;
-            txtAGI.Text="";
-            txtBaseFare.Text="";
-            txtExtraFare.Text="";
-            txtFoodFare.Text="";
-            txtHotelFare.Text="";
-            txtIncomeTaxFare.Text="";
-            txtISGFare.Text="";
-            txtSeveranceFare.Text="";
-            txtSGKPrimFare.Text="";
-            txtStampTaxFare.Text="";
-            txtTravelFare.Text="";
-            txtWorklesFonFare.Text="";
+            txtAGI.Text = "";
+            txtBaseFare.Text = "";
+            txtExtraFare.Text = "";
+            txtFoodFare.Text = "";
+            txtHotelFare.Text = "";
+            txtIncomeTaxFare.Text = "";
+            txtISGFare.Text = "";
+            txtSeveranceFare.Text = "";
+            txtSGKPrimFare.Text = "";
+            txtStampTaxFare.Text = "";
+            txtTravelFare.Text = "";
+            txtWorklesFonFare.Text = "";
 
         }
 
@@ -491,6 +504,17 @@ namespace IhalematikPro.Forms
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             panelControl2.Visible = false;
+            txtSGKPrimFare.Text = "0";
+            txtWorklesFonFare.Text = "0";
+            txtIncomeTaxFare.Text = "0";
+            txtSeveranceFare.Text = "0";
+            txtStampTaxFare.Text = "0";
+            txtAGI.Text = "0";
+            txtFoodFare.Text = "0";
+            txtTravelFare.Text = "0";
+            txtHotelFare.Text = "0";
+            txtISGFare.Text = "0";
+            txtExtraFare.Text = "0";
         }
     }
 }

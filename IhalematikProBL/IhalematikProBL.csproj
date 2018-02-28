@@ -121,6 +121,7 @@
   <ItemGroup>
     <Compile Include="Entity\Company.cs" />
     <Compile Include="Entity\License.cs" />
+    <Compile Include="Enum\WorkerTypesEnum.cs" />
     <Compile Include="Mailing\EmailData.cs" />
     <Compile Include="Mailing\EmailSetting.cs" />
     <Compile Include="Entity\EntityBase.cs" />

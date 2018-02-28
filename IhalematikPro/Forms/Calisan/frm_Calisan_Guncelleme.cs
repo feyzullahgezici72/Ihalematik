@@ -90,14 +90,29 @@ namespace IhalematikProUI.Forms
                 txtWorklesFonFare.Text = CurrentWorker.WorklesFonFare.Amount.ToString("c2");
                 int index = models.FindIndex(p => p.Id == CurrentWorker.Title.Id);
                 ddlTitles.SelectedIndex = index;//selectedTitle;
-                if (CurrentWorker.IsNormal)
+
+                switch (currentWorker.WorkerType)
                 {
-                    rbNormal.Checked = true;
+                    case WorkerTypesEnum.MinimumSalary:
+                        rbAsgariUcret.Checked = true;
+                        break;
+                    case WorkerTypesEnum.NormalSalary:
+                        rbNormal.Checked = true;
+                        break;
+                    case WorkerTypesEnum.NetSalary:
+                        rbNetSalary.Checked = true;
+                        break;
+                    default:
+                        break;
                 }
-                else
-                {
-                    rbAsgariUcret.Checked = true;
-                }
+                //if (CurrentWorker.IsNormal)
+                //{
+                //    rbNormal.Checked = true;
+                //}
+                //else
+                //{
+                //    rbAsgariUcret.Checked = true;
+                //}
             }
 
         }
@@ -188,7 +203,22 @@ namespace IhalematikProUI.Forms
             WorkerModel model = new WorkerModel(this.currentWorker);
             //model.Code = txtCode.Text;
             model.TitleId = ((TitleModel)ddlTitles.SelectedItem).Id.Value;
-            model.IsNormal = rbNormal.Checked;
+
+            if (rbAsgariUcret.Checked)
+            {
+                model.WorkerType = WorkerTypesEnum.MinimumSalary;
+            }
+            else if (rbNormal.Checked)
+            {
+                model.WorkerType = WorkerTypesEnum.NormalSalary;
+            }
+
+            else
+            {
+                model.WorkerType = WorkerTypesEnum.NetSalary;
+            }
+
+           // model.IsNormal = rbNormal.Checked;
             model.BaseFare = new Fare(double.Parse(txtBaseFare.Text.Replace("TL", string.Empty)));
             model.SGKPrimFare = new Fare(double.Parse(txtSGKPrimFare.Text.Replace("TL", string.Empty)));
 
@@ -234,6 +264,17 @@ namespace IhalematikProUI.Forms
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             panel1.Visible = false;
+            txtSGKPrimFare.Text = "0";
+            txtWorklesFonFare.Text = "0";
+            txtIncomeTaxFare.Text = "0";
+            txtSeveranceFare.Text = "0";
+            txtStampTaxFare.Text = "0";
+            txtAGI.Text = "0";
+            txtFoodFare.Text = "0";
+            txtTravelFare.Text = "0";
+            txtHotelFare.Text = "0";
+            txtISGFare.Text = "0";
+            txtExtraFare.Text = "0";
         }
     }
 }

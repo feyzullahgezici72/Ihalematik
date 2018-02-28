@@ -7,6 +7,7 @@ using SimpleApplicationBase.BL.Base;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Manager;
+using IhalematikProBL.Enum;
 
 namespace IhalematikPro.Model
 {
@@ -40,7 +41,7 @@ namespace IhalematikPro.Model
             }
         }
 
-        public bool IsNormal { get; set; }
+        public WorkerTypesEnum WorkerType { get; set; }
 
         //Net Maas
         public Fare BaseFare { get; set; }
@@ -137,7 +138,7 @@ namespace IhalematikPro.Model
             this.HotelFare = Entity.HotelFare;
             this.Id = Entity.Id;
             this.ISGFare = Entity.ISGFare;
-            this.IsNormal = Entity.IsNormal;
+            this.WorkerType = Entity.WorkerType;
             this.SGKPrimFare = Entity.SGKPrimFare;
             this.StampTaxFare = Entity.StampTaxFare;
             this.Title = Entity.Title;
@@ -161,7 +162,7 @@ namespace IhalematikPro.Model
                 worker.Id = this.Id.Value;
             }
             worker.ISGFare = this.ISGFare;
-            worker.IsNormal = this.IsNormal;
+            worker.WorkerType = this.WorkerType;
             worker.SGKPrimFare = this.SGKPrimFare;
             worker.StampTaxFare = this.StampTaxFare;
             worker.Title = this.Title;

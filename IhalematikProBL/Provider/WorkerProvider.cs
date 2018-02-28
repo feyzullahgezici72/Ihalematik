@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using SimpleApplicationBase.Toolkit;
+using IhalematikProBL.Enum;
 
 namespace IhalematikProBL.Provider
 {
@@ -17,7 +18,7 @@ namespace IhalematikProBL.Provider
 
             parameters.Add("TitleId", t.TitleId);
             parameters.Add("Code", t.Code);
-            parameters.Add("IsNormal", t.IsNormal);
+            parameters.Add("IsNormal", t.WorkerType);
 
             parameters.Add("AGIFareAmount", t.AGIFare.Amount);
             parameters.Add("AGIFareCurrency", t.AGIFare.CurrencyType);
@@ -65,7 +66,7 @@ namespace IhalematikProBL.Provider
             t.SeveranceFare = new Fare(dr.GetValue<double>("SeveranceFareAmount"));
             t.IncomeTaxFare = new Fare(dr.GetValue<double>("IncomeTaxFareAmount"));
             t.WorklesFonFare = new Fare(dr.GetValue<double>("WorklesFonFareAmount"));
-            t.IsNormal = dr.GetValue<bool>("IsNormal");
+            t.WorkerType = dr.GetValue<WorkerTypesEnum>("IsNormal");
             t.IsActive = dr.GetValue<bool>("IsActive");
         }
     }

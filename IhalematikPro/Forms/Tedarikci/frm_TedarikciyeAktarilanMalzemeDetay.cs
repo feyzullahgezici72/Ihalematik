@@ -93,6 +93,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             {
                 //this.SendMailTask = new Task(() =>
                 //{
+                emailMesajPanel.Visible = true;
                 this.IsSendMail = false;
                 this.CreateExcel();
                 frm_wait fw = new frm_wait();//Mail gönderiliyor mesaj formu
@@ -102,28 +103,28 @@ namespace IhalematikProUI.Forms.Tedarikci
                 //this.SendMailTask.Start();
                 if (result.Success)
                 {
-                    emailMesajPanel.Visible = true;
+                    emailMesajPanel.Visible = false;
                     this.SendInfoMessage();
                 }
                 else
                 {
+                    emailMesajPanel.Visible = false;
                     if (result.ValidationResults.Count > 0)
                     {
                         if (result.ValidationResults.FirstOrDefault().PropertyName == "NoInternetconnection")
                         {
-                            fw.Hide();
+                           
                             MessageBox.Show("Internet baglantinizi kontrol ediniz");
                         }
                         else if (result.ValidationResults.FirstOrDefault().PropertyName == "GmailLessSecureApps")
                         {
-                            fw.Hide();
+                            
                             MessageBox.Show("Lutfen firma bilgileri bolumunden email kullanici adi(email) ve sifrenizi kontrol ediniz veya /https://myaccount.google.com/lesssecureapps/ mail gonderilebilmesi icin izin verdiginizden emin olun");
                         }
                     }
 
                     else
                     {
-                        fw.Hide();
                         MessageBox.Show("Mail gonderirken hata oluştu.Lütfen daha sonra tekrar deneyiniz");
                     }
                 }
