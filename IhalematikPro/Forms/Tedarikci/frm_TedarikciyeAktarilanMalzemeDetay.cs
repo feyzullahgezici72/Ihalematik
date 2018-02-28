@@ -113,12 +113,12 @@ namespace IhalematikProUI.Forms.Tedarikci
                     {
                         if (result.ValidationResults.FirstOrDefault().PropertyName == "NoInternetconnection")
                         {
-                           
+
                             MessageBox.Show("Internet baglantinizi kontrol ediniz");
                         }
                         else if (result.ValidationResults.FirstOrDefault().PropertyName == "GmailLessSecureApps")
                         {
-                            
+
                             MessageBox.Show("Lutfen firma bilgileri bolumunden email kullanici adi(email) ve sifrenizi kontrol ediniz veya /https://myaccount.google.com/lesssecureapps/ mail gonderilebilmesi icin izin verdiginizden emin olun");
                         }
                     }
@@ -151,7 +151,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                     string sourcePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug\\", string.Empty), "EmailFile");
                     string targetPath = Path.Combine(sourcePath, "SentFile");
                     string sourceFile = Path.Combine(sourcePath, fileName);
-                    this.DestinationFile = Path.Combine(targetPath, this.Supplier.CompanyName + "-" + fileName + "-" + DateTime.Now.ToShortDateString().Replace("/", string.Empty));
+                    this.DestinationFile = Path.Combine(targetPath, this.Supplier.CompanyName + "-" + DateTime.Now.ToShortDateString().Replace("/", string.Empty) + "-" + fileName);
 
                     if (!Directory.Exists(targetPath))
                     {
@@ -162,7 +162,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                     oXL = new Microsoft.Office.Interop.Excel.Application();
                     oWB = oXL.Workbooks.Open(DestinationFile);
                     oSheet = String.IsNullOrEmpty("Sayfa1") ? (Microsoft.Office.Interop.Excel._Worksheet)oWB.ActiveSheet : (Microsoft.Office.Interop.Excel._Worksheet)oWB.Worksheets["Sayfa1"];
-
+                    
                     if (CurrentManager.Instance.CurrentOffer != null)
                     {
                         Dictionary<string, object> parameters = new Dictionary<string, object>();
