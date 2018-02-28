@@ -96,9 +96,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                 emailMesajPanel.Visible = true;
                 this.IsSendMail = false;
                 this.CreateExcel();
-                frm_wait fw = new frm_wait();//Mail gönderiliyor mesaj formu
+                //frm_wait fw = new frm_wait();//Mail gönderiliyor mesaj formu
                 OperationResult result = this.SendMail();
-                fw.Show();
+                //fw.Show();
                 //});
                 //this.SendMailTask.Start();
                 if (result.Success)

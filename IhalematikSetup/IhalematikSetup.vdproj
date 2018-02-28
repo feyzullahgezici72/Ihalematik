@@ -2638,6 +2638,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
     }
@@ -4991,7 +4999,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:IhalematikSetup"
         "ProductCode" = "8:{4DF0B191-8F6F-468F-A972-38AE793751BE}"
-        "PackageCode" = "8:{29BCAC86-E47A-42FC-AE2F-6A338A459382}"
+        "PackageCode" = "8:{EFBCE43C-6A66-405E-B1FE-60CD14C6B2A1}"
         "UpgradeCode" = "8:{DB14AA50-2DCE-4581-92DD-5F4062828034}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -4999,7 +5007,7 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Default Company Name"
+        "Manufacturer" = "8:ihalematikPro"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:IhalematikSetup"
