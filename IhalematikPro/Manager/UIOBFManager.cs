@@ -1,5 +1,6 @@
 ﻿using IhalematikPro.Model;
 using IhalematikProBL.Entity;
+using IhalematikProBL.Manager;
 using IhalematikProBL.Provider;
 using SimpleApplicationBase.BL.Base;
 using System;
@@ -12,6 +13,12 @@ namespace IhalematikPro.Manager
 {
     public class UIOBFManager : SingletonBase<UIOBFManager>
     {
+        public int GetLastOfferNumber()
+        {
+            object offerNumber = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(CustomDBConnectionManager.Instance.ExecuteScalar("OBF_GetLastNumber", new System.Collections.Hashtable()));
+
+            return (int)offerNumber;
+        }
 
         public List<OBFModel> GetOBFs(string OBFNumber, string OBFDescription)
         {

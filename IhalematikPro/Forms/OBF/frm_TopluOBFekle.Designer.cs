@@ -45,38 +45,43 @@
             this.groupControl1.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl1.Controls.Add(this.btnTopluOFBekle);
             this.groupControl1.Controls.Add(this.pictureBox1);
-            this.groupControl1.Location = new System.Drawing.Point(12, 12);
+            this.groupControl1.Location = new System.Drawing.Point(8, 8);
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(519, 326);
+            this.groupControl1.Size = new System.Drawing.Size(346, 223);
             this.groupControl1.TabIndex = 31;
             this.groupControl1.Text = "Ekleyeceğiniz Excel Dosyası Aşağıdaki gibi ayarlanmalıdır";
             // 
             // btnTopluOFBekle
             // 
-            this.btnTopluOFBekle.Location = new System.Drawing.Point(339, 255);
+            this.btnTopluOFBekle.Location = new System.Drawing.Point(226, 174);
+            this.btnTopluOFBekle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTopluOFBekle.Name = "btnTopluOFBekle";
-            this.btnTopluOFBekle.Size = new System.Drawing.Size(174, 58);
+            this.btnTopluOFBekle.Size = new System.Drawing.Size(116, 40);
             this.btnTopluOFBekle.TabIndex = 7;
             this.btnTopluOFBekle.Text = "Gözat";
+            this.btnTopluOFBekle.Click += new System.EventHandler(this.btnTopluOFBekle_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 23);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(513, 216);
+            this.pictureBox1.Size = new System.Drawing.Size(342, 148);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // frm_TopluOBFekle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 344);
+            this.ClientSize = new System.Drawing.Size(359, 235);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TopluOBFekle";
