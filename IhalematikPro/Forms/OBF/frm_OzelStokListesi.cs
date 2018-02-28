@@ -248,9 +248,8 @@ namespace IhalematikPro.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            frm_TopluOBFekle toe = new frm_TopluOBFekle();
+            frm_TopluOBFekle toe = new frm_TopluOBFekle(this);
             toe.ShowDialog();
-
         }
     }
 }
