@@ -137,6 +137,13 @@ namespace IhalematikProUI.Forms
             //grdSupplier.DataSource = suppliers;
             if (suppliers != null && suppliers.Count > 0)
             {
+                foreach (var item in suppliers)
+                {
+                    if (item.Score == null)
+                    {
+                        item.Score = "0";
+                    }
+                }
                 suppliers = suppliers.OrderByDescending(p => double.Parse(p.Score)).ToList();
             }
             if (cmbAktivePasive.SelectedIndex == 0)
