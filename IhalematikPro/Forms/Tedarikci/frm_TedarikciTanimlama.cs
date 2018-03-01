@@ -139,7 +139,7 @@ namespace IhalematikProUI.Forms
             {
                 foreach (var item in suppliers)
                 {
-                    if (item.Score == null)
+                    if (string.IsNullOrEmpty(item.Score))
                     {
                         item.Score = "0";
                     }
