@@ -52,9 +52,19 @@ namespace IhalematikProUI.Forms.Tedarikci
             this.OfferNumber = string.Empty;
             this.OfferDescription = string.Empty;
             this.MaterialLists = new List<OfferMaterialListModel>();
-            FileStream stream = System.IO.File.Open(@"" + path + "", FileMode.Open, FileAccess.Read);
-
+            FileStream stream = null;
+            try
+            {
+                stream = System.IO.File.Open(@"" + path + "", FileMode.Open, FileAccess.Read);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Lütfen yüklemek istediğiniz excel dosyasını kapatınız.");
+                return;
+            }
             IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
+
+            double currentSupplierId = 0;
             //if (CurrentManager.Instance.CurrentOffer == null)
             //{
             //    MessageBox.Show("Lütfen yüklemek istediğiniz teklifi aktif hale getiriniz.");
@@ -93,15 +103,31 @@ namespace IhalematikProUI.Forms.Tedarikci
                             }
                         }
 
-                        double supplierId = excelReader.GetDouble(2);
+                        double supplierId = currentSupplierId = excelReader.GetDouble(2);
                         double materialId = excelReader.GetDouble(3);
 
                         string description = excelReader.GetString(5);
                         string unit = excelReader.GetString(6);
 
                         double quantity = excelReader.GetDouble(7);
-                        double kdv = excelReader.GetDouble(8) * 100;
-                        double price = excelReader.GetDouble(9);
+                        double kdv = 0;
+                        try
+                        {
+                            kdv = excelReader.GetDouble(8) * 100;
+                        }
+                        catch (Exception)
+                        {
+
+                        }
+
+                        double price = 0;
+                        try
+                        {
+                            price = excelReader.GetDouble(9);
+                        }
+                        catch (Exception)
+                        {
+                        }
 
                         Dictionary<string, object> parameters = new Dictionary<string, object>();
                         parameters.Add("SupplierId", supplierId);
@@ -152,6 +178,17 @@ namespace IhalematikProUI.Forms.Tedarikci
                 }
                 else
                 {
+                    if (currentSupplierId > 0)
+                    {
+                        Supplier supplier = SupplierProvider.Instance.GetItem((int)currentSupplierId);
+                        if (supplier != null)
+                        {
+                            double score = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(supplier.Score);
+                            score += 10;
+                            supplier.Score = score.ToString();
+                            SupplierProvider.Instance.Save(supplier);
+                        }
+                    }
                     frm_MesajFormu mf = new frm_MesajFormu();
                     mf.lblMesaj.Text = this.SupplierName + " Firmasının \nTeklif dosyası aktarıldı...";
                     mf.ShowDialog();
