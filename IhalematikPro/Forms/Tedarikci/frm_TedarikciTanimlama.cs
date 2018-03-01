@@ -135,7 +135,10 @@ namespace IhalematikProUI.Forms
         {
             List<Supplier> suppliers = SupplierProvider.Instance.GetItems();
             //grdSupplier.DataSource = suppliers;
-
+            if (suppliers != null && suppliers.Count > 0)
+            {
+                suppliers = suppliers.OrderByDescending(p => double.Parse(p.Score)).ToList();
+            }
             if (cmbAktivePasive.SelectedIndex == 0)
             {
                 suppliers = suppliers.Where(p => p.IsActive).ToList();
