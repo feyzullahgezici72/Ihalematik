@@ -94,6 +94,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                 //this.SendMailTask = new Task(() =>
                 //{
                 emailMesajPanel.Visible = true;
+                timer1.Start();
                 this.IsSendMail = false;
                 this.CreateExcel();
                 //frm_wait fw = new frm_wait();//Mail gönderiliyor mesaj formu
@@ -255,6 +256,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             else
             {
                 emailMesajPanel.Visible = false;
+                timer1.Stop();
                 frm_MesajFormu mesajformu = new frm_MesajFormu();
                 mesajformu.lblMesaj.Text = "Mail Gönderildi...";
                 mesajformu.ShowDialog();
@@ -286,6 +288,18 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void frm_TedarikciyeAktarilanMalzemeDetay_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (lblWait.Visible == true)
+            {
+                lblWait.Visible = false;
+            }
+            else
+            {
+                lblWait.Visible = true;
+            }
         }
     }
 }

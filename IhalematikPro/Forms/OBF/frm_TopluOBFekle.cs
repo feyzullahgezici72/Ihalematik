@@ -30,8 +30,12 @@ namespace IhalematikProUI.Forms.OBF
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+            
             if (dialog.ShowDialog() == DialogResult.OK) // if user clicked OK
             {
+                MesajPanel.Visible = true;
+                 //timer1.Start();
+                 MessageBox.Show("Yükleme Malzeme sayısına göre biraz zaman alabilir...");
                 String path = dialog.FileName; // get name of file
                 this.ReadExcel(path);
                 this.Close();
@@ -42,11 +46,10 @@ namespace IhalematikProUI.Forms.OBF
 
         private void ReadExcel(string path)
         {
-
+           
             try
             {
                 FileStream stream = System.IO.File.Open(@"" + path + "", FileMode.Open, FileAccess.Read);
-
                 IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
 
                 int i = 0;
@@ -59,10 +62,13 @@ namespace IhalematikProUI.Forms.OBF
                             try
                             {
                                 excelReader.GetString(0);
+                                
                             }
                             catch (Exception)
                             {
-                                MessageBox.Show("Excel basari ile yuklendi.");
+                                MessageBox.Show("Malzemeler basarıyla yuklendi.");
+                                MesajPanel.Visible = false;
+                                //timer1.Stop();
                                 break;
                             }
                             string stokKodu = excelReader.GetString(0);
@@ -115,5 +121,21 @@ namespace IhalematikProUI.Forms.OBF
             }
         }
 
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (lblWait.Visible == true)
+            {
+                lblWait.Visible = false;
+            }
+            else
+            {
+                lblWait.Visible = true;
+            }
+        }
     }
 }
