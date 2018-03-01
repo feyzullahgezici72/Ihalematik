@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikcilerdenFiyatAl));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.pnltoplam = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtTotalAmount = new DevExpress.XtraEditors.TextEdit();
@@ -560,8 +560,6 @@
             this.colRisk.FieldName = "Risk";
             this.colRisk.Name = "colRisk";
             this.colRisk.OptionsFilter.AllowFilter = false;
-            this.colRisk.Visible = true;
-            this.colRisk.VisibleIndex = 6;
             this.colRisk.Width = 86;
             // 
             // colPriceWithRisk
@@ -577,7 +575,7 @@
             this.colPriceWithRisk.OptionsColumn.AllowFocus = false;
             this.colPriceWithRisk.OptionsFilter.AllowFilter = false;
             this.colPriceWithRisk.Visible = true;
-            this.colPriceWithRisk.VisibleIndex = 7;
+            this.colPriceWithRisk.VisibleIndex = 6;
             this.colPriceWithRisk.Width = 117;
             // 
             // colMeterialDetail
@@ -590,7 +588,7 @@
             this.colMeterialDetail.Name = "colMeterialDetail";
             this.colMeterialDetail.OptionsFilter.AllowFilter = false;
             this.colMeterialDetail.Visible = true;
-            this.colMeterialDetail.VisibleIndex = 8;
+            this.colMeterialDetail.VisibleIndex = 7;
             this.colMeterialDetail.Width = 25;
             // 
             // rpstMeterialDetail
@@ -598,7 +596,7 @@
             this.rpstMeterialDetail.AutoHeight = false;
             this.rpstMeterialDetail.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rpstMeterialDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.rpstMeterialDetail.Name = "rpstMeterialDetail";
             this.rpstMeterialDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rpstMeterialDetail.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.rpstMeterialDetail_ButtonClick);

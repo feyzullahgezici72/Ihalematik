@@ -83,10 +83,10 @@ namespace IhalematikProUI.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            colRisk.Visible = true;
-            colPriceWithRisk.Visible = true;
+            //colRisk.Visible = true;
+            //colPriceWithRisk.Visible = true;
             btnKaydet.Visible = true;
-            pnlrisk.Visible = true;
+            //pnlrisk.Visible = true;
             pnltoplam.Visible = true;
             List<OfferMaterialListModel> dataSoruce = new List<OfferMaterialListModel>();
 

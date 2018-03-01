@@ -59,10 +59,9 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.labelControl3.Location = new System.Drawing.Point(8, 150);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl3.Location = new System.Drawing.Point(12, 219);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(64, 13);
+            this.labelControl3.Size = new System.Drawing.Size(96, 19);
             this.labelControl3.TabIndex = 1;
             this.labelControl3.Text = "Bilgisayar Adı:";
             // 
@@ -70,10 +69,9 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.labelControl4.Location = new System.Drawing.Point(14, 171);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl4.Location = new System.Drawing.Point(21, 250);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(57, 13);
+            this.labelControl4.Size = new System.Drawing.Size(86, 19);
             this.labelControl4.TabIndex = 1;
             this.labelControl4.Text = "İp Numarası:";
             // 
@@ -84,10 +82,9 @@
             this.lblPcName.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
             this.lblPcName.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.lblPcName.LineVisible = true;
-            this.lblPcName.Location = new System.Drawing.Point(80, 150);
-            this.lblPcName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblPcName.Location = new System.Drawing.Point(120, 219);
             this.lblPcName.Name = "lblPcName";
-            this.lblPcName.Size = new System.Drawing.Size(2, 13);
+            this.lblPcName.Size = new System.Drawing.Size(4, 19);
             this.lblPcName.TabIndex = 2;
             this.lblPcName.Text = " ";
             // 
@@ -98,28 +95,25 @@
             this.lblIpNumber.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
             this.lblIpNumber.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.lblIpNumber.LineVisible = true;
-            this.lblIpNumber.Location = new System.Drawing.Point(80, 171);
-            this.lblIpNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblIpNumber.Location = new System.Drawing.Point(120, 250);
             this.lblIpNumber.Name = "lblIpNumber";
-            this.lblIpNumber.Size = new System.Drawing.Size(2, 13);
+            this.lblIpNumber.Size = new System.Drawing.Size(4, 19);
             this.lblIpNumber.TabIndex = 2;
             this.lblIpNumber.Text = " ";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(186, 90);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl2.Location = new System.Drawing.Point(279, 132);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(26, 13);
+            this.labelControl2.Size = new System.Drawing.Size(38, 19);
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "Şifre:";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(149, 64);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl1.Location = new System.Drawing.Point(224, 94);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(59, 13);
+            this.labelControl1.Size = new System.Drawing.Size(93, 19);
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "Kullanıcı Adı:";
             // 
@@ -127,43 +121,40 @@
             // 
             this.txtPassword.EditValue = "";
             this.txtPassword.EnterMoveNextControl = true;
-            this.txtPassword.Location = new System.Drawing.Point(215, 88);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Location = new System.Drawing.Point(322, 129);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtPassword.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtPassword.Properties.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(181, 20);
+            this.txtPassword.Size = new System.Drawing.Size(272, 26);
             this.txtPassword.TabIndex = 7;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // txtUserName
             // 
             this.txtUserName.EditValue = "";
             this.txtUserName.EnterMoveNextControl = true;
-            this.txtUserName.Location = new System.Drawing.Point(215, 62);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUserName.Location = new System.Drawing.Point(322, 91);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtUserName.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtUserName.Size = new System.Drawing.Size(181, 20);
+            this.txtUserName.Size = new System.Drawing.Size(272, 26);
             this.txtUserName.TabIndex = 4;
             // 
             // panelControl1
             // 
-            this.panelControl1.Location = new System.Drawing.Point(149, 56);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl1.Location = new System.Drawing.Point(224, 82);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(247, 1);
+            this.panelControl1.Size = new System.Drawing.Size(370, 1);
             this.panelControl1.TabIndex = 10;
             // 
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelControl5.Location = new System.Drawing.Point(149, 36);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl5.Location = new System.Drawing.Point(224, 53);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(29, 16);
+            this.labelControl5.Size = new System.Drawing.Size(45, 24);
             this.labelControl5.TabIndex = 6;
             this.labelControl5.Text = "Giriş";
             // 
@@ -174,11 +165,10 @@
             this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
             this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnIptal.Location = new System.Drawing.Point(331, 112);
+            this.btnIptal.Location = new System.Drawing.Point(496, 164);
             this.btnIptal.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnIptal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(67, 38);
+            this.btnIptal.Size = new System.Drawing.Size(100, 56);
             this.btnIptal.TabIndex = 9;
             this.btnIptal.Text = "İptal";
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
@@ -189,11 +179,10 @@
             this.btnTamam.Appearance.Options.UseFont = true;
             this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
             this.btnTamam.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnTamam.Location = new System.Drawing.Point(260, 112);
+            this.btnTamam.Location = new System.Drawing.Point(390, 164);
             this.btnTamam.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnTamam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTamam.Name = "btnTamam";
-            this.btnTamam.Size = new System.Drawing.Size(67, 38);
+            this.btnTamam.Size = new System.Drawing.Size(100, 56);
             this.btnTamam.TabIndex = 8;
             this.btnTamam.Text = "Tamam";
             this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
@@ -201,10 +190,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.login;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 136);
+            this.pictureBox1.Size = new System.Drawing.Size(196, 199);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -212,10 +200,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::IhalematikProUI.Properties.Resources.logo_L;
-            this.pictureBox2.Location = new System.Drawing.Point(277, -22);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(416, -32);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(167, 79);
+            this.pictureBox2.Size = new System.Drawing.Size(250, 115);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -224,9 +211,9 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 186);
+            this.ClientSize = new System.Drawing.Size(616, 272);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.labelControl2);
@@ -247,7 +234,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.LookAndFeel.SkinName = "VS2010";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Login";

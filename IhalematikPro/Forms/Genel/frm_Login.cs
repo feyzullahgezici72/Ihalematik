@@ -66,5 +66,13 @@ namespace IhalematikProUI.Forms.Genel
                 return;
             }
         }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btnTamam.PerformClick();
+            }
+        }
     }
 }

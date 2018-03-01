@@ -62,5 +62,13 @@ namespace IhalematikProUI.Forms.Genel
         {
             txtUserName.Text = CurrentManager.Instance.CurrentMember != null ? CurrentManager.Instance.CurrentMember.UserName : string.Empty;
         }
+
+        private void txtPassword2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btnTamam.PerformClick();
+            }
+        }
     }
 }
