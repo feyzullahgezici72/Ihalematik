@@ -1,4 +1,5 @@
-﻿using IhalematikPro.Manager;
+﻿using IhalematikPro.Forms;
+using IhalematikPro.Manager;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms.Genel;
 using System;

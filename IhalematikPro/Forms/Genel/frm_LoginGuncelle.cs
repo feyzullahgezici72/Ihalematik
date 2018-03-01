@@ -8,6 +8,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using IhalematikProBL.Entity;
+using IhalematikPro.Manager;
+using IhalematikProBL.Provider;
 
 namespace IhalematikProUI.Forms.Genel
 {
@@ -25,7 +28,39 @@ namespace IhalematikProUI.Forms.Genel
 
         private void btnTamam_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Parola Güncellendi...");
+            string password1 = txtPassword1.Text.Trim();
+            string password2 = txtPassword2.Text.Trim();
+
+            if (string.IsNullOrEmpty(password1) || string.IsNullOrEmpty(password2) || string.IsNullOrEmpty(txtUserName.Text))
+            {
+                MessageBox.Show("Lütfen bütün alanları doldurunuz.");
+                return;
+            }
+
+            if (!password1.Equals(password2))
+            {
+                MessageBox.Show("Girdiğiniz şifreler uyuşmuyor");
+                return;
+            }
+
+            string hashPass = SimpleApplicationBase.Toolkit.Helpers.CreateOneWayHash(password1);
+
+            Member member = CurrentManager.Instance.CurrentMember;
+            if (member == null)
+            {
+                member = new Member();
+            }
+            member.Password = hashPass;
+            member.UserName = txtUserName.Text;
+
+            MemberProvider.Instance.Save(member);
+            MessageBox.Show("Güncelleme yapıldı...");
+            this.Close();
+        }
+
+        private void frm_LoginGuncelle_Load(object sender, EventArgs e)
+        {
+            txtUserName.Text = CurrentManager.Instance.CurrentMember != null ? CurrentManager.Instance.CurrentMember.UserName : string.Empty;
         }
     }
 }

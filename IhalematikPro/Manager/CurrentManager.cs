@@ -17,5 +17,7 @@ namespace IhalematikPro.Manager
         public Offer CurrentOffer { get; set; }
 
         public List<MaterialListModel> CurrentMaterialListModel { get; set; }
+
+        public Member CurrentMember { get; set; }
     }
 }

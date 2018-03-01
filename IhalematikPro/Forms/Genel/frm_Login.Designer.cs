@@ -36,16 +36,16 @@
             this.lblIpNumber = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtPassword = new DevExpress.XtraEditors.TextEdit();
+            this.txtUserName = new DevExpress.XtraEditors.TextEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
             this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -59,9 +59,10 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.labelControl3.Location = new System.Drawing.Point(12, 219);
+            this.labelControl3.Location = new System.Drawing.Point(8, 150);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(96, 19);
+            this.labelControl3.Size = new System.Drawing.Size(64, 13);
             this.labelControl3.TabIndex = 1;
             this.labelControl3.Text = "Bilgisayar Adı:";
             // 
@@ -69,9 +70,10 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Gray;
-            this.labelControl4.Location = new System.Drawing.Point(21, 250);
+            this.labelControl4.Location = new System.Drawing.Point(14, 171);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(86, 19);
+            this.labelControl4.Size = new System.Drawing.Size(57, 13);
             this.labelControl4.TabIndex = 1;
             this.labelControl4.Text = "İp Numarası:";
             // 
@@ -82,9 +84,10 @@
             this.lblPcName.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
             this.lblPcName.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.lblPcName.LineVisible = true;
-            this.lblPcName.Location = new System.Drawing.Point(120, 219);
+            this.lblPcName.Location = new System.Drawing.Point(80, 150);
+            this.lblPcName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblPcName.Name = "lblPcName";
-            this.lblPcName.Size = new System.Drawing.Size(4, 19);
+            this.lblPcName.Size = new System.Drawing.Size(2, 13);
             this.lblPcName.TabIndex = 2;
             this.lblPcName.Text = " ";
             // 
@@ -95,65 +98,72 @@
             this.lblIpNumber.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
             this.lblIpNumber.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             this.lblIpNumber.LineVisible = true;
-            this.lblIpNumber.Location = new System.Drawing.Point(120, 250);
+            this.lblIpNumber.Location = new System.Drawing.Point(80, 171);
+            this.lblIpNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblIpNumber.Name = "lblIpNumber";
-            this.lblIpNumber.Size = new System.Drawing.Size(4, 19);
+            this.lblIpNumber.Size = new System.Drawing.Size(2, 13);
             this.lblIpNumber.TabIndex = 2;
             this.lblIpNumber.Text = " ";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(279, 131);
+            this.labelControl2.Location = new System.Drawing.Point(186, 90);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(38, 19);
+            this.labelControl2.Size = new System.Drawing.Size(26, 13);
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "Şifre:";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(224, 93);
+            this.labelControl1.Location = new System.Drawing.Point(149, 64);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(93, 19);
+            this.labelControl1.Size = new System.Drawing.Size(59, 13);
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "Kullanıcı Adı:";
             // 
-            // textEdit2
+            // txtPassword
             // 
-            this.textEdit2.EditValue = "Demo";
-            this.textEdit2.EnterMoveNextControl = true;
-            this.textEdit2.Location = new System.Drawing.Point(323, 128);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textEdit2.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.textEdit2.Properties.PasswordChar = '*';
-            this.textEdit2.Size = new System.Drawing.Size(272, 26);
-            this.textEdit2.TabIndex = 7;
+            this.txtPassword.EditValue = "";
+            this.txtPassword.EnterMoveNextControl = true;
+            this.txtPassword.Location = new System.Drawing.Point(215, 88);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtPassword.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtPassword.Properties.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(181, 20);
+            this.txtPassword.TabIndex = 7;
             // 
-            // textEdit1
+            // txtUserName
             // 
-            this.textEdit1.EditValue = "Demo";
-            this.textEdit1.EnterMoveNextControl = true;
-            this.textEdit1.Location = new System.Drawing.Point(323, 90);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.textEdit1.Size = new System.Drawing.Size(272, 26);
-            this.textEdit1.TabIndex = 4;
+            this.txtUserName.EditValue = "";
+            this.txtUserName.EnterMoveNextControl = true;
+            this.txtUserName.Location = new System.Drawing.Point(215, 62);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtUserName.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtUserName.Size = new System.Drawing.Size(181, 20);
+            this.txtUserName.TabIndex = 4;
             // 
             // panelControl1
             // 
-            this.panelControl1.Location = new System.Drawing.Point(224, 82);
+            this.panelControl1.Location = new System.Drawing.Point(149, 56);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(371, 2);
+            this.panelControl1.Size = new System.Drawing.Size(247, 1);
             this.panelControl1.TabIndex = 10;
             // 
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelControl5.Location = new System.Drawing.Point(224, 52);
+            this.labelControl5.Location = new System.Drawing.Point(149, 36);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(45, 24);
+            this.labelControl5.Size = new System.Drawing.Size(29, 16);
             this.labelControl5.TabIndex = 6;
             this.labelControl5.Text = "Giriş";
             // 
@@ -164,10 +174,11 @@
             this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
             this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnIptal.Location = new System.Drawing.Point(496, 164);
+            this.btnIptal.Location = new System.Drawing.Point(331, 112);
             this.btnIptal.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnIptal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(100, 55);
+            this.btnIptal.Size = new System.Drawing.Size(67, 38);
             this.btnIptal.TabIndex = 9;
             this.btnIptal.Text = "İptal";
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
@@ -178,10 +189,11 @@
             this.btnTamam.Appearance.Options.UseFont = true;
             this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
             this.btnTamam.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnTamam.Location = new System.Drawing.Point(390, 164);
+            this.btnTamam.Location = new System.Drawing.Point(260, 112);
             this.btnTamam.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnTamam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTamam.Name = "btnTamam";
-            this.btnTamam.Size = new System.Drawing.Size(100, 55);
+            this.btnTamam.Size = new System.Drawing.Size(67, 38);
             this.btnTamam.TabIndex = 8;
             this.btnTamam.Text = "Tamam";
             this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
@@ -189,9 +201,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.login;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 199);
+            this.pictureBox1.Size = new System.Drawing.Size(131, 136);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -199,9 +212,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::IhalematikProUI.Properties.Resources.logo_L;
-            this.pictureBox2.Location = new System.Drawing.Point(416, -32);
+            this.pictureBox2.Location = new System.Drawing.Point(277, -22);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(251, 116);
+            this.pictureBox2.Size = new System.Drawing.Size(167, 79);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -210,18 +224,18 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 272);
+            this.ClientSize = new System.Drawing.Size(411, 186);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.btnIptal);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.textEdit2);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnTamam);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblIpNumber);
             this.Controls.Add(this.lblPcName);
             this.Controls.Add(this.labelControl4);
@@ -233,14 +247,15 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.LookAndFeel.SkinName = "VS2010";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hoşgeldiniz...";
             this.Load += new System.EventHandler(this.frm_Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -260,9 +275,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton btnIptal;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraEditors.SimpleButton btnTamam;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtUserName;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl5;
     }

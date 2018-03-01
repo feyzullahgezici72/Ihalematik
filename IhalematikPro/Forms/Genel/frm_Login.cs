@@ -11,6 +11,9 @@ using DevExpress.XtraEditors;
 using System.Threading;
 using IhalematikPro.Forms;
 using System.Net;
+using IhalematikProBL.Provider;
+using IhalematikProBL.Entity;
+using IhalematikPro.Manager;
 
 namespace IhalematikProUI.Forms.Genel
 {
@@ -30,18 +33,38 @@ namespace IhalematikProUI.Forms.Genel
             Thread.Sleep(1500);
         }
 
-     
+
 
         private void btnIptal_Click(object sender, EventArgs e)
         {
-           Application.Exit();
+            Application.Exit();
         }
 
         private void btnTamam_Click(object sender, EventArgs e)
         {
-            frm_Anaform af = new frm_Anaform();
-            this.Hide();
-            af.ShowDialog();
+            string password = txtPassword.Text.Trim();
+            string userName = txtUserName.Text.Trim();
+
+            string hashPass = SimpleApplicationBase.Toolkit.Helpers.CreateOneWayHash(password);
+
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("Password", hashPass);
+            parameters.Add("UserName", userName);
+
+            Member member = MemberProvider.Instance.GetOne(parameters);
+
+            if (member != null)
+            {
+                CurrentManager.Instance.CurrentMember = member;
+                frm_Anaform af = new frm_Anaform();
+                this.Hide();
+                af.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Kullanıcı adı veya şifre hatalı");
+                return;
+            }
         }
     }
 }
