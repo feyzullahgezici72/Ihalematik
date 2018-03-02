@@ -51,7 +51,7 @@ namespace IhalematikProUI.Forms
                 txtNumber.Text = this.CurrentOBF.Number;
                 txtUnit.Text = this.CurrentOBF.Unit;
                 //var cultureInfo = new System.Globalization.CultureInfo("tr-TR");
-                txtUnitPrice.Text = this.CurrentOBF.UnitPrice.ToString("##,##,###.00");
+                txtUnitPrice.Text = this.CurrentOBF.UnitPrice.ToString("##.##.###,00");
                 txtDescriptionForSupplier.Text = this.CurrentOBF.DescriptionForSupplier;
             }
         }
