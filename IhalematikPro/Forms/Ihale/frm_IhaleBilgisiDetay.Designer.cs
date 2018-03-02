@@ -29,24 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_IhaleBilgisiDetay));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             this.tabIhaleBilgileri = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.txtTeklifNo = new DevExpress.XtraEditors.TextEdit();
+            this.txtcompanyName = new DevExpress.XtraEditors.TextEdit();
+            this.txtAciklama = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
-            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
-            this.txtTeklifNo = new DevExpress.XtraEditors.TextEdit();
-            this.txtcompanyName = new DevExpress.XtraEditors.TextEdit();
-            this.txtAciklama = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
@@ -59,32 +53,39 @@
             this.txtScope = new DevExpress.XtraEditors.TextEdit();
             this.txtType = new DevExpress.XtraEditors.TextEdit();
             this.txtEkapNumber = new DevExpress.XtraEditors.TextEdit();
-            this.txtLastOfferDate = new DevExpress.XtraEditors.TextEdit();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
+            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
+            this.LastOfferDate = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.tabIhaleBilgileri)).BeginInit();
             this.tabIhaleBilgileri.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeklifNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtcompanyName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
+            this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtManagement.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlace.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProcedure.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtScope.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEkapNumber.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLastOfferDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tabIhaleBilgileri
             // 
             this.tabIhaleBilgileri.Location = new System.Drawing.Point(8, 48);
-            this.tabIhaleBilgileri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabIhaleBilgileri.Margin = new System.Windows.Forms.Padding(2);
             this.tabIhaleBilgileri.Name = "tabIhaleBilgileri";
             this.tabIhaleBilgileri.SelectedTabPage = this.xtraTabPage1;
             this.tabIhaleBilgileri.Size = new System.Drawing.Size(571, 223);
@@ -95,7 +96,7 @@
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.txtLastOfferDate);
+            this.xtraTabPage1.Controls.Add(this.LastOfferDate);
             this.xtraTabPage1.Controls.Add(this.txtTeklifNo);
             this.xtraTabPage1.Controls.Add(this.txtcompanyName);
             this.xtraTabPage1.Controls.Add(this.txtAciklama);
@@ -103,10 +104,57 @@
             this.xtraTabPage1.Controls.Add(this.labelControl2);
             this.xtraTabPage1.Controls.Add(this.labelControl4);
             this.xtraTabPage1.Controls.Add(this.labelControl5);
-            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(567, 199);
+            this.xtraTabPage1.Size = new System.Drawing.Size(565, 195);
             this.xtraTabPage1.Text = "İhale Bilgileri";
+            // 
+            // txtTeklifNo
+            // 
+            this.txtTeklifNo.Enabled = false;
+            this.txtTeklifNo.EnterMoveNextControl = true;
+            this.txtTeklifNo.Location = new System.Drawing.Point(74, 20);
+            this.txtTeklifNo.Name = "txtTeklifNo";
+            this.txtTeklifNo.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTeklifNo.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtTeklifNo.Properties.Appearance.Options.UseFont = true;
+            this.txtTeklifNo.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTeklifNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTeklifNo.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTeklifNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtTeklifNo.Properties.Mask.BeepOnError = true;
+            this.txtTeklifNo.Size = new System.Drawing.Size(125, 24);
+            this.txtTeklifNo.TabIndex = 11;
+            // 
+            // txtcompanyName
+            // 
+            this.txtcompanyName.EnterMoveNextControl = true;
+            this.txtcompanyName.Location = new System.Drawing.Point(74, 69);
+            this.txtcompanyName.Name = "txtcompanyName";
+            this.txtcompanyName.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtcompanyName.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtcompanyName.Properties.Appearance.Options.UseFont = true;
+            this.txtcompanyName.Properties.Appearance.Options.UseForeColor = true;
+            this.txtcompanyName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtcompanyName.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtcompanyName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtcompanyName.Size = new System.Drawing.Size(396, 22);
+            this.txtcompanyName.TabIndex = 13;
+            // 
+            // txtAciklama
+            // 
+            this.txtAciklama.EnterMoveNextControl = true;
+            this.txtAciklama.Location = new System.Drawing.Point(74, 45);
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAciklama.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtAciklama.Properties.Appearance.Options.UseFont = true;
+            this.txtAciklama.Properties.Appearance.Options.UseForeColor = true;
+            this.txtAciklama.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtAciklama.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtAciklama.Size = new System.Drawing.Size(396, 22);
+            this.txtAciklama.TabIndex = 12;
             // 
             // labelControl1
             // 
@@ -162,136 +210,10 @@
             this.xtraTabPage2.Controls.Add(this.txtScope);
             this.xtraTabPage2.Controls.Add(this.txtType);
             this.xtraTabPage2.Controls.Add(this.txtEkapNumber);
-            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(567, 199);
+            this.xtraTabPage2.Size = new System.Drawing.Size(565, 195);
             this.xtraTabPage2.Text = "Detay          ";
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
-            this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.panelControl1.Controls.Add(this.panelControl2);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(581, 24);
-            this.panelControl1.TabIndex = 33;
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl2.Appearance.Options.UseBackColor = true;
-            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.labelControl3);
-            this.panelControl2.Controls.Add(this.btnIptal);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(581, 24);
-            this.panelControl2.TabIndex = 3;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
-            this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl3.LineColor = System.Drawing.Color.Red;
-            this.labelControl3.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl3.Location = new System.Drawing.Point(3, 1);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.ShowLineShadow = false;
-            this.labelControl3.Size = new System.Drawing.Size(161, 23);
-            this.labelControl3.TabIndex = 0;
-            this.labelControl3.Text = "İHALE BİLGİSİ DETAY";
-            this.labelControl3.UseMnemonic = false;
-            // 
-            // btnIptal
-            // 
-            this.btnIptal.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnIptal.Appearance.Options.UseFont = true;
-            this.btnIptal.AutoSize = true;
-            this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
-            this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnIptal.Location = new System.Drawing.Point(555, 0);
-            this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(26, 24);
-            this.btnIptal.TabIndex = 1;
-            this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnGuncelle.Appearance.Options.UseFont = true;
-            this.btnGuncelle.Appearance.Options.UseForeColor = true;
-            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnGuncelle.Location = new System.Drawing.Point(483, 276);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(89, 34);
-            toolTipTitleItem1.Text = "Güncelle";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.btnGuncelle.SuperTip = superToolTip1;
-            this.btnGuncelle.TabIndex = 109;
-            this.btnGuncelle.Text = "Güncelle";
-            // 
-            // dxErrorProvider1
-            // 
-            this.dxErrorProvider1.ContainerControl = this;
-            // 
-            // txtTeklifNo
-            // 
-            this.txtTeklifNo.Enabled = false;
-            this.txtTeklifNo.EnterMoveNextControl = true;
-            this.txtTeklifNo.Location = new System.Drawing.Point(74, 20);
-            this.txtTeklifNo.Name = "txtTeklifNo";
-            this.txtTeklifNo.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtTeklifNo.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtTeklifNo.Properties.Appearance.Options.UseFont = true;
-            this.txtTeklifNo.Properties.Appearance.Options.UseForeColor = true;
-            this.txtTeklifNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtTeklifNo.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtTeklifNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtTeklifNo.Properties.Mask.BeepOnError = true;
-            this.txtTeklifNo.Size = new System.Drawing.Size(125, 24);
-            this.txtTeklifNo.TabIndex = 11;
-            // 
-            // txtcompanyName
-            // 
-            this.txtcompanyName.EnterMoveNextControl = true;
-            this.txtcompanyName.Location = new System.Drawing.Point(74, 69);
-            this.txtcompanyName.Name = "txtcompanyName";
-            this.txtcompanyName.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtcompanyName.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtcompanyName.Properties.Appearance.Options.UseFont = true;
-            this.txtcompanyName.Properties.Appearance.Options.UseForeColor = true;
-            this.txtcompanyName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtcompanyName.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtcompanyName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtcompanyName.Size = new System.Drawing.Size(396, 22);
-            this.txtcompanyName.TabIndex = 13;
-            // 
-            // txtAciklama
-            // 
-            this.txtAciklama.EnterMoveNextControl = true;
-            this.txtAciklama.Location = new System.Drawing.Point(74, 45);
-            this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAciklama.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtAciklama.Properties.Appearance.Options.UseFont = true;
-            this.txtAciklama.Properties.Appearance.Options.UseForeColor = true;
-            this.txtAciklama.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtAciklama.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtAciklama.Size = new System.Drawing.Size(396, 22);
-            this.txtAciklama.TabIndex = 12;
             // 
             // labelControl12
             // 
@@ -443,20 +365,102 @@
             this.txtEkapNumber.Size = new System.Drawing.Size(276, 22);
             this.txtEkapNumber.TabIndex = 12;
             // 
-            // txtLastOfferDate
+            // panelControl1
             // 
-            this.txtLastOfferDate.EnterMoveNextControl = true;
-            this.txtLastOfferDate.Location = new System.Drawing.Point(75, 92);
-            this.txtLastOfferDate.Name = "txtLastOfferDate";
-            this.txtLastOfferDate.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtLastOfferDate.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtLastOfferDate.Properties.Appearance.Options.UseFont = true;
-            this.txtLastOfferDate.Properties.Appearance.Options.UseForeColor = true;
-            this.txtLastOfferDate.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtLastOfferDate.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtLastOfferDate.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtLastOfferDate.Size = new System.Drawing.Size(396, 22);
-            this.txtLastOfferDate.TabIndex = 14;
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.panelControl1.Controls.Add(this.panelControl2);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(581, 24);
+            this.panelControl1.TabIndex = 33;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.labelControl3);
+            this.panelControl2.Controls.Add(this.btnIptal);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(0, 0);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(581, 24);
+            this.panelControl2.TabIndex = 3;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
+            this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.labelControl3.LineColor = System.Drawing.Color.Red;
+            this.labelControl3.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.labelControl3.Location = new System.Drawing.Point(3, 1);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.ShowLineShadow = false;
+            this.labelControl3.Size = new System.Drawing.Size(161, 23);
+            this.labelControl3.TabIndex = 0;
+            this.labelControl3.Text = "İHALE BİLGİSİ DETAY";
+            this.labelControl3.UseMnemonic = false;
+            // 
+            // btnIptal
+            // 
+            this.btnIptal.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnIptal.Appearance.Options.UseFont = true;
+            this.btnIptal.AutoSize = true;
+            this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
+            this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnIptal.Location = new System.Drawing.Point(555, 0);
+            this.btnIptal.Name = "btnIptal";
+            this.btnIptal.Size = new System.Drawing.Size(26, 24);
+            this.btnIptal.TabIndex = 1;
+            this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnGuncelle.Appearance.Options.UseFont = true;
+            this.btnGuncelle.Appearance.Options.UseForeColor = true;
+            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
+            this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnGuncelle.Location = new System.Drawing.Point(483, 276);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(89, 34);
+            toolTipTitleItem2.Text = "Güncelle";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.btnGuncelle.SuperTip = superToolTip2;
+            this.btnGuncelle.TabIndex = 109;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
+            // dxErrorProvider1
+            // 
+            this.dxErrorProvider1.ContainerControl = this;
+            // 
+            // LastOfferDate
+            // 
+            this.LastOfferDate.EditValue = new System.DateTime(2017, 11, 14, 14, 49, 43, 0);
+            this.LastOfferDate.Location = new System.Drawing.Point(74, 96);
+            this.LastOfferDate.Margin = new System.Windows.Forms.Padding(2);
+            this.LastOfferDate.Name = "LastOfferDate";
+            this.LastOfferDate.Properties.AppearanceDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.LastOfferDate.Properties.AppearanceDropDown.Options.UseBackColor = true;
+            this.LastOfferDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LastOfferDate.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
+            this.LastOfferDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LastOfferDate.Properties.Mask.EditMask = "f";
+            this.LastOfferDate.Size = new System.Drawing.Size(396, 20);
+            this.LastOfferDate.TabIndex = 14;
             // 
             // frm_IhaleBilgisiDetay
             // 
@@ -470,7 +474,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_IhaleBilgisiDetay";
@@ -481,24 +485,25 @@
             this.tabIhaleBilgileri.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
-            this.xtraTabPage2.ResumeLayout(false);
-            this.xtraTabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeklifNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtcompanyName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
+            this.xtraTabPage2.ResumeLayout(false);
+            this.xtraTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtManagement.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlace.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProcedure.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtScope.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEkapNumber.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLastOfferDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -533,6 +538,6 @@
         private DevExpress.XtraEditors.TextEdit txtScope;
         private DevExpress.XtraEditors.TextEdit txtType;
         private DevExpress.XtraEditors.TextEdit txtEkapNumber;
-        private DevExpress.XtraEditors.TextEdit txtLastOfferDate;
+        private DevExpress.XtraEditors.DateEdit LastOfferDate;
     }
 }
