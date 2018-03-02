@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_pozGuncelle));
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -41,17 +40,17 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtDescription = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtUnitPrice = new DevExpress.XtraEditors.TextEdit();
             this.txtNumber = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
+            this.txtUnitPrice = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -112,10 +111,10 @@
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(134, 50);
-            toolTipTitleItem2.Text = "Güncelle";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            this.btnGuncelle.SuperTip = superToolTip2;
-            this.btnGuncelle.TabIndex = 108;
+            toolTipTitleItem1.Text = "Güncelle";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.btnGuncelle.SuperTip = superToolTip1;
+            this.btnGuncelle.TabIndex = 4;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
@@ -141,7 +140,7 @@
             this.txtUnit.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtUnit.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtUnit.Size = new System.Drawing.Size(358, 26);
-            this.txtUnit.TabIndex = 101;
+            this.txtUnit.TabIndex = 2;
             // 
             // labelControl4
             // 
@@ -165,7 +164,7 @@
             this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Size = new System.Drawing.Size(516, 26);
-            this.txtDescription.TabIndex = 100;
+            this.txtDescription.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -177,22 +176,6 @@
             this.labelControl3.Size = new System.Drawing.Size(70, 19);
             this.labelControl3.TabIndex = 105;
             this.labelControl3.Text = "Açıklama:";
-            // 
-            // txtUnitPrice
-            // 
-            this.txtUnitPrice.EditValue = "";
-            this.txtUnitPrice.EnterMoveNextControl = true;
-            this.txtUnitPrice.Location = new System.Drawing.Point(110, 158);
-            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUnitPrice.Name = "txtUnitPrice";
-            this.txtUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtUnitPrice.Properties.Appearance.Options.UseBackColor = true;
-            this.txtUnitPrice.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtUnitPrice.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtUnitPrice.Properties.Mask.EditMask = "c2";
-            this.txtUnitPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtUnitPrice.Size = new System.Drawing.Size(358, 26);
-            this.txtUnitPrice.TabIndex = 102;
             // 
             // txtNumber
             // 
@@ -206,7 +189,7 @@
             this.txtNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtNumber.Properties.ReadOnly = true;
             this.txtNumber.Size = new System.Drawing.Size(150, 26);
-            this.txtNumber.TabIndex = 99;
+            this.txtNumber.TabIndex = 0;
             // 
             // labelControl2
             // 
@@ -223,6 +206,28 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
+            // txtUnitPrice
+            // 
+            this.txtUnitPrice.EditValue = "";
+            this.txtUnitPrice.EnterMoveNextControl = true;
+            this.dxErrorProvider1.SetIconAlignment(this.txtUnitPrice, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.txtUnitPrice.Location = new System.Drawing.Point(110, 158);
+            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUnitPrice.Name = "txtUnitPrice";
+            this.txtUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtUnitPrice.Properties.Appearance.Options.UseBackColor = true;
+            this.txtUnitPrice.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtUnitPrice.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtUnitPrice.Properties.DisplayFormat.FormatString = "c";
+            this.txtUnitPrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtUnitPrice.Properties.EditFormat.FormatString = "c";
+            this.txtUnitPrice.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtUnitPrice.Properties.Mask.EditMask = "c";
+            this.txtUnitPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtUnitPrice.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtUnitPrice.Size = new System.Drawing.Size(356, 26);
+            this.txtUnitPrice.TabIndex = 3;
+            // 
             // frm_pozGuncelle
             // 
             this.AcceptButton = this.btnGuncelle;
@@ -231,13 +236,13 @@
             this.CancelButton = this.btnKapat;
             this.ClientSize = new System.Drawing.Size(649, 215);
             this.ControlBox = false;
+            this.Controls.Add(this.txtUnitPrice);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.txtUnit);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.txtUnitPrice);
             this.Controls.Add(this.txtNumber);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.panelControl2);
@@ -255,9 +260,9 @@
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,9 +279,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtDescription;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit txtUnitPrice;
         private DevExpress.XtraEditors.TextEdit txtNumber;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
+        private DevExpress.XtraEditors.TextEdit txtUnitPrice;
     }
 }

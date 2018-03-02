@@ -294,6 +294,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
             if (lblWait.Visible == true)
             {
+                Application.DoEvents();
                 lblWait.Visible = false;
             }
             else

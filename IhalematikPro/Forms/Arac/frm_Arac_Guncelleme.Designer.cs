@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Arac_Guncelleme));
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
@@ -71,7 +70,7 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PanelSirket)).BeginInit();
@@ -170,10 +169,12 @@
             this.txtCompanyMaintenanceFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtCompanyMaintenanceFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtCompanyMaintenanceFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtCompanyMaintenanceFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtCompanyMaintenanceFare.Properties.DisplayFormat.FormatString = "c";
             this.txtCompanyMaintenanceFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCompanyMaintenanceFare.Properties.EditFormat.FormatString = "c2";
+            this.txtCompanyMaintenanceFare.Properties.EditFormat.FormatString = "c";
             this.txtCompanyMaintenanceFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtCompanyMaintenanceFare.Properties.Mask.EditMask = "c";
+            this.txtCompanyMaintenanceFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCompanyMaintenanceFare.Size = new System.Drawing.Size(224, 26);
             this.txtCompanyMaintenanceFare.TabIndex = 132;
             // 
@@ -246,10 +247,12 @@
             this.txtCompanyServiceFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtCompanyServiceFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtCompanyServiceFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtCompanyServiceFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtCompanyServiceFare.Properties.DisplayFormat.FormatString = "c";
             this.txtCompanyServiceFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCompanyServiceFare.Properties.EditFormat.FormatString = "c2";
+            this.txtCompanyServiceFare.Properties.EditFormat.FormatString = "c";
             this.txtCompanyServiceFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtCompanyServiceFare.Properties.Mask.EditMask = "c";
+            this.txtCompanyServiceFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCompanyServiceFare.Size = new System.Drawing.Size(224, 26);
             this.txtCompanyServiceFare.TabIndex = 133;
             // 
@@ -263,10 +266,12 @@
             this.txtCompanyFuelOilFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtCompanyFuelOilFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtCompanyFuelOilFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtCompanyFuelOilFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtCompanyFuelOilFare.Properties.DisplayFormat.FormatString = "c";
             this.txtCompanyFuelOilFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCompanyFuelOilFare.Properties.EditFormat.FormatString = "c2";
+            this.txtCompanyFuelOilFare.Properties.EditFormat.FormatString = "c";
             this.txtCompanyFuelOilFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtCompanyFuelOilFare.Properties.Mask.EditMask = "c";
+            this.txtCompanyFuelOilFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCompanyFuelOilFare.Size = new System.Drawing.Size(224, 26);
             this.txtCompanyFuelOilFare.TabIndex = 130;
             // 
@@ -280,10 +285,12 @@
             this.txtCompanyOtherFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtCompanyOtherFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtCompanyOtherFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtCompanyOtherFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtCompanyOtherFare.Properties.DisplayFormat.FormatString = "c";
             this.txtCompanyOtherFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCompanyOtherFare.Properties.EditFormat.FormatString = "c2";
+            this.txtCompanyOtherFare.Properties.EditFormat.FormatString = "c";
             this.txtCompanyOtherFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtCompanyOtherFare.Properties.Mask.EditMask = "c";
+            this.txtCompanyOtherFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCompanyOtherFare.Size = new System.Drawing.Size(224, 26);
             this.txtCompanyOtherFare.TabIndex = 135;
             // 
@@ -308,10 +315,12 @@
             this.txtCompanyGeneralFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtCompanyGeneralFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtCompanyGeneralFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtCompanyGeneralFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtCompanyGeneralFare.Properties.DisplayFormat.FormatString = "c";
             this.txtCompanyGeneralFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCompanyGeneralFare.Properties.EditFormat.FormatString = "c2";
+            this.txtCompanyGeneralFare.Properties.EditFormat.FormatString = "c";
             this.txtCompanyGeneralFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtCompanyGeneralFare.Properties.Mask.EditMask = "c";
+            this.txtCompanyGeneralFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCompanyGeneralFare.Size = new System.Drawing.Size(224, 26);
             this.txtCompanyGeneralFare.TabIndex = 134;
             // 
@@ -336,10 +345,12 @@
             this.txtCompanyDriverFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtCompanyDriverFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtCompanyDriverFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtCompanyDriverFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtCompanyDriverFare.Properties.DisplayFormat.FormatString = "c";
             this.txtCompanyDriverFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCompanyDriverFare.Properties.EditFormat.FormatString = "c2";
+            this.txtCompanyDriverFare.Properties.EditFormat.FormatString = "c";
             this.txtCompanyDriverFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtCompanyDriverFare.Properties.Mask.EditMask = "c";
+            this.txtCompanyDriverFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCompanyDriverFare.Size = new System.Drawing.Size(224, 26);
             this.txtCompanyDriverFare.TabIndex = 131;
             // 
@@ -404,10 +415,12 @@
             this.txtRentFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtRentFare.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtRentFare.Properties.AppearanceFocused.Options.UseTextOptions = true;
-            this.txtRentFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtRentFare.Properties.DisplayFormat.FormatString = "c";
             this.txtRentFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRentFare.Properties.EditFormat.FormatString = "c2";
+            this.txtRentFare.Properties.EditFormat.FormatString = "c";
             this.txtRentFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRentFare.Properties.Mask.EditMask = "c";
+            this.txtRentFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtRentFare.Size = new System.Drawing.Size(224, 26);
             this.txtRentFare.TabIndex = 3;
             // 
@@ -456,10 +469,12 @@
             this.txtRentDriverFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtRentDriverFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtRentDriverFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRentDriverFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtRentDriverFare.Properties.DisplayFormat.FormatString = "c";
             this.txtRentDriverFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRentDriverFare.Properties.EditFormat.FormatString = "c2";
+            this.txtRentDriverFare.Properties.EditFormat.FormatString = "c";
             this.txtRentDriverFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRentDriverFare.Properties.Mask.EditMask = "c";
+            this.txtRentDriverFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtRentDriverFare.Size = new System.Drawing.Size(224, 26);
             this.txtRentDriverFare.TabIndex = 6;
             // 
@@ -495,10 +510,12 @@
             this.txtRentGeneralFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtRentGeneralFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtRentGeneralFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRentGeneralFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtRentGeneralFare.Properties.DisplayFormat.FormatString = "c";
             this.txtRentGeneralFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRentGeneralFare.Properties.EditFormat.FormatString = "c2";
+            this.txtRentGeneralFare.Properties.EditFormat.FormatString = "c";
             this.txtRentGeneralFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRentGeneralFare.Properties.Mask.EditMask = "c";
+            this.txtRentGeneralFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtRentGeneralFare.Size = new System.Drawing.Size(224, 26);
             this.txtRentGeneralFare.TabIndex = 7;
             // 
@@ -549,10 +566,12 @@
             this.txtRentOtherFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtRentOtherFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtRentOtherFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRentOtherFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtRentOtherFare.Properties.DisplayFormat.FormatString = "c";
             this.txtRentOtherFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRentOtherFare.Properties.EditFormat.FormatString = "c2";
+            this.txtRentOtherFare.Properties.EditFormat.FormatString = "c";
             this.txtRentOtherFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRentOtherFare.Properties.Mask.EditMask = "c";
+            this.txtRentOtherFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtRentOtherFare.Size = new System.Drawing.Size(224, 26);
             this.txtRentOtherFare.TabIndex = 8;
             // 
@@ -577,10 +596,12 @@
             this.txtRentFuelOilFare.Properties.Appearance.Options.UseBackColor = true;
             this.txtRentFuelOilFare.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtRentFuelOilFare.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRentFuelOilFare.Properties.DisplayFormat.FormatString = "c2";
+            this.txtRentFuelOilFare.Properties.DisplayFormat.FormatString = "c";
             this.txtRentFuelOilFare.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtRentFuelOilFare.Properties.EditFormat.FormatString = "c2";
+            this.txtRentFuelOilFare.Properties.EditFormat.FormatString = "c";
             this.txtRentFuelOilFare.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRentFuelOilFare.Properties.Mask.EditMask = "c";
+            this.txtRentFuelOilFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtRentFuelOilFare.Size = new System.Drawing.Size(224, 26);
             this.txtRentFuelOilFare.TabIndex = 5;
             // 
@@ -666,7 +687,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(439, 35);
+            this.panelControl2.Size = new System.Drawing.Size(435, 35);
             this.panelControl2.TabIndex = 95;
             // 
             // btnKapat
@@ -676,7 +697,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(411, 0);
+            this.btnKapat.Location = new System.Drawing.Point(407, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -709,7 +730,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(439, 545);
+            this.ClientSize = new System.Drawing.Size(435, 545);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl2);

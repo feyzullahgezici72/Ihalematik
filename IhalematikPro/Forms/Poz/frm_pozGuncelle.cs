@@ -50,7 +50,7 @@ namespace IhalematikProUI.Forms
                 txtDescription.Text = this.CurrentPoz.Description;
                 txtNumber.Text = this.CurrentPoz.Number;
                 txtUnit.Text = this.CurrentPoz.Unit;
-                txtUnitPrice.Text = this.CurrentPoz.UnitPrice.ToString("##,##,##,###.00", CultureInfo.InvariantCulture);
+                txtUnitPrice.Text = this.CurrentPoz.UnitPrice.ToString();
             }
         }
 
@@ -63,13 +63,14 @@ namespace IhalematikProUI.Forms
                 model.Description = txtDescription.Text;
                 model.Number = txtNumber.Text;
                 model.Unit = txtUnit.Text;
-                model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty), CultureInfo.InvariantCulture);
+                model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty));
                 model.Save();
                 //PozProvider.Instance.Save()
                 frm_MesajFormu mf = new frm_MesajFormu();
                 mf.lblMesaj.Text = "Kayıt Güncellendi...";
                 mf.ShowDialog();
                 this.Close();
+                this._owner.LoadGrid();
             }
         }
         public bool IsEmptyKontrol()
