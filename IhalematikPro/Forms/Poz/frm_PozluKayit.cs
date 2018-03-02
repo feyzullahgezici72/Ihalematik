@@ -100,6 +100,7 @@ namespace IhalematikPro.Forms
                                     PozModel model = new PozModel();
                                     model.Description = item.PozOBF.Description;
                                     model.Number = item.PozOBF.Number;
+                                    model.IsActive = true;
                                     model.Unit = item.PozOBF.Unit;
                                     model.UnitPrice = item.PozOBF.UnitPrice;
                                     double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
@@ -114,6 +115,7 @@ namespace IhalematikPro.Forms
                                 {
                                     PozModel model = new PozModel();
                                     model.Description = item.PozOBF.Description;
+                                    model.IsActive = true;
                                     model.Number = item.PozOBF.Number;
                                     model.Unit = item.PozOBF.Unit;
                                     model.UnitPrice = item.PozOBF.UnitPrice;
@@ -128,6 +130,7 @@ namespace IhalematikPro.Forms
                                 PozModel model = new PozModel();
                                 model.Description = item.PozOBF.Description;
                                 model.Number = item.PozOBF.Number;
+                                model.IsActive = true;
                                 model.Unit = item.PozOBF.Unit;
                                 model.UnitPrice = item.PozOBF.UnitPrice;
                                 double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
