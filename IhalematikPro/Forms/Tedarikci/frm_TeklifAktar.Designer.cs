@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TeklifAktar));
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
@@ -170,15 +170,15 @@
             this.btnUploadFile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnUploadFile.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
             this.btnUploadFile.Size = new System.Drawing.Size(266, 90);
-            toolTipTitleItem2.Text = "YÜKLE";
-            toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipItem2.Appearance.Options.UseImage = true;
-            toolTipItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem2.Image")));
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "Tedarikçilerden gelen Fiyatları yükleyin";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            this.btnUploadFile.SuperTip = superToolTip2;
+            toolTipTitleItem1.Text = "YÜKLE";
+            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            toolTipItem1.Appearance.Options.UseImage = true;
+            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Tedarikçilerden gelen Fiyatları yükleyin";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.btnUploadFile.SuperTip = superToolTip1;
             this.btnUploadFile.TabIndex = 11;
             this.btnUploadFile.Text = "Teklifleri Yükle";
             this.btnUploadFile.Click += new System.EventHandler(this.btnUploadFile_Click);
@@ -523,6 +523,9 @@
             this.colKDV.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colKDV.FieldName = "KDV";
             this.colKDV.Name = "colKDV";
+            this.colKDV.OptionsColumn.AllowEdit = false;
+            this.colKDV.OptionsColumn.AllowFocus = false;
+            this.colKDV.OptionsColumn.ReadOnly = true;
             this.colKDV.OptionsFilter.AllowFilter = false;
             this.colKDV.Visible = true;
             this.colKDV.VisibleIndex = 4;
