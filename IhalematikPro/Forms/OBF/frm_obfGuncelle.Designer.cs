@@ -182,10 +182,6 @@
             this.txtUnitPrice.Properties.Appearance.Options.UseBackColor = true;
             this.txtUnitPrice.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtUnitPrice.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtUnitPrice.Properties.DisplayFormat.FormatString = "c2";
-            this.txtUnitPrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtUnitPrice.Properties.EditFormat.FormatString = "c2";
-            this.txtUnitPrice.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtUnitPrice.Properties.Mask.EditMask = "c2";
             this.txtUnitPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtUnitPrice.Size = new System.Drawing.Size(356, 26);

@@ -43,7 +43,6 @@ namespace IhalematikProUI.Forms
             this.Close();
             this._owner.LoadGrid();
         }
-
         private void frm_obfGuncelle_Load(object sender, EventArgs e)
         {
             if (this.CurrentOBF != null)
@@ -51,7 +50,7 @@ namespace IhalematikProUI.Forms
                 txtDescription.Text = this.CurrentOBF.Description;
                 txtNumber.Text = this.CurrentOBF.Number;
                 txtUnit.Text = this.CurrentOBF.Unit;
-                txtUnitPrice.Text = this.CurrentOBF.UnitPrice.ToString("c2");
+                txtUnitPrice.Text = this.CurrentOBF.UnitPrice.ToString("###,###.00");
                 txtDescriptionForSupplier.Text = this.CurrentOBF.DescriptionForSupplier;
             }
         }
@@ -93,7 +92,9 @@ namespace IhalematikProUI.Forms
                 model.Description = txtDescription.Text;
                 model.Number = txtNumber.Text;
                 model.Unit = txtUnit.Text;
-                model.UnitPrice = model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty), CultureInfo.InvariantCulture); 
+                var cultureInfo = new System.Globalization.CultureInfo("tr-TR");
+                //double plain = return Double.Parse("$20,000.00", cultureInfo);
+                model.UnitPrice = model.UnitPrice = double.Parse(txtUnitPrice.Text, cultureInfo); 
                 model.DescriptionForSupplier = txtDescriptionForSupplier.Text;
                 model.Save();
                 frm_MesajFormu mf = new frm_MesajFormu();
