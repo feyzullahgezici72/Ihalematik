@@ -50,7 +50,7 @@ namespace IhalematikProUI.Forms
                 txtDescription.Text = this.CurrentPoz.Description;
                 txtNumber.Text = this.CurrentPoz.Number;
                 txtUnit.Text = this.CurrentPoz.Unit;
-                txtUnitPrice.Text = this.CurrentPoz.UnitPrice.ToString("c2");
+                txtUnitPrice.Text = this.CurrentPoz.UnitPrice.ToString("##,##,##,###.00", CultureInfo.InvariantCulture);
             }
         }
 
