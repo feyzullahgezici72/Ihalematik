@@ -50,7 +50,8 @@ namespace IhalematikProUI.Forms
                 txtDescription.Text = this.CurrentOBF.Description;
                 txtNumber.Text = this.CurrentOBF.Number;
                 txtUnit.Text = this.CurrentOBF.Unit;
-                txtUnitPrice.Text = this.CurrentOBF.UnitPrice.ToString("###,###.00");
+                //var cultureInfo = new System.Globalization.CultureInfo("tr-TR");
+                txtUnitPrice.Text = this.CurrentOBF.UnitPrice.ToString("##,##,###.00");
                 txtDescriptionForSupplier.Text = this.CurrentOBF.DescriptionForSupplier;
             }
         }
@@ -92,9 +93,8 @@ namespace IhalematikProUI.Forms
                 model.Description = txtDescription.Text;
                 model.Number = txtNumber.Text;
                 model.Unit = txtUnit.Text;
-                var cultureInfo = new System.Globalization.CultureInfo("tr-TR");
                 //double plain = return Double.Parse("$20,000.00", cultureInfo);
-                model.UnitPrice = model.UnitPrice = double.Parse(txtUnitPrice.Text, cultureInfo); 
+                model.UnitPrice = model.UnitPrice = double.Parse(txtUnitPrice.Text);
                 model.DescriptionForSupplier = txtDescriptionForSupplier.Text;
                 model.Save();
                 frm_MesajFormu mf = new frm_MesajFormu();
