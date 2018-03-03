@@ -847,6 +847,8 @@
             this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn8.OptionsFilter.AllowFilter = false;
+            this.gridColumn8.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalAmount", "{0:c2}")});
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 8;
             this.gridColumn8.Width = 93;
@@ -894,9 +896,9 @@
             this.btnSelectDeselect.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnSelectDeselect.Location = new System.Drawing.Point(0, 0);
             this.btnSelectDeselect.Name = "btnSelectDeselect";
-            this.btnSelectDeselect.Size = new System.Drawing.Size(72, 70);
+            this.btnSelectDeselect.Size = new System.Drawing.Size(126, 70);
             this.btnSelectDeselect.TabIndex = 11;
-            this.btnSelectDeselect.Text = "Seç";
+            this.btnSelectDeselect.Text = "Tümünü Seç";
             // 
             // panel2
             // 
