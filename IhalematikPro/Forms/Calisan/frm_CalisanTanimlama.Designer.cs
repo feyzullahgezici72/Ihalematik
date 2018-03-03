@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_CalisanTanimlama));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -89,7 +90,7 @@
             this.cmbAktivePasive = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -821,12 +822,12 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl9.Location = new System.Drawing.Point(108, 210);
+            this.labelControl9.Location = new System.Drawing.Point(42, 211);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(54, 19);
+            this.labelControl9.Size = new System.Drawing.Size(121, 19);
             this.labelControl9.TabIndex = 135;
-            this.labelControl9.Text = "Yemek:";
+            this.labelControl9.Text = " Yemek(Günlük):";
             // 
             // txtWorklesFonFare
             // 
@@ -928,12 +929,12 @@
             // 
             this.label99.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label99.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.label99.Location = new System.Drawing.Point(134, 243);
+            this.label99.Location = new System.Drawing.Point(70, 243);
             this.label99.Margin = new System.Windows.Forms.Padding(4);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(29, 19);
+            this.label99.Size = new System.Drawing.Size(91, 19);
             this.label99.TabIndex = 132;
-            this.label99.Text = "Yol:";
+            this.label99.Text = "Yol(Günlük):";
             // 
             // labelControl8
             // 
@@ -1052,12 +1053,12 @@
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl11.Location = new System.Drawing.Point(80, 278);
+            this.labelControl11.Location = new System.Drawing.Point(16, 279);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(83, 19);
+            this.labelControl11.Size = new System.Drawing.Size(145, 19);
             this.labelControl11.TabIndex = 134;
-            this.labelControl11.Text = "Konaklama:";
+            this.labelControl11.Text = "Konaklama(Günlük):";
             // 
             // labelControl12
             // 
