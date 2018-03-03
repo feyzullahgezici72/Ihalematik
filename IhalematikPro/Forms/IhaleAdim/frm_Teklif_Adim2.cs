@@ -52,7 +52,7 @@ namespace IhalematikPro.Forms
             if (items != null)
             {
                 //List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-                double baseAmount = 0;
+                //double baseAmount = 0;
                 lblTotalMarkup.Text = (items.Sum(p => p.TotalMarkup)).ToString("C2");
             }
         }
@@ -63,10 +63,13 @@ namespace IhalematikPro.Forms
             {
                 List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
                 List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(items);
-                models[0].IsSelected = true;
-                this.SelectedGroupId = models[0].Id.Value;
-                grdTenderGroup.DataSource = models;
-                this.LoadTenderMaterialList();
+                if (models != null && models.Count != 0)
+                {
+                    models[0].IsSelected = true;
+                    this.SelectedGroupId = models[0].Id.Value;
+                    grdTenderGroup.DataSource = models;
+                    this.LoadTenderMaterialList();
+                }
             }
         }
 
@@ -100,7 +103,7 @@ namespace IhalematikPro.Forms
                     }
                 }
                 double baseAmount = 0;
-              
+
             }
             if (e.Column == colRisk)
             {
@@ -114,7 +117,7 @@ namespace IhalematikPro.Forms
                     }
                 }
                 double baseAmount = 0;
-          
+
             }
         }
 
