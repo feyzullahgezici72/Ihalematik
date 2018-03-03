@@ -119,9 +119,9 @@
             this.labelControl9.Location = new System.Drawing.Point(14, 12);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(76, 19);
+            this.labelControl9.Size = new System.Drawing.Size(80, 19);
             this.labelControl9.TabIndex = 42;
-            this.labelControl9.Text = "İhale No  :";
+            this.labelControl9.Text = "İhale No   :";
             // 
             // labelControl17
             // 

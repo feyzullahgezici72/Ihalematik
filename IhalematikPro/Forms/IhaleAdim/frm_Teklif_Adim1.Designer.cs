@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim1));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -45,7 +44,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnPozKayit = new DevExpress.XtraEditors.SimpleButton();
             this.btnObfKayit = new DevExpress.XtraEditors.SimpleButton();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             this.grupPanel = new DevExpress.XtraEditors.PanelControl();
             this.grdTenderGroup = new DevExpress.XtraGrid.GridControl();
             this.gridViewTenderGroup = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -899,6 +898,7 @@
             this.btnSelectDeselect.Size = new System.Drawing.Size(126, 70);
             this.btnSelectDeselect.TabIndex = 11;
             this.btnSelectDeselect.Text = "Tümünü Seç";
+            this.btnSelectDeselect.Click += new System.EventHandler(this.btnSelectDeselect_Click);
             // 
             // panel2
             // 

@@ -99,7 +99,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             }
 
             List<OfferMaterialList> items = currentOffer.MaterialList.Where(p => !p.IsPoz && !p.IsMarkedForDeletion).ToList();
-            List <OfferMaterialListModel> dataSource = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(items).ToList();
+            List<OfferMaterialListModel> dataSource = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(items).ToList();
 
             grdAddedOBF.DataSource = null;
             grdAddedOBF.DataSource = dataSource;
@@ -130,9 +130,12 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void frm_TedarikciOfbKayit_Shown(object sender, EventArgs e)
         {
-            List<OfferMaterialList> items = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => !p.IsPoz).ToList();
-            List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(items).ToList();
-            grdAddedOBF.DataSource = models;
+            if (CurrentManager.Instance.CurrentOffer != null && CurrentManager.Instance.CurrentOffer.MaterialList != null)
+            {
+                List<OfferMaterialList> items = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => !p.IsPoz).ToList();
+                List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(items).ToList();
+                grdAddedOBF.DataSource = models;
+            }
         }
 
         private void frm_TedarikciOfbKayit_Load(object sender, EventArgs e)
