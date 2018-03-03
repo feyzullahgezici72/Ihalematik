@@ -161,7 +161,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
+                        //MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
                         //TODO feyzullahg hata olustu mesaji gostermek lazim.
                         isException = true;
                         break;

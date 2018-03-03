@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikciyeAktarilanMalzemeDetay));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.emailMesajPanel = new DevExpress.XtraEditors.PanelControl();
@@ -65,7 +64,6 @@
             this.txtEmailBody = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.emailMesajPanel)).BeginInit();
@@ -666,6 +664,7 @@
             // txtEmailBody
             // 
             this.txtEmailBody.Dock = System.Windows.Forms.DockStyle.Right;
+            this.txtEmailBody.EditValue = "Selamlar\r\nUygun fiyatlarınızı bekler.\r\nİyi çalışmalar dileriz.\r\n";
             this.txtEmailBody.Location = new System.Drawing.Point(159, 3);
             this.txtEmailBody.Name = "txtEmailBody";
             this.txtEmailBody.Size = new System.Drawing.Size(696, 74);
@@ -697,11 +696,6 @@
             this.simpleButton1.TabIndex = 5;
             this.simpleButton1.Text = "Mail Gönder";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 300;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frm_TedarikciyeAktarilanMalzemeDetay
             // 
@@ -796,6 +790,5 @@
         private DevExpress.XtraEditors.LabelControl lblWait;
         private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private System.Windows.Forms.Timer timer1;
     }
 }

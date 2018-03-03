@@ -22,5 +22,10 @@ namespace IhalematikProUI.Forms
         {
 
         }
+
+        private void frm_wait_Shown(object sender, EventArgs e)
+        {
+            Application.DoEvents();
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
@@ -33,9 +34,8 @@ namespace IhalematikProUI.Forms.OBF
             
             if (dialog.ShowDialog() == DialogResult.OK) // if user clicked OK
             {
-                MesajPanel.Visible = true;
-                 //timer1.Start();
-                 MessageBox.Show("Yükleme Malzeme sayısına göre biraz zaman alabilir...");
+                  MesajPanel.Visible = true;
+               // MessageBox.Show("Yükleme Malzeme sayısına göre biraz zaman alabilir...");
                 String path = dialog.FileName; // get name of file
                 this.ReadExcel(path);
                 this.Close();
@@ -55,6 +55,7 @@ namespace IhalematikProUI.Forms.OBF
                 int i = 0;
                 while (excelReader.Read())
                 {
+                    Application.DoEvents();
                     try
                     {
                         if (i >= 1)
@@ -68,7 +69,6 @@ namespace IhalematikProUI.Forms.OBF
                             {
                                 MessageBox.Show("Malzemeler basarıyla yuklendi.");
                                 MesajPanel.Visible = false;
-                                //timer1.Stop();
                                 break;
                             }
                             string stokKodu = excelReader.GetString(0);
@@ -117,7 +117,7 @@ namespace IhalematikProUI.Forms.OBF
             }
             catch (Exception)
             {
-                MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz. Yuklemeye calistiginiz excel dosyasi en az office 2010 ile olusturulmus olmasi gerekmektedir.Excel in kapali oldugundan emin olunuz");
+                MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.\n Yuklemeye calistiginiz excel dosyasi en az office 2010 ile olusturulmus olmasi gerekmektedir.\n Excel in kapali oldugundan emin olunuz");
             }
         }
 
@@ -128,14 +128,7 @@ namespace IhalematikProUI.Forms.OBF
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (lblWait.Visible == true)
-            {
-                lblWait.Visible = false;
-            }
-            else
-            {
-                lblWait.Visible = true;
-            }
+
         }
     }
 }

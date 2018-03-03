@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TopluOBFekle));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.MesajPanel = new DevExpress.XtraEditors.PanelControl();
@@ -37,10 +36,9 @@
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.lblWait = new DevExpress.XtraEditors.LabelControl();
             this.btnTopluOFBekle = new DevExpress.XtraEditors.SimpleButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MesajPanel)).BeginInit();
@@ -51,6 +49,7 @@
             this.panelControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -77,11 +76,11 @@
             this.MesajPanel.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.MesajPanel.Controls.Add(this.panelControl7);
             this.MesajPanel.Controls.Add(this.panelControl6);
-            this.MesajPanel.Location = new System.Drawing.Point(63, 40);
+            this.MesajPanel.Location = new System.Drawing.Point(34, 44);
             this.MesajPanel.LookAndFeel.SkinName = "Money Twins";
             this.MesajPanel.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MesajPanel.Name = "MesajPanel";
-            this.MesajPanel.Size = new System.Drawing.Size(388, 205);
+            this.MesajPanel.Size = new System.Drawing.Size(436, 211);
             this.MesajPanel.TabIndex = 8;
             this.MesajPanel.Visible = false;
             // 
@@ -95,7 +94,7 @@
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl7.Location = new System.Drawing.Point(0, 0);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(388, 37);
+            this.panelControl7.Size = new System.Drawing.Size(436, 37);
             this.panelControl7.TabIndex = 1;
             // 
             // labelControl7
@@ -113,20 +112,21 @@
             this.panelControl6.Appearance.BackColor = System.Drawing.Color.White;
             this.panelControl6.Appearance.Options.UseBackColor = true;
             this.panelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl6.Controls.Add(this.pictureBox3);
             this.panelControl6.Controls.Add(this.pictureBox2);
             this.panelControl6.Controls.Add(this.labelControl8);
-            this.panelControl6.Controls.Add(this.lblWait);
-            this.panelControl6.Location = new System.Drawing.Point(14, 48);
+            this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl6.Location = new System.Drawing.Point(0, 0);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(360, 145);
+            this.panelControl6.Size = new System.Drawing.Size(436, 211);
             this.panelControl6.TabIndex = 0;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::IhalematikProUI.Properties.Resources.cargo_2_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 23);
+            this.pictureBox2.Location = new System.Drawing.Point(274, 43);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(77, 63);
+            this.pictureBox2.Size = new System.Drawing.Size(63, 60);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
@@ -135,21 +135,11 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl8.Location = new System.Drawing.Point(85, 40);
+            this.labelControl8.Location = new System.Drawing.Point(241, 109);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(270, 29);
+            this.labelControl8.Size = new System.Drawing.Size(138, 58);
             this.labelControl8.TabIndex = 4;
-            this.labelControl8.Text = "MALZEMELER YÜKLENİYOR";
-            // 
-            // lblWait
-            // 
-            this.lblWait.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblWait.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblWait.Location = new System.Drawing.Point(197, 75);
-            this.lblWait.Name = "lblWait";
-            this.lblWait.Size = new System.Drawing.Size(143, 22);
-            this.lblWait.TabIndex = 3;
-            this.lblWait.Text = "Lütfen Bekleyiniz...";
+            this.labelControl8.Text = "MALZEMELER \r\nYÜKLENİYOR";
             // 
             // btnTopluOFBekle
             // 
@@ -167,17 +157,22 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 36);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(513, 216);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // timer1
+            // pictureBox3
             // 
-            this.timer1.Interval = 300;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.pictureBox3.Image = global::IhalematikProUI.Properties.Resources.yukleniyor;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 36);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(177, 172);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
             // 
             // frm_TopluOBFekle
             // 
@@ -206,6 +201,7 @@
             this.panelControl6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -219,9 +215,8 @@
         private DevExpress.XtraEditors.PanelControl panelControl6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.LabelControl lblWait;
         private DevExpress.XtraEditors.SimpleButton btnTopluOFBekle;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

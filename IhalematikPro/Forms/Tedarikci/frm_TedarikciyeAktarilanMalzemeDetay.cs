@@ -85,31 +85,34 @@ namespace IhalematikProUI.Forms.Tedarikci
                 grdMaterialList.DataSource = items.Select(p => p.MaterialList).ToList();
             }
         }
-
+        frm_wait fw;
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            Application.DoEvents();
             List<OfferMaterialList> items = grdMaterialList.DataSource as List<OfferMaterialList>;
             if (items != null && items.Count != 0)
             {
                 //this.SendMailTask = new Task(() =>
                 //{
-                emailMesajPanel.Visible = true;
-                timer1.Start();
+                //emailMesajPanel.Visible = true;
+               fw  = new frm_wait();//Mail gönderiliyor mesaj formu
+                fw.Show();
                 this.IsSendMail = false;
                 this.CreateExcel();
-                //frm_wait fw = new frm_wait();//Mail gönderiliyor mesaj formu
+                
                 OperationResult result = this.SendMail();
-                //fw.Show();
+                
                 //});
                 //this.SendMailTask.Start();
                 if (result.Success)
                 {
+                    Application.DoEvents();
                     emailMesajPanel.Visible = false;
                     this.SendInfoMessage();
                 }
                 else
                 {
-                    emailMesajPanel.Visible = false;
+                    //emailMesajPanel.Visible = false;
                     if (result.ValidationResults.Count > 0)
                     {
                         if (result.ValidationResults.FirstOrDefault().PropertyName == "NoInternetconnection")
@@ -138,6 +141,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void CreateExcel()
         {
+            Application.DoEvents();
             Microsoft.Office.Interop.Excel.Application oXL = null;
             Microsoft.Office.Interop.Excel._Workbook oWB = null;
             Microsoft.Office.Interop.Excel._Worksheet oSheet = null;
@@ -145,8 +149,10 @@ namespace IhalematikProUI.Forms.Tedarikci
             //List<Supplier> suppliers = CurrentManager.Instance.CurrentOffer.Suppliers;
             if (this.Supplier != null)
             {
+                Application.DoEvents();
                 try
                 {
+                    Application.DoEvents();
                     string fileName = "Malzeme_Fiyat_Listesi.xlsx";
                     //string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "EmailFile");
                     string sourcePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug\\", string.Empty), "EmailFile");
@@ -156,8 +162,10 @@ namespace IhalematikProUI.Forms.Tedarikci
 
                     if (!Directory.Exists(targetPath))
                     {
+                        Application.DoEvents();
                         Directory.CreateDirectory(targetPath);
                     }
+                    Application.DoEvents();
                     File.Copy(sourceFile, this.DestinationFile, true);
 
                     oXL = new Microsoft.Office.Interop.Excel.Application();
@@ -166,6 +174,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                     
                     if (CurrentManager.Instance.CurrentOffer != null)
                     {
+                        Application.DoEvents();
                         Dictionary<string, object> parameters = new Dictionary<string, object>();
                         parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
                         parameters.Add("SupplierId", this.Supplier.Id);
@@ -174,11 +183,13 @@ namespace IhalematikProUI.Forms.Tedarikci
                         List<OfferMaterialList> offerMaterialLists = new List<OfferMaterialList>();
                         if (items.Count != 0)
                         {
+                            Application.DoEvents();
                             offerMaterialLists.AddRange(items.Select(p => p.MaterialList));
                         }
 
                         if (offerMaterialLists.Count != 0)
                         {
+                            Application.DoEvents();
                             int row = 8;
                             int indexNumber = 1;
                             oSheet.Cells[1, 5] = CurrentManager.Instance.CurrentCompany.Name;
@@ -189,27 +200,30 @@ namespace IhalematikProUI.Forms.Tedarikci
 
                             foreach (OfferMaterialList materialList in offerMaterialLists)
                             {
-
+                                Application.DoEvents();
                                 oSheet.Cells[row, 2] = CurrentManager.Instance.CurrentOffer.Id;
                                 oSheet.Cells[row, 3] = this.Supplier.Id;//supplierId
                                 oSheet.Cells[row, 4] = materialList.Id;
                                 oSheet.Cells[row, 5] = indexNumber;
                                 if (!string.IsNullOrEmpty(materialList.PozOBF.DescriptionForSupplier))
                                 {
+                                    Application.DoEvents();
                                     oSheet.Cells[row, 6] = materialList.PozOBF.DescriptionForSupplier;
                                 }
                                 else
                                 {
+                                    Application.DoEvents();
                                     oSheet.Cells[row, 6] = materialList.PozOBF.Description;
                                 }
                                 oSheet.Cells[row, 7] = materialList.PozOBF.Unit;
                                 oSheet.Cells[row, 8] = materialList.Quantity;
                                 row++;
                                 indexNumber++;
+                                Application.DoEvents();
                             }
                         }
                     }
-
+                    Application.DoEvents();
                     oWB.Save();
                 }
                 catch (Exception)
@@ -232,6 +246,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void SendInfoMessage()
         {
+            Application.DoEvents();
             if (!this.IsSendMail)
             {
                 if (this.SendMailTask == null)
@@ -243,6 +258,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                 {
                     try
                     {
+                        Application.DoEvents();
                         this.SendMailTask.Wait();
                         this.SendInfoMessage();
                     }
@@ -255,10 +271,13 @@ namespace IhalematikProUI.Forms.Tedarikci
             }
             else
             {
-                emailMesajPanel.Visible = false;
-                timer1.Stop();
+                Application.DoEvents();
+                //emailMesajPanel.Visible = false;
+                //timer1.Stop();
+                fw.Close();
                 frm_MesajFormu mesajformu = new frm_MesajFormu();
                 mesajformu.lblMesaj.Text = "Mail Gönderildi...";
+                
                 mesajformu.ShowDialog();
                 this.Close();
             }
@@ -266,18 +285,21 @@ namespace IhalematikProUI.Forms.Tedarikci
         private OperationResult SendMail()
         {
             OperationResult result = new OperationResult();
+            Application.DoEvents();
             try
             {
                 if (File.Exists(this.DestinationFile))
                 {
+                    Application.DoEvents();
                     result = MailingManager.Instance.SendMaterialToSupplier(this.Supplier.Email, txtEmailBody.Text, this.DestinationFile);
                     if (result.Success)
                     {
+                        Application.DoEvents();
                         this.IsSendMail = true;
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // throw ex;
             }
@@ -292,15 +314,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (lblWait.Visible == true)
-            {
-                Application.DoEvents();
-                lblWait.Visible = false;
-            }
-            else
-            {
-                lblWait.Visible = true;
-            }
+          
         }
     }
 }
