@@ -756,6 +756,7 @@
             this.grdMaterialList2.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.False;
             this.grdMaterialList2.OptionsView.EnableAppearanceEvenRow = true;
             this.grdMaterialList2.OptionsView.EnableAppearanceOddRow = true;
+            this.grdMaterialList2.OptionsView.ShowFooter = true;
             this.grdMaterialList2.OptionsView.ShowGroupPanel = false;
             this.grdMaterialList2.PaintStyleName = "Web";
             // 
