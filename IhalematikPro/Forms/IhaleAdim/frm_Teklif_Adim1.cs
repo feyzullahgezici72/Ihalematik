@@ -241,5 +241,23 @@ namespace IhalematikPro.Forms
         {
 
         }
+
+        private void btnSelectDeselect_Click(object sender, EventArgs e)
+        {
+            List<MaterialListModel> models = grdMaterialList.DataSource as List<MaterialListModel>;
+            if (models != null && models.Count != 0)
+            {
+                if (models.Where(p => !p.IsWorkship).Count() == 0)
+                {
+                    models.ForEach(p => p.IsWorkship = false);
+                }
+                else
+                {
+                    models.ForEach(p => p.IsWorkship = true);
+                }
+                grdMaterialList.DataSource = models;
+                grdMaterialList.RefreshDataSource();
+            }
+        }
     }
 }
