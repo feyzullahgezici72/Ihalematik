@@ -2,6 +2,7 @@
 using IhalematikPro.Manager;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms.Genel;
+using IhalematikProUI.Manager;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -46,7 +47,15 @@ namespace IhalematikPro
              CurrentManager.Instance.CurrentTender = TenderProvider.Instance.GetItems().OrderByDescending(p => p.InsertTime).FirstOrDefault();
              CurrentManager.Instance.CurrentCompany = CompanyProvider.Instance.GetItems().FirstOrDefault();
              CurrentManager.Instance.CurrentOffer = OfferProvider.Instance.GetItems().OrderByDescending(p => p.InsertTime).FirstOrDefault();//.LastOrDefault();
-            Application.Run(new frm_Login());
+            if (UICustomConfigurationManager.Instance.Mode == "DEVELOPMENT")
+            {
+                Application.Run(new frm_Anaform());
+            }
+
+            else
+            {
+                Application.Run(new frm_Login());
+            }
         }
     }
 }
