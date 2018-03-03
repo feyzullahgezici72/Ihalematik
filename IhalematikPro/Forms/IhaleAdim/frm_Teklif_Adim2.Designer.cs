@@ -142,7 +142,7 @@
             this.gridColumn8.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn8.AppearanceHeader.Options.UseFont = true;
             this.gridColumn8.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn8.Caption = "T.TOPLAMI";
+            this.gridColumn8.Caption = "M.TOPLAMI";
             this.gridColumn8.DisplayFormat.FormatString = "C2";
             this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn8.FieldName = "TotalAmount";
@@ -151,6 +151,8 @@
             this.gridColumn8.OptionsColumn.AllowFocus = false;
             this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.OptionsFilter.AllowFilter = false;
+            this.gridColumn8.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalAmount", "{0:C2}")});
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 6;
             this.gridColumn8.Width = 117;
@@ -515,6 +517,8 @@
             this.gridColumn11.OptionsColumn.AllowFocus = false;
             this.gridColumn11.OptionsColumn.ReadOnly = true;
             this.gridColumn11.OptionsFilter.AllowFilter = false;
+            this.gridColumn11.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalMarkup", "{0:C2}")});
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 11;
             this.gridColumn11.Width = 142;
@@ -1057,6 +1061,7 @@
             this.panelControl6.Name = "panelControl6";
             this.panelControl6.Size = new System.Drawing.Size(976, 31);
             this.panelControl6.TabIndex = 32;
+            this.panelControl6.Visible = false;
             // 
             // panelControl7
             // 

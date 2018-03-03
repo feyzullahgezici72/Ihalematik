@@ -1415,6 +1415,8 @@
             this.colWorkerTotalAmount.OptionsColumn.AllowEdit = false;
             this.colWorkerTotalAmount.OptionsColumn.AllowFocus = false;
             this.colWorkerTotalAmount.OptionsFilter.AllowFilter = false;
+            this.colWorkerTotalAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "WorkerTotalAmount", "{0:c}")});
             this.colWorkerTotalAmount.Visible = true;
             this.colWorkerTotalAmount.VisibleIndex = 7;
             this.colWorkerTotalAmount.Width = 116;
@@ -1457,6 +1459,8 @@
             this.colCustomWorkerTotalAmount.Name = "colCustomWorkerTotalAmount";
             this.colCustomWorkerTotalAmount.OptionsColumn.AllowEdit = false;
             this.colCustomWorkerTotalAmount.OptionsFilter.AllowFilter = false;
+            this.colCustomWorkerTotalAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CustomWorkerTotalAmount", "{0:c}")});
             // 
             // colCustomWorkerMarkupUnitPrice
             // 
@@ -1777,6 +1781,7 @@
             this.panelControl7.Name = "panelControl7";
             this.panelControl7.Size = new System.Drawing.Size(984, 28);
             this.panelControl7.TabIndex = 33;
+            this.panelControl7.Visible = false;
             // 
             // panelControl8
             // 
