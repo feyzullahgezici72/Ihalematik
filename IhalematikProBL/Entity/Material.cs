@@ -33,7 +33,7 @@ namespace IhalematikProBL.Entity
             {
 
                 OBF item = Entity as OBF;
-                material.Number = item.Number;
+                material.Number = item.StokNumber;
                 material.Unit = item.Unit;
                 material.UnitPrice = item.UnitPrice;
                 material.Description = item.Description;
