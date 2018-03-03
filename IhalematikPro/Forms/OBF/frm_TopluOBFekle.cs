@@ -31,11 +31,11 @@ namespace IhalematikProUI.Forms.OBF
         {
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
-            
+
             if (dialog.ShowDialog() == DialogResult.OK) // if user clicked OK
             {
-                  MesajPanel.Visible = true;
-               // MessageBox.Show("Yükleme Malzeme sayısına göre biraz zaman alabilir...");
+                MesajPanel.Visible = true;
+                // MessageBox.Show("Yükleme Malzeme sayısına göre biraz zaman alabilir...");
                 String path = dialog.FileName; // get name of file
                 this.ReadExcel(path);
                 this.Close();
@@ -46,7 +46,7 @@ namespace IhalematikProUI.Forms.OBF
 
         private void ReadExcel(string path)
         {
-           
+
             try
             {
                 FileStream stream = System.IO.File.Open(@"" + path + "", FileMode.Open, FileAccess.Read);
@@ -63,7 +63,6 @@ namespace IhalematikProUI.Forms.OBF
                             try
                             {
                                 excelReader.GetString(0);
-                                
                             }
                             catch (Exception)
                             {
@@ -96,6 +95,7 @@ namespace IhalematikProUI.Forms.OBF
                                 int lastTenderNumber = UIOBFManager.Instance.GetLastOfferNumber();
                                 newOBF.Number = string.Format("{0}", (lastTenderNumber + 1).ToString().PadLeft(8, '0'));
                                 newOBF.IsActive = true;
+                                newOBF.StokNumber = stokKodu;
                                 newOBF.Description = description;
                                 newOBF.Unit = unit;
                                 newOBF.UnitPrice = unitPrice;
@@ -106,6 +106,7 @@ namespace IhalematikProUI.Forms.OBF
                     catch (Exception ex)
                     {
                         MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
+                        MesajPanel.Visible = false;
                         //TODO feyzullahg hata olustu mesaji gostermek lazim.
                         break;
                     }
@@ -113,6 +114,7 @@ namespace IhalematikProUI.Forms.OBF
                     i++;
                 }
                 stream.Close();
+                MesajPanel.Visible = false;
 
             }
             catch (Exception)

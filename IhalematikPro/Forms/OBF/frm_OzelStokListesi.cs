@@ -27,7 +27,7 @@ namespace IhalematikPro.Forms
         {
             InitializeComponent();
             base.ScreenMethod();
-            LoadGrid();
+           
         }
         public void LoadGrid()
         {
@@ -172,7 +172,7 @@ namespace IhalematikPro.Forms
 
         private void frm_OzelStokListesi_Shown(object sender, EventArgs e)
         {
-
+            LoadGrid();
         }
 
         private void btnPasive_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -234,7 +234,7 @@ namespace IhalematikPro.Forms
 
             if (!string.IsNullOrEmpty(obfNo))
             {
-                items = items.Where(p => p.Number.Contains(obfNo)).ToList();
+                items = items.Where(p => p.StokNumber.Contains(obfNo)).ToList();
             }
             if (!string.IsNullOrEmpty(obfDesc))
             {
