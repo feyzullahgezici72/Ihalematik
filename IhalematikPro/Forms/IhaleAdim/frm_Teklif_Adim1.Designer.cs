@@ -71,6 +71,7 @@
             this.colIsWorker = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpstWorkship = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.btnSelectDeselect = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
@@ -422,6 +423,7 @@
             this.colIsSelected.Caption = " ";
             this.colIsSelected.ColumnEdit = this.rpstSelected;
             this.colIsSelected.FieldName = "IsSelected";
+            this.colIsSelected.Image = ((System.Drawing.Image)(resources.GetObject("colIsSelected.Image")));
             this.colIsSelected.Name = "colIsSelected";
             this.colIsSelected.OptionsFilter.AllowFilter = false;
             this.colIsSelected.Visible = true;
@@ -449,6 +451,7 @@
             this.gridColumn10.Caption = "GRUP ADI";
             this.gridColumn10.FieldName = "Description";
             this.gridColumn10.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.Value;
+            this.gridColumn10.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn10.Image")));
             this.gridColumn10.MinWidth = 80;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.AllowEdit = false;
@@ -639,6 +642,9 @@
             this.colIsWorker});
             this.gridViewMaterialList.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridViewMaterialList.GridControl = this.grdMaterialList;
+            this.gridViewMaterialList.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "KDVAmount", this.gridColumn6, "c2"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalAmount", this.gridColumn8, "c2")});
             this.gridViewMaterialList.Name = "gridViewMaterialList";
             this.gridViewMaterialList.OptionsDetail.AllowExpandEmptyDetails = true;
             this.gridViewMaterialList.OptionsMenu.EnableColumnMenu = false;
@@ -741,7 +747,7 @@
             this.colKDV.AppearanceHeader.Options.UseBackColor = true;
             this.colKDV.AppearanceHeader.Options.UseFont = true;
             this.colKDV.AppearanceHeader.Options.UseForeColor = true;
-            this.colKDV.Caption = "KDV %";
+            this.colKDV.Caption = "KDV%";
             this.colKDV.DisplayFormat.FormatString = "{0:f0} %";
             this.colKDV.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.colKDV.FieldName = "KDVPercentage";
@@ -852,6 +858,7 @@
             this.colIsWorker.Caption = "İşçilikli";
             this.colIsWorker.ColumnEdit = this.rpstWorkship;
             this.colIsWorker.FieldName = "IsWorkship";
+            this.colIsWorker.Image = ((System.Drawing.Image)(resources.GetObject("colIsWorker.Image")));
             this.colIsWorker.Name = "colIsWorker";
             this.colIsWorker.OptionsFilter.AllowAutoFilter = false;
             this.colIsWorker.OptionsFilter.AllowFilter = false;
@@ -873,6 +880,7 @@
             this.panelControl3.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.panelControl3.Appearance.Options.UseBackColor = true;
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl3.Controls.Add(this.btnSelectDeselect);
             this.panelControl3.Controls.Add(this.panel2);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl3.Location = new System.Drawing.Point(386, 589);
@@ -880,6 +888,15 @@
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(976, 70);
             this.panelControl3.TabIndex = 22;
+            // 
+            // btnSelectDeselect
+            // 
+            this.btnSelectDeselect.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSelectDeselect.Location = new System.Drawing.Point(0, 0);
+            this.btnSelectDeselect.Name = "btnSelectDeselect";
+            this.btnSelectDeselect.Size = new System.Drawing.Size(72, 70);
+            this.btnSelectDeselect.TabIndex = 11;
+            this.btnSelectDeselect.Text = "Seç";
             // 
             // panel2
             // 
@@ -1017,5 +1034,6 @@
         private System.Windows.Forms.Panel panel2;
         public DevExpress.XtraEditors.SimpleButton btnNext;
         private DevExpress.XtraEditors.PanelControl panelControl4;
+        private DevExpress.XtraEditors.SimpleButton btnSelectDeselect;
     }
 }
