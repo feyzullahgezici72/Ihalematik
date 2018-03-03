@@ -20,7 +20,7 @@ namespace IhalematikPro.Model
         public bool IsActive { get; set; }
         public double OfferPrice { get; internal set; }
         public string DescriptionForSupplier { get; internal set; }
-
+        public string StokNumber { get; set; }
         public OBFModel(OBF Entity)
         {
             this.Number = Entity.Number;
@@ -29,6 +29,7 @@ namespace IhalematikPro.Model
             this.Description = Entity.Description;
             this.Id = Entity.Id;
             this.IsActive = Entity.IsActive;
+            this.StokNumber = Entity.StokNumber;
             this.DescriptionForSupplier = Entity.DescriptionForSupplier;
         }
 
@@ -48,6 +49,7 @@ namespace IhalematikPro.Model
             OBF.Number = this.Number;
             OBF.Unit = this.Unit;
             OBF.UnitPrice = this.UnitPrice;
+            OBF.StokNumber = this.StokNumber;
             OBF.IsActive = this.IsActive;
             OBF.DescriptionForSupplier = this.DescriptionForSupplier;
             return OBF;

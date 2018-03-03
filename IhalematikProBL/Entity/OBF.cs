@@ -15,5 +15,7 @@ namespace IhalematikProBL.Entity
         public double UnitPrice { get; set; }
         public bool IsActive { get; set; }
         public string DescriptionForSupplier { get; set; }
+
+        public string StokNumber { get; set; }
     }
 }
