@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim3));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btnIscilikveAracGirisi = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -99,11 +99,11 @@
             this.btnCalisanlarveAraclar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colMaterialListMarkup = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colWorkerUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomWorkerUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomWorkerMarkupUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCustomWorkerTotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colWorkerTotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colWorkerMarkupUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCustomWorkerUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCustomWorkerTotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCustomWorkerMarkupUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource(this.components);
             this.panelGrup = new DevExpress.XtraEditors.PanelControl();
@@ -187,7 +187,7 @@
             // 
             this.btnIscilikveAracGirisi.AutoHeight = false;
             this.btnIscilikveAracGirisi.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Ekle", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnIscilikveAracGirisi.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Ekle", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnIscilikveAracGirisi.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
             this.btnIscilikveAracGirisi.Name = "btnIscilikveAracGirisi";
             this.btnIscilikveAracGirisi.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -227,10 +227,12 @@
             // cmbBirimFiyat
             // 
             this.cmbBirimFiyat.AutoSize = true;
+            this.cmbBirimFiyat.Checked = true;
             this.cmbBirimFiyat.Location = new System.Drawing.Point(170, 35);
             this.cmbBirimFiyat.Name = "cmbBirimFiyat";
             this.cmbBirimFiyat.Size = new System.Drawing.Size(156, 23);
             this.cmbBirimFiyat.TabIndex = 3;
+            this.cmbBirimFiyat.TabStop = true;
             this.cmbBirimFiyat.Text = "Birim Fiyata Göre";
             this.cmbBirimFiyat.UseVisualStyleBackColor = true;
             this.cmbBirimFiyat.Click += new System.EventHandler(this.cmbBirimFiyat_Click);
@@ -238,14 +240,13 @@
             // cmbAdamSaat
             // 
             this.cmbAdamSaat.AutoSize = true;
-            this.cmbAdamSaat.Checked = true;
             this.cmbAdamSaat.Location = new System.Drawing.Point(4, 35);
             this.cmbAdamSaat.Name = "cmbAdamSaat";
             this.cmbAdamSaat.Size = new System.Drawing.Size(155, 23);
             this.cmbAdamSaat.TabIndex = 2;
-            this.cmbAdamSaat.TabStop = true;
             this.cmbAdamSaat.Text = "İnsan Saate Göre";
             this.cmbAdamSaat.UseVisualStyleBackColor = true;
+            this.cmbAdamSaat.CheckedChanged += new System.EventHandler(this.cmbAdamSaat_CheckedChanged);
             this.cmbAdamSaat.Click += new System.EventHandler(this.cmbAdamSaat_Click);
             // 
             // panelControl4
@@ -1235,11 +1236,11 @@
             this.clmEquipments,
             this.colMaterialListMarkup,
             this.colWorkerUnitPrice,
-            this.colWorkerTotalAmount,
-            this.colWorkerMarkupUnitPrice,
             this.colCustomWorkerUnitPrice,
+            this.colCustomWorkerMarkupUnitPrice,
             this.colCustomWorkerTotalAmount,
-            this.colCustomWorkerMarkupUnitPrice});
+            this.colWorkerTotalAmount,
+            this.colWorkerMarkupUnitPrice});
             this.gridViewMaterialListIsWorkship.GridControl = this.grdMaterialListIsWorkship;
             this.gridViewMaterialListIsWorkship.Name = "gridViewMaterialListIsWorkship";
             this.gridViewMaterialListIsWorkship.OptionsFind.AllowFindPanel = false;
@@ -1275,13 +1276,15 @@
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
             this.gridColumn1.Caption = "POZ/ÖBF NO";
             this.gridColumn1.FieldName = "PozOBFNumber";
+            this.gridColumn1.MaxWidth = 80;
+            this.gridColumn1.MinWidth = 80;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.OptionsColumn.AllowFocus = false;
             this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 122;
+            this.gridColumn1.Width = 80;
             // 
             // gridColumn2
             // 
@@ -1299,7 +1302,7 @@
             this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 506;
+            this.gridColumn2.Width = 374;
             // 
             // gridColumn3
             // 
@@ -1309,15 +1312,17 @@
             this.gridColumn3.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn3.Caption = "BİRİMİ";
+            this.gridColumn3.Caption = "BİRİM";
             this.gridColumn3.FieldName = "PozOBFUnit";
+            this.gridColumn3.MaxWidth = 60;
+            this.gridColumn3.MinWidth = 60;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 74;
+            this.gridColumn3.Width = 60;
             // 
             // gridColumn4
             // 
@@ -1327,16 +1332,18 @@
             this.gridColumn4.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn4.Caption = "MİKTARI";
+            this.gridColumn4.Caption = "MİKTAR";
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "Quantity";
+            this.gridColumn4.MaxWidth = 60;
+            this.gridColumn4.MinWidth = 60;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 89;
+            this.gridColumn4.Width = 60;
             // 
             // clmEquipments
             // 
@@ -1351,26 +1358,25 @@
             this.clmEquipments.Caption = "İŞÇİLİK";
             this.clmEquipments.ColumnEdit = this.btnCalisanlarveAraclar;
             this.clmEquipments.FieldName = "Id";
-            this.clmEquipments.MinWidth = 40;
+            this.clmEquipments.MaxWidth = 60;
+            this.clmEquipments.MinWidth = 60;
             this.clmEquipments.Name = "clmEquipments";
             this.clmEquipments.OptionsFilter.AllowFilter = false;
             this.clmEquipments.Visible = true;
             this.clmEquipments.VisibleIndex = 4;
-            this.clmEquipments.Width = 70;
+            this.clmEquipments.Width = 60;
             // 
             // btnCalisanlarveAraclar
             // 
             this.btnCalisanlarveAraclar.AutoHeight = false;
             this.btnCalisanlarveAraclar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCalisanlarveAraclar.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCalisanlarveAraclar.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.btnCalisanlarveAraclar.Name = "btnCalisanlarveAraclar";
             this.btnCalisanlarveAraclar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnCalisanlarveAraclar.Click += new System.EventHandler(this.btnCalisanlarveAraclar_Click);
             // 
             // colMaterialListMarkup
             // 
-            this.colMaterialListMarkup.AppearanceCell.BackColor = System.Drawing.Color.LightYellow;
-            this.colMaterialListMarkup.AppearanceCell.Options.UseBackColor = true;
             this.colMaterialListMarkup.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
             this.colMaterialListMarkup.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colMaterialListMarkup.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
@@ -1379,11 +1385,13 @@
             this.colMaterialListMarkup.AppearanceHeader.Options.UseFont = true;
             this.colMaterialListMarkup.Caption = "KAR%";
             this.colMaterialListMarkup.FieldName = "WorkerPercentageMarkup";
+            this.colMaterialListMarkup.MaxWidth = 60;
+            this.colMaterialListMarkup.MinWidth = 60;
             this.colMaterialListMarkup.Name = "colMaterialListMarkup";
             this.colMaterialListMarkup.OptionsFilter.AllowFilter = false;
             this.colMaterialListMarkup.Visible = true;
             this.colMaterialListMarkup.VisibleIndex = 5;
-            this.colMaterialListMarkup.Width = 64;
+            this.colMaterialListMarkup.Width = 60;
             // 
             // colWorkerUnitPrice
             // 
@@ -1393,15 +1401,76 @@
             this.colWorkerUnitPrice.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colWorkerUnitPrice.AppearanceHeader.Options.UseBackColor = true;
             this.colWorkerUnitPrice.AppearanceHeader.Options.UseFont = true;
-            this.colWorkerUnitPrice.Caption = "BİRİM FİYAT";
+            this.colWorkerUnitPrice.Caption = "İNSAN SAAT";
             this.colWorkerUnitPrice.DisplayFormat.FormatString = "c";
             this.colWorkerUnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colWorkerUnitPrice.FieldName = "WorkerUnitPrice";
+            this.colWorkerUnitPrice.MaxWidth = 90;
+            this.colWorkerUnitPrice.MinWidth = 90;
             this.colWorkerUnitPrice.Name = "colWorkerUnitPrice";
+            this.colWorkerUnitPrice.OptionsColumn.AllowEdit = false;
+            this.colWorkerUnitPrice.OptionsColumn.AllowFocus = false;
+            this.colWorkerUnitPrice.OptionsColumn.ReadOnly = true;
             this.colWorkerUnitPrice.OptionsFilter.AllowFilter = false;
             this.colWorkerUnitPrice.Visible = true;
             this.colWorkerUnitPrice.VisibleIndex = 6;
-            this.colWorkerUnitPrice.Width = 110;
+            this.colWorkerUnitPrice.Width = 90;
+            // 
+            // colCustomWorkerUnitPrice
+            // 
+            this.colCustomWorkerUnitPrice.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.colCustomWorkerUnitPrice.AppearanceCell.Options.UseBackColor = true;
+            this.colCustomWorkerUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colCustomWorkerUnitPrice.AppearanceHeader.Options.UseBackColor = true;
+            this.colCustomWorkerUnitPrice.Caption = "BİRİM FİYAT";
+            this.colCustomWorkerUnitPrice.DisplayFormat.FormatString = "c";
+            this.colCustomWorkerUnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colCustomWorkerUnitPrice.FieldName = "CustomWorkerUnitPrice";
+            this.colCustomWorkerUnitPrice.MaxWidth = 90;
+            this.colCustomWorkerUnitPrice.MinWidth = 90;
+            this.colCustomWorkerUnitPrice.Name = "colCustomWorkerUnitPrice";
+            this.colCustomWorkerUnitPrice.OptionsFilter.AllowFilter = false;
+            this.colCustomWorkerUnitPrice.Visible = true;
+            this.colCustomWorkerUnitPrice.VisibleIndex = 7;
+            this.colCustomWorkerUnitPrice.Width = 90;
+            // 
+            // colCustomWorkerMarkupUnitPrice
+            // 
+            this.colCustomWorkerMarkupUnitPrice.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.colCustomWorkerMarkupUnitPrice.AppearanceCell.Options.UseBackColor = true;
+            this.colCustomWorkerMarkupUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colCustomWorkerMarkupUnitPrice.AppearanceHeader.Options.UseBackColor = true;
+            this.colCustomWorkerMarkupUnitPrice.Caption = "K.BR.FİYAT";
+            this.colCustomWorkerMarkupUnitPrice.DisplayFormat.FormatString = "c";
+            this.colCustomWorkerMarkupUnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colCustomWorkerMarkupUnitPrice.FieldName = "CustomWorkerMarkupUnitPrice";
+            this.colCustomWorkerMarkupUnitPrice.MaxWidth = 90;
+            this.colCustomWorkerMarkupUnitPrice.MinWidth = 90;
+            this.colCustomWorkerMarkupUnitPrice.Name = "colCustomWorkerMarkupUnitPrice";
+            this.colCustomWorkerMarkupUnitPrice.OptionsColumn.AllowEdit = false;
+            this.colCustomWorkerMarkupUnitPrice.OptionsFilter.AllowFilter = false;
+            this.colCustomWorkerMarkupUnitPrice.Visible = true;
+            this.colCustomWorkerMarkupUnitPrice.VisibleIndex = 8;
+            this.colCustomWorkerMarkupUnitPrice.Width = 90;
+            // 
+            // colCustomWorkerTotalAmount
+            // 
+            this.colCustomWorkerTotalAmount.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colCustomWorkerTotalAmount.AppearanceHeader.Options.UseBackColor = true;
+            this.colCustomWorkerTotalAmount.Caption = "TOPLAM";
+            this.colCustomWorkerTotalAmount.DisplayFormat.FormatString = "c";
+            this.colCustomWorkerTotalAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colCustomWorkerTotalAmount.FieldName = "CustomWorkerTotalAmount";
+            this.colCustomWorkerTotalAmount.MaxWidth = 90;
+            this.colCustomWorkerTotalAmount.MinWidth = 90;
+            this.colCustomWorkerTotalAmount.Name = "colCustomWorkerTotalAmount";
+            this.colCustomWorkerTotalAmount.OptionsColumn.AllowEdit = false;
+            this.colCustomWorkerTotalAmount.OptionsFilter.AllowFilter = false;
+            this.colCustomWorkerTotalAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CustomWorkerTotalAmount", "{0:c}")});
+            this.colCustomWorkerTotalAmount.Visible = true;
+            this.colCustomWorkerTotalAmount.VisibleIndex = 8;
+            this.colCustomWorkerTotalAmount.Width = 90;
             // 
             // colWorkerTotalAmount
             // 
@@ -1417,8 +1486,6 @@
             this.colWorkerTotalAmount.OptionsFilter.AllowFilter = false;
             this.colWorkerTotalAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "WorkerTotalAmount", "{0:c}")});
-            this.colWorkerTotalAmount.Visible = true;
-            this.colWorkerTotalAmount.VisibleIndex = 7;
             this.colWorkerTotalAmount.Width = 116;
             // 
             // colWorkerMarkupUnitPrice
@@ -1433,46 +1500,7 @@
             this.colWorkerMarkupUnitPrice.OptionsColumn.AllowEdit = false;
             this.colWorkerMarkupUnitPrice.OptionsColumn.AllowFocus = false;
             this.colWorkerMarkupUnitPrice.OptionsFilter.AllowFilter = false;
-            this.colWorkerMarkupUnitPrice.Visible = true;
-            this.colWorkerMarkupUnitPrice.VisibleIndex = 8;
             this.colWorkerMarkupUnitPrice.Width = 79;
-            // 
-            // colCustomWorkerUnitPrice
-            // 
-            this.colCustomWorkerUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colCustomWorkerUnitPrice.AppearanceHeader.Options.UseBackColor = true;
-            this.colCustomWorkerUnitPrice.Caption = "BİRİM FİYAT";
-            this.colCustomWorkerUnitPrice.DisplayFormat.FormatString = "c";
-            this.colCustomWorkerUnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colCustomWorkerUnitPrice.FieldName = "CustomWorkerUnitPrice";
-            this.colCustomWorkerUnitPrice.Name = "colCustomWorkerUnitPrice";
-            this.colCustomWorkerUnitPrice.OptionsFilter.AllowFilter = false;
-            // 
-            // colCustomWorkerTotalAmount
-            // 
-            this.colCustomWorkerTotalAmount.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colCustomWorkerTotalAmount.AppearanceHeader.Options.UseBackColor = true;
-            this.colCustomWorkerTotalAmount.Caption = "TOPLAM FİYAT";
-            this.colCustomWorkerTotalAmount.DisplayFormat.FormatString = "c";
-            this.colCustomWorkerTotalAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colCustomWorkerTotalAmount.FieldName = "CustomWorkerTotalAmount";
-            this.colCustomWorkerTotalAmount.Name = "colCustomWorkerTotalAmount";
-            this.colCustomWorkerTotalAmount.OptionsColumn.AllowEdit = false;
-            this.colCustomWorkerTotalAmount.OptionsFilter.AllowFilter = false;
-            this.colCustomWorkerTotalAmount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CustomWorkerTotalAmount", "{0:c}")});
-            // 
-            // colCustomWorkerMarkupUnitPrice
-            // 
-            this.colCustomWorkerMarkupUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colCustomWorkerMarkupUnitPrice.AppearanceHeader.Options.UseBackColor = true;
-            this.colCustomWorkerMarkupUnitPrice.Caption = "K.BİRİM FİYAT";
-            this.colCustomWorkerMarkupUnitPrice.DisplayFormat.FormatString = "c";
-            this.colCustomWorkerMarkupUnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colCustomWorkerMarkupUnitPrice.FieldName = "CustomWorkerMarkupUnitPrice";
-            this.colCustomWorkerMarkupUnitPrice.Name = "colCustomWorkerMarkupUnitPrice";
-            this.colCustomWorkerMarkupUnitPrice.OptionsColumn.AllowEdit = false;
-            this.colCustomWorkerMarkupUnitPrice.OptionsFilter.AllowFilter = false;
             // 
             // panelGrup
             // 
@@ -1487,9 +1515,9 @@
             // 
             this.grdTenderGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdTenderGroup.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.grdTenderGroup.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.grdTenderGroup.Location = new System.Drawing.Point(3, 3);
             this.grdTenderGroup.MainView = this.gridViewTenderGroup;
             this.grdTenderGroup.Margin = new System.Windows.Forms.Padding(4);
@@ -1671,7 +1699,7 @@
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit1.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
             this.repositoryItemButtonEdit1.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -1680,7 +1708,7 @@
             // 
             this.btnSil.AutoHeight = false;
             this.btnSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSil.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
             this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnSil.Name = "btnSil";
             this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;

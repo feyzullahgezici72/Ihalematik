@@ -270,11 +270,11 @@ namespace IhalematikPro.Forms
             this.LoadTenderGroupGrid();
             if (CurrentManager.Instance.CurrentTender.PersonHour)
             {
-                cmbAdamSaat.PerformClick();
+                //cmbAdamSaat.PerformClick();
             }
             else
             {
-                cmbBirimFiyat.PerformClick();
+                //cmbBirimFiyat.PerformClick();
             }
         }
 
@@ -410,32 +410,32 @@ namespace IhalematikPro.Forms
 
         private void cmbAdamSaat_Click(object sender, EventArgs e)
         {
-            clmEquipments.Visible = true;
-            colWorkerUnitPrice.VisibleIndex = 6;
-            colWorkerTotalAmount.VisibleIndex = 7;
-            colWorkerMarkupUnitPrice.VisibleIndex = 8;
-            colCustomWorkerUnitPrice.Visible = false;
-            colCustomWorkerTotalAmount.Visible = false;
-            colCustomWorkerMarkupUnitPrice.Visible = false;
-            colWorkerUnitPrice.Visible = true;
-            colWorkerTotalAmount.Visible = true;
-            colWorkerMarkupUnitPrice.Visible = true;
-            this.CalculateInnerValuesMarkup(null);
+            //clmEquipments.Visible = true;
+            //colWorkerUnitPrice.VisibleIndex = 6;
+            //colWorkerTotalAmount.VisibleIndex = 7;
+            //colWorkerMarkupUnitPrice.VisibleIndex = 8;
+            //colCustomWorkerUnitPrice.Visible = false;
+            //colCustomWorkerTotalAmount.Visible = false;
+            //colCustomWorkerMarkupUnitPrice.Visible = false;
+            //colWorkerUnitPrice.Visible = true;
+            //colWorkerTotalAmount.Visible = true;
+            //colWorkerMarkupUnitPrice.Visible = true;
+            //this.CalculateInnerValuesMarkup(null);
         }
 
         private void cmbBirimFiyat_Click(object sender, EventArgs e)
         {
-            colCustomWorkerUnitPrice.VisibleIndex = 6;
-            colCustomWorkerTotalAmount.VisibleIndex = 7;
-            colCustomWorkerMarkupUnitPrice.VisibleIndex = 8;
-            clmEquipments.Visible = false;
-            colCustomWorkerUnitPrice.Visible = true;
-            colCustomWorkerTotalAmount.Visible = true;
-            colCustomWorkerMarkupUnitPrice.Visible = true;
-            colWorkerUnitPrice.Visible = false;
-            colWorkerTotalAmount.Visible = false;
-            colWorkerMarkupUnitPrice.Visible = false;
-            this.CalculateInnerValuesMarkup(null);
+        //    colCustomWorkerUnitPrice.VisibleIndex = 6;
+        //    colCustomWorkerTotalAmount.VisibleIndex = 7;
+        //    colCustomWorkerMarkupUnitPrice.VisibleIndex = 8;
+        //    clmEquipments.Visible = false;
+        //    colCustomWorkerUnitPrice.Visible = true;
+        //    colCustomWorkerTotalAmount.Visible = true;
+        //    colCustomWorkerMarkupUnitPrice.Visible = true;
+        //    colWorkerUnitPrice.Visible = false;
+        //    colWorkerTotalAmount.Visible = false;
+        //    colWorkerMarkupUnitPrice.Visible = false;
+        //    this.CalculateInnerValuesMarkup(null);
         }
 
         private void btnCalisanlarveAraclar_Click(object sender, EventArgs e)
@@ -462,6 +462,11 @@ namespace IhalematikPro.Forms
             this.FocusedRowHandle = gridViewMaterialListIsWorkship.FocusedRowHandle;
             iscilik.SelectedMaterial = this.SelectedMaterial;
             iscilik.ShowDialog();
+        }
+
+        private void cmbAdamSaat_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim1));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -44,7 +45,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnPozKayit = new DevExpress.XtraEditors.SimpleButton();
             this.btnObfKayit = new DevExpress.XtraEditors.SimpleButton();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.grupPanel = new DevExpress.XtraEditors.PanelControl();
             this.grdTenderGroup = new DevExpress.XtraGrid.GridControl();
             this.gridViewTenderGroup = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -465,7 +466,7 @@
             // 
             this.btnGuncelle.AutoHeight = false;
             this.btnGuncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, ((System.Drawing.Image)(resources.GetObject("btnGuncelle.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnGuncelle.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -474,7 +475,7 @@
             // 
             this.btnSil.AutoHeight = false;
             this.btnSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSil.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnSil.Name = "btnSil";
             this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -684,7 +685,7 @@
             this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 73;
+            this.gridColumn1.Width = 67;
             // 
             // gridColumn2
             // 
@@ -750,12 +751,14 @@
             this.colKDV.DisplayFormat.FormatString = "{0:f0} %";
             this.colKDV.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.colKDV.FieldName = "KDVPercentage";
+            this.colKDV.MaxWidth = 60;
+            this.colKDV.MinWidth = 60;
             this.colKDV.Name = "colKDV";
             this.colKDV.OptionsFilter.AllowAutoFilter = false;
             this.colKDV.OptionsFilter.AllowFilter = false;
             this.colKDV.Visible = true;
             this.colKDV.VisibleIndex = 4;
-            this.colKDV.Width = 83;
+            this.colKDV.Width = 60;
             // 
             // colQuantity
             // 
@@ -774,15 +777,19 @@
             this.colQuantity.Caption = "MİKTARI";
             this.colQuantity.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colQuantity.FieldName = "Quantity";
+            this.colQuantity.MaxWidth = 60;
+            this.colQuantity.MinWidth = 60;
             this.colQuantity.Name = "colQuantity";
             this.colQuantity.OptionsFilter.AllowAutoFilter = false;
             this.colQuantity.OptionsFilter.AllowFilter = false;
             this.colQuantity.Visible = true;
             this.colQuantity.VisibleIndex = 5;
-            this.colQuantity.Width = 52;
+            this.colQuantity.Width = 60;
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn5.AppearanceCell.Options.UseBackColor = true;
             this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
             this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn5.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
@@ -795,12 +802,17 @@
             this.gridColumn5.DisplayFormat.FormatString = "c2";
             this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn5.FieldName = "PozOBFUnitPrice";
+            this.gridColumn5.MaxWidth = 100;
+            this.gridColumn5.MinWidth = 100;
             this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.AllowEdit = false;
+            this.gridColumn5.OptionsColumn.AllowFocus = false;
+            this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 6;
-            this.gridColumn5.Width = 71;
+            this.gridColumn5.Width = 100;
             // 
             // gridColumn6
             // 
@@ -816,6 +828,8 @@
             this.gridColumn6.DisplayFormat.FormatString = "c2";
             this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "KDVAmount";
+            this.gridColumn6.MaxWidth = 100;
+            this.gridColumn6.MinWidth = 100;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.OptionsColumn.AllowFocus = false;
@@ -824,7 +838,7 @@
             this.gridColumn6.OptionsFilter.AllowFilter = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 7;
-            this.gridColumn6.Width = 71;
+            this.gridColumn6.Width = 100;
             // 
             // gridColumn8
             // 
@@ -840,6 +854,8 @@
             this.gridColumn8.DisplayFormat.FormatString = "c2";
             this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn8.FieldName = "TotalAmount";
+            this.gridColumn8.MaxWidth = 100;
+            this.gridColumn8.MinWidth = 100;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.OptionsColumn.AllowFocus = false;
@@ -850,22 +866,23 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalAmount", "{0:c2}")});
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 8;
-            this.gridColumn8.Width = 93;
+            this.gridColumn8.Width = 100;
             // 
             // colIsWorker
             // 
             this.colIsWorker.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
             this.colIsWorker.AppearanceHeader.Options.UseBackColor = true;
-            this.colIsWorker.Caption = "İşçilikli";
             this.colIsWorker.ColumnEdit = this.rpstWorkship;
             this.colIsWorker.FieldName = "IsWorkship";
             this.colIsWorker.Image = ((System.Drawing.Image)(resources.GetObject("colIsWorker.Image")));
             this.colIsWorker.Name = "colIsWorker";
+            this.colIsWorker.OptionsColumn.AllowEdit = false;
+            this.colIsWorker.OptionsColumn.AllowFocus = false;
             this.colIsWorker.OptionsFilter.AllowAutoFilter = false;
             this.colIsWorker.OptionsFilter.AllowFilter = false;
             this.colIsWorker.Visible = true;
             this.colIsWorker.VisibleIndex = 0;
-            this.colIsWorker.Width = 55;
+            this.colIsWorker.Width = 35;
             // 
             // rpstWorkship
             // 

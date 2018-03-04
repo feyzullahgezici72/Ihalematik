@@ -802,7 +802,7 @@
             this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 689;
+            this.gridColumn2.Width = 535;
             // 
             // gridColumn3
             // 
@@ -842,8 +842,8 @@
             this.gridColumn4.Caption = "MİKTARI";
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "Quantity";
-            this.gridColumn4.MaxWidth = 80;
-            this.gridColumn4.MinWidth = 80;
+            this.gridColumn4.MaxWidth = 60;
+            this.gridColumn4.MinWidth = 60;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
@@ -851,10 +851,12 @@
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 80;
+            this.gridColumn4.Width = 60;
             // 
             // colUnitTotalFare
             // 
+            this.colUnitTotalFare.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.colUnitTotalFare.AppearanceCell.Options.UseBackColor = true;
             this.colUnitTotalFare.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
             this.colUnitTotalFare.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colUnitTotalFare.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
@@ -867,8 +869,8 @@
             this.colUnitTotalFare.DisplayFormat.FormatString = "c2";
             this.colUnitTotalFare.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colUnitTotalFare.FieldName = "UnitTotalFarePreview";
-            this.colUnitTotalFare.MaxWidth = 80;
-            this.colUnitTotalFare.MinWidth = 80;
+            this.colUnitTotalFare.MaxWidth = 90;
+            this.colUnitTotalFare.MinWidth = 90;
             this.colUnitTotalFare.Name = "colUnitTotalFare";
             this.colUnitTotalFare.OptionsColumn.AllowEdit = false;
             this.colUnitTotalFare.OptionsColumn.AllowFocus = false;
@@ -876,7 +878,7 @@
             this.colUnitTotalFare.OptionsFilter.AllowFilter = false;
             this.colUnitTotalFare.Visible = true;
             this.colUnitTotalFare.VisibleIndex = 4;
-            this.colUnitTotalFare.Width = 80;
+            this.colUnitTotalFare.Width = 90;
             // 
             // colTotalFare
             // 
