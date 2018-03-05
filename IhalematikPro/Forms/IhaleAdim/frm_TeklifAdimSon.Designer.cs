@@ -609,7 +609,7 @@
             this.txtCarriage.Properties.Mask.EditMask = "c2";
             this.txtCarriage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCarriage.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtCarriage.Size = new System.Drawing.Size(209, 28);
+            this.txtCarriage.Size = new System.Drawing.Size(209, 26);
             this.txtCarriage.TabIndex = 0;
             this.txtCarriage.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtCarriage_ButtonClick);
             // 
@@ -631,7 +631,7 @@
             this.txtAccountingCosts.Properties.Mask.EditMask = "c2";
             this.txtAccountingCosts.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAccountingCosts.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtAccountingCosts.Size = new System.Drawing.Size(209, 28);
+            this.txtAccountingCosts.Size = new System.Drawing.Size(209, 26);
             this.txtAccountingCosts.TabIndex = 1;
             // 
             // textEdit1
@@ -652,7 +652,7 @@
             this.textEdit1.Properties.Mask.EditMask = "c2";
             this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textEdit1.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.textEdit1.Size = new System.Drawing.Size(209, 28);
+            this.textEdit1.Size = new System.Drawing.Size(209, 26);
             this.textEdit1.TabIndex = 45;
             // 
             // grdMaterialList
@@ -1134,6 +1134,8 @@
             this.groupControl8.Controls.Add(this.labelControl11);
             this.groupControl8.Controls.Add(this.txtMarkupWorkerAmount);
             this.groupControl8.Location = new System.Drawing.Point(6, 308);
+            this.groupControl8.LookAndFeel.SkinName = "London Liquid Sky";
+            this.groupControl8.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl8.Name = "groupControl8";
             this.groupControl8.Size = new System.Drawing.Size(350, 147);
             this.groupControl8.TabIndex = 56;
@@ -1235,6 +1237,8 @@
             this.groupControl7.Controls.Add(this.txtWorkerKDVAmount);
             this.groupControl7.Controls.Add(this.labelControl5);
             this.groupControl7.Location = new System.Drawing.Point(8, 159);
+            this.groupControl7.LookAndFeel.SkinName = "London Liquid Sky";
+            this.groupControl7.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl7.Name = "groupControl7";
             this.groupControl7.Size = new System.Drawing.Size(348, 143);
             this.groupControl7.TabIndex = 55;
@@ -1936,7 +1940,6 @@
             this.Controls.Add(this.gridSplitContainer1);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
