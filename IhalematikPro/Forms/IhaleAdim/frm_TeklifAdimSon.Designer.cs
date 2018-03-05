@@ -372,7 +372,6 @@
             this.groupControl4.AppearanceCaption.ForeColor = System.Drawing.Color.Maroon;
             this.groupControl4.AppearanceCaption.Options.UseFont = true;
             this.groupControl4.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl4.Controls.Add(this.btnTumuneUygula);
             this.groupControl4.Controls.Add(this.chckCompletionBond);
             this.groupControl4.Controls.Add(this.chckProvisionalBond);
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Right;
@@ -387,21 +386,21 @@
             // 
             // btnTumuneUygula
             // 
-            this.btnTumuneUygula.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTumuneUygula.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnTumuneUygula.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnTumuneUygula.Appearance.Options.UseFont = true;
             this.btnTumuneUygula.Appearance.Options.UseForeColor = true;
             this.btnTumuneUygula.AutoSize = true;
-            this.btnTumuneUygula.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
-            this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(291, 33);
+            this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnTumuneUygula.Location = new System.Drawing.Point(374, 23);
             this.btnTumuneUygula.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnTumuneUygula.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
-            this.btnTumuneUygula.Size = new System.Drawing.Size(28, 30);
+            this.btnTumuneUygula.Size = new System.Drawing.Size(72, 96);
             this.btnTumuneUygula.TabIndex = 4;
+            this.btnTumuneUygula.Text = "Tümüne\r\nUygula";
             this.btnTumuneUygula.ToolTip = "Tümünü Uygula";
             this.btnTumuneUygula.Click += new System.EventHandler(this.btnTumuneUygula_Click);
             // 
@@ -555,14 +554,14 @@
             this.panelControl8.Location = new System.Drawing.Point(0, 0);
             this.panelControl8.LookAndFeel.SkinName = "Office 2007 Pink";
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(367, 145);
+            this.panelControl8.Size = new System.Drawing.Size(469, 145);
             this.panelControl8.TabIndex = 49;
             // 
             // labelControl37
             // 
             this.labelControl37.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl37.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl37.Location = new System.Drawing.Point(36, 93);
+            this.labelControl37.Location = new System.Drawing.Point(41, 93);
             this.labelControl37.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl37.Name = "labelControl37";
             this.labelControl37.Size = new System.Drawing.Size(95, 19);
@@ -573,7 +572,7 @@
             // 
             this.labelControl32.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl32.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl32.Location = new System.Drawing.Point(15, 60);
+            this.labelControl32.Location = new System.Drawing.Point(20, 60);
             this.labelControl32.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl32.Name = "labelControl32";
             this.labelControl32.Size = new System.Drawing.Size(115, 19);
@@ -584,7 +583,7 @@
             // 
             this.labelControl18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl18.Location = new System.Drawing.Point(34, 25);
+            this.labelControl18.Location = new System.Drawing.Point(39, 25);
             this.labelControl18.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(97, 19);
@@ -965,6 +964,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btnTumuneUygula);
             this.panel1.Controls.Add(this.panelControl8);
             this.panel1.Controls.Add(this.groupControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -1964,7 +1964,6 @@
             this.panelControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
-            this.groupControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chckCompletionBond.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chckProvisionalBond.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
@@ -1978,6 +1977,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
             this.gridSplitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
