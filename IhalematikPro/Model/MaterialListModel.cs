@@ -390,6 +390,7 @@ namespace IhalematikPro.Model
             }
         }
 
+        public double CarriagePercent { get; set; }
         public MaterialListModel()
         {
 
@@ -411,7 +412,7 @@ namespace IhalematikPro.Model
             this.OfferPrice = Entity.OfferPrice;
             this.IsPoz = Entity.IsPoz;
             this.CustomWorkerUnitPrice = Entity.CustomWorkerUnitPrice;
-
+            this.CarriagePercent = Entity.CarriagePercent;
             OfferMaterialList offerMaterialList = OfferManager.Instance.GetOfferMaterialListPrice(this.Tender.OfferId, this.PozOBFId, this.IsPoz);
 
             if (this.Tender.Offer != null)
@@ -437,6 +438,8 @@ namespace IhalematikPro.Model
             materialList.TenderId = this.TenderId;
             materialList.UnitTime = this.UnitTime;
             materialList.WorkerMarkup = this.WorkerPercentageMarkup;
+            materialList.CarriagePercent = this.CarriagePercent;
+
             if (this.UnitTimeType != null)
             {
                 materialList.UnitTimeType = this.UnitTimeType.UnitTimeType;

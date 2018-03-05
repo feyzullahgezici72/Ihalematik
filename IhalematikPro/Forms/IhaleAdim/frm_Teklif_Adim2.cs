@@ -102,8 +102,6 @@ namespace IhalematikPro.Forms
                         break;
                     }
                 }
-                double baseAmount = 0;
-
             }
             if (e.Column == colRisk)
             {
@@ -116,8 +114,6 @@ namespace IhalematikPro.Forms
                         break;
                     }
                 }
-                double baseAmount = 0;
-
             }
         }
 

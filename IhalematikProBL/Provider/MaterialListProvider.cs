@@ -29,6 +29,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("Risk", t.Risk);
             parameters.Add("TenderGroupId", t.TenderGroupId);
             parameters.Add("CustomWorkerUnitPrice", t.CustomWorkerUnitPrice);
+            parameters.Add("CarriagePercent", t.CarriagePercent);
 
             return parameters;
         }
@@ -49,6 +50,7 @@ namespace IhalematikProBL.Provider
             t.UnitTimeType = dr.GetValue<UnitTimeTypesEnum>("UnitTimeType");
             t.TenderGroupId = dr.GetValue<int>("TenderGroupId");
             t.CustomWorkerUnitPrice = dr.GetValue<double>("CustomWorkerUnitPrice");
+            t.CarriagePercent = dr.GetValue<double>("CarriagePercent");
         }
     }
 }

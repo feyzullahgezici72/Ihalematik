@@ -165,6 +165,6 @@ namespace IhalematikProBL.Entity
             }
         }
 
-
+        public double CarriagePercent { get; set; }
     }
 }

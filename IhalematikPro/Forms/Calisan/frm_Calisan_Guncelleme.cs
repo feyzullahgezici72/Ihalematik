@@ -15,6 +15,8 @@ using IhalematikPro.Manager;
 using IhalematikPro.Forms;
 using IhalematikProBL.Enum;
 using IhalematikProUI.Forms.Base;
+using System.Globalization;
+
 namespace IhalematikProUI.Forms
 {
     public partial class frm_Calisan_Guncelleme : DevExpress.XtraEditors.XtraForm
@@ -71,8 +73,8 @@ namespace IhalematikProUI.Forms
         {
             List<TitleModel> models = UITitleManager.Instance.GetTitles();
             ddlTitles.Properties.Items.AddRange(models);
-            ddlTitles.ReadOnly = true; 
-            
+            ddlTitles.ReadOnly = true;
+
             if (CurrentWorker != null)
             {
                 txtAGI.Text = CurrentWorker.AGIFare.Amount.ToString("c2");
@@ -123,6 +125,9 @@ namespace IhalematikProUI.Forms
             {
                 txtBaseFare.Text = "0";
             }
+            double a;
+            double.TryParse(txtBaseFare.Text.Replace("TL", ""), NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out a);
+
             double minimumWage = double.Parse(txtBaseFare.Text.Replace("TL", ""));
             if (this.Rules != null && rbNormal.Checked)
             {
@@ -218,7 +223,7 @@ namespace IhalematikProUI.Forms
                 model.WorkerType = WorkerTypesEnum.NetSalary;
             }
 
-           // model.IsNormal = rbNormal.Checked;
+            // model.IsNormal = rbNormal.Checked;
             model.BaseFare = new Fare(double.Parse(txtBaseFare.Text.Replace("TL", string.Empty)));
             model.SGKPrimFare = new Fare(double.Parse(txtSGKPrimFare.Text.Replace("TL", string.Empty)));
 
@@ -240,7 +245,7 @@ namespace IhalematikProUI.Forms
             mf.ShowDialog();
             this._owner.LoadGrid();
             this.Close();
-          
+
         }
         public bool IsEmptyKontrol()
         {

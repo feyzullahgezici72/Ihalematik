@@ -205,13 +205,13 @@ namespace IhalematikProUI.Forms
             txtMaterialWorksipCount.Text = tender.MaterialList.Where(p => p.IsWorkship).Count().ToString();
             txtMaterialTotalAmount.Text = txtMaterialCostAmount.Text;
             txtWorkerTotalAmount.Text = txtWorkerCostAmount.Text;
-            txtTotalMaterialAndWorkerAmount.Text = (double.Parse(txtWorkerCostAmount.Text.Replace("TL", "")) + double.Parse(txtMaterialTotalAmount.Text.Replace("TL", ""))).ToString("c2");
+            //txtTotalMaterialAndWorkerAmount.Text = (double.Parse(txtWorkerCostAmount.Text.Replace("TL", "")) + double.Parse(txtMaterialTotalAmount.Text.Replace("TL", ""))).ToString("c2");
             txtGeneralMarkupWorkerAmount.Text = txtMarkupWorkerAmount.Text;
             txtTotalMarkupAmount.Text = txtMarkupAmount.Text;
 
-            txtOfferTotalAmount.Text = (double.Parse(txtTotalMaterialAndWorkerAmount.Text.Replace("TL", "")) + double.Parse(txtGeneralMarkupWorkerAmount.Text.Replace("TL", "")) + double.Parse(txtTotalMarkupAmount.Text.Replace("TL", ""))).ToString("c2");
+            //txtOfferTotalAmount.Text = (double.Parse(txtTotalMaterialAndWorkerAmount.Text.Replace("TL", "")) + double.Parse(txtGeneralMarkupWorkerAmount.Text.Replace("TL", "")) + double.Parse(txtTotalMarkupAmount.Text.Replace("TL", ""))).ToString("c2");
 
-            txtKirim.Text = (tender.NearlyTotalAmount - double.Parse(txtOfferTotalAmount.Text.Replace("TL", ""))).ToString("c2");
+            //txtKirim.Text = (tender.NearlyTotalAmount - double.Parse(txtOfferTotalAmount.Text.Replace("TL", ""))).ToString("c2");
         }
 
 
@@ -247,16 +247,34 @@ namespace IhalematikProUI.Forms
                 provisionalBond.Value = "0";
             }
 
-            this.OtherTotalAmount = (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(provisionalBond.Value) / 1000) + (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 1000) + carriage + accountingCosts;
+            this.OtherTotalAmount = (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(provisionalBond.Value) / 1000) + (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 1000) + accountingCosts;
 
             double increaseAmount = Math.Round((this.OtherTotalAmount / this.TotalMarkupNonKDV), 4);
+
+
+            double totalMarkupZeroCarriage = this.DataSource.Where(p => p.CarriagePercent == 0).Sum(p => p.TotalAmount);
+
+            double otherCarriageZeroAmountPercent = this.DataSource.Sum(p => p.CarriagePercent);
+            double increaseZeroCarriage = Math.Round((carriage * (100 - otherCarriageZeroAmountPercent) / 100 / totalMarkupZeroCarriage), 4);
+
+
+            double increaseCarriageAmount = Math.Round((carriage / this.TotalMarkupNonKDV), 4);
             //birim fiyat unittotalFare
             //Toplam fiyat TotalFare
             foreach (MaterialListModel item in this.DataSource)
             {
-                double increaseOtherFare = 0; //Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 2);
-                increaseOtherFare = Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 4);
-                item.UnitTotalFarePreview = Math.Round((item.UnitTotalFare + increaseOtherFare), 2);
+                if (item.CarriagePercent == 0)
+                {
+                    double increaseOtherFare = 0; //Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 2);
+                    increaseOtherFare = Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 4) + Math.Round(((increaseCarriageAmount * item.TotalFare) / item.Quantity), 4);
+
+                    item.UnitTotalFarePreview = Math.Round((item.UnitTotalFare + increaseOtherFare), 2);
+                }
+                else
+                {
+                    double a = (carriage * item.CarriagePercent / 100 / item.Quantity);
+                    item.UnitTotalFarePreview = Math.Round((item.UnitTotalFare + a), 2);
+                }
             }
 
             grdMaterialList.DataSource = null;
@@ -292,9 +310,12 @@ namespace IhalematikProUI.Forms
 
         private void txtCarriage_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            frm_Nakliye nakliye = new frm_Nakliye();
+            frm_Nakliye nakliye = new frm_Nakliye(this);
             nakliye.ShowDialog();
-
+        }
+        public void SetCarriageValue()
+        {
+            txtCarriage.Text = CurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
         }
     }
 }
