@@ -18,6 +18,7 @@ using System.Threading;
 using IhalematikProUI.Forms.Base;
 using IhalematikPro.Forms;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Forms.IhaleAdim;
 //using IhalematikProUI.Report;
 
 namespace IhalematikProUI.Forms
@@ -286,6 +287,13 @@ namespace IhalematikProUI.Forms
 
         private void frm_TeklifAdimSon_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtCarriage_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            frm_Nakliye nakliye = new frm_Nakliye();
+            nakliye.ShowDialog();
 
         }
     }
