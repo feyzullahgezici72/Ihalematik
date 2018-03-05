@@ -41,7 +41,6 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.btnTumuneUygula = new DevExpress.XtraEditors.SimpleButton();
             this.chckCompletionBond = new DevExpress.XtraEditors.CheckEdit();
             this.chckProvisionalBond = new DevExpress.XtraEditors.CheckEdit();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
@@ -54,13 +53,12 @@
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.lblTederDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnTumuneUygula = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.txtCarriage = new DevExpress.XtraEditors.ButtonEdit();
-            this.txtAccountingCosts = new DevExpress.XtraEditors.ButtonEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.ButtonEdit();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.grdMaterialList2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -138,6 +136,8 @@
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.txtTenderNearlyTotalAmount = new DevExpress.XtraEditors.TextEdit();
+            this.txtAccountingCosts = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
@@ -155,8 +155,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
             this.panelControl8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCarriage.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAccountingCosts.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
@@ -204,6 +202,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMaterialWorksipCount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenderNearlyTotalAmount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAccountingCosts.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -384,26 +384,6 @@
             this.groupControl4.Text = "Teminat Tutarı Ekle";
             this.groupControl4.Visible = false;
             // 
-            // btnTumuneUygula
-            // 
-            this.btnTumuneUygula.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTumuneUygula.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnTumuneUygula.Appearance.Options.UseFont = true;
-            this.btnTumuneUygula.Appearance.Options.UseForeColor = true;
-            this.btnTumuneUygula.AutoSize = true;
-            this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
-            this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(374, 23);
-            this.btnTumuneUygula.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnTumuneUygula.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTumuneUygula.Name = "btnTumuneUygula";
-            this.btnTumuneUygula.Size = new System.Drawing.Size(72, 96);
-            this.btnTumuneUygula.TabIndex = 4;
-            this.btnTumuneUygula.Text = "Tümüne\r\nUygula";
-            this.btnTumuneUygula.ToolTip = "Tümünü Uygula";
-            this.btnTumuneUygula.Click += new System.EventHandler(this.btnTumuneUygula_Click);
-            // 
             // chckCompletionBond
             // 
             this.chckCompletionBond.Location = new System.Drawing.Point(150, 39);
@@ -539,11 +519,29 @@
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "İhale No:";
             // 
+            // btnTumuneUygula
+            // 
+            this.btnTumuneUygula.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTumuneUygula.Appearance.Options.UseFont = true;
+            this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
+            this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnTumuneUygula.Location = new System.Drawing.Point(362, 26);
+            this.btnTumuneUygula.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnTumuneUygula.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTumuneUygula.Name = "btnTumuneUygula";
+            this.btnTumuneUygula.Size = new System.Drawing.Size(72, 93);
+            this.btnTumuneUygula.TabIndex = 4;
+            this.btnTumuneUygula.Text = "Tümüne\r\nUygula";
+            this.btnTumuneUygula.ToolTip = "Tümünü Uygula";
+            this.btnTumuneUygula.Click += new System.EventHandler(this.btnTumuneUygula_Click);
+            // 
             // panelControl8
             // 
             this.panelControl8.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl8.Appearance.Options.UseBackColor = true;
             this.panelControl8.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl8.Controls.Add(this.btnTumuneUygula);
             this.panelControl8.Controls.Add(this.labelControl37);
             this.panelControl8.Controls.Add(this.labelControl32);
             this.panelControl8.Controls.Add(this.labelControl18);
@@ -611,48 +609,6 @@
             this.txtCarriage.Size = new System.Drawing.Size(209, 26);
             this.txtCarriage.TabIndex = 0;
             this.txtCarriage.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtCarriage_ButtonClick);
-            // 
-            // txtAccountingCosts
-            // 
-            this.txtAccountingCosts.Location = new System.Drawing.Point(145, 59);
-            this.txtAccountingCosts.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAccountingCosts.Name = "txtAccountingCosts";
-            this.txtAccountingCosts.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtAccountingCosts.Properties.Appearance.Options.UseBackColor = true;
-            this.txtAccountingCosts.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtAccountingCosts.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtAccountingCosts.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtAccountingCosts.Properties.DisplayFormat.FormatString = "c2";
-            this.txtAccountingCosts.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtAccountingCosts.Properties.EditFormat.FormatString = "c2";
-            this.txtAccountingCosts.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtAccountingCosts.Properties.Mask.EditMask = "c2";
-            this.txtAccountingCosts.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtAccountingCosts.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtAccountingCosts.Size = new System.Drawing.Size(209, 26);
-            this.txtAccountingCosts.TabIndex = 1;
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(145, 93);
-            this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.textEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.textEdit1.Properties.DisplayFormat.FormatString = "c2";
-            this.textEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.textEdit1.Properties.EditFormat.FormatString = "c2";
-            this.textEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.textEdit1.Properties.Mask.EditMask = "c2";
-            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEdit1.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.textEdit1.Size = new System.Drawing.Size(209, 26);
-            this.textEdit1.TabIndex = 45;
             // 
             // grdMaterialList
             // 
@@ -964,7 +920,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.btnTumuneUygula);
             this.panel1.Controls.Add(this.panelControl8);
             this.panel1.Controls.Add(this.groupControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -1930,6 +1885,44 @@
             this.txtTenderNearlyTotalAmount.TabIndex = 50;
             this.txtTenderNearlyTotalAmount.Visible = false;
             // 
+            // txtAccountingCosts
+            // 
+            this.txtAccountingCosts.Location = new System.Drawing.Point(145, 59);
+            this.txtAccountingCosts.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAccountingCosts.Name = "txtAccountingCosts";
+            this.txtAccountingCosts.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtAccountingCosts.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAccountingCosts.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtAccountingCosts.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAccountingCosts.Properties.DisplayFormat.FormatString = "c2";
+            this.txtAccountingCosts.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtAccountingCosts.Properties.EditFormat.FormatString = "c2";
+            this.txtAccountingCosts.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtAccountingCosts.Properties.Mask.EditMask = "c2";
+            this.txtAccountingCosts.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtAccountingCosts.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtAccountingCosts.Size = new System.Drawing.Size(209, 26);
+            this.txtAccountingCosts.TabIndex = 1;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(145, 93);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textEdit1.Properties.DisplayFormat.FormatString = "c2";
+            this.textEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit1.Properties.EditFormat.FormatString = "c2";
+            this.textEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit1.Properties.Mask.EditMask = "c2";
+            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEdit1.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.textEdit1.Size = new System.Drawing.Size(209, 26);
+            this.textEdit1.TabIndex = 45;
+            // 
             // frm_TeklifAdimSon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1970,14 +1963,11 @@
             this.panelControl8.ResumeLayout(false);
             this.panelControl8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCarriage.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAccountingCosts.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
             this.gridSplitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -2026,6 +2016,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMaterialWorksipCount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenderNearlyTotalAmount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAccountingCosts.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2138,7 +2130,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraEditors.LabelControl labelControl37;
         private DevExpress.XtraEditors.ButtonEdit txtCarriage;
-        private DevExpress.XtraEditors.ButtonEdit txtAccountingCosts;
-        private DevExpress.XtraEditors.ButtonEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtAccountingCosts;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
     }
 }

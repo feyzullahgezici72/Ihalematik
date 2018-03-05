@@ -1337,7 +1337,7 @@ namespace IhalematikPro.Forms
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup17});
             this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "İşlemler";
+            this.ribbonPage2.Text = "Ayarlar";
             // 
             // ribbonPageGroup17
             // 
