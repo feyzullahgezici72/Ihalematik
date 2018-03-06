@@ -252,13 +252,17 @@ namespace IhalematikProUI.Forms
             double increaseAmount = Math.Round((this.OtherTotalAmount / this.TotalMarkupNonKDV), 4);
 
 
-            double totalMarkupZeroCarriage = this.DataSource.Where(p => p.CarriagePercent == 0).Sum(p => p.TotalAmount);
+            double totalMarkupZeroCarriage = this.DataSource.Where(p => p.CarriagePercent == 0).Sum(p => p.TotalFare);
 
             double otherCarriageZeroAmountPercent = this.DataSource.Sum(p => p.CarriagePercent);
             double increaseZeroCarriage = Math.Round((carriage * (100 - otherCarriageZeroAmountPercent) / 100 / totalMarkupZeroCarriage), 4);
 
 
             double increaseCarriageAmount = Math.Round((carriage / increaseZeroCarriage), 4);
+            if (carriage == 0)
+            {
+                increaseCarriageAmount = 0;
+            }
             //birim fiyat unittotalFare
             //Toplam fiyat TotalFare
             foreach (MaterialListModel item in this.DataSource)
@@ -267,6 +271,7 @@ namespace IhalematikProUI.Forms
                 increaseOtherFare = Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 2);
                 if (item.CarriagePercent == 0)
                 {
+
                     increaseOtherFare += Math.Round(((increaseCarriageAmount * item.TotalFare) / item.Quantity), 4);
                     item.UnitTotalFarePreview = Math.Round((item.UnitTotalFare + increaseOtherFare), 2);
                 }
