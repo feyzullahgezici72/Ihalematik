@@ -11,6 +11,7 @@ using IhalematikProUI.Model;
 using IhalematikPro.Manager;
 using System.Collections;
 using IhalematikProBL.Manager;
+using IhalematikProUI.Manager;
 
 namespace IhalematikPro.Model
 {
@@ -211,6 +212,9 @@ namespace IhalematikPro.Model
                 if (this.UnitTimeType != null && this.TenderMaterialListEquipment != null)
                 {
                     this.workerUnitPrice = 0;
+                    double dayPerMonthValue = RuleManager.Instance.DayPerMonthValue == 0 ? 30 : RuleManager.Instance.DayPerMonthValue;
+                    double hourPerDayValue = RuleManager.Instance.HourPerDayValue == 0 ? 8 : RuleManager.Instance.HourPerDayValue;
+
                     foreach (TenderMaterialListEquipment item in this.TenderMaterialListEquipment)
                     {
                         double amount = 0;
@@ -224,15 +228,15 @@ namespace IhalematikPro.Model
                         }
                         if (item.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
                         {
-                            this.workerUnitPrice += Math.Round((amount / (30 * 8 * 60)), 2) * item.UnitTime * item.Quantity;
+                            this.workerUnitPrice += Math.Round((amount / (dayPerMonthValue * hourPerDayValue * 60)), 2) * item.UnitTime * this.Quantity;
                         }
                         else if (item.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Hour)
                         {
-                            this.workerUnitPrice += Math.Round((amount / (30 * 8)), 2) * item.UnitTime * item.Quantity;
+                            this.workerUnitPrice += Math.Round((amount / (dayPerMonthValue * hourPerDayValue)), 2) * item.UnitTime * this.Quantity;
                         }
                         else if (item.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Day)
                         {
-                            this.workerUnitPrice += Math.Round((amount / (30)), 2) * item.UnitTime * item.Quantity;
+                            this.workerUnitPrice += Math.Round((amount / (dayPerMonthValue)), 2) * item.UnitTime * this.Quantity;
                         }
                         else if (item.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Week)
                         {
