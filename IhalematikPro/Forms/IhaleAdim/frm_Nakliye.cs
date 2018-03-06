@@ -66,5 +66,10 @@ namespace IhalematikProUI.Forms.IhaleAdim
                 }
             }
         }
+
+        private void grdMaterialList_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

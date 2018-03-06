@@ -39,12 +39,13 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.gridViewMaterialList = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCarriagePercent = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnResetValue = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -66,8 +67,9 @@
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(587, 24);
+            this.panelControl2.Size = new System.Drawing.Size(880, 35);
             this.panelControl2.TabIndex = 96;
             // 
             // btnKapat
@@ -77,9 +79,10 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(561, 0);
+            this.btnKapat.Location = new System.Drawing.Point(852, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(26, 24);
+            this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 21;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
@@ -91,10 +94,11 @@
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(7, 0);
+            this.labelControl1.Location = new System.Drawing.Point(10, 0);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(172, 23);
+            this.labelControl1.Size = new System.Drawing.Size(251, 35);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "NAKLİYE HESAPLAMA";
             this.labelControl1.UseMnemonic = false;
@@ -105,14 +109,14 @@
             this.groupControl1.AppearanceCaption.ForeColor = System.Drawing.Color.Blue;
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl1.Controls.Add(this.btnResetValue);
             this.groupControl1.Controls.Add(this.btnOk);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.txtCarriage);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(0, 24);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupControl1.Location = new System.Drawing.Point(0, 35);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(587, 68);
+            this.groupControl1.Size = new System.Drawing.Size(880, 99);
             this.groupControl1.TabIndex = 97;
             this.groupControl1.Text = "Nakliye";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
@@ -120,10 +124,9 @@
             // btnOk
             // 
             this.btnOk.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.Image")));
-            this.btnOk.Location = new System.Drawing.Point(295, 30);
-            this.btnOk.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOk.Location = new System.Drawing.Point(442, 44);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(71, 28);
+            this.btnOk.Size = new System.Drawing.Size(106, 41);
             this.btnOk.TabIndex = 141;
             this.btnOk.Text = "Tamam";
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
@@ -132,18 +135,26 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl6.Location = new System.Drawing.Point(49, 38);
+            this.labelControl6.Location = new System.Drawing.Point(74, 56);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(68, 13);
+            this.labelControl6.Size = new System.Drawing.Size(104, 19);
             this.labelControl6.TabIndex = 140;
             this.labelControl6.Text = "Nakliye Gideri:";
             // 
             // txtCarriage
             // 
-            this.txtCarriage.Location = new System.Drawing.Point(124, 36);
-            this.txtCarriage.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCarriage.Location = new System.Drawing.Point(186, 53);
             this.txtCarriage.Name = "txtCarriage";
-            this.txtCarriage.Size = new System.Drawing.Size(157, 20);
+            this.txtCarriage.Properties.DisplayFormat.FormatString = "c2";
+            this.txtCarriage.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtCarriage.Properties.EditFormat.FormatString = "c2";
+            this.txtCarriage.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtCarriage.Properties.Mask.BeepOnError = true;
+            this.txtCarriage.Properties.Mask.EditMask = "c2";
+            this.txtCarriage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtCarriage.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCarriage.Size = new System.Drawing.Size(236, 26);
             this.txtCarriage.TabIndex = 0;
             // 
             // groupControl2
@@ -154,10 +165,9 @@
             this.groupControl2.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl2.Controls.Add(this.grdMaterialList);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(0, 92);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupControl2.Location = new System.Drawing.Point(0, 134);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(587, 381);
+            this.groupControl2.Size = new System.Drawing.Size(880, 557);
             this.groupControl2.TabIndex = 98;
             this.groupControl2.Text = "Ağırlık oranını belirtiniz";
             // 
@@ -165,13 +175,16 @@
             // 
             this.grdMaterialList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialList.Location = new System.Drawing.Point(2, 20);
+            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.grdMaterialList.Location = new System.Drawing.Point(3, 30);
             this.grdMaterialList.MainView = this.gridViewMaterialList;
+            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
-            this.grdMaterialList.Size = new System.Drawing.Size(583, 359);
+            this.grdMaterialList.Size = new System.Drawing.Size(874, 524);
             this.grdMaterialList.TabIndex = 2;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
+            this.grdMaterialList.Click += new System.EventHandler(this.grdMaterialList_Click);
             // 
             // gridViewMaterialList
             // 
@@ -308,6 +321,12 @@
             this.gridViewMaterialList.PaintStyleName = "Web";
             this.gridViewMaterialList.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.grdMaterialList2_CellValueChanged);
             // 
+            // colId
+            // 
+            this.colId.Caption = "Id";
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            // 
             // gridColumn1
             // 
             this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
@@ -418,24 +437,26 @@
             this.colCarriagePercent.VisibleIndex = 4;
             this.colCarriagePercent.Width = 60;
             // 
-            // colId
+            // btnResetValue
             // 
-            this.colId.Caption = "Id";
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
+            this.btnResetValue.Image = ((System.Drawing.Image)(resources.GetObject("btnResetValue.Image")));
+            this.btnResetValue.Location = new System.Drawing.Point(762, 44);
+            this.btnResetValue.Name = "btnResetValue";
+            this.btnResetValue.Size = new System.Drawing.Size(106, 41);
+            this.btnResetValue.TabIndex = 142;
+            this.btnResetValue.Text = "Sıfırla";
             // 
             // frm_Nakliye
             // 
             this.AcceptButton = this.btnOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 473);
+            this.ClientSize = new System.Drawing.Size(880, 691);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Nakliye";
@@ -475,5 +496,6 @@
         private DevExpress.XtraEditors.SimpleButton btnOk;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraEditors.SimpleButton btnResetValue;
     }
 }
