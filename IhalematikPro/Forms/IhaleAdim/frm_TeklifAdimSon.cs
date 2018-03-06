@@ -272,7 +272,7 @@ namespace IhalematikProUI.Forms
                 if (item.CarriagePercent == 0)
                 {
 
-                    increaseOtherFare += Math.Round(((increaseCarriageAmount * item.TotalFare) / item.Quantity), 4);
+                    increaseOtherFare += Math.Round(((increaseZeroCarriage * item.TotalFare) / item.Quantity), 4);
                     item.UnitTotalFarePreview = Math.Round((item.UnitTotalFare + increaseOtherFare), 2);
                 }
                 else
@@ -286,7 +286,7 @@ namespace IhalematikProUI.Forms
             grdMaterialList.DataSource = this.DataSource;
 
 
-            lblTotalMarkupNonKDV.Text = Math.Round((this.TotalMarkupNonKDV + this.OtherTotalAmount), 2).ToString("c2");
+            lblTotalMarkupNonKDV.Text = Math.Round((this.TotalMarkupNonKDV + this.OtherTotalAmount + carriage), 2).ToString("c2");
         }
 
         private void btnCalc_Click(object sender, EventArgs e)

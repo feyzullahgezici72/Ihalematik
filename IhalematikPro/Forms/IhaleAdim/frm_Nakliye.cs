@@ -43,8 +43,12 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
         private void frm_Nakliye_Load(object sender, EventArgs e)
         {
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
-            this.grdMaterialList.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            if (CurrentManager.Instance.CurrentTender != null)
+            {
+                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+                this.grdMaterialList.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+                txtCarriage.Text = CurrentManager.Instance.CurrentTender.Carriage.ToString("c2"); 
+            }
         }
 
         private void grdMaterialList2_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
