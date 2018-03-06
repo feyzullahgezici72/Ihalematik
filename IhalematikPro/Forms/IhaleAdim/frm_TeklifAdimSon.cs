@@ -229,8 +229,15 @@ namespace IhalematikProUI.Forms
             Tender currentTender = CurrentManager.Instance.CurrentTender;
             IhalematikProBL.Entity.Rule provisionalBond = RuleProvider.Instance.GetItems("Code", "ProvisionalBond").FirstOrDefault();
             IhalematikProBL.Entity.Rule completionBond = RuleProvider.Instance.GetItems("Code", "CompletionBond").FirstOrDefault();
+            IhalematikProBL.Entity.Rule tradingStamps = RuleProvider.Instance.GetItems("Code", "TradingStamps").FirstOrDefault();
+
             double carriage = double.Parse(string.IsNullOrEmpty(txtCarriage.Text) ? "0" : txtCarriage.Text.Replace("TL", string.Empty));
-            double accountingCosts = double.Parse(string.IsNullOrEmpty(txtAccountingCosts.Text) ? "0" : txtAccountingCosts.Text.Replace("TL", string.Empty));
+            double accountingCosts = (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(provisionalBond.Value) / 1000) + (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 1000) +
+                (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(tradingStamps.Value) / 1000);
+
+            txtAccountingCosts.Text = accountingCosts.ToString("c2");
+
+            double otherCosts = double.Parse(string.IsNullOrEmpty(txtOtherCoast.Text) ? "0" : txtOtherCoast.Text.Replace("TL", string.Empty));
 
             currentTender.Carriage = carriage;
             currentTender.AccountingCosts = accountingCosts;
@@ -238,16 +245,8 @@ namespace IhalematikProUI.Forms
             currentTender.ProvisionalBond = chckProvisionalBond.Checked;
             currentTender.PersonHour = ddlCalculateWorkerType.SelectedIndex == 0 ? true : false;
 
-            if (!chckCompletionBond.Checked)
-            {
-                completionBond.Value = "0";
-            }
-            if (!chckProvisionalBond.Checked)
-            {
-                provisionalBond.Value = "0";
-            }
 
-            this.OtherTotalAmount = (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(provisionalBond.Value) / 1000) + (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 1000) + accountingCosts;
+            this.OtherTotalAmount = accountingCosts + otherCosts;
 
             double increaseAmount = Math.Round((this.OtherTotalAmount / this.TotalMarkupNonKDV), 4);
 

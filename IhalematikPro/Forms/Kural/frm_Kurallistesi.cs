@@ -19,7 +19,7 @@ namespace IhalematikProUI.Forms
         {
             InitializeComponent();
             bindingSourceRules.DataSource = typeof(List<IhalematikProBL.Entity.Rule>);
-            grdRules.DataSource = bindingSourceRules;
+            grdWorkerRules.DataSource = bindingSourceRules;
         }
 
         private void btnKapat_Click(object sender, EventArgs e)
@@ -50,8 +50,33 @@ namespace IhalematikProUI.Forms
 
         public void LoadGrid()
         {
-            List<IhalematikProBL.Entity.Rule> rules = RuleProvider.Instance.GetItems();
-            grdRules.DataSource = rules;
+            List<IhalematikProBL.Entity.Rule> allRules = RuleProvider.Instance.GetItems();
+            List<IhalematikProBL.Entity.Rule> tenderRules = new List<IhalematikProBL.Entity.Rule>();
+            List<IhalematikProBL.Entity.Rule> workerRules = new List<IhalematikProBL.Entity.Rule>();
+
+            foreach (var rule in allRules)
+            {
+                if (rule.RuleType == IhalematikProBL.Enum.RuleTypesEnum.TradingStamps || rule.RuleType == IhalematikProBL.Enum.RuleTypesEnum.CompletionBond || rule.RuleType == IhalematikProBL.Enum.RuleTypesEnum.ProvisionalBond)
+                {
+                    tenderRules.Add(rule);
+                }
+                else
+                {
+                    workerRules.Add(rule);
+                }
+            }
+
+            grdWorkerRules.DataSource = workerRules;
+            grdTenderRules.DataSource = tenderRules;
+
+        }
+
+        private void repositoryItemButtonEdit1_Click(object sender, EventArgs e)
+        {
+            int currentRuleId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridView1.GetFocusedRowCellValue("Id"));
+            frm_Kurallar krl = new frm_Kurallar(this);
+            krl.CurrentRuleId = currentRuleId;
+            krl.ShowDialog();
         }
     }
 }

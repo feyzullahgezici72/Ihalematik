@@ -49,6 +49,9 @@ namespace IhalematikProBL.Entity
                     case RuleTypesEnum.ProvisionalBond:
                         this.text = string.Format("‰{0}", this.Value);
                         break;
+                    case RuleTypesEnum.TradingStamps:
+                        this.text = string.Format("‰{0}", this.Value);
+                        break;
                     case RuleTypesEnum.HourPerDayValue:
                         this.text = string.Format("{0}", this.Value);
                         break;

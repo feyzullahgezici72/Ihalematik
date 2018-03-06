@@ -16,6 +16,7 @@ namespace IhalematikProBL.Enum
         ProvisionalBond,
         CompletionBond,
         HourPerDayValue,
-        DayPerMonthValue
+        DayPerMonthValue,
+        TradingStamps
     }
 }
