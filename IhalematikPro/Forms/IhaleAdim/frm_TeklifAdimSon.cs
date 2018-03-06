@@ -147,6 +147,12 @@ namespace IhalematikProUI.Forms
             {
                 CurrentManager.Instance.CurrentTender.PersonHour = false;
             }
+
+            foreach (var item in CurrentManager.Instance.CurrentTender.MaterialList)
+            {
+                MaterialListProvider.Instance.Save(item);
+            }
+
             TenderProvider.Instance.Save(CurrentManager.Instance.CurrentTender);
 
             frm_MesajFormu mf = new frm_MesajFormu();

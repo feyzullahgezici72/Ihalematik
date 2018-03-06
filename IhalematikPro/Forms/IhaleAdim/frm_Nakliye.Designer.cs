@@ -39,12 +39,12 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.gridViewMaterialList = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCarriagePercent = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -307,6 +307,14 @@
             this.gridViewMaterialList.OptionsView.ShowGroupPanel = false;
             this.gridViewMaterialList.PaintStyleName = "Web";
             this.gridViewMaterialList.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.grdMaterialList2_CellValueChanged);
+            this.gridViewMaterialList.CellValueChanging += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewMaterialList_CellValueChanging);
+            this.gridViewMaterialList.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridViewMaterialList_ValidatingEditor);
+            // 
+            // colId
+            // 
+            this.colId.Caption = "Id";
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
             // 
             // gridColumn1
             // 
@@ -417,12 +425,6 @@
             this.colCarriagePercent.Visible = true;
             this.colCarriagePercent.VisibleIndex = 4;
             this.colCarriagePercent.Width = 60;
-            // 
-            // colId
-            // 
-            this.colId.Caption = "Id";
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
             // 
             // frm_Nakliye
             // 

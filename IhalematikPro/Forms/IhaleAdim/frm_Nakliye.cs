@@ -11,6 +11,10 @@ using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikPro.Manager;
 using IhalematikPro.Model;
+using DevExpress.XtraEditors.DXErrorProvider;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace IhalematikProUI.Forms.IhaleAdim
 {
@@ -47,21 +51,46 @@ namespace IhalematikProUI.Forms.IhaleAdim
             {
                 List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
                 this.grdMaterialList.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-                txtCarriage.Text = CurrentManager.Instance.CurrentTender.Carriage.ToString("c2"); 
+                txtCarriage.Text = CurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
             }
         }
 
         private void grdMaterialList2_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            if (e.Column == colCarriagePercent)
+           
+        }
+
+        private void gridViewMaterialList_CellValueChanging(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            
+        }
+
+        private void gridViewMaterialList_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
+        {
+            ColumnView view = sender as ColumnView;
+            GridColumn column = (e as EditFormValidateEditorEventArgs)?.Column ?? view.FocusedColumn;
+
+            if (column == colCarriagePercent)
             {
-                int currenMaterialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialList.GetFocusedRowCellValue("Id"));
-                foreach (var item in CurrentManager.Instance.CurrentTender.MaterialList)
+                double carriagePercent = CurrentManager.Instance.CurrentTender.MaterialList.Sum(p => p.CarriagePercent);
+                double currentCarriagePercent = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
+                if ((carriagePercent + currentCarriagePercent) > 100)
                 {
-                    if (item.Id.Equals(currenMaterialId))
+                    //gridViewMaterialList.SetColumnError(colCarriagePercent, "Ağırlık toplamları %100 ü geçmemelidir!", ErrorType.Critical);
+                    MessageBox.Show("Ağırlık toplamları %100 ü geçmemelidir!");
+                    e.Valid = false;
+                    //    gridViewMaterialList.SetRowCellValue(e.RowHandle, "CarriagePercent", 0);
+                }
+                else
+                {
+                    int currenMaterialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialList.GetFocusedRowCellValue("Id"));
+                    foreach (var item in CurrentManager.Instance.CurrentTender.MaterialList)
                     {
-                        item.CarriagePercent = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
-                        break;
+                        if (item.Id.Equals(currenMaterialId))
+                        {
+                            item.CarriagePercent = currentCarriagePercent;
+                            break;
+                        }
                     }
                 }
             }
