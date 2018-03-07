@@ -69,9 +69,9 @@
             // pictureEdit1
             // 
             this.pictureEdit1.Image = global::IhalematikProUI.Properties.Resources.yukleniyor;
-            this.pictureEdit1.Location = new System.Drawing.Point(9, 27);
+            this.pictureEdit1.Location = new System.Drawing.Point(9, 12);
             this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Size = new System.Drawing.Size(147, 135);
+            this.pictureEdit1.Size = new System.Drawing.Size(147, 150);
             this.pictureEdit1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureEdit1.TabIndex = 9;
             this.pictureEdit1.TabStop = false;
