@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Iscilik));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Iscilik));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             this.isciAracGirisPanelix = new DevExpress.XtraEditors.PanelControl();
             this.grdAddVehicle = new DevExpress.XtraGrid.GridControl();
             this.gridViewAddVehicle = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colAracCikar = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnAracCikar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colAddVehicleId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAddVehicleVehicle = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpstVehicle = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
@@ -45,11 +47,11 @@
             this.colAddVehicleUnitTimeType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpstVehicleUnitTimeTypes = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colAddVehicleWorkerUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAracCikar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnAracCikar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.grdAddWorker = new DevExpress.XtraGrid.GridControl();
             this.gridViewAddWorker = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colCikar = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnIsciCikar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colAddWorkerId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAddWorkerWorker = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpstWorker = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
@@ -58,6 +60,8 @@
             this.colAddWorkerUnitTimeType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpstUnitTimeTypes = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colAddWorkerWorkerUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCikar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnIsciCikar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
             this.txtCurrentDescription = new DevExpress.XtraEditors.TextEdit();
@@ -77,16 +81,16 @@
             this.isciAracGirisPanelix.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdAddVehicle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewAddVehicle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAracCikar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstVehicle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstVehicleUnitTimeTypes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAracCikar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdAddWorker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewAddWorker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnIsciCikar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstWorker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstUnitTimeTypes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnIsciCikar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCurrentDescription.Properties)).BeginInit();
@@ -118,7 +122,7 @@
             this.grdAddVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdAddVehicle.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddVehicle.Location = new System.Drawing.Point(3, 361);
-            this.grdAddVehicle.LookAndFeel.SkinName = "VS2010";
+            this.grdAddVehicle.LookAndFeel.SkinName = "London Liquid Sky";
             this.grdAddVehicle.LookAndFeel.UseDefaultLookAndFeel = false;
             this.grdAddVehicle.MainView = this.gridViewAddVehicle;
             this.grdAddVehicle.Margin = new System.Windows.Forms.Padding(4);
@@ -242,13 +246,13 @@
             this.gridViewAddVehicle.Appearance.VertLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(188)))), ((int)(((byte)(184)))));
             this.gridViewAddVehicle.Appearance.VertLine.Options.UseBackColor = true;
             this.gridViewAddVehicle.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colAracCikar,
             this.colAddVehicleId,
             this.colAddVehicleVehicle,
             this.colAddVehicleQuantity,
             this.colAddVehicleUnitTime,
             this.colAddVehicleUnitTimeType,
-            this.colAddVehicleWorkerUnitPrice});
+            this.colAddVehicleWorkerUnitPrice,
+            this.colAracCikar});
             this.gridViewAddVehicle.GridControl = this.grdAddVehicle;
             this.gridViewAddVehicle.Name = "gridViewAddVehicle";
             this.gridViewAddVehicle.OptionsMenu.EnableColumnMenu = false;
@@ -260,27 +264,6 @@
             this.gridViewAddVehicle.OptionsView.ShowGroupPanel = false;
             this.gridViewAddVehicle.PaintStyleName = "Web";
             this.gridViewAddVehicle.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewAddVehicle_CellValueChanged);
-            // 
-            // colAracCikar
-            // 
-            this.colAracCikar.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.colAracCikar.AppearanceHeader.Options.UseFont = true;
-            this.colAracCikar.Caption = "gridColumn1";
-            this.colAracCikar.ColumnEdit = this.btnAracCikar;
-            this.colAracCikar.MaxWidth = 20;
-            this.colAracCikar.Name = "colAracCikar";
-            this.colAracCikar.Visible = true;
-            this.colAracCikar.VisibleIndex = 0;
-            this.colAracCikar.Width = 20;
-            // 
-            // btnAracCikar
-            // 
-            this.btnAracCikar.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnAracCikar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
-            this.btnAracCikar.Name = "btnAracCikar";
-            this.btnAracCikar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.btnAracCikar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnAracCikar_ButtonClick);
             // 
             // colAddVehicleId
             // 
@@ -305,15 +288,17 @@
             this.colAddVehicleVehicle.Name = "colAddVehicleVehicle";
             this.colAddVehicleVehicle.OptionsFilter.AllowFilter = false;
             this.colAddVehicleVehicle.Visible = true;
-            this.colAddVehicleVehicle.VisibleIndex = 1;
+            this.colAddVehicleVehicle.VisibleIndex = 0;
             this.colAddVehicleVehicle.Width = 340;
             // 
             // rpstVehicle
             // 
             this.rpstVehicle.AutoHeight = false;
+            serializableAppearanceObject1.Image = ((System.Drawing.Image)(resources.GetObject("serializableAppearanceObject1.Image")));
+            serializableAppearanceObject1.Options.UseImage = true;
             this.rpstVehicle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.rpstVehicle.LookAndFeel.SkinName = "McSkin";
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstVehicle.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.rpstVehicle.LookAndFeel.SkinName = "Money Twins";
             this.rpstVehicle.LookAndFeel.UseDefaultLookAndFeel = false;
             this.rpstVehicle.Name = "rpstVehicle";
             // 
@@ -335,7 +320,7 @@
             this.colAddVehicleQuantity.Name = "colAddVehicleQuantity";
             this.colAddVehicleQuantity.OptionsFilter.AllowFilter = false;
             this.colAddVehicleQuantity.Visible = true;
-            this.colAddVehicleQuantity.VisibleIndex = 2;
+            this.colAddVehicleQuantity.VisibleIndex = 1;
             this.colAddVehicleQuantity.Width = 60;
             // 
             // colAddVehicleUnitTime
@@ -356,7 +341,7 @@
             this.colAddVehicleUnitTime.Name = "colAddVehicleUnitTime";
             this.colAddVehicleUnitTime.OptionsFilter.AllowFilter = false;
             this.colAddVehicleUnitTime.Visible = true;
-            this.colAddVehicleUnitTime.VisibleIndex = 4;
+            this.colAddVehicleUnitTime.VisibleIndex = 2;
             this.colAddVehicleUnitTime.Width = 60;
             // 
             // colAddVehicleUnitTimeType
@@ -373,20 +358,22 @@
             this.colAddVehicleUnitTimeType.ColumnEdit = this.rpstVehicleUnitTimeTypes;
             this.colAddVehicleUnitTimeType.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAddVehicleUnitTimeType.FieldName = "SelectedUnitTimeType";
-            this.colAddVehicleUnitTimeType.MaxWidth = 70;
-            this.colAddVehicleUnitTimeType.MinWidth = 70;
+            this.colAddVehicleUnitTimeType.MaxWidth = 90;
+            this.colAddVehicleUnitTimeType.MinWidth = 90;
             this.colAddVehicleUnitTimeType.Name = "colAddVehicleUnitTimeType";
             this.colAddVehicleUnitTimeType.OptionsFilter.AllowFilter = false;
             this.colAddVehicleUnitTimeType.Visible = true;
             this.colAddVehicleUnitTimeType.VisibleIndex = 3;
-            this.colAddVehicleUnitTimeType.Width = 70;
+            this.colAddVehicleUnitTimeType.Width = 90;
             // 
             // rpstVehicleUnitTimeTypes
             // 
             this.rpstVehicleUnitTimeTypes.AutoHeight = false;
+            serializableAppearanceObject2.Image = ((System.Drawing.Image)(resources.GetObject("serializableAppearanceObject2.Image")));
+            serializableAppearanceObject2.Options.UseImage = true;
             this.rpstVehicleUnitTimeTypes.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.rpstVehicleUnitTimeTypes.LookAndFeel.SkinName = "McSkin";
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstVehicleUnitTimeTypes.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.rpstVehicleUnitTimeTypes.LookAndFeel.SkinName = "Money Twins";
             this.rpstVehicleUnitTimeTypes.LookAndFeel.UseDefaultLookAndFeel = false;
             this.rpstVehicleUnitTimeTypes.Name = "rpstVehicleUnitTimeTypes";
             // 
@@ -407,10 +394,34 @@
             this.colAddVehicleWorkerUnitPrice.MaxWidth = 100;
             this.colAddVehicleWorkerUnitPrice.MinWidth = 100;
             this.colAddVehicleWorkerUnitPrice.Name = "colAddVehicleWorkerUnitPrice";
+            this.colAddVehicleWorkerUnitPrice.OptionsColumn.AllowEdit = false;
+            this.colAddVehicleWorkerUnitPrice.OptionsColumn.AllowFocus = false;
             this.colAddVehicleWorkerUnitPrice.OptionsFilter.AllowFilter = false;
             this.colAddVehicleWorkerUnitPrice.Visible = true;
-            this.colAddVehicleWorkerUnitPrice.VisibleIndex = 5;
+            this.colAddVehicleWorkerUnitPrice.VisibleIndex = 4;
             this.colAddVehicleWorkerUnitPrice.Width = 100;
+            // 
+            // colAracCikar
+            // 
+            this.colAracCikar.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAracCikar.AppearanceHeader.Options.UseFont = true;
+            this.colAracCikar.Caption = "gridColumn1";
+            this.colAracCikar.ColumnEdit = this.btnAracCikar;
+            this.colAracCikar.MaxWidth = 20;
+            this.colAracCikar.Name = "colAracCikar";
+            this.colAracCikar.Visible = true;
+            this.colAracCikar.VisibleIndex = 5;
+            this.colAracCikar.Width = 20;
+            // 
+            // btnAracCikar
+            // 
+            this.btnAracCikar.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnAracCikar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            this.btnAracCikar.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.btnAracCikar.Name = "btnAracCikar";
+            this.btnAracCikar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnAracCikar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnAracCikar_ButtonClick);
             // 
             // groupControl3
             // 
@@ -428,7 +439,7 @@
             this.grdAddWorker.Dock = System.Windows.Forms.DockStyle.Top;
             this.grdAddWorker.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddWorker.Location = new System.Drawing.Point(0, 0);
-            this.grdAddWorker.LookAndFeel.SkinName = "McSkin";
+            this.grdAddWorker.LookAndFeel.SkinName = "London Liquid Sky";
             this.grdAddWorker.LookAndFeel.UseDefaultLookAndFeel = false;
             this.grdAddWorker.MainView = this.gridViewAddWorker;
             this.grdAddWorker.Margin = new System.Windows.Forms.Padding(4);
@@ -550,13 +561,13 @@
             this.gridViewAddWorker.Appearance.VertLine.Options.UseBackColor = true;
             this.gridViewAddWorker.Appearance.VertLine.Options.UseBorderColor = true;
             this.gridViewAddWorker.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colCikar,
             this.colAddWorkerId,
             this.colAddWorkerWorker,
             this.colAddWorkerQuantity,
             this.colAddWorkerUnitTime,
             this.colAddWorkerUnitTimeType,
-            this.colAddWorkerWorkerUnitPrice});
+            this.colAddWorkerWorkerUnitPrice,
+            this.colCikar});
             this.gridViewAddWorker.GridControl = this.grdAddWorker;
             this.gridViewAddWorker.Name = "gridViewAddWorker";
             this.gridViewAddWorker.OptionsFind.AllowFindPanel = false;
@@ -572,27 +583,6 @@
             this.gridViewAddWorker.OptionsView.ShowGroupPanel = false;
             this.gridViewAddWorker.PaintStyleName = "Web";
             this.gridViewAddWorker.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewAddWorker_CellValueChanged);
-            // 
-            // colCikar
-            // 
-            this.colCikar.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.colCikar.AppearanceHeader.Options.UseFont = true;
-            this.colCikar.Caption = "gridColumn1";
-            this.colCikar.ColumnEdit = this.btnIsciCikar;
-            this.colCikar.MaxWidth = 20;
-            this.colCikar.Name = "colCikar";
-            this.colCikar.Visible = true;
-            this.colCikar.VisibleIndex = 0;
-            this.colCikar.Width = 20;
-            // 
-            // btnIsciCikar
-            // 
-            this.btnIsciCikar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
-            this.btnIsciCikar.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnIsciCikar.Name = "btnIsciCikar";
-            this.btnIsciCikar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.btnIsciCikar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnCikar_ButtonClick);
             // 
             // colAddWorkerId
             // 
@@ -615,15 +605,19 @@
             this.colAddWorkerWorker.Name = "colAddWorkerWorker";
             this.colAddWorkerWorker.OptionsFilter.AllowFilter = false;
             this.colAddWorkerWorker.Visible = true;
-            this.colAddWorkerWorker.VisibleIndex = 1;
+            this.colAddWorkerWorker.VisibleIndex = 0;
             this.colAddWorkerWorker.Width = 532;
             // 
             // rpstWorker
             // 
+            this.rpstWorker.AppearanceFocused.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.rpstWorker.AppearanceFocused.Options.UseBackColor = true;
             this.rpstWorker.AutoHeight = false;
+            serializableAppearanceObject4.Image = ((System.Drawing.Image)(resources.GetObject("serializableAppearanceObject4.Image")));
+            serializableAppearanceObject4.Options.UseImage = true;
             this.rpstWorker.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.rpstWorker.LookAndFeel.SkinName = "McSkin";
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstWorker.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            this.rpstWorker.LookAndFeel.SkinName = "Money Twins";
             this.rpstWorker.LookAndFeel.UseDefaultLookAndFeel = false;
             this.rpstWorker.Name = "rpstWorker";
             // 
@@ -643,7 +637,7 @@
             this.colAddWorkerQuantity.Name = "colAddWorkerQuantity";
             this.colAddWorkerQuantity.OptionsFilter.AllowFilter = false;
             this.colAddWorkerQuantity.Visible = true;
-            this.colAddWorkerQuantity.VisibleIndex = 2;
+            this.colAddWorkerQuantity.VisibleIndex = 1;
             this.colAddWorkerQuantity.Width = 60;
             // 
             // colAddWorkerUnitTime
@@ -662,7 +656,7 @@
             this.colAddWorkerUnitTime.Name = "colAddWorkerUnitTime";
             this.colAddWorkerUnitTime.OptionsFilter.AllowFilter = false;
             this.colAddWorkerUnitTime.Visible = true;
-            this.colAddWorkerUnitTime.VisibleIndex = 4;
+            this.colAddWorkerUnitTime.VisibleIndex = 2;
             this.colAddWorkerUnitTime.Width = 60;
             // 
             // colAddWorkerUnitTimeType
@@ -677,20 +671,24 @@
             this.colAddWorkerUnitTimeType.ColumnEdit = this.rpstUnitTimeTypes;
             this.colAddWorkerUnitTimeType.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colAddWorkerUnitTimeType.FieldName = "SelectedUnitTimeType";
-            this.colAddWorkerUnitTimeType.MaxWidth = 70;
-            this.colAddWorkerUnitTimeType.MinWidth = 70;
+            this.colAddWorkerUnitTimeType.MaxWidth = 90;
+            this.colAddWorkerUnitTimeType.MinWidth = 90;
             this.colAddWorkerUnitTimeType.Name = "colAddWorkerUnitTimeType";
             this.colAddWorkerUnitTimeType.OptionsFilter.AllowFilter = false;
             this.colAddWorkerUnitTimeType.Visible = true;
             this.colAddWorkerUnitTimeType.VisibleIndex = 3;
-            this.colAddWorkerUnitTimeType.Width = 70;
+            this.colAddWorkerUnitTimeType.Width = 90;
             // 
             // rpstUnitTimeTypes
             // 
+            this.rpstUnitTimeTypes.AppearanceFocused.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.rpstUnitTimeTypes.AppearanceFocused.Options.UseBackColor = true;
             this.rpstUnitTimeTypes.AutoHeight = false;
+            serializableAppearanceObject5.Image = ((System.Drawing.Image)(resources.GetObject("serializableAppearanceObject5.Image")));
+            serializableAppearanceObject5.Options.UseImage = true;
             this.rpstUnitTimeTypes.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.rpstUnitTimeTypes.LookAndFeel.SkinName = "McSkin";
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstUnitTimeTypes.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            this.rpstUnitTimeTypes.LookAndFeel.SkinName = "Money Twins";
             this.rpstUnitTimeTypes.LookAndFeel.UseDefaultLookAndFeel = false;
             this.rpstUnitTimeTypes.Name = "rpstUnitTimeTypes";
             // 
@@ -709,10 +707,35 @@
             this.colAddWorkerWorkerUnitPrice.MaxWidth = 100;
             this.colAddWorkerWorkerUnitPrice.MinWidth = 100;
             this.colAddWorkerWorkerUnitPrice.Name = "colAddWorkerWorkerUnitPrice";
+            this.colAddWorkerWorkerUnitPrice.OptionsColumn.AllowEdit = false;
+            this.colAddWorkerWorkerUnitPrice.OptionsColumn.AllowFocus = false;
+            this.colAddWorkerWorkerUnitPrice.OptionsColumn.ReadOnly = true;
             this.colAddWorkerWorkerUnitPrice.OptionsFilter.AllowFilter = false;
             this.colAddWorkerWorkerUnitPrice.Visible = true;
-            this.colAddWorkerWorkerUnitPrice.VisibleIndex = 5;
+            this.colAddWorkerWorkerUnitPrice.VisibleIndex = 4;
             this.colAddWorkerWorkerUnitPrice.Width = 100;
+            // 
+            // colCikar
+            // 
+            this.colCikar.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colCikar.AppearanceHeader.Options.UseFont = true;
+            this.colCikar.Caption = "gridColumn1";
+            this.colCikar.ColumnEdit = this.btnIsciCikar;
+            this.colCikar.MaxWidth = 20;
+            this.colCikar.Name = "colCikar";
+            this.colCikar.Visible = true;
+            this.colCikar.VisibleIndex = 5;
+            this.colCikar.Width = 20;
+            // 
+            // btnIsciCikar
+            // 
+            this.btnIsciCikar.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.btnIsciCikar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            this.btnIsciCikar.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnIsciCikar.Name = "btnIsciCikar";
+            this.btnIsciCikar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnIsciCikar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnCikar_ButtonClick);
             // 
             // groupControl1
             // 
@@ -895,16 +918,16 @@
             this.isciAracGirisPanelix.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdAddVehicle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewAddVehicle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAracCikar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstVehicle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstVehicleUnitTimeTypes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAracCikar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdAddWorker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewAddWorker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnIsciCikar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstWorker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstUnitTimeTypes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnIsciCikar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();

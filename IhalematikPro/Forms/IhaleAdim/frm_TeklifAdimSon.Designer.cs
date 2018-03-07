@@ -232,15 +232,15 @@
             this.panelControl5.Controls.Add(this.ddlCalculateWorkerType);
             this.panelControl5.Controls.Add(this.labelControl33);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl5.Location = new System.Drawing.Point(946, 0);
+            this.panelControl5.Location = new System.Drawing.Point(931, 0);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(396, 35);
+            this.panelControl5.Size = new System.Drawing.Size(411, 35);
             this.panelControl5.TabIndex = 17;
             // 
             // ddlCalculateWorkerType
             // 
             this.ddlCalculateWorkerType.EditValue = "İnsan Saate Göre";
-            this.ddlCalculateWorkerType.Location = new System.Drawing.Point(200, 4);
+            this.ddlCalculateWorkerType.Location = new System.Drawing.Point(209, 4);
             this.ddlCalculateWorkerType.Name = "ddlCalculateWorkerType";
             this.ddlCalculateWorkerType.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ddlCalculateWorkerType.Properties.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
