@@ -119,13 +119,13 @@
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.isciAracGirisPaneli = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.lblKarToplam = new DevExpress.XtraEditors.LabelControl();
+            this.pnlrisk = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl9 = new DevExpress.XtraEditors.PanelControl();
             this.btnPrev = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
-            this.lblKarToplam = new DevExpress.XtraEditors.LabelControl();
-            this.pnlrisk = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnIscilikveAracGirisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -174,12 +174,12 @@
             this.isciAracGirisPaneli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlrisk)).BeginInit();
+            this.pnlrisk.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).BeginInit();
             this.panelControl9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlrisk)).BeginInit();
-            this.pnlrisk.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnIscilikveAracGirisi
@@ -1263,7 +1263,7 @@
             // 
             this.Id.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Id.AppearanceCell.Options.UseFont = true;
-            this.Id.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Id.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Id.AppearanceHeader.Options.UseFont = true;
             this.Id.Caption = "gridColumn6";
             this.Id.FieldName = "Id";
@@ -1276,7 +1276,7 @@
             this.gridColumn1.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn1.AppearanceCell.Options.UseFont = true;
             this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn1.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn1.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
@@ -1297,7 +1297,7 @@
             this.gridColumn2.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn2.AppearanceCell.Options.UseFont = true;
             this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn2.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn2.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
@@ -1317,7 +1317,7 @@
             this.gridColumn3.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn3.AppearanceCell.Options.UseFont = true;
             this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn3.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn3.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
@@ -1338,7 +1338,7 @@
             this.gridColumn4.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn4.AppearanceCell.Options.UseFont = true;
             this.gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn4.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn4.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
@@ -1360,7 +1360,7 @@
             this.clmEquipments.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.clmEquipments.AppearanceCell.Options.UseFont = true;
             this.clmEquipments.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.clmEquipments.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.clmEquipments.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.clmEquipments.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.clmEquipments.AppearanceHeader.ForeColor = System.Drawing.Color.Navy;
             this.clmEquipments.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -1391,7 +1391,7 @@
             this.colMaterialListMarkup.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colMaterialListMarkup.AppearanceCell.Options.UseFont = true;
             this.colMaterialListMarkup.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colMaterialListMarkup.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colMaterialListMarkup.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colMaterialListMarkup.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colMaterialListMarkup.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colMaterialListMarkup.AppearanceHeader.Options.UseBackColor = true;
@@ -1410,7 +1410,7 @@
             this.colWorkerUnitPrice.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colWorkerUnitPrice.AppearanceCell.Options.UseFont = true;
             this.colWorkerUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colWorkerUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colWorkerUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colWorkerUnitPrice.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colWorkerUnitPrice.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colWorkerUnitPrice.AppearanceHeader.Options.UseBackColor = true;
@@ -1436,7 +1436,7 @@
             this.colCustomWorkerUnitPrice.AppearanceCell.Options.UseBackColor = true;
             this.colCustomWorkerUnitPrice.AppearanceCell.Options.UseFont = true;
             this.colCustomWorkerUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colCustomWorkerUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colCustomWorkerUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colCustomWorkerUnitPrice.AppearanceHeader.Options.UseBackColor = true;
             this.colCustomWorkerUnitPrice.AppearanceHeader.Options.UseFont = true;
             this.colCustomWorkerUnitPrice.Caption = "BİRİM FİYAT";
@@ -1457,7 +1457,7 @@
             this.colCustomWorkerMarkupUnitPrice.AppearanceCell.Options.UseBackColor = true;
             this.colCustomWorkerMarkupUnitPrice.AppearanceCell.Options.UseFont = true;
             this.colCustomWorkerMarkupUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colCustomWorkerMarkupUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colCustomWorkerMarkupUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colCustomWorkerMarkupUnitPrice.AppearanceHeader.Options.UseBackColor = true;
             this.colCustomWorkerMarkupUnitPrice.AppearanceHeader.Options.UseFont = true;
             this.colCustomWorkerMarkupUnitPrice.Caption = "K.BR.FİYAT";
@@ -1477,7 +1477,7 @@
             this.colCustomWorkerTotalAmount.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colCustomWorkerTotalAmount.AppearanceCell.Options.UseFont = true;
             this.colCustomWorkerTotalAmount.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colCustomWorkerTotalAmount.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colCustomWorkerTotalAmount.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colCustomWorkerTotalAmount.AppearanceHeader.Options.UseBackColor = true;
             this.colCustomWorkerTotalAmount.AppearanceHeader.Options.UseFont = true;
             this.colCustomWorkerTotalAmount.Caption = "MLYT.TOPLAMI";
@@ -1499,7 +1499,7 @@
             this.colWorkerTotalAmount.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colWorkerTotalAmount.AppearanceCell.Options.UseFont = true;
             this.colWorkerTotalAmount.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colWorkerTotalAmount.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colWorkerTotalAmount.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colWorkerTotalAmount.AppearanceHeader.Options.UseBackColor = true;
             this.colWorkerTotalAmount.AppearanceHeader.Options.UseFont = true;
             this.colWorkerTotalAmount.Caption = "TOPLAM FİYAT";
@@ -1519,7 +1519,7 @@
             this.colWorkerMarkupUnitPrice.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colWorkerMarkupUnitPrice.AppearanceCell.Options.UseFont = true;
             this.colWorkerMarkupUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colWorkerMarkupUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colWorkerMarkupUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colWorkerMarkupUnitPrice.AppearanceHeader.Options.UseBackColor = true;
             this.colWorkerMarkupUnitPrice.AppearanceHeader.Options.UseFont = true;
             this.colWorkerMarkupUnitPrice.Caption = "K.BİRİM FİYAT";
@@ -1537,7 +1537,7 @@
             this.gridColumn5.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn5.AppearanceCell.Options.UseFont = true;
             this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.Caption = "K.MLY.TOP.";
@@ -1708,6 +1708,7 @@
             this.colIsSelected.Caption = " ";
             this.colIsSelected.ColumnEdit = this.rpstIsSelected;
             this.colIsSelected.FieldName = "IsSelected";
+            this.colIsSelected.Image = ((System.Drawing.Image)(resources.GetObject("colIsSelected.Image")));
             this.colIsSelected.Name = "colIsSelected";
             this.colIsSelected.OptionsFilter.AllowFilter = false;
             this.colIsSelected.Visible = true;
@@ -1730,6 +1731,7 @@
             this.gridColumn10.Caption = "GRUP ADI";
             this.gridColumn10.FieldName = "Description";
             this.gridColumn10.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.Value;
+            this.gridColumn10.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn10.Image")));
             this.gridColumn10.MinWidth = 80;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.AllowEdit = false;
@@ -1791,6 +1793,41 @@
             this.panelControl3.Size = new System.Drawing.Size(1157, 70);
             this.panelControl3.TabIndex = 28;
             // 
+            // lblKarToplam
+            // 
+            this.lblKarToplam.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKarToplam.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.lblKarToplam.Location = new System.Drawing.Point(560, 96);
+            this.lblKarToplam.Margin = new System.Windows.Forms.Padding(4);
+            this.lblKarToplam.Name = "lblKarToplam";
+            this.lblKarToplam.Size = new System.Drawing.Size(43, 24);
+            this.lblKarToplam.TabIndex = 14;
+            this.lblKarToplam.Text = "0 TL  ";
+            // 
+            // pnlrisk
+            // 
+            this.pnlrisk.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pnlrisk.Appearance.Options.UseBackColor = true;
+            this.pnlrisk.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlrisk.Controls.Add(this.simpleButton1);
+            this.pnlrisk.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlrisk.Location = new System.Drawing.Point(0, 0);
+            this.pnlrisk.Name = "pnlrisk";
+            this.pnlrisk.Size = new System.Drawing.Size(172, 70);
+            this.pnlrisk.TabIndex = 49;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(0, 0);
+            this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
+            this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(172, 70);
+            this.simpleButton1.TabIndex = 1;
+            this.simpleButton1.Text = "Tümünü Listele";
+            // 
             // panelControl9
             // 
             this.panelControl9.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -1844,41 +1881,6 @@
             this.btnNext.TabIndex = 3;
             this.btnNext.Text = "Sonraki Adım";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // lblKarToplam
-            // 
-            this.lblKarToplam.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKarToplam.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.lblKarToplam.Location = new System.Drawing.Point(560, 96);
-            this.lblKarToplam.Margin = new System.Windows.Forms.Padding(4);
-            this.lblKarToplam.Name = "lblKarToplam";
-            this.lblKarToplam.Size = new System.Drawing.Size(43, 24);
-            this.lblKarToplam.TabIndex = 14;
-            this.lblKarToplam.Text = "0 TL  ";
-            // 
-            // pnlrisk
-            // 
-            this.pnlrisk.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pnlrisk.Appearance.Options.UseBackColor = true;
-            this.pnlrisk.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pnlrisk.Controls.Add(this.simpleButton1);
-            this.pnlrisk.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlrisk.Location = new System.Drawing.Point(0, 0);
-            this.pnlrisk.Name = "pnlrisk";
-            this.pnlrisk.Size = new System.Drawing.Size(172, 70);
-            this.pnlrisk.TabIndex = 49;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(0, 0);
-            this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
-            this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(172, 70);
-            this.simpleButton1.TabIndex = 1;
-            this.simpleButton1.Text = "Tümünü Listele";
             // 
             // frm_Teklif_Adim3
             // 
@@ -1958,12 +1960,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlrisk)).EndInit();
+            this.pnlrisk.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).EndInit();
             this.panelControl9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
             this.panelControl6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pnlrisk)).EndInit();
-            this.pnlrisk.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

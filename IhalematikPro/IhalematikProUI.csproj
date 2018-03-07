@@ -271,6 +271,12 @@
     <Compile Include="Forms\IhaleAdim\frm_BirimFiyatHistory.Designer.cs">
       <DependentUpon>frm_BirimFiyatHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_DigerGiderler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_DigerGiderler.Designer.cs">
+      <DependentUpon>frm_DigerGiderler.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\IhaleAdim\frm_Iscilik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -612,6 +618,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IhaleAdim\frm_BirimFiyatHistory.resx">
       <DependentUpon>frm_BirimFiyatHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IhaleAdim\frm_DigerGiderler.resx">
+      <DependentUpon>frm_DigerGiderler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IhaleAdim\frm_Iscilik.resx">
       <DependentUpon>frm_Iscilik.cs</DependentUpon>

@@ -321,5 +321,16 @@ namespace IhalematikProUI.Forms
         {
             txtCarriage.Text = CurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
         }
+
+        private void groupControl5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtOtherCoast_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            frm_DigerGiderler digergiderler = new frm_DigerGiderler();
+            digergiderler.ShowDialog();
+        }
     }
 }

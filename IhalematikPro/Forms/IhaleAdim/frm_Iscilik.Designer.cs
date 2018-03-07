@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Iscilik));
             this.isciAracGirisPanelix = new DevExpress.XtraEditors.PanelControl();
             this.grdAddVehicle = new DevExpress.XtraGrid.GridControl();
@@ -263,6 +263,8 @@
             // 
             // colAracCikar
             // 
+            this.colAracCikar.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAracCikar.AppearanceHeader.Options.UseFont = true;
             this.colAracCikar.Caption = "gridColumn1";
             this.colAracCikar.ColumnEdit = this.btnAracCikar;
             this.colAracCikar.MaxWidth = 20;
@@ -275,20 +277,22 @@
             // 
             this.btnAracCikar.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnAracCikar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnAracCikar.Name = "btnAracCikar";
             this.btnAracCikar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnAracCikar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnAracCikar_ButtonClick);
             // 
             // colAddVehicleId
             // 
+            this.colAddVehicleId.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddVehicleId.AppearanceHeader.Options.UseFont = true;
             this.colAddVehicleId.FieldName = "Id";
             this.colAddVehicleId.Name = "colAddVehicleId";
             // 
             // colAddVehicleVehicle
             // 
             this.colAddVehicleVehicle.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colAddVehicleVehicle.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddVehicleVehicle.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddVehicleVehicle.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddVehicleVehicle.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colAddVehicleVehicle.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -316,7 +320,7 @@
             // colAddVehicleQuantity
             // 
             this.colAddVehicleQuantity.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colAddVehicleQuantity.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddVehicleQuantity.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddVehicleQuantity.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddVehicleQuantity.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colAddVehicleQuantity.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -337,7 +341,7 @@
             // colAddVehicleUnitTime
             // 
             this.colAddVehicleUnitTime.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colAddVehicleUnitTime.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddVehicleUnitTime.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddVehicleUnitTime.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddVehicleUnitTime.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colAddVehicleUnitTime.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -358,7 +362,7 @@
             // colAddVehicleUnitTimeType
             // 
             this.colAddVehicleUnitTimeType.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colAddVehicleUnitTimeType.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddVehicleUnitTimeType.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddVehicleUnitTimeType.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddVehicleUnitTimeType.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colAddVehicleUnitTimeType.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -389,7 +393,7 @@
             // colAddVehicleWorkerUnitPrice
             // 
             this.colAddVehicleWorkerUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colAddVehicleWorkerUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddVehicleWorkerUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddVehicleWorkerUnitPrice.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddVehicleWorkerUnitPrice.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colAddVehicleWorkerUnitPrice.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -571,6 +575,8 @@
             // 
             // colCikar
             // 
+            this.colCikar.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colCikar.AppearanceHeader.Options.UseFont = true;
             this.colCikar.Caption = "gridColumn1";
             this.colCikar.ColumnEdit = this.btnIsciCikar;
             this.colCikar.MaxWidth = 20;
@@ -582,7 +588,7 @@
             // btnIsciCikar
             // 
             this.btnIsciCikar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.cross_script_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnIsciCikar.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnIsciCikar.Name = "btnIsciCikar";
             this.btnIsciCikar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -590,13 +596,15 @@
             // 
             // colAddWorkerId
             // 
+            this.colAddWorkerId.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddWorkerId.AppearanceHeader.Options.UseFont = true;
             this.colAddWorkerId.FieldName = "Id";
             this.colAddWorkerId.Name = "colAddWorkerId";
             // 
             // colAddWorkerWorker
             // 
             this.colAddWorkerWorker.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colAddWorkerWorker.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddWorkerWorker.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddWorkerWorker.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddWorkerWorker.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colAddWorkerWorker.AppearanceHeader.Options.UseBackColor = true;
@@ -622,7 +630,7 @@
             // colAddWorkerQuantity
             // 
             this.colAddWorkerQuantity.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colAddWorkerQuantity.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddWorkerQuantity.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddWorkerQuantity.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddWorkerQuantity.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colAddWorkerQuantity.AppearanceHeader.Options.UseBackColor = true;
@@ -641,7 +649,7 @@
             // colAddWorkerUnitTime
             // 
             this.colAddWorkerUnitTime.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colAddWorkerUnitTime.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddWorkerUnitTime.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddWorkerUnitTime.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddWorkerUnitTime.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colAddWorkerUnitTime.AppearanceHeader.Options.UseBackColor = true;
@@ -660,7 +668,7 @@
             // colAddWorkerUnitTimeType
             // 
             this.colAddWorkerUnitTimeType.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colAddWorkerUnitTimeType.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddWorkerUnitTimeType.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddWorkerUnitTimeType.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddWorkerUnitTimeType.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colAddWorkerUnitTimeType.AppearanceHeader.Options.UseBackColor = true;
@@ -689,7 +697,7 @@
             // colAddWorkerWorkerUnitPrice
             // 
             this.colAddWorkerWorkerUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colAddWorkerWorkerUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colAddWorkerWorkerUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colAddWorkerWorkerUnitPrice.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colAddWorkerWorkerUnitPrice.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.colAddWorkerWorkerUnitPrice.AppearanceHeader.Options.UseBackColor = true;
