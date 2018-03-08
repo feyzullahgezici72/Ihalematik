@@ -445,6 +445,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(132, 66);
             this.simpleButton1.TabIndex = 45;
             this.simpleButton1.Text = "Gönder";
+            this.simpleButton1.Visible = false;
             // 
             // lblTenderNumber
             // 
@@ -1045,7 +1046,7 @@
             this.groupControl5.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl5.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(350, 145);
+            this.groupControl5.Size = new System.Drawing.Size(350, 149);
             this.groupControl5.TabIndex = 15;
             this.groupControl5.Text = "İs-Bf Farkı";
             this.groupControl5.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl5_Paint);
@@ -1054,7 +1055,7 @@
             // 
             this.labelControl34.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl34.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl34.Location = new System.Drawing.Point(140, 108);
+            this.labelControl34.Location = new System.Drawing.Point(140, 105);
             this.labelControl34.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl34.Name = "labelControl34";
             this.labelControl34.Size = new System.Drawing.Size(33, 19);
@@ -1065,7 +1066,7 @@
             // 
             this.labelControl35.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl35.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl35.Location = new System.Drawing.Point(52, 77);
+            this.labelControl35.Location = new System.Drawing.Point(52, 74);
             this.labelControl35.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl35.Name = "labelControl35";
             this.labelControl35.Size = new System.Drawing.Size(122, 19);
@@ -1076,7 +1077,7 @@
             // 
             this.labelControl36.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl36.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl36.Location = new System.Drawing.Point(52, 51);
+            this.labelControl36.Location = new System.Drawing.Point(52, 48);
             this.labelControl36.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl36.Name = "labelControl36";
             this.labelControl36.Size = new System.Drawing.Size(119, 19);
@@ -1085,7 +1086,7 @@
             // 
             // txtDifference
             // 
-            this.txtDifference.Location = new System.Drawing.Point(183, 113);
+            this.txtDifference.Location = new System.Drawing.Point(183, 110);
             this.txtDifference.Margin = new System.Windows.Forms.Padding(4);
             this.txtDifference.Name = "txtDifference";
             this.txtDifference.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1103,7 +1104,7 @@
             // 
             // txtTotalUnitPrice
             // 
-            this.txtTotalUnitPrice.Location = new System.Drawing.Point(183, 79);
+            this.txtTotalUnitPrice.Location = new System.Drawing.Point(183, 76);
             this.txtTotalUnitPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalUnitPrice.Name = "txtTotalUnitPrice";
             this.txtTotalUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1121,7 +1122,7 @@
             // 
             // txtTotalPersonHour
             // 
-            this.txtTotalPersonHour.Location = new System.Drawing.Point(183, 47);
+            this.txtTotalPersonHour.Location = new System.Drawing.Point(183, 44);
             this.txtTotalPersonHour.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalPersonHour.Name = "txtTotalPersonHour";
             this.txtTotalPersonHour.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1159,7 +1160,7 @@
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl13.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl13.Location = new System.Drawing.Point(126, 113);
+            this.labelControl13.Location = new System.Drawing.Point(126, 116);
             this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(55, 19);
@@ -1168,7 +1169,7 @@
             // 
             // txtMarkupMaterialTotal
             // 
-            this.txtMarkupMaterialTotal.Location = new System.Drawing.Point(184, 39);
+            this.txtMarkupMaterialTotal.Location = new System.Drawing.Point(184, 42);
             this.txtMarkupMaterialTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarkupMaterialTotal.Name = "txtMarkupMaterialTotal";
             this.txtMarkupMaterialTotal.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1186,7 +1187,7 @@
             // 
             // txtMarkupAmount
             // 
-            this.txtMarkupAmount.Location = new System.Drawing.Point(184, 110);
+            this.txtMarkupAmount.Location = new System.Drawing.Point(184, 113);
             this.txtMarkupAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarkupAmount.Name = "txtMarkupAmount";
             this.txtMarkupAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1206,7 +1207,7 @@
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl12.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl12.Location = new System.Drawing.Point(140, 76);
+            this.labelControl12.Location = new System.Drawing.Point(140, 79);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(41, 19);
@@ -1217,7 +1218,7 @@
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl11.Location = new System.Drawing.Point(116, 42);
+            this.labelControl11.Location = new System.Drawing.Point(116, 45);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(65, 19);
@@ -1226,7 +1227,7 @@
             // 
             // txtMarkupWorkerAmount
             // 
-            this.txtMarkupWorkerAmount.Location = new System.Drawing.Point(184, 73);
+            this.txtMarkupWorkerAmount.Location = new System.Drawing.Point(184, 76);
             this.txtMarkupWorkerAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarkupWorkerAmount.Name = "txtMarkupWorkerAmount";
             this.txtMarkupWorkerAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1369,7 +1370,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl6.Location = new System.Drawing.Point(48, 41);
+            this.labelControl6.Location = new System.Drawing.Point(48, 44);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(124, 19);
@@ -1378,7 +1379,7 @@
             // 
             // txtMaterialCostAmount
             // 
-            this.txtMaterialCostAmount.Location = new System.Drawing.Point(183, 39);
+            this.txtMaterialCostAmount.Location = new System.Drawing.Point(183, 42);
             this.txtMaterialCostAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaterialCostAmount.Name = "txtMaterialCostAmount";
             this.txtMaterialCostAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1396,7 +1397,7 @@
             // 
             // txtMaterialkdvTotalAmount
             // 
-            this.txtMaterialkdvTotalAmount.Location = new System.Drawing.Point(183, 73);
+            this.txtMaterialkdvTotalAmount.Location = new System.Drawing.Point(183, 76);
             this.txtMaterialkdvTotalAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaterialkdvTotalAmount.Name = "txtMaterialkdvTotalAmount";
             this.txtMaterialkdvTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1416,7 +1417,7 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl8.Location = new System.Drawing.Point(82, 76);
+            this.labelControl8.Location = new System.Drawing.Point(82, 79);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(89, 19);
@@ -1425,7 +1426,7 @@
             // 
             // txtTotalAmount
             // 
-            this.txtTotalAmount.Location = new System.Drawing.Point(183, 107);
+            this.txtTotalAmount.Location = new System.Drawing.Point(183, 110);
             this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1445,7 +1446,7 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl7.Location = new System.Drawing.Point(72, 110);
+            this.labelControl7.Location = new System.Drawing.Point(72, 113);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(98, 19);
