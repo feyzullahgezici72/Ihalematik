@@ -38,6 +38,15 @@ namespace IhalematikPro.Model
                 return Math.Round(this.PozOBFUnitPrice * this.Quantity, 2);
             }
         }
+
+        //karli maliyet toplami
+        public double TotalAmountMarkup
+        {
+            get
+            {
+                return Math.Round(this.TotalMarkup + this.TotalAmount, 2);
+            }
+        }
         public bool IsPoz { get; set; }
 
         public int PozOBFId { get; set; }
