@@ -237,11 +237,6 @@ namespace IhalematikPro.Forms
             }
         }
 
-        private void rpstWorkship_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSelectDeselect_Click(object sender, EventArgs e)
         {
             List<MaterialListModel> models = grdMaterialList.DataSource as List<MaterialListModel>;
@@ -257,6 +252,16 @@ namespace IhalematikPro.Forms
                 }
                 grdMaterialList.DataSource = models;
                 grdMaterialList.RefreshDataSource();
+            }
+        }
+
+        private void simpleButton1_Click_1(object sender, EventArgs e)
+        {
+            if (CurrentManager.Instance.CurrentTender.MaterialList != null)
+            {
+                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+                List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+                grdMaterialList.DataSource = models;
             }
         }
     }

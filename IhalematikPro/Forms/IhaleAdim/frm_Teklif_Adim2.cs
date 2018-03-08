@@ -245,5 +245,16 @@ namespace IhalematikPro.Forms
                 }
             }
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            if (this.SelectedGroupId != 0 && CurrentManager.Instance.CurrentTender.MaterialList != null)
+            {
+                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+                List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+                grdMaterialListNonWorkship.DataSource = models;
+                this.CalculateTotalMarkup();
+            }
+        }
     }
 }

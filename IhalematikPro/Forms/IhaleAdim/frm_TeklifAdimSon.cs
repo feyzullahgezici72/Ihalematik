@@ -185,7 +185,7 @@ namespace IhalematikProUI.Forms
                 this.OtherExpenses();
                 this.LoadGrid();
                 this.CalculateFooterInnerValues(null);
-                this.CalculateLeftPanelValues();
+                //this.CalculateLeftPanelValues();
 
                 colUnitTotalFare.Visible = true;
                 colTotalFare.Visible = true;
