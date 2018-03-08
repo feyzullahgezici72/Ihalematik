@@ -694,18 +694,24 @@
             // 
             // colMaterialListIsPoz
             // 
+            this.colMaterialListIsPoz.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colMaterialListIsPoz.AppearanceHeader.Options.UseFont = true;
             this.colMaterialListIsPoz.Caption = "gridColumn4";
             this.colMaterialListIsPoz.FieldName = "IsPoz";
             this.colMaterialListIsPoz.Name = "colMaterialListIsPoz";
             // 
             // colMaterialListPozOBFId
             // 
+            this.colMaterialListPozOBFId.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colMaterialListPozOBFId.AppearanceHeader.Options.UseFont = true;
             this.colMaterialListPozOBFId.Caption = "gridColumn4";
             this.colMaterialListPozOBFId.FieldName = "PozOBFId";
             this.colMaterialListPozOBFId.Name = "colMaterialListPozOBFId";
             // 
             // colId
             // 
+            this.colId.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colId.AppearanceHeader.Options.UseFont = true;
             this.colId.Caption = "gridColumn4";
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
@@ -713,11 +719,15 @@
             // colChangeMetreialName
             // 
             this.colChangeMetreialName.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colChangeMetreialName.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colChangeMetreialName.AppearanceHeader.Options.UseBackColor = true;
+            this.colChangeMetreialName.AppearanceHeader.Options.UseFont = true;
             this.colChangeMetreialName.ColumnEdit = this.btnChangeMeterialName;
+            this.colChangeMetreialName.Image = ((System.Drawing.Image)(resources.GetObject("colChangeMetreialName.Image")));
             this.colChangeMetreialName.MaxWidth = 30;
             this.colChangeMetreialName.MinWidth = 30;
             this.colChangeMetreialName.Name = "colChangeMetreialName";
+            this.colChangeMetreialName.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.colChangeMetreialName.Visible = true;
             this.colChangeMetreialName.VisibleIndex = 1;
             this.colChangeMetreialName.Width = 30;
@@ -742,7 +752,9 @@
             // colIsSelectedOfferMaterial
             // 
             this.colIsSelectedOfferMaterial.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colIsSelectedOfferMaterial.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colIsSelectedOfferMaterial.AppearanceHeader.Options.UseBackColor = true;
+            this.colIsSelectedOfferMaterial.AppearanceHeader.Options.UseFont = true;
             this.colIsSelectedOfferMaterial.Caption = " ";
             this.colIsSelectedOfferMaterial.ColumnEdit = this.rpstIsSelectedOfferMaterial;
             this.colIsSelectedOfferMaterial.FieldName = "IsSelected";
@@ -758,7 +770,7 @@
             // gridColumn1
             // 
             this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn1.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn1.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn1.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -780,7 +792,7 @@
             // gridColumn2
             // 
             this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn2.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn2.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn2.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -802,7 +814,7 @@
             // gridColumn3
             // 
             this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn3.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn3.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -832,7 +844,7 @@
             this.colMaterialListQuantity.AppearanceCell.Options.UseFont = true;
             this.colMaterialListQuantity.AppearanceCell.Options.UseForeColor = true;
             this.colMaterialListQuantity.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colMaterialListQuantity.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colMaterialListQuantity.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colMaterialListQuantity.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colMaterialListQuantity.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colMaterialListQuantity.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -854,7 +866,9 @@
             // colBirimFiyat
             // 
             this.colBirimFiyat.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colBirimFiyat.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colBirimFiyat.AppearanceHeader.Options.UseBackColor = true;
+            this.colBirimFiyat.AppearanceHeader.Options.UseFont = true;
             this.colBirimFiyat.Caption = "BİRİM FİYAT";
             this.colBirimFiyat.DisplayFormat.FormatString = "c";
             this.colBirimFiyat.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -1060,13 +1074,17 @@
             // 
             // colIdSupplier
             // 
+            this.colIdSupplier.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colIdSupplier.AppearanceHeader.Options.UseFont = true;
             this.colIdSupplier.FieldName = "Id";
             this.colIdSupplier.Name = "colIdSupplier";
             // 
             // colIsSelectedSupplier
             // 
             this.colIsSelectedSupplier.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colIsSelectedSupplier.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colIsSelectedSupplier.AppearanceHeader.Options.UseBackColor = true;
+            this.colIsSelectedSupplier.AppearanceHeader.Options.UseFont = true;
             this.colIsSelectedSupplier.Caption = " ";
             this.colIsSelectedSupplier.ColumnEdit = this.rpstIsSelectedSupplier;
             this.colIsSelectedSupplier.FieldName = "IsSelected";
@@ -1086,7 +1104,7 @@
             // colCompanyName
             // 
             this.colCompanyName.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colCompanyName.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colCompanyName.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colCompanyName.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.colCompanyName.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.colCompanyName.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -1107,7 +1125,9 @@
             // gridColumn5
             // 
             this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.Caption = "FAALİYET ALANI";
             this.gridColumn5.FieldName = "SegmentText";
             this.gridColumn5.Name = "gridColumn5";
@@ -1119,7 +1139,9 @@
             // colSupplierDetail
             // 
             this.colSupplierDetail.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colSupplierDetail.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colSupplierDetail.AppearanceHeader.Options.UseBackColor = true;
+            this.colSupplierDetail.AppearanceHeader.Options.UseFont = true;
             this.colSupplierDetail.ColumnEdit = this.rpstSupplierDetail1;
             this.colSupplierDetail.MaxWidth = 30;
             this.colSupplierDetail.MinWidth = 30;
@@ -1138,7 +1160,7 @@
             // panelControl7
             // 
             this.panelControl7.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl7.Appearance.BackColor2 = System.Drawing.Color.Red;
+            this.panelControl7.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panelControl7.Appearance.Options.UseBackColor = true;
             this.panelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl7.Controls.Add(this.labelControl5);

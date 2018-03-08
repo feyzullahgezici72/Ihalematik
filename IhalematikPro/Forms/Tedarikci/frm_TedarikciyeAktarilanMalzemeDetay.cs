@@ -129,7 +129,9 @@ namespace IhalematikProUI.Forms.Tedarikci
 
                     else
                     {
+                        fw.Close();
                         MessageBox.Show("Mail gonderirken hata oluştu.Lütfen daha sonra tekrar deneyiniz");
+
                     }
                 }
             }

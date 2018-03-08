@@ -253,6 +253,8 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.Caption = "gridColumn4";
             this.gridColumn4.FieldName = "Id";
             this.gridColumn4.Name = "gridColumn4";
@@ -260,7 +262,7 @@
             // gridColumn9
             // 
             this.gridColumn9.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn9.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn9.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn9.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn9.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn9.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -282,7 +284,7 @@
             // gridColumn10
             // 
             this.gridColumn10.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn10.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn10.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn10.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn10.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn10.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -304,7 +306,7 @@
             // gridColumn11
             // 
             this.gridColumn11.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn11.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn11.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn11.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn11.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn11.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -332,7 +334,7 @@
             this.gridColumn12.AppearanceCell.Options.UseFont = true;
             this.gridColumn12.AppearanceCell.Options.UseForeColor = true;
             this.gridColumn12.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn12.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn12.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn12.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.gridColumn12.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
             this.gridColumn12.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -356,7 +358,9 @@
             // colRemoveAddEdMaterialList
             // 
             this.colRemoveAddEdMaterialList.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colRemoveAddEdMaterialList.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.colRemoveAddEdMaterialList.AppearanceHeader.Options.UseBackColor = true;
+            this.colRemoveAddEdMaterialList.AppearanceHeader.Options.UseFont = true;
             this.colRemoveAddEdMaterialList.Caption = " ";
             this.colRemoveAddEdMaterialList.ColumnEdit = this.rpstRemove;
             this.colRemoveAddEdMaterialList.MaxWidth = 20;

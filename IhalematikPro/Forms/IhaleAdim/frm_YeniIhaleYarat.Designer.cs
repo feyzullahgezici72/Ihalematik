@@ -631,6 +631,8 @@
             // 
             // colIsSelected
             // 
+            this.colIsSelected.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colIsSelected.AppearanceHeader.Options.UseFont = true;
             this.colIsSelected.Caption = " ";
             this.colIsSelected.ColumnEdit = this.rpstSelected;
             this.colIsSelected.FieldName = "IsSelected";
@@ -650,12 +652,14 @@
             // 
             // colId
             // 
+            this.colId.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colId.AppearanceHeader.Options.UseFont = true;
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
             // 
             // gridColumn2
             // 
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn2.AppearanceHeader.Options.UseFont = true;
             this.gridColumn2.Caption = "Teklif No";
             this.gridColumn2.FieldName = "Number";
@@ -669,7 +673,7 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
             this.gridColumn1.Caption = "Teklif Tarihi";
             this.gridColumn1.FieldName = "DateTime";
@@ -683,7 +687,7 @@
             // 
             // gridColumn10
             // 
-            this.gridColumn10.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn10.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn10.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn10.AppearanceHeader.Options.UseBorderColor = true;
             this.gridColumn10.AppearanceHeader.Options.UseFont = true;
