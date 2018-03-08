@@ -212,6 +212,14 @@ namespace IhalematikPro.Model
             }
         }
 
+        // Karli maliyet Iscilikli birim fiyat
+        public double TotalWorkerMarkupUnitPrice
+        {
+            get
+            {
+                return Math.Round(this.WorkerMarkupUnitPrice * this.Quantity, 2);
+            }
+        }
         //ISCILIK(MALZEME) BIRIM FIYAT
         private double workerUnitPrice = 0;
         public double WorkerUnitPrice
