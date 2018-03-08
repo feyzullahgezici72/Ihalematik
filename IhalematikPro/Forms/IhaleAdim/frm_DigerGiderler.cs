@@ -16,8 +16,10 @@ namespace IhalematikProUI.Forms.IhaleAdim
 {
     public partial class frm_DigerGiderler : DevExpress.XtraEditors.XtraForm
     {
-        public frm_DigerGiderler()
+        private frm_TeklifAdimSon _owner = null;
+        public frm_DigerGiderler(frm_TeklifAdimSon Owner)
         {
+            this._owner = Owner;
             InitializeComponent();
         }
 
@@ -28,14 +30,20 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            this._owner.OtherExpenses();
             this.Close();
-
         }
 
         private void frm_DigerGiderler_Shown(object sender, EventArgs e)
         {
+            this.LoadGrid();
+        }
+
+        private void LoadGrid()
+        {
             List<OtherExpenses> items = OtherExpensesProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
-            grdOtherExpenses.DataSource = items;
+            bindingSourceOtherExpenses.DataSource = items;
+            grdOtherExpenses.DataSource = bindingSourceOtherExpenses;
         }
 
         private void gridViewOtherExpenses_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -47,25 +55,33 @@ namespace IhalematikProUI.Forms.IhaleAdim
             if (id > 0)
             {
                 currentItem = OtherExpensesProvider.Instance.GetItem(id);
+                if (e.Column == colDescription)
+                {
 
+                    currentItem.Description = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<string>(e.Value);
+                }
+                else if (e.Column == colPrice)
+                {
+                    currentItem.Price = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
+                }
+                OtherExpensesProvider.Instance.Save(currentItem);
             }
             else
             {
                 currentItem = new OtherExpenses(CurrentManager.Instance.CurrentTender.Id);
-
+                if (e.Column == colDescription)
+                {
+                    currentItem.Description = (string)gridViewOtherExpenses.ActiveEditor.EditValue;
+                }
+                else if (e.Column == colPrice)
+                {
+                    object price = gridViewOtherExpenses.ActiveEditor.EditValue;
+                    currentItem.Price = double.Parse((string)price);
+                }
+                OtherExpensesProvider.Instance.Save(currentItem);
+                gridViewOtherExpenses.SetFocusedRowCellValue(colId, currentItem.Id);
             }
-
-
-            if (e.Column == colDescription)
-            {
-                currentItem.Description = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<string>(e.Value);
-            }
-            else if (e.Column == colPrice)
-            {
-                currentItem.Price = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
-            }
-
-            OtherExpensesProvider.Instance.Save(currentItem);
+            grdOtherExpenses.Refresh();
         }
     }
 }

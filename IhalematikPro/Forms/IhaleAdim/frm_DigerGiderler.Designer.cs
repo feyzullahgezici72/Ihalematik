@@ -40,6 +40,7 @@
             this.colPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnOk = new DevExpress.XtraEditors.SimpleButton();
+            this.bindingSourceOtherExpenses = new System.Windows.Forms.BindingSource();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -48,6 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOtherExpenses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceOtherExpenses)).BeginInit();
             this.SuspendLayout();
             // 
             // btnKapat
@@ -57,10 +59,9 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(772, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Location = new System.Drawing.Point(507, 0);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(28, 35);
+            this.btnKapat.Size = new System.Drawing.Size(26, 24);
             this.btnKapat.TabIndex = 21;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
@@ -72,11 +73,10 @@
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(10, 0);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Location = new System.Drawing.Point(7, 0);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(194, 35);
+            this.labelControl1.Size = new System.Drawing.Size(130, 23);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "DİĞER GİDERLER";
             this.labelControl1.UseMnemonic = false;
@@ -91,9 +91,8 @@
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(800, 35);
+            this.panelControl2.Size = new System.Drawing.Size(533, 24);
             this.panelControl2.TabIndex = 99;
             // 
             // groupControl2
@@ -106,24 +105,23 @@
             this.groupControl2.Controls.Add(this.grdOtherExpenses);
             this.groupControl2.Controls.Add(this.groupControl1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(0, 35);
+            this.groupControl2.Location = new System.Drawing.Point(0, 24);
             this.groupControl2.LookAndFeel.SkinName = "London Liquid Sky";
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.LookAndFeel.UseWindowsXPTheme = true;
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(800, 494);
+            this.groupControl2.Size = new System.Drawing.Size(533, 338);
             this.groupControl2.TabIndex = 101;
             // 
             // grdOtherExpenses
             // 
             this.grdOtherExpenses.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.grdOtherExpenses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdOtherExpenses.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdOtherExpenses.Location = new System.Drawing.Point(2, 2);
             this.grdOtherExpenses.MainView = this.gridViewOtherExpenses;
-            this.grdOtherExpenses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdOtherExpenses.Name = "grdOtherExpenses";
-            this.grdOtherExpenses.Size = new System.Drawing.Size(796, 436);
+            this.grdOtherExpenses.Size = new System.Drawing.Size(529, 297);
             this.grdOtherExpenses.TabIndex = 2;
             this.grdOtherExpenses.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOtherExpenses});
@@ -326,31 +324,34 @@
             this.groupControl1.CaptionLocation = DevExpress.Utils.Locations.Left;
             this.groupControl1.Controls.Add(this.btnOk);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(2, 438);
+            this.groupControl1.Location = new System.Drawing.Point(2, 299);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(796, 54);
+            this.groupControl1.Size = new System.Drawing.Size(529, 37);
             this.groupControl1.TabIndex = 101;
             // 
             // btnOk
             // 
             this.btnOk.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.Image")));
-            this.btnOk.Location = new System.Drawing.Point(680, 7);
+            this.btnOk.Location = new System.Drawing.Point(453, 5);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(106, 41);
+            this.btnOk.Size = new System.Drawing.Size(71, 28);
             this.btnOk.TabIndex = 141;
             this.btnOk.Text = "Tamam";
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // frm_DigerGiderler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(800, 529);
+            this.ClientSize = new System.Drawing.Size(533, 362);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_DigerGiderler";
@@ -366,6 +367,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOtherExpenses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceOtherExpenses)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -383,5 +385,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colPrice;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton btnOk;
+        private System.Windows.Forms.BindingSource bindingSourceOtherExpenses;
     }
 }

@@ -181,20 +181,23 @@ namespace IhalematikProUI.Forms
 
                 lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
                 lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
-                //List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
 
-                //this.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-                //grdMaterialList.DataSource = this.DataSource;
-
+                this.OtherExpenses();
                 this.LoadGrid();
-
-                //this.TotalMarkupNonKDV = this.DataSource.Sum(p => p.TotalFare);
-
                 this.CalculateFooterInnerValues(null);
                 this.CalculateLeftPanelValues();
 
                 colUnitTotalFare.Visible = true;
                 colTotalFare.Visible = true;
+            }
+        }
+
+        public void OtherExpenses()
+        {
+            List<OtherExpenses> otherExpenses = OtherExpensesProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
+            if (otherExpenses.Count != 0)
+            {
+                txtOtherCoast.Text = otherExpenses.Sum(p => p.Price).ToString("c2");
             }
         }
 
@@ -335,7 +338,7 @@ namespace IhalematikProUI.Forms
 
         private void txtOtherCoast_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            frm_DigerGiderler digergiderler = new frm_DigerGiderler();
+            frm_DigerGiderler digergiderler = new frm_DigerGiderler(this);
             digergiderler.ShowDialog();
         }
     }
