@@ -245,15 +245,15 @@ namespace IhalematikPro.Model
                         }
                         if (item.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
                         {
-                            this.workerUnitPrice += Math.Round((amount / (dayPerMonthValue * hourPerDayValue * 60)), 2) * item.UnitTime * this.Quantity;
+                            this.workerUnitPrice += Math.Round((amount / (dayPerMonthValue * hourPerDayValue * 60)), 2) * item.UnitTime * item.Quantity;
                         }
                         else if (item.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Hour)
                         {
-                            this.workerUnitPrice += Math.Round((amount / (dayPerMonthValue * hourPerDayValue)), 2) * item.UnitTime * this.Quantity;
+                            this.workerUnitPrice += Math.Round((amount / (dayPerMonthValue * hourPerDayValue)), 2) * item.UnitTime * item.Quantity;
                         }
                         else if (item.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Day)
                         {
-                            this.workerUnitPrice += Math.Round((amount / (dayPerMonthValue)), 2) * item.UnitTime * this.Quantity;
+                            this.workerUnitPrice += Math.Round((amount / (dayPerMonthValue)), 2) * item.UnitTime * item.Quantity;
                         }
                         else if (item.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Week)
                         {
