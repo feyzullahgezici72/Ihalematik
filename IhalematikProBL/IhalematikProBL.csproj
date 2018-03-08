@@ -122,6 +122,7 @@
     <Compile Include="Entity\Company.cs" />
     <Compile Include="Entity\License.cs" />
     <Compile Include="Entity\Member.cs" />
+    <Compile Include="Entity\OtherExpenses.cs" />
     <Compile Include="Enum\WorkerTypesEnum.cs" />
     <Compile Include="Mailing\EmailData.cs" />
     <Compile Include="Mailing\EmailSetting.cs" />
@@ -165,6 +166,7 @@
     <Compile Include="Provider\OBFProvider.cs" />
     <Compile Include="Provider\OfferMaterialListProvider.cs" />
     <Compile Include="Provider\OfferProvider.cs" />
+    <Compile Include="Provider\OtherExpensesProvider.cs" />
     <Compile Include="Provider\PozProvider.cs" />
     <Compile Include="Provider\RuleProvider.cs" />
     <Compile Include="Provider\SupplierMaterialListProvider.cs" />

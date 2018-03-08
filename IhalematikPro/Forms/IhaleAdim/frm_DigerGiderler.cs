@@ -8,6 +8,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using IhalematikProBL.Entity;
+using IhalematikProBL.Provider;
+using IhalematikPro.Manager;
 
 namespace IhalematikProUI.Forms.IhaleAdim
 {
@@ -27,6 +30,42 @@ namespace IhalematikProUI.Forms.IhaleAdim
         {
             this.Close();
 
+        }
+
+        private void frm_DigerGiderler_Shown(object sender, EventArgs e)
+        {
+            List<OtherExpenses> items = OtherExpensesProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
+            grdOtherExpenses.DataSource = items;
+        }
+
+        private void gridViewOtherExpenses_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOtherExpenses.GetFocusedRowCellValue("Id"));
+
+            OtherExpenses currentItem = null;
+
+            if (id > 0)
+            {
+                currentItem = OtherExpensesProvider.Instance.GetItem(id);
+
+            }
+            else
+            {
+                currentItem = new OtherExpenses(CurrentManager.Instance.CurrentTender.Id);
+
+            }
+
+
+            if (e.Column == colDescription)
+            {
+                currentItem.Description = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<string>(e.Value);
+            }
+            else if (e.Column == colPrice)
+            {
+                currentItem.Price = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
+            }
+
+            OtherExpensesProvider.Instance.Save(currentItem);
         }
     }
 }
