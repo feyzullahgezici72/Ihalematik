@@ -76,6 +76,7 @@ namespace IhalematikProUI.Forms
         private void frm_FaalitetAlaniEkle_Shown(object sender, EventArgs e)
         {
             this.LoadGrid();
+            txtUnvan.Focus();
         }
 
         public void LoadGrid()
@@ -89,6 +90,14 @@ namespace IhalematikProUI.Forms
             this.Close();
             this._owner.LoadGrid();
             this._owner.LoadSupplierSegments();
+        }
+
+        private void txtUnvan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                btnSave.PerformClick();
+            }
         }
     }
 }

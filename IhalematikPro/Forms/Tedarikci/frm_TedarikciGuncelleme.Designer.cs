@@ -159,6 +159,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.checkedComboboxEditSupplierSegments.Size = new System.Drawing.Size(369, 28);
             this.checkedComboboxEditSupplierSegments.TabIndex = 94;
+            this.checkedComboboxEditSupplierSegments.Closed += new DevExpress.XtraEditors.Controls.ClosedEventHandler(this.checkedComboboxEditSupplierSegments_Closed);
             // 
             // btnGuncelle
             // 

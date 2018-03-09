@@ -102,5 +102,10 @@ namespace IhalematikProUI.Forms
             }
             return false;
         }
+
+        private void frm_pozGuncelle_Shown(object sender, EventArgs e)
+        {
+            txtDescription.Focus();
+        }
     }
 }

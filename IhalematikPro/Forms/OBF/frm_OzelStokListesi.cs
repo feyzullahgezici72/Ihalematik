@@ -173,6 +173,7 @@ namespace IhalematikPro.Forms
         private void frm_OzelStokListesi_Shown(object sender, EventArgs e)
         {
             LoadGrid();
+            grdOBFList.Focus();
         }
 
         private void btnPasive_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)

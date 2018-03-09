@@ -127,5 +127,10 @@ namespace IhalematikProUI.Forms.Tedarikci
                 }
             }
         }
+
+        private void checkedComboboxEditSupplierSegments_Closed(object sender, DevExpress.XtraEditors.Controls.ClosedEventArgs e)
+        {
+            txtCompanyName.Focus();
+        }
     }
 }

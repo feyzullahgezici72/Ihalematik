@@ -54,6 +54,7 @@ namespace IhalematikProUI.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
+           
             frm_FaalitetAlaniEkle FAE = new frm_FaalitetAlaniEkle(this);
             FAE.ShowDialog();
         }
@@ -263,6 +264,11 @@ namespace IhalematikProUI.Forms
             txtTelephone.Text = "";
             txtAddress.Text = "";
 
+        }
+
+        private void checkedComboboxEditSupplierSegments_Closed(object sender, DevExpress.XtraEditors.Controls.ClosedEventArgs e)
+        {
+            txtCompanyName.Focus();
         }
     }
 }

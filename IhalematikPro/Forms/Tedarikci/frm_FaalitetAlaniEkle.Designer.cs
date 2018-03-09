@@ -82,6 +82,7 @@
             this.txtUnvan.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtUnvan.Size = new System.Drawing.Size(516, 26);
             this.txtUnvan.TabIndex = 0;
+            this.txtUnvan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUnvan_KeyPress);
             // 
             // labelControl2
             // 

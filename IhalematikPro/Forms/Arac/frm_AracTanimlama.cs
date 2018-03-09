@@ -416,6 +416,20 @@ namespace IhalematikPro.Forms
             }
         }
 
-        
+        private void txtOtherFare_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                btnKaydet.PerformClick();
+            }
+        }
+
+        private void txtRentOtherFare_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                btnKaydet.PerformClick();
+            }
+        }
     }
 }

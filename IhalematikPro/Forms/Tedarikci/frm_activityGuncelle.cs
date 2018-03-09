@@ -44,6 +44,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void frm_activityGuncelle_Shown(object sender, EventArgs e)
         {
             txtSupplierSegment.Text = this.CurrentSupplierSegment.Name;
+            txtSupplierSegment.Focus();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)

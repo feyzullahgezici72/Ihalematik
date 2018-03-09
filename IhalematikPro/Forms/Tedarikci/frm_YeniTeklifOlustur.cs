@@ -89,5 +89,10 @@ namespace IhalematikProUI.Forms
             }
             return false;
         }
+
+        private void frm_YeniTeklifOlustur_Shown(object sender, EventArgs e)
+        {
+            txtAciklama.Focus();
+        }
     }
 }

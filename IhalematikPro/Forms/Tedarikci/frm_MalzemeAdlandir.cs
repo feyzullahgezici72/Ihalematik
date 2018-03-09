@@ -92,5 +92,10 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
             this.Close();
         }
+
+        private void frm_MalzemeAdlandir_Shown(object sender, EventArgs e)
+        {
+            txtdescriptionForSupplier.Focus();
+        }
     }
 }

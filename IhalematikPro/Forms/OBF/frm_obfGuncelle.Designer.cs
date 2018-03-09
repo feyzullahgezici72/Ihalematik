@@ -163,12 +163,12 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl3.Location = new System.Drawing.Point(34, 91);
+            this.labelControl3.Location = new System.Drawing.Point(38, 92);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(70, 19);
+            this.labelControl3.Size = new System.Drawing.Size(67, 19);
             this.labelControl3.TabIndex = 117;
-            this.labelControl3.Text = "Açıklama:";
+            this.labelControl3.Text = "Malzeme:";
             // 
             // txtUnitPrice
             // 
@@ -244,10 +244,10 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl8.Location = new System.Drawing.Point(6, 129);
+            this.labelControl8.Location = new System.Drawing.Point(35, 128);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(101, 19);
+            this.labelControl8.Size = new System.Drawing.Size(70, 19);
             toolTipTitleItem2.Text = "AÇIKLAMA";
             toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             toolTipItem1.Appearance.Options.UseImage = true;
@@ -258,7 +258,7 @@
             superToolTip2.Items.Add(toolTipItem1);
             this.labelControl8.SuperTip = superToolTip2;
             this.labelControl8.TabIndex = 121;
-            this.labelControl8.Text = "T.G.Açıklama:";
+            this.labelControl8.Text = "Açıklama:";
             // 
             // txtDescriptionForSupplier
             // 
