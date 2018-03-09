@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IhalematikProBL.Entity
 {
-    public class OBF : Material
+    public class OBF : CustomEntityBase
     {
         public string Number { get; set; }
         public string Description { get; set; }
