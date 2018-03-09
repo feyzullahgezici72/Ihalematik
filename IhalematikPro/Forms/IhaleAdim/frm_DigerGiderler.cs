@@ -83,5 +83,22 @@ namespace IhalematikProUI.Forms.IhaleAdim
             }
             grdOtherExpenses.Refresh();
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Silmek istediğinizden emin misiniz?", "Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.Yes))
+            {
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOtherExpenses.GetFocusedRowCellValue("Id"));
+                OtherExpenses selectedVehicle = OtherExpensesProvider.Instance.GetItem(id);
+                selectedVehicle.IsMarkedForDeletion = true;
+                OtherExpensesProvider.Instance.Save(selectedVehicle);
+                this.LoadGrid();
+            }
+            else
+            {
+
+            }
+        }
     }
 }
