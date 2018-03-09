@@ -52,6 +52,7 @@ namespace IhalematikPro.Forms
                     this._owner.SelectedTitleId = model.Id;
                     this._owner.LoadWorkerTitles();
                     this.Close();
+                   
                 }
                 else
                 {
@@ -88,6 +89,7 @@ namespace IhalematikPro.Forms
         private void frm_CalisanEkle_Shown(object sender, EventArgs e)
         {
             this.LoadGrid();
+            txtUnvan.Focus();
         }
 
         public void LoadGrid()

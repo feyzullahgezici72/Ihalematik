@@ -44,6 +44,7 @@ namespace IhalematikProUI.Forms.Calisan
         private void frm_WorkerGuncelle_Shown(object sender, EventArgs e)
         {
             txtWorkerTitle.Text = this.CurrentWorkerTitle.Name;
+            txtWorkerTitle.Focus();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)

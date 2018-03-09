@@ -332,6 +332,7 @@ namespace IhalematikPro.Forms
         private void rbAsgariUcret_CheckedChanged(object sender, EventArgs e)
         {
             panelControl2.Visible = true;
+            txtAGI.Focus();
             this.IsCalculatedMinimumWage = true;
             if (this.rbAsgariUcret.Checked)
             {
@@ -382,9 +383,10 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            txtBaseFare.Focus();
             frm_CalisanEkle frm = new frm_CalisanEkle(this);
-
             frm.ShowDialog();
+         
         }
 
         private void btnGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -503,6 +505,7 @@ namespace IhalematikPro.Forms
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            txtBaseFare.Focus();
             panelControl2.Visible = false;
             txtSGKPrimFare.Text = "0";
             txtWorklesFonFare.Text = "0";
@@ -515,6 +518,22 @@ namespace IhalematikPro.Forms
             txtHotelFare.Text = "0";
             txtISGFare.Text = "0";
             txtExtraFare.Text = "0";
+        }
+
+        private void txtBaseFare_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                txtAGI.Focus();
+            }
+        }
+
+        private void txtExtraFare_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                btnKaydet.Focus();
+            }
         }
     }
 }
