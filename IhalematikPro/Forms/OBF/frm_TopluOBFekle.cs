@@ -92,7 +92,7 @@ namespace IhalematikProUI.Forms.OBF
                             else
                             {
                                 IhalematikProBL.Entity.OBF newOBF = new IhalematikProBL.Entity.OBF();
-                                int lastTenderNumber = UIOBFManager.Instance.GetLastOfferNumber();
+                                int lastTenderNumber = UIOBFManager.Instance.GetLastOBFNumber();
                                 newOBF.Number = string.Format("{0}", (lastTenderNumber + 1).ToString().PadLeft(8, '0'));
                                 newOBF.IsActive = true;
                                 newOBF.StokNumber = stokKodu;

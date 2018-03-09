@@ -62,8 +62,10 @@ namespace IhalematikPro.Forms
             IsEmptyKontrol();
             OBFModel model = new OBFModel();
             model.Description = txtDescription.Text;
-            model.Number = txtNumber.Text;
+            int lastTenderNumber = UIOBFManager.Instance.GetLastOBFNumber();
+            model.Number = lastTenderNumber.ToString();
             model.IsActive = true;
+            model.StokNumber = txtNumber.Text;
             model.Unit = txtUnit.Text;
             model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty), CultureInfo.InvariantCulture);
             model.DescriptionForSupplier = txtDescriptionForSupplier.Text;

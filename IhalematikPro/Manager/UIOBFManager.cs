@@ -13,11 +13,11 @@ namespace IhalematikPro.Manager
 {
     public class UIOBFManager : SingletonBase<UIOBFManager>
     {
-        public int GetLastOfferNumber()
+        public int GetLastOBFNumber()
         {
-            object offerNumber = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(CustomDBConnectionManager.Instance.ExecuteScalar("OBF_GetLastNumber", new System.Collections.Hashtable()));
+            object obfNumber = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(CustomDBConnectionManager.Instance.ExecuteScalar("OBF_GetLastNumber", new System.Collections.Hashtable()));
 
-            return (int)offerNumber;
+            return (int)obfNumber;
         }
 
         public List<OBFModel> GetOBFs(string OBFNumber, string OBFDescription)
