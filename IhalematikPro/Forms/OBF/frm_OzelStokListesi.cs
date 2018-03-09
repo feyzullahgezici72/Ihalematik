@@ -254,5 +254,10 @@ namespace IhalematikPro.Forms
             frm_TopluOBFekle toe = new frm_TopluOBFekle(this);
             toe.ShowDialog();
         }
+
+        private void labelControl6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
