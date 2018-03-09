@@ -56,6 +56,7 @@ namespace IhalematikProUI.Forms.Arac
         private void frm_CarGuncelle_Shown(object sender, EventArgs e)
         {
             txtVehicleTitleName.Text = this.CurrentVehicleTitle.Name;
+            txtVehicleTitleName.Focus();
         }
     }
 }

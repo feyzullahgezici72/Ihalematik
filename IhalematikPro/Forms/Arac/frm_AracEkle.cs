@@ -102,6 +102,7 @@ namespace IhalematikPro.Forms
         private void frm_AracEkle_Shown(object sender, EventArgs e)
         {
             this.LoadGrid();
+            txtName.Focus();
         }
 
         public void LoadGrid()

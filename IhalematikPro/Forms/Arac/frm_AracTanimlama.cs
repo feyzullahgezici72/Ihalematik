@@ -216,6 +216,7 @@ namespace IhalematikPro.Forms
         {
             PanelSirket.Visible = true;
             PanelKira.Visible = false;
+            txtFuelOilDay.Focus();
         }
 
         private void rbAsgariUcret_CheckedChanged(object sender, EventArgs e)
@@ -223,10 +224,19 @@ namespace IhalematikPro.Forms
             PanelKira.Visible = true;
             PanelSirket.Visible = false;
             PanelKira.Location = PanelSirket.Location;
+            txtRentFare.Focus();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            if (rbCompanyVehicle.Checked==true)
+            {
+                txtFuelOilDay.Focus();
+            }
+            if (rbAsgariUcret.Checked==true)
+            {
+                txtRentFare.Focus();
+            }
             frm_AracEkle frm = new frm_AracEkle(this);
             frm.ShowDialog();
         }

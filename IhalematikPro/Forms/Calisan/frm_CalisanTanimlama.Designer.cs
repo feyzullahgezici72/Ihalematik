@@ -641,7 +641,7 @@
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(132, 58);
-            this.btnKaydet.TabIndex = 15;
+            this.btnKaydet.TabIndex = 2;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.ToolTip = "Kaydet";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
@@ -658,7 +658,7 @@
             this.btnTemizle.Margin = new System.Windows.Forms.Padding(4);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(48, 58);
-            this.btnTemizle.TabIndex = 16;
+            this.btnTemizle.TabIndex = 3;
             this.btnTemizle.ToolTip = "Formu Temizle";
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
@@ -690,9 +690,10 @@
             this.txtBaseFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtBaseFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtBaseFare.Size = new System.Drawing.Size(224, 26);
-            this.txtBaseFare.TabIndex = 3;
+            this.txtBaseFare.TabIndex = 1;
             this.txtBaseFare.TabStop = false;
             this.txtBaseFare.EditValueChanged += new System.EventHandler(this.txtBaseFare_EditValueChanged);
+            this.txtBaseFare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBaseFare_KeyPress);
             // 
             // ddlTitles
             // 
@@ -802,7 +803,8 @@
             this.txtExtraFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtExtraFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtExtraFare.Size = new System.Drawing.Size(224, 26);
-            this.txtExtraFare.TabIndex = 14;
+            this.txtExtraFare.TabIndex = 10;
+            this.txtExtraFare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExtraFare_KeyPress);
             // 
             // txtSGKPrimFare
             // 
@@ -819,7 +821,7 @@
             this.txtSGKPrimFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtSGKPrimFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtSGKPrimFare.Size = new System.Drawing.Size(224, 26);
-            this.txtSGKPrimFare.TabIndex = 4;
+            this.txtSGKPrimFare.TabIndex = 0;
             this.txtSGKPrimFare.TabStop = false;
             // 
             // labelControl9
@@ -848,7 +850,7 @@
             this.txtWorklesFonFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtWorklesFonFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtWorklesFonFare.Size = new System.Drawing.Size(224, 26);
-            this.txtWorklesFonFare.TabIndex = 5;
+            this.txtWorklesFonFare.TabIndex = 1;
             this.txtWorklesFonFare.TabStop = false;
             // 
             // txtFoodFare
@@ -869,7 +871,7 @@
             this.txtFoodFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtFoodFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtFoodFare.Size = new System.Drawing.Size(224, 26);
-            this.txtFoodFare.TabIndex = 10;
+            this.txtFoodFare.TabIndex = 6;
             // 
             // txtSeveranceFare
             // 
@@ -889,7 +891,7 @@
             this.txtSeveranceFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtSeveranceFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtSeveranceFare.Size = new System.Drawing.Size(224, 26);
-            this.txtSeveranceFare.TabIndex = 9;
+            this.txtSeveranceFare.TabIndex = 5;
             // 
             // txtStampTaxFare
             // 
@@ -906,7 +908,7 @@
             this.txtStampTaxFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtStampTaxFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtStampTaxFare.Size = new System.Drawing.Size(224, 26);
-            this.txtStampTaxFare.TabIndex = 7;
+            this.txtStampTaxFare.TabIndex = 3;
             this.txtStampTaxFare.TabStop = false;
             // 
             // txtAGI
@@ -927,7 +929,7 @@
             this.txtAGI.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAGI.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtAGI.Size = new System.Drawing.Size(224, 26);
-            this.txtAGI.TabIndex = 8;
+            this.txtAGI.TabIndex = 4;
             // 
             // label99
             // 
@@ -1013,7 +1015,7 @@
             this.txtTravelFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTravelFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTravelFare.Size = new System.Drawing.Size(224, 26);
-            this.txtTravelFare.TabIndex = 11;
+            this.txtTravelFare.TabIndex = 7;
             // 
             // txtISGFare
             // 
@@ -1033,7 +1035,7 @@
             this.txtISGFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtISGFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtISGFare.Size = new System.Drawing.Size(224, 26);
-            this.txtISGFare.TabIndex = 13;
+            this.txtISGFare.TabIndex = 9;
             // 
             // txtIncomeTaxFare
             // 
@@ -1050,7 +1052,7 @@
             this.txtIncomeTaxFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtIncomeTaxFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtIncomeTaxFare.Size = new System.Drawing.Size(224, 26);
-            this.txtIncomeTaxFare.TabIndex = 6;
+            this.txtIncomeTaxFare.TabIndex = 2;
             this.txtIncomeTaxFare.TabStop = false;
             // 
             // labelControl11
@@ -1115,7 +1117,7 @@
             this.txtHotelFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtHotelFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtHotelFare.Size = new System.Drawing.Size(224, 26);
-            this.txtHotelFare.TabIndex = 12;
+            this.txtHotelFare.TabIndex = 8;
             // 
             // simpleButton1
             // 
