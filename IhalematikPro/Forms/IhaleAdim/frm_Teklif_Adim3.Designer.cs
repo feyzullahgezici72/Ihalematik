@@ -1836,6 +1836,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(172, 70);
             this.simpleButton1.TabIndex = 1;
             this.simpleButton1.Text = "Tümünü Listele";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // panelControl9
             // 

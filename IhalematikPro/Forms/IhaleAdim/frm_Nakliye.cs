@@ -47,6 +47,11 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
         private void frm_Nakliye_Load(object sender, EventArgs e)
         {
+            this.LoadGrid();
+        }
+
+        private void LoadGrid()
+        {
             if (CurrentManager.Instance.CurrentTender != null)
             {
                 List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
@@ -57,12 +62,12 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
         private void grdMaterialList2_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-           
+
         }
 
         private void gridViewMaterialList_CellValueChanging(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            
+
         }
 
         private void gridViewMaterialList_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
@@ -99,6 +104,18 @@ namespace IhalematikProUI.Forms.IhaleAdim
         private void grdMaterialList_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnResetValue_Click(object sender, EventArgs e)
+        {
+            if (CurrentManager.Instance.CurrentTender.MaterialList.Count > 0)
+            {
+                foreach (var item in CurrentManager.Instance.CurrentTender.MaterialList)
+                {
+                    item.CarriagePercent = 0;
+                }
+            }
+            this.LoadGrid();
         }
     }
 }
