@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim3));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -86,7 +87,7 @@
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.btnPanelKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.grdMaterialListIsWorkship = new DevExpress.XtraGrid.GridControl();
             this.gridViewMaterialListIsWorkship = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -104,8 +105,8 @@
             this.colWorkerTotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colWorkerMarkupUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource();
-            this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource();
+            this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource(this.components);
             this.panelGrup = new DevExpress.XtraEditors.PanelControl();
             this.grdTenderGroup = new DevExpress.XtraGrid.GridControl();
             this.gridViewTenderGroup = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -1832,6 +1833,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(115, 48);
             this.simpleButton1.TabIndex = 1;
             this.simpleButton1.Text = "Tümünü Listele";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // panelControl9
             // 

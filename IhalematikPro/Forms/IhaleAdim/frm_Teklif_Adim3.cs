@@ -468,5 +468,12 @@ namespace IhalematikPro.Forms
         {
 
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p =>  p.IsWorkship).ToList();
+            List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            grdMaterialListIsWorkship.DataSource = models;
+        }
     }
 }
