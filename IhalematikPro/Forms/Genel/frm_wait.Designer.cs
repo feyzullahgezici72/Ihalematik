@@ -29,52 +29,49 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.progressPanel1 = new DevExpress.XtraWaitForm.ProgressPanel();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.pictureEdit1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.email_send_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(229, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(362, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(77, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // labelControl8
+            // progressPanel1
             // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl8.Location = new System.Drawing.Point(172, 86);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(245, 35);
-            this.labelControl8.TabIndex = 7;
-            this.labelControl8.Text = "MAİL GÖNDERİLİYOR";
+            this.progressPanel1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.progressPanel1.Appearance.Options.UseBackColor = true;
+            this.progressPanel1.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.progressPanel1.AppearanceCaption.Options.UseFont = true;
+            this.progressPanel1.AppearanceDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.progressPanel1.AppearanceDescription.Options.UseFont = true;
+            this.progressPanel1.Caption = "e-MAİL GÖNDERİLİYOR";
+            this.progressPanel1.Description = "Lütfen Bekleyiniz ...";
+            this.progressPanel1.ImageHorzOffset = 20;
+            this.progressPanel1.Location = new System.Drawing.Point(9, 14);
+            this.progressPanel1.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.progressPanel1.Name = "progressPanel1";
+            this.progressPanel1.ShowDescription = false;
+            this.progressPanel1.Size = new System.Drawing.Size(369, 57);
+            this.progressPanel1.TabIndex = 10;
+            this.progressPanel1.Text = "progressPanel1";
             // 
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelControl5.Location = new System.Drawing.Point(264, 127);
+            this.labelControl5.Location = new System.Drawing.Point(69, 66);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(143, 22);
             this.labelControl5.TabIndex = 6;
             this.labelControl5.Text = "Lütfen Bekleyiniz...";
-            // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.Image = global::IhalematikProUI.Properties.Resources.yukleniyor;
-            this.pictureEdit1.Location = new System.Drawing.Point(9, 12);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Size = new System.Drawing.Size(147, 150);
-            this.pictureEdit1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureEdit1.TabIndex = 9;
-            this.pictureEdit1.TabStop = false;
             // 
             // frm_wait
             // 
@@ -82,24 +79,21 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 183);
+            this.ClientSize = new System.Drawing.Size(451, 102);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.labelControl5);
+            this.Controls.Add(this.progressPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_wait";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " e-Mail gönderiliyor";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frm_wait_Load);
             this.Shown += new System.EventHandler(this.frm_wait_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,8 +101,7 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraWaitForm.ProgressPanel progressPanel1;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private System.Windows.Forms.PictureBox pictureEdit1;
     }
 }

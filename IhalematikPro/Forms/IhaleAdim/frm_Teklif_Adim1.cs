@@ -16,6 +16,7 @@ using IhalematikPro.Model;
 using IhalematikProUI.Forms;
 using System.Threading;
 using IhalematikProUI.Forms.Base;
+using IhalematikProUI.Forms.Genel;
 
 namespace IhalematikPro.Forms
 {
@@ -197,6 +198,8 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim1_Shown(object sender, EventArgs e)
         {
+            frm_yukleniyor yukle = new frm_yukleniyor();
+            yukle.ShowDialog();
             if (CurrentManager.Instance.CurrentTender != null && CurrentManager.Instance.CurrentTender.Offer != null)
             {
                 colQuantity.OptionsColumn.AllowEdit = false;
@@ -212,6 +215,7 @@ namespace IhalematikPro.Forms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+
             this.SaveMaterialListIsWorkship();
 
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).ToList();

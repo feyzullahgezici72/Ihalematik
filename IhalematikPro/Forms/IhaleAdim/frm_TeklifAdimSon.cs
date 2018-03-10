@@ -19,6 +19,7 @@ using IhalematikProUI.Forms.Base;
 using IhalematikPro.Forms;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms.IhaleAdim;
+using IhalematikProUI.Forms.Genel;
 //using IhalematikProUI.Report;
 
 namespace IhalematikProUI.Forms
@@ -162,6 +163,8 @@ namespace IhalematikProUI.Forms
 
         private void frm_TeklifAdimSon_Shown(object sender, EventArgs e)
         {
+            frm_yukleniyor yukle = new frm_yukleniyor();
+            yukle.ShowDialog();
             if (CurrentManager.Instance.CurrentTender != null)
             {
                 Tender currentTender = CurrentManager.Instance.CurrentTender;

@@ -84,6 +84,7 @@ namespace IhalematikPro.Forms
         {
             barBtnPozListesi.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
+          
             if (pl == null)
             {
                 pl = new frm_PozListesi();
@@ -110,6 +111,7 @@ namespace IhalematikPro.Forms
         {
             barBtnOzelStokListesi.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
+            
             if (osl == null)
             {
                 osl = new frm_OzelStokListesi();

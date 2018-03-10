@@ -17,6 +17,7 @@ using IhalematikProBL.Provider;
 using System.Diagnostics;
 using IhalematikProUI.Forms.Base;
 using System.Globalization;
+using IhalematikProUI.Forms.Genel;
 
 namespace IhalematikPro.Forms
 {
@@ -138,6 +139,8 @@ namespace IhalematikPro.Forms
 
         private void frm_PozListesi_Shown(object sender, EventArgs e)
         {
+            frm_yukleniyor yukle = new frm_yukleniyor();
+            yukle.ShowDialog();
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             LoadGrid();

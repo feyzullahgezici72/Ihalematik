@@ -26,6 +26,7 @@ using SimpleApplicationBase.BL.Base;
 using IhalematikProUI.Forms.Base;
 using DevExpress.XtraBars;
 using IhalematikProUI.Forms.IhaleAdim;
+using IhalematikProUI.Forms.Genel;
 
 namespace IhalematikPro.Forms
 {
@@ -266,6 +267,8 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim3_Shown(object sender, EventArgs e)
         {
+            frm_yukleniyor yukle = new frm_yukleniyor();
+            yukle.ShowDialog();
             bindingSourceAddWorker.DataSource = typeof(List<TenderMaterialListEquipmentModel>);
             this.LoadTenderGroupGrid();
             if (CurrentManager.Instance.CurrentTender.PersonHour)

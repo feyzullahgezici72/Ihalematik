@@ -17,6 +17,7 @@ using IhalematikProUI.Forms;
 using System.Threading;
 using IhalematikProUI.Forms.Base;
 using DevExpress.XtraBars;
+using IhalematikProUI.Forms.Genel;
 
 namespace IhalematikPro.Forms
 {
@@ -163,6 +164,8 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim2_Shown(object sender, EventArgs e)
         {
+            frm_yukleniyor yukle = new frm_yukleniyor();
+            yukle.ShowDialog();
             bindingSourceMaterialListNonWorkship.DataSource = typeof(List<MaterialListModel>);
             grdMaterialListNonWorkship.DataSource = bindingSourceMaterialListNonWorkship;
             this.LoadTenderGroupGrid();
@@ -214,7 +217,6 @@ namespace IhalematikPro.Forms
         private void btnPrev_Click(object sender, EventArgs e)
         {
             this.Close();
-
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             af.RibonPasif();
             af.btnAdimx1.PerformClick();
