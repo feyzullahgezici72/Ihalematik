@@ -428,9 +428,9 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl4.Location = new System.Drawing.Point(6, 3);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(215, 29);
+            this.labelControl4.Size = new System.Drawing.Size(205, 29);
             this.labelControl4.TabIndex = 3;
-            this.labelControl4.Text = "ÖBFLİ MALZEME EKLE";
+            this.labelControl4.Text = "ÖBF\'Lİ MALZEMELER";
             // 
             // btnKapat
             // 
@@ -824,7 +824,6 @@
             // 
             // frm_TedarikciOfbKayit
             // 
-            this.AcceptButton = this.btnBul;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;

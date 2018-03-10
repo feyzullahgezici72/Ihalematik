@@ -140,6 +140,7 @@ namespace IhalematikPro.Forms
         private void frm_ObfKayit_Shown(object sender, EventArgs e)
         {
             lblGrupName.Text = this.SelectedGroup.Description;
+            txtNumber.Focus();
             if (CurrentManager.Instance.CurrentTender.Offer == null)
             {
                 colOfferPrice.Visible = false;

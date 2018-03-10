@@ -747,9 +747,9 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl4.Location = new System.Drawing.Point(12, 3);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(225, 29);
+            this.labelControl4.Size = new System.Drawing.Size(215, 29);
             this.labelControl4.TabIndex = 2;
-            this.labelControl4.Text = "POZLU MALZEME EKLE";
+            this.labelControl4.Text = "POZ\'LU MALZEMELER";
             // 
             // btnKapat
             // 
@@ -786,7 +786,6 @@
             // 
             // frm_TedarikciPozluKayit
             // 
-            this.AcceptButton = this.btnBul;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;

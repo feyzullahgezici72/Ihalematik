@@ -603,6 +603,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ihale_demo {
+            get {
+                object obj = ResourceManager.GetObject("ihale_demo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Inventory_icon {
             get {
                 object obj = ResourceManager.GetObject("Inventory-icon", resourceCulture);

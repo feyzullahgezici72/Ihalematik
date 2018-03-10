@@ -117,5 +117,10 @@ namespace IhalematikProUI.Forms.IhaleAdim
             }
             this.LoadGrid();
         }
+
+        private void frm_Nakliye_Shown(object sender, EventArgs e)
+        {
+            txtCarriage.Focus();
+        }
     }
 }

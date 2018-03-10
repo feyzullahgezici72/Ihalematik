@@ -93,6 +93,7 @@ namespace IhalematikPro.Forms
 
             LastOfferDate.DateTime = DateTime.Now;
             this.LoadGridOffer();
+            txtAciklama.Focus();
 
         }
 
@@ -176,6 +177,11 @@ namespace IhalematikPro.Forms
 
             grdOffer.DataSource = null;
             grdOffer.DataSource = offers;
+        }
+
+        private void tabIhaleBilgileri_Selected(object sender, DevExpress.XtraTab.TabPageEventArgs e)
+        {
+             
         }
     }
 }

@@ -124,6 +124,7 @@
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(28, 35);
             this.btnIptal.TabIndex = 1;
+            this.btnIptal.Visible = false;
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
             // 
             // groupControl1
@@ -560,6 +561,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.frm_IhaleGrup_Load);
+            this.Shown += new System.EventHandler(this.frm_IhaleGrup_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();

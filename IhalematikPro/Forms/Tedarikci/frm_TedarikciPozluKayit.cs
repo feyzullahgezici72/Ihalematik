@@ -47,6 +47,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             List<OfferMaterialList> items = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.IsPoz).ToList();
             List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(items).ToList();
             grdAddedPoz.DataSource = models;
+            txtPozNumber.Focus();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)

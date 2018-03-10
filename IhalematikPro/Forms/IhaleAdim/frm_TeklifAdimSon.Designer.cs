@@ -954,8 +954,6 @@
             this.colTotalFare.OptionsColumn.AllowFocus = false;
             this.colTotalFare.OptionsColumn.ReadOnly = true;
             this.colTotalFare.OptionsFilter.AllowFilter = false;
-            this.colTotalFare.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalFarePreview", "{0:c2}")});
             this.colTotalFare.Visible = true;
             this.colTotalFare.VisibleIndex = 5;
             this.colTotalFare.Width = 100;
@@ -1003,7 +1001,7 @@
             // lblTotalMarkupNonKDV
             // 
             this.lblTotalMarkupNonKDV.Appearance.Font = new System.Drawing.Font("Calibri", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTotalMarkupNonKDV.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lblTotalMarkupNonKDV.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblTotalMarkupNonKDV.Location = new System.Drawing.Point(24, 50);
             this.lblTotalMarkupNonKDV.Margin = new System.Windows.Forms.Padding(4);
             this.lblTotalMarkupNonKDV.Name = "lblTotalMarkupNonKDV";

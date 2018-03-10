@@ -116,7 +116,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 35);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1242, 50);
+            this.groupControl2.Size = new System.Drawing.Size(1238, 50);
             this.groupControl2.TabIndex = 33;
             this.groupControl2.Text = "Malzeme Bilgileri";
             // 
@@ -126,7 +126,7 @@
             this.btnBul.Appearance.Options.UseFont = true;
             this.btnBul.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnBul.Image = global::IhalematikProUI.Properties.Resources.search_icon__4_;
-            this.btnBul.Location = new System.Drawing.Point(1006, 0);
+            this.btnBul.Location = new System.Drawing.Point(1002, 0);
             this.btnBul.Margin = new System.Windows.Forms.Padding(6);
             this.btnBul.Name = "btnBul";
             this.btnBul.Size = new System.Drawing.Size(118, 50);
@@ -140,7 +140,7 @@
             this.btnEkle.Appearance.Options.UseFont = true;
             this.btnEkle.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEkle.Image = global::IhalematikProUI.Properties.Resources.Button_Add_icon__1_;
-            this.btnEkle.Location = new System.Drawing.Point(1124, 0);
+            this.btnEkle.Location = new System.Drawing.Point(1120, 0);
             this.btnEkle.Margin = new System.Windows.Forms.Padding(6);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(118, 50);
@@ -202,7 +202,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1242, 35);
+            this.panelControl1.Size = new System.Drawing.Size(1238, 35);
             this.panelControl1.TabIndex = 32;
             // 
             // panelControl2
@@ -216,7 +216,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1242, 35);
+            this.panelControl2.Size = new System.Drawing.Size(1238, 35);
             this.panelControl2.TabIndex = 2;
             // 
             // lblGrupName
@@ -236,7 +236,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1214, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1210, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -257,7 +257,7 @@
             this.groupControl1.Location = new System.Drawing.Point(0, 85);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1242, 323);
+            this.groupControl1.Size = new System.Drawing.Size(1238, 323);
             this.groupControl1.TabIndex = 34;
             this.groupControl1.Text = "Poz Listesi";
             // 
@@ -271,7 +271,7 @@
             this.grdPozList.MainView = this.gridView1;
             this.grdPozList.Margin = new System.Windows.Forms.Padding(4);
             this.grdPozList.Name = "grdPozList";
-            this.grdPozList.Size = new System.Drawing.Size(1242, 323);
+            this.grdPozList.Size = new System.Drawing.Size(1238, 323);
             this.grdPozList.TabIndex = 0;
             this.grdPozList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -529,7 +529,7 @@
             this.groupControl3.Location = new System.Drawing.Point(0, 408);
             this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1242, 310);
+            this.groupControl3.Size = new System.Drawing.Size(1238, 306);
             this.groupControl3.TabIndex = 35;
             this.groupControl3.Text = "Eklenen Malzemeler";
             // 
@@ -543,7 +543,7 @@
             this.grdAddedPoz.MainView = this.gridView2;
             this.grdAddedPoz.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddedPoz.Name = "grdAddedPoz";
-            this.grdAddedPoz.Size = new System.Drawing.Size(1122, 310);
+            this.grdAddedPoz.Size = new System.Drawing.Size(1118, 306);
             this.grdAddedPoz.TabIndex = 0;
             this.grdAddedPoz.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -798,7 +798,7 @@
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(120, 310);
+            this.panelControl3.Size = new System.Drawing.Size(120, 306);
             this.panelControl3.TabIndex = 0;
             // 
             // simpleButton3
@@ -834,12 +834,11 @@
             // 
             // frm_PozluKayit
             // 
-            this.AcceptButton = this.btnBul;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(1242, 718);
+            this.ClientSize = new System.Drawing.Size(1238, 714);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl1);
@@ -852,7 +851,7 @@
             this.Name = "frm_PozluKayit";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POZ\'LU MALZEME EKLE";
+            this.Text = "POZ\'LU MALZEMELER";
             this.Load += new System.EventHandler(this.frm_PozluKayit_Load);
             this.Shown += new System.EventHandler(this.frm_PozluKayit_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.txtPozNumber.Properties)).EndInit();

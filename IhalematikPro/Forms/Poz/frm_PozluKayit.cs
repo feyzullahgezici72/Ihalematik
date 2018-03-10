@@ -246,6 +246,7 @@ namespace IhalematikPro.Forms
         private void frm_PozluKayit_Shown(object sender, EventArgs e)
         {
             lblGrupName.Text = this.SelectedGroup.Description;
+            txtPozNumber.Focus();
             if (CurrentManager.Instance.CurrentTender.Offer == null)
             {
                 colOfferPrice.Visible = false;

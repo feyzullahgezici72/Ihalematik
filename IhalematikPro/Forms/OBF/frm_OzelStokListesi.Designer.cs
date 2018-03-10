@@ -187,7 +187,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(39, 60);
+            this.labelControl2.Location = new System.Drawing.Point(39, 56);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(76, 19);
@@ -257,10 +257,10 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl8.Location = new System.Drawing.Point(14, 121);
+            this.labelControl8.Location = new System.Drawing.Point(45, 120);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(101, 19);
+            this.labelControl8.Size = new System.Drawing.Size(70, 19);
             toolTipTitleItem1.Text = "AÇIKLAMA";
             toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             toolTipItem1.Appearance.Options.UseImage = true;
@@ -271,7 +271,7 @@
             superToolTip1.Items.Add(toolTipItem1);
             this.labelControl8.SuperTip = superToolTip1;
             this.labelControl8.TabIndex = 29;
-            this.labelControl8.Text = "T.G.Açıklama:";
+            this.labelControl8.Text = "Açıklama:";
             // 
             // txtNumber
             // 
@@ -323,12 +323,12 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl3.Location = new System.Drawing.Point(45, 88);
+            this.labelControl3.Location = new System.Drawing.Point(48, 88);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(70, 19);
+            this.labelControl3.Size = new System.Drawing.Size(67, 19);
             this.labelControl3.TabIndex = 19;
-            this.labelControl3.Text = "Açıklama:";
+            this.labelControl3.Text = "Malzeme:";
             // 
             // txtDescriptionForSupplier
             // 

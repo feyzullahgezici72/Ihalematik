@@ -140,5 +140,10 @@ namespace IhalematikProUI.Forms
 
             this.Close();
         }
+
+        private void frm_IhaleGrup_Shown(object sender, EventArgs e)
+        {
+            txtTenderGroupDescription.Focus();
+        }
     }
 }

@@ -131,6 +131,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void frm_TedarikciOfbKayit_Shown(object sender, EventArgs e)
         {
             if (CurrentManager.Instance.CurrentOffer != null && CurrentManager.Instance.CurrentOffer.MaterialList != null)
+                txtNumber.Focus();
             {
                 List<OfferMaterialList> items = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => !p.IsPoz).ToList();
                 List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(items).ToList();
