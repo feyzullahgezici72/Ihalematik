@@ -72,6 +72,7 @@
             this.colTotalFare = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPrev = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.lblTotalMarkupNonKDV = new DevExpress.XtraEditors.LabelControl();
             this.isciAracGirisPaneli = new DevExpress.XtraEditors.PanelControl();
@@ -973,6 +974,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btnPrev);
             this.panel1.Controls.Add(this.panelControl8);
             this.panel1.Controls.Add(this.groupControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -981,6 +983,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 145);
             this.panel1.TabIndex = 36;
+            // 
+            // btnPrev
+            // 
+            this.btnPrev.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPrev.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnPrev.Appearance.Options.UseFont = true;
+            this.btnPrev.Appearance.Options.UseForeColor = true;
+            this.btnPrev.Image = ((System.Drawing.Image)(resources.GetObject("btnPrev.Image")));
+            this.btnPrev.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnPrev.Location = new System.Drawing.Point(539, 43);
+            this.btnPrev.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnPrev.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnPrev.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Size = new System.Drawing.Size(200, 70);
+            this.btnPrev.TabIndex = 50;
+            this.btnPrev.Text = "Önceki Adım";
+            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
             // groupControl1
             // 
@@ -2156,5 +2176,6 @@
         private DevExpress.XtraEditors.SimpleButton btnTumuneUygula;
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraEditors.ButtonEdit txtOtherCoast;
+        public DevExpress.XtraEditors.SimpleButton btnPrev;
     }
 }

@@ -165,6 +165,7 @@ namespace IhalematikProUI.Forms
         {
             frm_yukleniyor yukle = new frm_yukleniyor();
             yukle.ShowDialog();
+            
             if (CurrentManager.Instance.CurrentTender != null)
             {
                 Tender currentTender = CurrentManager.Instance.CurrentTender;
@@ -321,7 +322,7 @@ namespace IhalematikProUI.Forms
 
         private void frm_TeklifAdimSon_Load(object sender, EventArgs e)
         {
-
+            btnPrev.Left = groupControl1.Left-btnPrev.Width-5;
         }
 
         private void txtCarriage_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -343,6 +344,14 @@ namespace IhalematikProUI.Forms
         {
             frm_DigerGiderler digergiderler = new frm_DigerGiderler(this);
             digergiderler.ShowDialog();
+        }
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            af.RibonPasif();
+            af.btnAdimx3.PerformClick();
         }
     }
 }

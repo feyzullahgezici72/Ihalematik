@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim2));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -63,7 +64,7 @@
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
-            this.bindingSourceMaterialListNonWorkship = new System.Windows.Forms.BindingSource();
+            this.bindingSourceMaterialListNonWorkship = new System.Windows.Forms.BindingSource(this.components);
             this.grupPanel = new DevExpress.XtraEditors.PanelControl();
             this.grdTenderGroup = new DevExpress.XtraGrid.GridControl();
             this.gridViewTenderGroup = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -75,16 +76,13 @@
             this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.lblTotalMarkup = new DevExpress.XtraEditors.LabelControl();
             this.pnlrisk = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnPrev = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
-            this.lblTotalMarkup = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialListNonWorkship)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialListNonWorkship)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -110,9 +108,6 @@
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
-            this.panelControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.SuspendLayout();
             // 
             // colMarkup
@@ -133,7 +128,7 @@
             this.colMarkup.OptionsFilter.AllowFilter = false;
             this.colMarkup.Visible = true;
             this.colMarkup.VisibleIndex = 7;
-            this.colMarkup.Width = 57;
+            this.colMarkup.Width = 52;
             // 
             // gridColumn8
             // 
@@ -151,6 +146,7 @@
             this.gridColumn8.DisplayFormat.FormatString = "C2";
             this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn8.FieldName = "TotalAmount";
+            this.gridColumn8.MinWidth = 80;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.OptionsColumn.AllowFocus = false;
@@ -160,7 +156,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalAmount", "{0:C2}")});
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 11;
-            this.gridColumn8.Width = 77;
+            this.gridColumn8.Width = 80;
             // 
             // gridColumn7
             // 
@@ -196,7 +192,7 @@
             this.grdMaterialListNonWorkship.MainView = this.gridViewMaterialListNonWorkship;
             this.grdMaterialListNonWorkship.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialListNonWorkship.Name = "grdMaterialListNonWorkship";
-            this.grdMaterialListNonWorkship.Size = new System.Drawing.Size(1000, 557);
+            this.grdMaterialListNonWorkship.Size = new System.Drawing.Size(1000, 588);
             this.grdMaterialListNonWorkship.TabIndex = 0;
             this.grdMaterialListNonWorkship.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialListNonWorkship});
@@ -363,7 +359,7 @@
             this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 64;
+            this.gridColumn1.Width = 58;
             // 
             // gridColumn2
             // 
@@ -386,7 +382,7 @@
             this.gridColumn2.OptionsFilter.AllowFilter = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 161;
+            this.gridColumn2.Width = 149;
             // 
             // gridColumn3
             // 
@@ -409,7 +405,7 @@
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 54;
+            this.gridColumn3.Width = 49;
             // 
             // gridColumn4
             // 
@@ -431,7 +427,7 @@
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 63;
+            this.gridColumn4.Width = 57;
             // 
             // gridColumn5
             // 
@@ -456,7 +452,7 @@
             this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 49;
+            this.gridColumn5.Width = 44;
             // 
             // gridColumn6
             // 
@@ -481,7 +477,7 @@
             this.gridColumn6.OptionsFilter.AllowFilter = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 70;
+            this.gridColumn6.Width = 64;
             // 
             // colRisk
             // 
@@ -496,7 +492,7 @@
             this.colRisk.Name = "colRisk";
             this.colRisk.Visible = true;
             this.colRisk.VisibleIndex = 6;
-            this.colRisk.Width = 48;
+            this.colRisk.Width = 43;
             // 
             // gridColumn10
             // 
@@ -521,7 +517,7 @@
             this.gridColumn10.OptionsFilter.AllowFilter = false;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 8;
-            this.gridColumn10.Width = 94;
+            this.gridColumn10.Width = 86;
             // 
             // gridColumn12
             // 
@@ -548,7 +544,7 @@
             this.gridColumn12.OptionsFilter.AllowFilter = false;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 9;
-            this.gridColumn12.Width = 95;
+            this.gridColumn12.Width = 87;
             // 
             // gridColumn11
             // 
@@ -566,6 +562,7 @@
             this.gridColumn11.DisplayFormat.FormatString = "C2";
             this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn11.FieldName = "TotalMarkup";
+            this.gridColumn11.MinWidth = 80;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.OptionsColumn.AllowFocus = false;
@@ -575,7 +572,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalMarkup", "{0:C2}")});
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 10;
-            this.gridColumn11.Width = 93;
+            this.gridColumn11.Width = 80;
             // 
             // gridColumn13
             // 
@@ -586,11 +583,17 @@
             this.gridColumn13.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn13.AppearanceHeader.Options.UseFont = true;
             this.gridColumn13.Caption = "K.MLYT.TOP.";
+            this.gridColumn13.DisplayFormat.FormatString = "c2";
+            this.gridColumn13.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn13.FieldName = "TotalAmountMarkup";
+            this.gridColumn13.ImageAlignment = System.Drawing.StringAlignment.Far;
+            this.gridColumn13.MinWidth = 80;
             this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalAmountMarkup", "{0:c2}")});
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 12;
-            this.gridColumn13.Width = 61;
+            this.gridColumn13.Width = 80;
             // 
             // panelControl2
             // 
@@ -1012,6 +1015,7 @@
             this.panelControl3.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl3.Appearance.Options.UseBackColor = true;
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl3.Controls.Add(this.lblTotalMarkup);
             this.panelControl3.Controls.Add(this.pnlrisk);
             this.panelControl3.Controls.Add(this.panel6);
             this.panelControl3.Controls.Add(this.panelControl5);
@@ -1021,6 +1025,17 @@
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(1000, 70);
             this.panelControl3.TabIndex = 31;
+            // 
+            // lblTotalMarkup
+            // 
+            this.lblTotalMarkup.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTotalMarkup.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.lblTotalMarkup.Location = new System.Drawing.Point(478, 23);
+            this.lblTotalMarkup.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTotalMarkup.Name = "lblTotalMarkup";
+            this.lblTotalMarkup.Size = new System.Drawing.Size(53, 24);
+            this.lblTotalMarkup.TabIndex = 14;
+            this.lblTotalMarkup.Text = "0 TL    ";
             // 
             // pnlrisk
             // 
@@ -1101,52 +1116,6 @@
             this.btnNext.Text = "Sonraki Adım";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // lblTotalMarkup
-            // 
-            this.lblTotalMarkup.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTotalMarkup.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.lblTotalMarkup.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblTotalMarkup.Location = new System.Drawing.Point(947, 0);
-            this.lblTotalMarkup.Margin = new System.Windows.Forms.Padding(4);
-            this.lblTotalMarkup.Name = "lblTotalMarkup";
-            this.lblTotalMarkup.Size = new System.Drawing.Size(53, 24);
-            this.lblTotalMarkup.TabIndex = 14;
-            this.lblTotalMarkup.Text = "0 TL    ";
-            // 
-            // panelControl6
-            // 
-            this.panelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl6.Controls.Add(this.panelControl7);
-            this.panelControl6.Controls.Add(this.labelControl3);
-            this.panelControl6.Controls.Add(this.lblTotalMarkup);
-            this.panelControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl6.Location = new System.Drawing.Point(362, 663);
-            this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(1000, 31);
-            this.panelControl6.TabIndex = 32;
-            this.panelControl6.Visible = false;
-            // 
-            // panelControl7
-            // 
-            this.panelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl7.ContentImage = ((System.Drawing.Image)(resources.GetObject("panelControl7.ContentImage")));
-            this.panelControl7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl7.Location = new System.Drawing.Point(804, 0);
-            this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(26, 31);
-            this.panelControl7.TabIndex = 16;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.labelControl3.Location = new System.Drawing.Point(830, 0);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(117, 24);
-            this.labelControl3.TabIndex = 15;
-            this.labelControl3.Text = " Kar Toplamı: ";
-            // 
             // frm_Teklif_Adim2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1154,7 +1123,6 @@
             this.ClientSize = new System.Drawing.Size(1362, 764);
             this.ControlBox = false;
             this.Controls.Add(this.grdMaterialListNonWorkship);
-            this.Controls.Add(this.panelControl6);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.grupPanel);
             this.Controls.Add(this.panelControl2);
@@ -1192,15 +1160,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
+            this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlrisk)).EndInit();
             this.pnlrisk.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
-            this.panelControl6.ResumeLayout(false);
-            this.panelControl6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1248,9 +1213,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl5;
         public DevExpress.XtraEditors.SimpleButton btnNext;
         private DevExpress.XtraEditors.LabelControl lblTotalMarkup;
-        private DevExpress.XtraEditors.PanelControl panelControl6;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.PanelControl panelControl7;
         private System.Windows.Forms.Panel panel6;
         public DevExpress.XtraEditors.SimpleButton btnPrev;
         private System.Windows.Forms.MaskedTextBox txtRisk;

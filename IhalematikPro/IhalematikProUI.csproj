@@ -1169,6 +1169,9 @@
   <ItemGroup>
     <Content Include="ico.ico" />
     <Content Include="icon.ico" />
+    <None Include="Resources\life4.JPG" />
+    <None Include="Resources\life2.JPG" />
+    <None Include="Resources\life3.JPG" />
     <None Include="Resources\ihale_demo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

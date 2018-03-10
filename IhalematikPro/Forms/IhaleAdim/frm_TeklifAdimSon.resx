@@ -5640,6 +5640,18 @@
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="btnPrev.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAsdEVYdFRpdGxlAFByZXY7RG91YmxlO0Fycm93O1Ns
+        b3c7UmV3aW5kO0RlY3JlYXNlelPeUQAAARpJREFUWEfFkMsNAjEQQ2lw26EAmqAE7pzoLtiHSJE9+ZGw
+        e3gSet7YI24ppUsJ5ZmEcpbj8TkAfs7nJmbJ5bWBXm5ihrI8GujlxMQoWq4DvTxjYoSonIzmJSZ6oCgs
+        B+9Ojtj7TLRASXUcNMeJ9hETNVCwNE60k5iIwOPlcaK9xISCh1vGiXYTEyV4tG2caD8xQe6v5/ZxojvE
+        BMHH28eJ7hAT+PAv40S3iAmCj6/7BzJ4sP0I3SAmSvBo6xHaT0woeLjtCO0mJiLweMsR2ktM1EDB8hHa
+        SUy0QMnSEdpHTPRAUfWITo7Y+0yMgLJwZDQvMTEKCm1kJs+YmEFHZnNiYpZyRDPSy038Qh5Rn2nlJs4m
+        lGcSyvNIty+UJAE4WyhjcwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="groupControl5.CaptionImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABR0RVh0VGl0
