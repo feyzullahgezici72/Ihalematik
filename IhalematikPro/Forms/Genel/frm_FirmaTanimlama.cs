@@ -12,12 +12,15 @@ using IhalematikProBL.Entity;
 using IhalematikPro.Manager;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms;
+using System.IO;
 
 namespace IhalematikPro.Forms
 {
     public partial class frm_FirmaTanimlama : DevExpress.XtraEditors.XtraForm
     {
         frm_Anaform _owner = null;
+        private string logoName = string.Empty;
+
         public frm_FirmaTanimlama(frm_Anaform Owner)
         {
             InitializeComponent();
@@ -53,6 +56,11 @@ namespace IhalematikPro.Forms
                 txtMailPassword.Text = company.MailPassword;//samet ekledi
                 txtTaxOffice.Text = company.TaxOffice;
                 txtTaxNumber.Text = company.TaxNumber;
+                if (!string.IsNullOrEmpty(company.LogoPath))
+                {
+                    string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                    picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + company.LogoPath); 
+                }
             }
         }
 
@@ -77,6 +85,7 @@ namespace IhalematikPro.Forms
             company.WebAddress = txtWebAddress.Text;
             company.TaxNumber = txtTaxNumber.Text;
             company.TaxOffice = txtTaxOffice.Text;
+            company.LogoPath = this.logoName;
             if (!string.IsNullOrEmpty(txtMailPassword.Text.Trim()))
             {
                 company.MailPassword = txtMailPassword.Text.Trim();
@@ -89,6 +98,30 @@ namespace IhalematikPro.Forms
             mf.ShowDialog();
             this.Close();
 
+        }
+
+        private void btnUploadFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Image Files(*.jpeg;*.bmp;*.png;*.jpg)|*.jpeg;*.bmp;*.png;*.jpg";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string filename = System.IO.Path.GetFileName(dialog.FileName);
+                string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+
+                try
+                {
+                    this.logoName = Guid.NewGuid().ToString() + filename;
+                    System.IO.File.Copy(dialog.FileName, path + "\\EmailFile\\Images\\Logo\\" + this.logoName);
+                    picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + this.logoName);
+                    //picLogo.Image.
+                    //this.logoName = Guid.NewGuid().ToString() + filename;
+                }
+                catch (Exception)
+                {
+
+                }
+            }
         }
     }
 }

@@ -24,5 +24,6 @@ namespace IhalematikProBL.Entity
         public string TaxNumber  { get; set; }
 
         public string TaxOffice { get; set; }
+        public string LogoPath { get; set; }
     }
 }

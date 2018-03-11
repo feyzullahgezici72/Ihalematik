@@ -28,6 +28,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("MailPassword", t.MailPassword);
             parameters.Add("TaxOffice", t.TaxOffice);
             parameters.Add("TaxNumber", t.TaxNumber);
+            parameters.Add("LogoPath", t.LogoPath);
             return parameters;
         }
         protected override void Initialize(Company t, Dictionary<string, object> dr)
@@ -47,6 +48,7 @@ namespace IhalematikProBL.Provider
             t.MailPassword = dr.GetValue<string>("MailPassword");
             t.TaxNumber = dr.GetValue<string>("TaxNumber");
             t.TaxOffice = dr.GetValue<string>("TaxOffice");
+            t.LogoPath = dr.GetValue<string>("LogoPath");
         }
 
     }
