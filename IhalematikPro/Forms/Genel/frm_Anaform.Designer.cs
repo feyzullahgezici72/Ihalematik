@@ -208,6 +208,7 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barBtnKuralllar = new DevExpress.XtraBars.BarButtonItem();
+            this.barStaticItem7 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
@@ -316,10 +317,11 @@ namespace IhalematikPro.Forms
             this.barButtonItem42,
             this.barButtonItem1,
             this.barButtonItem41,
-            this.barButtonItem43});
+            this.barButtonItem43,
+            this.barStaticItem7});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 66;
+            this.ribbon.MaxItemId = 67;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsTouch.AffectOnlyRibbon = true;
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -1470,6 +1472,7 @@ namespace IhalematikPro.Forms
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem6);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem7);
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 645);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbon;
@@ -1825,6 +1828,13 @@ namespace IhalematikPro.Forms
             this.barBtnKuralllar.LargeWidth = 120;
             this.barBtnKuralllar.Name = "barBtnKuralllar";
             // 
+            // barStaticItem7
+            // 
+            this.barStaticItem7.Caption = "LifeTree Software";
+            this.barStaticItem7.Id = 66;
+            this.barStaticItem7.Name = "barStaticItem7";
+            this.barStaticItem7.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
             // frm_Anaform
             // 
             this.ActiveGlowColor = System.Drawing.Color.White;
@@ -2026,6 +2036,7 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
         private DevExpress.XtraEditors.Repository.RepositoryItemColorEdit repositoryItemColorEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit repositoryItemPopupContainerEdit3;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem7;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }
