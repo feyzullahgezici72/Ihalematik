@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TeklifAktar));
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
@@ -40,7 +43,6 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.lblSupplierName = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.btnUploadFile = new DevExpress.XtraEditors.SimpleButton();
             this.lblOfferDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.lblOfferNumber = new DevExpress.XtraEditors.LabelControl();
@@ -60,6 +62,8 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSuppierName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUploadFile = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -122,9 +126,10 @@
             this.panelControl2.Appearance.BackColor2 = System.Drawing.Color.White;
             this.panelControl2.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.panelControl2.Controls.Add(this.btnUploadFile);
+            this.panelControl2.Controls.Add(this.btnKaydet);
             this.panelControl2.Controls.Add(this.lblSupplierName);
             this.panelControl2.Controls.Add(this.labelControl4);
-            this.panelControl2.Controls.Add(this.btnUploadFile);
             this.panelControl2.Controls.Add(this.lblOfferDescription);
             this.panelControl2.Controls.Add(this.labelControl2);
             this.panelControl2.Controls.Add(this.lblOfferNumber);
@@ -155,33 +160,6 @@
             this.labelControl4.Size = new System.Drawing.Size(109, 19);
             this.labelControl4.TabIndex = 12;
             this.labelControl4.Text = "Tedarikci Adi :";
-            // 
-            // btnUploadFile
-            // 
-            this.btnUploadFile.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUploadFile.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnUploadFile.Appearance.Options.UseFont = true;
-            this.btnUploadFile.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnUploadFile.Image = global::IhalematikProUI.Properties.Resources.yukle;
-            this.btnUploadFile.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnUploadFile.Location = new System.Drawing.Point(1031, 3);
-            this.btnUploadFile.Margin = new System.Windows.Forms.Padding(6);
-            this.btnUploadFile.Name = "btnUploadFile";
-            this.btnUploadFile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnUploadFile.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
-            this.btnUploadFile.Size = new System.Drawing.Size(266, 90);
-            toolTipTitleItem1.Text = "YÜKLE";
-            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipItem1.Appearance.Options.UseImage = true;
-            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Tedarikçilerden gelen Fiyatları yükleyin";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            this.btnUploadFile.SuperTip = superToolTip1;
-            this.btnUploadFile.TabIndex = 11;
-            this.btnUploadFile.Text = "Teklifleri Yükle";
-            this.btnUploadFile.Click += new System.EventHandler(this.btnUploadFile_Click);
             // 
             // lblOfferDescription
             // 
@@ -567,9 +545,65 @@
             this.repositoryItemCheckEdit1.AutoHeight = false;
             this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
             // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaydet.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnKaydet.Appearance.Options.UseFont = true;
+            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
+            this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnKaydet.Location = new System.Drawing.Point(1195, 3);
+            this.btnKaydet.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnKaydet.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(6);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnKaydet.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.btnKaydet.Size = new System.Drawing.Size(102, 90);
+            toolTipTitleItem2.Text = "YÜKLE";
+            toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            toolTipItem2.Appearance.Options.UseImage = true;
+            toolTipItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem2.Image")));
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Tedarikçilerden gelen Fiyatları yükleyin";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.btnKaydet.SuperTip = superToolTip2;
+            this.btnKaydet.TabIndex = 14;
+            this.btnKaydet.Text = "Kaydet";
+            // 
+            // btnUploadFile
+            // 
+            this.btnUploadFile.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUploadFile.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnUploadFile.Appearance.Options.UseFont = true;
+            this.btnUploadFile.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnUploadFile.Image = global::IhalematikProUI.Properties.Resources.yukle;
+            this.btnUploadFile.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnUploadFile.Location = new System.Drawing.Point(1081, 3);
+            this.btnUploadFile.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnUploadFile.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnUploadFile.Margin = new System.Windows.Forms.Padding(6);
+            this.btnUploadFile.Name = "btnUploadFile";
+            this.btnUploadFile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnUploadFile.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.btnUploadFile.Size = new System.Drawing.Size(114, 90);
+            toolTipTitleItem1.Text = "YÜKLE";
+            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            toolTipItem1.Appearance.Options.UseImage = true;
+            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Tedarikçilerden gelen Fiyatları yükleyin";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.btnUploadFile.SuperTip = superToolTip1;
+            this.btnUploadFile.TabIndex = 15;
+            this.btnUploadFile.Text = "Yükle";
+            this.btnUploadFile.Click += new System.EventHandler(this.btnUploadFile_Click);
+            // 
             // frm_TeklifAktar
             // 
-            this.AcceptButton = this.btnUploadFile;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 700);
@@ -627,9 +661,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn colSuppierName;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
-        private DevExpress.XtraEditors.SimpleButton btnUploadFile;
         private DevExpress.XtraEditors.LabelControl lblSupplierName;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraGrid.Columns.GridColumn colKDV;
+        private DevExpress.XtraEditors.SimpleButton btnUploadFile;
+        private DevExpress.XtraEditors.SimpleButton btnKaydet;
     }
 }

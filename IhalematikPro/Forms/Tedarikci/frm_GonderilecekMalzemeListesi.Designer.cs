@@ -43,12 +43,16 @@
             this.colRemoveAddEdMaterialList = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpstRemove = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdAddedOfferMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewAddedOfferMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstRemove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -109,7 +113,7 @@
             this.grdAddedOfferMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1,
             this.rpstRemove});
-            this.grdAddedOfferMaterialList.Size = new System.Drawing.Size(1215, 615);
+            this.grdAddedOfferMaterialList.Size = new System.Drawing.Size(1215, 555);
             this.grdAddedOfferMaterialList.TabIndex = 0;
             this.grdAddedOfferMaterialList.UseDisabledStatePainter = false;
             this.grdAddedOfferMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -386,6 +390,27 @@
             this.repositoryItemCheckEdit1.AutoHeight = false;
             this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
             // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.simpleButton1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl1.Location = new System.Drawing.Point(0, 590);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1215, 60);
+            this.panelControl1.TabIndex = 113;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(1046, 3);
+            this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
+            this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(166, 54);
+            this.simpleButton1.TabIndex = 0;
+            this.simpleButton1.Text = "Tümünü Çıkar";
+            // 
             // frm_GonderilecekMalzemeListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -393,6 +418,7 @@
             this.ClientSize = new System.Drawing.Size(1215, 650);
             this.ControlBox = false;
             this.Controls.Add(this.grdAddedOfferMaterialList);
+            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.LookAndFeel.SkinName = "London Liquid Sky";
@@ -410,6 +436,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewAddedOfferMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstRemove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -429,5 +457,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colRemoveAddEdMaterialList;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit rpstRemove;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

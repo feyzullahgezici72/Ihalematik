@@ -49,17 +49,20 @@
             DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
             this.rpstSupplierDetail1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
@@ -115,6 +118,7 @@
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -497,6 +501,7 @@
             // pnlAktarmaPaneli
             // 
             this.pnlAktarmaPaneli.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.pnlAktarmaPaneli.Controls.Add(this.simpleButton1);
             this.pnlAktarmaPaneli.Controls.Add(this.btnAktar);
             this.pnlAktarmaPaneli.Location = new System.Drawing.Point(686, 4);
             this.pnlAktarmaPaneli.Margin = new System.Windows.Forms.Padding(4);
@@ -506,23 +511,23 @@
             // 
             // btnAktar
             // 
-            this.btnAktar.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAktar.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAktar.Appearance.Options.UseFont = true;
             this.btnAktar.Image = ((System.Drawing.Image)(resources.GetObject("btnAktar.Image")));
             this.btnAktar.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnAktar.Location = new System.Drawing.Point(6, 335);
+            this.btnAktar.Location = new System.Drawing.Point(6, 319);
             this.btnAktar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAktar.Name = "btnAktar";
-            this.btnAktar.Size = new System.Drawing.Size(93, 80);
-            toolTipTitleItem7.Text = "MALZEME AKTAR";
-            toolTipItem7.Appearance.Options.UseImage = true;
-            toolTipItem7.LeftIndent = 6;
-            toolTipItem7.Text = "Seçili Malzemeleri seçilen Tedarikçilere aktarır";
-            superToolTip7.Items.Add(toolTipTitleItem7);
-            superToolTip7.Items.Add(toolTipItem7);
-            this.btnAktar.SuperTip = superToolTip7;
+            this.btnAktar.Size = new System.Drawing.Size(93, 96);
+            toolTipTitleItem8.Text = "MALZEME AKTAR";
+            toolTipItem8.Appearance.Options.UseImage = true;
+            toolTipItem8.LeftIndent = 6;
+            toolTipItem8.Text = "Seçili Malzemeleri seçilen Tedarikçilere aktarır";
+            superToolTip8.Items.Add(toolTipTitleItem8);
+            superToolTip8.Items.Add(toolTipItem8);
+            this.btnAktar.SuperTip = superToolTip8;
             this.btnAktar.TabIndex = 0;
-            this.btnAktar.Text = "Aktar";
+            this.btnAktar.Text = "Seçili\r\nAktar";
             this.btnAktar.Click += new System.EventHandler(this.btnAktar_Click);
             // 
             // pnlMalzemeListesi
@@ -735,14 +740,14 @@
             // btnChangeMeterialName
             // 
             this.btnChangeMeterialName.AutoHeight = false;
-            toolTipTitleItem8.Text = "YENİDEN ADLANDIR";
-            toolTipItem8.Appearance.Options.UseImage = true;
-            toolTipItem8.LeftIndent = 6;
-            toolTipItem8.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmek isterseniz kullanınız..";
-            superToolTip8.Items.Add(toolTipTitleItem8);
-            superToolTip8.Items.Add(toolTipItem8);
+            toolTipTitleItem9.Text = "YENİDEN ADLANDIR";
+            toolTipItem9.Appearance.Options.UseImage = true;
+            toolTipItem9.LeftIndent = 6;
+            toolTipItem9.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmek isterseniz kullanınız..";
+            superToolTip9.Items.Add(toolTipTitleItem9);
+            superToolTip9.Items.Add(toolTipItem9);
             this.btnChangeMeterialName.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnChangeMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, superToolTip8, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnChangeMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, superToolTip9, true)});
             this.btnChangeMeterialName.LookAndFeel.SkinName = "Sharp Plus";
             this.btnChangeMeterialName.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnChangeMeterialName.Name = "btnChangeMeterialName";
@@ -881,15 +886,15 @@
             // btnResetMeterialName
             // 
             this.btnResetMeterialName.AutoHeight = false;
-            toolTipTitleItem9.Text = "GERİAL YENİDEN ADLANDIR";
-            toolTipItem9.Appearance.Options.UseImage = true;
-            toolTipItem9.LeftIndent = 6;
-            toolTipItem9.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmişseniz geri almak için kullan" +
+            toolTipTitleItem10.Text = "GERİAL YENİDEN ADLANDIR";
+            toolTipItem10.Appearance.Options.UseImage = true;
+            toolTipItem10.LeftIndent = 6;
+            toolTipItem10.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmişseniz geri almak için kullan" +
     "ınız...";
-            superToolTip9.Items.Add(toolTipTitleItem9);
-            superToolTip9.Items.Add(toolTipItem9);
+            superToolTip10.Items.Add(toolTipTitleItem10);
+            superToolTip10.Items.Add(toolTipItem10);
             this.btnResetMeterialName.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnResetMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, superToolTip9, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnResetMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, superToolTip10, true)});
             this.btnResetMeterialName.LookAndFeel.SkinName = "Sharp Plus";
             this.btnResetMeterialName.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnResetMeterialName.Name = "btnResetMeterialName";
@@ -1185,6 +1190,27 @@
             // 
             this.popupMenu1.Name = "popupMenu1";
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.simpleButton1.Location = new System.Drawing.Point(6, 423);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(93, 91);
+            toolTipTitleItem7.Text = "MALZEME AKTAR";
+            toolTipItem7.Appearance.Options.UseImage = true;
+            toolTipItem7.LeftIndent = 6;
+            toolTipItem7.Text = "Seçili Malzemeleri seçilen Tedarikçilere aktarır";
+            superToolTip7.Items.Add(toolTipTitleItem7);
+            superToolTip7.Items.Add(toolTipItem7);
+            this.simpleButton1.SuperTip = superToolTip7;
+            this.simpleButton1.TabIndex = 0;
+            this.simpleButton1.Text = "Tümünü\r\nAktar";
+            this.simpleButton1.Click += new System.EventHandler(this.btnAktar_Click);
+            // 
             // frm_TedarikcilereTeklifGonder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1302,5 +1328,6 @@
         private DevExpress.XtraBars.PopupMenu popupMenu1;
         private DevExpress.XtraGrid.Columns.GridColumn colMaterialListIsPoz;
         private DevExpress.XtraGrid.Columns.GridColumn colMaterialListPozOBFId;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }
