@@ -46,7 +46,6 @@ namespace IhalematikPro.Forms
         }
         public void frm_Anaform_Load(object sender, EventArgs e)
         {
-            
             logoOrtala();
             DevExpress.UserSkins.BonusSkins.Register();
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
@@ -56,6 +55,11 @@ namespace IhalematikPro.Forms
             if (CurrentManager.Instance.CurrentCompany != null)
             {
                 lblCompanyName.Text = CurrentManager.Instance.CurrentCompany.Name;
+                if (!string.IsNullOrEmpty(CurrentManager.Instance.CurrentCompany.LogoPath))
+                {
+                    string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                    picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
+                }
             }
         }
 
