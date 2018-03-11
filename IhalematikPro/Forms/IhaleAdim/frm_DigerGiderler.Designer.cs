@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DigerGiderler));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
@@ -44,7 +43,7 @@
             this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnOk = new DevExpress.XtraEditors.SimpleButton();
-            this.bindingSourceOtherExpenses = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceOtherExpenses = new System.Windows.Forms.BindingSource();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -65,7 +64,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(772, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 21;
@@ -80,7 +79,7 @@
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.labelControl1.Location = new System.Drawing.Point(10, 0);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
             this.labelControl1.Size = new System.Drawing.Size(194, 35);
@@ -98,7 +97,7 @@
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(800, 35);
             this.panelControl2.TabIndex = 99;
@@ -125,10 +124,10 @@
             // 
             this.grdOtherExpenses.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.grdOtherExpenses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdOtherExpenses.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdOtherExpenses.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdOtherExpenses.Location = new System.Drawing.Point(2, 2);
             this.grdOtherExpenses.MainView = this.gridViewOtherExpenses;
-            this.grdOtherExpenses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdOtherExpenses.Margin = new System.Windows.Forms.Padding(4);
             this.grdOtherExpenses.Name = "grdOtherExpenses";
             this.grdOtherExpenses.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnSil});
@@ -333,8 +332,7 @@
             this.colDelete.ColumnEdit = this.btnSil;
             this.colDelete.MaxWidth = 20;
             this.colDelete.Name = "colDelete";
-            this.colDelete.OptionsColumn.AllowEdit = false;
-            this.colDelete.OptionsColumn.AllowFocus = false;
+            this.colDelete.OptionsColumn.TabStop = false;
             this.colDelete.Visible = true;
             this.colDelete.VisibleIndex = 2;
             this.colDelete.Width = 20;
