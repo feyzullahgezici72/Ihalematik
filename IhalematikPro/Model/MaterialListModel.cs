@@ -220,6 +220,14 @@ namespace IhalematikPro.Model
                 return Math.Round(this.CustomWorkerMarkupUnitPrice * this.Quantity, 2);
             }
         }
+        //İşçilik kar tutarı malzeme bazlı
+        public double TotalCustomWorkerMarkupPrice
+        {
+            get
+            {
+                return Math.Round(this.CustomWorkerMarkup * this.Quantity, 2);
+            }
+        }
         //ISCILIK(MALZEME) BIRIM FIYAT
         private double workerUnitPrice = 0;
         public double WorkerUnitPrice

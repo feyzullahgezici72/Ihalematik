@@ -57,6 +57,9 @@
             this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.rpstColId = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSelectDeselect = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.gridViewMaterialList = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -72,8 +75,6 @@
             this.rpstWorkship = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.pnlrisk = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSelectDeselect = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
@@ -93,6 +94,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstColId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
+            this.panelControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
@@ -275,10 +278,11 @@
             // grupPanel
             // 
             this.grupPanel.Controls.Add(this.grdTenderGroup);
+            this.grupPanel.Controls.Add(this.panelControl5);
             this.grupPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.grupPanel.Location = new System.Drawing.Point(0, 0);
             this.grupPanel.Name = "grupPanel";
-            this.grupPanel.Size = new System.Drawing.Size(386, 659);
+            this.grupPanel.Size = new System.Drawing.Size(300, 659);
             this.grupPanel.TabIndex = 1;
             // 
             // grdTenderGroup
@@ -297,7 +301,7 @@
             this.btnSil,
             this.rpstColId,
             this.rpstSelected});
-            this.grdTenderGroup.Size = new System.Drawing.Size(380, 653);
+            this.grdTenderGroup.Size = new System.Drawing.Size(294, 585);
             this.grdTenderGroup.TabIndex = 0;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup,
@@ -495,6 +499,45 @@
             this.gridView1.GridControl = this.grdTenderGroup;
             this.gridView1.Name = "gridView1";
             // 
+            // panelControl5
+            // 
+            this.panelControl5.Controls.Add(this.simpleButton1);
+            this.panelControl5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl5.Location = new System.Drawing.Point(3, 588);
+            this.panelControl5.Name = "panelControl5";
+            this.panelControl5.Size = new System.Drawing.Size(294, 68);
+            this.panelControl5.TabIndex = 50;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.simpleButton1.Location = new System.Drawing.Point(3, 3);
+            this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
+            this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(288, 62);
+            this.simpleButton1.TabIndex = 0;
+            this.simpleButton1.Text = "Tümünü Listele";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
+            // 
+            // btnSelectDeselect
+            // 
+            this.btnSelectDeselect.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSelectDeselect.Appearance.Options.UseFont = true;
+            this.btnSelectDeselect.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSelectDeselect.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectDeselect.Image")));
+            this.btnSelectDeselect.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnSelectDeselect.Location = new System.Drawing.Point(0, 0);
+            this.btnSelectDeselect.Name = "btnSelectDeselect";
+            this.btnSelectDeselect.Size = new System.Drawing.Size(155, 70);
+            this.btnSelectDeselect.TabIndex = 11;
+            this.btnSelectDeselect.Text = "Hepsini Seç";
+            this.btnSelectDeselect.Click += new System.EventHandler(this.btnSelectDeselect_Click);
+            // 
             // panelControl6
             // 
             this.panelControl6.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -514,13 +557,13 @@
             // 
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdMaterialList.Location = new System.Drawing.Point(386, 0);
+            this.grdMaterialList.Location = new System.Drawing.Point(300, 0);
             this.grdMaterialList.MainView = this.gridViewMaterialList;
             this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstWorkship});
-            this.grdMaterialList.Size = new System.Drawing.Size(976, 589);
+            this.grdMaterialList.Size = new System.Drawing.Size(1062, 589);
             this.grdMaterialList.TabIndex = 0;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
@@ -848,6 +891,8 @@
             this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn6.OptionsFilter.AllowFilter = false;
+            this.gridColumn6.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom, "KDVAmount", "Toplam:")});
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 7;
             this.gridColumn6.Width = 100;
@@ -913,13 +958,12 @@
             this.panelControl3.Appearance.Options.UseBackColor = true;
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl3.Controls.Add(this.pnlrisk);
-            this.panelControl3.Controls.Add(this.btnSelectDeselect);
             this.panelControl3.Controls.Add(this.panel2);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl3.Location = new System.Drawing.Point(386, 589);
+            this.panelControl3.Location = new System.Drawing.Point(300, 589);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(976, 70);
+            this.panelControl3.Size = new System.Drawing.Size(1062, 70);
             this.panelControl3.TabIndex = 22;
             // 
             // pnlrisk
@@ -927,43 +971,19 @@
             this.pnlrisk.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnlrisk.Appearance.Options.UseBackColor = true;
             this.pnlrisk.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pnlrisk.Controls.Add(this.simpleButton1);
+            this.pnlrisk.Controls.Add(this.btnSelectDeselect);
             this.pnlrisk.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlrisk.Location = new System.Drawing.Point(159, 0);
+            this.pnlrisk.Location = new System.Drawing.Point(0, 0);
             this.pnlrisk.Name = "pnlrisk";
-            this.pnlrisk.Size = new System.Drawing.Size(172, 70);
+            this.pnlrisk.Size = new System.Drawing.Size(168, 70);
             this.pnlrisk.TabIndex = 49;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(0, 0);
-            this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
-            this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(172, 70);
-            this.simpleButton1.TabIndex = 0;
-            this.simpleButton1.Text = "Tümünü Listele";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
-            // 
-            // btnSelectDeselect
-            // 
-            this.btnSelectDeselect.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnSelectDeselect.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectDeselect.Image")));
-            this.btnSelectDeselect.Location = new System.Drawing.Point(0, 0);
-            this.btnSelectDeselect.Name = "btnSelectDeselect";
-            this.btnSelectDeselect.Size = new System.Drawing.Size(159, 70);
-            this.btnSelectDeselect.TabIndex = 11;
-            this.btnSelectDeselect.Text = "Hepsini Seç";
-            this.btnSelectDeselect.Click += new System.EventHandler(this.btnSelectDeselect_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.panelControl4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(678, 0);
+            this.panel2.Location = new System.Drawing.Point(764, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(298, 70);
@@ -1037,6 +1057,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstColId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
+            this.panelControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
             this.panelControl6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
@@ -1097,7 +1119,8 @@
         public DevExpress.XtraEditors.SimpleButton btnNext;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.SimpleButton btnSelectDeselect;
-        private DevExpress.XtraEditors.PanelControl pnlrisk;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.PanelControl panelControl5;
+        private DevExpress.XtraEditors.PanelControl pnlrisk;
     }
 }

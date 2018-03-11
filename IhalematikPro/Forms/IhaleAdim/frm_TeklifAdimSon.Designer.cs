@@ -551,7 +551,7 @@
             this.btnTumuneUygula.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
-            this.btnTumuneUygula.Size = new System.Drawing.Size(72, 95);
+            this.btnTumuneUygula.Size = new System.Drawing.Size(72, 97);
             this.btnTumuneUygula.TabIndex = 4;
             this.btnTumuneUygula.Text = "Tümüne\r\nUygula";
             this.btnTumuneUygula.ToolTip = "Tümünü Uygula";

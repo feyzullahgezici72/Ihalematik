@@ -30,7 +30,6 @@ namespace IhalematikPro.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Anaform));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
@@ -149,6 +148,7 @@ namespace IhalematikPro.Forms
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem41 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem43 = new DevExpress.XtraBars.BarButtonItem();
+            this.barStaticItem7 = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -204,11 +204,10 @@ namespace IhalematikPro.Forms
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barBtnKuralllar = new DevExpress.XtraBars.BarButtonItem();
-            this.barStaticItem7 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
@@ -1149,6 +1148,13 @@ namespace IhalematikPro.Forms
             this.barButtonItem43.Name = "barButtonItem43";
             this.barButtonItem43.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem43_ItemClick);
             // 
+            // barStaticItem7
+            // 
+            this.barStaticItem7.Caption = "LifeTree Software";
+            this.barStaticItem7.Id = 66;
+            this.barStaticItem7.Name = "barStaticItem7";
+            this.barStaticItem7.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -1553,7 +1559,7 @@ namespace IhalematikPro.Forms
             this.picLogo.Image = global::IhalematikProUI.Properties.Resources.prg_logo1;
             this.picLogo.Location = new System.Drawing.Point(523, 110);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(295, 192);
+            this.picLogo.Size = new System.Drawing.Size(300, 200);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 3;
             this.picLogo.TabStop = false;
@@ -1827,13 +1833,6 @@ namespace IhalematikPro.Forms
             this.barBtnKuralllar.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnKuralllar.LargeGlyph")));
             this.barBtnKuralllar.LargeWidth = 120;
             this.barBtnKuralllar.Name = "barBtnKuralllar";
-            // 
-            // barStaticItem7
-            // 
-            this.barStaticItem7.Caption = "LifeTree Software";
-            this.barStaticItem7.Id = 66;
-            this.barStaticItem7.Name = "barStaticItem7";
-            this.barStaticItem7.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // frm_Anaform
             // 
