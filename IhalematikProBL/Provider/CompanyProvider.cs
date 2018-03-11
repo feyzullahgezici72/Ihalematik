@@ -29,6 +29,8 @@ namespace IhalematikProBL.Provider
             parameters.Add("TaxOffice", t.TaxOffice);
             parameters.Add("TaxNumber", t.TaxNumber);
             parameters.Add("LogoPath", t.LogoPath);
+            parameters.Add("LogoHeight", t.LogoHeight);
+            parameters.Add("LogoWidth", t.LogoWidth);
             return parameters;
         }
         protected override void Initialize(Company t, Dictionary<string, object> dr)
@@ -49,6 +51,8 @@ namespace IhalematikProBL.Provider
             t.TaxNumber = dr.GetValue<string>("TaxNumber");
             t.TaxOffice = dr.GetValue<string>("TaxOffice");
             t.LogoPath = dr.GetValue<string>("LogoPath");
+            t.LogoWidth = dr.GetValue<int>("LogoWidth");
+            t.LogoHeight = dr.GetValue<int>("LogoHeight");
         }
 
     }

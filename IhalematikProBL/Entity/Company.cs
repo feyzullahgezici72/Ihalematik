@@ -20,10 +20,11 @@ namespace IhalematikProBL.Entity
         public string WebAddress { get; set; }
         public string MailAddress { get; set; }
         public string MailPassword { get; set; }
-
         public string TaxNumber  { get; set; }
-
         public string TaxOffice { get; set; }
         public string LogoPath { get; set; }
+
+        public int LogoHeight { get; set; }
+        public int LogoWidth { get; set; }
     }
 }

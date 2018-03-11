@@ -41,6 +41,18 @@ namespace IhalematikPro.Forms
 
         public void logoOrtala()
         {
+            if (CurrentManager.Instance.CurrentCompany != null)
+            {
+                if (CurrentManager.Instance.CurrentCompany.LogoWidth != 0)
+                {
+                    picLogo.Width = CurrentManager.Instance.CurrentCompany.LogoWidth;
+                }
+                if (CurrentManager.Instance.CurrentCompany.LogoHeight != 0)
+                {
+                    picLogo.Height = CurrentManager.Instance.CurrentCompany.LogoHeight;
+                }
+            }
+
             picLogo.Left = (pnlAna.Width / 2) - (picLogo.Width / 2);
             picLogo.Top = (pnlAna.Height / 2) - (picLogo.Height / 2);
         }
@@ -88,7 +100,7 @@ namespace IhalematikPro.Forms
         {
             barBtnPozListesi.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
-          
+
             if (pl == null)
             {
                 pl = new frm_PozListesi();
@@ -115,7 +127,7 @@ namespace IhalematikPro.Forms
         {
             barBtnOzelStokListesi.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
-            
+
             if (osl == null)
             {
                 osl = new frm_OzelStokListesi();
@@ -637,7 +649,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-           
+
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
@@ -756,7 +768,7 @@ namespace IhalematikPro.Forms
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void barButtonItem25_ItemClick(object sender, ItemClickEventArgs e)
@@ -778,7 +790,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem29_ItemClick_1(object sender, ItemClickEventArgs e)
         {
-            
+
         }
 
         private void barButtonItem39_ItemClick(object sender, ItemClickEventArgs e)
@@ -795,7 +807,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem31_ItemClick(object sender, ItemClickEventArgs e)
         {
-           
+
         }
 
         private void barButtonItem32_ItemClick(object sender, ItemClickEventArgs e)
@@ -885,7 +897,7 @@ namespace IhalematikPro.Forms
             {
                 bfh = new frm_BirimFiyatHistory();
                 bfh.MdiParent = this;
-                bfh.FormClosed +=new FormClosedEventHandler(Bfh_FormClosed);
+                bfh.FormClosed += new FormClosedEventHandler(Bfh_FormClosed);
                 bfh.Show();
             }
             else
@@ -903,8 +915,9 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem31_ItemClick_1(object sender, ItemClickEventArgs e)
         {
-            frm_LogoAyarları logo = new frm_LogoAyarları();
+            frm_LogoAyarları logo = new frm_LogoAyarları(this);
             logo.ShowDialog();
         }
+        
     }
 }
