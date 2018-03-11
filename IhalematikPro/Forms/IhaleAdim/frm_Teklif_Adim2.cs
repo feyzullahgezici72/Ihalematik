@@ -49,13 +49,13 @@ namespace IhalematikPro.Forms
         }
         private void CalculateTotalMarkup()
         {
-            List<MaterialListModel> items = grdMaterialListNonWorkship.DataSource as List<MaterialListModel>;
-            if (items != null)
-            {
-                //List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-                //double baseAmount = 0;
-                lblTotalMarkup.Text = (items.Sum(p => p.TotalMarkup)).ToString("C2");
-            }
+            //List<MaterialListModel> items = grdMaterialListNonWorkship.DataSource as List<MaterialListModel>;
+            //if (items != null)
+            //{
+            //    //List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            //    //double baseAmount = 0;
+            //    //lblTotalMarkup.Text = (items.Sum(p => p.TotalMarkup)).ToString("C2");
+            //}
         }
 
         public void LoadTenderGroupGrid()

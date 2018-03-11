@@ -76,7 +76,6 @@
             this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.lblTotalMarkup = new DevExpress.XtraEditors.LabelControl();
             this.pnlrisk = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -1015,7 +1014,6 @@
             this.panelControl3.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl3.Appearance.Options.UseBackColor = true;
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl3.Controls.Add(this.lblTotalMarkup);
             this.panelControl3.Controls.Add(this.pnlrisk);
             this.panelControl3.Controls.Add(this.panel6);
             this.panelControl3.Controls.Add(this.panelControl5);
@@ -1025,17 +1023,6 @@
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(1000, 70);
             this.panelControl3.TabIndex = 31;
-            // 
-            // lblTotalMarkup
-            // 
-            this.lblTotalMarkup.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTotalMarkup.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.lblTotalMarkup.Location = new System.Drawing.Point(478, 23);
-            this.lblTotalMarkup.Margin = new System.Windows.Forms.Padding(4);
-            this.lblTotalMarkup.Name = "lblTotalMarkup";
-            this.lblTotalMarkup.Size = new System.Drawing.Size(53, 24);
-            this.lblTotalMarkup.TabIndex = 14;
-            this.lblTotalMarkup.Text = "0 TL    ";
             // 
             // pnlrisk
             // 
@@ -1160,7 +1147,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
-            this.panelControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlrisk)).EndInit();
             this.pnlrisk.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -1212,7 +1198,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.PanelControl panelControl5;
         public DevExpress.XtraEditors.SimpleButton btnNext;
-        private DevExpress.XtraEditors.LabelControl lblTotalMarkup;
         private System.Windows.Forms.Panel panel6;
         public DevExpress.XtraEditors.SimpleButton btnPrev;
         private System.Windows.Forms.MaskedTextBox txtRisk;

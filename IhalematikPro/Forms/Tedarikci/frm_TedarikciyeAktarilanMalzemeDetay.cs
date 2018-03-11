@@ -53,15 +53,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void frm_TedarikciyeAktarilanMalzemeDetay_Shown(object sender, EventArgs e)
         {
-            emailMesajPaneloOrtala();//mail mesaj formunu ortalar
-            if (this.ShowMailPanel)
-            {
-                pnlMail.Visible = true;
-            }
-            else
-            {
-                pnlMail.Visible = false;
-            }
+          
             //Supplier supplier = SupplierProvider.Instance.GetItem(this.SelectedSupplierId);
             if (this.Supplier != null)
             {
@@ -101,13 +93,11 @@ namespace IhalematikProUI.Forms.Tedarikci
                 this.CreateExcel();
                 
                 OperationResult result = this.SendMail();
-                
-                //});
-                //this.SendMailTask.Start();
+             
                 if (result.Success)
                 {
                     Application.DoEvents();
-                    emailMesajPanel.Visible = false;
+                    
                     this.SendInfoMessage();
                 }
                 else
@@ -240,11 +230,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             }
         }
 
-        public void emailMesajPaneloOrtala()
-        {
-            emailMesajPanel.Left = (grdMaterialList.Width / 2) - (emailMesajPanel.Width / 2);
-            emailMesajPanel.Top = (grdMaterialList.Height / 2) - (emailMesajPanel.Height / 2);
-        }
+        
 
         private void SendInfoMessage()
         {

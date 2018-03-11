@@ -72,7 +72,7 @@ namespace IhalematikProBL.Entity
         {
             get
             {
-                if (this.materialList == null)
+                if (this.materialList == null || this.materialList.Count == 0)
                 {
                     this.materialList = MaterialListProvider.Instance.GetItems("TenderId", this.Id);
                 }

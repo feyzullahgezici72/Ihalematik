@@ -30,13 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikciyeAktarilanMalzemeDetay));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.emailMesajPanel = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.lblWait = new DevExpress.XtraEditors.LabelControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.gridViewMaterialList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -66,13 +59,6 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.emailMesajPanel)).BeginInit();
-            this.emailMesajPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
-            this.panelControl7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
-            this.panelControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedOfferMaterial)).BeginInit();
@@ -94,94 +80,12 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.emailMesajPanel);
             this.panelControl1.Controls.Add(this.grdMaterialList);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 191);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1041, 388);
             this.panelControl1.TabIndex = 0;
-            // 
-            // emailMesajPanel
-            // 
-            this.emailMesajPanel.Appearance.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.emailMesajPanel.Appearance.Options.UseBackColor = true;
-            this.emailMesajPanel.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.emailMesajPanel.Controls.Add(this.panelControl7);
-            this.emailMesajPanel.Controls.Add(this.panelControl6);
-            this.emailMesajPanel.Location = new System.Drawing.Point(345, 69);
-            this.emailMesajPanel.LookAndFeel.SkinName = "Money Twins";
-            this.emailMesajPanel.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.emailMesajPanel.Name = "emailMesajPanel";
-            this.emailMesajPanel.Size = new System.Drawing.Size(388, 205);
-            this.emailMesajPanel.TabIndex = 3;
-            this.emailMesajPanel.Visible = false;
-            // 
-            // panelControl7
-            // 
-            this.panelControl7.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl7.Appearance.BackColor2 = System.Drawing.Color.Crimson;
-            this.panelControl7.Appearance.Options.UseBackColor = true;
-            this.panelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl7.Controls.Add(this.labelControl7);
-            this.panelControl7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl7.Location = new System.Drawing.Point(0, 0);
-            this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(388, 37);
-            this.panelControl7.TabIndex = 1;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl7.Location = new System.Drawing.Point(14, 6);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(57, 24);
-            this.labelControl7.TabIndex = 3;
-            this.labelControl7.Text = "e-mail ";
-            // 
-            // panelControl6
-            // 
-            this.panelControl6.Appearance.BackColor = System.Drawing.Color.White;
-            this.panelControl6.Appearance.Options.UseBackColor = true;
-            this.panelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl6.Controls.Add(this.pictureBox1);
-            this.panelControl6.Controls.Add(this.labelControl8);
-            this.panelControl6.Controls.Add(this.lblWait);
-            this.panelControl6.Location = new System.Drawing.Point(14, 48);
-            this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(360, 145);
-            this.panelControl6.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.email_send_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl8.Location = new System.Drawing.Point(95, 34);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(245, 35);
-            this.labelControl8.TabIndex = 4;
-            this.labelControl8.Text = "MAİL GÖNDERİLİYOR";
-            // 
-            // lblWait
-            // 
-            this.lblWait.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblWait.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblWait.Location = new System.Drawing.Point(197, 75);
-            this.lblWait.Name = "lblWait";
-            this.lblWait.Size = new System.Drawing.Size(143, 22);
-            this.lblWait.TabIndex = 3;
-            this.lblWait.Text = "Lütfen Bekleyiniz...";
             // 
             // grdMaterialList
             // 
@@ -722,15 +626,6 @@
             this.Shown += new System.EventHandler(this.frm_TedarikciyeAktarilanMalzemeDetay_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.emailMesajPanel)).EndInit();
-            this.emailMesajPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
-            this.panelControl7.ResumeLayout(false);
-            this.panelControl7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
-            this.panelControl6.ResumeLayout(false);
-            this.panelControl6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedOfferMaterial)).EndInit();
@@ -785,12 +680,5 @@
         private DevExpress.XtraEditors.MemoEdit txtEmailBody;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         public DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.PanelControl emailMesajPanel;
-        private DevExpress.XtraEditors.PanelControl panelControl7;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.PanelControl panelControl6;
-        private DevExpress.XtraEditors.LabelControl lblWait;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
     }
 }
