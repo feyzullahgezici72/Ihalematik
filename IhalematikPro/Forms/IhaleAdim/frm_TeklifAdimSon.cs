@@ -81,7 +81,6 @@ namespace IhalematikProUI.Forms
                 }
             }
 
-
             totalAmount = materialCostAmount + materialkdvTotalAmount;
             txtMaterialCostAmount.Text = materialCostAmount.ToString("c2");
             txtMaterialkdvTotalAmount.Text = materialkdvTotalAmount.ToString("c2");

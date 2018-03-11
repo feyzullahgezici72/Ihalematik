@@ -60,5 +60,30 @@ namespace IhalematikProUI.Forms.Tedarikci
             this._owner.LoadMaterialGrid(CurrentManager.Instance.CurrentOffer.MaterialList);
             this.LoadAddedMateriallistGrid();
         }
+
+        private void btnTumunuCikar_Click(object sender, EventArgs e)
+        {
+            //   int materialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewAddedOfferMaterialList.GetFocusedRowCellValue("Id"));
+            List<OfferMaterialList> selectedOfferMaterialLists = CurrentManager.Instance.CurrentOffer.MaterialList;
+            if (selectedOfferMaterialLists != null)
+            {
+                foreach (var selectedOfferMaterialList in selectedOfferMaterialLists)
+                {
+                    selectedOfferMaterialList.IsSelected = false;
+                    OfferMaterialListProvider.Instance.Save(selectedOfferMaterialList);
+                    Dictionary<string, object> parameters = new Dictionary<string, object>();
+                    parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
+                    parameters.Add("MaterialListId", selectedOfferMaterialList.Id);
+                    List<SupplierMaterialList> items = SupplierMaterialListProvider.Instance.GetItems(parameters);
+                    foreach (var item in items)
+                    {
+                        item.IsMarkedForDeletion = true;
+                        SupplierMaterialListProvider.Instance.Save(item);
+                    }
+                }
+                this._owner.LoadMaterialGrid(CurrentManager.Instance.CurrentOffer.MaterialList);
+                this.LoadAddedMateriallistGrid();
+            }
+        }
     }
 }
