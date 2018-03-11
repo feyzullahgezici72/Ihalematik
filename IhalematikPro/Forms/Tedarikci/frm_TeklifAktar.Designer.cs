@@ -30,17 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TeklifAktar));
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.btnUploadFile = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.lblSupplierName = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.lblOfferDescription = new DevExpress.XtraEditors.LabelControl();
@@ -62,8 +64,6 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSuppierName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.btnUploadFile = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -140,6 +140,63 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1300, 96);
             this.panelControl2.TabIndex = 29;
+            // 
+            // btnUploadFile
+            // 
+            this.btnUploadFile.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUploadFile.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnUploadFile.Appearance.Options.UseFont = true;
+            this.btnUploadFile.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnUploadFile.Image = global::IhalematikProUI.Properties.Resources.yukle;
+            this.btnUploadFile.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnUploadFile.Location = new System.Drawing.Point(1081, 3);
+            this.btnUploadFile.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnUploadFile.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnUploadFile.Margin = new System.Windows.Forms.Padding(6);
+            this.btnUploadFile.Name = "btnUploadFile";
+            this.btnUploadFile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnUploadFile.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.btnUploadFile.Size = new System.Drawing.Size(114, 90);
+            toolTipTitleItem1.Text = "YÜKLE";
+            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            toolTipItem1.Appearance.Options.UseImage = true;
+            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Tedarikçilerden gelen Fiyatları yükleyin";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.btnUploadFile.SuperTip = superToolTip1;
+            this.btnUploadFile.TabIndex = 15;
+            this.btnUploadFile.Text = "Yükle";
+            this.btnUploadFile.Click += new System.EventHandler(this.btnUploadFile_Click);
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaydet.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnKaydet.Appearance.Options.UseFont = true;
+            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Check_icon__1_;
+            this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnKaydet.Location = new System.Drawing.Point(1195, 3);
+            this.btnKaydet.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnKaydet.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(6);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnKaydet.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.btnKaydet.Size = new System.Drawing.Size(102, 90);
+            toolTipTitleItem2.Text = "YÜKLE";
+            toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            toolTipItem2.Appearance.Options.UseImage = true;
+            toolTipItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem2.Image")));
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Tedarikçilerden gelen Fiyatları yükleyin";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.btnKaydet.SuperTip = superToolTip2;
+            this.btnKaydet.TabIndex = 14;
+            this.btnKaydet.Text = "Tamam";
             // 
             // lblSupplierName
             // 
@@ -544,63 +601,6 @@
             // 
             this.repositoryItemCheckEdit1.AutoHeight = false;
             this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
-            // 
-            // btnKaydet
-            // 
-            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnKaydet.Appearance.Options.UseFont = true;
-            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
-            this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnKaydet.Location = new System.Drawing.Point(1195, 3);
-            this.btnKaydet.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnKaydet.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(6);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnKaydet.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
-            this.btnKaydet.Size = new System.Drawing.Size(102, 90);
-            toolTipTitleItem2.Text = "YÜKLE";
-            toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            toolTipItem2.Appearance.Options.UseImage = true;
-            toolTipItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem2.Image")));
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "Tedarikçilerden gelen Fiyatları yükleyin";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            this.btnKaydet.SuperTip = superToolTip2;
-            this.btnKaydet.TabIndex = 14;
-            this.btnKaydet.Text = "Kaydet";
-            // 
-            // btnUploadFile
-            // 
-            this.btnUploadFile.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUploadFile.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnUploadFile.Appearance.Options.UseFont = true;
-            this.btnUploadFile.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnUploadFile.Image = global::IhalematikProUI.Properties.Resources.yukle;
-            this.btnUploadFile.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnUploadFile.Location = new System.Drawing.Point(1081, 3);
-            this.btnUploadFile.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnUploadFile.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnUploadFile.Margin = new System.Windows.Forms.Padding(6);
-            this.btnUploadFile.Name = "btnUploadFile";
-            this.btnUploadFile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnUploadFile.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
-            this.btnUploadFile.Size = new System.Drawing.Size(114, 90);
-            toolTipTitleItem1.Text = "YÜKLE";
-            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipItem1.Appearance.Options.UseImage = true;
-            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Tedarikçilerden gelen Fiyatları yükleyin";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            this.btnUploadFile.SuperTip = superToolTip1;
-            this.btnUploadFile.TabIndex = 15;
-            this.btnUploadFile.Text = "Yükle";
-            this.btnUploadFile.Click += new System.EventHandler(this.btnUploadFile_Click);
             // 
             // frm_TeklifAktar
             // 
