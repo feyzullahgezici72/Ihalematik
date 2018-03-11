@@ -900,5 +900,11 @@ namespace IhalematikPro.Forms
             RibonAktif();
             barButtonItem43.ButtonStyle = BarButtonStyle.Default;
         }
+
+        private void barButtonItem31_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            frm_LogoAyarları logo = new frm_LogoAyarları();
+            logo.ShowDialog();
+        }
     }
 }

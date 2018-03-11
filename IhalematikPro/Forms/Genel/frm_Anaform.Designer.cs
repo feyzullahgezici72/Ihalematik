@@ -149,6 +149,7 @@ namespace IhalematikPro.Forms
             this.barButtonItem41 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem43 = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItem7 = new DevExpress.XtraBars.BarStaticItem();
+            this.barButtonItem31 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -317,10 +318,11 @@ namespace IhalematikPro.Forms
             this.barButtonItem1,
             this.barButtonItem41,
             this.barButtonItem43,
-            this.barStaticItem7});
+            this.barStaticItem7,
+            this.barButtonItem31});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 67;
+            this.ribbon.MaxItemId = 68;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsTouch.AffectOnlyRibbon = true;
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -1155,6 +1157,15 @@ namespace IhalematikPro.Forms
             this.barStaticItem7.Name = "barStaticItem7";
             this.barStaticItem7.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
+            // barButtonItem31
+            // 
+            this.barButtonItem31.Caption = "Logo Ayarları";
+            this.barButtonItem31.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem31.Glyph")));
+            this.barButtonItem31.Id = 67;
+            this.barButtonItem31.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem31.LargeGlyph")));
+            this.barButtonItem31.Name = "barButtonItem31";
+            this.barButtonItem31.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem31_ItemClick_1);
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -1370,6 +1381,7 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem39);
             this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem30);
             this.ribbonPageGroup17.ItemLinks.Add(this.barSubItem2);
+            this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem31);
             this.ribbonPageGroup17.Name = "ribbonPageGroup17";
             this.ribbonPageGroup17.ShowCaptionButton = false;
             this.ribbonPageGroup17.Text = "İşlemler Menüsü";
@@ -1557,9 +1569,9 @@ namespace IhalematikPro.Forms
             // picLogo
             // 
             this.picLogo.Image = global::IhalematikProUI.Properties.Resources.prg_logo1;
-            this.picLogo.Location = new System.Drawing.Point(523, 110);
+            this.picLogo.Location = new System.Drawing.Point(523, 146);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(300, 200);
+            this.picLogo.Size = new System.Drawing.Size(300, 164);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 3;
             this.picLogo.TabStop = false;
@@ -1979,7 +1991,6 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private System.Windows.Forms.PictureBox picLogo;
         private DevExpress.XtraBars.BarButtonItem barButtonItem28;
         public DevExpress.XtraBars.BarButtonItem barButtonItem14;
         private DevExpress.XtraBars.BarButtonItem barBtnCalisanRapor;
@@ -2036,6 +2047,8 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraEditors.Repository.RepositoryItemColorEdit repositoryItemColorEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit repositoryItemPopupContainerEdit3;
         private DevExpress.XtraBars.BarStaticItem barStaticItem7;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem31;
+        public System.Windows.Forms.PictureBox picLogo;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }
