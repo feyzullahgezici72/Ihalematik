@@ -118,7 +118,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                         if (result.ValidationResults.FirstOrDefault().PropertyName == "NoInternetconnection")
                         {
 
-                            MessageBox.Show("Internet baglantinizi kontrol ediniz");
+                            MessageBox.Show("Internet bağlantınızın olduğundan emin olunuz veya e-posta gönderdiğiniz firmanın mail adresinin doğruluğunu kontrol ediniz");
                         }
                         else if (result.ValidationResults.FirstOrDefault().PropertyName == "GmailLessSecureApps")
                         {

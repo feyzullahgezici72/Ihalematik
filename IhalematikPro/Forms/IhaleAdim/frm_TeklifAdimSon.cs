@@ -199,10 +199,10 @@ namespace IhalematikProUI.Forms
         public void OtherExpenses()
         {
             List<OtherExpenses> otherExpenses = OtherExpensesProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
-            if (otherExpenses.Count != 0)
-            {
+            //if (otherExpenses.Count != 0)
+            //{
                 txtOtherCoast.Text = otherExpenses.Sum(p => p.Price).ToString("c2");
-            }
+            //}
         }
 
         private void CalculateLeftPanelValues()
