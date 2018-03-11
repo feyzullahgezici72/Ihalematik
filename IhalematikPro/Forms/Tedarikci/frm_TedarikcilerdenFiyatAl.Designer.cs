@@ -924,8 +924,7 @@
             this.pnlrisk.Controls.Add(this.txtRisk);
             this.pnlrisk.Controls.Add(this.labelControl3);
             this.pnlrisk.Controls.Add(this.btnTumuneUygula);
-            this.pnlrisk.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlrisk.Location = new System.Drawing.Point(942, 3);
+            this.pnlrisk.Location = new System.Drawing.Point(816, 3);
             this.pnlrisk.Name = "pnlrisk";
             this.pnlrisk.Size = new System.Drawing.Size(274, 64);
             this.pnlrisk.TabIndex = 46;
