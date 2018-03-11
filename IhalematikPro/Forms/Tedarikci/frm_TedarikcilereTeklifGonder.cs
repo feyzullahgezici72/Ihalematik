@@ -299,5 +299,21 @@ namespace IhalematikProUI.Forms.Tedarikci
             frm.IsPoz = IsPoz;
             frm.ShowDialog();
         }
+
+        private void btnTumunuAktar_Click(object sender, EventArgs e)
+        {
+            List<OfferMaterialListModel> datasourceMaterialList = gridViewMaterialList.DataSource as List<OfferMaterialListModel>;
+
+            foreach (var seledtedMaterialList in datasourceMaterialList)
+            {
+                seledtedMaterialList.IsSelected = true;
+                OfferMaterialList items = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Id == seledtedMaterialList.Id).FirstOrDefault();
+                items.IsSelected = true;
+                //OfferMaterialListProvider.Instance.Save(items);
+            }
+            grdMaterialList.DataSource = null;
+            grdMaterialList.DataSource = datasourceMaterialList;
+            //grdMaterialList.RefreshDataSource();
+        }
     }
 }
