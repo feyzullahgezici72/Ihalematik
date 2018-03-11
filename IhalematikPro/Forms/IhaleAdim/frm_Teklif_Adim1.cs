@@ -65,15 +65,39 @@ namespace IhalematikPro.Forms
         }
         public void LoadTenderGroupGrid()
         {
-            if (CurrentManager.Instance.CurrentTender != null)
+            Offer offer = CurrentManager.Instance.CurrentTender.Offer;
+            Tender tender = CurrentManager.Instance.CurrentTender;
+            if (tender != null)
             {
                 List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
                 List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(items);
+
                 if (models != null && models.Count != 0)
                 {
+                    if (models.Count == 1 && offer != null)
+                    {
+                        List<MaterialList> addedMaterialLists = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => !p.IsPoz).ToList();
+
+                        foreach (var item in offer.MaterialList)
+                        {
+                            MaterialList addedMaterialList = addedMaterialLists.Where(p => p.PozOBFId == item.PozOBFId && !p.IsPoz).FirstOrDefault();
+
+                            if (addedMaterialList == null)
+                            {
+                                MaterialList materialList = new MaterialList();
+                                materialList.IsPoz = false;
+                                materialList.PozOBFId = item.PozOBFId;
+                                materialList.Tender = tender;
+                                materialList.TenderGroupId = models[0].Id.Value;
+                                materialList.OfferPrice = item.Price;
+                                materialList.KDVPercentage = 18;
+                                MaterialListProvider.Instance.Save(materialList);
+                            }
+                        }
+                    }
+
                     models[0].IsSelected = true;
                     grdTenderGroup.DataSource = models;
-
                     this.SelectedGroupId = models[0].Id.Value;
                     this.LoadTenderMaterialList();
                 }
