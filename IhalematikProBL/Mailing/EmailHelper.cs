@@ -130,11 +130,11 @@ namespace IhalematikProBL.Mailing
             catch (System.Exception ex)
             {
                 result.Success = false;
-                if (ex.InnerException != null && ex.InnerException.Message.Contains("The remote name could not be resolved"))
+                if (ex.InnerException != null && (ex.InnerException.Message.Contains("The remote name could not be resolved") || ex.InnerException.Message.Contains("Uzak ad çözülemedi")))
                 {
                     result.ValidationResults.Add("The remote name could not be resolved", "NoInternetconnection");
                 }
-                else if (ex.Message.Contains("The SMTP server requires a secure connection or the client was not authenticated"))
+                else if (ex.Message.Contains("The SMTP server requires a secure connection or the client was not authenticated") || ex.Message.Contains("SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi"))
                 {
                     result.ValidationResults.Add("The SMTP server requires a secure connection or the client was not authenticated", "GmailLessSecureApps");
                 }
