@@ -72,9 +72,9 @@ namespace IhalematikProUI.Forms
                 {
                     materialCostAmount += item.PozOBF.UnitPrice * item.Quantity;
                     materialkdvTotalAmount += item.KDVAmount;
-                    workerCostAmount += item.WorkerUnitPrice * item.Quantity;
+                    workerCostAmount += item.CustomWorkerTotalAmount;
                     markupMaterialAmount += item.UnitMarkup * item.Quantity; ;
-                    markupWorkerAmount += item.WorkerUnitPrice * item.Quantity * (item.Markup / 100);
+                    markupWorkerAmount += item.CustomWorkerTotalAmount;// * (item.Markup / 100);
                     TotalMarkupNonKDV += item.TotalFarePreview;
                     totalPersonHour += Math.Round(item.WorkerMarkupUnitPrice, 2);
                     totalUnitPrice += Math.Round(item.CustomWorkerMarkupUnitPrice, 2);
@@ -87,8 +87,9 @@ namespace IhalematikProUI.Forms
             txtMaterialkdvTotalAmount.Text = materialkdvTotalAmount.ToString("c2");
             txtTotalAmount.Text = totalAmount.ToString("c2");
             txtWorkerCostAmount.Text = workerCostAmount.ToString("c2");
-            txtWorkerKDVAmount.Text = Math.Round((workerCostAmount * 18 / 100), 2).ToString("c2");
-            txtWorkerAmount.Text = workerCostAmount.ToString("c2");
+            double workerMarkupAmount = Math.Round((workerCostAmount * 18 / 100), 2);
+            txtWorkerKDVAmount.Text = workerMarkupAmount.ToString("c2");
+            txtWorkerAmount.Text = (workerMarkupAmount + workerCostAmount).ToString("c2");
             txtMarkupMaterialTotal.Text = markupMaterialAmount.ToString("c2");
             txtMarkupWorkerAmount.Text = markupWorkerAmount.ToString("c2");
             txtMarkupAmount.Text = (markupWorkerAmount + markupMaterialAmount).ToString("c2");
@@ -165,7 +166,7 @@ namespace IhalematikProUI.Forms
         {
             frm_yukleniyor yukle = new frm_yukleniyor();
             yukle.ShowDialog();
-            
+
             if (CurrentManager.Instance.CurrentTender != null)
             {
                 Tender currentTender = CurrentManager.Instance.CurrentTender;
@@ -201,7 +202,7 @@ namespace IhalematikProUI.Forms
             List<OtherExpenses> otherExpenses = OtherExpensesProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
             //if (otherExpenses.Count != 0)
             //{
-                txtOtherCoast.Text = otherExpenses.Sum(p => p.Price).ToString("c2");
+            txtOtherCoast.Text = otherExpenses.Sum(p => p.Price).ToString("c2");
             //}
         }
 
@@ -322,7 +323,7 @@ namespace IhalematikProUI.Forms
 
         private void frm_TeklifAdimSon_Load(object sender, EventArgs e)
         {
-            btnPrev.Left = groupControl1.Left-btnPrev.Width-5;
+            btnPrev.Left = groupControl1.Left - btnPrev.Width - 5;
         }
 
         private void txtCarriage_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
