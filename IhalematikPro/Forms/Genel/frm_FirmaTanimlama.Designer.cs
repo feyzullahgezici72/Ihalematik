@@ -487,7 +487,7 @@
             this.btnUploadFile.Appearance.Options.UseFont = true;
             this.btnUploadFile.Image = ((System.Drawing.Image)(resources.GetObject("btnUploadFile.Image")));
             this.btnUploadFile.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnUploadFile.Location = new System.Drawing.Point(77, 59);
+            this.btnUploadFile.Location = new System.Drawing.Point(27, 36);
             this.btnUploadFile.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnUploadFile.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnUploadFile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
@@ -495,12 +495,12 @@
             this.btnUploadFile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnUploadFile.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
             this.btnUploadFile.Size = new System.Drawing.Size(82, 37);
-            toolTipTitleItem1.Text = "YÜKLE";
+            toolTipTitleItem1.Text = "LOGO";
             toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             toolTipItem1.Appearance.Options.UseImage = true;
             toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
             toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Tedarikçilerden gelen Fiyatları yükleyin";
+            toolTipItem1.Text = "Firma Logosunu yükleyin";
             superToolTip1.Items.Add(toolTipTitleItem1);
             superToolTip1.Items.Add(toolTipItem1);
             this.btnUploadFile.SuperTip = superToolTip1;
@@ -510,16 +510,17 @@
             // 
             // picLogo
             // 
-            this.picLogo.Location = new System.Drawing.Point(186, 0);
+            this.picLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picLogo.Location = new System.Drawing.Point(133, 6);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(306, 137);
+            this.picLogo.Size = new System.Drawing.Size(353, 125);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 103;
             this.picLogo.TabStop = false;
             // 
             // labelControl16
             // 
-            this.labelControl16.Location = new System.Drawing.Point(7, 30);
+            this.labelControl16.Location = new System.Drawing.Point(7, 7);
             this.labelControl16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Size = new System.Drawing.Size(102, 19);
@@ -605,7 +606,7 @@
             // 
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.White;
             this.panelControl2.Appearance.Options.UseBackColor = true;
-            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.panelControl2.Controls.Add(this.btnUploadFile);
             this.panelControl2.Controls.Add(this.picLogo);
             this.panelControl2.Controls.Add(this.labelControl16);
