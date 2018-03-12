@@ -53,7 +53,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void frm_TedarikciyeAktarilanMalzemeDetay_Shown(object sender, EventArgs e)
         {
-          
+            pnlMail.Visible = this.ShowMailPanel; 
             //Supplier supplier = SupplierProvider.Instance.GetItem(this.SelectedSupplierId);
             if (this.Supplier != null)
             {
@@ -87,7 +87,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                 //this.SendMailTask = new Task(() =>
                 //{
                 //emailMesajPanel.Visible = true;
-               fw  = new frm_wait();//Mail gönderiliyor mesaj formu
+                fw  = new frm_wait();//Mail gönderiliyor mesaj formu
                 fw.Show();
                 this.IsSendMail = false;
                 this.CreateExcel();
