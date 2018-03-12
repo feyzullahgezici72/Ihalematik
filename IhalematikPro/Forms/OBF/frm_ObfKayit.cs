@@ -116,7 +116,7 @@ namespace IhalematikPro.Forms
 
             MaterialListModel[] selectedRowsItems = models.ToArray();
 
-           // currentTender.MaterialList.ForEach(p => p.Id = p.PozOBFId);
+            // currentTender.MaterialList.ForEach(p => p.Id = p.PozOBFId);
 
             foreach (int item in selectedRows)
             {
@@ -130,7 +130,7 @@ namespace IhalematikPro.Forms
             }
 
             List<MaterialList> items = currentTender.MaterialList.Where(p => !p.IsPoz && p.TenderGroupId == this.SelectedGroupId && !p.IsMarkedForDeletion).ToList();
-            List <MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items).ToList();
+            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items).ToList();
 
             grdAddedOBF.DataSource = null;
             grdAddedOBF.DataSource = dataSource;
@@ -173,7 +173,7 @@ namespace IhalematikPro.Forms
                     {
                         item.OfferPrice = OfferManager.Instance.GetOfferMaterialListPrice(offerMaterialList.Id).Price;
                     }
-                } 
+                }
             }
 
             List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items).ToList();
@@ -191,12 +191,12 @@ namespace IhalematikPro.Forms
 
             if (offer == null)
             {
-                oBFModels = UIOBFManager.Instance.GetOBFs(obfNumber, obfDescription).Where(p=> p.IsActive).ToList();
+                oBFModels = UIOBFManager.Instance.GetOBFs(obfNumber, obfDescription).Where(p => p.IsActive).ToList();
             }
 
             else
             {
-                List<OfferMaterialList> items = offer.MaterialList.Where(p => !p.IsPoz && p.IsSelected).ToList();
+                List<OfferMaterialList> items = offer.MaterialList.Where(p => !p.IsPoz).ToList();
                 if (items != null && items.Count != 0)
                 {
                     foreach (var item in items)
@@ -214,18 +214,29 @@ namespace IhalematikPro.Forms
 
                         if (!isExist)
                         {
+                            OBFModel model = new OBFModel();
+                            model.Description = item.PozOBF.Description;
+                            model.Number = item.PozOBF.Number;
+                            model.Unit = item.PozOBF.Unit;
+                            model.UnitPrice = item.PozOBF.UnitPrice;
+                            model.Id = item.PozOBFId;
+                            double offerPrice = 0;
+                            if (item.IsSelected)
+                            {
+                                // Malzeme tedarikciye gonderilmisse fiyatini offerMatetialdan ceksin.
+                                offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
+                                model.OfferPrice = offerPrice;
+                            }
+                            else
+                            {
+                                offerPrice = item.PozOBF.UnitPrice; // Malzeme tedarikciye gonderilmemisse fiyatini obf den ceksin.
+                                model.OfferPrice = offerPrice;
+                            }
+                            
                             if (!string.IsNullOrEmpty(obfNumber))
                             {
                                 if (item.PozOBF.Number.Contains(obfNumber))
                                 {
-                                    OBFModel model = new OBFModel();
-                                    model.Description = item.PozOBF.Description;
-                                    model.Number = item.PozOBF.Number;
-                                    model.Unit = item.PozOBF.Unit;
-                                    model.UnitPrice = item.PozOBF.UnitPrice;
-                                    double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
-                                    model.OfferPrice = offerPrice;
-                                    model.Id = item.PozOBFId;
                                     oBFModels.Add(model);
                                 }
                             }
@@ -233,27 +244,11 @@ namespace IhalematikPro.Forms
                             {
                                 if (item.PozOBF.Description.Contains(obfDescription))
                                 {
-                                    OBFModel model = new OBFModel();
-                                    model.Description = item.PozOBF.Description;
-                                    model.Number = item.PozOBF.Number;
-                                    model.Unit = item.PozOBF.Unit;
-                                    model.UnitPrice = item.PozOBF.UnitPrice;
-                                    double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
-                                    model.OfferPrice = offerPrice;
-                                    model.Id = item.PozOBFId;
                                     oBFModels.Add(model);
                                 }
                             }
                             else
                             {
-                                OBFModel model = new OBFModel();
-                                model.Description = item.PozOBF.Description;
-                                model.Number = item.PozOBF.Number;
-                                model.Unit = item.PozOBF.Unit;
-                                model.UnitPrice = item.PozOBF.UnitPrice;
-                                double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
-                                model.OfferPrice = offerPrice;
-                                model.Id = item.PozOBFId;
                                 oBFModels.Add(model);
                             }
                         }
