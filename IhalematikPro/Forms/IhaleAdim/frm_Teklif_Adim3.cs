@@ -428,14 +428,11 @@ namespace IhalematikPro.Forms
 
         private void btnCalisanlarveAraclar_Click(object sender, EventArgs e)
         {
-            this.Enabled = false;
             frm_Iscilik iscilik = new frm_Iscilik(this);
-
-            this.Enabled = true;
 
             bindingSourceAddWorker.DataSource = null;
             int currentId = Convert.ToInt32(gridViewMaterialListIsWorkship.GetFocusedRowCellValue("Id"));
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).ToList();
             List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             foreach (var item in models)
             {

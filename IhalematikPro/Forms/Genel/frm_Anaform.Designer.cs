@@ -602,7 +602,7 @@ namespace IhalematikPro.Forms
             this.barButtonItem6.Id = 2;
             this.barButtonItem6.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Green;
             this.barButtonItem6.ItemAppearance.Hovered.Options.UseForeColor = true;
-            this.barButtonItem6.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.LargeGlyph")));
+            this.barButtonItem6.LargeGlyph = global::IhalematikProUI.Properties.Resources.Actions_view_calendar_list_icon;
             this.barButtonItem6.LargeWidth = 120;
             this.barButtonItem6.Name = "barButtonItem6";
             this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
@@ -653,7 +653,7 @@ namespace IhalematikPro.Forms
             this.barButtonItem13.Id = 10;
             this.barButtonItem13.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Green;
             this.barButtonItem13.ItemAppearance.Hovered.Options.UseForeColor = true;
-            this.barButtonItem13.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.LargeGlyph")));
+            this.barButtonItem13.LargeGlyph = global::IhalematikProUI.Properties.Resources.App_lists_icon1;
             this.barButtonItem13.LargeWidth = 120;
             this.barButtonItem13.Name = "barButtonItem13";
             toolTipTitleItem12.Text = "TEKLİF LİSTELERİ";

@@ -1196,6 +1196,8 @@
   <ItemGroup>
     <Content Include="ico.ico" />
     <Content Include="icon.ico" />
+    <None Include="Resources\Actions-view-calendar-list-icon.png" />
+    <None Include="Resources\App-lists-icon.png" />
     <None Include="Resources\prg_logo1.JPG" />
     <None Include="Resources\life4.JPG" />
     <None Include="Resources\life2.JPG" />

@@ -183,6 +183,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Actions_view_calendar_list_icon {
+            get {
+                object obj = ResourceManager.GetObject("Actions-view-calendar-list-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Actions_view_refresh_icon {
             get {
                 object obj = ResourceManager.GetObject("Actions-view-refresh-icon", resourceCulture);
@@ -246,6 +256,16 @@ namespace IhalematikProUI.Properties {
         internal static System.Drawing.Bitmap App_lists_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("App-lists-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap App_lists_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("App-lists-icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -752,6 +752,8 @@
             this.colChangeMetreialName.MaxWidth = 30;
             this.colChangeMetreialName.MinWidth = 30;
             this.colChangeMetreialName.Name = "colChangeMetreialName";
+            this.colChangeMetreialName.OptionsColumn.AllowEdit = false;
+            this.colChangeMetreialName.OptionsColumn.AllowFocus = false;
             this.colChangeMetreialName.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.colChangeMetreialName.Visible = true;
             this.colChangeMetreialName.VisibleIndex = 1;
