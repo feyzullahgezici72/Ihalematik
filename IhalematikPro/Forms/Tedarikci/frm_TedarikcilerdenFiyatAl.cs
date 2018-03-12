@@ -85,9 +85,7 @@ namespace IhalematikProUI.Forms
         {
             //colRisk.Visible = true;
             //colPriceWithRisk.Visible = true;
-            btnKaydet.Visible = true;
-            //pnlrisk.Visible = true;
-            pnltoplam.Visible = true;
+           
             List<OfferMaterialListModel> dataSoruce = new List<OfferMaterialListModel>();
 
             if (rdSortPrice.SelectedIndex == 0)
@@ -112,7 +110,7 @@ namespace IhalematikProUI.Forms
                         model.SupplierMaterialList = supplierMaterialList;
                         model.SupplierMaterialListId = supplierMaterialList.Id;
                         model.Risk = supplierMaterialList.Risk;
-                        dataSoruce.Add(model); 
+                        dataSoruce.Add(model);
                     }
                 }
             }
@@ -152,7 +150,12 @@ namespace IhalematikProUI.Forms
                 }
             }
             grdMaterialList.DataSource = dataSoruce;
-            this.CalculateInnerValues();
+            if (dataSoruce != null && dataSoruce.Count != 0)
+            {
+                btnKaydet.Visible = true;
+                pnltoplam.Visible = true;
+                this.CalculateInnerValues();
+            }
         }
 
         private void btnTumuneUygula_Click(object sender, EventArgs e)
@@ -185,7 +188,7 @@ namespace IhalematikProUI.Forms
         {
             List<OfferMaterialListModel> items = grdMaterialList.DataSource as List<OfferMaterialListModel>;
 
-            if (items != null)
+            if (items != null && items.Count != 0)
             {
                 SupplierMaterialListProvider.Instance.SupplierMaterialListSelectedUpdate(CurrentManager.Instance.CurrentOffer.Id);
 
