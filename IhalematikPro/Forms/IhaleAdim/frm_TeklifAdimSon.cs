@@ -118,10 +118,10 @@ namespace IhalematikProUI.Forms
                     model.PozOBFNumber = item.PozOBFNumber;
                     model.ItemNumber = i.ToString();
                     model.Quantity = item.Quantity.ToString();
-                    totalAmount += Math.Round((item.MarkupUnitPrice + item.WorkerUnitPrice) * item.Quantity, 2);
-                    model.Total = Math.Round(item.TotalFare, 2).ToString("c2");
+                    totalAmount += Math.Round(item.TotalFarePreview, 2);
+                    model.Total = Math.Round(item.TotalFarePreview, 2).ToString("c2");
                     model.Unit = item.PozOBFUnit;
-                    model.UnitPrice = item.UnitTotalFare.ToString("C2");
+                    model.UnitPrice = item.UnitTotalFarePreview.ToString("C2");
                     models.Add(model);
                     i++;
                 }
