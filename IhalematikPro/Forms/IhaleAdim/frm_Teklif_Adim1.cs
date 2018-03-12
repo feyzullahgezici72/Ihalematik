@@ -1,20 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using IhalematikPro.Manager;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Model;
 using IhalematikPro.Model;
-using IhalematikProUI.Forms;
-using System.Threading;
 using IhalematikProUI.Forms.Base;
 using IhalematikProUI.Forms.Genel;
 
