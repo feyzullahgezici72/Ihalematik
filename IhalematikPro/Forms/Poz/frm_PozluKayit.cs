@@ -93,19 +93,31 @@ namespace IhalematikPro.Forms
 
                         if (!isExist)
                         {
+                            PozModel model = new PozModel();
+                            model.Description = item.PozOBF.Description;
+                            model.Number = item.PozOBF.Number;
+                            model.IsActive = true;
+                            model.Unit = item.PozOBF.Unit;
+                            model.UnitPrice = item.PozOBF.UnitPrice;
+                            model.Id = item.PozOBFId;
+                            double offerPrice = 0;
+
+                            if (item.IsSelected)
+                            {
+                                offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
+                                model.OfferPrice = offerPrice;
+                            }
+                            else
+                            {
+                                offerPrice = item.PozOBF.UnitPrice; // Malzeme tedarikciye gonderilmemisse fiyatini poz dan ceksin.
+                                model.OfferPrice = offerPrice;
+                            }
+
+
                             if (!string.IsNullOrEmpty(pozNumber))
                             {
                                 if (item.PozOBF.Number.Contains(pozNumber))
                                 {
-                                    PozModel model = new PozModel();
-                                    model.Description = item.PozOBF.Description;
-                                    model.Number = item.PozOBF.Number;
-                                    model.IsActive = true;
-                                    model.Unit = item.PozOBF.Unit;
-                                    model.UnitPrice = item.PozOBF.UnitPrice;
-                                    double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
-                                    model.OfferPrice = offerPrice;
-                                    model.Id = item.PozOBFId;
                                     pozModels.Add(model);
                                 }
                             }
@@ -113,29 +125,11 @@ namespace IhalematikPro.Forms
                             {
                                 if (item.PozOBF.Description.Contains(pozDescription))
                                 {
-                                    PozModel model = new PozModel();
-                                    model.Description = item.PozOBF.Description;
-                                    model.IsActive = true;
-                                    model.Number = item.PozOBF.Number;
-                                    model.Unit = item.PozOBF.Unit;
-                                    model.UnitPrice = item.PozOBF.UnitPrice;
-                                    double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
-                                    model.OfferPrice = offerPrice;
-                                    model.Id = item.PozOBFId;
                                     pozModels.Add(model);
                                 }
                             }
                             else
                             {
-                                PozModel model = new PozModel();
-                                model.Description = item.PozOBF.Description;
-                                model.Number = item.PozOBF.Number;
-                                model.IsActive = true;
-                                model.Unit = item.PozOBF.Unit;
-                                model.UnitPrice = item.PozOBF.UnitPrice;
-                                double offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
-                                model.OfferPrice = offerPrice;
-                                model.Id = item.PozOBFId;
                                 pozModels.Add(model);
                             }
                         }
