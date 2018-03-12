@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TeklifAktar));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
@@ -36,7 +35,7 @@
             DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
@@ -197,6 +196,7 @@
             this.btnKaydet.SuperTip = superToolTip2;
             this.btnKaydet.TabIndex = 14;
             this.btnKaydet.Text = "Tamam";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // lblSupplierName
             // 

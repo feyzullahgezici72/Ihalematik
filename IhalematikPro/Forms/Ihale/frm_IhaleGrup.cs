@@ -71,7 +71,7 @@ namespace IhalematikProUI.Forms
                         CurrentManager.Instance.CurrentTender.Groups.Add(item);
                         TenderGroupProvider.Instance.Save(item);
                         this.LoadGrid();
-                        txtTenderGroupDescription.Text="";
+                        txtTenderGroupDescription.Text = "";
                         txtTenderGroupDescription.Focus();
                     }
                 }
@@ -124,7 +124,7 @@ namespace IhalematikProUI.Forms
             {
 
             }
-           
+
         }
 
         private void btnTamam_Click(object sender, EventArgs e)
@@ -132,13 +132,25 @@ namespace IhalematikProUI.Forms
 
             if (CurrentManager.Instance.CurrentTender.Groups == null || CurrentManager.Instance.CurrentTender.Groups.Count == 0)
             {
-                TenderGroup item = new TenderGroup();
-                item.Description = "Genel Grup";
-                item.Tender = CurrentManager.Instance.CurrentTender;
-                TenderGroupProvider.Instance.Save(item);
+                DialogResult resultMsg = MessageBox.Show("Hiç Grup oluşturmadınız emin misiniz?", "Uyarı!!! ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (resultMsg.Equals(DialogResult.Yes))
+                {
+                    TenderGroup item = new TenderGroup();
+                    item.Description = "Genel Grup";
+                    item.Tender = CurrentManager.Instance.CurrentTender;
+                    TenderGroupProvider.Instance.Save(item);
+                    this.Close();
+                }
+                else
+                {
+                    txtTenderGroupDescription.Focus();
+                }
+            }
+            else
+            {
+                this.Close();
             }
 
-            this.Close();
         }
 
         private void frm_IhaleGrup_Shown(object sender, EventArgs e)

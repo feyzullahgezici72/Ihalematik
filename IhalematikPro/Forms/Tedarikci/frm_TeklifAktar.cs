@@ -204,5 +204,10 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
 
         }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
