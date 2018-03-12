@@ -908,6 +908,10 @@ namespace IhalematikPro.Forms
             frm_LogoAyarları logo = new frm_LogoAyarları(this);
             logo.ShowDialog();
         }
-        
+
+        private void barStaticItem6_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

@@ -879,6 +879,7 @@
             this.colMaterialListQuantity.AppearanceHeader.Options.UseFont = true;
             this.colMaterialListQuantity.AppearanceHeader.Options.UseForeColor = true;
             this.colMaterialListQuantity.Caption = "MİKTARI";
+            this.colMaterialListQuantity.DisplayFormat.FormatString = "0";
             this.colMaterialListQuantity.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colMaterialListQuantity.FieldName = "Quantity";
             this.colMaterialListQuantity.MaxWidth = 80;
