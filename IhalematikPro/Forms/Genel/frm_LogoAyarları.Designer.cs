@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_LogoAyarları));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtWidth = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtHeight = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtWidth = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.picLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWidth.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHeight.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWidth.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -60,24 +60,15 @@
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Ayarlar";
             // 
-            // labelControl1
+            // simpleButton1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(13, 52);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(66, 19);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Genişlik :";
-            // 
-            // txtWidth
-            // 
-            this.txtWidth.EditValue = "300";
-            this.txtWidth.EnterMoveNextControl = true;
-            this.txtWidth.Location = new System.Drawing.Point(85, 49);
-            this.txtWidth.Name = "txtWidth";
-            this.txtWidth.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtWidth.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtWidth.Size = new System.Drawing.Size(100, 26);
-            this.txtWidth.TabIndex = 0;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(432, 38);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(95, 47);
+            this.simpleButton1.TabIndex = 2;
+            this.simpleButton1.Text = "Tamam";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // txtHeight
             // 
@@ -87,6 +78,8 @@
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtHeight.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtHeight.Properties.EditFormat.FormatString = "N";
+            this.txtHeight.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtHeight.Size = new System.Drawing.Size(100, 26);
             this.txtHeight.TabIndex = 1;
             // 
@@ -98,15 +91,26 @@
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Yükseklik :";
             // 
-            // simpleButton1
+            // txtWidth
             // 
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(432, 38);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(95, 47);
-            this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Text = "Tamam";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.txtWidth.EditValue = "300";
+            this.txtWidth.EnterMoveNextControl = true;
+            this.txtWidth.Location = new System.Drawing.Point(85, 49);
+            this.txtWidth.Name = "txtWidth";
+            this.txtWidth.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtWidth.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtWidth.Properties.EditFormat.FormatString = "N";
+            this.txtWidth.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtWidth.Size = new System.Drawing.Size(100, 26);
+            this.txtWidth.TabIndex = 0;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(13, 52);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(66, 19);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Genişlik :";
             // 
             // panelControl1
             // 
@@ -149,8 +153,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWidth.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHeight.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWidth.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
