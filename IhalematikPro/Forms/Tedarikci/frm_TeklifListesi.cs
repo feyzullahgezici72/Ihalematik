@@ -83,7 +83,8 @@ namespace IhalematikProUI.Forms
         private void LoadOfferGrid()
         {
             List<Offer> items = OfferProvider.Instance.GetItems();
-           // grdOffer.DataSource = items;
+            grdOfferNoCompleated.DataSource = items.Where(p => !p.IsCompleated).ToList();
+            // grdOffer.DataSource = items;
 
             if (cmbAktivePasive.SelectedIndex == 0)
             {
