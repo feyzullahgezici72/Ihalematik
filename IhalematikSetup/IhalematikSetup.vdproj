@@ -4,9 +4,9 @@
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
 "ProjectName" = "8:IhalematikSetup"
-"LanguageId" = "3:1033"
-"CodePage" = "3:1252"
-"UILanguageId" = "3:1033"
+"LanguageId" = "3:1055"
+"CodePage" = "3:1254"
+"UILanguageId" = "3:1055"
 "SccProjectName" = "8:"
 "SccLocalPath" = "8:"
 "SccAuxPath" = "8:"
@@ -77,12 +77,6 @@
         {
         "MsmKey" = "8:_082FF64B75DA4BD23594A8812DF8A012"
         "OwnerKey" = "8:_88AD7381F4FF4D7F8C08A4E8DF31253B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_0A4191DAE113494EB39739E2C28158AE"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2783,26 +2777,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0A4191DAE113494EB39739E2C28158AE"
-            {
-            "SourcePath" = "8:C:\\Users\\-adm-sbegde\\Desktop\\logolar\\setuplogo.JPG"
-            "TargetName" = "8:setuplogo.JPG"
-            "Tag" = "8:"
-            "Folder" = "8:_1BCDC96C70CC4683AC9693922FFC0E5C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0C8F9DE915E648DDA0ECEBE2C407C6DE"
             {
             "SourcePath" = "8:..\\IhalematikProBL\\icon.ico"
@@ -3946,11 +3920,6 @@
             "AssemblyAsmDisplayName" = "8:IhalematikProBL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_A050D5018F82E270A2DE397B2F9F8DA7"
-                    {
-                    "Name" = "8:IhalematikProBL.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:IhalematikProBL.dll"
             "TargetName" = "8:"
@@ -4991,7 +4960,7 @@
         }
         "MsiBootstrapper"
         {
-        "LangId" = "3:1033"
+        "LangId" = "3:1055"
         "RequiresElevation" = "11:FALSE"
         }
         "Product"
@@ -5010,7 +4979,7 @@
         "Manufacturer" = "8:ihalematikPro"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:IhalematikSetup"
+        "Title" = "8:İhalematik Pro Kurulum"
         "Subject" = "8:"
         "ARPCONTACT" = "8:LifeTreeSoftware Ltd."
         "Keywords" = "8:"
@@ -5197,7 +5166,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_0A4191DAE113494EB39739E2C28158AE"
+                            "Value" = "8:"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "CopyrightWarning"
@@ -5321,7 +5290,7 @@
                             "ContextData" = "8:Bitmap"
                             "Attributes" = "3:4"
                             "Setting" = "3:2"
-                            "Value" = "8:_0A4191DAE113494EB39739E2C28158AE"
+                            "Value" = "8:"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "CopyrightWarning"
