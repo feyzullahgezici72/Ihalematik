@@ -349,6 +349,12 @@
     <Compile Include="Forms\Genel\frm_DovizKurlari.Designer.cs">
       <DependentUpon>frm_DovizKurlari.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Ihale\frm_IhaleKalanGun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ihale\frm_IhaleKalanGun.Designer.cs">
+      <DependentUpon>frm_IhaleKalanGun.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\OBF\frm_TopluOBFekle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -669,6 +675,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Genel\frm_DovizKurlari.resx">
       <DependentUpon>frm_DovizKurlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ihale\frm_IhaleKalanGun.resx">
+      <DependentUpon>frm_IhaleKalanGun.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OBF\frm_TopluOBFekle.resx">
       <DependentUpon>frm_TopluOBFekle.cs</DependentUpon>

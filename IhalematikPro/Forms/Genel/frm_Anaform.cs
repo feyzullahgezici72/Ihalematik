@@ -16,6 +16,7 @@ using IhalematikProBL.Entity;
 using IhalematikProUI.Forms.Tedarikci;
 using IhalematikProUI.Forms.Genel;
 using IhalematikProUI.Forms.IhaleAdim;
+using IhalematikProUI.Forms.Ihale;
 
 namespace IhalematikPro.Forms
 {
@@ -60,9 +61,6 @@ namespace IhalematikPro.Forms
         {
             logoOrtala();
             DevExpress.UserSkins.BonusSkins.Register();
-            List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
-
-            grdActiveTenderList.DataSource = list.Where(p => p.LastOfferDate == null || p.LastOfferDate.Value >= DateTime.Now).ToList();
             this.WindowState = FormWindowState.Maximized;
             if (CurrentManager.Instance.CurrentCompany != null)
             {
@@ -592,16 +590,8 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem18_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (pnIhaleListesi.Visible == false)
-            {
-                pnIhaleListesi.Visible = true;
-                barButtonItem18.ButtonStyle = BarButtonStyle.Check;
-            }
-            else
-            {
-                pnIhaleListesi.Visible = false;
-                barButtonItem18.ButtonStyle = BarButtonStyle.Default;
-            }
+            frm_IhaleKalanGun kg = new frm_IhaleKalanGun();
+            kg.ShowDialog();
 
         }
 
@@ -853,16 +843,16 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem21_ItemClick_2(object sender, ItemClickEventArgs e)
         {
-            if (pnIhaleListesi.Visible == false)
-            {
-                pnIhaleListesi.Visible = true;
-                barButtonItem18.ButtonStyle = BarButtonStyle.Check;
-            }
-            else
-            {
-                pnIhaleListesi.Visible = false;
-                barButtonItem18.ButtonStyle = BarButtonStyle.Default;
-            }
+            //if (pnIhaleListesi.Visible == false)
+            //{
+            //    pnIhaleListesi.Visible = true;
+            //    barButtonItem18.ButtonStyle = BarButtonStyle.Check;
+            //}
+            //else
+            //{
+            //    pnIhaleListesi.Visible = false;
+            //    barButtonItem18.ButtonStyle = BarButtonStyle.Default;
+            //}
         }
 
         private void barButtonItem25_ItemClick_1(object sender, ItemClickEventArgs e)
