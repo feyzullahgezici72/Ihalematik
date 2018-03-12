@@ -142,5 +142,11 @@ namespace IhalematikProUI.Forms
         {
             this.LoadOfferGrid();
         }
+
+        private void btnDetail_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            frm_TeklifDetayFirma detay = new frm_TeklifDetayFirma();
+            detay.ShowDialog();
+        }
     }
 }
