@@ -145,7 +145,9 @@ namespace IhalematikProUI.Forms
 
         private void btnDetail_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOffer.GetFocusedRowCellValue("Id"));
             frm_TeklifDetayFirma detay = new frm_TeklifDetayFirma();
+            detay.CurrentOfferId = id;
             detay.ShowDialog();
         }
     }

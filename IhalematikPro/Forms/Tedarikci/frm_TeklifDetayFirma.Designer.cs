@@ -35,56 +35,56 @@
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtDate = new DevExpress.XtraEditors.TextEdit();
             this.txtTeklifNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtAciklama = new DevExpress.XtraEditors.TextEdit();
-            this.LastOfferDate = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.grdSupplier = new DevExpress.XtraGrid.GridControl();
+            this.grdSupplierReplayed = new DevExpress.XtraGrid.GridControl();
             this.gridViewSupplier = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdSupplier = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.rpstIsSelectedSupplier = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colCompanyName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSupplierDetail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpstSupplierDetail1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.rpstIsSelectedSupplier = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grdSupplierNonReplayed = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeklifNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdSupplier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSupplierReplayed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewSupplier)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedSupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedSupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSupplierNonReplayed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,9 +98,8 @@
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(892, 35);
+            this.panelControl2.Size = new System.Drawing.Size(595, 24);
             this.panelControl2.TabIndex = 100;
             // 
             // btnKapat
@@ -110,10 +109,9 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(864, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Location = new System.Drawing.Point(569, 0);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(28, 35);
+            this.btnKapat.Size = new System.Drawing.Size(26, 24);
             this.btnKapat.TabIndex = 21;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
@@ -125,36 +123,52 @@
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(10, 0);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Location = new System.Drawing.Point(7, 0);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(166, 35);
+            this.labelControl1.Size = new System.Drawing.Size(111, 23);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "TEKLİF DETAYI";
             this.labelControl1.UseMnemonic = false;
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.txtDate);
             this.groupControl1.Controls.Add(this.txtTeklifNo);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.labelControl5);
             this.groupControl1.Controls.Add(this.txtAciklama);
-            this.groupControl1.Controls.Add(this.LastOfferDate);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(0, 35);
+            this.groupControl1.Location = new System.Drawing.Point(0, 24);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(892, 159);
+            this.groupControl1.Size = new System.Drawing.Size(595, 109);
             this.groupControl1.TabIndex = 101;
             this.groupControl1.Text = "Teklif Bilgileri";
+            // 
+            // txtDate
+            // 
+            this.txtDate.Enabled = false;
+            this.txtDate.EnterMoveNextControl = true;
+            this.txtDate.Location = new System.Drawing.Point(78, 76);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtDate.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtDate.Properties.Appearance.Options.UseFont = true;
+            this.txtDate.Properties.Appearance.Options.UseForeColor = true;
+            this.txtDate.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtDate.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtDate.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtDate.Properties.Mask.BeepOnError = true;
+            this.txtDate.Size = new System.Drawing.Size(125, 24);
+            this.txtDate.TabIndex = 17;
             // 
             // txtTeklifNo
             // 
             this.txtTeklifNo.Enabled = false;
             this.txtTeklifNo.EnterMoveNextControl = true;
-            this.txtTeklifNo.Location = new System.Drawing.Point(111, 43);
-            this.txtTeklifNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTeklifNo.Location = new System.Drawing.Point(78, 29);
             this.txtTeklifNo.Name = "txtTeklifNo";
             this.txtTeklifNo.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTeklifNo.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -164,7 +178,7 @@
             this.txtTeklifNo.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtTeklifNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtTeklifNo.Properties.Mask.BeepOnError = true;
-            this.txtTeklifNo.Size = new System.Drawing.Size(188, 30);
+            this.txtTeklifNo.Size = new System.Drawing.Size(125, 24);
             this.txtTeklifNo.TabIndex = 11;
             // 
             // labelControl2
@@ -172,10 +186,9 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl2.Enabled = false;
-            this.labelControl2.Location = new System.Drawing.Point(38, 45);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Location = new System.Drawing.Point(25, 31);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(70, 19);
+            this.labelControl2.Size = new System.Drawing.Size(45, 13);
             this.labelControl2.TabIndex = 16;
             this.labelControl2.Text = "Teklif No:";
             // 
@@ -184,10 +197,9 @@
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl3.Enabled = false;
-            this.labelControl3.Location = new System.Drawing.Point(34, 81);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Location = new System.Drawing.Point(23, 55);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(74, 19);
+            this.labelControl3.Size = new System.Drawing.Size(47, 13);
             this.labelControl3.TabIndex = 14;
             this.labelControl3.Text = "Teklif Adı:";
             // 
@@ -196,10 +208,9 @@
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl5.Enabled = false;
-            this.labelControl5.Location = new System.Drawing.Point(19, 117);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl5.Location = new System.Drawing.Point(13, 80);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(89, 19);
+            this.labelControl5.Size = new System.Drawing.Size(60, 13);
             this.labelControl5.TabIndex = 15;
             this.labelControl5.Text = "Tarih / Saat:";
             // 
@@ -207,8 +218,7 @@
             // 
             this.txtAciklama.Enabled = false;
             this.txtAciklama.EnterMoveNextControl = true;
-            this.txtAciklama.Location = new System.Drawing.Point(111, 79);
-            this.txtAciklama.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAciklama.Location = new System.Drawing.Point(78, 54);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAciklama.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -217,51 +227,36 @@
             this.txtAciklama.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtAciklama.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtAciklama.Size = new System.Drawing.Size(597, 28);
+            this.txtAciklama.Size = new System.Drawing.Size(398, 22);
             this.txtAciklama.TabIndex = 12;
-            // 
-            // LastOfferDate
-            // 
-            this.LastOfferDate.EditValue = new System.DateTime(2017, 11, 14, 14, 49, 43, 0);
-            this.LastOfferDate.Location = new System.Drawing.Point(111, 114);
-            this.LastOfferDate.Name = "LastOfferDate";
-            this.LastOfferDate.Properties.DisplayFormat.FormatString = "d";
-            this.LastOfferDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.LastOfferDate.Properties.EditFormat.FormatString = "d";
-            this.LastOfferDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.LastOfferDate.Properties.Mask.EditMask = "f";
-            this.LastOfferDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
-            this.LastOfferDate.Size = new System.Drawing.Size(361, 26);
-            this.LastOfferDate.TabIndex = 13;
             // 
             // groupControl2
             // 
             this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
-            this.groupControl2.Controls.Add(this.grdSupplier);
+            this.groupControl2.Controls.Add(this.grdSupplierReplayed);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl2.Location = new System.Drawing.Point(0, 194);
+            this.groupControl2.Location = new System.Drawing.Point(0, 133);
             this.groupControl2.LookAndFeel.SkinName = "Office 2007 Green";
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(892, 219);
+            this.groupControl2.Size = new System.Drawing.Size(595, 150);
             this.groupControl2.TabIndex = 102;
             this.groupControl2.Text = "Teklifimize Fiyat Bildirenler";
             // 
-            // grdSupplier
+            // grdSupplierReplayed
             // 
-            this.grdSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdSupplier.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdSupplier.Location = new System.Drawing.Point(3, 33);
-            this.grdSupplier.MainView = this.gridViewSupplier;
-            this.grdSupplier.Margin = new System.Windows.Forms.Padding(4);
-            this.grdSupplier.Name = "grdSupplier";
-            this.grdSupplier.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.grdSupplierReplayed.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdSupplierReplayed.Location = new System.Drawing.Point(2, 22);
+            this.grdSupplierReplayed.MainView = this.gridViewSupplier;
+            this.grdSupplierReplayed.Name = "grdSupplierReplayed";
+            this.grdSupplierReplayed.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstSupplierDetail1,
             this.rpstIsSelectedSupplier});
-            this.grdSupplier.Size = new System.Drawing.Size(886, 183);
-            this.grdSupplier.TabIndex = 1;
-            this.grdSupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdSupplierReplayed.Size = new System.Drawing.Size(591, 126);
+            this.grdSupplierReplayed.TabIndex = 1;
+            this.grdSupplierReplayed.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSupplier,
             this.gridView1});
             // 
@@ -378,7 +373,7 @@
             this.colCompanyName,
             this.gridColumn5,
             this.colSupplierDetail});
-            this.gridViewSupplier.GridControl = this.grdSupplier;
+            this.gridViewSupplier.GridControl = this.grdSupplierReplayed;
             this.gridViewSupplier.Name = "gridViewSupplier";
             this.gridViewSupplier.OptionsMenu.EnableColumnMenu = false;
             this.gridViewSupplier.OptionsMenu.EnableFooterMenu = false;
@@ -395,13 +390,6 @@
             this.colIdSupplier.AppearanceHeader.Options.UseFont = true;
             this.colIdSupplier.FieldName = "Id";
             this.colIdSupplier.Name = "colIdSupplier";
-            // 
-            // rpstIsSelectedSupplier
-            // 
-            this.rpstIsSelectedSupplier.AutoHeight = false;
-            this.rpstIsSelectedSupplier.LookAndFeel.SkinName = "Sharp Plus";
-            this.rpstIsSelectedSupplier.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.rpstIsSelectedSupplier.Name = "rpstIsSelectedSupplier";
             // 
             // colCompanyName
             // 
@@ -431,7 +419,7 @@
             this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.Caption = "FAALİYET ALANI";
-            this.gridColumn5.FieldName = "SegmentText";
+            this.gridColumn5.FieldName = "SupplierSegmentTexts";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
@@ -463,26 +451,36 @@
             this.rpstSupplierDetail1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.rpstSupplierDetail1.Name = "rpstSupplierDetail1";
             this.rpstSupplierDetail1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.rpstSupplierDetail1.Click += new System.EventHandler(this.rpstSupplierDetail1_Click_1);
+            // 
+            // rpstIsSelectedSupplier
+            // 
+            this.rpstIsSelectedSupplier.AutoHeight = false;
+            this.rpstIsSelectedSupplier.LookAndFeel.SkinName = "Sharp Plus";
+            this.rpstIsSelectedSupplier.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.rpstIsSelectedSupplier.Name = "rpstIsSelectedSupplier";
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.grdSupplier;
+            this.gridView1.GridControl = this.grdSupplierReplayed;
             this.gridView1.Name = "gridView1";
             // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.btnTamam);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 668);
+            this.panelControl1.Location = new System.Drawing.Point(0, 457);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(892, 43);
+            this.panelControl1.Size = new System.Drawing.Size(595, 29);
             this.panelControl1.TabIndex = 103;
             // 
             // btnTamam
             // 
-            this.btnTamam.Location = new System.Drawing.Point(781, 4);
+            this.btnTamam.Location = new System.Drawing.Point(521, 3);
+            this.btnTamam.Margin = new System.Windows.Forms.Padding(2);
             this.btnTamam.Name = "btnTamam";
-            this.btnTamam.Size = new System.Drawing.Size(105, 34);
+            this.btnTamam.Size = new System.Drawing.Size(70, 23);
             this.btnTamam.TabIndex = 0;
             this.btnTamam.Text = "Tamam";
             this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
@@ -491,30 +489,29 @@
             // 
             this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupControl3.AppearanceCaption.Options.UseFont = true;
-            this.groupControl3.Controls.Add(this.gridControl1);
+            this.groupControl3.Controls.Add(this.grdSupplierNonReplayed);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl3.Location = new System.Drawing.Point(0, 413);
+            this.groupControl3.Location = new System.Drawing.Point(0, 283);
             this.groupControl3.LookAndFeel.SkinName = "Office 2007 Pink";
             this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(892, 255);
+            this.groupControl3.Size = new System.Drawing.Size(595, 174);
             this.groupControl3.TabIndex = 104;
             this.groupControl3.Text = "Teklifimize Fiyat Bildirmeyenler";
             // 
-            // gridControl1
+            // grdSupplierNonReplayed
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridControl1.Location = new System.Drawing.Point(3, 33);
-            this.gridControl1.MainView = this.gridView2;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.grdSupplierNonReplayed.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdSupplierNonReplayed.Location = new System.Drawing.Point(2, 22);
+            this.grdSupplierNonReplayed.MainView = this.gridView2;
+            this.grdSupplierNonReplayed.Name = "grdSupplierNonReplayed";
+            this.grdSupplierNonReplayed.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1,
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(886, 219);
-            this.gridControl1.TabIndex = 1;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdSupplierNonReplayed.Size = new System.Drawing.Size(591, 150);
+            this.grdSupplierNonReplayed.TabIndex = 1;
+            this.grdSupplierNonReplayed.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2,
             this.gridView3});
             // 
@@ -631,7 +628,7 @@
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn6});
-            this.gridView2.GridControl = this.gridControl1;
+            this.gridView2.GridControl = this.grdSupplierNonReplayed;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsMenu.EnableColumnMenu = false;
             this.gridView2.OptionsMenu.EnableFooterMenu = false;
@@ -648,13 +645,6 @@
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
             this.gridColumn1.FieldName = "Id";
             this.gridColumn1.Name = "gridColumn1";
-            // 
-            // repositoryItemCheckEdit1
-            // 
-            this.repositoryItemCheckEdit1.AutoHeight = false;
-            this.repositoryItemCheckEdit1.LookAndFeel.SkinName = "Sharp Plus";
-            this.repositoryItemCheckEdit1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
             // 
             // gridColumn3
             // 
@@ -684,7 +674,7 @@
             this.gridColumn4.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.Caption = "FAALİYET ALANI";
-            this.gridColumn4.FieldName = "SegmentText";
+            this.gridColumn4.FieldName = "SupplierSegmentTexts";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
@@ -716,17 +706,25 @@
             this.repositoryItemButtonEdit1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repositoryItemButtonEdit1.Click += new System.EventHandler(this.rpstSupplierDetail1_Click);
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.LookAndFeel.SkinName = "Sharp Plus";
+            this.repositoryItemCheckEdit1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
             // 
             // gridView3
             // 
-            this.gridView3.GridControl = this.gridControl1;
+            this.gridView3.GridControl = this.grdSupplierNonReplayed;
             this.gridView3.Name = "gridView3";
             // 
             // frm_TeklifDetayFirma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 711);
+            this.ClientSize = new System.Drawing.Size(595, 486);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.panelControl1);
@@ -734,32 +732,34 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_TeklifDetayFirma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Shown += new System.EventHandler(this.frm_TeklifDetayFirma_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeklifNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdSupplier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSupplierReplayed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewSupplier)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedSupplier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedSupplier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSupplierNonReplayed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.ResumeLayout(false);
 
@@ -777,7 +777,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.TextEdit txtAciklama;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraGrid.GridControl grdSupplier;
+        private DevExpress.XtraGrid.GridControl grdSupplierReplayed;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewSupplier;
         private DevExpress.XtraGrid.Columns.GridColumn colIdSupplier;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit rpstIsSelectedSupplier;
@@ -789,7 +789,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnTamam;
         private DevExpress.XtraEditors.GroupControl groupControl3;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grdSupplierNonReplayed;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
@@ -798,6 +798,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
-        private DevExpress.XtraEditors.TextEdit LastOfferDate;
+        private DevExpress.XtraEditors.TextEdit txtDate;
     }
 }

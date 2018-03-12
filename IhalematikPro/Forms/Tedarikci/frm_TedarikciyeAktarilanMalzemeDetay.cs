@@ -22,7 +22,6 @@ namespace IhalematikProUI.Forms.Tedarikci
         protected Task SendMailTask { get; set; }
         public bool IsSendMail { get; set; }
         public bool ShowMailPanel { get; set; }
-        frm_TedarikcilereTeklifGonder _owner;
         public int SelectedSupplierId { get; set; }
         private Supplier supplier { get; set; }
         public Supplier Supplier
@@ -40,10 +39,10 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         string DestinationFile = string.Empty;
 
-        public frm_TedarikciyeAktarilanMalzemeDetay(frm_TedarikcilereTeklifGonder Owner)
+        public frm_TedarikciyeAktarilanMalzemeDetay()
         {
             InitializeComponent();
-            this._owner = Owner;
+            //this._owner = Owner;
         }
 
         private void btnKapat_Click(object sender, EventArgs e)

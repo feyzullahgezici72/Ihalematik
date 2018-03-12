@@ -263,7 +263,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void rpstSupplierDetail_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             this.Enabled = false;
-            frm_TedarikciyeAktarilanMalzemeDetay md = new frm_TedarikciyeAktarilanMalzemeDetay(this);
+            frm_TedarikciyeAktarilanMalzemeDetay md = new frm_TedarikciyeAktarilanMalzemeDetay();
             md.ShowMailPanel = this.ShowMailPanel;
             int selectedSupplierId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
             md.SelectedSupplierId = selectedSupplierId;
