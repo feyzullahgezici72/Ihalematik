@@ -1194,8 +1194,9 @@
     <None Include="Resources\logo_L.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ico.ico" />
     <Content Include="icon.ico" />
+    <None Include="Resources\network-icon1.png" />
+    <None Include="Resources\System-Info-icon.png" />
     <None Include="Resources\Actions-view-calendar-list-icon.png" />
     <None Include="Resources\App-lists-icon.png" />
     <None Include="Resources\prg_logo1.JPG" />

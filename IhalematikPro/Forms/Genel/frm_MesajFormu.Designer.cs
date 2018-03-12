@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MesajFormu));
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMesaj = new DevExpress.XtraEditors.LabelControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -60,22 +59,28 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Bilgi";
             // 
-            // pictureBox1
-            // 
-        
-            // 
             // lblMesaj
             // 
             this.lblMesaj.Appearance.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblMesaj.Appearance.ForeColor = System.Drawing.Color.Black;
             this.lblMesaj.LineColor = System.Drawing.Color.Red;
             this.lblMesaj.LineVisible = true;
-            this.lblMesaj.Location = new System.Drawing.Point(146, 40);
+            this.lblMesaj.Location = new System.Drawing.Point(146, 49);
             this.lblMesaj.LookAndFeel.SkinName = "Coffee";
             this.lblMesaj.Name = "lblMesaj";
             this.lblMesaj.Size = new System.Drawing.Size(96, 27);
             this.lblMesaj.TabIndex = 12;
             this.lblMesaj.Text = "    Mesaj    ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.System_Info_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 49);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 129);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btnTamam
             // 

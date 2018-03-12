@@ -643,6 +643,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap network_icon {
+            get {
+                object obj = ResourceManager.GetObject("network-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap network_icon32 {
             get {
                 object obj = ResourceManager.GetObject("network-icon32", resourceCulture);
@@ -786,6 +796,16 @@ namespace IhalematikProUI.Properties {
         internal static System.Drawing.Bitmap search_icon__4_ {
             get {
                 object obj = ResourceManager.GetObject("search-icon (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap System_Info_icon {
+            get {
+                object obj = ResourceManager.GetObject("System-Info-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
