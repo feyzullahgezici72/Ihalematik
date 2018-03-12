@@ -51,7 +51,7 @@ namespace IhalematikProUI.Forms
             this.Close();
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             af.ribbonPage8.Ribbon.SelectedPage = af.ribbonPage8;
-           // af.barButtonItem14.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
+            // af.barButtonItem14.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             af.RibonPasif();
             if (teklifGonder == null)
             {
@@ -88,14 +88,14 @@ namespace IhalematikProUI.Forms
 
             if (cmbAktivePasive.SelectedIndex == 0)
             {
-                grdOffer.DataSource = items.Where(p => p.IsActive);
+                grdOffer.DataSource = items.Where(p => p.IsActive && p.IsCompleated);
                 colPasive.Visible = true;
                 colActive.Visible = false;
                 colOpen.Visible = true;
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
-                grdOffer.DataSource = items.Where(p => !p.IsActive);
+                grdOffer.DataSource = items.Where(p => !p.IsActive && p.IsCompleated);
                 colActive.Visible = true;
                 colOpen.Visible = false;
                 colPasive.Visible = false;
