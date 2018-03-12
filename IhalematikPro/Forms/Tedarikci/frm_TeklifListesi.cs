@@ -38,7 +38,7 @@ namespace IhalematikProUI.Forms
 
         private void frm_TeklifListesi_Load(object sender, EventArgs e)
         {
-
+            groupControl1.Width = groupControl2.Width;
         }
         frm_TedarikcilereTeklifGonder teklifGonder;
 

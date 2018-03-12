@@ -138,11 +138,11 @@ namespace IhalematikPro.Forms
             this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
             this.barMenu = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem40 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem42 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem41 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem43 = new DevExpress.XtraBars.BarButtonItem();
@@ -1071,14 +1071,6 @@ namespace IhalematikPro.Forms
             this.barButtonItem19.Name = "barButtonItem19";
             this.barButtonItem19.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem19_ItemClick_1);
             // 
-            // barButtonItem21
-            // 
-            this.barButtonItem21.Caption = "İhale Panosu";
-            this.barButtonItem21.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem21.Glyph")));
-            this.barButtonItem21.Id = 48;
-            this.barButtonItem21.Name = "barButtonItem21";
-            this.barButtonItem21.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem21_ItemClick_2);
-            // 
             // barButtonItem25
             // 
             this.barButtonItem25.Caption = "Program Hakkında";
@@ -1109,6 +1101,14 @@ namespace IhalematikPro.Forms
             this.barButtonItem42.Id = 53;
             this.barButtonItem42.Name = "barButtonItem42";
             this.barButtonItem42.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem42_ItemClick);
+            // 
+            // barButtonItem21
+            // 
+            this.barButtonItem21.Caption = "İhale Panosu";
+            this.barButtonItem21.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem21.Glyph")));
+            this.barButtonItem21.Id = 48;
+            this.barButtonItem21.Name = "barButtonItem21";
+            this.barButtonItem21.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem21_ItemClick_2);
             // 
             // barButtonItem1
             // 
