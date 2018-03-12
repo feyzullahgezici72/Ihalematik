@@ -78,8 +78,9 @@
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtHeight.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtHeight.Properties.EditFormat.FormatString = "N";
-            this.txtHeight.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtHeight.Properties.Mask.EditMask = "d";
+            this.txtHeight.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtHeight.Properties.NullText = "165";
             this.txtHeight.Size = new System.Drawing.Size(100, 26);
             this.txtHeight.TabIndex = 1;
             // 
@@ -99,8 +100,9 @@
             this.txtWidth.Name = "txtWidth";
             this.txtWidth.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtWidth.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtWidth.Properties.EditFormat.FormatString = "N";
-            this.txtWidth.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtWidth.Properties.Mask.EditMask = "d";
+            this.txtWidth.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtWidth.Properties.NullText = "300";
             this.txtWidth.Size = new System.Drawing.Size(100, 26);
             this.txtWidth.TabIndex = 0;
             // 
