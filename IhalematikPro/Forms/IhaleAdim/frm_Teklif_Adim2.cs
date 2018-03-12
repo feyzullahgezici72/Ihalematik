@@ -76,18 +76,27 @@ namespace IhalematikPro.Forms
 
         private void btnTumuneUygula_Click(object sender, EventArgs e)
         {
-            double markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMarkup.Text.Replace("%", ""));
-            double risk = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRisk.Text.Replace("%", ""));
-
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
-            foreach (var item in items)
+            if (!string.IsNullOrEmpty(txtRisk.Text) || !string.IsNullOrEmpty(txtMarkup.Text))
             {
-                item.Markup = markup;
-                item.Risk = risk;
-                MaterialListProvider.Instance.Save(item);
+                double markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMarkup.Text.Replace("%", ""));
+                double risk = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRisk.Text.Replace("%", ""));
+
+                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
+                foreach (var item in items)
+                {
+                    if (!string.IsNullOrEmpty(txtMarkup.Text))
+                    {
+                        item.Markup = markup;
+                    }
+                    if (!string.IsNullOrEmpty(txtRisk.Text))
+                    {
+                        item.Risk = risk;
+                    }
+                    MaterialListProvider.Instance.Save(item);
+                }
+                this.LoadTenderMaterialList();
+                this.CalculateTotalMarkup();
             }
-            this.LoadTenderMaterialList();
-            this.CalculateTotalMarkup();
         }
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
