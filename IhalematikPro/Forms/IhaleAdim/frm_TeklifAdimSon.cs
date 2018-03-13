@@ -261,16 +261,16 @@ namespace IhalematikProUI.Forms
 
             this.OtherTotalAmount = accountingCosts + otherCosts;
 
-            double increaseAmount = Math.Round((this.OtherTotalAmount / this.TotalMarkupNonKDV), 4);
+            double increaseAmount = Math.Round((this.OtherTotalAmount / this.TotalMarkupNonKDV), 2);
 
 
             double totalMarkupZeroCarriage = this.DataSource.Where(p => p.CarriagePercent == 0).Sum(p => p.TotalFare);
 
             double otherCarriageZeroAmountPercent = this.DataSource.Sum(p => p.CarriagePercent);
-            double increaseZeroCarriage = Math.Round((carriage * (100 - otherCarriageZeroAmountPercent) / 100 / totalMarkupZeroCarriage), 4);
+            double increaseZeroCarriage = Math.Round((carriage * (100 - otherCarriageZeroAmountPercent) / 100 / totalMarkupZeroCarriage), 2);
 
 
-            double increaseCarriageAmount = Math.Round((carriage / increaseZeroCarriage), 4);
+            double increaseCarriageAmount = Math.Round((carriage / increaseZeroCarriage), 2);
             if (carriage == 0)
             {
                 increaseCarriageAmount = 0;
@@ -284,12 +284,12 @@ namespace IhalematikProUI.Forms
                 if (item.CarriagePercent == 0)
                 {
 
-                    increaseOtherFare += Math.Round(((increaseZeroCarriage * item.TotalFare) / item.Quantity), 4);
+                    increaseOtherFare += Math.Round(((increaseZeroCarriage * item.TotalFare) / item.Quantity), 2);
                     item.UnitTotalFarePreview = Math.Round((item.UnitTotalFare + increaseOtherFare), 2);
                 }
                 else
                 {
-                    increaseOtherFare += Math.Round((item.CarriagePercent * carriage / 100 / item.Quantity), 4);
+                    increaseOtherFare += Math.Round((item.CarriagePercent * carriage / 100 / item.Quantity), 2);
                     item.UnitTotalFarePreview = Math.Round((item.UnitTotalFare + increaseOtherFare), 2);
                 }
             }
@@ -297,8 +297,9 @@ namespace IhalematikProUI.Forms
             grdMaterialList.DataSource = null;
             grdMaterialList.DataSource = this.DataSource;
 
-
             lblTotalMarkupNonKDV.Text = Math.Round((this.TotalMarkupNonKDV + this.OtherTotalAmount + carriage), 2).ToString("c2");
+
+            TenderProvider.Instance.Save(currentTender);
         }
 
         private void btnCalc_Click(object sender, EventArgs e)
