@@ -242,5 +242,35 @@ namespace IhalematikPro.Forms
             grdPozList.DataSource = items;
             lblRecordCount.Text = items.Count.ToString();
         }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            string pozNo = txtSearchNumber.Text.Trim();
+            string pozDesc = txtSearchDescription.Text.Trim();
+            List<Poz> items = new List<Poz>();
+
+            if (cmbAktivePasive.SelectedIndex == 0)
+            {
+                items = UIPozManager.Instance.GetPozs(true);
+            }
+            else if (cmbAktivePasive.SelectedIndex == 1)
+            {
+                items = UIPozManager.Instance.GetPozs(false);
+            }
+
+            if (!string.IsNullOrEmpty(pozNo))
+            {
+                items = items.Where(p => p.Number.Contains(pozNo)).ToList();
+            }
+            if (!string.IsNullOrEmpty(pozDesc))
+            {
+                items = items.Where(p => p.Description.Contains(pozDesc)).ToList();
+            }
+
+            grdPozList.DataSource = null;
+            grdPozList.DataSource = items;
+            lblRecordCount.Text = items.Count.ToString();
+        }
     }
+    
 }
