@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DevamEdenIhaleListesi));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -37,7 +38,7 @@
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.timer1 = new System.Windows.Forms.Timer();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.grdActiveTenderList = new DevExpress.XtraGrid.GridControl();
             this.gridViewActiveTenderList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,11 +54,12 @@
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.txtTenderNumber = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.txtTenderDescription = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtTenderNumber = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -69,8 +71,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenderNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenderDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderNumber.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -113,9 +119,9 @@
             this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderCaptin.Name = "lblTenderCaptin";
             this.lblTenderCaptin.ShowLineShadow = false;
-            this.lblTenderCaptin.Size = new System.Drawing.Size(221, 35);
+            this.lblTenderCaptin.Size = new System.Drawing.Size(154, 35);
             this.lblTenderCaptin.TabIndex = 17;
-            this.lblTenderCaptin.Text = "AÇIK TEKLİF LİSTESİ";
+            this.lblTenderCaptin.Text = "İHALE LİSTESİ";
             this.lblTenderCaptin.UseMnemonic = false;
             // 
             // btnKapat
@@ -140,14 +146,14 @@
             // 
             this.grdActiveTenderList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdActiveTenderList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdActiveTenderList.Location = new System.Drawing.Point(0, 85);
+            this.grdActiveTenderList.Location = new System.Drawing.Point(0, 111);
             this.grdActiveTenderList.MainView = this.gridViewActiveTenderList;
             this.grdActiveTenderList.Margin = new System.Windows.Forms.Padding(4);
             this.grdActiveTenderList.Name = "grdActiveTenderList";
             this.grdActiveTenderList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnIhaleAc,
             this.btnDetay});
-            this.grdActiveTenderList.Size = new System.Drawing.Size(1224, 568);
+            this.grdActiveTenderList.Size = new System.Drawing.Size(1224, 542);
             this.grdActiveTenderList.TabIndex = 0;
             this.grdActiveTenderList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewActiveTenderList});
@@ -465,16 +471,42 @@
             // 
             // panelControl3
             // 
-            this.panelControl3.Controls.Add(this.simpleButton1);
-            this.panelControl3.Controls.Add(this.txtTenderNumber);
-            this.panelControl3.Controls.Add(this.labelControl7);
-            this.panelControl3.Controls.Add(this.txtTenderDescription);
-            this.panelControl3.Controls.Add(this.labelControl6);
+            this.panelControl3.Controls.Add(this.groupControl3);
+            this.panelControl3.Controls.Add(this.groupControl2);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl3.Location = new System.Drawing.Point(0, 35);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1224, 50);
+            this.panelControl3.Size = new System.Drawing.Size(1224, 76);
             this.panelControl3.TabIndex = 97;
+            // 
+            // groupControl3
+            // 
+            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl3.AppearanceCaption.Options.UseFont = true;
+            this.groupControl3.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl3.CaptionImage")));
+            this.groupControl3.Controls.Add(this.txtTenderDescription);
+            this.groupControl3.Controls.Add(this.simpleButton1);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupControl3.Location = new System.Drawing.Point(255, 3);
+            this.groupControl3.LookAndFeel.SkinName = "London Liquid Sky";
+            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(573, 70);
+            this.groupControl3.TabIndex = 35;
+            this.groupControl3.Text = "İhale Adı";
+            // 
+            // txtTenderDescription
+            // 
+            this.txtTenderDescription.EnterMoveNextControl = true;
+            this.txtTenderDescription.Location = new System.Drawing.Point(7, 38);
+            this.txtTenderDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenderDescription.Name = "txtTenderDescription";
+            this.txtTenderDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtTenderDescription.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTenderDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTenderDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTenderDescription.Size = new System.Drawing.Size(505, 26);
+            this.txtTenderDescription.TabIndex = 1;
             // 
             // simpleButton1
             // 
@@ -482,11 +514,12 @@
             this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton1.Location = new System.Drawing.Point(770, 13);
+            this.simpleButton1.Location = new System.Drawing.Point(520, 35);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(50, 31);
+            this.simpleButton1.Size = new System.Drawing.Size(50, 32);
             toolTipTitleItem1.Text = "Kaydet";
             superToolTip1.Items.Add(toolTipTitleItem1);
             this.simpleButton1.SuperTip = superToolTip1;
@@ -494,53 +527,51 @@
             this.simpleButton1.Text = "Bul";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
             // 
+            // groupControl2
+            // 
+            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl2.AppearanceCaption.Options.UseFont = true;
+            this.groupControl2.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl2.CaptionImage")));
+            this.groupControl2.Controls.Add(this.simpleButton2);
+            this.groupControl2.Controls.Add(this.txtTenderNumber);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupControl2.Location = new System.Drawing.Point(3, 3);
+            this.groupControl2.LookAndFeel.SkinName = "London Liquid Sky";
+            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(252, 70);
+            this.groupControl2.TabIndex = 34;
+            this.groupControl2.Text = "İhale No";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Appearance.Options.UseForeColor = true;
+            this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.simpleButton2.Location = new System.Drawing.Point(199, 35);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(50, 32);
+            this.simpleButton2.TabIndex = 27;
+            this.simpleButton2.Text = "Bul";
+            this.simpleButton2.ToolTip = "Poz Bul";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click_1);
+            // 
             // txtTenderNumber
             // 
             this.txtTenderNumber.EnterMoveNextControl = true;
-            this.txtTenderNumber.Location = new System.Drawing.Point(86, 12);
+            this.txtTenderNumber.Location = new System.Drawing.Point(7, 39);
             this.txtTenderNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenderNumber.Name = "txtTenderNumber";
             this.txtTenderNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTenderNumber.Properties.Appearance.Options.UseBackColor = true;
             this.txtTenderNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtTenderNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtTenderNumber.Size = new System.Drawing.Size(150, 26);
+            this.txtTenderNumber.Size = new System.Drawing.Size(184, 26);
             this.txtTenderNumber.TabIndex = 0;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl7.Location = new System.Drawing.Point(22, 13);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(66, 19);
-            this.labelControl7.TabIndex = 22;
-            this.labelControl7.Text = "İhale No:";
-            // 
-            // txtTenderDescription
-            // 
-            this.txtTenderDescription.EnterMoveNextControl = true;
-            this.txtTenderDescription.Location = new System.Drawing.Point(340, 15);
-            this.txtTenderDescription.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTenderDescription.Name = "txtTenderDescription";
-            this.txtTenderDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtTenderDescription.Properties.Appearance.Options.UseBackColor = true;
-            this.txtTenderDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtTenderDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtTenderDescription.Size = new System.Drawing.Size(422, 26);
-            this.txtTenderDescription.TabIndex = 1;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl6.Location = new System.Drawing.Point(266, 15);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(70, 19);
-            this.labelControl6.TabIndex = 19;
-            this.labelControl6.Text = "Açıklama:";
             // 
             // frm_DevamEdenIhaleListesi
             // 
@@ -574,9 +605,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
-            this.panelControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTenderNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtTenderDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderNumber.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -597,16 +631,17 @@
         private DevExpress.XtraEditors.LabelControl lblRecordCount;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.PanelControl panelControl3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.TextEdit txtTenderNumber;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.TextEdit txtTenderDescription;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDetay;
         private DevExpress.XtraEditors.SimpleButton btnKapat;
         private System.Windows.Forms.PictureBox pcWorld;
         private DevExpress.XtraEditors.LabelControl lblTenderCaptin;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraEditors.TextEdit txtTenderDescription;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

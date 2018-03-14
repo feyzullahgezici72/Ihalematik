@@ -160,5 +160,38 @@ namespace IhalematikPro.Forms
             grdActiveTenderList.DataSource = list.OrderByDescending(p => p.InsertTime).ToList();
             lblRecordCount.Text = list.Count.ToString();
         }
+
+        private void simpleButton2_Click_1(object sender, EventArgs e)
+        {
+            string tenderNumber = txtTenderNumber.Text.Trim();
+            string tenderDescription = txtTenderDescription.Text.Trim();
+
+            List<Tender> list = new List<Tender>();
+            if (comboBoxEdit1.SelectedIndex == 0)
+            {
+                list = TenderProvider.Instance.GetItems("IsActive", true);
+            }
+            if (comboBoxEdit1.SelectedIndex == 1)
+            {
+                list = TenderProvider.Instance.GetItems("IsActive", false);
+            }
+            if (comboBoxEdit1.SelectedIndex == 2)
+            {
+                list = TenderProvider.Instance.GetItems();
+            }
+
+            if (!string.IsNullOrEmpty(tenderNumber))
+            {
+                list = list.Where(p => p.Number.ToString().Contains(tenderNumber)).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(tenderDescription))
+            {
+                list = list.Where(p => p.Description.ToString().Contains(tenderDescription)).ToList();
+            }
+
+            grdActiveTenderList.DataSource = list.OrderByDescending(p => p.InsertTime).ToList();
+            lblRecordCount.Text = list.Count.ToString();
+        }
     }
 }

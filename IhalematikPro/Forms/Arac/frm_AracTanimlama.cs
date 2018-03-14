@@ -315,8 +315,8 @@ namespace IhalematikPro.Forms
         {
             ddlVehicleTitle.SelectedIndex = -1;
             rbAsgariUcret.Checked = false;
-            rbCompanyVehicle.Checked = false;
-            rdDay.Checked = false;
+            rbCompanyVehicle.Checked = true;
+            rdDay.Checked = true;
             rdHour.Checked = false;
             rdMonth.Checked = false;
             txtDriverFare.Text="";
@@ -332,6 +332,7 @@ namespace IhalematikPro.Forms
             txtRentGeneralFare.Text="";
             txtRentOtherFare.Text="";
             txtServiceFare.Text="";
+            
         }
 
         private void frm_AracTanimlama_Shown(object sender, EventArgs e)

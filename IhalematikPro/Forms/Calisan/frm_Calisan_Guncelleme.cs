@@ -281,5 +281,10 @@ namespace IhalematikProUI.Forms
             txtISGFare.Text = "0";
             txtExtraFare.Text = "0";
         }
+
+        private void groupControl3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

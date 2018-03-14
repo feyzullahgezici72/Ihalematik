@@ -34,10 +34,17 @@
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.rbNormal = new System.Windows.Forms.RadioButton();
+            this.rbAsgariUcret = new System.Windows.Forms.RadioButton();
             this.rbNetSalary = new System.Windows.Forms.RadioButton();
+            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.txtBaseFare = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.label99 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.txtWorklesFonFare = new DevExpress.XtraEditors.TextEdit();
             this.txtSeveranceFare = new DevExpress.XtraEditors.TextEdit();
             this.txtAGI = new DevExpress.XtraEditors.TextEdit();
@@ -58,19 +65,14 @@
             this.txtStampTaxFare = new DevExpress.XtraEditors.TextEdit();
             this.txtFoodFare = new DevExpress.XtraEditors.TextEdit();
             this.ddlTitles = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.rbAsgariUcret = new System.Windows.Forms.RadioButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.rbNormal = new System.Windows.Forms.RadioButton();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.label99 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseFare.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtWorklesFonFare.Properties)).BeginInit();
@@ -85,8 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtStampTaxFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFoodFare.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlTitles.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +102,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(496, 35);
+            this.panelControl2.Size = new System.Drawing.Size(456, 35);
             this.panelControl2.TabIndex = 96;
             // 
             // btnKapat
@@ -112,7 +112,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(468, 0);
+            this.btnKapat.Location = new System.Drawing.Point(428, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -143,21 +143,67 @@
             this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.groupControl2.Controls.Add(this.rbNetSalary);
+            this.groupControl2.Controls.Add(this.groupControl3);
+            this.groupControl2.Controls.Add(this.btnGuncelle);
             this.groupControl2.Controls.Add(this.txtBaseFare);
             this.groupControl2.Controls.Add(this.labelControl4);
             this.groupControl2.Controls.Add(this.panel1);
             this.groupControl2.Controls.Add(this.ddlTitles);
-            this.groupControl2.Controls.Add(this.rbAsgariUcret);
             this.groupControl2.Controls.Add(this.labelControl3);
-            this.groupControl2.Controls.Add(this.rbNormal);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 35);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(496, 672);
+            this.groupControl2.Size = new System.Drawing.Size(456, 672);
             this.groupControl2.TabIndex = 97;
             this.groupControl2.Text = "Çalışan Bilgileri";
+            // 
+            // groupControl3
+            // 
+            this.groupControl3.Controls.Add(this.rbNormal);
+            this.groupControl3.Controls.Add(this.rbAsgariUcret);
+            this.groupControl3.Controls.Add(this.rbNetSalary);
+            this.groupControl3.Location = new System.Drawing.Point(155, 79);
+            this.groupControl3.LookAndFeel.SkinName = "London Liquid Sky";
+            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(267, 71);
+            this.groupControl3.TabIndex = 139;
+            this.groupControl3.Text = "Maaş Tipi";
+            this.groupControl3.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl3_Paint);
+            // 
+            // rbNormal
+            // 
+            this.rbNormal.AutoSize = true;
+            this.rbNormal.BackColor = System.Drawing.SystemColors.Control;
+            this.rbNormal.Checked = true;
+            this.rbNormal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbNormal.ForeColor = System.Drawing.Color.Maroon;
+            this.rbNormal.Location = new System.Drawing.Point(7, 39);
+            this.rbNormal.Margin = new System.Windows.Forms.Padding(4);
+            this.rbNormal.Name = "rbNormal";
+            this.rbNormal.Size = new System.Drawing.Size(72, 25);
+            this.rbNormal.TabIndex = 1;
+            this.rbNormal.TabStop = true;
+            this.rbNormal.Text = "Brüt";
+            this.rbNormal.UseVisualStyleBackColor = false;
+            this.rbNormal.CheckedChanged += new System.EventHandler(this.rbNormal_CheckedChanged);
+            // 
+            // rbAsgariUcret
+            // 
+            this.rbAsgariUcret.AutoSize = true;
+            this.rbAsgariUcret.BackColor = System.Drawing.SystemColors.Control;
+            this.rbAsgariUcret.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbAsgariUcret.ForeColor = System.Drawing.Color.Maroon;
+            this.rbAsgariUcret.Location = new System.Drawing.Point(93, 39);
+            this.rbAsgariUcret.Margin = new System.Windows.Forms.Padding(4);
+            this.rbAsgariUcret.Name = "rbAsgariUcret";
+            this.rbAsgariUcret.Size = new System.Drawing.Size(89, 25);
+            this.rbAsgariUcret.TabIndex = 2;
+            this.rbAsgariUcret.TabStop = true;
+            this.rbAsgariUcret.Text = "Asgari";
+            this.rbAsgariUcret.UseVisualStyleBackColor = false;
+            this.rbAsgariUcret.CheckedChanged += new System.EventHandler(this.rbAsgariUcret_CheckedChanged);
             // 
             // rbNetSalary
             // 
@@ -165,20 +211,35 @@
             this.rbNetSalary.BackColor = System.Drawing.Color.Transparent;
             this.rbNetSalary.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbNetSalary.ForeColor = System.Drawing.Color.Maroon;
-            this.rbNetSalary.Location = new System.Drawing.Point(308, 85);
+            this.rbNetSalary.Location = new System.Drawing.Point(196, 39);
             this.rbNetSalary.Margin = new System.Windows.Forms.Padding(4);
             this.rbNetSalary.Name = "rbNetSalary";
-            this.rbNetSalary.Size = new System.Drawing.Size(115, 23);
+            this.rbNetSalary.Size = new System.Drawing.Size(63, 23);
             this.rbNetSalary.TabIndex = 137;
-            this.rbNetSalary.Text = "Net Maaş ";
+            this.rbNetSalary.Text = "Net";
             this.rbNetSalary.UseVisualStyleBackColor = false;
             this.rbNetSalary.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnGuncelle.Appearance.Options.UseFont = true;
+            this.btnGuncelle.Appearance.Options.UseForeColor = true;
+            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
+            this.btnGuncelle.Location = new System.Drawing.Point(308, 610);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(130, 55);
+            this.btnGuncelle.TabIndex = 24;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // txtBaseFare
             // 
             this.txtBaseFare.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtBaseFare, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.txtBaseFare.Location = new System.Drawing.Point(198, 120);
+            this.txtBaseFare.Location = new System.Drawing.Point(198, 165);
             this.txtBaseFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtBaseFare.Name = "txtBaseFare";
             this.txtBaseFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -200,7 +261,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Location = new System.Drawing.Point(116, 123);
+            this.labelControl4.Location = new System.Drawing.Point(116, 168);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(74, 19);
@@ -232,11 +293,44 @@
             this.panel1.Controls.Add(this.labelControl8);
             this.panel1.Controls.Add(this.txtStampTaxFare);
             this.panel1.Controls.Add(this.txtFoodFare);
-            this.panel1.Location = new System.Drawing.Point(22, 151);
+            this.panel1.Location = new System.Drawing.Point(22, 196);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(418, 438);
+            this.panel1.Size = new System.Drawing.Size(418, 392);
             this.panel1.TabIndex = 34;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl9.Location = new System.Drawing.Point(48, 211);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(121, 19);
+            this.labelControl9.TabIndex = 138;
+            this.labelControl9.Text = " Yemek(Günlük):";
+            // 
+            // label99
+            // 
+            this.label99.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label99.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.label99.Location = new System.Drawing.Point(76, 243);
+            this.label99.Margin = new System.Windows.Forms.Padding(4);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(91, 19);
+            this.label99.TabIndex = 136;
+            this.label99.Text = "Yol(Günlük):";
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl11.Location = new System.Drawing.Point(22, 279);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(145, 19);
+            this.labelControl11.TabIndex = 137;
+            this.labelControl11.Text = "Konaklama(Günlük):";
             // 
             // txtWorklesFonFare
             // 
@@ -550,7 +644,7 @@
             // 
             this.ddlTitles.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.ddlTitles, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.ddlTitles.Location = new System.Drawing.Point(92, 44);
+            this.ddlTitles.Location = new System.Drawing.Point(155, 44);
             this.ddlTitles.Margin = new System.Windows.Forms.Padding(4);
             this.ddlTitles.Name = "ddlTitles";
             this.ddlTitles.Properties.AccessibleDescription = "Name";
@@ -559,117 +653,23 @@
             this.ddlTitles.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.ddlTitles.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ddlTitles.Size = new System.Drawing.Size(330, 28);
+            this.ddlTitles.Size = new System.Drawing.Size(267, 28);
             this.ddlTitles.TabIndex = 0;
-            // 
-            // rbAsgariUcret
-            // 
-            this.rbAsgariUcret.AutoSize = true;
-            this.rbAsgariUcret.BackColor = System.Drawing.SystemColors.Control;
-            this.rbAsgariUcret.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbAsgariUcret.ForeColor = System.Drawing.Color.Maroon;
-            this.rbAsgariUcret.Location = new System.Drawing.Point(128, 82);
-            this.rbAsgariUcret.Margin = new System.Windows.Forms.Padding(4);
-            this.rbAsgariUcret.Name = "rbAsgariUcret";
-            this.rbAsgariUcret.Size = new System.Drawing.Size(150, 25);
-            this.rbAsgariUcret.TabIndex = 2;
-            this.rbAsgariUcret.TabStop = true;
-            this.rbAsgariUcret.Text = "Asgari Ücretli";
-            this.rbAsgariUcret.UseVisualStyleBackColor = false;
-            this.rbAsgariUcret.CheckedChanged += new System.EventHandler(this.rbAsgariUcret_CheckedChanged);
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl3.Location = new System.Drawing.Point(28, 47);
+            this.labelControl3.Location = new System.Drawing.Point(92, 48);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(55, 19);
             this.labelControl3.TabIndex = 78;
             this.labelControl3.Text = "Ünvanı:";
             // 
-            // rbNormal
-            // 
-            this.rbNormal.AutoSize = true;
-            this.rbNormal.BackColor = System.Drawing.SystemColors.Control;
-            this.rbNormal.Checked = true;
-            this.rbNormal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNormal.ForeColor = System.Drawing.Color.Maroon;
-            this.rbNormal.Location = new System.Drawing.Point(22, 82);
-            this.rbNormal.Margin = new System.Windows.Forms.Padding(4);
-            this.rbNormal.Name = "rbNormal";
-            this.rbNormal.Size = new System.Drawing.Size(97, 25);
-            this.rbNormal.TabIndex = 1;
-            this.rbNormal.TabStop = true;
-            this.rbNormal.Text = "Normal";
-            this.rbNormal.UseVisualStyleBackColor = false;
-            this.rbNormal.CheckedChanged += new System.EventHandler(this.rbNormal_CheckedChanged);
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.White;
-            this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.panelControl1.Controls.Add(this.btnGuncelle);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 646);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(496, 61);
-            this.panelControl1.TabIndex = 98;
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnGuncelle.Appearance.Options.UseFont = true;
-            this.btnGuncelle.Appearance.Options.UseForeColor = true;
-            this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.Location = new System.Drawing.Point(363, 3);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(130, 55);
-            this.btnGuncelle.TabIndex = 24;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
-            // 
             // dxErrorProvider1
             // 
             this.dxErrorProvider1.ContainerControl = this;
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl9.Location = new System.Drawing.Point(48, 211);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(121, 19);
-            this.labelControl9.TabIndex = 138;
-            this.labelControl9.Text = " Yemek(Günlük):";
-            // 
-            // label99
-            // 
-            this.label99.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label99.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.label99.Location = new System.Drawing.Point(76, 243);
-            this.label99.Margin = new System.Windows.Forms.Padding(4);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(91, 19);
-            this.label99.TabIndex = 136;
-            this.label99.Text = "Yol(Günlük):";
-            // 
-            // labelControl11
-            // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl11.Location = new System.Drawing.Point(22, 279);
-            this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(145, 19);
-            this.labelControl11.TabIndex = 137;
-            this.labelControl11.Text = "Konaklama(Günlük):";
             // 
             // frm_Calisan_Guncelleme
             // 
@@ -678,9 +678,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(496, 707);
+            this.ClientSize = new System.Drawing.Size(456, 707);
             this.ControlBox = false;
-            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl2);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
@@ -699,6 +698,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBaseFare.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -714,8 +716,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtStampTaxFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFoodFare.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlTitles.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             this.ResumeLayout(false);
 
@@ -753,12 +753,12 @@
         private System.Windows.Forms.RadioButton rbAsgariUcret;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.RadioButton rbNormal;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnGuncelle;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
         private System.Windows.Forms.RadioButton rbNetSalary;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl label99;
         private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
     }
 }

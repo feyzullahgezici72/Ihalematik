@@ -80,6 +80,7 @@ namespace IhalematikProUI.Forms
                 {
                     MessageBox.Show("Güncelleme sırasında hata oluştu.");
                 }
+                this.Close();
             }
         }
     }
