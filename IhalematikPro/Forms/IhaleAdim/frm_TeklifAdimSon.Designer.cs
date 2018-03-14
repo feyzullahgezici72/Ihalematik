@@ -54,13 +54,15 @@
             this.lblTederDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
-            this.btnTumuneUygula = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl32 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.txtCarriage = new DevExpress.XtraEditors.ButtonEdit();
-            this.txtAccountingCosts = new DevExpress.XtraEditors.TextEdit();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.txtOtherCoast = new DevExpress.XtraEditors.ButtonEdit();
+            this.btnTumuneUygula = new DevExpress.XtraEditors.SimpleButton();
+            this.txtCarriage = new DevExpress.XtraEditors.ButtonEdit();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
+            this.txtAccountingCosts = new DevExpress.XtraEditors.TextEdit();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.grdMaterialList2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -139,7 +141,6 @@
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.txtTenderNearlyTotalAmount = new DevExpress.XtraEditors.TextEdit();
-            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
@@ -156,9 +157,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.chckProvisionalBond.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
             this.panelControl8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOtherCoast.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCarriage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccountingCosts.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOtherCoast.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
@@ -206,7 +210,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMaterialWorksipCount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenderNearlyTotalAmount.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -528,20 +531,73 @@
             this.panelControl8.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl8.Appearance.Options.UseBackColor = true;
             this.panelControl8.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl8.Controls.Add(this.panelControl3);
-            this.panelControl8.Controls.Add(this.btnTumuneUygula);
-            this.panelControl8.Controls.Add(this.labelControl32);
-            this.panelControl8.Controls.Add(this.labelControl37);
-            this.panelControl8.Controls.Add(this.txtAccountingCosts);
-            this.panelControl8.Controls.Add(this.labelControl18);
-            this.panelControl8.Controls.Add(this.txtCarriage);
-            this.panelControl8.Controls.Add(this.txtOtherCoast);
+            this.panelControl8.Controls.Add(this.groupControl2);
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl8.Location = new System.Drawing.Point(0, 0);
             this.panelControl8.LookAndFeel.SkinName = "Office 2007 Pink";
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(470, 145);
+            this.panelControl8.Size = new System.Drawing.Size(501, 145);
             this.panelControl8.TabIndex = 49;
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.CaptionLocation = DevExpress.Utils.Locations.Right;
+            this.groupControl2.Controls.Add(this.labelControl32);
+            this.groupControl2.Controls.Add(this.panelControl3);
+            this.groupControl2.Controls.Add(this.txtOtherCoast);
+            this.groupControl2.Controls.Add(this.btnTumuneUygula);
+            this.groupControl2.Controls.Add(this.txtCarriage);
+            this.groupControl2.Controls.Add(this.labelControl18);
+            this.groupControl2.Controls.Add(this.labelControl37);
+            this.groupControl2.Controls.Add(this.txtAccountingCosts);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupControl2.Location = new System.Drawing.Point(0, 0);
+            this.groupControl2.LookAndFeel.SkinName = "London Liquid Sky";
+            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(501, 145);
+            this.groupControl2.TabIndex = 48;
+            // 
+            // labelControl32
+            // 
+            this.labelControl32.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl32.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl32.Location = new System.Drawing.Point(21, 28);
+            this.labelControl32.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl32.Name = "labelControl32";
+            this.labelControl32.Size = new System.Drawing.Size(115, 19);
+            this.labelControl32.TabIndex = 44;
+            this.labelControl32.Text = "Muhasebe Gideri:";
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.Location = new System.Drawing.Point(43, 52);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(320, 2);
+            this.panelControl3.TabIndex = 47;
+            // 
+            // txtOtherCoast
+            // 
+            this.txtOtherCoast.Location = new System.Drawing.Point(146, 97);
+            this.txtOtherCoast.Margin = new System.Windows.Forms.Padding(4);
+            this.txtOtherCoast.Name = "txtOtherCoast";
+            this.txtOtherCoast.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtOtherCoast.Properties.Appearance.Options.UseBackColor = true;
+            this.txtOtherCoast.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtOtherCoast.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOtherCoast.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtOtherCoast.Properties.DisplayFormat.FormatString = "c2";
+            this.txtOtherCoast.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtOtherCoast.Properties.EditFormat.FormatString = "c2";
+            this.txtOtherCoast.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtOtherCoast.Properties.Mask.EditMask = "c2";
+            this.txtOtherCoast.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtOtherCoast.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtOtherCoast.Properties.ReadOnly = true;
+            this.txtOtherCoast.Size = new System.Drawing.Size(208, 26);
+            this.txtOtherCoast.TabIndex = 45;
+            this.txtOtherCoast.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtOtherCoast_ButtonClick);
             // 
             // btnTumuneUygula
             // 
@@ -549,7 +605,7 @@
             this.btnTumuneUygula.Appearance.Options.UseFont = true;
             this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
             this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(362, 61);
+            this.btnTumuneUygula.Location = new System.Drawing.Point(362, 62);
             this.btnTumuneUygula.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnTumuneUygula.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
@@ -560,42 +616,9 @@
             this.btnTumuneUygula.ToolTip = "Tümünü Uygula";
             this.btnTumuneUygula.Click += new System.EventHandler(this.btnTumuneUygula_Click);
             // 
-            // labelControl37
-            // 
-            this.labelControl37.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl37.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl37.Location = new System.Drawing.Point(40, 94);
-            this.labelControl37.Margin = new System.Windows.Forms.Padding(6);
-            this.labelControl37.Name = "labelControl37";
-            this.labelControl37.Size = new System.Drawing.Size(95, 19);
-            this.labelControl37.TabIndex = 46;
-            this.labelControl37.Text = "Diğer Giderler:";
-            // 
-            // labelControl32
-            // 
-            this.labelControl32.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl32.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl32.Location = new System.Drawing.Point(20, 19);
-            this.labelControl32.Margin = new System.Windows.Forms.Padding(6);
-            this.labelControl32.Name = "labelControl32";
-            this.labelControl32.Size = new System.Drawing.Size(115, 19);
-            this.labelControl32.TabIndex = 44;
-            this.labelControl32.Text = "Muhasebe Gideri:";
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl18.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl18.Location = new System.Drawing.Point(39, 61);
-            this.labelControl18.Margin = new System.Windows.Forms.Padding(6);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(95, 19);
-            this.labelControl18.TabIndex = 42;
-            this.labelControl18.Text = "Nakliye Gideri:";
-            // 
             // txtCarriage
             // 
-            this.txtCarriage.Location = new System.Drawing.Point(146, 61);
+            this.txtCarriage.Location = new System.Drawing.Point(146, 63);
             this.txtCarriage.Margin = new System.Windows.Forms.Padding(4);
             this.txtCarriage.Name = "txtCarriage";
             this.txtCarriage.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -616,9 +639,31 @@
             this.txtCarriage.TabIndex = 0;
             this.txtCarriage.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtCarriage_ButtonClick);
             // 
+            // labelControl18
+            // 
+            this.labelControl18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl18.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl18.Location = new System.Drawing.Point(41, 69);
+            this.labelControl18.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(95, 19);
+            this.labelControl18.TabIndex = 42;
+            this.labelControl18.Text = "Nakliye Gideri:";
+            // 
+            // labelControl37
+            // 
+            this.labelControl37.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl37.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl37.Location = new System.Drawing.Point(41, 103);
+            this.labelControl37.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl37.Name = "labelControl37";
+            this.labelControl37.Size = new System.Drawing.Size(95, 19);
+            this.labelControl37.TabIndex = 46;
+            this.labelControl37.Text = "Diğer Giderler:";
+            // 
             // txtAccountingCosts
             // 
-            this.txtAccountingCosts.Location = new System.Drawing.Point(146, 17);
+            this.txtAccountingCosts.Location = new System.Drawing.Point(146, 19);
             this.txtAccountingCosts.Margin = new System.Windows.Forms.Padding(4);
             this.txtAccountingCosts.Name = "txtAccountingCosts";
             this.txtAccountingCosts.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -634,29 +679,6 @@
             this.txtAccountingCosts.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtAccountingCosts.Size = new System.Drawing.Size(208, 26);
             this.txtAccountingCosts.TabIndex = 1;
-            // 
-            // txtOtherCoast
-            // 
-            this.txtOtherCoast.Location = new System.Drawing.Point(146, 94);
-            this.txtOtherCoast.Margin = new System.Windows.Forms.Padding(4);
-            this.txtOtherCoast.Name = "txtOtherCoast";
-            this.txtOtherCoast.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtOtherCoast.Properties.Appearance.Options.UseBackColor = true;
-            this.txtOtherCoast.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtOtherCoast.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtOtherCoast.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtOtherCoast.Properties.DisplayFormat.FormatString = "c2";
-            this.txtOtherCoast.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtOtherCoast.Properties.EditFormat.FormatString = "c2";
-            this.txtOtherCoast.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtOtherCoast.Properties.Mask.EditMask = "c2";
-            this.txtOtherCoast.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtOtherCoast.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtOtherCoast.Properties.ReadOnly = true;
-            this.txtOtherCoast.Size = new System.Drawing.Size(208, 26);
-            this.txtOtherCoast.TabIndex = 45;
-            this.txtOtherCoast.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtOtherCoast_ButtonClick);
             // 
             // grdMaterialList
             // 
@@ -1970,13 +1992,6 @@
             this.txtTenderNearlyTotalAmount.TabIndex = 50;
             this.txtTenderNearlyTotalAmount.Visible = false;
             // 
-            // panelControl3
-            // 
-            this.panelControl3.Location = new System.Drawing.Point(39, 49);
-            this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(320, 2);
-            this.panelControl3.TabIndex = 47;
-            // 
             // frm_TeklifAdimSon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -2015,10 +2030,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.chckProvisionalBond.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
             this.panelControl8.ResumeLayout(false);
-            this.panelControl8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOtherCoast.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCarriage.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccountingCosts.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOtherCoast.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
@@ -2072,7 +2090,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMaterialWorksipCount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenderNearlyTotalAmount.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2189,5 +2206,6 @@
         private DevExpress.XtraEditors.ButtonEdit txtOtherCoast;
         public DevExpress.XtraEditors.SimpleButton btnPrev;
         private DevExpress.XtraEditors.PanelControl panelControl3;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
     }
 }
