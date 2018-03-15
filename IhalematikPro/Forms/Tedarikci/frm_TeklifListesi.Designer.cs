@@ -110,7 +110,7 @@
             this.lblTenderCaptin.LineColor = System.Drawing.Color.Red;
             this.lblTenderCaptin.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.lblTenderCaptin.Location = new System.Drawing.Point(51, 1);
-            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderCaptin.Name = "lblTenderCaptin";
             this.lblTenderCaptin.ShowLineShadow = false;
             this.lblTenderCaptin.Size = new System.Drawing.Size(161, 35);
@@ -128,7 +128,7 @@
             this.panelControl2.Controls.Add(this.btnKapat);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1362, 35);
             this.panelControl2.TabIndex = 2;
@@ -152,7 +152,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1334, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 1;
@@ -168,7 +168,7 @@
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1362, 35);
             this.panelControl1.TabIndex = 95;
@@ -176,10 +176,10 @@
             // grdOffer
             // 
             this.grdOffer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdOffer.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdOffer.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdOffer.Location = new System.Drawing.Point(3, 33);
             this.grdOffer.MainView = this.gridViewOffer;
-            this.grdOffer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdOffer.Margin = new System.Windows.Forms.Padding(4);
             this.grdOffer.Name = "grdOffer";
             this.grdOffer.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnOpen,
@@ -480,13 +480,13 @@
             this.cmbAktivePasive.Name = "cmbAktivePasive";
             this.cmbAktivePasive.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbAktivePasive.Properties.Appearance.Options.UseFont = true;
-            this.cmbAktivePasive.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.cmbAktivePasive.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbAktivePasive.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.cmbAktivePasive.Properties.Items.AddRange(new object[] {
             "Aktif Kayıtlar",
             "Pasif Kayıtlar"});
+            this.cmbAktivePasive.Properties.LookAndFeel.SkinName = "McSkin";
+            this.cmbAktivePasive.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cmbAktivePasive.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbAktivePasive.Size = new System.Drawing.Size(170, 28);
             this.cmbAktivePasive.TabIndex = 1;
@@ -494,21 +494,21 @@
             // 
             // lblRecordCount
             // 
-            this.lblRecordCount.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblRecordCount.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblRecordCount.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblRecordCount.Location = new System.Drawing.Point(97, 0);
+            this.lblRecordCount.Location = new System.Drawing.Point(89, 0);
             this.lblRecordCount.Name = "lblRecordCount";
-            this.lblRecordCount.Size = new System.Drawing.Size(18, 22);
+            this.lblRecordCount.Size = new System.Drawing.Size(16, 19);
             this.lblRecordCount.TabIndex = 0;
             this.lblRecordCount.Text = "10";
             // 
             // labelControl14
             // 
-            this.labelControl14.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl14.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl14.Dock = System.Windows.Forms.DockStyle.Left;
             this.labelControl14.Location = new System.Drawing.Point(0, 0);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(97, 22);
+            this.labelControl14.Size = new System.Drawing.Size(89, 19);
             this.labelControl14.TabIndex = 0;
             this.labelControl14.Text = "Kayıt Sayısı : ";
             // 
@@ -543,10 +543,10 @@
             // grdOfferNoCompleated
             // 
             this.grdOfferNoCompleated.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdOfferNoCompleated.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdOfferNoCompleated.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdOfferNoCompleated.Location = new System.Drawing.Point(3, 33);
             this.grdOfferNoCompleated.MainView = this.gridView1;
-            this.grdOfferNoCompleated.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdOfferNoCompleated.Margin = new System.Windows.Forms.Padding(4);
             this.grdOfferNoCompleated.Name = "grdOfferNoCompleated";
             this.grdOfferNoCompleated.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnAc,
@@ -845,7 +845,7 @@
             this.Controls.Add(this.panelControl1);
             this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TeklifListesi";

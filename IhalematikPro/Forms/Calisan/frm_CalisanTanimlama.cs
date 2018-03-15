@@ -366,6 +366,7 @@ namespace IhalematikPro.Forms
         private void rbNormal_CheckedChanged(object sender, EventArgs e)
         {
             panelControl2.Visible = true;
+            
             this.IsCalculatedMinimumWage = false;
             if (this.rbNormal.Checked)
             {
@@ -534,6 +535,21 @@ namespace IhalematikPro.Forms
             {
                 btnKaydet.Focus();
             }
+        }
+
+        private void rbNormal_Click(object sender, EventArgs e)
+        {
+            txtBaseFare.Focus();
+        }
+
+        private void rbAsgariUcret_Click(object sender, EventArgs e)
+        {
+            txtBaseFare.Focus();
+        }
+
+        private void rbBaseAmount_Click(object sender, EventArgs e)
+        {
+            txtBaseFare.Focus();
         }
     }
 }

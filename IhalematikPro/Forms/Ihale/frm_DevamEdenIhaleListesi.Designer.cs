@@ -444,6 +444,8 @@
             "Aktif Kayıtlar",
             "Pasif Kayıtlar",
             "Tüm Kayıtlar"});
+            this.comboBoxEdit1.Properties.LookAndFeel.SkinName = "McSkin";
+            this.comboBoxEdit1.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.comboBoxEdit1.Size = new System.Drawing.Size(170, 28);
             this.comboBoxEdit1.TabIndex = 1;
@@ -451,21 +453,21 @@
             // 
             // lblRecordCount
             // 
-            this.lblRecordCount.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblRecordCount.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblRecordCount.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblRecordCount.Location = new System.Drawing.Point(97, 0);
+            this.lblRecordCount.Location = new System.Drawing.Point(89, 0);
             this.lblRecordCount.Name = "lblRecordCount";
-            this.lblRecordCount.Size = new System.Drawing.Size(18, 22);
+            this.lblRecordCount.Size = new System.Drawing.Size(16, 19);
             this.lblRecordCount.TabIndex = 0;
             this.lblRecordCount.Text = "10";
             // 
             // labelControl14
             // 
-            this.labelControl14.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl14.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl14.Dock = System.Windows.Forms.DockStyle.Left;
             this.labelControl14.Location = new System.Drawing.Point(0, 0);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(97, 22);
+            this.labelControl14.Size = new System.Drawing.Size(89, 19);
             this.labelControl14.TabIndex = 0;
             this.labelControl14.Text = "Kayıt Sayısı : ";
             // 

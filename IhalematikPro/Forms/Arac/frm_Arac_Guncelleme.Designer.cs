@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Arac_Guncelleme));
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
@@ -35,7 +36,6 @@
             this.txtCompanyMaintenanceFare = new DevExpress.XtraEditors.TextEdit();
             this.txtCompanyFuelOilDay = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtCompanyServiceFare = new DevExpress.XtraEditors.TextEdit();
@@ -70,7 +70,8 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PanelSirket)).BeginInit();
@@ -140,10 +141,10 @@
             this.PanelSirket.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.PanelSirket.Appearance.Options.UseBackColor = true;
             this.PanelSirket.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.PanelSirket.Controls.Add(this.labelControl5);
             this.PanelSirket.Controls.Add(this.txtCompanyMaintenanceFare);
             this.PanelSirket.Controls.Add(this.txtCompanyFuelOilDay);
             this.PanelSirket.Controls.Add(this.labelControl7);
-            this.PanelSirket.Controls.Add(this.labelControl5);
             this.PanelSirket.Controls.Add(this.labelControl4);
             this.PanelSirket.Controls.Add(this.labelControl6);
             this.PanelSirket.Controls.Add(this.txtCompanyServiceFare);
@@ -203,17 +204,6 @@
             this.labelControl7.Size = new System.Drawing.Size(96, 19);
             this.labelControl7.TabIndex = 136;
             this.labelControl7.Text = "Bakım Gideri:";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl5.Location = new System.Drawing.Point(4, 6);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(147, 19);
-            this.labelControl5.TabIndex = 137;
-            this.labelControl5.Text = "Harcanan Yakıt (LT):";
             // 
             // labelControl4
             // 
@@ -687,7 +677,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(435, 35);
+            this.panelControl2.Size = new System.Drawing.Size(436, 35);
             this.panelControl2.TabIndex = 95;
             // 
             // btnKapat
@@ -697,7 +687,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(407, 0);
+            this.btnKapat.Location = new System.Drawing.Point(408, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -725,12 +715,23 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl5.Location = new System.Drawing.Point(20, 10);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(131, 19);
+            this.labelControl5.TabIndex = 143;
+            this.labelControl5.Text = "Günlük Yakıt (LT):";
+            // 
             // frm_Arac_Guncelleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(435, 545);
+            this.ClientSize = new System.Drawing.Size(436, 545);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl2);
@@ -806,7 +807,6 @@
         private DevExpress.XtraEditors.TextEdit txtCompanyMaintenanceFare;
         private DevExpress.XtraEditors.TextEdit txtCompanyFuelOilDay;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.TextEdit txtCompanyServiceFare;
@@ -819,5 +819,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
         private DevExpress.XtraEditors.SimpleButton btnGuncelle;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
     }
 }

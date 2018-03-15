@@ -656,6 +656,7 @@
             this.rbNormal.Text = "Brüt ";
             this.rbNormal.UseVisualStyleBackColor = false;
             this.rbNormal.CheckedChanged += new System.EventHandler(this.rbNormal_CheckedChanged);
+            this.rbNormal.Click += new System.EventHandler(this.rbNormal_Click);
             // 
             // rbBaseAmount
             // 
@@ -671,6 +672,7 @@
             this.rbBaseAmount.Text = "Net";
             this.rbBaseAmount.UseVisualStyleBackColor = false;
             this.rbBaseAmount.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rbBaseAmount.Click += new System.EventHandler(this.rbBaseAmount_Click);
             // 
             // rbAsgariUcret
             // 
@@ -686,6 +688,7 @@
             this.rbAsgariUcret.Text = "Asgari";
             this.rbAsgariUcret.UseVisualStyleBackColor = false;
             this.rbAsgariUcret.CheckedChanged += new System.EventHandler(this.rbAsgariUcret_CheckedChanged);
+            this.rbAsgariUcret.Click += new System.EventHandler(this.rbAsgariUcret_Click);
             // 
             // btnKaydet
             // 

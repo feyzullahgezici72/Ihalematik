@@ -286,5 +286,28 @@ namespace IhalematikProUI.Forms
         {
 
         }
+
+        private void txtBaseFare_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                txtAGI.Focus();
+            }
+        }
+
+        private void rbNormal_Click(object sender, EventArgs e)
+        {
+            txtBaseFare.Focus();
+        }
+
+        private void rbAsgariUcret_Click(object sender, EventArgs e)
+        {
+            txtBaseFare.Focus();
+        }
+
+        private void rbNetSalary_Click(object sender, EventArgs e)
+        {
+            txtBaseFare.Focus();
+        }
     }
 }
