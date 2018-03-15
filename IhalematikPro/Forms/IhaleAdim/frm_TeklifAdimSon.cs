@@ -254,50 +254,52 @@ namespace IhalematikProUI.Forms
 
             currentTender.Carriage = carriage;
             currentTender.AccountingCosts = accountingCosts;
-            currentTender.CompletionBond = chckCompletionBond.Checked;
-            currentTender.ProvisionalBond = chckProvisionalBond.Checked;
-            currentTender.PersonHour = ddlCalculateWorkerType.SelectedIndex == 0 ? true : false;
+            //currentTender.CompletionBond = chckCompletionBond.Checked;
+            //currentTender.ProvisionalBond = chckProvisionalBond.Checked;
+            //currentTender.PersonHour = ddlCalculateWorkerType.SelectedIndex == 0 ? true : false;
 
 
             this.OtherTotalAmount = accountingCosts + otherCosts;
 
-            double increaseAmount = Math.Round((this.OtherTotalAmount / this.TotalMarkupNonKDV), 2);
+            double increaseAmount = (this.OtherTotalAmount / this.TotalMarkupNonKDV);
 
 
             double totalMarkupZeroCarriage = this.DataSource.Where(p => p.CarriagePercent == 0).Sum(p => p.TotalFare);
 
             double otherCarriageZeroAmountPercent = this.DataSource.Sum(p => p.CarriagePercent);
-            double increaseZeroCarriage = Math.Round((carriage * (100 - otherCarriageZeroAmountPercent) / 100 / totalMarkupZeroCarriage), 2);
+            double increaseZeroCarriage = (carriage * (100 - otherCarriageZeroAmountPercent) / 100 / totalMarkupZeroCarriage);
 
 
-            double increaseCarriageAmount = Math.Round((carriage / increaseZeroCarriage), 2);
+            double increaseCarriageAmount = (carriage / increaseZeroCarriage);
             if (carriage == 0)
             {
                 increaseCarriageAmount = 0;
             }
             //birim fiyat unittotalFare
             //Toplam fiyat TotalFare
+            this.TotalMarkupNonKDV = 0;
             foreach (MaterialListModel item in this.DataSource)
             {
                 double increaseOtherFare = 0;
-                increaseOtherFare = Math.Round(((increaseAmount * item.TotalFare) / item.Quantity), 2);
+                increaseOtherFare = ((increaseAmount * item.TotalFare) / item.Quantity);
                 if (item.CarriagePercent == 0)
                 {
 
-                    increaseOtherFare += Math.Round(((increaseZeroCarriage * item.TotalFare) / item.Quantity), 2);
-                    item.UnitTotalFarePreview = Math.Round((item.UnitTotalFare + increaseOtherFare), 2);
+                    increaseOtherFare += ((increaseZeroCarriage * item.TotalFare) / item.Quantity);
+                    item.UnitTotalFarePreview = (item.UnitTotalFare + increaseOtherFare);
                 }
                 else
                 {
-                    increaseOtherFare += Math.Round((item.CarriagePercent * carriage / 100 / item.Quantity), 2);
-                    item.UnitTotalFarePreview = Math.Round((item.UnitTotalFare + increaseOtherFare), 2);
+                    increaseOtherFare += (item.CarriagePercent * carriage / 100 / item.Quantity);
+                    item.UnitTotalFarePreview = (item.UnitTotalFare + increaseOtherFare);
                 }
+                this.TotalMarkupNonKDV += item.TotalFarePreview;
             }
 
             grdMaterialList.DataSource = null;
             grdMaterialList.DataSource = this.DataSource;
 
-            lblTotalMarkupNonKDV.Text = Math.Round((this.TotalMarkupNonKDV + this.OtherTotalAmount + carriage), 2).ToString("c2");
+            lblTotalMarkupNonKDV.Text = this.TotalMarkupNonKDV.ToString("c2");
 
             TenderProvider.Instance.Save(currentTender);
         }
@@ -317,8 +319,8 @@ namespace IhalematikProUI.Forms
 
         private void ddlCalculateWorkerType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.LoadGrid();
-            this.CalculateFooterInnerValues(null);
+            //this.LoadGrid();
+           // this.CalculateFooterInnerValues(null);
         }
 
         private void frm_TeklifAdimSon_Load(object sender, EventArgs e)
@@ -353,6 +355,11 @@ namespace IhalematikProUI.Forms
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             af.RibonPasif();
             af.btnAdimx3.PerformClick();
+        }
+
+        private void grdMaterialList_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
