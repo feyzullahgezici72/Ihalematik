@@ -28,7 +28,7 @@ namespace IhalematikPro.Forms
         {
             InitializeComponent();
             base.ScreenMethod();
-           
+
         }
         public void LoadGrid()
         {
@@ -64,7 +64,7 @@ namespace IhalematikPro.Forms
             OBFModel model = new OBFModel();
             model.Description = txtDescription.Text;
             int lastTenderNumber = UIOBFManager.Instance.GetLastOBFNumber();
-            model.Number = lastTenderNumber.ToString();
+            model.Number = (lastTenderNumber + 1).ToString();
             model.IsActive = true;
             model.StokNumber = txtNumber.Text;
             model.Unit = txtUnit.Text;
@@ -76,7 +76,7 @@ namespace IhalematikPro.Forms
                 frm_MesajFormu mf = new frm_MesajFormu();
                 mf.lblMesaj.Text = "Bu OBF numarasi ile kayit bulunmaktadir";
                 mf.ShowDialog();
-                this.txtNumber.Text="";
+                this.txtNumber.Text = "";
                 this.txtNumber.Focus();
             }
             else
@@ -91,10 +91,10 @@ namespace IhalematikPro.Forms
         }
         private void FormClear()
         {
-            this.txtNumber.Text="";
-            this.txtDescription.Text="";
-            this.txtUnit.Text="";
-            this.txtUnitPrice.Text="";
+            this.txtNumber.Text = "";
+            this.txtDescription.Text = "";
+            this.txtUnit.Text = "";
+            this.txtUnitPrice.Text = "";
             this.txtNumber.Focus();
         }
         private void btnKapat_Click(object sender, EventArgs e)
@@ -142,10 +142,10 @@ namespace IhalematikPro.Forms
 
         private void btnTemizle_Click(object sender, EventArgs e)
         {
-            txtDescription.Text="";
-            txtNumber.Text="";
-            txtUnit.Text="";
-            txtUnitPrice.Text="";
+            txtDescription.Text = "";
+            txtNumber.Text = "";
+            txtUnit.Text = "";
+            txtUnitPrice.Text = "";
             txtNumber.Focus();
         }
 
