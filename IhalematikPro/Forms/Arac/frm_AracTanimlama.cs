@@ -72,7 +72,7 @@ namespace IhalematikPro.Forms
                 if (rbCompanyVehicle.Checked)
                 {
                     model.IsCompanyVehicle = true;
-                    if (txtFuelOilFare.Text!="")
+                    if (txtFuelOilFare.Text != "")
                     {
                         model.FuelOilFare = double.Parse(txtFuelOilFare.Text.Replace("TL", string.Empty));
                     }
@@ -80,7 +80,7 @@ namespace IhalematikPro.Forms
                     {
                         model.FuelOilFare = 0;
                     }
-                    if (txtFuelOilDay.Text!="")
+                    if (txtFuelOilDay.Text != "")
                     {
                         model.FuelOilDay = float.Parse(txtFuelOilDay.Text.Replace("TL", string.Empty));
                     }
@@ -88,16 +88,16 @@ namespace IhalematikPro.Forms
                     {
                         model.FuelOilDay = 0;
                     }
-                    if (txtDriverFare.Text!="")
+                    if (txtDriverFare.Text != "")
                     {
                         model.DriverFare = double.Parse(txtDriverFare.Text.Replace("TL", string.Empty));
                     }
-                   else
+                    else
                     {
                         model.DriverFare = 0;
                     }
 
-                    if (txtMaintenanceFare.Text!="")
+                    if (txtMaintenanceFare.Text != "")
                     {
                         model.MaintenanceFare = double.Parse(txtMaintenanceFare.Text.Replace("TL", string.Empty));
                     }
@@ -105,7 +105,7 @@ namespace IhalematikPro.Forms
                     {
                         model.MaintenanceFare = 0;
                     }
-                    if (txtServiceFare.Text!="")
+                    if (txtServiceFare.Text != "")
                     {
                         model.ServiceFare = double.Parse(txtServiceFare.Text.Replace("TL", string.Empty));
                     }
@@ -113,7 +113,7 @@ namespace IhalematikPro.Forms
                     {
                         model.ServiceFare = 0;
                     }
-                    if (txtGeneralFare.Text!="")
+                    if (txtGeneralFare.Text != "")
                     {
                         model.GeneralFare = double.Parse(txtGeneralFare.Text.Replace("TL", string.Empty));
                     }
@@ -121,7 +121,7 @@ namespace IhalematikPro.Forms
                     {
                         model.GeneralFare = 0;
                     }
-                    if (txtOtherFare.Text!="")
+                    if (txtOtherFare.Text != "")
                     {
                         model.OtherFare = double.Parse(txtOtherFare.Text.Replace("TL", string.Empty));
                     }
@@ -129,7 +129,7 @@ namespace IhalematikPro.Forms
                     {
                         model.OtherFare = 0;
                     }
-                    
+
                 }
                 else
                 {
@@ -147,7 +147,7 @@ namespace IhalematikPro.Forms
                     {
                         model.RentType = IhalematikProBL.Enum.RentTypesEnum.Month;
                     }
-                    if (txtRentFuelOilFare.Text!="")
+                    if (txtRentFuelOilFare.Text != "")
                     {
                         model.FuelOilFare = double.Parse(txtRentFuelOilFare.Text.Replace("TL", string.Empty));
                     }
@@ -155,7 +155,7 @@ namespace IhalematikPro.Forms
                     {
                         model.FuelOilFare = 0;
                     }
-                    if (txtRentFuelOilDay.Text!="")
+                    if (txtRentFuelOilDay.Text != "")
                     {
                         model.FuelOilDay = float.Parse(txtRentFuelOilDay.Text.Replace("TL", string.Empty));
                     }
@@ -163,7 +163,7 @@ namespace IhalematikPro.Forms
                     {
                         model.FuelOilDay = 0;
                     }
-                    if (txtRentDriverFare.Text!="")
+                    if (txtRentDriverFare.Text != "")
                     {
                         model.DriverFare = double.Parse(txtRentDriverFare.Text.Replace("TL", string.Empty));
                     }
@@ -171,7 +171,7 @@ namespace IhalematikPro.Forms
                     {
                         model.DriverFare = 0;
                     }
-                    if (txtRentFare.Text!="")
+                    if (txtRentFare.Text != "")
                     {
                         model.RentFare = double.Parse(txtRentFare.Text.Replace("TL", string.Empty));
                     }
@@ -179,7 +179,7 @@ namespace IhalematikPro.Forms
                     {
                         model.RentFare = 0;
                     }
-                    if (txtRentGeneralFare.Text!="")
+                    if (txtRentGeneralFare.Text != "")
                     {
                         model.GeneralFare = double.Parse(txtRentGeneralFare.Text.Replace("TL", string.Empty));
                     }
@@ -187,7 +187,7 @@ namespace IhalematikPro.Forms
                     {
                         model.GeneralFare = 0;
                     }
-                    if (txtRentOtherFare.Text!="")
+                    if (txtRentOtherFare.Text != "")
                     {
                         model.OtherFare = double.Parse(txtRentOtherFare.Text.Replace("TL", string.Empty));
                     }
@@ -229,11 +229,11 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            if (rbCompanyVehicle.Checked==true)
+            if (rbCompanyVehicle.Checked == true)
             {
                 txtFuelOilDay.Focus();
             }
-            if (rbAsgariUcret.Checked==true)
+            if (rbAsgariUcret.Checked == true)
             {
                 txtRentFare.Focus();
             }
@@ -319,20 +319,20 @@ namespace IhalematikPro.Forms
             rdDay.Checked = true;
             rdHour.Checked = false;
             rdMonth.Checked = false;
-            txtDriverFare.Text="";
-            txtFuelOilDay.Text="";
-            txtFuelOilFare.Text="";
-            txtGeneralFare.Text="";
-            txtMaintenanceFare.Text="";
-            txtOtherFare.Text="";
-            txtRentDriverFare.Text="";
-            txtRentFare.Text="";
-            txtRentFuelOilDay.Text="";
-            txtRentFuelOilFare.Text="";
-            txtRentGeneralFare.Text="";
-            txtRentOtherFare.Text="";
-            txtServiceFare.Text="";
-            
+            txtDriverFare.Text = "";
+            txtFuelOilDay.Text = "";
+            txtFuelOilFare.Text = "";
+            txtGeneralFare.Text = "";
+            txtMaintenanceFare.Text = "";
+            txtOtherFare.Text = "";
+            txtRentDriverFare.Text = "";
+            txtRentFare.Text = "";
+            txtRentFuelOilDay.Text = "";
+            txtRentFuelOilFare.Text = "";
+            txtRentGeneralFare.Text = "";
+            txtRentOtherFare.Text = "";
+            txtServiceFare.Text = "";
+
         }
 
         private void frm_AracTanimlama_Shown(object sender, EventArgs e)
@@ -358,7 +358,11 @@ namespace IhalematikPro.Forms
         private void LoadVehicleGrid()
         {
             List<Vehicle> items = UIVehicleManager.Instance.GetVehicles();
-            List<VehicleModel> models = IhalematikModelBase.GetModels<VehicleModel, Vehicle>(items); 
+            List<VehicleModel> models = IhalematikModelBase.GetModels<VehicleModel, Vehicle>(items);
+            if (!string.IsNullOrEmpty(txtVehicleTitle.Text.Trim()))
+            {
+                models = models.Where(p => p.Title.Name.Contains(txtVehicleTitle.Text.Trim())).ToList();
+            }
             if (cmbAktivePasive.SelectedIndex == 0)
             {
                 models = models.Where(p => p.IsActive).ToList();
@@ -419,7 +423,7 @@ namespace IhalematikPro.Forms
 
         private void txtOtherFare_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13)
             {
                 btnKaydet.PerformClick();
             }
@@ -427,10 +431,15 @@ namespace IhalematikPro.Forms
 
         private void txtRentOtherFare_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13)
             {
                 btnKaydet.PerformClick();
             }
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            this.LoadVehicleGrid();
         }
     }
 }

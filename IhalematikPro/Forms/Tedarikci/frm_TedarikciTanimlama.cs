@@ -136,6 +136,17 @@ namespace IhalematikProUI.Forms
         {
             List<Supplier> suppliers = SupplierProvider.Instance.GetItems();
             //grdSupplier.DataSource = suppliers;
+
+            if (!string.IsNullOrEmpty(txtSearchCompanyName.Text.Trim()))
+            {
+                suppliers = suppliers.Where(p => p.CompanyName.Contains(txtSearchCompanyName.Text.Trim())).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(txtSearchSupplierSegment.Text.Trim()))
+            {
+                suppliers = suppliers.Where(p => p.SupplierSegmentTexts.Contains(txtSearchSupplierSegment.Text.Trim())).ToList();
+            }
+
             if (suppliers != null && suppliers.Count > 0)
             {
                 foreach (var item in suppliers)
@@ -269,6 +280,16 @@ namespace IhalematikProUI.Forms
         private void checkedComboboxEditSupplierSegments_Closed(object sender, DevExpress.XtraEditors.Controls.ClosedEventArgs e)
         {
             txtCompanyName.Focus();
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            this.LoadGrid();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.LoadGrid();
         }
     }
 }
