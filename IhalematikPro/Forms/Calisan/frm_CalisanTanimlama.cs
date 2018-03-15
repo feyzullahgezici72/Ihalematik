@@ -123,7 +123,10 @@ namespace IhalematikPro.Forms
         public void LoadGrid()
         {
             List<WorkerModel> models = UIWorkerManager.Instance.GetWorkers();
-
+            if (!string.IsNullOrEmpty(txtWorkerTitle.Text.Trim()))
+            {
+                models = models.Where(p => p.Title.Name.Contains(txtWorkerTitle.Text.Trim())).ToList();
+            }
             if (cmbAktivePasive.SelectedIndex == 0)
             {
                 models = models.Where(p => p.IsActive).ToList();
@@ -550,6 +553,11 @@ namespace IhalematikPro.Forms
         private void rbBaseAmount_Click(object sender, EventArgs e)
         {
             txtBaseFare.Focus();
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            this.LoadGrid();
         }
     }
 }
