@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using SimpleApplicationBase.BL.Base;
+using IhalematikPro.Forms;
 
 namespace IhalematikProUI.Forms
 {
@@ -33,8 +34,10 @@ namespace IhalematikProUI.Forms
                 this.tender = value;
             }
         }
-        public frm_IhaleBilgisiDetay()
+        private frm_DevamEdenIhaleListesi _owner = null;
+        public frm_IhaleBilgisiDetay(frm_DevamEdenIhaleListesi Owner)
         {
+            this._owner = Owner;
             InitializeComponent();
         }
 
@@ -75,6 +78,7 @@ namespace IhalematikProUI.Forms
                 if (res.Success)
                 {
                     MessageBox.Show("Ihale bilgileri güncellendi.");
+                    this._owner.LoadGrid();
                 }
                 else
                 {

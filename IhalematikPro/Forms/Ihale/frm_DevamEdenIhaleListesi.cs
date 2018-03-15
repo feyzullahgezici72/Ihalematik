@@ -31,10 +31,14 @@ namespace IhalematikPro.Forms
         }
         private void frm_DevamEdenIhaleListesi_Load(object sender, EventArgs e)
         {
+            this.LoadGrid();
+        }
+
+        public void LoadGrid()
+        {
             List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
             lblRecordCount.Text = list.Count.ToString();
             grdActiveTenderList.DataSource = list.OrderByDescending(p => p.InsertTime).ToList();
-
         }
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -123,7 +127,7 @@ namespace IhalematikPro.Forms
 
         private void btnDetay_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            frm_IhaleBilgisiDetay ibd = new frm_IhaleBilgisiDetay();
+            frm_IhaleBilgisiDetay ibd = new frm_IhaleBilgisiDetay(this);
             ibd.TenderId = (int)gridViewActiveTenderList.GetFocusedRowCellValue("Id");
             ibd.ShowDialog();
         }
