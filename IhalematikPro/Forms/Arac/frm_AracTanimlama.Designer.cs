@@ -98,7 +98,6 @@
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.txtSearchNumber = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -1229,7 +1228,6 @@
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImage")));
-            this.groupControl1.Controls.Add(this.simpleButton2);
             this.groupControl1.Controls.Add(this.txtSearchNumber);
             this.groupControl1.Controls.Add(this.simpleButton3);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -1240,22 +1238,6 @@
             this.groupControl1.Size = new System.Drawing.Size(400, 69);
             this.groupControl1.TabIndex = 29;
             this.groupControl1.Text = "Araç";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Appearance.Options.UseForeColor = true;
-            this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton2.Location = new System.Drawing.Point(297, 35);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(50, 31);
-            this.simpleButton2.TabIndex = 28;
-            this.simpleButton2.Text = "Bul";
-            this.simpleButton2.ToolTip = "Poz Bul";
             // 
             // txtSearchNumber
             // 
@@ -1421,6 +1403,5 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.TextEdit txtSearchNumber;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }
