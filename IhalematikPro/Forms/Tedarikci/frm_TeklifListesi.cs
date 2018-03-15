@@ -150,5 +150,38 @@ namespace IhalematikProUI.Forms
             detay.CurrentOfferId = id;
             detay.ShowDialog();
         }
+
+        private void btnDetail_ButtonClick_1(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridView1.GetFocusedRowCellValue("Id"));
+            frm_TeklifDetayFirma detay = new frm_TeklifDetayFirma();
+            detay.CurrentOfferId = id;
+            detay.ShowDialog();
+        }
+
+        private void btnAc_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridView1.GetFocusedRowCellValue("Id"));
+
+            CurrentManager.Instance.CurrentOffer = OfferProvider.Instance.GetItem(id);
+
+            this.Close();
+            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            af.ribbonPage8.Ribbon.SelectedPage = af.ribbonPage8;
+            // af.barButtonItem14.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
+            af.RibonPasif();
+            if (teklifGonder == null)
+            {
+                teklifGonder = new frm_TedarikcilereTeklifGonder();
+                teklifGonder.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                teklifGonder.FormClosed += new FormClosedEventHandler(TeklifGonder_FormClosed);
+                af.MainPanel.Visible = false;
+                teklifGonder.Show();
+            }
+            else
+            {
+                teklifGonder.Activate();
+            }
+        }
     }
 }
