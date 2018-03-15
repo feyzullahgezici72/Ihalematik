@@ -46,7 +46,6 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtGSM = new DevExpress.XtraEditors.TextEdit();
-            this.txtScore = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.label99 = new DevExpress.XtraEditors.LabelControl();
             this.txtTelephone = new DevExpress.XtraEditors.TextEdit();
@@ -54,6 +53,7 @@
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.txtAddress = new DevExpress.XtraEditors.MemoEdit();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.txtScore = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -63,11 +63,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAuthorNameSurname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCompanyName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGSM.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtScore.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelephone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtScore.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -122,6 +122,7 @@
             this.groupControl2.AppearanceCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl2.Controls.Add(this.txtScore);
             this.groupControl2.Controls.Add(this.checkedComboboxEditSupplierSegments);
             this.groupControl2.Controls.Add(this.btnGuncelle);
             this.groupControl2.Controls.Add(this.labelControl2);
@@ -134,7 +135,6 @@
             this.groupControl2.Controls.Add(this.labelControl6);
             this.groupControl2.Controls.Add(this.labelControl7);
             this.groupControl2.Controls.Add(this.txtGSM);
-            this.groupControl2.Controls.Add(this.txtScore);
             this.groupControl2.Controls.Add(this.labelControl8);
             this.groupControl2.Controls.Add(this.label99);
             this.groupControl2.Controls.Add(this.txtTelephone);
@@ -158,7 +158,7 @@
             this.checkedComboboxEditSupplierSegments.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.checkedComboboxEditSupplierSegments.Size = new System.Drawing.Size(369, 28);
-            this.checkedComboboxEditSupplierSegments.TabIndex = 94;
+            this.checkedComboboxEditSupplierSegments.TabIndex = 0;
             this.checkedComboboxEditSupplierSegments.Closed += new DevExpress.XtraEditors.Controls.ClosedEventHandler(this.checkedComboboxEditSupplierSegments_Closed);
             // 
             // btnGuncelle
@@ -300,19 +300,6 @@
             this.txtGSM.Size = new System.Drawing.Size(224, 26);
             this.txtGSM.TabIndex = 4;
             // 
-            // txtScore
-            // 
-            this.txtScore.EnterMoveNextControl = true;
-            this.txtScore.Location = new System.Drawing.Point(150, 289);
-            this.txtScore.Margin = new System.Windows.Forms.Padding(4);
-            this.txtScore.Name = "txtScore";
-            this.txtScore.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtScore.Properties.Appearance.Options.UseBackColor = true;
-            this.txtScore.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtScore.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtScore.Size = new System.Drawing.Size(82, 26);
-            this.txtScore.TabIndex = 7;
-            // 
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -400,6 +387,23 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
+            // txtScore
+            // 
+            this.txtScore.EnterMoveNextControl = true;
+            this.txtScore.Location = new System.Drawing.Point(150, 290);
+            this.txtScore.Margin = new System.Windows.Forms.Padding(4);
+            this.txtScore.Name = "txtScore";
+            this.txtScore.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtScore.Properties.Appearance.Options.UseBackColor = true;
+            this.txtScore.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtScore.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtScore.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtScore.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtScore.Properties.Mask.EditMask = "n0";
+            this.txtScore.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtScore.Size = new System.Drawing.Size(82, 26);
+            this.txtScore.TabIndex = 7;
+            // 
             // frm_TedarikciGuncelleme
             // 
             this.AcceptButton = this.btnGuncelle;
@@ -430,11 +434,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAuthorNameSurname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCompanyName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGSM.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtScore.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelephone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtScore.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -455,7 +459,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.TextEdit txtGSM;
-        private DevExpress.XtraEditors.TextEdit txtScore;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl label99;
         private DevExpress.XtraEditors.TextEdit txtTelephone;
@@ -465,5 +468,6 @@
         private DevExpress.XtraEditors.SimpleButton btnGuncelle;
         private DevExpress.XtraEditors.CheckedComboBoxEdit checkedComboboxEditSupplierSegments;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
+        private DevExpress.XtraEditors.TextEdit txtScore;
     }
 }
