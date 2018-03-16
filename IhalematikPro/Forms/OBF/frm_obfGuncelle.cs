@@ -48,7 +48,7 @@ namespace IhalematikProUI.Forms
             if (this.CurrentOBF != null)
             {
                 txtDescription.Text = this.CurrentOBF.Description;
-                txtNumber.Text = this.CurrentOBF.Number;
+                txtNumber.Text = this.CurrentOBF.StokNumber;
                 txtUnit.Text = this.CurrentOBF.Unit;
                 //var cultureInfo = new System.Globalization.CultureInfo("tr-TR");
                 txtUnitPrice.Text = this.CurrentOBF.UnitPrice.ToString();
@@ -91,7 +91,9 @@ namespace IhalematikProUI.Forms
             {
                 OBFModel model = new OBFModel(this.currentOBF);
                 model.Description = txtDescription.Text;
-                model.Number = txtNumber.Text;
+                //model.Number = txtNumber.Text;
+                model.StokNumber = txtNumber.Text;
+
                 model.Unit = txtUnit.Text;
                 //double plain = return Double.Parse("$20,000.00", cultureInfo);
                 model.UnitPrice = model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty));
