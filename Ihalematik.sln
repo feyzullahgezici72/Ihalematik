@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IhalematikProUI", "Ihalemat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IhalematikProBL", "IhalematikProBL\IhalematikProBL.csproj", "{0E0BEF73-F7D6-4D3D-A02D-3B4BA085CA6A}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IhalematikSetup", "IhalematikSetup\IhalematikSetup.vdproj", "{0855A2F1-BE19-417C-9A5F-1E223DE04006}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IhalematikLicance", "IhalematikLicance\IhalematikLicance.csproj", "{DDE316EB-06BB-4AD6-8A73-3A1E40DAED30}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IhalematikLicenceAdmin", "IhalematikLicenceAdmin\IhalematikLicenceAdmin.csproj", "{4D0C2393-310F-4F5A-A6D5-F5556B93D4F6}"
@@ -28,8 +26,6 @@ Global
 		{0E0BEF73-F7D6-4D3D-A02D-3B4BA085CA6A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{0E0BEF73-F7D6-4D3D-A02D-3B4BA085CA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E0BEF73-F7D6-4D3D-A02D-3B4BA085CA6A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0855A2F1-BE19-417C-9A5F-1E223DE04006}.Debug|Any CPU.ActiveCfg = Debug
-		{0855A2F1-BE19-417C-9A5F-1E223DE04006}.Release|Any CPU.ActiveCfg = Release
 		{DDE316EB-06BB-4AD6-8A73-3A1E40DAED30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DDE316EB-06BB-4AD6-8A73-3A1E40DAED30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDE316EB-06BB-4AD6-8A73-3A1E40DAED30}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
