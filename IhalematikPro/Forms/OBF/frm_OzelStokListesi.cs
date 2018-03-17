@@ -68,7 +68,8 @@ namespace IhalematikPro.Forms
             model.IsActive = true;
             model.StokNumber = txtNumber.Text;
             model.Unit = txtUnit.Text;
-            model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty), CultureInfo.InvariantCulture);
+            //model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty), CultureInfo.InvariantCulture);
+            model.UnitPrice = model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty));
             model.DescriptionForSupplier = txtDescriptionForSupplier.Text;
             List<OBF> existingOBFs = UIOBFManager.Instance.GetOBF(model.Number);
             if (existingOBFs != null && existingOBFs.Count != 0)
