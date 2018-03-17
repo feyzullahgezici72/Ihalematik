@@ -965,7 +965,7 @@ namespace IhalematikPro.Forms
             // barStaticItem6
             // 
             this.barStaticItem6.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barStaticItem6.Caption = "LifeTree Software CopyRight ©:1996-2017 Tüm hakları Saklıdır.";
+            this.barStaticItem6.Caption = "LifeTree Software CopyRight ©:1996-2018 Tüm hakları Saklıdır.";
             this.barStaticItem6.Id = 14;
             this.barStaticItem6.Name = "barStaticItem6";
             this.barStaticItem6.TextAlignment = System.Drawing.StringAlignment.Near;

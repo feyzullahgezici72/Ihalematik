@@ -22,7 +22,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                if (this.pozOBF == null)
+                if (this.PozOBF == null)
                 {
                     return 0;
                 }

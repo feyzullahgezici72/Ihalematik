@@ -1065,6 +1065,7 @@
             // 
             // txtToplamAracSaat
             // 
+            this.txtToplamAracSaat.Enabled = false;
             this.txtToplamAracSaat.Location = new System.Drawing.Point(164, 92);
             this.txtToplamAracSaat.Margin = new System.Windows.Forms.Padding(4);
             this.txtToplamAracSaat.Name = "txtToplamAracSaat";
@@ -1083,6 +1084,7 @@
             // 
             // txtToplamAdamSaat
             // 
+            this.txtToplamAdamSaat.Enabled = false;
             this.txtToplamAdamSaat.Location = new System.Drawing.Point(164, 58);
             this.txtToplamAdamSaat.Margin = new System.Windows.Forms.Padding(4);
             this.txtToplamAdamSaat.Name = "txtToplamAdamSaat";
