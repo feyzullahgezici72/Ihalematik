@@ -10,14 +10,42 @@ using IhalematikProBL.Entity;
 
 namespace IhalematikLicenceAdmin
 {
-    public partial class Form1 : Form
+    public partial class MusteriOlustur : DevExpress.XtraEditors.XtraForm
     {
-        public Form1()
+        public MusteriOlustur()
         {
             InitializeComponent();
         }
-
         private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private Random random = new Random();
+        public string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
+        private void MusteriOlustur_Load(object sender, EventArgs e)
+        {
+            LoadGrid();
+        }
+
+        private void LoadGrid()
+        {
+            List<License> licenses = LicenseProvider.Instance.GetItems();
+            gridLicense.DataSource = licenses;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnKeyOlustur_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtAuthorNameSurname.Text.Trim()) || string.IsNullOrEmpty(txtCompanyName.Text.Trim()))
             {
@@ -33,26 +61,7 @@ namespace IhalematikLicenceAdmin
             txtSerialNumber.Text = serialNumber;
         }
 
-        private Random random = new Random();
-        public string RandomString(int length)
-        {
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            return new string(Enumerable.Repeat(chars, length)
-              .Select(s => s[random.Next(s.Length)]).ToArray());
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            LoadGrid();
-        }
-
-        private void LoadGrid()
-        {
-            List<License> licenses = LicenseProvider.Instance.GetItems();
-            gridLicense.DataSource = licenses;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnKaydet_Click(object sender, EventArgs e)
         {
             string serialNumber = txtSerialNumber.Text.Replace("-", string.Empty);
             if (string.IsNullOrEmpty(serialNumber))
@@ -63,7 +72,7 @@ namespace IhalematikLicenceAdmin
             string passPhrase = "LifeTreeSoftware!.1";
             Encryption.InitVector = "LifeTreeSoftware";
 
-           
+
             string hashSerialNumber = Encryption.Encrypt(serialNumber, passPhrase);
 
             IhalematikProBL.Entity.License existingLicense = LicenseProvider.Instance.GetOne("HashSerialNumber", serialNumber);
