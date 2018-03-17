@@ -70,7 +70,7 @@ namespace IhalematikProUI.Forms
             {
                 foreach (MaterialListModel item in models)
                 {
-                    materialCostAmount += item.PozOBF.UnitPrice * item.Quantity;
+                    materialCostAmount += item.PozOBFUnitPrice * item.Quantity;
                     materialkdvTotalAmount += item.KDVAmount;
                     workerCostAmount += item.CustomWorkerTotalAmount;
                     markupMaterialAmount += item.UnitMarkup * item.Quantity; ;
@@ -188,7 +188,7 @@ namespace IhalematikProUI.Forms
 
                 this.OtherExpenses();
                 this.LoadGrid();
-                this.CalculateFooterInnerValues(null);
+                //this.CalculateFooterInnerValues(null);
                 //this.CalculateLeftPanelValues();
 
                 colUnitTotalFare.Visible = true;
@@ -238,6 +238,7 @@ namespace IhalematikProUI.Forms
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
 
             this.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+            this.CalculateFooterInnerValues(this.DataSource);
             this.TotalMarkupNonKDV = this.DataSource.Sum(p => p.TotalFare);
             Tender currentTender = CurrentManager.Instance.CurrentTender;
             IhalematikProBL.Entity.Rule provisionalBond = RuleProvider.Instance.GetItems("Code", "ProvisionalBond").FirstOrDefault();
