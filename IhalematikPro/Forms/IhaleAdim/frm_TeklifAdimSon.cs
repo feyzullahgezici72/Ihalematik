@@ -20,6 +20,8 @@ using IhalematikPro.Forms;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms.IhaleAdim;
 using IhalematikProUI.Forms.Genel;
+using IhalematikProBL.Enum;
+using IhalematikProUI.Manager;
 //using IhalematikProUI.Report;
 
 namespace IhalematikProUI.Forms
@@ -188,11 +190,64 @@ namespace IhalematikProUI.Forms
 
                 this.OtherExpenses();
                 this.LoadGrid();
+                this.CalculateMaterialListEquipment();
                 //this.CalculateFooterInnerValues(null);
                 //this.CalculateLeftPanelValues();
 
                 colUnitTotalFare.Visible = true;
                 colTotalFare.Visible = true;
+            }
+        }
+
+        private void CalculateMaterialListEquipment()
+        {
+            List<TenderMaterialListEquipment> items = TenderMaterialListEquipmentProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
+
+            double totalWorkerHour = 0;
+            double totalVehicleHour = 0;
+            double totalHour = 0;
+
+            double dayPerMonthValue = RuleManager.Instance.DayPerMonthValue;
+            double hourPerDayValue = RuleManager.Instance.HourPerDayValue;
+
+            if (items != null && items.Count != 0)
+            {
+                foreach (var item in items)
+                {
+                    switch (item.UnitTimeType)
+                    {
+                        case UnitTimeTypesEnum.Minute:
+                            totalHour += Math.Round(item.UnitTime / 60);
+                            break;
+                        case UnitTimeTypesEnum.Hour:
+                            totalHour += item.UnitTime;
+                            break;
+                        case UnitTimeTypesEnum.Day:
+                            totalHour += Math.Round(item.UnitTime * hourPerDayValue);
+                            break;
+                        case UnitTimeTypesEnum.Week:
+                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * 7);
+                            break;
+                        case UnitTimeTypesEnum.Month:
+                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * dayPerMonthValue);
+                            break;
+                        case UnitTimeTypesEnum.Year:
+                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * dayPerMonthValue * 12);
+                            break;
+                        default:
+                            break;
+                    }
+                    if (item.Equipment.IsWorker)
+                    {
+                        totalWorkerHour += totalHour;
+                    }
+                    else
+                    {
+                        totalVehicleHour += totalHour;
+                    }
+                }
+                txtToplamAdamSaat.Text = totalWorkerHour.ToString();
+                txtToplamAracSaat.Text = totalVehicleHour.ToString();
             }
         }
 
@@ -321,7 +376,7 @@ namespace IhalematikProUI.Forms
         private void ddlCalculateWorkerType_SelectedIndexChanged(object sender, EventArgs e)
         {
             //this.LoadGrid();
-           // this.CalculateFooterInnerValues(null);
+            // this.CalculateFooterInnerValues(null);
         }
 
         private void frm_TeklifAdimSon_Load(object sender, EventArgs e)
