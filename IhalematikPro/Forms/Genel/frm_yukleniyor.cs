@@ -42,7 +42,7 @@ namespace IhalematikProUI.Forms.Genel
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.Close();
+           this.Close();
         }
     }
 }

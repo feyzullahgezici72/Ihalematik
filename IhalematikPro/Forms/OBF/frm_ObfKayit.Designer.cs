@@ -36,7 +36,6 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtNumber = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.timer1 = new System.Windows.Forms.Timer();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.lblGrupName = new DevExpress.XtraEditors.LabelControl();
@@ -100,7 +99,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 35);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1226, 50);
+            this.groupControl2.Size = new System.Drawing.Size(1218, 50);
             this.groupControl2.TabIndex = 31;
             this.groupControl2.Text = "Malzeme Bilgileri";
             // 
@@ -110,7 +109,7 @@
             this.btnBul.Appearance.Options.UseFont = true;
             this.btnBul.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnBul.Image = global::IhalematikProUI.Properties.Resources.search_icon__4_;
-            this.btnBul.Location = new System.Drawing.Point(990, 0);
+            this.btnBul.Location = new System.Drawing.Point(982, 0);
             this.btnBul.Margin = new System.Windows.Forms.Padding(4);
             this.btnBul.Name = "btnBul";
             this.btnBul.Size = new System.Drawing.Size(116, 50);
@@ -124,7 +123,7 @@
             this.btnEkle.Appearance.Options.UseFont = true;
             this.btnEkle.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEkle.Image = global::IhalematikProUI.Properties.Resources.Button_Add_icon__1_;
-            this.btnEkle.Location = new System.Drawing.Point(1106, 0);
+            this.btnEkle.Location = new System.Drawing.Point(1098, 0);
             this.btnEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(120, 50);
@@ -188,10 +187,6 @@
             this.labelControl2.TabIndex = 97;
             this.labelControl2.Text = "ÖBF Kodu:";
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 10;
-            // 
             // panelControl1
             // 
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
@@ -203,7 +198,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1226, 35);
+            this.panelControl1.Size = new System.Drawing.Size(1218, 35);
             this.panelControl1.TabIndex = 30;
             // 
             // panelControl2
@@ -219,7 +214,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1226, 35);
+            this.panelControl2.Size = new System.Drawing.Size(1218, 35);
             this.panelControl2.TabIndex = 2;
             // 
             // lblGrupName
@@ -255,7 +250,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1198, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1190, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -276,7 +271,7 @@
             this.groupControl1.Location = new System.Drawing.Point(0, 85);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1226, 251);
+            this.groupControl1.Size = new System.Drawing.Size(1218, 251);
             this.groupControl1.TabIndex = 32;
             this.groupControl1.Text = "ÖBF Malzeme Listesi";
             // 
@@ -288,7 +283,7 @@
             this.grdOBFList.MainView = this.gridView1;
             this.grdOBFList.Margin = new System.Windows.Forms.Padding(4);
             this.grdOBFList.Name = "grdOBFList";
-            this.grdOBFList.Size = new System.Drawing.Size(1226, 251);
+            this.grdOBFList.Size = new System.Drawing.Size(1218, 251);
             this.grdOBFList.TabIndex = 0;
             this.grdOBFList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -536,7 +531,7 @@
             this.groupControl3.Location = new System.Drawing.Point(0, 336);
             this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1226, 373);
+            this.groupControl3.Size = new System.Drawing.Size(1218, 365);
             this.groupControl3.TabIndex = 33;
             this.groupControl3.Text = "Eklenen Malzemeler";
             // 
@@ -548,7 +543,7 @@
             this.grdAddedOBF.MainView = this.gridView2;
             this.grdAddedOBF.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddedOBF.Name = "grdAddedOBF";
-            this.grdAddedOBF.Size = new System.Drawing.Size(1106, 373);
+            this.grdAddedOBF.Size = new System.Drawing.Size(1098, 365);
             this.grdAddedOBF.TabIndex = 0;
             this.grdAddedOBF.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -800,7 +795,7 @@
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(120, 373);
+            this.panelControl3.Size = new System.Drawing.Size(120, 365);
             this.panelControl3.TabIndex = 0;
             // 
             // simpleButton3
@@ -842,7 +837,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(1226, 709);
+            this.ClientSize = new System.Drawing.Size(1218, 701);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl1);
@@ -856,6 +851,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ÖBF\'Lİ MALZEMELER";
+            this.Load += new System.EventHandler(this.frm_ObfKayit_Load);
             this.Shown += new System.EventHandler(this.frm_ObfKayit_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
@@ -884,7 +880,6 @@
 
         #endregion
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.TextEdit txtNumber;
         private DevExpress.XtraEditors.LabelControl labelControl2;
