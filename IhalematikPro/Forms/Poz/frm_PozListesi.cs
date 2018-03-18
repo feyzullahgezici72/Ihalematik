@@ -141,11 +141,11 @@ namespace IhalematikPro.Forms
         {
             frm_yukleniyor yukle = new frm_yukleniyor();
             yukle.ShowDialog();
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
+            //Stopwatch stopWatch = new Stopwatch();
+            //stopWatch.Start();
             LoadGrid();
-            stopWatch.Stop();
-            TimeSpan ts = stopWatch.Elapsed;
+            //stopWatch.Stop();
+            //TimeSpan ts = stopWatch.Elapsed;
             grdPozList.Show();
         }
         public bool IsEmptyKontrol()
@@ -216,6 +216,8 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            frm_yukleniyor yukle = new frm_yukleniyor();
+            yukle.ShowDialog();
             string pozNo = txtSearchNumber.Text.Trim();
             string pozDesc = txtSearchDescription.Text.Trim();
             List<Poz> items = new List<Poz>();
@@ -241,10 +243,13 @@ namespace IhalematikPro.Forms
             grdPozList.DataSource = null;
             grdPozList.DataSource = items;
             lblRecordCount.Text = items.Count.ToString();
+            txtSearchNumber.Focus();
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
+            frm_yukleniyor yukle = new frm_yukleniyor();
+            yukle.ShowDialog();
             string pozNo = txtSearchNumber.Text.Trim();
             string pozDesc = txtSearchDescription.Text.Trim();
             List<Poz> items = new List<Poz>();
@@ -270,6 +275,22 @@ namespace IhalematikPro.Forms
             grdPozList.DataSource = null;
             grdPozList.DataSource = items;
             lblRecordCount.Text = items.Count.ToString();
+        }
+
+        private void txtSearchNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                simpleButton1.PerformClick();
+            }
+        }
+
+        private void txtSearchDescription_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                simpleButton2.PerformClick();
+            }
         }
     }
     

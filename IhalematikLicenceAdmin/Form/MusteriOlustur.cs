@@ -103,5 +103,10 @@ namespace IhalematikLicenceAdmin
                 this.LoadGrid();
             }
         }
+
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

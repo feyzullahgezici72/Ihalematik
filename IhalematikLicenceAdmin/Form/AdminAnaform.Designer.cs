@@ -36,7 +36,14 @@
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.mainPanel = new DevExpress.XtraEditors.PanelControl();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainPanel)).BeginInit();
+            this.mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -53,9 +60,10 @@
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
+            this.ribbon.ShowToolbarCustomizeItem = false;
             this.ribbon.Size = new System.Drawing.Size(1574, 202);
             this.ribbon.StatusBar = this.ribbonStatusBar;
+            this.ribbon.Toolbar.ShowCustomizeItem = false;
             // 
             // btnBayi
             // 
@@ -105,11 +113,49 @@
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(1574, 43);
             // 
+            // mainPanel
+            // 
+            this.mainPanel.Appearance.BackColor = System.Drawing.Color.White;
+            this.mainPanel.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.mainPanel.Appearance.Options.UseBackColor = true;
+            this.mainPanel.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.mainPanel.Controls.Add(this.picLogo);
+            this.mainPanel.Controls.Add(this.panelControl4);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 202);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1574, 481);
+            this.mainPanel.TabIndex = 3;
+            // 
+            // picLogo
+            // 
+            this.picLogo.Image = global::IhalematikLicenceAdmin.Properties.Resources.prg_logo;
+            this.picLogo.Location = new System.Drawing.Point(676, 238);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(372, 211);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 3;
+            this.picLogo.TabStop = false;
+            // 
+            // panelControl4
+            // 
+            this.panelControl4.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl4.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.panelControl4.Appearance.Options.UseBackColor = true;
+            this.panelControl4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelControl4.ContentImageAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl4.Location = new System.Drawing.Point(0, 0);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(1574, 28);
+            this.panelControl4.TabIndex = 2;
+            // 
             // AdminAnaform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1574, 726);
+            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;
@@ -119,7 +165,12 @@
             this.Text = "LifeTree Software Ltd.";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AdminAnaform_Load);
+            this.Shown += new System.EventHandler(this.AdminAnaform_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainPanel)).EndInit();
+            this.mainPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,5 +185,8 @@
         private DevExpress.XtraBars.BarButtonItem btnBayi;
         private DevExpress.XtraBars.BarButtonItem btnMusteri;
         private DevExpress.XtraBars.BarButtonItem btnBayiListesi;
+        private DevExpress.XtraEditors.PanelControl mainPanel;
+        public System.Windows.Forms.PictureBox picLogo;
+        private DevExpress.XtraEditors.PanelControl panelControl4;
     }
 }

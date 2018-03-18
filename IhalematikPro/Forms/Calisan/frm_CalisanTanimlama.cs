@@ -427,8 +427,9 @@ namespace IhalematikPro.Forms
             txtStampTaxFare.Text = "";
             txtTravelFare.Text = "";
             txtWorklesFonFare.Text = "";
-
+            
         }
+
 
         private void ddlTitles_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -526,9 +527,17 @@ namespace IhalematikPro.Forms
 
         private void txtBaseFare_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13 && rbNormal.Checked == true)
             {
                 txtAGI.Focus();
+            }
+            if (e.KeyChar == 13 && rbAsgariUcret.Checked == true)
+            {
+                txtAGI.Focus();
+            }
+            if (e.KeyChar == 13 && rbBaseAmount.Checked == true)
+            {
+                btnKaydet.Focus();
             }
         }
 
@@ -558,6 +567,15 @@ namespace IhalematikPro.Forms
         private void simpleButton3_Click(object sender, EventArgs e)
         {
             this.LoadGrid();
+            txtWorkerTitle.Focus();
+        }
+
+        private void txtWorkerTitle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                simpleButton3.PerformClick();
+            }
         }
     }
 }

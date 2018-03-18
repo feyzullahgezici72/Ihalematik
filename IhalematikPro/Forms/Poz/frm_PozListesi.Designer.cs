@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PozListesi));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -74,7 +73,7 @@
             this.cmbAktivePasive = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -679,6 +678,7 @@
             this.txtSearchDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSearchDescription.Size = new System.Drawing.Size(422, 26);
             this.txtSearchDescription.TabIndex = 1;
+            this.txtSearchDescription.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchDescription_KeyPress);
             // 
             // txtSearchNumber
             // 
@@ -693,6 +693,7 @@
             this.txtSearchNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSearchNumber.Size = new System.Drawing.Size(192, 26);
             this.txtSearchNumber.TabIndex = 0;
+            this.txtSearchNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchNumber_KeyPress);
             // 
             // panelControl2
             // 
@@ -729,10 +730,10 @@
             this.simpleButton2.Appearance.Options.UseForeColor = true;
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton2.Location = new System.Drawing.Point(431, 35);
+            this.simpleButton2.Location = new System.Drawing.Point(431, 33);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(50, 31);
+            this.simpleButton2.Size = new System.Drawing.Size(50, 33);
             this.simpleButton2.TabIndex = 28;
             this.simpleButton2.Text = "Bul";
             this.simpleButton2.ToolTip = "Poz Bul";
@@ -762,10 +763,10 @@
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton1.Location = new System.Drawing.Point(199, 35);
+            this.simpleButton1.Location = new System.Drawing.Point(199, 33);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(50, 31);
+            this.simpleButton1.Size = new System.Drawing.Size(50, 33);
             this.simpleButton1.TabIndex = 27;
             this.simpleButton1.Text = "Bul";
             this.simpleButton1.ToolTip = "Poz Bul";
@@ -789,7 +790,7 @@
             this.ddlTitles.EditValue = "2017 Pozları Tüm Kurumlar";
             this.ddlTitles.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.ddlTitles, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.ddlTitles.Location = new System.Drawing.Point(3, 35);
+            this.ddlTitles.Location = new System.Drawing.Point(3, 33);
             this.ddlTitles.Margin = new System.Windows.Forms.Padding(4);
             this.ddlTitles.Name = "ddlTitles";
             this.ddlTitles.Properties.AccessibleDescription = "Name";
@@ -802,7 +803,7 @@
             "2017 Pozları Tüm Kurumlar",
             "2018 Pozları Tüm Kurumlar"});
             this.ddlTitles.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.ddlTitles.Size = new System.Drawing.Size(254, 28);
+            this.ddlTitles.Size = new System.Drawing.Size(254, 26);
             this.ddlTitles.TabIndex = 30;
             // 
             // statusPanel

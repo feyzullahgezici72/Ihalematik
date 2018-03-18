@@ -163,6 +163,7 @@ namespace IhalematikPro.Forms
 
             grdActiveTenderList.DataSource = list.OrderByDescending(p => p.InsertTime).ToList();
             lblRecordCount.Text = list.Count.ToString();
+            txtTenderDescription.Focus();
         }
 
         private void simpleButton2_Click_1(object sender, EventArgs e)
@@ -196,6 +197,23 @@ namespace IhalematikPro.Forms
 
             grdActiveTenderList.DataSource = list.OrderByDescending(p => p.InsertTime).ToList();
             lblRecordCount.Text = list.Count.ToString();
+            txtTenderNumber.Focus();
+        }
+
+        private void txtTenderNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                simpleButton2.PerformClick();
+            }
+        }
+
+        private void txtTenderDescription_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                simpleButton1.PerformClick();
+            }
         }
     }
 }

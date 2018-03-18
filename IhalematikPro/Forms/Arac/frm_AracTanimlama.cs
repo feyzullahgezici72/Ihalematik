@@ -440,6 +440,15 @@ namespace IhalematikPro.Forms
         private void simpleButton3_Click(object sender, EventArgs e)
         {
             this.LoadVehicleGrid();
+            txtVehicleTitle.Focus();
+        }
+
+        private void txtVehicleTitle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                simpleButton3.PerformClick();
+            }
         }
     }
 }

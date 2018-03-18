@@ -267,5 +267,13 @@ namespace IhalematikPro.Forms
                 btnBul.PerformClick();
             }
         }
+
+        private void txtDescription_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                btnBul.PerformClick();
+            }
+        }
     }
 }

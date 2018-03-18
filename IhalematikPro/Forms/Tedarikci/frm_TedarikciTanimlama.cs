@@ -285,11 +285,29 @@ namespace IhalematikProUI.Forms
         private void simpleButton3_Click(object sender, EventArgs e)
         {
             this.LoadGrid();
+            txtSearchCompanyName.Focus();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             this.LoadGrid();
+            txtSearchSupplierSegment.Focus();
+        }
+
+        private void txtSearchCompanyName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                simpleButton3.PerformClick();
+            }
+        }
+
+        private void txtSearchSupplierSegment_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                simpleButton1.PerformClick();
+            }
         }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
@@ -86,7 +85,7 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.txtSearchNumber = new DevExpress.XtraEditors.TextEdit();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).BeginInit();
@@ -255,11 +254,11 @@
             // 
             this.panelControl3.Controls.Add(this.memoEdit1);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl3.Location = new System.Drawing.Point(3, 35);
+            this.panelControl3.Location = new System.Drawing.Point(3, 30);
             this.panelControl3.LookAndFeel.SkinName = "Dark Side";
             this.panelControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(384, 73);
+            this.panelControl3.Size = new System.Drawing.Size(384, 78);
             this.panelControl3.TabIndex = 1;
             // 
             // memoEdit1
@@ -272,18 +271,18 @@
             this.memoEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.memoEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.memoEdit1.Properties.ReadOnly = true;
-            this.memoEdit1.Size = new System.Drawing.Size(378, 67);
+            this.memoEdit1.Size = new System.Drawing.Size(378, 72);
             this.memoEdit1.TabIndex = 2;
             // 
             // simpleButton2
             // 
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(387, 35);
+            this.simpleButton2.Location = new System.Drawing.Point(387, 30);
             this.simpleButton2.LookAndFeel.SkinName = "London Liquid Sky";
             this.simpleButton2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(130, 73);
+            this.simpleButton2.Size = new System.Drawing.Size(130, 78);
             this.simpleButton2.TabIndex = 0;
             this.simpleButton2.Text = "Ekle";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -900,6 +899,7 @@
             this.txtSearchDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSearchDescription.Size = new System.Drawing.Size(422, 26);
             this.txtSearchDescription.TabIndex = 1;
+            this.txtSearchDescription.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchDescription_KeyPress);
             // 
             // simpleButton1
             // 
@@ -909,12 +909,12 @@
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton1.Location = new System.Drawing.Point(435, 35);
+            this.simpleButton1.Location = new System.Drawing.Point(435, 33);
             this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
             this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(50, 31);
+            this.simpleButton1.Size = new System.Drawing.Size(50, 33);
             this.simpleButton1.TabIndex = 26;
             this.simpleButton1.Text = "Bul";
             this.simpleButton1.ToolTip = "Malzeme Bul";
@@ -944,12 +944,12 @@
             this.simpleButton3.Appearance.Options.UseForeColor = true;
             this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton3.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton3.Location = new System.Drawing.Point(199, 35);
+            this.simpleButton3.Location = new System.Drawing.Point(199, 33);
             this.simpleButton3.LookAndFeel.SkinName = "London Liquid Sky";
             this.simpleButton3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(50, 31);
+            this.simpleButton3.Size = new System.Drawing.Size(50, 33);
             this.simpleButton3.TabIndex = 27;
             this.simpleButton3.Text = "Bul";
             this.simpleButton3.ToolTip = "Malzeme Bul";
@@ -967,6 +967,7 @@
             this.txtSearchNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSearchNumber.Size = new System.Drawing.Size(184, 26);
             this.txtSearchNumber.TabIndex = 0;
+            this.txtSearchNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchNumber_KeyPress);
             // 
             // dxErrorProvider1
             // 

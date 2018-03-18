@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Calisan_Guncelleme));
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
@@ -66,7 +65,7 @@
             this.txtFoodFare = new DevExpress.XtraEditors.TextEdit();
             this.ddlTitles = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -234,7 +233,7 @@
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(130, 55);
-            this.btnGuncelle.TabIndex = 24;
+            this.btnGuncelle.TabIndex = 1;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
@@ -415,6 +414,7 @@
             this.txtExtraFare.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtExtraFare.Size = new System.Drawing.Size(224, 26);
             this.txtExtraFare.TabIndex = 10;
+            this.txtExtraFare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExtraFare_KeyPress);
             // 
             // labelControl13
             // 
@@ -657,7 +657,7 @@
             this.ddlTitles.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.ddlTitles.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ddlTitles.Size = new System.Drawing.Size(267, 28);
+            this.ddlTitles.Size = new System.Drawing.Size(267, 26);
             this.ddlTitles.TabIndex = 0;
             // 
             // labelControl3

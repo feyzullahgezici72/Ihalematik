@@ -251,6 +251,7 @@ namespace IhalematikPro.Forms
             grdOBFList.DataSource = null;
             grdOBFList.DataSource = items;
             lblRecordCount.Text = items.Count.ToString();
+            txtSearchDescription.Focus();
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -292,6 +293,24 @@ namespace IhalematikPro.Forms
             grdOBFList.DataSource = null;
             grdOBFList.DataSource = items;
             lblRecordCount.Text = items.Count.ToString();
+            txtSearchNumber.Focus();
+        }
+
+        private void txtSearchNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                simpleButton3.PerformClick();
+            }
+        }
+
+        private void txtSearchDescription_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                simpleButton1.PerformClick();
+
+            }
         }
     }
 }

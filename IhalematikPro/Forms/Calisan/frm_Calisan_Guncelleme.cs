@@ -289,9 +289,17 @@ namespace IhalematikProUI.Forms
 
         private void txtBaseFare_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 13)
+            if (e.KeyChar == 13 && rbNormal.Checked==true)
             {
                 txtAGI.Focus();
+            }
+            if (e.KeyChar == 13 && rbAsgariUcret.Checked == true)
+            {
+                txtAGI.Focus();
+            }
+            if (e.KeyChar == 13 && rbNetSalary.Checked == true)
+            {
+                btnGuncelle.Focus();
             }
         }
 
@@ -308,6 +316,14 @@ namespace IhalematikProUI.Forms
         private void rbNetSalary_Click(object sender, EventArgs e)
         {
             txtBaseFare.Focus();
+        }
+
+        private void txtExtraFare_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            {
+                btnGuncelle.Focus();
+            }
         }
     }
 }
