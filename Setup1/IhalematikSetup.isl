@@ -340,10 +340,6 @@
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{04DBFAAA-AA96-476B-B7F2-FEC28A672A0F}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{9F61B614-A202-496A-9242-75C2BF95EA48}</td><td>EMAILFILE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{E8A0A86E-9142-44D5-A1E1-EC16D8C42D74}</td><td>IMAGES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{02BCA606-9686-4B5B-985B-5AA2E893DAF0}</td><td>LOGO</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{8F92AF11-5EDF-4DEC-96E6-ED62EED2A73A}</td><td>SENTFILE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{1D26DC22-7B78-4257-ABEE-E640F7DACC44}</td><td>MyPicturesFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IhalematikProUI.exe</td><td>{EDCC7D79-25E4-4C77-BFFC-D9C500E3C0B6}</td><td>INSTALLDIR</td><td>2</td><td/><td>ihalematikproui.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
@@ -1054,18 +1050,10 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
-		<row><td>EMAILFILE</td><td>ISX_DEFAULTCOMPONENT1</td></row>
-		<row><td>IMAGES</td><td>ISX_DEFAULTCOMPONENT2</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT1</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT2</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT3</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT4</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT5</td></row>
 		<row><td>INSTALLDIR</td><td>IhalematikProUI.exe</td></row>
-		<row><td>LOGO</td><td>ISX_DEFAULTCOMPONENT3</td></row>
 		<row><td>MyPicturesFolder</td><td>ISX_DEFAULTCOMPONENT5</td></row>
-		<row><td>SENTFILE</td><td>ISX_DEFAULTCOMPONENT4</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1152,18 +1140,15 @@
 		<row><td>CommonFilesFolder</td><td>TARGETDIR</td><td>.:Common</td><td/><td>0</td><td/></row>
 		<row><td>DATABASEDIR</td><td>ISYourDataBaseDir</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>DesktopFolder</td><td>TARGETDIR</td><td>.:Desktop</td><td/><td>3</td><td/></row>
-		<row><td>EMAILFILE</td><td>INSTALLDIR</td><td>EMAILF~1|EmailFile</td><td/><td>0</td><td/></row>
 		<row><td>FavoritesFolder</td><td>TARGETDIR</td><td>.:FAVORI~1|Favorites</td><td/><td>0</td><td/></row>
 		<row><td>FontsFolder</td><td>TARGETDIR</td><td>.:Fonts</td><td/><td>0</td><td/></row>
 		<row><td>GlobalAssemblyCache</td><td>TARGETDIR</td><td>.:Global~1|GlobalAssemblyCache</td><td/><td>0</td><td/></row>
 		<row><td>IHALEMATIK</td><td>ProgramFilesFolder</td><td>IHALEM~1|ihalematik</td><td/><td>0</td><td/></row>
-		<row><td>IMAGES</td><td>EMAILFILE</td><td>Images</td><td/><td>0</td><td/></row>
 		<row><td>INSTALLDIR</td><td>IHALEMATIK</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>ISCommonFilesFolder</td><td>CommonFilesFolder</td><td>Instal~1|InstallShield</td><td/><td>0</td><td/></row>
 		<row><td>ISMyCompanyDir</td><td>ProgramFilesFolder</td><td>MYCOMP~1|My Company Name</td><td/><td>0</td><td/></row>
 		<row><td>ISMyProductDir</td><td>ISMyCompanyDir</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
 		<row><td>ISYourDataBaseDir</td><td>INSTALLDIR</td><td>Database</td><td/><td>0</td><td/></row>
-		<row><td>LOGO</td><td>IMAGES</td><td>Logo</td><td/><td>0</td><td/></row>
 		<row><td>LocalAppDataFolder</td><td>TARGETDIR</td><td>.:LocalA~1|LocalAppData</td><td/><td>0</td><td/></row>
 		<row><td>MY_PRODUCT_NAME</td><td>IHALEMATIK</td><td>IHALEM~1|ihalematik</td><td/><td>0</td><td/></row>
 		<row><td>MyPicturesFolder</td><td>TARGETDIR</td><td>.:MyPict~1|MyPictures</td><td/><td>0</td><td/></row>
@@ -1175,7 +1160,6 @@
 		<row><td>ProgramFilesFolder</td><td>TARGETDIR</td><td>.:PROGRA~1|program files</td><td/><td>0</td><td/></row>
 		<row><td>ProgramMenuFolder</td><td>TARGETDIR</td><td>.:Programs</td><td/><td>3</td><td/></row>
 		<row><td>RecentFolder</td><td>TARGETDIR</td><td>.:Recent</td><td/><td>0</td><td/></row>
-		<row><td>SENTFILE</td><td>EMAILFILE</td><td>SentFile</td><td/><td>0</td><td/></row>
 		<row><td>SendToFolder</td><td>TARGETDIR</td><td>.:SendTo</td><td/><td>3</td><td/></row>
 		<row><td>StartMenuFolder</td><td>TARGETDIR</td><td>.:STARTM~1|Start Menu</td><td/><td>3</td><td/></row>
 		<row><td>StartupFolder</td><td>TARGETDIR</td><td>.:StartUp</td><td/><td>3</td><td/></row>
@@ -1882,10 +1866,6 @@
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT2</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT3</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT4</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT5</td></row>
 		<row><td>AlwaysInstall</td><td>IhalematikProUI.exe</td></row>
 	</table>
@@ -1902,36 +1882,8 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>_51eb7ba_7f38_4642_a4dd_0f87</td><td>ISX_DEFAULTCOMPONENT3</td><td>351EB7~1.JPG|351eb7ba-7f38-4642-a4dd-0f87a91e933eash_Logo.JPG</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\Images\Logo\351eb7ba-7f38-4642-a4dd-0f87a91e933eash_Logo.JPG</td><td>1</td><td/></row>
-		<row><td>_5ea06c3_8805_4e8d_a16e_acdb</td><td>ISX_DEFAULTCOMPONENT3</td><td>75EA06~1.JPG|75ea06c3-8805-4e8d-a16e-acdb242a8510ash_Logo.JPG</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\Images\Logo\75ea06c3-8805-4e8d-a16e-acdb242a8510ash_Logo.JPG</td><td>1</td><td/></row>
-		<row><td>_71a1500_5e6f_4c76_9298_2e83</td><td>ISX_DEFAULTCOMPONENT3</td><td>371A15~1.JPE|371a1500-5e6f-4c76-9298-2e8302a6ec6fimage1.jpeg</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\Images\Logo\371a1500-5e6f-4c76-9298-2e8302a6ec6fimage1.jpeg</td><td>1</td><td/></row>
-		<row><td>__16.12.2017a93a90fa_57bc_45</td><td>ISX_DEFAULTCOMPONENT4</td><td>~$1612~1.XLS|~$16.12.2017a93a90fa-57bc-45f9-a672-89ca73f1f706-abc elektronik 1-Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\SentFile\~$16.12.2017a93a90fa-57bc-45f9-a672-89ca73f1f706-abc elektronik 1-Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
-		<row><td>__22112017da79828b_c272_4a2c</td><td>ISX_DEFAULTCOMPONENT4</td><td>~$2211~1.XLS|~$22112017da79828b-c272-4a2c-a0af-43cb280f1b9b-abc elektronik 1-Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\SentFile\~$22112017da79828b-c272-4a2c-a0af-43cb280f1b9b-abc elektronik 1-Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
-		<row><td>_dc16008_27ef_4d86_abda_5fcb</td><td>ISX_DEFAULTCOMPONENT3</td><td>9DC160~1.JPG|9dc16008-27ef-4d86-abda-5fcb77360ae0avcu.JPG</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\Images\Logo\9dc16008-27ef-4d86-abda-5fcb77360ae0avcu.JPG</td><td>1</td><td/></row>
-		<row><td>_f2f14ae_3a64_4ad7_9394_e8c0</td><td>ISX_DEFAULTCOMPONENT3</td><td>3F2F14~1.JPG|3f2f14ae-3a64-4ad7-9394-e8c0bd3424aeash_Logo.JPG</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\Images\Logo\3f2f14ae-3a64-4ad7-9394-e8c0bd3424aeash_Logo.JPG</td><td>1</td><td/></row>
-		<row><td>_f30efa3_36f3_4569_8c1d_e1a6</td><td>ISX_DEFAULTCOMPONENT3</td><td>1F30EF~1.JPG|1f30efa3-36f3-4569-8c1d-e1a6536e76dfavcu.JPG</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\Images\Logo\1f30efa3-36f3-4569-8c1d-e1a6536e76dfavcu.JPG</td><td>1</td><td/></row>
-		<row><td>_mer_elektrik_1.03.2018_malz</td><td>ISX_DEFAULTCOMPONENT4</td><td>MERELE~1.XLS|ömer elektrik-1.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\SentFile\ömer elektrik-1.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
-		<row><td>_zt_rk_ticaret_16.03.2018_ma</td><td>ISX_DEFAULTCOMPONENT4</td><td>ZTRKTI~1.XLS|Öztürk Ticaret-16.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\SentFile\Öztürk Ticaret-16.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
-		<row><td>a47828bd_055d_4102_99e8_7a97</td><td>ISX_DEFAULTCOMPONENT3</td><td>A47828~1.JPG|a47828bd-055d-4102-99e8-7a97f6a257a0ash_Logo.JPG</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\Images\Logo\a47828bd-055d-4102-99e8-7a97f6a257a0ash_Logo.JPG</td><td>1</td><td/></row>
-		<row><td>c7bcb0c4_d505_456e_a9da_b71a</td><td>ISX_DEFAULTCOMPONENT3</td><td>C7BCB0~1.JPG|c7bcb0c4-d505-456e-a9da-b71a40327c27avcu.JPG</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\Images\Logo\c7bcb0c4-d505-456e-a9da-b71a40327c27avcu.JPG</td><td>1</td><td/></row>
-		<row><td>cc1d7023_4aec_46e3_a7e0_9079</td><td>ISX_DEFAULTCOMPONENT3</td><td>CC1D70~1.JPG|cc1d7023-4aec-46e3-a7e0-90790616f4d0life4.JPG</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\Images\Logo\cc1d7023-4aec-46e3-a7e0-90790616f4d0life4.JPG</td><td>1</td><td/></row>
-		<row><td>ccfb22bb_dc7d_4ca0_a814_59e4</td><td>ISX_DEFAULTCOMPONENT3</td><td>CCFB22~1.PNG|ccfb22bb-dc7d-4ca0-a814-59e4bb47dac7ash.PNG</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\Images\Logo\ccfb22bb-dc7d-4ca0-a814-59e4bb47dac7ash.PNG</td><td>1</td><td/></row>
-		<row><td>d9652dc3_6eae_4a82_b7d6_95ac</td><td>ISX_DEFAULTCOMPONENT3</td><td>D9652D~1.JPG|d9652dc3-6eae-4a82-b7d6-95ac87c58528ash_Logo.JPG</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\Images\Logo\d9652dc3-6eae-4a82-b7d6-95ac87c58528ash_Logo.JPG</td><td>1</td><td/></row>
-		<row><td>ed8e29c5_6144_4ed8_8c0a_bd52</td><td>ISX_DEFAULTCOMPONENT3</td><td>ED8E29~1.JPG|ed8e29c5-6144-4ed8-8c0a-bd52e048081cash_Logo.JPG</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\Images\Logo\ed8e29c5-6144-4ed8-8c0a-bd52e048081cash_Logo.JPG</td><td>1</td><td/></row>
-		<row><td>emin_elektrik_6.03.2018_malz</td><td>ISX_DEFAULTCOMPONENT4</td><td>EMINEL~1.XLS|emin elektrik-6.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\SentFile\emin elektrik-6.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
-		<row><td>emin_elektrik_7.03.2018_malz</td><td>ISX_DEFAULTCOMPONENT4</td><td>EMINEL~1.XLS|emin elektrik-7.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\SentFile\emin elektrik-7.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
-		<row><td>emin_elektrik_9.03.2018_malz</td><td>ISX_DEFAULTCOMPONENT4</td><td>EMINEL~1.XLS|emin elektrik-9.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\SentFile\emin elektrik-9.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
-		<row><td>entes_elektrik_10.03.2018_ma</td><td>ISX_DEFAULTCOMPONENT4</td><td>ENTESE~1.XLS|Entes Elektrik-10.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\SentFile\Entes Elektrik-10.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
-		<row><td>entes_elektrik_11.03.2018_ma</td><td>ISX_DEFAULTCOMPONENT4</td><td>ENTESE~1.XLS|Entes Elektrik-11.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\SentFile\Entes Elektrik-11.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
 		<row><td>ihalematikproui.exe</td><td>IhalematikProUI.exe</td><td>IHALEM~1.EXE|IhalematikProUI.exe</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\bin\Debug\IhalematikProUI.exe</td><td>1</td><td/></row>
 		<row><td>ihalematikproui.exe.config</td><td>ISX_DEFAULTCOMPONENT</td><td>IHALEM~1.CON|IhalematikProUI.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\bin\Debug\IhalematikProUI.exe.config</td><td>1</td><td/></row>
-		<row><td>imaj_bilgisayar_3.03.2018_ma</td><td>ISX_DEFAULTCOMPONENT4</td><td>IMAJBI~1.XLS|imaj bilgisayar-3.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\SentFile\imaj bilgisayar-3.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
-		<row><td>malzeme_fiyat_listesi.xlsx</td><td>ISX_DEFAULTCOMPONENT1</td><td>MALZEM~1.XLS|Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
-		<row><td>saskom_3.03.2018_malzeme_fiy</td><td>ISX_DEFAULTCOMPONENT4</td><td>SASKOM~1.XLS|saskom-3.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\SentFile\saskom-3.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
-		<row><td>saskom_hurdavat_6.03.2018_ma</td><td>ISX_DEFAULTCOMPONENT4</td><td>SASKOM~1.XLS|saskom hurdavat-6.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\SentFile\saskom hurdavat-6.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
-		<row><td>saskom_ltd_14.03.2018_malzem</td><td>ISX_DEFAULTCOMPONENT4</td><td>SASKOM~1.XLS|saskom ltd-14.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\SentFile\saskom ltd-14.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
-		<row><td>simens_6.03.2018_malzeme_fiy</td><td>ISX_DEFAULTCOMPONENT4</td><td>SIMENS~1.XLS|Simens-6.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\SentFile\Simens-6.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
-		<row><td>umut_ticaret_16.03.2018_malz</td><td>ISX_DEFAULTCOMPONENT4</td><td>UMUTTI~1.XLS|Umut Ticaret-16.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\SentFile\Umut Ticaret-16.03.2018-Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2074,10 +2026,6 @@
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_A13D7229_3871_453F_A264_C2826E6ED103_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_B1EF1489_713F_43EA_8E38_A267130CE405_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_CFCD840A_8C38_40F4_86CB_5FC833AA38EB_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_42120E83_39DA_4F43_B2DB_63F119FD3D1F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_DC7916C0_BD57_46B9_9584_42CBF0454352_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT5</td><td/><td/><td>_BDA48498_722D_444B_9116_A00E0A277114_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IhalematikProUI.exe</td><td/><td/><td>_A4E5DD38_B315_48BC_84DB_95D3627EA92F_FILTER</td><td/><td/><td/><td/></row>
 	</table>
