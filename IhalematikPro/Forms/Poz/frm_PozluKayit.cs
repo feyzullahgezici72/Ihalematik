@@ -230,6 +230,7 @@ namespace IhalematikPro.Forms
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = dataSource;
             this.LoadMaterialListGrid();
+ 
         }
 
         private void frm_PozluKayit_Load(object sender, EventArgs e)
@@ -300,6 +301,11 @@ namespace IhalematikPro.Forms
             {
                 btnBul.PerformClick();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }

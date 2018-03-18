@@ -275,5 +275,10 @@ namespace IhalematikPro.Forms
                 btnBul.PerformClick();
             }
         }
+
+        private void frm_ObfKayit_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
