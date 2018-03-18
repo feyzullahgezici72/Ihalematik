@@ -64,7 +64,6 @@ namespace IhalematikProUI.Forms
 
             //KDV haric toplam kar
 
-
             double totalPersonHour = 0;
             double totalUnitPrice = 0;
 

@@ -30,6 +30,7 @@ namespace IhalematikPro.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Anaform));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
@@ -217,7 +218,7 @@ namespace IhalematikPro.Forms
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.lblCompanyName = new DevExpress.XtraEditors.LabelControl();
-            this.timer1 = new System.Windows.Forms.Timer();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barBtnKuralllar = new DevExpress.XtraBars.BarButtonItem();
@@ -366,7 +367,7 @@ namespace IhalematikPro.Forms
             this.ribbon.ShowFullScreenButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowQatLocationSelector = false;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1368, 205);
+            this.ribbon.Size = new System.Drawing.Size(1368, 146);
             this.ribbon.StatusBar = this.ribbonStatusBar1;
             this.ribbon.Toolbar.ItemLinks.Add(this.barButtonItem23);
             this.ribbon.Toolbar.ItemLinks.Add(this.barButtonItem18);
@@ -1604,10 +1605,10 @@ namespace IhalematikPro.Forms
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem6);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 645);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 657);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbon;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1368, 43);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1368, 31);
             // 
             // ribbonGalleryBarItem1
             // 
@@ -1657,9 +1658,9 @@ namespace IhalematikPro.Forms
             this.MainPanel.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.MainPanel.Controls.Add(this.pnlAna);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(0, 205);
+            this.MainPanel.Location = new System.Drawing.Point(0, 146);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1368, 440);
+            this.MainPanel.Size = new System.Drawing.Size(1368, 511);
             this.MainPanel.TabIndex = 9;
             // 
             // pnlAna
@@ -1671,9 +1672,9 @@ namespace IhalematikPro.Forms
             this.pnlAna.Controls.Add(this.picLogo);
             this.pnlAna.Controls.Add(this.panelControl4);
             this.pnlAna.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlAna.Location = new System.Drawing.Point(3, 3);
+            this.pnlAna.Location = new System.Drawing.Point(2, 2);
             this.pnlAna.Name = "pnlAna";
-            this.pnlAna.Size = new System.Drawing.Size(1362, 434);
+            this.pnlAna.Size = new System.Drawing.Size(1364, 507);
             this.pnlAna.TabIndex = 0;
             this.pnlAna.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             this.pnlAna.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelControl1_MouseMove);
@@ -1701,7 +1702,7 @@ namespace IhalematikPro.Forms
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1362, 28);
+            this.panelControl4.Size = new System.Drawing.Size(1364, 28);
             this.panelControl4.TabIndex = 2;
             // 
             // lblCompanyName
@@ -1714,9 +1715,9 @@ namespace IhalematikPro.Forms
             this.lblCompanyName.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
             this.lblCompanyName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCompanyName.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.lblCompanyName.Location = new System.Drawing.Point(3, 3);
+            this.lblCompanyName.Location = new System.Drawing.Point(2, 2);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(1356, 35);
+            this.lblCompanyName.Size = new System.Drawing.Size(1360, 23);
             this.lblCompanyName.TabIndex = 1;
             this.lblCompanyName.Text = " ";
             // 

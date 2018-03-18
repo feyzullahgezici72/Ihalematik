@@ -60,7 +60,11 @@ namespace IhalematikPro.Forms
         }
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            IsEmptyKontrol();
+            bool isEmpty = IsEmptyKontrol();
+            if (isEmpty)
+            {
+                return;
+            }
             OBFModel model = new OBFModel();
             model.Description = txtDescription.Text;
             int lastTenderNumber = UIOBFManager.Instance.GetLastOBFNumber();
@@ -298,7 +302,7 @@ namespace IhalematikPro.Forms
 
         private void txtSearchNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13)
             {
                 simpleButton3.PerformClick();
             }
@@ -306,7 +310,7 @@ namespace IhalematikPro.Forms
 
         private void txtSearchDescription_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13)
             {
                 simpleButton1.PerformClick();
 

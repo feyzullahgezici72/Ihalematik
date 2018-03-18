@@ -160,18 +160,21 @@ namespace IhalematikPro.Forms
         Forms.frm_Teklif_Adim1 ta1;
         private void btnAdimx1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            btnAdimx1.ButtonStyle = BarButtonStyle.Check;
-            RibonPasif();
-            if (ta1 == null)
+            if (CurrentManager.Instance.CurrentTender != null)
             {
-                ta1 = new frm_Teklif_Adim1();
-                ta1.MdiParent = this;
-                ta1.FormClosed += new FormClosedEventHandler(Ta1_FormClosed);
-                ta1.Show();
-            }
-            else
-            {
-                ta1.Activate();
+                btnAdimx1.ButtonStyle = BarButtonStyle.Check;
+                RibonPasif();
+                if (ta1 == null)
+                {
+                    ta1 = new frm_Teklif_Adim1();
+                    ta1.MdiParent = this;
+                    ta1.FormClosed += new FormClosedEventHandler(Ta1_FormClosed);
+                    ta1.Show();
+                }
+                else
+                {
+                    ta1.Activate();
+                }
             }
         }
 
@@ -233,18 +236,21 @@ namespace IhalematikPro.Forms
         Forms.frm_Teklif_Adim3 ta3;
         private void btnAdimx3_ItemClick(object sender, ItemClickEventArgs e)
         {
-            btnAdimx3.ButtonStyle = BarButtonStyle.Check;
-            RibonPasif();
-            if (ta3 == null)
+            if (CurrentManager.Instance.CurrentTender != null)
             {
-                ta3 = new frm_Teklif_Adim3();
-                ta3.MdiParent = this;
-                ta3.FormClosed += new FormClosedEventHandler(Ta3_FormClosed);
-                ta3.Show();
-            }
-            else
-            {
-                ta3.Activate();
+                btnAdimx3.ButtonStyle = BarButtonStyle.Check;
+                RibonPasif();
+                if (ta3 == null)
+                {
+                    ta3 = new frm_Teklif_Adim3();
+                    ta3.MdiParent = this;
+                    ta3.FormClosed += new FormClosedEventHandler(Ta3_FormClosed);
+                    ta3.Show();
+                }
+                else
+                {
+                    ta3.Activate();
+                }
             }
         }
 
@@ -258,18 +264,21 @@ namespace IhalematikPro.Forms
         Forms.frm_Teklif_Adim2 ta4;
         private void btnAdimx4_ItemClick(object sender, ItemClickEventArgs e)
         {
-            btnAdimx4.ButtonStyle = BarButtonStyle.Check;
-            RibonPasif();
-            if (ta4 == null)
+            if (CurrentManager.Instance.CurrentTender != null)
             {
-                ta4 = new frm_Teklif_Adim2();
-                ta4.MdiParent = this;
-                ta4.FormClosed += new FormClosedEventHandler(Ta4_FormClosed);
-                ta4.Show();
-            }
-            else
-            {
-                ta4.Activate();
+                btnAdimx4.ButtonStyle = BarButtonStyle.Check;
+                RibonPasif();
+                if (ta4 == null)
+                {
+                    ta4 = new frm_Teklif_Adim2();
+                    ta4.MdiParent = this;
+                    ta4.FormClosed += new FormClosedEventHandler(Ta4_FormClosed);
+                    ta4.Show();
+                }
+                else
+                {
+                    ta4.Activate();
+                }
             }
         }
 
@@ -405,20 +414,22 @@ namespace IhalematikPro.Forms
         frm_TedarikcilerdenFiyatAl tfa;
         private void barButtonItem15_ItemClick(object sender, ItemClickEventArgs e)
         {
-            barButtonItem15.ButtonStyle = BarButtonStyle.Check;
-            RibonPasif();
-            if (tfa == null)
+            if (CurrentManager.Instance.CurrentOffer != null && CurrentManager.Instance.CurrentOffer.MaterialList != null)
             {
-                tfa = new frm_TedarikcilerdenFiyatAl();
-                tfa.MdiParent = this;
-                tfa.FormClosed += new FormClosedEventHandler(Tfa_FormClosed);
-                tfa.Show();
+                barButtonItem15.ButtonStyle = BarButtonStyle.Check;
+                RibonPasif();
+                if (tfa == null)
+                {
+                    tfa = new frm_TedarikcilerdenFiyatAl();
+                    tfa.MdiParent = this;
+                    tfa.FormClosed += new FormClosedEventHandler(Tfa_FormClosed);
+                    tfa.Show();
+                }
+                else
+                {
+                    tfa.Activate();
+                }
             }
-            else
-            {
-                tfa.Activate();
-            }
-
         }
 
         private void Tfa_FormClosed(object sender, FormClosedEventArgs e)
@@ -430,18 +441,21 @@ namespace IhalematikPro.Forms
         frm_TeklifAdimSon ts;
         private void btnAdimx5_ItemClick(object sender, ItemClickEventArgs e)
         {
-            btnAdimx5.ButtonStyle = BarButtonStyle.Check;
-            RibonPasif();
-            if (ts == null)
+            if (CurrentManager.Instance.CurrentTender != null)
             {
-                ts = new frm_TeklifAdimSon();
-                ts.MdiParent = this;
-                ts.FormClosed += new FormClosedEventHandler(Ts_FormClosed);
-                ts.Show();
-            }
-            else
-            {
-                ts.Activate();
+                btnAdimx5.ButtonStyle = BarButtonStyle.Check;
+                RibonPasif();
+                if (ts == null)
+                {
+                    ts = new frm_TeklifAdimSon();
+                    ts.MdiParent = this;
+                    ts.FormClosed += new FormClosedEventHandler(Ts_FormClosed);
+                    ts.Show();
+                }
+                else
+                {
+                    ts.Activate();
+                }
             }
         }
 
@@ -686,21 +700,24 @@ namespace IhalematikPro.Forms
         frm_TedarikcilereTeklifGonder tg;
         private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
         {
-            barButtonItem14.ButtonStyle = BarButtonStyle.Check;
-            RibonPasif();
-            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-            if (tg == null)
+            if (CurrentManager.Instance.CurrentOffer != null && CurrentManager.Instance.CurrentOffer.MaterialList != null)
             {
-                tg = new frm_TedarikcilereTeklifGonder();
-                tg.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-                tg.FormClosed += new FormClosedEventHandler(Tg_FormClosed);
-                af.MainPanel.Visible = false;
-                tg.Show();
+                barButtonItem14.ButtonStyle = BarButtonStyle.Check;
+                RibonPasif();
+                frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                if (tg == null)
+                {
+                    tg = new frm_TedarikcilereTeklifGonder();
+                    tg.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                    tg.FormClosed += new FormClosedEventHandler(Tg_FormClosed);
+                    af.MainPanel.Visible = false;
+                    tg.Show();
 
-            }
-            else
-            {
-                tg.Activate();
+                }
+                else
+                {
+                    tg.Activate();
+                }
             }
         }
 
@@ -728,18 +745,21 @@ namespace IhalematikPro.Forms
         frm_TeklifAktar teklifAktar;
         private void barButtonItem28_ItemClick(object sender, ItemClickEventArgs e)
         {
-            barButtonItem28.ButtonStyle = BarButtonStyle.Check;
-            RibonPasif();
-            if (teklifAktar == null)
+            if (CurrentManager.Instance.CurrentOffer != null && CurrentManager.Instance.CurrentOffer.MaterialList != null)
             {
-                teklifAktar = new frm_TeklifAktar();
-                teklifAktar.MdiParent = this;
-                teklifAktar.FormClosed += new FormClosedEventHandler(TeklifAktar_FormClosed);
-                teklifAktar.Show();
-            }
-            else
-            {
-                teklifAktar.Activate();
+                barButtonItem28.ButtonStyle = BarButtonStyle.Check;
+                RibonPasif();
+                if (teklifAktar == null)
+                {
+                    teklifAktar = new frm_TeklifAktar();
+                    teklifAktar.MdiParent = this;
+                    teklifAktar.FormClosed += new FormClosedEventHandler(TeklifAktar_FormClosed);
+                    teklifAktar.Show();
+                }
+                else
+                {
+                    teklifAktar.Activate();
+                }
             }
         }
 
@@ -881,18 +901,21 @@ namespace IhalematikPro.Forms
         frm_BirimFiyatHistory bfh;
         private void barButtonItem43_ItemClick(object sender, ItemClickEventArgs e)
         {
-            barButtonItem43.ButtonStyle = BarButtonStyle.Check;
-            RibonPasif();
-            if (bfh == null)
+            if (CurrentManager.Instance.CurrentTender != null)
             {
-                bfh = new frm_BirimFiyatHistory();
-                bfh.MdiParent = this;
-                bfh.FormClosed += new FormClosedEventHandler(Bfh_FormClosed);
-                bfh.Show();
-            }
-            else
-            {
-                bfh.Activate();
+                barButtonItem43.ButtonStyle = BarButtonStyle.Check;
+                RibonPasif();
+                if (bfh == null)
+                {
+                    bfh = new frm_BirimFiyatHistory();
+                    bfh.MdiParent = this;
+                    bfh.FormClosed += new FormClosedEventHandler(Bfh_FormClosed);
+                    bfh.Show();
+                }
+                else
+                {
+                    bfh.Activate();
+                }
             }
         }
 
