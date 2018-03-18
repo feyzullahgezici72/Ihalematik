@@ -35,6 +35,11 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnBul_Click(object sender, EventArgs e)
         {
+            this.LoadPozListGrid();
+        }
+
+        private void LoadPozListGrid()
+        {
             string pozNumber = txtPozNumber.Text;
             string pozDescription = txtDescription.Text;
 
@@ -104,8 +109,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                 if (selectedItem != null)
                 {
                     selectedItem.IsMarkedForDeletion = true;
-                    //int index = currentOffer.MaterialList.FindIndex(p => p.PozOBFId == selectedItem.PozOBFId);
-                    //currentOffer.MaterialList.RemoveAt(index);
                 }
             }
 
@@ -114,6 +117,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = dataSource;
+            this.LoadPozListGrid();
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
