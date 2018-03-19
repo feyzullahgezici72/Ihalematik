@@ -158,9 +158,17 @@ namespace IhalematikPro.Forms
                 materialList.Tender = currentTender;
                 materialList.TenderGroupId = this.SelectedGroupId;
                 materialList.OfferPrice = pozModel.OfferPrice;
-                List<MaterialList> items = currentTender.MaterialList.Where(p => p.PozOBFId == materialList.PozOBFId && p.IsPoz).ToList();
-
-                if (items.Count == 0)
+                
+                bool isExist = false;
+                foreach (var existmaterialList in currentTender.MaterialList)
+                {
+                    if (existmaterialList.IsPoz && existmaterialList.PozOBFId == materialList.PozOBFId)
+                    {
+                        isExist = true;
+                    }
+                }
+                
+                if (!isExist)
                 {
                     currentTender.MaterialList.Add(materialList);
                     int index = pozModels.FindIndex(p => p.Id == pozModel.Id);
@@ -217,8 +225,6 @@ namespace IhalematikPro.Forms
 
                 if (selectedItem != null)
                 {
-                    //int index = currentTender.MaterialList.FindIndex(p => p.PozOBFId == selectedItem.PozOBFId);
-                    //currentTender.MaterialList.RemoveAt(index);
                     selectedItem.IsMarkedForDeletion = true;
                 }
             }
