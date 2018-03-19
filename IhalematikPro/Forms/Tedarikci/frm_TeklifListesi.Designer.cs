@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TeklifListesi));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -35,7 +36,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            this.timer1 = new System.Windows.Forms.Timer();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
@@ -176,7 +177,7 @@
             // 
             this.grdOffer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdOffer.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdOffer.Location = new System.Drawing.Point(3, 30);
+            this.grdOffer.Location = new System.Drawing.Point(3, 33);
             this.grdOffer.MainView = this.gridViewOffer;
             this.grdOffer.Margin = new System.Windows.Forms.Padding(4);
             this.grdOffer.Name = "grdOffer";
@@ -184,7 +185,7 @@
             this.btnOpen,
             this.btnActive,
             this.btnPasive});
-            this.grdOffer.Size = new System.Drawing.Size(735, 640);
+            this.grdOffer.Size = new System.Drawing.Size(735, 637);
             this.grdOffer.TabIndex = 0;
             this.grdOffer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOffer});
@@ -543,7 +544,7 @@
             // 
             this.grdOfferNoCompleated.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdOfferNoCompleated.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdOfferNoCompleated.Location = new System.Drawing.Point(3, 30);
+            this.grdOfferNoCompleated.Location = new System.Drawing.Point(3, 33);
             this.grdOfferNoCompleated.MainView = this.gridView1;
             this.grdOfferNoCompleated.Margin = new System.Windows.Forms.Padding(4);
             this.grdOfferNoCompleated.Name = "grdOfferNoCompleated";
@@ -551,7 +552,7 @@
             this.btnAc,
             this.btnDetail,
             this.repositoryItemButtonEdit3});
-            this.grdOfferNoCompleated.Size = new System.Drawing.Size(579, 640);
+            this.grdOfferNoCompleated.Size = new System.Drawing.Size(579, 637);
             this.grdOfferNoCompleated.TabIndex = 0;
             this.grdOfferNoCompleated.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});

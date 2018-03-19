@@ -991,6 +991,8 @@
             this.colTotalFare.OptionsColumn.AllowFocus = false;
             this.colTotalFare.OptionsColumn.ReadOnly = true;
             this.colTotalFare.OptionsFilter.AllowFilter = false;
+            this.colTotalFare.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalFarePreview", "{0:c2}")});
             this.colTotalFare.Visible = true;
             this.colTotalFare.VisibleIndex = 5;
             this.colTotalFare.Width = 100;

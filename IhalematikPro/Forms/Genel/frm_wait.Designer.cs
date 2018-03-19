@@ -37,9 +37,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.email_send_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(407, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(512, 14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 63);
+            this.pictureBox1.Size = new System.Drawing.Size(87, 77);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -47,15 +47,19 @@
             // progressPanel1
             // 
             this.progressPanel1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.progressPanel1.Appearance.ForeColor = System.Drawing.Color.White;
+            this.progressPanel1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.progressPanel1.Appearance.ForeColor = System.Drawing.Color.Black;
             this.progressPanel1.Appearance.Options.UseBackColor = true;
+            this.progressPanel1.Appearance.Options.UseFont = true;
             this.progressPanel1.Appearance.Options.UseForeColor = true;
-            this.progressPanel1.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.progressPanel1.AppearanceCaption.ForeColor = System.Drawing.Color.White;
+            this.progressPanel1.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.progressPanel1.AppearanceCaption.ForeColor = System.Drawing.Color.Black;
             this.progressPanel1.AppearanceCaption.Options.UseFont = true;
             this.progressPanel1.AppearanceCaption.Options.UseForeColor = true;
             this.progressPanel1.AppearanceDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.progressPanel1.AppearanceDescription.ForeColor = System.Drawing.Color.Black;
             this.progressPanel1.AppearanceDescription.Options.UseFont = true;
+            this.progressPanel1.AppearanceDescription.Options.UseForeColor = true;
             this.progressPanel1.Caption = "e-MAİL GÖNDERİLİYOR";
             this.progressPanel1.Description = "Lütfen Bekleyiniz ...";
             this.progressPanel1.ImageHorzOffset = 20;
@@ -70,8 +74,8 @@
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Yellow;
-            this.labelControl5.Location = new System.Drawing.Point(75, 66);
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl5.Location = new System.Drawing.Point(195, 69);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(143, 22);
             this.labelControl5.TabIndex = 6;
@@ -79,21 +83,20 @@
             // 
             // frm_wait
             // 
-            this.Appearance.BackColor = System.Drawing.Color.SteelBlue;
+            this.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 114);
+            this.ClientSize = new System.Drawing.Size(611, 114);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.progressPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_wait";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = " ";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frm_wait_Load);
             this.Shown += new System.EventHandler(this.frm_wait_Shown);
