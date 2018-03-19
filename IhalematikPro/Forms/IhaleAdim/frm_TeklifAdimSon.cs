@@ -300,7 +300,8 @@ namespace IhalematikProUI.Forms
                     increaseOtherFare += (item.CarriagePercent * carriage / 100 / item.Quantity);
                     item.UnitTotalFarePreview = (item.UnitTotalFare + increaseOtherFare);
                 }
-                
+
+                this.TotalMarkupNonKDV += item.TotalFarePreview;
                 materialCostAmount += item.PozOBFUnitPrice * item.Quantity;
                 materialkdvTotalAmount += item.KDVAmount;
                 workerCostAmount += item.CustomWorkerTotalAmount;
