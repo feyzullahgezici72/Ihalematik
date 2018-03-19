@@ -421,6 +421,12 @@
     <Compile Include="Forms\Tedarikci\frm_GonderilecekMalzemeListesi.Designer.cs">
       <DependentUpon>frm_GonderilecekMalzemeListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tedarikci\frm_MailListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tedarikci\frm_MailListesi.Designer.cs">
+      <DependentUpon>frm_MailListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tedarikci\frm_MalzemeAdlandir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -717,6 +723,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_GonderilecekMalzemeListesi.resx">
       <DependentUpon>frm_GonderilecekMalzemeListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tedarikci\frm_MailListesi.resx">
+      <DependentUpon>frm_MailListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_MalzemeAdlandir.resx">
       <DependentUpon>frm_MalzemeAdlandir.cs</DependentUpon>

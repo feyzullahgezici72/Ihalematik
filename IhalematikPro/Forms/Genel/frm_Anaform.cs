@@ -996,5 +996,29 @@ namespace IhalematikPro.Forms
         {
 
         }
+        frm_MailListesi ml;
+        private void barButtonItem44_ItemClick(object sender, ItemClickEventArgs e)
+        {
+                barButtonItem44.ButtonStyle = BarButtonStyle.Check;
+                RibonPasif();
+                if (ml == null)
+                {
+                    ml = new frm_MailListesi();
+                    ml.MdiParent = this;
+                    ml.FormClosed +=new FormClosedEventHandler(Ml_FormClosed);
+                    ml.Show();
+                }
+                else
+                {
+                    ml.Activate();
+                }
+            }
+
+        private void Ml_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ml = null;
+            RibonAktif();
+            barButtonItem44.ButtonStyle = BarButtonStyle.Default;
+        }
     }
-}
+    }
