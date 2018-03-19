@@ -33,14 +33,14 @@ namespace IhalematikProUI.Forms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (lblMesaj.Visible == true)
-            {
-                lblMesaj.Visible = false;
-            }
-            else
-            {
-                lblMesaj.Visible = true;
-            }
+            //if (lblMesaj.Visible == true)
+            //{
+            //    lblMesaj.Visible = false;
+            //}
+            //else
+            //{
+            //    lblMesaj.Visible = true;
+            //}
         }
 
         private void frm_MesajFormu_Shown(object sender, EventArgs e)

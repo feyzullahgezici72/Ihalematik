@@ -176,6 +176,14 @@ namespace IhalematikPro.Forms
                     ta1.Activate();
                 }
             }
+            else
+            {
+                btnAdimx1.ButtonStyle = BarButtonStyle.Default;
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Aktif bir İhale Bulunamadı\n Yeni bir İhale oluşturun yada \n Raporlar Menüsünden bir İhale açın.";
+                mf.ShowDialog();
+            }
+
         }
 
 
@@ -252,6 +260,13 @@ namespace IhalematikPro.Forms
                     ta3.Activate();
                 }
             }
+            else
+            {
+                btnAdimx3.ButtonStyle = BarButtonStyle.Default;
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Aktif bir İhale Bulunamadı\n Yeni bir İhale oluşturun yada \n Raporlar Menüsünden bir İhale açın.";
+                mf.ShowDialog();
+            }
         }
 
         private void Ta3_FormClosed(object sender, FormClosedEventArgs e)
@@ -279,6 +294,13 @@ namespace IhalematikPro.Forms
                 {
                     ta4.Activate();
                 }
+            }
+            else
+            {
+                btnAdimx4.ButtonStyle = BarButtonStyle.Default;
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Aktif bir İhale Bulunamadı\n Yeni bir İhale oluşturun yada \n Raporlar Menüsünden bir İhale açın.";
+                mf.ShowDialog();
             }
         }
 
@@ -430,6 +452,13 @@ namespace IhalematikPro.Forms
                     tfa.Activate();
                 }
             }
+            else
+            {
+                barButtonItem15.ButtonStyle = BarButtonStyle.Default;
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Aktif bir Teklif Bulunamadı\n Yeni bir teklif oluşturun yada \n Raporlar Menüsünden bir teklif açın.";
+                mf.ShowDialog();
+            }
         }
 
         private void Tfa_FormClosed(object sender, FormClosedEventArgs e)
@@ -456,6 +485,13 @@ namespace IhalematikPro.Forms
                 {
                     ts.Activate();
                 }
+            }
+            else
+            {
+                btnAdimx5.ButtonStyle = BarButtonStyle.Default;
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Aktif bir İhale Bulunamadı\n Yeni bir İhale oluşturun yada \n Raporlar Menüsünden bir İhale açın.";
+                mf.ShowDialog();
             }
         }
 
@@ -702,11 +738,11 @@ namespace IhalematikPro.Forms
         {
             if (CurrentManager.Instance.CurrentOffer != null && CurrentManager.Instance.CurrentOffer.MaterialList != null)
             {
-                barButtonItem14.ButtonStyle = BarButtonStyle.Check;
-                RibonPasif();
                 frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
                 if (tg == null)
                 {
+                    barButtonItem14.ButtonStyle = BarButtonStyle.Check;
+                    RibonPasif();
                     tg = new frm_TedarikcilereTeklifGonder();
                     tg.MdiParent = (frm_Anaform)Application.OpenForms["frm_Anaform"];
                     tg.FormClosed += new FormClosedEventHandler(Tg_FormClosed);
@@ -718,8 +754,17 @@ namespace IhalematikPro.Forms
                 {
                     tg.Activate();
                 }
+
             }
-        }
+            else
+            {
+                barButtonItem14.ButtonStyle = BarButtonStyle.Default;
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Aktif bir Teklif Bulunamadı\n Yeni bir teklif oluşturun yada \n Raporlar Menüsünden bir teklif açın.";
+                mf.ShowDialog();
+            }
+
+         }
 
         private void Tg_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -761,6 +806,14 @@ namespace IhalematikPro.Forms
                     teklifAktar.Activate();
                 }
             }
+            else
+            {
+                barButtonItem28.ButtonStyle = BarButtonStyle.Default;
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Aktif bir Teklif Bulunamadı\n Yeni bir teklif oluşturun yada \n Raporlar Menüsünden bir teklif açın.";
+                mf.ShowDialog();
+            }
+
         }
 
         private void TeklifAktar_FormClosed(object sender, FormClosedEventArgs e)
@@ -916,6 +969,13 @@ namespace IhalematikPro.Forms
                 {
                     bfh.Activate();
                 }
+            }
+            else
+            {
+                barButtonItem43.ButtonStyle = BarButtonStyle.Default;
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Aktif bir İhale Bulunamadı\n Yeni bir İhale oluşturun yada \n Raporlar Menüsünden bir İhale açın.";
+                mf.ShowDialog();
             }
         }
 
