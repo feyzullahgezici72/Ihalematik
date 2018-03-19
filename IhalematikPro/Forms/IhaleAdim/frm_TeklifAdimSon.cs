@@ -45,61 +45,7 @@ namespace IhalematikProUI.Forms
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             af.RibonAktif();
         }
-
-        private void CalculateFooterInnerValues(List<MaterialListModel> models)
-        {
-            if (models == null)
-            {
-                models = grdMaterialList.DataSource as List<MaterialListModel>;
-            }
-            this.TotalMarkupNonKDV = 0;
-            double materialCostAmount = 0; // Malzeme Maliyet fiyat
-            double materialkdvTotalAmount = 0; // Malzeme Toplam KDV
-            double totalAmount = 0; // Malzeme Toplam Fiyat
-            double workerCostAmount = 0; // Malzeme Maliyet fiyat
-
-            //Kar Toplamlari
-            double markupMaterialAmount = 0;
-            double markupWorkerAmount = 0;
-
-            //KDV haric toplam kar
-
-            double totalPersonHour = 0;
-            double totalUnitPrice = 0;
-
-            if (models != null)
-            {
-                foreach (MaterialListModel item in models)
-                {
-                    materialCostAmount += item.PozOBFUnitPrice * item.Quantity;
-                    materialkdvTotalAmount += item.KDVAmount;
-                    workerCostAmount += item.CustomWorkerTotalAmount;
-                    markupMaterialAmount += item.UnitMarkup * item.Quantity; ;
-                    markupWorkerAmount += item.TotalCustomWorkerMarkupPrice;// * (item.Markup / 100);
-                    TotalMarkupNonKDV += item.TotalFarePreview;
-                    totalPersonHour += Math.Round(item.TotalWorkerMarkup, 2);
-                    totalUnitPrice += Math.Round(item.TotalCustomWorkerMarkupPrice, 2);
-                }
-            }
-
-            totalAmount = materialCostAmount + materialkdvTotalAmount;
-            txtMaterialCostAmount.Text = materialCostAmount.ToString("c2");
-            txtMaterialkdvTotalAmount.Text = materialkdvTotalAmount.ToString("c2");
-            txtTotalAmount.Text = totalAmount.ToString("c2");
-            txtWorkerCostAmount.Text = workerCostAmount.ToString("c2");
-            double workerMarkupAmount = Math.Round((workerCostAmount * 18 / 100), 2);
-            txtWorkerKDVAmount.Text = workerMarkupAmount.ToString("c2");
-            txtWorkerAmount.Text = (workerMarkupAmount + workerCostAmount).ToString("c2");
-            txtMarkupMaterialTotal.Text = markupMaterialAmount.ToString("c2");
-            txtMarkupWorkerAmount.Text = markupWorkerAmount.ToString("c2");
-            txtMarkupAmount.Text = (markupWorkerAmount + markupMaterialAmount).ToString("c2");
-            txtTotalPersonHour.Text = totalPersonHour.ToString("c2");
-            txtTotalUnitPrice.Text = totalUnitPrice.ToString("c2");
-            txtDifference.Text = Math.Round((totalPersonHour - totalUnitPrice), 2).ToString("c2");
-            lblTotalMarkupNonKDV.Text = this.TotalMarkupNonKDV.ToString("c2");
-            txtPanelMarkupMaterialTotal.Text = txtMarkupMaterialTotal.Text; // a.samet ekledi
-        }
-
+        
         private void btnObfKayit_Click(object sender, EventArgs e)
         {
             MainReport ms = new MainReport();
@@ -291,9 +237,7 @@ namespace IhalematikProUI.Forms
         private void LoadGrid()
         {
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
-
             this.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            this.CalculateFooterInnerValues(this.DataSource);
             this.TotalMarkupNonKDV = this.DataSource.Sum(p => p.TotalFare);
             Tender currentTender = CurrentManager.Instance.CurrentTender;
             IhalematikProBL.Entity.Rule provisionalBond = RuleProvider.Instance.GetItems("Code", "ProvisionalBond").FirstOrDefault();
@@ -310,30 +254,37 @@ namespace IhalematikProUI.Forms
 
             currentTender.Carriage = carriage;
             currentTender.AccountingCosts = accountingCosts;
-            //currentTender.CompletionBond = chckCompletionBond.Checked;
-            //currentTender.ProvisionalBond = chckProvisionalBond.Checked;
-            //currentTender.PersonHour = ddlCalculateWorkerType.SelectedIndex == 0 ? true : false;
-
-
             this.OtherTotalAmount = accountingCosts + otherCosts;
-
             double increaseAmount = (this.OtherTotalAmount / this.TotalMarkupNonKDV);
-
-
             double totalMarkupZeroCarriage = this.DataSource.Where(p => p.CarriagePercent == 0).Sum(p => p.TotalFare);
-
             double otherCarriageZeroAmountPercent = this.DataSource.Sum(p => p.CarriagePercent);
             double increaseZeroCarriage = (carriage * (100 - otherCarriageZeroAmountPercent) / 100 / totalMarkupZeroCarriage);
-
-
             double increaseCarriageAmount = (carriage / increaseZeroCarriage);
+
             if (carriage == 0)
             {
                 increaseCarriageAmount = 0;
             }
+
             //birim fiyat unittotalFare
             //Toplam fiyat TotalFare
             this.TotalMarkupNonKDV = 0;
+
+
+            #region LeftPanelValues
+            this.TotalMarkupNonKDV = 0;
+            double materialCostAmount = 0; // Malzeme Maliyet fiyat
+            double materialkdvTotalAmount = 0; // Malzeme Toplam KDV
+            double totalAmount = 0; // Malzeme Toplam Fiyat
+            double workerCostAmount = 0; // Malzeme Maliyet fiyat
+            //Kar Toplamlari
+            double markupMaterialAmount = 0;
+            double markupWorkerAmount = 0;
+            //Insan saat arac saat toplami
+            double totalPersonHour = 0;
+            double totalUnitPrice = 0; 
+            #endregion
+
             foreach (MaterialListModel item in this.DataSource)
             {
                 double increaseOtherFare = 0;
@@ -349,9 +300,37 @@ namespace IhalematikProUI.Forms
                     increaseOtherFare += (item.CarriagePercent * carriage / 100 / item.Quantity);
                     item.UnitTotalFarePreview = (item.UnitTotalFare + increaseOtherFare);
                 }
+
                 this.TotalMarkupNonKDV += item.TotalFarePreview;
+                materialCostAmount += item.PozOBFUnitPrice * item.Quantity;
+                materialkdvTotalAmount += item.KDVAmount;
+                workerCostAmount += item.CustomWorkerTotalAmount;
+                markupMaterialAmount += item.UnitMarkup * item.Quantity; ;
+                markupWorkerAmount += item.TotalCustomWorkerMarkupPrice;// * (item.Markup / 100);
+                TotalMarkupNonKDV += item.TotalFarePreview;
+                totalPersonHour += Math.Round(item.TotalWorkerMarkup, 2);
+                totalUnitPrice += Math.Round(item.TotalCustomWorkerMarkupPrice, 2);
             }
 
+            #region LeftPanelValues
+            totalAmount = materialCostAmount + materialkdvTotalAmount;
+            txtMaterialCostAmount.Text = materialCostAmount.ToString("c2");
+            txtMaterialkdvTotalAmount.Text = materialkdvTotalAmount.ToString("c2");
+            txtTotalAmount.Text = totalAmount.ToString("c2");
+            txtWorkerCostAmount.Text = workerCostAmount.ToString("c2");
+            double workerMarkupAmount = Math.Round((workerCostAmount * 18 / 100), 2);
+            txtWorkerKDVAmount.Text = workerMarkupAmount.ToString("c2");
+            txtWorkerAmount.Text = (workerMarkupAmount + workerCostAmount).ToString("c2");
+            txtMarkupMaterialTotal.Text = markupMaterialAmount.ToString("c2");
+            txtMarkupWorkerAmount.Text = markupWorkerAmount.ToString("c2");
+            txtMarkupAmount.Text = (markupWorkerAmount + markupMaterialAmount).ToString("c2");
+            txtTotalPersonHour.Text = totalPersonHour.ToString("c2");
+            txtTotalUnitPrice.Text = totalUnitPrice.ToString("c2");
+            txtDifference.Text = Math.Round((totalPersonHour - totalUnitPrice), 2).ToString("c2");
+            lblTotalMarkupNonKDV.Text = this.TotalMarkupNonKDV.ToString("c2");
+            txtPanelMarkupMaterialTotal.Text = txtMarkupMaterialTotal.Text; // a.samet ekledi
+
+            #endregion
             grdMaterialList.DataSource = null;
             grdMaterialList.DataSource = this.DataSource;
 
