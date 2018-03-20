@@ -22,6 +22,7 @@ using IhalematikProUI.Forms.IhaleAdim;
 using IhalematikProUI.Forms.Genel;
 using IhalematikProBL.Enum;
 using IhalematikProUI.Manager;
+using System.Diagnostics;
 //using IhalematikProUI.Report;
 
 namespace IhalematikProUI.Forms
@@ -390,6 +391,28 @@ namespace IhalematikProUI.Forms
 
         private void grdMaterialList_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string FileName = "\\Development\\Ihalematik\\IhalematikPro\\ExcelFiles\\ihaleTeklifOzeti.xls";
+                grdMaterialList.ExportToXls(FileName);
+                frm_MesajFormu mesaj = new frm_MesajFormu();
+                mesaj.lblMesaj.Text = "Veriler Excel dosyasına aktarıldı...";
+                mesaj.ShowDialog();
+                System.Diagnostics.ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.FileName = "EXCEL.EXE";
+                startInfo.Arguments = FileName;
+                Process.Start(startInfo);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
+            }
 
         }
     }

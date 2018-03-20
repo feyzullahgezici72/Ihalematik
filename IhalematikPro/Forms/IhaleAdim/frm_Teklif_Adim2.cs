@@ -18,7 +18,9 @@ using System.Threading;
 using IhalematikProUI.Forms.Base;
 using DevExpress.XtraBars;
 using IhalematikProUI.Forms.Genel;
-
+using IhalematikProUI.Report;
+using DevExpress.XtraReports.UI;
+using System.Diagnostics;
 namespace IhalematikPro.Forms
 {
     public partial class frm_Teklif_Adim2 : IhalematikBaseForm
@@ -264,6 +266,27 @@ namespace IhalematikPro.Forms
                 grdMaterialListNonWorkship.DataSource = models;
                 this.CalculateTotalMarkup();
             }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            KarliMalzemeRaporu km = new KarliMalzemeRaporu();
+            ReportPrintTool tool = new ReportPrintTool(km);
+            km.ShowPreview();
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            string FileName = "\\Development\\Ihalematik\\IhalematikPro\\ExcelFiles\\KarliMalzemeRaporu.xls";
+            grdMaterialListNonWorkship.ExportToXls(FileName);
+            frm_MesajFormu mesaj = new frm_MesajFormu();
+            mesaj.lblMesaj.Text = "Veriler Excel dosyasına aktarıldı...";
+            mesaj.ShowDialog();
+            System.Diagnostics.ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.FileName = "EXCEL.EXE";
+            startInfo.Arguments = FileName;
+            Process.Start(startInfo);
+
         }
     }
 }

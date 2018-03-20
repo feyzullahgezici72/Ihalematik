@@ -80,12 +80,14 @@
     <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraRichEdit.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Reporting, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraSpellChecker.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraSpreadsheet.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -601,11 +603,29 @@
     <Compile Include="Model\WrapperReportModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\IscilikMaliyetKarRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\IscilikMaliyetKarRaporu.Designer.cs">
+      <DependentUpon>IscilikMaliyetKarRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\KarliMalzemeRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\KarliMalzemeRaporu.Designer.cs">
+      <DependentUpon>KarliMalzemeRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\MainReport.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\MainReport.Designer.cs">
       <DependentUpon>MainReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\MalzemeMaliyetRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\MalzemeMaliyetRaporu.Designer.cs">
+      <DependentUpon>MalzemeMaliyetRaporu.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\Arac\frm_CarGuncelle.resx">
       <DependentUpon>frm_CarGuncelle.cs</DependentUpon>
@@ -813,8 +833,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\IscilikMaliyetKarRaporu.resx">
+      <DependentUpon>IscilikMaliyetKarRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\KarliMalzemeRaporu.resx">
+      <DependentUpon>KarliMalzemeRaporu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\MainReport.resx">
       <DependentUpon>MainReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\MalzemeMaliyetRaporu.resx">
+      <DependentUpon>MalzemeMaliyetRaporu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="EmailFile\Malzeme_Fiyat_Listesi.xlsx" />
     <None Include="packages.config" />

@@ -45,7 +45,7 @@
             this.chckProvisionalBond = new DevExpress.XtraEditors.CheckEdit();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btnObfKayit = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
             this.lblTenderNumber = new DevExpress.XtraEditors.LabelControl();
             this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -369,7 +369,7 @@
             this.panelControl4.Controls.Add(this.groupControl4);
             this.panelControl4.Controls.Add(this.btnKaydet);
             this.panelControl4.Controls.Add(this.btnObfKayit);
-            this.panelControl4.Controls.Add(this.simpleButton1);
+            this.panelControl4.Controls.Add(this.btnExcel);
             this.panelControl4.Controls.Add(this.lblTenderNumber);
             this.panelControl4.Controls.Add(this.lblTenderDescription);
             this.panelControl4.Controls.Add(this.labelControl2);
@@ -448,20 +448,20 @@
             this.btnObfKayit.Text = "Yazdır";
             this.btnObfKayit.Click += new System.EventHandler(this.btnObfKayit_Click);
             // 
-            // simpleButton1
+            // btnExcel
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(1575, 3);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(132, 66);
-            this.simpleButton1.TabIndex = 45;
-            this.simpleButton1.Text = "Gönder";
-            this.simpleButton1.Visible = false;
+            this.btnExcel.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExcel.Appearance.Options.UseFont = true;
+            this.btnExcel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
+            this.btnExcel.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnExcel.Location = new System.Drawing.Point(1575, 3);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(132, 66);
+            this.btnExcel.TabIndex = 45;
+            this.btnExcel.Text = "Excel\'e Aktar";
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // lblTenderNumber
             // 
@@ -2258,7 +2258,7 @@
         private DevExpress.XtraEditors.MemoEdit textEdit4;
         public DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.SimpleButton btnObfKayit;
-        public DevExpress.XtraEditors.SimpleButton simpleButton1;
+        public DevExpress.XtraEditors.SimpleButton btnExcel;
         private DevExpress.XtraEditors.GroupControl groupControl4;
         private DevExpress.XtraEditors.CheckEdit chckCompletionBond;
         private DevExpress.XtraEditors.CheckEdit chckProvisionalBond;

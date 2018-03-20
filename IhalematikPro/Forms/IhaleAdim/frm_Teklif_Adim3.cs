@@ -12,7 +12,10 @@ using IhalematikProBL.Provider;
 using IhalematikProUI.Forms.Base;
 using IhalematikProUI.Forms.IhaleAdim;
 using IhalematikProUI.Forms.Genel;
-
+using IhalematikProUI.Report;
+using DevExpress.XtraReports.UI;
+using IhalematikProUI.Forms;
+using System.Diagnostics;
 namespace IhalematikPro.Forms
 {
     public partial class frm_Teklif_Adim3 : IhalematikBaseForm
@@ -457,6 +460,26 @@ namespace IhalematikPro.Forms
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p =>  p.IsWorkship).ToList();
             List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             grdMaterialListIsWorkship.DataSource = models;
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            IscilikMaliyetKarRaporu ikr = new IscilikMaliyetKarRaporu();
+            ReportPrintTool tool = new ReportPrintTool(ikr);
+            ikr.ShowPreview();
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            string FileName = "\\Development\\Ihalematik\\IhalematikPro\\ExcelFiles\\iscilikMaliyetKarRaporu.xls";
+            grdMaterialListIsWorkship.ExportToXls(FileName);
+            frm_MesajFormu mesaj = new frm_MesajFormu();
+            mesaj.lblMesaj.Text = "Veriler Excel dosyasına aktarıldı...";
+            mesaj.ShowDialog();
+            System.Diagnostics.ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.FileName = "EXCEL.EXE";
+            startInfo.Arguments = FileName;
+            Process.Start(startInfo);
         }
     }
 }

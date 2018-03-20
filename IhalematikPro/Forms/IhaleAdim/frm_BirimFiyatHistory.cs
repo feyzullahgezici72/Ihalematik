@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikPro.Manager;
 using IhalematikPro.Model;
+using System.Diagnostics;
 
 namespace IhalematikProUI.Forms.IhaleAdim
 {
@@ -39,6 +40,27 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
                     grdMaterialListHistory.DataSource = models;
                 } 
+            }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string FileName = "\\Development\\Ihalematik\\IhalematikPro\\ExcelFiles\\birimFiyatAnalizi.xls";
+                grdMaterialListHistory.ExportToXls(FileName);
+                frm_MesajFormu mesaj = new frm_MesajFormu();
+                mesaj.lblMesaj.Text = "Veriler Excel dosyasına aktarıldı...";
+                mesaj.ShowDialog();
+                System.Diagnostics.ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.FileName = "EXCEL.EXE";
+                startInfo.Arguments = FileName;
+                Process.Start(startInfo);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
             }
         }
     }

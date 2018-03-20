@@ -1,16 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.Text;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 using IhalematikPro.Manager;
-using IhalematikProBL.Entity;
-using IhalematikProBL.Provider;
-using IhalematikProUI.Model;
 using IhalematikPro.Model;
+using IhalematikProBL.Entity;
+using IhalematikProUI.Report;
+using IhalematikProUI.Model;
+using DevExpress.XtraReports.UI;
+using System.Threading;
 using IhalematikProUI.Forms.Base;
+using IhalematikPro.Forms;
+using IhalematikProBL.Provider;
+using IhalematikProUI.Forms.IhaleAdim;
 using IhalematikProUI.Forms.Genel;
-
+using IhalematikProBL.Enum;
+using IhalematikProUI.Manager;
+using IhalematikProUI.Forms;
+using System.Diagnostics;
+//using IhalematikProUI.Report;
 namespace IhalematikPro.Forms
 {
     public partial class frm_Teklif_Adim1 : IhalematikBaseForm
@@ -282,6 +296,42 @@ namespace IhalematikPro.Forms
                 List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
                 grdMaterialList.DataSource = models;
             }
+        }
+
+        private void simpleButton2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            MalzemeMaliyetRaporu mm = new MalzemeMaliyetRaporu();
+            ReportPrintTool tool = new ReportPrintTool(mm);
+            mm.ShowPreview();
+
+
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string FileName = "\\Development\\Ihalematik\\IhalematikPro\\ExcelFiles\\MalzemeMaliyetListesi.xls";
+                grdMaterialList.ExportToXls(FileName);
+                frm_MesajFormu mesaj = new frm_MesajFormu();
+                mesaj.lblMesaj.Text = "Veriler Excel dosyasına aktarıldı...";
+                mesaj.ShowDialog();
+                System.Diagnostics.ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.FileName = "EXCEL.EXE";
+                startInfo.Arguments = FileName;
+                Process.Start(startInfo);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
+            }
+            
         }
     }
 }

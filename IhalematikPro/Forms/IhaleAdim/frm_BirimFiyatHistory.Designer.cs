@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_BirimFiyatHistory));
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
             this.lblTenderNumber = new DevExpress.XtraEditors.LabelControl();
             this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -69,6 +70,7 @@
             this.panelControl4.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.panelControl4.Appearance.Options.UseBackColor = true;
             this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelControl4.Controls.Add(this.btnExcel);
             this.panelControl4.Controls.Add(this.lblTenderNumber);
             this.panelControl4.Controls.Add(this.lblTenderDescription);
             this.panelControl4.Controls.Add(this.labelControl2);
@@ -80,6 +82,20 @@
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(1370, 72);
             this.panelControl4.TabIndex = 25;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExcel.Appearance.Options.UseFont = true;
+            this.btnExcel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExcel.Image = global::IhalematikProUI.Properties.Resources.Excel_icon;
+            this.btnExcel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnExcel.Location = new System.Drawing.Point(1161, 3);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(206, 66);
+            this.btnExcel.TabIndex = 45;
+            this.btnExcel.Text = "Excel\'e Aktar";
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // lblTenderNumber
             // 
@@ -211,7 +227,7 @@
             this.grdMaterialListHistory.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grdMaterialListHistory.EmbeddedNavigator.Appearance.Options.UseFont = true;
             this.grdMaterialListHistory.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdMaterialListHistory.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.grdMaterialListHistory.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grdMaterialListHistory.Location = new System.Drawing.Point(0, 107);
             this.grdMaterialListHistory.MainView = this.gridViewMaterialListNonWorkship;
             this.grdMaterialListHistory.Margin = new System.Windows.Forms.Padding(4);
@@ -351,6 +367,7 @@
             this.gridViewMaterialListNonWorkship.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewMaterialListNonWorkship.OptionsView.ShowDetailButtons = false;
             this.gridViewMaterialListNonWorkship.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.gridViewMaterialListNonWorkship.OptionsView.ShowFooter = true;
             this.gridViewMaterialListNonWorkship.OptionsView.ShowGroupPanel = false;
             this.gridViewMaterialListNonWorkship.PaintStyleName = "Web";
             // 
@@ -627,5 +644,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraEditors.SimpleButton btnExcel;
     }
 }
