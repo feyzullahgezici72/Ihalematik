@@ -18,6 +18,7 @@ using IhalematikPro.Forms;
 using System.IO;
 using ExcelDataReader;
 using IhalematikProUI.Forms.Tedarikci;
+using System.Diagnostics;
 
 namespace IhalematikProUI.Forms
 {
@@ -256,6 +257,27 @@ namespace IhalematikProUI.Forms
             if (e.KeyChar == 13)
             {
                 btnTumuneUygula.PerformClick();
+            }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string FileName = "\\Development\\Ihalematik\\IhalematikPro\\ExcelFiles\\TedarikcilerdenAlinanMaliyetListesi.xls";
+                grdMaterialList.ExportToXls(FileName);
+                frm_MesajFormu mesaj = new frm_MesajFormu();
+                mesaj.lblMesaj.Text = "Veriler Excel dosyasına aktarıldı...";
+                mesaj.ShowDialog();
+                System.Diagnostics.ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.FileName = "EXCEL.EXE";
+                startInfo.Arguments = FileName;
+                Process.Start(startInfo);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
             }
         }
     }

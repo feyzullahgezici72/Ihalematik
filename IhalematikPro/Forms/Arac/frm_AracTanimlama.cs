@@ -16,6 +16,7 @@ using IhalematikProBL.Provider;
 using IhalematikProBL.Entity;
 using IhalematikProUI.Forms.Base;
 using IhalematikProBL.Manager;
+using System.Diagnostics;
 
 namespace IhalematikPro.Forms
 {
@@ -448,6 +449,27 @@ namespace IhalematikPro.Forms
             if (e.KeyChar==13)
             {
                 simpleButton3.PerformClick();
+            }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string FileName = "\\Development\\Ihalematik\\IhalematikPro\\ExcelFiles\\AracListesi.xls";
+                grdVehicle.ExportToXls(FileName);
+                frm_MesajFormu mesaj = new frm_MesajFormu();
+                mesaj.lblMesaj.Text = "Veriler Excel dosyasına aktarıldı...";
+                mesaj.ShowDialog();
+                System.Diagnostics.ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.FileName = "EXCEL.EXE";
+                startInfo.Arguments = FileName;
+                Process.Start(startInfo);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
             }
         }
     }

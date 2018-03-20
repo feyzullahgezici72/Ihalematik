@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MailListesi));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
@@ -37,7 +37,7 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
+            this.grdMailList = new DevExpress.XtraGrid.GridControl();
             this.gridViewMaterialList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -52,6 +52,7 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.txtSearchTedarikci = new DevExpress.XtraEditors.TextEdit();
+            this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -59,7 +60,7 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdMailList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstMeterialDetail)).BeginInit();
@@ -87,7 +88,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1257, 35);
+            this.panelControl1.Size = new System.Drawing.Size(1301, 35);
             this.panelControl1.TabIndex = 26;
             // 
             // pcWorld
@@ -109,7 +110,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1229, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1273, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(6);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -139,7 +140,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl2.Location = new System.Drawing.Point(0, 580);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1257, 55);
+            this.panelControl2.Size = new System.Drawing.Size(1301, 55);
             this.panelControl2.TabIndex = 27;
             // 
             // btnTamam
@@ -149,7 +150,7 @@
             this.btnTamam.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
             this.btnTamam.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnTamam.Location = new System.Drawing.Point(1111, 3);
+            this.btnTamam.Location = new System.Drawing.Point(1155, 3);
             this.btnTamam.Margin = new System.Windows.Forms.Padding(4);
             this.btnTamam.Name = "btnTamam";
             this.btnTamam.Size = new System.Drawing.Size(143, 49);
@@ -159,27 +160,27 @@
             // 
             // panelControl3
             // 
-            this.panelControl3.Controls.Add(this.grdMaterialList);
+            this.panelControl3.Controls.Add(this.grdMailList);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 110);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1257, 470);
+            this.panelControl3.Size = new System.Drawing.Size(1301, 470);
             this.panelControl3.TabIndex = 28;
             // 
-            // grdMaterialList
+            // grdMailList
             // 
-            this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdMaterialList.Location = new System.Drawing.Point(3, 3);
-            this.grdMaterialList.MainView = this.gridViewMaterialList;
-            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
-            this.grdMaterialList.Name = "grdMaterialList";
-            this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.grdMailList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdMailList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.grdMailList.Location = new System.Drawing.Point(3, 3);
+            this.grdMailList.MainView = this.gridViewMaterialList;
+            this.grdMailList.Margin = new System.Windows.Forms.Padding(4);
+            this.grdMailList.Name = "grdMailList";
+            this.grdMailList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1,
             this.rpstMeterialDetail});
-            this.grdMaterialList.Size = new System.Drawing.Size(1251, 464);
-            this.grdMaterialList.TabIndex = 29;
-            this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdMailList.Size = new System.Drawing.Size(1295, 464);
+            this.grdMailList.TabIndex = 29;
+            this.grdMailList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
             // 
             // gridViewMaterialList
@@ -299,7 +300,7 @@
             this.gridColumn3,
             this.gridColumn4});
             this.gridViewMaterialList.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridViewMaterialList.GridControl = this.grdMaterialList;
+            this.gridViewMaterialList.GridControl = this.grdMailList;
             this.gridViewMaterialList.Name = "gridViewMaterialList";
             this.gridViewMaterialList.OptionsDetail.AllowExpandEmptyDetails = true;
             this.gridViewMaterialList.OptionsMenu.EnableColumnMenu = false;
@@ -373,12 +374,13 @@
             this.rpstMeterialDetail.AutoHeight = false;
             this.rpstMeterialDetail.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rpstMeterialDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.rpstMeterialDetail.Name = "rpstMeterialDetail";
             this.rpstMeterialDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // panelControl4
             // 
+            this.panelControl4.Controls.Add(this.btnExcel);
             this.panelControl4.Controls.Add(this.groupControl3);
             this.panelControl4.Controls.Add(this.groupControl2);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -386,7 +388,7 @@
             this.panelControl4.LookAndFeel.SkinName = "London Liquid Sky";
             this.panelControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1257, 75);
+            this.panelControl4.Size = new System.Drawing.Size(1301, 75);
             this.panelControl4.TabIndex = 44;
             // 
             // groupControl3
@@ -483,13 +485,28 @@
             this.txtSearchTedarikci.Size = new System.Drawing.Size(478, 26);
             this.txtSearchTedarikci.TabIndex = 0;
             // 
+            // btnExcel
+            // 
+            this.btnExcel.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExcel.Appearance.Options.UseFont = true;
+            this.btnExcel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExcel.Image = global::IhalematikProUI.Properties.Resources.Excel_icon;
+            this.btnExcel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnExcel.Location = new System.Drawing.Point(1093, 3);
+            this.btnExcel.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(205, 69);
+            this.btnExcel.TabIndex = 51;
+            this.btnExcel.Text = "Excel\'e Aktar";
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
             // frm_MailListesi
             // 
             this.AcceptButton = this.btnTamam;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(1257, 635);
+            this.ClientSize = new System.Drawing.Size(1301, 635);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl4);
@@ -507,7 +524,7 @@
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdMailList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstMeterialDetail)).EndInit();
@@ -532,7 +549,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl2;
         public DevExpress.XtraEditors.SimpleButton btnTamam;
         private DevExpress.XtraEditors.PanelControl panelControl3;
-        public DevExpress.XtraGrid.GridControl grdMaterialList;
+        public DevExpress.XtraGrid.GridControl grdMailList;
         public DevExpress.XtraGrid.Views.Grid.GridView gridViewMaterialList;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
@@ -547,5 +564,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.TextEdit txtSearchTedarikci;
+        private DevExpress.XtraEditors.SimpleButton btnExcel;
     }
 }
