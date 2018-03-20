@@ -64,13 +64,6 @@ namespace IhalematikPro.Forms
             if (offer == null)
             {
                 pozModels = UIPozManager.Instance.GetPozs(pozNumber, pozDescription);
-                if (pozModels == null || pozModels.Count == 0)
-                {
-                    frm_MesajFormu mf = new frm_MesajFormu();
-                    mf.lblMesaj.Text = "Kayıt Bulunmadı";
-                    mf.ShowDialog();
-                    txtPozNumber.Focus();
-                }
             }
 
             else
@@ -211,31 +204,6 @@ namespace IhalematikPro.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            Tender currentTender = CurrentManager.Instance.CurrentTender;
-            int[] selectedRows = gridView2.GetSelectedRows();
-            List<MaterialListModel> models = (List<MaterialListModel>)gridView2.DataSource;
-
-            MaterialListModel[] selectedRowsItems = models.ToArray();
-
-            foreach (int item in selectedRows)
-            {
-                MaterialListModel pozModel = selectedRowsItems[item];
-
-                MaterialList selectedItem = currentTender.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
-
-                if (selectedItem != null)
-                {
-                    selectedItem.IsMarkedForDeletion = true;
-                }
-            }
-
-            List<MaterialList> items = currentTender.MaterialList.Where(p => p.IsPoz && p.TenderGroupId == this.SelectedGroupId && !p.IsMarkedForDeletion).ToList();
-
-            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items).ToList();
-
-            grdAddedPoz.DataSource = null;
-            grdAddedPoz.DataSource = dataSource;
-            this.LoadMaterialListGrid();
  
         }
 
@@ -309,9 +277,33 @@ namespace IhalematikPro.Forms
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void btnCikar_Click(object sender, EventArgs e)
         {
+            Tender currentTender = CurrentManager.Instance.CurrentTender;
+            int[] selectedRows = gridView2.GetSelectedRows();
+            List<MaterialListModel> models = (List<MaterialListModel>)gridView2.DataSource;
 
+            MaterialListModel[] selectedRowsItems = models.ToArray();
+
+            foreach (int item in selectedRows)
+            {
+                MaterialListModel pozModel = selectedRowsItems[item];
+
+                MaterialList selectedItem = currentTender.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
+
+                if (selectedItem != null)
+                {
+                    selectedItem.IsMarkedForDeletion = true;
+                }
+            }
+
+            List<MaterialList> items = currentTender.MaterialList.Where(p => p.IsPoz && p.TenderGroupId == this.SelectedGroupId && !p.IsMarkedForDeletion).ToList();
+
+            List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items).ToList();
+
+            grdAddedPoz.DataSource = null;
+            grdAddedPoz.DataSource = dataSource;
+            this.LoadMaterialListGrid();
         }
     }
 }

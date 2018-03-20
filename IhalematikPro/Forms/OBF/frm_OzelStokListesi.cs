@@ -180,8 +180,6 @@ namespace IhalematikPro.Forms
 
         private void frm_OzelStokListesi_Shown(object sender, EventArgs e)
         {
-            frm_yukleniyor yukle = new frm_yukleniyor();
-            yukle.ShowDialog();
             LoadGrid();
             grdOBFList.Focus();
         }

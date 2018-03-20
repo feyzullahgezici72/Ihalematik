@@ -252,8 +252,6 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim3_Shown(object sender, EventArgs e)
         {
-            frm_yukleniyor yukle = new frm_yukleniyor();
-            yukle.ShowDialog();
             bindingSourceAddWorker.DataSource = typeof(List<TenderMaterialListEquipmentModel>);
             this.LoadTenderGroupGrid();
             if (CurrentManager.Instance.CurrentTender.PersonHour)

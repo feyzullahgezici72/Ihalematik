@@ -215,8 +215,6 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim1_Shown(object sender, EventArgs e)
         {
-            frm_yukleniyor yukle = new frm_yukleniyor();
-            yukle.ShowDialog();
             if (CurrentManager.Instance.CurrentTender != null && CurrentManager.Instance.CurrentTender.Offer != null)
             {
                 colQuantity.OptionsColumn.AllowEdit = false;

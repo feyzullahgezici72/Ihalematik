@@ -139,8 +139,6 @@ namespace IhalematikPro.Forms
 
         private void frm_PozListesi_Shown(object sender, EventArgs e)
         {
-            frm_yukleniyor yukle = new frm_yukleniyor();
-            yukle.ShowDialog();
             //Stopwatch stopWatch = new Stopwatch();
             //stopWatch.Start();
             LoadGrid();
@@ -216,8 +214,6 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            frm_yukleniyor yukle = new frm_yukleniyor();
-            yukle.ShowDialog();
             string pozNo = txtSearchNumber.Text.Trim();
             string pozDesc = txtSearchDescription.Text.Trim();
             List<Poz> items = new List<Poz>();
@@ -248,8 +244,6 @@ namespace IhalematikPro.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            frm_yukleniyor yukle = new frm_yukleniyor();
-            yukle.ShowDialog();
             string pozNo = txtSearchNumber.Text.Trim();
             string pozDesc = txtSearchDescription.Text.Trim();
             List<Poz> items = new List<Poz>();

@@ -173,8 +173,6 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim2_Shown(object sender, EventArgs e)
         {
-            frm_yukleniyor yukle = new frm_yukleniyor();
-            yukle.ShowDialog();
             bindingSourceMaterialListNonWorkship.DataSource = typeof(List<MaterialListModel>);
             grdMaterialListNonWorkship.DataSource = bindingSourceMaterialListNonWorkship;
             this.LoadTenderGroupGrid();
