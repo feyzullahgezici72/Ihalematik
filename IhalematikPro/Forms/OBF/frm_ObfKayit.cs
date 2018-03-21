@@ -95,11 +95,8 @@ namespace IhalematikPro.Forms
                 List<MaterialList> items = currentTender.MaterialList.Where(p => !p.IsPoz && p.TenderGroupId == this.SelectedGroupId).ToList();
                 foreach (MaterialList item in items)
                 {
-                    if (item.IsMarkedForDeletion)
-                    {
-                        currentTender.MaterialList.Remove(item);
-                    }
                     item.KDVPercentage = 18;
+                    item.TenderGroupId = this.SelectedGroupId;
                     MaterialListProvider.Instance.Save(item);
                 }
             }
@@ -122,14 +119,15 @@ namespace IhalematikPro.Forms
             {
                 MaterialListModel pozModel = selectedRowsItems[item];
                 MaterialList selectedItem = currentTender.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
-
-                if (selectedItem != null)
+                currentTender.MaterialList.Remove(selectedItem);
+                if (selectedItem.Id > 0)
                 {
                     selectedItem.IsMarkedForDeletion = true;
+                    MaterialListProvider.Instance.Save(selectedItem);
                 }
             }
 
-            List<MaterialList> items = currentTender.MaterialList.Where(p => !p.IsPoz && p.TenderGroupId == this.SelectedGroupId && !p.IsMarkedForDeletion).ToList();
+            List<MaterialList> items = currentTender.MaterialList.Where(p => !p.IsPoz && p.TenderGroupId == this.SelectedGroupId).ToList();
             List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items).ToList();
 
             grdAddedOBF.DataSource = null;

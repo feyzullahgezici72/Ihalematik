@@ -151,7 +151,7 @@ namespace IhalematikPro.Forms
                 materialList.Tender = currentTender;
                 materialList.TenderGroupId = this.SelectedGroupId;
                 materialList.OfferPrice = pozModel.OfferPrice;
-                
+
                 bool isExist = false;
                 foreach (var existmaterialList in currentTender.MaterialList)
                 {
@@ -160,7 +160,7 @@ namespace IhalematikPro.Forms
                         isExist = true;
                     }
                 }
-                
+
                 if (!isExist)
                 {
                     currentTender.MaterialList.Add(materialList);
@@ -185,10 +185,6 @@ namespace IhalematikPro.Forms
                 List<MaterialList> items = currentTender.MaterialList.Where(p => p.IsPoz && p.TenderGroupId == this.SelectedGroupId).ToList();
                 foreach (MaterialList item in items)
                 {
-                    if (item.IsMarkedForDeletion)
-                    {
-                        currentTender.MaterialList.Remove(item);
-                    }
                     item.TenderGroupId = this.SelectedGroupId;
                     item.KDVPercentage = 18;
                     MaterialListProvider.Instance.Save(item);
@@ -204,7 +200,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
- 
+
         }
 
         private void frm_PozluKayit_Load(object sender, EventArgs e)
@@ -271,13 +267,13 @@ namespace IhalematikPro.Forms
 
         private void txtDescription_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13)
             {
                 btnBul.PerformClick();
             }
         }
 
-        private void btnCikar_Click(object sender, EventArgs e)
+        private void btnCikar2_Click(object sender, EventArgs e)
         {
             Tender currentTender = CurrentManager.Instance.CurrentTender;
             int[] selectedRows = gridView2.GetSelectedRows();
@@ -288,12 +284,12 @@ namespace IhalematikPro.Forms
             foreach (int item in selectedRows)
             {
                 MaterialListModel pozModel = selectedRowsItems[item];
-
                 MaterialList selectedItem = currentTender.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
-
-                if (selectedItem != null)
+                currentTender.MaterialList.Remove(selectedItem);
+                if (selectedItem.Id > 0)
                 {
                     selectedItem.IsMarkedForDeletion = true;
+                    MaterialListProvider.Instance.Save(selectedItem);
                 }
             }
 
