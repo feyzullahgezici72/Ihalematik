@@ -36,12 +36,40 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnBul_Click(object sender, EventArgs e)
         {
+            this.LoadMaterialList();
+        }
+
+        private void LoadMaterialList()
+        {
             string obfNo = txtNumber.Text;
             string obfDescription = txtDescription.Text;
-
             oBFModels = UIOBFManager.Instance.GetOBFs(obfNo, obfDescription);
-
             oBFModels = oBFModels.Where(p => p.IsActive).ToList();
+            List<OfferMaterialList> selectedMaterialLists = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => !p.IsPoz).ToList();
+
+            if (selectedMaterialLists != null)
+            {
+                foreach (OfferMaterialList item in selectedMaterialLists)
+                {
+                    bool isExistingPozModel = false;
+                    OBFModel selectedOBFModel = null;
+                    foreach (var pozModel in oBFModels)
+                    {
+                        if (pozModel.Id == item.PozOBFId)
+                        {
+                            isExistingPozModel = true;
+                            selectedOBFModel = pozModel;
+                            break;
+                        }
+                    }
+
+                    if (isExistingPozModel)
+                    {
+                        oBFModels.Remove(selectedOBFModel);
+                    }
+                }
+            }
+
             grdOBFList.DataSource = oBFModels;
         }
 
@@ -73,6 +101,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
             grdAddedOBF.DataSource = null;
             grdAddedOBF.DataSource = models;
+            this.LoadMaterialList();
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -82,27 +111,25 @@ namespace IhalematikProUI.Forms.Tedarikci
             List<OfferMaterialListModel> models = gridView2.DataSource as List<OfferMaterialListModel>;
 
             OfferMaterialListModel[] selectedRowsItems = models.ToArray();
-            currentOffer.MaterialList.ForEach(p => p.Id = p.PozOBFId);
-
+            
             foreach (int item in selectedRows)
             {
                 OfferMaterialListModel pozModel = selectedRowsItems[item];
-
-                OfferMaterialList selectedItem = currentOffer.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).FirstOrDefault();
-
-                if (selectedItem != null)
+                OfferMaterialList selectedItem = currentOffer.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
+                currentOffer.MaterialList.Remove(selectedItem);
+                if (selectedItem.Id > 0)
                 {
                     selectedItem.IsMarkedForDeletion = true;
-                    //int index = currentOffer.MaterialList.FindIndex(p => p.PozOBFId == selectedItem.PozOBFId);
-                    //currentOffer.MaterialList.RemoveAt(index);
+                    OfferMaterialListProvider.Instance.Save(selectedItem);
                 }
             }
 
-            List<OfferMaterialList> items = currentOffer.MaterialList.Where(p => !p.IsPoz && !p.IsMarkedForDeletion).ToList();
+            List<OfferMaterialList> items = currentOffer.MaterialList.Where(p => !p.IsPoz).ToList();
             List<OfferMaterialListModel> dataSource = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(items).ToList();
 
             grdAddedOBF.DataSource = null;
             grdAddedOBF.DataSource = dataSource;
+            this.LoadMaterialList();
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
@@ -113,10 +140,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                 List<OfferMaterialList> items = currentOffer.MaterialList.Where(p => !p.IsPoz).ToList();
                 foreach (OfferMaterialList item in items)
                 {
-                    if (item.IsMarkedForDeletion)
-                    {
-                        currentOffer.MaterialList.Remove(item);
-                    }
                     OfferMaterialListProvider.Instance.Save(item);
                 }
             }

@@ -44,7 +44,34 @@ namespace IhalematikProUI.Forms.Tedarikci
             string pozDescription = txtDescription.Text;
 
             pozModels = UIPozManager.Instance.GetPozs(pozNumber, pozDescription);
+            List<OfferMaterialList> selectedMaterialLists = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.IsPoz).ToList();
+
+            if (selectedMaterialLists != null)
+            {
+                foreach (OfferMaterialList item in selectedMaterialLists)
+                {
+                    bool isExistingPozModel = false;
+                    PozModel selectedOBFModel = null;
+                    foreach (var pozModel in pozModels)
+                    {
+                        if (pozModel.Id == item.PozOBFId)
+                        {
+                            isExistingPozModel = true;
+                            selectedOBFModel = pozModel;
+                            break;
+                        }
+                    }
+
+                    if (isExistingPozModel)
+                    {
+                        pozModels.Remove(selectedOBFModel);
+                    }
+                }
+            }
+
+
             grdPozList.DataSource = pozModels;
+
         }
 
         private void frm_TedarikciPozluKayit_Shown(object sender, EventArgs e)
@@ -92,6 +119,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
             grdAddedPoz.DataSource = null;
             grdAddedPoz.DataSource = models;
+            this.LoadPozListGrid();
         }
 
         private void btnListedenCikar_Click(object sender, EventArgs e)
@@ -103,12 +131,14 @@ namespace IhalematikProUI.Forms.Tedarikci
 
             foreach (int item in selectedRows)
             {
-                OfferMaterialListModel pozModel = selectedRowsItems[item];
-                var selectedItem = currentOffer.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).SingleOrDefault();
 
-                if (selectedItem != null)
+                OfferMaterialListModel pozModel = selectedRowsItems[item];
+                OfferMaterialList selectedItem = currentOffer.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
+                currentOffer.MaterialList.Remove(selectedItem);
+                if (selectedItem.Id > 0)
                 {
                     selectedItem.IsMarkedForDeletion = true;
+                    OfferMaterialListProvider.Instance.Save(selectedItem);
                 }
             }
 
@@ -128,10 +158,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                 List<OfferMaterialList> items = currentOffer.MaterialList.Where(p => p.IsPoz).ToList();
                 foreach (OfferMaterialList item in items)
                 {
-                    if (item.IsMarkedForDeletion)
-                    {
-                        currentOffer.MaterialList.Remove(item);
-                    }
                     OfferMaterialListProvider.Instance.Save(item);
                 }
             }

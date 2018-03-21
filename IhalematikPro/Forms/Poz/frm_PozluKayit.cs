@@ -64,6 +64,28 @@ namespace IhalematikPro.Forms
             if (offer == null)
             {
                 pozModels = UIPozManager.Instance.GetPozs(pozNumber, pozDescription);
+                if (selectedMaterialLists != null)
+                {
+                    foreach (MaterialList item in selectedMaterialLists)
+                    {
+                        bool isExistingPozModel = false;
+                        PozModel selectedPozModel = null;
+                        foreach (var pozModel in pozModels)
+                        {
+                            if (pozModel.Id == item.PozOBFId)
+                            {
+                                isExistingPozModel = true;
+                                selectedPozModel = pozModel;
+                                break;
+                            }
+                        }
+
+                        if (isExistingPozModel)
+                        {
+                            pozModels.Remove(selectedPozModel);
+                        }
+                    }
+                }
             }
 
             else

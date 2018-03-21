@@ -190,6 +190,28 @@ namespace IhalematikPro.Forms
             if (offer == null)
             {
                 oBFModels = UIOBFManager.Instance.GetOBFs(obfNumber, obfDescription).Where(p => p.IsActive).ToList();
+                if (selectedMaterialLists != null)
+                {
+                    foreach (MaterialList item in selectedMaterialLists)
+                    {
+                        bool isExistingPozModel = false;
+                        OBFModel selectedOBFModel = null;
+                        foreach (var pozModel in oBFModels)
+                        {
+                            if (pozModel.Id == item.PozOBFId)
+                            {
+                                isExistingPozModel = true;
+                                selectedOBFModel = pozModel;
+                                break;
+                            }
+                        }
+
+                        if (isExistingPozModel)
+                        {
+                            oBFModels.Remove(selectedOBFModel);
+                        }
+                    }
+                }
             }
 
             else
