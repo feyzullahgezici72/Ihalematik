@@ -576,9 +576,11 @@
     <Compile Include="Manager\CurrentManager.cs" />
     <Compile Include="Manager\RuleManager.cs" />
     <Compile Include="Manager\UICustomConfigurationManager.cs" />
+    <Compile Include="Manager\UIGlobalVeriables.cs" />
     <Compile Include="Manager\UIMaterialListManager.cs" />
     <Compile Include="Manager\UIOBFManager.cs" />
     <Compile Include="Manager\UIPozManager.cs" />
+    <Compile Include="Manager\UIReportManager.cs" />
     <Compile Include="Manager\UITitleManager.cs" />
     <Compile Include="Manager\UIVehicleManager.cs" />
     <Compile Include="Manager\UIVehicleTitleManager.cs" />
