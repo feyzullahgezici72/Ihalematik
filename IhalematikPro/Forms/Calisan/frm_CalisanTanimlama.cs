@@ -55,7 +55,7 @@ namespace IhalematikPro.Forms
 
         public void getExcel()
         {
-            FileStream stream = System.IO.File.Open(@"E:\2017BirimFiyat.xlsx", FileMode.Open, FileAccess.Read);
+            FileStream stream = System.IO.File.Open(@"E:\2018BirimFiyat.xlsx", FileMode.Open, FileAccess.Read);
 
             IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
             //excelReader.IsFirstRowAsColumnNames = true;
@@ -65,11 +65,11 @@ namespace IhalematikPro.Forms
             {
                 if (i > 1)
                 {
-                    string pozno = excelReader.GetString(0);
-                    string description = excelReader.GetString(1);
-                    string unit = excelReader.GetString(2);
-                    double unitprice = excelReader.GetDouble(3);
-
+                    string pozno = excelReader.GetString(1);
+                    string description = excelReader.GetString(2);
+                    string unit = excelReader.GetString(3);
+                    double unitprice = excelReader.GetDouble(4);
+                    
                     if (!string.IsNullOrEmpty(pozno) && !string.IsNullOrEmpty(description) && !string.IsNullOrEmpty(unit))
                     {
                         Poz poz = new Poz();
@@ -77,6 +77,8 @@ namespace IhalematikPro.Forms
                         poz.Description = description;
                         poz.Unit = unit;
                         poz.UnitPrice = unitprice;
+                        poz.Year = 2018;
+                        poz.IsActive = true;
                         PozProvider.Instance.Save(poz);
                     }
                 }

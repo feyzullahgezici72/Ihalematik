@@ -15,7 +15,9 @@ namespace IhalematikProBL.Entity
         public string Unit { get; set; }
 
         public double UnitPrice { get; set; }
-        
+
+        public int Year { get; set; }
+
         public Material CreateMaterial(EntityBase Entity)
         {
             Material material = new Material();
@@ -27,6 +29,7 @@ namespace IhalematikProBL.Entity
                 material.UnitPrice = item.UnitPrice;
                 material.Description = item.Description;
                 material.DescriptionForSupplier = item.DescriptionForSupplier;
+                material.Year = item.Year;
                 material.Id = item.Id;
             }
             else if (Entity is OBF)

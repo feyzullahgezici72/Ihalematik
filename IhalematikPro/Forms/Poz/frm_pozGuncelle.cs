@@ -70,7 +70,7 @@ namespace IhalematikProUI.Forms
                 mf.lblMesaj.Text = "Kayıt Güncellendi...";
                 mf.ShowDialog();
                 this.Close();
-                this._owner.LoadGrid();
+                this._owner.LoadPozGrid();
             }
         }
         public bool IsEmptyKontrol()

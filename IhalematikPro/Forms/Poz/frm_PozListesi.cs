@@ -41,32 +41,6 @@ namespace IhalematikPro.Forms
             grdPozList.Hide();
         }
 
-        public void LoadGrid()
-        {
-            List<Poz> pozs = new List<Poz>();
-
-            if (cmbAktivePasive.SelectedIndex == 0)
-            {
-                pozs = UIPozManager.Instance.GetPozs(true);
-                colPasive.Visible = true;
-                colEdit.Visible = true;
-                colActive.Visible = false;
-            }
-            else if (cmbAktivePasive.SelectedIndex == 1)
-            {
-                pozs = UIPozManager.Instance.GetPozs(false);
-                colEdit.Visible = false;
-                colPasive.Visible = false;
-                colActive.Visible = true;
-            }
-            //if (this.FocusedRowHandle != 0)
-            //{
-            //    pozs = UIPozManager.Instance.GetPozs();
-            //}
-            grdPozList.DataSource = pozs;
-            gridViewPozList.FocusedRowHandle = this.FocusedRowHandle;
-            lblRecordCount.Text = pozs.Count.ToString();
-        }
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             IsEmptyKontrol();
@@ -85,13 +59,13 @@ namespace IhalematikPro.Forms
                     frm_MesajFormu mf = new frm_MesajFormu();
                     mf.lblMesaj.Text = "Bu Poz numarasi ile kayit bulunmaktadir";
                     mf.ShowDialog();
-                    this.txtNumber.Text="";
+                    this.txtNumber.Text = "";
                 }
                 else
                 {
                     model.Save();
                     FormClear();
-                    LoadGrid();
+                    LoadPozGrid();
                     frm_MesajFormu mf = new frm_MesajFormu();
                     mf.lblMesaj.Text = "Malzeme Kaydedildi...";
                     mf.ShowDialog();
@@ -100,19 +74,19 @@ namespace IhalematikPro.Forms
         }
         private void FormClear()
         {
-            this.txtNumber.Text="";
-            this.txtDescription.Text="";
-            this.txtUnit.Text="";
-            this.txtUnitPrice.Text="";
+            this.txtNumber.Text = "";
+            this.txtDescription.Text = "";
+            this.txtUnit.Text = "";
+            this.txtUnitPrice.Text = "";
             this.txtNumber.Focus();
         }
 
         private void btnTemizle_Click(object sender, EventArgs e)
         {
-            txtDescription.Text="";
-            txtNumber.Text="";
-            txtUnit.Text="";
-            txtUnitPrice.Text="";
+            txtDescription.Text = "";
+            txtNumber.Text = "";
+            txtUnit.Text = "";
+            txtUnitPrice.Text = "";
             txtNumber.Focus();
         }
 
@@ -129,21 +103,17 @@ namespace IhalematikPro.Forms
             frm.ShowDialog();
             pozMenu.Visible = true;
             grdPozList.Enabled = true;
-            this.LoadGrid();
+            this.LoadPozGrid();
         }
 
         private void cmbAktivePasive_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.LoadGrid();
+            this.LoadPozGrid();
         }
 
         private void frm_PozListesi_Shown(object sender, EventArgs e)
         {
-            //Stopwatch stopWatch = new Stopwatch();
-            //stopWatch.Start();
-            LoadGrid();
-            //stopWatch.Stop();
-            //TimeSpan ts = stopWatch.Elapsed;
+            LoadPozGrid();
             grdPozList.Show();
         }
         public bool IsEmptyKontrol()
@@ -186,7 +156,7 @@ namespace IhalematikPro.Forms
                 Poz selectedVehicle = PozProvider.Instance.GetItem(id);
                 selectedVehicle.IsActive = true;
                 PozProvider.Instance.Save(selectedVehicle);
-                this.LoadGrid();
+                this.LoadPozGrid();
             }
             else
             {
@@ -204,7 +174,7 @@ namespace IhalematikPro.Forms
                 Poz selectedVehicle = PozProvider.Instance.GetItem(id);
                 selectedVehicle.IsActive = false;
                 PozProvider.Instance.Save(selectedVehicle);
-                this.LoadGrid();
+                this.LoadPozGrid();
             }
             else
             {
@@ -214,47 +184,44 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            string pozNo = txtSearchNumber.Text.Trim();
-            string pozDesc = txtSearchDescription.Text.Trim();
-            List<Poz> items = new List<Poz>();
-
-            if (cmbAktivePasive.SelectedIndex == 0)
-            {
-                items = UIPozManager.Instance.GetPozs(true);
-            }
-            else if (cmbAktivePasive.SelectedIndex == 1)
-            {
-                items = UIPozManager.Instance.GetPozs(false);
-            }
-            
-            if (!string.IsNullOrEmpty(pozNo))
-            {
-                items = items.Where(p => p.Number.Contains(pozNo)).ToList();
-            }
-            if (!string.IsNullOrEmpty(pozDesc))
-            {
-                items = items.Where(p => p.Description.Contains(pozDesc)).ToList();
-            }
-
-            grdPozList.DataSource = null;
-            grdPozList.DataSource = items;
-            lblRecordCount.Text = items.Count.ToString();
+            this.LoadPozGrid();
             txtSearchNumber.Focus();
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
+            this.LoadPozGrid();
+        }
+
+        public void LoadPozGrid()
+        {
             string pozNo = txtSearchNumber.Text.Trim();
             string pozDesc = txtSearchDescription.Text.Trim();
             List<Poz> items = new List<Poz>();
+            int year = DateTime.Now.Year;
+
+            if (ddlPozYear.SelectedIndex == 0 /*2017*/)
+            {
+                year = 2017;
+            }
+            if (ddlPozYear.SelectedIndex == 1 /*2018*/)
+            {
+                year = 2018;
+            }
 
             if (cmbAktivePasive.SelectedIndex == 0)
             {
-                items = UIPozManager.Instance.GetPozs(true);
+                items = UIPozManager.Instance.GetPozs(true, year);
+                colPasive.Visible = true;
+                colEdit.Visible = true;
+                colActive.Visible = false;
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
-                items = UIPozManager.Instance.GetPozs(false);
+                items = UIPozManager.Instance.GetPozs(false, year);
+                colEdit.Visible = false;
+                colPasive.Visible = false;
+                colActive.Visible = true;
             }
 
             if (!string.IsNullOrEmpty(pozNo))
@@ -268,12 +235,13 @@ namespace IhalematikPro.Forms
 
             grdPozList.DataSource = null;
             grdPozList.DataSource = items;
+            gridViewPozList.FocusedRowHandle = this.FocusedRowHandle;
             lblRecordCount.Text = items.Count.ToString();
         }
 
         private void txtSearchNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13)
             {
                 simpleButton1.PerformClick();
             }
@@ -281,11 +249,16 @@ namespace IhalematikPro.Forms
 
         private void txtSearchDescription_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13)
             {
                 simpleButton2.PerformClick();
             }
         }
+
+        private void ddlPozYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.LoadPozGrid();
+        }
     }
-    
+
 }

@@ -20,6 +20,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("UnitPrice", t.UnitPrice);
             parameters.Add("IsActive", t.IsActive);
             parameters.Add("DescriptionForSupplier", t.DescriptionForSupplier);
+            parameters.Add("Year", t.Year);
             return parameters;
         }
 
@@ -31,6 +32,7 @@ namespace IhalematikProBL.Provider
             t.Unit = dr.GetValue<string>("Unit");
             t.UnitPrice = dr.GetValue<double>("UnitPrice");
             t.IsActive = dr.GetValue<bool>("IsActive");
+            t.Year = dr.GetValue<int>("Year");
             t.DescriptionForSupplier = dr.GetValue<string>("DescriptionForSupplier");
         }
     }

@@ -24,6 +24,7 @@ namespace IhalematikPro.Manager
             Dictionary<string, object> param = new Dictionary<string, object>();
             param.Add("Number", PozNumber);
             param.Add("Description", PozDescription);
+            param.Add("Year", DateTime.Now.Year);
             pozs = PozProvider.Instance.GetItems(param);
             List<PozModel> models = CustomSaveableModelBase.GetModels<PozModel, Poz>(pozs);
             return models;
@@ -38,10 +39,12 @@ namespace IhalematikPro.Manager
             }
             return null;
         }
-        public List<Poz> GetPozs(bool IsActive)
+        public List<Poz> GetPozs(bool IsActive, int Year)
         {
-            List<Poz> pozs = PozProvider.Instance.GetItems("IsActive", IsActive);
-            //List<PozModel> models = CustomSaveableModelBase.GetModels<PozModel, Poz>(pozs);
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("IsActive", IsActive);
+            parameters.Add("Year", Year);
+            List<Poz> pozs = PozProvider.Instance.GetItems(parameters);
             return pozs;
         }
     }
