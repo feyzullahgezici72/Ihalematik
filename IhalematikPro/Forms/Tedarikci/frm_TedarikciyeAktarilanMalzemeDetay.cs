@@ -91,7 +91,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                 this.IsSendMail = false;
                 this.CreateExcel();
 
-               // OperationResult result = this.SendMail();
+               OperationResult result = this.SendMail();
 
                 if (result.Success)
                 {
