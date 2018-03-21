@@ -52,7 +52,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void frm_TedarikciyeAktarilanMalzemeDetay_Shown(object sender, EventArgs e)
         {
-            pnlMail.Visible = this.ShowMailPanel; 
+            pnlMail.Visible = this.ShowMailPanel;
             //Supplier supplier = SupplierProvider.Instance.GetItem(this.SelectedSupplierId);
             if (this.Supplier != null)
             {
@@ -86,17 +86,17 @@ namespace IhalematikProUI.Forms.Tedarikci
                 //this.SendMailTask = new Task(() =>
                 //{
                 //emailMesajPanel.Visible = true;
-                fw  = new frm_wait();//Mail gönderiliyor mesaj formu
+                fw = new frm_wait();//Mail gönderiliyor mesaj formu
                 fw.Show();
                 this.IsSendMail = false;
                 this.CreateExcel();
-                
-                OperationResult result = this.SendMail();
-             
+
+               // OperationResult result = this.SendMail();
+
                 if (result.Success)
                 {
                     Application.DoEvents();
-                    
+
                     this.SendInfoMessage();
                 }
                 else
@@ -162,7 +162,14 @@ namespace IhalematikProUI.Forms.Tedarikci
                     oXL = new Microsoft.Office.Interop.Excel.Application();
                     oWB = oXL.Workbooks.Open(DestinationFile);
                     oSheet = String.IsNullOrEmpty("Sayfa1") ? (Microsoft.Office.Interop.Excel._Worksheet)oWB.ActiveSheet : (Microsoft.Office.Interop.Excel._Worksheet)oWB.Worksheets["Sayfa1"];
-                    
+
+                    //oSheet.PageSetup.LeftHeaderPicture = image;
+                    //oSheet.PageSetup.LeftHeader = "&G";
+
+                    //xlWorkSheet.Shapes.AddPicture("C:\\csharp-xl-picture.JPG", Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 50, 50, 300, 45); 
+
+
+
                     if (CurrentManager.Instance.CurrentOffer != null)
                     {
                         Application.DoEvents();
@@ -215,9 +222,17 @@ namespace IhalematikProUI.Forms.Tedarikci
                         }
                     }
                     Application.DoEvents();
+                    string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                    string a = (path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
+                    oSheet.Shapes.AddPicture(a, Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 100, 10, CurrentManager.Instance.CurrentCompany.LogoWidth, CurrentManager.Instance.CurrentCompany.LogoHeight);
+                    //string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                    //Image image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
+                    //oSheet.PageSetup.LeftHeaderPicture.Filename = path;
+                    //oSheet.PageSetup.RightHeaderPicture.Filename = path;
+
                     oWB.Save();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     // MessageBox.Show(ex.ToString());
                 }
@@ -229,7 +244,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             }
         }
 
-        
+
 
         private void SendInfoMessage()
         {
@@ -264,7 +279,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                 fw.Close();
                 frm_MesajFormu mesajformu = new frm_MesajFormu();
                 mesajformu.lblMesaj.Text = "Mail Gönderildi...";
-                
+
                 mesajformu.ShowDialog();
                 this.Close();
             }
@@ -301,7 +316,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-          
+
         }
     }
 }
