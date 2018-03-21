@@ -195,6 +195,7 @@ namespace IhalematikPro.Forms
 
         public void LoadPozGrid()
         {
+
             string pozNo = txtSearchNumber.Text.Trim();
             string pozDesc = txtSearchDescription.Text.Trim();
             List<Poz> items = new List<Poz>();
@@ -203,10 +204,14 @@ namespace IhalematikPro.Forms
             if (ddlPozYear.SelectedIndex == 0 /*2017*/)
             {
                 year = 2017;
+                lblPozListesi.Text = "POZ LİSTESİ" + "                               " + ddlPozYear.Text ;
+
             }
             if (ddlPozYear.SelectedIndex == 1 /*2018*/)
             {
                 year = 2018;
+                lblPozListesi.Text = "POZ LİSTESİ" + "                               " + ddlPozYear.Text ;
+
             }
 
             if (cmbAktivePasive.SelectedIndex == 0)
@@ -258,6 +263,7 @@ namespace IhalematikPro.Forms
         private void ddlPozYear_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.LoadPozGrid();
+            
         }
     }
 
