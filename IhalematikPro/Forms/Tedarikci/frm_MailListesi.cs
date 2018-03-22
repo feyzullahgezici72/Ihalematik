@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Diagnostics;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -33,20 +34,16 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
             try
             {
-                string FileName = "\\Development\\Ihalematik\\IhalematikPro\\ExcelFiles\\eMailListesi.xls";
-                grdMailList.ExportToXls(FileName);
-                frm_MesajFormu mesaj = new frm_MesajFormu();
-                mesaj.lblMesaj.Text = "Veriler Excel dosyasına aktarıldı...";
-                mesaj.ShowDialog();
-                System.Diagnostics.ProcessStartInfo startInfo = new ProcessStartInfo();
-                startInfo.FileName = "EXCEL.EXE";
-                startInfo.Arguments = FileName;
-                Process.Start(startInfo);
+                bool isSuccess = UIReportManager.Instance.ExtractExcel(grdMailList);
+                if (!isSuccess)
+                {
+                    MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
+                }
             }
             catch (Exception)
             {
 
-                MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
+
             }
         }
     }

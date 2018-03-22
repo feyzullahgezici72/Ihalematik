@@ -28,22 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Teklif_Adim3));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.btnIscilikveAracGirisi = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.cmbBirimFiyat = new System.Windows.Forms.RadioButton();
             this.cmbAdamSaat = new System.Windows.Forms.RadioButton();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
-            this.btnTumuneUygula = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtWorkerMarkup = new System.Windows.Forms.MaskedTextBox();
             this.lblTenderNumber = new DevExpress.XtraEditors.LabelControl();
             this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -87,7 +82,7 @@
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.btnPanelKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             this.grdMaterialListIsWorkship = new DevExpress.XtraGrid.GridControl();
             this.gridViewMaterialListIsWorkship = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -104,8 +99,8 @@
             this.colWorkerTotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCustomWorkerTotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource();
+            this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource();
             this.panelGrup = new DevExpress.XtraEditors.PanelControl();
             this.grdTenderGroup = new DevExpress.XtraGrid.GridControl();
             this.gridViewTenderGroup = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -121,20 +116,23 @@
             this.isciAracGirisPaneli = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.lblKarToplam = new DevExpress.XtraEditors.LabelControl();
-            this.pnlrisk = new DevExpress.XtraEditors.PanelControl();
             this.panelControl9 = new DevExpress.XtraEditors.PanelControl();
             this.btnPrev = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
+            this.pnlrisk = new DevExpress.XtraEditors.PanelControl();
             this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.btnTumuneUygula = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtWorkerMarkup = new System.Windows.Forms.MaskedTextBox();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.btnIscilikveAracGirisi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
-            this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -178,19 +176,22 @@
             this.isciAracGirisPaneli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlrisk)).BeginInit();
-            this.pnlrisk.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).BeginInit();
             this.panelControl9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlrisk)).BeginInit();
+            this.pnlrisk.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
             this.SuspendLayout();
             // 
             // btnIscilikveAracGirisi
             // 
             this.btnIscilikveAracGirisi.AutoHeight = false;
             this.btnIscilikveAracGirisi.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Ekle", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnIscilikveAracGirisi.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "Ekle", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnIscilikveAracGirisi.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnIscilikveAracGirisi.Name = "btnIscilikveAracGirisi";
             this.btnIscilikveAracGirisi.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -199,8 +200,8 @@
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.groupControl2);
             this.panelControl2.Controls.Add(this.panelControl4);
+            this.panelControl2.Controls.Add(this.pnlrisk);
             this.panelControl2.Controls.Add(this.lblTenderNumber);
             this.panelControl2.Controls.Add(this.lblTenderDescription);
             this.panelControl2.Controls.Add(this.labelControl1);
@@ -218,8 +219,7 @@
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.Controls.Add(this.cmbBirimFiyat);
             this.groupControl2.Controls.Add(this.cmbAdamSaat);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl2.Location = new System.Drawing.Point(846, 0);
+            this.groupControl2.Location = new System.Drawing.Point(1308, 253);
             this.groupControl2.LookAndFeel.SkinName = "London Liquid Sky";
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Name = "groupControl2";
@@ -252,60 +252,6 @@
             this.cmbAdamSaat.UseVisualStyleBackColor = true;
             this.cmbAdamSaat.CheckedChanged += new System.EventHandler(this.cmbAdamSaat_CheckedChanged);
             this.cmbAdamSaat.Click += new System.EventHandler(this.cmbAdamSaat_Click);
-            // 
-            // panelControl4
-            // 
-            this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl4.Controls.Add(this.btnTumuneUygula);
-            this.panelControl4.Controls.Add(this.labelControl2);
-            this.panelControl4.Controls.Add(this.txtWorkerMarkup);
-            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl4.Location = new System.Drawing.Point(1198, 0);
-            this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(172, 66);
-            this.panelControl4.TabIndex = 44;
-            // 
-            // btnTumuneUygula
-            // 
-            this.btnTumuneUygula.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTumuneUygula.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTumuneUygula.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnTumuneUygula.Appearance.Options.UseFont = true;
-            this.btnTumuneUygula.Appearance.Options.UseForeColor = true;
-            this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
-            this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(120, 12);
-            this.btnTumuneUygula.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnTumuneUygula.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTumuneUygula.Name = "btnTumuneUygula";
-            this.btnTumuneUygula.Size = new System.Drawing.Size(39, 38);
-            this.btnTumuneUygula.TabIndex = 34;
-            this.btnTumuneUygula.Click += new System.EventHandler(this.btnTumuneUygula_Click);
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Location = new System.Drawing.Point(15, 23);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(6);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(48, 19);
-            this.labelControl2.TabIndex = 35;
-            this.labelControl2.Text = "Kar %  :";
-            // 
-            // txtWorkerMarkup
-            // 
-            this.txtWorkerMarkup.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtWorkerMarkup.BeepOnError = true;
-            this.txtWorkerMarkup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtWorkerMarkup.Location = new System.Drawing.Point(68, 18);
-            this.txtWorkerMarkup.Name = "txtWorkerMarkup";
-            this.txtWorkerMarkup.Size = new System.Drawing.Size(46, 27);
-            this.txtWorkerMarkup.TabIndex = 41;
-            this.txtWorkerMarkup.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtWorkerMarkup.TextChanged += new System.EventHandler(this.txtWorkerMarkup_TextChanged);
-            this.txtWorkerMarkup.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWorkerMarkup_KeyPress);
             // 
             // lblTenderNumber
             // 
@@ -1384,7 +1330,7 @@
             // 
             this.btnCalisanlarveAraclar.AutoHeight = false;
             this.btnCalisanlarveAraclar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCalisanlarveAraclar.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCalisanlarveAraclar.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnCalisanlarveAraclar.Name = "btnCalisanlarveAraclar";
             this.btnCalisanlarveAraclar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnCalisanlarveAraclar.Click += new System.EventHandler(this.btnCalisanlarveAraclar_Click);
@@ -1746,7 +1692,7 @@
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit1.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject11, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit1.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.repositoryItemButtonEdit1.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -1755,7 +1701,7 @@
             // 
             this.btnSil.AutoHeight = false;
             this.btnSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSil.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject12, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSil.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnSil.Name = "btnSil";
             this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -1805,7 +1751,6 @@
             this.panelControl3.Appearance.Options.UseBackColor = true;
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl3.Controls.Add(this.lblKarToplam);
-            this.panelControl3.Controls.Add(this.pnlrisk);
             this.panelControl3.Controls.Add(this.panelControl9);
             this.panelControl3.Controls.Add(this.panelControl6);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -1825,19 +1770,6 @@
             this.lblKarToplam.Size = new System.Drawing.Size(43, 24);
             this.lblKarToplam.TabIndex = 14;
             this.lblKarToplam.Text = "0 TL  ";
-            // 
-            // pnlrisk
-            // 
-            this.pnlrisk.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pnlrisk.Appearance.Options.UseBackColor = true;
-            this.pnlrisk.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pnlrisk.Controls.Add(this.btnExcel);
-            this.pnlrisk.Controls.Add(this.btnPrint);
-            this.pnlrisk.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlrisk.Location = new System.Drawing.Point(0, 0);
-            this.pnlrisk.Name = "pnlrisk";
-            this.pnlrisk.Size = new System.Drawing.Size(368, 70);
-            this.pnlrisk.TabIndex = 49;
             // 
             // panelControl9
             // 
@@ -1893,33 +1825,111 @@
             this.btnNext.Text = "Sonraki Adım";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
+            // pnlrisk
+            // 
+            this.pnlrisk.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pnlrisk.Appearance.Options.UseBackColor = true;
+            this.pnlrisk.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlrisk.Controls.Add(this.panelControl8);
+            this.pnlrisk.Controls.Add(this.btnPrint);
+            this.pnlrisk.Controls.Add(this.btnExcel);
+            this.pnlrisk.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlrisk.Location = new System.Drawing.Point(981, 0);
+            this.pnlrisk.Name = "pnlrisk";
+            this.pnlrisk.Size = new System.Drawing.Size(389, 66);
+            this.pnlrisk.TabIndex = 50;
+            // 
             // btnExcel
             // 
             this.btnExcel.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExcel.Appearance.Options.UseFont = true;
-            this.btnExcel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnExcel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExcel.Image = global::IhalematikProUI.Properties.Resources.Excel_icon;
             this.btnExcel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnExcel.Location = new System.Drawing.Point(155, 0);
+            this.btnExcel.Location = new System.Drawing.Point(183, 0);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(206, 70);
+            this.btnExcel.Size = new System.Drawing.Size(206, 66);
             this.btnExcel.TabIndex = 17;
             this.btnExcel.Text = "Excel\'e Aktar";
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // panelControl4
+            // 
+            this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl4.Controls.Add(this.btnTumuneUygula);
+            this.panelControl4.Controls.Add(this.labelControl2);
+            this.panelControl4.Controls.Add(this.txtWorkerMarkup);
+            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelControl4.Location = new System.Drawing.Point(809, 0);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(172, 66);
+            this.panelControl4.TabIndex = 51;
+            // 
+            // btnTumuneUygula
+            // 
+            this.btnTumuneUygula.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTumuneUygula.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTumuneUygula.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnTumuneUygula.Appearance.Options.UseFont = true;
+            this.btnTumuneUygula.Appearance.Options.UseForeColor = true;
+            this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
+            this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnTumuneUygula.Location = new System.Drawing.Point(120, 12);
+            this.btnTumuneUygula.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnTumuneUygula.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTumuneUygula.Name = "btnTumuneUygula";
+            this.btnTumuneUygula.Size = new System.Drawing.Size(39, 38);
+            this.btnTumuneUygula.TabIndex = 34;
+            this.btnTumuneUygula.Click += new System.EventHandler(this.btnTumuneUygula_Click);
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Location = new System.Drawing.Point(15, 23);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(6);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(48, 19);
+            this.labelControl2.TabIndex = 35;
+            this.labelControl2.Text = "Kar %  :";
+            // 
+            // txtWorkerMarkup
+            // 
+            this.txtWorkerMarkup.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtWorkerMarkup.BeepOnError = true;
+            this.txtWorkerMarkup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtWorkerMarkup.Location = new System.Drawing.Point(68, 18);
+            this.txtWorkerMarkup.Name = "txtWorkerMarkup";
+            this.txtWorkerMarkup.Size = new System.Drawing.Size(46, 27);
+            this.txtWorkerMarkup.TabIndex = 41;
+            this.txtWorkerMarkup.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnPrint
             // 
             this.btnPrint.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnPrint.Appearance.Options.UseFont = true;
-            this.btnPrint.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnPrint.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
             this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(0, 0);
+            this.btnPrint.Location = new System.Drawing.Point(28, 0);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(155, 70);
-            this.btnPrint.TabIndex = 16;
+            this.btnPrint.Size = new System.Drawing.Size(155, 66);
+            this.btnPrint.TabIndex = 53;
             this.btnPrint.Text = "Yazdır";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // panelControl8
+            // 
+            this.panelControl8.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelControl8.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl8.Appearance.Options.UseBackColor = true;
+            this.panelControl8.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelControl8.Location = new System.Drawing.Point(3, 0);
+            this.panelControl8.Name = "panelControl8";
+            this.panelControl8.Size = new System.Drawing.Size(25, 66);
+            this.panelControl8.TabIndex = 54;
             // 
             // frm_Teklif_Adim3
             // 
@@ -1928,6 +1938,7 @@
             this.CancelButton = this.btnPanelKapat;
             this.ClientSize = new System.Drawing.Size(1370, 642);
             this.ControlBox = false;
+            this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.grdMaterialListIsWorkship);
             this.Controls.Add(this.isciAracGirisPaneli);
             this.Controls.Add(this.panelControl3);
@@ -1951,9 +1962,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
-            this.panelControl4.ResumeLayout(false);
-            this.panelControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -2001,12 +2009,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlrisk)).EndInit();
-            this.pnlrisk.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).EndInit();
             this.panelControl9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
             this.panelControl6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pnlrisk)).EndInit();
+            this.pnlrisk.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
+            this.panelControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2022,7 +2034,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl lblTenderNumber;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.MaskedTextBox txtWorkerMarkup;
         private DevExpress.XtraGrid.GridControl grdMaterialListIsWorkship;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
@@ -2032,10 +2043,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn clmEquipments;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnIscilikveAracGirisi;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnCalisanlarveAraclar;
-        private DevExpress.XtraEditors.SimpleButton btnTumuneUygula;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraGrid.Columns.GridColumn colMaterialListMarkup;
-        private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.PanelControl isciAracGirisPanelix;
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -2101,10 +2109,15 @@
         private DevExpress.XtraGrid.Columns.GridColumn colCustomWorkerTotalAmount;
         private DevExpress.XtraGrid.Columns.GridColumn colCustomWorkerMarkupUnitPrice;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraEditors.PanelControl pnlrisk;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.PanelControl panelControl7;
+        private DevExpress.XtraEditors.PanelControl panelControl4;
+        private DevExpress.XtraEditors.SimpleButton btnTumuneUygula;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private System.Windows.Forms.MaskedTextBox txtWorkerMarkup;
+        private DevExpress.XtraEditors.PanelControl pnlrisk;
         private DevExpress.XtraEditors.SimpleButton btnExcel;
+        private DevExpress.XtraEditors.PanelControl panelControl8;
         private DevExpress.XtraEditors.SimpleButton btnPrint;
     }
 }

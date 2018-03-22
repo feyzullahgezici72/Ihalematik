@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TedarikcilerdenFiyatAl));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.pnltoplam = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtTotalAmount = new DevExpress.XtraEditors.TextEdit();
@@ -39,7 +38,6 @@
             this.txtBaseKDVAmount = new DevExpress.XtraEditors.TextEdit();
             this.txtBaseAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
@@ -82,9 +80,11 @@
             this.lblTederDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.pnltoplam.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalAmount.Properties)).BeginInit();
@@ -118,12 +118,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.SuspendLayout();
             // 
             // pnltoplam
             // 
             this.pnltoplam.BackColor = System.Drawing.Color.Transparent;
-            this.pnltoplam.Controls.Add(this.btnExcel);
             this.pnltoplam.Controls.Add(this.panel6);
             this.pnltoplam.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnltoplam.Location = new System.Drawing.Point(0, 0);
@@ -218,21 +218,6 @@
             this.labelControl8.Size = new System.Drawing.Size(89, 19);
             this.labelControl8.TabIndex = 10;
             this.labelControl8.Text = "Kdv Toplamı:";
-            // 
-            // btnKaydet
-            // 
-            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.Appearance.Options.UseFont = true;
-            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
-            this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnKaydet.Location = new System.Drawing.Point(1216, 3);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(143, 64);
-            this.btnKaydet.TabIndex = 3;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // panelControl3
             // 
@@ -611,7 +596,7 @@
             this.rpstMeterialDetail.AutoHeight = false;
             this.rpstMeterialDetail.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rpstMeterialDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.rpstMeterialDetail.Name = "rpstMeterialDetail";
             this.rpstMeterialDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.rpstMeterialDetail.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.rpstMeterialDetail_ButtonClick);
@@ -905,8 +890,9 @@
             this.panelControl2.Appearance.BackColor2 = System.Drawing.Color.White;
             this.panelControl2.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.panelControl2.Appearance.Options.UseBackColor = true;
-            this.panelControl2.Controls.Add(this.pnlrisk);
             this.panelControl2.Controls.Add(this.btnKaydet);
+            this.panelControl2.Controls.Add(this.panelControl4);
+            this.panelControl2.Controls.Add(this.btnExcel);
             this.panelControl2.Controls.Add(this.lblTenderDescription);
             this.panelControl2.Controls.Add(this.labelControl2);
             this.panelControl2.Controls.Add(this.lblTenderNumber);
@@ -927,7 +913,7 @@
             this.pnlrisk.Controls.Add(this.txtRisk);
             this.pnlrisk.Controls.Add(this.labelControl3);
             this.pnlrisk.Controls.Add(this.btnTumuneUygula);
-            this.pnlrisk.Location = new System.Drawing.Point(816, 3);
+            this.pnlrisk.Location = new System.Drawing.Point(411, 34);
             this.pnlrisk.Name = "pnlrisk";
             this.pnlrisk.Size = new System.Drawing.Size(274, 64);
             this.pnlrisk.TabIndex = 46;
@@ -1030,6 +1016,7 @@
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            this.panelControl1.Controls.Add(this.pnlrisk);
             this.panelControl1.Controls.Add(this.pcWorld);
             this.panelControl1.Controls.Add(this.btnKapat);
             this.panelControl1.Controls.Add(this.txtAdimAciklama);
@@ -1048,15 +1035,42 @@
             // 
             this.btnExcel.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExcel.Appearance.Options.UseFont = true;
-            this.btnExcel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnExcel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExcel.Image = global::IhalematikProUI.Properties.Resources.Excel_icon;
             this.btnExcel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnExcel.Location = new System.Drawing.Point(0, 0);
+            this.btnExcel.Location = new System.Drawing.Point(1123, 3);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(250, 104);
-            this.btnExcel.TabIndex = 47;
+            this.btnExcel.Size = new System.Drawing.Size(236, 64);
+            this.btnExcel.TabIndex = 48;
             this.btnExcel.Text = "Excel\'e Aktar";
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // panelControl4
+            // 
+            this.panelControl4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelControl4.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl4.Appearance.Options.UseBackColor = true;
+            this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelControl4.Location = new System.Drawing.Point(1098, 3);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(25, 64);
+            this.panelControl4.TabIndex = 50;
+            // 
+            // btnKaydet
+            // 
+            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaydet.Appearance.Options.UseFont = true;
+            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
+            this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnKaydet.Location = new System.Drawing.Point(955, 3);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(143, 64);
+            this.btnKaydet.TabIndex = 51;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // frm_TedarikcilerdenFiyatAl
             // 
@@ -1112,6 +1126,7 @@
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1125,7 +1140,6 @@
         private DevExpress.XtraEditors.TextEdit txtBaseKDVAmount;
         private DevExpress.XtraEditors.TextEdit txtBaseAmount;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        public DevExpress.XtraEditors.SimpleButton btnKaydet;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraEditors.PanelControl panelControl6;
@@ -1171,5 +1185,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit rpstMeterialDetail;
         private DevExpress.XtraGrid.Columns.GridColumn colKDV;
         private DevExpress.XtraEditors.SimpleButton btnExcel;
+        public DevExpress.XtraEditors.SimpleButton btnKaydet;
+        private DevExpress.XtraEditors.PanelControl panelControl4;
     }
 }

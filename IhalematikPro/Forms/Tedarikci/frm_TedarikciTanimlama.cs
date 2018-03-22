@@ -16,6 +16,7 @@ using SimpleApplicationBase.BL.Base;
 using IhalematikProUI.Forms.Tedarikci;
 using IhalematikProUI.Model;
 using System.Diagnostics;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms
 {
@@ -315,20 +316,16 @@ namespace IhalematikProUI.Forms
         {
             try
             {
-                string FileName = "\\Development\\Ihalematik\\IhalematikPro\\ExcelFiles\\TedarikciListesi.xls";
-                grdSupplier.ExportToXls(FileName);
-                frm_MesajFormu mesaj = new frm_MesajFormu();
-                mesaj.lblMesaj.Text = "Veriler Excel dosyasına aktarıldı...";
-                mesaj.ShowDialog();
-                System.Diagnostics.ProcessStartInfo startInfo = new ProcessStartInfo();
-                startInfo.FileName = "EXCEL.EXE";
-                startInfo.Arguments = FileName;
-                Process.Start(startInfo);
+                bool isSuccess = UIReportManager.Instance.ExtractExcel(grdSupplier);
+                if (!isSuccess)
+                {
+                    MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
+                }
             }
             catch (Exception)
             {
 
-                MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
+
             }
         }
     }

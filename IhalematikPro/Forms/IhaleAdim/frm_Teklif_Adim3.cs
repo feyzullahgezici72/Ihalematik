@@ -16,6 +16,8 @@ using IhalematikProUI.Report;
 using DevExpress.XtraReports.UI;
 using IhalematikProUI.Forms;
 using System.Diagnostics;
+using IhalematikProUI.Manager;
+
 namespace IhalematikPro.Forms
 {
     public partial class frm_Teklif_Adim3 : IhalematikBaseForm
@@ -471,15 +473,19 @@ namespace IhalematikPro.Forms
 
         private void btnExcel_Click(object sender, EventArgs e)
         {
-            string FileName = "\\Development\\Ihalematik\\IhalematikPro\\ExcelFiles\\iscilikMaliyetKarRaporu.xls";
-            grdMaterialListIsWorkship.ExportToXls(FileName);
-            frm_MesajFormu mesaj = new frm_MesajFormu();
-            mesaj.lblMesaj.Text = "Veriler Excel dosyasına aktarıldı...";
-            mesaj.ShowDialog();
-            System.Diagnostics.ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.FileName = "EXCEL.EXE";
-            startInfo.Arguments = FileName;
-            Process.Start(startInfo);
+          try
+            {
+                bool isSuccess = UIReportManager.Instance.ExtractExcel(grdMaterialListIsWorkship);
+                if (!isSuccess)
+                {
+                    MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
         }
     }
 }
