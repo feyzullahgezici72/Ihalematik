@@ -70,10 +70,10 @@ namespace IhalematikProUI.Forms.Tedarikci
             //    MessageBox.Show("Lütfen yüklemek istediğiniz teklifi aktif hale getiriniz.");
             //    return;
             //}
-            int i = 1;
+            int i = 0;
             while (excelReader.Read())
             {
-                if (i >= 8)
+                if (i >= 6)
                 {
                     try
                     {

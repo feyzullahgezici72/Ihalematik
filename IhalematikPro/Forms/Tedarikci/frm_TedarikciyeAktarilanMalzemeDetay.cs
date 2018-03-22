@@ -79,6 +79,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         frm_wait fw;
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            simpleButton1.Enabled = false;
             Application.DoEvents();
             List<OfferMaterialList> items = grdMaterialList.DataSource as List<OfferMaterialList>;
             if (items != null && items.Count != 0)
@@ -107,12 +108,14 @@ namespace IhalematikProUI.Forms.Tedarikci
                         if (result.ValidationResults.FirstOrDefault().PropertyName == "NoInternetconnection")
                         {
 
-                            MessageBox.Show("Internet bağlantınızın olduğundan emin olunuz veya e-posta gönderdiğiniz firmanın mail adresinin doğruluğunu kontrol ediniz");
+                            MessageBox.Show("Internet bağlantınızın olduğundan emin olunuz\n veya e-posta gönderdiğiniz firmanın mail adresinin \n doğruluğunu kontrol ediniz");
+                            simpleButton1.Enabled = true;
                         }
                         else if (result.ValidationResults.FirstOrDefault().PropertyName == "GmailLessSecureApps")
                         {
 
-                            MessageBox.Show("Lutfen firma bilgileri bolumunden email kullanici adi(email) ve sifrenizi kontrol ediniz veya /https://myaccount.google.com/lesssecureapps/ mail gonderilebilmesi icin izin verdiginizden emin olun");
+                            MessageBox.Show("Lutfen firma bilgileri bolumunden \n email kullanici adi ve sifrenizi kontrol ediniz \n veya /https://myaccount.google.com/lesssecureapps/ \n mail gonderilebilmesi icin izin verdiginizden emin olun");
+                            simpleButton1.Enabled = true;
                         }
                     }
 
@@ -120,6 +123,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                     {
                         fw.Close();
                         MessageBox.Show("Mail gonderirken hata oluştu.Lütfen daha sonra tekrar deneyiniz");
+                        simpleButton1.Enabled = true;
 
                     }
                 }
@@ -127,6 +131,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             else
             {
                 MessageBox.Show("Gönderilecek malzeme listesi boş olamaz");
+                simpleButton1.Enabled = true;
             }
         }
 
@@ -188,7 +193,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                         if (offerMaterialLists.Count != 0)
                         {
                             Application.DoEvents();
-                            int row = 8;
+                            int row = 7;
                             int indexNumber = 1;
                             oSheet.Cells[1, 5] = CurrentManager.Instance.CurrentCompany.Name;
                             oSheet.Cells[2, 5] = CurrentManager.Instance.CurrentCompany.Address;
@@ -222,9 +227,11 @@ namespace IhalematikProUI.Forms.Tedarikci
                         }
                     }
                     Application.DoEvents();
+                    int LogoW = 180;
+                    int LogoH = 80;
                     string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
                     string a = (path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
-                    oSheet.Shapes.AddPicture(a, Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 100, 10, CurrentManager.Instance.CurrentCompany.LogoWidth, CurrentManager.Instance.CurrentCompany.LogoHeight);
+                    oSheet.Shapes.AddPicture(a, Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 330, 2, LogoW,LogoH);
                     //string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
                     //Image image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
                     //oSheet.PageSetup.LeftHeaderPicture.Filename = path;
