@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace IhalematikProUI.Manager
 {
-    public class RuleManager : SingletonBase<RuleManager>
+    public class UIRuleManager : SingletonBase<UIRuleManager>
     {
         public int HourPerDayValue
         {

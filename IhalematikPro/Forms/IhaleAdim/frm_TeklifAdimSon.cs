@@ -150,8 +150,8 @@ namespace IhalematikProUI.Forms
             double totalVehicleHour = 0;
             double totalHour = 0;
 
-            double dayPerMonthValue = RuleManager.Instance.DayPerMonthValue;
-            double hourPerDayValue = RuleManager.Instance.HourPerDayValue;
+            double dayPerMonthValue = UIRuleManager.Instance.DayPerMonthValue;
+            double hourPerDayValue = UIRuleManager.Instance.HourPerDayValue;
 
             if (items != null && items.Count != 0)
             {

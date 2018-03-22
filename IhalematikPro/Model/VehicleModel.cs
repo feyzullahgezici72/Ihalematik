@@ -75,7 +75,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                return Math.Round(this.DayPrice / RuleManager.Instance.HourPerDayValue);
+                return Math.Round(this.DayPrice / UIRuleManager.Instance.HourPerDayValue);
             }
         }
 
@@ -84,7 +84,7 @@ namespace IhalematikPro.Model
             get
             {
                 //return 0;
-                return Math.Round(this.MonthPrice / RuleManager.Instance.DayPerMonthValue);
+                return Math.Round(this.MonthPrice / UIRuleManager.Instance.DayPerMonthValue);
             }
         }
 
@@ -98,22 +98,22 @@ namespace IhalematikPro.Model
                     if (this.IsCompanyVehicle)
                     {
 
-                        this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare * RuleManager.Instance.DayPerMonthValue) + (this.DriverFare * RuleManager.Instance.DayPerMonthValue) + this.GeneralFare + this.MaintenanceFare + this.OtherFare + this.ServiceFare), 2);
+                        this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare * UIRuleManager.Instance.DayPerMonthValue) + (this.DriverFare * UIRuleManager.Instance.DayPerMonthValue) + this.GeneralFare + this.MaintenanceFare + this.OtherFare + this.ServiceFare), 2);
                     }
                     else
                     {
 
                         if (this.RentType == RentTypesEnum.Day)
                         {
-                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare) * RuleManager.Instance.DayPerMonthValue, 2);
+                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare) * UIRuleManager.Instance.DayPerMonthValue, 2);
                         }
                         else if (this.RentType == RentTypesEnum.Hour)
                         {
-                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare / RuleManager.Instance.HourPerDayValue) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare) * RuleManager.Instance.DayPerMonthValue * RuleManager.Instance.HourPerDayValue, 2);
+                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare / UIRuleManager.Instance.HourPerDayValue) + this.RentFare + this.DriverFare + this.GeneralFare + this.OtherFare) * UIRuleManager.Instance.DayPerMonthValue * UIRuleManager.Instance.HourPerDayValue, 2);
                         }
                         else if (this.RentType == RentTypesEnum.Month)
                         {
-                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare * RuleManager.Instance.DayPerMonthValue) + this.RentFare + (this.DriverFare * RuleManager.Instance.DayPerMonthValue) + this.GeneralFare + this.OtherFare), 2);
+                            this.monthPrice = Math.Round(((this.FuelOilDay * this.FuelOilFare * UIRuleManager.Instance.DayPerMonthValue) + this.RentFare + (this.DriverFare * UIRuleManager.Instance.DayPerMonthValue) + this.GeneralFare + this.OtherFare), 2);
                         }
                     }
                 }

@@ -237,8 +237,8 @@ namespace IhalematikPro.Model
                 if (this.UnitTimeType != null && this.TenderMaterialListEquipment != null)
                 {
                     this.workerUnitPrice = 0;
-                    double dayPerMonthValue = RuleManager.Instance.DayPerMonthValue == 0 ? 30 : RuleManager.Instance.DayPerMonthValue;
-                    double hourPerDayValue = RuleManager.Instance.HourPerDayValue == 0 ? 8 : RuleManager.Instance.HourPerDayValue;
+                    double dayPerMonthValue = UIRuleManager.Instance.DayPerMonthValue == 0 ? 30 : UIRuleManager.Instance.DayPerMonthValue;
+                    double hourPerDayValue = UIRuleManager.Instance.HourPerDayValue == 0 ? 8 : UIRuleManager.Instance.HourPerDayValue;
 
                     foreach (TenderMaterialListEquipment item in this.TenderMaterialListEquipment)
                     {

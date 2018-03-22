@@ -85,7 +85,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                double totalAmount = this.AGIFare.Amount + this.BaseFare.Amount + this.ExtraFare.Amount + (this.FoodFare.Amount * RuleManager.Instance.DayPerMonthValue) + (this.HotelFare.Amount * RuleManager.Instance.DayPerMonthValue) + this.ISGFare.Amount + this.SGKPrimFare.Amount + this.StampTaxFare.Amount + (this.TravelFare.Amount * RuleManager.Instance.DayPerMonthValue) + this.WorklesFonFare.Amount + this.IncomeTaxFare.Amount + this.SeveranceFare.Amount;
+                double totalAmount = this.AGIFare.Amount + this.BaseFare.Amount + this.ExtraFare.Amount + (this.FoodFare.Amount * UIRuleManager.Instance.DayPerMonthValue) + (this.HotelFare.Amount * UIRuleManager.Instance.DayPerMonthValue) + this.ISGFare.Amount + this.SGKPrimFare.Amount + this.StampTaxFare.Amount + (this.TravelFare.Amount * UIRuleManager.Instance.DayPerMonthValue) + this.WorklesFonFare.Amount + this.IncomeTaxFare.Amount + this.SeveranceFare.Amount;
 
                 return new Fare(totalAmount);
             }
@@ -95,7 +95,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                return new Fare(Math.Round((this.TotalFare.Amount / RuleManager.Instance.DayPerMonthValue), 2));
+                return new Fare(Math.Round((this.TotalFare.Amount / UIRuleManager.Instance.DayPerMonthValue), 2));
             }
         }
 
@@ -103,7 +103,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                return new Fare(Math.Round((this.DayFare.Amount / RuleManager.Instance.HourPerDayValue), 2));
+                return new Fare(Math.Round((this.DayFare.Amount / UIRuleManager.Instance.HourPerDayValue), 2));
             }
         }
 

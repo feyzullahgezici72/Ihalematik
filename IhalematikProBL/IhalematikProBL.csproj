@@ -156,6 +156,7 @@
     <Compile Include="Manager\CustomDBConnectionManager.cs" />
     <Compile Include="Mailing\MailingManager.cs" />
     <Compile Include="Manager\OfferManager.cs" />
+    <Compile Include="Manager\RuleManager.cs" />
     <Compile Include="Manager\TenderManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider\CompanyProvider.cs" />

@@ -1,4 +1,5 @@
 ﻿using IhalematikProBL.Enum;
+using IhalematikProBL.Manager;
 using IhalematikProBL.Provider;
 using System;
 using System.Collections.Generic;
@@ -74,8 +75,12 @@ namespace IhalematikProBL.Entity
         {
             get
             {
-                double totalAmount = this.AGIFare.Amount + this.BaseFare.Amount + this.ExtraFare.Amount + this.FoodFare.Amount + this.HotelFare.Amount + this.ISGFare.Amount + this.SGKPrimFare.Amount + this.StampTaxFare.Amount + this.TravelFare.Amount + this.WorklesFonFare.Amount + this.IncomeTaxFare.Amount + this.SeveranceFare.Amount;
-
+                double totalAmount = this.AGIFare.Amount + this.BaseFare.Amount + this.ExtraFare.Amount +
+                    (this.FoodFare.Amount * RuleManager.Instance.DayPerMonthValue) + 
+                    (this.HotelFare.Amount * RuleManager.Instance.DayPerMonthValue) + 
+                    this.ISGFare.Amount + this.SGKPrimFare.Amount + this.StampTaxFare.Amount + 
+                    (this.TravelFare.Amount * RuleManager.Instance.DayPerMonthValue) + 
+                    this.WorklesFonFare.Amount + this.IncomeTaxFare.Amount + this.SeveranceFare.Amount;
                 return new Fare(totalAmount);
             }
         }
@@ -84,7 +89,10 @@ namespace IhalematikProBL.Entity
         {
             get
             {
-                return new Fare(Math.Round((this.TotalFare.Amount / 30), 2));
+                double dayPerMonthValue = RuleManager.Instance.DayPerMonthValue == 0 ? 30 : RuleManager.Instance.DayPerMonthValue;
+                //double hourPerDayValue = RuleManager.Instance.HourPerDayValue == 0 ? 8 : RuleManager.Instance.HourPerDayValue;
+
+                return new Fare(Math.Round((this.TotalFare.Amount / dayPerMonthValue), 2));
             }
         }
 
@@ -92,7 +100,8 @@ namespace IhalematikProBL.Entity
         {
             get
             {
-                return new Fare(Math.Round((this.DayFare.Amount / 8), 2));
+                double hourPerDayValue = RuleManager.Instance.HourPerDayValue == 0 ? 8 : RuleManager.Instance.HourPerDayValue;
+                return new Fare(Math.Round((this.DayFare.Amount / hourPerDayValue), 2));
             }
         }
 

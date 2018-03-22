@@ -58,8 +58,8 @@ namespace IhalematikProUI.Model
                     return 0;
                 }
                 this.workerUnitPricea = 0;
-                double dayPerMonthValue = RuleManager.Instance.DayPerMonthValue == 0 ? 30 : RuleManager.Instance.DayPerMonthValue;
-                double hourPerDayValue = RuleManager.Instance.HourPerDayValue == 0 ? 8 : RuleManager.Instance.HourPerDayValue;
+                double dayPerMonthValue = UIRuleManager.Instance.DayPerMonthValue == 0 ? 30 : UIRuleManager.Instance.DayPerMonthValue;
+                double hourPerDayValue = UIRuleManager.Instance.HourPerDayValue == 0 ? 8 : UIRuleManager.Instance.HourPerDayValue;
 
                 double amount = ((Worker)this.Equipment.WorkerVehicle) == null ? 0 : ((Worker)this.Equipment.WorkerVehicle).TotalFare.Amount;
                 if (this.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
@@ -100,8 +100,8 @@ namespace IhalematikProUI.Model
                     return 0;
                 }
                 this.vehicleUnitPrice = 0;
-                double dayPerMonthValue = RuleManager.Instance.DayPerMonthValue == 0 ? 30 : RuleManager.Instance.DayPerMonthValue;
-                double hourPerDayValue = RuleManager.Instance.HourPerDayValue == 0 ? 8 : RuleManager.Instance.HourPerDayValue;
+                double dayPerMonthValue = UIRuleManager.Instance.DayPerMonthValue == 0 ? 30 : UIRuleManager.Instance.DayPerMonthValue;
+                double hourPerDayValue = UIRuleManager.Instance.HourPerDayValue == 0 ? 8 : UIRuleManager.Instance.HourPerDayValue;
 
                 double amount = ((Vehicle)this.Equipment.WorkerVehicle) == null ? 0 : ((Vehicle)this.Equipment.WorkerVehicle).TotalFare.Amount;
                 if (this.UnitTimeType == IhalematikProBL.Enum.UnitTimeTypesEnum.Minute)
