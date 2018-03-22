@@ -535,7 +535,7 @@
             this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn1.Caption = "ALINAN FİYAT";
+            this.gridColumn1.Caption = "BİRİM FİYAT";
             this.gridColumn1.DisplayFormat.FormatString = "c2";
             this.gridColumn1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn1.FieldName = "Price";
@@ -573,8 +573,6 @@
             this.colPriceWithRisk.OptionsColumn.AllowEdit = false;
             this.colPriceWithRisk.OptionsColumn.AllowFocus = false;
             this.colPriceWithRisk.OptionsFilter.AllowFilter = false;
-            this.colPriceWithRisk.Visible = true;
-            this.colPriceWithRisk.VisibleIndex = 6;
             this.colPriceWithRisk.Width = 117;
             // 
             // colMeterialDetail
@@ -589,7 +587,7 @@
             this.colMeterialDetail.Name = "colMeterialDetail";
             this.colMeterialDetail.OptionsFilter.AllowFilter = false;
             this.colMeterialDetail.Visible = true;
-            this.colMeterialDetail.VisibleIndex = 7;
+            this.colMeterialDetail.VisibleIndex = 6;
             this.colMeterialDetail.Width = 25;
             // 
             // rpstMeterialDetail
@@ -629,9 +627,8 @@
             // 
             // grdSupplier
             // 
-            this.grdSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdSupplier.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdSupplier.Location = new System.Drawing.Point(3, 3);
+            this.grdSupplier.Location = new System.Drawing.Point(-49, 4);
             this.grdSupplier.MainView = this.gridViewSupplier;
             this.grdSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.grdSupplier.Name = "grdSupplier";
@@ -840,7 +837,7 @@
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(370, 94);
             this.simpleButton1.TabIndex = 23;
-            this.simpleButton1.Text = "Teklifleri Karşılaştır";
+            this.simpleButton1.Text = "Karşılaştır";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // pcWorld

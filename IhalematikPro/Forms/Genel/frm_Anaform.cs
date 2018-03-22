@@ -1012,13 +1012,37 @@ namespace IhalematikPro.Forms
                 {
                     ml.Activate();
                 }
-            }
+        }
 
         private void Ml_FormClosed(object sender, FormClosedEventArgs e)
         {
             ml = null;
             RibonAktif();
             barButtonItem44.ButtonStyle = BarButtonStyle.Default;
+        }
+        frm_KarsilastirmadaSecilenFirmaUrunListesi ufl;
+        private void barButtonItem45_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            barButtonItem45.ButtonStyle = BarButtonStyle.Check;
+            RibonPasif();
+            if (ufl== null)
+            {
+                ufl = new frm_KarsilastirmadaSecilenFirmaUrunListesi();
+                ufl.MdiParent = this;
+                ufl.FormClosed +=new FormClosedEventHandler(Ufl_FormClosed);
+                ufl.Show();
+            }
+            else
+            {
+                ufl.Activate();
+            }
+        }
+
+        private void Ufl_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ufl = null;
+            RibonAktif();
+            barButtonItem45.ButtonStyle = BarButtonStyle.Default;
         }
     }
     }

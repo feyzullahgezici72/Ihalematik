@@ -426,6 +426,8 @@
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
             this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnKaydet.Location = new System.Drawing.Point(1302, 3);
+            this.btnKaydet.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnKaydet.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(132, 66);
@@ -441,6 +443,8 @@
             this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnObfKayit.Location = new System.Drawing.Point(1434, 3);
+            this.btnObfKayit.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnObfKayit.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4);
             this.btnObfKayit.Name = "btnObfKayit";
             this.btnObfKayit.Size = new System.Drawing.Size(141, 66);
@@ -456,6 +460,8 @@
             this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
             this.btnExcel.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnExcel.Location = new System.Drawing.Point(1575, 3);
+            this.btnExcel.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnExcel.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(132, 66);
