@@ -281,8 +281,6 @@ namespace IhalematikProUI.Forms.Tedarikci
             else
             {
                 Application.DoEvents();
-                //emailMesajPanel.Visible = false;
-                //timer1.Stop();
                 fw.Close();
                 frm_MesajFormu mesajformu = new frm_MesajFormu();
                 mesajformu.lblMesaj.Text = "Mail Gönderildi...";

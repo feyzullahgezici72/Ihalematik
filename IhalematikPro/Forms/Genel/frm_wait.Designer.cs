@@ -96,7 +96,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_wait";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = "Gönderim işlemi İnternet hızınıza bağlı olarak  birkaç dakika sürebilir.";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frm_wait_Load);
             this.Shown += new System.EventHandler(this.frm_wait_Shown);

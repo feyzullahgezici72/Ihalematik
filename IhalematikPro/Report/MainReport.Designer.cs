@@ -75,6 +75,7 @@
             this.PageInfo = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DataField = new DevExpress.XtraReports.UI.XRControlStyle();
             this.TotalFare = new DevExpress.XtraReports.UI.CalculatedField();
+            this.xrControlStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.objectDataSource2 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -85,13 +86,14 @@
             // 
             // Detail
             // 
-            this.Detail.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
+            this.Detail.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.DashDotDot;
             this.Detail.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable2});
-            this.Detail.HeightF = 18.27778F;
+            this.Detail.HeightF = 16.88889F;
+            this.Detail.MultiColumn.Layout = DevExpress.XtraPrinting.ColumnLayout.AcrossThenDown;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.StylePriority.UseBorderDashStyle = false;
@@ -102,17 +104,17 @@
             // 
             this.xrTable2.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.xrTable2.BorderColor = System.Drawing.Color.DarkRed;
-            this.xrTable2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrTable2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTable2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.DashDotDot;
+            this.xrTable2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrTable2.BorderWidth = 100F;
+            this.xrTable2.EvenStyleName = "DataField";
             this.xrTable2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(50F, 0F);
             this.xrTable2.Name = "xrTable2";
+            this.xrTable2.OddStyleName = "FieldCaption";
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow4});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(745.8611F, 16.75F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(745.8611F, 16.88889F);
             this.xrTable2.StylePriority.UseBorderColor = false;
             this.xrTable2.StylePriority.UseBorderDashStyle = false;
             this.xrTable2.StylePriority.UseBorders = false;
@@ -579,6 +581,11 @@
             this.TotalFare.Expression = "20";
             this.TotalFare.Name = "TotalFare";
             // 
+            // xrControlStyle1
+            // 
+            this.xrControlStyle1.Name = "xrControlStyle1";
+            this.xrControlStyle1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            // 
             // objectDataSource2
             // 
             this.objectDataSource2.DataSource = typeof(IhalematikProUI.Model.WrapperReportModel);
@@ -611,7 +618,8 @@
             this.Title,
             this.FieldCaption,
             this.PageInfo,
-            this.DataField});
+            this.DataField,
+            this.xrControlStyle1});
             this.Version = "15.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
@@ -669,5 +677,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.CalculatedField TotalFare;
         private DevExpress.XtraReports.UI.XRLabel xrLabel8;
+        private DevExpress.XtraReports.UI.XRControlStyle xrControlStyle1;
     }
 }

@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MalzemeAdlandir));
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MalzemeAdlandir));
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtdescriptionForSupplier = new DevExpress.XtraEditors.TextEdit();
             this.btnChangeName = new DevExpress.XtraEditors.SimpleButton();
@@ -67,22 +67,32 @@
             // 
             this.txtdescriptionForSupplier.EditValue = "";
             this.txtdescriptionForSupplier.EnterMoveNextControl = true;
-            this.txtdescriptionForSupplier.Location = new System.Drawing.Point(120, 85);
+            this.txtdescriptionForSupplier.Location = new System.Drawing.Point(120, 89);
             this.txtdescriptionForSupplier.Name = "txtdescriptionForSupplier";
             this.txtdescriptionForSupplier.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtdescriptionForSupplier.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtdescriptionForSupplier.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtdescriptionForSupplier.Properties.AppearanceFocused.Options.UseFont = true;
             this.txtdescriptionForSupplier.Size = new System.Drawing.Size(734, 26);
+            toolTipTitleItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            toolTipTitleItem1.Appearance.Options.UseImage = true;
+            toolTipTitleItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipTitleItem1.Image")));
+            toolTipTitleItem1.Text = "AÇIKLAMA";
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Tedarikçilere gönderilecek malzeme listesinde burada belirteceğiniz malzeme hakkı" +
+    "ndaki açıklama gönderilecektir.\r\nBoş bırakırsanız Malzeme adı gönderilecektir.";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.txtdescriptionForSupplier.SuperTip = superToolTip1;
             this.txtdescriptionForSupplier.TabIndex = 1;
             // 
             // btnChangeName
             // 
             this.btnChangeName.Image = ((System.Drawing.Image)(resources.GetObject("btnChangeName.Image")));
             this.btnChangeName.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnChangeName.Location = new System.Drawing.Point(737, 117);
+            this.btnChangeName.Location = new System.Drawing.Point(737, 137);
             this.btnChangeName.Name = "btnChangeName";
-            this.btnChangeName.Size = new System.Drawing.Size(117, 56);
+            this.btnChangeName.Size = new System.Drawing.Size(117, 68);
             this.btnChangeName.TabIndex = 2;
             this.btnChangeName.Text = "Değiştir";
             this.btnChangeName.Click += new System.EventHandler(this.btnChangeName_Click);
@@ -99,15 +109,15 @@
             this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescription.Size = new System.Drawing.Size(734, 26);
-            toolTipTitleItem3.Text = "AÇIKLAMA";
-            toolTipItem3.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipItem3.Appearance.Options.UseImage = true;
-            toolTipItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem3.Image")));
-            toolTipItem3.LeftIndent = 6;
-            toolTipItem3.Text = "Tedarikçilere gönderilecek işçilikli malzemenin adı";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            superToolTip3.Items.Add(toolTipItem3);
-            this.txtDescription.SuperTip = superToolTip3;
+            toolTipTitleItem2.Text = "AÇIKLAMA";
+            toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            toolTipItem2.Appearance.Options.UseImage = true;
+            toolTipItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem2.Image")));
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Tedarikçilere gönderilecek işçilikli malzemenin adı";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.txtDescription.SuperTip = superToolTip2;
             this.txtDescription.TabIndex = 122;
             // 
             // labelControl8
@@ -118,15 +128,6 @@
             this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(75, 19);
-            toolTipTitleItem1.Text = "AÇIKLAMA";
-            toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            toolTipItem1.Appearance.Options.UseImage = true;
-            toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Tedarikçilere gönderilecek işçilikli malzemenin adı";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            this.labelControl8.SuperTip = superToolTip1;
             this.labelControl8.TabIndex = 123;
             this.labelControl8.Text = "Açıklama :";
             // 
@@ -143,10 +144,11 @@
             this.groupControl2.Controls.Add(this.txtdescriptionForSupplier);
             this.groupControl2.Controls.Add(this.labelControl8);
             this.groupControl2.Controls.Add(this.btnChangeName);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 35);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(876, 191);
+            this.groupControl2.Size = new System.Drawing.Size(860, 217);
             this.groupControl2.TabIndex = 125;
             this.groupControl2.Text = "Malzeme Adı";
             // 
@@ -162,7 +164,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(864, 35);
+            this.panelControl1.Size = new System.Drawing.Size(860, 35);
             this.panelControl1.TabIndex = 124;
             // 
             // panelControl2
@@ -176,7 +178,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(864, 35);
+            this.panelControl2.Size = new System.Drawing.Size(860, 35);
             this.panelControl2.TabIndex = 2;
             // 
             // labelControl3
@@ -191,9 +193,9 @@
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.ShowLineShadow = false;
-            this.labelControl3.Size = new System.Drawing.Size(318, 35);
+            this.labelControl3.Size = new System.Drawing.Size(574, 35);
             this.labelControl3.TabIndex = 0;
-            this.labelControl3.Text = "MALZEME ADINI GÜNCELLE";
+            this.labelControl3.Text = "MALZEME HAKKINDA DETAYLI AÇIKLAMA GİRİNİZ";
             this.labelControl3.UseMnemonic = false;
             // 
             // btnKapat
@@ -203,7 +205,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(836, 0);
+            this.btnKapat.Location = new System.Drawing.Point(832, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -216,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(864, 222);
+            this.ClientSize = new System.Drawing.Size(860, 252);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl1);

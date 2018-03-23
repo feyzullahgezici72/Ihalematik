@@ -291,7 +291,6 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void btnChangeMeterialName_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             frm_MalzemeAdlandir frm = new frm_MalzemeAdlandir(this);
-
             int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialList.GetFocusedRowCellValue("PozOBFId"));
             bool IsPoz = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<bool>(gridViewMaterialList.GetFocusedRowCellValue("IsPoz"));
 

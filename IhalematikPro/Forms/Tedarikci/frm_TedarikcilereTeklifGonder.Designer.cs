@@ -731,6 +731,7 @@
             this.gridViewMaterialList.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewMaterialList.OptionsView.ShowDetailButtons = false;
             this.gridViewMaterialList.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.gridViewMaterialList.OptionsView.ShowFooter = true;
             this.gridViewMaterialList.OptionsView.ShowGroupPanel = false;
             this.gridViewMaterialList.PaintStyleName = "Web";
             this.gridViewMaterialList.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewMaterialList_CellValueChanged);
@@ -770,8 +771,6 @@
             this.colChangeMetreialName.MaxWidth = 30;
             this.colChangeMetreialName.MinWidth = 30;
             this.colChangeMetreialName.Name = "colChangeMetreialName";
-            this.colChangeMetreialName.OptionsColumn.AllowEdit = false;
-            this.colChangeMetreialName.OptionsColumn.AllowFocus = false;
             this.colChangeMetreialName.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.colChangeMetreialName.Visible = true;
             this.colChangeMetreialName.VisibleIndex = 1;
@@ -1115,6 +1114,7 @@
             this.gridViewSupplier.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewSupplier.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewSupplier.OptionsView.ShowDetailButtons = false;
+            this.gridViewSupplier.OptionsView.ShowFooter = true;
             this.gridViewSupplier.OptionsView.ShowGroupPanel = false;
             this.gridViewSupplier.PaintStyleName = "Web";
             // 
@@ -1164,6 +1164,8 @@
             this.colCompanyName.OptionsColumn.AllowEdit = false;
             this.colCompanyName.OptionsColumn.AllowFocus = false;
             this.colCompanyName.OptionsFilter.AllowFilter = false;
+            this.colCompanyName.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "CompanyName", "Tedarikçi Sayısı:{0}")});
             this.colCompanyName.Visible = true;
             this.colCompanyName.VisibleIndex = 1;
             this.colCompanyName.Width = 411;
