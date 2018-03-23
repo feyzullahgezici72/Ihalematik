@@ -101,7 +101,7 @@ namespace IhalematikPro.Forms
         {
             List<Offer> offers = OfferProvider.Instance.GetItems();
             //offers.Where(p=> p.)
-            grdOffer.DataSource = offers.Where(p => p.IsCompleated).ToList();
+            grdOffer.DataSource = offers.Where(p => p.IsCompleated && p.IsActive).ToList();
         }
 
         private void gridViewOffer_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -181,7 +181,7 @@ namespace IhalematikPro.Forms
 
         private void tabIhaleBilgileri_Selected(object sender, DevExpress.XtraTab.TabPageEventArgs e)
         {
-             
+
         }
     }
 }
