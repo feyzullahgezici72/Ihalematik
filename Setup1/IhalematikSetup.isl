@@ -52,7 +52,7 @@
 	<summary>
 		<codepage>1252</codepage>
 		<title>Installation Database</title>
-		<subject></subject>
+		<subject>ihalematik</subject>
 		<author>##ID_STRING2##</author>
 		<keywords>Installer,MSI,Database</keywords>
 		<comments>Contact:  Your local administrator</comments>
@@ -3968,7 +3968,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{DFD50118-6179-4371-BF46-4CC8C9C52FD7}</td></row>
 		<row><td>ISUSSignature</td><td>{6025415D-E9AC-460B-A40B-9BF795B39578}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewUI,viewProject,viewRelease</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewUI,viewProject,viewRelease,viewISToday,viewLearnMore</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4341,7 +4341,7 @@ RABWAEQALQA1AAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>ProductCode</td><td>{8B59DB3F-DA94-4DA8-AE39-C8E56D0E62B8}</td><td/></row>
-		<row><td>ProductName</td><td>Setup1</td><td/></row>
+		<row><td>ProductName</td><td>ihalematik</td><td/></row>
 		<row><td>ProductVersion</td><td>1.0.0.0</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
