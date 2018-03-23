@@ -83,9 +83,9 @@
             // 
             this.pnlMail.Controls.Add(this.simpleButton1);
             this.pnlMail.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlMail.Location = new System.Drawing.Point(0, 632);
+            this.pnlMail.Location = new System.Drawing.Point(0, 647);
             this.pnlMail.Name = "pnlMail";
-            this.pnlMail.Size = new System.Drawing.Size(1181, 80);
+            this.pnlMail.Size = new System.Drawing.Size(1181, 65);
             this.pnlMail.TabIndex = 41;
             // 
             // simpleButton1
@@ -95,14 +95,14 @@
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.Excel_icon;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton1.Location = new System.Drawing.Point(934, 3);
+            this.simpleButton1.Location = new System.Drawing.Point(1011, 3);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(6);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(244, 74);
+            this.simpleButton1.Size = new System.Drawing.Size(167, 59);
             this.simpleButton1.TabIndex = 5;
-            this.simpleButton1.Text = "Excel\'e Aktar";
+            this.simpleButton1.Text = "Tamam";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // txtAuthorNameSurname
@@ -248,9 +248,9 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(491, 35);
+            this.labelControl1.Size = new System.Drawing.Size(522, 35);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "FİRMANIN TEKLİF ETTİĞİ MALZEME LİSTESİ";
+            this.labelControl1.Text = "TEDARİKÇİYE GÖNDERİLEN MALZEME LİSTESİ";
             this.labelControl1.UseMnemonic = false;
             // 
             // panelControl4
@@ -327,10 +327,10 @@
             // 
             this.groupControl1.Controls.Add(this.grdMaterialList);
             this.groupControl1.Location = new System.Drawing.Point(6, 197);
-            this.groupControl1.LookAndFeel.SkinName = "Liquid Sky";
+            this.groupControl1.LookAndFeel.SkinName = "Stardust";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1169, 429);
+            this.groupControl1.Size = new System.Drawing.Size(1169, 444);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = " ";
             // 
@@ -344,7 +344,7 @@
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstIsSelectedOfferMaterial});
-            this.grdMaterialList.Size = new System.Drawing.Size(1163, 391);
+            this.grdMaterialList.Size = new System.Drawing.Size(1163, 406);
             this.grdMaterialList.TabIndex = 1;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
@@ -597,8 +597,6 @@
             this.gridColumn4.Caption = "BİRİM FİYAT";
             this.gridColumn4.MinWidth = 100;
             this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 4;
             this.gridColumn4.Width = 100;
             // 
             // rpstIsSelectedOfferMaterial

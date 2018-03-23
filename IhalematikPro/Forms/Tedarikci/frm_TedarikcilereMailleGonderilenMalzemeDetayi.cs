@@ -21,19 +21,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                bool isSuccess = UIReportManager.Instance.ExtractExcel(grdMaterialList);
-                if (!isSuccess)
-                {
-                    MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
-                }
-            }
-            catch (Exception)
-            {
-
-
-            }
+            this.Close();
         }
     }
 }
