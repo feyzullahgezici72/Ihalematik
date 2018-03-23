@@ -38,6 +38,9 @@
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.btnPozKayit = new DevExpress.XtraEditors.SimpleButton();
+            this.btnObfKayit = new DevExpress.XtraEditors.SimpleButton();
+            this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
             this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -78,15 +81,12 @@
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
-            this.btnPozKayit = new DevExpress.XtraEditors.SimpleButton();
-            this.btnObfKayit = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grupPanel)).BeginInit();
             this.grupPanel.SuspendLayout();
@@ -111,7 +111,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -183,7 +182,6 @@
             this.panelControl2.Controls.Add(this.btnPozKayit);
             this.panelControl2.Controls.Add(this.btnObfKayit);
             this.panelControl2.Controls.Add(this.panelControl7);
-            this.panelControl2.Controls.Add(this.btnPrint);
             this.panelControl2.Controls.Add(this.btnExcel);
             this.panelControl2.Controls.Add(this.lblTenderDescription);
             this.panelControl2.Controls.Add(this.labelControl2);
@@ -196,6 +194,57 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1362, 70);
             this.panelControl2.TabIndex = 20;
+            // 
+            // btnPozKayit
+            // 
+            this.btnPozKayit.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPozKayit.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
+            this.btnPozKayit.Appearance.Options.UseFont = true;
+            this.btnPozKayit.Appearance.Options.UseForeColor = true;
+            this.btnPozKayit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnPozKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnPozKayit.Image")));
+            this.btnPozKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnPozKayit.Location = new System.Drawing.Point(808, 3);
+            this.btnPozKayit.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnPozKayit.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnPozKayit.Margin = new System.Windows.Forms.Padding(6);
+            this.btnPozKayit.Name = "btnPozKayit";
+            this.btnPozKayit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnPozKayit.Size = new System.Drawing.Size(160, 64);
+            this.btnPozKayit.TabIndex = 24;
+            this.btnPozKayit.Text = "F1 : Poz Seç";
+            this.btnPozKayit.Click += new System.EventHandler(this.simpleButton3_Click);
+            // 
+            // btnObfKayit
+            // 
+            this.btnObfKayit.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnObfKayit.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.btnObfKayit.Appearance.Options.UseFont = true;
+            this.btnObfKayit.Appearance.Options.UseForeColor = true;
+            this.btnObfKayit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
+            this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnObfKayit.Location = new System.Drawing.Point(968, 3);
+            this.btnObfKayit.LookAndFeel.SkinName = "London Liquid Sky";
+            this.btnObfKayit.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnObfKayit.Margin = new System.Windows.Forms.Padding(6);
+            this.btnObfKayit.Name = "btnObfKayit";
+            this.btnObfKayit.Size = new System.Drawing.Size(160, 64);
+            this.btnObfKayit.TabIndex = 25;
+            this.btnObfKayit.Text = "F2 : ÖBF Seç";
+            this.btnObfKayit.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // panelControl7
+            // 
+            this.panelControl7.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelControl7.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl7.Appearance.Options.UseBackColor = true;
+            this.panelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelControl7.Location = new System.Drawing.Point(1128, 3);
+            this.panelControl7.Name = "panelControl7";
+            this.panelControl7.Size = new System.Drawing.Size(25, 64);
+            this.panelControl7.TabIndex = 23;
             // 
             // btnExcel
             // 
@@ -1017,73 +1066,6 @@
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
             // 
-            // btnPrint
-            // 
-            this.btnPrint.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPrint.Appearance.Options.UseFont = true;
-            this.btnPrint.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(998, 3);
-            this.btnPrint.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnPrint.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(155, 64);
-            this.btnPrint.TabIndex = 22;
-            this.btnPrint.Text = "Yazdır";
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // btnPozKayit
-            // 
-            this.btnPozKayit.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPozKayit.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btnPozKayit.Appearance.Options.UseFont = true;
-            this.btnPozKayit.Appearance.Options.UseForeColor = true;
-            this.btnPozKayit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPozKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnPozKayit.Image")));
-            this.btnPozKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnPozKayit.Location = new System.Drawing.Point(653, 3);
-            this.btnPozKayit.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnPozKayit.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnPozKayit.Margin = new System.Windows.Forms.Padding(6);
-            this.btnPozKayit.Name = "btnPozKayit";
-            this.btnPozKayit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnPozKayit.Size = new System.Drawing.Size(160, 64);
-            this.btnPozKayit.TabIndex = 24;
-            this.btnPozKayit.Text = "F1 : Poz Seç";
-            this.btnPozKayit.Click += new System.EventHandler(this.simpleButton3_Click);
-            // 
-            // btnObfKayit
-            // 
-            this.btnObfKayit.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnObfKayit.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.btnObfKayit.Appearance.Options.UseFont = true;
-            this.btnObfKayit.Appearance.Options.UseForeColor = true;
-            this.btnObfKayit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
-            this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnObfKayit.Location = new System.Drawing.Point(813, 3);
-            this.btnObfKayit.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnObfKayit.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnObfKayit.Margin = new System.Windows.Forms.Padding(6);
-            this.btnObfKayit.Name = "btnObfKayit";
-            this.btnObfKayit.Size = new System.Drawing.Size(160, 64);
-            this.btnObfKayit.TabIndex = 25;
-            this.btnObfKayit.Text = "F2 : ÖBF Seç";
-            this.btnObfKayit.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // panelControl7
-            // 
-            this.panelControl7.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panelControl7.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl7.Appearance.Options.UseBackColor = true;
-            this.panelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl7.Location = new System.Drawing.Point(973, 3);
-            this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(25, 64);
-            this.panelControl7.TabIndex = 23;
-            // 
             // frm_Teklif_Adim1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1109,6 +1091,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grupPanel)).EndInit();
             this.grupPanel.ResumeLayout(false);
@@ -1133,7 +1116,6 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1187,6 +1169,5 @@
         private DevExpress.XtraEditors.SimpleButton btnPozKayit;
         private DevExpress.XtraEditors.SimpleButton btnObfKayit;
         private DevExpress.XtraEditors.PanelControl panelControl7;
-        private DevExpress.XtraEditors.SimpleButton btnPrint;
     }
 }

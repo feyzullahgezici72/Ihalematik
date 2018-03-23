@@ -1427,6 +1427,7 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup19.ItemLinks.Add(this.barButtonItem44);
             this.ribbonPageGroup19.Name = "ribbonPageGroup19";
             this.ribbonPageGroup19.Text = "Mail Listesi";
+            this.ribbonPageGroup19.Visible = false;
             // 
             // ribbonPageGroup21
             // 

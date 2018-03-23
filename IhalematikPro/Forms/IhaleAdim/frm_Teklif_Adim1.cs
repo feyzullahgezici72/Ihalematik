@@ -306,9 +306,7 @@ namespace IhalematikPro.Forms
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            MalzemeMaliyetRaporu mm = new MalzemeMaliyetRaporu();
-            ReportPrintTool tool = new ReportPrintTool(mm);
-            mm.ShowPreview();
+        
 
 
         }

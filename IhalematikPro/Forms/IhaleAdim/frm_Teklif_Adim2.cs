@@ -272,9 +272,7 @@ namespace IhalematikPro.Forms
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            KarliMalzemeRaporu km = new KarliMalzemeRaporu();
-            ReportPrintTool tool = new ReportPrintTool(km);
-            km.ShowPreview();
+           
         }
 
         private void btnExcel_Click(object sender, EventArgs e)

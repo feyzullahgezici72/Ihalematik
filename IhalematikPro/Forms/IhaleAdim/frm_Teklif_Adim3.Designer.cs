@@ -43,7 +43,6 @@
             this.txtWorkerMarkup = new System.Windows.Forms.MaskedTextBox();
             this.pnlrisk = new DevExpress.XtraEditors.PanelControl();
             this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
-            this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
             this.lblTenderNumber = new DevExpress.XtraEditors.LabelControl();
             this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
@@ -221,26 +220,26 @@
             this.panelControl4.Controls.Add(this.labelControl2);
             this.panelControl4.Controls.Add(this.txtWorkerMarkup);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl4.Location = new System.Drawing.Point(809, 0);
+            this.panelControl4.Location = new System.Drawing.Point(965, 0);
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(172, 70);
             this.panelControl4.TabIndex = 51;
             // 
             // btnTumuneUygula
             // 
-            this.btnTumuneUygula.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTumuneUygula.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTumuneUygula.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.btnTumuneUygula.Appearance.Options.UseFont = true;
             this.btnTumuneUygula.Appearance.Options.UseForeColor = true;
+            this.btnTumuneUygula.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
             this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(120, 14);
+            this.btnTumuneUygula.Location = new System.Drawing.Point(133, 0);
             this.btnTumuneUygula.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnTumuneUygula.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
-            this.btnTumuneUygula.Size = new System.Drawing.Size(39, 38);
+            this.btnTumuneUygula.Size = new System.Drawing.Size(39, 70);
             this.btnTumuneUygula.TabIndex = 34;
             this.btnTumuneUygula.Click += new System.EventHandler(this.btnTumuneUygula_Click);
             // 
@@ -272,12 +271,11 @@
             this.pnlrisk.Appearance.Options.UseBackColor = true;
             this.pnlrisk.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pnlrisk.Controls.Add(this.panelControl8);
-            this.pnlrisk.Controls.Add(this.btnPrint);
             this.pnlrisk.Controls.Add(this.btnExcel);
             this.pnlrisk.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlrisk.Location = new System.Drawing.Point(981, 0);
+            this.pnlrisk.Location = new System.Drawing.Point(1137, 0);
             this.pnlrisk.Name = "pnlrisk";
-            this.pnlrisk.Size = new System.Drawing.Size(389, 70);
+            this.pnlrisk.Size = new System.Drawing.Size(233, 70);
             this.pnlrisk.TabIndex = 50;
             // 
             // panelControl8
@@ -287,27 +285,10 @@
             this.panelControl8.Appearance.Options.UseBackColor = true;
             this.panelControl8.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl8.Location = new System.Drawing.Point(3, 0);
+            this.panelControl8.Location = new System.Drawing.Point(2, 0);
             this.panelControl8.Name = "panelControl8";
             this.panelControl8.Size = new System.Drawing.Size(25, 70);
             this.panelControl8.TabIndex = 54;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPrint.Appearance.Options.UseFont = true;
-            this.btnPrint.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(28, 0);
-            this.btnPrint.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnPrint.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(155, 70);
-            this.btnPrint.TabIndex = 53;
-            this.btnPrint.Text = "Yazdır";
-            this.btnPrint.Visible = false;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnExcel
             // 
@@ -316,7 +297,7 @@
             this.btnExcel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExcel.Image = global::IhalematikProUI.Properties.Resources.Excel_icon;
             this.btnExcel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnExcel.Location = new System.Drawing.Point(183, 0);
+            this.btnExcel.Location = new System.Drawing.Point(27, 0);
             this.btnExcel.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnExcel.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnExcel.Name = "btnExcel";
@@ -2129,6 +2110,5 @@
         private DevExpress.XtraEditors.PanelControl pnlrisk;
         private DevExpress.XtraEditors.SimpleButton btnExcel;
         private DevExpress.XtraEditors.PanelControl panelControl8;
-        private DevExpress.XtraEditors.SimpleButton btnPrint;
     }
 }

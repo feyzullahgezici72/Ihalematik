@@ -94,7 +94,7 @@
             this.btnChangeName.Name = "btnChangeName";
             this.btnChangeName.Size = new System.Drawing.Size(117, 68);
             this.btnChangeName.TabIndex = 2;
-            this.btnChangeName.Text = "Değiştir";
+            this.btnChangeName.Text = "Tamam";
             this.btnChangeName.Click += new System.EventHandler(this.btnChangeName_Click);
             // 
             // txtDescription
@@ -148,7 +148,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 35);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(860, 217);
+            this.groupControl2.Size = new System.Drawing.Size(856, 213);
             this.groupControl2.TabIndex = 125;
             this.groupControl2.Text = "Malzeme Adı";
             // 
@@ -164,7 +164,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(860, 35);
+            this.panelControl1.Size = new System.Drawing.Size(856, 35);
             this.panelControl1.TabIndex = 124;
             // 
             // panelControl2
@@ -178,7 +178,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(860, 35);
+            this.panelControl2.Size = new System.Drawing.Size(856, 35);
             this.panelControl2.TabIndex = 2;
             // 
             // labelControl3
@@ -205,7 +205,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(832, 0);
+            this.btnKapat.Location = new System.Drawing.Point(828, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -218,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(860, 252);
+            this.ClientSize = new System.Drawing.Size(856, 248);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl1);

@@ -81,6 +81,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             // int uzunluk = int.Parse(txtNewMeterialName.Text.Length.ToString());
             txtDescription.Text = this.PozOBF.Description;
             txtdescriptionForSupplier.Text = this.PozOBF.DescriptionForSupplier;
+            txtdescriptionForSupplier.Text = txtDescription.Text;
         }
 
         private void trcBar_EditValueChanged(object sender, EventArgs e)
