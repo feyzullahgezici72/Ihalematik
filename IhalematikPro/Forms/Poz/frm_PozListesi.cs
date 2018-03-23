@@ -39,6 +39,7 @@ namespace IhalematikPro.Forms
         private void frm_PozListesi_Load(object sender, EventArgs e)
         {
             grdPozList.Hide();
+            
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
