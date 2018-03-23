@@ -8,7 +8,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using System.Diagnostics;
+using IhalematikProBL.Entity;
+using IhalematikProBL.Provider;
+using IhalematikProBL.Manager;
+using IhalematikPro.Model;
+using IhalematikPro.Manager;
+using System.Threading;
+using IhalematikProUI.Forms;
 using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms.Tedarikci
@@ -45,6 +51,28 @@ namespace IhalematikProUI.Forms.Tedarikci
 
 
             }
+        }
+
+        private void btnDetail_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            frm_TedarikcilereMailleGonderilenMalzemeDetayi frm = new frm_TedarikcilereMailleGonderilenMalzemeDetayi();
+            frm.ShowDialog();
+        }
+        private void LoadGridOffer()
+        {
+            List<Offer> offers = OfferProvider.Instance.GetItems();
+            //offers.Where(p=> p.)
+            grdMailList.DataSource = offers.Where(p => p.IsCompleated).ToList();
+        }
+        private void frm_MailListesi_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_MailListesi_Shown(object sender, EventArgs e)
+        {
+   
+            this.LoadGridOffer();
         }
     }
 }
