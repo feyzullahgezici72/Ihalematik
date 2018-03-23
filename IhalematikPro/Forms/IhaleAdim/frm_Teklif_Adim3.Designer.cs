@@ -211,7 +211,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 35);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1370, 66);
+            this.panelControl2.Size = new System.Drawing.Size(1370, 70);
             this.panelControl2.TabIndex = 22;
             // 
             // panelControl4
@@ -223,7 +223,7 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelControl4.Location = new System.Drawing.Point(809, 0);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(172, 66);
+            this.panelControl4.Size = new System.Drawing.Size(172, 70);
             this.panelControl4.TabIndex = 51;
             // 
             // btnTumuneUygula
@@ -235,7 +235,7 @@
             this.btnTumuneUygula.Appearance.Options.UseForeColor = true;
             this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
             this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(120, 12);
+            this.btnTumuneUygula.Location = new System.Drawing.Point(120, 14);
             this.btnTumuneUygula.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnTumuneUygula.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
@@ -248,7 +248,7 @@
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Location = new System.Drawing.Point(15, 23);
+            this.labelControl2.Location = new System.Drawing.Point(15, 25);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(6);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(48, 19);
@@ -260,7 +260,7 @@
             this.txtWorkerMarkup.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtWorkerMarkup.BeepOnError = true;
             this.txtWorkerMarkup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtWorkerMarkup.Location = new System.Drawing.Point(68, 18);
+            this.txtWorkerMarkup.Location = new System.Drawing.Point(68, 20);
             this.txtWorkerMarkup.Name = "txtWorkerMarkup";
             this.txtWorkerMarkup.Size = new System.Drawing.Size(46, 27);
             this.txtWorkerMarkup.TabIndex = 41;
@@ -277,7 +277,7 @@
             this.pnlrisk.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlrisk.Location = new System.Drawing.Point(981, 0);
             this.pnlrisk.Name = "pnlrisk";
-            this.pnlrisk.Size = new System.Drawing.Size(389, 66);
+            this.pnlrisk.Size = new System.Drawing.Size(389, 70);
             this.pnlrisk.TabIndex = 50;
             // 
             // panelControl8
@@ -289,7 +289,7 @@
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelControl8.Location = new System.Drawing.Point(3, 0);
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(25, 66);
+            this.panelControl8.Size = new System.Drawing.Size(25, 70);
             this.panelControl8.TabIndex = 54;
             // 
             // btnPrint
@@ -303,9 +303,10 @@
             this.btnPrint.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnPrint.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(155, 66);
+            this.btnPrint.Size = new System.Drawing.Size(155, 70);
             this.btnPrint.TabIndex = 53;
             this.btnPrint.Text = "Yazdır";
+            this.btnPrint.Visible = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnExcel
@@ -319,7 +320,7 @@
             this.btnExcel.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnExcel.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(206, 66);
+            this.btnExcel.Size = new System.Drawing.Size(206, 70);
             this.btnExcel.TabIndex = 17;
             this.btnExcel.Text = "Excel\'e Aktar";
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
@@ -1170,12 +1171,12 @@
             // 
             this.grdMaterialListIsWorkship.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdMaterialListIsWorkship.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.grdMaterialListIsWorkship.Location = new System.Drawing.Point(300, 101);
+            this.grdMaterialListIsWorkship.Location = new System.Drawing.Point(300, 105);
             this.grdMaterialListIsWorkship.MainView = this.gridViewMaterialListIsWorkship;
             this.grdMaterialListIsWorkship.Name = "grdMaterialListIsWorkship";
             this.grdMaterialListIsWorkship.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnCalisanlarveAraclar});
-            this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(1070, 471);
+            this.grdMaterialListIsWorkship.Size = new System.Drawing.Size(1070, 467);
             this.grdMaterialListIsWorkship.TabIndex = 0;
             this.grdMaterialListIsWorkship.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialListIsWorkship});
@@ -1608,9 +1609,9 @@
             this.panelGrup.Controls.Add(this.grdTenderGroup);
             this.panelGrup.Controls.Add(this.panelControl7);
             this.panelGrup.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelGrup.Location = new System.Drawing.Point(0, 101);
+            this.panelGrup.Location = new System.Drawing.Point(0, 105);
             this.panelGrup.Name = "panelGrup";
-            this.panelGrup.Size = new System.Drawing.Size(300, 541);
+            this.panelGrup.Size = new System.Drawing.Size(300, 537);
             this.panelGrup.TabIndex = 27;
             // 
             // grdTenderGroup
@@ -1628,7 +1629,7 @@
             this.repositoryItemButtonEdit1,
             this.btnSil,
             this.rpstIsSelected});
-            this.grdTenderGroup.Size = new System.Drawing.Size(294, 467);
+            this.grdTenderGroup.Size = new System.Drawing.Size(294, 463);
             this.grdTenderGroup.TabIndex = 0;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup,
@@ -1827,7 +1828,7 @@
             // 
             this.panelControl7.Controls.Add(this.simpleButton1);
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl7.Location = new System.Drawing.Point(3, 470);
+            this.panelControl7.Location = new System.Drawing.Point(3, 466);
             this.panelControl7.Name = "panelControl7";
             this.panelControl7.Size = new System.Drawing.Size(294, 68);
             this.panelControl7.TabIndex = 50;
