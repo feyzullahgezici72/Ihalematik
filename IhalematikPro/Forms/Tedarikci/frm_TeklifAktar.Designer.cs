@@ -33,8 +33,6 @@
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
@@ -184,12 +182,8 @@
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnKaydet.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
+            this.btnKaydet.ShowToolTips = false;
             this.btnKaydet.Size = new System.Drawing.Size(102, 90);
-            toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            toolTipItem2.Appearance.Options.UseImage = true;
-            toolTipItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem2.Image")));
-            superToolTip2.Items.Add(toolTipItem2);
-            this.btnKaydet.SuperTip = superToolTip2;
             this.btnKaydet.TabIndex = 14;
             this.btnKaydet.Text = "Tamam";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);

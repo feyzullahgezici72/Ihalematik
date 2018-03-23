@@ -75,6 +75,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
+        
             Offer currentOffer = CurrentManager.Instance.CurrentOffer;
 
             int[] selectedRows = gridView1.GetSelectedRows();

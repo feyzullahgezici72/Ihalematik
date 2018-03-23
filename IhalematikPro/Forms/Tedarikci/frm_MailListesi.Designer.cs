@@ -376,8 +376,6 @@
             this.gridColumn5.ColumnEdit = this.btnDetail;
             this.gridColumn5.MaxWidth = 20;
             this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 20;
             // 
             // btnDetail
