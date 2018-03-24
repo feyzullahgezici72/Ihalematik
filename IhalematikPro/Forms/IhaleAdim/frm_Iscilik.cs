@@ -354,11 +354,14 @@ namespace IhalematikProUI.Forms.IhaleAdim
             DialogResult result = MessageBox.Show("Silmek istediğinizden emin misiniz?", "Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (result.Equals(DialogResult.Yes))
             {
-                //int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(grdAddWorker.GetFocusedRowCellValue("Id"));
-                //OtherExpenses selectedVehicle = OtherExpensesProvider.Instance.GetItem(id);
-                //selectedVehicle.IsMarkedForDeletion = true;
-                //OtherExpensesProvider.Instance.Save(selectedVehicle);
-                //this.LoadGrid();
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewAddWorker.GetFocusedRowCellValue("Id"));
+                TenderMaterialListEquipment selectedWorker = TenderMaterialListEquipmentProvider.Instance.GetItem(id);
+                if (selectedWorker != null)
+                {
+                    selectedWorker.IsMarkedForDeletion = true;
+                    TenderMaterialListEquipmentProvider.Instance.Save(selectedWorker);
+                    this.LoadWorkerMateriallistGrid();
+                }
             }
             else
             {
@@ -372,11 +375,14 @@ namespace IhalematikProUI.Forms.IhaleAdim
             DialogResult result = MessageBox.Show("Silmek istediğinizden emin misiniz?", "Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (result.Equals(DialogResult.Yes))
             {
-                //int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(grdAddWorker.GetFocusedRowCellValue("Id"));
-                //OtherExpenses selectedVehicle = OtherExpensesProvider.Instance.GetItem(id);
-                //selectedVehicle.IsMarkedForDeletion = true;
-                //OtherExpensesProvider.Instance.Save(selectedVehicle);
-                //this.LoadGrid();
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewAddWorker.GetFocusedRowCellValue("Id"));
+                TenderMaterialListEquipment selectedVehicle = TenderMaterialListEquipmentProvider.Instance.GetItem(id);
+                if (selectedVehicle != null)
+                {
+                    selectedVehicle.IsMarkedForDeletion = true;
+                    TenderMaterialListEquipmentProvider.Instance.Save(selectedVehicle);
+                    this.LoadWorkerMateriallistGrid(); 
+                }
             }
             else
             {

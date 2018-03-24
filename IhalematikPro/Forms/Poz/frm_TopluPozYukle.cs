@@ -53,7 +53,15 @@ namespace IhalematikProUI.Forms.Genel
 
                                 }
                                 string unit = excelReader.GetString(3);
-                                double unitprice = excelReader.GetDouble(4);
+                                double unitprice = 0;
+                                try
+                                {
+                                    unitprice = excelReader.GetDouble(4);
+                                }
+                                catch (Exception)
+                                {
+
+                                }
 
                                 if (!string.IsNullOrEmpty(pozno) && !string.IsNullOrEmpty(description) && !string.IsNullOrEmpty(unit))
                                 {
@@ -90,9 +98,9 @@ namespace IhalematikProUI.Forms.Genel
                 }
                 else
                 {
-                    
+
                 }
-            }  
+            }
         }
         private void simpleButton2_Click(object sender, EventArgs e)
         {
