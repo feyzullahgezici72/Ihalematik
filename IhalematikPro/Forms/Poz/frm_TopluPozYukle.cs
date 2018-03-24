@@ -48,6 +48,10 @@ namespace IhalematikProUI.Forms.Genel
                             {
                                 string pozno = excelReader.GetString(1);
                                 string description = excelReader.GetString(2);
+                                if (description == "El ile her derinlikte geniş derin batak ve balçık kazılması")
+                                {
+
+                                }
                                 string unit = excelReader.GetString(3);
                                 double unitprice = excelReader.GetDouble(4);
 
@@ -79,7 +83,7 @@ namespace IhalematikProUI.Forms.Genel
                         mesaj.lblMesaj.Text = "Pozlar başarıyla yüklendi...";
                         mesaj.Close();
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
                         MessageBox.Show("Beklenmedik bir sorunla karşılaşıldı..");
                     }
