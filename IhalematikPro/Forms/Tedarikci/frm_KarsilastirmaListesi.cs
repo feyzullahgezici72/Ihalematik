@@ -47,7 +47,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             //if (items != null)
             //{
             //    foreach (var item in items)
-            //    {
+            //    { 
             //        //MaterialListModel materialListModel = new MaterialListModel();
             //        //materialListModel.Quantity = item.MaterialList.Quantity;
             //        //materialListModel.PozOBF = item.MaterialList.PozOBF;//.DescriptionForSupplier;
