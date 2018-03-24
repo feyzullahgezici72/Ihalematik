@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_KarsilastirmadaSecilenFirmaUrunListesi));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pnlrisk = new DevExpress.XtraEditors.PanelControl();
             this.txtRisk = new System.Windows.Forms.MaskedTextBox();
@@ -63,8 +63,8 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKDV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.rpstMeterialDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.rpstMeterialDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlrisk)).BeginInit();
@@ -81,8 +81,8 @@
             this.panelControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rpstMeterialDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstMeterialDetail)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -229,6 +229,7 @@
             this.btnExcel.Size = new System.Drawing.Size(236, 64);
             this.btnExcel.TabIndex = 48;
             this.btnExcel.Text = "Excel\'e Aktar";
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // lblTenderDescription
             // 
@@ -777,19 +778,19 @@
             this.gridColumn1.VisibleIndex = 5;
             this.gridColumn1.Width = 110;
             // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            // 
             // rpstMeterialDetail
             // 
             this.rpstMeterialDetail.AutoHeight = false;
             this.rpstMeterialDetail.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rpstMeterialDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.rpstMeterialDetail.Name = "rpstMeterialDetail";
             this.rpstMeterialDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // repositoryItemCheckEdit1
-            // 
-            this.repositoryItemCheckEdit1.AutoHeight = false;
-            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
             // 
             // frm_KarsilastirmadaSecilenFirmaUrunListesi
             // 
@@ -828,8 +829,8 @@
             this.panelControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rpstMeterialDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpstMeterialDetail)).EndInit();
             this.ResumeLayout(false);
 
         }

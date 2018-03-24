@@ -28,6 +28,7 @@ namespace IhalematikProUI.Forms.Genel
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Excel Files(*.xls;*.xlsx)|*.xls;*.xlsx";
             if (dialog.ShowDialog() == DialogResult.OK)
+                
             {
                 try
                 {

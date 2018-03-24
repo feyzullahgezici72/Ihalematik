@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using IhalematikPro.Manager;
 using IhalematikProBL.Entity;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -56,6 +57,23 @@ namespace IhalematikProUI.Forms.Tedarikci
 
             grdMaterialList.DataSource = null;
             grdMaterialList.DataSource = items;
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool isSuccess = UIReportManager.Instance.ExtractExcel(grdMaterialList);
+                if (!isSuccess)
+                {
+                    MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
         }
     }
 }
