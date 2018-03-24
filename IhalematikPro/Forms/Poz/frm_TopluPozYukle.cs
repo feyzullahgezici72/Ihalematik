@@ -49,7 +49,15 @@ namespace IhalematikProUI.Forms.Genel
                                 string pozno = excelReader.GetString(1);
                                 string description = excelReader.GetString(2);
                                 string unit = excelReader.GetString(3);
-                                double unitprice = excelReader.GetDouble(4);
+                                double unitprice = 0;
+                                try
+                                {
+                                    unitprice = excelReader.GetDouble(4);
+                                }
+                                catch (Exception)
+                                {
+
+                                }
 
                                 if (!string.IsNullOrEmpty(pozno) && !string.IsNullOrEmpty(description) && !string.IsNullOrEmpty(unit))
                                 {
@@ -79,16 +87,16 @@ namespace IhalematikProUI.Forms.Genel
                         mesaj.lblMesaj.Text = "Pozlar başarıyla yüklendi...";
                         mesaj.Close();
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
                         MessageBox.Show("Beklenmedik bir sorunla karşılaşıldı..");
                     }
                 }
                 else
                 {
-                    
+
                 }
-            }  
+            }
         }
         private void simpleButton2_Click(object sender, EventArgs e)
         {
