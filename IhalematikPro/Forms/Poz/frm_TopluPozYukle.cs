@@ -62,7 +62,7 @@ namespace IhalematikProUI.Forms.Genel
                                 lblBirim.Text = poz.Unit;
                                 lblBirimFiyat.Text = poz.UnitPrice.ToString();
                                 lblPosSayisi.Text = i.ToString();
-                                //PozProvider.Instance.Save(poz);
+                                PozProvider.Instance.Save(poz);
                             }
                         }
                         i++;

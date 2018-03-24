@@ -55,14 +55,6 @@ namespace IhalematikProUI.Forms.OBF
                             }
                             catch (Exception)
                             {
-
-                                lblobfno.Text = "";
-                                lblAciklama.Text = "";
-                                lblBirim.Text = "";
-                                lblBirimFiyat.Text = "";
-                                frm_MesajFormu mesaj = new frm_MesajFormu();
-                                mesaj.lblMesaj.Text = "Malzemeler başarıyla yüklendi...";
-                                mesaj.Close();
                                 break;
                             }
                             string stokKodu = excelReader.GetString(0);
@@ -116,7 +108,13 @@ namespace IhalematikProUI.Forms.OBF
                 }
                 stream.Close();
                 //MesajPanel.Visible = false;
-
+                lblobfno.Text = "";
+                lblAciklama.Text = "";
+                lblBirim.Text = "";
+                lblBirimFiyat.Text = "";
+                frm_MesajFormu mesaj = new frm_MesajFormu();
+                mesaj.lblMesaj.Text = "Malzemeler başarıyla yüklendi...";
+                mesaj.Close();
             }
             catch (Exception)
             {
