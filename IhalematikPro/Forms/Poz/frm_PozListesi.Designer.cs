@@ -38,6 +38,10 @@
             this.lblPozListesi = new DevExpress.XtraEditors.LabelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.pozMenu = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.txtNumber = new DevExpress.XtraEditors.TextEdit();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -80,6 +84,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pozMenu)).BeginInit();
             this.pozMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).BeginInit();
@@ -174,6 +183,7 @@
             this.pozMenu.AppearanceCaption.Options.UseFont = true;
             this.pozMenu.AppearanceCaption.Options.UseForeColor = true;
             this.pozMenu.CaptionLocation = DevExpress.Utils.Locations.Top;
+            this.pozMenu.Controls.Add(this.groupControl4);
             this.pozMenu.Controls.Add(this.txtNumber);
             this.pozMenu.Controls.Add(this.btnKaydet);
             this.pozMenu.Controls.Add(this.labelControl2);
@@ -192,6 +202,59 @@
             this.pozMenu.Size = new System.Drawing.Size(442, 623);
             this.pozMenu.TabIndex = 37;
             this.pozMenu.Text = "Yeni Poz Ekle";
+            // 
+            // groupControl4
+            // 
+            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl4.AppearanceCaption.Options.UseFont = true;
+            this.groupControl4.Controls.Add(this.panelControl3);
+            this.groupControl4.Controls.Add(this.simpleButton3);
+            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupControl4.Location = new System.Drawing.Point(3, 479);
+            this.groupControl4.LookAndFeel.SkinName = "London Liquid Sky";
+            this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(436, 141);
+            this.groupControl4.TabIndex = 31;
+            this.groupControl4.Text = "Toplu Malzeme Ekle";
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.Controls.Add(this.memoEdit1);
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl3.Location = new System.Drawing.Point(3, 35);
+            this.panelControl3.LookAndFeel.SkinName = "Dark Side";
+            this.panelControl3.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(275, 103);
+            this.panelControl3.TabIndex = 1;
+            // 
+            // memoEdit1
+            // 
+            this.memoEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.memoEdit1.EditValue = "\"Ekle\" Buttonuna tıkladığınızda Resimde \r\ngösterildiği gibi hazırladığınız Excel " +
+    "dosyasını \r\nhızlı bir şekilde yükleyebilirsiniz.";
+            this.memoEdit1.Location = new System.Drawing.Point(3, 3);
+            this.memoEdit1.Name = "memoEdit1";
+            this.memoEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.memoEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.memoEdit1.Properties.ReadOnly = true;
+            this.memoEdit1.Size = new System.Drawing.Size(269, 97);
+            this.memoEdit1.TabIndex = 2;
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.simpleButton3.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.Image")));
+            this.simpleButton3.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.simpleButton3.Location = new System.Drawing.Point(278, 35);
+            this.simpleButton3.LookAndFeel.SkinName = "London Liquid Sky";
+            this.simpleButton3.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(155, 103);
+            this.simpleButton3.TabIndex = 0;
+            this.simpleButton3.Text = "Dosyadan \r\nAl";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // txtNumber
             // 
@@ -895,6 +958,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pozMenu)).EndInit();
             this.pozMenu.ResumeLayout(false);
             this.pozMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).EndInit();
@@ -967,5 +1035,9 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.ComboBoxEdit ddlPozYear;
+        private DevExpress.XtraEditors.GroupControl groupControl4;
+        private DevExpress.XtraEditors.PanelControl panelControl3;
+        private DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
     }
 }

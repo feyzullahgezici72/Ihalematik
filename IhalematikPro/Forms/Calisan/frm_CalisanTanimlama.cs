@@ -54,38 +54,7 @@ namespace IhalematikPro.Forms
 
         public string BaseFare = string.Empty;
 
-        public void getExcel()
-        {
-            FileStream stream = System.IO.File.Open(@"E:\2018BirimFiyat.xlsx", FileMode.Open, FileAccess.Read);
-
-            IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
-            //excelReader.IsFirstRowAsColumnNames = true;
-            //DataSet result = excelReader.AsDataSet();
-            int i = 0;
-            while (excelReader.Read())
-            {
-                if (i > 1)
-                {
-                    string pozno = excelReader.GetString(1);
-                    string description = excelReader.GetString(2);
-                    string unit = excelReader.GetString(3);
-                    double unitprice = excelReader.GetDouble(4);
-                    
-                    if (!string.IsNullOrEmpty(pozno) && !string.IsNullOrEmpty(description) && !string.IsNullOrEmpty(unit))
-                    {
-                        Poz poz = new Poz();
-                        poz.Number = pozno;
-                        poz.Description = description;
-                        poz.Unit = unit;
-                        poz.UnitPrice = unitprice;
-                        poz.Year = 2018;
-                        poz.IsActive = true;
-                        PozProvider.Instance.Save(poz);
-                    }
-                }
-                i++;
-            }
-        }
+       
         public void InitilalizeForm()
         {
             this.LoadWorkerTitles();
@@ -597,6 +566,11 @@ namespace IhalematikPro.Forms
 
 
             }
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

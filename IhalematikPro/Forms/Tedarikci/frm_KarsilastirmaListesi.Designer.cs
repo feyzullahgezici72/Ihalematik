@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_KarsilastirmadaSecilenFirmaUrunListesi));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pnlrisk = new DevExpress.XtraEditors.PanelControl();
             this.txtRisk = new System.Windows.Forms.MaskedTextBox();
@@ -63,9 +63,6 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKDV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRisk = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPriceWithRisk = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMeterialDetail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.rpstMeterialDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -427,6 +424,7 @@
             this.gridViewSupplier.OptionsView.ShowGroupPanel = false;
             this.gridViewSupplier.OptionsView.ShowIndicator = false;
             this.gridViewSupplier.PaintStyleName = "Web";
+            this.gridViewSupplier.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridViewSupplier_RowClick);
             // 
             // colIdSupplier
             // 
@@ -478,6 +476,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(368, 93);
             this.simpleButton1.TabIndex = 23;
             this.simpleButton1.Text = "Tümünü Listele";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // pnltoplam
             // 
@@ -623,10 +622,7 @@
             this.gridColumn9,
             this.gridColumn10,
             this.colKDV,
-            this.gridColumn1,
-            this.colRisk,
-            this.colPriceWithRisk,
-            this.colMeterialDetail});
+            this.gridColumn1});
             this.gridViewMaterialList.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridViewMaterialList.GridControl = this.grdMaterialList;
             this.gridViewMaterialList.Name = "gridViewMaterialList";
@@ -667,7 +663,7 @@
             this.gridColumn7.AppearanceHeader.Options.UseFont = true;
             this.gridColumn7.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn7.Caption = "ÖBF/POZ NO";
-            this.gridColumn7.FieldName = "PozOBF.Number";
+            this.gridColumn7.FieldName = "MaterialList.PozOBF.Number";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.OptionsColumn.AllowFocus = false;
@@ -689,7 +685,7 @@
             this.gridColumn8.AppearanceHeader.Options.UseFont = true;
             this.gridColumn8.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn8.Caption = "AÇIKLAMA";
-            this.gridColumn8.FieldName = "PozOBF.Description";
+            this.gridColumn8.FieldName = "MaterialList.PozOBF.Description";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.OptionsColumn.AllowFocus = false;
@@ -711,7 +707,7 @@
             this.gridColumn9.AppearanceHeader.Options.UseFont = true;
             this.gridColumn9.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn9.Caption = "BİRİMİ";
-            this.gridColumn9.FieldName = "PozOBF.Unit";
+            this.gridColumn9.FieldName = "MaterialList.PozOBF.Unit";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.OptionsColumn.AllowFocus = false;
@@ -738,7 +734,7 @@
             this.gridColumn10.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn10.Caption = "MİKTARI";
             this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn10.FieldName = "Quantity";
+            this.gridColumn10.FieldName = "MaterialList.Quantity";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.OptionsColumn.AllowFocus = false;
@@ -781,55 +777,12 @@
             this.gridColumn1.VisibleIndex = 5;
             this.gridColumn1.Width = 110;
             // 
-            // colRisk
-            // 
-            this.colRisk.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colRisk.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.colRisk.AppearanceHeader.Options.UseBackColor = true;
-            this.colRisk.AppearanceHeader.Options.UseFont = true;
-            this.colRisk.Caption = "RİSK%";
-            this.colRisk.FieldName = "Risk";
-            this.colRisk.Name = "colRisk";
-            this.colRisk.OptionsFilter.AllowFilter = false;
-            this.colRisk.Width = 86;
-            // 
-            // colPriceWithRisk
-            // 
-            this.colPriceWithRisk.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colPriceWithRisk.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.colPriceWithRisk.AppearanceHeader.Options.UseBackColor = true;
-            this.colPriceWithRisk.AppearanceHeader.Options.UseFont = true;
-            this.colPriceWithRisk.Caption = "BİRİM FİYAT";
-            this.colPriceWithRisk.DisplayFormat.FormatString = "c2";
-            this.colPriceWithRisk.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colPriceWithRisk.FieldName = "PriceWithRisk";
-            this.colPriceWithRisk.Name = "colPriceWithRisk";
-            this.colPriceWithRisk.OptionsColumn.AllowEdit = false;
-            this.colPriceWithRisk.OptionsColumn.AllowFocus = false;
-            this.colPriceWithRisk.OptionsFilter.AllowFilter = false;
-            this.colPriceWithRisk.Width = 117;
-            // 
-            // colMeterialDetail
-            // 
-            this.colMeterialDetail.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colMeterialDetail.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.colMeterialDetail.AppearanceHeader.Options.UseBackColor = true;
-            this.colMeterialDetail.AppearanceHeader.Options.UseFont = true;
-            this.colMeterialDetail.ColumnEdit = this.rpstMeterialDetail;
-            this.colMeterialDetail.MaxWidth = 25;
-            this.colMeterialDetail.MinWidth = 25;
-            this.colMeterialDetail.Name = "colMeterialDetail";
-            this.colMeterialDetail.OptionsFilter.AllowFilter = false;
-            this.colMeterialDetail.Visible = true;
-            this.colMeterialDetail.VisibleIndex = 6;
-            this.colMeterialDetail.Width = 25;
-            // 
             // rpstMeterialDetail
             // 
             this.rpstMeterialDetail.AutoHeight = false;
             this.rpstMeterialDetail.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.rpstMeterialDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("rpstMeterialDetail.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.rpstMeterialDetail.Name = "rpstMeterialDetail";
             this.rpstMeterialDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -854,6 +807,8 @@
             this.MinimizeBox = false;
             this.Name = "frm_KarsilastirmadaSecilenFirmaUrunListesi";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frm_KarsilastirmadaSecilenFirmaUrunListesi_Load);
+            this.Shown += new System.EventHandler(this.frm_KarsilastirmadaSecilenFirmaUrunListesi_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -912,9 +867,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn colKDV;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn colRisk;
-        private DevExpress.XtraGrid.Columns.GridColumn colPriceWithRisk;
-        private DevExpress.XtraGrid.Columns.GridColumn colMeterialDetail;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit rpstMeterialDetail;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraEditors.PanelControl panelControl5;
