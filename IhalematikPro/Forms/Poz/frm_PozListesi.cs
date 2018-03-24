@@ -266,6 +266,12 @@ namespace IhalematikPro.Forms
             this.LoadPozGrid();
             
         }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            frm_TopluPozYukle pozyukle = new frm_TopluPozYukle();
+            pozyukle.ShowDialog();
+        }
     }
 
 }

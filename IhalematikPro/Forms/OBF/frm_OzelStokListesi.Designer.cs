@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
@@ -86,7 +87,7 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.txtSearchNumber = new DevExpress.XtraEditors.TextEdit();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitPrice.Properties)).BeginInit();
@@ -259,20 +260,21 @@
             this.panelControl3.LookAndFeel.SkinName = "Dark Side";
             this.panelControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(359, 103);
+            this.panelControl3.Size = new System.Drawing.Size(392, 103);
             this.panelControl3.TabIndex = 1;
             // 
             // memoEdit1
             // 
             this.memoEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.memoEdit1.EditValue = "\"Ekle\" Buttonuna tıkladığınızda Resimde \r\ngösterildiği gibi hazırladığınız Excel " +
-    "dosyasını \r\nhızlı bir şekilde yükleyebilirsiniz.";
+            this.memoEdit1.EditValue = resources.GetString("memoEdit1.EditValue");
             this.memoEdit1.Location = new System.Drawing.Point(3, 3);
             this.memoEdit1.Name = "memoEdit1";
             this.memoEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.memoEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.memoEdit1.Properties.LookAndFeel.SkinName = "Lilian";
+            this.memoEdit1.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.memoEdit1.Properties.ReadOnly = true;
-            this.memoEdit1.Size = new System.Drawing.Size(353, 97);
+            this.memoEdit1.Size = new System.Drawing.Size(386, 97);
             this.memoEdit1.TabIndex = 2;
             // 
             // simpleButton2
@@ -280,11 +282,11 @@
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
             this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(362, 35);
+            this.simpleButton2.Location = new System.Drawing.Point(395, 35);
             this.simpleButton2.LookAndFeel.SkinName = "London Liquid Sky";
             this.simpleButton2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(155, 103);
+            this.simpleButton2.Size = new System.Drawing.Size(122, 103);
             this.simpleButton2.TabIndex = 0;
             this.simpleButton2.Text = "Dosyadan \r\nAl";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);

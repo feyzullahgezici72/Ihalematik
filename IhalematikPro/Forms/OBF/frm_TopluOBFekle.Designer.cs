@@ -29,158 +29,257 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TopluOBFekle));
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.MesajPanel = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.btnTopluOFBekle = new DevExpress.XtraEditors.SimpleButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.lblPosSayisi = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.lblobfno = new DevExpress.XtraEditors.LabelControl();
+            this.lblAciklama = new DevExpress.XtraEditors.LabelControl();
+            this.lblBirim = new DevExpress.XtraEditors.LabelControl();
+            this.lblBirimFiyat = new DevExpress.XtraEditors.LabelControl();
+            this.pcWorld = new System.Windows.Forms.PictureBox();
+            this.lblPozListesi = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MesajPanel)).BeginInit();
-            this.MesajPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
-            this.panelControl7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
-            this.panelControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(798, 27);
+            this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
+            this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(140, 57);
+            this.simpleButton1.TabIndex = 28;
+            this.simpleButton1.Text = "Yükle";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl2.Location = new System.Drawing.Point(52, 48);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(57, 19);
+            this.labelControl2.TabIndex = 33;
+            this.labelControl2.Text = "Öbf No:";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl4.Location = new System.Drawing.Point(61, 142);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(47, 19);
+            this.labelControl4.TabIndex = 31;
+            this.labelControl4.Text = "Birimi:";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl5.Location = new System.Drawing.Point(24, 189);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(85, 19);
+            this.labelControl5.TabIndex = 30;
+            this.labelControl5.Text = "Birim Fiyatı:";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl3.Location = new System.Drawing.Point(39, 95);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(70, 19);
+            this.labelControl3.TabIndex = 32;
+            this.labelControl3.Text = "Açıklama:";
             // 
             // groupControl1
             // 
-            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupControl1.AppearanceCaption.ForeColor = System.Drawing.Color.Green;
-            this.groupControl1.AppearanceCaption.Options.UseFont = true;
-            this.groupControl1.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl1.Controls.Add(this.MesajPanel);
-            this.groupControl1.Controls.Add(this.btnTopluOFBekle);
-            this.groupControl1.Controls.Add(this.pictureBox1);
-            this.groupControl1.Location = new System.Drawing.Point(10, 8);
-            this.groupControl1.LookAndFeel.SkinName = "McSkin";
+            this.groupControl1.Controls.Add(this.groupControl2);
+            this.groupControl1.Controls.Add(this.labelControl2);
+            this.groupControl1.Controls.Add(this.labelControl4);
+            this.groupControl1.Controls.Add(this.labelControl5);
+            this.groupControl1.Controls.Add(this.labelControl3);
+            this.groupControl1.Controls.Add(this.lblobfno);
+            this.groupControl1.Controls.Add(this.lblAciklama);
+            this.groupControl1.Controls.Add(this.lblBirim);
+            this.groupControl1.Controls.Add(this.lblBirimFiyat);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl1.Location = new System.Drawing.Point(0, 35);
+            this.groupControl1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(519, 351);
-            this.groupControl1.TabIndex = 33;
-            this.groupControl1.Text = "Ekleyeceğiniz Excel Dosyası Aşağıdaki gibi ayarlanmalıdır";
+            this.groupControl1.Size = new System.Drawing.Size(1096, 319);
+            this.groupControl1.TabIndex = 32;
+            this.groupControl1.Text = " ";
             // 
-            // MesajPanel
+            // groupControl2
             // 
-            this.MesajPanel.Appearance.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.MesajPanel.Appearance.Options.UseBackColor = true;
-            this.MesajPanel.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.MesajPanel.Controls.Add(this.panelControl7);
-            this.MesajPanel.Controls.Add(this.panelControl6);
-            this.MesajPanel.Location = new System.Drawing.Point(34, 44);
-            this.MesajPanel.LookAndFeel.SkinName = "Money Twins";
-            this.MesajPanel.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.MesajPanel.Name = "MesajPanel";
-            this.MesajPanel.Size = new System.Drawing.Size(436, 211);
-            this.MesajPanel.TabIndex = 8;
-            this.MesajPanel.Visible = false;
+            this.groupControl2.Controls.Add(this.simpleButton1);
+            this.groupControl2.Controls.Add(this.lblPosSayisi);
+            this.groupControl2.Controls.Add(this.simpleButton2);
+            this.groupControl2.Controls.Add(this.labelControl1);
+            this.groupControl2.Location = new System.Drawing.Point(0, 225);
+            this.groupControl2.LookAndFeel.SkinName = "Visual Studio 2013 Light";
+            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(1101, 94);
+            this.groupControl2.TabIndex = 34;
             // 
-            // panelControl7
+            // lblPosSayisi
             // 
-            this.panelControl7.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl7.Appearance.BackColor2 = System.Drawing.Color.Crimson;
-            this.panelControl7.Appearance.Options.UseBackColor = true;
-            this.panelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl7.Controls.Add(this.labelControl7);
-            this.panelControl7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl7.Location = new System.Drawing.Point(0, 0);
-            this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(436, 37);
-            this.panelControl7.TabIndex = 1;
+            this.lblPosSayisi.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPosSayisi.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.lblPosSayisi.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblPosSayisi.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.lblPosSayisi.Location = new System.Drawing.Point(146, 53);
+            this.lblPosSayisi.Name = "lblPosSayisi";
+            this.lblPosSayisi.Size = new System.Drawing.Size(117, 31);
+            this.lblPosSayisi.TabIndex = 23;
             // 
-            // labelControl7
+            // simpleButton2
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl7.Location = new System.Drawing.Point(14, 6);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(63, 24);
-            this.labelControl7.TabIndex = 3;
-            this.labelControl7.Text = "UYARI !";
+            this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(944, 27);
+            this.simpleButton2.LookAndFeel.SkinName = "London Liquid Sky";
+            this.simpleButton2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(140, 57);
+            this.simpleButton2.TabIndex = 29;
+            this.simpleButton2.Text = "Tamam";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
-            // panelControl6
+            // labelControl1
             // 
-            this.panelControl6.Appearance.BackColor = System.Drawing.Color.White;
-            this.panelControl6.Appearance.Options.UseBackColor = true;
-            this.panelControl6.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl6.Controls.Add(this.pictureBox3);
-            this.panelControl6.Controls.Add(this.pictureBox2);
-            this.panelControl6.Controls.Add(this.labelControl8);
-            this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl6.Location = new System.Drawing.Point(0, 0);
-            this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(436, 211);
-            this.panelControl6.TabIndex = 0;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl1.Location = new System.Drawing.Point(137, 27);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(147, 19);
+            this.labelControl1.TabIndex = 30;
+            this.labelControl1.Text = "Yüklenen Öbf Sayısı:";
             // 
-            // pictureBox3
+            // lblobfno
             // 
-            this.pictureBox3.Image = global::IhalematikProUI.Properties.Resources.yukleniyor;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 36);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(177, 172);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
+            this.lblobfno.Appearance.BackColor = System.Drawing.Color.Black;
+            this.lblobfno.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblobfno.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblobfno.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblobfno.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.lblobfno.Location = new System.Drawing.Point(122, 46);
+            this.lblobfno.Name = "lblobfno";
+            this.lblobfno.Size = new System.Drawing.Size(174, 30);
+            this.lblobfno.TabIndex = 20;
             // 
-            // pictureBox2
+            // lblAciklama
             // 
-            this.pictureBox2.Image = global::IhalematikProUI.Properties.Resources.cargo_2_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(274, 43);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(63, 60);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.lblAciklama.Appearance.BackColor = System.Drawing.Color.Black;
+            this.lblAciklama.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAciklama.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblAciklama.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.lblAciklama.Location = new System.Drawing.Point(122, 92);
+            this.lblAciklama.Name = "lblAciklama";
+            this.lblAciklama.Size = new System.Drawing.Size(962, 30);
+            this.lblAciklama.TabIndex = 21;
             // 
-            // labelControl8
+            // lblBirim
             // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl8.Location = new System.Drawing.Point(241, 109);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(138, 58);
-            this.labelControl8.TabIndex = 4;
-            this.labelControl8.Text = "MALZEMELER \r\nYÜKLENİYOR";
+            this.lblBirim.Appearance.BackColor = System.Drawing.Color.Black;
+            this.lblBirim.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBirim.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblBirim.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblBirim.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.lblBirim.Location = new System.Drawing.Point(122, 139);
+            this.lblBirim.Name = "lblBirim";
+            this.lblBirim.Size = new System.Drawing.Size(174, 30);
+            this.lblBirim.TabIndex = 22;
             // 
-            // btnTopluOFBekle
+            // lblBirimFiyat
             // 
-            this.btnTopluOFBekle.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.btnTopluOFBekle.Appearance.Options.UseFont = true;
-            this.btnTopluOFBekle.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnTopluOFBekle.Image = global::IhalematikProUI.Properties.Resources.Excel_icon;
-            this.btnTopluOFBekle.Location = new System.Drawing.Point(3, 272);
-            this.btnTopluOFBekle.Name = "btnTopluOFBekle";
-            this.btnTopluOFBekle.Size = new System.Drawing.Size(513, 76);
-            this.btnTopluOFBekle.TabIndex = 7;
-            this.btnTopluOFBekle.Text = "Excel Dosyasını Seçip Yükleyiniz";
-            this.btnTopluOFBekle.Click += new System.EventHandler(this.btnTopluOFBekle_Click);
+            this.lblBirimFiyat.Appearance.BackColor = System.Drawing.Color.Black;
+            this.lblBirimFiyat.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBirimFiyat.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblBirimFiyat.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblBirimFiyat.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.lblBirimFiyat.Location = new System.Drawing.Point(122, 185);
+            this.lblBirimFiyat.Name = "lblBirimFiyat";
+            this.lblBirimFiyat.Size = new System.Drawing.Size(174, 30);
+            this.lblBirimFiyat.TabIndex = 23;
             // 
-            // pictureBox1
+            // pcWorld
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(513, 216);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.pcWorld.BackColor = System.Drawing.Color.Transparent;
+            this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
+            this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Name = "pcWorld";
+            this.pcWorld.Size = new System.Drawing.Size(50, 35);
+            this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcWorld.TabIndex = 23;
+            this.pcWorld.TabStop = false;
+            // 
+            // lblPozListesi
+            // 
+            this.lblPozListesi.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPozListesi.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
+            this.lblPozListesi.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.lblPozListesi.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblPozListesi.LineColor = System.Drawing.Color.Red;
+            this.lblPozListesi.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.lblPozListesi.Location = new System.Drawing.Point(52, 0);
+            this.lblPozListesi.Margin = new System.Windows.Forms.Padding(4);
+            this.lblPozListesi.Name = "lblPozListesi";
+            this.lblPozListesi.ShowLineShadow = false;
+            this.lblPozListesi.Size = new System.Drawing.Size(212, 35);
+            this.lblPozListesi.TabIndex = 22;
+            this.lblPozListesi.Text = "TOPLU ÖBF YÜKLE";
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            this.panelControl1.Controls.Add(this.pcWorld);
+            this.panelControl1.Controls.Add(this.lblPozListesi);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1096, 35);
+            this.panelControl1.TabIndex = 31;
             // 
             // frm_TopluOBFekle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 359);
+            this.ClientSize = new System.Drawing.Size(1096, 354);
+            this.ControlBox = false;
             this.Controls.Add(this.groupControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Controls.Add(this.panelControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.LookAndFeel.SkinName = "McSkin";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
@@ -188,35 +287,38 @@
             this.Name = "frm_TopluOBFekle";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Toplu ÖBF Malzeme Ekle";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.MesajPanel)).EndInit();
-            this.MesajPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
-            this.panelControl7.ResumeLayout(false);
-            this.panelControl7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
-            this.panelControl6.ResumeLayout(false);
-            this.panelControl6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.PanelControl MesajPanel;
-        private DevExpress.XtraEditors.PanelControl panelControl7;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.PanelControl panelControl6;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.SimpleButton btnTopluOFBekle;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.LabelControl lblPosSayisi;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl lblobfno;
+        private DevExpress.XtraEditors.LabelControl lblAciklama;
+        private DevExpress.XtraEditors.LabelControl lblBirim;
+        private DevExpress.XtraEditors.LabelControl lblBirimFiyat;
+        private System.Windows.Forms.PictureBox pcWorld;
+        private DevExpress.XtraEditors.LabelControl lblPozListesi;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }

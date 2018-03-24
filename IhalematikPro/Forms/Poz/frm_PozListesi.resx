@@ -5487,6 +5487,29 @@
         8j91kUbX3K/WKgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="memoEdit1.EditValue" xml:space="preserve">
+    <value>"Ekle" Buttonuna tıklayarak  hazırladığınız 
+Excel dosyasını hızlı bir şekilde yükleyebilirsiniz.
+Excel Dosyanız aşağıdaki sutünlardan oluşmalı
+A  Sütunu :Poz No
+B   Sütunu: Malzeme Cinsi Açıklama
+C Sütunu :Birimi
+D Sütunu : Birim Fiyat
+
+şeklinde olmalı ve Başlıklar 2 satırda olmalıdır.</value>
+  </data>
+  <data name="simpleButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAVdEVYdFRpdGxlAERvd25sb2FkO0Fycm93O+yPGtAA
+        AAExSURBVFhH7dNBTsNADIXhLhF3yw4QS7ZcA+U8rJG4Wulgw7h6cf9m2qgyGxafmr5Jnp1K3bXW/hSG
+        lTCshGElDCthODK9fbSs53j/GgxH8nDXc7x/DYYjebjrOd6/BsORPLz7WcDRM+dgOCJD/xdYLED3jmBo
+        ZZMUv5u7dK6Dg57fm085m/R5haE9kJf4Ms9yHvmRnD2YvZx5z6JfYRj6w1HkpS89j+yo54/Gl4387JsH
+        DIMV0BKv8l09mYvfPGAYvKDLS8S1OhnuqFdhqKKol8YA/ZkdDnfUqTBUWmZ0iYNch8VwR50KQ5ULjS6x
+        OtxRp8IwzPN8UtjlJTYNdxjaYPv4XUBzZQNiieFfLfoIhpcscI3NC9zKpgVuLc8IGFbCsBKGlTCshGEl
+        DCthWKftvgGH20AHMkqg3gAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="dxErrorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>36, 9</value>
   </metadata>

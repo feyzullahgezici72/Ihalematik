@@ -29,18 +29,7 @@ namespace IhalematikProUI.Forms.OBF
 
         private void btnTopluOFBekle_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
-
-            if (dialog.ShowDialog() == DialogResult.OK) // if user clicked OK
-            {
-                MesajPanel.Visible = true;
-                // MessageBox.Show("Yükleme Malzeme sayısına göre biraz zaman alabilir...");
-                String path = dialog.FileName; // get name of file
-                this.ReadExcel(path);
-                this.Close();
-                this._owner.LoadGrid();
-            }
+            
 
         }
 
@@ -66,8 +55,6 @@ namespace IhalematikProUI.Forms.OBF
                             }
                             catch (Exception)
                             {
-                                MessageBox.Show("Malzemeler basarıyla yuklendi.");
-                                MesajPanel.Visible = false;
                                 break;
                             }
                             string stokKodu = excelReader.GetString(0);
@@ -99,6 +86,12 @@ namespace IhalematikProUI.Forms.OBF
                                 newOBF.Description = description;
                                 newOBF.Unit = unit;
                                 newOBF.UnitPrice = unitPrice;
+                                Application.DoEvents();
+                                lblobfno.Text = newOBF.StokNumber;
+                                lblAciklama.Text = newOBF.Description;
+                                lblBirim.Text = newOBF.Unit;
+                                lblBirimFiyat.Text = newOBF.UnitPrice.ToString();
+                                lblPosSayisi.Text = i.ToString();
                                 OBFProvider.Instance.Save(newOBF);
                             }
                         }
@@ -106,7 +99,7 @@ namespace IhalematikProUI.Forms.OBF
                     catch (Exception ex)
                     {
                         MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
-                        MesajPanel.Visible = false;
+                        //MesajPanel.Visible = false;
                         //TODO feyzullahg hata olustu mesaji gostermek lazim.
                         break;
                     }
@@ -114,8 +107,14 @@ namespace IhalematikProUI.Forms.OBF
                     i++;
                 }
                 stream.Close();
-                MesajPanel.Visible = false;
-
+                //MesajPanel.Visible = false;
+                lblobfno.Text = "";
+                lblAciklama.Text = "";
+                lblBirim.Text = "";
+                lblBirimFiyat.Text = "";
+                frm_MesajFormu mesaj = new frm_MesajFormu();
+                mesaj.lblMesaj.Text = "Malzemeler başarıyla yüklendi...";
+                mesaj.Close();
             }
             catch (Exception)
             {
@@ -123,14 +122,30 @@ namespace IhalematikProUI.Forms.OBF
             }
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void simpleButton1_Click(object sender, EventArgs e)
         {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
 
+            if (dialog.ShowDialog() == DialogResult.OK) // if user clicked OK
+            {
+                //MesajPanel.Visible = true;
+                // MessageBox.Show("Yükleme Malzeme sayısına göre biraz zaman alabilir...");
+                String path = dialog.FileName; // get name of file
+                this.ReadExcel(path);
+                this.Close();
+                this._owner.LoadGrid();
+            }
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
