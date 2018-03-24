@@ -134,12 +134,19 @@ namespace IhalematikProUI.Forms.OBF
 
             if (dialog.ShowDialog() == DialogResult.OK) // if user clicked OK
             {
-                //MesajPanel.Visible = true;
-                // MessageBox.Show("Yükleme Malzeme sayısına göre biraz zaman alabilir...");
-                String path = dialog.FileName; // get name of file
-                this.ReadExcel(path);
-                this.Close();
-                this._owner.LoadGrid();
+                DialogResult result = MessageBox.Show("Yüklemek istediğinizden emin misiniz?", "Yükleme Dosya içeriğine göre biraz zaman alabilir", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (result.Equals(DialogResult.Yes))
+                {
+                    String path = dialog.FileName; // get name of file
+                    this.ReadExcel(path);
+                    this.Close();
+                    this._owner.LoadGrid();
+                }
+                else
+                {
+
+                }
+                
             }
         }
 

@@ -100,5 +100,10 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
             }
         }
+
+        private void frm_DigerGiderler_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

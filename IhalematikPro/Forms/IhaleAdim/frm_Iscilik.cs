@@ -351,12 +351,37 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
         private void btnCikar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            DialogResult result = MessageBox.Show("Silmek istediğinizden emin misiniz?", "Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.Yes))
+            {
+                //int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(grdAddWorker.GetFocusedRowCellValue("Id"));
+                //OtherExpenses selectedVehicle = OtherExpensesProvider.Instance.GetItem(id);
+                //selectedVehicle.IsMarkedForDeletion = true;
+                //OtherExpensesProvider.Instance.Save(selectedVehicle);
+                //this.LoadGrid();
+            }
+            else
+            {
 
+            }
         }
 
         private void btnAracCikar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
 
+            DialogResult result = MessageBox.Show("Silmek istediğinizden emin misiniz?", "Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.Yes))
+            {
+                //int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(grdAddWorker.GetFocusedRowCellValue("Id"));
+                //OtherExpenses selectedVehicle = OtherExpensesProvider.Instance.GetItem(id);
+                //selectedVehicle.IsMarkedForDeletion = true;
+                //OtherExpensesProvider.Instance.Save(selectedVehicle);
+                //this.LoadGrid();
+            }
+            else
+            {
+
+            }
         }
     }
 }
