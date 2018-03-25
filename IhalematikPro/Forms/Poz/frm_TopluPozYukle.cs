@@ -57,6 +57,10 @@ namespace IhalematikProUI.Forms.Genel
                                     pozno = poznodouble.ToString();
                                 }
                                 string description = excelReader.GetString(2);
+                                if (description == "El ile her derinlikte geniş derin batak ve balçık kazılması")
+                                {
+
+                                }
                                 string unit = excelReader.GetString(3);
                                 double unitprice = 0;
                                 try
