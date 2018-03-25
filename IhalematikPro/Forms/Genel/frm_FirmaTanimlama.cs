@@ -58,8 +58,21 @@ namespace IhalematikPro.Forms
                 txtTaxNumber.Text = company.TaxNumber;
                 if (!string.IsNullOrEmpty(company.LogoPath))
                 {
-                    string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
-                    picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + company.LogoPath); 
+                    if (!string.IsNullOrEmpty(CurrentManager.Instance.CurrentCompany.LogoPath))
+                    {
+                        //string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                        //picLogo.Image = Image.FromFile(path + "\\ihalematik\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
+                        string path = string.Empty;
+                        if (Application.StartupPath.Contains("bin\\Debug"))
+                        {
+                            path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                        }
+                        else
+                        {
+                            path = Application.StartupPath.Substring(0, (Application.StartupPath.Length));
+                        }
+                        picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
+                    }
                 }
             }
         }
