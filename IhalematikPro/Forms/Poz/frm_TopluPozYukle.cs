@@ -46,7 +46,16 @@ namespace IhalematikProUI.Forms.Genel
                         {
                             if (i > 1)
                             {
-                                string pozno = excelReader.GetString(1);
+                                string pozno = string.Empty;
+                                try
+                                {
+                                    pozno = excelReader.GetString(1);
+                                }
+                                catch (Exception)
+                                {
+                                    double poznodouble = excelReader.GetDouble(1);
+                                    pozno = poznodouble.ToString();
+                                }
                                 string description = excelReader.GetString(2);
                                 string unit = excelReader.GetString(3);
                                 double unitprice = 0;
