@@ -59,9 +59,14 @@ namespace IhalematikPro.Forms
         }
         public void frm_Anaform_Load(object sender, EventArgs e)
         {
-            logoOrtala();
             DevExpress.UserSkins.BonusSkins.Register();
             this.WindowState = FormWindowState.Maximized;
+            this.LoadLogo();
+        }
+
+        public void LoadLogo()
+        {
+            logoOrtala();
             if (CurrentManager.Instance.CurrentCompany != null)
             {
                 lblCompanyName.Text = CurrentManager.Instance.CurrentCompany.Name;
@@ -79,6 +84,10 @@ namespace IhalematikPro.Forms
                         path = Application.StartupPath.Substring(0, (Application.StartupPath.Length));
                     }
                     picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
+                }
+                else
+                {
+                    picLogo.Image = null;
                 }
             }
         }
@@ -774,7 +783,7 @@ namespace IhalematikPro.Forms
                 mf.ShowDialog();
             }
 
-         }
+        }
 
         private void Tg_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -1009,19 +1018,19 @@ namespace IhalematikPro.Forms
         frm_MailListesi ml;
         private void barButtonItem44_ItemClick(object sender, ItemClickEventArgs e)
         {
-                barButtonItem44.ButtonStyle = BarButtonStyle.Check;
-                RibonPasif();
-                if (ml == null)
-                {
-                    ml = new frm_MailListesi();
-                    ml.MdiParent = this;
-                    ml.FormClosed +=new FormClosedEventHandler(Ml_FormClosed);
-                    ml.Show();
-                }
-                else
-                {
-                    ml.Activate();
-                }
+            barButtonItem44.ButtonStyle = BarButtonStyle.Check;
+            RibonPasif();
+            if (ml == null)
+            {
+                ml = new frm_MailListesi();
+                ml.MdiParent = this;
+                ml.FormClosed += new FormClosedEventHandler(Ml_FormClosed);
+                ml.Show();
+            }
+            else
+            {
+                ml.Activate();
+            }
         }
 
         private void Ml_FormClosed(object sender, FormClosedEventArgs e)
@@ -1035,11 +1044,11 @@ namespace IhalematikPro.Forms
         {
             barButtonItem45.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
-            if (ufl== null)
+            if (ufl == null)
             {
                 ufl = new frm_KarsilastirmadaSecilenFirmaUrunListesi();
                 ufl.MdiParent = this;
-                ufl.FormClosed +=new FormClosedEventHandler(Ufl_FormClosed);
+                ufl.FormClosed += new FormClosedEventHandler(Ufl_FormClosed);
                 ufl.Show();
             }
             else
@@ -1055,4 +1064,4 @@ namespace IhalematikPro.Forms
             barButtonItem45.ButtonStyle = BarButtonStyle.Default;
         }
     }
-    }
+}
