@@ -58,7 +58,13 @@ namespace IhalematikPro.Forms
 
             int[] selectedRows = gridView1.GetSelectedRows();
 
-            OBFModel[] selectedRowsItems = oBFModels.ToArray();
+            OBFModel[] dataSource = grdOBFList.DataSource as OBFModel[];
+            if (dataSource == null)
+            {
+                return;
+            }
+
+            OBFModel[] selectedRowsItems = dataSource.ToArray();
 
             foreach (int item in selectedRows)
             {

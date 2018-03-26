@@ -91,7 +91,12 @@ namespace IhalematikProUI.Forms.Tedarikci
 
             int[] selectedRows = gridView1.GetSelectedRows();
 
-            PozModel[] selectedRowsItems = pozModels.ToArray();
+            List<PozModel> dataSource = grdPozList.DataSource as List<PozModel>;
+            if (dataSource == null)
+            {
+                return;
+            }
+            PozModel[] selectedRowsItems = dataSource.ToArray();
 
             foreach (int item in selectedRows)
             {
