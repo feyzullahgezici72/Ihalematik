@@ -22,5 +22,10 @@ namespace IhalematikProUI.Forms.OBF
         {
            
         }
+
+        private void btnHayir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

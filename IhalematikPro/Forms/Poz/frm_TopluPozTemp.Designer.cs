@@ -31,6 +31,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TopluPozTemp));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.grdPozTempList = new DevExpress.XtraGrid.GridControl();
             this.gridViewPozList = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -42,6 +43,11 @@
             this.btnGncelle = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnPasive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnActive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.btnHayir = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEvet = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdPozTempList)).BeginInit();
@@ -49,18 +55,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnActive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.grdPozTempList);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.groupControl1.Location = new System.Drawing.Point(309, 0);
+            this.groupControl1.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1128, 694);
+            this.groupControl1.Size = new System.Drawing.Size(919, 694);
             this.groupControl1.TabIndex = 2;
+            this.groupControl1.Text = "Okunan Poz Listesi";
             // 
             // grdPozTempList
             // 
@@ -74,7 +85,7 @@
             this.btnGncelle,
             this.btnPasive,
             this.btnActive});
-            this.grdPozTempList.Size = new System.Drawing.Size(1122, 660);
+            this.grdPozTempList.Size = new System.Drawing.Size(913, 660);
             this.grdPozTempList.TabIndex = 1;
             this.grdPozTempList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPozList});
@@ -341,17 +352,66 @@
             this.btnActive.Name = "btnActive";
             this.btnActive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
+            // groupControl2
+            // 
+            this.groupControl2.Controls.Add(this.btnHayir);
+            this.groupControl2.Controls.Add(this.btnEvet);
+            this.groupControl2.Controls.Add(this.labelControl2);
+            this.groupControl2.Controls.Add(this.labelControl1);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupControl2.Location = new System.Drawing.Point(0, 0);
+            this.groupControl2.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
+            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(309, 694);
+            this.groupControl2.TabIndex = 3;
+            // 
+            // btnHayir
+            // 
+            this.btnHayir.Image = ((System.Drawing.Image)(resources.GetObject("btnHayir.Image")));
+            this.btnHayir.Location = new System.Drawing.Point(173, 151);
+            this.btnHayir.Name = "btnHayir";
+            this.btnHayir.Size = new System.Drawing.Size(120, 44);
+            this.btnHayir.TabIndex = 1;
+            this.btnHayir.Text = "Hayır";
+            this.btnHayir.Click += new System.EventHandler(this.btnHayir_Click);
+            // 
+            // btnEvet
+            // 
+            this.btnEvet.Image = ((System.Drawing.Image)(resources.GetObject("btnEvet.Image")));
+            this.btnEvet.Location = new System.Drawing.Point(47, 151);
+            this.btnEvet.Name = "btnEvet";
+            this.btnEvet.Size = new System.Drawing.Size(120, 44);
+            this.btnEvet.TabIndex = 1;
+            this.btnEvet.Text = "Evet";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(110, 126);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(110, 19);
+            this.labelControl2.TabIndex = 0;
+            this.labelControl2.Text = "Kaydedilsin mi?";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(22, 73);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(181, 19);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Tablodaki veriler okundu.";
+            // 
             // frm_TopluPozTemp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1128, 694);
+            this.ClientSize = new System.Drawing.Size(1228, 694);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Controls.Add(this.groupControl2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frm_TopluPozTemp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Okunan Poz Listesi";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdPozTempList)).EndInit();
@@ -359,6 +419,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnActive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            this.groupControl2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -376,5 +439,10 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnGncelle;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnPasive;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnActive;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.SimpleButton btnHayir;
+        private DevExpress.XtraEditors.SimpleButton btnEvet;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

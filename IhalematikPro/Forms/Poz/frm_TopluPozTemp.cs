@@ -24,5 +24,10 @@ namespace IhalematikProUI.Forms.PozTem
         {
             
         }
+
+        private void btnHayir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
