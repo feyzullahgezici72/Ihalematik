@@ -92,7 +92,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                 this.IsSendMail = false;
                 this.CreateExcel();
 
-               OperationResult result = this.SendMail();
+                OperationResult result = this.SendMail();
 
                 if (result.Success)
                 {
@@ -229,13 +229,22 @@ namespace IhalematikProUI.Forms.Tedarikci
                     Application.DoEvents();
                     int LogoW = 180;
                     int LogoH = 80;
-                    string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
-                    string a = (path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
-                    oSheet.Shapes.AddPicture(a, Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 330, 2, LogoW,LogoH);
-                    //string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
-                    //Image image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
-                    //oSheet.PageSetup.LeftHeaderPicture.Filename = path;
-                    //oSheet.PageSetup.RightHeaderPicture.Filename = path;
+
+                    if (!string.IsNullOrEmpty(CurrentManager.Instance.CurrentCompany.LogoPath))
+                    {
+                        //string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                        //picLogo.Image = Image.FromFile(path + "\\ihalematik\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
+                        string path = string.Empty;
+                        if (Application.StartupPath.Contains("bin\\Debug"))
+                        {
+                            path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                        }
+                        else
+                        {
+                            path = Application.StartupPath.Substring(0, (Application.StartupPath.Length));
+                        }
+                        oSheet.Shapes.AddPicture(path, Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 330, 2, LogoW, LogoH);
+                    }
 
                     oWB.Save();
                 }

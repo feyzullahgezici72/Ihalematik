@@ -80,7 +80,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
             int[] selectedRows = gridView1.GetSelectedRows();
 
-            OBFModel[] dataSource = grdOBFList.DataSource as OBFModel[];
+            List<OBFModel> dataSource = grdOBFList.DataSource as List<OBFModel>;
             if (dataSource == null)
             {
                 return;

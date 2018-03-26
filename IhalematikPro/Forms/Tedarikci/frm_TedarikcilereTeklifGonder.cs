@@ -308,8 +308,8 @@ namespace IhalematikProUI.Forms.Tedarikci
             foreach (var seledtedMaterialList in datasourceMaterialList)
             {
                 seledtedMaterialList.IsSelected = true;
-                OfferMaterialList items = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Id == seledtedMaterialList.Id).FirstOrDefault();
-                items.IsSelected = true;
+                //OfferMaterialList items = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Id == seledtedMaterialList.Id).FirstOrDefault();
+                //items.IsSelected = true;
                 //OfferMaterialListProvider.Instance.Save(items);
             }
             grdMaterialList.DataSource = null;
