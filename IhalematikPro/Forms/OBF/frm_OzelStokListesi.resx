@@ -175,10 +175,10 @@
     <value>"Ekle" Buttonuna tıklayarak  hazırladığınız 
 Excel dosyasını hızlı bir şekilde yükleyebilirsiniz.
 Excel Dosyanız aşağıdaki sutünlardan oluşmalı
-A  Sütunu :Öbf No
-B   Sütunu: Malzeme Cinsi Açıklama
-C Sütunu :Birimi
-D Sütunu : Birim Fiyat
+B2  Sütunu :Öbf No
+C2  Sütunu: Malzeme Cinsi Açıklama
+D2 Sütunu :Birimi
+E2 Sütunu : Birim Fiyat
 
 şeklinde olmalı ve Başlıklar 2 satırda olmalıdır.</value>
   </data>
