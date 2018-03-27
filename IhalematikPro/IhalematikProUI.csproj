@@ -1282,7 +1282,9 @@
     <None Include="Resources\logo_L.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon.ico" />
+    <Content Include="icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\network-icon1.png" />
     <None Include="Resources\System-Info-icon.png" />
     <None Include="Resources\Actions-view-calendar-list-icon.png" />
