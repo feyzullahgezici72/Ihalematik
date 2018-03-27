@@ -39,6 +39,9 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         string DestinationFile = string.Empty;
 
+        private Microsoft.Office.Interop.Excel.Application oXL = null;
+        private Microsoft.Office.Interop.Excel._Workbook oWB = null;
+
         public frm_TedarikciyeAktarilanMalzemeDetay()
         {
             InitializeComponent();
@@ -107,25 +110,21 @@ namespace IhalematikProUI.Forms.Tedarikci
                     {
                         if (result.ValidationResults.FirstOrDefault().PropertyName == "NoInternetconnection")
                         {
-
                             MessageBox.Show("Internet bağlantınızın olduğundan emin olunuz\n veya e-posta gönderdiğiniz firmanın mail adresinin \n doğruluğunu kontrol ediniz");
-                            simpleButton1.Enabled = true;
                         }
                         else if (result.ValidationResults.FirstOrDefault().PropertyName == "GmailLessSecureApps")
                         {
 
                             MessageBox.Show("Lutfen firma bilgileri bolumunden \n email kullanici adi ve sifrenizi kontrol ediniz \n veya /https://myaccount.google.com/lesssecureapps/ \n mail gonderilebilmesi icin izin verdiginizden emin olun");
-                            simpleButton1.Enabled = true;
                         }
                     }
 
                     else
                     {
-                        fw.Close();
                         MessageBox.Show("Mail gonderirken hata oluştu.Lütfen daha sonra tekrar deneyiniz");
-                        simpleButton1.Enabled = true;
-
                     }
+                    simpleButton1.Enabled = true;
+                    fw.Close();
                 }
             }
             else
@@ -138,8 +137,8 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void CreateExcel()
         {
             Application.DoEvents();
-            Microsoft.Office.Interop.Excel.Application oXL = null;
-            Microsoft.Office.Interop.Excel._Workbook oWB = null;
+            this.oXL = null;
+            this.oWB = null;
             Microsoft.Office.Interop.Excel._Worksheet oSheet = null;
 
             //List<Supplier> suppliers = CurrentManager.Instance.CurrentOffer.Suppliers;
@@ -155,6 +154,11 @@ namespace IhalematikProUI.Forms.Tedarikci
                     string targetPath = Path.Combine(sourcePath, "SentFile");
                     string sourceFile = Path.Combine(sourcePath, fileName);
                     this.DestinationFile = Path.Combine(targetPath, this.Supplier.CompanyName + "-" + DateTime.Now.ToShortDateString().Replace("/", string.Empty) + "-" + fileName);
+                    if (File.Exists(this.DestinationFile))
+                    {
+                        this.DestinationFile = Path.Combine(targetPath, this.Supplier.CompanyName + "-" + DateTime.Now.ToShortDateString().Replace("/", string.Empty) + "-" + new Random().Next(1, 100).ToString() + "-" + fileName);
+                    }
+
 
                     if (!Directory.Exists(targetPath))
                     {
@@ -250,12 +254,18 @@ namespace IhalematikProUI.Forms.Tedarikci
                 }
                 catch (Exception ex)
                 {
+                    if (this.oWB != null)
+                        this.oWB.Close();
+                    if (this.oXL != null)
+                        this.oXL.Quit();
                     // MessageBox.Show(ex.ToString());
                 }
                 finally
                 {
-                    if (oWB != null)
-                        oWB.Close();
+                    if (this.oWB != null)
+                        this.oWB.Close();
+                    if (this.oXL != null)
+                        this.oXL.Quit();
                 }
             }
         }

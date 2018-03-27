@@ -77,8 +77,16 @@ namespace IhalematikProUI.Forms.Tedarikci
                 {
                     try
                     {
-                        double offerId = excelReader.GetDouble(1);
 
+                        double offerId = 0;
+                        try
+                        {
+                            offerId = excelReader.GetDouble(1);
+                        }
+                        catch (Exception)
+                        {
+                            break;
+                        }
                         if (CurrentManager.Instance.CurrentOffer == null)
                         {
                             Offer offer = OfferProvider.Instance.GetItem((int)offerId);
@@ -159,7 +167,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                             }
                         }
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
                         //MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
                         //TODO feyzullahg hata olustu mesaji gostermek lazim.
