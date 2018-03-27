@@ -80,7 +80,12 @@ namespace IhalematikProUI.Forms.Tedarikci
 
             int[] selectedRows = gridView1.GetSelectedRows();
 
-            OBFModel[] selectedRowsItems = oBFModels.ToArray();
+            List<OBFModel> dataSource = grdOBFList.DataSource as List<OBFModel>;
+            if (dataSource == null)
+            {
+                return;
+            }
+            OBFModel[] selectedRowsItems = dataSource.ToArray();
 
             foreach (int item in selectedRows)
             {

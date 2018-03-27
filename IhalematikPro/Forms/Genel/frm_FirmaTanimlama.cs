@@ -105,7 +105,8 @@ namespace IhalematikPro.Forms
             }
             CompanyProvider.Instance.Save(company);
 
-            this._owner.frm_Anaform_Load(null, null);
+            //this._owner.frm_Anaform_Load(null, null);
+            this._owner.LoadLogo();
             frm_MesajFormu mf = new frm_MesajFormu();
             mf.lblMesaj.Text = "Bilgiler Güncellendi";
             mf.ShowDialog();
@@ -140,6 +141,13 @@ namespace IhalematikPro.Forms
         private void timer1_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.logoName = string.Empty;
+            picLogo.Image = null;
+            //CompanyProvider.Instance.Save(company);
         }
     }
 }
