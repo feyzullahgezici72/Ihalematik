@@ -72,6 +72,7 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.label99 = new DevExpress.XtraEditors.LabelControl();
             this.txtTelephone = new DevExpress.XtraEditors.TextEdit();
+            this.txtGmail = new DevExpress.XtraEditors.TextEdit();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.txtAddress = new DevExpress.XtraEditors.MemoEdit();
@@ -110,6 +111,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGSM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtScore.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelephone.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             this.statusPanel.SuspendLayout();
@@ -361,6 +363,7 @@
             this.colCompanyName.Name = "colCompanyName";
             this.colCompanyName.OptionsColumn.AllowEdit = false;
             this.colCompanyName.OptionsColumn.AllowFocus = false;
+            this.colCompanyName.OptionsColumn.ReadOnly = true;
             this.colCompanyName.OptionsFilter.AllowFilter = false;
             this.colCompanyName.Visible = true;
             this.colCompanyName.VisibleIndex = 0;
@@ -383,6 +386,7 @@
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowFocus = false;
             this.gridColumn3.OptionsColumn.FixedWidth = true;
+            this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
@@ -404,6 +408,7 @@
             this.colAuthorNameSurname.Name = "colAuthorNameSurname";
             this.colAuthorNameSurname.OptionsColumn.AllowEdit = false;
             this.colAuthorNameSurname.OptionsColumn.AllowFocus = false;
+            this.colAuthorNameSurname.OptionsColumn.ReadOnly = true;
             this.colAuthorNameSurname.OptionsFilter.AllowFilter = false;
             this.colAuthorNameSurname.Visible = true;
             this.colAuthorNameSurname.VisibleIndex = 2;
@@ -425,6 +430,7 @@
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.OptionsColumn.AllowFocus = false;
+            this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.OptionsFilter.AllowFilter = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 3;
@@ -446,6 +452,7 @@
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
+            this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 4;
@@ -461,12 +468,13 @@
             this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn5.Caption = "TELEFON (SABİT)";
-            this.gridColumn5.FieldName = "Telephone";
+            this.gridColumn5.Caption = "EMAİL ADRESİ";
+            this.gridColumn5.FieldName = "Email";
             this.gridColumn5.MinWidth = 80;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.OptionsColumn.AllowFocus = false;
+            this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 5;
@@ -481,6 +489,9 @@
             this.gridColumn1.Caption = "PUAN";
             this.gridColumn1.FieldName = "Score";
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.gridColumn1.OptionsColumn.AllowFocus = false;
+            this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 6;
             // 
@@ -596,6 +607,7 @@
             this.groupControl2.Controls.Add(this.labelControl8);
             this.groupControl2.Controls.Add(this.label99);
             this.groupControl2.Controls.Add(this.txtTelephone);
+            this.groupControl2.Controls.Add(this.txtGmail);
             this.groupControl2.Controls.Add(this.txtEmail);
             this.groupControl2.Controls.Add(this.labelControl9);
             this.groupControl2.Controls.Add(this.txtAddress);
@@ -838,6 +850,28 @@
             this.txtTelephone.Size = new System.Drawing.Size(224, 26);
             this.txtTelephone.TabIndex = 5;
             // 
+            // txtGmail
+            // 
+            this.txtGmail.EditValue = "@gmail.com";
+            this.txtGmail.EnterMoveNextControl = true;
+            this.txtGmail.Location = new System.Drawing.Point(372, 262);
+            this.txtGmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGmail.Name = "txtGmail";
+            this.txtGmail.Properties.AllowFocused = false;
+            this.txtGmail.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtGmail.Properties.Appearance.Options.UseBackColor = true;
+            this.txtGmail.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtGmail.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtGmail.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtGmail.Properties.DisplayFormat.FormatString = "N2";
+            this.txtGmail.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.txtGmail.Properties.EditFormat.FormatString = "N2";
+            this.txtGmail.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.txtGmail.Properties.ReadOnly = true;
+            this.txtGmail.Size = new System.Drawing.Size(134, 26);
+            this.txtGmail.TabIndex = 6;
+            this.txtGmail.TabStop = false;
+            // 
             // txtEmail
             // 
             this.txtEmail.EnterMoveNextControl = true;
@@ -854,7 +888,7 @@
             this.txtEmail.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtEmail.Properties.EditFormat.FormatString = "N2";
             this.txtEmail.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtEmail.Size = new System.Drawing.Size(368, 26);
+            this.txtEmail.Size = new System.Drawing.Size(224, 26);
             this.txtEmail.TabIndex = 6;
             // 
             // labelControl9
@@ -1122,6 +1156,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGSM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtScore.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelephone.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
             this.statusPanel.ResumeLayout(false);
@@ -1197,5 +1232,6 @@
         private DevExpress.XtraEditors.TextEdit txtSearchCompanyName;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton btnExcel;
+        private DevExpress.XtraEditors.TextEdit txtGmail;
     }
 }

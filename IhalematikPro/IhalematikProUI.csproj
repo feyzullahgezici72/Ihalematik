@@ -270,6 +270,12 @@
     <Compile Include="Forms\Genel\frm_LogoAyarları.Designer.cs">
       <DependentUpon>frm_LogoAyarları.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Genel\frm_Mybrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Genel\frm_Mybrowser.Designer.cs">
+      <DependentUpon>frm_Mybrowser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Genel\frm_PozlariOnlineGuncelle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -700,6 +706,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Genel\frm_LogoAyarları.resx">
       <DependentUpon>frm_LogoAyarları.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Genel\frm_Mybrowser.resx">
+      <DependentUpon>frm_Mybrowser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Genel\frm_PozlariOnlineGuncelle.resx">
       <DependentUpon>frm_PozlariOnlineGuncelle.cs</DependentUpon>

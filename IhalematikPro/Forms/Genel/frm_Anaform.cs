@@ -1063,5 +1063,29 @@ namespace IhalematikPro.Forms
             RibonAktif();
             barButtonItem45.ButtonStyle = BarButtonStyle.Default;
         }
+        frm_Mybrowser myB;
+        private void barButtonItem46_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            barButtonItem46.ButtonStyle = BarButtonStyle.Check;
+            RibonPasif();
+            if (myB == null)
+            {
+                myB = new frm_Mybrowser();
+                myB.MdiParent = this;
+                myB.FormClosed +=new FormClosedEventHandler( MyB_FormClosed);
+                myB.Show();
+            }
+            else
+            {
+                myB.Activate();
+            }
+        }
+
+        private void MyB_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            myB = null;
+            RibonAktif();
+            barButtonItem46.ButtonStyle = BarButtonStyle.Default;
+        }
     }
 }

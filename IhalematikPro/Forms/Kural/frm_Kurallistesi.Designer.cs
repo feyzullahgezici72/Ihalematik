@@ -85,7 +85,7 @@
             this.grdWorkerRules.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGuncelle,
             this.btnSil});
-            this.grdWorkerRules.Size = new System.Drawing.Size(590, 493);
+            this.grdWorkerRules.Size = new System.Drawing.Size(586, 486);
             this.grdWorkerRules.TabIndex = 0;
             this.grdWorkerRules.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewRules});
@@ -262,8 +262,7 @@
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn3.Caption = "DEĞERİ";
-            this.gridColumn3.DisplayFormat.FormatString = "C2";
-            this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn3.FieldName = "Text";
             this.gridColumn3.MaxWidth = 80;
             this.gridColumn3.MinWidth = 80;
@@ -378,14 +377,14 @@
             // 
             this.xtraTabPage1.Controls.Add(this.grdWorkerRules);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(590, 493);
+            this.xtraTabPage1.Size = new System.Drawing.Size(586, 486);
             this.xtraTabPage1.Text = "İşçilik Kuralları";
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.grdTenderRules);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(590, 493);
+            this.xtraTabPage2.Size = new System.Drawing.Size(586, 486);
             this.xtraTabPage2.Text = "İhale Kuralları";
             // 
             // grdTenderRules
@@ -398,7 +397,7 @@
             this.grdTenderRules.Name = "grdTenderRules";
             this.grdTenderRules.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
-            this.grdTenderRules.Size = new System.Drawing.Size(590, 493);
+            this.grdTenderRules.Size = new System.Drawing.Size(586, 486);
             this.grdTenderRules.TabIndex = 1;
             this.grdTenderRules.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -572,8 +571,7 @@
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn6.Caption = "DEĞERİ";
-            this.gridColumn6.DisplayFormat.FormatString = "C2";
-            this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "Text";
             this.gridColumn6.MaxWidth = 80;
             this.gridColumn6.MinWidth = 80;

@@ -175,6 +175,7 @@ namespace IhalematikPro.Forms
             this.barButtonItem44 = new DevExpress.XtraBars.BarButtonItem();
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.barButtonItem45 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem46 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -196,6 +197,7 @@ namespace IhalematikPro.Forms
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup22 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup20 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -339,10 +341,11 @@ namespace IhalematikPro.Forms
             this.barButtonItem31,
             this.barButtonItem44,
             this.skinRibbonGalleryBarItem1,
-            this.barButtonItem45});
+            this.barButtonItem45,
+            this.barButtonItem46});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 75;
+            this.ribbon.MaxItemId = 76;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsTouch.AffectOnlyRibbon = true;
             this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem1);
@@ -1327,6 +1330,16 @@ namespace IhalematikPro.Forms
             this.barButtonItem45.Name = "barButtonItem45";
             this.barButtonItem45.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem45_ItemClick);
             // 
+            // barButtonItem46
+            // 
+            this.barButtonItem46.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
+            this.barButtonItem46.Caption = "Ekap İhale İlanları";
+            this.barButtonItem46.Id = 75;
+            this.barButtonItem46.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem46.LargeGlyph")));
+            this.barButtonItem46.LargeWidth = 120;
+            this.barButtonItem46.Name = "barButtonItem46";
+            this.barButtonItem46.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem46_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Appearance.BackColor = System.Drawing.Color.Gray;
@@ -1517,7 +1530,8 @@ namespace IhalematikPro.Forms
             this.ribbonPage4.Appearance.Options.UseTextOptions = true;
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup4,
-            this.ribbonPageGroup5});
+            this.ribbonPageGroup5,
+            this.ribbonPageGroup22});
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "Raporlar";
             // 
@@ -1536,6 +1550,13 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup5.ShowCaptionButton = false;
             this.ribbonPageGroup5.Text = "Yazdır";
             this.ribbonPageGroup5.Visible = false;
+            // 
+            // ribbonPageGroup22
+            // 
+            this.ribbonPageGroup22.ItemLinks.Add(this.barButtonItem46);
+            this.ribbonPageGroup22.Name = "ribbonPageGroup22";
+            this.ribbonPageGroup22.ShowCaptionButton = false;
+            this.ribbonPageGroup22.Text = "İlanlar";
             // 
             // ribbonPage2
             // 
@@ -2001,6 +2022,8 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.BarButtonItem barButtonItem45;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup21;
         private DevExpress.XtraEditors.StyleController styleController1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem46;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup22;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }
