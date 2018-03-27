@@ -737,7 +737,7 @@
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(203, 66);
             this.btnExcel.TabIndex = 15;
-            this.btnExcel.Text = "Excel\'e Aktar";
+            this.btnExcel.Text = "&Excel\'e Aktar";
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // lblTenderNumber
@@ -1080,7 +1080,7 @@
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(288, 63);
             this.simpleButton1.TabIndex = 1;
-            this.simpleButton1.Text = "Tümünü Listele";
+            this.simpleButton1.Text = "&Tümünü Listele";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // panelControl3
@@ -1123,7 +1123,7 @@
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(200, 70);
             this.btnPrev.TabIndex = 4;
-            this.btnPrev.Text = "Önceki Adım";
+            this.btnPrev.Text = "&Önceki Adım";
             this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
             // 
             // panelControl5
@@ -1152,7 +1152,7 @@
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(200, 70);
             this.btnNext.TabIndex = 3;
-            this.btnNext.Text = "Sonraki Adım";
+            this.btnNext.Text = "&Sonraki Adım";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // frm_Teklif_Adim2

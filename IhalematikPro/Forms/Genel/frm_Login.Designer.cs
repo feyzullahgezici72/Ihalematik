@@ -170,7 +170,7 @@
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(100, 56);
             this.btnIptal.TabIndex = 9;
-            this.btnIptal.Text = "İptal";
+            this.btnIptal.Text = "İpt&al";
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
             // 
             // btnTamam
@@ -184,7 +184,7 @@
             this.btnTamam.Name = "btnTamam";
             this.btnTamam.Size = new System.Drawing.Size(100, 56);
             this.btnTamam.TabIndex = 8;
-            this.btnTamam.Text = "Tamam";
+            this.btnTamam.Text = "&Tamam";
             this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
             // 
             // pictureBox1

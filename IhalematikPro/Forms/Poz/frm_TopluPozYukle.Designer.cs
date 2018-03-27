@@ -39,13 +39,13 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.lblPosSayisi = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.lblPosSayisi = new DevExpress.XtraEditors.LabelControl();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -156,7 +156,7 @@
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(140, 57);
             this.simpleButton1.TabIndex = 28;
-            this.simpleButton1.Text = "Yükle";
+            this.simpleButton1.Text = "&Yükle";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
@@ -169,7 +169,7 @@
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(140, 57);
             this.simpleButton2.TabIndex = 29;
-            this.simpleButton2.Text = "Tamam";
+            this.simpleButton2.Text = "&Tamam";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // groupControl1
@@ -191,6 +191,41 @@
             this.groupControl1.Size = new System.Drawing.Size(1101, 318);
             this.groupControl1.TabIndex = 30;
             this.groupControl1.Text = " ";
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Controls.Add(this.simpleButton1);
+            this.groupControl2.Controls.Add(this.lblPosSayisi);
+            this.groupControl2.Controls.Add(this.simpleButton2);
+            this.groupControl2.Controls.Add(this.labelControl1);
+            this.groupControl2.Location = new System.Drawing.Point(0, 225);
+            this.groupControl2.LookAndFeel.SkinName = "Visual Studio 2013 Light";
+            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(1101, 94);
+            this.groupControl2.TabIndex = 34;
+            // 
+            // lblPosSayisi
+            // 
+            this.lblPosSayisi.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPosSayisi.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.lblPosSayisi.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblPosSayisi.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.lblPosSayisi.Location = new System.Drawing.Point(146, 53);
+            this.lblPosSayisi.Name = "lblPosSayisi";
+            this.lblPosSayisi.Size = new System.Drawing.Size(117, 31);
+            this.lblPosSayisi.TabIndex = 23;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl1.Location = new System.Drawing.Point(137, 27);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(146, 19);
+            this.labelControl1.TabIndex = 30;
+            this.labelControl1.Text = "Yüklenen Poz Sayısı:";
             // 
             // labelControl2
             // 
@@ -235,41 +270,6 @@
             this.labelControl3.Size = new System.Drawing.Size(70, 19);
             this.labelControl3.TabIndex = 32;
             this.labelControl3.Text = "Açıklama:";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl1.Location = new System.Drawing.Point(137, 27);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(146, 19);
-            this.labelControl1.TabIndex = 30;
-            this.labelControl1.Text = "Yüklenen Poz Sayısı:";
-            // 
-            // lblPosSayisi
-            // 
-            this.lblPosSayisi.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPosSayisi.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.lblPosSayisi.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblPosSayisi.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblPosSayisi.Location = new System.Drawing.Point(146, 53);
-            this.lblPosSayisi.Name = "lblPosSayisi";
-            this.lblPosSayisi.Size = new System.Drawing.Size(117, 31);
-            this.lblPosSayisi.TabIndex = 23;
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.Controls.Add(this.simpleButton1);
-            this.groupControl2.Controls.Add(this.lblPosSayisi);
-            this.groupControl2.Controls.Add(this.simpleButton2);
-            this.groupControl2.Controls.Add(this.labelControl1);
-            this.groupControl2.Location = new System.Drawing.Point(0, 225);
-            this.groupControl2.LookAndFeel.SkinName = "Visual Studio 2013 Light";
-            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1101, 94);
-            this.groupControl2.TabIndex = 34;
             // 
             // frm_TopluPozYukle
             // 

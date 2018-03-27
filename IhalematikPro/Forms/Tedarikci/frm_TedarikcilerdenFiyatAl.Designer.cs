@@ -838,7 +838,7 @@
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(370, 94);
             this.simpleButton1.TabIndex = 23;
-            this.simpleButton1.Text = "Karşılaştır";
+            this.simpleButton1.Text = "K&arşılaştır";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // pcWorld
@@ -917,7 +917,7 @@
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(143, 64);
             this.btnKaydet.TabIndex = 51;
-            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.Text = "&Kaydet";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // panelControl4
@@ -943,7 +943,7 @@
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(236, 64);
             this.btnExcel.TabIndex = 48;
-            this.btnExcel.Text = "Excel\'e Aktar";
+            this.btnExcel.Text = "&Excel\'e Aktar";
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // lblTenderDescription

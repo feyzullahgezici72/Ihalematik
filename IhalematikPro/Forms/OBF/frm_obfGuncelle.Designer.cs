@@ -233,7 +233,7 @@
             superToolTip1.Items.Add(toolTipTitleItem1);
             this.btnGuncelle.SuperTip = superToolTip1;
             this.btnGuncelle.TabIndex = 5;
-            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.Text = "&Güncelle";
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // dxErrorProvider1

@@ -313,7 +313,7 @@
             superToolTip2.Items.Add(toolTipItem2);
             this.btnObfKayit.SuperTip = superToolTip2;
             this.btnObfKayit.TabIndex = 5;
-            this.btnObfKayit.Text = "F2 : ÖBF Seç";
+            this.btnObfKayit.Text = "F2 : Ö&BF Seç";
             this.btnObfKayit.Click += new System.EventHandler(this.btnObfKayit_Click);
             // 
             // btnPozKayit
@@ -338,7 +338,7 @@
             superToolTip3.Items.Add(toolTipItem3);
             this.btnPozKayit.SuperTip = superToolTip3;
             this.btnPozKayit.TabIndex = 5;
-            this.btnPozKayit.Text = "F1 : Poz Seç";
+            this.btnPozKayit.Text = "F1 : &Poz Seç";
             this.btnPozKayit.Click += new System.EventHandler(this.btnPozKayit_Click);
             // 
             // lblTenderDescription
@@ -413,7 +413,7 @@
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(250, 66);
             this.btnExcel.TabIndex = 46;
-            this.btnExcel.Text = "Excel\'e Aktar";
+            this.btnExcel.Text = "&Excel\'e Aktar";
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // btnTedarikciListesi
@@ -437,7 +437,7 @@
             superToolTip4.Items.Add(toolTipItem4);
             this.btnTedarikciListesi.SuperTip = superToolTip4;
             this.btnTedarikciListesi.TabIndex = 6;
-            this.btnTedarikciListesi.Text = "Mail Gönder";
+            this.btnTedarikciListesi.Text = "Mail &Gönder";
             this.btnTedarikciListesi.Click += new System.EventHandler(this.btnTedarikciListesi_Click);
             // 
             // btnTedaikcileregonder
@@ -461,7 +461,7 @@
             superToolTip5.Items.Add(toolTipItem5);
             this.btnTedaikcileregonder.SuperTip = superToolTip5;
             this.btnTedaikcileregonder.TabIndex = 5;
-            this.btnTedaikcileregonder.Text = "Malzeme Aktar";
+            this.btnTedaikcileregonder.Text = "Malzeme &Aktar";
             this.btnTedaikcileregonder.Click += new System.EventHandler(this.btnTedaikcileregonder_Click);
             // 
             // btnListeOlustur
@@ -485,7 +485,7 @@
             superToolTip6.Items.Add(toolTipItem6);
             this.btnListeOlustur.SuperTip = superToolTip6;
             this.btnListeOlustur.TabIndex = 4;
-            this.btnListeOlustur.Text = "Malzeme Listesi Oluştur";
+            this.btnListeOlustur.Text = "Malzeme &Listesi Oluştur";
             this.btnListeOlustur.Click += new System.EventHandler(this.btnListeOlustur_Click);
             // 
             // gridColumn6

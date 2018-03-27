@@ -34,6 +34,7 @@
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtScore = new DevExpress.XtraEditors.TextEdit();
             this.checkedComboboxEditSupplierSegments = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -53,11 +54,11 @@
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.txtAddress = new DevExpress.XtraEditors.MemoEdit();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.txtScore = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtScore.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkedComboboxEditSupplierSegments.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAuthorNameSurname.Properties)).BeginInit();
@@ -67,7 +68,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtScore.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -149,6 +149,23 @@
             this.groupControl2.TabIndex = 98;
             this.groupControl2.Text = "Tedarikçi Bilgileri";
             // 
+            // txtScore
+            // 
+            this.txtScore.EnterMoveNextControl = true;
+            this.txtScore.Location = new System.Drawing.Point(150, 290);
+            this.txtScore.Margin = new System.Windows.Forms.Padding(4);
+            this.txtScore.Name = "txtScore";
+            this.txtScore.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtScore.Properties.Appearance.Options.UseBackColor = true;
+            this.txtScore.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtScore.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtScore.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtScore.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtScore.Properties.Mask.EditMask = "n0";
+            this.txtScore.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtScore.Size = new System.Drawing.Size(82, 26);
+            this.txtScore.TabIndex = 7;
+            // 
             // checkedComboboxEditSupplierSegments
             // 
             this.dxErrorProvider1.SetIconAlignment(this.checkedComboboxEditSupplierSegments, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
@@ -157,7 +174,7 @@
             this.checkedComboboxEditSupplierSegments.Name = "checkedComboboxEditSupplierSegments";
             this.checkedComboboxEditSupplierSegments.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.checkedComboboxEditSupplierSegments.Size = new System.Drawing.Size(369, 28);
+            this.checkedComboboxEditSupplierSegments.Size = new System.Drawing.Size(369, 26);
             this.checkedComboboxEditSupplierSegments.TabIndex = 0;
             this.checkedComboboxEditSupplierSegments.Closed += new DevExpress.XtraEditors.Controls.ClosedEventHandler(this.checkedComboboxEditSupplierSegments_Closed);
             // 
@@ -173,7 +190,7 @@
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(130, 56);
             this.btnGuncelle.TabIndex = 9;
-            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.Text = "&Güncelle";
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // labelControl2
@@ -387,23 +404,6 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
-            // txtScore
-            // 
-            this.txtScore.EnterMoveNextControl = true;
-            this.txtScore.Location = new System.Drawing.Point(150, 290);
-            this.txtScore.Margin = new System.Windows.Forms.Padding(4);
-            this.txtScore.Name = "txtScore";
-            this.txtScore.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtScore.Properties.Appearance.Options.UseBackColor = true;
-            this.txtScore.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtScore.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtScore.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtScore.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtScore.Properties.Mask.EditMask = "n0";
-            this.txtScore.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtScore.Size = new System.Drawing.Size(82, 26);
-            this.txtScore.TabIndex = 7;
-            // 
             // frm_TedarikciGuncelleme
             // 
             this.AcceptButton = this.btnGuncelle;
@@ -429,6 +429,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtScore.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkedComboboxEditSupplierSegments.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAuthorNameSurname.Properties)).EndInit();
@@ -438,7 +439,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtScore.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

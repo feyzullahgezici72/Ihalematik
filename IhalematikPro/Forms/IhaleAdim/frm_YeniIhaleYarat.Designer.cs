@@ -137,8 +137,8 @@
             this.btnIhaleOlustur.Margin = new System.Windows.Forms.Padding(6);
             this.btnIhaleOlustur.Name = "btnIhaleOlustur";
             this.btnIhaleOlustur.Size = new System.Drawing.Size(182, 90);
-            this.btnIhaleOlustur.TabIndex = 0;
-            this.btnIhaleOlustur.Text = "Oluştur";
+            this.btnIhaleOlustur.TabIndex = 3;
+            this.btnIhaleOlustur.Text = "&Oluştur";
             this.btnIhaleOlustur.Click += new System.EventHandler(this.btnIhaleOlustur_Click);
             // 
             // txtAciklama
@@ -155,7 +155,7 @@
             this.txtAciklama.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtAciklama.Size = new System.Drawing.Size(597, 28);
-            this.txtAciklama.TabIndex = 1;
+            this.txtAciklama.TabIndex = 0;
             // 
             // txtTeklifNo
             // 
@@ -222,7 +222,7 @@
             this.txtcompanyName.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtcompanyName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtcompanyName.Size = new System.Drawing.Size(597, 28);
-            this.txtcompanyName.TabIndex = 2;
+            this.txtcompanyName.TabIndex = 1;
             // 
             // labelControl5
             // 
@@ -261,7 +261,7 @@
             this.xtraTabPage1.Controls.Add(this.txtcompanyName);
             this.xtraTabPage1.Controls.Add(this.txtAciklama);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(744, 262);
+            this.xtraTabPage1.Size = new System.Drawing.Size(740, 255);
             this.xtraTabPage1.Text = "İhale Bilgileri";
             // 
             // LastOfferDate
@@ -277,8 +277,8 @@
             this.LastOfferDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.LastOfferDate.Properties.Mask.EditMask = "f";
-            this.LastOfferDate.Size = new System.Drawing.Size(597, 28);
-            this.LastOfferDate.TabIndex = 3;
+            this.LastOfferDate.Size = new System.Drawing.Size(597, 26);
+            this.LastOfferDate.TabIndex = 2;
             // 
             // xtraTabPage2
             // 
@@ -295,7 +295,7 @@
             this.xtraTabPage2.Controls.Add(this.txtType);
             this.xtraTabPage2.Controls.Add(this.txtEkapNumber);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(744, 262);
+            this.xtraTabPage2.Size = new System.Drawing.Size(740, 255);
             this.xtraTabPage2.Text = "Detay          ";
             // 
             // labelControl12
@@ -761,7 +761,7 @@
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(131, 34);
             this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "Bul";
+            this.btnSearch.Text = "&Bul";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dateEnd
@@ -775,7 +775,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEnd.Size = new System.Drawing.Size(134, 28);
+            this.dateEnd.Size = new System.Drawing.Size(134, 26);
             this.dateEnd.TabIndex = 2;
             // 
             // dateStart
@@ -789,7 +789,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateStart.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateStart.Size = new System.Drawing.Size(162, 28);
+            this.dateStart.Size = new System.Drawing.Size(162, 26);
             this.dateStart.TabIndex = 2;
             // 
             // txtOfferNumber
@@ -930,6 +930,7 @@
             // 
             // frm_YeniIhaleYarat
             // 
+            this.AcceptButton = this.btnIhaleOlustur;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 710);
@@ -939,7 +940,7 @@
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.tabIhaleBilgileri);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);

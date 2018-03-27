@@ -288,7 +288,7 @@
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(122, 108);
             this.simpleButton2.TabIndex = 0;
-            this.simpleButton2.Text = "Dosyadan \r\nAl";
+            this.simpleButton2.Text = "&Dosyadan \r\nAl";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // labelControl8
@@ -335,7 +335,7 @@
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(124, 58);
             this.btnKaydet.TabIndex = 5;
-            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.Text = "&Kaydet";
             this.btnKaydet.ToolTip = "Kaydet";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
@@ -888,7 +888,7 @@
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(205, 69);
             this.btnExcel.TabIndex = 50;
-            this.btnExcel.Text = "Excel\'e Aktar";
+            this.btnExcel.Text = "&Excel\'e Aktar";
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // groupControl3

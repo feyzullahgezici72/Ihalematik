@@ -373,7 +373,7 @@
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(106, 41);
             this.btnOk.TabIndex = 141;
-            this.btnOk.Text = "Tamam";
+            this.btnOk.Text = "&Tamam";
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // frm_DigerGiderler

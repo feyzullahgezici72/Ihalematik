@@ -212,7 +212,7 @@
             this.btnPozKayit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnPozKayit.Size = new System.Drawing.Size(160, 64);
             this.btnPozKayit.TabIndex = 24;
-            this.btnPozKayit.Text = "F1 : Poz Seç";
+            this.btnPozKayit.Text = "F1 : &Poz Seç";
             this.btnPozKayit.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // btnObfKayit
@@ -231,7 +231,7 @@
             this.btnObfKayit.Name = "btnObfKayit";
             this.btnObfKayit.Size = new System.Drawing.Size(160, 64);
             this.btnObfKayit.TabIndex = 25;
-            this.btnObfKayit.Text = "F2 : ÖBF Seç";
+            this.btnObfKayit.Text = "F2 : Ö&BF Seç";
             this.btnObfKayit.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // panelControl7
@@ -259,7 +259,7 @@
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(206, 64);
             this.btnExcel.TabIndex = 18;
-            this.btnExcel.Text = "Excel\'e Aktar";
+            this.btnExcel.Text = "&Excel\'e Aktar";
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // lblTenderDescription
@@ -561,7 +561,7 @@
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(288, 62);
             this.simpleButton1.TabIndex = 0;
-            this.simpleButton1.Text = "Tümünü Listele";
+            this.simpleButton1.Text = "&Tümünü Listele";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
             // 
             // btnSelectDeselect
@@ -577,7 +577,7 @@
             this.btnSelectDeselect.Name = "btnSelectDeselect";
             this.btnSelectDeselect.Size = new System.Drawing.Size(155, 70);
             this.btnSelectDeselect.TabIndex = 11;
-            this.btnSelectDeselect.Text = "Hepsini Seç";
+            this.btnSelectDeselect.Text = "&Hepsini Seç";
             this.btnSelectDeselect.Click += new System.EventHandler(this.btnSelectDeselect_Click);
             // 
             // panelControl6
@@ -1057,7 +1057,7 @@
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(200, 70);
             this.btnNext.TabIndex = 3;
-            this.btnNext.Text = "Sonraki Adım";
+            this.btnNext.Text = "&Sonraki Adım";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // colId

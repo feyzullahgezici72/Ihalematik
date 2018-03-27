@@ -338,6 +338,7 @@
             this.gridViewMaterialList.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewMaterialList.OptionsView.ShowDetailButtons = false;
             this.gridViewMaterialList.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.gridViewMaterialList.OptionsView.ShowFooter = true;
             this.gridViewMaterialList.OptionsView.ShowGroupPanel = false;
             this.gridViewMaterialList.PaintStyleName = "Web";
             // 

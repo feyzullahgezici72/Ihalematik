@@ -93,6 +93,8 @@
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.progressPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.LookAndFeel.SkinName = "VS2010";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_wait";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

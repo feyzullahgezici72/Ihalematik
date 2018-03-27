@@ -64,7 +64,7 @@
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(140, 57);
             this.simpleButton1.TabIndex = 28;
-            this.simpleButton1.Text = "Yükle";
+            this.simpleButton1.Text = "&Yükle";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // labelControl2
@@ -165,7 +165,7 @@
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(140, 57);
             this.simpleButton2.TabIndex = 29;
-            this.simpleButton2.Text = "Tamam";
+            this.simpleButton2.Text = "&Tamam";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // labelControl1

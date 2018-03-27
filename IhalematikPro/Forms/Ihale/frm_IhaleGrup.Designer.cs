@@ -168,7 +168,7 @@
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(102, 39);
             this.btnEkle.TabIndex = 1;
-            this.btnEkle.Text = "Ekle";
+            this.btnEkle.Text = "&Ekle";
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // txtTenderGroupDescription

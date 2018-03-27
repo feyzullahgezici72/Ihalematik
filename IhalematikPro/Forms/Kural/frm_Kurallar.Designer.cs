@@ -77,7 +77,7 @@
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(130, 54);
             this.btnGuncelle.TabIndex = 147;
-            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.Text = "&Güncelle";
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // lblRuleName

@@ -164,7 +164,7 @@
             superToolTip1.Items.Add(toolTipItem1);
             this.btnUploadFile.SuperTip = superToolTip1;
             this.btnUploadFile.TabIndex = 15;
-            this.btnUploadFile.Text = "Yükle";
+            this.btnUploadFile.Text = "&Yükle";
             this.btnUploadFile.Click += new System.EventHandler(this.btnUploadFile_Click);
             // 
             // btnKaydet
@@ -185,7 +185,7 @@
             this.btnKaydet.ShowToolTips = false;
             this.btnKaydet.Size = new System.Drawing.Size(102, 90);
             this.btnKaydet.TabIndex = 14;
-            this.btnKaydet.Text = "Tamam";
+            this.btnKaydet.Text = "&Tamam";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // lblSupplierName

@@ -400,7 +400,7 @@
             this.btnHayir.Name = "btnHayir";
             this.btnHayir.Size = new System.Drawing.Size(120, 44);
             this.btnHayir.TabIndex = 1;
-            this.btnHayir.Text = "Hayır";
+            this.btnHayir.Text = "&Hayır";
             this.btnHayir.Click += new System.EventHandler(this.btnHayir_Click);
             // 
             // btnEvet
@@ -410,7 +410,7 @@
             this.btnEvet.Name = "btnEvet";
             this.btnEvet.Size = new System.Drawing.Size(120, 44);
             this.btnEvet.TabIndex = 1;
-            this.btnEvet.Text = "Evet";
+            this.btnEvet.Text = "&Evet";
             // 
             // labelControl2
             // 

@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_MesajFormu));
-            this.timer1 = new System.Windows.Forms.Timer();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMesaj = new DevExpress.XtraEditors.LabelControl();
@@ -93,7 +94,7 @@
             this.btnTamam.Name = "btnTamam";
             this.btnTamam.Size = new System.Drawing.Size(131, 50);
             this.btnTamam.TabIndex = 14;
-            this.btnTamam.Text = "Tamam";
+            this.btnTamam.Text = "&Tamam";
             this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
             // 
             // frm_MesajFormu

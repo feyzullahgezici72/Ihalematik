@@ -44,7 +44,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(614, 84);
+            this.groupControl1.Size = new System.Drawing.Size(610, 84);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "Grup Adı";
             // 
@@ -70,7 +70,7 @@
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(130, 54);
             this.btnGuncelle.TabIndex = 149;
-            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.Text = "&Güncelle";
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // frm_IhaleGrupGuncelle
@@ -80,7 +80,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 148);
+            this.ClientSize = new System.Drawing.Size(610, 144);
             this.ControlBox = false;
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.groupControl1);

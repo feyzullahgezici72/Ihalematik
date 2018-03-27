@@ -600,7 +600,7 @@
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(183, 74);
             this.simpleButton1.TabIndex = 5;
-            this.simpleButton1.Text = "Mail Gönder";
+            this.simpleButton1.Text = "&Mail Gönder";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // frm_TedarikciyeAktarilanMalzemeDetay

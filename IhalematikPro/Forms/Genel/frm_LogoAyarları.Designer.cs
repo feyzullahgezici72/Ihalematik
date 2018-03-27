@@ -67,7 +67,7 @@
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(95, 47);
             this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Text = "Tamam";
+            this.simpleButton1.Text = "&Tamam";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // txtHeight

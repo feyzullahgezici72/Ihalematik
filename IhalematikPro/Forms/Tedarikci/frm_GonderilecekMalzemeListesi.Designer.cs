@@ -65,8 +65,9 @@
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(810, 24);
+            this.panelControl2.Size = new System.Drawing.Size(1215, 35);
             this.panelControl2.TabIndex = 111;
             // 
             // btnKapat
@@ -76,9 +77,10 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(784, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1187, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(26, 24);
+            this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 21;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
@@ -90,10 +92,11 @@
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(3, 1);
+            this.labelControl1.Location = new System.Drawing.Point(4, 1);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(388, 23);
+            this.labelControl1.Size = new System.Drawing.Size(575, 35);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "TEDARİKÇİLERE GÖNDERİLECEK MALZEME LİSTESİ";
             this.labelControl1.UseMnemonic = false;
@@ -101,16 +104,16 @@
             // grdAddedOfferMaterialList
             // 
             this.grdAddedOfferMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdAddedOfferMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grdAddedOfferMaterialList.Location = new System.Drawing.Point(0, 24);
+            this.grdAddedOfferMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.grdAddedOfferMaterialList.Location = new System.Drawing.Point(0, 35);
             this.grdAddedOfferMaterialList.LookAndFeel.SkinName = "Money Twins";
             this.grdAddedOfferMaterialList.MainView = this.gridViewAddedOfferMaterialList;
-            this.grdAddedOfferMaterialList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdAddedOfferMaterialList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.grdAddedOfferMaterialList.Name = "grdAddedOfferMaterialList";
             this.grdAddedOfferMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1,
             this.rpstRemove});
-            this.grdAddedOfferMaterialList.Size = new System.Drawing.Size(810, 380);
+            this.grdAddedOfferMaterialList.Size = new System.Drawing.Size(1215, 555);
             this.grdAddedOfferMaterialList.TabIndex = 0;
             this.grdAddedOfferMaterialList.UseDisabledStatePainter = false;
             this.grdAddedOfferMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -249,6 +252,7 @@
             this.gridViewAddedOfferMaterialList.OptionsView.EnableAppearanceOddRow = true;
             this.gridViewAddedOfferMaterialList.OptionsView.ShowDetailButtons = false;
             this.gridViewAddedOfferMaterialList.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.gridViewAddedOfferMaterialList.OptionsView.ShowFooter = true;
             this.gridViewAddedOfferMaterialList.OptionsView.ShowGroupPanel = false;
             this.gridViewAddedOfferMaterialList.PaintStyleName = "Web";
             // 
@@ -300,6 +304,8 @@
             this.gridColumn10.OptionsColumn.ReadOnly = true;
             this.gridColumn10.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn10.OptionsFilter.AllowFilter = false;
+            this.gridColumn10.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "PozOBF.Description", "Malzeme Sayısı={0}")});
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 1;
             this.gridColumn10.Width = 915;
@@ -391,31 +397,29 @@
             // 
             this.panelControl1.Controls.Add(this.btnTumunuCikar);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 404);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl1.Location = new System.Drawing.Point(0, 590);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(810, 41);
+            this.panelControl1.Size = new System.Drawing.Size(1215, 60);
             this.panelControl1.TabIndex = 113;
             // 
             // btnTumunuCikar
             // 
             this.btnTumunuCikar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnTumunuCikar.Image = ((System.Drawing.Image)(resources.GetObject("btnTumunuCikar.Image")));
-            this.btnTumunuCikar.Location = new System.Drawing.Point(697, 2);
+            this.btnTumunuCikar.Location = new System.Drawing.Point(1046, 3);
             this.btnTumunuCikar.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnTumunuCikar.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnTumunuCikar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTumunuCikar.Name = "btnTumunuCikar";
-            this.btnTumunuCikar.Size = new System.Drawing.Size(111, 37);
+            this.btnTumunuCikar.Size = new System.Drawing.Size(166, 54);
             this.btnTumunuCikar.TabIndex = 0;
-            this.btnTumunuCikar.Text = "Tümünü Çıkar";
+            this.btnTumunuCikar.Text = "&Tümünü Çıkar";
             this.btnTumunuCikar.Click += new System.EventHandler(this.btnTumunuCikar_Click);
             // 
             // frm_GonderilecekMalzemeListesi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 445);
+            this.ClientSize = new System.Drawing.Size(1215, 650);
             this.ControlBox = false;
             this.Controls.Add(this.grdAddedOfferMaterialList);
             this.Controls.Add(this.panelControl1);
@@ -423,7 +427,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_GonderilecekMalzemeListesi";

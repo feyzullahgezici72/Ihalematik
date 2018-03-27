@@ -57,6 +57,7 @@
             // 
             // txtAciklama
             // 
+            this.txtAciklama.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtAciklama, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.txtAciklama.Location = new System.Drawing.Point(124, 94);
             this.txtAciklama.Margin = new System.Windows.Forms.Padding(4);
@@ -69,7 +70,7 @@
             this.txtAciklama.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtAciklama.Size = new System.Drawing.Size(592, 28);
-            this.txtAciklama.TabIndex = 33;
+            this.txtAciklama.TabIndex = 0;
             // 
             // txtTeklifNo
             // 
@@ -194,8 +195,8 @@
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(141, 54);
-            this.simpleButton2.TabIndex = 41;
-            this.simpleButton2.Text = "Oluştur";
+            this.simpleButton2.TabIndex = 2;
+            this.simpleButton2.Text = "&Oluştur";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click_1);
             // 
             // dxErrorProvider1
@@ -205,6 +206,7 @@
             // txtDateTime
             // 
             this.txtDateTime.EditValue = new System.DateTime(2017, 11, 14, 14, 49, 43, 0);
+            this.txtDateTime.EnterMoveNextControl = true;
             this.txtDateTime.Location = new System.Drawing.Point(124, 129);
             this.txtDateTime.Name = "txtDateTime";
             this.txtDateTime.Properties.AppearanceDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -215,8 +217,8 @@
             this.txtDateTime.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDateTime.Properties.Mask.EditMask = "f";
-            this.txtDateTime.Size = new System.Drawing.Size(594, 28);
-            this.txtDateTime.TabIndex = 42;
+            this.txtDateTime.Size = new System.Drawing.Size(594, 26);
+            this.txtDateTime.TabIndex = 1;
             // 
             // labelControl5
             // 
@@ -231,6 +233,7 @@
             // 
             // frm_YeniTeklifOlustur
             // 
+            this.AcceptButton = this.simpleButton2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;

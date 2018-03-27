@@ -105,7 +105,7 @@
             // 
             this.txtTaxOffice.EnterMoveNextControl = true;
             this.txtTaxOffice.Location = new System.Drawing.Point(134, 118);
-            this.txtTaxOffice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTaxOffice.Margin = new System.Windows.Forms.Padding(4);
             this.txtTaxOffice.Name = "txtTaxOffice";
             this.txtTaxOffice.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTaxOffice.Properties.Appearance.Options.UseBackColor = true;
@@ -118,7 +118,7 @@
             // 
             this.txtTitle.EnterMoveNextControl = true;
             this.txtTitle.Location = new System.Drawing.Point(134, 83);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(4);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTitle.Properties.Appearance.Options.UseBackColor = true;
@@ -130,7 +130,7 @@
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(70, 88);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(55, 19);
             this.labelControl3.TabIndex = 66;
@@ -140,7 +140,7 @@
             // 
             this.txtMailAddress.EnterMoveNextControl = true;
             this.txtMailAddress.Location = new System.Drawing.Point(132, 227);
-            this.txtMailAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMailAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtMailAddress.Name = "txtMailAddress";
             this.txtMailAddress.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMailAddress.Properties.Appearance.Options.UseBackColor = true;
@@ -152,7 +152,7 @@
             // labelControl12
             // 
             this.labelControl12.Location = new System.Drawing.Point(40, 229);
-            this.labelControl12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(84, 19);
             this.labelControl12.TabIndex = 102;
@@ -162,7 +162,7 @@
             // 
             this.txtWebAddress.EnterMoveNextControl = true;
             this.txtWebAddress.Location = new System.Drawing.Point(132, 191);
-            this.txtWebAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtWebAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtWebAddress.Name = "txtWebAddress";
             this.txtWebAddress.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtWebAddress.Properties.Appearance.Options.UseBackColor = true;
@@ -174,7 +174,7 @@
             // labelControl11
             // 
             this.labelControl11.Location = new System.Drawing.Point(38, 194);
-            this.labelControl11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(87, 19);
             this.labelControl11.TabIndex = 100;
@@ -183,7 +183,7 @@
             // labelControl13
             // 
             this.labelControl13.Location = new System.Drawing.Point(398, 56);
-            this.labelControl13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(51, 19);
             this.labelControl13.TabIndex = 98;
@@ -193,7 +193,7 @@
             // 
             this.txtGSM.EnterMoveNextControl = true;
             this.txtGSM.Location = new System.Drawing.Point(132, 158);
-            this.txtGSM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGSM.Margin = new System.Windows.Forms.Padding(4);
             this.txtGSM.Name = "txtGSM";
             this.txtGSM.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtGSM.Properties.Appearance.Options.UseBackColor = true;
@@ -207,7 +207,7 @@
             // labelControl14
             // 
             this.labelControl14.Location = new System.Drawing.Point(86, 162);
-            this.labelControl14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(38, 19);
             this.labelControl14.TabIndex = 94;
@@ -217,7 +217,7 @@
             // 
             this.txtFax.EnterMoveNextControl = true;
             this.txtFax.Location = new System.Drawing.Point(132, 124);
-            this.txtFax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFax.Margin = new System.Windows.Forms.Padding(4);
             this.txtFax.Name = "txtFax";
             this.txtFax.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtFax.Properties.Appearance.Options.UseBackColor = true;
@@ -232,7 +232,7 @@
             // 
             this.txtName.EnterMoveNextControl = true;
             this.txtName.Location = new System.Drawing.Point(134, 50);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtName.Properties.Appearance.Options.UseBackColor = true;
@@ -244,7 +244,7 @@
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(96, 53);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(30, 19);
             this.labelControl2.TabIndex = 64;
@@ -253,7 +253,7 @@
             // labelControl10
             // 
             this.labelControl10.Location = new System.Drawing.Point(94, 129);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(30, 19);
             this.labelControl10.TabIndex = 95;
@@ -263,7 +263,7 @@
             // 
             this.txtTelephone2.EnterMoveNextControl = true;
             this.txtTelephone2.Location = new System.Drawing.Point(132, 91);
-            this.txtTelephone2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelephone2.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelephone2.Name = "txtTelephone2";
             this.txtTelephone2.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTelephone2.Properties.Appearance.Options.UseBackColor = true;
@@ -277,7 +277,7 @@
             // labelControl9
             // 
             this.labelControl9.Location = new System.Drawing.Point(51, 95);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(73, 19);
             this.labelControl9.TabIndex = 92;
@@ -286,7 +286,7 @@
             // labelControl8
             // 
             this.labelControl8.Location = new System.Drawing.Point(51, 58);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(73, 19);
             this.labelControl8.TabIndex = 90;
@@ -295,7 +295,7 @@
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(30, 121);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(96, 19);
             this.labelControl4.TabIndex = 68;
@@ -305,7 +305,7 @@
             // 
             this.txtTelephone1.EnterMoveNextControl = true;
             this.txtTelephone1.Location = new System.Drawing.Point(132, 56);
-            this.txtTelephone1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelephone1.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelephone1.Name = "txtTelephone1";
             this.txtTelephone1.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTelephone1.Properties.Appearance.Options.UseBackColor = true;
@@ -320,7 +320,7 @@
             // 
             this.txtAddress.EnterMoveNextControl = true;
             this.txtAddress.Location = new System.Drawing.Point(458, 56);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtAddress.Properties.Appearance.Options.UseBackColor = true;
@@ -333,7 +333,7 @@
             // 
             this.txtBossSurName.EnterMoveNextControl = true;
             this.txtBossSurName.Location = new System.Drawing.Point(134, 221);
-            this.txtBossSurName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBossSurName.Margin = new System.Windows.Forms.Padding(4);
             this.txtBossSurName.Name = "txtBossSurName";
             this.txtBossSurName.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBossSurName.Properties.Appearance.Options.UseBackColor = true;
@@ -345,7 +345,7 @@
             // labelControl7
             // 
             this.labelControl7.Location = new System.Drawing.Point(26, 224);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(101, 19);
             this.labelControl7.TabIndex = 74;
@@ -355,7 +355,7 @@
             // 
             this.txtBossName.EnterMoveNextControl = true;
             this.txtBossName.Location = new System.Drawing.Point(134, 186);
-            this.txtBossName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBossName.Margin = new System.Windows.Forms.Padding(4);
             this.txtBossName.Name = "txtBossName";
             this.txtBossName.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBossName.Properties.Appearance.Options.UseBackColor = true;
@@ -367,7 +367,7 @@
             // labelControl6
             // 
             this.labelControl6.Location = new System.Drawing.Point(48, 189);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(78, 19);
             this.labelControl6.TabIndex = 72;
@@ -377,7 +377,7 @@
             // 
             this.txtTaxNumber.EnterMoveNextControl = true;
             this.txtTaxNumber.Location = new System.Drawing.Point(134, 152);
-            this.txtTaxNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTaxNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtTaxNumber.Name = "txtTaxNumber";
             this.txtTaxNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTaxNumber.Properties.Appearance.Options.UseBackColor = true;
@@ -410,7 +410,7 @@
             this.groupControl3.Controls.Add(this.labelControl8);
             this.groupControl3.Controls.Add(this.txtAddress);
             this.groupControl3.Location = new System.Drawing.Point(8, 260);
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(886, 354);
             this.groupControl3.TabIndex = 88;
@@ -422,18 +422,18 @@
             this.btnKaydet.Appearance.Options.UseFont = true;
             this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
             this.btnKaydet.Location = new System.Drawing.Point(723, 263);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(140, 54);
             this.btnKaydet.TabIndex = 8;
-            this.btnKaydet.Text = "Güncelle";
+            this.btnKaydet.Text = "&Güncelle";
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // txtMailPassword
             // 
             this.txtMailPassword.EnterMoveNextControl = true;
             this.txtMailPassword.Location = new System.Drawing.Point(132, 260);
-            this.txtMailPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMailPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtMailPassword.Name = "txtMailPassword";
             this.txtMailPassword.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMailPassword.Properties.Appearance.Options.UseBackColor = true;
@@ -446,7 +446,7 @@
             // labelControl15
             // 
             this.labelControl15.Location = new System.Drawing.Point(42, 265);
-            this.labelControl15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(82, 19);
             this.labelControl15.TabIndex = 102;
@@ -477,7 +477,7 @@
             this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 35);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(902, 582);
             this.groupControl2.TabIndex = 29;
@@ -507,7 +507,7 @@
             this.simpleButton1.Location = new System.Drawing.Point(26, 85);
             this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
             this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(6);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.simpleButton1.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
@@ -522,7 +522,7 @@
             superToolTip1.Items.Add(toolTipItem1);
             this.simpleButton1.SuperTip = superToolTip1;
             this.simpleButton1.TabIndex = 105;
-            this.simpleButton1.Text = "Kaldir";
+            this.simpleButton1.Text = "&Kaldir";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // btnUploadFile
@@ -535,7 +535,7 @@
             this.btnUploadFile.Location = new System.Drawing.Point(27, 37);
             this.btnUploadFile.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnUploadFile.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnUploadFile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnUploadFile.Margin = new System.Windows.Forms.Padding(6);
             this.btnUploadFile.Name = "btnUploadFile";
             this.btnUploadFile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnUploadFile.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
@@ -550,7 +550,7 @@
             superToolTip2.Items.Add(toolTipItem2);
             this.btnUploadFile.SuperTip = superToolTip2;
             this.btnUploadFile.TabIndex = 104;
-            this.btnUploadFile.Text = "Yükle";
+            this.btnUploadFile.Text = "&Yükle";
             this.btnUploadFile.Click += new System.EventHandler(this.btnUploadFile_Click);
             // 
             // picLogo
@@ -566,7 +566,7 @@
             // labelControl16
             // 
             this.labelControl16.Location = new System.Drawing.Point(8, 7);
-            this.labelControl16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl16.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Size = new System.Drawing.Size(102, 19);
             this.labelControl16.TabIndex = 102;
@@ -575,7 +575,7 @@
             // labelControl5
             // 
             this.labelControl5.Location = new System.Drawing.Point(10, 155);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(115, 19);
             this.labelControl5.TabIndex = 70;
@@ -593,7 +593,7 @@
             this.panelControl1.Controls.Add(this.btnKapat);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(902, 35);
             this.panelControl1.TabIndex = 28;
@@ -617,7 +617,7 @@
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.labelControl1.Location = new System.Drawing.Point(56, 0);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
             this.labelControl1.Size = new System.Drawing.Size(245, 35);
@@ -637,7 +637,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(874, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 3;
@@ -655,7 +655,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_FirmaTanimlama";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

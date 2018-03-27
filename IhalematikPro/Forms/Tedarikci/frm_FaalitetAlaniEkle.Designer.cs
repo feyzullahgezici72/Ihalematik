@@ -319,7 +319,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(98, 61);
             this.btnSave.TabIndex = 93;
-            this.btnSave.Text = "Kaydet";
+            this.btnSave.Text = "&Kaydet";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnKapat

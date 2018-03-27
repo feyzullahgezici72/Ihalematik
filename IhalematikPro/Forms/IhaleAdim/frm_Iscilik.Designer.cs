@@ -764,7 +764,7 @@
             this.btnTamam.Name = "btnTamam";
             this.btnTamam.Size = new System.Drawing.Size(118, 63);
             this.btnTamam.TabIndex = 2;
-            this.btnTamam.Text = "Tamam";
+            this.btnTamam.Text = "&Tamam";
             this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
             // 
             // txtCurrentDescription

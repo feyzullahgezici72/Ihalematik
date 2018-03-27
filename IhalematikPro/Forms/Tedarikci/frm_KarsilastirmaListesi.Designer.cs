@@ -228,7 +228,7 @@
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(236, 64);
             this.btnExcel.TabIndex = 48;
-            this.btnExcel.Text = "Excel\'e Aktar";
+            this.btnExcel.Text = "&Excel\'e Aktar";
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // lblTenderDescription
@@ -476,7 +476,7 @@
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(368, 93);
             this.simpleButton1.TabIndex = 23;
-            this.simpleButton1.Text = "Tümünü Listele";
+            this.simpleButton1.Text = "&Tümünü Listele";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // pnltoplam

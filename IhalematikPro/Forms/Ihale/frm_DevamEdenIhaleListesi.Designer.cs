@@ -494,7 +494,7 @@
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(205, 70);
             this.btnExcel.TabIndex = 49;
-            this.btnExcel.Text = "Excel\'e Aktar";
+            this.btnExcel.Text = "&Excel\'e Aktar";
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // groupControl3
@@ -535,10 +535,10 @@
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton1.Location = new System.Drawing.Point(520, 35);
+            this.simpleButton1.Location = new System.Drawing.Point(520, 33);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(50, 32);
+            this.simpleButton1.Size = new System.Drawing.Size(50, 34);
             toolTipTitleItem1.Text = "Kaydet";
             superToolTip1.Items.Add(toolTipTitleItem1);
             this.simpleButton1.SuperTip = superToolTip1;
@@ -570,10 +570,10 @@
             this.simpleButton2.Appearance.Options.UseForeColor = true;
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton2.Location = new System.Drawing.Point(199, 35);
+            this.simpleButton2.Location = new System.Drawing.Point(199, 33);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(50, 32);
+            this.simpleButton2.Size = new System.Drawing.Size(50, 34);
             this.simpleButton2.TabIndex = 27;
             this.simpleButton2.Text = "Bul";
             this.simpleButton2.ToolTip = "Poz Bul";

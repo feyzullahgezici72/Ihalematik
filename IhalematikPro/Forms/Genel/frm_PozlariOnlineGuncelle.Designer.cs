@@ -122,7 +122,7 @@
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(220, 111);
             this.btnGuncelle.TabIndex = 106;
-            this.btnGuncelle.Text = "Güncellemeye Başla";
+            this.btnGuncelle.Text = "&Güncellemeye Başla";
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // pictureBox1
