@@ -156,7 +156,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                     this.DestinationFile = Path.Combine(targetPath, this.Supplier.CompanyName + "-" + DateTime.Now.ToShortDateString().Replace("/", string.Empty) + "-" + fileName);
                     if (File.Exists(this.DestinationFile))
                     {
-                        this.DestinationFile = Path.Combine(targetPath, this.Supplier.CompanyName + "-" + DateTime.Now.ToShortDateString().Replace("/", string.Empty) + "-" + new Random().Next(1, 100).ToString() + "-" + fileName);
+                        this.DestinationFile = Path.Combine(targetPath, this.Supplier.CompanyName + "-" + DateTime.Now.ToShortDateString().Replace("/", string.Empty) + "-" + new Random().Next(1, 100000).ToString() + "-" + fileName);
                     }
 
 
@@ -247,6 +247,8 @@ namespace IhalematikProUI.Forms.Tedarikci
                         {
                             path = Application.StartupPath.Substring(0, (Application.StartupPath.Length));
                         }
+
+                        path = path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath;
                         oSheet.Shapes.AddPicture(path, Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 330, 2, LogoW, LogoH);
                     }
 
