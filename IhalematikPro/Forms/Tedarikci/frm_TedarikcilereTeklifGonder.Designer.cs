@@ -1252,6 +1252,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_TedarikcilereTeklifGonder_Load);
             this.Shown += new System.EventHandler(this.frm_TedarikcilereTeklifGonder_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frm_TedarikcilereTeklifGonder_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.rpstSupplierDetail1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
