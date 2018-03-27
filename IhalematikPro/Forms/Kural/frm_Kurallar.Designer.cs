@@ -100,10 +100,11 @@
             this.txtRuleValue.Properties.Appearance.Options.UseBackColor = true;
             this.txtRuleValue.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtRuleValue.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtRuleValue.Properties.DisplayFormat.FormatString = "N2";
-            this.txtRuleValue.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtRuleValue.Properties.EditFormat.FormatString = "N2";
-            this.txtRuleValue.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.txtRuleValue.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRuleValue.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRuleValue.Properties.Mask.BeepOnError = true;
+            this.txtRuleValue.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtRuleValue.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtRuleValue.Size = new System.Drawing.Size(202, 26);
             this.txtRuleValue.TabIndex = 145;
             // 
