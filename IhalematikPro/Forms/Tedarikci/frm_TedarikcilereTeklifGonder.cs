@@ -333,5 +333,20 @@ namespace IhalematikProUI.Forms.Tedarikci
 
             }
         }
+
+        private void frm_TedarikcilereTeklifGonder_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                frm_TedarikciPozluKayit pkf = new frm_TedarikciPozluKayit(this);
+                pkf.ShowDialog();
+            }
+            if (e.KeyCode.ToString() == "F2")
+            {
+
+                frm_TedarikciOfbKayit okf = new frm_TedarikciOfbKayit(this);
+                okf.ShowDialog();
+            }
+        }
     }
 }

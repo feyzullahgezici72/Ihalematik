@@ -306,5 +306,10 @@ namespace IhalematikPro.Forms
         {
 
         }
+
+        private void frm_ObfKayit_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }
