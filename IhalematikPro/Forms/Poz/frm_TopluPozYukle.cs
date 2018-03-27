@@ -14,6 +14,7 @@ using IhalematikProUI.Forms;
 using IhalematikProUI.Forms.Base;
 using System.Diagnostics;
 using IhalematikProUI.Manager;
+using IhalematikProUI.Forms.PozTem;
 
 namespace IhalematikProUI.Forms.Genel
 {
@@ -92,6 +93,9 @@ namespace IhalematikProUI.Forms.Genel
                             }
                             i++;
                         }
+                        this.Close();
+                        frm_TopluPozTemp pozTemp = new frm_TopluPozTemp();
+                        pozTemp.ShowDialog();
                         lblPozno.Text = "";
                         lblAciklama.Text = "";
                         lblBirim.Text = "";

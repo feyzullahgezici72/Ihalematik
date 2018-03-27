@@ -256,11 +256,11 @@
             // 
             this.panelControl3.Controls.Add(this.memoEdit1);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl3.Location = new System.Drawing.Point(3, 35);
+            this.panelControl3.Location = new System.Drawing.Point(3, 30);
             this.panelControl3.LookAndFeel.SkinName = "Dark Side";
             this.panelControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(392, 103);
+            this.panelControl3.Size = new System.Drawing.Size(392, 108);
             this.panelControl3.TabIndex = 1;
             // 
             // memoEdit1
@@ -274,7 +274,7 @@
             this.memoEdit1.Properties.LookAndFeel.SkinName = "Lilian";
             this.memoEdit1.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.memoEdit1.Properties.ReadOnly = true;
-            this.memoEdit1.Size = new System.Drawing.Size(386, 97);
+            this.memoEdit1.Size = new System.Drawing.Size(386, 102);
             this.memoEdit1.TabIndex = 2;
             // 
             // simpleButton2
@@ -282,11 +282,11 @@
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
             this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(395, 35);
+            this.simpleButton2.Location = new System.Drawing.Point(395, 30);
             this.simpleButton2.LookAndFeel.SkinName = "London Liquid Sky";
             this.simpleButton2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(122, 103);
+            this.simpleButton2.Size = new System.Drawing.Size(122, 108);
             this.simpleButton2.TabIndex = 0;
             this.simpleButton2.Text = "Dosyadan \r\nAl";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -929,12 +929,12 @@
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton1.Location = new System.Drawing.Point(435, 35);
+            this.simpleButton1.Location = new System.Drawing.Point(435, 33);
             this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
             this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(50, 31);
+            this.simpleButton1.Size = new System.Drawing.Size(50, 33);
             this.simpleButton1.TabIndex = 26;
             this.simpleButton1.Text = "Bul";
             this.simpleButton1.ToolTip = "Malzeme Bul";
@@ -964,12 +964,12 @@
             this.simpleButton3.Appearance.Options.UseForeColor = true;
             this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton3.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton3.Location = new System.Drawing.Point(199, 35);
+            this.simpleButton3.Location = new System.Drawing.Point(199, 33);
             this.simpleButton3.LookAndFeel.SkinName = "London Liquid Sky";
             this.simpleButton3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(50, 31);
+            this.simpleButton3.Size = new System.Drawing.Size(50, 33);
             this.simpleButton3.TabIndex = 27;
             this.simpleButton3.Text = "Bul";
             this.simpleButton3.ToolTip = "Malzeme Bul";
