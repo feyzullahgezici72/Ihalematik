@@ -136,7 +136,7 @@
             this.btnIhaleOlustur.Location = new System.Drawing.Point(530, 164);
             this.btnIhaleOlustur.Margin = new System.Windows.Forms.Padding(6);
             this.btnIhaleOlustur.Name = "btnIhaleOlustur";
-            this.btnIhaleOlustur.Size = new System.Drawing.Size(182, 90);
+            this.btnIhaleOlustur.Size = new System.Drawing.Size(180, 90);
             this.btnIhaleOlustur.TabIndex = 3;
             this.btnIhaleOlustur.Text = "&Oluştur";
             this.btnIhaleOlustur.Click += new System.EventHandler(this.btnIhaleOlustur_Click);
@@ -921,6 +921,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.ihale_demo;
             this.pictureBox1.Location = new System.Drawing.Point(493, 368);
             this.pictureBox1.Name = "pictureBox1";

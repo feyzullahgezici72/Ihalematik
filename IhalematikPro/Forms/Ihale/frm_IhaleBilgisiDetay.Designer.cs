@@ -130,7 +130,7 @@
             this.tabIhaleBilgileri.Location = new System.Drawing.Point(493, 42);
             this.tabIhaleBilgileri.Name = "tabIhaleBilgileri";
             this.tabIhaleBilgileri.SelectedTabPage = this.xtraTabPage1;
-            this.tabIhaleBilgileri.Size = new System.Drawing.Size(752, 310);
+            this.tabIhaleBilgileri.Size = new System.Drawing.Size(752, 378);
             this.tabIhaleBilgileri.TabIndex = 34;
             this.tabIhaleBilgileri.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -263,6 +263,7 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.labelControl12);
+            this.xtraTabPage2.Controls.Add(this.btnGuncelle);
             this.xtraTabPage2.Controls.Add(this.labelControl11);
             this.xtraTabPage2.Controls.Add(this.labelControl10);
             this.xtraTabPage2.Controls.Add(this.labelControl9);
@@ -275,7 +276,7 @@
             this.xtraTabPage2.Controls.Add(this.txtType);
             this.xtraTabPage2.Controls.Add(this.txtEkapNumber);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(746, 275);
+            this.xtraTabPage2.Size = new System.Drawing.Size(746, 343);
             this.xtraTabPage2.Text = "Detay          ";
             // 
             // labelControl12
@@ -509,11 +510,11 @@
             this.btnGuncelle.Appearance.Options.UseFont = true;
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnGuncelle.Location = new System.Drawing.Point(1108, 369);
+            this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnGuncelle.Location = new System.Drawing.Point(553, 246);
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(134, 50);
+            this.btnGuncelle.Size = new System.Drawing.Size(180, 90);
             toolTipTitleItem1.Text = "Güncelle";
             superToolTip1.Items.Add(toolTipTitleItem1);
             this.btnGuncelle.SuperTip = superToolTip1;
@@ -891,10 +892,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.ihale_demo;
-            this.pictureBox1.Location = new System.Drawing.Point(496, 451);
+            this.pictureBox1.Location = new System.Drawing.Point(491, 426);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(749, 304);
+            this.pictureBox1.Size = new System.Drawing.Size(754, 329);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 111;
             this.pictureBox1.TabStop = false;
@@ -905,11 +907,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1254, 767);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelControl3);
-            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.tabIhaleBilgileri);
             this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
