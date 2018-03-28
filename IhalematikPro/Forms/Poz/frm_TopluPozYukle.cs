@@ -16,13 +16,17 @@ using System.Diagnostics;
 using IhalematikProUI.Manager;
 using IhalematikProUI.Forms.PozTem;
 using IhalematikProBL.Manager;
+using IhalematikPro.Forms;
 
 namespace IhalematikProUI.Forms.Genel
 {
     public partial class frm_TopluPozYukle : DevExpress.XtraEditors.XtraForm
     {
-        public frm_TopluPozYukle()
+        public List<Poz> pozItems = new List<Poz>();
+        public frm_PozListesi _owner = null;
+        public frm_TopluPozYukle(frm_PozListesi Owner)
         {
+            this._owner = Owner;
             InitializeComponent();
         }
         public void getExcel()
@@ -39,10 +43,8 @@ namespace IhalematikProUI.Forms.Genel
                     {
                         string filename = System.IO.Path.GetFileName(dialog.FileName);
                         FileStream stream = System.IO.File.Open(dialog.FileName, FileMode.Open, FileAccess.Read);
-
                         IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
-                        //excelReader.IsFirstRowAsColumnNames = true;
-                        //DataSet result = excelReader.AsDataSet();
+
                         int i = 0;
                         while (excelReader.Read())
                         {
@@ -60,10 +62,6 @@ namespace IhalematikProUI.Forms.Genel
                                     LoggingManager.Instance.SaveErrorLog(ex);
                                 }
                                 string description = excelReader.GetString(2);
-                                if (description == "El ile her derinlikte geniş derin batak ve balçık kazılması")
-                                {
-
-                                }
                                 string unit = excelReader.GetString(3);
                                 double unitprice = 0;
                                 try
@@ -82,7 +80,7 @@ namespace IhalematikProUI.Forms.Genel
                                     poz.Description = description;
                                     poz.Unit = unit;
                                     poz.UnitPrice = unitprice;
-                                    poz.Year = 2018;
+                                    poz.Year = DateTime.Now.Year;
                                     poz.IsActive = true;
                                     Application.DoEvents();
                                     lblPozno.Text = poz.Number;
@@ -90,13 +88,14 @@ namespace IhalematikProUI.Forms.Genel
                                     lblBirim.Text = poz.Unit;
                                     lblBirimFiyat.Text = poz.UnitPrice.ToString();
                                     lblPosSayisi.Text = i.ToString();
-                                    PozProvider.Instance.Save(poz);
+                                    pozItems.Add(poz);
                                 }
                             }
                             i++;
                         }
                         this.Close();
-                        frm_TopluPozTemp pozTemp = new frm_TopluPozTemp();
+                        frm_TopluPozTemp pozTemp = new frm_TopluPozTemp(this._owner);
+                        pozTemp.pozItems = pozItems;
                         pozTemp.ShowDialog();
                         lblPozno.Text = "";
                         lblAciklama.Text = "";

@@ -22,16 +22,11 @@ namespace IhalematikProUI.Forms.OBF
     public partial class frm_TopluOBFekle : DevExpress.XtraEditors.XtraForm
     {
         private frm_OzelStokListesi _owner;
+        List<IhalematikProBL.Entity.OBF> obfItems = new List<IhalematikProBL.Entity.OBF>();
         public frm_TopluOBFekle(frm_OzelStokListesi Owner)
         {
             this._owner = Owner;
             InitializeComponent();
-        }
-
-        private void btnTopluOFBekle_Click(object sender, EventArgs e)
-        {
-            
-
         }
 
         private void ReadExcel(string path)
@@ -71,30 +66,31 @@ namespace IhalematikProUI.Forms.OBF
                                 unitPrice = double.Parse(excelReader.GetString(3), CultureInfo.InvariantCulture);
                             }
 
-                            IhalematikProBL.Entity.OBF existingObf = OBFProvider.Instance.GetOne("Description", description);
-                            if (existingObf != null)
-                            {
-                                existingObf.UnitPrice = unitPrice;
-                                OBFProvider.Instance.Save(existingObf);
-                            }
-                            else
-                            {
-                                IhalematikProBL.Entity.OBF newOBF = new IhalematikProBL.Entity.OBF();
-                                int lastTenderNumber = UIOBFManager.Instance.GetLastOBFNumber();
-                                newOBF.Number = string.Format("{0}", (lastTenderNumber + 1).ToString().PadLeft(8, '0'));
-                                newOBF.IsActive = true;
-                                newOBF.StokNumber = stokKodu;
-                                newOBF.Description = description;
-                                newOBF.Unit = unit;
-                                newOBF.UnitPrice = unitPrice;
-                                Application.DoEvents();
-                                lblobfno.Text = newOBF.StokNumber;
-                                lblAciklama.Text = newOBF.Description;
-                                lblBirim.Text = newOBF.Unit;
-                                lblBirimFiyat.Text = newOBF.UnitPrice.ToString();
-                                lblPosSayisi.Text = i.ToString();
-                                OBFProvider.Instance.Save(newOBF);
-                            }
+                            //IhalematikProBL.Entity.OBF existingObf = OBFProvider.Instance.GetOne("Description", description);
+                            //if (existingObf != null)
+                            //{
+                            //    existingObf.UnitPrice = unitPrice;
+                            //    OBFProvider.Instance.Save(existingObf);
+                            //}
+                            //else
+                            //{
+                            IhalematikProBL.Entity.OBF newOBF = new IhalematikProBL.Entity.OBF();
+                            int lastTenderNumber = UIOBFManager.Instance.GetLastOBFNumber();
+                            newOBF.Number = string.Format("{0}", (lastTenderNumber + 1).ToString().PadLeft(8, '0'));
+                            newOBF.IsActive = true;
+                            newOBF.StokNumber = stokKodu;
+                            newOBF.Description = description;
+                            newOBF.Unit = unit;
+                            newOBF.UnitPrice = unitPrice;
+                            Application.DoEvents();
+                            lblobfno.Text = newOBF.StokNumber;
+                            lblAciklama.Text = newOBF.Description;
+                            lblBirim.Text = newOBF.Unit;
+                            lblBirimFiyat.Text = newOBF.UnitPrice.ToString();
+                            lblPosSayisi.Text = i.ToString();
+                            obfItems.Add(newOBF);
+                            //OBFProvider.Instance.Save(newOBF);
+                            //}
                         }
                     }
                     catch (Exception ex)
@@ -122,11 +118,6 @@ namespace IhalematikProUI.Forms.OBF
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
-        }
-
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -140,15 +131,15 @@ namespace IhalematikProUI.Forms.OBF
                     String path = dialog.FileName; // get name of file
                     this.ReadExcel(path);
                     this.Close();
-                    frm_TopluObfTemp obfTemp = new frm_TopluObfTemp();
+                    frm_TopluObfTemp obfTemp = new frm_TopluObfTemp(_owner);
+                    obfTemp.obfItems = this.obfItems;
                     obfTemp.ShowDialog();
-                    //this._owner.LoadGrid();
                 }
                 else
                 {
 
                 }
-                
+
             }
         }
 
@@ -159,7 +150,7 @@ namespace IhalematikProUI.Forms.OBF
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

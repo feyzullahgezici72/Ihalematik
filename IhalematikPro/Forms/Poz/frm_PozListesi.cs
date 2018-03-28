@@ -39,7 +39,6 @@ namespace IhalematikPro.Forms
         private void frm_PozListesi_Load(object sender, EventArgs e)
         {
             grdPozList.Hide();
-            
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -205,13 +204,13 @@ namespace IhalematikPro.Forms
             if (ddlPozYear.SelectedIndex == 0 /*2017*/)
             {
                 year = 2017;
-                lblPozListesi.Text = "POZ LİSTESİ" + "                               " + ddlPozYear.Text ;
+                lblPozListesi.Text = "POZ LİSTESİ" + "                               " + ddlPozYear.Text;
 
             }
             if (ddlPozYear.SelectedIndex == 1 /*2018*/)
             {
                 year = 2018;
-                lblPozListesi.Text = "POZ LİSTESİ" + "                               " + ddlPozYear.Text ;
+                lblPozListesi.Text = "POZ LİSTESİ" + "                               " + ddlPozYear.Text;
 
             }
 
@@ -264,14 +263,13 @@ namespace IhalematikPro.Forms
         private void ddlPozYear_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.LoadPozGrid();
-            
+
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            frm_TopluPozYukle pozyukle = new frm_TopluPozYukle();
-            pozyukle.ShowDialog();
+            frm_TopluPozYukle pozyukle = new frm_TopluPozYukle(this);
+            pozyukle.ShowDialog(this);
         }
     }
-
 }
