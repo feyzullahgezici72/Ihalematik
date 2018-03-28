@@ -260,6 +260,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                         this.oWB.Close();
                     if (this.oXL != null)
                         this.oXL.Quit();
+                    LoggingManager.Instance.SaveErrorLog(ex);
                     // MessageBox.Show(ex.ToString());
                 }
                 finally
@@ -293,9 +294,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                         this.SendInfoMessage();
                     }
 
-                    catch (Exception)
+                    catch (Exception ex)
                     {
-
+                        LoggingManager.Instance.SaveErrorLog(ex);
                     }
                 }
             }
@@ -327,8 +328,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                LoggingManager.Instance.SaveErrorLog(ex);
                 // throw ex;
             }
 

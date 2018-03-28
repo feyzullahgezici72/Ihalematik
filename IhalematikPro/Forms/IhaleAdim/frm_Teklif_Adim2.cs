@@ -22,6 +22,7 @@ using IhalematikProUI.Report;
 using DevExpress.XtraReports.UI;
 using System.Diagnostics;
 using IhalematikProUI.Manager;
+using IhalematikProBL.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -270,14 +271,8 @@ namespace IhalematikPro.Forms
             }
         }
 
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void btnExcel_Click(object sender, EventArgs e)
         {
-       
             try
             {
                 bool isSuccess = UIReportManager.Instance.ExtractExcel(grdMaterialListNonWorkship);
@@ -286,12 +281,10 @@ namespace IhalematikPro.Forms
                     MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-
+                LoggingManager.Instance.SaveErrorLog(ex);
             }
-
         }
     }
 }

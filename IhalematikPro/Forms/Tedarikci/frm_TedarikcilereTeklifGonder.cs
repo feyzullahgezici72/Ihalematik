@@ -327,10 +327,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                     MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-
+                LoggingManager.Instance.SaveErrorLog(ex);
             }
         }
 

@@ -47,8 +47,9 @@ namespace IhalematikProBL.Manager
                 }
             }
 
-            catch (Exception)
+            catch (Exception ex)
             {
+                LoggingManager.Instance.SaveErrorLog(ex);
                 //MailingManager.Instance.SendErrorEmail(ex);
             }
 

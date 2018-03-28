@@ -17,6 +17,7 @@ using DevExpress.XtraReports.UI;
 using IhalematikProUI.Forms;
 using System.Diagnostics;
 using IhalematikProUI.Manager;
+using IhalematikProBL.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -416,17 +417,17 @@ namespace IhalematikPro.Forms
 
         private void cmbBirimFiyat_Click(object sender, EventArgs e)
         {
-        //    colCustomWorkerUnitPrice.VisibleIndex = 6;
-        //    colCustomWorkerTotalAmount.VisibleIndex = 7;
-        //    colCustomWorkerMarkupUnitPrice.VisibleIndex = 8;
-        //    clmEquipments.Visible = false;
-        //    colCustomWorkerUnitPrice.Visible = true;
-        //    colCustomWorkerTotalAmount.Visible = true;
-        //    colCustomWorkerMarkupUnitPrice.Visible = true;
-        //    colWorkerUnitPrice.Visible = false;
-        //    colWorkerTotalAmount.Visible = false;
-        //    colWorkerMarkupUnitPrice.Visible = false;
-        //    this.CalculateInnerValuesMarkup(null);
+            //    colCustomWorkerUnitPrice.VisibleIndex = 6;
+            //    colCustomWorkerTotalAmount.VisibleIndex = 7;
+            //    colCustomWorkerMarkupUnitPrice.VisibleIndex = 8;
+            //    clmEquipments.Visible = false;
+            //    colCustomWorkerUnitPrice.Visible = true;
+            //    colCustomWorkerTotalAmount.Visible = true;
+            //    colCustomWorkerMarkupUnitPrice.Visible = true;
+            //    colWorkerUnitPrice.Visible = false;
+            //    colWorkerTotalAmount.Visible = false;
+            //    colWorkerMarkupUnitPrice.Visible = false;
+            //    this.CalculateInnerValuesMarkup(null);
         }
 
         private void btnCalisanlarveAraclar_Click(object sender, EventArgs e)
@@ -459,7 +460,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p =>  p.IsWorkship).ToList();
+            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).ToList();
             List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             grdMaterialListIsWorkship.DataSource = models;
         }
@@ -473,7 +474,7 @@ namespace IhalematikPro.Forms
 
         private void btnExcel_Click(object sender, EventArgs e)
         {
-          try
+            try
             {
                 bool isSuccess = UIReportManager.Instance.ExtractExcel(grdMaterialListIsWorkship);
                 if (!isSuccess)
@@ -481,10 +482,9 @@ namespace IhalematikPro.Forms
                     MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-
+                LoggingManager.Instance.SaveErrorLog(ex);
             }
         }
     }

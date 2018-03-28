@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using IhalematikPro.Manager;
 using IhalematikProBL.Entity;
 using IhalematikProUI.Manager;
+using IhalematikProBL.Manager;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -69,10 +70,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                     MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-
+                LoggingManager.Instance.SaveErrorLog(ex);
             }
         }
     }
