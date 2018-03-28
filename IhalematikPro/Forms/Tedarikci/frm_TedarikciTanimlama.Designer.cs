@@ -72,7 +72,6 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.label99 = new DevExpress.XtraEditors.LabelControl();
             this.txtTelephone = new DevExpress.XtraEditors.TextEdit();
-            this.txtGmail = new DevExpress.XtraEditors.TextEdit();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.txtAddress = new DevExpress.XtraEditors.MemoEdit();
@@ -111,7 +110,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGSM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtScore.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelephone.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             this.statusPanel.SuspendLayout();
@@ -607,7 +605,6 @@
             this.groupControl2.Controls.Add(this.labelControl8);
             this.groupControl2.Controls.Add(this.label99);
             this.groupControl2.Controls.Add(this.txtTelephone);
-            this.groupControl2.Controls.Add(this.txtGmail);
             this.groupControl2.Controls.Add(this.txtEmail);
             this.groupControl2.Controls.Add(this.labelControl9);
             this.groupControl2.Controls.Add(this.txtAddress);
@@ -628,7 +625,7 @@
             this.checkedComboboxEditSupplierSegments.Name = "checkedComboboxEditSupplierSegments";
             this.checkedComboboxEditSupplierSegments.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.checkedComboboxEditSupplierSegments.Size = new System.Drawing.Size(369, 26);
+            this.checkedComboboxEditSupplierSegments.Size = new System.Drawing.Size(369, 28);
             this.checkedComboboxEditSupplierSegments.TabIndex = 93;
             this.checkedComboboxEditSupplierSegments.Closed += new DevExpress.XtraEditors.Controls.ClosedEventHandler(this.checkedComboboxEditSupplierSegments_Closed);
             // 
@@ -850,28 +847,6 @@
             this.txtTelephone.Size = new System.Drawing.Size(224, 26);
             this.txtTelephone.TabIndex = 5;
             // 
-            // txtGmail
-            // 
-            this.txtGmail.EditValue = "@gmail.com";
-            this.txtGmail.EnterMoveNextControl = true;
-            this.txtGmail.Location = new System.Drawing.Point(372, 262);
-            this.txtGmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGmail.Name = "txtGmail";
-            this.txtGmail.Properties.AllowFocused = false;
-            this.txtGmail.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtGmail.Properties.Appearance.Options.UseBackColor = true;
-            this.txtGmail.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtGmail.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtGmail.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtGmail.Properties.DisplayFormat.FormatString = "N2";
-            this.txtGmail.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtGmail.Properties.EditFormat.FormatString = "N2";
-            this.txtGmail.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtGmail.Properties.ReadOnly = true;
-            this.txtGmail.Size = new System.Drawing.Size(134, 26);
-            this.txtGmail.TabIndex = 6;
-            this.txtGmail.TabStop = false;
-            // 
             // txtEmail
             // 
             this.txtEmail.EnterMoveNextControl = true;
@@ -888,7 +863,7 @@
             this.txtEmail.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtEmail.Properties.EditFormat.FormatString = "N2";
             this.txtEmail.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtEmail.Size = new System.Drawing.Size(224, 26);
+            this.txtEmail.Size = new System.Drawing.Size(370, 26);
             this.txtEmail.TabIndex = 6;
             // 
             // labelControl9
@@ -1056,10 +1031,10 @@
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton1.Location = new System.Drawing.Point(347, 33);
+            this.simpleButton1.Location = new System.Drawing.Point(347, 35);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(50, 33);
+            this.simpleButton1.Size = new System.Drawing.Size(50, 31);
             this.simpleButton1.TabIndex = 27;
             this.simpleButton1.Text = "Bul";
             this.simpleButton1.ToolTip = "Poz Bul";
@@ -1104,10 +1079,10 @@
             this.simpleButton3.Appearance.Options.UseForeColor = true;
             this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton3.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton3.Location = new System.Drawing.Point(347, 33);
+            this.simpleButton3.Location = new System.Drawing.Point(347, 35);
             this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(50, 33);
+            this.simpleButton3.Size = new System.Drawing.Size(50, 31);
             this.simpleButton3.TabIndex = 27;
             this.simpleButton3.Text = "Bul";
             this.simpleButton3.ToolTip = "Poz Bul";
@@ -1156,7 +1131,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGSM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtScore.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelephone.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
             this.statusPanel.ResumeLayout(false);
@@ -1232,6 +1206,5 @@
         private DevExpress.XtraEditors.TextEdit txtSearchCompanyName;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton btnExcel;
-        private DevExpress.XtraEditors.TextEdit txtGmail;
     }
 }
