@@ -15,6 +15,7 @@ using IhalematikProBL.Provider;
 using IhalematikPro.Manager;
 using IhalematikPro.Forms;
 using System.Globalization;
+using IhalematikProBL.Manager;
 
 namespace IhalematikProUI.Forms.OBF
 {
@@ -35,7 +36,6 @@ namespace IhalematikProUI.Forms.OBF
 
         private void ReadExcel(string path)
         {
-
             try
             {
                 FileStream stream = System.IO.File.Open(@"" + path + "", FileMode.Open, FileAccess.Read);
@@ -53,8 +53,9 @@ namespace IhalematikProUI.Forms.OBF
                             {
                                 excelReader.GetString(0);
                             }
-                            catch (Exception)
+                            catch (Exception ex)
                             {
+                                LoggingManager.Instance.SaveErrorLog(ex);
                                 break;
                             }
                             string stokKodu = excelReader.GetString(0);
@@ -99,8 +100,7 @@ namespace IhalematikProUI.Forms.OBF
                     catch (Exception ex)
                     {
                         MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
-                        //MesajPanel.Visible = false;
-                        //TODO feyzullahg hata olustu mesaji gostermek lazim.
+                        LoggingManager.Instance.SaveErrorLog(ex);
                         break;
                     }
 

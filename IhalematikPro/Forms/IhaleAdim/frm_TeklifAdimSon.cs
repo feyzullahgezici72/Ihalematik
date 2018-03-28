@@ -23,6 +23,7 @@ using IhalematikProUI.Forms.Genel;
 using IhalematikProBL.Enum;
 using IhalematikProUI.Manager;
 using System.Diagnostics;
+using IhalematikProBL.Manager;
 //using IhalematikProUI.Report;
 
 namespace IhalematikProUI.Forms
@@ -404,10 +405,9 @@ namespace IhalematikProUI.Forms
                     MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-
+                LoggingManager.Instance.SaveErrorLog(ex);
             }
         }
 

@@ -14,6 +14,7 @@ using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Model;
 using IhalematikPro.Manager;
+using IhalematikProBL.Manager;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -57,9 +58,10 @@ namespace IhalematikProUI.Forms.Tedarikci
             {
                 stream = System.IO.File.Open(@"" + path + "", FileMode.Open, FileAccess.Read);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Lütfen yüklemek istediğiniz excel dosyasını kapatınız.");
+                LoggingManager.Instance.SaveErrorLog(ex);
                 return;
             }
             IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
@@ -83,8 +85,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                         {
                             offerId = excelReader.GetDouble(1);
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
+                            LoggingManager.Instance.SaveErrorLog(ex);
                             break;
                         }
                         if (CurrentManager.Instance.CurrentOffer == null)
@@ -123,9 +126,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                         {
                             kdv = excelReader.GetDouble(8) * 100;
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
-
+                            LoggingManager.Instance.SaveErrorLog(ex);
                         }
 
                         double price = 0;
@@ -133,8 +136,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                         {
                             price = excelReader.GetDouble(9);
                         }
-                        catch (Exception)
+                        catch (Exception ex)
                         {
+                            LoggingManager.Instance.SaveErrorLog(ex);
                         }
 
                         Dictionary<string, object> parameters = new Dictionary<string, object>();
@@ -169,6 +173,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                     }
                     catch (Exception ex)
                     {
+                        LoggingManager.Instance.SaveErrorLog(ex);
                         //MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
                         //TODO feyzullahg hata olustu mesaji gostermek lazim.
                         isException = true;

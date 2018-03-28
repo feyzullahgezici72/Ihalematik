@@ -20,6 +20,7 @@ using ExcelDataReader;
 using IhalematikProUI.Forms.Tedarikci;
 using System.Diagnostics;
 using IhalematikProUI.Manager;
+using IhalematikProBL.Manager;
 
 namespace IhalematikProUI.Forms
 {
@@ -271,10 +272,9 @@ namespace IhalematikProUI.Forms
                     MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-
+                LoggingManager.Instance.SaveErrorLog(ex);
             }
         }
     }

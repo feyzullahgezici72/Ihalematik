@@ -15,6 +15,7 @@ using IhalematikProUI.Forms.Base;
 using System.Diagnostics;
 using IhalematikProUI.Manager;
 using IhalematikProUI.Forms.PozTem;
+using IhalematikProBL.Manager;
 
 namespace IhalematikProUI.Forms.Genel
 {
@@ -52,10 +53,11 @@ namespace IhalematikProUI.Forms.Genel
                                 {
                                     pozno = excelReader.GetString(1);
                                 }
-                                catch (Exception)
+                                catch (Exception ex)
                                 {
                                     double poznodouble = excelReader.GetDouble(1);
                                     pozno = poznodouble.ToString();
+                                    LoggingManager.Instance.SaveErrorLog(ex);
                                 }
                                 string description = excelReader.GetString(2);
                                 if (description == "El ile her derinlikte geniş derin batak ve balçık kazılması")
@@ -68,9 +70,9 @@ namespace IhalematikProUI.Forms.Genel
                                 {
                                     unitprice = excelReader.GetDouble(4);
                                 }
-                                catch (Exception)
+                                catch (Exception ex)
                                 {
-
+                                    LoggingManager.Instance.SaveErrorLog(ex);
                                 }
 
                                 if (!string.IsNullOrEmpty(pozno) && !string.IsNullOrEmpty(description) && !string.IsNullOrEmpty(unit))

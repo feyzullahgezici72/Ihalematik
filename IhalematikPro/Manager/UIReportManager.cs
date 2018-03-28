@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraPrinting;
+using IhalematikProBL.Manager;
 using IhalematikProUI.Forms;
 using SimpleApplicationBase.BL.Base;
 using System;
@@ -27,8 +28,9 @@ namespace IhalematikProUI.Manager
                 Process.Start(startInfo);
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                LoggingManager.Instance.SaveErrorLog(ex);
                 return false;
             }
         }

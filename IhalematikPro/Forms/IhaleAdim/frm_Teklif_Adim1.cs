@@ -25,6 +25,7 @@ using IhalematikProUI.Manager;
 using IhalematikProUI.Forms;
 using System.Diagnostics;
 using System.IO;
+using IhalematikProBL.Manager;
 //using IhalematikProUI.Report;
 namespace IhalematikPro.Forms
 {
@@ -321,12 +322,10 @@ namespace IhalematikPro.Forms
                     MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                
+                LoggingManager.Instance.SaveErrorLog(ex);
             }
-
         }
     }
 }

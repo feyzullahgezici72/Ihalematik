@@ -13,6 +13,7 @@ using IhalematikPro.Manager;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms;
 using System.IO;
+using IhalematikProBL.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -132,9 +133,9 @@ namespace IhalematikPro.Forms
                     //picLogo.Image.
                     //this.logoName = Guid.NewGuid().ToString() + filename;
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-
+                    LoggingManager.Instance.SaveErrorLog(ex);
                 }
             }
         }

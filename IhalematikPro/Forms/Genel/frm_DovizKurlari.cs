@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Xml;
 using IhalematikProUI.Forms;
+using IhalematikProBL.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -26,15 +27,12 @@ namespace IhalematikPro.Forms
             {
                 dataGrid1.DataSource = source();
             }
-            catch (Exception )
+            catch (Exception ex)
             {
-
+                LoggingManager.Instance.SaveErrorLog(ex);
                 frm_MesajFormu mf = new frm_MesajFormu();
                 mf.lblMesaj.Text = "İnternet Bağlantınız olmadığından\n Döviz kurları alınamadı...";
-
                 mf.ShowDialog();
-
-
             }
            
         }

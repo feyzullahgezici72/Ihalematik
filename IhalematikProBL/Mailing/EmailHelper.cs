@@ -129,6 +129,7 @@ namespace IhalematikProBL.Mailing
             }
             catch (System.Exception ex)
             {
+                LoggingManager.Instance.SaveErrorLog(ex);
                 result.Success = false;
                 if (ex.InnerException != null && (ex.InnerException.Message.Contains("The remote name could not be resolved") || ex.InnerException.Message.Contains("Uzak ad çözülemedi")))
                 {
@@ -186,8 +187,9 @@ namespace IhalematikProBL.Mailing
                 this.SendEmail(info);
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                LoggingManager.Instance.SaveErrorLog(ex);
                 //CustomLoggingManager.Instance.Log(Guid.NewGuid(), ex, string.Empty);
                 //MailingManager.Instance.SendErrorEmail(ex);
                 return false;
