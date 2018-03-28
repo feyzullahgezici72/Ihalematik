@@ -17,6 +17,7 @@ namespace IhalematikProUI.Forms
 {
     public partial class frm_IhaleBilgisiDetay : DevExpress.XtraEditors.XtraForm
     {
+        public int SelectedOfferId { get; set; }
         public int TenderId { get; set; }
         private Tender tender { get; set; }
         public Tender Tender
@@ -70,6 +71,7 @@ namespace IhalematikProUI.Forms
                 this.Tender.CompanyName = txtcompanyName.Text;
                 this.Tender.EkapNumber = txtEkapNumber.Text;
                 this.Tender.Type = txtType.Text;
+                this.Tender.OfferId = this.SelectedOfferId;
                 this.Tender.Scope = txtScope.Text;
                 this.Tender.Procedure = txtProcedure.Text;
                 this.Tender.Place = txtPlace.Text;
@@ -85,6 +87,36 @@ namespace IhalematikProUI.Forms
                     MessageBox.Show("Güncelleme sırasında hata oluştu.");
                 }
                 this.Close();
+            }
+        }
+
+        private void gridViewOffer_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            for (int i = 0; i < gridViewOffer.RowCount; i++)
+            {
+                gridViewOffer.SetRowCellValue(i, colIsSelected, false);
+            }
+            gridViewOffer.SetFocusedRowCellValue(colIsSelected, true);
+            this.SelectedOfferId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOffer.GetFocusedRowCellValue("Id"));
+        }
+
+        private void rpstSelected_CheckedChanged(object sender, EventArgs e)
+        {
+            bool isSelected = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<bool>(gridViewOffer.GetFocusedRowCellValue("IsSelected"));
+            for (int i = 0; i < gridViewOffer.RowCount; i++)
+            {
+                gridViewOffer.SetRowCellValue(i, colIsSelected, false);
+            }
+
+            if (isSelected)
+            {
+                gridViewOffer.SetFocusedRowCellValue(colIsSelected, false);
+                this.SelectedOfferId = 0;
+            }
+            else
+            {
+                gridViewOffer.SetFocusedRowCellValue(colIsSelected, true);
+                this.SelectedOfferId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOffer.GetFocusedRowCellValue("Id"));
             }
         }
     }
