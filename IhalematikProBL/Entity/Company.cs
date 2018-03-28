@@ -24,7 +24,7 @@ namespace IhalematikProBL.Entity
             {
                 if (!string.IsNullOrEmpty(this.MailUserName))
                 {
-                    return string.Format("{0}.gmail.com", this.MailUserName);
+                    return string.Format("{0}@gmail.com", this.MailUserName);
                 }
                 return string.Empty;
             }
