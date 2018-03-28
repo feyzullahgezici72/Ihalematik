@@ -8,7 +8,7 @@ namespace IhalematikProBL.Entity
 {
     public class Company : CustomEntityBase
     {
-        public string Name{ get; set; }
+        public string Name { get; set; }
         public string Title { get; set; }
         public string BossName { get; set; }
         public string BossSurName { get; set; }
@@ -18,9 +18,21 @@ namespace IhalematikProBL.Entity
         public string GSM { get; set; }
         public string Address { get; set; }
         public string WebAddress { get; set; }
-        public string MailAddress { get; set; }
+        public string MailAddress
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(this.MailUserName))
+                {
+                    return string.Format("{0}.gmail.com", this.MailUserName);
+                }
+                return string.Empty;
+            }
+        }
+
+        public string MailUserName { get; set; }
         public string MailPassword { get; set; }
-        public string TaxNumber  { get; set; }
+        public string TaxNumber { get; set; }
         public string TaxOffice { get; set; }
         public string LogoPath { get; set; }
 

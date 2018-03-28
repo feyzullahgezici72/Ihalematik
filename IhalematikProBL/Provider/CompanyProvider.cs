@@ -23,7 +23,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("GSM", t.GSM);
             parameters.Add("Telephone1", t.Telephone1);
             parameters.Add("Telephone2", t.Telephone2);
-            parameters.Add("MailAddress", t.MailAddress);
+            parameters.Add("MailAddress", t.MailUserName);
             parameters.Add("WebAddress", t.WebAddress);
             parameters.Add("MailPassword", t.MailPassword);
             parameters.Add("TaxOffice", t.TaxOffice);
@@ -41,7 +41,7 @@ namespace IhalematikProBL.Provider
             t.BossSurName = dr.GetValue<string>("BossSurName");
             t.Fax = dr.GetValue<string>("Fax");
             t.GSM = dr.GetValue<string>("GSM");
-            t.MailAddress = dr.GetValue<string>("MailAddress");
+            t.MailUserName = dr.GetValue<string>("MailAddress");
             t.Name = dr.GetValue<string>("Name");
             t.Telephone1 = dr.GetValue<string>("Telephone1");
             t.Telephone2 = dr.GetValue<string>("Telephone2");
