@@ -613,6 +613,7 @@
       <DependentUpon>frm_YeniTeklifOlustur.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager\CurrentManager.cs" />
+    <Compile Include="Manager\LoadingManager.cs" />
     <Compile Include="Manager\UIRuleManager.cs" />
     <Compile Include="Manager\UICustomConfigurationManager.cs" />
     <Compile Include="Manager\UIGlobalVeriables.cs" />

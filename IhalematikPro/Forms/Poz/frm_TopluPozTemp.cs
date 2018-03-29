@@ -11,10 +11,12 @@ using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikPro.Forms;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Manager;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikProUI.Forms.PozTem
 {
-    public partial class frm_TopluPozTemp : DevExpress.XtraEditors.XtraForm
+    public partial class frm_TopluPozTemp : IhalematikBaseForm
     {
         private frm_PozListesi _owner = null;
         public List<Poz> pozItems = null;
@@ -31,13 +33,14 @@ namespace IhalematikProUI.Forms.PozTem
 
         private void btnEvet_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Kaydetme işlemi veri uzunluğuna göre biraz zaman alabilir...");
             if (this.pozItems != null)
             {
+                LoadingManager.Instance.Show(this);
                 foreach (IhalematikProBL.Entity.Poz item in pozItems)
                 {
                     PozProvider.Instance.Save(item);
                 }
+                LoadingManager.Instance.Hide();
                 MessageBox.Show("Poz listesi kaydedildi.");
                 this._owner.LoadPozGrid();
             }

@@ -18,6 +18,7 @@ using System.Diagnostics;
 using IhalematikProUI.Forms.Base;
 using System.Globalization;
 using IhalematikProUI.Forms.Genel;
+using IhalematikProUI.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -113,9 +114,12 @@ namespace IhalematikPro.Forms
 
         private void frm_PozListesi_Shown(object sender, EventArgs e)
         {
+            LoadingManager.Instance.Show(this);
             LoadPozGrid();
             grdPozList.Show();
+            LoadingManager.Instance.Hide();
         }
+
         public bool IsEmptyKontrol()
         {
             if (string.IsNullOrEmpty(txtNumber.Text.Trim()))
