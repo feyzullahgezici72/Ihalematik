@@ -130,7 +130,7 @@ namespace IhalematikProUI.Forms.OBF
                 {
                     String path = dialog.FileName; // get name of file
                     this.ReadExcel(path);
-                    this.Close();
+                    this.Hide();
                     frm_TopluObfTemp obfTemp = new frm_TopluObfTemp(_owner);
                     obfTemp.obfItems = this.obfItems;
                     obfTemp.ShowDialog();

@@ -93,7 +93,7 @@ namespace IhalematikProUI.Forms.Genel
                             }
                             i++;
                         }
-                        this.Close();
+                        this.Hide();
                         frm_TopluPozTemp pozTemp = new frm_TopluPozTemp(this._owner);
                         pozTemp.pozItems = pozItems;
                         pozTemp.ShowDialog();

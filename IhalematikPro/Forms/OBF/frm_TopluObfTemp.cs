@@ -40,14 +40,16 @@ namespace IhalematikProUI.Forms.OBF
 
         private void btnEvet_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Kaydetme işlemi veri uzunluğuna göre biraz zaman alabilir...");
             if (this.obfItems != null)
             {
-                foreach (IhalematikProBL.Entity.OBF item in obfItems)
+               foreach (IhalematikProBL.Entity.OBF item in obfItems)
                 {
                     OBFProvider.Instance.Save(item);
                 }
                 MessageBox.Show("OBF listesi kaydedildi.");
                 this._owner.LoadGrid();
+                this.Close();
             }
             else
             {

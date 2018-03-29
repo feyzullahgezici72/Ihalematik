@@ -31,6 +31,7 @@ namespace IhalematikProUI.Forms.PozTem
 
         private void btnEvet_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Kaydetme işlemi veri uzunluğuna göre biraz zaman alabilir...");
             if (this.pozItems != null)
             {
                 foreach (IhalematikProBL.Entity.Poz item in pozItems)
