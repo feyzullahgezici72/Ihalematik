@@ -1,4 +1,4 @@
-﻿namespace IhalematikProUI.Forms
+﻿namespace IhalematikProUI.Forms.Genel
 {
     partial class frm_wait
     {
@@ -28,89 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.progressPanel1 = new DevExpress.XtraWaitForm.ProgressPanel();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.email_send_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(512, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(87, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             // 
             // progressPanel1
             // 
             this.progressPanel1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.progressPanel1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.progressPanel1.Appearance.ForeColor = System.Drawing.Color.Black;
             this.progressPanel1.Appearance.Options.UseBackColor = true;
-            this.progressPanel1.Appearance.Options.UseFont = true;
-            this.progressPanel1.Appearance.Options.UseForeColor = true;
-            this.progressPanel1.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.progressPanel1.AppearanceCaption.ForeColor = System.Drawing.Color.Black;
+            this.progressPanel1.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.progressPanel1.AppearanceCaption.Options.UseFont = true;
-            this.progressPanel1.AppearanceCaption.Options.UseForeColor = true;
             this.progressPanel1.AppearanceDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.progressPanel1.AppearanceDescription.ForeColor = System.Drawing.Color.Black;
             this.progressPanel1.AppearanceDescription.Options.UseFont = true;
-            this.progressPanel1.AppearanceDescription.Options.UseForeColor = true;
-            this.progressPanel1.Caption = "e-MAİL GÖNDERİLİYOR";
-            this.progressPanel1.Description = "Lütfen Bekleyiniz ...";
+            this.progressPanel1.Caption = "Yükleniyor";
+            this.progressPanel1.Description = "Lütfen Bekleyiniz...";
+            this.progressPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.progressPanel1.ImageHorzOffset = 20;
-            this.progressPanel1.Location = new System.Drawing.Point(9, 14);
+            this.progressPanel1.Location = new System.Drawing.Point(0, 27);
             this.progressPanel1.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.progressPanel1.Name = "progressPanel1";
-            this.progressPanel1.ShowDescription = false;
-            this.progressPanel1.Size = new System.Drawing.Size(369, 57);
-            this.progressPanel1.TabIndex = 10;
+            this.progressPanel1.Size = new System.Drawing.Size(369, 58);
+            this.progressPanel1.TabIndex = 0;
             this.progressPanel1.Text = "progressPanel1";
             // 
-            // labelControl5
+            // tableLayoutPanel1
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl5.Location = new System.Drawing.Point(195, 69);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(143, 22);
-            this.labelControl5.TabIndex = 6;
-            this.labelControl5.Text = "Lütfen Bekleyiniz...";
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.progressPanel1, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 22, 0, 22);
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(369, 112);
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // frm_wait
             // 
-            this.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 114);
-            this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.labelControl5);
-            this.Controls.Add(this.progressPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.LookAndFeel.SkinName = "VS2010";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(369, 112);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_wait";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gönderim işlemi İnternet hızınıza bağlı olarak  birkaç dakika sürebilir.";
-            this.TopMost = true;
-            this.Load += new System.EventHandler(this.frm_wait_Load);
-            this.Shown += new System.EventHandler(this.frm_wait_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Form1";
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+
         private DevExpress.XtraWaitForm.ProgressPanel progressPanel1;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

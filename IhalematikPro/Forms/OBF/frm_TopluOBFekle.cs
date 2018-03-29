@@ -98,12 +98,12 @@ namespace IhalematikProUI.Forms.OBF
                         MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
                         LoggingManager.Instance.SaveErrorLog(ex);
                         break;
+                        this.Close();
                     }
 
                     i++;
                 }
                 stream.Close();
-                //MesajPanel.Visible = false;
                 lblobfno.Text = "";
                 lblAciklama.Text = "";
                 lblBirim.Text = "";

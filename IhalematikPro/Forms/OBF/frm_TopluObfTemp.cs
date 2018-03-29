@@ -10,10 +10,12 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using IhalematikPro.Forms;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Manager;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikProUI.Forms.OBF
 {
-    public partial class frm_TopluObfTemp : DevExpress.XtraEditors.XtraForm
+    public partial class frm_TopluObfTemp :IhalematikBaseForm
     {
         public List<IhalematikProBL.Entity.OBF> obfItems = null;
         private frm_OzelStokListesi _owner;
@@ -22,12 +24,6 @@ namespace IhalematikProUI.Forms.OBF
             this._owner = Owner;
             InitializeComponent();
         }
-
-        private void simpleButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnHayir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -40,10 +36,10 @@ namespace IhalematikProUI.Forms.OBF
 
         private void btnEvet_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Kaydetme işlemi veri uzunluğuna göre biraz zaman alabilir...");
             if (this.obfItems != null)
             {
-               foreach (IhalematikProBL.Entity.OBF item in obfItems)
+                LoadingManager.Instance.Show(this);
+                foreach (IhalematikProBL.Entity.OBF item in obfItems)
                 {
                     OBFProvider.Instance.Save(item);
                 }

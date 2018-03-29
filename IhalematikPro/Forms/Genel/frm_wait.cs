@@ -4,28 +4,40 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
+using DevExpress.XtraWaitForm;
 
-namespace IhalematikProUI.Forms
+namespace IhalematikProUI.Forms.Genel
 {
-    public partial class frm_wait : DevExpress.XtraEditors.XtraForm
+    public partial class frm_wait : WaitForm
     {
         public frm_wait()
         {
             InitializeComponent();
+            this.progressPanel1.AutoHeight = true;
         }
 
-        private void frm_wait_Load(object sender, EventArgs e)
-        {
+        #region Overrides
 
+        public override void SetCaption(string caption)
+        {
+            base.SetCaption(caption);
+            this.progressPanel1.Caption = caption;
+        }
+        public override void SetDescription(string description)
+        {
+            base.SetDescription(description);
+            this.progressPanel1.Description = description;
+        }
+        public override void ProcessCommand(Enum cmd, object arg)
+        {
+            base.ProcessCommand(cmd, arg);
         }
 
-        private void frm_wait_Shown(object sender, EventArgs e)
+        #endregion
+
+        public enum WaitFormCommand
         {
-            Application.DoEvents();
         }
     }
 }

@@ -114,10 +114,12 @@ namespace IhalematikPro.Forms
 
         private void frm_PozListesi_Shown(object sender, EventArgs e)
         {
+            this.Enabled = false;
             LoadingManager.Instance.Show(this);
             LoadPozGrid();
             grdPozList.Show();
             LoadingManager.Instance.Hide();
+            this.Enabled = true;
         }
 
         public bool IsEmptyKontrol()
