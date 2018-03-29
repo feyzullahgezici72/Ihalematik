@@ -42,24 +42,35 @@ namespace IhalematikProUI.Forms.OBF
                     Application.DoEvents();
                     try
                     {
-                        if (i >= 1)
+                        if (i > 1)
                         {
                             try
                             {
-                                excelReader.GetString(0);
+                                excelReader.GetString(1);
                             }
                             catch (Exception ex)
                             {
                                 LoggingManager.Instance.SaveErrorLog(ex);
                                 break;
                             }
-                            string stokKodu = excelReader.GetString(0);
-                            string description = excelReader.GetString(1);
-                            string unit = excelReader.GetString(2);
+                            string stokKodu = string.Empty;
+
+                            try
+                            {
+                                stokKodu = excelReader.GetString(1);
+                            }
+                            catch (Exception ex)
+                            {
+                                double stokKodudouble = excelReader.GetDouble(1);
+                                stokKodu = stokKodudouble.ToString();
+                                LoggingManager.Instance.SaveErrorLog(ex);
+                            }
+                            string description = excelReader.GetString(2);
+                            string unit = excelReader.GetString(3);
                             double unitPrice = 0;
                             try
                             {
-                                unitPrice = excelReader.GetDouble(3);
+                                unitPrice = excelReader.GetDouble(4);
                             }
                             catch (Exception)
                             {
