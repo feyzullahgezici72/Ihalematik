@@ -282,12 +282,6 @@
     <Compile Include="Forms\Genel\frm_PozlariOnlineGuncelle.Designer.cs">
       <DependentUpon>frm_PozlariOnlineGuncelle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Genel\frm_wait.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Genel\frm_wait.Designer.cs">
-      <DependentUpon>frm_wait.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\OBF\frm_TopluObfTemp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -594,11 +588,11 @@
     <Compile Include="Forms\IhaleAdim\frm_Teklif_Adim3.Designer.cs">
       <DependentUpon>frm_Teklif_Adim3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Genel\frm_mailWait.cs">
+    <Compile Include="Forms\Genel\frm_wait.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Genel\frm_mailWait.Designer.cs">
-      <DependentUpon>frm_mailWait.cs</DependentUpon>
+    <Compile Include="Forms\Genel\frm_wait.Designer.cs">
+      <DependentUpon>frm_wait.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\IhaleAdim\frm_YeniIhaleYarat.cs">
       <SubType>Form</SubType>
@@ -713,9 +707,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Genel\frm_PozlariOnlineGuncelle.resx">
       <DependentUpon>frm_PozlariOnlineGuncelle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Genel\frm_wait.resx">
-      <DependentUpon>frm_wait.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OBF\frm_TopluObfTemp.resx">
       <DependentUpon>frm_TopluObfTemp.cs</DependentUpon>
@@ -870,8 +861,8 @@
     <EmbeddedResource Include="Forms\IhaleAdim\frm_Teklif_Adim3.resx">
       <DependentUpon>frm_Teklif_Adim3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Genel\frm_mailWait.resx">
-      <DependentUpon>frm_mailWait.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Genel\frm_wait.resx">
+      <DependentUpon>frm_wait.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IhaleAdim\frm_YeniIhaleYarat.resx">
       <DependentUpon>frm_YeniIhaleYarat.cs</DependentUpon>
@@ -1295,6 +1286,7 @@
     <Content Include="icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\loading-bar-gif-1.gif" />
     <None Include="Resources\network-icon1.png" />
     <None Include="Resources\System-Info-icon.png" />
     <None Include="Resources\Actions-view-calendar-list-icon.png" />

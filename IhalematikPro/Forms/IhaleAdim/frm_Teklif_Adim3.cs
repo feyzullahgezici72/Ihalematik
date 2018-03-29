@@ -258,16 +258,12 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim3_Shown(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            LoadingManager.Instance.Show(this);
             bindingSourceAddWorker.DataSource = typeof(List<TenderMaterialListEquipmentModel>);
             this.LoadTenderGroupGrid();
-            if (CurrentManager.Instance.CurrentTender.PersonHour)
-            {
-                //cmbAdamSaat.PerformClick();
-            }
-            else
-            {
-                //cmbBirimFiyat.PerformClick();
-            }
+            LoadingManager.Instance.frm_wait.Close();
+            this.Enabled = true;
         }
 
         private void CalculateInnerValuesMarkup(List<MaterialListModel> items)

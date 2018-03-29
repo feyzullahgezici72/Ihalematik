@@ -58,7 +58,7 @@
             // simpleButton1
             // 
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(798, 27);
+            this.simpleButton1.Location = new System.Drawing.Point(693, 27);
             this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
             this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton1.Name = "simpleButton1";
@@ -127,7 +127,7 @@
             this.groupControl1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1096, 319);
+            this.groupControl1.Size = new System.Drawing.Size(994, 319);
             this.groupControl1.TabIndex = 32;
             this.groupControl1.Text = " ";
             // 
@@ -159,7 +159,7 @@
             // 
             this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(944, 27);
+            this.simpleButton2.Location = new System.Drawing.Point(839, 27);
             this.simpleButton2.LookAndFeel.SkinName = "London Liquid Sky";
             this.simpleButton2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton2.Name = "simpleButton2";
@@ -200,7 +200,7 @@
             this.lblAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.lblAciklama.Location = new System.Drawing.Point(122, 92);
             this.lblAciklama.Name = "lblAciklama";
-            this.lblAciklama.Size = new System.Drawing.Size(962, 30);
+            this.lblAciklama.Size = new System.Drawing.Size(860, 30);
             this.lblAciklama.TabIndex = 21;
             // 
             // lblBirim
@@ -268,14 +268,14 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1096, 35);
+            this.panelControl1.Size = new System.Drawing.Size(994, 35);
             this.panelControl1.TabIndex = 31;
             // 
             // frm_TopluOBFekle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 354);
+            this.ClientSize = new System.Drawing.Size(994, 354);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl1);

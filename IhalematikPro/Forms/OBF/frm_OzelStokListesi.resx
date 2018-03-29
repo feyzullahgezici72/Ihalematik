@@ -175,11 +175,10 @@
     <value>"Ekle" Buttonuna tıklayarak  hazırladığınız 
 Excel dosyasını hızlı bir şekilde yükleyebilirsiniz.
 Excel Dosyanız aşağıdaki sutünlardan oluşmalı
-B2  Sütunu :Öbf No
-C2  Sütunu: Malzeme Cinsi Açıklama
-D2 Sütunu :Birimi
-E2 Sütunu : Birim Fiyat
-
+A1  Sütunu :Öbf No
+B1  Sütunu: Malzeme Cinsi Açıklama
+C1  Sütunu :Birimi
+D1  Sütunu : Birim Fiyat
 şeklinde olmalı ve Başlıklar 2 satırda olmalıdır.</value>
   </data>
   <data name="simpleButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

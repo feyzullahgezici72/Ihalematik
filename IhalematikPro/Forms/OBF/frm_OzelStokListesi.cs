@@ -183,8 +183,17 @@ namespace IhalematikPro.Forms
 
         private void frm_OzelStokListesi_Shown(object sender, EventArgs e)
         {
+
+            frm_OzelStokListesi pl = new frm_OzelStokListesi();
+            pl.Enabled = false;
+            LoadingManager.Instance.Show(this);
             LoadGrid();
-            grdOBFList.Focus();
+            //grdOBFList.Focus();
+            LoadingManager.Instance.frm_wait.Close();
+            pl.Enabled = true;
+
+
+           
         }
 
         private void btnPasive_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)

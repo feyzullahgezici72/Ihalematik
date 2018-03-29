@@ -94,13 +94,11 @@ namespace IhalematikPro.Forms
         private void repositoryItemButtonEdit1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             this.FocusedRowHandle = gridViewPozList.FocusedRowHandle;
-
             frm_pozGuncelle frm = new frm_pozGuncelle(this);
             int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewPozList.GetFocusedRowCellValue("Id"));
             frm.CurrentPozId = id;
             pozMenu.Visible = false;
             grdPozList.Enabled = false;
-
             frm.ShowDialog();
             pozMenu.Visible = true;
             grdPozList.Enabled = true;
@@ -118,7 +116,7 @@ namespace IhalematikPro.Forms
             LoadingManager.Instance.Show(this);
             LoadPozGrid();
             grdPozList.Show();
-            LoadingManager.Instance.Hide();
+            LoadingManager.Instance.frm_wait.Close();
             this.Enabled = true;
         }
 

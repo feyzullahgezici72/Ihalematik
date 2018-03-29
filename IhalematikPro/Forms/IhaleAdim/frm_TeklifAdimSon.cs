@@ -112,6 +112,8 @@ namespace IhalematikProUI.Forms
 
         private void frm_TeklifAdimSon_Shown(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            LoadingManager.Instance.Show(this);
             if (CurrentManager.Instance.CurrentTender != null)
             {
                 Tender currentTender = CurrentManager.Instance.CurrentTender;
@@ -141,6 +143,8 @@ namespace IhalematikProUI.Forms
                 colUnitTotalFare.Visible = true;
                 colTotalFare.Visible = true;
             }
+            LoadingManager.Instance.frm_wait.Close();
+            this.Enabled = true;
         }
 
         private void CalculateMaterialListEquipment()

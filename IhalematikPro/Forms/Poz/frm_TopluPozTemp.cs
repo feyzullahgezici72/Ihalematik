@@ -35,12 +35,13 @@ namespace IhalematikProUI.Forms.PozTem
         {
             if (this.pozItems != null)
             {
+                this.Enabled = false;
                 LoadingManager.Instance.Show(this);
                 foreach (IhalematikProBL.Entity.Poz item in pozItems)
                 {
                     PozProvider.Instance.Save(item);
                 }
-                LoadingManager.Instance.Hide();
+                LoadingManager.Instance.frm_wait.Close();
                 MessageBox.Show("Poz listesi kaydedildi.");
                 this._owner.LoadPozGrid();
             }

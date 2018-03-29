@@ -241,7 +241,11 @@ namespace IhalematikPro.Forms
                 colKDV.OptionsColumn.AllowFocus = false;
                 colKDV.OptionsColumn.ReadOnly = true;
             }
+            this.Enabled = false;
+            LoadingManager.Instance.Show(this);
             this.LoadTenderGroupGrid();
+            LoadingManager.Instance.frm_wait.Close();
+            this.Enabled = true;
         }
 
         private void btnNext_Click(object sender, EventArgs e)

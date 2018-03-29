@@ -48,25 +48,25 @@ namespace IhalematikProUI.Forms.Genel
                         int i = 0;
                         while (excelReader.Read())
                         {
-                            if (i > 1)
+                            if (i > 0)
                             {
                                 string pozno = string.Empty;
                                 try
                                 {
-                                    pozno = excelReader.GetString(1);
+                                    pozno = excelReader.GetString(0);
                                 }
                                 catch (Exception ex)
                                 {
-                                    double poznodouble = excelReader.GetDouble(1);
+                                    double poznodouble = excelReader.GetDouble(0);
                                     pozno = poznodouble.ToString();
                                     LoggingManager.Instance.SaveErrorLog(ex);
                                 }
-                                string description = excelReader.GetString(2);
-                                string unit = excelReader.GetString(3);
+                                string description = excelReader.GetString(1);
+                                string unit = excelReader.GetString(2);
                                 double unitprice = 0;
                                 try
                                 {
-                                    unitprice = excelReader.GetDouble(4);
+                                    unitprice = excelReader.GetDouble(3);
                                 }
                                 catch (Exception ex)
                                 {

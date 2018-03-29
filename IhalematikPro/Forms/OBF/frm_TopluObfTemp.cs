@@ -38,13 +38,15 @@ namespace IhalematikProUI.Forms.OBF
         {
             if (this.obfItems != null)
             {
+                this.Enabled = false;
                 LoadingManager.Instance.Show(this);
                 foreach (IhalematikProBL.Entity.OBF item in obfItems)
                 {
                     OBFProvider.Instance.Save(item);
                 }
-                MessageBox.Show("OBF listesi kaydedildi.");
                 this._owner.LoadGrid();
+                LoadingManager.Instance.frm_wait.Close();
+                this.Enabled = true;
                 this.Close();
             }
             else

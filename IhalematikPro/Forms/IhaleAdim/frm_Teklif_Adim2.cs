@@ -178,10 +178,14 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim2_Shown(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            LoadingManager.Instance.Show(this);
             bindingSourceMaterialListNonWorkship.DataSource = typeof(List<MaterialListModel>);
             grdMaterialListNonWorkship.DataSource = bindingSourceMaterialListNonWorkship;
             this.LoadTenderGroupGrid();
             this.CalculateTotalMarkup();
+            LoadingManager.Instance.frm_wait.Close();
+            this.Enabled = true;
         }
 
         private void btnNext_Click(object sender, EventArgs e)

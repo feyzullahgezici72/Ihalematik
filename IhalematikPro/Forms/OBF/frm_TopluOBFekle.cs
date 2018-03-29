@@ -42,11 +42,11 @@ namespace IhalematikProUI.Forms.OBF
                     Application.DoEvents();
                     try
                     {
-                        if (i > 1)
+                        if (i > 0)
                         {
                             try
                             {
-                                excelReader.GetString(1);
+                                excelReader.GetString(0);
                             }
                             catch (Exception ex)
                             {
@@ -57,24 +57,24 @@ namespace IhalematikProUI.Forms.OBF
 
                             try
                             {
-                                stokKodu = excelReader.GetString(1);
+                                stokKodu = excelReader.GetString(0);
                             }
                             catch (Exception ex)
                             {
-                                double stokKodudouble = excelReader.GetDouble(1);
+                                double stokKodudouble = excelReader.GetDouble(0);
                                 stokKodu = stokKodudouble.ToString();
                                 LoggingManager.Instance.SaveErrorLog(ex);
                             }
-                            string description = excelReader.GetString(2);
-                            string unit = excelReader.GetString(3);
+                            string description = excelReader.GetString(1);
+                            string unit = excelReader.GetString(2);
                             double unitPrice = 0;
                             try
                             {
-                                unitPrice = excelReader.GetDouble(4);
+                                unitPrice = excelReader.GetDouble(3);
                             }
                             catch (Exception)
                             {
-                                unitPrice = double.Parse(excelReader.GetString(3), CultureInfo.InvariantCulture);
+                                unitPrice = double.Parse(excelReader.GetString(2), CultureInfo.InvariantCulture);
                             }
 
                             //IhalematikProBL.Entity.OBF existingObf = OBFProvider.Instance.GetOne("Description", description);
@@ -108,8 +108,8 @@ namespace IhalematikProUI.Forms.OBF
                     {
                         MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
                         LoggingManager.Instance.SaveErrorLog(ex);
-                        break;
                         this.Close();
+                        break;
                     }
 
                     i++;
