@@ -34,7 +34,7 @@ namespace IhalematikPro.Forms
         }
         private void frm_DevamEdenIhaleListesi_Load(object sender, EventArgs e)
         {
-            this.LoadGrid();
+
         }
 
         public void LoadGrid()
@@ -233,6 +233,15 @@ namespace IhalematikPro.Forms
             {
                 LoggingManager.Instance.SaveErrorLog(ex);
             }    
+        }
+
+        private void frm_DevamEdenIhaleListesi_Shown(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            LoadingManager.Instance.Show(this);
+            this.LoadGrid();
+            LoadingManager.Instance.frm_wait.Close();
+            this.Enabled = true;
         }
     }
 }

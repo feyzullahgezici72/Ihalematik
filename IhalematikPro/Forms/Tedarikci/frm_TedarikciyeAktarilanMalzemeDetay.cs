@@ -14,10 +14,12 @@ using IhalematikPro.Manager;
 using IhalematikProBL.Manager;
 using System.IO;
 using SimpleApplicationBase.BL.Base;
+using IhalematikProUI.Manager;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
-    public partial class frm_TedarikciyeAktarilanMalzemeDetay : DevExpress.XtraEditors.XtraForm
+    public partial class frm_TedarikciyeAktarilanMalzemeDetay : IhalematikBaseForm
     {
         protected Task SendMailTask { get; set; }
         public bool IsSendMail { get; set; }
@@ -87,20 +89,14 @@ namespace IhalematikProUI.Forms.Tedarikci
             List<OfferMaterialList> items = grdMaterialList.DataSource as List<OfferMaterialList>;
             if (items != null && items.Count != 0)
             {
-                //this.SendMailTask = new Task(() =>
-                //{
-                //emailMesajPanel.Visible = true;
-                fw = new frm_wait();//Mail gönderiliyor mesaj formu
-                fw.Show();
+                this.Enabled = false;
+                LoadingManager.Instance.Show(this);
                 this.IsSendMail = false;
                 this.CreateExcel();
-
                 OperationResult result = this.SendMail();
-
                 if (result.Success)
                 {
                     Application.DoEvents();
-
                     this.SendInfoMessage();
                 }
                 else
@@ -124,7 +120,8 @@ namespace IhalematikProUI.Forms.Tedarikci
                         MessageBox.Show("Mail gonderirken hata oluştu.Lütfen daha sonra tekrar deneyiniz");
                     }
                     simpleButton1.Enabled = true;
-                    fw.Close();
+                    LoadingManager.Instance.frm_wait.Close();
+                    this.Enabled = true;
                 }
             }
             else

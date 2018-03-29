@@ -15,10 +15,12 @@ using IhalematikProBL.Provider;
 using IhalematikProUI.Model;
 using IhalematikPro.Manager;
 using IhalematikProBL.Manager;
+using IhalematikProUI.Forms.Base;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
-    public partial class frm_TeklifAktar : DevExpress.XtraEditors.XtraForm
+    public partial class frm_TeklifAktar : IhalematikBaseForm
     {
         public List<OfferMaterialListModel> MaterialLists = new List<OfferMaterialListModel>();
         public string SupplierName { get; set; }
@@ -37,6 +39,8 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnUploadFile_Click(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            LoadingManager.Instance.Show(this);
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
             if (dialog.ShowDialog() == DialogResult.OK) // if user clicked OK
@@ -44,6 +48,8 @@ namespace IhalematikProUI.Forms.Tedarikci
                 String path = dialog.FileName; // get name of file
                 this.ReadExcel(path);
             }
+            LoadingManager.Instance.frm_wait.Close();
+            this.Enabled = true;
         }
 
         private void ReadExcel(string path)

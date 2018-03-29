@@ -14,6 +14,7 @@ using IhalematikProBL.Provider;
 using IhalematikProUI.Forms.Tedarikci;
 using IhalematikPro.Forms;
 using IhalematikPro.Manager;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms
 {
@@ -77,7 +78,12 @@ namespace IhalematikProUI.Forms
 
         private void frm_TeklifListesi_Shown(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            LoadingManager.Instance.Show(this);
             this.LoadOfferGrid();
+            LoadingManager.Instance.frm_wait.Close();
+            this.Enabled = true;
+
         }
 
         private void LoadOfferGrid()

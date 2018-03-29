@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DevamEdenIhaleListesi));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -38,7 +37,7 @@
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.grdActiveTenderList = new DevExpress.XtraGrid.GridControl();
             this.gridViewActiveTenderList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -535,10 +534,10 @@
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton1.Location = new System.Drawing.Point(520, 33);
+            this.simpleButton1.Location = new System.Drawing.Point(520, 35);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(50, 34);
+            this.simpleButton1.Size = new System.Drawing.Size(50, 32);
             toolTipTitleItem1.Text = "Kaydet";
             superToolTip1.Items.Add(toolTipTitleItem1);
             this.simpleButton1.SuperTip = superToolTip1;
@@ -570,10 +569,10 @@
             this.simpleButton2.Appearance.Options.UseForeColor = true;
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton2.Location = new System.Drawing.Point(199, 33);
+            this.simpleButton2.Location = new System.Drawing.Point(199, 35);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(50, 34);
+            this.simpleButton2.Size = new System.Drawing.Size(50, 32);
             this.simpleButton2.TabIndex = 27;
             this.simpleButton2.Text = "Bul";
             this.simpleButton2.ToolTip = "Poz Bul";
@@ -612,6 +611,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_DevamEdenIhaleListesi_Load);
+            this.Shown += new System.EventHandler(this.frm_DevamEdenIhaleListesi_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();

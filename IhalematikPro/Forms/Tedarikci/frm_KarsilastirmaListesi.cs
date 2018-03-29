@@ -12,10 +12,11 @@ using IhalematikPro.Manager;
 using IhalematikProBL.Entity;
 using IhalematikProUI.Manager;
 using IhalematikProBL.Manager;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
-    public partial class frm_KarsilastirmadaSecilenFirmaUrunListesi : DevExpress.XtraEditors.XtraForm
+    public partial class frm_KarsilastirmadaSecilenFirmaUrunListesi : IhalematikBaseForm
     {
         public frm_KarsilastirmadaSecilenFirmaUrunListesi()
         {
@@ -54,10 +55,14 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            LoadingManager.Instance.Show(this);
             List<SupplierMaterialList> items = CurrentManager.Instance.CurrentOffer.SelectedSupplierMaterialList;
 
             grdMaterialList.DataSource = null;
             grdMaterialList.DataSource = items;
+            LoadingManager.Instance.frm_wait.Close();
+            this.Enabled = true;
         }
 
         private void btnExcel_Click(object sender, EventArgs e)

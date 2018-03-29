@@ -64,10 +64,12 @@ namespace IhalematikProUI.Forms
 
         private void frm_TedarikciTanimlama_Shown(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            LoadingManager.Instance.Show(this);
             this.LoadSupplierSegments();
             this.LoadGrid();
-            //comboBox1.DataSource = supplierSegments;
-            //checkedComboBoxEdit1.Properties.Items.AddRange(supplierSegments);
+            LoadingManager.Instance.frm_wait.Close();
+            this.Enabled = true;
         }
 
         public void LoadSupplierSegments()

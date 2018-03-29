@@ -26,7 +26,6 @@ using IhalematikProUI.Forms;
 using System.Diagnostics;
 using System.IO;
 using IhalematikProBL.Manager;
-//using IhalematikProUI.Report;
 namespace IhalematikPro.Forms
 {
     public partial class frm_Teklif_Adim1 : IhalematikBaseForm

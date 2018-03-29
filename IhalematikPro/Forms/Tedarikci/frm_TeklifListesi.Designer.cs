@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TeklifListesi));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -36,7 +35,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer();
             this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
@@ -110,7 +109,7 @@
             this.lblTenderCaptin.LineColor = System.Drawing.Color.Red;
             this.lblTenderCaptin.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.lblTenderCaptin.Location = new System.Drawing.Point(51, 1);
-            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderCaptin.Name = "lblTenderCaptin";
             this.lblTenderCaptin.ShowLineShadow = false;
             this.lblTenderCaptin.Size = new System.Drawing.Size(161, 35);
@@ -128,7 +127,7 @@
             this.panelControl2.Controls.Add(this.btnKapat);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1362, 35);
             this.panelControl2.TabIndex = 2;
@@ -152,7 +151,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1334, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 1;
@@ -168,7 +167,7 @@
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1362, 35);
             this.panelControl1.TabIndex = 95;
@@ -176,16 +175,16 @@
             // grdOffer
             // 
             this.grdOffer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdOffer.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grdOffer.Location = new System.Drawing.Point(3, 30);
+            this.grdOffer.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.grdOffer.Location = new System.Drawing.Point(3, 33);
             this.grdOffer.MainView = this.gridViewOffer;
-            this.grdOffer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdOffer.Margin = new System.Windows.Forms.Padding(4);
             this.grdOffer.Name = "grdOffer";
             this.grdOffer.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnOpen,
             this.btnActive,
             this.btnPasive});
-            this.grdOffer.Size = new System.Drawing.Size(735, 640);
+            this.grdOffer.Size = new System.Drawing.Size(735, 637);
             this.grdOffer.TabIndex = 0;
             this.grdOffer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOffer});
@@ -543,16 +542,16 @@
             // grdOfferNoCompleated
             // 
             this.grdOfferNoCompleated.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdOfferNoCompleated.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grdOfferNoCompleated.Location = new System.Drawing.Point(3, 30);
+            this.grdOfferNoCompleated.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.grdOfferNoCompleated.Location = new System.Drawing.Point(3, 33);
             this.grdOfferNoCompleated.MainView = this.gridView1;
-            this.grdOfferNoCompleated.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdOfferNoCompleated.Margin = new System.Windows.Forms.Padding(4);
             this.grdOfferNoCompleated.Name = "grdOfferNoCompleated";
             this.grdOfferNoCompleated.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnAc,
             this.btnDetail,
             this.repositoryItemButtonEdit3});
-            this.grdOfferNoCompleated.Size = new System.Drawing.Size(579, 640);
+            this.grdOfferNoCompleated.Size = new System.Drawing.Size(579, 637);
             this.grdOfferNoCompleated.TabIndex = 0;
             this.grdOfferNoCompleated.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -846,7 +845,7 @@
             this.Controls.Add(this.panelControl1);
             this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TeklifListesi";
