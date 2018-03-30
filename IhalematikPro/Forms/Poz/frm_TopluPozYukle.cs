@@ -58,7 +58,7 @@ namespace IhalematikProUI.Forms.Genel
                                 {
                                     double poznodouble = excelReader.GetDouble(0);
                                     pozno = poznodouble.ToString();
-                                    LoggingManager.Instance.SaveErrorLog(ex);
+                                    //LoggingManager.Instance.SaveErrorLog(ex);
                                 }
                                 string description = excelReader.GetString(1);
                                 string unit = excelReader.GetString(2);

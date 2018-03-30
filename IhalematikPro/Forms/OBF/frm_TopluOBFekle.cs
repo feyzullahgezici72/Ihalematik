@@ -44,17 +44,7 @@ namespace IhalematikProUI.Forms.OBF
                     {
                         if (i > 0)
                         {
-                            try
-                            {
-                                excelReader.GetString(0);
-                            }
-                            catch (Exception ex)
-                            {
-                                LoggingManager.Instance.SaveErrorLog(ex);
-                                break;
-                            }
                             string stokKodu = string.Empty;
-
                             try
                             {
                                 stokKodu = excelReader.GetString(0);
@@ -63,7 +53,7 @@ namespace IhalematikProUI.Forms.OBF
                             {
                                 double stokKodudouble = excelReader.GetDouble(0);
                                 stokKodu = stokKodudouble.ToString();
-                                LoggingManager.Instance.SaveErrorLog(ex);
+                                //LoggingManager.Instance.SaveErrorLog(ex);
                             }
                             string description = excelReader.GetString(1);
                             string unit = excelReader.GetString(2);

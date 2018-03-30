@@ -39,12 +39,12 @@ namespace IhalematikProUI.Forms.OBF
             if (this.obfItems != null)
             {
                 //this.Enabled = false;
-                //LoadingManager.Instance.Show(this);
+                LoadingManager.Instance.Show(this);
                 foreach (IhalematikProBL.Entity.OBF item in obfItems)
                 {
                     OBFProvider.Instance.Save(item);
                 }
-                //LoadingManager.Instance.Hide();
+                LoadingManager.Instance.Hide();
                 this._owner.LoadGrid();
                 //this.Enabled = true;
                 this.Close();
