@@ -167,7 +167,7 @@ namespace IhalematikPro.Forms
         private void cmbAktivePasive_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.LoadGrid();
-            LoadingManager.Instance.frm_wait.Close();
+            LoadingManager.Instance.Hide();;
         }
 
         private void btnSl_Click(object sender, EventArgs e)
@@ -180,7 +180,7 @@ namespace IhalematikPro.Forms
             this.Enabled = false;
             LoadingManager.Instance.Show(this);
             this.LoadGrid();
-            LoadingManager.Instance.frm_wait.Close();
+            LoadingManager.Instance.Hide();;
             this.Enabled = true;
 
 

@@ -104,20 +104,20 @@ namespace IhalematikProUI.Forms.Tedarikci
                         if (result.ValidationResults.FirstOrDefault().PropertyName == "NoInternetconnection")
                         {
                             MessageBox.Show("Internet bağlantınızın olduğundan emin olunuz\n veya e-posta gönderdiğiniz firmanın mail adresinin \n doğruluğunu kontrol ediniz");
-                            LoadingManager.Instance.frm_wait.Close();
+                            LoadingManager.Instance.Hide();;
                             this.Enabled = true;
                         }
                         else if (result.ValidationResults.FirstOrDefault().PropertyName == "GmailLessSecureApps")
                         {
                             MessageBox.Show("Lutfen firma bilgileri bolumunden \n email kullanici adi ve sifrenizi kontrol ediniz \n veya /https://myaccount.google.com/lesssecureapps/ \n mail gonderilebilmesi icin izin verdiginizden emin olun");
-                            LoadingManager.Instance.frm_wait.Close();
+                            LoadingManager.Instance.Hide();;
                             this.Enabled = true;
                         }
                     }
                     else
                     {
                         MessageBox.Show("Mail gonderirken hata oluştu.Lütfen daha sonra tekrar deneyiniz");
-                        LoadingManager.Instance.frm_wait.Close();
+                        LoadingManager.Instance.Hide();;
                         this.Enabled = true;
                     }
                 }
@@ -126,7 +126,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             else
             {
                 MessageBox.Show("Gönderilecek malzeme listesi boş olamaz");
-                LoadingManager.Instance.frm_wait.Close();
+                LoadingManager.Instance.Hide();;
                 this.Enabled = true;
             }
         }
@@ -266,7 +266,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             }
             else
             {
-                LoadingManager.Instance.frm_wait.Close();
+                LoadingManager.Instance.Hide();;
                 this.Enabled = true;
                  frm_MesajFormu mesajformu = new frm_MesajFormu();
                 mesajformu.lblMesaj.Text = "Mail Gönderildi...";

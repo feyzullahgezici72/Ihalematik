@@ -184,7 +184,7 @@ namespace IhalematikPro.Forms
             grdMaterialListNonWorkship.DataSource = bindingSourceMaterialListNonWorkship;
             this.LoadTenderGroupGrid();
             this.CalculateTotalMarkup();
-            LoadingManager.Instance.frm_wait.Close();
+            LoadingManager.Instance.Hide();;
             this.Enabled = true;
         }
 

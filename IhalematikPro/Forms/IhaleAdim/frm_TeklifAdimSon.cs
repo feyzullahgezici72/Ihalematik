@@ -143,7 +143,7 @@ namespace IhalematikProUI.Forms
                 colUnitTotalFare.Visible = true;
                 colTotalFare.Visible = true;
             }
-            LoadingManager.Instance.frm_wait.Close();
+            LoadingManager.Instance.Hide();;
             this.Enabled = true;
         }
 

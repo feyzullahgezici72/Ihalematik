@@ -116,7 +116,7 @@ namespace IhalematikPro.Forms
             LoadingManager.Instance.Show(this);
             LoadPozGrid();
             grdPozList.Show();
-            LoadingManager.Instance.frm_wait.Close();
+            LoadingManager.Instance.Hide();
             this.Enabled = true;
         }
 
@@ -199,7 +199,6 @@ namespace IhalematikPro.Forms
 
         public void LoadPozGrid()
         {
-
             string pozNo = txtSearchNumber.Text.Trim();
             string pozDesc = txtSearchDescription.Text.Trim();
             List<Poz> items = new List<Poz>();

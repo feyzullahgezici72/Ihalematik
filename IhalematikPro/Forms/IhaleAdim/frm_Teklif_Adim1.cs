@@ -243,7 +243,7 @@ namespace IhalematikPro.Forms
             this.Enabled = false;
             LoadingManager.Instance.Show(this);
             this.LoadTenderGroupGrid();
-            LoadingManager.Instance.frm_wait.Close();
+            LoadingManager.Instance.Hide();;
             this.Enabled = true;
         }
 

@@ -13,17 +13,6 @@ namespace IhalematikProUI.Forms.Base
         {
             this.InitializeMethod();
         }
-        public void ShowLoading()
-        {
-            //this.panelLoading.Show();
-            //loading.ShowDialog();
-        }
-        public void HideLoading()
-        {
-            //this.panelLoading.Hide();
-            //loading.Hide();
-        }
-
         private void InitializeMethod()
         {
             this.SuspendLayout();

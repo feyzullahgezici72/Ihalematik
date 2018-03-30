@@ -25,7 +25,7 @@ namespace IhalematikProUI.Forms
 
         private void frm_wait_Shown(object sender, EventArgs e)
         {
-            Application.DoEvents();
+            //Application.DoEvents();
         }
 
         private void progressPanel1_Click(object sender, EventArgs e)

@@ -41,7 +41,7 @@ namespace IhalematikProUI.Forms.PozTem
                 {
                     PozProvider.Instance.Save(item);
                 }
-                LoadingManager.Instance.frm_wait.Close();
+                LoadingManager.Instance.Hide();;
                 MessageBox.Show("Poz listesi kaydedildi.");
                 this._owner.LoadPozGrid();
             }

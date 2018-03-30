@@ -81,7 +81,7 @@ namespace IhalematikProUI.Forms
             this.Enabled = false;
             LoadingManager.Instance.Show(this);
             this.LoadOfferGrid();
-            LoadingManager.Instance.frm_wait.Close();
+            LoadingManager.Instance.Hide();;
             this.Enabled = true;
 
         }

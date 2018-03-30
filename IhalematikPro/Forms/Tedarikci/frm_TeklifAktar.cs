@@ -48,7 +48,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                 String path = dialog.FileName; // get name of file
                 this.ReadExcel(path);
             }
-            LoadingManager.Instance.frm_wait.Close();
+            LoadingManager.Instance.Hide();;
             this.Enabled = true;
         }
 

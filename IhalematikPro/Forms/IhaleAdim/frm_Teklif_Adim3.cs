@@ -262,7 +262,7 @@ namespace IhalematikPro.Forms
             LoadingManager.Instance.Show(this);
             bindingSourceAddWorker.DataSource = typeof(List<TenderMaterialListEquipmentModel>);
             this.LoadTenderGroupGrid();
-            LoadingManager.Instance.frm_wait.Close();
+            LoadingManager.Instance.Hide();;
             this.Enabled = true;
         }
 

@@ -148,7 +148,7 @@ namespace IhalematikProUI.Forms
                     model.SupplierName = supplierMaterialList.Supplier.CompanyName;
                     dataSoruce.Add(model);
                 }
-                LoadingManager.Instance.frm_wait.Close();
+                LoadingManager.Instance.Hide();;
                 this.Enabled = true;
             }
             grdMaterialList.DataSource = dataSoruce;

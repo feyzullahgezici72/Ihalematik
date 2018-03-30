@@ -45,7 +45,7 @@ namespace IhalematikProUI.Forms.OBF
                     OBFProvider.Instance.Save(item);
                 }
                 this._owner.LoadGrid();
-                LoadingManager.Instance.frm_wait.Close();
+                LoadingManager.Instance.Hide();;
                 this.Enabled = true;
                 this.Close();
             }

@@ -15,16 +15,16 @@ namespace IhalematikProUI.Manager
     public class LoadingManager : SingletonBase<LoadingManager>
     {
         public IhalematikBaseForm _MainForm = null;
-        public Forms.frm_wait frm_wait;
+        public frm_wait frm_wait;
         public void Show(IhalematikBaseForm MainForm)
         {
             this._MainForm = MainForm;
-            this.frm_wait = new Forms.frm_wait();
+            this.frm_wait = new frm_wait();
             ShowProgress();
         }
         private void StartProgress(String strStatusText)
         {
-            frm_wait = new Forms.frm_wait();
+            frm_wait = new frm_wait();
             //frm_wait.strStatus = strStatusText;
             ShowProgress();
         }
