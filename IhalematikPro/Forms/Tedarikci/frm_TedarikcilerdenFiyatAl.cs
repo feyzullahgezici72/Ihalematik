@@ -86,8 +86,6 @@ namespace IhalematikProUI.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            this.Enabled = false;
-            LoadingManager.Instance.Show(this);
             List<OfferMaterialListModel> dataSoruce = new List<OfferMaterialListModel>();
             if (rdSortPrice.SelectedIndex == 0)
             {
@@ -148,8 +146,6 @@ namespace IhalematikProUI.Forms
                     model.SupplierName = supplierMaterialList.Supplier.CompanyName;
                     dataSoruce.Add(model);
                 }
-                LoadingManager.Instance.Hide();;
-                this.Enabled = true;
             }
             grdMaterialList.DataSource = dataSoruce;
             if (dataSoruce != null && dataSoruce.Count != 0)

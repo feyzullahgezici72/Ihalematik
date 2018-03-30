@@ -39,8 +39,6 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnUploadFile_Click(object sender, EventArgs e)
         {
-            this.Enabled = false;
-            LoadingManager.Instance.Show(this);
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
             if (dialog.ShowDialog() == DialogResult.OK) // if user clicked OK
@@ -48,8 +46,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                 String path = dialog.FileName; // get name of file
                 this.ReadExcel(path);
             }
-            LoadingManager.Instance.Hide();;
-            this.Enabled = true;
         }
 
         private void ReadExcel(string path)
