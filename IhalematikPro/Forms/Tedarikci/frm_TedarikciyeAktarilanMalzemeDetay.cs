@@ -81,14 +81,13 @@ namespace IhalematikProUI.Forms.Tedarikci
                 grdMaterialList.DataSource = items.Select(p => p.MaterialList).ToList();
             }
         }
-        frm_wait fw;
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-            LoadingManager.Instance.Show(this);
             List<OfferMaterialList> items = grdMaterialList.DataSource as List<OfferMaterialList>;
             if (items != null && items.Count != 0)
             {
+                LoadingManager.Instance.Show(this, "E-mail Gönderiliyor");
                 this.IsSendMail = false;
                 this.CreateExcel();
                 OperationResult result = this.SendMail();
@@ -104,29 +103,25 @@ namespace IhalematikProUI.Forms.Tedarikci
                         if (result.ValidationResults.FirstOrDefault().PropertyName == "NoInternetconnection")
                         {
                             MessageBox.Show("Internet bağlantınızın olduğundan emin olunuz\n veya e-posta gönderdiğiniz firmanın mail adresinin \n doğruluğunu kontrol ediniz");
-                            LoadingManager.Instance.Hide();;
                             this.Enabled = true;
                         }
                         else if (result.ValidationResults.FirstOrDefault().PropertyName == "GmailLessSecureApps")
                         {
                             MessageBox.Show("Lutfen firma bilgileri bolumunden \n email kullanici adi ve sifrenizi kontrol ediniz \n veya /https://myaccount.google.com/lesssecureapps/ \n mail gonderilebilmesi icin izin verdiginizden emin olun");
-                            LoadingManager.Instance.Hide();;
                             this.Enabled = true;
                         }
                     }
                     else
                     {
                         MessageBox.Show("Mail gonderirken hata oluştu.Lütfen daha sonra tekrar deneyiniz");
-                        LoadingManager.Instance.Hide();;
                         this.Enabled = true;
                     }
                 }
-
+                LoadingManager.Instance.Hide();
             }
             else
             {
                 MessageBox.Show("Gönderilecek malzeme listesi boş olamaz");
-                LoadingManager.Instance.Hide();;
                 this.Enabled = true;
             }
         }
@@ -266,9 +261,9 @@ namespace IhalematikProUI.Forms.Tedarikci
             }
             else
             {
-                LoadingManager.Instance.Hide();;
+                LoadingManager.Instance.Hide(); ;
                 this.Enabled = true;
-                 frm_MesajFormu mesajformu = new frm_MesajFormu();
+                frm_MesajFormu mesajformu = new frm_MesajFormu();
                 mesajformu.lblMesaj.Text = "Mail Gönderildi...";
                 mesajformu.ShowDialog();
                 this.Close();

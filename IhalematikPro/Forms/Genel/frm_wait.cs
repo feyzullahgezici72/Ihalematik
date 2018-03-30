@@ -13,6 +13,7 @@ namespace IhalematikProUI.Forms
 {
     public partial class frm_wait : DevExpress.XtraEditors.XtraForm
     {
+        public string LoadingString = string.Empty;
         public frm_wait()
         {
             InitializeComponent();
@@ -25,7 +26,10 @@ namespace IhalematikProUI.Forms
 
         private void frm_wait_Shown(object sender, EventArgs e)
         {
-            //Application.DoEvents();
+            if (!string.IsNullOrEmpty(this.LoadingString))
+            {
+                lblYukleniyor.Text = LoadingString;
+            }
         }
 
         private void progressPanel1_Click(object sender, EventArgs e)

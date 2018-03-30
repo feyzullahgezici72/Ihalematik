@@ -14,12 +14,14 @@ namespace IhalematikProUI.Manager
 {
     public class LoadingManager : SingletonBase<LoadingManager>
     {
+        public string LoadingString = string.Empty;
         public IhalematikBaseForm _MainForm = null;
         public frm_wait frm_wait;
-        public void Show(IhalematikBaseForm MainForm)
+        public void Show(IhalematikBaseForm MainForm, string LoadingString = null)
         {
             this._MainForm = MainForm;
             this.frm_wait = new frm_wait();
+            this.frm_wait.LoadingString = LoadingString;
             ShowProgress();
         }
         private void StartProgress(String strStatusText)
