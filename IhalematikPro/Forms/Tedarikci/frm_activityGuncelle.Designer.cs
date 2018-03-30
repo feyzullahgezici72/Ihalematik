@@ -192,6 +192,7 @@
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frm_activityGuncelle";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Shown += new System.EventHandler(this.frm_activityGuncelle_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();

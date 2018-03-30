@@ -50,6 +50,7 @@
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frm_Duyurular";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Duyurular";
             this.Load += new System.EventHandler(this.frm_Duyurular_Load);
             this.ResumeLayout(false);

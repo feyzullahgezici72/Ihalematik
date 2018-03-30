@@ -2108,6 +2108,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TeklifAdimSon";
+            this.ShowInTaskbar = false;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_TeklifAdimSon_Load);
             this.Shown += new System.EventHandler(this.frm_TeklifAdimSon_Shown);

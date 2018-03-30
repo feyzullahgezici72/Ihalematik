@@ -442,11 +442,12 @@ namespace IhalematikPro.Forms
 
         private void frm_CalisanTanimlama_Shown(object sender, EventArgs e)
         {
-            this.Enabled = false;
-            LoadingManager.Instance.Show(this);
+            //this.Enabled = false;
+            //LoadingManager.Instance.Show(this);
             this.InitilalizeForm();
             this.LoadGrid();
-            LoadingManager.Instance.frm_wait.Close();
+            //LoadingManager.Instance.frm_wait.Close();
+            //this.Enabled = true;
         }
 
         private void btnPasive_Click(object sender, EventArgs e)

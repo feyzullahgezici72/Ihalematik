@@ -148,6 +148,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_LogoAyarları";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Logo Ayarları";
             this.Load += new System.EventHandler(this.frm_LogoAyarları_Load);

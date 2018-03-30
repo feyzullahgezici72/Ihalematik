@@ -33,6 +33,7 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.PanelSirket = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtCompanyMaintenanceFare = new DevExpress.XtraEditors.TextEdit();
             this.txtCompanyFuelOilDay = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -71,7 +72,6 @@
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PanelSirket)).BeginInit();
@@ -159,6 +159,17 @@
             this.PanelSirket.Name = "PanelSirket";
             this.PanelSirket.Size = new System.Drawing.Size(394, 273);
             this.PanelSirket.TabIndex = 80;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl5.Location = new System.Drawing.Point(20, 10);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(131, 19);
+            this.labelControl5.TabIndex = 143;
+            this.labelControl5.Text = "Günlük Yakıt (LT):";
             // 
             // txtCompanyMaintenanceFare
             // 
@@ -715,17 +726,6 @@
             // 
             this.dxErrorProvider1.ContainerControl = this;
             // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl5.Location = new System.Drawing.Point(20, 10);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(131, 19);
-            this.labelControl5.TabIndex = 143;
-            this.labelControl5.Text = "Günlük Yakıt (LT):";
-            // 
             // frm_Arac_Guncelleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -742,6 +742,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Arac_Guncelleme";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = " ";
             this.Load += new System.EventHandler(this.frm_Arac_Guncelleme_Load);

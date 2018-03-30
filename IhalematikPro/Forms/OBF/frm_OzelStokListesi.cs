@@ -36,7 +36,6 @@ namespace IhalematikPro.Forms
         public void LoadGrid()
         {
             List<OBFModel> items = UIOBFManager.Instance.GetOBFs();
-
             if (cmbAktivePasive.SelectedIndex == 0)
             {
                 items = items.Where(p => p.IsActive).ToList();
@@ -44,7 +43,6 @@ namespace IhalematikPro.Forms
                 colPasive.Visible = true;
                 colEdit.Visible = true;
                 colActive.Visible = false;
-
             }
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
@@ -55,11 +53,6 @@ namespace IhalematikPro.Forms
                 colActive.Visible = true;
             }
             lblRecordCount.Text = items.Count.ToString();
-            //if (this.FocusedRowHandle != 0)
-            //{
-            //    gridViewOBFList.FocusedRowHandle = this.FocusedRowHandle;
-            //}
-
         }
         private void btnKaydet_Click(object sender, EventArgs e)
         {
@@ -112,7 +105,7 @@ namespace IhalematikPro.Forms
 
         private void frmOzelStokListesi_Load(object sender, EventArgs e)
         {
-            this.LoadGrid();
+            //this.LoadGrid();
         }
         public bool IsEmptyKontrol()
         {
@@ -174,6 +167,7 @@ namespace IhalematikPro.Forms
         private void cmbAktivePasive_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.LoadGrid();
+            LoadingManager.Instance.frm_wait.Close();
         }
 
         private void btnSl_Click(object sender, EventArgs e)
@@ -183,14 +177,11 @@ namespace IhalematikPro.Forms
 
         private void frm_OzelStokListesi_Shown(object sender, EventArgs e)
         {
-
-            frm_OzelStokListesi pl = new frm_OzelStokListesi();
-            pl.Enabled = false;
+            this.Enabled = false;
             LoadingManager.Instance.Show(this);
-            LoadGrid();
-            //grdOBFList.Focus();
+            this.LoadGrid();
             LoadingManager.Instance.frm_wait.Close();
-            pl.Enabled = true;
+            this.Enabled = true;
 
 
            

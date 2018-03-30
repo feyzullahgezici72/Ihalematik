@@ -403,6 +403,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_FaalitetAlaniEkle";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Shown += new System.EventHandler(this.frm_FaalitetAlaniEkle_Shown);

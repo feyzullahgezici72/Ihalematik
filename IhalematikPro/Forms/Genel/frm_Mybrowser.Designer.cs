@@ -138,6 +138,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Mybrowser";
+            this.ShowInTaskbar = false;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_Mybrowser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

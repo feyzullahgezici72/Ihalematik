@@ -179,6 +179,7 @@
             this.LookAndFeel.SkinName = "VS2010";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frm_LoginGuncelle";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş Şifresi Güncelle";
             this.Load += new System.EventHandler(this.frm_LoginGuncelle_Load);

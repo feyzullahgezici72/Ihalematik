@@ -217,7 +217,7 @@
             this.txtDateTime.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDateTime.Properties.Mask.EditMask = "f";
-            this.txtDateTime.Size = new System.Drawing.Size(594, 26);
+            this.txtDateTime.Size = new System.Drawing.Size(594, 28);
             this.txtDateTime.TabIndex = 1;
             // 
             // labelControl5
@@ -254,6 +254,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_YeniTeklifOlustur";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.frm_YeniTeklifOlustur_Load);

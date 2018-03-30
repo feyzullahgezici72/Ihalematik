@@ -64,12 +64,12 @@ namespace IhalematikProUI.Forms
 
         private void frm_TedarikciTanimlama_Shown(object sender, EventArgs e)
         {
-            this.Enabled = false;
-            LoadingManager.Instance.Show(this);
+            //this.Enabled = false;
+            //LoadingManager.Instance.Show(this);
             this.LoadSupplierSegments();
             this.LoadGrid();
-            LoadingManager.Instance.frm_wait.Close();
-            this.Enabled = true;
+            //LoadingManager.Instance.frm_wait.Close();
+            //this.Enabled = true;
         }
 
         public void LoadSupplierSegments()

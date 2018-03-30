@@ -61,6 +61,7 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtTaxNumber = new DevExpress.XtraEditors.TextEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.txtGmail = new DevExpress.XtraEditors.TextEdit();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.txtMailPassword = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
@@ -75,7 +76,6 @@
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.txtGmail = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaxOffice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTitle.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMailAddress.Properties)).BeginInit();
@@ -91,6 +91,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTaxNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMailPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
@@ -100,7 +101,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGmail.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTaxOffice
@@ -419,6 +419,28 @@
             this.groupControl3.TabIndex = 88;
             this.groupControl3.Text = "İletişim Bilgileri";
             // 
+            // txtGmail
+            // 
+            this.txtGmail.EditValue = "@gmail.com";
+            this.txtGmail.EnterMoveNextControl = true;
+            this.txtGmail.Location = new System.Drawing.Point(359, 227);
+            this.txtGmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGmail.Name = "txtGmail";
+            this.txtGmail.Properties.AllowFocused = false;
+            this.txtGmail.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtGmail.Properties.Appearance.Options.UseBackColor = true;
+            this.txtGmail.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtGmail.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtGmail.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
+            this.txtGmail.Properties.DisplayFormat.FormatString = "N2";
+            this.txtGmail.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.txtGmail.Properties.EditFormat.FormatString = "N2";
+            this.txtGmail.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.txtGmail.Properties.ReadOnly = true;
+            this.txtGmail.Size = new System.Drawing.Size(134, 26);
+            this.txtGmail.TabIndex = 103;
+            this.txtGmail.TabStop = false;
+            // 
             // btnKaydet
             // 
             this.btnKaydet.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -646,28 +668,6 @@
             this.btnKapat.TabIndex = 3;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
-            // txtGmail
-            // 
-            this.txtGmail.EditValue = "@gmail.com";
-            this.txtGmail.EnterMoveNextControl = true;
-            this.txtGmail.Location = new System.Drawing.Point(359, 227);
-            this.txtGmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGmail.Name = "txtGmail";
-            this.txtGmail.Properties.AllowFocused = false;
-            this.txtGmail.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtGmail.Properties.Appearance.Options.UseBackColor = true;
-            this.txtGmail.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtGmail.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtGmail.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.txtGmail.Properties.DisplayFormat.FormatString = "N2";
-            this.txtGmail.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtGmail.Properties.EditFormat.FormatString = "N2";
-            this.txtGmail.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.txtGmail.Properties.ReadOnly = true;
-            this.txtGmail.Size = new System.Drawing.Size(134, 26);
-            this.txtGmail.TabIndex = 103;
-            this.txtGmail.TabStop = false;
-            // 
             // frm_FirmaTanimlama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -682,6 +682,7 @@
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_FirmaTanimlama";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.frm_FirmaTanimlama_Load);
@@ -701,6 +702,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMailPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
@@ -713,7 +715,6 @@
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGmail.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -339,13 +339,13 @@ namespace IhalematikPro.Forms
 
         private void frm_AracTanimlama_Shown(object sender, EventArgs e)
         {
-            this.Enabled = false;
-            LoadingManager.Instance.Show(this);
+            //this.Enabled = false;
+            //LoadingManager.Instance.Show(this);
             this.LoadVehicleGrid();
             this.LoadVehicleTitle();
             grdVehicle.Show();
-            LoadingManager.Instance.frm_wait.Close();
-            this.Enabled = true;
+            //LoadingManager.Instance.frm_wait.Close();
+            //this.Enabled = true;
         }
 
         protected internal void LoadVehicleTitle()

@@ -84,19 +84,16 @@ namespace IhalematikProUI.Forms.Tedarikci
         frm_wait fw;
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            simpleButton1.Enabled = false;
-            Application.DoEvents();
+            this.Enabled = false;
+            LoadingManager.Instance.Show(this);
             List<OfferMaterialList> items = grdMaterialList.DataSource as List<OfferMaterialList>;
             if (items != null && items.Count != 0)
             {
-                this.Enabled = false;
-                LoadingManager.Instance.Show(this);
                 this.IsSendMail = false;
                 this.CreateExcel();
                 OperationResult result = this.SendMail();
                 if (result.Success)
                 {
-                    Application.DoEvents();
                     this.SendInfoMessage();
                 }
                 else
@@ -107,27 +104,30 @@ namespace IhalematikProUI.Forms.Tedarikci
                         if (result.ValidationResults.FirstOrDefault().PropertyName == "NoInternetconnection")
                         {
                             MessageBox.Show("Internet bağlantınızın olduğundan emin olunuz\n veya e-posta gönderdiğiniz firmanın mail adresinin \n doğruluğunu kontrol ediniz");
+                            LoadingManager.Instance.frm_wait.Close();
+                            this.Enabled = true;
                         }
                         else if (result.ValidationResults.FirstOrDefault().PropertyName == "GmailLessSecureApps")
                         {
-
                             MessageBox.Show("Lutfen firma bilgileri bolumunden \n email kullanici adi ve sifrenizi kontrol ediniz \n veya /https://myaccount.google.com/lesssecureapps/ \n mail gonderilebilmesi icin izin verdiginizden emin olun");
+                            LoadingManager.Instance.frm_wait.Close();
+                            this.Enabled = true;
                         }
                     }
-
                     else
                     {
                         MessageBox.Show("Mail gonderirken hata oluştu.Lütfen daha sonra tekrar deneyiniz");
+                        LoadingManager.Instance.frm_wait.Close();
+                        this.Enabled = true;
                     }
-                    simpleButton1.Enabled = true;
-                    LoadingManager.Instance.frm_wait.Close();
-                    this.Enabled = true;
                 }
+
             }
             else
             {
                 MessageBox.Show("Gönderilecek malzeme listesi boş olamaz");
-                simpleButton1.Enabled = true;
+                LoadingManager.Instance.frm_wait.Close();
+                this.Enabled = true;
             }
         }
 
@@ -144,7 +144,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                 Application.DoEvents();
                 try
                 {
-                    Application.DoEvents();
                     string fileName = "Malzeme_Fiyat_Listesi.xlsx";
                     //string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "EmailFile");
                     string sourcePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug\\", string.Empty), "EmailFile");
@@ -155,86 +154,59 @@ namespace IhalematikProUI.Forms.Tedarikci
                     {
                         this.DestinationFile = Path.Combine(targetPath, this.Supplier.CompanyName + "-" + DateTime.Now.ToShortDateString().Replace("/", string.Empty) + "-" + new Random().Next(1, 100000).ToString() + "-" + fileName);
                     }
-
-
                     if (!Directory.Exists(targetPath))
                     {
-                        Application.DoEvents();
                         Directory.CreateDirectory(targetPath);
                     }
-                    Application.DoEvents();
                     File.Copy(sourceFile, this.DestinationFile, true);
-
                     oXL = new Microsoft.Office.Interop.Excel.Application();
                     oWB = oXL.Workbooks.Open(DestinationFile);
                     oSheet = String.IsNullOrEmpty("Sayfa1") ? (Microsoft.Office.Interop.Excel._Worksheet)oWB.ActiveSheet : (Microsoft.Office.Interop.Excel._Worksheet)oWB.Worksheets["Sayfa1"];
-
-                    //oSheet.PageSetup.LeftHeaderPicture = image;
-                    //oSheet.PageSetup.LeftHeader = "&G";
-
-                    //xlWorkSheet.Shapes.AddPicture("C:\\csharp-xl-picture.JPG", Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 50, 50, 300, 45); 
-
-
-
                     if (CurrentManager.Instance.CurrentOffer != null)
                     {
-                        Application.DoEvents();
                         Dictionary<string, object> parameters = new Dictionary<string, object>();
                         parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
                         parameters.Add("SupplierId", this.Supplier.Id);
-
                         List<SupplierMaterialList> items = SupplierMaterialListProvider.Instance.GetItems(parameters);
                         List<OfferMaterialList> offerMaterialLists = new List<OfferMaterialList>();
                         if (items.Count != 0)
                         {
-                            Application.DoEvents();
                             offerMaterialLists.AddRange(items.Select(p => p.MaterialList));
                         }
 
                         if (offerMaterialLists.Count != 0)
                         {
-                            Application.DoEvents();
                             int row = 7;
                             int indexNumber = 1;
                             oSheet.Cells[1, 5] = CurrentManager.Instance.CurrentCompany.Name;
                             oSheet.Cells[2, 5] = CurrentManager.Instance.CurrentCompany.Address;
                             oSheet.Cells[2, 10] = DateTime.Now.ToShortDateString();
-
                             oSheet.Cells[4, 6] = this.Supplier.CompanyName;
-
                             foreach (OfferMaterialList materialList in offerMaterialLists)
                             {
-                                Application.DoEvents();
                                 oSheet.Cells[row, 2] = CurrentManager.Instance.CurrentOffer.Id;
                                 oSheet.Cells[row, 3] = this.Supplier.Id;//supplierId
                                 oSheet.Cells[row, 4] = materialList.Id;
                                 oSheet.Cells[row, 5] = indexNumber;
                                 if (!string.IsNullOrEmpty(materialList.PozOBF.DescriptionForSupplier))
                                 {
-                                    Application.DoEvents();
                                     oSheet.Cells[row, 6] = materialList.PozOBF.DescriptionForSupplier;
                                 }
                                 else
                                 {
-                                    Application.DoEvents();
                                     oSheet.Cells[row, 6] = materialList.PozOBF.Description;
                                 }
                                 oSheet.Cells[row, 7] = materialList.PozOBF.Unit;
                                 oSheet.Cells[row, 8] = materialList.Quantity;
                                 row++;
                                 indexNumber++;
-                                Application.DoEvents();
                             }
                         }
                     }
-                    Application.DoEvents();
                     int LogoW = 180;
                     int LogoH = 80;
-
                     if (!string.IsNullOrEmpty(CurrentManager.Instance.CurrentCompany.LogoPath))
                     {
-                        //string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
-                        //picLogo.Image = Image.FromFile(path + "\\ihalematik\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
                         string path = string.Empty;
                         if (Application.StartupPath.Contains("bin\\Debug"))
                         {
@@ -244,11 +216,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                         {
                             path = Application.StartupPath.Substring(0, (Application.StartupPath.Length));
                         }
-
                         path = path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath;
                         oSheet.Shapes.AddPicture(path, Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 330, 2, LogoW, LogoH);
                     }
-
                     oWB.Save();
                 }
                 catch (Exception ex)
@@ -258,7 +228,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                     if (this.oXL != null)
                         this.oXL.Quit();
                     LoggingManager.Instance.SaveErrorLog(ex);
-                    // MessageBox.Show(ex.ToString());
                 }
                 finally
                 {
@@ -274,7 +243,6 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void SendInfoMessage()
         {
-            Application.DoEvents();
             if (!this.IsSendMail)
             {
                 if (this.SendMailTask == null)
@@ -286,7 +254,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                 {
                     try
                     {
-                        Application.DoEvents();
                         this.SendMailTask.Wait();
                         this.SendInfoMessage();
                     }
@@ -299,11 +266,10 @@ namespace IhalematikProUI.Forms.Tedarikci
             }
             else
             {
-                Application.DoEvents();
-                fw.Close();
-                frm_MesajFormu mesajformu = new frm_MesajFormu();
+                LoadingManager.Instance.frm_wait.Close();
+                this.Enabled = true;
+                 frm_MesajFormu mesajformu = new frm_MesajFormu();
                 mesajformu.lblMesaj.Text = "Mail Gönderildi...";
-
                 mesajformu.ShowDialog();
                 this.Close();
             }
@@ -311,16 +277,13 @@ namespace IhalematikProUI.Forms.Tedarikci
         private OperationResult SendMail()
         {
             OperationResult result = new OperationResult();
-            Application.DoEvents();
             try
             {
                 if (File.Exists(this.DestinationFile))
                 {
-                    Application.DoEvents();
                     result = MailingManager.Instance.SendMaterialToSupplier(this.Supplier.Email, txtEmailBody.Text, this.DestinationFile);
                     if (result.Success)
                     {
-                        Application.DoEvents();
                         this.IsSendMail = true;
                     }
                 }
@@ -328,18 +291,12 @@ namespace IhalematikProUI.Forms.Tedarikci
             catch (Exception ex)
             {
                 LoggingManager.Instance.SaveErrorLog(ex);
-                // throw ex;
             }
 
             return result;
         }
 
         private void frm_TedarikciyeAktarilanMalzemeDetay_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
         {
 
         }

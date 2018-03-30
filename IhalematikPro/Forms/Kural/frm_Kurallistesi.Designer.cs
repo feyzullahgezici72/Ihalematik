@@ -85,7 +85,7 @@
             this.grdWorkerRules.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGuncelle,
             this.btnSil});
-            this.grdWorkerRules.Size = new System.Drawing.Size(586, 486);
+            this.grdWorkerRules.Size = new System.Drawing.Size(590, 493);
             this.grdWorkerRules.TabIndex = 0;
             this.grdWorkerRules.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewRules});
@@ -377,14 +377,14 @@
             // 
             this.xtraTabPage1.Controls.Add(this.grdWorkerRules);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(586, 486);
+            this.xtraTabPage1.Size = new System.Drawing.Size(590, 493);
             this.xtraTabPage1.Text = "İşçilik Kuralları";
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.grdTenderRules);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(586, 486);
+            this.xtraTabPage2.Size = new System.Drawing.Size(590, 493);
             this.xtraTabPage2.Text = "İhale Kuralları";
             // 
             // grdTenderRules
@@ -397,7 +397,7 @@
             this.grdTenderRules.Name = "grdTenderRules";
             this.grdTenderRules.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
-            this.grdTenderRules.Size = new System.Drawing.Size(586, 486);
+            this.grdTenderRules.Size = new System.Drawing.Size(590, 493);
             this.grdTenderRules.TabIndex = 1;
             this.grdTenderRules.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -629,6 +629,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Kurallistesi";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.frm_Kurallistesi_Load);

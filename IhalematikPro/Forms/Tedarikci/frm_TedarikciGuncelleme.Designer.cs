@@ -174,7 +174,7 @@
             this.checkedComboboxEditSupplierSegments.Name = "checkedComboboxEditSupplierSegments";
             this.checkedComboboxEditSupplierSegments.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.checkedComboboxEditSupplierSegments.Size = new System.Drawing.Size(369, 26);
+            this.checkedComboboxEditSupplierSegments.Size = new System.Drawing.Size(369, 28);
             this.checkedComboboxEditSupplierSegments.TabIndex = 0;
             this.checkedComboboxEditSupplierSegments.Closed += new DevExpress.XtraEditors.Controls.ClosedEventHandler(this.checkedComboboxEditSupplierSegments_Closed);
             // 
@@ -420,6 +420,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TedarikciGuncelleme";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = " ";
             this.Shown += new System.EventHandler(this.frm_TedarikciGuncelleme_Shown);

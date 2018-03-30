@@ -76,10 +76,10 @@
             // grdPozTempList
             // 
             this.grdPozTempList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdPozTempList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdPozTempList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdPozTempList.Location = new System.Drawing.Point(3, 31);
             this.grdPozTempList.MainView = this.gridViewPozList;
-            this.grdPozTempList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdPozTempList.Margin = new System.Windows.Forms.Padding(4);
             this.grdPozTempList.Name = "grdPozTempList";
             this.grdPozTempList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGncelle,
@@ -414,8 +414,9 @@
             this.LookAndFeel.SkinName = "McSkin";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frm_TopluPozTemp";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = "POZ";
             this.Shown += new System.EventHandler(this.frm_TopluPozTemp_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

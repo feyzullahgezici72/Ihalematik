@@ -681,6 +681,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_MailListesi";
+            this.ShowInTaskbar = false;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_MailListesi_Load);
             this.Shown += new System.EventHandler(this.frm_MailListesi_Shown);

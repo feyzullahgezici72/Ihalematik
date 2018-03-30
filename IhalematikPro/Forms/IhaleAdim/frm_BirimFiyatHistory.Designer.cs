@@ -603,6 +603,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_BirimFiyatHistory";
+            this.ShowInTaskbar = false;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Shown += new System.EventHandler(this.frm_BirimFiyatHistory_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();

@@ -65,7 +65,7 @@
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1215, 35);
             this.panelControl2.TabIndex = 111;
@@ -78,7 +78,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1187, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 21;
@@ -93,7 +93,7 @@
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.labelControl1.Location = new System.Drawing.Point(4, 1);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
             this.labelControl1.Size = new System.Drawing.Size(575, 35);
@@ -104,11 +104,11 @@
             // grdAddedOfferMaterialList
             // 
             this.grdAddedOfferMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdAddedOfferMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.grdAddedOfferMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
             this.grdAddedOfferMaterialList.Location = new System.Drawing.Point(0, 35);
             this.grdAddedOfferMaterialList.LookAndFeel.SkinName = "Money Twins";
             this.grdAddedOfferMaterialList.MainView = this.gridViewAddedOfferMaterialList;
-            this.grdAddedOfferMaterialList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.grdAddedOfferMaterialList.Margin = new System.Windows.Forms.Padding(6);
             this.grdAddedOfferMaterialList.Name = "grdAddedOfferMaterialList";
             this.grdAddedOfferMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1,
@@ -430,6 +430,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_GonderilecekMalzemeListesi";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = " ";
             this.Shown += new System.EventHandler(this.frm_GonderilecekMalzemeListesi_Shown);

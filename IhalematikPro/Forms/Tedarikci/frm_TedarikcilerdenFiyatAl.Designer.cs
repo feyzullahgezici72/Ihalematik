@@ -1087,6 +1087,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TedarikcilerdenFiyatAl";
+            this.ShowInTaskbar = false;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Shown += new System.EventHandler(this.frm_TedarikcilerdenFiyatAl_Shown);
             this.pnltoplam.ResumeLayout(false);

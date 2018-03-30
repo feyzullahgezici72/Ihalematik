@@ -558,6 +558,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_IhaleGrup";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.frm_IhaleGrup_Load);

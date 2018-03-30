@@ -36,7 +36,6 @@
             this.progressBarControl1 = new DevExpress.XtraEditors.ProgressBarControl();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblBekle = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).BeginInit();
@@ -127,24 +126,14 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.loading;
-            this.pictureBox1.Location = new System.Drawing.Point(435, 61);
+            this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.yukleniyor;
+            this.pictureBox1.Location = new System.Drawing.Point(435, 80);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(192, 193);
+            this.pictureBox1.Size = new System.Drawing.Size(192, 174);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 105;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
-            // 
-            // lblBekle
-            // 
-            this.lblBekle.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.lblBekle.Location = new System.Drawing.Point(458, 260);
-            this.lblBekle.Name = "lblBekle";
-            this.lblBekle.Size = new System.Drawing.Size(133, 19);
-            this.lblBekle.TabIndex = 109;
-            this.lblBekle.Text = "Lütfen Bekleyiniz...";
-            this.lblBekle.Visible = false;
             // 
             // frm_PozlariOnlineGuncelle
             // 
@@ -153,7 +142,6 @@
             this.CancelButton = this.btnKapat;
             this.ClientSize = new System.Drawing.Size(639, 350);
             this.ControlBox = false;
-            this.Controls.Add(this.lblBekle);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.lblAck);
             this.Controls.Add(this.progressBarControl1);
@@ -165,6 +153,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_PozlariOnlineGuncelle";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
@@ -172,7 +161,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -185,6 +173,5 @@
         private DevExpress.XtraEditors.ProgressBarControl progressBarControl1;
         private DevExpress.XtraEditors.SimpleButton btnGuncelle;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private DevExpress.XtraEditors.LabelControl lblBekle;
     }
 }

@@ -110,7 +110,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_MesajFormu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frm_MesajFormu_Load);
             this.Shown += new System.EventHandler(this.frm_MesajFormu_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

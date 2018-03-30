@@ -807,6 +807,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_KarsilastirmadaSecilenFirmaUrunListesi";
+            this.ShowInTaskbar = false;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_KarsilastirmadaSecilenFirmaUrunListesi_Load);
             this.Shown += new System.EventHandler(this.frm_KarsilastirmadaSecilenFirmaUrunListesi_Shown);

@@ -443,7 +443,7 @@
             this.Name = "frm_TopluObfTemp";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = "ÖBF";
             this.Shown += new System.EventHandler(this.frm_TopluObfTemp_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

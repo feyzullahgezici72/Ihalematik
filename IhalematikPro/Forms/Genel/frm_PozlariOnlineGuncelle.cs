@@ -27,7 +27,6 @@ namespace IhalematikProUI.Forms.Genel
         {
             pictureBox1.Visible = true;
             lblAck.Visible = true;
-            lblBekle.Visible = true;
         }
     }
 }
