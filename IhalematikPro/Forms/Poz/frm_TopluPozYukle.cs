@@ -22,7 +22,7 @@ namespace IhalematikProUI.Forms.Genel
 {
     public partial class frm_TopluPozYukle : DevExpress.XtraEditors.XtraForm
     {
-        public List<Poz> pozItems = new List<Poz>();
+        public List<Poz> pozItems = null;
         public frm_PozListesi _owner = null;
         public frm_TopluPozYukle(frm_PozListesi Owner)
         {
@@ -31,6 +31,7 @@ namespace IhalematikProUI.Forms.Genel
         }
         public void getExcel()
         {
+            pozItems = new List<Poz>();
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Excel Files(*.xls;*.xlsx)|*.xls;*.xlsx";
             if (dialog.ShowDialog() == DialogResult.OK)

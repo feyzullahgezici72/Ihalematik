@@ -22,7 +22,7 @@ namespace IhalematikProUI.Forms.OBF
     public partial class frm_TopluOBFekle : DevExpress.XtraEditors.XtraForm
     {
         private frm_OzelStokListesi _owner;
-        List<IhalematikProBL.Entity.OBF> obfItems = new List<IhalematikProBL.Entity.OBF>();
+        List<IhalematikProBL.Entity.OBF> obfItems = null;// new List<IhalematikProBL.Entity.OBF>();
         public frm_TopluOBFekle(frm_OzelStokListesi Owner)
         {
             this._owner = Owner;
@@ -31,6 +31,7 @@ namespace IhalematikProUI.Forms.OBF
 
         private void ReadExcel(string path)
         {
+            obfItems = new List<IhalematikProBL.Entity.OBF>();
             try
             {
                 FileStream stream = System.IO.File.Open(@"" + path + "", FileMode.Open, FileAccess.Read);
