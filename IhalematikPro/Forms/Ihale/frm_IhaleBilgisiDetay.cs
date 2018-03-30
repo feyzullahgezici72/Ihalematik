@@ -67,13 +67,13 @@ namespace IhalematikProUI.Forms
 
             if (this.Tender.MaterialList == null || this.Tender.MaterialList.Count == 0 )
             {
-                panelControl3.Visible = false;
+                grdOffer.Enabled = true;
             }
             else
             {
-                panelControl3.Visible = true;
-                this.LoadGridOffer();
+                grdOffer.Enabled = false;
             }
+            this.LoadGridOffer();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)

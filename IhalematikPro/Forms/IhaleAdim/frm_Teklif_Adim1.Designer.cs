@@ -60,6 +60,7 @@
             this.rpstColId = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
+            this.btnGrupEkle = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnSelectDeselect = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
@@ -81,7 +82,6 @@
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnGrupEkle = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -550,12 +550,23 @@
             this.panelControl5.Size = new System.Drawing.Size(294, 68);
             this.panelControl5.TabIndex = 50;
             // 
+            // btnGrupEkle
+            // 
+            this.btnGrupEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnGrupEkle.Image")));
+            this.btnGrupEkle.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnGrupEkle.Location = new System.Drawing.Point(0, 1);
+            this.btnGrupEkle.Name = "btnGrupEkle";
+            this.btnGrupEkle.Size = new System.Drawing.Size(125, 63);
+            this.btnGrupEkle.TabIndex = 1;
+            this.btnGrupEkle.Text = "Grup Ekle";
+            this.btnGrupEkle.Click += new System.EventHandler(this.btnGrupEkle_Click);
+            // 
             // simpleButton1
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.simpleButton1.Location = new System.Drawing.Point(131, 3);
             this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
             this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -1066,15 +1077,6 @@
             this.colId.Caption = "gridColumn7";
             this.colId.FieldName = "Id";
             this.colId.Name = "colId";
-            // 
-            // btnGrupEkle
-            // 
-            this.btnGrupEkle.Location = new System.Drawing.Point(0, 1);
-            this.btnGrupEkle.Name = "btnGrupEkle";
-            this.btnGrupEkle.Size = new System.Drawing.Size(125, 63);
-            this.btnGrupEkle.TabIndex = 1;
-            this.btnGrupEkle.Text = "simpleButton2";
-            this.btnGrupEkle.Click += new System.EventHandler(this.btnGrupEkle_Click);
             // 
             // frm_Teklif_Adim1
             // 
