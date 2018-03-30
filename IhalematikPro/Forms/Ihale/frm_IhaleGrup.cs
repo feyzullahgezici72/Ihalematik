@@ -13,14 +13,18 @@ using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikPro.Model;
 using IhalematikPro.Manager;
+using IhalematikPro.Forms;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikProUI.Forms
 {
-    public partial class frm_IhaleGrup : DevExpress.XtraEditors.XtraForm
+    public partial class frm_IhaleGrup : IhalematikBaseForm
     {
+        public IhalematikBaseForm _owner = null;
         public int FocusedRowHandle = 0;
-        public frm_IhaleGrup()
+        public frm_IhaleGrup(IhalematikBaseForm Owner)
         {
+            this._owner = Owner;
             InitializeComponent();
             bindingSourceTenderGroup.DataSource = typeof(List<TenderGroupModel>);
             grdTenderGroup.DataSource = bindingSourceTenderGroup;
@@ -103,11 +107,6 @@ namespace IhalematikProUI.Forms
             }
         }
 
-        private void grdTenderGroup_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSil_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Silmek  istediğinz emin misiniz?", "Sil", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -129,7 +128,6 @@ namespace IhalematikProUI.Forms
 
         private void btnTamam_Click(object sender, EventArgs e)
         {
-
             if (CurrentManager.Instance.CurrentTender.Groups == null || CurrentManager.Instance.CurrentTender.Groups.Count == 0)
             {
                 DialogResult resultMsg = MessageBox.Show("Hiç Grup oluşturmadınız emin misiniz?", "Uyarı!!! ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -150,7 +148,10 @@ namespace IhalematikProUI.Forms
             {
                 this.Close();
             }
-
+            if (this._owner is frm_Teklif_Adim1)
+            {
+                ((frm_Teklif_Adim1)this._owner).LoadTenderGroupGrid();
+            }
         }
 
         private void frm_IhaleGrup_Shown(object sender, EventArgs e)

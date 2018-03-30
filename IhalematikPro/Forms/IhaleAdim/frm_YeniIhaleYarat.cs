@@ -16,10 +16,11 @@ using IhalematikPro.Manager;
 using System.Threading;
 using IhalematikProUI.Forms;
 using DevExpress.LookAndFeel;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikPro.Forms
 {
-    public partial class frm_YeniIhaleYarat : DevExpress.XtraEditors.XtraForm
+    public partial class frm_YeniIhaleYarat : IhalematikBaseForm
     {
         private object a1;
         public int SelectedOfferId { get; set; }
@@ -78,7 +79,7 @@ namespace IhalematikPro.Forms
                 mf.lblMesaj.Text = "Yeni İhale Oluşturuldu";
                 mf.ShowDialog();
 
-                frm_IhaleGrup ig = new frm_IhaleGrup();
+                frm_IhaleGrup ig = new frm_IhaleGrup(this);
                 ig.ShowDialog();
                 this.Close();
                 frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
@@ -132,11 +133,6 @@ namespace IhalematikPro.Forms
                 gridViewOffer.SetFocusedRowCellValue(colIsSelected, true);
                 this.SelectedOfferId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOffer.GetFocusedRowCellValue("Id"));
             }
-
-        }
-
-        private void simpleButton1_Click_1(object sender, EventArgs e)
-        {
 
         }
 

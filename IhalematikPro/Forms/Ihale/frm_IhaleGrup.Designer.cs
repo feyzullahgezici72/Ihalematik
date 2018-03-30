@@ -203,7 +203,7 @@
             this.grdTenderGroup.TabIndex = 0;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup});
-            this.grdTenderGroup.Click += new System.EventHandler(this.grdTenderGroup_Click);
+            
             // 
             // gridViewTenderGroup
             // 

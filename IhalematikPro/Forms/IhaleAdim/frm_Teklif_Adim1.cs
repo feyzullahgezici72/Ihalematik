@@ -303,18 +303,6 @@ namespace IhalematikPro.Forms
             }
         }
 
-        private void simpleButton2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-        
-
-
-        }
-
         private void btnExcel_Click(object sender, EventArgs e)
         {
             try
@@ -329,6 +317,12 @@ namespace IhalematikPro.Forms
             {
                 LoggingManager.Instance.SaveErrorLog(ex);
             }
+        }
+
+        private void btnGrupEkle_Click(object sender, EventArgs e)
+        {
+            frm_IhaleGrup ig = new frm_IhaleGrup(this);
+            ig.ShowDialog();
         }
     }
 }

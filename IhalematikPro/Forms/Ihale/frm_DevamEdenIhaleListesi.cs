@@ -243,5 +243,10 @@ namespace IhalematikPro.Forms
             LoadingManager.Instance.Hide();;
             this.Enabled = true;
         }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -46,7 +46,12 @@ namespace IhalematikProUI.Forms
         {
             this.Close();
         }
-
+        private void LoadGridOffer()
+        {
+            List<Offer> offers = OfferProvider.Instance.GetItems();
+            //offers.Where(p=> p.)
+            grdOffer.DataSource = offers.Where(p => p.IsCompleated && p.IsActive).ToList();
+        }
         private void frm_IhaleBilgisiDetay_Load(object sender, EventArgs e)
         {
             txtTeklifNo.Text = this.Tender.Number.ToString();
@@ -59,6 +64,7 @@ namespace IhalematikProUI.Forms
             txtProcedure.Text = this.Tender.Procedure;
             txtPlace.Text = this.Tender.Place;
             txtManagement.Text = this.Tender.Management;
+            this.LoadGridOffer();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)

@@ -153,7 +153,7 @@ namespace IhalematikPro.Forms
 
             }
             grdPozList.DataSource = null;
-            grdPozList.DataSource = pozModels.Where(p => p.IsActive);
+            grdPozList.DataSource = pozModels.Where(p => p.IsActive).ToList();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
