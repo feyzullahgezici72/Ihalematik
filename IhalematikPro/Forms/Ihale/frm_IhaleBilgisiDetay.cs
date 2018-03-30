@@ -64,7 +64,16 @@ namespace IhalematikProUI.Forms
             txtProcedure.Text = this.Tender.Procedure;
             txtPlace.Text = this.Tender.Place;
             txtManagement.Text = this.Tender.Management;
-            this.LoadGridOffer();
+
+            if (this.Tender.MaterialList == null || this.Tender.MaterialList.Count == 0 )
+            {
+                panelControl3.Visible = false;
+            }
+            else
+            {
+                panelControl3.Visible = true;
+                this.LoadGridOffer();
+            }
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
