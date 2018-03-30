@@ -70,7 +70,7 @@ namespace IhalematikProUI.Forms.Genel
                                 }
                                 catch (Exception ex)
                                 {
-                                    LoggingManager.Instance.SaveErrorLog(ex);
+                                    //LoggingManager.Instance.SaveErrorLog(ex);
                                 }
 
                                 if (!string.IsNullOrEmpty(pozno) && !string.IsNullOrEmpty(description) && !string.IsNullOrEmpty(unit))

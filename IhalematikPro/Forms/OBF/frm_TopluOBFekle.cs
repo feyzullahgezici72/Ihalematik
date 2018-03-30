@@ -65,7 +65,7 @@ namespace IhalematikProUI.Forms.OBF
                             }
                             catch (Exception)
                             {
-                                unitPrice = double.Parse(excelReader.GetString(2), CultureInfo.InvariantCulture);
+                                //unitPrice = double.Parse(excelReader.GetString(2), CultureInfo.InvariantCulture);
                             }
 
                             //IhalematikProBL.Entity.OBF existingObf = OBFProvider.Instance.GetOne("Description", description);
@@ -76,21 +76,24 @@ namespace IhalematikProUI.Forms.OBF
                             //}
                             //else
                             //{
-                            IhalematikProBL.Entity.OBF newOBF = new IhalematikProBL.Entity.OBF();
-                            int lastTenderNumber = UIOBFManager.Instance.GetLastOBFNumber();
-                            newOBF.Number = string.Format("{0}", (lastTenderNumber + 1).ToString().PadLeft(8, '0'));
-                            newOBF.IsActive = true;
-                            newOBF.StokNumber = stokKodu;
-                            newOBF.Description = description;
-                            newOBF.Unit = unit;
-                            newOBF.UnitPrice = unitPrice;
-                            Application.DoEvents();
-                            lblobfno.Text = newOBF.StokNumber;
-                            lblAciklama.Text = newOBF.Description;
-                            lblBirim.Text = newOBF.Unit;
-                            lblBirimFiyat.Text = newOBF.UnitPrice.ToString();
-                            lblPosSayisi.Text = i.ToString();
-                            obfItems.Add(newOBF);
+                            if (!string.IsNullOrEmpty(stokKodu) && !string.IsNullOrEmpty(description) && !string.IsNullOrEmpty(unit))
+                            {
+                                IhalematikProBL.Entity.OBF newOBF = new IhalematikProBL.Entity.OBF();
+                                int lastTenderNumber = UIOBFManager.Instance.GetLastOBFNumber();
+                                newOBF.Number = string.Format("{0}", (lastTenderNumber + 1).ToString().PadLeft(8, '0'));
+                                newOBF.IsActive = true;
+                                newOBF.StokNumber = stokKodu;
+                                newOBF.Description = description;
+                                newOBF.Unit = unit;
+                                newOBF.UnitPrice = unitPrice;
+                                Application.DoEvents();
+                                lblobfno.Text = newOBF.StokNumber;
+                                lblAciklama.Text = newOBF.Description;
+                                lblBirim.Text = newOBF.Unit;
+                                lblBirimFiyat.Text = newOBF.UnitPrice.ToString();
+                                lblPosSayisi.Text = i.ToString();
+                                obfItems.Add(newOBF);
+                            }
                             //OBFProvider.Instance.Save(newOBF);
                             //}
                         }
