@@ -53,9 +53,9 @@
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.Location = new System.Drawing.Point(12, 141);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(138, 22);
+            this.labelControl1.Size = new System.Drawing.Size(220, 22);
             this.labelControl1.TabIndex = 9;
-            this.labelControl1.Text = "Lütfen Bekleyiniz...";
+            this.labelControl1.Text = "Bu işlem biraz zaman alabilir...";
             // 
             // lblYukleniyor
             // 
