@@ -118,9 +118,9 @@
             this.lblAciklama.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblAciklama.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblAciklama.Location = new System.Drawing.Point(122, 92);
+            this.lblAciklama.Location = new System.Drawing.Point(122, 91);
             this.lblAciklama.Name = "lblAciklama";
-            this.lblAciklama.Size = new System.Drawing.Size(860, 30);
+            this.lblAciklama.Size = new System.Drawing.Size(860, 66);
             this.lblAciklama.TabIndex = 21;
             // 
             // lblBirim
@@ -130,7 +130,7 @@
             this.lblBirim.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblBirim.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblBirim.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblBirim.Location = new System.Drawing.Point(122, 139);
+            this.lblBirim.Location = new System.Drawing.Point(122, 172);
             this.lblBirim.Name = "lblBirim";
             this.lblBirim.Size = new System.Drawing.Size(174, 30);
             this.lblBirim.TabIndex = 22;
@@ -142,7 +142,7 @@
             this.lblBirimFiyat.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblBirimFiyat.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblBirimFiyat.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblBirimFiyat.Location = new System.Drawing.Point(122, 185);
+            this.lblBirimFiyat.Location = new System.Drawing.Point(122, 217);
             this.lblBirimFiyat.Name = "lblBirimFiyat";
             this.lblBirimFiyat.Size = new System.Drawing.Size(174, 30);
             this.lblBirimFiyat.TabIndex = 23;
@@ -188,7 +188,7 @@
             this.groupControl1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(994, 318);
+            this.groupControl1.Size = new System.Drawing.Size(994, 359);
             this.groupControl1.TabIndex = 30;
             this.groupControl1.Text = " ";
             // 
@@ -198,11 +198,12 @@
             this.groupControl2.Controls.Add(this.lblPosSayisi);
             this.groupControl2.Controls.Add(this.simpleButton2);
             this.groupControl2.Controls.Add(this.labelControl1);
-            this.groupControl2.Location = new System.Drawing.Point(0, 225);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupControl2.Location = new System.Drawing.Point(3, 262);
             this.groupControl2.LookAndFeel.SkinName = "Visual Studio 2013 Light";
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1101, 94);
+            this.groupControl2.Size = new System.Drawing.Size(988, 94);
             this.groupControl2.TabIndex = 34;
             // 
             // lblPosSayisi
@@ -242,7 +243,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Location = new System.Drawing.Point(61, 142);
+            this.labelControl4.Location = new System.Drawing.Point(61, 175);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(47, 19);
@@ -253,7 +254,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl5.Location = new System.Drawing.Point(24, 189);
+            this.labelControl5.Location = new System.Drawing.Point(24, 222);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(85, 19);
@@ -276,7 +277,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.simpleButton2;
-            this.ClientSize = new System.Drawing.Size(994, 353);
+            this.ClientSize = new System.Drawing.Size(994, 394);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl1);

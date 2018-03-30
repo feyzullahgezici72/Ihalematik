@@ -126,7 +126,7 @@
             this.panelControl1.Controls.Add(this.btnKapat);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1370, 35);
             this.panelControl1.TabIndex = 18;
@@ -152,7 +152,7 @@
             this.lblPozListesi.LineColor = System.Drawing.Color.Red;
             this.lblPozListesi.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.lblPozListesi.Location = new System.Drawing.Point(52, 0);
-            this.lblPozListesi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblPozListesi.Margin = new System.Windows.Forms.Padding(4);
             this.lblPozListesi.Name = "lblPozListesi";
             this.lblPozListesi.ShowLineShadow = false;
             this.lblPozListesi.Size = new System.Drawing.Size(133, 35);
@@ -167,7 +167,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1342, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 20;
@@ -197,7 +197,7 @@
             this.pozMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pozMenu.Location = new System.Drawing.Point(0, 35);
             this.pozMenu.LookAndFeel.SkinName = "London Liquid Sky";
-            this.pozMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pozMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pozMenu.Name = "pozMenu";
             this.pozMenu.Size = new System.Drawing.Size(526, 623);
             this.pozMenu.TabIndex = 37;
@@ -262,7 +262,7 @@
             this.txtNumber.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtNumber, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.txtNumber.Location = new System.Drawing.Point(102, 47);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtNumber.Properties.Appearance.Options.UseBackColor = true;
@@ -278,7 +278,7 @@
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
             this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnKaydet.Location = new System.Drawing.Point(322, 200);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(124, 58);
             this.btnKaydet.TabIndex = 4;
@@ -291,7 +291,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl2.Location = new System.Drawing.Point(39, 50);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(56, 19);
             this.labelControl2.TabIndex = 22;
@@ -302,7 +302,7 @@
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl4.Location = new System.Drawing.Point(48, 117);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(47, 19);
             this.labelControl4.TabIndex = 18;
@@ -317,7 +317,7 @@
             this.btnTemizle.Image = global::IhalematikProUI.Properties.Resources.Actions_edit_clear_icon;
             this.btnTemizle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnTemizle.Location = new System.Drawing.Point(454, 200);
-            this.btnTemizle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTemizle.Margin = new System.Windows.Forms.Padding(4);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(48, 58);
             this.btnTemizle.TabIndex = 25;
@@ -329,7 +329,7 @@
             this.txtDescription.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtDescription, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.txtDescription.Location = new System.Drawing.Point(102, 80);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtDescription.Properties.Appearance.Options.UseBackColor = true;
@@ -344,7 +344,7 @@
             this.txtUnitPrice.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtUnitPrice, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.txtUnitPrice.Location = new System.Drawing.Point(102, 149);
-            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUnitPrice.Properties.Appearance.Options.UseBackColor = true;
@@ -365,7 +365,7 @@
             this.txtUnit.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtUnit, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.txtUnit.Location = new System.Drawing.Point(102, 115);
-            this.txtUnit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUnit.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUnit.Properties.Appearance.Options.UseBackColor = true;
@@ -379,7 +379,7 @@
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl5.Location = new System.Drawing.Point(10, 151);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(85, 19);
             this.labelControl5.TabIndex = 14;
@@ -390,7 +390,7 @@
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl3.Location = new System.Drawing.Point(26, 83);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(70, 19);
             this.labelControl3.TabIndex = 19;
@@ -399,10 +399,10 @@
             // grdPozList
             // 
             this.grdPozList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdPozList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdPozList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdPozList.Location = new System.Drawing.Point(526, 110);
             this.grdPozList.MainView = this.gridViewPozList;
-            this.grdPozList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdPozList.Margin = new System.Windows.Forms.Padding(4);
             this.grdPozList.Name = "grdPozList";
             this.grdPozList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGncelle,
@@ -735,7 +735,7 @@
             // txtSearchDescription
             // 
             this.txtSearchDescription.Location = new System.Drawing.Point(8, 37);
-            this.txtSearchDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchDescription.Name = "txtSearchDescription";
             this.txtSearchDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSearchDescription.Properties.Appearance.Options.UseBackColor = true;
@@ -748,7 +748,7 @@
             // txtSearchNumber
             // 
             this.txtSearchNumber.Location = new System.Drawing.Point(4, 38);
-            this.txtSearchNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchNumber.Name = "txtSearchNumber";
             this.txtSearchNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSearchNumber.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -796,7 +796,7 @@
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton2.Location = new System.Drawing.Point(431, 35);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(50, 31);
             this.simpleButton2.TabIndex = 28;
@@ -829,7 +829,7 @@
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton1.Location = new System.Drawing.Point(199, 35);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(50, 31);
             this.simpleButton1.TabIndex = 27;
@@ -856,7 +856,7 @@
             this.ddlPozYear.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.ddlPozYear, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.ddlPozYear.Location = new System.Drawing.Point(3, 35);
-            this.ddlPozYear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ddlPozYear.Margin = new System.Windows.Forms.Padding(4);
             this.ddlPozYear.Name = "ddlPozYear";
             this.ddlPozYear.Properties.AccessibleDescription = "Name";
             this.ddlPozYear.Properties.AccessibleName = "Id";
@@ -944,7 +944,7 @@
             this.Controls.Add(this.panelControl1);
             this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_PozListesi";
