@@ -106,7 +106,7 @@
             this.lblPozno.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblPozno.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblPozno.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblPozno.Location = new System.Drawing.Point(122, 46);
+            this.lblPozno.Location = new System.Drawing.Point(122, 63);
             this.lblPozno.Name = "lblPozno";
             this.lblPozno.Size = new System.Drawing.Size(174, 30);
             this.lblPozno.TabIndex = 20;
@@ -118,9 +118,9 @@
             this.lblAciklama.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblAciklama.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblAciklama.Location = new System.Drawing.Point(122, 91);
+            this.lblAciklama.Location = new System.Drawing.Point(122, 108);
             this.lblAciklama.Name = "lblAciklama";
-            this.lblAciklama.Size = new System.Drawing.Size(860, 66);
+            this.lblAciklama.Size = new System.Drawing.Size(860, 30);
             this.lblAciklama.TabIndex = 21;
             // 
             // lblBirim
@@ -130,7 +130,7 @@
             this.lblBirim.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblBirim.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblBirim.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblBirim.Location = new System.Drawing.Point(122, 172);
+            this.lblBirim.Location = new System.Drawing.Point(122, 153);
             this.lblBirim.Name = "lblBirim";
             this.lblBirim.Size = new System.Drawing.Size(174, 30);
             this.lblBirim.TabIndex = 22;
@@ -142,7 +142,7 @@
             this.lblBirimFiyat.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblBirimFiyat.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblBirimFiyat.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblBirimFiyat.Location = new System.Drawing.Point(122, 217);
+            this.lblBirimFiyat.Location = new System.Drawing.Point(122, 198);
             this.lblBirimFiyat.Name = "lblBirimFiyat";
             this.lblBirimFiyat.Size = new System.Drawing.Size(174, 30);
             this.lblBirimFiyat.TabIndex = 23;
@@ -232,7 +232,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(52, 48);
+            this.labelControl2.Location = new System.Drawing.Point(52, 65);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(56, 19);
@@ -243,7 +243,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Location = new System.Drawing.Point(61, 175);
+            this.labelControl4.Location = new System.Drawing.Point(61, 156);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(47, 19);
@@ -254,7 +254,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl5.Location = new System.Drawing.Point(24, 222);
+            this.labelControl5.Location = new System.Drawing.Point(24, 203);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(85, 19);
@@ -265,7 +265,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl3.Location = new System.Drawing.Point(39, 95);
+            this.labelControl3.Location = new System.Drawing.Point(39, 112);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(70, 19);
