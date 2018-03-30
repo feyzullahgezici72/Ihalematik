@@ -39,10 +39,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.loading;
-            this.pictureBox1.Location = new System.Drawing.Point(199, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(396, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 134);
+            this.pictureBox1.Size = new System.Drawing.Size(224, 196);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -52,10 +51,9 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl1.Location = new System.Drawing.Point(52, 97);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl1.Location = new System.Drawing.Point(12, 141);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(102, 14);
+            this.labelControl1.Size = new System.Drawing.Size(138, 22);
             this.labelControl1.TabIndex = 9;
             this.labelControl1.Text = "Lütfen Bekleyiniz...";
             // 
@@ -66,20 +64,18 @@
             this.lblYukleniyor.Appearance.ForeColor = System.Drawing.Color.SteelBlue;
             this.lblYukleniyor.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.lblYukleniyor.LineColor = System.Drawing.Color.Red;
-            this.lblYukleniyor.Location = new System.Drawing.Point(8, 16);
-            this.lblYukleniyor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblYukleniyor.Location = new System.Drawing.Point(12, 34);
             this.lblYukleniyor.Name = "lblYukleniyor";
-            this.lblYukleniyor.Size = new System.Drawing.Size(121, 33);
+            this.lblYukleniyor.Size = new System.Drawing.Size(177, 49);
             this.lblYukleniyor.TabIndex = 10;
             this.lblYukleniyor.Text = "Yükleniyor";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::IhalematikProUI.Properties.Resources.loading_bar_gif_1;
-            this.pictureBox2.Location = new System.Drawing.Point(-84, 53);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(-207, 75);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(372, 140);
+            this.pictureBox2.Size = new System.Drawing.Size(777, 205);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
@@ -88,9 +84,9 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 152);
+            this.ClientSize = new System.Drawing.Size(632, 222);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelControl1);
@@ -99,6 +95,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.LookAndFeel.SkinName = "McSkin";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frm_wait";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
