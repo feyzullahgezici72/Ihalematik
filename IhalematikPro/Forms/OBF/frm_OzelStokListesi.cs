@@ -288,11 +288,11 @@ namespace IhalematikPro.Forms
 
             if (!string.IsNullOrEmpty(obfNo))
             {
-                items = items.Where(p => p.StokNumber.Contains(obfNo)).ToList();
+                items = items.Where(p => p.StokNumber.ToLower().Contains(obfNo.ToLower())).ToList();
             }
             if (!string.IsNullOrEmpty(obfDesc))
             {
-                items = items.Where(p => p.Description.Contains(obfDesc)).ToList();
+                items = items.Where(p => p.Description.ToLower().Contains(obfDesc.ToLower())).ToList();
             }
 
             grdOBFList.DataSource = null;

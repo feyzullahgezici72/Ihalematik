@@ -156,12 +156,12 @@ namespace IhalematikPro.Forms
 
             if (!string.IsNullOrEmpty(tenderNumber))
             {
-                list = list.Where(p => p.Number.ToString().Contains(tenderNumber)).ToList();
+                list = list.Where(p => p.Number.ToString().ToLower().Contains(tenderNumber.ToLower())).ToList();
             }
 
             if (!string.IsNullOrEmpty(tenderDescription))
             {
-                list = list.Where(p => p.Description.ToString().Contains(tenderDescription)).ToList();
+                list = list.Where(p => p.Description.ToString().ToLower().Contains(tenderDescription.ToLower())).ToList();
             }
 
             grdActiveTenderList.DataSource = list.OrderByDescending(p => p.InsertTime).ToList();
@@ -190,12 +190,12 @@ namespace IhalematikPro.Forms
 
             if (!string.IsNullOrEmpty(tenderNumber))
             {
-                list = list.Where(p => p.Number.ToString().Contains(tenderNumber)).ToList();
+                list = list.Where(p => p.Number.ToString().ToLower().Contains(tenderNumber.ToLower())).ToList();
             }
 
             if (!string.IsNullOrEmpty(tenderDescription))
             {
-                list = list.Where(p => p.Description.ToString().Contains(tenderDescription)).ToList();
+                list = list.Where(p => p.Description.ToString().ToLower().Contains(tenderDescription.ToLower())).ToList();
             }
 
             grdActiveTenderList.DataSource = list.OrderByDescending(p => p.InsertTime).ToList();

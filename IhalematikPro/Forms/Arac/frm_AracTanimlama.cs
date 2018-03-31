@@ -367,7 +367,7 @@ namespace IhalematikPro.Forms
             List<VehicleModel> models = IhalematikModelBase.GetModels<VehicleModel, Vehicle>(items);
             if (!string.IsNullOrEmpty(txtVehicleTitle.Text.Trim()))
             {
-                models = models.Where(p => p.Title.Name.Contains(txtVehicleTitle.Text.Trim())).ToList();
+                models = models.Where(p => p.Title.Name.ToLower().Contains(txtVehicleTitle.Text.Trim().ToLower())).ToList();
             }
             if (cmbAktivePasive.SelectedIndex == 0)
             {
