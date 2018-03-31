@@ -265,8 +265,11 @@ namespace IhalematikPro.Forms
 
         private void ddlPozYear_SelectedIndexChanged(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            LoadingManager.Instance.Show(this);
             this.LoadPozGrid();
-
+            LoadingManager.Instance.Hide();
+            this.Enabled = true;
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
