@@ -99,7 +99,7 @@ namespace IhalematikPro.Forms
             List<WorkerModel> models = UIWorkerManager.Instance.GetWorkers();
             if (!string.IsNullOrEmpty(txtWorkerTitle.Text.Trim()))
             {
-                models = models.Where(p => p.Title.Name.Contains(txtWorkerTitle.Text.Trim())).ToList();
+                models = models.Where(p => p.Title.Name.ToLower().Contains(txtWorkerTitle.Text.Trim().ToLower())).ToList();
             }
             if (cmbAktivePasive.SelectedIndex == 0)
             {

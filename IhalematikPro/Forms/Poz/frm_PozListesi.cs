@@ -234,11 +234,11 @@ namespace IhalematikPro.Forms
 
             if (!string.IsNullOrEmpty(pozNo))
             {
-                items = items.Where(p => p.Number.Contains(pozNo)).ToList();
+                items = items.Where(p => p.Number.ToLower().Contains(pozNo.ToLower())).ToList();
             }
             if (!string.IsNullOrEmpty(pozDesc))
             {
-                items = items.Where(p => p.Description.Contains(pozDesc)).ToList();
+                items = items.Where(p => p.Description.ToLower().Contains(pozDesc.ToLower())).ToList();
             }
 
             grdPozList.DataSource = null;
