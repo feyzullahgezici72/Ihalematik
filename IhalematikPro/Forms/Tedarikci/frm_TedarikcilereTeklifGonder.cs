@@ -347,5 +347,11 @@ namespace IhalematikProUI.Forms.Tedarikci
                 okf.ShowDialog();
             }
         }
+
+        private void btnExelAl_Click(object sender, EventArgs e)
+        {
+            frm_PozOrObf pozobf = new frm_PozOrObf();
+            pozobf.ShowDialog();
+        }
     }
 }

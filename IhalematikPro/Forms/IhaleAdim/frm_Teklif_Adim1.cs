@@ -324,5 +324,11 @@ namespace IhalematikPro.Forms
             frm_IhaleGrup ig = new frm_IhaleGrup(this);
             ig.ShowDialog();
         }
+
+        private void btnExceldenAl_Click(object sender, EventArgs e)
+        {
+            frm_PozOrObfIhale pozorobf = new frm_PozOrObfIhale();
+            pozorobf.ShowDialog();
+        }
     }
 }

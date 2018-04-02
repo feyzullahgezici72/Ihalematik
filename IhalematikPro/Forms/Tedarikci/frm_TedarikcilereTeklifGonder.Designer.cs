@@ -72,8 +72,9 @@
             this.pnlGonderilecekListe = new DevExpress.XtraEditors.PanelControl();
             this.btnGonderilenMalzemeListesi = new DevExpress.XtraEditors.SimpleButton();
             this.pnlobfpozButtonpanel = new System.Windows.Forms.Panel();
-            this.btnObfKayit = new DevExpress.XtraEditors.SimpleButton();
             this.btnPozKayit = new DevExpress.XtraEditors.SimpleButton();
+            this.btnObfKayit = new DevExpress.XtraEditors.SimpleButton();
+            this.btnExelAl = new DevExpress.XtraEditors.SimpleButton();
             this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.lblTenderNumber = new DevExpress.XtraEditors.LabelControl();
@@ -178,7 +179,7 @@
             this.panelControl1.Controls.Add(this.txtAdimAciklama);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1370, 35);
             this.panelControl1.TabIndex = 20;
@@ -203,7 +204,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1342, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(9);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 3;
@@ -219,7 +220,7 @@
             this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
             this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.txtAdimAciklama.Location = new System.Drawing.Point(52, 1);
-            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
             this.txtAdimAciklama.Size = new System.Drawing.Size(579, 35);
@@ -241,18 +242,19 @@
             this.pnlUst.Controls.Add(this.labelControl1);
             this.pnlUst.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUst.Location = new System.Drawing.Point(0, 35);
-            this.pnlUst.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pnlUst.Margin = new System.Windows.Forms.Padding(6);
             this.pnlUst.Name = "pnlUst";
             this.pnlUst.Size = new System.Drawing.Size(1370, 70);
             this.pnlUst.TabIndex = 21;
             // 
             // pnlGonderilecekListe
             // 
+            this.pnlGonderilecekListe.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pnlGonderilecekListe.Controls.Add(this.btnGonderilenMalzemeListesi);
             this.pnlGonderilecekListe.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlGonderilecekListe.Location = new System.Drawing.Point(751, 3);
+            this.pnlGonderilecekListe.Location = new System.Drawing.Point(598, 3);
             this.pnlGonderilecekListe.Name = "pnlGonderilecekListe";
-            this.pnlGonderilecekListe.Size = new System.Drawing.Size(290, 64);
+            this.pnlGonderilecekListe.Size = new System.Drawing.Size(282, 64);
             this.pnlGonderilecekListe.TabIndex = 12;
             this.pnlGonderilecekListe.Visible = false;
             // 
@@ -262,13 +264,13 @@
             this.btnGonderilenMalzemeListesi.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnGonderilenMalzemeListesi.Appearance.Options.UseFont = true;
             this.btnGonderilenMalzemeListesi.Appearance.Options.UseForeColor = true;
-            this.btnGonderilenMalzemeListesi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnGonderilenMalzemeListesi.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnGonderilenMalzemeListesi.Image = ((System.Drawing.Image)(resources.GetObject("btnGonderilenMalzemeListesi.Image")));
             this.btnGonderilenMalzemeListesi.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnGonderilenMalzemeListesi.Location = new System.Drawing.Point(3, 3);
-            this.btnGonderilenMalzemeListesi.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.btnGonderilenMalzemeListesi.Location = new System.Drawing.Point(7, 0);
+            this.btnGonderilenMalzemeListesi.Margin = new System.Windows.Forms.Padding(9);
             this.btnGonderilenMalzemeListesi.Name = "btnGonderilenMalzemeListesi";
-            this.btnGonderilenMalzemeListesi.Size = new System.Drawing.Size(284, 58);
+            this.btnGonderilenMalzemeListesi.Size = new System.Drawing.Size(275, 64);
             toolTipTitleItem1.Text = "GÖNDERİLECEKLER";
             toolTipItem1.Appearance.Options.UseImage = true;
             toolTipItem1.LeftIndent = 6;
@@ -276,45 +278,22 @@
             superToolTip1.Items.Add(toolTipTitleItem1);
             superToolTip1.Items.Add(toolTipItem1);
             this.btnGonderilenMalzemeListesi.SuperTip = superToolTip1;
-            this.btnGonderilenMalzemeListesi.TabIndex = 9;
+            this.btnGonderilenMalzemeListesi.TabIndex = 53;
             this.btnGonderilenMalzemeListesi.Text = "Gönderilecek Malzeme Listesi";
             this.btnGonderilenMalzemeListesi.Click += new System.EventHandler(this.btnGonderilenMalzemeListesi_Click);
             // 
             // pnlobfpozButtonpanel
             // 
             this.pnlobfpozButtonpanel.BackColor = System.Drawing.Color.Transparent;
-            this.pnlobfpozButtonpanel.Controls.Add(this.btnObfKayit);
             this.pnlobfpozButtonpanel.Controls.Add(this.btnPozKayit);
+            this.pnlobfpozButtonpanel.Controls.Add(this.btnObfKayit);
+            this.pnlobfpozButtonpanel.Controls.Add(this.btnExelAl);
             this.pnlobfpozButtonpanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlobfpozButtonpanel.Location = new System.Drawing.Point(1041, 3);
+            this.pnlobfpozButtonpanel.Location = new System.Drawing.Point(880, 3);
             this.pnlobfpozButtonpanel.Margin = new System.Windows.Forms.Padding(14, 13, 14, 13);
             this.pnlobfpozButtonpanel.Name = "pnlobfpozButtonpanel";
-            this.pnlobfpozButtonpanel.Size = new System.Drawing.Size(326, 64);
+            this.pnlobfpozButtonpanel.Size = new System.Drawing.Size(487, 64);
             this.pnlobfpozButtonpanel.TabIndex = 11;
-            // 
-            // btnObfKayit
-            // 
-            this.btnObfKayit.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnObfKayit.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.btnObfKayit.Appearance.Options.UseFont = true;
-            this.btnObfKayit.Appearance.Options.UseForeColor = true;
-            this.btnObfKayit.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
-            this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnObfKayit.Location = new System.Drawing.Point(160, 0);
-            this.btnObfKayit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.btnObfKayit.Name = "btnObfKayit";
-            this.btnObfKayit.Size = new System.Drawing.Size(160, 64);
-            toolTipTitleItem2.Text = "ÖBF";
-            toolTipItem2.Appearance.Options.UseImage = true;
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "ÖBF\'den Malzeme listesi seçin";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            this.btnObfKayit.SuperTip = superToolTip2;
-            this.btnObfKayit.TabIndex = 5;
-            this.btnObfKayit.Text = "F2 : Ö&BF Seç";
-            this.btnObfKayit.Click += new System.EventHandler(this.btnObfKayit_Click);
             // 
             // btnPozKayit
             // 
@@ -322,30 +301,68 @@
             this.btnPozKayit.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnPozKayit.Appearance.Options.UseFont = true;
             this.btnPozKayit.Appearance.Options.UseForeColor = true;
-            this.btnPozKayit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnPozKayit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnPozKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnPozKayit.Image")));
             this.btnPozKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnPozKayit.Location = new System.Drawing.Point(0, 0);
-            this.btnPozKayit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnPozKayit.Location = new System.Drawing.Point(7, 0);
+            this.btnPozKayit.Margin = new System.Windows.Forms.Padding(6);
             this.btnPozKayit.Name = "btnPozKayit";
             this.btnPozKayit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnPozKayit.Size = new System.Drawing.Size(160, 64);
-            toolTipTitleItem3.Text = "POZ";
-            toolTipItem3.Appearance.Options.UseImage = true;
-            toolTipItem3.LeftIndent = 6;
-            toolTipItem3.Text = "Poz Listesinden Malzeme seçin";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            superToolTip3.Items.Add(toolTipItem3);
-            this.btnPozKayit.SuperTip = superToolTip3;
-            this.btnPozKayit.TabIndex = 5;
+            toolTipTitleItem2.Text = "POZ";
+            toolTipItem2.Appearance.Options.UseImage = true;
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Poz Listesinden Malzeme seçin";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.btnPozKayit.SuperTip = superToolTip2;
+            this.btnPozKayit.TabIndex = 50;
             this.btnPozKayit.Text = "F1 : &Poz Seç";
             this.btnPozKayit.Click += new System.EventHandler(this.btnPozKayit_Click);
+            // 
+            // btnObfKayit
+            // 
+            this.btnObfKayit.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnObfKayit.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.btnObfKayit.Appearance.Options.UseFont = true;
+            this.btnObfKayit.Appearance.Options.UseForeColor = true;
+            this.btnObfKayit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
+            this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnObfKayit.Location = new System.Drawing.Point(167, 0);
+            this.btnObfKayit.Margin = new System.Windows.Forms.Padding(6);
+            this.btnObfKayit.Name = "btnObfKayit";
+            this.btnObfKayit.Size = new System.Drawing.Size(160, 64);
+            toolTipTitleItem3.Text = "ÖBF";
+            toolTipItem3.Appearance.Options.UseImage = true;
+            toolTipItem3.LeftIndent = 6;
+            toolTipItem3.Text = "ÖBF\'den Malzeme listesi seçin";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            superToolTip3.Items.Add(toolTipItem3);
+            this.btnObfKayit.SuperTip = superToolTip3;
+            this.btnObfKayit.TabIndex = 48;
+            this.btnObfKayit.Text = "F2 : Ö&BF Seç";
+            this.btnObfKayit.Click += new System.EventHandler(this.btnObfKayit_Click);
+            // 
+            // btnExelAl
+            // 
+            this.btnExelAl.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExelAl.Appearance.Options.UseFont = true;
+            this.btnExelAl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExelAl.Image = ((System.Drawing.Image)(resources.GetObject("btnExelAl.Image")));
+            this.btnExelAl.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnExelAl.Location = new System.Drawing.Point(327, 0);
+            this.btnExelAl.Name = "btnExelAl";
+            this.btnExelAl.Size = new System.Drawing.Size(160, 64);
+            this.btnExelAl.TabIndex = 47;
+            this.btnExelAl.Text = "&Excelden Al";
+            this.btnExelAl.Click += new System.EventHandler(this.btnExelAl_Click);
             // 
             // lblTenderDescription
             // 
             this.lblTenderDescription.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTenderDescription.Location = new System.Drawing.Point(102, 39);
-            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderDescription.Name = "lblTenderDescription";
             this.lblTenderDescription.Size = new System.Drawing.Size(0, 19);
             this.lblTenderDescription.TabIndex = 10;
@@ -355,7 +372,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl2.Location = new System.Drawing.Point(15, 39);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(79, 19);
             this.labelControl2.TabIndex = 9;
@@ -365,7 +382,7 @@
             // 
             this.lblTenderNumber.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTenderNumber.Location = new System.Drawing.Point(102, 13);
-            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderNumber.Name = "lblTenderNumber";
             this.lblTenderNumber.Size = new System.Drawing.Size(0, 19);
             this.lblTenderNumber.TabIndex = 8;
@@ -374,7 +391,7 @@
             // 
             this.lblOfferDescription.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblOfferDescription.Location = new System.Drawing.Point(102, 39);
-            this.lblOfferDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblOfferDescription.Margin = new System.Windows.Forms.Padding(4);
             this.lblOfferDescription.Name = "lblOfferDescription";
             this.lblOfferDescription.Size = new System.Drawing.Size(0, 19);
             this.lblOfferDescription.TabIndex = 7;
@@ -384,7 +401,7 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl1.Location = new System.Drawing.Point(15, 13);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(77, 19);
             this.labelControl1.TabIndex = 6;
@@ -426,7 +443,7 @@
             this.btnTedarikciListesi.Image = ((System.Drawing.Image)(resources.GetObject("btnTedarikciListesi.Image")));
             this.btnTedarikciListesi.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnTedarikciListesi.Location = new System.Drawing.Point(3, 163);
-            this.btnTedarikciListesi.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.btnTedarikciListesi.Margin = new System.Windows.Forms.Padding(9);
             this.btnTedarikciListesi.Name = "btnTedarikciListesi";
             this.btnTedarikciListesi.Size = new System.Drawing.Size(250, 80);
             toolTipTitleItem4.Text = "MAİL GÖNDER";
@@ -450,7 +467,7 @@
             this.btnTedaikcileregonder.Image = ((System.Drawing.Image)(resources.GetObject("btnTedaikcileregonder.Image")));
             this.btnTedaikcileregonder.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnTedaikcileregonder.Location = new System.Drawing.Point(3, 83);
-            this.btnTedaikcileregonder.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.btnTedaikcileregonder.Margin = new System.Windows.Forms.Padding(9);
             this.btnTedaikcileregonder.Name = "btnTedaikcileregonder";
             this.btnTedaikcileregonder.Size = new System.Drawing.Size(250, 80);
             toolTipTitleItem5.Text = "AKTAR";
@@ -474,7 +491,7 @@
             this.btnListeOlustur.Image = ((System.Drawing.Image)(resources.GetObject("btnListeOlustur.Image")));
             this.btnListeOlustur.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnListeOlustur.Location = new System.Drawing.Point(3, 3);
-            this.btnListeOlustur.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.btnListeOlustur.Margin = new System.Windows.Forms.Padding(9);
             this.btnListeOlustur.Name = "btnListeOlustur";
             this.btnListeOlustur.Size = new System.Drawing.Size(250, 80);
             toolTipTitleItem6.Text = "LİSTE";
@@ -520,7 +537,7 @@
             this.pnlAktarmaPaneli.Controls.Add(this.btnTumunuAktar);
             this.pnlAktarmaPaneli.Controls.Add(this.btnAktar);
             this.pnlAktarmaPaneli.Location = new System.Drawing.Point(686, 4);
-            this.pnlAktarmaPaneli.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlAktarmaPaneli.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAktarmaPaneli.Name = "pnlAktarmaPaneli";
             this.pnlAktarmaPaneli.Size = new System.Drawing.Size(104, 864);
             this.pnlAktarmaPaneli.TabIndex = 35;
@@ -532,7 +549,7 @@
             this.btnTumunuAktar.Image = ((System.Drawing.Image)(resources.GetObject("btnTumunuAktar.Image")));
             this.btnTumunuAktar.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnTumunuAktar.Location = new System.Drawing.Point(6, 422);
-            this.btnTumunuAktar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTumunuAktar.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumunuAktar.Name = "btnTumunuAktar";
             this.btnTumunuAktar.Size = new System.Drawing.Size(93, 91);
             toolTipTitleItem7.Text = "MALZEME AKTAR";
@@ -553,7 +570,7 @@
             this.btnAktar.Image = ((System.Drawing.Image)(resources.GetObject("btnAktar.Image")));
             this.btnAktar.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnAktar.Location = new System.Drawing.Point(6, 329);
-            this.btnAktar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAktar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAktar.Name = "btnAktar";
             this.btnAktar.Size = new System.Drawing.Size(93, 86);
             toolTipTitleItem8.Text = "MALZEME AKTAR";
@@ -572,7 +589,7 @@
             this.pnlMalzemeListesi.Controls.Add(this.grdMaterialList);
             this.pnlMalzemeListesi.Controls.Add(this.panelControl6);
             this.pnlMalzemeListesi.Location = new System.Drawing.Point(14, 10);
-            this.pnlMalzemeListesi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlMalzemeListesi.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMalzemeListesi.Name = "pnlMalzemeListesi";
             this.pnlMalzemeListesi.Size = new System.Drawing.Size(669, 590);
             this.pnlMalzemeListesi.TabIndex = 32;
@@ -580,11 +597,11 @@
             // grdMaterialList
             // 
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grdMaterialList.Location = new System.Drawing.Point(3, 28);
             this.grdMaterialList.MainView = this.gridViewMaterialList;
-            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnChangeMeterialName,
@@ -969,7 +986,7 @@
             this.pnlFirma.Controls.Add(this.grdSupplier);
             this.pnlFirma.Controls.Add(this.panelControl7);
             this.pnlFirma.Location = new System.Drawing.Point(796, 13);
-            this.pnlFirma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlFirma.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFirma.Name = "pnlFirma";
             this.pnlFirma.Size = new System.Drawing.Size(712, 588);
             this.pnlFirma.TabIndex = 34;
@@ -978,10 +995,10 @@
             // grdSupplier
             // 
             this.grdSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdSupplier.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdSupplier.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdSupplier.Location = new System.Drawing.Point(3, 28);
             this.grdSupplier.MainView = this.gridViewSupplier;
-            this.grdSupplier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.grdSupplier.Name = "grdSupplier";
             this.grdSupplier.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstSupplierDetail1,
@@ -1307,8 +1324,6 @@
         private DevExpress.XtraEditors.LabelControl lblTenderNumber;
         private DevExpress.XtraEditors.LabelControl lblOfferDescription;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.SimpleButton btnPozKayit;
-        private DevExpress.XtraEditors.SimpleButton btnObfKayit;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private System.Windows.Forms.Panel pnlobfpozButtonpanel;
@@ -1316,8 +1331,6 @@
         public DevExpress.XtraEditors.SimpleButton btnListeOlustur;
         public DevExpress.XtraEditors.SimpleButton btnTedarikciListesi;
         public DevExpress.XtraEditors.SimpleButton btnTedaikcileregonder;
-        private DevExpress.XtraEditors.PanelControl pnlGonderilecekListe;
-        public DevExpress.XtraEditors.SimpleButton btnGonderilenMalzemeListesi;
         private DevExpress.XtraEditors.PanelControl pnlx;
         private DevExpress.XtraEditors.PanelControl pnlAktarmaPaneli;
         private DevExpress.XtraEditors.SimpleButton btnAktar;
@@ -1354,5 +1367,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMaterialListPozOBFId;
         private DevExpress.XtraEditors.SimpleButton btnTumunuAktar;
         private DevExpress.XtraEditors.SimpleButton btnExcel;
+        private DevExpress.XtraEditors.SimpleButton btnExelAl;
+        private DevExpress.XtraEditors.SimpleButton btnPozKayit;
+        private DevExpress.XtraEditors.SimpleButton btnObfKayit;
+        private DevExpress.XtraEditors.PanelControl pnlGonderilecekListe;
+        public DevExpress.XtraEditors.SimpleButton btnGonderilenMalzemeListesi;
     }
 }

@@ -176,6 +176,7 @@ namespace IhalematikPro.Forms
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.barButtonItem45 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem46 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem47 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -342,10 +343,11 @@ namespace IhalematikPro.Forms
             this.barButtonItem44,
             this.skinRibbonGalleryBarItem1,
             this.barButtonItem45,
-            this.barButtonItem46});
+            this.barButtonItem46,
+            this.barButtonItem47});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 76;
+            this.ribbon.MaxItemId = 77;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsTouch.AffectOnlyRibbon = true;
             this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem1);
@@ -1340,6 +1342,12 @@ namespace IhalematikPro.Forms
             this.barButtonItem46.Name = "barButtonItem46";
             this.barButtonItem46.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem46_ItemClick);
             // 
+            // barButtonItem47
+            // 
+            this.barButtonItem47.Caption = "barButtonItem47";
+            this.barButtonItem47.Id = 76;
+            this.barButtonItem47.Name = "barButtonItem47";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Appearance.BackColor = System.Drawing.Color.Gray;
@@ -2024,6 +2032,7 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraEditors.StyleController styleController1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem46;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup22;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem47;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }

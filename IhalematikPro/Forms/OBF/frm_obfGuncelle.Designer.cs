@@ -265,8 +265,6 @@
             this.txtDescriptionForSupplier.Location = new System.Drawing.Point(112, 126);
             this.txtDescriptionForSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescriptionForSupplier.Name = "txtDescriptionForSupplier";
-            this.txtDescriptionForSupplier.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txtDescriptionForSupplier.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtDescriptionForSupplier.Size = new System.Drawing.Size(666, 111);
             toolTipTitleItem3.Text = "AÇIKLAMA";
             toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));

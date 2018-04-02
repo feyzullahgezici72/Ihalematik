@@ -54,6 +54,7 @@ namespace IhalematikProUI.Forms
                 txtUnitPrice.Text = this.CurrentOBF.UnitPrice.ToString();
                 txtDescriptionForSupplier.Text = this.CurrentOBF.DescriptionForSupplier;
             }
+            txtDescriptionForSupplier.Text = txtDescription.Text;
         }
         public bool IsEmptyKontrol()
         {

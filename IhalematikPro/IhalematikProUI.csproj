@@ -282,6 +282,36 @@
     <Compile Include="Forms\Genel\frm_PozlariOnlineGuncelle.Designer.cs">
       <DependentUpon>frm_PozlariOnlineGuncelle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_PozOrObfIhale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_PozOrObfIhale.Designer.cs">
+      <DependentUpon>frm_PozOrObfIhale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_TopluObfYukleIhale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_TopluObfYukleIhale.Designer.cs">
+      <DependentUpon>frm_TopluObfYukleIhale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_TopluObfIhaleTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_TopluObfIhaleTemp.Designer.cs">
+      <DependentUpon>frm_TopluObfIhaleTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_TopluPozIhaleTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_TopluPozIhaleTemp.Designer.cs">
+      <DependentUpon>frm_TopluPozIhaleTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_TopluPozYukleIhale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IhaleAdim\frm_TopluPozYukleIhale.Designer.cs">
+      <DependentUpon>frm_TopluPozYukleIhale.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\OBF\frm_TopluObfTemp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -444,6 +474,12 @@
     <Compile Include="Forms\Tedarikci\frm_GonderilecekMalzemeListesi.Designer.cs">
       <DependentUpon>frm_GonderilecekMalzemeListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tedarikci\frm_PozOrObf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tedarikci\frm_PozOrObf.Designer.cs">
+      <DependentUpon>frm_PozOrObf.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tedarikci\frm_TedarikcilereMailleGonderilenMalzemeDetayi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -600,6 +636,30 @@
     <Compile Include="Forms\IhaleAdim\frm_YeniIhaleYarat.Designer.cs">
       <DependentUpon>frm_YeniIhaleYarat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TopluObfEkleTedarikci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TopluObfEkleTedarikci.Designer.cs">
+      <DependentUpon>frm_TopluObfEkleTedarikci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TopluObfTedarikciTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TopluObfTedarikciTemp.Designer.cs">
+      <DependentUpon>frm_TopluObfTedarikciTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TopluPozTedarikciTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TopluPozTedarikciTemp.Designer.cs">
+      <DependentUpon>frm_TopluPozTedarikciTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TopluPozYukleTedarikci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tedarikci\frm_TopluPozYukleTedarikci.Designer.cs">
+      <DependentUpon>frm_TopluPozYukleTedarikci.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tedarikci\frm_YeniTeklifOlustur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -708,6 +768,21 @@
     <EmbeddedResource Include="Forms\Genel\frm_PozlariOnlineGuncelle.resx">
       <DependentUpon>frm_PozlariOnlineGuncelle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IhaleAdim\frm_PozOrObfIhale.resx">
+      <DependentUpon>frm_PozOrObfIhale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IhaleAdim\frm_TopluObfYukleIhale.resx">
+      <DependentUpon>frm_TopluObfYukleIhale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IhaleAdim\frm_TopluObfIhaleTemp.resx">
+      <DependentUpon>frm_TopluObfIhaleTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IhaleAdim\frm_TopluPozIhaleTemp.resx">
+      <DependentUpon>frm_TopluPozIhaleTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IhaleAdim\frm_TopluPozYukleIhale.resx">
+      <DependentUpon>frm_TopluPozYukleIhale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\OBF\frm_TopluObfTemp.resx">
       <DependentUpon>frm_TopluObfTemp.cs</DependentUpon>
     </EmbeddedResource>
@@ -789,6 +864,9 @@
     <EmbeddedResource Include="Forms\Tedarikci\frm_GonderilecekMalzemeListesi.resx">
       <DependentUpon>frm_GonderilecekMalzemeListesi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tedarikci\frm_PozOrObf.resx">
+      <DependentUpon>frm_PozOrObf.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_TedarikcilereMailleGonderilenMalzemeDetayi.resx">
       <DependentUpon>frm_TedarikcilereMailleGonderilenMalzemeDetayi.cs</DependentUpon>
     </EmbeddedResource>
@@ -866,6 +944,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IhaleAdim\frm_YeniIhaleYarat.resx">
       <DependentUpon>frm_YeniIhaleYarat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tedarikci\frm_TopluObfEkleTedarikci.resx">
+      <DependentUpon>frm_TopluObfEkleTedarikci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tedarikci\frm_TopluObfTedarikciTemp.resx">
+      <DependentUpon>frm_TopluObfTedarikciTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tedarikci\frm_TopluPozTedarikciTemp.resx">
+      <DependentUpon>frm_TopluPozTedarikciTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tedarikci\frm_TopluPozYukleTedarikci.resx">
+      <DependentUpon>frm_TopluPozYukleTedarikci.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_YeniTeklifOlustur.resx">
       <DependentUpon>frm_YeniTeklifOlustur.cs</DependentUpon>
