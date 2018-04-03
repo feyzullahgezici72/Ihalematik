@@ -88,64 +88,65 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                 stokKodu = stokKodudouble.ToString();
                             }
                             string description = excelReader.GetString(1);
-                            string unit = excelReader.GetString(2);
-                            double unitPrice = 0;
-                            try
+                            if (!string.IsNullOrEmpty(stokKodu) && !string.IsNullOrEmpty(description))
                             {
-                                unitPrice = excelReader.GetDouble(3);
-                            }
-                            catch (Exception)
-                            {
-                                //unitPrice = double.Parse(excelReader.GetString(2), CultureInfo.InvariantCulture);
-                            }
+                                string unit = excelReader.GetString(2);
+                                double unitPrice = 0;
+                                try
+                                {
+                                    unitPrice = excelReader.GetDouble(3);
+                                }
+                                catch (Exception)
+                                {
+                                    //unitPrice = double.Parse(excelReader.GetString(2), CultureInfo.InvariantCulture);
+                                }
 
-                            IhalematikProBL.Entity.OBF existingObf = OBFProvider.Instance.GetOne("Description", description);
-                            if (existingObf != null)
-                            {
-                                obfId = existingObf.Id;
-                                //OBFProvider.Instance.Save(existingObf);
-                            }
-                            else
-                            {
-                                IhalematikProBL.Entity.OBF obf = new IhalematikProBL.Entity.OBF();
-                                int lastTenderNumber = UIOBFManager.Instance.GetLastOBFNumber();
-                                obf.Number = string.Format("{0}", (lastTenderNumber + 1).ToString().PadLeft(8, '0'));
-                                obf.StokNumber = stokKodu;
-                                obf.Description = description;
-                                obf.Unit = unit;
-                                obf.UnitPrice = 0;
-                                obf.IsActive = true;
-                                OBFProvider.Instance.Save(obf);
-                                obfId = obf.Id;
-                                lblobfno.Text = obf.Number;
-                                lblAciklama.Text = obf.Description;
-                                lblBirim.Text = obf.Unit;
-                                lblBirimFiyat.Text = obf.UnitPrice.ToString();
-                                lblPosSayisi.Text = i.ToString();
-                            }
+                                IhalematikProBL.Entity.OBF existingObf = OBFProvider.Instance.GetOne("Description", description);
+                                if (existingObf != null)
+                                {
+                                    obfId = existingObf.Id;
+                                    //OBFProvider.Instance.Save(existingObf);
+                                }
+                                else
+                                {
+                                    IhalematikProBL.Entity.OBF obf = new IhalematikProBL.Entity.OBF();
+                                    int lastTenderNumber = UIOBFManager.Instance.GetLastOBFNumber();
+                                    obf.Number = string.Format("{0}", (lastTenderNumber + 1).ToString().PadLeft(8, '0'));
+                                    obf.StokNumber = stokKodu;
+                                    obf.Description = description;
+                                    obf.Unit = unit;
+                                    obf.UnitPrice = 0;
+                                    obf.IsActive = true;
+                                    OBFProvider.Instance.Save(obf);
+                                    obfId = obf.Id;
+                                    lblobfno.Text = obf.Number;
+                                    lblAciklama.Text = obf.Description;
+                                    lblBirim.Text = obf.Unit;
+                                    lblBirimFiyat.Text = obf.UnitPrice.ToString();
+                                    lblPosSayisi.Text = i.ToString();
+                                }
 
-                            double quantity = 0;
-                            try
-                            {
-                                quantity = excelReader.GetDouble(3);
-                            }
-                            catch (Exception ex)
-                            {
+                                double quantity = 0;
+                                try
+                                {
+                                    quantity = excelReader.GetDouble(3);
+                                }
+                                catch (Exception ex)
+                                {
 
+                                }
+                                if (obfId != 0)
+                                {
+                                    MaterialList materialList = new MaterialList();
+                                    materialList.IsPoz = false;
+                                    materialList.PozOBFId = obfId;
+                                    materialList.Quantity = (float)quantity;
+                                    materialList.KDVPercentage = 18;
+                                    materialList.Tender = CurrentManager.Instance.CurrentTender;
+                                    materialList.TenderGroupId = this._owner.SelectedGroupId;
+                                    materialListItems.Add(materialList);
+                                }
                             }
-                            if (obfId != 0)
-                            {
-                                MaterialList materialList = new MaterialList();
-                                materialList.IsPoz = false;
-                                materialList.PozOBFId = obfId;
-                                materialList.Quantity = (float)quantity;
-                                materialList.KDVPercentage = 18;
-                                materialList.Tender = CurrentManager.Instance.CurrentTender;
-                                materialList.TenderGroupId = this._owner.SelectedGroupId;
-                                materialListItems.Add(materialList);
-                            }
-                            //OBFProvider.Instance.Save(newOBF);
-                            //}
                         }
                         i++;
                     }

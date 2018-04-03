@@ -74,51 +74,52 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
                                 string description = excelReader.GetString(1);
                                 string unit = excelReader.GetString(2);
-
-                                List<PozModel> existingPozs = UIPozManager.Instance.GetPozs(pozno, description);
-
-                                if (existingPozs != null && existingPozs.Count != 0)
+                                if (!string.IsNullOrEmpty(pozno) && !string.IsNullOrEmpty(description))
                                 {
-                                    pozId = existingPozs.First().Id.Value;
-                                }
-                                else
-                                {
-                                    Poz poz = new Poz();
-                                    poz.Number = pozno;
-                                    poz.Description = description;
-                                    poz.Unit = unit;
-                                    poz.UnitPrice = 0;
-                                    poz.Year = DateTime.Now.Year;
-                                    poz.IsActive = true;
-                                    PozProvider.Instance.Save(poz);
-                                    pozId = poz.Id;
-                                    lblPozno.Text = poz.Number;
-                                    lblAciklama.Text = poz.Description;
-                                    lblBirim.Text = poz.Unit;
-                                    lblBirimFiyat.Text = poz.UnitPrice.ToString();
-                                    lblPosSayisi.Text = i.ToString();
-                                }
+                                    List<PozModel> existingPozs = UIPozManager.Instance.GetPozs(pozno, description);
+                                    if (existingPozs != null && existingPozs.Count != 0)
+                                    {
+                                        pozId = existingPozs.First().Id.Value;
+                                    }
+                                    else
+                                    {
+                                        Poz poz = new Poz();
+                                        poz.Number = pozno;
+                                        poz.Description = description;
+                                        poz.Unit = unit;
+                                        poz.UnitPrice = 0;
+                                        poz.Year = DateTime.Now.Year;
+                                        poz.IsActive = true;
+                                        PozProvider.Instance.Save(poz);
+                                        pozId = poz.Id;
+                                        lblPozno.Text = poz.Number;
+                                        lblAciklama.Text = poz.Description;
+                                        lblBirim.Text = poz.Unit;
+                                        lblBirimFiyat.Text = poz.UnitPrice.ToString();
+                                        lblPosSayisi.Text = i.ToString();
+                                    }
 
-                                double quantity = 0;
-                                try
-                                {
-                                    quantity = excelReader.GetDouble(3);
-                                }
-                                catch (Exception ex)
-                                {
+                                    double quantity = 0;
+                                    try
+                                    {
+                                        quantity = excelReader.GetDouble(3);
+                                    }
+                                    catch (Exception ex)
+                                    {
 
-                                }
+                                    }
 
-                                if (pozId != 0)
-                                {
-                                    MaterialList materialList = new MaterialList();
-                                    materialList.IsPoz = true;
-                                    materialList.PozOBFId = pozId;
-                                    materialList.Quantity = (float)quantity;
-                                    materialList.KDVPercentage = 18;
-                                    materialList.Tender = CurrentManager.Instance.CurrentTender;
-                                    materialList.TenderGroupId = this._owner.SelectedGroupId;
-                                    materialListItems.Add(materialList);
+                                    if (pozId != 0)
+                                    {
+                                        MaterialList materialList = new MaterialList();
+                                        materialList.IsPoz = true;
+                                        materialList.PozOBFId = pozId;
+                                        materialList.Quantity = (float)quantity;
+                                        materialList.KDVPercentage = 18;
+                                        materialList.Tender = CurrentManager.Instance.CurrentTender;
+                                        materialList.TenderGroupId = this._owner.SelectedGroupId;
+                                        materialListItems.Add(materialList);
+                                    }
                                 }
                             }
                             i++;
