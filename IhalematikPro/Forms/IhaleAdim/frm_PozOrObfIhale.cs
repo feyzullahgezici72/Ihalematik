@@ -29,7 +29,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
         private void btnObfYukle_Click(object sender, EventArgs e)
         {
-            frm_TopluObfYukleIhale obfY = new frm_TopluObfYukleIhale();
+            frm_TopluObfYukleIhale obfY = new frm_TopluObfYukleIhale(this._owner);
             obfY.ShowDialog();
         }
     }
