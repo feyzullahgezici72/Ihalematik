@@ -327,7 +327,7 @@ namespace IhalematikPro.Forms
 
         private void btnExceldenAl_Click(object sender, EventArgs e)
         {
-            frm_PozOrObfIhale pozorobf = new frm_PozOrObfIhale();
+            frm_PozOrObfIhale pozorobf = new frm_PozOrObfIhale(this);
             pozorobf.ShowDialog();
         }
     }
