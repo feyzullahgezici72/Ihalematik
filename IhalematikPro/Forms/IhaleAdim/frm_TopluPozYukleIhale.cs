@@ -78,9 +78,15 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                 if (!string.IsNullOrEmpty(pozno) && !string.IsNullOrEmpty(description))
                                 {
                                     List<PozModel> existingPozs = UIPozManager.Instance.GetPozs(pozno, description);
+                                   
                                     if (existingPozs != null && existingPozs.Count != 0)
                                     {
+                                        //poz = existingPozs.First();
                                         pozId = existingPozs.First().Id.Value;
+                                        lblPozno.Text = existingPozs.First().Number;
+                                        lblAciklama.Text = existingPozs.First().Description;
+                                        lblBirim.Text = existingPozs.First().Unit;
+                                        lblPosSayisi.Text = i.ToString();
                                     }
                                     else
                                     {
@@ -96,7 +102,6 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                         lblPozno.Text = poz.Number;
                                         lblAciklama.Text = poz.Description;
                                         lblBirim.Text = poz.Unit;
-                                        lblBirimFiyat.Text = poz.UnitPrice.ToString();
                                         lblPosSayisi.Text = i.ToString();
                                     }
 
@@ -122,8 +127,8 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                         materialListItems.Add(materialList);
                                     }
                                 }
-                                i++;
                             }
+                            i++;
                         }
                         stream.Close();
                         this.Hide();

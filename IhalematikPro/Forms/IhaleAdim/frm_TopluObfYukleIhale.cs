@@ -157,8 +157,6 @@ namespace IhalematikProUI.Forms.IhaleAdim
                         this.Close();
                         break;
                     }
-
-                    i++;
                 }
                 stream.Close();
                 this.Hide();
