@@ -124,6 +124,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                             }
                             i++;
                         }
+                        stream.Close();
                         this.Hide();
                         frm_TopluPozIhaleTemp pozTemp = new frm_TopluPozIhaleTemp(this._owner);
                         pozTemp.MaterialListItems = materialListItems;
