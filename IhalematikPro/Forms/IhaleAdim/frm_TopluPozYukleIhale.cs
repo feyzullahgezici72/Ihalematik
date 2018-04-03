@@ -60,6 +60,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                         {
                             if (i > 0)
                             {
+                                Application.DoEvents();
                                 int pozId = 0;
                                 string pozno = string.Empty;
                                 try
@@ -107,19 +108,18 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                     catch (Exception ex)
                                     {
 
-                                    }
-
-                                    if (pozId != 0)
-                                    {
-                                        MaterialList materialList = new MaterialList();
-                                        materialList.IsPoz = true;
-                                        materialList.PozOBFId = pozId;
-                                        materialList.Quantity = (float)quantity;
-                                        materialList.KDVPercentage = 18;
-                                        materialList.Tender = CurrentManager.Instance.CurrentTender;
-                                        materialList.TenderGroupId = this._owner.SelectedGroupId;
-                                        materialListItems.Add(materialList);
-                                    }
+                                }
+                                lblMiktar.Text = quantity.ToString();
+                                if (pozId != 0)
+                                {
+                                    MaterialList materialList = new MaterialList();
+                                    materialList.IsPoz = true;
+                                    materialList.PozOBFId = pozId;
+                                    materialList.Quantity = (float)quantity;
+                                    materialList.KDVPercentage = 18;
+                                    materialList.Tender = CurrentManager.Instance.CurrentTender;
+                                    materialList.TenderGroupId = this._owner.SelectedGroupId;
+                                    materialListItems.Add(materialList);
                                 }
                             }
                             i++;
