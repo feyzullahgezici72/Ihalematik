@@ -108,21 +108,22 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                     catch (Exception ex)
                                     {
 
+                                    }
+                                    lblMiktar.Text = quantity.ToString();
+                                    if (pozId != 0)
+                                    {
+                                        MaterialList materialList = new MaterialList();
+                                        materialList.IsPoz = true;
+                                        materialList.PozOBFId = pozId;
+                                        materialList.Quantity = (float)quantity;
+                                        materialList.KDVPercentage = 18;
+                                        materialList.Tender = CurrentManager.Instance.CurrentTender;
+                                        materialList.TenderGroupId = this._owner.SelectedGroupId;
+                                        materialListItems.Add(materialList);
+                                    }
                                 }
-                                lblMiktar.Text = quantity.ToString();
-                                if (pozId != 0)
-                                {
-                                    MaterialList materialList = new MaterialList();
-                                    materialList.IsPoz = true;
-                                    materialList.PozOBFId = pozId;
-                                    materialList.Quantity = (float)quantity;
-                                    materialList.KDVPercentage = 18;
-                                    materialList.Tender = CurrentManager.Instance.CurrentTender;
-                                    materialList.TenderGroupId = this._owner.SelectedGroupId;
-                                    materialListItems.Add(materialList);
-                                }
+                                i++;
                             }
-                            i++;
                         }
                         stream.Close();
                         this.Hide();
@@ -132,6 +133,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                         frm_MesajFormu mesaj = new frm_MesajFormu();
                         mesaj.lblMesaj.Text = "Pozlar başarıyla yüklendi...";
                         mesaj.Close();
+
                     }
                     catch (Exception ex)
                     {

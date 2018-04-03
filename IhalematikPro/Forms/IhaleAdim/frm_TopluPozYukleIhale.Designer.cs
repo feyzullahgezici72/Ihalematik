@@ -298,7 +298,6 @@
             this.lblMiktar.Name = "lblMiktar";
             this.lblMiktar.Size = new System.Drawing.Size(174, 31);
             this.lblMiktar.TabIndex = 35;
-            this.lblMiktar.Click += new System.EventHandler(this.labelControl7_Click);
             // 
             // frm_TopluPozYukleIhale
             // 
