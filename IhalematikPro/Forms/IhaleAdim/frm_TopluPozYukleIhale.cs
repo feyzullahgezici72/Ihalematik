@@ -60,6 +60,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                         {
                             if (i > 0)
                             {
+                                Application.DoEvents();
                                 int pozId = 0;
                                 string pozno = string.Empty;
                                 try
@@ -83,6 +84,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                 }
                                 else
                                 {
+                                    
                                     Poz poz = new Poz();
                                     poz.Number = pozno;
                                     poz.Description = description;
@@ -95,7 +97,6 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                     lblPozno.Text = poz.Number;
                                     lblAciklama.Text = poz.Description;
                                     lblBirim.Text = poz.Unit;
-                                    lblBirimFiyat.Text = poz.UnitPrice.ToString();
                                     lblPosSayisi.Text = i.ToString();
                                 }
 
@@ -108,7 +109,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                 {
 
                                 }
-
+                                lblMiktar.Text = quantity.ToString();
                                 if (pozId != 0)
                                 {
                                     MaterialList materialList = new MaterialList();
@@ -141,6 +142,11 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
                 }
             }
+        }
+
+        private void labelControl7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
