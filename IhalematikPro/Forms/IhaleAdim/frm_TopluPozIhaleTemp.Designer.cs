@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TopluPozIhaleTemp));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.btnHayir = new DevExpress.XtraEditors.SimpleButton();
@@ -49,11 +49,11 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaterialListQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.btnChangeMeterialName = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnResetMeterialName = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.colUnitPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
@@ -74,7 +74,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(206, 475);
             this.groupControl2.TabIndex = 7;
@@ -91,7 +91,7 @@
             this.groupControl3.Location = new System.Drawing.Point(2, 52);
             this.groupControl3.LookAndFeel.SkinName = "Seven Classic";
             this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(202, 72);
             this.groupControl3.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             this.btnHayir.Image = ((System.Drawing.Image)(resources.GetObject("btnHayir.Image")));
             this.btnHayir.Location = new System.Drawing.Point(103, 29);
-            this.btnHayir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHayir.Margin = new System.Windows.Forms.Padding(2);
             this.btnHayir.Name = "btnHayir";
             this.btnHayir.Size = new System.Drawing.Size(95, 39);
             this.btnHayir.TabIndex = 1;
@@ -112,7 +112,7 @@
             // 
             this.btnEvet.Image = ((System.Drawing.Image)(resources.GetObject("btnEvet.Image")));
             this.btnEvet.Location = new System.Drawing.Point(6, 29);
-            this.btnEvet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEvet.Margin = new System.Windows.Forms.Padding(2);
             this.btnEvet.Name = "btnEvet";
             this.btnEvet.Size = new System.Drawing.Size(93, 39);
             this.btnEvet.TabIndex = 1;
@@ -127,7 +127,7 @@
             this.groupControl4.Location = new System.Drawing.Point(2, 23);
             this.groupControl4.LookAndFeel.SkinName = "Seven Classic";
             this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl4.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(202, 29);
             this.groupControl4.TabIndex = 3;
@@ -270,6 +270,7 @@
             this.gridViewMaterialList.OptionsView.ShowFooter = true;
             this.gridViewMaterialList.OptionsView.ShowGroupPanel = false;
             this.gridViewMaterialList.PaintStyleName = "Web";
+            this.gridViewMaterialList.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewMaterialList_CellValueChanged);
             // 
             // colMaterialListPozOBFId
             // 
@@ -380,28 +381,11 @@
             this.colMaterialListQuantity.MaxWidth = 80;
             this.colMaterialListQuantity.MinWidth = 80;
             this.colMaterialListQuantity.Name = "colMaterialListQuantity";
-            this.colMaterialListQuantity.OptionsColumn.AllowEdit = false;
-            this.colMaterialListQuantity.OptionsColumn.AllowFocus = false;
             this.colMaterialListQuantity.OptionsFilter.AllowAutoFilter = false;
             this.colMaterialListQuantity.OptionsFilter.AllowFilter = false;
             this.colMaterialListQuantity.Visible = true;
             this.colMaterialListQuantity.VisibleIndex = 3;
             this.colMaterialListQuantity.Width = 80;
-            // 
-            // colUnitPrice
-            // 
-            this.colUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colUnitPrice.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.colUnitPrice.AppearanceHeader.Options.UseBackColor = true;
-            this.colUnitPrice.AppearanceHeader.Options.UseFont = true;
-            this.colUnitPrice.Caption = "BİRİM FİYATI";
-            this.colUnitPrice.DisplayFormat.FormatString = "c2";
-            this.colUnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colUnitPrice.MinWidth = 100;
-            this.colUnitPrice.Name = "colUnitPrice";
-            this.colUnitPrice.Visible = true;
-            this.colUnitPrice.VisibleIndex = 4;
-            this.colUnitPrice.Width = 100;
             // 
             // grdMaterialList
             // 
@@ -421,14 +405,14 @@
             // btnChangeMeterialName
             // 
             this.btnChangeMeterialName.AutoHeight = false;
-            toolTipTitleItem1.Text = "YENİDEN ADLANDIR";
-            toolTipItem1.Appearance.Options.UseImage = true;
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmek isterseniz kullanınız..";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
+            toolTipTitleItem5.Text = "YENİDEN ADLANDIR";
+            toolTipItem5.Appearance.Options.UseImage = true;
+            toolTipItem5.LeftIndent = 6;
+            toolTipItem5.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmek isterseniz kullanınız..";
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            superToolTip5.Items.Add(toolTipItem5);
             this.btnChangeMeterialName.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnChangeMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, superToolTip1, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnChangeMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, superToolTip5, true)});
             this.btnChangeMeterialName.LookAndFeel.SkinName = "Sharp Plus";
             this.btnChangeMeterialName.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnChangeMeterialName.Name = "btnChangeMeterialName";
@@ -437,15 +421,15 @@
             // btnResetMeterialName
             // 
             this.btnResetMeterialName.AutoHeight = false;
-            toolTipTitleItem2.Text = "GERİAL YENİDEN ADLANDIR";
-            toolTipItem2.Appearance.Options.UseImage = true;
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmişseniz geri almak için kullan" +
+            toolTipTitleItem6.Text = "GERİAL YENİDEN ADLANDIR";
+            toolTipItem6.Appearance.Options.UseImage = true;
+            toolTipItem6.LeftIndent = 6;
+            toolTipItem6.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmişseniz geri almak için kullan" +
     "ınız...";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            superToolTip6.Items.Add(toolTipItem6);
             this.btnResetMeterialName.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnResetMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, superToolTip2, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnResetMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, superToolTip6, true)});
             this.btnResetMeterialName.LookAndFeel.SkinName = "Sharp Plus";
             this.btnResetMeterialName.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnResetMeterialName.Name = "btnResetMeterialName";
@@ -459,11 +443,19 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(206, 0);
             this.groupControl1.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(679, 475);
             this.groupControl1.TabIndex = 6;
             this.groupControl1.Text = "Okunan Poz Listesi";
+            // 
+            // colUnitPrice
+            // 
+            this.colUnitPrice.Caption = "BiRiM FiYAT";
+            this.colUnitPrice.FieldName = "PozOBFUnitePrice";
+            this.colUnitPrice.Name = "colUnitPrice";
+            this.colUnitPrice.Visible = true;
+            this.colUnitPrice.VisibleIndex = 4;
             // 
             // frm_TopluPozIhaleTemp
             // 
@@ -476,7 +468,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TopluPozIhaleTemp";
@@ -513,10 +505,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         public DevExpress.XtraGrid.GridControl grdMaterialList;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraGrid.Columns.GridColumn colUnitPrice;
         private DevExpress.XtraEditors.GroupControl groupControl4;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.SimpleButton btnHayir;
         private DevExpress.XtraEditors.SimpleButton btnEvet;
+        private DevExpress.XtraGrid.Columns.GridColumn colUnitPrice;
     }
 }

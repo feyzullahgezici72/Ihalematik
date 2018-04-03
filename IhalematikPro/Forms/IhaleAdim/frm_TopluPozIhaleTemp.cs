@@ -47,5 +47,22 @@ namespace IhalematikProUI.Forms.IhaleAdim
             this.Close();
             this._owner.LoadTenderGroupGrid();
         }
+
+        private void gridViewMaterialList_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            if (e.Column == colUnitPrice)
+            {
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialList.GetFocusedRowCellValue("PozOBFId"));
+
+                Poz currentPoz = PozProvider.Instance.GetItem(id);
+
+                if (currentPoz != null)
+                {
+                    double unitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
+                    currentPoz.UnitPrice = unitPrice;
+                    PozProvider.Instance.Save(currentPoz);
+                }
+            }
+        }
     }
 }

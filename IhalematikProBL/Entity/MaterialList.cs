@@ -166,5 +166,23 @@ namespace IhalematikProBL.Entity
         }
 
         public double CarriagePercent { get; set; }
+
+        private double pozOBFUnitePrice { get; set; }
+        public double PozOBFUnitePrice
+        {
+            get
+            {
+                if (pozOBFUnitePrice == 0)
+                {
+                    return this.PozOBF.UnitPrice;
+                }
+
+                return 0;
+            }
+            set
+            {
+                this.pozOBFUnitePrice = value;
+            }
+        }
     }
 }
