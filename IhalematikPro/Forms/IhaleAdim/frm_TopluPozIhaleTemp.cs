@@ -24,6 +24,8 @@ namespace IhalematikProUI.Forms.IhaleAdim
         {
             this._owner = Owner;
             InitializeComponent();
+            bindingSourceMaterialList.DataSource = typeof(List<MaterialList>);
+            grdMaterialList.DataSource = bindingSourceMaterialList;
         }
 
         private void btnHayir_Click(object sender, EventArgs e)
@@ -33,7 +35,13 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
         private void frm_TopluPozIhaleTemp_Shown(object sender, EventArgs e)
         {
-            List<MaterialList> items = this.MaterialListItems;
+            if (this.MaterialListItems != null)
+            {
+                foreach (var item in this.MaterialListItems)
+                {
+                    item.PozOBFUnitePrice = item.PozOBF.UnitPrice;
+                }
+            }
             grdMaterialList.DataSource = this.MaterialListItems;
         }
 
@@ -43,6 +51,13 @@ namespace IhalematikProUI.Forms.IhaleAdim
             {
                 MaterialListProvider.Instance.Save(item);
                 CurrentManager.Instance.CurrentTender.MaterialList.Add(item);
+
+                Poz currentPoz = PozProvider.Instance.GetItem(item.PozOBFId);
+                if (currentPoz != null)
+                {
+                    currentPoz.UnitPrice = item.PozOBFUnitePrice;
+                    PozProvider.Instance.Save(currentPoz);
+                }
             }
             this.Close();
             this._owner.LoadTenderGroupGrid();
@@ -60,7 +75,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                 {
                     double unitPrice = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
                     currentPoz.UnitPrice = unitPrice;
-                    PozProvider.Instance.Save(currentPoz);
+                    //
                 }
             }
         }
