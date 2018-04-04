@@ -42,6 +42,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
             if (dialog.ShowDialog() == DialogResult.OK) // if user clicked OK
             {
+                pnlYukle.Visible = false;
                 DialogResult result = MessageBox.Show("Yüklemek istediğinizden emin misiniz?", "Yükleme Dosya içeriğine göre biraz zaman alabilir", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result.Equals(DialogResult.Yes))
                 {
@@ -68,7 +69,6 @@ namespace IhalematikProUI.Forms.IhaleAdim
             {
                 FileStream stream = System.IO.File.Open(@"" + path + "", FileMode.Open, FileAccess.Read);
                 IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
-
                 int i = 0;
                 while (excelReader.Read())
                 {
@@ -97,10 +97,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                 if (existingObf != null)
                                 {
                                     obfId = existingObf.Id;
-                                    lblobfno.Text = existingObf.Number;
-                                    lblAciklama.Text = existingObf.Description;
-                                    lblBirim.Text = existingObf.Unit;
-                                    lblMiktar.Text = existingObf.UnitPrice.ToString();
+                                    
                                     lblPosSayisi.Text = i.ToString();
                                     //OBFProvider.Instance.Save(existingObf);
                                 }
@@ -116,10 +113,6 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                     obf.IsActive = true;
                                     OBFProvider.Instance.Save(obf);
                                     obfId = obf.Id;
-                                    lblobfno.Text = obf.Number;
-                                    lblAciklama.Text = obf.Description;
-                                    lblBirim.Text = obf.Unit;
-                                    lblMiktar.Text = obf.UnitPrice.ToString();
                                     lblPosSayisi.Text = i.ToString();
                                 }
 
@@ -133,7 +126,6 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
                                 }
 
-                                lblMiktar.Text = quantity.ToString();
                                 if (obfId != 0)
                                 {
                                     MaterialList materialList = new MaterialList();
@@ -151,6 +143,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                     }
                     catch (Exception ex)
                     {
+                        pnlYukle.Visible = true;
                         MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
                         LoggingManager.Instance.SaveErrorLog(ex);
                         this.Close();
@@ -168,6 +161,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
             }
             catch (Exception)
             {
+                pnlYukle.Visible = true;
                 MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.\n Yuklemeye calistiginiz excel dosyasi en az office 2010 ile olusturulmus olmasi gerekmektedir.\n Excel in kapali oldugundan emin olunuz");
             }
         }
