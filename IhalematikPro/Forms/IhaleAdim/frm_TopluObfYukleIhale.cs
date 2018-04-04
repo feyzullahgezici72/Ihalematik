@@ -99,6 +99,9 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                     obfId = existingObf.Id;
                                     
                                     lblPosSayisi.Text = i.ToString();
+                                    listBox1.Items.Add(existingObf.Number);
+                                    listBox1.Items.Add(existingObf.Description);
+                                    listBox1.Items.Add(existingObf.Unit);
                                     //OBFProvider.Instance.Save(existingObf);
                                 }
                                 else
@@ -114,6 +117,9 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                     OBFProvider.Instance.Save(obf);
                                     obfId = obf.Id;
                                     lblPosSayisi.Text = i.ToString();
+                                    listBox1.Items.Add(obf.Number);
+                                    listBox1.Items.Add(obf.Description);
+                                    listBox1.Items.Add(obf.Unit);
                                 }
 
                                 double quantity = 0;
