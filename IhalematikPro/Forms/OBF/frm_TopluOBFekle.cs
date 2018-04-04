@@ -34,6 +34,7 @@ namespace IhalematikProUI.Forms.OBF
             obfItems = new List<IhalematikProBL.Entity.OBF>();
             try
             {
+                pnlYuke.Visible = false;
                 FileStream stream = System.IO.File.Open(@"" + path + "", FileMode.Open, FileAccess.Read);
                 IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
 
@@ -87,10 +88,6 @@ namespace IhalematikProUI.Forms.OBF
                                 newOBF.Unit = unit;
                                 newOBF.UnitPrice = unitPrice;
                                 Application.DoEvents();
-                                lblobfno.Text = newOBF.StokNumber;
-                                lblAciklama.Text = newOBF.Description;
-                                lblBirim.Text = newOBF.Unit;
-                                lblBirimFiyat.Text = newOBF.UnitPrice.ToString();
                                 lblPosSayisi.Text = i.ToString();
                                 obfItems.Add(newOBF);
                             }
@@ -100,6 +97,7 @@ namespace IhalematikProUI.Forms.OBF
                     }
                     catch (Exception ex)
                     {
+                        pnlYuke.Visible = true;
                         MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
                         LoggingManager.Instance.SaveErrorLog(ex);
                         this.Close();
@@ -109,16 +107,13 @@ namespace IhalematikProUI.Forms.OBF
                     i++;
                 }
                 stream.Close();
-                lblobfno.Text = "";
-                lblAciklama.Text = "";
-                lblBirim.Text = "";
-                lblBirimFiyat.Text = "";
                 frm_MesajFormu mesaj = new frm_MesajFormu();
                 mesaj.lblMesaj.Text = "Malzemeler başarıyla yüklendi...";
                 mesaj.Close();
             }
             catch (Exception)
             {
+                pnlYuke.Visible = true;
                 MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.\n Yuklemeye calistiginiz excel dosyasi en az office 2010 ile olusturulmus olmasi gerekmektedir.\n Excel in kapali oldugundan emin olunuz");
             }
         }
@@ -154,6 +149,11 @@ namespace IhalematikProUI.Forms.OBF
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_TopluOBFekle_Load(object sender, EventArgs e)
         {
 
         }

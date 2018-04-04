@@ -36,6 +36,7 @@ namespace IhalematikProUI.Forms.Genel
             dialog.Filter = "Excel Files(*.xls;*.xlsx)|*.xls;*.xlsx";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
+                pnlYuke.Visible = false;
                 DialogResult result = MessageBox.Show("Yüklemek istediğinizden emin misiniz?", "Yükleme Dosya içeriğine göre biraz zaman alabilir", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result.Equals(DialogResult.Yes))
                 {
@@ -83,10 +84,6 @@ namespace IhalematikProUI.Forms.Genel
                                     poz.Year = DateTime.Now.Year;
                                     poz.IsActive = true;
                                     Application.DoEvents();
-                                    lblPozno.Text = poz.Number;
-                                    lblAciklama.Text = poz.Description;
-                                    lblBirim.Text = poz.Unit;
-                                    lblBirimFiyat.Text = poz.UnitPrice.ToString();
                                     lblPosSayisi.Text = i.ToString();
                                     pozItems.Add(poz);
                                 }
@@ -97,22 +94,19 @@ namespace IhalematikProUI.Forms.Genel
                         frm_TopluPozTemp pozTemp = new frm_TopluPozTemp(this._owner);
                         pozTemp.pozItems = pozItems;
                         pozTemp.ShowDialog();
-                        lblPozno.Text = "";
-                        lblAciklama.Text = "";
-                        lblBirim.Text = "";
-                        lblBirimFiyat.Text = "";
                         frm_MesajFormu mesaj = new frm_MesajFormu();
                         mesaj.lblMesaj.Text = "Pozlar başarıyla yüklendi...";
                         mesaj.Close();
                     }
                     catch (Exception ex)
                     {
+                        pnlYuke.Visible = true;
                         MessageBox.Show("Beklenmedik bir sorunla karşılaşıldı..");
                     }
                 }
                 else
                 {
-
+                    pnlYuke.Visible = true;
                 }
             }
         }
