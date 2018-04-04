@@ -41,10 +41,10 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
-            this.lblPosSayisi = new DevExpress.XtraEditors.LabelControl();
             this.btnYukle = new DevExpress.XtraEditors.SimpleButton();
+            this.lblPosSayisi = new DevExpress.XtraEditors.LabelControl();
+            this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.pbar1 = new DevExpress.XtraEditors.ProgressBarControl();
@@ -66,8 +66,9 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pcWorld.Name = "pcWorld";
-            this.pcWorld.Size = new System.Drawing.Size(50, 35);
+            this.pcWorld.Size = new System.Drawing.Size(33, 24);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcWorld.TabIndex = 23;
             this.pcWorld.TabStop = false;
@@ -80,11 +81,10 @@
             this.lblPozListesi.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.lblPozListesi.LineColor = System.Drawing.Color.Red;
             this.lblPozListesi.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.lblPozListesi.Location = new System.Drawing.Point(52, 0);
-            this.lblPozListesi.Margin = new System.Windows.Forms.Padding(4);
+            this.lblPozListesi.Location = new System.Drawing.Point(35, 0);
             this.lblPozListesi.Name = "lblPozListesi";
             this.lblPozListesi.ShowLineShadow = false;
-            this.lblPozListesi.Size = new System.Drawing.Size(212, 35);
+            this.lblPozListesi.Size = new System.Drawing.Size(142, 23);
             this.lblPozListesi.TabIndex = 22;
             this.lblPozListesi.Text = "TOPLU ÖBF YÜKLE";
             // 
@@ -99,9 +99,8 @@
             this.panelControl1.Controls.Add(this.lblPozListesi);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(994, 35);
+            this.panelControl1.Size = new System.Drawing.Size(663, 24);
             this.panelControl1.TabIndex = 35;
             // 
             // lblMiktar
@@ -111,9 +110,10 @@
             this.lblMiktar.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblMiktar.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblMiktar.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblMiktar.Location = new System.Drawing.Point(122, 216);
+            this.lblMiktar.Location = new System.Drawing.Point(81, 148);
+            this.lblMiktar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblMiktar.Name = "lblMiktar";
-            this.lblMiktar.Size = new System.Drawing.Size(174, 31);
+            this.lblMiktar.Size = new System.Drawing.Size(116, 21);
             this.lblMiktar.TabIndex = 23;
             // 
             // lblBirim
@@ -123,9 +123,10 @@
             this.lblBirim.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblBirim.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblBirim.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblBirim.Location = new System.Drawing.Point(122, 172);
+            this.lblBirim.Location = new System.Drawing.Point(81, 118);
+            this.lblBirim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblBirim.Name = "lblBirim";
-            this.lblBirim.Size = new System.Drawing.Size(174, 31);
+            this.lblBirim.Size = new System.Drawing.Size(116, 21);
             this.lblBirim.TabIndex = 22;
             // 
             // lblAciklama
@@ -135,9 +136,10 @@
             this.lblAciklama.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblAciklama.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblAciklama.Location = new System.Drawing.Point(122, 128);
+            this.lblAciklama.Location = new System.Drawing.Point(81, 88);
+            this.lblAciklama.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblAciklama.Name = "lblAciklama";
-            this.lblAciklama.Size = new System.Drawing.Size(860, 31);
+            this.lblAciklama.Size = new System.Drawing.Size(573, 21);
             this.lblAciklama.TabIndex = 21;
             // 
             // lblobfno
@@ -147,19 +149,19 @@
             this.lblobfno.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblobfno.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblobfno.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblobfno.Location = new System.Drawing.Point(122, 84);
+            this.lblobfno.Location = new System.Drawing.Point(81, 57);
+            this.lblobfno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblobfno.Name = "lblobfno";
-            this.lblobfno.Size = new System.Drawing.Size(174, 31);
+            this.lblobfno.Size = new System.Drawing.Size(116, 21);
             this.lblobfno.TabIndex = 20;
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl3.Location = new System.Drawing.Point(39, 133);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Location = new System.Drawing.Point(26, 91);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(70, 19);
+            this.labelControl3.Size = new System.Drawing.Size(45, 13);
             this.labelControl3.TabIndex = 32;
             this.labelControl3.Text = "Açıklama:";
             // 
@@ -167,10 +169,9 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl5.Location = new System.Drawing.Point(56, 223);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl5.Location = new System.Drawing.Point(37, 153);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(53, 19);
+            this.labelControl5.Size = new System.Drawing.Size(35, 13);
             this.labelControl5.TabIndex = 30;
             this.labelControl5.Text = "Miktarı:";
             // 
@@ -178,10 +179,9 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Location = new System.Drawing.Point(62, 176);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl4.Location = new System.Drawing.Point(41, 120);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(47, 19);
+            this.labelControl4.Size = new System.Drawing.Size(28, 13);
             this.labelControl4.TabIndex = 31;
             this.labelControl4.Text = "Birimi:";
             // 
@@ -189,10 +189,9 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(52, 86);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Location = new System.Drawing.Point(35, 59);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(57, 19);
+            this.labelControl2.Size = new System.Drawing.Size(38, 13);
             this.labelControl2.TabIndex = 33;
             this.labelControl2.Text = "Öbf No:";
             // 
@@ -203,34 +202,24 @@
             this.groupControl2.Controls.Add(this.btnIptal);
             this.groupControl2.Controls.Add(this.labelControl1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl2.Location = new System.Drawing.Point(3, 629);
+            this.groupControl2.Location = new System.Drawing.Point(2, 431);
             this.groupControl2.LookAndFeel.SkinName = "Visual Studio 2013 Light";
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(988, 94);
+            this.groupControl2.Size = new System.Drawing.Size(659, 64);
             this.groupControl2.TabIndex = 34;
             // 
-            // labelControl1
+            // btnYukle
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl1.Location = new System.Drawing.Point(136, 26);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(147, 19);
-            this.labelControl1.TabIndex = 30;
-            this.labelControl1.Text = "Yüklenen Öbf Sayısı:";
-            // 
-            // btnIptal
-            // 
-            this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
-            this.btnIptal.Location = new System.Drawing.Point(838, 26);
-            this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(140, 57);
-            this.btnIptal.TabIndex = 29;
-            this.btnIptal.Text = "&Iptal";
-            this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
+            this.btnYukle.Image = ((System.Drawing.Image)(resources.GetObject("btnYukle.Image")));
+            this.btnYukle.Location = new System.Drawing.Point(462, 18);
+            this.btnYukle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnYukle.Name = "btnYukle";
+            this.btnYukle.Size = new System.Drawing.Size(93, 39);
+            this.btnYukle.TabIndex = 28;
+            this.btnYukle.Text = "&Yükle";
+            this.btnYukle.Click += new System.EventHandler(this.btnYukle_Click);
             // 
             // lblPosSayisi
             // 
@@ -238,20 +227,33 @@
             this.lblPosSayisi.Appearance.ForeColor = System.Drawing.Color.Maroon;
             this.lblPosSayisi.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblPosSayisi.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblPosSayisi.Location = new System.Drawing.Point(146, 53);
+            this.lblPosSayisi.Location = new System.Drawing.Point(97, 36);
+            this.lblPosSayisi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblPosSayisi.Name = "lblPosSayisi";
-            this.lblPosSayisi.Size = new System.Drawing.Size(117, 31);
+            this.lblPosSayisi.Size = new System.Drawing.Size(78, 21);
             this.lblPosSayisi.TabIndex = 23;
             // 
-            // btnYukle
+            // btnIptal
             // 
-            this.btnYukle.Image = ((System.Drawing.Image)(resources.GetObject("btnYukle.Image")));
-            this.btnYukle.Location = new System.Drawing.Point(693, 26);
-            this.btnYukle.Name = "btnYukle";
-            this.btnYukle.Size = new System.Drawing.Size(140, 57);
-            this.btnYukle.TabIndex = 28;
-            this.btnYukle.Text = "&Yükle";
-            this.btnYukle.Click += new System.EventHandler(this.btnYukle_Click);
+            this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
+            this.btnIptal.Location = new System.Drawing.Point(559, 18);
+            this.btnIptal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIptal.Name = "btnIptal";
+            this.btnIptal.Size = new System.Drawing.Size(93, 39);
+            this.btnIptal.TabIndex = 29;
+            this.btnIptal.Text = "&Iptal";
+            this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl1.Location = new System.Drawing.Point(91, 18);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(98, 13);
+            this.labelControl1.TabIndex = 30;
+            this.labelControl1.Text = "Yüklenen Öbf Sayısı:";
             // 
             // listBox1
             // 
@@ -259,11 +261,10 @@
             this.listBox1.Font = new System.Drawing.Font("Calibri", 12F);
             this.listBox1.ForeColor = System.Drawing.Color.Lime;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 29;
-            this.listBox1.Location = new System.Drawing.Point(5, 43);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.listBox1.ItemHeight = 19;
+            this.listBox1.Location = new System.Drawing.Point(3, 29);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(982, 555);
+            this.listBox1.Size = new System.Drawing.Size(656, 365);
             this.listBox1.TabIndex = 35;
             // 
             // groupControl1
@@ -282,39 +283,43 @@
             this.groupControl1.Controls.Add(this.lblMiktar);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(994, 726);
+            this.groupControl1.Size = new System.Drawing.Size(663, 497);
             this.groupControl1.TabIndex = 36;
             this.groupControl1.Text = " ";
             // 
             // pbar1
             // 
             this.pbar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pbar1.Location = new System.Drawing.Point(3, 599);
+            this.pbar1.Location = new System.Drawing.Point(2, 410);
+            this.pbar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbar1.Name = "pbar1";
-            this.pbar1.Size = new System.Drawing.Size(988, 30);
+            this.pbar1.Size = new System.Drawing.Size(659, 21);
             this.pbar1.TabIndex = 38;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 43);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 30);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(988, 556);
+            this.pictureBox1.Size = new System.Drawing.Size(659, 380);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
             // 
             // frm_TopluObfYukleIhale
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(994, 726);
+            this.ClientSize = new System.Drawing.Size(663, 497);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TopluObfYukleIhale";

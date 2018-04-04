@@ -18,7 +18,7 @@ using IhalematikProUI.Forms.Base;
 
 namespace IhalematikProUI.Forms.IhaleAdim
 {
-    public partial class frm_TopluPozIhaleTemp :IhalematikBaseForm
+    public partial class frm_TopluPozIhaleTemp : IhalematikBaseForm
     {
         public frm_Teklif_Adim1 _owner { get; set; }
         public List<MaterialList> MaterialListItems = null;
@@ -37,6 +37,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
         private void frm_TopluPozIhaleTemp_Shown(object sender, EventArgs e)
         {
+            LoadingManager.Instance.Show(this);
             if (this.MaterialListItems != null)
             {
                 foreach (var item in this.MaterialListItems)
@@ -45,6 +46,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                 }
             }
             grdMaterialList.DataSource = this.MaterialListItems;
+            LoadingManager.Instance.Hide();
         }
 
         private void btnEvet_Click(object sender, EventArgs e)
@@ -63,7 +65,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                     PozProvider.Instance.Save(currentPoz);
                 }
             }
-            LoadingManager.Instance.Hide(); ;
+            LoadingManager.Instance.Hide();
             this.Enabled = true;
             this.Close();
             this._owner.LoadTenderGroupGrid();
