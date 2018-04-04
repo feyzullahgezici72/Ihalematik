@@ -47,7 +47,7 @@ namespace IhalematikProUI.Forms
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             af.RibonAktif();
         }
-        
+
         private void btnObfKayit_Click(object sender, EventArgs e)
         {
             MainReport ms = new MainReport();
@@ -143,7 +143,7 @@ namespace IhalematikProUI.Forms
                 colUnitTotalFare.Visible = true;
                 colTotalFare.Visible = true;
             }
-            LoadingManager.Instance.Hide();;
+            LoadingManager.Instance.Hide(); ;
             this.Enabled = true;
         }
 
@@ -166,22 +166,22 @@ namespace IhalematikProUI.Forms
                     switch (item.UnitTimeType)
                     {
                         case UnitTimeTypesEnum.Minute:
-                            totalHour += Math.Round(item.UnitTime / 60 * item.Quantity, 3);
+                            totalHour += Math.Round(item.UnitTime / 60 * item.Quantity * item.Equipment.Quantity, 3);
                             break;
                         case UnitTimeTypesEnum.Hour:
-                            totalHour += item.UnitTime * item.Quantity;
+                            totalHour += item.UnitTime * item.Quantity * item.Equipment.Quantity;
                             break;
                         case UnitTimeTypesEnum.Day:
-                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * item.Quantity, 3);
+                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * item.Quantity * item.Equipment.Quantity, 3);
                             break;
                         case UnitTimeTypesEnum.Week:
-                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * 7 * item.Quantity, 3);
+                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * 7 * item.Quantity * item.Equipment.Quantity, 3);
                             break;
                         case UnitTimeTypesEnum.Month:
-                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * dayPerMonthValue * item.Quantity, 3);
+                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * dayPerMonthValue * item.Quantity * item.Equipment.Quantity, 3);
                             break;
                         case UnitTimeTypesEnum.Year:
-                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * dayPerMonthValue * 12 * item.Quantity, 3);
+                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * dayPerMonthValue * 12 * item.Quantity * item.Equipment.Quantity, 3);
                             break;
                         default:
                             break;
@@ -285,7 +285,7 @@ namespace IhalematikProUI.Forms
             double markupWorkerAmount = 0;
             //Insan saat arac saat toplami
             double totalPersonHour = 0;
-            double totalUnitPrice = 0; 
+            double totalUnitPrice = 0;
             #endregion
 
             foreach (MaterialListModel item in this.DataSource)
@@ -401,7 +401,7 @@ namespace IhalematikProUI.Forms
 
         private void btnExcel_Click(object sender, EventArgs e)
         {
-          try
+            try
             {
                 bool isSuccess = UIReportManager.Instance.ExtractExcel(grdMaterialList);
                 if (!isSuccess)
