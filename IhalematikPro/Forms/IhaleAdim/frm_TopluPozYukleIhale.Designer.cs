@@ -45,8 +45,9 @@
             this.lblBirim = new DevExpress.XtraEditors.LabelControl();
             this.lblAciklama = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.lblMiktar = new DevExpress.XtraEditors.LabelControl();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lblMiktar = new DevExpress.XtraEditors.LabelControl();
+            this.pbar1 = new DevExpress.XtraEditors.ProgressBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -54,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbar1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl2
@@ -63,23 +65,21 @@
             this.groupControl2.Controls.Add(this.btnIptal);
             this.groupControl2.Controls.Add(this.labelControl1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl2.Location = new System.Drawing.Point(2, 431);
+            this.groupControl2.Location = new System.Drawing.Point(3, 629);
             this.groupControl2.LookAndFeel.SkinName = "Visual Studio 2013 Light";
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(659, 64);
+            this.groupControl2.Size = new System.Drawing.Size(988, 94);
             this.groupControl2.TabIndex = 34;
             // 
             // btnYukle
             // 
             this.btnYukle.Image = ((System.Drawing.Image)(resources.GetObject("btnYukle.Image")));
-            this.btnYukle.Location = new System.Drawing.Point(465, 18);
+            this.btnYukle.Location = new System.Drawing.Point(698, 26);
             this.btnYukle.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnYukle.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnYukle.Margin = new System.Windows.Forms.Padding(2);
             this.btnYukle.Name = "btnYukle";
-            this.btnYukle.Size = new System.Drawing.Size(93, 39);
+            this.btnYukle.Size = new System.Drawing.Size(140, 57);
             this.btnYukle.TabIndex = 28;
             this.btnYukle.Text = "&Yükle";
             this.btnYukle.Click += new System.EventHandler(this.btnYukle_Click);
@@ -90,22 +90,20 @@
             this.lblPosSayisi.Appearance.ForeColor = System.Drawing.Color.Maroon;
             this.lblPosSayisi.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblPosSayisi.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblPosSayisi.Location = new System.Drawing.Point(97, 36);
-            this.lblPosSayisi.Margin = new System.Windows.Forms.Padding(2);
+            this.lblPosSayisi.Location = new System.Drawing.Point(146, 53);
             this.lblPosSayisi.Name = "lblPosSayisi";
-            this.lblPosSayisi.Size = new System.Drawing.Size(78, 21);
+            this.lblPosSayisi.Size = new System.Drawing.Size(117, 31);
             this.lblPosSayisi.TabIndex = 23;
             // 
             // btnIptal
             // 
             this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
-            this.btnIptal.Location = new System.Drawing.Point(562, 18);
+            this.btnIptal.Location = new System.Drawing.Point(843, 26);
             this.btnIptal.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnIptal.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnIptal.Margin = new System.Windows.Forms.Padding(2);
             this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(93, 39);
+            this.btnIptal.Size = new System.Drawing.Size(140, 57);
             this.btnIptal.TabIndex = 29;
             this.btnIptal.Text = "&İptal";
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
@@ -114,9 +112,10 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl1.Location = new System.Drawing.Point(91, 18);
+            this.labelControl1.Location = new System.Drawing.Point(136, 26);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(97, 13);
+            this.labelControl1.Size = new System.Drawing.Size(146, 19);
             this.labelControl1.TabIndex = 30;
             this.labelControl1.Text = "Yüklenen Poz Sayısı:";
             // 
@@ -128,10 +127,11 @@
             this.lblPozListesi.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.lblPozListesi.LineColor = System.Drawing.Color.Red;
             this.lblPozListesi.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.lblPozListesi.Location = new System.Drawing.Point(35, 0);
+            this.lblPozListesi.Location = new System.Drawing.Point(52, 0);
+            this.lblPozListesi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblPozListesi.Name = "lblPozListesi";
             this.lblPozListesi.ShowLineShadow = false;
-            this.lblPozListesi.Size = new System.Drawing.Size(141, 23);
+            this.lblPozListesi.Size = new System.Drawing.Size(211, 35);
             this.lblPozListesi.TabIndex = 22;
             this.lblPozListesi.Text = "TOPLU POZ YÜKLE";
             // 
@@ -139,9 +139,10 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(35, 44);
+            this.labelControl2.Location = new System.Drawing.Point(52, 64);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(37, 13);
+            this.labelControl2.Size = new System.Drawing.Size(56, 19);
             this.labelControl2.TabIndex = 33;
             this.labelControl2.Text = "Poz No:";
             // 
@@ -149,9 +150,10 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Location = new System.Drawing.Point(41, 107);
+            this.labelControl4.Location = new System.Drawing.Point(62, 156);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(28, 13);
+            this.labelControl4.Size = new System.Drawing.Size(47, 19);
             this.labelControl4.TabIndex = 31;
             this.labelControl4.Text = "Birimi:";
             // 
@@ -159,9 +161,10 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl5.Location = new System.Drawing.Point(37, 140);
+            this.labelControl5.Location = new System.Drawing.Point(56, 205);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(35, 13);
+            this.labelControl5.Size = new System.Drawing.Size(53, 19);
             this.labelControl5.TabIndex = 30;
             this.labelControl5.Text = "Miktarı:";
             // 
@@ -169,9 +172,10 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl3.Location = new System.Drawing.Point(26, 77);
+            this.labelControl3.Location = new System.Drawing.Point(39, 113);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(45, 13);
+            this.labelControl3.Size = new System.Drawing.Size(70, 19);
             this.labelControl3.TabIndex = 32;
             this.labelControl3.Text = "Açıklama:";
             // 
@@ -186,8 +190,9 @@
             this.panelControl1.Controls.Add(this.lblPozListesi);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(663, 24);
+            this.panelControl1.Size = new System.Drawing.Size(994, 35);
             this.panelControl1.TabIndex = 33;
             // 
             // pcWorld
@@ -196,9 +201,8 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Margin = new System.Windows.Forms.Padding(2);
             this.pcWorld.Name = "pcWorld";
-            this.pcWorld.Size = new System.Drawing.Size(33, 24);
+            this.pcWorld.Size = new System.Drawing.Size(50, 35);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcWorld.TabIndex = 23;
             this.pcWorld.TabStop = false;
@@ -210,10 +214,9 @@
             this.lblPozno.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblPozno.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblPozno.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblPozno.Location = new System.Drawing.Point(81, 43);
-            this.lblPozno.Margin = new System.Windows.Forms.Padding(2);
+            this.lblPozno.Location = new System.Drawing.Point(122, 63);
             this.lblPozno.Name = "lblPozno";
-            this.lblPozno.Size = new System.Drawing.Size(116, 21);
+            this.lblPozno.Size = new System.Drawing.Size(174, 31);
             this.lblPozno.TabIndex = 20;
             // 
             // lblBirim
@@ -223,10 +226,9 @@
             this.lblBirim.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblBirim.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblBirim.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblBirim.Location = new System.Drawing.Point(81, 105);
-            this.lblBirim.Margin = new System.Windows.Forms.Padding(2);
+            this.lblBirim.Location = new System.Drawing.Point(122, 153);
             this.lblBirim.Name = "lblBirim";
-            this.lblBirim.Size = new System.Drawing.Size(116, 21);
+            this.lblBirim.Size = new System.Drawing.Size(174, 31);
             this.lblBirim.TabIndex = 22;
             // 
             // lblAciklama
@@ -236,14 +238,14 @@
             this.lblAciklama.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblAciklama.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblAciklama.Location = new System.Drawing.Point(81, 74);
-            this.lblAciklama.Margin = new System.Windows.Forms.Padding(2);
+            this.lblAciklama.Location = new System.Drawing.Point(122, 108);
             this.lblAciklama.Name = "lblAciklama";
-            this.lblAciklama.Size = new System.Drawing.Size(573, 21);
+            this.lblAciklama.Size = new System.Drawing.Size(860, 31);
             this.lblAciklama.TabIndex = 21;
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.pbar1);
             this.groupControl1.Controls.Add(this.listBox1);
             this.groupControl1.Controls.Add(this.lblMiktar);
             this.groupControl1.Controls.Add(this.groupControl2);
@@ -258,11 +260,23 @@
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(663, 497);
+            this.groupControl1.Size = new System.Drawing.Size(994, 726);
             this.groupControl1.TabIndex = 34;
             this.groupControl1.Text = " ";
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.Black;
+            this.listBox1.Font = new System.Drawing.Font("Calibri", 12F);
+            this.listBox1.ForeColor = System.Drawing.Color.Lime;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 29;
+            this.listBox1.Location = new System.Drawing.Point(8, 51);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(982, 555);
+            this.listBox1.TabIndex = 24;
             // 
             // lblMiktar
             // 
@@ -271,34 +285,28 @@
             this.lblMiktar.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblMiktar.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblMiktar.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblMiktar.Location = new System.Drawing.Point(81, 135);
-            this.lblMiktar.Margin = new System.Windows.Forms.Padding(2);
+            this.lblMiktar.Location = new System.Drawing.Point(122, 197);
             this.lblMiktar.Name = "lblMiktar";
-            this.lblMiktar.Size = new System.Drawing.Size(116, 21);
+            this.lblMiktar.Size = new System.Drawing.Size(174, 31);
             this.lblMiktar.TabIndex = 35;
             // 
-            // listBox1
+            // pbar1
             // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.InfoText;
-            this.listBox1.Font = new System.Drawing.Font("Calibri", 12F);
-            this.listBox1.ForeColor = System.Drawing.Color.Green;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 19;
-            this.listBox1.Location = new System.Drawing.Point(5, 35);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(656, 384);
-            this.listBox1.TabIndex = 24;
+            this.pbar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pbar1.Location = new System.Drawing.Point(3, 599);
+            this.pbar1.Name = "pbar1";
+            this.pbar1.Size = new System.Drawing.Size(988, 30);
+            this.pbar1.TabIndex = 37;
             // 
             // frm_TopluPozYukleIhale
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 497);
+            this.ClientSize = new System.Drawing.Size(994, 726);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TopluPozYukleIhale";
@@ -314,6 +322,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbar1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -338,5 +347,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl lblMiktar;
         private System.Windows.Forms.ListBox listBox1;
+        private DevExpress.XtraEditors.ProgressBarControl pbar1;
     }
 }

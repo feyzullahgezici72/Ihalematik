@@ -13,10 +13,12 @@ using IhalematikPro.Model;
 using IhalematikPro.Manager;
 using IhalematikProBL.Provider;
 using IhalematikPro.Forms;
+using IhalematikProUI.Manager;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikProUI.Forms.IhaleAdim
 {
-    public partial class frm_TopluPozIhaleTemp : DevExpress.XtraEditors.XtraForm
+    public partial class frm_TopluPozIhaleTemp :IhalematikBaseForm
     {
         public frm_Teklif_Adim1 _owner { get; set; }
         public List<MaterialList> MaterialListItems = null;
@@ -47,6 +49,8 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
         private void btnEvet_Click(object sender, EventArgs e)
         {
+            this.Enabled = false;
+            LoadingManager.Instance.Show(this);
             foreach (var item in this.MaterialListItems)
             {
                 MaterialListProvider.Instance.Save(item);
@@ -59,6 +63,8 @@ namespace IhalematikProUI.Forms.IhaleAdim
                     PozProvider.Instance.Save(currentPoz);
                 }
             }
+            LoadingManager.Instance.Hide(); ;
+            this.Enabled = true;
             this.Close();
             this._owner.LoadTenderGroupGrid();
         }
