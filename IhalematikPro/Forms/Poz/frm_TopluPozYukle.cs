@@ -20,7 +20,7 @@ using IhalematikPro.Forms;
 
 namespace IhalematikProUI.Forms.Genel
 {
-    public partial class frm_TopluPozYukle : DevExpress.XtraEditors.XtraForm
+    public partial class frm_TopluPozYukle : IhalematikBaseForm
     {
         public List<Poz> pozItems = null;
         public frm_PozListesi _owner = null;
@@ -42,6 +42,7 @@ namespace IhalematikProUI.Forms.Genel
                 {
                     try
                     {
+                        LoadingManager.Instance.Show(this);
                         string filename = System.IO.Path.GetFileName(dialog.FileName);
                         FileStream stream = System.IO.File.Open(dialog.FileName, FileMode.Open, FileAccess.Read);
                         IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
@@ -76,20 +77,37 @@ namespace IhalematikProUI.Forms.Genel
 
                                 if (!string.IsNullOrEmpty(pozno) && !string.IsNullOrEmpty(description) && !string.IsNullOrEmpty(unit))
                                 {
-                                    Poz poz = new Poz();
-                                    poz.Number = pozno;
-                                    poz.Description = description;
-                                    poz.Unit = unit;
-                                    poz.UnitPrice = unitprice;
-                                    poz.Year = DateTime.Now.Year;
-                                    poz.IsActive = true;
-                                    Application.DoEvents();
-                                    lblPosSayisi.Text = i.ToString();
-                                    pozItems.Add(poz);
+                                    List<PozModel> existingPozs = UIPozManager.Instance.GetPozs(pozno, description);
+                                    if (existingPozs != null && existingPozs.Count != 0)
+                                    {
+                                        listBox1.Items.Add(existingPozs.First().Number);
+                                        listBox1.Items.Add(existingPozs.First().Description);
+                                        listBox1.Items.Add(existingPozs.First().Unit);
+                                    }
+                                    else
+                                    {
+                                        Poz poz = new Poz();
+                                        poz.Number = pozno;
+                                        poz.Description = description;
+                                        poz.Unit = unit;
+                                        poz.UnitPrice = unitprice;
+                                        poz.Year = DateTime.Now.Year;
+                                        poz.IsActive = true;
+                                        Application.DoEvents();
+                                        lblPosSayisi.Text = i.ToString();
+                                        pozItems.Add(poz);
+                                        listBox1.Items.Add(poz.Number);
+                                        listBox1.Items.Add(poz.Description);
+                                        listBox1.Items.Add(poz.Unit);
+                                    }
+
+                                    listBox1.Items.Add("-------------------------------------------------------------");
+                                    listBox1.TopIndex = listBox1.Items.Count - 1;
                                 }
                             }
                             i++;
                         }
+                        LoadingManager.Instance.Hide();
                         this.Hide();
                         frm_TopluPozTemp pozTemp = new frm_TopluPozTemp(this._owner);
                         pozTemp.pozItems = pozItems;
@@ -100,6 +118,7 @@ namespace IhalematikProUI.Forms.Genel
                     }
                     catch (Exception ex)
                     {
+                        LoadingManager.Instance.Hide();
                         pnlYuke.Visible = true;
                         MessageBox.Show("Beklenmedik bir sorunla karşılaşıldı..");
                     }
@@ -118,6 +137,7 @@ namespace IhalematikProUI.Forms.Genel
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             this.getExcel();
+            LoadingManager.Instance.Hide();
         }
     }
 }

@@ -16,10 +16,12 @@ using IhalematikPro.Manager;
 using IhalematikPro.Forms;
 using System.Globalization;
 using IhalematikProBL.Manager;
+using IhalematikProUI.Manager;
+using IhalematikProUI.Forms.Base;
 
 namespace IhalematikProUI.Forms.OBF
 {
-    public partial class frm_TopluOBFekle : DevExpress.XtraEditors.XtraForm
+    public partial class frm_TopluOBFekle :IhalematikBaseForm
     {
         private frm_OzelStokListesi _owner;
         List<IhalematikProBL.Entity.OBF> obfItems = null;// new List<IhalematikProBL.Entity.OBF>();
@@ -79,17 +81,35 @@ namespace IhalematikProUI.Forms.OBF
                             //{
                             if (!string.IsNullOrEmpty(stokKodu) && !string.IsNullOrEmpty(description) && !string.IsNullOrEmpty(unit))
                             {
-                                IhalematikProBL.Entity.OBF newOBF = new IhalematikProBL.Entity.OBF();
-                                int lastTenderNumber = UIOBFManager.Instance.GetLastOBFNumber();
-                                newOBF.Number = string.Format("{0}", (lastTenderNumber + 1).ToString().PadLeft(8, '0'));
-                                newOBF.IsActive = true;
-                                newOBF.StokNumber = stokKodu;
-                                newOBF.Description = description;
-                                newOBF.Unit = unit;
-                                newOBF.UnitPrice = unitPrice;
-                                Application.DoEvents();
-                                lblPosSayisi.Text = i.ToString();
-                                obfItems.Add(newOBF);
+                                IhalematikProBL.Entity.OBF existingObf = OBFProvider.Instance.GetOne("Description", description);
+                                if (existingObf != null)
+                                {
+                                    listBox1.Items.Add(existingObf.Number);
+                                    listBox1.Items.Add(existingObf.Description);
+                                    listBox1.Items.Add(existingObf.Unit);
+                                    //OBFProvider.Instance.Save(existingObf);
+                                }
+
+                                else
+                                {
+                                    IhalematikProBL.Entity.OBF newOBF = new IhalematikProBL.Entity.OBF();
+                                    int lastTenderNumber = UIOBFManager.Instance.GetLastOBFNumber();
+                                    newOBF.Number = string.Format("{0}", (lastTenderNumber + 1).ToString().PadLeft(8, '0'));
+                                    newOBF.IsActive = true;
+                                    newOBF.StokNumber = stokKodu;
+                                    newOBF.Description = description;
+                                    newOBF.Unit = unit;
+                                    newOBF.UnitPrice = unitPrice;
+                                    Application.DoEvents();
+                                    lblPosSayisi.Text = i.ToString();
+                                    obfItems.Add(newOBF);
+                                    listBox1.Items.Add(newOBF.Number);
+                                    listBox1.Items.Add(newOBF.Description);
+                                    listBox1.Items.Add(newOBF.Unit);
+                                }
+
+                                listBox1.Items.Add("-------------------------------------------------------------");
+                                listBox1.TopIndex = listBox1.Items.Count - 1;
                             }
                             //OBFProvider.Instance.Save(newOBF);
                             //}
@@ -97,6 +117,7 @@ namespace IhalematikProUI.Forms.OBF
                     }
                     catch (Exception ex)
                     {
+                        LoadingManager.Instance.Hide(); ;
                         pnlYuke.Visible = true;
                         MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
                         LoggingManager.Instance.SaveErrorLog(ex);
@@ -106,6 +127,7 @@ namespace IhalematikProUI.Forms.OBF
 
                     i++;
                 }
+                LoadingManager.Instance.Hide();
                 stream.Close();
                 frm_MesajFormu mesaj = new frm_MesajFormu();
                 mesaj.lblMesaj.Text = "Malzemeler başarıyla yüklendi...";
@@ -129,7 +151,9 @@ namespace IhalematikProUI.Forms.OBF
                 if (result.Equals(DialogResult.Yes))
                 {
                     String path = dialog.FileName; // get name of file
+                    LoadingManager.Instance.Show(this);
                     this.ReadExcel(path);
+                    LoadingManager.Instance.Hide();
                     this.Hide();
                     frm_TopluObfTemp obfTemp = new frm_TopluObfTemp(_owner);
                     obfTemp.obfItems = this.obfItems;

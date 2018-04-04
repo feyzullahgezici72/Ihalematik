@@ -131,7 +131,9 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                 {
 
                                 }
-
+                                listBox1.Items.Add(quantity.ToString());
+                                listBox1.Items.Add("-------------------------------------------------------------");
+                                listBox1.TopIndex = listBox1.Items.Count - 1;
                                 if (obfId != 0)
                                 {
                                     MaterialList materialList = new MaterialList();

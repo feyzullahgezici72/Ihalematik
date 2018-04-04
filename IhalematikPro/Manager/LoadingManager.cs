@@ -1,4 +1,5 @@
-﻿using IhalematikProUI.Forms;
+﻿using IhalematikProBL.Manager;
+using IhalematikProUI.Forms;
 using IhalematikProUI.Forms.Base;
 using IhalematikProUI.Forms.Genel;
 using SimpleApplicationBase.BL.Base;
@@ -32,8 +33,15 @@ namespace IhalematikProUI.Manager
         }
         private void CloseProgress()
         {
-            Thread.Sleep(500);
-            this.frm_wait.Invoke(new Action(this.frm_wait.Close));
+            Thread.Sleep(800);
+            try
+            {
+                this.frm_wait.Invoke(new Action(this.frm_wait.Close));
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.SaveErrorLog(ex);
+            }
         }
         private void ShowProgress()
         {
