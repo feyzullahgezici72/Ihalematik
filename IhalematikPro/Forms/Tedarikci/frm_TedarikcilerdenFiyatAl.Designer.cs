@@ -164,7 +164,6 @@
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl7.Location = new System.Drawing.Point(37, 76);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
@@ -175,7 +174,6 @@
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl6.Location = new System.Drawing.Point(20, 8);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
@@ -212,7 +210,6 @@
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.labelControl8.Location = new System.Drawing.Point(46, 42);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
@@ -1081,8 +1078,6 @@
             this.Controls.Add(this.panelControl6);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

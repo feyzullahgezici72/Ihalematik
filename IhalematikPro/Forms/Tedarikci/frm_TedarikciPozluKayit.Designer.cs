@@ -776,8 +776,6 @@
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl1);
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TedarikciPozluKayit";

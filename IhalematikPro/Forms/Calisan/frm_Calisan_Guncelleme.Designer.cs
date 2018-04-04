@@ -164,8 +164,6 @@
             this.groupControl3.Controls.Add(this.rbAsgariUcret);
             this.groupControl3.Controls.Add(this.rbNetSalary);
             this.groupControl3.Location = new System.Drawing.Point(155, 79);
-            this.groupControl3.LookAndFeel.SkinName = "London Liquid Sky";
-            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(267, 71);
             this.groupControl3.TabIndex = 139;
@@ -658,7 +656,7 @@
             this.ddlTitles.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.ddlTitles.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ddlTitles.Size = new System.Drawing.Size(267, 28);
+            this.ddlTitles.Size = new System.Drawing.Size(267, 26);
             this.ddlTitles.TabIndex = 0;
             // 
             // labelControl3
@@ -689,8 +687,6 @@
             this.Controls.Add(this.panelControl2);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Calisan_Guncelleme";

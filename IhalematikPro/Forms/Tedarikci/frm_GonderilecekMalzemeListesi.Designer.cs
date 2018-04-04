@@ -407,8 +407,6 @@
             this.btnTumunuCikar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnTumunuCikar.Image = ((System.Drawing.Image)(resources.GetObject("btnTumunuCikar.Image")));
             this.btnTumunuCikar.Location = new System.Drawing.Point(1046, 3);
-            this.btnTumunuCikar.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnTumunuCikar.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnTumunuCikar.Name = "btnTumunuCikar";
             this.btnTumunuCikar.Size = new System.Drawing.Size(166, 54);
             this.btnTumunuCikar.TabIndex = 0;
@@ -425,8 +423,6 @@
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_GonderilecekMalzemeListesi";

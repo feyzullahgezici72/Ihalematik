@@ -99,8 +99,6 @@
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.pictureEdit1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Cikis";
             this.ShowInTaskbar = false;

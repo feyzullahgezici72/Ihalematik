@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_IhaleBilgisiDetay));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tabIhaleBilgileri = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.LastOfferDate = new DevExpress.XtraEditors.DateEdit();
@@ -47,7 +47,6 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -59,6 +58,7 @@
             this.txtScope = new DevExpress.XtraEditors.TextEdit();
             this.txtType = new DevExpress.XtraEditors.TextEdit();
             this.txtEkapNumber = new DevExpress.XtraEditors.TextEdit();
+            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -147,7 +147,7 @@
             this.xtraTabPage1.Controls.Add(this.labelControl4);
             this.xtraTabPage1.Controls.Add(this.labelControl5);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(746, 276);
+            this.xtraTabPage1.Size = new System.Drawing.Size(742, 269);
             this.xtraTabPage1.Text = "İhale Bilgileri";
             // 
             // LastOfferDate
@@ -163,7 +163,7 @@
             this.LastOfferDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.LastOfferDate.Properties.Mask.EditMask = "f";
-            this.LastOfferDate.Size = new System.Drawing.Size(598, 28);
+            this.LastOfferDate.Size = new System.Drawing.Size(598, 26);
             this.LastOfferDate.TabIndex = 14;
             // 
             // txtTeklifNo
@@ -275,7 +275,7 @@
             this.xtraTabPage2.Controls.Add(this.txtType);
             this.xtraTabPage2.Controls.Add(this.txtEkapNumber);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(746, 289);
+            this.xtraTabPage2.Size = new System.Drawing.Size(742, 269);
             this.xtraTabPage2.Text = "Detay          ";
             // 
             // labelControl12
@@ -288,25 +288,6 @@
             this.labelControl12.Size = new System.Drawing.Size(71, 19);
             this.labelControl12.TabIndex = 18;
             this.labelControl12.Text = "Üst İdare:";
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnGuncelle.Appearance.Options.UseFont = true;
-            this.btnGuncelle.Appearance.Options.UseForeColor = true;
-            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnGuncelle.Location = new System.Drawing.Point(1087, 358);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(157, 60);
-            toolTipTitleItem1.Text = "Güncelle";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.btnGuncelle.SuperTip = superToolTip1;
-            this.btnGuncelle.TabIndex = 109;
-            this.btnGuncelle.Text = "&Güncelle";
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // labelControl11
             // 
@@ -459,6 +440,25 @@
             this.txtEkapNumber.Size = new System.Drawing.Size(414, 28);
             this.txtEkapNumber.TabIndex = 12;
             // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.btnGuncelle.Appearance.Options.UseFont = true;
+            this.btnGuncelle.Appearance.Options.UseForeColor = true;
+            this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
+            this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnGuncelle.Location = new System.Drawing.Point(1087, 358);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(157, 60);
+            toolTipTitleItem2.Text = "Güncelle";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.btnGuncelle.SuperTip = superToolTip2;
+            this.btnGuncelle.TabIndex = 109;
+            this.btnGuncelle.Text = "&Güncelle";
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
             // panelControl1
             // 
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -539,9 +539,9 @@
             // 
             this.grdOffer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdOffer.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.grdOffer.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.grdOffer.Location = new System.Drawing.Point(3, 102);
             this.grdOffer.MainView = this.gridViewOffer;
             this.grdOffer.Margin = new System.Windows.Forms.Padding(4);
@@ -778,7 +778,7 @@
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.TopCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.repositoryItemButtonEdit1.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -787,7 +787,7 @@
             // 
             this.btnSil.AutoHeight = false;
             this.btnSil.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.erase_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnSil.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnSil.Name = "btnSil";
             this.btnSil.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
@@ -814,8 +814,6 @@
             this.panelControl4.Controls.Add(this.labelControl6);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(3, 3);
-            this.panelControl4.LookAndFeel.SkinName = "VS2010";
-            this.panelControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(482, 99);
             this.panelControl4.TabIndex = 100;
@@ -840,7 +838,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEnd.Size = new System.Drawing.Size(134, 28);
+            this.dateEnd.Size = new System.Drawing.Size(134, 26);
             this.dateEnd.TabIndex = 2;
             // 
             // dateStart
@@ -854,7 +852,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateStart.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateStart.Size = new System.Drawing.Size(162, 28);
+            this.dateStart.Size = new System.Drawing.Size(162, 26);
             this.dateStart.TabIndex = 2;
             // 
             // txtOfferNumber
@@ -914,8 +912,6 @@
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_IhaleBilgisiDetay";

@@ -128,7 +128,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1370, 35);
+            this.panelControl1.Size = new System.Drawing.Size(1531, 35);
             this.panelControl1.TabIndex = 18;
             // 
             // pcWorld
@@ -166,7 +166,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1342, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1503, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -196,7 +196,6 @@
             this.pozMenu.Controls.Add(this.labelControl3);
             this.pozMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pozMenu.Location = new System.Drawing.Point(0, 35);
-            this.pozMenu.LookAndFeel.SkinName = "London Liquid Sky";
             this.pozMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pozMenu.Name = "pozMenu";
             this.pozMenu.Size = new System.Drawing.Size(526, 623);
@@ -249,8 +248,6 @@
             this.simpleButton3.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.Image")));
             this.simpleButton3.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.simpleButton3.Location = new System.Drawing.Point(395, 35);
-            this.simpleButton3.LookAndFeel.SkinName = "London Liquid Sky";
-            this.simpleButton3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(122, 102);
             this.simpleButton3.TabIndex = 0;
@@ -408,7 +405,7 @@
             this.btnGncelle,
             this.btnPasive,
             this.btnActive});
-            this.grdPozList.Size = new System.Drawing.Size(844, 514);
+            this.grdPozList.Size = new System.Drawing.Size(1005, 514);
             this.grdPozList.TabIndex = 0;
             this.grdPozList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPozList});
@@ -768,7 +765,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(526, 35);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(844, 75);
+            this.panelControl2.Size = new System.Drawing.Size(1005, 75);
             this.panelControl2.TabIndex = 39;
             // 
             // groupControl3
@@ -780,8 +777,6 @@
             this.groupControl3.Controls.Add(this.txtSearchDescription);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl3.Location = new System.Drawing.Point(255, 3);
-            this.groupControl3.LookAndFeel.SkinName = "London Liquid Sky";
-            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(484, 69);
             this.groupControl3.TabIndex = 30;
@@ -795,10 +790,10 @@
             this.simpleButton2.Appearance.Options.UseForeColor = true;
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton2.Location = new System.Drawing.Point(431, 35);
+            this.simpleButton2.Location = new System.Drawing.Point(431, 33);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(50, 31);
+            this.simpleButton2.Size = new System.Drawing.Size(50, 33);
             this.simpleButton2.TabIndex = 28;
             this.simpleButton2.Text = "Bul";
             this.simpleButton2.ToolTip = "Poz Bul";
@@ -813,8 +808,6 @@
             this.groupControl2.Controls.Add(this.simpleButton1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl2.Location = new System.Drawing.Point(3, 3);
-            this.groupControl2.LookAndFeel.SkinName = "London Liquid Sky";
-            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(252, 69);
             this.groupControl2.TabIndex = 29;
@@ -828,10 +821,10 @@
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton1.Location = new System.Drawing.Point(199, 35);
+            this.simpleButton1.Location = new System.Drawing.Point(199, 33);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(50, 31);
+            this.simpleButton1.Size = new System.Drawing.Size(50, 33);
             this.simpleButton1.TabIndex = 27;
             this.simpleButton1.Text = "Bul";
             this.simpleButton1.ToolTip = "Poz Bul";
@@ -843,7 +836,7 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.ddlPozYear);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl1.Location = new System.Drawing.Point(581, 3);
+            this.groupControl1.Location = new System.Drawing.Point(742, 3);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(260, 69);
             this.groupControl1.TabIndex = 28;
@@ -855,7 +848,7 @@
             this.ddlPozYear.EditValue = "2018 Pozları Tüm Kurumlar";
             this.ddlPozYear.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.ddlPozYear, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.ddlPozYear.Location = new System.Drawing.Point(3, 35);
+            this.ddlPozYear.Location = new System.Drawing.Point(3, 33);
             this.ddlPozYear.Margin = new System.Windows.Forms.Padding(4);
             this.ddlPozYear.Name = "ddlPozYear";
             this.ddlPozYear.Properties.AccessibleDescription = "Name";
@@ -868,7 +861,7 @@
             "2017 Pozları Tüm Kurumlar",
             "2018 Pozları Tüm Kurumlar"});
             this.ddlPozYear.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.ddlPozYear.Size = new System.Drawing.Size(254, 28);
+            this.ddlPozYear.Size = new System.Drawing.Size(254, 26);
             this.ddlPozYear.TabIndex = 30;
             this.ddlPozYear.SelectedIndexChanged += new System.EventHandler(this.ddlPozYear_SelectedIndexChanged);
             // 
@@ -880,7 +873,7 @@
             this.statusPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.statusPanel.Location = new System.Drawing.Point(526, 624);
             this.statusPanel.Name = "statusPanel";
-            this.statusPanel.Size = new System.Drawing.Size(844, 34);
+            this.statusPanel.Size = new System.Drawing.Size(1005, 34);
             this.statusPanel.TabIndex = 43;
             // 
             // cmbAktivePasive
@@ -888,7 +881,7 @@
             this.cmbAktivePasive.Dock = System.Windows.Forms.DockStyle.Right;
             this.cmbAktivePasive.EditValue = "Aktif Kayıtlar";
             this.cmbAktivePasive.EnterMoveNextControl = true;
-            this.cmbAktivePasive.Location = new System.Drawing.Point(674, 0);
+            this.cmbAktivePasive.Location = new System.Drawing.Point(835, 0);
             this.cmbAktivePasive.Name = "cmbAktivePasive";
             this.cmbAktivePasive.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbAktivePasive.Properties.Appearance.Options.UseFont = true;
@@ -935,15 +928,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1370, 658);
+            this.ClientSize = new System.Drawing.Size(1531, 658);
             this.ControlBox = false;
             this.Controls.Add(this.grdPozList);
             this.Controls.Add(this.statusPanel);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.pozMenu);
             this.Controls.Add(this.panelControl1);
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

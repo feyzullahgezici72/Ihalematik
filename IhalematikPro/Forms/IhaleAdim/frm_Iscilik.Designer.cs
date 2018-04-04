@@ -905,8 +905,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.isciAracGirisPanelix);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Iscilik";

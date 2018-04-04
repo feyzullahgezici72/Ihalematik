@@ -74,7 +74,6 @@
             this.groupControl1.Controls.Add(this.grdMaterialList);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(309, 0);
-            this.groupControl1.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1019, 694);
             this.groupControl1.TabIndex = 8;
@@ -401,7 +400,6 @@
             this.groupControl2.Controls.Add(this.groupControl5);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
-            this.groupControl2.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(309, 694);
             this.groupControl2.TabIndex = 9;
@@ -465,8 +463,6 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.LookAndFeel.SkinName = "Stardust";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TopluObfYukleIhaleTemp";

@@ -85,7 +85,7 @@
             this.grdWorkerRules.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGuncelle,
             this.btnSil});
-            this.grdWorkerRules.Size = new System.Drawing.Size(590, 493);
+            this.grdWorkerRules.Size = new System.Drawing.Size(586, 486);
             this.grdWorkerRules.TabIndex = 0;
             this.grdWorkerRules.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewRules});
@@ -377,7 +377,7 @@
             // 
             this.xtraTabPage1.Controls.Add(this.grdWorkerRules);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(590, 493);
+            this.xtraTabPage1.Size = new System.Drawing.Size(586, 486);
             this.xtraTabPage1.Text = "İşçilik Kuralları";
             // 
             // xtraTabPage2
@@ -624,8 +624,6 @@
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Kurallistesi";

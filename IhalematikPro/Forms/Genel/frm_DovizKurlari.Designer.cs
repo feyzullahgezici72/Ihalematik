@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DovizKurlari));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dataGrid1 = new System.Windows.Forms.DataGridView();
@@ -55,7 +54,7 @@
             this.groupControl1.Location = new System.Drawing.Point(0, 39);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(685, 619);
+            this.groupControl1.Size = new System.Drawing.Size(681, 615);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "TC.Merkez Bankası Verilerine Göre";
             // 
@@ -66,14 +65,6 @@
             this.dataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGrid1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid1.GridColor = System.Drawing.Color.White;
             this.dataGrid1.Location = new System.Drawing.Point(3, 35);
@@ -87,7 +78,7 @@
             this.dataGrid1.ShowCellToolTips = false;
             this.dataGrid1.ShowEditingIcon = false;
             this.dataGrid1.ShowRowErrors = false;
-            this.dataGrid1.Size = new System.Drawing.Size(679, 581);
+            this.dataGrid1.Size = new System.Drawing.Size(675, 577);
             this.dataGrid1.TabIndex = 9;
             // 
             // btnGizliKapat
@@ -112,7 +103,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(685, 39);
+            this.panelControl1.Size = new System.Drawing.Size(681, 39);
             this.panelControl1.TabIndex = 13;
             // 
             // btnIptal
@@ -124,7 +115,7 @@
             this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
             this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnIptal.Location = new System.Drawing.Point(657, 0);
+            this.btnIptal.Location = new System.Drawing.Point(653, 0);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(28, 39);
@@ -146,13 +137,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(685, 658);
+            this.ClientSize = new System.Drawing.Size(681, 654);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

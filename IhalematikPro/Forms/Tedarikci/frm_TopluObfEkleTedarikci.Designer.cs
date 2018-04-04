@@ -182,8 +182,6 @@
             this.groupControl1.Controls.Add(this.lblBirimFiyat);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(994, 394);
             this.groupControl1.TabIndex = 34;
@@ -207,8 +205,6 @@
             // 
             this.btnYukle.Image = ((System.Drawing.Image)(resources.GetObject("btnYukle.Image")));
             this.btnYukle.Location = new System.Drawing.Point(693, 27);
-            this.btnYukle.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnYukle.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnYukle.Name = "btnYukle";
             this.btnYukle.Size = new System.Drawing.Size(140, 57);
             this.btnYukle.TabIndex = 28;
@@ -219,8 +215,6 @@
             this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
             this.btnIptal.Location = new System.Drawing.Point(839, 27);
-            this.btnIptal.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnIptal.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(140, 57);
             this.btnIptal.TabIndex = 29;

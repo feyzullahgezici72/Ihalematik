@@ -147,8 +147,6 @@
             this.btnUploadFile.Image = global::IhalematikProUI.Properties.Resources.yukle;
             this.btnUploadFile.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnUploadFile.Location = new System.Drawing.Point(1081, 3);
-            this.btnUploadFile.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnUploadFile.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnUploadFile.Margin = new System.Windows.Forms.Padding(6);
             this.btnUploadFile.Name = "btnUploadFile";
             this.btnUploadFile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -176,8 +174,6 @@
             this.btnKaydet.Image = global::IhalematikProUI.Properties.Resources.Check_icon__1_;
             this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnKaydet.Location = new System.Drawing.Point(1195, 3);
-            this.btnKaydet.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnKaydet.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(6);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -601,8 +597,6 @@
             this.Controls.Add(this.panelControl6);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TeklifAktar";

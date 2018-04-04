@@ -530,8 +530,6 @@
             this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.cross_script_icon;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton1.Location = new System.Drawing.Point(26, 85);
-            this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
-            this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(6);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -558,8 +556,6 @@
             this.btnUploadFile.Image = ((System.Drawing.Image)(resources.GetObject("btnUploadFile.Image")));
             this.btnUploadFile.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnUploadFile.Location = new System.Drawing.Point(27, 37);
-            this.btnUploadFile.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnUploadFile.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnUploadFile.Margin = new System.Windows.Forms.Padding(6);
             this.btnUploadFile.Name = "btnUploadFile";
             this.btnUploadFile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

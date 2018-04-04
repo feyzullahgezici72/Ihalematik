@@ -22,5 +22,10 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
             this.Close();
         }
+
+        private void btnEvet_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

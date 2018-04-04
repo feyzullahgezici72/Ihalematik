@@ -116,8 +116,6 @@
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.network_icon32;
             this.btnGuncelle.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnGuncelle.Location = new System.Drawing.Point(40, 124);
-            this.btnGuncelle.LookAndFeel.SkinName = "McSkin";
-            this.btnGuncelle.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(220, 111);
             this.btnGuncelle.TabIndex = 106;
@@ -148,8 +146,6 @@
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_PozlariOnlineGuncelle";

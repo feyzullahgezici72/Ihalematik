@@ -109,8 +109,6 @@
             this.groupControl1.Controls.Add(this.webBrowser1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 35);
-            this.groupControl1.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
-            this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1362, 569);
             this.groupControl1.TabIndex = 30;

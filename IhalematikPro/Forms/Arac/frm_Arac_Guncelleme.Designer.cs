@@ -112,7 +112,6 @@
             this.groupControl2.Controls.Add(this.rbRentVehicle);
             this.groupControl2.Controls.Add(this.rbCompanyVehicle);
             this.groupControl2.Location = new System.Drawing.Point(0, 35);
-            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(891, 510);
@@ -128,7 +127,6 @@
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
             this.btnGuncelle.Location = new System.Drawing.Point(291, 436);
             this.btnGuncelle.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnGuncelle.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(130, 61);
@@ -737,8 +735,6 @@
             this.Controls.Add(this.panelControl2);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Arac_Guncelleme";

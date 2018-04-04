@@ -277,7 +277,7 @@
             this.LastOfferDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.LastOfferDate.Properties.Mask.EditMask = "f";
-            this.LastOfferDate.Size = new System.Drawing.Size(597, 28);
+            this.LastOfferDate.Size = new System.Drawing.Size(597, 26);
             this.LastOfferDate.TabIndex = 2;
             // 
             // xtraTabPage2
@@ -776,7 +776,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEnd.Size = new System.Drawing.Size(134, 28);
+            this.dateEnd.Size = new System.Drawing.Size(134, 26);
             this.dateEnd.TabIndex = 2;
             // 
             // dateStart
@@ -790,7 +790,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateStart.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateStart.Size = new System.Drawing.Size(162, 28);
+            this.dateStart.Size = new System.Drawing.Size(162, 26);
             this.dateStart.TabIndex = 2;
             // 
             // txtOfferNumber
@@ -943,8 +943,6 @@
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.tabIhaleBilgileri);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

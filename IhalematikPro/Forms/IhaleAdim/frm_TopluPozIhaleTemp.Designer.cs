@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TopluPozIhaleTemp));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.btnHayir = new DevExpress.XtraEditors.SimpleButton();
@@ -90,7 +90,6 @@
             this.groupControl2.Controls.Add(this.groupControl4);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
-            this.groupControl2.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(309, 674);
             this.groupControl2.TabIndex = 7;
@@ -414,11 +413,11 @@
             // grdMaterialList
             // 
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grdMaterialList.Location = new System.Drawing.Point(3, 35);
             this.grdMaterialList.MainView = this.gridViewMaterialList;
-            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnChangeMeterialName,
@@ -431,14 +430,14 @@
             // btnChangeMeterialName
             // 
             this.btnChangeMeterialName.AutoHeight = false;
-            toolTipTitleItem1.Text = "YENİDEN ADLANDIR";
-            toolTipItem1.Appearance.Options.UseImage = true;
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmek isterseniz kullanınız..";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
+            toolTipTitleItem3.Text = "YENİDEN ADLANDIR";
+            toolTipItem3.Appearance.Options.UseImage = true;
+            toolTipItem3.LeftIndent = 6;
+            toolTipItem3.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmek isterseniz kullanınız..";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            superToolTip3.Items.Add(toolTipItem3);
             this.btnChangeMeterialName.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnChangeMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, superToolTip1, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnChangeMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, superToolTip3, true)});
             this.btnChangeMeterialName.LookAndFeel.SkinName = "Sharp Plus";
             this.btnChangeMeterialName.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnChangeMeterialName.Name = "btnChangeMeterialName";
@@ -447,15 +446,15 @@
             // btnResetMeterialName
             // 
             this.btnResetMeterialName.AutoHeight = false;
-            toolTipTitleItem2.Text = "GERİAL YENİDEN ADLANDIR";
-            toolTipItem2.Appearance.Options.UseImage = true;
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmişseniz geri almak için kullan" +
+            toolTipTitleItem4.Text = "GERİAL YENİDEN ADLANDIR";
+            toolTipItem4.Appearance.Options.UseImage = true;
+            toolTipItem4.LeftIndent = 6;
+            toolTipItem4.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmişseniz geri almak için kullan" +
     "ınız...";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            superToolTip4.Items.Add(toolTipItem4);
             this.btnResetMeterialName.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnResetMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, superToolTip2, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnResetMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, superToolTip4, true)});
             this.btnResetMeterialName.LookAndFeel.SkinName = "Sharp Plus";
             this.btnResetMeterialName.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnResetMeterialName.Name = "btnResetMeterialName";
@@ -469,7 +468,6 @@
             this.groupControl1.Controls.Add(this.grdMaterialList);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(309, 0);
-            this.groupControl1.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1019, 674);
             this.groupControl1.TabIndex = 6;
@@ -600,8 +598,6 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TopluPozIhaleTemp";

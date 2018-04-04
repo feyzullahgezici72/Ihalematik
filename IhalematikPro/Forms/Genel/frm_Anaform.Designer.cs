@@ -157,6 +157,8 @@ namespace IhalematikPro.Forms
             this.barButtonItem34 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem36 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem38 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem48 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem49 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem35 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem37 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem39 = new DevExpress.XtraBars.BarButtonItem();
@@ -344,10 +346,12 @@ namespace IhalematikPro.Forms
             this.skinRibbonGalleryBarItem1,
             this.barButtonItem45,
             this.barButtonItem46,
-            this.barButtonItem47});
+            this.barButtonItem47,
+            this.barButtonItem48,
+            this.barButtonItem49});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 77;
+            this.ribbon.MaxItemId = 79;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsTouch.AffectOnlyRibbon = true;
             this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem1);
@@ -358,6 +362,7 @@ namespace IhalematikPro.Forms
             this.ribbonPage7,
             this.ribbonPage4,
             this.ribbonPage2});
+            this.ribbon.PopupShowMode = DevExpress.XtraBars.PopupShowMode.Classic;
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemPopupContainerEdit1,
             this.repositoryItemDateEdit1,
@@ -1073,7 +1078,7 @@ namespace IhalematikPro.Forms
             // 
             // barSubItem2
             // 
-            this.barSubItem2.Caption = "Standart Temalar";
+            this.barSubItem2.Caption = "Temalar";
             this.barSubItem2.Id = 36;
             this.barSubItem2.LargeGlyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
             this.barSubItem2.LargeWidth = 120;
@@ -1082,7 +1087,9 @@ namespace IhalematikPro.Forms
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem33),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem34),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem36),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem38)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem38),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem48),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem49)});
             this.barSubItem2.Name = "barSubItem2";
             toolTipTitleItem20.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image19")));
             toolTipTitleItem20.Appearance.Options.UseImage = true;
@@ -1133,6 +1140,23 @@ namespace IhalematikPro.Forms
             this.barButtonItem38.Id = 43;
             this.barButtonItem38.Name = "barButtonItem38";
             this.barButtonItem38.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem38_ItemClick);
+            // 
+            // barButtonItem48
+            // 
+            this.barButtonItem48.Caption = "Tema-6";
+            this.barButtonItem48.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem48.Id = 77;
+            this.barButtonItem48.LargeGlyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem48.Name = "barButtonItem48";
+            this.barButtonItem48.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem48_ItemClick);
+            // 
+            // barButtonItem49
+            // 
+            this.barButtonItem49.Caption = "Tema-7";
+            this.barButtonItem49.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
+            this.barButtonItem49.Id = 78;
+            this.barButtonItem49.Name = "barButtonItem49";
+            this.barButtonItem49.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem49_ItemClick);
             // 
             // barButtonItem35
             // 
@@ -2033,6 +2057,8 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.BarButtonItem barButtonItem46;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup22;
         private DevExpress.XtraBars.BarButtonItem barButtonItem47;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem48;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem49;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }

@@ -217,7 +217,7 @@
             this.txtDateTime.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDateTime.Properties.Mask.EditMask = "f";
-            this.txtDateTime.Size = new System.Drawing.Size(594, 28);
+            this.txtDateTime.Size = new System.Drawing.Size(594, 26);
             this.txtDateTime.TabIndex = 1;
             // 
             // labelControl5
@@ -248,8 +248,6 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

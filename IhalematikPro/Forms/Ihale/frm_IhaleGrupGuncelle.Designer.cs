@@ -44,7 +44,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(610, 84);
+            this.groupControl1.Size = new System.Drawing.Size(619, 84);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "Grup Adı";
             // 
@@ -65,7 +65,7 @@
             this.btnGuncelle.Appearance.Options.UseFont = true;
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.Location = new System.Drawing.Point(482, 93);
+            this.btnGuncelle.Location = new System.Drawing.Point(481, 76);
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(130, 54);
@@ -76,17 +76,15 @@
             // frm_IhaleGrupGuncelle
             // 
             this.AcceptButton = this.btnGuncelle;
-            this.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.Appearance.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 144);
+            this.ClientSize = new System.Drawing.Size(619, 143);
             this.ControlBox = false;
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frm_IhaleGrupGuncelle";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

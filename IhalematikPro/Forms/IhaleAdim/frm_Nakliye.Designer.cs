@@ -179,8 +179,6 @@
             this.groupControl2.Controls.Add(this.btnOk);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 77);
-            this.groupControl2.LookAndFeel.SkinName = "London Liquid Sky";
-            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(880, 543);
             this.groupControl2.TabIndex = 98;

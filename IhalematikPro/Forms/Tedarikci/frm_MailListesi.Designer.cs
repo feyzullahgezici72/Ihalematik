@@ -459,8 +459,6 @@
             this.groupControl3.Controls.Add(this.simpleButton1);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl3.Location = new System.Drawing.Point(543, 3);
-            this.groupControl3.LookAndFeel.SkinName = "London Liquid Sky";
-            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(540, 69);
             this.groupControl3.TabIndex = 32;
@@ -506,8 +504,6 @@
             this.groupControl2.Controls.Add(this.txtSearchTedarikci);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl2.Location = new System.Drawing.Point(3, 3);
-            this.groupControl2.LookAndFeel.SkinName = "London Liquid Sky";
-            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(540, 69);
             this.groupControl2.TabIndex = 31;

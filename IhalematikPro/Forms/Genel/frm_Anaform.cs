@@ -624,7 +624,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Green"; //"Money Twins"; //"Lilian";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Money Twins"; //"Money Twins"; //"Lilian";
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
@@ -638,7 +638,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "iMaginary"; //Office 2007 Blue
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "iMaginary"; //
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
@@ -652,7 +652,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Money Twins"; //London Liquid Sky
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Green"; //London Liquid Sky
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
@@ -894,7 +894,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem32_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Green"; //"Money Twins"; //"Lilian";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Devexpress Style"; //""; //"Lilian";
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
@@ -915,14 +915,14 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem36_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Caramel";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Money Twins";
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
 
         private void barButtonItem38_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Money Twins"; //London Liquid Sky
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Green"; //London Liquid Sky
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
@@ -1086,6 +1086,20 @@ namespace IhalematikPro.Forms
             myB = null;
             RibonAktif();
             barButtonItem46.ButtonStyle = BarButtonStyle.Default;
+        }
+
+        private void barButtonItem48_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "London Liquid Sky"; //
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
+        }
+
+        private void barButtonItem49_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "The Asphalt World"; //London Liquid Sky
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles();
         }
     }
 }

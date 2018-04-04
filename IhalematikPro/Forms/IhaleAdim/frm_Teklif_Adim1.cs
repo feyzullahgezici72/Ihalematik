@@ -295,12 +295,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click_1(object sender, EventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender.MaterialList != null)
-            {
-                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
-                List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-                grdMaterialList.DataSource = models;
-            }
+           
         }
 
         private void btnExcel_Click(object sender, EventArgs e)
@@ -319,16 +314,12 @@ namespace IhalematikPro.Forms
             }
         }
 
-        private void btnGrupEkle_Click(object sender, EventArgs e)
-        {
-            frm_IhaleGrup ig = new frm_IhaleGrup(this);
-            ig.ShowDialog();
-        }
+     
 
         private void btnExceldenAl_Click(object sender, EventArgs e)
         {
-            frm_PozOrObfIhale pozorobf = new frm_PozOrObfIhale(this);
-            pozorobf.ShowDialog();
+            //frm_PozOrObfIhale pozorobf = new frm_PozOrObfIhale(this);
+            //pozorobf.ShowDialog();
         }
 
         private void btnObf_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -341,6 +332,24 @@ namespace IhalematikPro.Forms
         {
             frm_TopluPozYukleIhale pozY = new frm_TopluPozYukleIhale(this);
             pozY.ShowDialog();
+        }
+
+      
+
+        private void barbtnYeniGrup_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_IhaleGrup ig = new frm_IhaleGrup(this);
+            ig.ShowDialog();
+        }
+
+        private void barTumGrupListele_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (CurrentManager.Instance.CurrentTender.MaterialList != null)
+            {
+                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+                List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+                grdMaterialList.DataSource = models;
+            }
         }
     }
 }

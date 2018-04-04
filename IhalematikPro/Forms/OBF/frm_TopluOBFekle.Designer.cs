@@ -59,8 +59,6 @@
             // 
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.Location = new System.Drawing.Point(693, 27);
-            this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
-            this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(140, 57);
             this.simpleButton1.TabIndex = 28;
@@ -124,8 +122,6 @@
             this.groupControl1.Controls.Add(this.lblBirimFiyat);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 35);
-            this.groupControl1.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(994, 359);
             this.groupControl1.TabIndex = 32;
@@ -161,8 +157,6 @@
             this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
             this.simpleButton2.Location = new System.Drawing.Point(839, 27);
-            this.simpleButton2.LookAndFeel.SkinName = "London Liquid Sky";
-            this.simpleButton2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(140, 57);
             this.simpleButton2.TabIndex = 29;
@@ -281,8 +275,6 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.LookAndFeel.SkinName = "McSkin";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TopluOBFekle";

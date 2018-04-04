@@ -282,12 +282,6 @@
     <Compile Include="Forms\Genel\frm_PozlariOnlineGuncelle.Designer.cs">
       <DependentUpon>frm_PozlariOnlineGuncelle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\IhaleAdim\frm_PozOrObfIhale.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\IhaleAdim\frm_PozOrObfIhale.Designer.cs">
-      <DependentUpon>frm_PozOrObfIhale.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\IhaleAdim\frm_TopluObfYukleIhale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -473,12 +467,6 @@
     </Compile>
     <Compile Include="Forms\Tedarikci\frm_GonderilecekMalzemeListesi.Designer.cs">
       <DependentUpon>frm_GonderilecekMalzemeListesi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Tedarikci\frm_PozOrObf.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Tedarikci\frm_PozOrObf.Designer.cs">
-      <DependentUpon>frm_PozOrObf.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tedarikci\frm_TedarikcilereMailleGonderilenMalzemeDetayi.cs">
       <SubType>Form</SubType>
@@ -768,9 +756,6 @@
     <EmbeddedResource Include="Forms\Genel\frm_PozlariOnlineGuncelle.resx">
       <DependentUpon>frm_PozlariOnlineGuncelle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\IhaleAdim\frm_PozOrObfIhale.resx">
-      <DependentUpon>frm_PozOrObfIhale.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\IhaleAdim\frm_TopluObfYukleIhale.resx">
       <DependentUpon>frm_TopluObfYukleIhale.cs</DependentUpon>
     </EmbeddedResource>
@@ -863,9 +848,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_GonderilecekMalzemeListesi.resx">
       <DependentUpon>frm_GonderilecekMalzemeListesi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tedarikci\frm_PozOrObf.resx">
-      <DependentUpon>frm_PozOrObf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_TedarikcilereMailleGonderilenMalzemeDetayi.resx">
       <DependentUpon>frm_TedarikcilereMailleGonderilenMalzemeDetayi.cs</DependentUpon>

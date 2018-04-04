@@ -427,8 +427,6 @@
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
             this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnKaydet.Location = new System.Drawing.Point(1302, 3);
-            this.btnKaydet.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnKaydet.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(132, 66);
@@ -444,8 +442,6 @@
             this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnObfKayit.Location = new System.Drawing.Point(1434, 3);
-            this.btnObfKayit.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnObfKayit.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(4);
             this.btnObfKayit.Name = "btnObfKayit";
             this.btnObfKayit.Size = new System.Drawing.Size(141, 66);
@@ -461,8 +457,6 @@
             this.btnExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExcel.Image")));
             this.btnExcel.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnExcel.Location = new System.Drawing.Point(1575, 3);
-            this.btnExcel.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnExcel.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(132, 66);
@@ -622,9 +616,7 @@
             this.btnTumuneUygula.Appearance.Options.UseFont = true;
             this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
             this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnTumuneUygula.Location = new System.Drawing.Point(362, 61);
-            this.btnTumuneUygula.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnTumuneUygula.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnTumuneUygula.Location = new System.Drawing.Point(362, 63);
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
             this.btnTumuneUygula.Size = new System.Drawing.Size(80, 61);
@@ -1042,8 +1034,6 @@
             this.groupControl3.Controls.Add(this.txtToplamAdamSaat);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl3.Location = new System.Drawing.Point(501, 0);
-            this.groupControl3.LookAndFeel.SkinName = "London Liquid Sky";
-            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(271, 145);
@@ -1119,8 +1109,6 @@
             this.btnPrev.Image = ((System.Drawing.Image)(resources.GetObject("btnPrev.Image")));
             this.btnPrev.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnPrev.Location = new System.Drawing.Point(894, 35);
-            this.btnPrev.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnPrev.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnPrev.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(200, 70);
@@ -1186,8 +1174,6 @@
             this.groupControl5.Controls.Add(this.txtTotalUnitPrice);
             this.groupControl5.Controls.Add(this.txtTotalPersonHour);
             this.groupControl5.Location = new System.Drawing.Point(8, 460);
-            this.groupControl5.LookAndFeel.SkinName = "London Liquid Sky";
-            this.groupControl5.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl5.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl5.Name = "groupControl5";
             this.groupControl5.Size = new System.Drawing.Size(350, 149);
@@ -1293,8 +1279,6 @@
             this.groupControl8.Controls.Add(this.labelControl11);
             this.groupControl8.Controls.Add(this.txtMarkupWorkerAmount);
             this.groupControl8.Location = new System.Drawing.Point(6, 308);
-            this.groupControl8.LookAndFeel.SkinName = "London Liquid Sky";
-            this.groupControl8.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl8.Name = "groupControl8";
             this.groupControl8.Size = new System.Drawing.Size(350, 148);
             this.groupControl8.TabIndex = 56;
@@ -1398,8 +1382,6 @@
             this.groupControl7.Controls.Add(this.txtWorkerKDVAmount);
             this.groupControl7.Controls.Add(this.labelControl5);
             this.groupControl7.Location = new System.Drawing.Point(8, 159);
-            this.groupControl7.LookAndFeel.SkinName = "London Liquid Sky";
-            this.groupControl7.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl7.Name = "groupControl7";
             this.groupControl7.Size = new System.Drawing.Size(348, 143);
             this.groupControl7.TabIndex = 55;
@@ -1503,8 +1485,6 @@
             this.groupControl6.Controls.Add(this.txtTotalAmount);
             this.groupControl6.Controls.Add(this.labelControl7);
             this.groupControl6.Location = new System.Drawing.Point(8, 7);
-            this.groupControl6.LookAndFeel.SkinName = "London Liquid Sky";
-            this.groupControl6.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl6.Name = "groupControl6";
             this.groupControl6.Size = new System.Drawing.Size(348, 146);
             this.groupControl6.TabIndex = 54;
@@ -2103,7 +2083,6 @@
             this.Controls.Add(this.gridSplitContainer1);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

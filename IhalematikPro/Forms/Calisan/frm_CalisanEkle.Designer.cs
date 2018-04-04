@@ -310,7 +310,6 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnSave.Location = new System.Drawing.Point(501, 90);
-            this.btnSave.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(91, 65);
@@ -393,8 +392,6 @@
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_CalisanEkle";
             this.ShowInTaskbar = false;

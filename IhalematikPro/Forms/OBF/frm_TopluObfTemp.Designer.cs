@@ -46,10 +46,10 @@
             this.btnPasive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnActive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.btnHayir = new DevExpress.XtraEditors.SimpleButton();
             this.btnEvet = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdOBFTempList)).BeginInit();
@@ -59,6 +59,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnActive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -68,8 +71,6 @@
             this.groupControl1.Controls.Add(this.grdOBFTempList);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(309, 0);
-            this.groupControl1.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
-            this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(919, 694);
             this.groupControl1.TabIndex = 0;
@@ -82,7 +83,7 @@
             gridLevelNode1.RelationName = "Level1";
             this.grdOBFTempList.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.grdOBFTempList.Location = new System.Drawing.Point(3, 31);
+            this.grdOBFTempList.Location = new System.Drawing.Point(3, 30);
             this.grdOBFTempList.MainView = this.gridViewOBFList;
             this.grdOBFTempList.Margin = new System.Windows.Forms.Padding(4);
             this.grdOBFTempList.Name = "grdOBFTempList";
@@ -90,7 +91,7 @@
             this.btnGncelle,
             this.btnPasive,
             this.btnActive});
-            this.grdOBFTempList.Size = new System.Drawing.Size(913, 660);
+            this.grdOBFTempList.Size = new System.Drawing.Size(913, 661);
             this.grdOBFTempList.TabIndex = 1;
             this.grdOBFTempList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOBFList});
@@ -381,24 +382,37 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.btnHayir);
-            this.groupControl2.Controls.Add(this.btnEvet);
-            this.groupControl2.Controls.Add(this.labelControl2);
-            this.groupControl2.Controls.Add(this.labelControl1);
+            this.groupControl2.Controls.Add(this.groupControl3);
+            this.groupControl2.Controls.Add(this.groupControl4);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
-            this.groupControl2.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
-            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(309, 694);
             this.groupControl2.TabIndex = 1;
             // 
+            // groupControl3
+            // 
+            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl3.AppearanceCaption.ForeColor = System.Drawing.Color.Red;
+            this.groupControl3.AppearanceCaption.Options.UseFont = true;
+            this.groupControl3.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl3.Controls.Add(this.btnHayir);
+            this.groupControl3.Controls.Add(this.btnEvet);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl3.Location = new System.Drawing.Point(3, 72);
+            this.groupControl3.LookAndFeel.SkinName = "Seven Classic";
+            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(303, 105);
+            this.groupControl3.TabIndex = 6;
+            this.groupControl3.Text = "Kaydedilsin mi?";
+            // 
             // btnHayir
             // 
             this.btnHayir.Image = ((System.Drawing.Image)(resources.GetObject("btnHayir.Image")));
-            this.btnHayir.Location = new System.Drawing.Point(172, 151);
+            this.btnHayir.Location = new System.Drawing.Point(154, 42);
             this.btnHayir.Name = "btnHayir";
-            this.btnHayir.Size = new System.Drawing.Size(120, 44);
+            this.btnHayir.Size = new System.Drawing.Size(142, 57);
             this.btnHayir.TabIndex = 1;
             this.btnHayir.Text = "&Hayır";
             this.btnHayir.Click += new System.EventHandler(this.btnHayir_Click);
@@ -406,28 +420,25 @@
             // btnEvet
             // 
             this.btnEvet.Image = ((System.Drawing.Image)(resources.GetObject("btnEvet.Image")));
-            this.btnEvet.Location = new System.Drawing.Point(46, 151);
+            this.btnEvet.Location = new System.Drawing.Point(9, 42);
             this.btnEvet.Name = "btnEvet";
-            this.btnEvet.Size = new System.Drawing.Size(120, 44);
+            this.btnEvet.Size = new System.Drawing.Size(140, 57);
             this.btnEvet.TabIndex = 1;
             this.btnEvet.Text = "&Evet";
             this.btnEvet.Click += new System.EventHandler(this.btnEvet_Click);
             // 
-            // labelControl2
+            // groupControl4
             // 
-            this.labelControl2.Location = new System.Drawing.Point(111, 126);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(110, 19);
-            this.labelControl2.TabIndex = 0;
-            this.labelControl2.Text = "Kaydedilsin mi?";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(22, 73);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(181, 19);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Tablodaki veriler okundu.";
+            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl4.AppearanceCaption.Options.UseFont = true;
+            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl4.Location = new System.Drawing.Point(3, 30);
+            this.groupControl4.LookAndFeel.SkinName = "Seven Classic";
+            this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(303, 42);
+            this.groupControl4.TabIndex = 5;
+            this.groupControl4.Text = "Tablodaki veriler okundu!";
             // 
             // frm_TopluObfTemp
             // 
@@ -438,8 +449,6 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.LookAndFeel.SkinName = "McSkin";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frm_TopluObfTemp";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -454,7 +463,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnActive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -474,9 +485,9 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnPasive;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnActive;
         private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.SimpleButton btnHayir;
         private DevExpress.XtraEditors.SimpleButton btnEvet;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.GroupControl groupControl4;
     }
 }

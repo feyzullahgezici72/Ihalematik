@@ -89,8 +89,6 @@
             this.btnTamam.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
             this.btnTamam.Location = new System.Drawing.Point(508, 128);
-            this.btnTamam.LookAndFeel.SkinName = "Seven";
-            this.btnTamam.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnTamam.Name = "btnTamam";
             this.btnTamam.Size = new System.Drawing.Size(131, 50);
             this.btnTamam.TabIndex = 14;

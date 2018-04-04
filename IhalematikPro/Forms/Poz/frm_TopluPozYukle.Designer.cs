@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TopluPozYukle));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.pcWorld = new System.Windows.Forms.PictureBox();
             this.lblPozListesi = new DevExpress.XtraEditors.LabelControl();
             this.lblPozno = new DevExpress.XtraEditors.LabelControl();
             this.lblAciklama = new DevExpress.XtraEditors.LabelControl();
@@ -37,22 +38,21 @@
             this.lblBirimFiyat = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.lblPosSayisi = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.pcWorld = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -70,6 +70,18 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(994, 35);
             this.panelControl1.TabIndex = 19;
+            // 
+            // pcWorld
+            // 
+            this.pcWorld.BackColor = System.Drawing.Color.Transparent;
+            this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
+            this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Name = "pcWorld";
+            this.pcWorld.Size = new System.Drawing.Size(50, 35);
+            this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcWorld.TabIndex = 23;
+            this.pcWorld.TabStop = false;
             // 
             // lblPozListesi
             // 
@@ -148,8 +160,6 @@
             this.groupControl1.Controls.Add(this.lblBirimFiyat);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 35);
-            this.groupControl1.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(994, 359);
             this.groupControl1.TabIndex = 30;
@@ -169,6 +179,16 @@
             this.groupControl2.Size = new System.Drawing.Size(988, 94);
             this.groupControl2.TabIndex = 34;
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(697, 27);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(140, 57);
+            this.simpleButton1.TabIndex = 28;
+            this.simpleButton1.Text = "&Yükle";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // lblPosSayisi
             // 
             this.lblPosSayisi.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -179,6 +199,17 @@
             this.lblPosSayisi.Name = "lblPosSayisi";
             this.lblPosSayisi.Size = new System.Drawing.Size(117, 31);
             this.lblPosSayisi.TabIndex = 23;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(843, 27);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(140, 57);
+            this.simpleButton2.TabIndex = 29;
+            this.simpleButton2.Text = "&Iptal";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // labelControl1
             // 
@@ -235,43 +266,6 @@
             this.labelControl3.TabIndex = 32;
             this.labelControl3.Text = "Açıklama:";
             // 
-            // simpleButton2
-            // 
-            this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(843, 27);
-            this.simpleButton2.LookAndFeel.SkinName = "London Liquid Sky";
-            this.simpleButton2.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(140, 57);
-            this.simpleButton2.TabIndex = 29;
-            this.simpleButton2.Text = "&Iptal";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(697, 27);
-            this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
-            this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(140, 57);
-            this.simpleButton1.TabIndex = 28;
-            this.simpleButton1.Text = "&Yükle";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // pcWorld
-            // 
-            this.pcWorld.BackColor = System.Drawing.Color.Transparent;
-            this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
-            this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Name = "pcWorld";
-            this.pcWorld.Size = new System.Drawing.Size(50, 35);
-            this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcWorld.TabIndex = 23;
-            this.pcWorld.TabStop = false;
-            // 
             // frm_TopluPozYukle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -288,13 +282,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             this.ResumeLayout(false);
 
         }

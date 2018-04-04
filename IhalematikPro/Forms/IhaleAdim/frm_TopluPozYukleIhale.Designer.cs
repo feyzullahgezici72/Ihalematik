@@ -45,11 +45,11 @@
             this.lblBirim = new DevExpress.XtraEditors.LabelControl();
             this.lblAciklama = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.pnlYuke = new DevExpress.XtraEditors.PanelControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbar1 = new DevExpress.XtraEditors.ProgressBarControl();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.lblMiktar = new DevExpress.XtraEditors.LabelControl();
-            this.pnlYuke = new DevExpress.XtraEditors.PanelControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -57,10 +57,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbar1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlYuke)).BeginInit();
             this.pnlYuke.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbar1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl2
@@ -81,8 +81,6 @@
             // 
             this.btnYukle.Image = ((System.Drawing.Image)(resources.GetObject("btnYukle.Image")));
             this.btnYukle.Location = new System.Drawing.Point(698, 26);
-            this.btnYukle.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnYukle.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnYukle.Name = "btnYukle";
             this.btnYukle.Size = new System.Drawing.Size(140, 57);
             this.btnYukle.TabIndex = 28;
@@ -105,8 +103,6 @@
             this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
             this.btnIptal.Location = new System.Drawing.Point(843, 26);
-            this.btnIptal.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnIptal.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(140, 57);
             this.btnIptal.TabIndex = 29;
@@ -271,6 +267,25 @@
             this.groupControl1.TabIndex = 34;
             this.groupControl1.Text = " ";
             // 
+            // pnlYuke
+            // 
+            this.pnlYuke.Controls.Add(this.pictureBox1);
+            this.pnlYuke.Location = new System.Drawing.Point(6, 41);
+            this.pnlYuke.Name = "pnlYuke";
+            this.pnlYuke.Size = new System.Drawing.Size(984, 559);
+            this.pnlYuke.TabIndex = 38;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(978, 556);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // pbar1
             // 
             this.pbar1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -304,25 +319,6 @@
             this.lblMiktar.Size = new System.Drawing.Size(174, 31);
             this.lblMiktar.TabIndex = 35;
             // 
-            // pnlYuke
-            // 
-            this.pnlYuke.Controls.Add(this.pictureBox1);
-            this.pnlYuke.Location = new System.Drawing.Point(6, 41);
-            this.pnlYuke.Name = "pnlYuke";
-            this.pnlYuke.Size = new System.Drawing.Size(984, 559);
-            this.pnlYuke.TabIndex = 38;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(978, 556);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // frm_TopluPozYukleIhale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -347,10 +343,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbar1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlYuke)).EndInit();
             this.pnlYuke.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbar1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

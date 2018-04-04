@@ -610,8 +610,6 @@
             this.groupControl2.Controls.Add(this.txtAddress);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 56);
-            this.groupControl2.LookAndFeel.SkinName = "Foggy";
-            this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(540, 673);
@@ -625,7 +623,7 @@
             this.checkedComboboxEditSupplierSegments.Name = "checkedComboboxEditSupplierSegments";
             this.checkedComboboxEditSupplierSegments.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.checkedComboboxEditSupplierSegments.Size = new System.Drawing.Size(369, 28);
+            this.checkedComboboxEditSupplierSegments.Size = new System.Drawing.Size(369, 26);
             this.checkedComboboxEditSupplierSegments.TabIndex = 93;
             this.checkedComboboxEditSupplierSegments.Closed += new DevExpress.XtraEditors.Controls.ClosedEventHandler(this.checkedComboboxEditSupplierSegments_Closed);
             // 
@@ -1001,8 +999,6 @@
             this.groupControl3.Controls.Add(this.simpleButton1);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl3.Location = new System.Drawing.Point(403, 3);
-            this.groupControl3.LookAndFeel.SkinName = "London Liquid Sky";
-            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(400, 69);
             this.groupControl3.TabIndex = 30;
@@ -1031,10 +1027,10 @@
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton1.Location = new System.Drawing.Point(347, 35);
+            this.simpleButton1.Location = new System.Drawing.Point(347, 33);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(50, 31);
+            this.simpleButton1.Size = new System.Drawing.Size(50, 33);
             this.simpleButton1.TabIndex = 27;
             this.simpleButton1.Text = "Bul";
             this.simpleButton1.ToolTip = "Poz Bul";
@@ -1049,8 +1045,6 @@
             this.groupControl1.Controls.Add(this.simpleButton3);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(3, 3);
-            this.groupControl1.LookAndFeel.SkinName = "London Liquid Sky";
-            this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(400, 69);
             this.groupControl1.TabIndex = 29;
@@ -1079,10 +1073,10 @@
             this.simpleButton3.Appearance.Options.UseForeColor = true;
             this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton3.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton3.Location = new System.Drawing.Point(347, 35);
+            this.simpleButton3.Location = new System.Drawing.Point(347, 33);
             this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(50, 31);
+            this.simpleButton3.Size = new System.Drawing.Size(50, 33);
             this.simpleButton3.TabIndex = 27;
             this.simpleButton3.Text = "Bul";
             this.simpleButton3.ToolTip = "Poz Bul";
@@ -1099,8 +1093,6 @@
             this.Controls.Add(this.statusPanel);
             this.Controls.Add(this.pnlKayit);
             this.Controls.Add(this.panelControl1);
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

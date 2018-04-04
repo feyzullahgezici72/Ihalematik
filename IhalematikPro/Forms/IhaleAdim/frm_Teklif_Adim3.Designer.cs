@@ -235,8 +235,6 @@
             this.btnTumuneUygula.Image = ((System.Drawing.Image)(resources.GetObject("btnTumuneUygula.Image")));
             this.btnTumuneUygula.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnTumuneUygula.Location = new System.Drawing.Point(128, 0);
-            this.btnTumuneUygula.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnTumuneUygula.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnTumuneUygula.Margin = new System.Windows.Forms.Padding(4);
             this.btnTumuneUygula.Name = "btnTumuneUygula";
             this.btnTumuneUygula.Size = new System.Drawing.Size(44, 70);
@@ -298,8 +296,6 @@
             this.btnExcel.Image = global::IhalematikProUI.Properties.Resources.Excel_icon;
             this.btnExcel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnExcel.Location = new System.Drawing.Point(27, 0);
-            this.btnExcel.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnExcel.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(206, 70);
             this.btnExcel.TabIndex = 17;
@@ -1819,8 +1815,6 @@
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.Location = new System.Drawing.Point(3, 3);
-            this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
-            this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(288, 62);
             this.simpleButton1.TabIndex = 1;
@@ -1885,8 +1879,6 @@
             this.btnPrev.Image = ((System.Drawing.Image)(resources.GetObject("btnPrev.Image")));
             this.btnPrev.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnPrev.Location = new System.Drawing.Point(0, 0);
-            this.btnPrev.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnPrev.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnPrev.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(200, 70);
@@ -1914,8 +1906,6 @@
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.btnNext.Location = new System.Drawing.Point(0, 0);
-            this.btnNext.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnNext.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(200, 70);
@@ -1937,8 +1927,6 @@
             this.Controls.Add(this.panelGrup);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -49,6 +49,11 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barTumGrupListele = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtnYeniGrup = new DevExpress.XtraBars.BarButtonItem();
+            this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
             this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
@@ -68,9 +73,8 @@
             this.btnSil = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.rpstColId = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
-            this.btnGrupEkle = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnIslemler = new DevExpress.XtraEditors.DropDownButton();
+            this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.btnSelectDeselect = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
@@ -109,8 +113,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstColId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
-            this.panelControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
@@ -218,8 +221,6 @@
             this.btnPozKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnPozKayit.Image")));
             this.btnPozKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnPozKayit.Location = new System.Drawing.Point(648, 3);
-            this.btnPozKayit.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnPozKayit.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnPozKayit.Margin = new System.Windows.Forms.Padding(6);
             this.btnPozKayit.Name = "btnPozKayit";
             this.btnPozKayit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -238,8 +239,6 @@
             this.btnObfKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnObfKayit.Image")));
             this.btnObfKayit.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnObfKayit.Location = new System.Drawing.Point(808, 3);
-            this.btnObfKayit.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnObfKayit.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(6);
             this.btnObfKayit.Name = "btnObfKayit";
             this.btnObfKayit.Size = new System.Drawing.Size(160, 64);
@@ -300,8 +299,13 @@
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnPoz,
-            this.btnObf});
-            this.barManager1.MaxItemId = 2;
+            this.btnObf,
+            this.barTumGrupListele,
+            this.barbtnYeniGrup,
+            this.barDockingMenuItem1,
+            this.barSubItem1,
+            this.skinBarSubItem1});
+            this.barManager1.MaxItemId = 7;
             // 
             // barDockControlTop
             // 
@@ -331,6 +335,42 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1362, 0);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 764);
             // 
+            // barTumGrupListele
+            // 
+            this.barTumGrupListele.Caption = "Tüm Malzemeleri Listele";
+            this.barTumGrupListele.Glyph = ((System.Drawing.Image)(resources.GetObject("barTumGrupListele.Glyph")));
+            this.barTumGrupListele.Id = 2;
+            this.barTumGrupListele.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barTumGrupListele.LargeGlyph")));
+            this.barTumGrupListele.Name = "barTumGrupListele";
+            this.barTumGrupListele.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barTumGrupListele_ItemClick);
+            // 
+            // barbtnYeniGrup
+            // 
+            this.barbtnYeniGrup.Caption = "Yeni Grup Ekle";
+            this.barbtnYeniGrup.Glyph = ((System.Drawing.Image)(resources.GetObject("barbtnYeniGrup.Glyph")));
+            this.barbtnYeniGrup.Id = 3;
+            this.barbtnYeniGrup.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barbtnYeniGrup.LargeGlyph")));
+            this.barbtnYeniGrup.Name = "barbtnYeniGrup";
+            this.barbtnYeniGrup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnYeniGrup_ItemClick);
+            // 
+            // barDockingMenuItem1
+            // 
+            this.barDockingMenuItem1.Caption = "barDockingMenuItem1";
+            this.barDockingMenuItem1.Id = 4;
+            this.barDockingMenuItem1.Name = "barDockingMenuItem1";
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "barSubItem1";
+            this.barSubItem1.Id = 5;
+            this.barSubItem1.Name = "barSubItem1";
+            // 
+            // skinBarSubItem1
+            // 
+            this.skinBarSubItem1.Caption = "skinBarSubItem1";
+            this.skinBarSubItem1.Id = 6;
+            this.skinBarSubItem1.Name = "skinBarSubItem1";
+            // 
             // panelControl7
             // 
             this.panelControl7.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -351,8 +391,6 @@
             this.btnExcel.Image = global::IhalematikProUI.Properties.Resources.Excel_icon;
             this.btnExcel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnExcel.Location = new System.Drawing.Point(1153, 3);
-            this.btnExcel.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnExcel.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(206, 64);
             this.btnExcel.TabIndex = 18;
@@ -414,7 +452,7 @@
             // grupPanel
             // 
             this.grupPanel.Controls.Add(this.grdTenderGroup);
-            this.grupPanel.Controls.Add(this.panelControl5);
+            this.grupPanel.Controls.Add(this.btnIslemler);
             this.grupPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.grupPanel.Location = new System.Drawing.Point(0, 0);
             this.grupPanel.Name = "grupPanel";
@@ -437,7 +475,7 @@
             this.btnSil,
             this.rpstColId,
             this.rpstSelected});
-            this.grdTenderGroup.Size = new System.Drawing.Size(294, 585);
+            this.grdTenderGroup.Size = new System.Drawing.Size(294, 583);
             this.grdTenderGroup.TabIndex = 0;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup,
@@ -636,41 +674,27 @@
             this.gridView1.GridControl = this.grdTenderGroup;
             this.gridView1.Name = "gridView1";
             // 
-            // panelControl5
+            // btnIslemler
             // 
-            this.panelControl5.Controls.Add(this.btnGrupEkle);
-            this.panelControl5.Controls.Add(this.simpleButton1);
-            this.panelControl5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl5.Location = new System.Drawing.Point(3, 588);
-            this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(294, 68);
-            this.panelControl5.TabIndex = 50;
+            this.btnIslemler.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnIslemler.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
+            this.btnIslemler.DropDownControl = this.popupMenu2;
+            this.btnIslemler.Image = ((System.Drawing.Image)(resources.GetObject("btnIslemler.Image")));
+            this.btnIslemler.Location = new System.Drawing.Point(3, 586);
+            this.btnIslemler.MenuManager = this.barManager1;
+            this.btnIslemler.Name = "btnIslemler";
+            this.btnIslemler.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            this.btnIslemler.Size = new System.Drawing.Size(294, 70);
+            this.btnIslemler.TabIndex = 12;
+            this.btnIslemler.Text = "Tümünü Listele";
             // 
-            // btnGrupEkle
+            // popupMenu2
             // 
-            this.btnGrupEkle.Image = ((System.Drawing.Image)(resources.GetObject("btnGrupEkle.Image")));
-            this.btnGrupEkle.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnGrupEkle.Location = new System.Drawing.Point(0, 1);
-            this.btnGrupEkle.Name = "btnGrupEkle";
-            this.btnGrupEkle.Size = new System.Drawing.Size(125, 63);
-            this.btnGrupEkle.TabIndex = 1;
-            this.btnGrupEkle.Text = "Grup Ekle";
-            this.btnGrupEkle.Click += new System.EventHandler(this.btnGrupEkle_Click);
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(131, 3);
-            this.simpleButton1.LookAndFeel.SkinName = "London Liquid Sky";
-            this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(160, 62);
-            this.simpleButton1.TabIndex = 0;
-            this.simpleButton1.Text = "&Tümünü Listele";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
+            this.popupMenu2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barbtnYeniGrup),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barTumGrupListele)});
+            this.popupMenu2.Manager = this.barManager1;
+            this.popupMenu2.Name = "popupMenu2";
             // 
             // btnSelectDeselect
             // 
@@ -680,8 +704,6 @@
             this.btnSelectDeselect.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectDeselect.Image")));
             this.btnSelectDeselect.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnSelectDeselect.Location = new System.Drawing.Point(0, 0);
-            this.btnSelectDeselect.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnSelectDeselect.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnSelectDeselect.Name = "btnSelectDeselect";
             this.btnSelectDeselect.Size = new System.Drawing.Size(155, 70);
             this.btnSelectDeselect.TabIndex = 11;
@@ -1159,8 +1181,6 @@
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.btnNext.Location = new System.Drawing.Point(0, 0);
-            this.btnNext.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnNext.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnNext.Margin = new System.Windows.Forms.Padding(4);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(200, 70);
@@ -1187,8 +1207,6 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.LookAndFeel.SkinName = "London Liquid Sky";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -1218,8 +1236,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpstColId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
-            this.panelControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
             this.panelControl6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
@@ -1279,12 +1296,9 @@
         public DevExpress.XtraEditors.SimpleButton btnNext;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.SimpleButton btnSelectDeselect;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.PanelControl pnlrisk;
         private DevExpress.XtraEditors.SimpleButton btnExcel;
         private DevExpress.XtraEditors.PanelControl panelControl7;
-        private DevExpress.XtraEditors.SimpleButton btnGrupEkle;
         private DevExpress.XtraEditors.DropDownButton btnExceldenAl;
         private DevExpress.XtraEditors.SimpleButton btnPozKayit;
         private DevExpress.XtraEditors.SimpleButton btnObfKayit;
@@ -1296,5 +1310,12 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraEditors.DropDownButton btnIslemler;
+        private DevExpress.XtraBars.BarButtonItem barTumGrupListele;
+        private DevExpress.XtraBars.BarButtonItem barbtnYeniGrup;
+        private DevExpress.XtraBars.BarDockingMenuItem barDockingMenuItem1;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.PopupMenu popupMenu2;
+        private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
     }
 }

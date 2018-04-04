@@ -327,8 +327,6 @@
             // 
             this.groupControl1.Controls.Add(this.grdMaterialList);
             this.groupControl1.Location = new System.Drawing.Point(6, 197);
-            this.groupControl1.LookAndFeel.SkinName = "Stardust";
-            this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1169, 444);
             this.groupControl1.TabIndex = 0;

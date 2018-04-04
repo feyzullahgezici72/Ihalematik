@@ -350,8 +350,19 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnExelAl_Click(object sender, EventArgs e)
         {
-            frm_PozOrObf pozobf = new frm_PozOrObf();
-            pozobf.ShowDialog();
+           
+        }
+
+        private void barBtnPozOku_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_TopluPozYukleTedarikci topluPoz = new frm_TopluPozYukleTedarikci(this);
+            topluPoz.ShowDialog();
+        }
+
+        private void barBtnObfOku_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_TopluObfEkleTedarikci topluObf = new frm_TopluObfEkleTedarikci();
+            topluObf.ShowDialog();
         }
     }
 }
