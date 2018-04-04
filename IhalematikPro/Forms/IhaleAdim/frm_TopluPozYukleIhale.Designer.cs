@@ -45,9 +45,11 @@
             this.lblBirim = new DevExpress.XtraEditors.LabelControl();
             this.lblAciklama = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.pbar1 = new DevExpress.XtraEditors.ProgressBarControl();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.lblMiktar = new DevExpress.XtraEditors.LabelControl();
-            this.pbar1 = new DevExpress.XtraEditors.ProgressBarControl();
+            this.pnlYuke = new DevExpress.XtraEditors.PanelControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -56,6 +58,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbar1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlYuke)).BeginInit();
+            this.pnlYuke.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl2
@@ -113,7 +118,7 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl1.Location = new System.Drawing.Point(136, 26);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(146, 19);
             this.labelControl1.TabIndex = 30;
@@ -128,7 +133,7 @@
             this.lblPozListesi.LineColor = System.Drawing.Color.Red;
             this.lblPozListesi.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.lblPozListesi.Location = new System.Drawing.Point(52, 0);
-            this.lblPozListesi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblPozListesi.Margin = new System.Windows.Forms.Padding(4);
             this.lblPozListesi.Name = "lblPozListesi";
             this.lblPozListesi.ShowLineShadow = false;
             this.lblPozListesi.Size = new System.Drawing.Size(211, 35);
@@ -140,7 +145,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl2.Location = new System.Drawing.Point(52, 64);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(56, 19);
             this.labelControl2.TabIndex = 33;
@@ -151,7 +156,7 @@
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl4.Location = new System.Drawing.Point(62, 156);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(47, 19);
             this.labelControl4.TabIndex = 31;
@@ -162,7 +167,7 @@
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl5.Location = new System.Drawing.Point(56, 205);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(53, 19);
             this.labelControl5.TabIndex = 30;
@@ -173,7 +178,7 @@
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl3.Location = new System.Drawing.Point(39, 113);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(70, 19);
             this.labelControl3.TabIndex = 32;
@@ -190,7 +195,7 @@
             this.panelControl1.Controls.Add(this.lblPozListesi);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(994, 35);
             this.panelControl1.TabIndex = 33;
@@ -245,6 +250,7 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.pnlYuke);
             this.groupControl1.Controls.Add(this.pbar1);
             this.groupControl1.Controls.Add(this.listBox1);
             this.groupControl1.Controls.Add(this.lblMiktar);
@@ -265,6 +271,14 @@
             this.groupControl1.TabIndex = 34;
             this.groupControl1.Text = " ";
             // 
+            // pbar1
+            // 
+            this.pbar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pbar1.Location = new System.Drawing.Point(3, 599);
+            this.pbar1.Name = "pbar1";
+            this.pbar1.Size = new System.Drawing.Size(988, 30);
+            this.pbar1.TabIndex = 37;
+            // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.Black;
@@ -273,7 +287,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 29;
             this.listBox1.Location = new System.Drawing.Point(8, 51);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(982, 555);
             this.listBox1.TabIndex = 24;
@@ -290,13 +304,24 @@
             this.lblMiktar.Size = new System.Drawing.Size(174, 31);
             this.lblMiktar.TabIndex = 35;
             // 
-            // pbar1
+            // pnlYuke
             // 
-            this.pbar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pbar1.Location = new System.Drawing.Point(3, 599);
-            this.pbar1.Name = "pbar1";
-            this.pbar1.Size = new System.Drawing.Size(988, 30);
-            this.pbar1.TabIndex = 37;
+            this.pnlYuke.Controls.Add(this.pictureBox1);
+            this.pnlYuke.Location = new System.Drawing.Point(6, 41);
+            this.pnlYuke.Name = "pnlYuke";
+            this.pnlYuke.Size = new System.Drawing.Size(984, 559);
+            this.pnlYuke.TabIndex = 38;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(978, 556);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frm_TopluPozYukleIhale
             // 
@@ -323,6 +348,9 @@
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbar1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlYuke)).EndInit();
+            this.pnlYuke.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -348,5 +376,7 @@
         private DevExpress.XtraEditors.LabelControl lblMiktar;
         private System.Windows.Forms.ListBox listBox1;
         private DevExpress.XtraEditors.ProgressBarControl pbar1;
+        private DevExpress.XtraEditors.PanelControl pnlYuke;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
