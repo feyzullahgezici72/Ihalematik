@@ -89,10 +89,6 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                         listBox1.Items.Add(existingPozs.First().Number);
                                         listBox1.Items.Add(existingPozs.First().Description);
                                         listBox1.Items.Add(existingPozs.First().Unit);
-
-                                        lblPozno.Text = existingPozs.First().Number;
-                                        lblAciklama.Text = existingPozs.First().Description;
-                                        lblBirim.Text = existingPozs.First().Unit;
                                         lblPosSayisi.Text = i.ToString();
                                     }
                                     else
@@ -106,9 +102,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                         poz.IsActive = true;
                                         PozProvider.Instance.Save(poz);
                                         pozId = poz.Id;
-                                        lblPozno.Text = poz.Number;
-                                        lblAciklama.Text = poz.Description;
-                                        lblBirim.Text = poz.Unit;
+                                         
                                         lblPosSayisi.Text = i.ToString();
 
                                         listBox1.Items.Add(poz.Number);
@@ -125,7 +119,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                     {
 
                                     }
-                                    lblMiktar.Text = quantity.ToString();
+                                     
                                     listBox1.Items.Add(quantity.ToString());
                                     listBox1.Items.Add("-------------------------------------------------------------");
                                     listBox1.TopIndex = listBox1.Items.Count - 1;
