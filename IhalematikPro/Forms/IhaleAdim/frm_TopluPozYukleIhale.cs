@@ -83,6 +83,11 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                     {
                                         //poz = existingPozs.First();
                                         pozId = existingPozs.First().Id.Value;
+
+                                        listBox1.Items.Add(existingPozs.First().Number);
+                                        listBox1.Items.Add(existingPozs.First().Description);
+                                        listBox1.Items.Add(existingPozs.First().Unit);
+
                                         lblPozno.Text = existingPozs.First().Number;
                                         lblAciklama.Text = existingPozs.First().Description;
                                         lblBirim.Text = existingPozs.First().Unit;
@@ -103,6 +108,10 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                         lblAciklama.Text = poz.Description;
                                         lblBirim.Text = poz.Unit;
                                         lblPosSayisi.Text = i.ToString();
+
+                                        listBox1.Items.Add(poz.Number);
+                                        listBox1.Items.Add(poz.Description);
+                                        listBox1.Items.Add(poz.Unit);
                                     }
 
                                     double quantity = 0;
@@ -115,6 +124,9 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
                                     }
                                     lblMiktar.Text = quantity.ToString();
+                                    listBox1.Items.Add(quantity.ToString());
+                                    listBox1.Items.Add("-------------------------------------------------------------");
+                                    listBox1.TopIndex = listBox1.Items.Count - 1;
                                     if (pozId != 0)
                                     {
                                         MaterialList materialList = new MaterialList();

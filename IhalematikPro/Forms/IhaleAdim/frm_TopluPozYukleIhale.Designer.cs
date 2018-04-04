@@ -46,6 +46,7 @@
             this.lblAciklama = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.lblMiktar = new DevExpress.XtraEditors.LabelControl();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -62,10 +63,10 @@
             this.groupControl2.Controls.Add(this.btnIptal);
             this.groupControl2.Controls.Add(this.labelControl1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl2.Location = new System.Drawing.Point(2, 204);
+            this.groupControl2.Location = new System.Drawing.Point(2, 431);
             this.groupControl2.LookAndFeel.SkinName = "Visual Studio 2013 Light";
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(659, 64);
             this.groupControl2.TabIndex = 34;
@@ -76,7 +77,7 @@
             this.btnYukle.Location = new System.Drawing.Point(465, 18);
             this.btnYukle.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnYukle.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnYukle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnYukle.Margin = new System.Windows.Forms.Padding(2);
             this.btnYukle.Name = "btnYukle";
             this.btnYukle.Size = new System.Drawing.Size(93, 39);
             this.btnYukle.TabIndex = 28;
@@ -90,7 +91,7 @@
             this.lblPosSayisi.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblPosSayisi.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.lblPosSayisi.Location = new System.Drawing.Point(97, 36);
-            this.lblPosSayisi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblPosSayisi.Margin = new System.Windows.Forms.Padding(2);
             this.lblPosSayisi.Name = "lblPosSayisi";
             this.lblPosSayisi.Size = new System.Drawing.Size(78, 21);
             this.lblPosSayisi.TabIndex = 23;
@@ -102,7 +103,7 @@
             this.btnIptal.Location = new System.Drawing.Point(562, 18);
             this.btnIptal.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnIptal.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnIptal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIptal.Margin = new System.Windows.Forms.Padding(2);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(93, 39);
             this.btnIptal.TabIndex = 29;
@@ -195,7 +196,7 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2);
             this.pcWorld.Name = "pcWorld";
             this.pcWorld.Size = new System.Drawing.Size(33, 24);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -210,7 +211,7 @@
             this.lblPozno.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblPozno.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.lblPozno.Location = new System.Drawing.Point(81, 43);
-            this.lblPozno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblPozno.Margin = new System.Windows.Forms.Padding(2);
             this.lblPozno.Name = "lblPozno";
             this.lblPozno.Size = new System.Drawing.Size(116, 21);
             this.lblPozno.TabIndex = 20;
@@ -223,7 +224,7 @@
             this.lblBirim.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblBirim.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.lblBirim.Location = new System.Drawing.Point(81, 105);
-            this.lblBirim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblBirim.Margin = new System.Windows.Forms.Padding(2);
             this.lblBirim.Name = "lblBirim";
             this.lblBirim.Size = new System.Drawing.Size(116, 21);
             this.lblBirim.TabIndex = 22;
@@ -236,13 +237,14 @@
             this.lblAciklama.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.lblAciklama.Location = new System.Drawing.Point(81, 74);
-            this.lblAciklama.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblAciklama.Margin = new System.Windows.Forms.Padding(2);
             this.lblAciklama.Name = "lblAciklama";
             this.lblAciklama.Size = new System.Drawing.Size(573, 21);
             this.lblAciklama.TabIndex = 21;
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.listBox1);
             this.groupControl1.Controls.Add(this.lblMiktar);
             this.groupControl1.Controls.Add(this.groupControl2);
             this.groupControl1.Controls.Add(this.labelControl2);
@@ -256,9 +258,9 @@
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(663, 270);
+            this.groupControl1.Size = new System.Drawing.Size(663, 497);
             this.groupControl1.TabIndex = 34;
             this.groupControl1.Text = " ";
             // 
@@ -270,21 +272,33 @@
             this.lblMiktar.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblMiktar.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.lblMiktar.Location = new System.Drawing.Point(81, 135);
-            this.lblMiktar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblMiktar.Margin = new System.Windows.Forms.Padding(2);
             this.lblMiktar.Name = "lblMiktar";
             this.lblMiktar.Size = new System.Drawing.Size(116, 21);
             this.lblMiktar.TabIndex = 35;
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.SystemColors.InfoText;
+            this.listBox1.Font = new System.Drawing.Font("Calibri", 12F);
+            this.listBox1.ForeColor = System.Drawing.Color.Green;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 19;
+            this.listBox1.Location = new System.Drawing.Point(5, 35);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(656, 384);
+            this.listBox1.TabIndex = 24;
             // 
             // frm_TopluPozYukleIhale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 270);
+            this.ClientSize = new System.Drawing.Size(663, 497);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TopluPozYukleIhale";
@@ -323,5 +337,6 @@
         private DevExpress.XtraEditors.LabelControl lblAciklama;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl lblMiktar;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
