@@ -42,7 +42,6 @@ namespace IhalematikProUI.Forms.Genel
                 {
                     try
                     {
-                        LoadingManager.Instance.Show(this);
                         string filename = System.IO.Path.GetFileName(dialog.FileName);
                         FileStream stream = System.IO.File.Open(dialog.FileName, FileMode.Open, FileAccess.Read);
                         IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
@@ -139,7 +138,7 @@ namespace IhalematikProUI.Forms.Genel
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             this.getExcel();
-            LoadingManager.Instance.Hide();
+           
         }
     }
 }
