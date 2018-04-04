@@ -87,6 +87,7 @@ namespace IhalematikProUI.Forms.OBF
                                     listBox1.Items.Add(existingObf.Number);
                                     listBox1.Items.Add(existingObf.Description);
                                     listBox1.Items.Add(existingObf.Unit);
+                                    listBox1.Items.Add(existingObf.UnitPrice);
                                     //OBFProvider.Instance.Save(existingObf);
                                 }
 
@@ -106,6 +107,7 @@ namespace IhalematikProUI.Forms.OBF
                                     listBox1.Items.Add(newOBF.Number);
                                     listBox1.Items.Add(newOBF.Description);
                                     listBox1.Items.Add(newOBF.Unit);
+                                    listBox1.Items.Add(newOBF.UnitPrice);
                                 }
 
                                 listBox1.Items.Add("-------------------------------------------------------------");

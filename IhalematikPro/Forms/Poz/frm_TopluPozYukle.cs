@@ -83,6 +83,7 @@ namespace IhalematikProUI.Forms.Genel
                                         listBox1.Items.Add(existingPozs.First().Number);
                                         listBox1.Items.Add(existingPozs.First().Description);
                                         listBox1.Items.Add(existingPozs.First().Unit);
+                                        listBox1.Items.Add(existingPozs.First().UnitPrice);
                                     }
                                     else
                                     {
@@ -99,6 +100,7 @@ namespace IhalematikProUI.Forms.Genel
                                         listBox1.Items.Add(poz.Number);
                                         listBox1.Items.Add(poz.Description);
                                         listBox1.Items.Add(poz.Unit);
+                                        listBox1.Items.Add(poz.UnitPrice);
                                     }
 
                                     listBox1.Items.Add("-------------------------------------------------------------");
