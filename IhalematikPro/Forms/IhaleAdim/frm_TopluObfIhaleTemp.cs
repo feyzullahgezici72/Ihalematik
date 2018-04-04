@@ -40,5 +40,10 @@ namespace IhalematikProUI.Forms.IhaleAdim
             this.Close();
             this._owner.LoadTenderGroupGrid();
         }
+
+        private void frm_TopluObfYukleIhaleTemp_Shown(object sender, EventArgs e)
+        {
+            grdMaterialList.DataSource = this.MaterialListItems;
+        }
     }
 }

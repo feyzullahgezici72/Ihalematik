@@ -40,7 +40,15 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btnPozKayit = new DevExpress.XtraEditors.SimpleButton();
             this.btnObfKayit = new DevExpress.XtraEditors.SimpleButton();
-            this.btnExceldenAl = new DevExpress.XtraEditors.SimpleButton();
+            this.btnExceldenAl = new DevExpress.XtraEditors.DropDownButton();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnPoz = new DevExpress.XtraBars.BarButtonItem();
+            this.btnObf = new DevExpress.XtraBars.BarButtonItem();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
             this.lblTenderDescription = new DevExpress.XtraEditors.LabelControl();
@@ -88,6 +96,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grupPanel)).BeginInit();
@@ -214,7 +224,7 @@
             this.btnPozKayit.Name = "btnPozKayit";
             this.btnPozKayit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnPozKayit.Size = new System.Drawing.Size(160, 64);
-            this.btnPozKayit.TabIndex = 27;
+            this.btnPozKayit.TabIndex = 30;
             this.btnPozKayit.Text = "F1 : &Poz Seç";
             this.btnPozKayit.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
@@ -233,7 +243,7 @@
             this.btnObfKayit.Margin = new System.Windows.Forms.Padding(6);
             this.btnObfKayit.Name = "btnObfKayit";
             this.btnObfKayit.Size = new System.Drawing.Size(160, 64);
-            this.btnObfKayit.TabIndex = 28;
+            this.btnObfKayit.TabIndex = 31;
             this.btnObfKayit.Text = "F2 : Ö&BF Seç";
             this.btnObfKayit.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
@@ -244,16 +254,82 @@
             this.btnExceldenAl.Appearance.Options.UseFont = true;
             this.btnExceldenAl.Appearance.Options.UseForeColor = true;
             this.btnExceldenAl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExceldenAl.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Show;
+            this.btnExceldenAl.DropDownControl = this.popupMenu1;
             this.btnExceldenAl.Image = ((System.Drawing.Image)(resources.GetObject("btnExceldenAl.Image")));
             this.btnExceldenAl.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnExceldenAl.Location = new System.Drawing.Point(968, 3);
-            this.btnExceldenAl.LookAndFeel.SkinName = "London Liquid Sky";
-            this.btnExceldenAl.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnExceldenAl.Name = "btnExceldenAl";
+            this.barManager1.SetPopupContextMenu(this.btnExceldenAl, this.popupMenu1);
             this.btnExceldenAl.Size = new System.Drawing.Size(160, 64);
-            this.btnExceldenAl.TabIndex = 26;
-            this.btnExceldenAl.Text = "&Excel\'den Al";
-            this.btnExceldenAl.Click += new System.EventHandler(this.btnExceldenAl_Click);
+            this.btnExceldenAl.TabIndex = 29;
+            this.btnExceldenAl.Text = "Excel\'den Oku";
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnPoz),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnObf)});
+            this.popupMenu1.Manager = this.barManager1;
+            this.popupMenu1.Name = "popupMenu1";
+            // 
+            // btnPoz
+            // 
+            this.btnPoz.Caption = "Poz Dosyası Oku";
+            this.btnPoz.Glyph = ((System.Drawing.Image)(resources.GetObject("btnPoz.Glyph")));
+            this.btnPoz.Id = 0;
+            this.btnPoz.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnPoz.LargeGlyph")));
+            this.btnPoz.Name = "btnPoz";
+            this.btnPoz.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPoz_ItemClick);
+            // 
+            // btnObf
+            // 
+            this.btnObf.Caption = "Öbf Dosyası Oku";
+            this.btnObf.Glyph = ((System.Drawing.Image)(resources.GetObject("btnObf.Glyph")));
+            this.btnObf.Id = 1;
+            this.btnObf.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnObf.LargeGlyph")));
+            this.btnObf.Name = "btnObf";
+            this.btnObf.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnObf_ItemClick);
+            // 
+            // barManager1
+            // 
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.btnPoz,
+            this.btnObf});
+            this.barManager1.MaxItemId = 2;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1362, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 764);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1362, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 764);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1362, 0);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 764);
             // 
             // panelControl7
             // 
@@ -1107,6 +1183,10 @@
             this.Controls.Add(this.panelControl6);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.LookAndFeel.SkinName = "London Liquid Sky";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -1125,6 +1205,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grupPanel)).EndInit();
@@ -1151,6 +1233,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1202,8 +1285,16 @@
         private DevExpress.XtraEditors.SimpleButton btnExcel;
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraEditors.SimpleButton btnGrupEkle;
+        private DevExpress.XtraEditors.DropDownButton btnExceldenAl;
         private DevExpress.XtraEditors.SimpleButton btnPozKayit;
         private DevExpress.XtraEditors.SimpleButton btnObfKayit;
-        private DevExpress.XtraEditors.SimpleButton btnExceldenAl;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraBars.BarButtonItem btnPoz;
+        private DevExpress.XtraBars.BarButtonItem btnObf;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
     }
 }

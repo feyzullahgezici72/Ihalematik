@@ -62,6 +62,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
         private void ReadExcel(string path)
         {
+            materialListItems = new List<MaterialList>();
             // obfItems = new List<IhalematikProBL.Entity.OBF>();
             try
             {
@@ -91,20 +92,16 @@ namespace IhalematikProUI.Forms.IhaleAdim
                             if (!string.IsNullOrEmpty(stokKodu) && !string.IsNullOrEmpty(description))
                             {
                                 string unit = excelReader.GetString(2);
-                                double unitPrice = 0;
-                                try
-                                {
-                                    unitPrice = excelReader.GetDouble(3);
-                                }
-                                catch (Exception)
-                                {
-                                    //unitPrice = double.Parse(excelReader.GetString(2), CultureInfo.InvariantCulture);
-                                }
 
                                 IhalematikProBL.Entity.OBF existingObf = OBFProvider.Instance.GetOne("Description", description);
                                 if (existingObf != null)
                                 {
                                     obfId = existingObf.Id;
+                                    lblobfno.Text = existingObf.Number;
+                                    lblAciklama.Text = existingObf.Description;
+                                    lblBirim.Text = existingObf.Unit;
+                                    lblMiktar.Text = existingObf.UnitPrice.ToString();
+                                    lblPosSayisi.Text = i.ToString();
                                     //OBFProvider.Instance.Save(existingObf);
                                 }
                                 else
@@ -122,7 +119,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                     lblobfno.Text = obf.Number;
                                     lblAciklama.Text = obf.Description;
                                     lblBirim.Text = obf.Unit;
-                                    lblBirimFiyat.Text = obf.UnitPrice.ToString();
+                                    lblMiktar.Text = obf.UnitPrice.ToString();
                                     lblPosSayisi.Text = i.ToString();
                                 }
 
@@ -135,6 +132,8 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                 {
 
                                 }
+
+                                lblMiktar.Text = quantity.ToString();
                                 if (obfId != 0)
                                 {
                                     MaterialList materialList = new MaterialList();

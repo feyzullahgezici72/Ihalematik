@@ -330,5 +330,17 @@ namespace IhalematikPro.Forms
             frm_PozOrObfIhale pozorobf = new frm_PozOrObfIhale(this);
             pozorobf.ShowDialog();
         }
+
+        private void btnObf_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_TopluObfYukleIhale obfY = new frm_TopluObfYukleIhale(this);
+            obfY.ShowDialog();
+        }
+
+        private void btnPoz_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frm_TopluPozYukleIhale pozY = new frm_TopluPozYukleIhale(this);
+            pozY.ShowDialog();
+        }
     }
 }
