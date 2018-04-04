@@ -38,10 +38,9 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.pbar1 = new DevExpress.XtraEditors.ProgressBarControl();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlYuke = new DevExpress.XtraEditors.PanelControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -49,10 +48,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbar1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlYuke)).BeginInit();
             this.pnlYuke.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl2
@@ -159,7 +157,6 @@
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.pnlYuke);
-            this.groupControl1.Controls.Add(this.pbar1);
             this.groupControl1.Controls.Add(this.listBox1);
             this.groupControl1.Controls.Add(this.groupControl2);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -171,13 +168,23 @@
             this.groupControl1.TabIndex = 34;
             this.groupControl1.Text = " ";
             // 
-            // pbar1
+            // pnlYuke
             // 
-            this.pbar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pbar1.Location = new System.Drawing.Point(3, 599);
-            this.pbar1.Name = "pbar1";
-            this.pbar1.Size = new System.Drawing.Size(988, 30);
-            this.pbar1.TabIndex = 37;
+            this.pnlYuke.Controls.Add(this.pictureBox1);
+            this.pnlYuke.Location = new System.Drawing.Point(4, 47);
+            this.pnlYuke.Name = "pnlYuke";
+            this.pnlYuke.Size = new System.Drawing.Size(984, 559);
+            this.pnlYuke.TabIndex = 38;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(978, 556);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // listBox1
             // 
@@ -191,24 +198,6 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(982, 555);
             this.listBox1.TabIndex = 24;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(978, 556);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pnlYuke
-            // 
-            this.pnlYuke.Controls.Add(this.pictureBox1);
-            this.pnlYuke.Location = new System.Drawing.Point(4, 42);
-            this.pnlYuke.Name = "pnlYuke";
-            this.pnlYuke.Size = new System.Drawing.Size(984, 559);
-            this.pnlYuke.TabIndex = 38;
             // 
             // frm_TopluPozYukleIhale
             // 
@@ -233,10 +222,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbar1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlYuke)).EndInit();
             this.pnlYuke.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -252,7 +240,6 @@
         private DevExpress.XtraEditors.LabelControl lblPozListesi;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.ProgressBarControl pbar1;
         private DevExpress.XtraEditors.PanelControl pnlYuke;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListBox listBox1;

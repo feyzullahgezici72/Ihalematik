@@ -56,7 +56,6 @@ namespace IhalematikProUI.Forms.IhaleAdim
                         string filename = System.IO.Path.GetFileName(dialog.FileName);
                         FileStream stream = System.IO.File.Open(dialog.FileName, FileMode.Open, FileAccess.Read);
                         IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
-                        this.pbar1.Properties.Maximum = 265;
                         int i = 0;
                         while (excelReader.Read())
                         {
@@ -137,7 +136,6 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                 }
                             }
                             i++;
-                            this.pbar1.Position = i;
                         }
                         stream.Close();
                         this.Hide();

@@ -89,10 +89,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                                     poz.Year = DateTime.Now.Year;
                                     poz.IsActive = true;
                                     Application.DoEvents();
-                                    lblPozno.Text = poz.Number;
-                                    lblAciklama.Text = poz.Description;
-                                    lblBirim.Text = poz.Unit;
-                                    lblBirimFiyat.Text = poz.UnitPrice.ToString();
                                     lblPosSayisi.Text = i.ToString();
                                     pozItems.Add(poz);
                                 }
@@ -103,10 +99,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                         frm_TopluPozTedarikciTemp pozTemp = new frm_TopluPozTedarikciTemp(this._owner);
                         pozTemp.pozItems = pozItems;
                         pozTemp.ShowDialog();
-                        lblPozno.Text = "";
-                        lblAciklama.Text = "";
-                        lblBirim.Text = "";
-                        lblBirimFiyat.Text = "";
                         frm_MesajFormu mesaj = new frm_MesajFormu();
                         mesaj.lblMesaj.Text = "Pozlar başarıyla yüklendi...";
                         mesaj.Close();

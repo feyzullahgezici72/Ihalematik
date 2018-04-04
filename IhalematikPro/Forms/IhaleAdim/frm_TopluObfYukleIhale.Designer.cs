@@ -39,7 +39,6 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.pbar1 = new DevExpress.XtraEditors.ProgressBarControl();
             this.pnlYukle = new DevExpress.XtraEditors.PanelControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -49,7 +48,6 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbar1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlYukle)).BeginInit();
             this.pnlYukle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -172,7 +170,6 @@
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.pnlYukle);
-            this.groupControl1.Controls.Add(this.pbar1);
             this.groupControl1.Controls.Add(this.listBox1);
             this.groupControl1.Controls.Add(this.groupControl2);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -181,14 +178,6 @@
             this.groupControl1.Size = new System.Drawing.Size(994, 726);
             this.groupControl1.TabIndex = 36;
             this.groupControl1.Text = " ";
-            // 
-            // pbar1
-            // 
-            this.pbar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pbar1.Location = new System.Drawing.Point(3, 599);
-            this.pbar1.Name = "pbar1";
-            this.pbar1.Size = new System.Drawing.Size(988, 30);
-            this.pbar1.TabIndex = 38;
             // 
             // pnlYukle
             // 
@@ -231,7 +220,6 @@
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbar1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlYukle)).EndInit();
             this.pnlYukle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -250,7 +238,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.ListBox listBox1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.ProgressBarControl pbar1;
         private DevExpress.XtraEditors.PanelControl pnlYukle;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
