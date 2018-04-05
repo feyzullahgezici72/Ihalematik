@@ -36,7 +36,10 @@ namespace IhalematikProUI.Manager
             Thread.Sleep(1000);
             try
             {
-                this.frm_wait.Invoke(new Action(this.frm_wait.Close));
+                while (this.frm_wait.IsHandleCreated)
+                {
+                    this.frm_wait.Invoke(new Action(this.frm_wait.Close));
+                }
             }
             catch (Exception ex)
             {
