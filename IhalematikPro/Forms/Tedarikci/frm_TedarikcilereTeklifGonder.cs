@@ -361,7 +361,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void barBtnObfOku_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm_TopluObfEkleTedarikci topluObf = new frm_TopluObfEkleTedarikci();
+            frm_TopluObfEkleTedarikci topluObf = new frm_TopluObfEkleTedarikci(this);
             topluObf.ShowDialog();
         }
     }

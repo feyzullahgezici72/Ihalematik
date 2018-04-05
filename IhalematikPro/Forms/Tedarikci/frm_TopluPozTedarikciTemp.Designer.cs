@@ -73,25 +73,24 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.grdMaterialList);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(309, 0);
+            this.groupControl1.Location = new System.Drawing.Point(206, 0);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(919, 694);
+            this.groupControl1.Size = new System.Drawing.Size(613, 475);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Okunan Poz Listesi";
             // 
             // grdMaterialList
             // 
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.grdMaterialList.Location = new System.Drawing.Point(3, 33);
+            this.grdMaterialList.Location = new System.Drawing.Point(2, 20);
             this.grdMaterialList.MainView = this.gridViewMaterialList;
-            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnChangeMeterialName,
             this.btnResetMeterialName});
-            this.grdMaterialList.Size = new System.Drawing.Size(913, 658);
+            this.grdMaterialList.Size = new System.Drawing.Size(609, 453);
             this.grdMaterialList.TabIndex = 1;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
@@ -291,7 +290,7 @@
             this.gridColumn2.AppearanceHeader.Options.UseFont = true;
             this.gridColumn2.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn2.Caption = "AÇIKLAMA";
-            this.gridColumn2.FieldName = "PozOBFDescription";
+            this.gridColumn2.FieldName = "PozOBF.Description";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.OptionsColumn.AllowFocus = false;
@@ -394,8 +393,9 @@
             this.groupControl2.Controls.Add(this.groupControl4);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(309, 694);
+            this.groupControl2.Size = new System.Drawing.Size(206, 475);
             this.groupControl2.TabIndex = 5;
             // 
             // groupControl3
@@ -407,20 +407,22 @@
             this.groupControl3.Controls.Add(this.btnHayir);
             this.groupControl3.Controls.Add(this.btnEvet);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl3.Location = new System.Drawing.Point(3, 72);
+            this.groupControl3.Location = new System.Drawing.Point(2, 49);
             this.groupControl3.LookAndFeel.SkinName = "Seven Classic";
             this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(303, 105);
+            this.groupControl3.Size = new System.Drawing.Size(202, 72);
             this.groupControl3.TabIndex = 6;
             this.groupControl3.Text = "Kaydedilsin mi?";
             // 
             // btnHayir
             // 
             this.btnHayir.Image = ((System.Drawing.Image)(resources.GetObject("btnHayir.Image")));
-            this.btnHayir.Location = new System.Drawing.Point(154, 42);
+            this.btnHayir.Location = new System.Drawing.Point(103, 29);
+            this.btnHayir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHayir.Name = "btnHayir";
-            this.btnHayir.Size = new System.Drawing.Size(142, 57);
+            this.btnHayir.Size = new System.Drawing.Size(95, 39);
             this.btnHayir.TabIndex = 1;
             this.btnHayir.Text = "&Hayır";
             this.btnHayir.Click += new System.EventHandler(this.btnHayir_Click);
@@ -428,9 +430,10 @@
             // btnEvet
             // 
             this.btnEvet.Image = ((System.Drawing.Image)(resources.GetObject("btnEvet.Image")));
-            this.btnEvet.Location = new System.Drawing.Point(9, 42);
+            this.btnEvet.Location = new System.Drawing.Point(6, 29);
+            this.btnEvet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEvet.Name = "btnEvet";
-            this.btnEvet.Size = new System.Drawing.Size(140, 57);
+            this.btnEvet.Size = new System.Drawing.Size(93, 39);
             this.btnEvet.TabIndex = 1;
             this.btnEvet.Text = "&Evet";
             this.btnEvet.Click += new System.EventHandler(this.btnEvet_Click);
@@ -440,23 +443,25 @@
             this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupControl4.AppearanceCaption.Options.UseFont = true;
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl4.Location = new System.Drawing.Point(3, 30);
+            this.groupControl4.Location = new System.Drawing.Point(2, 20);
             this.groupControl4.LookAndFeel.SkinName = "Seven Classic";
             this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(303, 42);
+            this.groupControl4.Size = new System.Drawing.Size(202, 29);
             this.groupControl4.TabIndex = 5;
             this.groupControl4.Text = "Tablodaki veriler okundu!";
             // 
             // frm_TopluPozTedarikciTemp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 694);
+            this.ClientSize = new System.Drawing.Size(819, 475);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TopluPozTedarikciTemp";
