@@ -84,14 +84,14 @@
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.grdMaterialList.Location = new System.Drawing.Point(3, 33);
+            this.grdMaterialList.Location = new System.Drawing.Point(3, 30);
             this.grdMaterialList.MainView = this.gridViewMaterialList;
             this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnChangeMeterialName,
             this.btnResetMeterialName});
-            this.grdMaterialList.Size = new System.Drawing.Size(1013, 658);
+            this.grdMaterialList.Size = new System.Drawing.Size(1013, 661);
             this.grdMaterialList.TabIndex = 2;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
@@ -356,6 +356,8 @@
             this.colUnitPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
             this.colUnitPrice.AppearanceHeader.Options.UseBackColor = true;
             this.colUnitPrice.Caption = "BiRiM FiYAT";
+            this.colUnitPrice.DisplayFormat.FormatString = "c2";
+            this.colUnitPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colUnitPrice.FieldName = "PozOBFUnitePrice";
             this.colUnitPrice.Name = "colUnitPrice";
             this.colUnitPrice.Visible = true;
@@ -413,7 +415,7 @@
             this.groupControl4.Controls.Add(this.btnHayir);
             this.groupControl4.Controls.Add(this.btnEvet);
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl4.Location = new System.Drawing.Point(3, 75);
+            this.groupControl4.Location = new System.Drawing.Point(3, 72);
             this.groupControl4.LookAndFeel.SkinName = "Seven Classic";
             this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl4.Name = "groupControl4";
@@ -446,7 +448,7 @@
             this.groupControl5.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupControl5.AppearanceCaption.Options.UseFont = true;
             this.groupControl5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl5.Location = new System.Drawing.Point(3, 33);
+            this.groupControl5.Location = new System.Drawing.Point(3, 30);
             this.groupControl5.LookAndFeel.SkinName = "Seven Classic";
             this.groupControl5.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl5.Name = "groupControl5";

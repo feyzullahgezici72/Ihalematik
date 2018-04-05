@@ -84,16 +84,16 @@ namespace IhalematikPro.Forms
                 {
                     if (models.Count == 1 && offer != null)
                     {
-                        List<MaterialList> addedMaterialLists = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => !p.IsPoz).ToList();
+                        List<MaterialList> addedMaterialLists = CurrentManager.Instance.CurrentTender.MaterialList.ToList();
 
                         foreach (var item in offer.MaterialList)
                         {
-                            MaterialList addedMaterialList = addedMaterialLists.Where(p => p.PozOBFId == item.PozOBFId && !p.IsPoz).FirstOrDefault();
+                            MaterialList addedMaterialList = addedMaterialLists.Where(p => p.PozOBFId == item.PozOBFId).FirstOrDefault();
 
                             if (addedMaterialList == null)
                             {
                                 MaterialList materialList = new MaterialList();
-                                materialList.IsPoz = false;
+                                materialList.IsPoz = item.IsPoz;
                                 materialList.Quantity = item.Quantity;
                                 materialList.PozOBFId = item.PozOBFId;
                                 materialList.Tender = tender;

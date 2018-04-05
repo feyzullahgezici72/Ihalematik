@@ -34,6 +34,8 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
@@ -61,6 +63,10 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.txtTenderNumber = new DevExpress.XtraEditors.TextEdit();
+            this.colPasive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnPasive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.btnActive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -78,6 +84,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenderNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnActive)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -154,7 +162,9 @@
             this.grdActiveTenderList.Name = "grdActiveTenderList";
             this.grdActiveTenderList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnIhaleAc,
-            this.btnDetay});
+            this.btnDetay,
+            this.btnPasive,
+            this.btnActive});
             this.grdActiveTenderList.Size = new System.Drawing.Size(1224, 542);
             this.grdActiveTenderList.TabIndex = 0;
             this.grdActiveTenderList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -274,7 +284,9 @@
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
-            this.gridColumn5});
+            this.gridColumn5,
+            this.colPasive,
+            this.colActive});
             this.gridViewActiveTenderList.GridControl = this.grdActiveTenderList;
             this.gridViewActiveTenderList.Name = "gridViewActiveTenderList";
             this.gridViewActiveTenderList.OptionsMenu.EnableColumnMenu = false;
@@ -590,6 +602,44 @@
             this.txtTenderNumber.TabIndex = 0;
             this.txtTenderNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenderNumber_KeyPress);
             // 
+            // colPasive
+            // 
+            this.colPasive.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colPasive.AppearanceHeader.Options.UseBackColor = true;
+            this.colPasive.ColumnEdit = this.btnPasive;
+            this.colPasive.MaxWidth = 20;
+            this.colPasive.Name = "colPasive";
+            this.colPasive.Visible = true;
+            this.colPasive.VisibleIndex = 5;
+            this.colPasive.Width = 20;
+            // 
+            // colActive
+            // 
+            this.colActive.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colActive.AppearanceHeader.Options.UseBackColor = true;
+            this.colActive.ColumnEdit = this.btnActive;
+            this.colActive.MaxWidth = 20;
+            this.colActive.Name = "colActive";
+            this.colActive.Visible = true;
+            this.colActive.VisibleIndex = 6;
+            this.colActive.Width = 20;
+            // 
+            // btnPasive
+            // 
+            this.btnPasive.AutoHeight = false;
+            this.btnPasive.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.PasiveData, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            this.btnPasive.Name = "btnPasive";
+            this.btnPasive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // btnActive
+            // 
+            this.btnActive.AutoHeight = false;
+            this.btnActive.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.activeData, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            this.btnActive.Name = "btnActive";
+            this.btnActive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
             // frm_DevamEdenIhaleListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -628,6 +678,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtTenderNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnActive)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -661,5 +713,9 @@
         private DevExpress.XtraEditors.TextEdit txtTenderDescription;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton btnExcel;
+        private DevExpress.XtraGrid.Columns.GridColumn colPasive;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnPasive;
+        private DevExpress.XtraGrid.Columns.GridColumn colActive;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnActive;
     }
 }
