@@ -1141,12 +1141,6 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem48
             // 
-            this.barButtonItem48.Caption = "Tema-6";
-            this.barButtonItem48.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
-            this.barButtonItem48.Id = 77;
-            this.barButtonItem48.LargeGlyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
-            this.barButtonItem48.Name = "barButtonItem48";
-            this.barButtonItem48.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem48_ItemClick);
             // 
             // barButtonItem49
             // 
