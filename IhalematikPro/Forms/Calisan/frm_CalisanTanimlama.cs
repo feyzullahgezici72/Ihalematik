@@ -470,7 +470,7 @@ namespace IhalematikPro.Forms
 
         private void btnAktif_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Aktif yapmak istediginzden emin misiniz?", "Sil", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Aktif yapmak istediginzden emin misiniz?", "Aktif", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result.Equals(DialogResult.OK))
             {
                 this.FocusedRowHandle = gridViewWorker.FocusedRowHandle;
