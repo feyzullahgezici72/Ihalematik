@@ -39,7 +39,10 @@ namespace IhalematikProUI.Forms.IhaleAdim
             foreach (var item in this.MaterialListItems)
             {
                 MaterialListProvider.Instance.Save(item);
-                CurrentManager.Instance.CurrentTender.MaterialList.Add(item);
+                if (CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.Id == item.Id).Count() == 0)
+                {
+                    CurrentManager.Instance.CurrentTender.MaterialList.Add(item);
+                }
 
                 IhalematikProBL.Entity.OBF currentOBF = OBFProvider.Instance.GetItem(item.PozOBFId);
                 if (currentOBF != null)

@@ -40,7 +40,10 @@ namespace IhalematikProUI.Forms.Tedarikci
             foreach (var item in this.MaterialList)
             {
                 OfferMaterialListProvider.Instance.Save(item);
-                CurrentManager.Instance.CurrentOffer.MaterialList.Add(item);
+                if (CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Id == item.Id).Count() == 0)
+                {
+                    CurrentManager.Instance.CurrentOffer.MaterialList.Add(item);
+                }
             }
             LoadingManager.Instance.Hide();
             this.Enabled = true;

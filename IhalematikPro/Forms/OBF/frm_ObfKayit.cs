@@ -124,7 +124,7 @@ namespace IhalematikPro.Forms
             foreach (int item in selectedRows)
             {
                 MaterialListModel pozModel = selectedRowsItems[item];
-                MaterialList selectedItem = currentTender.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
+                MaterialList selectedItem = currentTender.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).FirstOrDefault();
                 currentTender.MaterialList.Remove(selectedItem);
                 if (selectedItem.Id > 0)
                 {

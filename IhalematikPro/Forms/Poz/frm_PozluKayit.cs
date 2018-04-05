@@ -15,6 +15,7 @@ using IhalematikProBL.Provider;
 using IhalematikProUI.Forms.Base;
 using IhalematikProBL.Manager;
 using IhalematikProUI.Forms;
+using IhalematikProUI.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -210,6 +211,7 @@ namespace IhalematikPro.Forms
             Tender currentTender = CurrentManager.Instance.CurrentTender;
             if (currentTender.MaterialList != null)
             {
+                LoadingManager.Instance.Show(this);
                 List<MaterialList> items = currentTender.MaterialList.Where(p => p.IsPoz && p.TenderGroupId == this.SelectedGroupId).ToList();
                 foreach (MaterialList item in items)
                 {
@@ -217,6 +219,7 @@ namespace IhalematikPro.Forms
                     item.KDVPercentage = 18;
                     MaterialListProvider.Instance.Save(item);
                 }
+                LoadingManager.Instance.Hide();
             }
             if (this._owner is frm_Teklif_Adim1)
             {
@@ -312,7 +315,7 @@ namespace IhalematikPro.Forms
             foreach (int item in selectedRows)
             {
                 MaterialListModel pozModel = selectedRowsItems[item];
-                MaterialList selectedItem = currentTender.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).Single();
+                MaterialList selectedItem = currentTender.MaterialList.Where(p => p.PozOBFId == pozModel.PozOBFId).FirstOrDefault();
                 currentTender.MaterialList.Remove(selectedItem);
                 if (selectedItem.Id > 0)
                 {
