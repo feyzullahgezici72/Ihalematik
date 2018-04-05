@@ -915,9 +915,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem36_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Money Twins";
-            DevExpress.Skins.SkinManager.EnableFormSkins();
-            Application.EnableVisualStyles();
+       
         }
 
         private void barButtonItem38_ItemClick(object sender, ItemClickEventArgs e)
@@ -1086,13 +1084,6 @@ namespace IhalematikPro.Forms
             myB = null;
             RibonAktif();
             barButtonItem46.ButtonStyle = BarButtonStyle.Default;
-        }
-
-        private void barButtonItem48_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "London Liquid Sky"; //
-            DevExpress.Skins.SkinManager.EnableFormSkins();
-            Application.EnableVisualStyles();
         }
 
         private void barButtonItem49_ItemClick(object sender, ItemClickEventArgs e)

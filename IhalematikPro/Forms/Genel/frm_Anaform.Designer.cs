@@ -1086,9 +1086,7 @@ namespace IhalematikPro.Forms
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem32),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem33),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem34),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem36),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem38),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem48),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem49)});
             this.barSubItem2.Name = "barSubItem2";
             toolTipTitleItem20.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image19")));
@@ -1103,7 +1101,7 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem32
             // 
-            this.barButtonItem32.Caption = "Temal-1";
+            this.barButtonItem32.Caption = "Tema-1";
             this.barButtonItem32.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
             this.barButtonItem32.Id = 37;
             this.barButtonItem32.Name = "barButtonItem32";
@@ -1135,7 +1133,7 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem38
             // 
-            this.barButtonItem38.Caption = "Tema-5";
+            this.barButtonItem38.Caption = "Tema-4";
             this.barButtonItem38.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
             this.barButtonItem38.Id = 43;
             this.barButtonItem38.Name = "barButtonItem38";
@@ -1152,7 +1150,7 @@ namespace IhalematikPro.Forms
             // 
             // barButtonItem49
             // 
-            this.barButtonItem49.Caption = "Tema-7";
+            this.barButtonItem49.Caption = "Tema-5";
             this.barButtonItem49.Glyph = global::IhalematikProUI.Properties.Resources.BMP_File_icon;
             this.barButtonItem49.Id = 78;
             this.barButtonItem49.Name = "barButtonItem49";
