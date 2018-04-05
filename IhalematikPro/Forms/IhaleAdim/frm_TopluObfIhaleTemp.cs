@@ -34,6 +34,13 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
         private void btnEvet_Click(object sender, EventArgs e)
         {
+            if (this.MaterialListItems.Where(p => p.PozOBFUnitePrice == 0).Count() != 0)
+            {
+                MessageBox.Show("Birim Fiyatı 0 olan malzeme bıraktınız. Lütfen Birim Fiyat belirtiniz?");
+                grdMaterialList.DataSource = null;
+                grdMaterialList.DataSource = this.MaterialListItems.OrderBy(p => p.PozOBFUnitePrice).ToList();
+                return;
+            }
             this.Enabled = false;
             LoadingManager.Instance.Show(this);
             foreach (var item in this.MaterialListItems)
