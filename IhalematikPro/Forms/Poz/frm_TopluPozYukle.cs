@@ -108,6 +108,12 @@ namespace IhalematikProUI.Forms.Genel
                             }
                             i++;
                         }
+                        if (pozItems == null || pozItems.Count == 0)
+                        {
+                            MessageBox.Show("Yüklenecek yeni poz bulunamadı.");
+                            this.Close();
+                            return;
+                        }
                         LoadingManager.Instance.Hide();
                         this.Hide();
                         frm_TopluPozTemp pozTemp = new frm_TopluPozTemp(this._owner);
@@ -138,7 +144,6 @@ namespace IhalematikProUI.Forms.Genel
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             this.getExcel();
-           
         }
     }
 }

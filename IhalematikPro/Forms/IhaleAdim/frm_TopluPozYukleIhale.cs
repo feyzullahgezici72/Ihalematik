@@ -139,6 +139,13 @@ namespace IhalematikProUI.Forms.IhaleAdim
                         }
                         stream.Close();
                         this.Hide();
+
+                        if (this.materialListItems == null || this.materialListItems.Count == 0)
+                        {
+                            MessageBox.Show("Yüklenecek Poz bulunamadı.");
+                            this.Close();
+                            return;
+                        }
                         frm_TopluPozIhaleTemp pozTemp = new frm_TopluPozIhaleTemp(this._owner);
                         pozTemp.MaterialListItems = materialListItems;
                         pozTemp.ShowDialog();

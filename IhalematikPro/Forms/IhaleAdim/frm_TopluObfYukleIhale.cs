@@ -53,11 +53,6 @@ namespace IhalematikProUI.Forms.IhaleAdim
                     //obfTemp.obfItems = this.obfItems;
                     //obfTemp.ShowDialog();
                 }
-                else
-                {
-
-                }
-
             }
         }
 
@@ -160,6 +155,14 @@ namespace IhalematikProUI.Forms.IhaleAdim
                 }
                 stream.Close();
                 this.Hide();
+
+                if (this.materialListItems == null || this.materialListItems.Count == 0)
+                {
+                    MessageBox.Show("Yüklenecek OBF bulunamadı.");
+                    this.Close();
+                    return;
+                }
+
                 frm_TopluObfYukleIhaleTemp pozTemp = new frm_TopluObfYukleIhaleTemp(this._owner);
                 pozTemp.MaterialListItems = materialListItems;
                 pozTemp.ShowDialog();
