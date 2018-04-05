@@ -22,10 +22,10 @@ namespace IhalematikProUI.Forms.Tedarikci
 {
     public partial class frm_TopluPozYukleTedarikci : IhalematikBaseForm
     {
-
-
         public List<Poz> pozItems = null;
         public frm_TedarikcilereTeklifGonder _owner = null;
+        public List<OfferMaterialList> materialListItems = null;
+
         public frm_TopluPozYukleTedarikci(frm_TedarikcilereTeklifGonder Owner)
         {
             this._owner = Owner;
@@ -37,7 +37,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         }
         public void getExcel()
         {
-            pozItems = new List<Poz>();
+            this.materialListItems = new List<OfferMaterialList>();
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.Filter = "Excel Files(*.xls;*.xlsx)|*.xls;*.xlsx";
             if (dialog.ShowDialog() == DialogResult.OK)
@@ -45,6 +45,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                 DialogResult result = MessageBox.Show("Yüklemek istediğinizden emin misiniz?", "Yükleme Dosya içeriğine göre biraz zaman alabilir", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result.Equals(DialogResult.Yes))
                 {
+                    pnlYuke.Visible = false;
                     try
                     {
                         string filename = System.IO.Path.GetFileName(dialog.FileName);
@@ -56,6 +57,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                         {
                             if (i > 0)
                             {
+                                int pozId = 0;
                                 string pozno = string.Empty;
                                 try
                                 {
@@ -69,35 +71,67 @@ namespace IhalematikProUI.Forms.Tedarikci
                                 }
                                 string description = excelReader.GetString(1);
                                 string unit = excelReader.GetString(2);
-                                double unitprice = 0;
-                                try
-                                {
-                                    unitprice = excelReader.GetDouble(3);
-                                }
-                                catch (Exception ex)
-                                {
-                                    //LoggingManager.Instance.SaveErrorLog(ex);
-                                }
 
                                 if (!string.IsNullOrEmpty(pozno) && !string.IsNullOrEmpty(description) && !string.IsNullOrEmpty(unit))
                                 {
-                                    Poz poz = new Poz();
-                                    poz.Number = pozno;
-                                    poz.Description = description;
-                                    poz.Unit = unit;
-                                    poz.UnitPrice = unitprice;
-                                    poz.Year = DateTime.Now.Year;
-                                    poz.IsActive = true;
-                                    Application.DoEvents();
+                                    List<PozModel> existingPozs = UIPozManager.Instance.GetPozs(pozno, description);
+                                    if (existingPozs != null && existingPozs.Count != 0)
+                                    {
+                                        pozId = existingPozs.First().Id.Value;
+                                        listBox1.Items.Add(existingPozs.First().Number);
+                                        listBox1.Items.Add(existingPozs.First().Description);
+                                        listBox1.Items.Add(existingPozs.First().Unit);
+                                        listBox1.Items.Add(existingPozs.First().UnitPrice);
+                                    }
+                                    else
+                                    {
+                                        Poz poz = new Poz();
+                                        poz.Number = pozno;
+                                        poz.Description = description;
+                                        poz.Unit = unit;
+                                        poz.Year = DateTime.Now.Year;
+                                        poz.IsActive = true;
+                                        PozProvider.Instance.Save(poz);
+                                        pozId = poz.Id;
+
+                                        Application.DoEvents();
+                                        lblPosSayisi.Text = i.ToString();
+                                        listBox1.Items.Add(poz.Number);
+                                        listBox1.Items.Add(poz.Description);
+                                        listBox1.Items.Add(poz.Unit);
+                                        listBox1.Items.Add(poz.UnitPrice);
+                                    }
                                     lblPosSayisi.Text = i.ToString();
-                                    pozItems.Add(poz);
+
+                                    double quantity = 0;
+                                    try
+                                    {
+                                        quantity = excelReader.GetDouble(3);
+                                    }
+                                    catch (Exception ex)
+                                    {
+
+                                    }
+
+                                    listBox1.Items.Add(quantity.ToString());
+                                    listBox1.Items.Add("-------------------------------------------------------------");
+                                    listBox1.TopIndex = listBox1.Items.Count - 1;
+                                    if (pozId != 0)
+                                    {
+                                        OfferMaterialList materialList = new OfferMaterialList();
+                                        materialList.IsPoz = true;
+                                        materialList.PozOBFId = pozId;
+                                        materialList.Quantity = (float)quantity;
+                                        materialList.Offer = CurrentManager.Instance.CurrentOffer;
+                                        materialListItems.Add(materialList);
+                                    }
                                 }
                             }
                             i++;
                         }
-                         this.Hide();
+                        this.Hide();
                         frm_TopluPozTedarikciTemp pozTemp = new frm_TopluPozTedarikciTemp(this._owner);
-                        pozTemp.pozItems = pozItems;
+                        pozTemp.MaterialList = materialListItems;
                         pozTemp.ShowDialog();
                         frm_MesajFormu mesaj = new frm_MesajFormu();
                         mesaj.lblMesaj.Text = "Pozlar başarıyla yüklendi...";
@@ -116,7 +150,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         }
         private void btnYukle_Click(object sender, EventArgs e)
         {
-
+            this.getExcel();
         }
 
         private void panelControl1_Paint(object sender, PaintEventArgs e)

@@ -13,13 +13,14 @@ using IhalematikPro.Forms;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Manager;
 using IhalematikProUI.Forms.Base;
+using IhalematikPro.Manager;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
     public partial class frm_TopluPozTedarikciTemp : IhalematikBaseForm
     {
         private frm_TedarikcilereTeklifGonder _owner = null;
-        public List<Poz> pozItems = null;
+        public List<OfferMaterialList> MaterialList = null;
         public frm_TopluPozTedarikciTemp(frm_TedarikcilereTeklifGonder Owner)
         {
             this._owner = Owner;
@@ -33,27 +34,23 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnEvet_Click(object sender, EventArgs e)
         {
-            if (this.pozItems != null)
+
+            this.Enabled = false;
+            LoadingManager.Instance.Show(this);
+            foreach (var item in this.MaterialList)
             {
-                this.Enabled = false;
-                LoadingManager.Instance.Show(this);
-                foreach (IhalematikProBL.Entity.Poz item in pozItems)
-                {
-                    PozProvider.Instance.Save(item);
-                }
-                LoadingManager.Instance.Hide(); ;
-                this._owner.LoadMaterialGrid();
+                OfferMaterialListProvider.Instance.Save(item);
+                CurrentManager.Instance.CurrentOffer.MaterialList.Add(item);
             }
-            else
-            {
-                MessageBox.Show("Kaydedilecek Poz bulunamadı.");
-            }
+            LoadingManager.Instance.Hide();
+            this.Enabled = true;
             this.Close();
+            this._owner.LoadMaterialGrid();
         }
 
         private void frm_TopluPozTedarikciTemp_Load(object sender, EventArgs e)
         {
-
+            grdMaterialList.DataSource = this.MaterialList;
         }
     }
 }
