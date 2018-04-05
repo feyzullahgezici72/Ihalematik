@@ -94,6 +94,7 @@ namespace IhalematikPro.Forms
                             {
                                 MaterialList materialList = new MaterialList();
                                 materialList.IsPoz = false;
+                                materialList.Quantity = item.Quantity;
                                 materialList.PozOBFId = item.PozOBFId;
                                 materialList.Tender = tender;
                                 materialList.TenderGroupId = models[0].Id.Value;
