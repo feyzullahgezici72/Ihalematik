@@ -230,6 +230,12 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            this.SearchResult();
+            txtSearchDescription.Focus();
+        }
+
+        private void SearchResult()
+        {
             string obfNo = txtSearchNumber.Text.Trim();
             string obfDesc = txtSearchDescription.Text.Trim();
 
@@ -256,7 +262,6 @@ namespace IhalematikPro.Forms
             grdOBFList.DataSource = null;
             grdOBFList.DataSource = items;
             lblRecordCount.Text = items.Count.ToString();
-            txtSearchDescription.Focus();
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -272,32 +277,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            string obfNo = txtSearchNumber.Text.Trim();
-            string obfDesc = txtSearchDescription.Text.Trim();
-
-            List<OBFModel> items = UIOBFManager.Instance.GetOBFs();
-
-            if (cmbAktivePasive.SelectedIndex == 0)
-            {
-                items = items.Where(p => p.IsActive).ToList();
-            }
-            else if (cmbAktivePasive.SelectedIndex == 1)
-            {
-                items = items.Where(p => !p.IsActive).ToList();
-            }
-
-            if (!string.IsNullOrEmpty(obfNo))
-            {
-                items = items.Where(p => p.StokNumber.ToLower().Contains(obfNo.ToLower())).ToList();
-            }
-            if (!string.IsNullOrEmpty(obfDesc))
-            {
-                items = items.Where(p => p.Description.ToLower().Contains(obfDesc.ToLower())).ToList();
-            }
-
-            grdOBFList.DataSource = null;
-            grdOBFList.DataSource = items;
-            lblRecordCount.Text = items.Count.ToString();
+            this.SearchResult();
             txtSearchNumber.Focus();
         }
 
