@@ -119,7 +119,6 @@ namespace IhalematikProUI.Forms.OBF
                     }
                     catch (Exception ex)
                     {
-                        LoadingManager.Instance.Hide(); ;
                         pnlYuke.Visible = true;
                         MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.");
                         LoggingManager.Instance.SaveErrorLog(ex);
@@ -129,7 +128,13 @@ namespace IhalematikProUI.Forms.OBF
 
                     i++;
                 }
-                LoadingManager.Instance.Hide();
+
+                if (this.obfItems == null || this.obfItems.Count == 0)
+                {
+                    MessageBox.Show("Yüklenecek yeni OBF bulunamadı.");
+                    this.Close();
+                    return;
+                }
                 stream.Close();
                 frm_MesajFormu mesaj = new frm_MesajFormu();
                 mesaj.lblMesaj.Text = "Malzemeler başarıyla yüklendi...";

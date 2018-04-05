@@ -48,15 +48,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                     String path = dialog.FileName; // get name of file
                     this.ReadExcel(path);
                     this.Hide();
-                    //frm_TopluObfTemp obfTemp = new frm_TopluObfTemp(_owner);
-                    //obfTemp.obfItems = this.obfItems;
-                    //obfTemp.ShowDialog();
                 }
-                else
-                {
-
-                }
-
             }
         }
 
@@ -159,6 +151,13 @@ namespace IhalematikProUI.Forms.Tedarikci
                 }
                 stream.Close();
                 this.Hide();
+
+                if (this.MaterialList == null || this.MaterialList.Count == 0)
+                {
+                    MessageBox.Show("Yüklenecek OBF bulunamadı.");
+                    this.Close();
+                    return;
+                }
                 frm_TopluObfTedarikciTemp obfTemp = new frm_TopluObfTedarikciTemp(this._owner);
                 obfTemp.MaterialList = this.MaterialList;
                 obfTemp.ShowDialog();

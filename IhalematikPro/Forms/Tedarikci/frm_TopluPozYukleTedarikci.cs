@@ -130,6 +130,12 @@ namespace IhalematikProUI.Forms.Tedarikci
                             i++;
                         }
                         this.Hide();
+                        if (this.materialListItems == null || this.materialListItems.Count == 0)
+                        {
+                            MessageBox.Show("Yüklenecek Poz bulunamadı.");
+                            this.Close();
+                            return;
+                        }
                         frm_TopluPozTedarikciTemp pozTemp = new frm_TopluPozTedarikciTemp(this._owner);
                         pozTemp.MaterialList = materialListItems;
                         pozTemp.ShowDialog();

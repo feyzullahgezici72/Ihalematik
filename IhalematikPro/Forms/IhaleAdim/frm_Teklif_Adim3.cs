@@ -262,7 +262,7 @@ namespace IhalematikPro.Forms
             LoadingManager.Instance.Show(this);
             bindingSourceAddWorker.DataSource = typeof(List<TenderMaterialListEquipmentModel>);
             this.LoadTenderGroupGrid();
-            LoadingManager.Instance.Hide();;
+            LoadingManager.Instance.Hide(); ;
             this.Enabled = true;
         }
 
@@ -326,6 +326,12 @@ namespace IhalematikPro.Forms
         private void btnNext_Click(object sender, EventArgs e)
         {
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.WorkerMarkup == 0 && p.IsWorkship).ToList();
+
+            if (items != null && items.Where(p => p.CustomWorkerUnitPrice == 0).Count() > 0)
+            {
+                DialogResult resultMsg = MessageBox.Show("İşçilik Birim Fiyat belirtmediginiz malzemeler var!!!");
+                return;
+            }
 
             if (items != null && items.Count != 0)
             {
