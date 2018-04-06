@@ -42,10 +42,10 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
             if (dialog.ShowDialog() == DialogResult.OK) // if user clicked OK
             {
-                pnlYukle.Visible = false;
                 DialogResult result = MessageBox.Show("Yüklemek istediğinizden emin misiniz?", "Yükleme Dosya içeriğine göre biraz zaman alabilir", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result.Equals(DialogResult.Yes))
                 {
+                    pnlYukle.Visible = false;
                     String path = dialog.FileName; // get name of file
                     this.ReadExcel(path);
                     this.Hide();
