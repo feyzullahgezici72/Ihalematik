@@ -245,15 +245,19 @@ namespace IhalematikPro.Forms
             this.Enabled = false;
             LoadingManager.Instance.Show(this);
             this.LoadTenderGroupGrid();
-            LoadingManager.Instance.Hide();;
+            LoadingManager.Instance.Hide(); ;
             this.Enabled = true;
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            if (CurrentManager.Instance.CurrentTender.MaterialList == null || CurrentManager.Instance.CurrentTender.MaterialList.Count == 0)
+            {
+                MessageBox.Show("Hiç malzeme seçmediniz. Lütfen malzeme seçiniz?");
+                return;
+            }
 
             this.SaveMaterialListIsWorkship();
-
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).ToList();
 
             List<MaterialList> zeroAmountItems = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.Quantity == 0).ToList();
@@ -297,7 +301,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click_1(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnExcel_Click(object sender, EventArgs e)
@@ -316,7 +320,7 @@ namespace IhalematikPro.Forms
             }
         }
 
-     
+
 
         private void btnExceldenAl_Click(object sender, EventArgs e)
         {
@@ -336,7 +340,7 @@ namespace IhalematikPro.Forms
             pozY.ShowDialog();
         }
 
-      
+
 
         private void barbtnYeniGrup_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

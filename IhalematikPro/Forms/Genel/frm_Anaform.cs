@@ -298,7 +298,7 @@ namespace IhalematikPro.Forms
         Forms.frm_Teklif_Adim2 ta4;
         private void btnAdimx4_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender != null)
+            if (CurrentManager.Instance.CurrentTender != null && CurrentManager.Instance.CurrentTender.MaterialList != null && CurrentManager.Instance.CurrentTender.MaterialList.Count != 0)
             {
                 btnAdimx4.ButtonStyle = BarButtonStyle.Check;
                 RibonPasif();
@@ -915,7 +915,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem36_ItemClick(object sender, ItemClickEventArgs e)
         {
-       
+
         }
 
         private void barButtonItem38_ItemClick(object sender, ItemClickEventArgs e)
@@ -1070,7 +1070,7 @@ namespace IhalematikPro.Forms
             {
                 myB = new frm_Mybrowser();
                 myB.MdiParent = this;
-                myB.FormClosed +=new FormClosedEventHandler( MyB_FormClosed);
+                myB.FormClosed += new FormClosedEventHandler(MyB_FormClosed);
                 myB.Show();
             }
             else
