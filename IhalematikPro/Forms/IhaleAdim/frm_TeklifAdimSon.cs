@@ -89,15 +89,6 @@ namespace IhalematikProUI.Forms
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            if (ddlCalculateWorkerType.SelectedIndex == 0)
-            {
-                CurrentManager.Instance.CurrentTender.PersonHour = true;
-            }
-            else
-            {
-                CurrentManager.Instance.CurrentTender.PersonHour = false;
-            }
-
             foreach (var item in CurrentManager.Instance.CurrentTender.MaterialList)
             {
                 MaterialListProvider.Instance.Save(item);
@@ -122,24 +113,12 @@ namespace IhalematikProUI.Forms
                 chckCompletionBond.Checked = currentTender.CompletionBond;
                 chckProvisionalBond.Checked = currentTender.ProvisionalBond;
 
-                if (currentTender.PersonHour)
-                {
-                    ddlCalculateWorkerType.SelectedIndex = 0;
-                }
-                else
-                {
-                    ddlCalculateWorkerType.SelectedIndex = 1;
-                }
-
                 lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
                 lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
 
                 this.OtherExpenses();
                 this.LoadGrid();
                 this.CalculateMaterialListEquipment();
-                //this.CalculateFooterInnerValues(null);
-                //this.CalculateLeftPanelValues();
-
                 colUnitTotalFare.Visible = true;
                 colTotalFare.Visible = true;
             }
@@ -166,22 +145,22 @@ namespace IhalematikProUI.Forms
                     switch (item.UnitTimeType)
                     {
                         case UnitTimeTypesEnum.Minute:
-                            totalHour += Math.Round(item.UnitTime / 60 * item.Quantity , 3);
+                            totalHour += Math.Round(item.UnitTime / 60 * item.Quantity * item.MaterialList.Quantity, 3);
                             break;
                         case UnitTimeTypesEnum.Hour:
-                            totalHour += item.UnitTime * item.Quantity ;
+                            totalHour += item.UnitTime * item.Quantity * item.MaterialList.Quantity;
                             break;
                         case UnitTimeTypesEnum.Day:
-                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * item.Quantity , 3);
+                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * item.Quantity * item.MaterialList.Quantity, 3);
                             break;
                         case UnitTimeTypesEnum.Week:
-                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * 7 * item.Quantity, 3);
+                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * 7 * item.Quantity * item.MaterialList.Quantity, 3);
                             break;
                         case UnitTimeTypesEnum.Month:
-                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * dayPerMonthValue * item.Quantity , 3);
+                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * dayPerMonthValue * item.Quantity * item.MaterialList.Quantity, 3);
                             break;
                         case UnitTimeTypesEnum.Year:
-                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * dayPerMonthValue * 12 * item.Quantity, 3);
+                            totalHour += Math.Round(item.UnitTime * hourPerDayValue * dayPerMonthValue * 12 * item.Quantity * item.MaterialList.Quantity, 3);
                             break;
                         default:
                             break;
@@ -195,8 +174,8 @@ namespace IhalematikProUI.Forms
                         totalVehicleHour += totalHour;
                     }
                 }
-                txtToplamAdamSaat.Text = totalWorkerHour.ToString();
-                txtToplamAracSaat.Text = totalVehicleHour.ToString();
+                txtToplamAdamSaat.Text = Math.Round(totalWorkerHour, 2).ToString();
+                txtToplamAracSaat.Text = Math.Round(totalVehicleHour, 2).ToString();
             }
         }
 
@@ -352,12 +331,6 @@ namespace IhalematikProUI.Forms
 
                 MessageBox.Show("Hesap Makinesi Yüklü değil...");
             }
-        }
-
-        private void ddlCalculateWorkerType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //this.LoadGrid();
-            // this.CalculateFooterInnerValues(null);
         }
 
         private void frm_TeklifAdimSon_Load(object sender, EventArgs e)

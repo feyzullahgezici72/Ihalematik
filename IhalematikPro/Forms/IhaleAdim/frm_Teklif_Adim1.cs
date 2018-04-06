@@ -240,6 +240,7 @@ namespace IhalematikPro.Forms
                 colKDV.OptionsColumn.AllowEdit = false;
                 colKDV.OptionsColumn.AllowFocus = false;
                 colKDV.OptionsColumn.ReadOnly = true;
+                btnExceldenAl.Visible = false;
             }
             this.Enabled = false;
             LoadingManager.Instance.Show(this);

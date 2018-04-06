@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using CefSharp;
+using CefSharp.WinForms;
 
 namespace IhalematikProUI.Forms.Genel
 {
@@ -16,6 +18,7 @@ namespace IhalematikProUI.Forms.Genel
         public frm_Mybrowser()
         {
             InitializeComponent();
+            //InitBrowser();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -28,9 +31,24 @@ namespace IhalematikProUI.Forms.Genel
             this.Close();
         }
 
+        public ChromiumWebBrowser browser;
         private void frm_Mybrowser_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            Cef.Initialize(new CefSettings());
+            browser = new ChromiumWebBrowser("ekap.kik.gov.tr/EKAP/Ortak/IhaleArama/index.html") {
+                Dock = DockStyle.Fill,
+                Size = new Size(600, 600),
+                Location = new Point(200, 200)
+            };
+            this.panel.Controls.Add(browser);
+            //browser.Dock = DockStyle.Fill;
+
+            // this.WindowState = FormWindowState.Maximized;
+            //
+        }
+        public void InitBrowser()
+        {
+           
         }
     }
 }
