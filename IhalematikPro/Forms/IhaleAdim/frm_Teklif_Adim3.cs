@@ -327,7 +327,7 @@ namespace IhalematikPro.Forms
         {
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.WorkerMarkup == 0 && p.IsWorkship).ToList();
 
-            if (items != null && items.Where(p => p.CustomWorkerUnitPrice == 0).Count() > 0)
+            if (CurrentManager.Instance.CurrentTender.MaterialList != null && CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.CustomWorkerUnitPrice == 0).Count() > 0)
             {
                 DialogResult resultMsg = MessageBox.Show("İşçilik Birim Fiyat belirtmediginiz malzemeler var!!!");
                 return;
