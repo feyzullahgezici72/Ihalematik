@@ -30,6 +30,17 @@ namespace IhalematikPro.Manager
             return models;
         }
 
+        public List<Poz> GetExistingPozs(string PozNumber, string PozDescription)
+        {
+            List<Poz> pozs = new List<Poz>();
+            Dictionary<string, object> param = new Dictionary<string, object>();
+            param.Add("Number", PozNumber);
+            param.Add("Description", PozDescription);
+            param.Add("Year", DateTime.Now.Year);
+            pozs = PozProvider.Instance.GetItems(param);
+            return pozs;
+        }
+
         public List<Poz> GetPoz(string PozNumber)
         {
             List<Poz> pozs = PozProvider.Instance.GetItems("Number", PozNumber);

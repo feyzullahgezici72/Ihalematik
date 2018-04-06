@@ -78,12 +78,12 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                 string unit = excelReader.GetString(2);
                                 if (!string.IsNullOrEmpty(pozno) && !string.IsNullOrEmpty(description))
                                 {
-                                    List<PozModel> existingPozs = UIPozManager.Instance.GetPozs(pozno, description);
+                                    List<Poz> existingPozs = UIPozManager.Instance.GetExistingPozs(pozno, description);
                                    
                                     if (existingPozs != null && existingPozs.Count != 0)
                                     {
                                         //poz = existingPozs.First();
-                                        pozId = existingPozs.First().Id.Value;
+                                        pozId = existingPozs.First().Id;
 
                                         listBox1.Items.Add(existingPozs.First().Number);
                                         listBox1.Items.Add(existingPozs.First().Description);
