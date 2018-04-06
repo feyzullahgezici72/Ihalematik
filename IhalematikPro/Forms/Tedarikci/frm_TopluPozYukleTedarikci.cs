@@ -132,6 +132,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                         this.Hide();
                         if (this.materialListItems == null || this.materialListItems.Count == 0)
                         {
+                            pnlYuke.Visible = true;
                             MessageBox.Show("Yüklenecek Poz bulunamadı.");
                             this.Close();
                             return;
@@ -145,12 +146,13 @@ namespace IhalematikProUI.Forms.Tedarikci
                     }
                     catch (Exception ex)
                     {
+                        pnlYuke.Visible = true;
                         MessageBox.Show("Beklenmedik bir sorunla karşılaşıldı..");
                     }
                 }
                 else
                 {
-
+                
                 }
             }
         }

@@ -63,7 +63,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                 int i = 0;
                 while (excelReader.Read())
                 {
-                    pnlYuke.Visible = false;
                     pnlYukle.Visible = false;
                     Application.DoEvents();
                     try
@@ -154,6 +153,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
                 if (this.MaterialList == null || this.MaterialList.Count == 0)
                 {
+                    pnlYukle.Visible = true;
                     MessageBox.Show("Yüklenecek OBF bulunamadı.");
                     this.Close();
                     return;

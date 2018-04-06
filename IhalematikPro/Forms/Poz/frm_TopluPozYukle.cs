@@ -36,12 +36,13 @@ namespace IhalematikProUI.Forms.Genel
             dialog.Filter = "Excel Files(*.xls;*.xlsx)|*.xls;*.xlsx";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                pnlYuke.Visible = false;
+                
                 DialogResult result = MessageBox.Show("Yüklemek istediğinizden emin misiniz?", "Yükleme Dosya içeriğine göre biraz zaman alabilir", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result.Equals(DialogResult.Yes))
                 {
                     try
                     {
+                        pnlYuke.Visible = false;
                         string filename = System.IO.Path.GetFileName(dialog.FileName);
                         FileStream stream = System.IO.File.Open(dialog.FileName, FileMode.Open, FileAccess.Read);
                         IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
@@ -110,6 +111,7 @@ namespace IhalematikProUI.Forms.Genel
                         }
                         if (pozItems == null || pozItems.Count == 0)
                         {
+                            pnlYuke.Visible = false;
                             MessageBox.Show("Yüklenecek yeni poz bulunamadı.");
                             this.Close();
                             return;

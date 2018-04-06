@@ -35,22 +35,22 @@
             this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.lblPozListesi = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.pcWorld = new System.Windows.Forms.PictureBox();
             this.pnlYuke = new DevExpress.XtraEditors.PanelControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lblPozListesi = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.pcWorld = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlYuke)).BeginInit();
             this.pnlYuke.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPosSayisi
@@ -123,6 +123,39 @@
             this.groupControl1.TabIndex = 32;
             this.groupControl1.Text = " ";
             // 
+            // pnlYuke
+            // 
+            this.pnlYuke.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlYuke.Controls.Add(this.pictureBox1);
+            this.pnlYuke.Location = new System.Drawing.Point(8, 7);
+            this.pnlYuke.Name = "pnlYuke";
+            this.pnlYuke.Size = new System.Drawing.Size(984, 559);
+            this.pnlYuke.TabIndex = 40;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(984, 559);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.Black;
+            this.listBox1.Font = new System.Drawing.Font("Calibri", 12F);
+            this.listBox1.ForeColor = System.Drawing.Color.Lime;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 29;
+            this.listBox1.Location = new System.Drawing.Point(11, 11);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(982, 555);
+            this.listBox1.TabIndex = 39;
+            // 
             // lblPozListesi
             // 
             this.lblPozListesi.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -168,37 +201,6 @@
             this.pcWorld.TabIndex = 23;
             this.pcWorld.TabStop = false;
             // 
-            // pnlYuke
-            // 
-            this.pnlYuke.Controls.Add(this.pictureBox1);
-            this.pnlYuke.Location = new System.Drawing.Point(8, 7);
-            this.pnlYuke.Name = "pnlYuke";
-            this.pnlYuke.Size = new System.Drawing.Size(984, 559);
-            this.pnlYuke.TabIndex = 40;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(5, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(978, 556);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.Black;
-            this.listBox1.Font = new System.Drawing.Font("Calibri", 12F);
-            this.listBox1.ForeColor = System.Drawing.Color.Lime;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 29;
-            this.listBox1.Location = new System.Drawing.Point(11, 11);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(982, 555);
-            this.listBox1.TabIndex = 39;
-            // 
             // frm_TopluPozYukleTedarikci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -215,13 +217,13 @@
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pnlYuke)).EndInit();
+            this.pnlYuke.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlYuke)).EndInit();
-            this.pnlYuke.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
