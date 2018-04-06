@@ -346,7 +346,7 @@
             // 
             // barbtnYeniGrup
             // 
-            this.barbtnYeniGrup.Caption = "Yeni Grup Ekle";
+            this.barbtnYeniGrup.Caption = "Grup Ekle/Güncelle/Sil";
             this.barbtnYeniGrup.Glyph = ((System.Drawing.Image)(resources.GetObject("barbtnYeniGrup.Glyph")));
             this.barbtnYeniGrup.Id = 3;
             this.barbtnYeniGrup.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barbtnYeniGrup.LargeGlyph")));
