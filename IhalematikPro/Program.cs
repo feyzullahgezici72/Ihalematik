@@ -61,8 +61,8 @@ namespace IhalematikPro
         {
             // Log the exception, display it, etc
             LoggingManager.Instance.SaveErrorLog(e.Exception);
-            LoadingManager.Instance.Hide();
-            MessageBox.Show("Beklenmedik bir hata ile karşılaşıldı. Lütfen program yöneticinize başvurun.");
+            //LoadingManager.Instance.Hide();
+           // MessageBox.Show("Beklenmedik bir hata ile karşılaşıldı. Lütfen program yöneticinize başvurun.");
             //Debug.WriteLine(e.Exception.Message);
         }
 
@@ -70,8 +70,8 @@ namespace IhalematikPro
         {
             // Log the exception, display it, etc
             LoggingManager.Instance.SaveErrorLog((e.ExceptionObject as Exception));
-            LoadingManager.Instance.Hide();
-            MessageBox.Show("Beklenmedik bir hata ile karşılaşıldı. Lütfen program yöneticinize başvurun.");
+            //LoadingManager.Instance.Hide();
+            //MessageBox.Show("Beklenmedik bir hata ile karşılaşıldı. Lütfen program yöneticinize başvurun.");
         }
     }
 }
