@@ -32,26 +32,32 @@ namespace IhalematikPro.Forms
         {
             this.Close();
         }
-        private void frm_DevamEdenIhaleListesi_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public void LoadGrid()
         {
-            List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
+            LoadingManager.Instance.Show(this);
+
+            List<Tender> list = new List<Tender>();
+            if (cmbAktivePasive.SelectedIndex == 0)
+            {
+                list = TenderProvider.Instance.GetItems("IsActive", true);
+                colPasive.Visible = true;
+                colOpenTender.Visible = true;
+                colActive.Visible = false;
+            }
+            else if (cmbAktivePasive.SelectedIndex == 1)
+            {
+                list = TenderProvider.Instance.GetItems("IsActive", false);
+                colOpenTender.Visible = false;
+                colPasive.Visible = false;
+                colActive.Visible = true;
+            }
+            
             lblRecordCount.Text = list.Count.ToString();
             grdActiveTenderList.DataSource = list.OrderByDescending(p => p.InsertTime).ToList();
-        }
 
-        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
-        {
 
-        }
 
-        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
-        {
-
+            LoadingManager.Instance.Hide();
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -105,27 +111,7 @@ namespace IhalematikPro.Forms
 
         private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxEdit1.SelectedIndex == 0)
-            {
-                List<Tender> list = TenderProvider.Instance.GetItems("IsActive", true);
-                lblRecordCount.Text = list.Count.ToString();
-                grdActiveTenderList.DataSource = list.OrderByDescending(p => p.InsertTime).ToList();
-                lblTenderCaptin.Text = "AÇIK TEKLİF LİSTESİ";
-            }
-            if (comboBoxEdit1.SelectedIndex == 1)
-            {
-                List<Tender> list = TenderProvider.Instance.GetItems("IsActive", false);
-                lblRecordCount.Text = list.Count.ToString();
-                grdActiveTenderList.DataSource = list.OrderByDescending(p => p.InsertTime).ToList();
-                lblTenderCaptin.Text = "KAPALI TEKLİF LİSTESİ";
-            }
-            if (comboBoxEdit1.SelectedIndex == 2)
-            {
-                List<Tender> list = TenderProvider.Instance.GetItems();
-                lblRecordCount.Text = list.Count.ToString();
-                grdActiveTenderList.DataSource = list.OrderByDescending(p => p.InsertTime).ToList();
-                lblTenderCaptin.Text = "TÜM TEKLİF LİSTESİ";
-            }
+            this.LoadGrid();
         }
 
         private void btnDetay_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -141,15 +127,15 @@ namespace IhalematikPro.Forms
             string tenderDescription = txtTenderDescription.Text.Trim();
 
             List<Tender> list = new List<Tender>();
-            if (comboBoxEdit1.SelectedIndex == 0)
+            if (cmbAktivePasive.SelectedIndex == 0)
             {
                 list = TenderProvider.Instance.GetItems("IsActive", true);
             }
-            if (comboBoxEdit1.SelectedIndex == 1)
+            if (cmbAktivePasive.SelectedIndex == 1)
             {
                 list = TenderProvider.Instance.GetItems("IsActive", false);
             }
-            if (comboBoxEdit1.SelectedIndex == 2)
+            if (cmbAktivePasive.SelectedIndex == 2)
             {
                 list = TenderProvider.Instance.GetItems();
             }
@@ -175,15 +161,15 @@ namespace IhalematikPro.Forms
             string tenderDescription = txtTenderDescription.Text.Trim();
 
             List<Tender> list = new List<Tender>();
-            if (comboBoxEdit1.SelectedIndex == 0)
+            if (cmbAktivePasive.SelectedIndex == 0)
             {
                 list = TenderProvider.Instance.GetItems("IsActive", true);
             }
-            if (comboBoxEdit1.SelectedIndex == 1)
+            if (cmbAktivePasive.SelectedIndex == 1)
             {
                 list = TenderProvider.Instance.GetItems("IsActive", false);
             }
-            if (comboBoxEdit1.SelectedIndex == 2)
+            if (cmbAktivePasive.SelectedIndex == 2)
             {
                 list = TenderProvider.Instance.GetItems();
             }
@@ -205,7 +191,7 @@ namespace IhalematikPro.Forms
 
         private void txtTenderNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13)
             {
                 simpleButton2.PerformClick();
             }
@@ -213,7 +199,7 @@ namespace IhalematikPro.Forms
 
         private void txtTenderDescription_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13)
             {
                 simpleButton1.PerformClick();
             }
@@ -232,21 +218,40 @@ namespace IhalematikPro.Forms
             catch (Exception ex)
             {
                 LoggingManager.Instance.SaveErrorLog(ex);
-            }    
+            }
         }
 
         private void frm_DevamEdenIhaleListesi_Shown(object sender, EventArgs e)
         {
             this.Enabled = false;
-            LoadingManager.Instance.Show(this);
             this.LoadGrid();
-            LoadingManager.Instance.Hide();;
             this.Enabled = true;
         }
 
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        private void btnPasive_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Pasif yapmak istediginzden emin misiniz?", "Pasif Yap", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.OK))
+            {
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewActiveTenderList.GetFocusedRowCellValue("Id"));
+                Tender selectedTender = TenderProvider.Instance.GetItem(id);
+                selectedTender.IsActive = false;
+                TenderProvider.Instance.Save(selectedTender);
+                this.LoadGrid();
+            }
+        }
 
+        private void btnActive_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Aktif yapmak istediğinizden emin misiniz?", "Aktif Yap", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.OK))
+            {
+                int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewActiveTenderList.GetFocusedRowCellValue("Id"));
+                Tender selectedTender = TenderProvider.Instance.GetItem(id);
+                selectedTender.IsActive = true;
+                TenderProvider.Instance.Save(selectedTender);
+                this.LoadGrid();
+            }
         }
     }
 }
