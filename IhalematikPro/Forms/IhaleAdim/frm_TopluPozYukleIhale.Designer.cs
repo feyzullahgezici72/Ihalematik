@@ -104,7 +104,7 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl1.Location = new System.Drawing.Point(136, 26);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(146, 19);
             this.labelControl1.TabIndex = 30;
@@ -119,7 +119,7 @@
             this.lblPozListesi.LineColor = System.Drawing.Color.Red;
             this.lblPozListesi.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.lblPozListesi.Location = new System.Drawing.Point(52, 0);
-            this.lblPozListesi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblPozListesi.Margin = new System.Windows.Forms.Padding(4);
             this.lblPozListesi.Name = "lblPozListesi";
             this.lblPozListesi.ShowLineShadow = false;
             this.lblPozListesi.Size = new System.Drawing.Size(211, 35);
@@ -137,7 +137,7 @@
             this.panelControl1.Controls.Add(this.lblPozListesi);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(994, 35);
             this.panelControl1.TabIndex = 33;
@@ -194,7 +194,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 29;
             this.listBox1.Location = new System.Drawing.Point(4, 51);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(982, 526);
             this.listBox1.TabIndex = 24;

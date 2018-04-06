@@ -61,7 +61,6 @@ namespace IhalematikProUI.Forms.IhaleAdim
                         {
                             if (i > 0)
                             {
-                                Application.DoEvents();
                                 int pozId = 0;
                                 string pozno = string.Empty;
                                 try

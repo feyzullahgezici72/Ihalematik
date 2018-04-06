@@ -67,7 +67,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                 int i = 0;
                 while (excelReader.Read())
                 {
-                    Application.DoEvents();
+                    
                     try
                     {
                         if (i > 0)
