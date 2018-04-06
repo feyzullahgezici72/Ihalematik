@@ -142,6 +142,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
                         if (this.materialListItems == null || this.materialListItems.Count == 0)
                         {
+                            pnlYuke.Visible = false;
                             MessageBox.Show("Yüklenecek Poz bulunamadı.");
                             this.Close();
                             return;

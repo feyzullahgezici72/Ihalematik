@@ -158,6 +158,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
                 if (this.materialListItems == null || this.materialListItems.Count == 0)
                 {
+                    pnlYukle.Visible = false;
                     MessageBox.Show("Yüklenecek OBF bulunamadı.");
                     this.Close();
                     return;

@@ -104,7 +104,7 @@
             this.groupControl2.Controls.Add(this.btnIptal);
             this.groupControl2.Controls.Add(this.labelControl1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl2.Location = new System.Drawing.Point(3, 629);
+            this.groupControl2.Location = new System.Drawing.Point(3, 597);
             this.groupControl2.LookAndFeel.SkinName = "Visual Studio 2013 Light";
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Name = "groupControl2";
@@ -175,24 +175,26 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(994, 726);
+            this.groupControl1.Size = new System.Drawing.Size(994, 694);
             this.groupControl1.TabIndex = 36;
             this.groupControl1.Text = " ";
             // 
             // pnlYukle
             // 
+            this.pnlYukle.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pnlYukle.Controls.Add(this.pictureBox1);
-            this.pnlYukle.Location = new System.Drawing.Point(6, 42);
+            this.pnlYukle.Location = new System.Drawing.Point(4, 42);
             this.pnlYukle.Name = "pnlYukle";
             this.pnlYukle.Size = new System.Drawing.Size(984, 559);
             this.pnlYukle.TabIndex = 39;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(978, 556);
+            this.pictureBox1.Size = new System.Drawing.Size(984, 559);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -201,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(994, 726);
+            this.ClientSize = new System.Drawing.Size(994, 694);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.groupControl1);
