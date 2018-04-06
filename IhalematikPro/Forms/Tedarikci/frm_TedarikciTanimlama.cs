@@ -57,7 +57,6 @@ namespace IhalematikProUI.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-           
             frm_FaalitetAlaniEkle FAE = new frm_FaalitetAlaniEkle(this);
             FAE.ShowDialog();
         }
