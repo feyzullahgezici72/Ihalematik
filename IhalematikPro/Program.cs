@@ -24,7 +24,7 @@ namespace IhalematikPro
         [STAThread]
         static void Main()
         {
-            Control.CheckForIllegalCrossThreadCalls = false;
+           // Control.CheckForIllegalCrossThreadCalls = false;
             const string appName = "LifeTree Software ihale Programı";
             bool createdNew;
             mutex = new Mutex(true, appName, out createdNew);
