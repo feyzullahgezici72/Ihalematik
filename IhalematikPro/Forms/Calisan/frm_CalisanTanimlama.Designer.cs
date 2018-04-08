@@ -1146,9 +1146,7 @@
             // simpleButton1
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.ForestGreen;
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Top;
             this.simpleButton1.Image = global::IhalematikProUI.Properties.Resources.worker;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
@@ -1156,7 +1154,7 @@
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(435, 50);
             this.simpleButton1.TabIndex = 96;
-            this.simpleButton1.Text = "Çalışan Ekle > F1";
+            this.simpleButton1.Text = "Ünvan Ekle > F1";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // statusPanel

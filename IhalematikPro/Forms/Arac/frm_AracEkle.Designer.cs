@@ -373,9 +373,9 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(126, 35);
+            this.labelControl1.Size = new System.Drawing.Size(175, 35);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "ARAÇ EKLE";
+            this.labelControl1.Text = "ARAÇ TİPİ EKLE";
             this.labelControl1.UseMnemonic = false;
             // 
             // dxErrorProvider1

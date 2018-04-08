@@ -111,7 +111,7 @@
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(620, 548);
             this.groupControl2.TabIndex = 34;
-            this.groupControl2.Text = "Çalışan Bilgileri";
+            this.groupControl2.Text = "Ünvan Bilgisi";
             // 
             // grdWorkerTitle
             // 
@@ -372,9 +372,9 @@
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(160, 35);
+            this.labelControl1.Size = new System.Drawing.Size(149, 35);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "ÇALIŞAN EKLE";
+            this.labelControl1.Text = "ÜNVAN EKLE";
             this.labelControl1.UseMnemonic = false;
             // 
             // dxErrorProvider1
