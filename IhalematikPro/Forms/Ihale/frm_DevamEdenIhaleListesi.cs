@@ -253,5 +253,10 @@ namespace IhalematikPro.Forms
                 this.LoadGrid();
             }
         }
+
+        private void repositoryItemLookUpEdit1_Click(object sender, EventArgs e)
+        {
+        
+        }
     }
 }

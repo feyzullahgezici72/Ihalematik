@@ -376,6 +376,8 @@
             this.rpstVehicleUnitTimeTypes.LookAndFeel.SkinName = "Money Twins";
             this.rpstVehicleUnitTimeTypes.LookAndFeel.UseDefaultLookAndFeel = false;
             this.rpstVehicleUnitTimeTypes.Name = "rpstVehicleUnitTimeTypes";
+            this.rpstVehicleUnitTimeTypes.NullText = "";
+            this.rpstVehicleUnitTimeTypes.NullValuePrompt = "Araç Seçin";
             // 
             // colAddVehicleWorkerUnitPrice
             // 
@@ -620,6 +622,7 @@
             this.rpstWorker.LookAndFeel.SkinName = "Money Twins";
             this.rpstWorker.LookAndFeel.UseDefaultLookAndFeel = false;
             this.rpstWorker.Name = "rpstWorker";
+            this.rpstWorker.NullText = "Çalışan Seçin";
             // 
             // colAddWorkerQuantity
             // 
@@ -691,6 +694,7 @@
             this.rpstUnitTimeTypes.LookAndFeel.SkinName = "Money Twins";
             this.rpstUnitTimeTypes.LookAndFeel.UseDefaultLookAndFeel = false;
             this.rpstUnitTimeTypes.Name = "rpstUnitTimeTypes";
+            this.rpstUnitTimeTypes.NullText = "Araç Seçin";
             // 
             // colAddWorkerWorkerUnitPrice
             // 
