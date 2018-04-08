@@ -181,13 +181,13 @@ namespace IhalematikPro.Forms
             this.txtDate = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem8 = new DevExpress.XtraBars.BarStaticItem();
             this.barSozlesmeBilgileri = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem50 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem51 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem52 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem53 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem54 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem55 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem56 = new DevExpress.XtraBars.BarButtonItem();
+            this.barSozlesmeMiktarlari = new DevExpress.XtraBars.BarButtonItem();
+            this.barOdenekDilimleri = new DevExpress.XtraBars.BarButtonItem();
+            this.barFiyatFarklari = new DevExpress.XtraBars.BarButtonItem();
+            this.barHakedisYarat = new DevExpress.XtraBars.BarButtonItem();
+            this.barYesilDefter = new DevExpress.XtraBars.BarButtonItem();
+            this.barIcmal = new DevExpress.XtraBars.BarButtonItem();
+            this.barHakedisOzeti = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -372,13 +372,13 @@ namespace IhalematikPro.Forms
             this.txtDate,
             this.barStaticItem8,
             this.barSozlesmeBilgileri,
-            this.barButtonItem50,
-            this.barButtonItem51,
-            this.barButtonItem52,
-            this.barButtonItem53,
-            this.barButtonItem54,
-            this.barButtonItem55,
-            this.barButtonItem56});
+            this.barSozlesmeMiktarlari,
+            this.barOdenekDilimleri,
+            this.barFiyatFarklari,
+            this.barHakedisYarat,
+            this.barYesilDefter,
+            this.barIcmal,
+            this.barHakedisOzeti});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.MaxItemId = 98;
@@ -1412,69 +1412,70 @@ namespace IhalematikPro.Forms
             this.barSozlesmeBilgileri.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSozlesmeBilgileri.LargeGlyph")));
             this.barSozlesmeBilgileri.LargeWidth = 120;
             this.barSozlesmeBilgileri.Name = "barSozlesmeBilgileri";
+            this.barSozlesmeBilgileri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barSozlesmeBilgileri_ItemClick);
             // 
-            // barButtonItem50
+            // barSozlesmeMiktarlari
             // 
-            this.barButtonItem50.Caption = "Sözleşme Miktar ve Fiyatları";
-            this.barButtonItem50.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem50.Glyph")));
-            this.barButtonItem50.Id = 91;
-            this.barButtonItem50.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem50.LargeGlyph")));
-            this.barButtonItem50.LargeWidth = 140;
-            this.barButtonItem50.Name = "barButtonItem50";
+            this.barSozlesmeMiktarlari.Caption = "Sözleşme Miktar ve Fiyatları";
+            this.barSozlesmeMiktarlari.Glyph = ((System.Drawing.Image)(resources.GetObject("barSozlesmeMiktarlari.Glyph")));
+            this.barSozlesmeMiktarlari.Id = 91;
+            this.barSozlesmeMiktarlari.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSozlesmeMiktarlari.LargeGlyph")));
+            this.barSozlesmeMiktarlari.LargeWidth = 140;
+            this.barSozlesmeMiktarlari.Name = "barSozlesmeMiktarlari";
             // 
-            // barButtonItem51
+            // barOdenekDilimleri
             // 
-            this.barButtonItem51.Caption = "Ödenek Dilimleri";
-            this.barButtonItem51.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem51.Glyph")));
-            this.barButtonItem51.Id = 92;
-            this.barButtonItem51.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem51.LargeGlyph")));
-            this.barButtonItem51.LargeWidth = 120;
-            this.barButtonItem51.Name = "barButtonItem51";
+            this.barOdenekDilimleri.Caption = "Ödenek Dilimleri";
+            this.barOdenekDilimleri.Glyph = ((System.Drawing.Image)(resources.GetObject("barOdenekDilimleri.Glyph")));
+            this.barOdenekDilimleri.Id = 92;
+            this.barOdenekDilimleri.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barOdenekDilimleri.LargeGlyph")));
+            this.barOdenekDilimleri.LargeWidth = 120;
+            this.barOdenekDilimleri.Name = "barOdenekDilimleri";
             // 
-            // barButtonItem52
+            // barFiyatFarklari
             // 
-            this.barButtonItem52.Caption = "Fiyat Farkı Ayarları";
-            this.barButtonItem52.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem52.Glyph")));
-            this.barButtonItem52.Id = 93;
-            this.barButtonItem52.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem52.LargeGlyph")));
-            this.barButtonItem52.LargeWidth = 120;
-            this.barButtonItem52.Name = "barButtonItem52";
+            this.barFiyatFarklari.Caption = "Fiyat Farkı Ayarları";
+            this.barFiyatFarklari.Glyph = ((System.Drawing.Image)(resources.GetObject("barFiyatFarklari.Glyph")));
+            this.barFiyatFarklari.Id = 93;
+            this.barFiyatFarklari.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barFiyatFarklari.LargeGlyph")));
+            this.barFiyatFarklari.LargeWidth = 120;
+            this.barFiyatFarklari.Name = "barFiyatFarklari";
             // 
-            // barButtonItem53
+            // barHakedisYarat
             // 
-            this.barButtonItem53.Caption = "Hakediş Yarat";
-            this.barButtonItem53.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem53.Glyph")));
-            this.barButtonItem53.Id = 94;
-            this.barButtonItem53.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem53.LargeGlyph")));
-            this.barButtonItem53.LargeWidth = 120;
-            this.barButtonItem53.Name = "barButtonItem53";
+            this.barHakedisYarat.Caption = "Hakediş Yarat";
+            this.barHakedisYarat.Glyph = ((System.Drawing.Image)(resources.GetObject("barHakedisYarat.Glyph")));
+            this.barHakedisYarat.Id = 94;
+            this.barHakedisYarat.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barHakedisYarat.LargeGlyph")));
+            this.barHakedisYarat.LargeWidth = 120;
+            this.barHakedisYarat.Name = "barHakedisYarat";
             // 
-            // barButtonItem54
+            // barYesilDefter
             // 
-            this.barButtonItem54.Caption = "Yeşil Defter";
-            this.barButtonItem54.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem54.Glyph")));
-            this.barButtonItem54.Id = 95;
-            this.barButtonItem54.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem54.LargeGlyph")));
-            this.barButtonItem54.LargeWidth = 120;
-            this.barButtonItem54.Name = "barButtonItem54";
+            this.barYesilDefter.Caption = "Yeşil Defter";
+            this.barYesilDefter.Glyph = ((System.Drawing.Image)(resources.GetObject("barYesilDefter.Glyph")));
+            this.barYesilDefter.Id = 95;
+            this.barYesilDefter.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barYesilDefter.LargeGlyph")));
+            this.barYesilDefter.LargeWidth = 120;
+            this.barYesilDefter.Name = "barYesilDefter";
             // 
-            // barButtonItem55
+            // barIcmal
             // 
-            this.barButtonItem55.Caption = "İcmal";
-            this.barButtonItem55.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem55.Glyph")));
-            this.barButtonItem55.Id = 96;
-            this.barButtonItem55.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem55.LargeGlyph")));
-            this.barButtonItem55.LargeWidth = 120;
-            this.barButtonItem55.Name = "barButtonItem55";
+            this.barIcmal.Caption = "İcmal";
+            this.barIcmal.Glyph = ((System.Drawing.Image)(resources.GetObject("barIcmal.Glyph")));
+            this.barIcmal.Id = 96;
+            this.barIcmal.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barIcmal.LargeGlyph")));
+            this.barIcmal.LargeWidth = 120;
+            this.barIcmal.Name = "barIcmal";
             // 
-            // barButtonItem56
+            // barHakedisOzeti
             // 
-            this.barButtonItem56.Caption = "Hakediş Özeti";
-            this.barButtonItem56.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem56.Glyph")));
-            this.barButtonItem56.Id = 97;
-            this.barButtonItem56.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem56.LargeGlyph")));
-            this.barButtonItem56.LargeWidth = 120;
-            this.barButtonItem56.Name = "barButtonItem56";
+            this.barHakedisOzeti.Caption = "Hakediş Özeti";
+            this.barHakedisOzeti.Glyph = ((System.Drawing.Image)(resources.GetObject("barHakedisOzeti.Glyph")));
+            this.barHakedisOzeti.Id = 97;
+            this.barHakedisOzeti.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barHakedisOzeti.LargeGlyph")));
+            this.barHakedisOzeti.LargeWidth = 120;
+            this.barHakedisOzeti.Name = "barHakedisOzeti";
             // 
             // ribbonPage1
             // 
@@ -1655,7 +1656,11 @@ namespace IhalematikPro.Forms
             // ribbonPage3
             // 
             this.ribbonPage3.Appearance.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ribbonPage3.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.ribbonPage3.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.ribbonPage3.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.ribbonPage3.Appearance.Options.UseFont = true;
+            this.ribbonPage3.Appearance.Options.UseForeColor = true;
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup24,
             this.ribbonPageGroup25,
@@ -1677,49 +1682,49 @@ namespace IhalematikPro.Forms
             // 
             // ribbonPageGroup25
             // 
-            this.ribbonPageGroup25.ItemLinks.Add(this.barButtonItem50);
+            this.ribbonPageGroup25.ItemLinks.Add(this.barSozlesmeMiktarlari);
             this.ribbonPageGroup25.Name = "ribbonPageGroup25";
             this.ribbonPageGroup25.ShowCaptionButton = false;
             this.ribbonPageGroup25.Text = "2.Adım";
             // 
             // ribbonPageGroup26
             // 
-            this.ribbonPageGroup26.ItemLinks.Add(this.barButtonItem51);
+            this.ribbonPageGroup26.ItemLinks.Add(this.barOdenekDilimleri);
             this.ribbonPageGroup26.Name = "ribbonPageGroup26";
             this.ribbonPageGroup26.ShowCaptionButton = false;
             this.ribbonPageGroup26.Text = "3.Adım";
             // 
             // ribbonPageGroup23
             // 
-            this.ribbonPageGroup23.ItemLinks.Add(this.barButtonItem52);
+            this.ribbonPageGroup23.ItemLinks.Add(this.barFiyatFarklari);
             this.ribbonPageGroup23.Name = "ribbonPageGroup23";
             this.ribbonPageGroup23.ShowCaptionButton = false;
             this.ribbonPageGroup23.Text = "4.Adım";
             // 
             // ribbonPageGroup27
             // 
-            this.ribbonPageGroup27.ItemLinks.Add(this.barButtonItem53);
+            this.ribbonPageGroup27.ItemLinks.Add(this.barHakedisYarat);
             this.ribbonPageGroup27.Name = "ribbonPageGroup27";
             this.ribbonPageGroup27.ShowCaptionButton = false;
             this.ribbonPageGroup27.Text = "5.Adım";
             // 
             // ribbonPageGroup28
             // 
-            this.ribbonPageGroup28.ItemLinks.Add(this.barButtonItem54);
+            this.ribbonPageGroup28.ItemLinks.Add(this.barYesilDefter);
             this.ribbonPageGroup28.Name = "ribbonPageGroup28";
             this.ribbonPageGroup28.ShowCaptionButton = false;
             this.ribbonPageGroup28.Text = "6.Adım";
             // 
             // ribbonPageGroup29
             // 
-            this.ribbonPageGroup29.ItemLinks.Add(this.barButtonItem55);
+            this.ribbonPageGroup29.ItemLinks.Add(this.barIcmal);
             this.ribbonPageGroup29.Name = "ribbonPageGroup29";
             this.ribbonPageGroup29.ShowCaptionButton = false;
             this.ribbonPageGroup29.Text = "7.Adım";
             // 
             // ribbonPageGroup30
             // 
-            this.ribbonPageGroup30.ItemLinks.Add(this.barButtonItem56);
+            this.ribbonPageGroup30.ItemLinks.Add(this.barHakedisOzeti);
             this.ribbonPageGroup30.Name = "ribbonPageGroup30";
             this.ribbonPageGroup30.ShowCaptionButton = false;
             this.ribbonPageGroup30.Text = "8.Adım";
@@ -1770,6 +1775,8 @@ namespace IhalematikPro.Forms
             // ribbonPage2
             // 
             this.ribbonPage2.Appearance.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            this.ribbonPage2.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.ribbonPage2.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.ribbonPage2.Appearance.Options.UseFont = true;
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup17,
@@ -2245,13 +2252,13 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.BarStaticItem barStaticItem8;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
         private DevExpress.XtraBars.BarButtonItem barSozlesmeBilgileri;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem50;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem51;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem52;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem53;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem54;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem55;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem56;
+        private DevExpress.XtraBars.BarButtonItem barSozlesmeMiktarlari;
+        private DevExpress.XtraBars.BarButtonItem barOdenekDilimleri;
+        private DevExpress.XtraBars.BarButtonItem barFiyatFarklari;
+        private DevExpress.XtraBars.BarButtonItem barHakedisYarat;
+        private DevExpress.XtraBars.BarButtonItem barYesilDefter;
+        private DevExpress.XtraBars.BarButtonItem barIcmal;
+        private DevExpress.XtraBars.BarButtonItem barHakedisOzeti;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup24;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup25;

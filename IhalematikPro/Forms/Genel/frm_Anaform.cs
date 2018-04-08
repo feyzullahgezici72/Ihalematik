@@ -18,6 +18,8 @@ using IhalematikProUI.Forms.Genel;
 using IhalematikProUI.Forms.IhaleAdim;
 using IhalematikProUI.Forms.Ihale;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Hakedis;
+
 namespace IhalematikPro.Forms
 {
     public partial class frm_Anaform : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -1101,6 +1103,30 @@ namespace IhalematikPro.Forms
         {
             frm_ProgramiGuncelle pg = new frm_ProgramiGuncelle();
             pg.ShowDialog();
+        }
+        frm_SozlesmeBilgileriFormu sbf;
+        private void barSozlesmeBilgileri_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            barSozlesmeBilgileri.ButtonStyle = BarButtonStyle.Check;
+            RibonPasif();
+            if (sbf == null)
+            {
+                sbf = new frm_SozlesmeBilgileriFormu();
+                sbf.MdiParent = this;
+                sbf.FormClosed +=new FormClosedEventHandler(Sbf_FormClosed);
+                sbf.Show();
+            }
+            else
+            {
+                sbf.Activate();
+            }
+        }
+
+        private void Sbf_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            sbf = null;
+            RibonAktif();
+            barSozlesmeBilgileri.ButtonStyle = BarButtonStyle.Default;
         }
     }
 }

@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace IhalematikProUI.Hakedis
 {
-    public partial class frm_SozlesmeBilgileriFormu : DevExpress.XtraEditors.XtraForm
+    public partial class frm_YeniSozlesmeYarat : DevExpress.XtraEditors.XtraForm
     {
-        public frm_SozlesmeBilgileriFormu()
+        public frm_YeniSozlesmeYarat()
         {
             InitializeComponent();
         }
@@ -21,12 +21,6 @@ namespace IhalematikProUI.Hakedis
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void yeniSözleşmeYaratToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frm_YeniSozlesmeYarat ysy = new frm_YeniSozlesmeYarat();
-            ysy.ShowDialog();
         }
     }
 }
