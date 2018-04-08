@@ -28,11 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TopluPozTemp));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TopluPozTemp));
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.btnHayir = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEvet = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.pcWorld = new System.Windows.Forms.PictureBox();
+            this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
             this.grdPozTempList = new DevExpress.XtraGrid.GridControl();
             this.gridViewPozList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -43,42 +50,130 @@
             this.btnGncelle = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnPasive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnActive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.btnHayir = new DevExpress.XtraEditors.SimpleButton();
-            this.btnEvet = new DevExpress.XtraEditors.SimpleButton();
-            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdPozTempList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewPozList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnActive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdPozTempList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPozList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnActive)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupControl1
+            // groupControl2
             // 
-            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupControl1.AppearanceCaption.Options.UseFont = true;
-            this.groupControl1.Controls.Add(this.grdPozTempList);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(309, 0);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(919, 694);
-            this.groupControl1.TabIndex = 2;
-            this.groupControl1.Text = "Okunan Poz Listesi";
+            this.groupControl2.Controls.Add(this.groupControl3);
+            this.groupControl2.Controls.Add(this.groupControl4);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupControl2.Location = new System.Drawing.Point(0, 35);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(309, 659);
+            this.groupControl2.TabIndex = 3;
+            // 
+            // groupControl3
+            // 
+            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl3.AppearanceCaption.ForeColor = System.Drawing.Color.Red;
+            this.groupControl3.AppearanceCaption.Options.UseFont = true;
+            this.groupControl3.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl3.Controls.Add(this.btnHayir);
+            this.groupControl3.Controls.Add(this.btnEvet);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl3.Location = new System.Drawing.Point(3, 72);
+            this.groupControl3.LookAndFeel.SkinName = "Seven Classic";
+            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(303, 105);
+            this.groupControl3.TabIndex = 6;
+            this.groupControl3.Text = "Kaydedilsin mi?";
+            // 
+            // btnHayir
+            // 
+            this.btnHayir.Image = ((System.Drawing.Image)(resources.GetObject("btnHayir.Image")));
+            this.btnHayir.Location = new System.Drawing.Point(154, 42);
+            this.btnHayir.Name = "btnHayir";
+            this.btnHayir.Size = new System.Drawing.Size(142, 57);
+            this.btnHayir.TabIndex = 1;
+            this.btnHayir.Text = "&Hayır";
+            this.btnHayir.Click += new System.EventHandler(this.btnHayir_Click);
+            // 
+            // btnEvet
+            // 
+            this.btnEvet.Image = ((System.Drawing.Image)(resources.GetObject("btnEvet.Image")));
+            this.btnEvet.Location = new System.Drawing.Point(9, 42);
+            this.btnEvet.Name = "btnEvet";
+            this.btnEvet.Size = new System.Drawing.Size(140, 57);
+            this.btnEvet.TabIndex = 1;
+            this.btnEvet.Text = "&Evet";
+            this.btnEvet.Click += new System.EventHandler(this.btnEvet_Click);
+            // 
+            // groupControl4
+            // 
+            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl4.AppearanceCaption.Options.UseFont = true;
+            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl4.Location = new System.Drawing.Point(3, 30);
+            this.groupControl4.LookAndFeel.SkinName = "Seven Classic";
+            this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(303, 42);
+            this.groupControl4.TabIndex = 5;
+            this.groupControl4.Text = "Tablodaki veriler okundu!";
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            this.panelControl1.Controls.Add(this.pcWorld);
+            this.panelControl1.Controls.Add(this.txtAdimAciklama);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1228, 35);
+            this.panelControl1.TabIndex = 26;
+            // 
+            // pcWorld
+            // 
+            this.pcWorld.BackColor = System.Drawing.Color.Transparent;
+            this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
+            this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Name = "pcWorld";
+            this.pcWorld.Size = new System.Drawing.Size(50, 35);
+            this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcWorld.TabIndex = 16;
+            this.pcWorld.TabStop = false;
+            // 
+            // txtAdimAciklama
+            // 
+            this.txtAdimAciklama.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAdimAciklama.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
+            this.txtAdimAciklama.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.txtAdimAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
+            this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.txtAdimAciklama.Location = new System.Drawing.Point(57, 0);
+            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdimAciklama.Name = "txtAdimAciklama";
+            this.txtAdimAciklama.ShowLineShadow = false;
+            this.txtAdimAciklama.Size = new System.Drawing.Size(244, 35);
+            this.txtAdimAciklama.TabIndex = 0;
+            this.txtAdimAciklama.Text = "OKUNAN POZ LİSTESİ";
             // 
             // grdPozTempList
             // 
             this.grdPozTempList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdPozTempList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdPozTempList.Location = new System.Drawing.Point(3, 31);
+            this.grdPozTempList.Location = new System.Drawing.Point(309, 35);
             this.grdPozTempList.MainView = this.gridViewPozList;
             this.grdPozTempList.Margin = new System.Windows.Forms.Padding(4);
             this.grdPozTempList.Name = "grdPozTempList";
@@ -86,8 +181,8 @@
             this.btnGncelle,
             this.btnPasive,
             this.btnActive});
-            this.grdPozTempList.Size = new System.Drawing.Size(913, 660);
-            this.grdPozTempList.TabIndex = 1;
+            this.grdPozTempList.Size = new System.Drawing.Size(919, 659);
+            this.grdPozTempList.TabIndex = 25;
             this.grdPozTempList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPozList});
             // 
@@ -353,99 +448,48 @@
             this.btnActive.Name = "btnActive";
             this.btnActive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // groupControl2
-            // 
-            this.groupControl2.Controls.Add(this.groupControl3);
-            this.groupControl2.Controls.Add(this.groupControl4);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl2.Location = new System.Drawing.Point(0, 0);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(309, 694);
-            this.groupControl2.TabIndex = 3;
-            // 
-            // groupControl3
-            // 
-            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupControl3.AppearanceCaption.ForeColor = System.Drawing.Color.Red;
-            this.groupControl3.AppearanceCaption.Options.UseFont = true;
-            this.groupControl3.AppearanceCaption.Options.UseForeColor = true;
-            this.groupControl3.Controls.Add(this.btnHayir);
-            this.groupControl3.Controls.Add(this.btnEvet);
-            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl3.Location = new System.Drawing.Point(3, 73);
-            this.groupControl3.LookAndFeel.SkinName = "Seven Classic";
-            this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(303, 105);
-            this.groupControl3.TabIndex = 6;
-            this.groupControl3.Text = "Kaydedilsin mi?";
-            // 
-            // btnHayir
-            // 
-            this.btnHayir.Image = ((System.Drawing.Image)(resources.GetObject("btnHayir.Image")));
-            this.btnHayir.Location = new System.Drawing.Point(154, 42);
-            this.btnHayir.Name = "btnHayir";
-            this.btnHayir.Size = new System.Drawing.Size(142, 57);
-            this.btnHayir.TabIndex = 1;
-            this.btnHayir.Text = "&Hayır";
-            this.btnHayir.Click += new System.EventHandler(this.btnHayir_Click);
-            // 
-            // btnEvet
-            // 
-            this.btnEvet.Image = ((System.Drawing.Image)(resources.GetObject("btnEvet.Image")));
-            this.btnEvet.Location = new System.Drawing.Point(9, 42);
-            this.btnEvet.Name = "btnEvet";
-            this.btnEvet.Size = new System.Drawing.Size(140, 57);
-            this.btnEvet.TabIndex = 1;
-            this.btnEvet.Text = "&Evet";
-            this.btnEvet.Click += new System.EventHandler(this.btnEvet_Click);
-            // 
-            // groupControl4
-            // 
-            this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupControl4.AppearanceCaption.Options.UseFont = true;
-            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl4.Location = new System.Drawing.Point(3, 31);
-            this.groupControl4.LookAndFeel.SkinName = "Seven Classic";
-            this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(303, 42);
-            this.groupControl4.TabIndex = 5;
-            this.groupControl4.Text = "Tablodaki veriler okundu!";
-            // 
             // frm_TopluPozTemp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1228, 694);
             this.ControlBox = false;
-            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.grdPozTempList);
             this.Controls.Add(this.groupControl2);
+            this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frm_TopluPozTemp";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "POZ";
             this.Shown += new System.EventHandler(this.frm_TopluPozTemp_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdPozTempList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewPozList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnActive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdPozTempList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPozList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnActive)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraEditors.SimpleButton btnHayir;
+        private DevExpress.XtraEditors.SimpleButton btnEvet;
+        private DevExpress.XtraEditors.GroupControl groupControl4;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private System.Windows.Forms.PictureBox pcWorld;
+        private DevExpress.XtraEditors.LabelControl txtAdimAciklama;
         private DevExpress.XtraGrid.GridControl grdPozTempList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewPozList;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
@@ -456,10 +500,5 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnGncelle;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnPasive;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnActive;
-        private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.GroupControl groupControl3;
-        private DevExpress.XtraEditors.SimpleButton btnHayir;
-        private DevExpress.XtraEditors.SimpleButton btnEvet;
-        private DevExpress.XtraEditors.GroupControl groupControl4;
     }
 }

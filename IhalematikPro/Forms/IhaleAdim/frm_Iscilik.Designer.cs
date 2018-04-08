@@ -850,7 +850,7 @@
             // panelControl5
             // 
             this.panelControl5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl5.Appearance.BackColor2 = System.Drawing.Color.Crimson;
+            this.panelControl5.Appearance.BackColor2 = System.Drawing.Color.SpringGreen;
             this.panelControl5.Appearance.Options.UseBackColor = true;
             this.panelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl5.Controls.Add(this.labelControl3);

@@ -42,29 +42,32 @@
             this.btnHayir = new DevExpress.XtraEditors.SimpleButton();
             this.btnEvet = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.btnResetMeterialName = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.btnChangeMeterialName = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.colMaterialListQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMaterialListPozOBFId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMaterialListIsPoz = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridViewMaterialList = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.pcWorld = new System.Windows.Forms.PictureBox();
+            this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.gridViewMaterialList = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colMaterialListIsPoz = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMaterialListPozOBFId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMaterialListQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnChangeMeterialName = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.btnResetMeterialName = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnResetMeterialName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnChangeMeterialName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChangeMeterialName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnResetMeterialName)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl2
@@ -72,11 +75,10 @@
             this.groupControl2.Controls.Add(this.groupControl3);
             this.groupControl2.Controls.Add(this.groupControl4);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl2.Location = new System.Drawing.Point(0, 0);
+            this.groupControl2.Location = new System.Drawing.Point(0, 35);
             this.groupControl2.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(206, 475);
+            this.groupControl2.Size = new System.Drawing.Size(309, 659);
             this.groupControl2.TabIndex = 7;
             // 
             // groupControl3
@@ -88,22 +90,20 @@
             this.groupControl3.Controls.Add(this.btnHayir);
             this.groupControl3.Controls.Add(this.btnEvet);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl3.Location = new System.Drawing.Point(2, 49);
+            this.groupControl3.Location = new System.Drawing.Point(3, 72);
             this.groupControl3.LookAndFeel.SkinName = "Seven Classic";
             this.groupControl3.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(202, 72);
+            this.groupControl3.Size = new System.Drawing.Size(303, 105);
             this.groupControl3.TabIndex = 6;
             this.groupControl3.Text = "Kaydedilsin mi?";
             // 
             // btnHayir
             // 
             this.btnHayir.Image = ((System.Drawing.Image)(resources.GetObject("btnHayir.Image")));
-            this.btnHayir.Location = new System.Drawing.Point(103, 29);
-            this.btnHayir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHayir.Location = new System.Drawing.Point(154, 42);
             this.btnHayir.Name = "btnHayir";
-            this.btnHayir.Size = new System.Drawing.Size(95, 39);
+            this.btnHayir.Size = new System.Drawing.Size(142, 57);
             this.btnHayir.TabIndex = 1;
             this.btnHayir.Text = "&Hayır";
             this.btnHayir.Click += new System.EventHandler(this.btnHayir_Click);
@@ -111,10 +111,9 @@
             // btnEvet
             // 
             this.btnEvet.Image = ((System.Drawing.Image)(resources.GetObject("btnEvet.Image")));
-            this.btnEvet.Location = new System.Drawing.Point(6, 29);
-            this.btnEvet.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEvet.Location = new System.Drawing.Point(9, 42);
             this.btnEvet.Name = "btnEvet";
-            this.btnEvet.Size = new System.Drawing.Size(93, 39);
+            this.btnEvet.Size = new System.Drawing.Size(140, 57);
             this.btnEvet.TabIndex = 1;
             this.btnEvet.Text = "&Evet";
             this.btnEvet.Click += new System.EventHandler(this.btnEvet_Click);
@@ -124,146 +123,74 @@
             this.groupControl4.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupControl4.AppearanceCaption.Options.UseFont = true;
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl4.Location = new System.Drawing.Point(2, 20);
+            this.groupControl4.Location = new System.Drawing.Point(3, 30);
             this.groupControl4.LookAndFeel.SkinName = "Seven Classic";
             this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl4.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(202, 29);
+            this.groupControl4.Size = new System.Drawing.Size(303, 42);
             this.groupControl4.TabIndex = 5;
             this.groupControl4.Text = "Tablodaki veriler okundu!";
             // 
-            // btnResetMeterialName
+            // panelControl1
             // 
-            this.btnResetMeterialName.AutoHeight = false;
-            toolTipTitleItem1.Text = "GERİAL YENİDEN ADLANDIR";
-            toolTipItem1.Appearance.Options.UseImage = true;
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmişseniz geri almak için kullan" +
-    "ınız...";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            this.btnResetMeterialName.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnResetMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, superToolTip1, true)});
-            this.btnResetMeterialName.LookAndFeel.SkinName = "Sharp Plus";
-            this.btnResetMeterialName.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnResetMeterialName.Name = "btnResetMeterialName";
-            this.btnResetMeterialName.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.panelControl1.Appearance.Options.UseBackColor = true;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            this.panelControl1.Controls.Add(this.pcWorld);
+            this.panelControl1.Controls.Add(this.txtAdimAciklama);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1228, 35);
+            this.panelControl1.TabIndex = 29;
             // 
-            // btnChangeMeterialName
+            // pcWorld
             // 
-            this.btnChangeMeterialName.AutoHeight = false;
-            toolTipTitleItem2.Text = "YENİDEN ADLANDIR";
-            toolTipItem2.Appearance.Options.UseImage = true;
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmek isterseniz kullanınız..";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            this.btnChangeMeterialName.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnChangeMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, superToolTip2, true)});
-            this.btnChangeMeterialName.LookAndFeel.SkinName = "Sharp Plus";
-            this.btnChangeMeterialName.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnChangeMeterialName.Name = "btnChangeMeterialName";
-            this.btnChangeMeterialName.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.pcWorld.BackColor = System.Drawing.Color.Transparent;
+            this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
+            this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Name = "pcWorld";
+            this.pcWorld.Size = new System.Drawing.Size(50, 35);
+            this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcWorld.TabIndex = 16;
+            this.pcWorld.TabStop = false;
             // 
-            // colMaterialListQuantity
+            // txtAdimAciklama
             // 
-            this.colMaterialListQuantity.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.colMaterialListQuantity.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.colMaterialListQuantity.AppearanceCell.ForeColor = System.Drawing.Color.Black;
-            this.colMaterialListQuantity.AppearanceCell.Options.UseBackColor = true;
-            this.colMaterialListQuantity.AppearanceCell.Options.UseFont = true;
-            this.colMaterialListQuantity.AppearanceCell.Options.UseForeColor = true;
-            this.colMaterialListQuantity.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colMaterialListQuantity.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.colMaterialListQuantity.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.colMaterialListQuantity.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.colMaterialListQuantity.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.colMaterialListQuantity.AppearanceHeader.Options.UseBackColor = true;
-            this.colMaterialListQuantity.AppearanceHeader.Options.UseFont = true;
-            this.colMaterialListQuantity.AppearanceHeader.Options.UseForeColor = true;
-            this.colMaterialListQuantity.Caption = "MİKTARI";
-            this.colMaterialListQuantity.DisplayFormat.FormatString = "0";
-            this.colMaterialListQuantity.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colMaterialListQuantity.FieldName = "Quantity";
-            this.colMaterialListQuantity.MaxWidth = 80;
-            this.colMaterialListQuantity.MinWidth = 80;
-            this.colMaterialListQuantity.Name = "colMaterialListQuantity";
-            this.colMaterialListQuantity.OptionsFilter.AllowAutoFilter = false;
-            this.colMaterialListQuantity.OptionsFilter.AllowFilter = false;
-            this.colMaterialListQuantity.Visible = true;
-            this.colMaterialListQuantity.VisibleIndex = 3;
-            this.colMaterialListQuantity.Width = 80;
+            this.txtAdimAciklama.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAdimAciklama.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
+            this.txtAdimAciklama.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.txtAdimAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
+            this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.txtAdimAciklama.Location = new System.Drawing.Point(57, 0);
+            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdimAciklama.Name = "txtAdimAciklama";
+            this.txtAdimAciklama.ShowLineShadow = false;
+            this.txtAdimAciklama.Size = new System.Drawing.Size(245, 35);
+            this.txtAdimAciklama.TabIndex = 0;
+            this.txtAdimAciklama.Text = "OKUNAN ÖBF LİSTESİ";
             // 
-            // gridColumn3
+            // grdMaterialList
             // 
-            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridColumn3.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.gridColumn3.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn3.Caption = "BİRİMİ";
-            this.gridColumn3.FieldName = "PozOBF.Unit";
-            this.gridColumn3.MaxWidth = 60;
-            this.gridColumn3.MinWidth = 60;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsColumn.AllowEdit = false;
-            this.gridColumn3.OptionsColumn.AllowFocus = false;
-            this.gridColumn3.OptionsColumn.ReadOnly = true;
-            this.gridColumn3.OptionsFilter.AllowAutoFilter = false;
-            this.gridColumn3.OptionsFilter.AllowFilter = false;
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 60;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridColumn1.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gridColumn1.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.gridColumn1.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn1.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn1.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn1.Caption = "POZ NO";
-            this.gridColumn1.FieldName = "PozOBF.Number";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.AllowEdit = false;
-            this.gridColumn1.OptionsColumn.AllowFocus = false;
-            this.gridColumn1.OptionsColumn.ReadOnly = true;
-            this.gridColumn1.OptionsFilter.AllowAutoFilter = false;
-            this.gridColumn1.OptionsFilter.AllowFilter = false;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 73;
-            // 
-            // colId
-            // 
-            this.colId.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.colId.AppearanceHeader.Options.UseFont = true;
-            this.colId.Caption = "gridColumn4";
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
-            // 
-            // colMaterialListPozOBFId
-            // 
-            this.colMaterialListPozOBFId.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.colMaterialListPozOBFId.AppearanceHeader.Options.UseFont = true;
-            this.colMaterialListPozOBFId.Caption = "gridColumn4";
-            this.colMaterialListPozOBFId.FieldName = "PozOBFId";
-            this.colMaterialListPozOBFId.Name = "colMaterialListPozOBFId";
-            // 
-            // colMaterialListIsPoz
-            // 
-            this.colMaterialListIsPoz.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.colMaterialListIsPoz.AppearanceHeader.Options.UseFont = true;
-            this.colMaterialListIsPoz.Caption = "gridColumn4";
-            this.colMaterialListIsPoz.FieldName = "IsPoz";
-            this.colMaterialListIsPoz.Name = "colMaterialListIsPoz";
+            this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.grdMaterialList.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.grdMaterialList.Location = new System.Drawing.Point(309, 35);
+            this.grdMaterialList.MainView = this.gridViewMaterialList;
+            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
+            this.grdMaterialList.Name = "grdMaterialList";
+            this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.btnChangeMeterialName,
+            this.btnResetMeterialName});
+            this.grdMaterialList.Size = new System.Drawing.Size(919, 659);
+            this.grdMaterialList.TabIndex = 28;
+            this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewMaterialList});
             // 
             // gridViewMaterialList
             // 
@@ -403,6 +330,52 @@
             this.gridViewMaterialList.OptionsView.ShowGroupPanel = false;
             this.gridViewMaterialList.PaintStyleName = "Web";
             // 
+            // colMaterialListIsPoz
+            // 
+            this.colMaterialListIsPoz.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colMaterialListIsPoz.AppearanceHeader.Options.UseFont = true;
+            this.colMaterialListIsPoz.Caption = "gridColumn4";
+            this.colMaterialListIsPoz.FieldName = "IsPoz";
+            this.colMaterialListIsPoz.Name = "colMaterialListIsPoz";
+            // 
+            // colMaterialListPozOBFId
+            // 
+            this.colMaterialListPozOBFId.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colMaterialListPozOBFId.AppearanceHeader.Options.UseFont = true;
+            this.colMaterialListPozOBFId.Caption = "gridColumn4";
+            this.colMaterialListPozOBFId.FieldName = "PozOBFId";
+            this.colMaterialListPozOBFId.Name = "colMaterialListPozOBFId";
+            // 
+            // colId
+            // 
+            this.colId.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colId.AppearanceHeader.Options.UseFont = true;
+            this.colId.Caption = "gridColumn4";
+            this.colId.FieldName = "Id";
+            this.colId.Name = "colId";
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn1.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gridColumn1.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.gridColumn1.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gridColumn1.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn1.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn1.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn1.Caption = "POZ NO";
+            this.gridColumn1.FieldName = "PozOBF.Number";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.gridColumn1.OptionsColumn.AllowFocus = false;
+            this.gridColumn1.OptionsColumn.ReadOnly = true;
+            this.gridColumn1.OptionsFilter.AllowAutoFilter = false;
+            this.gridColumn1.OptionsFilter.AllowFilter = false;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 73;
+            // 
             // gridColumn2
             // 
             this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
@@ -425,45 +398,102 @@
             this.gridColumn2.VisibleIndex = 1;
             this.gridColumn2.Width = 345;
             // 
-            // grdMaterialList
+            // gridColumn3
             // 
-            this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialList.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.grdMaterialList.Location = new System.Drawing.Point(2, 20);
-            this.grdMaterialList.MainView = this.gridViewMaterialList;
-            this.grdMaterialList.Name = "grdMaterialList";
-            this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btnChangeMeterialName,
-            this.btnResetMeterialName});
-            this.grdMaterialList.Size = new System.Drawing.Size(609, 453);
-            this.grdMaterialList.TabIndex = 1;
-            this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewMaterialList});
+            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn3.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.gridColumn3.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn3.Caption = "BİRİMİ";
+            this.gridColumn3.FieldName = "PozOBF.Unit";
+            this.gridColumn3.MaxWidth = 60;
+            this.gridColumn3.MinWidth = 60;
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.OptionsColumn.AllowFocus = false;
+            this.gridColumn3.OptionsColumn.ReadOnly = true;
+            this.gridColumn3.OptionsFilter.AllowAutoFilter = false;
+            this.gridColumn3.OptionsFilter.AllowFilter = false;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 60;
             // 
-            // groupControl1
+            // colMaterialListQuantity
             // 
-            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupControl1.AppearanceCaption.Options.UseFont = true;
-            this.groupControl1.Controls.Add(this.grdMaterialList);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(206, 0);
-            this.groupControl1.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(613, 475);
-            this.groupControl1.TabIndex = 6;
-            this.groupControl1.Text = "Okunan Öbf Listesi";
+            this.colMaterialListQuantity.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.colMaterialListQuantity.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colMaterialListQuantity.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.colMaterialListQuantity.AppearanceCell.Options.UseBackColor = true;
+            this.colMaterialListQuantity.AppearanceCell.Options.UseFont = true;
+            this.colMaterialListQuantity.AppearanceCell.Options.UseForeColor = true;
+            this.colMaterialListQuantity.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colMaterialListQuantity.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.colMaterialListQuantity.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.colMaterialListQuantity.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.colMaterialListQuantity.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.colMaterialListQuantity.AppearanceHeader.Options.UseBackColor = true;
+            this.colMaterialListQuantity.AppearanceHeader.Options.UseFont = true;
+            this.colMaterialListQuantity.AppearanceHeader.Options.UseForeColor = true;
+            this.colMaterialListQuantity.Caption = "MİKTARI";
+            this.colMaterialListQuantity.DisplayFormat.FormatString = "0";
+            this.colMaterialListQuantity.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colMaterialListQuantity.FieldName = "Quantity";
+            this.colMaterialListQuantity.MaxWidth = 80;
+            this.colMaterialListQuantity.MinWidth = 80;
+            this.colMaterialListQuantity.Name = "colMaterialListQuantity";
+            this.colMaterialListQuantity.OptionsFilter.AllowAutoFilter = false;
+            this.colMaterialListQuantity.OptionsFilter.AllowFilter = false;
+            this.colMaterialListQuantity.Visible = true;
+            this.colMaterialListQuantity.VisibleIndex = 3;
+            this.colMaterialListQuantity.Width = 80;
+            // 
+            // btnChangeMeterialName
+            // 
+            this.btnChangeMeterialName.AutoHeight = false;
+            toolTipTitleItem1.Text = "YENİDEN ADLANDIR";
+            toolTipItem1.Appearance.Options.UseImage = true;
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmek isterseniz kullanınız..";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.btnChangeMeterialName.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnChangeMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, superToolTip1, true)});
+            this.btnChangeMeterialName.LookAndFeel.SkinName = "Sharp Plus";
+            this.btnChangeMeterialName.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnChangeMeterialName.Name = "btnChangeMeterialName";
+            this.btnChangeMeterialName.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // btnResetMeterialName
+            // 
+            this.btnResetMeterialName.AutoHeight = false;
+            toolTipTitleItem2.Text = "GERİAL YENİDEN ADLANDIR";
+            toolTipItem2.Appearance.Options.UseImage = true;
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Tedarikçiye gönderilecek Malzemenin adını değiştirmişseniz geri almak için kullan" +
+    "ınız...";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.btnResetMeterialName.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnResetMeterialName.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, superToolTip2, true)});
+            this.btnResetMeterialName.LookAndFeel.SkinName = "Sharp Plus";
+            this.btnResetMeterialName.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnResetMeterialName.Name = "btnResetMeterialName";
+            this.btnResetMeterialName.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // frm_TopluObfTedarikciTemp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 475);
+            this.ClientSize = new System.Drawing.Size(1228, 694);
             this.ControlBox = false;
-            this.Controls.Add(this.groupControl1);
+            this.Controls.Add(this.grdMaterialList);
             this.Controls.Add(this.groupControl2);
+            this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_TopluObfTedarikciTemp";
@@ -476,33 +506,37 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnResetMeterialName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnChangeMeterialName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChangeMeterialName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnResetMeterialName)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnResetMeterialName;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnChangeMeterialName;
-        private DevExpress.XtraGrid.Columns.GridColumn colMaterialListQuantity;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn colId;
-        private DevExpress.XtraGrid.Columns.GridColumn colMaterialListPozOBFId;
-        private DevExpress.XtraGrid.Columns.GridColumn colMaterialListIsPoz;
-        public DevExpress.XtraGrid.Views.Grid.GridView gridViewMaterialList;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        public DevExpress.XtraGrid.GridControl grdMaterialList;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.SimpleButton btnHayir;
         private DevExpress.XtraEditors.SimpleButton btnEvet;
         private DevExpress.XtraEditors.GroupControl groupControl4;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private System.Windows.Forms.PictureBox pcWorld;
+        private DevExpress.XtraEditors.LabelControl txtAdimAciklama;
+        public DevExpress.XtraGrid.GridControl grdMaterialList;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridViewMaterialList;
+        private DevExpress.XtraGrid.Columns.GridColumn colMaterialListIsPoz;
+        private DevExpress.XtraGrid.Columns.GridColumn colMaterialListPozOBFId;
+        private DevExpress.XtraGrid.Columns.GridColumn colId;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn colMaterialListQuantity;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnChangeMeterialName;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnResetMeterialName;
     }
 }

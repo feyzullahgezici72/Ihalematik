@@ -237,7 +237,7 @@
             // 
             // tabIhaleBilgileri
             // 
-            this.tabIhaleBilgileri.Location = new System.Drawing.Point(493, 60);
+            this.tabIhaleBilgileri.Location = new System.Drawing.Point(493, 42);
             this.tabIhaleBilgileri.LookAndFeel.SkinName = "London Liquid Sky";
             this.tabIhaleBilgileri.LookAndFeel.UseDefaultLookAndFeel = false;
             this.tabIhaleBilgileri.Name = "tabIhaleBilgileri";
@@ -465,9 +465,9 @@
             this.panelControl3.Controls.Add(this.grdOffer);
             this.panelControl3.Controls.Add(this.panelControl4);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl3.Location = new System.Drawing.Point(0, 0);
+            this.panelControl3.Location = new System.Drawing.Point(0, 35);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(487, 710);
+            this.panelControl3.Size = new System.Drawing.Size(487, 643);
             this.panelControl3.TabIndex = 35;
             // 
             // grdOffer
@@ -486,7 +486,7 @@
             this.btnSil,
             this.rpstColId,
             this.rpstSelected});
-            this.grdOffer.Size = new System.Drawing.Size(481, 605);
+            this.grdOffer.Size = new System.Drawing.Size(481, 538);
             this.grdOffer.TabIndex = 0;
             this.grdOffer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOffer,
@@ -831,16 +831,16 @@
             // panelControl1
             // 
             this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.SpringGreen;
             this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(487, 0);
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(780, 35);
+            this.panelControl1.Size = new System.Drawing.Size(1267, 35);
             this.panelControl1.TabIndex = 36;
             // 
             // panelControl2
@@ -855,7 +855,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(780, 35);
+            this.panelControl2.Size = new System.Drawing.Size(1267, 35);
             this.panelControl2.TabIndex = 3;
             // 
             // pcWorld
@@ -895,7 +895,7 @@
             this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
             this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnIptal.Location = new System.Drawing.Point(752, 0);
+            this.btnIptal.Location = new System.Drawing.Point(1239, 0);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(28, 35);
@@ -906,9 +906,9 @@
             // 
             this.panelControl5.Controls.Add(this.labelControl16);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl5.Location = new System.Drawing.Point(487, 678);
+            this.panelControl5.Location = new System.Drawing.Point(0, 678);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(780, 32);
+            this.panelControl5.Size = new System.Drawing.Size(1267, 32);
             this.panelControl5.TabIndex = 37;
             // 
             // labelControl16
@@ -923,9 +923,9 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.ihale_demo;
-            this.pictureBox1.Location = new System.Drawing.Point(493, 368);
+            this.pictureBox1.Location = new System.Drawing.Point(493, 345);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(749, 304);
+            this.pictureBox1.Size = new System.Drawing.Size(749, 327);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
@@ -937,10 +937,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 710);
             this.ControlBox = false;
+            this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelControl5);
             this.Controls.Add(this.panelControl1);
-            this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.tabIhaleBilgileri);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
