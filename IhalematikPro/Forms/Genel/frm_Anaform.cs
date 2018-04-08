@@ -805,6 +805,9 @@ namespace IhalematikPro.Forms
         private void frm_Anaform_Shown(object sender, EventArgs e)
         {
             picLogo.Visible = true;
+            DateTime tarih = DateTime.Now;    
+            string format = "dd.MM.yyyy";  
+            txtDate.Caption= (tarih.ToString(format));
         }
         frm_TeklifAktar teklifAktar;
         private void barButtonItem28_ItemClick(object sender, ItemClickEventArgs e)
