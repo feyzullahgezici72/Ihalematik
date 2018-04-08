@@ -276,11 +276,11 @@
     <Compile Include="Forms\Genel\frm_Mybrowser.Designer.cs">
       <DependentUpon>frm_Mybrowser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Genel\frm_PozlariOnlineGuncelle.cs">
+    <Compile Include="Forms\Genel\frm_ProgramiGuncelle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Genel\frm_PozlariOnlineGuncelle.Designer.cs">
-      <DependentUpon>frm_PozlariOnlineGuncelle.cs</DependentUpon>
+    <Compile Include="Forms\Genel\frm_ProgramiGuncelle.Designer.cs">
+      <DependentUpon>frm_ProgramiGuncelle.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\IhaleAdim\frm_TopluObfYukleIhale.cs">
       <SubType>Form</SubType>
@@ -753,8 +753,8 @@
     <EmbeddedResource Include="Forms\Genel\frm_Mybrowser.resx">
       <DependentUpon>frm_Mybrowser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Genel\frm_PozlariOnlineGuncelle.resx">
-      <DependentUpon>frm_PozlariOnlineGuncelle.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Genel\frm_ProgramiGuncelle.resx">
+      <DependentUpon>frm_ProgramiGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IhaleAdim\frm_TopluObfYukleIhale.resx">
       <DependentUpon>frm_TopluObfYukleIhale.cs</DependentUpon>

@@ -17,7 +17,7 @@ using IhalematikProUI.Forms.Tedarikci;
 using IhalematikProUI.Forms.Genel;
 using IhalematikProUI.Forms.IhaleAdim;
 using IhalematikProUI.Forms.Ihale;
-
+using IhalematikProBL.Provider;
 namespace IhalematikPro.Forms
 {
     public partial class frm_Anaform : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -56,12 +56,13 @@ namespace IhalematikPro.Forms
 
             picLogo.Left = (pnlAna.Width / 2) - (picLogo.Width / 2);
             picLogo.Top = (pnlAna.Height / 2) - (picLogo.Height / 2);
-        }
+            }
         public void frm_Anaform_Load(object sender, EventArgs e)
         {
             DevExpress.UserSkins.BonusSkins.Register();
             this.WindowState = FormWindowState.Maximized;
             this.LoadLogo();
+            UserName.Caption = CurrentManager.Instance.CurrentMember.UserName.ToString();
         }
 
         public void LoadLogo()
@@ -599,7 +600,7 @@ namespace IhalematikPro.Forms
 
         private void frm_Anaform_Activated(object sender, EventArgs e)
         {
-            //ribbon.Enabled = true;
+           
         }
 
         public void RibonAktif()
@@ -847,7 +848,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem21_ItemClick_1(object sender, ItemClickEventArgs e)
         {
-            frm_PozlariOnlineGuncelle pg = new frm_PozlariOnlineGuncelle();
+            frm_ProgramiGuncelle pg = new frm_ProgramiGuncelle();
             pg.ShowDialog();
         }
 
@@ -869,7 +870,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem7_ItemClick_1(object sender, ItemClickEventArgs e)
         {
-            frm_PozlariOnlineGuncelle pg = new frm_PozlariOnlineGuncelle();
+            frm_ProgramiGuncelle pg = new frm_ProgramiGuncelle();
             pg.ShowDialog();
         }
 
@@ -1094,6 +1095,12 @@ namespace IhalematikPro.Forms
             DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "The Asphalt World"; //London Liquid Sky
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
+        }
+
+        private void ribbon_ApplicationButtonClick(object sender, EventArgs e)
+        {
+            frm_ProgramiGuncelle pg = new frm_ProgramiGuncelle();
+            pg.ShowDialog();
         }
     }
 }

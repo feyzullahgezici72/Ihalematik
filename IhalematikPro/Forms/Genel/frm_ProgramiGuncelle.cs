@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace IhalematikProUI.Forms.Genel
 {
-    public partial class frm_PozlariOnlineGuncelle : DevExpress.XtraEditors.XtraForm
+    public partial class frm_ProgramiGuncelle : DevExpress.XtraEditors.XtraForm
     {
-        public frm_PozlariOnlineGuncelle()
+        public frm_ProgramiGuncelle()
         {
             InitializeComponent();
         }

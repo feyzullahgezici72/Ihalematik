@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikPro.Manager;
 using IhalematikProBL.Provider;
+using IhalematikPro.Forms;
 
 namespace IhalematikProUI.Forms.Genel
 {
