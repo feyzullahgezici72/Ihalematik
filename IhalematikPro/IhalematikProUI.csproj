@@ -654,6 +654,12 @@
     <Compile Include="Forms\Tedarikci\frm_YeniTeklifOlustur.Designer.cs">
       <DependentUpon>frm_YeniTeklifOlustur.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hakedis\frm_OdenekDilimleriFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hakedis\frm_OdenekDilimleriFormu.Designer.cs">
+      <DependentUpon>frm_OdenekDilimleriFormu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hakedis\frm_SozlesmeBilgileriFormu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -956,6 +962,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_YeniTeklifOlustur.tr-TR.resx">
       <DependentUpon>frm_YeniTeklifOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hakedis\frm_OdenekDilimleriFormu.resx">
+      <DependentUpon>frm_OdenekDilimleriFormu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hakedis\frm_SozlesmeBilgileriFormu.resx">
       <DependentUpon>frm_SozlesmeBilgileriFormu.cs</DependentUpon>

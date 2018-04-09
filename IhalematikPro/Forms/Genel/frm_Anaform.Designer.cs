@@ -1421,6 +1421,7 @@ namespace IhalematikPro.Forms
             this.barSozlesmeMiktarlari.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSozlesmeMiktarlari.LargeGlyph")));
             this.barSozlesmeMiktarlari.LargeWidth = 140;
             this.barSozlesmeMiktarlari.Name = "barSozlesmeMiktarlari";
+            this.barSozlesmeMiktarlari.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barSozlesmeMiktarlari_ItemClick);
             // 
             // barOdenekDilimleri
             // 
@@ -1430,6 +1431,7 @@ namespace IhalematikPro.Forms
             this.barOdenekDilimleri.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barOdenekDilimleri.LargeGlyph")));
             this.barOdenekDilimleri.LargeWidth = 120;
             this.barOdenekDilimleri.Name = "barOdenekDilimleri";
+            this.barOdenekDilimleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barOdenekDilimleri_ItemClick);
             // 
             // barFiyatFarklari
             // 

@@ -1128,5 +1128,34 @@ namespace IhalematikPro.Forms
             RibonAktif();
             barSozlesmeBilgileri.ButtonStyle = BarButtonStyle.Default;
         }
+
+        private void barSozlesmeMiktarlari_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+        frm_OdenekDilimleriFormu odf;
+        private void barOdenekDilimleri_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            barOdenekDilimleri.ButtonStyle = BarButtonStyle.Check;
+            RibonPasif();
+            if (odf == null)
+            {
+                odf = new  frm_OdenekDilimleriFormu();
+                odf.MdiParent = this;
+                odf.FormClosed +=new FormClosedEventHandler(Odf_FormClosed);
+                odf.Show();
+            }
+            else
+            {
+                odf.Activate();
+            }
+        }
+
+        private void Odf_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            odf = null;
+            RibonAktif();
+            barOdenekDilimleri.ButtonStyle = BarButtonStyle.Default;
+        }
     }
 }
