@@ -181,7 +181,7 @@ namespace IhalematikPro.Forms
             this.txtDate = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem8 = new DevExpress.XtraBars.BarStaticItem();
             this.barSozlesmeBilgileri = new DevExpress.XtraBars.BarButtonItem();
-            this.barSozlesmeMiktarlari = new DevExpress.XtraBars.BarButtonItem();
+            this.barSozlesmeKalemleri = new DevExpress.XtraBars.BarButtonItem();
             this.barOdenekDilimleri = new DevExpress.XtraBars.BarButtonItem();
             this.barFiyatFarklari = new DevExpress.XtraBars.BarButtonItem();
             this.barHakedisYarat = new DevExpress.XtraBars.BarButtonItem();
@@ -371,7 +371,7 @@ namespace IhalematikPro.Forms
             this.txtDate,
             this.barStaticItem8,
             this.barSozlesmeBilgileri,
-            this.barSozlesmeMiktarlari,
+            this.barSozlesmeKalemleri,
             this.barOdenekDilimleri,
             this.barFiyatFarklari,
             this.barHakedisYarat,
@@ -1413,15 +1413,15 @@ namespace IhalematikPro.Forms
             this.barSozlesmeBilgileri.Name = "barSozlesmeBilgileri";
             this.barSozlesmeBilgileri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barSozlesmeBilgileri_ItemClick);
             // 
-            // barSozlesmeMiktarlari
+            // barSozlesmeKalemleri
             // 
-            this.barSozlesmeMiktarlari.Caption = "Sözleşme Miktar ve Fiyatları";
-            this.barSozlesmeMiktarlari.Glyph = ((System.Drawing.Image)(resources.GetObject("barSozlesmeMiktarlari.Glyph")));
-            this.barSozlesmeMiktarlari.Id = 91;
-            this.barSozlesmeMiktarlari.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSozlesmeMiktarlari.LargeGlyph")));
-            this.barSozlesmeMiktarlari.LargeWidth = 140;
-            this.barSozlesmeMiktarlari.Name = "barSozlesmeMiktarlari";
-            this.barSozlesmeMiktarlari.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barSozlesmeMiktarlari_ItemClick);
+            this.barSozlesmeKalemleri.Caption = "Sözleşme Kalemleri";
+            this.barSozlesmeKalemleri.Glyph = ((System.Drawing.Image)(resources.GetObject("barSozlesmeKalemleri.Glyph")));
+            this.barSozlesmeKalemleri.Id = 91;
+            this.barSozlesmeKalemleri.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSozlesmeKalemleri.LargeGlyph")));
+            this.barSozlesmeKalemleri.LargeWidth = 140;
+            this.barSozlesmeKalemleri.Name = "barSozlesmeKalemleri";
+            this.barSozlesmeKalemleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barSozlesmeKalemleri_ItemClick);
             // 
             // barOdenekDilimleri
             // 
@@ -1683,7 +1683,7 @@ namespace IhalematikPro.Forms
             // 
             // ribbonPageGroup25
             // 
-            this.ribbonPageGroup25.ItemLinks.Add(this.barSozlesmeMiktarlari);
+            this.ribbonPageGroup25.ItemLinks.Add(this.barSozlesmeKalemleri);
             this.ribbonPageGroup25.Name = "ribbonPageGroup25";
             this.ribbonPageGroup25.ShowCaptionButton = false;
             this.ribbonPageGroup25.Text = "2.Adım";
@@ -2253,7 +2253,7 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.BarStaticItem barStaticItem8;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
         private DevExpress.XtraBars.BarButtonItem barSozlesmeBilgileri;
-        private DevExpress.XtraBars.BarButtonItem barSozlesmeMiktarlari;
+        private DevExpress.XtraBars.BarButtonItem barSozlesmeKalemleri;
         private DevExpress.XtraBars.BarButtonItem barOdenekDilimleri;
         private DevExpress.XtraBars.BarButtonItem barFiyatFarklari;
         private DevExpress.XtraBars.BarButtonItem barHakedisYarat;

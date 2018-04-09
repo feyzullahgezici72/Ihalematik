@@ -1128,11 +1128,16 @@ namespace IhalematikPro.Forms
             RibonAktif();
             barSozlesmeBilgileri.ButtonStyle = BarButtonStyle.Default;
         }
-
         private void barSozlesmeMiktarlari_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            
         }
+
+        private void Sk_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         frm_OdenekDilimleriFormu odf;
         private void barOdenekDilimleri_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -1156,6 +1161,29 @@ namespace IhalematikPro.Forms
             odf = null;
             RibonAktif();
             barOdenekDilimleri.ButtonStyle = BarButtonStyle.Default;
+        }
+        frm_SozlesmeKalemleri sk;
+        private void barSozlesmeKalemleri_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            barSozlesmeKalemleri.ButtonStyle = BarButtonStyle.Check;
+            RibonPasif();
+            if (sk == null)
+            {
+                sk = new frm_SozlesmeKalemleri();
+                sk.MdiParent = this;
+                sk.FormClosed += new FormClosedEventHandler(Sk_FormClosed);
+                sk.Show();
+            }
+            else
+            {
+                sk.Activate();
+            }
+        }
+        private void sk_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            sk = null;
+            RibonAktif();
+            barSozlesmeKalemleri.ButtonStyle = BarButtonStyle.Default;
         }
     }
 }

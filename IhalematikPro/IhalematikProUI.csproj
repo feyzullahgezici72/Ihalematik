@@ -666,6 +666,12 @@
     <Compile Include="Hakedis\frm_SozlesmeBilgileriFormu.Designer.cs">
       <DependentUpon>frm_SozlesmeBilgileriFormu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hakedis\frm_SozlesmeKalemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hakedis\frm_SozlesmeKalemleri.Designer.cs">
+      <DependentUpon>frm_SozlesmeKalemleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hakedis\frm_YeniSozlesmeYarat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -968,6 +974,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hakedis\frm_SozlesmeBilgileriFormu.resx">
       <DependentUpon>frm_SozlesmeBilgileriFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hakedis\frm_SozlesmeKalemleri.resx">
+      <DependentUpon>frm_SozlesmeKalemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hakedis\frm_YeniSozlesmeYarat.resx">
       <DependentUpon>frm_YeniSozlesmeYarat.cs</DependentUpon>
