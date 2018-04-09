@@ -1133,10 +1133,7 @@ namespace IhalematikPro.Forms
             
         }
 
-        private void Sk_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         frm_OdenekDilimleriFormu odf;
         private void barOdenekDilimleri_ItemClick(object sender, ItemClickEventArgs e)
@@ -1179,11 +1176,12 @@ namespace IhalematikPro.Forms
                 sk.Activate();
             }
         }
-        private void sk_FormClosed(object sender, FormClosedEventArgs e)
+        private void Sk_FormClosed(object sender, FormClosedEventArgs e)
         {
             sk = null;
             RibonAktif();
             barSozlesmeKalemleri.ButtonStyle = BarButtonStyle.Default;
         }
+        
     }
 }

@@ -1415,6 +1415,7 @@ namespace IhalematikPro.Forms
             // 
             // barSozlesmeKalemleri
             // 
+            this.barSozlesmeKalemleri.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barSozlesmeKalemleri.Caption = "Sözleşme Kalemleri";
             this.barSozlesmeKalemleri.Glyph = ((System.Drawing.Image)(resources.GetObject("barSozlesmeKalemleri.Glyph")));
             this.barSozlesmeKalemleri.Id = 91;
@@ -1425,6 +1426,7 @@ namespace IhalematikPro.Forms
             // 
             // barOdenekDilimleri
             // 
+            this.barOdenekDilimleri.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
             this.barOdenekDilimleri.Caption = "Ödenek Dilimleri";
             this.barOdenekDilimleri.Glyph = ((System.Drawing.Image)(resources.GetObject("barOdenekDilimleri.Glyph")));
             this.barOdenekDilimleri.Id = 92;
