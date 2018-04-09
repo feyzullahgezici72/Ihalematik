@@ -654,28 +654,28 @@
     <Compile Include="Forms\Tedarikci\frm_YeniTeklifOlustur.Designer.cs">
       <DependentUpon>frm_YeniTeklifOlustur.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hakedis\frm_OdenekDilimleriFormu.cs">
+    <Compile Include="Forms\Hakedis\frm_OdenekDilimleriFormu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hakedis\frm_OdenekDilimleriFormu.Designer.cs">
+    <Compile Include="Forms\Hakedis\frm_OdenekDilimleriFormu.Designer.cs">
       <DependentUpon>frm_OdenekDilimleriFormu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hakedis\frm_SozlesmeBilgileriFormu.cs">
+    <Compile Include="Forms\Hakedis\frm_SozlesmeBilgileriFormu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hakedis\frm_SozlesmeBilgileriFormu.Designer.cs">
+    <Compile Include="Forms\Hakedis\frm_SozlesmeBilgileriFormu.Designer.cs">
       <DependentUpon>frm_SozlesmeBilgileriFormu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hakedis\frm_SozlesmeKalemleri.cs">
+    <Compile Include="Forms\Hakedis\frm_SozlesmeKalemleri.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hakedis\frm_SozlesmeKalemleri.Designer.cs">
+    <Compile Include="Forms\Hakedis\frm_SozlesmeKalemleri.Designer.cs">
       <DependentUpon>frm_SozlesmeKalemleri.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hakedis\frm_YeniSozlesmeYarat.cs">
+    <Compile Include="Forms\Hakedis\frm_YeniSozlesmeYarat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hakedis\frm_YeniSozlesmeYarat.Designer.cs">
+    <Compile Include="Forms\Hakedis\frm_YeniSozlesmeYarat.Designer.cs">
       <DependentUpon>frm_YeniSozlesmeYarat.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager\CurrentManager.cs" />
@@ -969,16 +969,16 @@
     <EmbeddedResource Include="Forms\Tedarikci\frm_YeniTeklifOlustur.tr-TR.resx">
       <DependentUpon>frm_YeniTeklifOlustur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hakedis\frm_OdenekDilimleriFormu.resx">
+    <EmbeddedResource Include="Forms\Hakedis\frm_OdenekDilimleriFormu.resx">
       <DependentUpon>frm_OdenekDilimleriFormu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hakedis\frm_SozlesmeBilgileriFormu.resx">
+    <EmbeddedResource Include="Forms\Hakedis\frm_SozlesmeBilgileriFormu.resx">
       <DependentUpon>frm_SozlesmeBilgileriFormu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hakedis\frm_SozlesmeKalemleri.resx">
+    <EmbeddedResource Include="Forms\Hakedis\frm_SozlesmeKalemleri.resx">
       <DependentUpon>frm_SozlesmeKalemleri.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hakedis\frm_YeniSozlesmeYarat.resx">
+    <EmbeddedResource Include="Forms\Hakedis\frm_YeniSozlesmeYarat.resx">
       <DependentUpon>frm_YeniSozlesmeYarat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />

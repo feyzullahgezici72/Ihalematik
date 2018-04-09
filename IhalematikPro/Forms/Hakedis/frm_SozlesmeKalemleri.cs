@@ -26,7 +26,6 @@ namespace IhalematikProUI.Hakedis
         private void btnKapat_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            MessageBox.Show("Test");
         }
 
         private void frm_SozlesmeKalemleri_Load(object sender, EventArgs e)
