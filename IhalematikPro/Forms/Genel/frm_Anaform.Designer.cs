@@ -286,9 +286,8 @@ namespace IhalematikPro.Forms
             // 
             this.ribbon.ApplicationCaption = "İhalematikPro V.1.0.0";
             this.ribbon.ApplicationIcon = ((System.Drawing.Bitmap)(resources.GetObject("ribbon.ApplicationIcon")));
-            this.ribbon.BackColor = System.Drawing.SystemColors.Control;
             this.ribbon.ButtonGroupsVertAlign = DevExpress.Utils.VertAlignment.Center;
-            this.ribbon.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.Blue;
+            this.ribbon.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.Orange;
             this.ribbon.ExpandCollapseItem.AllowRightClickInMenu = false;
             this.ribbon.ExpandCollapseItem.CloseRadialMenuOnItemClick = true;
             this.ribbon.ExpandCollapseItem.Id = 0;
