@@ -46,7 +46,17 @@ namespace IhalematikProUI.Forms.Genel
             {
                 if (!string.IsNullOrEmpty(CurrentManager.Instance.CurrentCompany.LogoPath))
                 {
-                    string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                    string path = string.Empty;
+                    if (Application.StartupPath.Contains("bin\\Debug"))
+                    {
+                        path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                    }
+                    else
+                    {
+                        path = Application.StartupPath.Substring(0, (Application.StartupPath.Length));
+                    }
+
+                    //string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
                     picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
                 }
                 if (CurrentManager.Instance.CurrentCompany.LogoWidth != 0)

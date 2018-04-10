@@ -123,7 +123,19 @@ namespace IhalematikPro.Forms
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 string filename = System.IO.Path.GetFileName(dialog.FileName);
-                string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+
+                string path = string.Empty;
+                if (Application.StartupPath.Contains("bin\\Debug"))
+                {
+                    path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                }
+                else
+                {
+                    path = Application.StartupPath.Substring(0, (Application.StartupPath.Length));
+                    //MessageBox.Show(path);
+                }
+
+                //string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
 
                 try
                 {

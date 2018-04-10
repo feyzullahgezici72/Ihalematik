@@ -64,7 +64,10 @@ namespace IhalematikPro.Forms
             DevExpress.UserSkins.BonusSkins.Register();
             this.WindowState = FormWindowState.Maximized;
             this.LoadLogo();
-            UserName.Caption = CurrentManager.Instance.CurrentMember.UserName.ToString();
+            if (CurrentManager.Instance.CurrentMember != null && !string.IsNullOrEmpty(CurrentManager.Instance.CurrentMember.UserName))
+            {
+                UserName.Caption = CurrentManager.Instance.CurrentMember.UserName.ToString(); 
+            }
         }
 
         public void LoadLogo()
