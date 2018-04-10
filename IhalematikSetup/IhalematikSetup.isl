@@ -340,10 +340,6 @@
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{4CE6A85A-5597-42DE-B9DF-F7EB3F22B5D6}</td><td>IHALEMATIK</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{5A148F15-7DFE-4BF2-8192-DB8D81696568}</td><td>EMAILFILE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{715157CB-FC14-4047-A133-BA2B91EB0F68}</td><td>IMAGES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{85F014CA-F34E-461D-A74B-A36D222C3166}</td><td>LOGO</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{292C6569-4AC8-4706-AD07-23B04D947DB9}</td><td>SENTFILE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IhalematikProUI.Primary_output</td><td>{9ECD4465-B082-4181-88AA-65BEE4CA0D37}</td><td>INSTALLDIR</td><td>2</td><td/><td>ihalematikproui.primary_outp</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
@@ -1053,17 +1049,9 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
-		<row><td>EMAILFILE</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>IHALEMATIK</td><td>ISX_DEFAULTCOMPONENT</td></row>
-		<row><td>IMAGES</td><td>ISX_DEFAULTCOMPONENT2</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT1</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT2</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT3</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT4</td></row>
 		<row><td>INSTALLDIR</td><td>IhalematikProUI.Primary_output</td></row>
-		<row><td>LOGO</td><td>ISX_DEFAULTCOMPONENT3</td></row>
-		<row><td>SENTFILE</td><td>ISX_DEFAULTCOMPONENT4</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1150,18 +1138,15 @@
 		<row><td>CommonFilesFolder</td><td>TARGETDIR</td><td>.:Common</td><td/><td>0</td><td/></row>
 		<row><td>DATABASEDIR</td><td>ISYourDataBaseDir</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>DesktopFolder</td><td>TARGETDIR</td><td>.:Desktop</td><td/><td>3</td><td/></row>
-		<row><td>EMAILFILE</td><td>INSTALLDIR</td><td>EMAILF~1|EmailFile</td><td/><td>0</td><td/></row>
 		<row><td>FavoritesFolder</td><td>TARGETDIR</td><td>.:FAVORI~1|Favorites</td><td/><td>0</td><td/></row>
 		<row><td>FontsFolder</td><td>TARGETDIR</td><td>.:Fonts</td><td/><td>0</td><td/></row>
 		<row><td>GlobalAssemblyCache</td><td>TARGETDIR</td><td>.:Global~1|GlobalAssemblyCache</td><td/><td>0</td><td/></row>
 		<row><td>IHALEMATIK</td><td>ProgramFilesFolder</td><td>IHALEM~1|ihalematik</td><td/><td>0</td><td/></row>
-		<row><td>IMAGES</td><td>EMAILFILE</td><td>Images</td><td/><td>0</td><td/></row>
 		<row><td>INSTALLDIR</td><td>IHALEMATIK</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>ISCommonFilesFolder</td><td>CommonFilesFolder</td><td>Instal~1|InstallShield</td><td/><td>0</td><td/></row>
 		<row><td>ISMyCompanyDir</td><td>ProgramFilesFolder</td><td>MYCOMP~1|My Company Name</td><td/><td>0</td><td/></row>
 		<row><td>ISMyProductDir</td><td>ISMyCompanyDir</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
 		<row><td>ISYourDataBaseDir</td><td>INSTALLDIR</td><td>Database</td><td/><td>0</td><td/></row>
-		<row><td>LOGO</td><td>IMAGES</td><td>Logo</td><td/><td>0</td><td/></row>
 		<row><td>LocalAppDataFolder</td><td>TARGETDIR</td><td>.:LocalA~1|LocalAppData</td><td/><td>0</td><td/></row>
 		<row><td>MY_PRODUCT_NAME</td><td>IHALEMATIK</td><td>IHALEM~1|Ihalematik</td><td/><td>0</td><td/></row>
 		<row><td>MyPicturesFolder</td><td>TARGETDIR</td><td>.:MyPict~1|MyPictures</td><td/><td>0</td><td/></row>
@@ -1173,7 +1158,6 @@
 		<row><td>ProgramFilesFolder</td><td>TARGETDIR</td><td>.:PROGRA~1|program files</td><td/><td>0</td><td/></row>
 		<row><td>ProgramMenuFolder</td><td>TARGETDIR</td><td>.:Programs</td><td/><td>3</td><td/></row>
 		<row><td>RecentFolder</td><td>TARGETDIR</td><td>.:Recent</td><td/><td>0</td><td/></row>
-		<row><td>SENTFILE</td><td>EMAILFILE</td><td>SentFile</td><td/><td>0</td><td/></row>
 		<row><td>SendToFolder</td><td>TARGETDIR</td><td>.:SendTo</td><td/><td>3</td><td/></row>
 		<row><td>StartMenuFolder</td><td>TARGETDIR</td><td>.:STARTM~1|Start Menu</td><td/><td>3</td><td/></row>
 		<row><td>StartupFolder</td><td>TARGETDIR</td><td>.:StartUp</td><td/><td>3</td><td/></row>
@@ -1880,10 +1864,6 @@
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT2</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT3</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT4</td></row>
 		<row><td>AlwaysInstall</td><td>IhalematikProUI.Primary_output</td></row>
 	</table>
 
@@ -1900,7 +1880,6 @@
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
 		<row><td>ihalematikproui.primary_outp</td><td>IhalematikProUI.Primary_output</td><td>IhalematikProUI.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;IhalematikProUI&gt;|Built</td><td>3</td><td/></row>
-		<row><td>malzeme_fiyat_listesi.xlsx</td><td>ISX_DEFAULTCOMPONENT1</td><td>MALZEM~1.XLS|Malzeme_Fiyat_Listesi.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\Development\Clone\IhalematikPro\EmailFile\Malzeme_Fiyat_Listesi.xlsx</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2044,10 +2023,6 @@
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_4EC56A9C_969D_429F_AEFE_76762CD31A28_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_A59AE3A5_53C0_4A51_B9D2_CAB488803EE0_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_8E0CA2F9_E150_478A_98E1_68DC050D1154_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_F7C8A307_71EE_42B3_9F81_F09CCB21C66F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_385B2E41_5325_4F6A_A67C_1A75CA62BE02_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IhalematikProUI.Primary_output</td><td/><td/><td>_5F86D1BC_98F3_447A_B6B4_0431131FE9FB_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
