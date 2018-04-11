@@ -24,7 +24,7 @@ namespace IhalematikPro
         [STAThread]
         static void Main()
         {
-           // Control.CheckForIllegalCrossThreadCalls = false;
+            Control.CheckForIllegalCrossThreadCalls = false;
             const string appName = "LifeTree Software ihale Programı";
             bool createdNew;
             mutex = new Mutex(true, appName, out createdNew);
@@ -33,14 +33,14 @@ namespace IhalematikPro
                 MessageBox.Show(appName + " zaten çalışıyor!");
                 return;
             }
-           
+
             DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Devexpress Style"; //"";  //"Money Twins";//
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-             CurrentManager.Instance.CurrentTender = TenderProvider.Instance.GetItems().OrderByDescending(p => p.InsertTime).FirstOrDefault();
-             CurrentManager.Instance.CurrentCompany = CompanyProvider.Instance.GetItems().FirstOrDefault();
-             CurrentManager.Instance.CurrentOffer = OfferProvider.Instance.GetItems().OrderByDescending(p => p.InsertTime).FirstOrDefault();//.LastOrDefault();
+            CurrentManager.Instance.CurrentTender = TenderProvider.Instance.GetItems().OrderByDescending(p => p.InsertTime).FirstOrDefault();
+            CurrentManager.Instance.CurrentCompany = CompanyProvider.Instance.GetItems().FirstOrDefault();
+            CurrentManager.Instance.CurrentOffer = OfferProvider.Instance.GetItems().OrderByDescending(p => p.InsertTime).FirstOrDefault();//.LastOrDefault();
 
             Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
 
@@ -62,7 +62,7 @@ namespace IhalematikPro
             // Log the exception, display it, etc
             LoggingManager.Instance.SaveErrorLog(e.Exception);
             //LoadingManager.Instance.Hide();
-           // MessageBox.Show("Beklenmedik bir hata ile karşılaşıldı. Lütfen program yöneticinize başvurun.");
+            // MessageBox.Show("Beklenmedik bir hata ile karşılaşıldı. Lütfen program yöneticinize başvurun.");
             //Debug.WriteLine(e.Exception.Message);
         }
 
