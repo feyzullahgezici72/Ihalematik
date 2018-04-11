@@ -481,7 +481,7 @@ namespace IhalematikPro.Forms
                 bool isSuccess = UIReportManager.Instance.ExtractExcel(grdMaterialListIsWorkship);
                 if (!isSuccess)
                 {
-                    MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
+                    MessageBox.Show("Program beklenmeyen bir hata ile karşılaştı.");
                 }
             }
             catch (Exception ex)

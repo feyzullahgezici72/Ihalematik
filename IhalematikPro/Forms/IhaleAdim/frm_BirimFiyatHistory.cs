@@ -52,7 +52,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                 bool isSuccess = UIReportManager.Instance.ExtractExcel(grdMaterialListHistory);
                 if (!isSuccess)
                 {
-                    MessageBox.Show("Hay Aksii!! \nProgram beklenmeyen bir hata ile karşılaştı.");
+                    MessageBox.Show("Program beklenmeyen bir hata ile karşılaştı.");
                 }
             }
             catch (Exception ex)

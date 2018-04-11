@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace IhalematikProUI.Manager
 {
@@ -19,6 +20,7 @@ namespace IhalematikProUI.Manager
             try
             {
                 GridControl.ExportToXls(UIGlobalVeriables.Instance.MalzemeMaliyetListesiPath);
+                MessageBox.Show(UIGlobalVeriables.Instance.MalzemeMaliyetListesiPath);
                 frm_MesajFormu mesaj = new frm_MesajFormu();
                 mesaj.lblMesaj.Text = "Veriler Excel dosyasına aktarıldı...";
                 mesaj.ShowDialog();

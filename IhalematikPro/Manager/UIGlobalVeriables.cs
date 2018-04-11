@@ -15,7 +15,7 @@ namespace IhalematikProUI.Manager
             get
             {
                 string fileName = "MalzemeMaliyetListesi.xls";
-                string sourcePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug\\", string.Empty), "ExcelFiles");
+                string sourcePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug\\", string.Empty).Replace("Program Files (x86)", "ProgramFiles(x86)"), "ExcelFiles");
                 string sourceFilePath = Path.Combine(sourcePath, fileName);
                 return sourceFilePath;
             }
