@@ -242,7 +242,8 @@ namespace IhalematikPro.Forms
                         {
                             OBFModel model = new OBFModel();
                             model.Description = item.PozOBF.Description;
-                            model.Number = item.PozOBF.Number;
+                            model.Number = item.PozOBF.Number.Trim();
+                            model.StokNumber = item.PozOBF.Number;
                             model.Unit = item.PozOBF.Unit;
                             model.UnitPrice = item.PozOBF.UnitPrice;
                             model.Id = item.PozOBFId;
