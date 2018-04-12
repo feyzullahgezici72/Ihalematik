@@ -20,7 +20,6 @@ namespace IhalematikProUI.Manager
             try
             {
                 GridControl.ExportToXls(UIGlobalVeriables.Instance.MalzemeMaliyetListesiPath);
-                MessageBox.Show(UIGlobalVeriables.Instance.MalzemeMaliyetListesiPath);
                 frm_MesajFormu mesaj = new frm_MesajFormu();
                 mesaj.lblMesaj.Text = "Veriler Excel dosyasına aktarıldı...";
                 mesaj.ShowDialog();

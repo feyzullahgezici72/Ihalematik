@@ -211,7 +211,6 @@ namespace IhalematikProUI.Forms.Tedarikci
                         {
                             path = Application.StartupPath.Substring(0, (Application.StartupPath.Length));
                         }
-                        MessageBox.Show(path);
                         path = path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath;
                         oSheet.Shapes.AddPicture(path, Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 330, 2, LogoW, LogoH);
                     }

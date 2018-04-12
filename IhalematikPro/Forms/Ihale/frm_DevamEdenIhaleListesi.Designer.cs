@@ -389,8 +389,6 @@
             this.gridColumn4.Caption = "KAZANDIK MI?";
             this.gridColumn4.ColumnEdit = this.chYesNo;
             this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
             this.gridColumn4.Width = 107;
             // 
             // chYesNo
@@ -426,7 +424,7 @@
             this.colOpenTender.OptionsFilter.AllowFilter = false;
             this.colOpenTender.ToolTip = "İhale Aç";
             this.colOpenTender.Visible = true;
-            this.colOpenTender.VisibleIndex = 4;
+            this.colOpenTender.VisibleIndex = 3;
             this.colOpenTender.Width = 30;
             // 
             // btnIhaleAc
@@ -451,7 +449,7 @@
             this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.ToolTip = "İhale Detayı Göster";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 30;
             // 
             // btnDetay
@@ -471,7 +469,7 @@
             this.colPasive.MaxWidth = 20;
             this.colPasive.Name = "colPasive";
             this.colPasive.Visible = true;
-            this.colPasive.VisibleIndex = 6;
+            this.colPasive.VisibleIndex = 5;
             this.colPasive.Width = 20;
             // 
             // btnPasive
@@ -491,7 +489,7 @@
             this.colActive.MaxWidth = 20;
             this.colActive.Name = "colActive";
             this.colActive.Visible = true;
-            this.colActive.VisibleIndex = 7;
+            this.colActive.VisibleIndex = 6;
             this.colActive.Width = 20;
             // 
             // btnActive
