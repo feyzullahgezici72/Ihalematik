@@ -132,14 +132,14 @@ namespace IhalematikPro.Forms
 
                             if (!string.IsNullOrEmpty(pozNumber))
                             {
-                                if (item.PozOBF.Number.Contains(pozNumber))
+                                if (item.PozOBF.Number.ToLower().Contains(pozNumber.ToLower()))
                                 {
                                     pozModels.Add(model);
                                 }
                             }
                             else if (!string.IsNullOrEmpty(pozDescription))
                             {
-                                if (item.PozOBF.Description.Contains(pozDescription))
+                                if (item.PozOBF.Description.ToLower().Contains(pozDescription.ToLower()))
                                 {
                                     pozModels.Add(model);
                                 }

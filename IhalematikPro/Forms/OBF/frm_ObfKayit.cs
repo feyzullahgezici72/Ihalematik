@@ -262,14 +262,14 @@ namespace IhalematikPro.Forms
                             
                             if (!string.IsNullOrEmpty(obfNumber))
                             {
-                                if (item.PozOBF.Number.Contains(obfNumber))
+                                if (item.PozOBF.Number.ToLower().Contains(obfNumber.ToLower()))
                                 {
                                     oBFModels.Add(model);
                                 }
                             }
                             else if (!string.IsNullOrEmpty(obfDescription))
                             {
-                                if (item.PozOBF.Description.Contains(obfDescription))
+                                if (item.PozOBF.Description.ToLower().Contains(obfDescription.ToLower()))
                                 {
                                     oBFModels.Add(model);
                                 }
