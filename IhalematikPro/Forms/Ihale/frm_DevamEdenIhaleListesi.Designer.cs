@@ -134,7 +134,7 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2);
             this.pcWorld.Name = "pcWorld";
             this.pcWorld.Size = new System.Drawing.Size(33, 24);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -551,7 +551,7 @@
             this.statusPanel.Controls.Add(this.labelControl14);
             this.statusPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.statusPanel.Location = new System.Drawing.Point(0, 447);
-            this.statusPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.statusPanel.Margin = new System.Windows.Forms.Padding(2);
             this.statusPanel.Name = "statusPanel";
             this.statusPanel.Size = new System.Drawing.Size(913, 23);
             this.statusPanel.TabIndex = 96;
@@ -562,7 +562,7 @@
             this.cmbAktivePasive.EditValue = "Aktif Kayıtlar";
             this.cmbAktivePasive.EnterMoveNextControl = true;
             this.cmbAktivePasive.Location = new System.Drawing.Point(800, 0);
-            this.cmbAktivePasive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbAktivePasive.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAktivePasive.Name = "cmbAktivePasive";
             this.cmbAktivePasive.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbAktivePasive.Properties.Appearance.Options.UseFont = true;
@@ -585,7 +585,7 @@
             this.lblRecordCount.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblRecordCount.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblRecordCount.Location = new System.Drawing.Point(57, 0);
-            this.lblRecordCount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblRecordCount.Margin = new System.Windows.Forms.Padding(2);
             this.lblRecordCount.Name = "lblRecordCount";
             this.lblRecordCount.Size = new System.Drawing.Size(12, 13);
             this.lblRecordCount.TabIndex = 0;
@@ -596,7 +596,7 @@
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl14.Dock = System.Windows.Forms.DockStyle.Left;
             this.labelControl14.Location = new System.Drawing.Point(0, 0);
-            this.labelControl14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(57, 13);
             this.labelControl14.TabIndex = 0;
@@ -611,7 +611,7 @@
             this.panelControl3.Controls.Add(this.groupControl2);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl3.Location = new System.Drawing.Point(0, 24);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(913, 52);
             this.panelControl3.TabIndex = 97;
@@ -625,17 +625,18 @@
             this.groupControl4.Controls.Add(this.simpleButton4);
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl4.Location = new System.Drawing.Point(724, 2);
-            this.groupControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl4.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(230, 48);
             this.groupControl4.TabIndex = 51;
             this.groupControl4.Text = "İhale Tipi";
+            this.groupControl4.Visible = false;
             // 
             // comboBoxEdit1
             // 
             this.comboBoxEdit1.EditValue = "Açık İhale";
             this.comboBoxEdit1.Location = new System.Drawing.Point(4, 25);
-            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
@@ -673,11 +674,12 @@
             this.groupControl1.Controls.Add(this.cmbYear);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(552, 2);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(172, 48);
             this.groupControl1.TabIndex = 50;
             this.groupControl1.Text = "İhale Yılı";
+            this.groupControl1.Visible = false;
             // 
             // simpleButton3
             // 
@@ -727,7 +729,7 @@
             this.btnExcel.Image = global::IhalematikProUI.Properties.Resources.Excel_icon;
             this.btnExcel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnExcel.Location = new System.Drawing.Point(774, 2);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(137, 48);
             this.btnExcel.TabIndex = 49;
@@ -743,7 +745,7 @@
             this.groupControl3.Controls.Add(this.simpleButton1);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl3.Location = new System.Drawing.Point(170, 2);
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(382, 48);
             this.groupControl3.TabIndex = 35;
@@ -789,7 +791,7 @@
             this.groupControl2.Controls.Add(this.txtTenderNumber);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl2.Location = new System.Drawing.Point(2, 2);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(168, 48);
             this.groupControl2.TabIndex = 34;

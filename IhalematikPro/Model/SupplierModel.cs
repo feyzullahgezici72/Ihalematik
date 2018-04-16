@@ -46,7 +46,8 @@ namespace IhalematikProUI.Model
         public string Address { get; set; }
         public bool IsActive { get; set; }
         public string Country { get; set; }
-
+        public string TaxOffice { get; private set; }
+        public string TaxNumber { get; private set; }
 
         public SupplierModel(Supplier Entity)
         {
@@ -61,6 +62,9 @@ namespace IhalematikProUI.Model
             this.Score = Entity.Score;
             this.Segments = Entity.Segments;
             this.Telephone = Entity.Telephone;
+            this.TaxOffice = Entity.TaxOffice;
+            this.TaxNumber = Entity.TaxNumber;
+
             this.IsSelected = false;
         }
 

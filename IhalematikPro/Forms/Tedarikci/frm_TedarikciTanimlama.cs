@@ -109,6 +109,8 @@ namespace IhalematikProUI.Forms
                 suplier.Score = txtScore.Text.Trim();
                 suplier.Telephone = txtTelephone.Text.Trim();
                 suplier.Country = txtCountry.Text.Trim();
+                suplier.TaxNumber = txtTaxNumber.Text.Trim();
+                suplier.TaxOffice = txtTaxOffice.Text.Trim();
                 if (selectedSegments != null && selectedSegments.Count() != 0)
                 {
                     suplier.Segments = new List<SupplierSegment>();

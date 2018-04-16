@@ -23,6 +23,8 @@ namespace IhalematikProBL.Provider
             parameters.Add("Telephone", t.Telephone);
             parameters.Add("IsActive", t.IsActive);
             parameters.Add("Country", t.Country);
+            parameters.Add("TaxOffice", t.TaxOffice);
+            parameters.Add("TaxNumber", t.TaxNumber);
             if (t.Segments != null && t.Segments.Count != 0)
             {
                 string segments = string.Join(";", t.Segments.Select(p => p.Id));
@@ -41,6 +43,8 @@ namespace IhalematikProBL.Provider
             t.Score = dr.GetValue<string>("Score");
             t.Telephone = dr.GetValue<string>("Telephone");
             t.Country = dr.GetValue<string>("Country");
+            t.TaxOffice = dr.GetValue<string>("TaxOffice");
+            t.TaxNumber = dr.GetValue<string>("TaxNumber");
             t.IsActive = dr.GetValue<bool>("IsActive");
 
             string segments = dr.GetValue<string>("SupplierSegment");

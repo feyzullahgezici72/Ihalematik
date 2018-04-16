@@ -32,5 +32,7 @@ namespace IhalematikProBL.Entity
         public string Address { get; set; }
         public bool IsActive { get; set; }
         public string Country { get; set; }
+        public string TaxOffice { get; set; }
+        public string TaxNumber { get; set; }
     }
 }

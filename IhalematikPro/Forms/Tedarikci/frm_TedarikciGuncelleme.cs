@@ -68,6 +68,9 @@ namespace IhalematikProUI.Forms.Tedarikci
             txtGSM.Text = this.CurrentSupplier.GSM;
             txtScore.Text = this.CurrentSupplier.Score;
             txtTelephone.Text = this.CurrentSupplier.Telephone;
+            txtTaxNumber.Text = this.CurrentSupplier.TaxNumber;
+            txtTaxOffice.Text = this.CurrentSupplier.TaxOffice;
+            
             if (this.CurrentSupplier.Segments != null)
             {
                 string selectedSuppliersSegments = string.Join(";", this.CurrentSupplier.Segments.Select(p => p.Id));
@@ -103,6 +106,8 @@ namespace IhalematikProUI.Forms.Tedarikci
                 this.CurrentSupplier.IsActive = true;
                 this.CurrentSupplier.Score = txtScore.Text;
                 this.CurrentSupplier.Telephone = txtTelephone.Text;
+                this.CurrentSupplier.TaxOffice = txtTaxOffice.Text.Trim();
+                this.CurrentSupplier.TaxNumber = txtTaxNumber.Text.Trim();
 
                 object items = checkedComboboxEditSupplierSegments.Properties.GetCheckedItems();
                 string[] selectedSegments = items.ToString().Split(';');
