@@ -36,6 +36,10 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -73,6 +77,16 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.cmbYear = new DevExpress.XtraEditors.DateEdit();
+            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.txtTenderDescription = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtTenderNumber = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -95,6 +109,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbYear.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbYear.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
+            this.groupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
+            this.groupControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderNumber.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -120,13 +146,14 @@
             // 
             // panelControl2
             // 
-            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelControl2.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl2.Controls.Add(this.pcWorld);
             this.panelControl2.Controls.Add(this.lblTenderCaptin);
             this.panelControl2.Controls.Add(this.btnKapat);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
@@ -160,17 +187,15 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
-            this.panelControl1.Appearance.Options.UseBackColor = true;
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.panelControl1.Controls.Add(this.panelControl4);
             this.panelControl1.Controls.Add(this.panelControl2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1362, 35);
+            this.panelControl1.Size = new System.Drawing.Size(1362, 116);
             this.panelControl1.TabIndex = 95;
             // 
             // grdOffer
@@ -185,7 +210,7 @@
             this.btnOpen,
             this.btnActive,
             this.btnPasive});
-            this.grdOffer.Size = new System.Drawing.Size(735, 637);
+            this.grdOffer.Size = new System.Drawing.Size(735, 556);
             this.grdOffer.TabIndex = 0;
             this.grdOffer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOffer});
@@ -518,11 +543,11 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.grdOffer);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl1.Location = new System.Drawing.Point(0, 35);
+            this.groupControl1.Location = new System.Drawing.Point(0, 116);
             this.groupControl1.LookAndFeel.SkinName = "Office 2007 Green";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(741, 673);
+            this.groupControl1.Size = new System.Drawing.Size(741, 592);
             this.groupControl1.TabIndex = 100;
             this.groupControl1.Text = "TAMAMLANAN TEKLİFLER";
             // 
@@ -532,11 +557,11 @@
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.Controls.Add(this.grdOfferNoCompleated);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(777, 35);
+            this.groupControl2.Location = new System.Drawing.Point(777, 116);
             this.groupControl2.LookAndFeel.SkinName = "Office 2007 Pink";
             this.groupControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(585, 673);
+            this.groupControl2.Size = new System.Drawing.Size(585, 592);
             this.groupControl2.TabIndex = 101;
             this.groupControl2.Text = "BEKLEYEN TEKLİFLER";
             // 
@@ -552,7 +577,7 @@
             this.btnAc,
             this.btnDetail,
             this.repositoryItemButtonEdit3});
-            this.grdOfferNoCompleated.Size = new System.Drawing.Size(579, 637);
+            this.grdOfferNoCompleated.Size = new System.Drawing.Size(579, 556);
             this.grdOfferNoCompleated.TabIndex = 0;
             this.grdOfferNoCompleated.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -827,10 +852,166 @@
             // panelControl3
             // 
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl3.Location = new System.Drawing.Point(741, 35);
+            this.panelControl3.Location = new System.Drawing.Point(741, 116);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(36, 673);
+            this.panelControl3.Size = new System.Drawing.Size(36, 592);
             this.panelControl3.TabIndex = 102;
+            // 
+            // panelControl4
+            // 
+            this.panelControl4.Controls.Add(this.groupControl3);
+            this.panelControl4.Controls.Add(this.groupControl5);
+            this.panelControl4.Controls.Add(this.groupControl6);
+            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl4.Location = new System.Drawing.Point(0, 35);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(1362, 76);
+            this.panelControl4.TabIndex = 104;
+            // 
+            // groupControl3
+            // 
+            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl3.AppearanceCaption.Options.UseFont = true;
+            this.groupControl3.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl3.CaptionImage")));
+            this.groupControl3.Controls.Add(this.simpleButton3);
+            this.groupControl3.Controls.Add(this.cmbYear);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupControl3.Location = new System.Drawing.Point(828, 3);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(258, 70);
+            this.groupControl3.TabIndex = 50;
+            this.groupControl3.Text = "Teklif Yılı";
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton3.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.simpleButton3.Appearance.Options.UseFont = true;
+            this.simpleButton3.Appearance.Options.UseForeColor = true;
+            this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.simpleButton3.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.simpleButton3.Location = new System.Drawing.Point(205, 33);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(50, 34);
+            toolTipTitleItem1.Text = "Kaydet";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.simpleButton3.SuperTip = superToolTip1;
+            this.simpleButton3.TabIndex = 26;
+            this.simpleButton3.Text = "Bul";
+            // 
+            // cmbYear
+            // 
+            this.cmbYear.EditValue = null;
+            this.cmbYear.Location = new System.Drawing.Point(8, 38);
+            this.cmbYear.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbYear.Name = "cmbYear";
+            this.cmbYear.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.cmbYear.Properties.Appearance.Options.UseBackColor = true;
+            this.cmbYear.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.cmbYear.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.cmbYear.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbYear.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbYear.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
+            this.cmbYear.Properties.DisplayFormat.FormatString = "";
+            this.cmbYear.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.cmbYear.Properties.EditFormat.FormatString = "";
+            this.cmbYear.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.cmbYear.Properties.Mask.EditMask = "";
+            this.cmbYear.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.cmbYear.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.cmbYear.Size = new System.Drawing.Size(192, 26);
+            this.cmbYear.TabIndex = 1;
+            // 
+            // groupControl5
+            // 
+            this.groupControl5.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl5.AppearanceCaption.Options.UseFont = true;
+            this.groupControl5.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl5.CaptionImage")));
+            this.groupControl5.Controls.Add(this.txtTenderDescription);
+            this.groupControl5.Controls.Add(this.simpleButton1);
+            this.groupControl5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupControl5.Location = new System.Drawing.Point(255, 3);
+            this.groupControl5.Name = "groupControl5";
+            this.groupControl5.Size = new System.Drawing.Size(573, 70);
+            this.groupControl5.TabIndex = 35;
+            this.groupControl5.Text = "Teklif  Adı";
+            // 
+            // txtTenderDescription
+            // 
+            this.txtTenderDescription.EnterMoveNextControl = true;
+            this.txtTenderDescription.Location = new System.Drawing.Point(8, 38);
+            this.txtTenderDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenderDescription.Name = "txtTenderDescription";
+            this.txtTenderDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtTenderDescription.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTenderDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTenderDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTenderDescription.Size = new System.Drawing.Size(506, 26);
+            this.txtTenderDescription.TabIndex = 1;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.simpleButton1.Location = new System.Drawing.Point(520, 33);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(50, 34);
+            toolTipTitleItem2.Text = "Kaydet";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.simpleButton1.SuperTip = superToolTip2;
+            this.simpleButton1.TabIndex = 26;
+            this.simpleButton1.Text = "Bul";
+            // 
+            // groupControl6
+            // 
+            this.groupControl6.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl6.AppearanceCaption.Options.UseFont = true;
+            this.groupControl6.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl6.CaptionImage")));
+            this.groupControl6.Controls.Add(this.simpleButton2);
+            this.groupControl6.Controls.Add(this.txtTenderNumber);
+            this.groupControl6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupControl6.Location = new System.Drawing.Point(3, 3);
+            this.groupControl6.Name = "groupControl6";
+            this.groupControl6.Size = new System.Drawing.Size(252, 70);
+            this.groupControl6.TabIndex = 34;
+            this.groupControl6.Text = "Teklif No";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Appearance.Options.UseForeColor = true;
+            this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.simpleButton2.Location = new System.Drawing.Point(199, 33);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(50, 34);
+            this.simpleButton2.TabIndex = 27;
+            this.simpleButton2.Text = "Bul";
+            this.simpleButton2.ToolTip = "Poz Bul";
+            // 
+            // txtTenderNumber
+            // 
+            this.txtTenderNumber.EnterMoveNextControl = true;
+            this.txtTenderNumber.Location = new System.Drawing.Point(8, 39);
+            this.txtTenderNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenderNumber.Name = "txtTenderNumber";
+            this.txtTenderNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtTenderNumber.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTenderNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTenderNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTenderNumber.Size = new System.Drawing.Size(184, 26);
+            this.txtTenderNumber.TabIndex = 0;
             // 
             // frm_TeklifListesi
             // 
@@ -876,6 +1057,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmbYear.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbYear.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
+            this.groupControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
+            this.groupControl6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenderNumber.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -918,5 +1111,15 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit3;
         private DevExpress.XtraEditors.PanelControl panelControl3;
+        private DevExpress.XtraEditors.PanelControl panelControl4;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.DateEdit cmbYear;
+        private DevExpress.XtraEditors.GroupControl groupControl5;
+        private DevExpress.XtraEditors.TextEdit txtTenderDescription;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.GroupControl groupControl6;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.TextEdit txtTenderNumber;
     }
 }

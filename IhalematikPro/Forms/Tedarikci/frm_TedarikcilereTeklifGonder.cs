@@ -192,6 +192,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnTedaikcileregonder_Click(object sender, EventArgs e)
         {
+            lblTedarikciListesi.Text = "TEDARİKÇİ LİSTESİ               Arama için :  CTRL + F ";
             if (CurrentManager.Instance.CurrentOffer == null)
             {
                 return;
@@ -229,6 +230,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void btnTedarikciListesi_Click(object sender, EventArgs e)
         {
+            lblTedarikciListesi.Text = "TEDARİKÇİ LİSTESİ";
             int quantityZeroCount = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Quantity == 0).Count();
 
             if (quantityZeroCount > 0)
@@ -271,12 +273,6 @@ namespace IhalematikProUI.Forms.Tedarikci
             md.SelectedSupplierId = selectedSupplierId;
             md.ShowDialog();
             this.Enabled = true;
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-
-
         }
 
         private void frm_TedarikcilereTeklifGonder_Load(object sender, EventArgs e)

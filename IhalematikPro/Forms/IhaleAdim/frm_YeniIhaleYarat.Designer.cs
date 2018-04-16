@@ -42,7 +42,9 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.tabIhaleBilgileri = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.LastOfferDate = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
@@ -91,6 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabIhaleBilgileri)).BeginInit();
             this.tabIhaleBilgileri.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
@@ -251,9 +254,11 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.comboBoxEdit1);
             this.xtraTabPage1.Controls.Add(this.LastOfferDate);
             this.xtraTabPage1.Controls.Add(this.txtTeklifNo);
             this.xtraTabPage1.Controls.Add(this.labelControl1);
+            this.xtraTabPage1.Controls.Add(this.labelControl15);
             this.xtraTabPage1.Controls.Add(this.labelControl2);
             this.xtraTabPage1.Controls.Add(this.btnIhaleOlustur);
             this.xtraTabPage1.Controls.Add(this.labelControl4);
@@ -264,21 +269,53 @@
             this.xtraTabPage1.Size = new System.Drawing.Size(744, 262);
             this.xtraTabPage1.Text = "İhale Bilgileri";
             // 
+            // comboBoxEdit1
+            // 
+            this.comboBoxEdit1.EditValue = "Açık İhale";
+            this.comboBoxEdit1.Location = new System.Drawing.Point(118, 163);
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            "Açık İhale",
+            "Doğrudan Temin"});
+            this.comboBoxEdit1.Size = new System.Drawing.Size(345, 26);
+            this.comboBoxEdit1.TabIndex = 11;
+            // 
             // LastOfferDate
             // 
-            this.LastOfferDate.EditValue = new System.DateTime(2017, 11, 14, 14, 49, 43, 0);
+            this.LastOfferDate.EditValue = new System.DateTime(2018, 4, 16, 14, 49, 43, 0);
             this.LastOfferDate.Location = new System.Drawing.Point(115, 127);
             this.LastOfferDate.Name = "LastOfferDate";
             this.LastOfferDate.Properties.AppearanceDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.LastOfferDate.Properties.AppearanceDropDown.Options.UseBackColor = true;
             this.LastOfferDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LastOfferDate.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.LastOfferDate.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
             this.LastOfferDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LastOfferDate.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
             this.LastOfferDate.Properties.Mask.EditMask = "f";
-            this.LastOfferDate.Size = new System.Drawing.Size(597, 26);
+            this.LastOfferDate.Properties.PopupResizeMode = DevExpress.XtraEditors.Controls.ResizeMode.LiveResize;
+            this.LastOfferDate.Properties.SuppressMouseEventOnOuterMouseClick = true;
+            this.LastOfferDate.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.LastOfferDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.LastOfferDate.Size = new System.Drawing.Size(348, 26);
             this.LastOfferDate.TabIndex = 2;
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl15.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl15.Location = new System.Drawing.Point(35, 164);
+            this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(73, 19);
+            this.labelControl15.TabIndex = 9;
+            this.labelControl15.Text = "İhale Tipi:";
             // 
             // xtraTabPage2
             // 
@@ -776,6 +813,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEnd.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
+            this.dateEnd.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.dateEnd.Size = new System.Drawing.Size(134, 26);
             this.dateEnd.TabIndex = 2;
             // 
@@ -790,6 +829,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateStart.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateStart.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
+            this.dateStart.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.dateStart.Size = new System.Drawing.Size(162, 26);
             this.dateStart.TabIndex = 2;
             // 
@@ -959,6 +1000,7 @@
             this.tabIhaleBilgileri.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastOfferDate.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
@@ -1054,5 +1096,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl16;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
     }
 }

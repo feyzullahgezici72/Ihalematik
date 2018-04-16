@@ -110,8 +110,8 @@ namespace IhalematikProUI.Forms
                 Tender currentTender = CurrentManager.Instance.CurrentTender;
                 txtCarriage.Text = currentTender.Carriage.ToString("c2");
                 txtAccountingCosts.Text = currentTender.AccountingCosts.ToString("c2");
-                chckCompletionBond.Checked = currentTender.CompletionBond;
-                chckProvisionalBond.Checked = currentTender.ProvisionalBond;
+                //chckCompletionBond.Checked = currentTender.CompletionBond;
+                //chckProvisionalBond.Checked = currentTender.ProvisionalBond;
 
                 lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
                 lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
@@ -192,18 +192,18 @@ namespace IhalematikProUI.Forms
         {
             Tender tender = CurrentManager.Instance.CurrentTender;
             isciAracGirisPaneli.Visible = true;
-            txtTenderNumber.Text = string.Format("{0}", (tender.Number).ToString().PadLeft(8, '0'));
-            txtTenderDescription.Text = tender.Description;
-            txtTenderLastOfferDate.Text = tender.LastOfferDate.Value.ToShortDateString();
-            txtTenderNearlyTotalAmount.Text = tender.NearlyTotalAmount.ToString("c2");
-            txtMaterialCount.Text = tender.MaterialList.Count().ToString();
-            txtMaterialIsNonWorkshipcount.Text = tender.MaterialList.Where(p => !p.IsWorkship).Count().ToString();
-            txtMaterialWorksipCount.Text = tender.MaterialList.Where(p => p.IsWorkship).Count().ToString();
-            txtMaterialTotalAmount.Text = txtMaterialCostAmount.Text;
-            txtWorkerTotalAmount.Text = txtWorkerCostAmount.Text;
+            //txtTenderNumber.Text = string.Format("{0}", (tender.Number).ToString().PadLeft(8, '0'));
+            //txtTenderDescription.Text = tender.Description;
+            //txtTenderLastOfferDate.Text = tender.LastOfferDate.Value.ToShortDateString();
+            //txtTenderNearlyTotalAmount.Text = tender.NearlyTotalAmount.ToString("c2");
+            //txtMaterialCount.Text = tender.MaterialList.Count().ToString();
+            //txtMaterialIsNonWorkshipcount.Text = tender.MaterialList.Where(p => !p.IsWorkship).Count().ToString();
+            //txtMaterialWorksipCount.Text = tender.MaterialList.Where(p => p.IsWorkship).Count().ToString();
+            //txtMaterialTotalAmount.Text = txtMaterialCostAmount.Text;
+            //txtWorkerTotalAmount.Text = txtWorkerCostAmount.Text;
             //txtTotalMaterialAndWorkerAmount.Text = (double.Parse(txtWorkerCostAmount.Text.Replace("TL", "")) + double.Parse(txtMaterialTotalAmount.Text.Replace("TL", ""))).ToString("c2");
-            txtGeneralMarkupWorkerAmount.Text = txtMarkupWorkerAmount.Text;
-            txtTotalMarkupAmount.Text = txtMarkupAmount.Text;
+            //txtGeneralMarkupWorkerAmount.Text = txtMarkupWorkerAmount.Text;
+            //txtTotalMarkupAmount.Text = txtMarkupAmount.Text;
 
             //txtOfferTotalAmount.Text = (double.Parse(txtTotalMaterialAndWorkerAmount.Text.Replace("TL", "")) + double.Parse(txtGeneralMarkupWorkerAmount.Text.Replace("TL", "")) + double.Parse(txtTotalMarkupAmount.Text.Replace("TL", ""))).ToString("c2");
 
@@ -304,12 +304,12 @@ namespace IhalematikProUI.Forms
             txtWorkerAmount.Text = (workerMarkupAmount + workerCostAmount).ToString("c2");
             txtMarkupMaterialTotal.Text = markupMaterialAmount.ToString("c2");
             txtMarkupWorkerAmount.Text = markupWorkerAmount.ToString("c2");
-            txtMarkupAmount.Text = (markupWorkerAmount + markupMaterialAmount).ToString("c2");
+            //txtMarkupAmount.Text = (markupWorkerAmount + markupMaterialAmount).ToString("c2");
             txtTotalPersonHour.Text = totalPersonHour.ToString("c2");
             txtTotalUnitPrice.Text = totalUnitPrice.ToString("c2");
             txtDifference.Text = Math.Round((totalPersonHour - totalUnitPrice), 2).ToString("c2");
             lblTotalMarkupNonKDV.Text = this.TotalMarkupNonKDV.ToString("c2");
-            txtPanelMarkupMaterialTotal.Text = txtMarkupMaterialTotal.Text; // a.samet ekledi
+            //txtPanelMarkupMaterialTotal.Text = txtMarkupMaterialTotal.Text; // a.samet ekledi
 
             #endregion
             grdMaterialList.DataSource = null;

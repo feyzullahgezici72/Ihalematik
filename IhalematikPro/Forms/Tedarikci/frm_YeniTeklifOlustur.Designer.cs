@@ -191,7 +191,7 @@
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(577, 208);
+            this.simpleButton2.Location = new System.Drawing.Point(561, 130);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(141, 54);
@@ -216,8 +216,10 @@
             this.txtDateTime.Properties.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.True;
             this.txtDateTime.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtDateTime.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
             this.txtDateTime.Properties.Mask.EditMask = "f";
-            this.txtDateTime.Size = new System.Drawing.Size(594, 26);
+            this.txtDateTime.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.txtDateTime.Size = new System.Drawing.Size(389, 26);
             this.txtDateTime.TabIndex = 1;
             // 
             // labelControl5
@@ -237,7 +239,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(736, 290);
+            this.ClientSize = new System.Drawing.Size(736, 214);
             this.ControlBox = false;
             this.Controls.Add(this.txtDateTime);
             this.Controls.Add(this.labelControl5);

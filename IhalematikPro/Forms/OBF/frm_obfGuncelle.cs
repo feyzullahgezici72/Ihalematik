@@ -107,5 +107,13 @@ namespace IhalematikProUI.Forms
                 this.Close();
             }
         }
+
+        private void txtDescription_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                txtUnit.Focus();
+            }
+        }
     }
 }

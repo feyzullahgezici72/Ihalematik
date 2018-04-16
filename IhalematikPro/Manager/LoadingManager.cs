@@ -33,7 +33,7 @@ namespace IhalematikProUI.Manager
         }
         private void CloseProgress()
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(1200);
             try
             {
                 if (this.frm_wait.IsHandleCreated)

@@ -171,6 +171,7 @@
             this.txtDescription.Size = new System.Drawing.Size(380, 26);
             this.txtDescription.TabIndex = 1;
             this.txtDescription.EditValueChanged += new System.EventHandler(this.txtDescription_EditValueChanged);
+            this.txtDescription.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescription_KeyPress);
             // 
             // txtUnitPrice
             // 
