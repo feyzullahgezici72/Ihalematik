@@ -71,11 +71,11 @@ namespace IhalematikPro.Forms
             //model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty), CultureInfo.InvariantCulture);
             model.UnitPrice = model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty));
             model.DescriptionForSupplier = txtDescriptionForSupplier.Text;
-            List<OBF> existingOBFs = UIOBFManager.Instance.GetOBF(model.Number);
+            List<OBFModel> existingOBFs = UIOBFManager.Instance.GetOBFs(model.Description);
             if (existingOBFs != null && existingOBFs.Count != 0)
             {
                 frm_MesajFormu mf = new frm_MesajFormu();
-                mf.lblMesaj.Text = "Bu OBF numarasi ile kayit bulunmaktadir";
+                mf.lblMesaj.Text = "Bu OBF açıklaması ile kayit bulunmaktadir";
                 mf.ShowDialog();
                 this.txtNumber.Text = "";
                 this.txtNumber.Focus();

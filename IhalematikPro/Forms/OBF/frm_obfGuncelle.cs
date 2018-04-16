@@ -13,6 +13,7 @@ using IhalematikProBL.Provider;
 using IhalematikPro.Forms;
 using IhalematikPro.Model;
 using System.Globalization;
+using IhalematikPro.Manager;
 
 namespace IhalematikProUI.Forms
 {
@@ -99,12 +100,25 @@ namespace IhalematikProUI.Forms
                 //double plain = return Double.Parse("$20,000.00", cultureInfo);
                 model.UnitPrice = model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty));
                 model.DescriptionForSupplier = txtDescriptionForSupplier.Text;
-                model.Save();
-                frm_MesajFormu mf = new frm_MesajFormu();
-                mf.lblMesaj.Text = "Kayıt Güncellendi...";
-                mf.ShowDialog();
-                this._owner.LoadGrid();
-                this.Close();
+
+                List<OBFModel> existingOBFs = UIOBFManager.Instance.GetOBFs(model.Description);
+                if (existingOBFs != null && existingOBFs.Count != 0)
+                {
+                    frm_MesajFormu mf = new frm_MesajFormu();
+                    mf.lblMesaj.Text = "Bu OBF açıklaması ile kayit bulunmaktadir";
+                    mf.ShowDialog();
+                    this.txtNumber.Text = "";
+                    this.txtNumber.Focus();
+                }
+                else
+                {
+                    model.Save();
+                    frm_MesajFormu mf = new frm_MesajFormu();
+                    mf.lblMesaj.Text = "Kayıt Güncellendi...";
+                    mf.ShowDialog();
+                    this._owner.LoadGrid();
+                    this.Close();
+                }
             }
         }
 
