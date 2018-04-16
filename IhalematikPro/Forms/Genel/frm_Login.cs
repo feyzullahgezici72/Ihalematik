@@ -56,6 +56,7 @@ namespace IhalematikProUI.Forms.Genel
             if (member != null)
             {
                 CurrentManager.Instance.CurrentMember = member;
+                CurrentManager.Instance.CurrentMember.UserName = userName;
                 frm_Anaform af = new frm_Anaform();
                 this.Hide();
                 af.ShowDialog();

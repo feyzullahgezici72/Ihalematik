@@ -142,6 +142,7 @@ namespace IhalematikPro.Forms
                     this.logoName = Guid.NewGuid().ToString() + filename;
                     System.IO.File.Copy(dialog.FileName, path + "\\EmailFile\\Images\\Logo\\" + this.logoName);
                     picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + this.logoName);
+                    CurrentManager.Instance.CurrentCompany.LogoPath = this.logoName;
                     //picLogo.Image.
                     //this.logoName = Guid.NewGuid().ToString() + filename;
                 }
