@@ -89,7 +89,14 @@ namespace IhalematikPro.Forms
                     {
                         path = Application.StartupPath.Substring(0, (Application.StartupPath.Length));
                     }
-                    picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
+                    try
+                    {
+                        picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
+                    }
+                    catch (Exception)
+                    {
+                        
+                    }
                 }
                 else
                 {

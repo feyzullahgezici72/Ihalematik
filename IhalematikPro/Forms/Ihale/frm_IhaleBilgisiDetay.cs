@@ -64,6 +64,7 @@ namespace IhalematikProUI.Forms
             txtProcedure.Text = this.Tender.Procedure;
             txtPlace.Text = this.Tender.Place;
             txtManagement.Text = this.Tender.Management;
+            ddlTenderType.SelectedIndex = (int)this.Tender.TenderType;
 
             if (this.Tender.MaterialList == null || this.Tender.MaterialList.Count == 0 )
             {
@@ -91,6 +92,14 @@ namespace IhalematikProUI.Forms
                 this.Tender.Procedure = txtProcedure.Text;
                 this.Tender.Place = txtPlace.Text;
                 this.Tender.Management = txtManagement.Text;
+                if (ddlTenderType.SelectedIndex == 0)
+                {
+                    this.Tender.TenderType = IhalematikProBL.Enum.TenderTypeEnum.Open;
+                }
+                else if (ddlTenderType.SelectedIndex == 1)
+                {
+                    this.Tender.TenderType = IhalematikProBL.Enum.TenderTypeEnum.DirectSupply;
+                }
                 OperationResult res = TenderProvider.Instance.Save(this.Tender);
                 if (res.Success)
                 {

@@ -65,6 +65,14 @@ namespace IhalematikPro.Forms
                 tender.Place = txtPlace.Text;
                 tender.Management = txtManagement.Text;
                 tender.IsActive = true;
+                if (ddlTenderType.SelectedIndex == 0)
+                {
+                    tender.TenderType = IhalematikProBL.Enum.TenderTypeEnum.Open;
+                }
+                else if (ddlTenderType.SelectedIndex == 1)
+                {
+                    tender.TenderType = IhalematikProBL.Enum.TenderTypeEnum.DirectSupply;
+                }
                 bool result = TenderManager.Instance.Save(tender);
                 if (!result)
                 {

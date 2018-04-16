@@ -1,4 +1,5 @@
-﻿using IhalematikProBL.Manager;
+﻿using IhalematikProBL.Enum;
+using IhalematikProBL.Manager;
 using IhalematikProBL.Provider;
 using System;
 using System.Collections.Generic;
@@ -48,6 +49,8 @@ namespace IhalematikProBL.Entity
         public string Management { get; set; }
 
         public double NearlyTotalAmount { get; set; }
+
+        public TenderTypeEnum TenderType { get; set; }
 
         private List<TenderEquipment> equipments { get; set; }
         public List<TenderEquipment> Equipments

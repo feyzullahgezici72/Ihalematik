@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Collections;
 using SimpleApplicationBase.Toolkit;
 using SimpleApplicationBase.BL.Base;
+using IhalematikProBL.Enum;
 
 namespace IhalematikProBL.Provider
 {
@@ -34,6 +35,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("CompletionBond", t.CompletionBond);
             parameters.Add("ProvisionalBond", t.ProvisionalBond);
             parameters.Add("PersonHour", t.PersonHour);
+            parameters.Add("TenderType", t.TenderType);
 
             return parameters;
         }
@@ -59,6 +61,7 @@ namespace IhalematikProBL.Provider
             t.CompletionBond = dr.GetValue<bool>("CompletionBond");
             t.ProvisionalBond = dr.GetValue<bool>("ProvisionalBond");
             t.PersonHour = dr.GetValue<bool>("PersonHour");
+            t.TenderType = dr.GetValue<TenderTypeEnum>("TenderType");
         }
     }
 }
