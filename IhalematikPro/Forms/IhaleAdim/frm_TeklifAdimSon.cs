@@ -35,6 +35,8 @@ namespace IhalematikProUI.Forms
         private double TotalMarkupNonKDV = 0;
 
         private double OtherTotalAmount = 0;
+
+        public double OtherCost { get; set; }
         public frm_TeklifAdimSon()
         {
             InitializeComponent();
@@ -186,8 +188,9 @@ namespace IhalematikProUI.Forms
             List<OtherExpenses> otherExpenses = OtherExpensesProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
             //if (otherExpenses.Count != 0)
             //{
-            txtOtherCoast.Text = otherExpenses.Sum(p => p.Price).ToString("c2");
-            txtLeftPanelOtherCoast.Text = otherExpenses.Sum(p => p.Price).ToString("c2");
+            this.OtherCost = otherExpenses.Sum(p => p.Price);
+            txtOtherCoast.Text = this.OtherCost.ToString("c2");
+            txtLeftPanelOtherCoast.Text = this.OtherCost.ToString("c2");
 
             //}
         }
@@ -230,6 +233,7 @@ namespace IhalematikProUI.Forms
             IhalematikProBL.Entity.Rule completionBond = RuleProvider.Instance.GetItems("Code", "CompletionBond").FirstOrDefault();
             IhalematikProBL.Entity.Rule tradingStamps = RuleProvider.Instance.GetItems("Code", "TradingStamps").FirstOrDefault();
 
+            double KDVTefkifat = 0;
             double carriage = double.Parse(string.IsNullOrEmpty(txtCarriage.Text) ? "0" : txtCarriage.Text.Replace("TL", string.Empty));
             double accountingCosts = 0;
             if (currentTender.TenderType == TenderTypeEnum.DirectSupply)
@@ -238,12 +242,12 @@ namespace IhalematikProUI.Forms
             }
             else
             {
-                double KDVTefkifat = this.TotalMarkupNonKDV * 0.18 / 10 * 3;
+                KDVTefkifat = this.TotalMarkupNonKDV * 0.18 / 10 * 3;
                 accountingCosts = (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(provisionalBond.Value) / 100) + (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 100) +
                     (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(tradingStamps.Value) / 100) + KDVTefkifat;
-                txtKDVTefkifat.Text = KDVTefkifat.ToString("c2");
+
             }
-            txtAccountingCosts.Text = accountingCosts.ToString("c2");
+
 
             double otherCosts = double.Parse(string.IsNullOrEmpty(txtOtherCoast.Text) ? "0" : txtOtherCoast.Text.Replace("TL", string.Empty));
 
@@ -310,15 +314,30 @@ namespace IhalematikProUI.Forms
 
             #region LeftPanelValues
             totalAmount = materialCostAmount + materialkdvTotalAmount;
+
+
             txtMaterialCostAmount.Text = materialCostAmount.ToString("c2");
-            txtMaterialkdvTotalAmount.Text = materialkdvTotalAmount.ToString("c2");
-            txtTotalAmount.Text = totalAmount.ToString("c2");
             txtWorkerCostAmount.Text = workerCostAmount.ToString("c2");
+            txtAccountingCosts.Text = accountingCosts.ToString("c2");
+            txtKDVTefkifat.Text = KDVTefkifat.ToString("c2");
+            txtLeftPanelCarriage.Text = CurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
+            //double otherCost = double.Parse(txtLeftPanelOtherCoast.Text);
+            txtTotalAmount.Text = (materialCostAmount + workerCostAmount + accountingCosts + CurrentManager.Instance.CurrentTender.Carriage + KDVTefkifat + this.OtherCost).ToString("c2");
+
+
             double workerMarkupAmount = Math.Round((workerCostAmount * 18 / 100), 2);
-            txtWorkerKDVAmount.Text = workerMarkupAmount.ToString("c2");
-            txtWorkerAmount.Text = (workerMarkupAmount + workerCostAmount).ToString("c2");
             txtMarkupMaterialTotal.Text = markupMaterialAmount.ToString("c2");
             txtMarkupWorkerAmount.Text = markupWorkerAmount.ToString("c2");
+            txtTotalRisk.Text = totalRisk.ToString("c2");
+            txtTotalMarkupAmount.Text = (markupMaterialAmount + markupWorkerAmount + totalRisk).ToString("c2");
+
+
+
+            txtMaterialkdvTotalAmount.Text = materialkdvTotalAmount.ToString("c2");
+            txtWorkerKDVAmount.Text = workerMarkupAmount.ToString("c2");
+            txtKDVToplam.Text = (materialkdvTotalAmount + workerMarkupAmount).ToString("c2");
+            
+
             //txtMarkupAmount.Text = (markupWorkerAmount + markupMaterialAmount).ToString("c2");
             txtTotalPersonHour.Text = totalPersonHour.ToString("c2");
             txtTotalUnitPrice.Text = totalUnitPrice.ToString("c2");

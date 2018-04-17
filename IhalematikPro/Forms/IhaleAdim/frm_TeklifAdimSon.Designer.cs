@@ -83,13 +83,13 @@
             this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
             this.txtMaterialkdvTotalAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.txtKDVToplam = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtWorkerKDVAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl8 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.txtWorkerAmount = new DevExpress.XtraEditors.TextEdit();
+            this.txtTotalMarkupAmount = new DevExpress.XtraEditors.TextEdit();
             this.txtMarkupMaterialTotal = new DevExpress.XtraEditors.TextEdit();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
@@ -144,11 +144,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).BeginInit();
             this.groupControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaterialkdvTotalAmount.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKDVToplam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWorkerKDVAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl8)).BeginInit();
             this.groupControl8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWorkerAmount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalMarkupAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMarkupMaterialTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalRisk.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMarkupWorkerAmount.Properties)).BeginInit();
@@ -188,7 +188,7 @@
             this.panelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelControl5.Location = new System.Drawing.Point(789, 0);
-            this.panelControl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl5.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl5.Name = "panelControl5";
             this.panelControl5.Size = new System.Drawing.Size(274, 24);
             this.panelControl5.TabIndex = 17;
@@ -200,7 +200,7 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2);
             this.pcWorld.Name = "pcWorld";
             this.pcWorld.Size = new System.Drawing.Size(33, 24);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -244,7 +244,7 @@
             this.btnCalc.Location = new System.Drawing.Point(2, 73);
             this.btnCalc.LookAndFeel.SkinName = "London Liquid Sky";
             this.btnCalc.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnCalc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCalc.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalc.Name = "btnCalc";
             this.btnCalc.Size = new System.Drawing.Size(163, 24);
             this.btnCalc.TabIndex = 17;
@@ -706,7 +706,7 @@
             this.gridSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridSplitContainer1.Grid = this.grdMaterialList;
             this.gridSplitContainer1.Location = new System.Drawing.Point(0, 73);
-            this.gridSplitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridSplitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.gridSplitContainer1.Name = "gridSplitContainer1";
             this.gridSplitContainer1.Panel1.Controls.Add(this.grdMaterialList);
             this.gridSplitContainer1.Panel1.Controls.Add(this.panel1);
@@ -740,7 +740,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl2.Location = new System.Drawing.Point(341, 0);
             this.groupControl2.LookAndFeel.SkinName = "London Liquid Sky";
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(293, 99);
             this.groupControl2.TabIndex = 59;
@@ -809,7 +809,7 @@
             this.labelControl18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl18.Location = new System.Drawing.Point(10, 34);
-            this.labelControl18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl18.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(69, 13);
             this.labelControl18.TabIndex = 42;
@@ -820,7 +820,7 @@
             this.labelControl37.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl37.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl37.Location = new System.Drawing.Point(11, 56);
-            this.labelControl37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl37.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl37.Name = "labelControl37";
             this.labelControl37.Size = new System.Drawing.Size(69, 13);
             this.labelControl37.TabIndex = 46;
@@ -1053,7 +1053,7 @@
             this.isciAracGirisPaneli.Location = new System.Drawing.Point(0, 0);
             this.isciAracGirisPaneli.LookAndFeel.SkinName = "London Liquid Sky";
             this.isciAracGirisPaneli.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.isciAracGirisPaneli.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.isciAracGirisPaneli.Margin = new System.Windows.Forms.Padding(2);
             this.isciAracGirisPaneli.Name = "isciAracGirisPaneli";
             this.isciAracGirisPaneli.Size = new System.Drawing.Size(211, 455);
             this.isciAracGirisPaneli.TabIndex = 35;
@@ -1067,7 +1067,7 @@
             this.groupControl7.CaptionLocation = DevExpress.Utils.Locations.Top;
             this.groupControl7.Controls.Add(this.txtMaterialkdvTotalAmount);
             this.groupControl7.Controls.Add(this.labelControl8);
-            this.groupControl7.Controls.Add(this.textEdit5);
+            this.groupControl7.Controls.Add(this.txtKDVToplam);
             this.groupControl7.Controls.Add(this.labelControl3);
             this.groupControl7.Controls.Add(this.txtWorkerKDVAmount);
             this.groupControl7.Controls.Add(this.labelControl5);
@@ -1105,22 +1105,22 @@
             this.labelControl8.TabIndex = 16;
             this.labelControl8.Text = "Malzeme :";
             // 
-            // textEdit5
+            // txtKDVToplam
             // 
-            this.textEdit5.Location = new System.Drawing.Point(80, 79);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textEdit5.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit5.Properties.Appearance.Options.UseFont = true;
-            this.textEdit5.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textEdit5.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.textEdit5.Properties.Mask.EditMask = "c";
-            this.textEdit5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEdit5.Properties.ReadOnly = true;
-            this.textEdit5.Size = new System.Drawing.Size(113, 20);
-            this.textEdit5.TabIndex = 18;
-            this.textEdit5.TabStop = false;
+            this.txtKDVToplam.Location = new System.Drawing.Point(80, 79);
+            this.txtKDVToplam.Name = "txtKDVToplam";
+            this.txtKDVToplam.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtKDVToplam.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKDVToplam.Properties.Appearance.Options.UseBackColor = true;
+            this.txtKDVToplam.Properties.Appearance.Options.UseFont = true;
+            this.txtKDVToplam.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtKDVToplam.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtKDVToplam.Properties.Mask.EditMask = "c";
+            this.txtKDVToplam.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtKDVToplam.Properties.ReadOnly = true;
+            this.txtKDVToplam.Size = new System.Drawing.Size(113, 20);
+            this.txtKDVToplam.TabIndex = 18;
+            this.txtKDVToplam.TabStop = false;
             // 
             // labelControl3
             // 
@@ -1166,7 +1166,7 @@
             this.groupControl8.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl8.CaptionImage")));
             this.groupControl8.CaptionLocation = DevExpress.Utils.Locations.Top;
             this.groupControl8.Controls.Add(this.labelControl13);
-            this.groupControl8.Controls.Add(this.txtWorkerAmount);
+            this.groupControl8.Controls.Add(this.txtTotalMarkupAmount);
             this.groupControl8.Controls.Add(this.txtMarkupMaterialTotal);
             this.groupControl8.Controls.Add(this.labelControl21);
             this.groupControl8.Controls.Add(this.labelControl12);
@@ -1175,7 +1175,7 @@
             this.groupControl8.Controls.Add(this.txtMarkupWorkerAmount);
             this.groupControl8.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl8.Location = new System.Drawing.Point(2, 193);
-            this.groupControl8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl8.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl8.Name = "groupControl8";
             this.groupControl8.Size = new System.Drawing.Size(207, 130);
             this.groupControl8.TabIndex = 56;
@@ -1191,22 +1191,22 @@
             this.labelControl13.TabIndex = 23;
             this.labelControl13.Text = "Toplam:";
             // 
-            // txtWorkerAmount
+            // txtTotalMarkupAmount
             // 
-            this.txtWorkerAmount.Location = new System.Drawing.Point(80, 99);
-            this.txtWorkerAmount.Name = "txtWorkerAmount";
-            this.txtWorkerAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtWorkerAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtWorkerAmount.Properties.Appearance.Options.UseBackColor = true;
-            this.txtWorkerAmount.Properties.Appearance.Options.UseFont = true;
-            this.txtWorkerAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtWorkerAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtWorkerAmount.Properties.Mask.EditMask = "c";
-            this.txtWorkerAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtWorkerAmount.Properties.ReadOnly = true;
-            this.txtWorkerAmount.Size = new System.Drawing.Size(113, 20);
-            this.txtWorkerAmount.TabIndex = 17;
-            this.txtWorkerAmount.TabStop = false;
+            this.txtTotalMarkupAmount.Location = new System.Drawing.Point(80, 99);
+            this.txtTotalMarkupAmount.Name = "txtTotalMarkupAmount";
+            this.txtTotalMarkupAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtTotalMarkupAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTotalMarkupAmount.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTotalMarkupAmount.Properties.Appearance.Options.UseFont = true;
+            this.txtTotalMarkupAmount.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtTotalMarkupAmount.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTotalMarkupAmount.Properties.Mask.EditMask = "c";
+            this.txtTotalMarkupAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtTotalMarkupAmount.Properties.ReadOnly = true;
+            this.txtTotalMarkupAmount.Size = new System.Drawing.Size(113, 20);
+            this.txtTotalMarkupAmount.TabIndex = 17;
+            this.txtTotalMarkupAmount.TabStop = false;
             // 
             // txtMarkupMaterialTotal
             // 
@@ -1311,7 +1311,7 @@
             this.groupControl6.Controls.Add(this.txtMaterialCostAmount);
             this.groupControl6.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl6.Location = new System.Drawing.Point(2, 2);
-            this.groupControl6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl6.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl6.Name = "groupControl6";
             this.groupControl6.Size = new System.Drawing.Size(207, 191);
             this.groupControl6.TabIndex = 54;
@@ -1565,12 +1565,12 @@
             this.groupControl7.ResumeLayout(false);
             this.groupControl7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaterialkdvTotalAmount.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKDVToplam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWorkerKDVAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl8)).EndInit();
             this.groupControl8.ResumeLayout(false);
             this.groupControl8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWorkerAmount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalMarkupAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMarkupMaterialTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalRisk.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMarkupWorkerAmount.Properties)).EndInit();
@@ -1627,7 +1627,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.TextEdit txtMarkupWorkerAmount;
         private DevExpress.XtraEditors.TextEdit txtMarkupMaterialTotal;
-        private DevExpress.XtraEditors.TextEdit txtWorkerAmount;
+        private DevExpress.XtraEditors.TextEdit txtTotalMarkupAmount;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtWorkerCostAmount;
         private DevExpress.XtraEditors.TextEdit txtTotalAmount;
@@ -1668,7 +1668,7 @@
         private DevExpress.XtraEditors.GroupControl groupControl7;
         private DevExpress.XtraEditors.TextEdit txtMaterialkdvTotalAmount;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit txtKDVToplam;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtWorkerKDVAmount;
         private DevExpress.XtraEditors.LabelControl labelControl5;
