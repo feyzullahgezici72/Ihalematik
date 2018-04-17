@@ -32,7 +32,7 @@ namespace IhalematikProUI.Forms
     {
         public List<MaterialListModel> DataSource { get; set; }
 
-        private double TotalMarkupNonKDV = 0;
+        private double TotalMarkupNonKDVPreview = 0;
 
         private double OtherTotalAmount = 0;
 
@@ -227,7 +227,7 @@ namespace IhalematikProUI.Forms
         {
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
             this.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-            this.TotalMarkupNonKDV = this.DataSource.Sum(p => p.TotalFare);
+            this.TotalMarkupNonKDVPreview = this.DataSource.Sum(p => p.TotalFare);
             Tender currentTender = CurrentManager.Instance.CurrentTender;
             IhalematikProBL.Entity.Rule provisionalBond = RuleProvider.Instance.GetItems("Code", "ProvisionalBond").FirstOrDefault();
             IhalematikProBL.Entity.Rule completionBond = RuleProvider.Instance.GetItems("Code", "CompletionBond").FirstOrDefault();
@@ -238,13 +238,13 @@ namespace IhalematikProUI.Forms
             double accountingCosts = 0;
             if (currentTender.TenderType == TenderTypeEnum.DirectSupply)
             {
-                accountingCosts = (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 100);
+                accountingCosts = (this.TotalMarkupNonKDVPreview * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 100);
             }
             else
             {
-                KDVTefkifat = this.TotalMarkupNonKDV * 0.18 / 10 * 3;
-                accountingCosts = (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(provisionalBond.Value) / 100) + (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 100) +
-                    (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(tradingStamps.Value) / 100) + KDVTefkifat;
+                KDVTefkifat = this.TotalMarkupNonKDVPreview * 0.18 / 10 * 3;
+                accountingCosts = (this.TotalMarkupNonKDVPreview * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(provisionalBond.Value) / 100) + (this.TotalMarkupNonKDVPreview * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 100) +
+                    (this.TotalMarkupNonKDVPreview * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(tradingStamps.Value) / 100) + KDVTefkifat;
 
             }
 
@@ -254,7 +254,7 @@ namespace IhalematikProUI.Forms
             currentTender.Carriage = carriage;
             currentTender.AccountingCosts = accountingCosts;
             this.OtherTotalAmount = accountingCosts + otherCosts;
-            double increaseAmount = (this.OtherTotalAmount / this.TotalMarkupNonKDV);
+            double increaseAmount = (this.OtherTotalAmount / this.TotalMarkupNonKDVPreview);
             double totalMarkupZeroCarriage = this.DataSource.Where(p => p.CarriagePercent == 0).Sum(p => p.TotalFare);
             double otherCarriageZeroAmountPercent = this.DataSource.Sum(p => p.CarriagePercent);
             double increaseZeroCarriage = (carriage * (100 - otherCarriageZeroAmountPercent) / 100 / totalMarkupZeroCarriage);
@@ -267,11 +267,12 @@ namespace IhalematikProUI.Forms
 
             //birim fiyat unittotalFare
             //Toplam fiyat TotalFare
-            this.TotalMarkupNonKDV = 0;
+            this.TotalMarkupNonKDVPreview = 0;
 
 
             #region LeftPanelValues
-            this.TotalMarkupNonKDV = 0;
+            this.TotalMarkupNonKDVPreview = 0;
+            double TotalMarkupNonKDV = 0;
             double materialCostAmount = 0; // Malzeme Maliyet fiyat
             double materialkdvTotalAmount = 0; // Malzeme Toplam KDV
             double totalAmount = 0; // Malzeme Toplam Fiyat
@@ -301,7 +302,8 @@ namespace IhalematikProUI.Forms
                     item.UnitTotalFarePreview = (item.UnitTotalFare + increaseOtherFare);
                 }
 
-                this.TotalMarkupNonKDV += item.TotalFarePreview;
+                this.TotalMarkupNonKDVPreview += item.TotalFarePreview;
+                TotalMarkupNonKDV += item.UnitTotalFare;
                 materialCostAmount += item.PozOBFUnitPrice * item.Quantity;
                 materialkdvTotalAmount += item.KDVAmount;
                 workerCostAmount += item.CustomWorkerTotalAmount;
@@ -309,7 +311,7 @@ namespace IhalematikProUI.Forms
                 markupWorkerAmount += item.TotalCustomWorkerMarkupPrice;// * (item.Markup / 100);
                 totalPersonHour += Math.Round(item.TotalWorkerMarkup, 2);
                 totalUnitPrice += Math.Round(item.TotalCustomWorkerMarkupPrice, 2);
-                totalRisk += Math.Round(item.UnitRisk, 2);
+                totalRisk += Math.Round(item.UnitRisk * item.Quantity, 2);
             }
 
             #region LeftPanelValues
@@ -336,27 +338,27 @@ namespace IhalematikProUI.Forms
             txtMaterialkdvTotalAmount.Text = materialkdvTotalAmount.ToString("c2");
             txtWorkerKDVAmount.Text = workerMarkupAmount.ToString("c2");
             txtKDVToplam.Text = (materialkdvTotalAmount + workerMarkupAmount).ToString("c2");
-            
+
 
             //txtMarkupAmount.Text = (markupWorkerAmount + markupMaterialAmount).ToString("c2");
             txtTotalPersonHour.Text = totalPersonHour.ToString("c2");
             txtTotalUnitPrice.Text = totalUnitPrice.ToString("c2");
             txtDifference.Text = Math.Round((totalPersonHour - totalUnitPrice), 2).ToString("c2");
-            lblTotalMarkupNonKDV.Text = this.TotalMarkupNonKDV.ToString("c2");
+            lblTotalMarkupNonKDV.Text = this.TotalMarkupNonKDVPreview.ToString("c2");
             //txtPanelMarkupMaterialTotal.Text = txtMarkupMaterialTotal.Text; // a.samet ekledi
 
             #endregion
             grdMaterialList.DataSource = null;
             grdMaterialList.DataSource = this.DataSource;
 
-            lblTotalMarkupNonKDV.Text = this.TotalMarkupNonKDV.ToString("c2");
-
+            lblTotalMarkupNonKDV.Text = this.TotalMarkupNonKDVPreview.ToString("c2");
+            lblbeforeTotalMarkupNonKDV.Text -
             TenderProvider.Instance.Save(currentTender);
         }
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void frm_TeklifAdimSon_Load(object sender, EventArgs e)
