@@ -106,7 +106,6 @@ namespace IhalematikProUI.Forms
         private void frm_TeklifAdimSon_Shown(object sender, EventArgs e)
         {
             this.Enabled = false;
-            LoadingManager.Instance.Show(this);
             if (CurrentManager.Instance.CurrentTender != null)
             {
                 Tender currentTender = CurrentManager.Instance.CurrentTender;
@@ -126,7 +125,6 @@ namespace IhalematikProUI.Forms
                 colUnitTotalFare.Visible = true;
                 colTotalFare.Visible = true;
             }
-            LoadingManager.Instance.Hide(); ;
             this.Enabled = true;
         }
 
@@ -225,6 +223,7 @@ namespace IhalematikProUI.Forms
 
         private void LoadGrid()
         {
+            LoadingManager.Instance.Show(this);
             List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
             this.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             this.TotalMarkupNonKDVPreview = this.DataSource.Sum(p => p.TotalFare);
@@ -314,9 +313,12 @@ namespace IhalematikProUI.Forms
                 totalRisk += Math.Round(item.UnitRisk * item.Quantity, 2);
             }
 
+            LoadingManager.Instance.Hide();
+            grdMaterialList.DataSource = null;
+            grdMaterialList.DataSource = this.DataSource;
+
             #region LeftPanelValues
             totalAmount = materialCostAmount + materialkdvTotalAmount;
-
 
             txtMaterialCostAmount.Text = materialCostAmount.ToString("c2");
             txtWorkerCostAmount.Text = workerCostAmount.ToString("c2");
@@ -325,20 +327,15 @@ namespace IhalematikProUI.Forms
             txtLeftPanelCarriage.Text = CurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
             //double otherCost = double.Parse(txtLeftPanelOtherCoast.Text);
             txtTotalAmount.Text = (materialCostAmount + workerCostAmount + accountingCosts + CurrentManager.Instance.CurrentTender.Carriage + this.OtherCost).ToString("c2");
-
-
             double workerMarkupAmount = Math.Round((workerCostAmount * 18 / 100), 2);
             txtMarkupMaterialTotal.Text = markupMaterialAmount.ToString("c2");
             txtMarkupWorkerAmount.Text = markupWorkerAmount.ToString("c2");
             txtTotalRisk.Text = totalRisk.ToString("c2");
             txtTotalMarkupAmount.Text = (markupMaterialAmount + markupWorkerAmount + totalRisk).ToString("c2");
-
-
-
+            
             txtMaterialkdvTotalAmount.Text = materialkdvTotalAmount.ToString("c2");
             txtWorkerKDVAmount.Text = workerMarkupAmount.ToString("c2");
             txtKDVToplam.Text = (materialkdvTotalAmount + workerMarkupAmount).ToString("c2");
-
 
             //txtMarkupAmount.Text = (markupWorkerAmount + markupMaterialAmount).ToString("c2");
             txtTotalPersonHour.Text = totalPersonHour.ToString("c2");
@@ -348,9 +345,6 @@ namespace IhalematikProUI.Forms
             //txtPanelMarkupMaterialTotal.Text = txtMarkupMaterialTotal.Text; // a.samet ekledi
 
             #endregion
-            grdMaterialList.DataSource = null;
-            grdMaterialList.DataSource = this.DataSource;
-
             lblTotalMarkupNonKDV.Text = this.TotalMarkupNonKDVPreview.ToString("c2");
             lblbeforeTotalMarkupNonKDV.Text = TotalMarkupNonKDV.ToString("c2");
             TenderProvider.Instance.Save(currentTender);
