@@ -324,7 +324,7 @@ namespace IhalematikProUI.Forms
             txtKDVTefkifat.Text = KDVTefkifat.ToString("c2");
             txtLeftPanelCarriage.Text = CurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
             //double otherCost = double.Parse(txtLeftPanelOtherCoast.Text);
-            txtTotalAmount.Text = (materialCostAmount + workerCostAmount + accountingCosts + CurrentManager.Instance.CurrentTender.Carriage + KDVTefkifat + this.OtherCost).ToString("c2");
+            txtTotalAmount.Text = (materialCostAmount + workerCostAmount + accountingCosts + CurrentManager.Instance.CurrentTender.Carriage + this.OtherCost).ToString("c2");
 
 
             double workerMarkupAmount = Math.Round((workerCostAmount * 18 / 100), 2);
