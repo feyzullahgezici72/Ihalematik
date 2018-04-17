@@ -303,7 +303,7 @@ namespace IhalematikProUI.Forms
                 }
 
                 this.TotalMarkupNonKDVPreview += item.TotalFarePreview;
-                TotalMarkupNonKDV += item.UnitTotalFare;
+                TotalMarkupNonKDV += item.TotalFare;
                 materialCostAmount += item.PozOBFUnitPrice * item.Quantity;
                 materialkdvTotalAmount += item.KDVAmount;
                 workerCostAmount += item.CustomWorkerTotalAmount;
