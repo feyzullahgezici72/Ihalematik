@@ -109,7 +109,9 @@ namespace IhalematikProUI.Forms
             {
                 Tender currentTender = CurrentManager.Instance.CurrentTender;
                 txtCarriage.Text = currentTender.Carriage.ToString("c2");
+                txtLeftPanelCarriage.Text = currentTender.Carriage.ToString("c2");
                 txtAccountingCosts.Text = currentTender.AccountingCosts.ToString("c2");
+
                 //chckCompletionBond.Checked = currentTender.CompletionBond;
                 //chckProvisionalBond.Checked = currentTender.ProvisionalBond;
 
@@ -185,6 +187,8 @@ namespace IhalematikProUI.Forms
             //if (otherExpenses.Count != 0)
             //{
             txtOtherCoast.Text = otherExpenses.Sum(p => p.Price).ToString("c2");
+            txtLeftPanelOtherCoast.Text = otherExpenses.Sum(p => p.Price).ToString("c2");
+
             //}
         }
 
@@ -234,8 +238,10 @@ namespace IhalematikProUI.Forms
             }
             else
             {
+                double KDVTefkifat = this.TotalMarkupNonKDV * 0.18 / 10 * 3;
                 accountingCosts = (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(provisionalBond.Value) / 100) + (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 100) +
-                    (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(tradingStamps.Value) / 100) + (this.TotalMarkupNonKDV * 0.18 / 10 * 3 /*KDV tefkifat*/);
+                    (this.TotalMarkupNonKDV * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(tradingStamps.Value) / 100) + KDVTefkifat;
+                txtKDVTefkifat.Text = KDVTefkifat.ToString("c2");
             }
             txtAccountingCosts.Text = accountingCosts.ToString("c2");
 
@@ -266,6 +272,7 @@ namespace IhalematikProUI.Forms
             double materialkdvTotalAmount = 0; // Malzeme Toplam KDV
             double totalAmount = 0; // Malzeme Toplam Fiyat
             double workerCostAmount = 0; // Malzeme Maliyet fiyat
+            double totalRisk = 0; // RiskToplami;
             //Kar Toplamlari
             double markupMaterialAmount = 0;
             double markupWorkerAmount = 0;
@@ -298,6 +305,7 @@ namespace IhalematikProUI.Forms
                 markupWorkerAmount += item.TotalCustomWorkerMarkupPrice;// * (item.Markup / 100);
                 totalPersonHour += Math.Round(item.TotalWorkerMarkup, 2);
                 totalUnitPrice += Math.Round(item.TotalCustomWorkerMarkupPrice, 2);
+                totalRisk += Math.Round(item.UnitRisk, 2);
             }
 
             #region LeftPanelValues
@@ -353,6 +361,7 @@ namespace IhalematikProUI.Forms
         public void SetCarriageValue()
         {
             txtCarriage.Text = CurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
+            txtLeftPanelCarriage.Text = CurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
         }
 
         private void groupControl5_Paint(object sender, PaintEventArgs e)
