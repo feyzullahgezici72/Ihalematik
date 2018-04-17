@@ -352,7 +352,7 @@ namespace IhalematikProUI.Forms
             grdMaterialList.DataSource = this.DataSource;
 
             lblTotalMarkupNonKDV.Text = this.TotalMarkupNonKDVPreview.ToString("c2");
-            lblbeforeTotalMarkupNonKDV.Text -
+            lblbeforeTotalMarkupNonKDV.Text = TotalMarkupNonKDV.ToString("c2");
             TenderProvider.Instance.Save(currentTender);
         }
 
