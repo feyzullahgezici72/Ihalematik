@@ -1778,9 +1778,11 @@ namespace IhalematikPro.Forms
             // 
             // ribbonPage2
             // 
+            this.ribbonPage2.Appearance.BackColor = System.Drawing.Color.Gray;
             this.ribbonPage2.Appearance.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.ribbonPage2.Appearance.FontStyleDelta = System.Drawing.FontStyle.Bold;
             this.ribbonPage2.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.ribbonPage2.Appearance.Options.UseBackColor = true;
             this.ribbonPage2.Appearance.Options.UseFont = true;
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup17,

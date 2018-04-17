@@ -356,15 +356,7 @@ namespace IhalematikProUI.Forms
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
-            try
-            {
-                System.Diagnostics.Process.Start("calc.exe");
-            }
-            catch (Exception)
-            {
-
-                MessageBox.Show("Hesap Makinesi Yüklü değil...");
-            }
+          
         }
 
         private void frm_TeklifAdimSon_Load(object sender, EventArgs e)
