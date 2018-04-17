@@ -910,7 +910,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem32_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Devexpress Style"; //""; //"Lilian";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2010 Blue"; //""; //"Lilian";
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
