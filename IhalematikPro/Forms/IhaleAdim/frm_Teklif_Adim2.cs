@@ -158,8 +158,10 @@ namespace IhalematikPro.Forms
         {
             if (this.SelectedGroupId != 0 && CurrentManager.Instance.CurrentTender.MaterialList != null)
             {
+                LoadingManager.Instance.Show(this);
                 List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
                 List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+                LoadingManager.Instance.Hide();
                 grdMaterialListNonWorkship.DataSource = models;
                 this.CalculateTotalMarkup();
             }
@@ -179,12 +181,11 @@ namespace IhalematikPro.Forms
         private void frm_Teklif_Adim2_Shown(object sender, EventArgs e)
         {
             this.Enabled = false;
-            LoadingManager.Instance.Show(this);
+           
             bindingSourceMaterialListNonWorkship.DataSource = typeof(List<MaterialListModel>);
             grdMaterialListNonWorkship.DataSource = bindingSourceMaterialListNonWorkship;
             this.LoadTenderGroupGrid();
             this.CalculateTotalMarkup();
-            LoadingManager.Instance.Hide();;
             this.Enabled = true;
         }
 

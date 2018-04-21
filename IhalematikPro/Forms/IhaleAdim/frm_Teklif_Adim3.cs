@@ -236,8 +236,11 @@ namespace IhalematikPro.Forms
         {
             if (this.SelectedGroupId != 0 && CurrentManager.Instance.CurrentTender.MaterialList != null)
             {
+                LoadingManager.Instance.Show(this);
+
                 List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
                 List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
+                LoadingManager.Instance.Hide();
                 grdMaterialListIsWorkship.DataSource = models;
                 gridViewMaterialListIsWorkship.FocusedRowHandle = this.FocusedRowHandle;
 
@@ -259,10 +262,8 @@ namespace IhalematikPro.Forms
         private void frm_Teklif_Adim3_Shown(object sender, EventArgs e)
         {
             this.Enabled = false;
-            LoadingManager.Instance.Show(this);
             bindingSourceAddWorker.DataSource = typeof(List<TenderMaterialListEquipmentModel>);
             this.LoadTenderGroupGrid();
-            LoadingManager.Instance.Hide(); ;
             this.Enabled = true;
         }
 

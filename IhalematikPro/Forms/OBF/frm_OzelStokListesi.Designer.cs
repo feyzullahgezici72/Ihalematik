@@ -385,7 +385,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(913, 24);
+            this.panelControl1.Size = new System.Drawing.Size(1025, 24);
             this.panelControl1.TabIndex = 39;
             // 
             // pcWorld
@@ -423,7 +423,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(887, 0);
+            this.btnKapat.Location = new System.Drawing.Point(999, 0);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(26, 24);
             this.btnKapat.TabIndex = 20;
@@ -442,7 +442,7 @@
             this.btnGncelle,
             this.btnPasive,
             this.btnActive});
-            this.grdOBFList.Size = new System.Drawing.Size(562, 425);
+            this.grdOBFList.Size = new System.Drawing.Size(674, 425);
             this.grdOBFList.TabIndex = 0;
             this.grdOBFList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOBFList});
@@ -799,7 +799,7 @@
             this.statusPanel.Location = new System.Drawing.Point(351, 500);
             this.statusPanel.Margin = new System.Windows.Forms.Padding(2);
             this.statusPanel.Name = "statusPanel";
-            this.statusPanel.Size = new System.Drawing.Size(562, 23);
+            this.statusPanel.Size = new System.Drawing.Size(674, 23);
             this.statusPanel.TabIndex = 42;
             // 
             // cmbAktivePasive
@@ -807,7 +807,7 @@
             this.cmbAktivePasive.Dock = System.Windows.Forms.DockStyle.Right;
             this.cmbAktivePasive.EditValue = "Aktif Kayıtlar";
             this.cmbAktivePasive.EnterMoveNextControl = true;
-            this.cmbAktivePasive.Location = new System.Drawing.Point(449, 0);
+            this.cmbAktivePasive.Location = new System.Drawing.Point(561, 0);
             this.cmbAktivePasive.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAktivePasive.Name = "cmbAktivePasive";
             this.cmbAktivePasive.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -859,7 +859,7 @@
             this.panelControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl2.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(562, 51);
+            this.panelControl2.Size = new System.Drawing.Size(674, 51);
             this.panelControl2.TabIndex = 43;
             // 
             // btnExcel
@@ -869,7 +869,7 @@
             this.btnExcel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExcel.Image = global::IhalematikProUI.Properties.Resources.Excel_icon;
             this.btnExcel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnExcel.Location = new System.Drawing.Point(423, 2);
+            this.btnExcel.Location = new System.Drawing.Point(535, 2);
             this.btnExcel.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnExcel.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcel.Name = "btnExcel";
@@ -974,7 +974,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 523);
+            this.ClientSize = new System.Drawing.Size(1025, 523);
             this.ControlBox = false;
             this.Controls.Add(this.grdOBFList);
             this.Controls.Add(this.panelControl2);

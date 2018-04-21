@@ -250,8 +250,21 @@ namespace IhalematikPro.Forms
             string obfNo = txtSearchNumber.Text.Trim();
             string obfDesc = txtSearchDescription.Text.Trim();
 
-            List<OBFModel> items = UIOBFManager.Instance.GetOBFs();
+            List<OBFModel> allItems = UIOBFManager.Instance.GetOBFs();
+            List<OBFModel> items = new List<OBFModel>();
 
+            foreach (var item in allItems)
+            {
+                if (item.Childrens.Count == 0)
+                {
+                    items.Add(item);
+                }
+                else
+                {
+                    items.Add(item.Childrens.OrderByDescending(p => p.InserTime).FirstOrDefault());
+                }
+            }
+            
             if (cmbAktivePasive.SelectedIndex == 0)
             {
                 items = items.Where(p => p.IsActive).ToList();
