@@ -202,12 +202,14 @@ namespace IhalematikPro.Forms
                     {
                         bool isExistingPozModel = false;
                         OBFModel selectedOBFModel = null;
-                        foreach (var pozModel in oBFModels)
+                        foreach (var obfModel in oBFModels)
                         {
-                            if (pozModel.Id == item.PozOBFId)
+                            OBF PozObf = OBFProvider.Instance.GetItem(item.PozOBFId);
+
+                            if (obfModel.Id == PozObf.Id || PozObf.ParentId == obfModel.ParentId || PozObf.ParentId == obfModel.Id)
                             {
                                 isExistingPozModel = true;
-                                selectedOBFModel = pozModel;
+                                selectedOBFModel = obfModel;
                                 break;
                             }
                         }
@@ -259,7 +261,7 @@ namespace IhalematikPro.Forms
                                 offerPrice = item.PozOBF.UnitPrice; // Malzeme tedarikciye gonderilmemisse fiyatini obf den ceksin.
                                 model.OfferPrice = offerPrice;
                             }
-                            
+
                             if (!string.IsNullOrEmpty(obfNumber))
                             {
                                 if (item.PozOBF.Number.ToLower().Contains(obfNumber.ToLower()))
@@ -297,7 +299,7 @@ namespace IhalematikPro.Forms
 
         private void txtDescription_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13)
             {
                 btnBul.PerformClick();
             }

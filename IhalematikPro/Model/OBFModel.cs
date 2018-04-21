@@ -21,6 +21,12 @@ namespace IhalematikPro.Model
         public double OfferPrice { get; internal set; }
         public string DescriptionForSupplier { get; internal set; }
         public string StokNumber { get; set; }
+        public int ParentId { get; set; }
+        public List<OBFModel> Childrens { get; set; }
+        public double LastUnitPrice { get; set; }
+
+        public DateTime InserTime { get; set; }
+
         public OBFModel(OBF Entity)
         {
             this.Number = Entity.Number;
@@ -31,6 +37,13 @@ namespace IhalematikPro.Model
             this.IsActive = Entity.IsActive;
             this.StokNumber = Entity.StokNumber;
             this.DescriptionForSupplier = Entity.DescriptionForSupplier;
+            this.ParentId = Entity.ParentId;
+            this.Childrens = CustomSaveableModelBase.GetModels<OBFModel, OBF>(Entity.Childrens);
+            this.InserTime = Entity.InsertTime;
+            //if (this.Childrens.Count != 0)
+            //{
+            //    this.UnitPrice = this.Childrens.OrderByDescending(p => p.InserTime).FirstOrDefault().UnitPrice;
+            //}
         }
 
         public OBFModel()
@@ -52,6 +65,7 @@ namespace IhalematikPro.Model
             OBF.StokNumber = this.StokNumber;
             OBF.IsActive = this.IsActive;
             OBF.DescriptionForSupplier = this.DescriptionForSupplier;
+            OBF.ParentId = this.ParentId;
             return OBF;
         }
 

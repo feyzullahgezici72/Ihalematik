@@ -35,7 +35,21 @@ namespace IhalematikPro.Forms
         }
         public void LoadGrid()
         {
-            List<OBFModel> items = UIOBFManager.Instance.GetOBFs();
+            List<OBFModel> allItems = UIOBFManager.Instance.GetOBFs();
+            List<OBFModel> items = new List<OBFModel>();
+
+            foreach (var item in allItems)
+            {
+                if (item.Childrens.Count == 0)
+                {
+                    items.Add(item);
+                }
+                else
+                {
+                    items.Add(item.Childrens.OrderByDescending(p => p.InserTime).FirstOrDefault());
+                }
+            }
+            
             if (cmbAktivePasive.SelectedIndex == 0)
             {
                 items = items.Where(p => p.IsActive).ToList();
@@ -182,9 +196,6 @@ namespace IhalematikPro.Forms
             this.LoadGrid();
             LoadingManager.Instance.Hide();;
             this.Enabled = true;
-
-
-           
         }
 
         private void btnPasive_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)

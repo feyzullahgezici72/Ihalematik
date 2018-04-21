@@ -93,32 +93,42 @@ namespace IhalematikProUI.Forms
             {
                 OBFModel model = new OBFModel(this.currentOBF);
                 model.Description = txtDescription.Text;
-                //model.Number = txtNumber.Text;
                 model.StokNumber = txtNumber.Text;
-
                 model.Unit = txtUnit.Text;
-                //double plain = return Double.Parse("$20,000.00", cultureInfo);
-                model.UnitPrice = model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty));
+                double newUnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty));
                 model.DescriptionForSupplier = txtDescriptionForSupplier.Text;
 
-                List<OBFModel> existingOBFs = UIOBFManager.Instance.GetOBFs(model.Description);
-                if (existingOBFs != null && existingOBFs.Count != 0)
+                //List<OBFModel> existingOBFs = UIOBFManager.Instance.GetOBFs(model.Description);
+                //if (existingOBFs != null && existingOBFs.Count != 0 && existingOBFs.First().Id !+model.Id)
+                //{
+                //    frm_MesajFormu mf = new frm_MesajFormu();
+                //    mf.lblMesaj.Text = "Bu OBF açıklaması ile kayit bulunmaktadir";
+                //    mf.ShowDialog();
+                //    this.txtNumber.Text = "";
+                //    this.txtNumber.Focus();
+                //}
+                //else
+                //{
+                model.Save();
+                if (!this.CurrentOBF.UnitPrice.Equals(newUnitPrice))
                 {
-                    frm_MesajFormu mf = new frm_MesajFormu();
-                    mf.lblMesaj.Text = "Bu OBF açıklaması ile kayit bulunmaktadir";
-                    mf.ShowDialog();
-                    this.txtNumber.Text = "";
-                    this.txtNumber.Focus();
-                }
-                else
-                {
+                    //OBFModel newObf = new OBFModel();
+                    //newObf.IsActive = true;
+                    if (model.ParentId == 0)
+                    {
+                        model.ParentId = model.Id.Value;
+                    }
+                    model.UnitPrice = newUnitPrice;
+                    model.Id = 0;
                     model.Save();
-                    frm_MesajFormu mf = new frm_MesajFormu();
-                    mf.lblMesaj.Text = "Kayıt Güncellendi...";
-                    mf.ShowDialog();
-                    this._owner.LoadGrid();
-                    this.Close();
                 }
+               
+                frm_MesajFormu mf = new frm_MesajFormu();
+                mf.lblMesaj.Text = "Kayıt Güncellendi...";
+                mf.ShowDialog();
+                this._owner.LoadGrid();
+                this.Close();
+                //}
             }
         }
 

@@ -55,7 +55,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                     OBFModel selectedOBFModel = null;
                     foreach (var pozModel in oBFModels)
                     {
-                        if (pozModel.Id == item.PozOBFId)
+                        IhalematikProBL.Entity.OBF PozObf = OBFProvider.Instance.GetItem(item.PozOBFId);
+
+                        if (PozObf.Id == pozModel.Id || PozObf.ParentId == pozModel.ParentId || PozObf.ParentId == pozModel.Id)
                         {
                             isExistingPozModel = true;
                             selectedOBFModel = pozModel;

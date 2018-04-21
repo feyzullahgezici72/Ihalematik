@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IhalematikProBL.Provider;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,5 +18,19 @@ namespace IhalematikProBL.Entity
         public string DescriptionForSupplier { get; set; }
 
         public string StokNumber { get; set; }
+        public int ParentId { get; set; }
+
+        private List<OBF> childrens { get; set; }
+        public List<OBF> Childrens
+        {
+            get
+            {
+                if (this.childrens == null)
+                {
+                    this.childrens = OBFProvider.Instance.GetItems("ParentId", this.Id);
+                }
+                return this.childrens;
+            }
+        }
     }
 }

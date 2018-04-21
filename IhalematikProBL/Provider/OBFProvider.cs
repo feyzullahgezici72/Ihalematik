@@ -17,6 +17,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("IsActive", t.IsActive);
             parameters.Add("DescriptionForSupplier", t.DescriptionForSupplier);
             parameters.Add("StokNumber", t.StokNumber);
+            parameters.Add("ParentId", t.ParentId);
             return parameters;
         }
 
@@ -30,6 +31,7 @@ namespace IhalematikProBL.Provider
             t.IsActive = dr.GetValue<bool>("IsActive");
             t.DescriptionForSupplier = dr.GetValue<string>("DescriptionForSupplier");
             t.StokNumber = dr.GetValue<string>("StokNumber");
+            t.ParentId= dr.GetValue<int>("ParentId");
         }
     }
 }

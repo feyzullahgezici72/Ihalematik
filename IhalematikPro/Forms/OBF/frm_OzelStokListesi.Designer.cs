@@ -238,7 +238,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl1.Location = new System.Drawing.Point(2, 401);
             this.groupControl1.LookAndFeel.SkinName = "London Liquid Sky";
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(347, 96);
             this.groupControl1.TabIndex = 30;
@@ -251,7 +251,7 @@
             this.panelControl3.Location = new System.Drawing.Point(2, 20);
             this.panelControl3.LookAndFeel.SkinName = "Dark Side";
             this.panelControl3.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(262, 74);
             this.panelControl3.TabIndex = 1;
@@ -261,7 +261,7 @@
             this.memoEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.memoEdit1.EditValue = resources.GetString("memoEdit1.EditValue");
             this.memoEdit1.Location = new System.Drawing.Point(2, 2);
-            this.memoEdit1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.memoEdit1.Margin = new System.Windows.Forms.Padding(2);
             this.memoEdit1.Name = "memoEdit1";
             this.memoEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.memoEdit1.Properties.Appearance.Options.UseBackColor = true;
@@ -277,7 +277,7 @@
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
             this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.simpleButton2.Location = new System.Drawing.Point(264, 20);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(2);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(81, 74);
             this.simpleButton2.TabIndex = 0;
@@ -308,7 +308,7 @@
             this.txtNumber.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtNumber, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.txtNumber.Location = new System.Drawing.Point(81, 36);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -394,7 +394,7 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2);
             this.pcWorld.Name = "pcWorld";
             this.pcWorld.Size = new System.Drawing.Size(33, 24);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -797,7 +797,7 @@
             this.statusPanel.Controls.Add(this.labelControl14);
             this.statusPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.statusPanel.Location = new System.Drawing.Point(351, 500);
-            this.statusPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.statusPanel.Margin = new System.Windows.Forms.Padding(2);
             this.statusPanel.Name = "statusPanel";
             this.statusPanel.Size = new System.Drawing.Size(562, 23);
             this.statusPanel.TabIndex = 42;
@@ -808,7 +808,7 @@
             this.cmbAktivePasive.EditValue = "Aktif Kayıtlar";
             this.cmbAktivePasive.EnterMoveNextControl = true;
             this.cmbAktivePasive.Location = new System.Drawing.Point(449, 0);
-            this.cmbAktivePasive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbAktivePasive.Margin = new System.Windows.Forms.Padding(2);
             this.cmbAktivePasive.Name = "cmbAktivePasive";
             this.cmbAktivePasive.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbAktivePasive.Properties.Appearance.Options.UseFont = true;
@@ -831,7 +831,7 @@
             this.lblRecordCount.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblRecordCount.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblRecordCount.Location = new System.Drawing.Point(57, 0);
-            this.lblRecordCount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblRecordCount.Margin = new System.Windows.Forms.Padding(2);
             this.lblRecordCount.Name = "lblRecordCount";
             this.lblRecordCount.Size = new System.Drawing.Size(12, 13);
             this.lblRecordCount.TabIndex = 0;
@@ -842,7 +842,7 @@
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl14.Dock = System.Windows.Forms.DockStyle.Left;
             this.labelControl14.Location = new System.Drawing.Point(0, 0);
-            this.labelControl14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(57, 13);
             this.labelControl14.TabIndex = 0;
@@ -857,7 +857,7 @@
             this.panelControl2.Location = new System.Drawing.Point(351, 24);
             this.panelControl2.LookAndFeel.SkinName = "London Liquid Sky";
             this.panelControl2.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(562, 51);
             this.panelControl2.TabIndex = 43;
@@ -871,7 +871,7 @@
             this.btnExcel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btnExcel.Location = new System.Drawing.Point(423, 2);
             this.btnExcel.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(137, 47);
             this.btnExcel.TabIndex = 50;
@@ -887,7 +887,7 @@
             this.groupControl3.Controls.Add(this.simpleButton1);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl3.Location = new System.Drawing.Point(170, 2);
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(325, 47);
             this.groupControl3.TabIndex = 32;
@@ -931,7 +931,7 @@
             this.groupControl2.Controls.Add(this.txtSearchNumber);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl2.Location = new System.Drawing.Point(2, 2);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(168, 47);
             this.groupControl2.TabIndex = 31;

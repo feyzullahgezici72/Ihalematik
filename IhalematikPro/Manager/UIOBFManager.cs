@@ -27,7 +27,23 @@ namespace IhalematikPro.Manager
             param.Add("Description", OBFDescription);
             List<OBF> obfs = OBFProvider.Instance.GetItems(param);
             List<OBFModel> models = CustomSaveableModelBase.GetModels<OBFModel, OBF>(obfs);
-            return models;
+
+            List<OBFModel> items = new List<OBFModel>();
+
+            foreach (var item in models)
+            {
+                if (item.Childrens.Count == 0)
+                {
+                    items.Add(item);
+                }
+                else
+                {
+                    items.Add(item.Childrens.OrderByDescending(p => p.InserTime).FirstOrDefault());
+                }
+            }
+
+
+            return items;
         }
         public List<OBFModel> GetOBFs(string OBFDescription)
         {

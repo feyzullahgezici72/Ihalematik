@@ -82,6 +82,7 @@ namespace IhalematikPro.Forms
 
                 if (models != null && models.Count != 0)
                 {
+                    LoadingManager.Instance.Show(this);
                     if (models.Count == 1 && offer != null)
                     {
                         List<MaterialList> addedMaterialLists = CurrentManager.Instance.CurrentTender.MaterialList.ToList();
@@ -204,18 +205,19 @@ namespace IhalematikPro.Forms
 
         public void LoadTenderMaterialList()
         {
+            List<MaterialListModel> models = new List<MaterialListModel>();
             if (this.SelectedGroupId != 0 && CurrentManager.Instance.CurrentTender.MaterialList != null)
             {
                 List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
-                List<MaterialListModel> models = new List<MaterialListModel>();
                 foreach (var item in items)
                 {
                     MaterialListModel model = new MaterialListModel(item);
                     models.Add(model);
                 }
 
-                grdMaterialList.DataSource = models;
             }
+            LoadingManager.Instance.Hide();
+            grdMaterialList.DataSource = models;
         }
 
         private void rpstSelected_CheckedChanged(object sender, EventArgs e)
@@ -243,9 +245,9 @@ namespace IhalematikPro.Forms
                 btnExceldenAl.Visible = false;
             }
             this.Enabled = false;
-            LoadingManager.Instance.Show(this);
+           // LoadingManager.Instance.Show(this);
             this.LoadTenderGroupGrid();
-            LoadingManager.Instance.Hide();;
+            //LoadingManager.Instance.Hide();;
             this.Enabled = true;
         }
 
