@@ -35,10 +35,10 @@ namespace IhalematikProBL.Provider
             t.ParentId= dr.GetValue<int>("ParentId");
         }
 
-        public void UpdateOBFPrice(int Id, double UnitePrice)
+        public void UpdateOBFPrice(int Id, double UnitPrice)
         {
             Hashtable param = new Hashtable();
-            param.Add("UnitePrice", UnitePrice);
+            param.Add("UnitPrice", UnitPrice);
             param.Add("Id", Id);
 
             CustomDBConnectionManager.Instance.ExecuteNonQuery("OBFPriceUpdate", param);

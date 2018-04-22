@@ -843,6 +843,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap TeklifFormu {
+            get {
+                object obj = ResourceManager.GetObject("TeklifFormu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tick_icon {
             get {
                 object obj = ResourceManager.GetObject("tick-icon", resourceCulture);

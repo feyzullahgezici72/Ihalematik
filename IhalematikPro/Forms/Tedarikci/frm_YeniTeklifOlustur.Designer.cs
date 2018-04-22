@@ -43,6 +43,7 @@
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.txtDateTime = new DevExpress.XtraEditors.DateEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeklifNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -53,13 +54,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDateTime.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDateTime.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtAciklama
             // 
             this.txtAciklama.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtAciklama, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.txtAciklama.Location = new System.Drawing.Point(124, 94);
+            this.txtAciklama.Location = new System.Drawing.Point(335, 94);
             this.txtAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -75,7 +77,7 @@
             // txtTeklifNo
             // 
             this.txtTeklifNo.Enabled = false;
-            this.txtTeklifNo.Location = new System.Drawing.Point(124, 58);
+            this.txtTeklifNo.Location = new System.Drawing.Point(335, 58);
             this.txtTeklifNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTeklifNo.Name = "txtTeklifNo";
             this.txtTeklifNo.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -93,7 +95,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(48, 99);
+            this.labelControl2.Location = new System.Drawing.Point(259, 99);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(70, 19);
@@ -104,7 +106,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl1.Location = new System.Drawing.Point(46, 61);
+            this.labelControl1.Location = new System.Drawing.Point(257, 61);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(70, 19);
@@ -120,7 +122,7 @@
             this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
             this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnIptal.Location = new System.Drawing.Point(708, 0);
+            this.btnIptal.Location = new System.Drawing.Point(917, 0);
             this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(28, 35);
@@ -139,7 +141,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(736, 35);
+            this.panelControl1.Size = new System.Drawing.Size(945, 35);
             this.panelControl1.TabIndex = 38;
             // 
             // panelControl2
@@ -154,7 +156,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(736, 35);
+            this.panelControl2.Size = new System.Drawing.Size(945, 35);
             this.panelControl2.TabIndex = 3;
             // 
             // pcWorld
@@ -191,7 +193,7 @@
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(561, 130);
+            this.simpleButton2.Location = new System.Drawing.Point(772, 130);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(141, 54);
@@ -207,7 +209,7 @@
             // 
             this.txtDateTime.EditValue = new System.DateTime(2017, 11, 14, 14, 49, 43, 0);
             this.txtDateTime.EnterMoveNextControl = true;
-            this.txtDateTime.Location = new System.Drawing.Point(124, 129);
+            this.txtDateTime.Location = new System.Drawing.Point(335, 131);
             this.txtDateTime.Name = "txtDateTime";
             this.txtDateTime.Properties.AppearanceDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtDateTime.Properties.AppearanceDropDown.Options.UseBackColor = true;
@@ -226,12 +228,22 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl5.Location = new System.Drawing.Point(74, 132);
+            this.labelControl5.Location = new System.Drawing.Point(285, 132);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(43, 19);
             this.labelControl5.TabIndex = 43;
             this.labelControl5.Text = "Tarih:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::IhalematikProUI.Properties.Resources.TeklifFormu;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 43);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(226, 210);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 44;
+            this.pictureBox1.TabStop = false;
             // 
             // frm_YeniTeklifOlustur
             // 
@@ -239,8 +251,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(736, 214);
+            this.ClientSize = new System.Drawing.Size(945, 265);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtDateTime);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.simpleButton2);
@@ -270,6 +283,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDateTime.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDateTime.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +304,6 @@
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
         private DevExpress.XtraEditors.DateEdit txtDateTime;
         private DevExpress.XtraEditors.LabelControl labelControl5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

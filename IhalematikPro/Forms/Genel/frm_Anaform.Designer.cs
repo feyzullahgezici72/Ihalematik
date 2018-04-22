@@ -483,7 +483,7 @@ namespace IhalematikPro.Forms
             // barBtnTeklifHazirla
             // 
             this.barBtnTeklifHazirla.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.barBtnTeklifHazirla.Caption = "Yeni İhale Yarat";
+            this.barBtnTeklifHazirla.Caption = "Yeni İhale Oluştur";
             this.barBtnTeklifHazirla.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnTeklifHazirla.Glyph")));
             this.barBtnTeklifHazirla.Id = 5;
             this.barBtnTeklifHazirla.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Green;
@@ -713,7 +713,7 @@ namespace IhalematikPro.Forms
             // barButtonItem12
             // 
             this.barButtonItem12.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.barButtonItem12.Caption = "Yeni Teklif Yarat";
+            this.barButtonItem12.Caption = "Yeni Teklif Oluştur";
             this.barButtonItem12.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.Glyph")));
             this.barButtonItem12.Id = 9;
             this.barButtonItem12.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Green;
