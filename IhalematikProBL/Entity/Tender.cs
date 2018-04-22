@@ -52,6 +52,23 @@ namespace IhalematikProBL.Entity
 
         public TenderTypeEnum TenderType { get; set; }
 
+        public string TenderTypeDisplay
+        {
+            get
+            {
+                switch (this.TenderType)
+                {
+                    case TenderTypeEnum.Open:
+                        return "Açık İhale";
+                    case TenderTypeEnum.DirectSupply:
+                        return "Doğrudan Temin";
+                    default:
+                        break;
+                }
+                return string.Empty;
+            }
+        }
+
         private List<TenderEquipment> equipments { get; set; }
         public List<TenderEquipment> Equipments
         {
