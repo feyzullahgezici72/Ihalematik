@@ -280,6 +280,8 @@ namespace IhalematikProUI.Forms
             txtScore.Text = "";
             txtTelephone.Text = "";
             txtAddress.Text = "";
+            txtTaxNumber.Text = "";
+            txtTaxOffice.Text = "";
 
         }
 
