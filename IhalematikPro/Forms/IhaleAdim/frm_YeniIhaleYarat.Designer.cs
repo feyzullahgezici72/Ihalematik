@@ -140,7 +140,7 @@
             this.btnIhaleOlustur.Margin = new System.Windows.Forms.Padding(6);
             this.btnIhaleOlustur.Name = "btnIhaleOlustur";
             this.btnIhaleOlustur.Size = new System.Drawing.Size(180, 91);
-            this.btnIhaleOlustur.TabIndex = 3;
+            this.btnIhaleOlustur.TabIndex = 5;
             this.btnIhaleOlustur.Text = "&Oluştur";
             this.btnIhaleOlustur.Click += new System.EventHandler(this.btnIhaleOlustur_Click);
             // 
@@ -158,7 +158,7 @@
             this.txtAciklama.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtAciklama.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtAciklama.Size = new System.Drawing.Size(597, 28);
-            this.txtAciklama.TabIndex = 0;
+            this.txtAciklama.TabIndex = 1;
             // 
             // txtTeklifNo
             // 
@@ -225,7 +225,7 @@
             this.txtcompanyName.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtcompanyName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.txtcompanyName.Size = new System.Drawing.Size(597, 28);
-            this.txtcompanyName.TabIndex = 1;
+            this.txtcompanyName.TabIndex = 2;
             // 
             // labelControl5
             // 
@@ -246,7 +246,7 @@
             this.tabIhaleBilgileri.Name = "tabIhaleBilgileri";
             this.tabIhaleBilgileri.SelectedTabPage = this.xtraTabPage1;
             this.tabIhaleBilgileri.Size = new System.Drawing.Size(750, 297);
-            this.tabIhaleBilgileri.TabIndex = 32;
+            this.tabIhaleBilgileri.TabIndex = 0;
             this.tabIhaleBilgileri.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2});
@@ -284,11 +284,12 @@
             "Doğrudan Temin"});
             this.ddlTenderType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.ddlTenderType.Size = new System.Drawing.Size(345, 26);
-            this.ddlTenderType.TabIndex = 11;
+            this.ddlTenderType.TabIndex = 4;
             // 
             // LastOfferDate
             // 
             this.LastOfferDate.EditValue = new System.DateTime(2018, 4, 16, 14, 49, 43, 0);
+            this.LastOfferDate.EnterMoveNextControl = true;
             this.LastOfferDate.Location = new System.Drawing.Point(116, 127);
             this.LastOfferDate.Name = "LastOfferDate";
             this.LastOfferDate.Properties.AppearanceDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -306,7 +307,7 @@
             this.LastOfferDate.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.LastOfferDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.LastOfferDate.Size = new System.Drawing.Size(348, 26);
-            this.LastOfferDate.TabIndex = 2;
+            this.LastOfferDate.TabIndex = 3;
             // 
             // labelControl15
             // 
