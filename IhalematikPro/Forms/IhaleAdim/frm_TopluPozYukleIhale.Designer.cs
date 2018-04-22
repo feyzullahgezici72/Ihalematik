@@ -39,8 +39,10 @@
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.pnlYuke = new DevExpress.XtraEditors.PanelControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
+            this.picture1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -50,7 +52,8 @@
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlYuke)).BeginInit();
             this.pnlYuke.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl2
@@ -169,22 +172,13 @@
             // pnlYuke
             // 
             this.pnlYuke.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pnlYuke.Controls.Add(this.pictureBox1);
+            this.pnlYuke.Controls.Add(this.labelControl2);
+            this.pnlYuke.Controls.Add(this.memoEdit1);
+            this.pnlYuke.Controls.Add(this.picture1);
             this.pnlYuke.Location = new System.Drawing.Point(4, 47);
             this.pnlYuke.Name = "pnlYuke";
             this.pnlYuke.Size = new System.Drawing.Size(984, 558);
             this.pnlYuke.TabIndex = 38;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(984, 558);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // listBox1
             // 
@@ -198,6 +192,39 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(982, 526);
             this.listBox1.TabIndex = 24;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelControl2.Location = new System.Drawing.Point(8, 57);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(77, 24);
+            this.labelControl2.TabIndex = 10;
+            this.labelControl2.Text = "UYARI !!!";
+            // 
+            // memoEdit1
+            // 
+            this.memoEdit1.EditValue = resources.GetString("memoEdit1.EditValue");
+            this.memoEdit1.Location = new System.Drawing.Point(8, 87);
+            this.memoEdit1.Name = "memoEdit1";
+            this.memoEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.memoEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.memoEdit1.Properties.LookAndFeel.SkinName = "Lilian";
+            this.memoEdit1.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.memoEdit1.Properties.ReadOnly = true;
+            this.memoEdit1.Size = new System.Drawing.Size(435, 414);
+            this.memoEdit1.TabIndex = 9;
+            // 
+            // picture1
+            // 
+            this.picture1.Image = ((System.Drawing.Image)(resources.GetObject("picture1.Image")));
+            this.picture1.Location = new System.Drawing.Point(449, 87);
+            this.picture1.Name = "picture1";
+            this.picture1.Size = new System.Drawing.Size(528, 414);
+            this.picture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture1.TabIndex = 8;
+            this.picture1.TabStop = false;
             // 
             // frm_TopluPozYukleIhale
             // 
@@ -224,7 +251,9 @@
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnlYuke)).EndInit();
             this.pnlYuke.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlYuke.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picture1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -241,7 +270,9 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.PanelControl pnlYuke;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListBox listBox1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private System.Windows.Forms.PictureBox picture1;
     }
 }

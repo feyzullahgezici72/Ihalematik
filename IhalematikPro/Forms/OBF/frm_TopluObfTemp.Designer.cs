@@ -286,6 +286,7 @@
             this.gridViewOBFList.OptionsMenu.EnableGroupPanelMenu = false;
             this.gridViewOBFList.OptionsView.EnableAppearanceEvenRow = true;
             this.gridViewOBFList.OptionsView.EnableAppearanceOddRow = true;
+            this.gridViewOBFList.OptionsView.ShowDetailButtons = false;
             this.gridViewOBFList.OptionsView.ShowFooter = true;
             this.gridViewOBFList.OptionsView.ShowGroupPanel = false;
             this.gridViewOBFList.PaintStyleName = "Web";

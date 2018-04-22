@@ -34,6 +34,7 @@
             this.lblPozListesi = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.pnlYukle = new DevExpress.XtraEditors.PanelControl();
+            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             this.picture1 = new System.Windows.Forms.PictureBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -41,6 +42,7 @@
             this.lblPosSayisi = new DevExpress.XtraEditors.LabelControl();
             this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -48,6 +50,7 @@
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlYukle)).BeginInit();
             this.pnlYukle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
@@ -112,21 +115,35 @@
             // pnlYukle
             // 
             this.pnlYukle.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlYukle.Controls.Add(this.labelControl2);
+            this.pnlYukle.Controls.Add(this.memoEdit1);
             this.pnlYukle.Controls.Add(this.picture1);
             this.pnlYukle.Location = new System.Drawing.Point(4, 41);
             this.pnlYukle.Name = "pnlYukle";
             this.pnlYukle.Size = new System.Drawing.Size(984, 558);
             this.pnlYukle.TabIndex = 40;
             // 
+            // memoEdit1
+            // 
+            this.memoEdit1.EditValue = resources.GetString("memoEdit1.EditValue");
+            this.memoEdit1.Location = new System.Drawing.Point(8, 72);
+            this.memoEdit1.Name = "memoEdit1";
+            this.memoEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.memoEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.memoEdit1.Properties.LookAndFeel.SkinName = "Lilian";
+            this.memoEdit1.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.memoEdit1.Properties.ReadOnly = true;
+            this.memoEdit1.Size = new System.Drawing.Size(435, 414);
+            this.memoEdit1.TabIndex = 5;
+            // 
             // picture1
             // 
-            this.picture1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picture1.Image = ((System.Drawing.Image)(resources.GetObject("picture1.Image")));
-            this.picture1.Location = new System.Drawing.Point(0, 0);
+            this.picture1.Location = new System.Drawing.Point(449, 72);
             this.picture1.Name = "picture1";
-            this.picture1.Size = new System.Drawing.Size(984, 558);
-            this.picture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picture1.TabIndex = 0;
+            this.picture1.Size = new System.Drawing.Size(528, 414);
+            this.picture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture1.TabIndex = 4;
             this.picture1.TabStop = false;
             // 
             // listBox1
@@ -199,6 +216,16 @@
             this.labelControl1.TabIndex = 30;
             this.labelControl1.Text = "Yüklenen Öbf Sayısı:";
             // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelControl2.Location = new System.Drawing.Point(8, 42);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(77, 24);
+            this.labelControl2.TabIndex = 7;
+            this.labelControl2.Text = "UYARI !!!";
+            // 
             // frm_TopluObfEkleTedarikci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -218,6 +245,8 @@
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnlYukle)).EndInit();
             this.pnlYukle.ResumeLayout(false);
+            this.pnlYukle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
@@ -238,7 +267,9 @@
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.SimpleButton btnIptal;
         private DevExpress.XtraEditors.PanelControl pnlYukle;
-        private System.Windows.Forms.PictureBox picture1;
         private System.Windows.Forms.ListBox listBox1;
+        private DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private System.Windows.Forms.PictureBox picture1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }

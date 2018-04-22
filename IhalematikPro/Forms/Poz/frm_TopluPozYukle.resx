@@ -5465,7 +5465,19 @@
         CAA7
 </value>
   </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="memoEdit1.EditValue" xml:space="preserve">
+    <value>"Yükle" Buttonuna tıklayarak  hazırladığınız 
+Excel dosyasını hızlı bir şekilde yükleyebilirsiniz.
+Excel Dosyanız aşağıdaki sutünlardan oluşmalıdır
+
+
+A1  Sütunu :POZ No
+B1  Sütunu: Malzeme Cinsi Açıklama
+C1  Sütunu :Birimi
+D1  Sütunu : Birim Fiyatı
+şeklinde olmalıdır.</value>
+  </data>
+  <data name="picture1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhIANYAvcAAKa2vkuuT2mEkuvw8WSBjqu6w+vw7tvh5M7W2uHm6+3w9Ort7nqRnM7Z24Wapevv
         8+7w8tTc4PDw8M/X2199jHSNmcTO0+zu7vDv8pmpqc/j02B8ht7l6GF8jOrx9YyhqXuVoebs72B7icHI
