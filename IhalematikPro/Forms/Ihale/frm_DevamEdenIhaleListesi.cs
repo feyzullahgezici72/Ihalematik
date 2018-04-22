@@ -263,5 +263,10 @@ namespace IhalematikPro.Forms
         {
 
         }
+
+        private void frm_DevamEdenIhaleListesi_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
