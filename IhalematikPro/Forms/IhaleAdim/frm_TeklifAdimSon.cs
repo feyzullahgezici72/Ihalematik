@@ -385,9 +385,18 @@ namespace IhalematikProUI.Forms
         private void btnPrev_Click(object sender, EventArgs e)
         {
             this.Close();
-            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-            af.RibonPasif();
-            af.btnAdimx3.PerformClick();
+            if (CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() == 0)
+            {
+                frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                af.RibonPasif();
+                af.btnAdimx4.PerformClick();
+            }
+            else
+            {
+                frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+                af.RibonPasif();
+                af.btnAdimx3.PerformClick();
+            }
         }
 
         private void grdMaterialList_Click(object sender, EventArgs e)
