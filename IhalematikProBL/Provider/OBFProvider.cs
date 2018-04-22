@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using SimpleApplicationBase.Toolkit;
+using IhalematikProBL.Manager;
 
 namespace IhalematikProBL.Provider
 {
@@ -32,6 +33,15 @@ namespace IhalematikProBL.Provider
             t.DescriptionForSupplier = dr.GetValue<string>("DescriptionForSupplier");
             t.StokNumber = dr.GetValue<string>("StokNumber");
             t.ParentId= dr.GetValue<int>("ParentId");
+        }
+
+        public void UpdateOBFPrice(int Id, double UnitePrice)
+        {
+            Hashtable param = new Hashtable();
+            param.Add("UnitePrice", UnitePrice);
+            param.Add("Id", Id);
+
+            CustomDBConnectionManager.Instance.ExecuteNonQuery("OBFPriceUpdate", param);
         }
     }
 }

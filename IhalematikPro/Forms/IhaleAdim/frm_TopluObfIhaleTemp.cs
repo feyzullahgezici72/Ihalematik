@@ -55,7 +55,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                 if (currentOBF != null)
                 {
                     currentOBF.UnitPrice = item.PozOBFUnitePrice;
-                    OBFProvider.Instance.Save(currentOBF);
+                    OBFProvider.Instance.UpdateOBFPrice(currentOBF.Id, currentOBF.UnitPrice);
                 }
             }
             LoadingManager.Instance.Hide();
