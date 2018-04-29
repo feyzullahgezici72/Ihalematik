@@ -1394,6 +1394,10 @@
     <Content Include="icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\ul_icon.png" />
+    <None Include="Resources\ll_icon.png" />
+    <None Include="Resources\Lock-Unlock-icon.png" />
+    <None Include="Resources\Lock-Lock-icon.png" />
     <None Include="Resources\TeklifFormu.png" />
     <None Include="Resources\loading-bar-gif-1.gif" />
     <None Include="Resources\network-icon1.png" />

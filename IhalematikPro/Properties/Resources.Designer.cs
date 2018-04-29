@@ -573,6 +573,16 @@ namespace IhalematikProUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ll_icon {
+            get {
+                object obj = ResourceManager.GetObject("ll_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loading {
             get {
                 object obj = ResourceManager.GetObject("loading", resourceCulture);
@@ -586,6 +596,26 @@ namespace IhalematikProUI.Properties {
         internal static System.Drawing.Bitmap loading_bar_gif_1 {
             get {
                 object obj = ResourceManager.GetObject("loading-bar-gif-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lock_Lock_icon {
+            get {
+                object obj = ResourceManager.GetObject("Lock-Lock-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lock_Unlock_icon {
+            get {
+                object obj = ResourceManager.GetObject("Lock-Unlock-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -866,6 +896,16 @@ namespace IhalematikProUI.Properties {
         internal static System.Drawing.Bitmap ui_check_box_uncheck_icon {
             get {
                 object obj = ResourceManager.GetObject("ui-check-box-uncheck-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ul_icon {
+            get {
+                object obj = ResourceManager.GetObject("ul_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

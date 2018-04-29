@@ -341,6 +341,7 @@
             this.btnKeyOlustur.TabIndex = 7;
             this.btnKeyOlustur.Text = "Oluştur";
             this.btnKeyOlustur.UseVisualStyleBackColor = true;
+            this.btnKeyOlustur.Click += new System.EventHandler(this.btnKeyOlustur_Click);
             // 
             // btnKaydet
             // 

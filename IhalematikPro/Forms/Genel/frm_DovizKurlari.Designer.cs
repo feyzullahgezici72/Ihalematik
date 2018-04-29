@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DovizKurlari));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dataGrid1 = new System.Windows.Forms.DataGridView();
             this.btnGizliKapat = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
@@ -54,7 +55,7 @@
             this.groupControl1.Location = new System.Drawing.Point(0, 39);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(673, 607);
+            this.groupControl1.Size = new System.Drawing.Size(669, 603);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "TC.Merkez Bankası Verilerine Göre";
             // 
@@ -65,6 +66,14 @@
             this.dataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGrid1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid1.GridColor = System.Drawing.Color.White;
             this.dataGrid1.Location = new System.Drawing.Point(3, 30);
@@ -78,7 +87,7 @@
             this.dataGrid1.ShowCellToolTips = false;
             this.dataGrid1.ShowEditingIcon = false;
             this.dataGrid1.ShowRowErrors = false;
-            this.dataGrid1.Size = new System.Drawing.Size(667, 574);
+            this.dataGrid1.Size = new System.Drawing.Size(663, 570);
             this.dataGrid1.TabIndex = 9;
             // 
             // btnGizliKapat
@@ -103,24 +112,8 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(673, 39);
+            this.panelControl1.Size = new System.Drawing.Size(669, 39);
             this.panelControl1.TabIndex = 13;
-            // 
-            // btnIptal
-            // 
-            this.btnIptal.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnIptal.Appearance.Options.UseFont = true;
-            this.btnIptal.AutoSize = true;
-            this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
-            this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnIptal.Location = new System.Drawing.Point(645, 0);
-            this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
-            this.btnIptal.Name = "btnIptal";
-            this.btnIptal.Size = new System.Drawing.Size(28, 39);
-            this.btnIptal.TabIndex = 2;
-            this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
             // 
             // labelControl1
             // 
@@ -132,12 +125,28 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "GÜNCEL DÖVİZ KUR BİLGİSİ";
             // 
+            // btnIptal
+            // 
+            this.btnIptal.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnIptal.Appearance.Options.UseFont = true;
+            this.btnIptal.AutoSize = true;
+            this.btnIptal.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
+            this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnIptal.Location = new System.Drawing.Point(641, 0);
+            this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIptal.Name = "btnIptal";
+            this.btnIptal.Size = new System.Drawing.Size(28, 39);
+            this.btnIptal.TabIndex = 2;
+            this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
+            // 
             // frm_DovizKurlari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(673, 646);
+            this.ClientSize = new System.Drawing.Size(669, 642);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl1);

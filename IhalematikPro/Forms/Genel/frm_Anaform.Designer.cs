@@ -188,10 +188,26 @@ namespace IhalematikPro.Forms
             this.barYesilDefter = new DevExpress.XtraBars.BarButtonItem();
             this.barIcmal = new DevExpress.XtraBars.BarButtonItem();
             this.barHakedisOzeti = new DevExpress.XtraBars.BarButtonItem();
+            this.lblDolar = new DevExpress.XtraBars.BarEditItem();
+            this.brDolar = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.lblEuro = new DevExpress.XtraBars.BarEditItem();
+            this.brEuro = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemDateEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.barEuro = new DevExpress.XtraBars.BarEditItem();
+            this.euroCh = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.barEditItem4 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemDateEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
+            this.dolarCh = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.barButtonGroup2 = new DevExpress.XtraBars.BarButtonGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup31 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup32 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup33 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -238,6 +254,15 @@ namespace IhalematikPro.Forms
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.repositoryItemColorEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemColorEdit();
             this.repositoryItemPopupContainerEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit();
+            this.repositoryItemTimeEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit();
+            this.repositoryItemCalcEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.repositoryItemTextEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.repositoryItemBreadCrumbEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemBreadCrumbEdit();
+            this.repositoryItemTimeSpanEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit();
+            this.repositoryItemTokenEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit();
+            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.pnlAna = new DevExpress.XtraEditors.PanelControl();
             this.picLogo = new System.Windows.Forms.PictureBox();
@@ -254,7 +279,17 @@ namespace IhalematikPro.Forms
             this.barBtnKuralllar = new DevExpress.XtraBars.BarButtonItem();
             this.styleController1 = new DevExpress.XtraEditors.StyleController(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
+            this.GuncelKurAl = new System.Windows.Forms.Timer(this.components);
+            this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brDolar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brEuro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.euroCh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dolarCh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).BeginInit();
@@ -272,6 +307,15 @@ namespace IhalematikPro.Forms
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBreadCrumbEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeSpanEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTokenEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlAna)).BeginInit();
             this.pnlAna.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -377,10 +421,17 @@ namespace IhalematikPro.Forms
             this.barHakedisYarat,
             this.barYesilDefter,
             this.barIcmal,
-            this.barHakedisOzeti});
+            this.barHakedisOzeti,
+            this.lblDolar,
+            this.lblEuro,
+            this.barEditItem2,
+            this.barEuro,
+            this.barEditItem4,
+            this.barEditItem1,
+            this.barButtonGroup2});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 98;
+            this.ribbon.MaxItemId = 123;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsTouch.AffectOnlyRibbon = true;
             this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem1);
@@ -409,13 +460,28 @@ namespace IhalematikPro.Forms
             this.repositoryItemHyperLinkEdit1,
             this.repositoryItemComboBox1,
             this.repositoryItemColorEdit1,
-            this.repositoryItemPopupContainerEdit3});
+            this.repositoryItemPopupContainerEdit3,
+            this.brDolar,
+            this.brEuro,
+            this.repositoryItemTimeEdit1,
+            this.repositoryItemCalcEdit2,
+            this.repositoryItemCheckEdit1,
+            this.repositoryItemTextEdit4,
+            this.repositoryItemCheckEdit2,
+            this.repositoryItemDateEdit2,
+            this.euroCh,
+            this.repositoryItemDateEdit3,
+            this.repositoryItemBreadCrumbEdit1,
+            this.dolarCh,
+            this.repositoryItemTimeSpanEdit1,
+            this.repositoryItemTokenEdit2,
+            this.repositoryItemLookUpEdit1});
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbon.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowFullScreenButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowQatLocationSelector = false;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1368, 205);
+            this.ribbon.Size = new System.Drawing.Size(1441, 205);
             this.ribbon.StatusBar = this.ribbonStatusBar1;
             this.ribbon.Toolbar.ItemLinks.Add(this.barButtonItem23);
             this.ribbon.Toolbar.ItemLinks.Add(this.barButtonItem18);
@@ -444,7 +510,7 @@ namespace IhalematikPro.Forms
             this.barBtnPozListesi.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Green;
             this.barBtnPozListesi.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barBtnPozListesi.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barBtnPozListesi.LargeGlyph")));
-            this.barBtnPozListesi.LargeWidth = 120;
+            this.barBtnPozListesi.LargeWidth = 100;
             this.barBtnPozListesi.Name = "barBtnPozListesi";
             toolTipTitleItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             toolTipTitleItem1.Appearance.Options.UseImage = true;
@@ -628,7 +694,7 @@ namespace IhalematikPro.Forms
             this.barButtonItem2.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Green;
             this.barButtonItem2.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
-            this.barButtonItem2.LargeWidth = 120;
+            this.barButtonItem2.LargeWidth = 100;
             this.barButtonItem2.Name = "barButtonItem2";
             toolTipTitleItem8.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
             toolTipTitleItem8.Appearance.Options.UseImage = true;
@@ -651,7 +717,7 @@ namespace IhalematikPro.Forms
             this.barButtonItem4.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Green;
             this.barButtonItem4.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barButtonItem4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.LargeGlyph")));
-            this.barButtonItem4.LargeWidth = 120;
+            this.barButtonItem4.LargeWidth = 100;
             this.barButtonItem4.Name = "barButtonItem4";
             toolTipTitleItem9.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
             toolTipTitleItem9.Appearance.Options.UseImage = true;
@@ -696,7 +762,7 @@ namespace IhalematikPro.Forms
             this.barButtonItem10.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Green;
             this.barButtonItem10.ItemAppearance.Hovered.Options.UseForeColor = true;
             this.barButtonItem10.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.LargeGlyph")));
-            this.barButtonItem10.LargeWidth = 120;
+            this.barButtonItem10.LargeWidth = 100;
             this.barButtonItem10.Name = "barButtonItem10";
             toolTipTitleItem11.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image10")));
             toolTipTitleItem11.Appearance.Options.UseImage = true;
@@ -958,7 +1024,7 @@ namespace IhalematikPro.Forms
             // barBtnDovizKurlar
             // 
             this.barBtnDovizKurlar.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.barBtnDovizKurlar.Caption = "Döviz Kurları";
+            this.barBtnDovizKurlar.Caption = "Tüm Döviz Kurları";
             this.barBtnDovizKurlar.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnDovizKurlar.Glyph")));
             this.barBtnDovizKurlar.Id = 8;
             this.barBtnDovizKurlar.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Green;
@@ -1479,6 +1545,118 @@ namespace IhalematikPro.Forms
             this.barHakedisOzeti.LargeWidth = 120;
             this.barHakedisOzeti.Name = "barHakedisOzeti";
             // 
+            // lblDolar
+            // 
+            this.lblDolar.Caption = "Dolar:";
+            this.lblDolar.Edit = this.brDolar;
+            this.lblDolar.Enabled = false;
+            this.lblDolar.Id = 100;
+            this.lblDolar.Name = "lblDolar";
+            this.lblDolar.Width = 100;
+            // 
+            // brDolar
+            // 
+            this.brDolar.AutoHeight = false;
+            this.brDolar.Name = "brDolar";
+            // 
+            // lblEuro
+            // 
+            this.lblEuro.Caption = "Euro :";
+            this.lblEuro.Edit = this.brEuro;
+            this.lblEuro.Enabled = false;
+            this.lblEuro.Id = 101;
+            this.lblEuro.Name = "lblEuro";
+            this.lblEuro.Width = 100;
+            // 
+            // brEuro
+            // 
+            this.brEuro.AutoHeight = false;
+            this.brEuro.Name = "brEuro";
+            // 
+            // barEditItem2
+            // 
+            this.barEditItem2.Caption = "Tarih:";
+            this.barEditItem2.Edit = this.repositoryItemDateEdit2;
+            this.barEditItem2.Id = 107;
+            this.barEditItem2.Name = "barEditItem2";
+            this.barEditItem2.Width = 100;
+            // 
+            // repositoryItemDateEdit2
+            // 
+            this.repositoryItemDateEdit2.AutoHeight = false;
+            this.repositoryItemDateEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit2.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit2.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
+            this.repositoryItemDateEdit2.Name = "repositoryItemDateEdit2";
+            this.repositoryItemDateEdit2.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            // 
+            // barEuro
+            // 
+            this.barEuro.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.barEuro.Caption = "Euro";
+            this.barEuro.Edit = this.euroCh;
+            this.barEuro.Id = 111;
+            this.barEuro.IEBehavior = true;
+            this.barEuro.Name = "barEuro";
+            // 
+            // euroCh
+            // 
+            this.euroCh.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.euroCh.Appearance.Options.UseBackColor = true;
+            this.euroCh.AutoHeight = false;
+            this.euroCh.Caption = "";
+            this.euroCh.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.UserDefined;
+            this.euroCh.Name = "euroCh";
+            this.euroCh.PictureChecked = global::IhalematikProUI.Properties.Resources.ll_icon;
+            this.euroCh.PictureGrayed = global::IhalematikProUI.Properties.Resources.ui_check_box_uncheck_icon;
+            this.euroCh.PictureUnchecked = global::IhalematikProUI.Properties.Resources.ul_icon;
+            // 
+            // barEditItem4
+            // 
+            this.barEditItem4.Caption = "Tarih:";
+            this.barEditItem4.Edit = this.repositoryItemDateEdit3;
+            this.barEditItem4.Id = 112;
+            this.barEditItem4.Name = "barEditItem4";
+            this.barEditItem4.Width = 100;
+            // 
+            // repositoryItemDateEdit3
+            // 
+            this.repositoryItemDateEdit3.AutoHeight = false;
+            this.repositoryItemDateEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit3.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit3.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
+            this.repositoryItemDateEdit3.Name = "repositoryItemDateEdit3";
+            this.repositoryItemDateEdit3.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            // 
+            // barEditItem1
+            // 
+            this.barEditItem1.Caption = "Dolar";
+            this.barEditItem1.Edit = this.dolarCh;
+            this.barEditItem1.Id = 114;
+            this.barEditItem1.IEBehavior = true;
+            this.barEditItem1.Name = "barEditItem1";
+            // 
+            // dolarCh
+            // 
+            this.dolarCh.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.dolarCh.Appearance.Options.UseBackColor = true;
+            this.dolarCh.AutoHeight = false;
+            this.dolarCh.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.UserDefined;
+            this.dolarCh.Name = "dolarCh";
+            this.dolarCh.PictureChecked = global::IhalematikProUI.Properties.Resources.ll_icon;
+            this.dolarCh.PictureGrayed = global::IhalematikProUI.Properties.Resources.ui_check_box_uncheck_icon;
+            this.dolarCh.PictureUnchecked = global::IhalematikProUI.Properties.Resources.ul_icon;
+            // 
+            // barButtonGroup2
+            // 
+            this.barButtonGroup2.Caption = "barButtonGroup2";
+            this.barButtonGroup2.Id = 119;
+            this.barButtonGroup2.Name = "barButtonGroup2";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Appearance.BackColor = System.Drawing.Color.Red;
@@ -1494,7 +1672,10 @@ namespace IhalematikPro.Forms
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
             this.ribbonPageGroup10,
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup31,
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup32,
+            this.ribbonPageGroup33});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Tanımlamalar";
             // 
@@ -1518,12 +1699,37 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             this.ribbonPageGroup10.ShowCaptionButton = false;
             // 
+            // ribbonPageGroup31
+            // 
+            this.ribbonPageGroup31.ItemLinks.Add(this.lblDolar);
+            this.ribbonPageGroup31.ItemLinks.Add(this.lblEuro);
+            this.ribbonPageGroup31.Name = "ribbonPageGroup31";
+            this.ribbonPageGroup31.ShowCaptionButton = false;
+            this.ribbonPageGroup31.Text = "Güncel Kur";
+            // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.AllowMinimize = false;
-            this.ribbonPageGroup2.ItemLinks.Add(this.barBtnDovizKurlar);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barEditItem1);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barEditItem4);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.ShowCaptionButton = false;
+            this.ribbonPageGroup2.Text = "Dolar Kuru Sabitle";
+            // 
+            // ribbonPageGroup32
+            // 
+            this.ribbonPageGroup32.ItemLinks.Add(this.barEuro);
+            this.ribbonPageGroup32.ItemLinks.Add(this.barEditItem2);
+            this.ribbonPageGroup32.Name = "ribbonPageGroup32";
+            this.ribbonPageGroup32.ShowCaptionButton = false;
+            this.ribbonPageGroup32.Text = "Euro Kuru Sabitle";
+            // 
+            // ribbonPageGroup33
+            // 
+            this.ribbonPageGroup33.ItemLinks.Add(this.barBtnDovizKurlar);
+            this.ribbonPageGroup33.Name = "ribbonPageGroup33";
+            this.ribbonPageGroup33.ShowCaptionButton = false;
+            this.ribbonPageGroup33.Text = "Merkez Bankası";
             // 
             // ribbonPage8
             // 
@@ -1674,7 +1880,7 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup29,
             this.ribbonPageGroup30});
             this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Hakediş Modülü";
+            this.ribbonPage3.Text = "İş Takibi";
             this.ribbonPage3.Visible = false;
             // 
             // ribbonPageGroup24
@@ -1909,6 +2115,63 @@ namespace IhalematikPro.Forms
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemPopupContainerEdit3.Name = "repositoryItemPopupContainerEdit3";
             // 
+            // repositoryItemTimeEdit1
+            // 
+            this.repositoryItemTimeEdit1.AutoHeight = false;
+            this.repositoryItemTimeEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemTimeEdit1.Name = "repositoryItemTimeEdit1";
+            this.repositoryItemTimeEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repositoryItemTimeEdit1.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            // 
+            // repositoryItemCalcEdit2
+            // 
+            this.repositoryItemCalcEdit2.AutoHeight = false;
+            this.repositoryItemCalcEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemCalcEdit2.Name = "repositoryItemCalcEdit2";
+            // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            // 
+            // repositoryItemTextEdit4
+            // 
+            this.repositoryItemTextEdit4.AutoHeight = false;
+            this.repositoryItemTextEdit4.Name = "repositoryItemTextEdit4";
+            // 
+            // repositoryItemCheckEdit2
+            // 
+            this.repositoryItemCheckEdit2.AutoHeight = false;
+            this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
+            // 
+            // repositoryItemBreadCrumbEdit1
+            // 
+            this.repositoryItemBreadCrumbEdit1.AutoHeight = false;
+            this.repositoryItemBreadCrumbEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemBreadCrumbEdit1.Name = "repositoryItemBreadCrumbEdit1";
+            // 
+            // repositoryItemTimeSpanEdit1
+            // 
+            this.repositoryItemTimeSpanEdit1.AutoHeight = false;
+            this.repositoryItemTimeSpanEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemTimeSpanEdit1.Mask.EditMask = "dd.HH:mm:ss";
+            this.repositoryItemTimeSpanEdit1.Name = "repositoryItemTimeSpanEdit1";
+            // 
+            // repositoryItemTokenEdit2
+            // 
+            this.repositoryItemTokenEdit2.Name = "repositoryItemTokenEdit2";
+            // 
+            // repositoryItemLookUpEdit1
+            // 
+            this.repositoryItemLookUpEdit1.AutoHeight = false;
+            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
+            // 
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.txtDate);
@@ -1916,10 +2179,10 @@ namespace IhalematikPro.Forms
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem6);
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem7);
             this.ribbonStatusBar1.ItemLinks.Add(this.UserName);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 645);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 654);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbon;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1368, 43);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1449, 34);
             // 
             // pnlAna
             // 
@@ -1932,7 +2195,7 @@ namespace IhalematikPro.Forms
             this.pnlAna.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAna.Location = new System.Drawing.Point(3, 3);
             this.pnlAna.Name = "pnlAna";
-            this.pnlAna.Size = new System.Drawing.Size(1362, 434);
+            this.pnlAna.Size = new System.Drawing.Size(1435, 473);
             this.pnlAna.TabIndex = 0;
             this.pnlAna.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             this.pnlAna.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelControl1_MouseMove);
@@ -1959,7 +2222,7 @@ namespace IhalematikPro.Forms
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1362, 28);
+            this.panelControl4.Size = new System.Drawing.Size(1435, 28);
             this.panelControl4.TabIndex = 2;
             // 
             // lblCompanyName
@@ -1974,7 +2237,7 @@ namespace IhalematikPro.Forms
             this.lblCompanyName.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.lblCompanyName.Location = new System.Drawing.Point(3, 3);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(1356, 35);
+            this.lblCompanyName.Size = new System.Drawing.Size(1429, 35);
             this.lblCompanyName.TabIndex = 1;
             this.lblCompanyName.Text = " ";
             // 
@@ -2028,7 +2291,7 @@ namespace IhalematikPro.Forms
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 205);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1368, 440);
+            this.MainPanel.Size = new System.Drawing.Size(1441, 479);
             this.MainPanel.TabIndex = 9;
             // 
             // ribbonPageGroup16
@@ -2055,6 +2318,22 @@ namespace IhalematikPro.Forms
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
             this.ribbonPageCategory1.Text = "ribbonPageCategory1";
             // 
+            // GuncelKurAl
+            // 
+            this.GuncelKurAl.Enabled = true;
+            this.GuncelKurAl.Interval = 10000;
+            this.GuncelKurAl.Tick += new System.EventHandler(this.timer1_Tick_2);
+            // 
+            // barButtonGroup1
+            // 
+            this.barButtonGroup1.Caption = "barButtonGroup1";
+            this.barButtonGroup1.Id = 117;
+            this.barButtonGroup1.LargeWidth = 200;
+            this.barButtonGroup1.MenuBarWidth = 200;
+            this.barButtonGroup1.Name = "barButtonGroup1";
+            this.barButtonGroup1.SmallWithoutTextWidth = 200;
+            this.barButtonGroup1.SmallWithTextWidth = 200;
+            // 
             // frm_Anaform
             // 
             this.ActiveGlowColor = System.Drawing.Color.White;
@@ -2068,27 +2347,33 @@ namespace IhalematikPro.Forms
             this.Appearance.Options.UseTextOptions = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1368, 688);
+            this.ClientSize = new System.Drawing.Size(1441, 684);
             this.ControlBox = false;
             this.Controls.Add(this.MainPanel);
-            this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbon);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.InactiveGlowColor = System.Drawing.SystemColors.Control;
             this.IsMdiContainer = true;
             this.KeyPreview = true;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(800, 599);
+            this.MinimumSize = new System.Drawing.Size(808, 609);
             this.Name = "frm_Anaform";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.StatusBar = this.ribbonStatusBar1;
             this.Text = "İhalematikPro V.1.0.0";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_Anaform_Load);
             this.Shown += new System.EventHandler(this.frm_Anaform_Shown);
             this.Resize += new System.EventHandler(this.frm_Anaform_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brDolar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brEuro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.euroCh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dolarCh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();
@@ -2106,6 +2391,15 @@ namespace IhalematikPro.Forms
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBreadCrumbEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeSpanEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTokenEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlAna)).EndInit();
             this.pnlAna.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
@@ -2274,6 +2568,33 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup28;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup29;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup30;
+        private DevExpress.XtraBars.BarEditItem lblDolar;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit brDolar;
+        private DevExpress.XtraBars.BarEditItem lblEuro;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit brEuro;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup31;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private DevExpress.XtraBars.BarEditItem barEditItem2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit2;
+        private DevExpress.XtraBars.BarEditItem barEuro;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit euroCh;
+        private DevExpress.XtraBars.BarEditItem barEditItem4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit3;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit repositoryItemTimeEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryItemCalcEdit2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemBreadCrumbEdit repositoryItemBreadCrumbEdit1;
+        private DevExpress.XtraBars.BarEditItem barEditItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit dolarCh;
+        private System.Windows.Forms.Timer GuncelKurAl;
+        private DevExpress.XtraBars.BarButtonGroup barButtonGroup2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit repositoryItemTimeSpanEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit repositoryItemTokenEdit2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
+        private DevExpress.XtraBars.BarButtonGroup barButtonGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup32;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup33;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }
