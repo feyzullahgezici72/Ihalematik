@@ -94,6 +94,8 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.Controls.Add(this.btnOnlineAl);
             this.groupControl2.Controls.Add(this.txtEuro);
             this.groupControl2.Controls.Add(this.txtDolar);
@@ -109,6 +111,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.checkEdit2);
             this.groupControl1.Controls.Add(this.checkEdit1);
             this.groupControl1.Controls.Add(this.dtSabitEuro);
@@ -121,8 +125,10 @@
             this.groupControl1.Controls.Add(this.labelControl5);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 182);
+            this.groupControl1.LookAndFeel.SkinName = "The Asphalt World";
+            this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(396, 250);
+            this.groupControl1.Size = new System.Drawing.Size(396, 222);
             this.groupControl1.TabIndex = 15;
             this.groupControl1.Text = "Kur Sabitle";
             // 
@@ -267,10 +273,11 @@
             // 
             // checkEdit1
             // 
-            this.checkEdit1.Location = new System.Drawing.Point(357, 76);
+            this.checkEdit1.Location = new System.Drawing.Point(357, 74);
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "";
             this.checkEdit1.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.UserDefined;
+            this.checkEdit1.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
             this.checkEdit1.Properties.PictureChecked = global::IhalematikProUI.Properties.Resources.Lock_Lock_icon;
             this.checkEdit1.Properties.PictureUnchecked = global::IhalematikProUI.Properties.Resources.Lock_Unlock_icon;
             this.checkEdit1.Size = new System.Drawing.Size(39, 28);
@@ -278,10 +285,11 @@
             // 
             // checkEdit2
             // 
-            this.checkEdit2.Location = new System.Drawing.Point(355, 149);
+            this.checkEdit2.Location = new System.Drawing.Point(355, 147);
             this.checkEdit2.Name = "checkEdit2";
             this.checkEdit2.Properties.Caption = "";
             this.checkEdit2.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.UserDefined;
+            this.checkEdit2.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
             this.checkEdit2.Properties.PictureChecked = global::IhalematikProUI.Properties.Resources.Lock_Lock_icon;
             this.checkEdit2.Properties.PictureUnchecked = global::IhalematikProUI.Properties.Resources.Lock_Unlock_icon;
             this.checkEdit2.Size = new System.Drawing.Size(39, 28);
