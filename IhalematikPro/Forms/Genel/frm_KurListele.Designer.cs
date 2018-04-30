@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_KurListele));
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.dataGrid1 = new System.Windows.Forms.DataGridView();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.dataGrid1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl2
@@ -49,6 +49,19 @@
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(671, 645);
             this.groupControl2.TabIndex = 16;
+            // 
+            // dataGrid1
+            // 
+            this.dataGrid1.AllowUserToAddRows = false;
+            this.dataGrid1.AllowUserToDeleteRows = false;
+            this.dataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGrid1.Location = new System.Drawing.Point(3, 30);
+            this.dataGrid1.Name = "dataGrid1";
+            this.dataGrid1.ReadOnly = true;
+            this.dataGrid1.RowTemplate.Height = 28;
+            this.dataGrid1.Size = new System.Drawing.Size(665, 612);
+            this.dataGrid1.TabIndex = 0;
             // 
             // panelControl1
             // 
@@ -90,19 +103,6 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "KUR LİSTESİ";
             // 
-            // dataGrid1
-            // 
-            this.dataGrid1.AllowUserToAddRows = false;
-            this.dataGrid1.AllowUserToDeleteRows = false;
-            this.dataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGrid1.Location = new System.Drawing.Point(3, 30);
-            this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.ReadOnly = true;
-            this.dataGrid1.RowTemplate.Height = 28;
-            this.dataGrid1.Size = new System.Drawing.Size(665, 612);
-            this.dataGrid1.TabIndex = 0;
-            // 
             // frm_KurListele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -113,15 +113,15 @@
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frm_KurListele";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-           
             this.Shown += new System.EventHandler(this.frm_KurListele_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
             this.ResumeLayout(false);
 
         }
