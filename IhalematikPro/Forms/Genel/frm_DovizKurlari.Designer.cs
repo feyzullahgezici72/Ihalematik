@@ -267,24 +267,24 @@
             // 
             // checkEdit1
             // 
-            this.checkEdit1.Location = new System.Drawing.Point(357, 80);
+            this.checkEdit1.Location = new System.Drawing.Point(357, 76);
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "";
             this.checkEdit1.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.UserDefined;
-            this.checkEdit1.Properties.PictureChecked = global::IhalematikProUI.Properties.Resources.ll_icon;
-            this.checkEdit1.Properties.PictureUnchecked = global::IhalematikProUI.Properties.Resources.ul_icon;
-            this.checkEdit1.Size = new System.Drawing.Size(39, 20);
+            this.checkEdit1.Properties.PictureChecked = global::IhalematikProUI.Properties.Resources.Lock_Lock_icon;
+            this.checkEdit1.Properties.PictureUnchecked = global::IhalematikProUI.Properties.Resources.Lock_Unlock_icon;
+            this.checkEdit1.Size = new System.Drawing.Size(39, 28);
             this.checkEdit1.TabIndex = 17;
             // 
             // checkEdit2
             // 
-            this.checkEdit2.Location = new System.Drawing.Point(357, 153);
+            this.checkEdit2.Location = new System.Drawing.Point(355, 149);
             this.checkEdit2.Name = "checkEdit2";
             this.checkEdit2.Properties.Caption = "";
             this.checkEdit2.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.UserDefined;
-            this.checkEdit2.Properties.PictureChecked = global::IhalematikProUI.Properties.Resources.ll_icon;
-            this.checkEdit2.Properties.PictureUnchecked = global::IhalematikProUI.Properties.Resources.ul_icon;
-            this.checkEdit2.Size = new System.Drawing.Size(39, 20);
+            this.checkEdit2.Properties.PictureChecked = global::IhalematikProUI.Properties.Resources.Lock_Lock_icon;
+            this.checkEdit2.Properties.PictureUnchecked = global::IhalematikProUI.Properties.Resources.Lock_Unlock_icon;
+            this.checkEdit2.Size = new System.Drawing.Size(39, 28);
             this.checkEdit2.TabIndex = 18;
             // 
             // frm_DovizKurlari
@@ -350,7 +350,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.CheckEdit checkEdit2;
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
+        private DevExpress.XtraEditors.CheckEdit checkEdit2;
     }
 }
