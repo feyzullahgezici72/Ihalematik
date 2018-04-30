@@ -68,8 +68,7 @@ namespace IhalematikPro.Forms
             {
                 UserName.Caption = CurrentManager.Instance.CurrentMember.UserName.ToString(); 
             }
-            brDolar.NullText = GetRate("USD").ToString();
-            brEuro.NullText = GetRate("EUR").ToString();
+
         }
 
         public void LoadLogo()
@@ -1194,49 +1193,11 @@ namespace IhalematikPro.Forms
             RibonAktif();
             barSozlesmeKalemleri.ButtonStyle = BarButtonStyle.Default;
         }
-        //----------------------------------döviz kuru ekledim----------------------------
-        public class Currency
-        {
-            public string Code { get; set; }
-            public decimal Rate { get; set; }
-        }
-        private decimal GetRate(string code)
-        {
-            string url = string.Empty;
-            var date = DateTime.Now;
-            if (date.Date == DateTime.Today)
-                url = "http://www.tcmb.gov.tr/kurlar/today.xml";
-            else
-                url = string.Format("http://www.tcmb.gov.tr/kurlar/{0}{1}/{2}{1}{0}.xml", date.Year, addZero(date.Month), addZero(date.Day));
 
-            System.Xml.Linq.XDocument document = System.Xml.Linq.XDocument.Load(url);
-            Dictionary<string, string> dic = new Dictionary<string, string>();
-            var result = document.Descendants("Currency")
-            .Where(v => v.Element("ForexBuying") != null && v.Element("ForexBuying").Value.Length > 0)
-            .Select(v => new Currency
-            {
-                Code = v.Attribute("Kod").Value,
-                Rate = decimal.Parse(v.Element("ForexBuying").Value.Replace('.', ','))
-            }).ToList();
-            return result.FirstOrDefault(s => s.Code == code).Rate;
-        }
-        private string addZero(int p)
+        private void barButtonItem50_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (p.ToString().Length == 1)
-                return "0" + p;
-            return p.ToString();
+            frm_KurListele kl = new frm_KurListele();
+            kl.ShowDialog();
         }
-
-        private void timer1_Tick_2(object sender, EventArgs e)
-        {
-            brDolar.NullText = GetRate("USD").ToString();
-            brEuro.NullText = GetRate("EUR").ToString();
-        }
-
-        private void barEuro_ItemClick(object sender, ItemClickEventArgs e)
-        {
-          
-        }
-        //----------------------------------döviz kuru ekledim----------------------------
     }
 }

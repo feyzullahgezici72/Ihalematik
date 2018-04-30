@@ -252,6 +252,12 @@
     <Compile Include="Forms\Genel\frm_GenelBilgiler.Designer.cs">
       <DependentUpon>frm_GenelBilgiler.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Genel\frm_KurListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Genel\frm_KurListele.Designer.cs">
+      <DependentUpon>frm_KurListele.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Genel\frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -764,6 +770,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Genel\frm_GenelBilgiler.resx">
       <DependentUpon>frm_GenelBilgiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Genel\frm_KurListele.resx">
+      <DependentUpon>frm_KurListele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Genel\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>

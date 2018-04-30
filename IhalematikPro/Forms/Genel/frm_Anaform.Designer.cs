@@ -201,12 +201,10 @@ namespace IhalematikPro.Forms
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.dolarCh = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.barButtonGroup2 = new DevExpress.XtraBars.BarButtonGroup();
+            this.barButtonItem50 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup31 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup32 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup33 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -235,6 +233,7 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup22 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup31 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup20 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -279,7 +278,6 @@ namespace IhalematikPro.Forms
             this.barBtnKuralllar = new DevExpress.XtraBars.BarButtonItem();
             this.styleController1 = new DevExpress.XtraEditors.StyleController(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
-            this.GuncelKurAl = new System.Windows.Forms.Timer(this.components);
             this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brDolar)).BeginInit();
@@ -428,10 +426,11 @@ namespace IhalematikPro.Forms
             this.barEuro,
             this.barEditItem4,
             this.barEditItem1,
-            this.barButtonGroup2});
+            this.barButtonGroup2,
+            this.barButtonItem50});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 123;
+            this.ribbon.MaxItemId = 124;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsTouch.AffectOnlyRibbon = true;
             this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem1);
@@ -1024,7 +1023,7 @@ namespace IhalematikPro.Forms
             // barBtnDovizKurlar
             // 
             this.barBtnDovizKurlar.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.barBtnDovizKurlar.Caption = "Tüm Döviz Kurları";
+            this.barBtnDovizKurlar.Caption = "Kur İşlemleri";
             this.barBtnDovizKurlar.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnDovizKurlar.Glyph")));
             this.barBtnDovizKurlar.Id = 8;
             this.barBtnDovizKurlar.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Green;
@@ -1035,9 +1034,9 @@ namespace IhalematikPro.Forms
             toolTipTitleItem16.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image15")));
             toolTipTitleItem16.Appearance.Options.UseImage = true;
             toolTipTitleItem16.Image = ((System.Drawing.Image)(resources.GetObject("toolTipTitleItem16.Image")));
-            toolTipTitleItem16.Text = "GÜNCEL DÖVİZ KURLARI";
+            toolTipTitleItem16.Text = "KUR AYARLARI";
             toolTipItem16.LeftIndent = 6;
-            toolTipItem16.Text = "Merkez Bankasından güncel döviz kurlarını listeleme formu";
+            toolTipItem16.Text = "Dolar ve Euro Kurlarını kaydetmek ve kurları sabitleme";
             superToolTip16.Items.Add(toolTipTitleItem16);
             superToolTip16.Items.Add(toolTipItem16);
             this.barBtnDovizKurlar.SuperTip = superToolTip16;
@@ -1657,6 +1656,16 @@ namespace IhalematikPro.Forms
             this.barButtonGroup2.Id = 119;
             this.barButtonGroup2.Name = "barButtonGroup2";
             // 
+            // barButtonItem50
+            // 
+            this.barButtonItem50.Caption = "Döviz Kur Listele";
+            this.barButtonItem50.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem50.Glyph")));
+            this.barButtonItem50.Id = 123;
+            this.barButtonItem50.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem50.LargeGlyph")));
+            this.barButtonItem50.LargeWidth = 120;
+            this.barButtonItem50.Name = "barButtonItem50";
+            this.barButtonItem50.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem50_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Appearance.BackColor = System.Drawing.Color.Red;
@@ -1672,9 +1681,6 @@ namespace IhalematikPro.Forms
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
             this.ribbonPageGroup10,
-            this.ribbonPageGroup31,
-            this.ribbonPageGroup2,
-            this.ribbonPageGroup32,
             this.ribbonPageGroup33});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Tanımlamalar";
@@ -1699,37 +1705,11 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             this.ribbonPageGroup10.ShowCaptionButton = false;
             // 
-            // ribbonPageGroup31
-            // 
-            this.ribbonPageGroup31.ItemLinks.Add(this.lblDolar);
-            this.ribbonPageGroup31.ItemLinks.Add(this.lblEuro);
-            this.ribbonPageGroup31.Name = "ribbonPageGroup31";
-            this.ribbonPageGroup31.ShowCaptionButton = false;
-            this.ribbonPageGroup31.Text = "Güncel Kur";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.AllowMinimize = false;
-            this.ribbonPageGroup2.ItemLinks.Add(this.barEditItem1);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barEditItem4);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.ShowCaptionButton = false;
-            this.ribbonPageGroup2.Text = "Dolar Kuru Sabitle";
-            // 
-            // ribbonPageGroup32
-            // 
-            this.ribbonPageGroup32.ItemLinks.Add(this.barEuro);
-            this.ribbonPageGroup32.ItemLinks.Add(this.barEditItem2);
-            this.ribbonPageGroup32.Name = "ribbonPageGroup32";
-            this.ribbonPageGroup32.ShowCaptionButton = false;
-            this.ribbonPageGroup32.Text = "Euro Kuru Sabitle";
-            // 
             // ribbonPageGroup33
             // 
             this.ribbonPageGroup33.ItemLinks.Add(this.barBtnDovizKurlar);
             this.ribbonPageGroup33.Name = "ribbonPageGroup33";
             this.ribbonPageGroup33.ShowCaptionButton = false;
-            this.ribbonPageGroup33.Text = "Merkez Bankası";
             // 
             // ribbonPage8
             // 
@@ -1954,7 +1934,8 @@ namespace IhalematikPro.Forms
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup4,
             this.ribbonPageGroup5,
-            this.ribbonPageGroup22});
+            this.ribbonPageGroup22,
+            this.ribbonPageGroup31});
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "Raporlar";
             // 
@@ -1981,6 +1962,13 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup22.ShowCaptionButton = false;
             this.ribbonPageGroup22.Text = "İlanlar";
             this.ribbonPageGroup22.Visible = false;
+            // 
+            // ribbonPageGroup31
+            // 
+            this.ribbonPageGroup31.ItemLinks.Add(this.barButtonItem50);
+            this.ribbonPageGroup31.Name = "ribbonPageGroup31";
+            this.ribbonPageGroup31.ShowCaptionButton = false;
+            this.ribbonPageGroup31.Text = "Döviz Listele";
             // 
             // ribbonPage2
             // 
@@ -2179,10 +2167,10 @@ namespace IhalematikPro.Forms
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem6);
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem7);
             this.ribbonStatusBar1.ItemLinks.Add(this.UserName);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 654);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 651);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbon;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1449, 34);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1449, 37);
             // 
             // pnlAna
             // 
@@ -2317,12 +2305,6 @@ namespace IhalematikPro.Forms
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
             this.ribbonPageCategory1.Text = "ribbonPageCategory1";
-            // 
-            // GuncelKurAl
-            // 
-            this.GuncelKurAl.Enabled = true;
-            this.GuncelKurAl.Interval = 10000;
-            this.GuncelKurAl.Tick += new System.EventHandler(this.timer1_Tick_2);
             // 
             // barButtonGroup1
             // 
@@ -2464,7 +2446,6 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
         private DevExpress.XtraBars.BarStaticItem barStaticItem3;
         private DevExpress.XtraBars.BarButtonItem barBtnDovizKurlar;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarStaticItem barStaticItem4;
         private DevExpress.XtraBars.BarStaticItem barStaticItem5;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
@@ -2572,7 +2553,6 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit brDolar;
         private DevExpress.XtraBars.BarEditItem lblEuro;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit brEuro;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup31;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraBars.BarEditItem barEditItem2;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit2;
@@ -2587,14 +2567,14 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraEditors.Repository.RepositoryItemBreadCrumbEdit repositoryItemBreadCrumbEdit1;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit dolarCh;
-        private System.Windows.Forms.Timer GuncelKurAl;
         private DevExpress.XtraBars.BarButtonGroup barButtonGroup2;
         private DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit repositoryItemTimeSpanEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit repositoryItemTokenEdit2;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
         private DevExpress.XtraBars.BarButtonGroup barButtonGroup1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup32;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup33;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem50;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup31;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }
