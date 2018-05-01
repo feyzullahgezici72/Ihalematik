@@ -277,5 +277,20 @@ namespace IhalematikPro.Forms
             frm_TopluPozYukle pozyukle = new frm_TopluPozYukle(this);
             pozyukle.ShowDialog(this);
         }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            IhalematikProUI.Forms.Kurumlar.frm_Kurumlar kr = new IhalematikProUI.Forms.Kurumlar.frm_Kurumlar();
+            kr.ShowDialog();
+        }
+
+        private void frm_PozListesi_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F1")
+            {
+                IhalematikProUI.Forms.Kurumlar.frm_Kurumlar kr = new IhalematikProUI.Forms.Kurumlar.frm_Kurumlar();
+                kr.ShowDialog();
+            }
+        }
     }
 }

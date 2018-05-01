@@ -34,6 +34,7 @@
             this.lblPozListesi = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.pnlYuke = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             this.picture1 = new System.Windows.Forms.PictureBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -42,7 +43,9 @@
             this.lblPosSayisi = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -54,6 +57,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picture1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -116,6 +122,7 @@
             // pnlYuke
             // 
             this.pnlYuke.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlYuke.Controls.Add(this.groupControl3);
             this.pnlYuke.Controls.Add(this.labelControl2);
             this.pnlYuke.Controls.Add(this.memoEdit1);
             this.pnlYuke.Controls.Add(this.picture1);
@@ -123,6 +130,16 @@
             this.pnlYuke.Name = "pnlYuke";
             this.pnlYuke.Size = new System.Drawing.Size(984, 559);
             this.pnlYuke.TabIndex = 40;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelControl2.Location = new System.Drawing.Point(8, 42);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(77, 24);
+            this.labelControl2.TabIndex = 7;
+            this.labelControl2.Text = "UYARI !!!";
             // 
             // memoEdit1
             // 
@@ -217,15 +234,39 @@
             this.labelControl1.TabIndex = 30;
             this.labelControl1.Text = "Yüklenen Poz Sayısı:";
             // 
-            // labelControl2
+            // labelControl3
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelControl2.Location = new System.Drawing.Point(8, 42);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(77, 24);
-            this.labelControl2.TabIndex = 7;
-            this.labelControl2.Text = "UYARI !!!";
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl3.Location = new System.Drawing.Point(18, 36);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(82, 19);
+            this.labelControl3.TabIndex = 33;
+            this.labelControl3.Text = "Kurum Adı:";
+            // 
+            // comboBoxEdit1
+            // 
+            this.comboBoxEdit1.Location = new System.Drawing.Point(107, 33);
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Size = new System.Drawing.Size(404, 26);
+            this.comboBoxEdit1.TabIndex = 34;
+            // 
+            // groupControl3
+            // 
+            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupControl3.AppearanceCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.groupControl3.AppearanceCaption.Options.UseFont = true;
+            this.groupControl3.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl3.Controls.Add(this.comboBoxEdit1);
+            this.groupControl3.Controls.Add(this.labelControl3);
+            this.groupControl3.Location = new System.Drawing.Point(449, 488);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(527, 68);
+            this.groupControl3.TabIndex = 35;
+            this.groupControl3.Text = "Kurum Seçiniz";
             // 
             // frm_TopluPozYukle
             // 
@@ -254,6 +295,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            this.groupControl3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -274,5 +319,8 @@
         private DevExpress.XtraEditors.MemoEdit memoEdit1;
         private System.Windows.Forms.PictureBox picture1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }

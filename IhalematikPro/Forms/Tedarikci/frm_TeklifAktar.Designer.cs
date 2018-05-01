@@ -28,16 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TeklifAktar));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtEuro = new DevExpress.XtraEditors.TextEdit();
+            this.txtDolar = new DevExpress.XtraEditors.TextEdit();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.btnUploadFile = new DevExpress.XtraEditors.SimpleButton();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.lblSupplierName = new DevExpress.XtraEditors.LabelControl();
@@ -56,6 +67,8 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MoneyUnit = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKDV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -65,12 +78,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEuro.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDolar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoneyUnit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,6 +142,7 @@
             this.panelControl2.Appearance.BackColor2 = System.Drawing.Color.White;
             this.panelControl2.Appearance.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.panelControl2.Controls.Add(this.groupControl1);
             this.panelControl2.Controls.Add(this.btnUploadFile);
             this.panelControl2.Controls.Add(this.btnKaydet);
             this.panelControl2.Controls.Add(this.lblSupplierName);
@@ -137,6 +157,110 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1300, 96);
             this.panelControl2.TabIndex = 29;
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.groupControl1.Appearance.Options.UseBackColor = true;
+            this.groupControl1.Controls.Add(this.labelControl3);
+            this.groupControl1.Controls.Add(this.comboBoxEdit1);
+            this.groupControl1.Controls.Add(this.txtEuro);
+            this.groupControl1.Controls.Add(this.txtDolar);
+            this.groupControl1.Controls.Add(this.radioButton2);
+            this.groupControl1.Controls.Add(this.radioButton1);
+            this.groupControl1.Controls.Add(this.labelControl7);
+            this.groupControl1.Controls.Add(this.labelControl6);
+            this.groupControl1.Controls.Add(this.labelControl5);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupControl1.Location = new System.Drawing.Point(519, 3);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(562, 90);
+            this.groupControl1.TabIndex = 16;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(411, 32);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(89, 19);
+            this.labelControl3.TabIndex = 19;
+            this.labelControl3.Text = "Ödeme Şekli";
+            // 
+            // comboBoxEdit1
+            // 
+            this.comboBoxEdit1.EditValue = "Nakit";
+            this.comboBoxEdit1.Location = new System.Drawing.Point(411, 55);
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            "Nakit",
+            "Çek",
+            "Kart"});
+            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxEdit1.Size = new System.Drawing.Size(142, 26);
+            this.comboBoxEdit1.TabIndex = 18;
+            // 
+            // txtEuro
+            // 
+            this.txtEuro.Location = new System.Drawing.Point(263, 55);
+            this.txtEuro.Name = "txtEuro";
+            this.txtEuro.Properties.ReadOnly = true;
+            this.txtEuro.Size = new System.Drawing.Size(86, 26);
+            this.txtEuro.TabIndex = 16;
+            // 
+            // txtDolar
+            // 
+            this.txtDolar.Location = new System.Drawing.Point(163, 55);
+            this.txtDolar.Name = "txtDolar";
+            this.txtDolar.Properties.ReadOnly = true;
+            this.txtDolar.Size = new System.Drawing.Size(86, 26);
+            this.txtDolar.TabIndex = 17;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(56, 55);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(45, 23);
+            this.radioButton2.TabIndex = 4;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "H";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 55);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(43, 23);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "E";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(263, 32);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(71, 19);
+            this.labelControl7.TabIndex = 2;
+            this.labelControl7.Text = "Euro Kuru";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(163, 32);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(76, 19);
+            this.labelControl6.TabIndex = 2;
+            this.labelControl6.Text = "Dolar Kuru";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(6, 32);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(95, 19);
+            this.labelControl5.TabIndex = 2;
+            this.labelControl5.Text = "Kur Sabit mi?";
             // 
             // btnUploadFile
             // 
@@ -288,12 +412,16 @@
             // 
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            gridLevelNode1.RelationName = "Level1";
+            this.grdMaterialList.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
             this.grdMaterialList.Location = new System.Drawing.Point(0, 0);
             this.grdMaterialList.MainView = this.gridView1;
             this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemCheckEdit1});
+            this.repositoryItemCheckEdit1,
+            this.MoneyUnit});
             this.grdMaterialList.Size = new System.Drawing.Size(1300, 569);
             this.grdMaterialList.TabIndex = 0;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -413,6 +541,7 @@
             this.gridColumn7,
             this.gridColumn8,
             this.gridColumn9,
+            this.gridColumn2,
             this.gridColumn10,
             this.colKDV,
             this.gridColumn1,
@@ -512,6 +641,30 @@
             this.gridColumn9.VisibleIndex = 2;
             this.gridColumn9.Width = 78;
             // 
+            // gridColumn2
+            // 
+            this.gridColumn2.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridColumn2.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn2.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn2.Caption = "PARA BİRİMİ";
+            this.gridColumn2.ColumnEdit = this.MoneyUnit;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 3;
+            // 
+            // MoneyUnit
+            // 
+            this.MoneyUnit.AutoHeight = false;
+            this.MoneyUnit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("MoneyUnit.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.MoneyUnit.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TL", "TL"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Dolar", "$"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Euro", "€")});
+            this.MoneyUnit.DataSource = this.bindingSource1;
+            this.MoneyUnit.Name = "MoneyUnit";
+            // 
             // gridColumn10
             // 
             this.gridColumn10.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -535,7 +688,7 @@
             this.gridColumn10.OptionsFilter.AllowAutoFilter = false;
             this.gridColumn10.OptionsFilter.AllowFilter = false;
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 3;
+            this.gridColumn10.VisibleIndex = 4;
             this.gridColumn10.Width = 82;
             // 
             // colKDV
@@ -554,7 +707,7 @@
             this.colKDV.OptionsColumn.ReadOnly = true;
             this.colKDV.OptionsFilter.AllowFilter = false;
             this.colKDV.Visible = true;
-            this.colKDV.VisibleIndex = 4;
+            this.colKDV.VisibleIndex = 5;
             this.colKDV.Width = 65;
             // 
             // gridColumn1
@@ -572,7 +725,7 @@
             this.gridColumn1.OptionsColumn.AllowFocus = false;
             this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 5;
+            this.gridColumn1.VisibleIndex = 6;
             this.gridColumn1.Width = 71;
             // 
             // colSuppierName
@@ -608,6 +761,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEuro.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDolar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -615,6 +774,7 @@
             this.panelControl6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoneyUnit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.ResumeLayout(false);
 
@@ -650,5 +810,17 @@
         private DevExpress.XtraGrid.Columns.GridColumn colKDV;
         private DevExpress.XtraEditors.SimpleButton btnUploadFile;
         private DevExpress.XtraEditors.SimpleButton btnKaydet;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.TextEdit txtEuro;
+        private DevExpress.XtraEditors.TextEdit txtDolar;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit MoneyUnit;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
     }
 }

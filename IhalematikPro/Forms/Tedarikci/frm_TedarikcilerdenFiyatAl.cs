@@ -43,7 +43,7 @@ namespace IhalematikProUI.Forms
         {
             this.LoadSupplierGrid();
             pnlrisk.Visible = false;
-            pnltoplam.Visible = false;
+            //pnltoplam.Visible = false;
             btnKaydet.Visible = false;
         }
         public void LoadSupplierGrid()
@@ -151,7 +151,7 @@ namespace IhalematikProUI.Forms
             if (dataSoruce != null && dataSoruce.Count != 0)
             {
                 btnKaydet.Visible = true;
-                pnltoplam.Visible = true;
+                //pnltoplam.Visible = true;
                 this.CalculateInnerValues();
             }
         }
@@ -227,7 +227,7 @@ namespace IhalematikProUI.Forms
         private void grdSupplier_Click(object sender, EventArgs e)
         {
             pnlrisk.Visible = false;
-            pnltoplam.Visible = false;
+            //pnltoplam.Visible = false;
             btnKaydet.Visible = false;
         }
 
@@ -245,7 +245,7 @@ namespace IhalematikProUI.Forms
         private void rdSortPrice_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnlrisk.Visible = false;
-            pnltoplam.Visible = false;
+            //pnltoplam.Visible = false;
             btnKaydet.Visible = false;
         }
 

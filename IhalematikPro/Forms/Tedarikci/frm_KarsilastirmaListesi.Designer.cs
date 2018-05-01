@@ -54,6 +54,16 @@
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.pnltoplam = new System.Windows.Forms.Panel();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtEuro = new DevExpress.XtraEditors.TextEdit();
+            this.txtDolar = new DevExpress.XtraEditors.TextEdit();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.gridViewMaterialList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -79,6 +89,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedSupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
+            this.pnltoplam.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEuro.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDolar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
@@ -482,12 +498,117 @@
             // pnltoplam
             // 
             this.pnltoplam.BackColor = System.Drawing.Color.Transparent;
+            this.pnltoplam.Controls.Add(this.groupControl1);
             this.pnltoplam.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnltoplam.Location = new System.Drawing.Point(380, 590);
             this.pnltoplam.Margin = new System.Windows.Forms.Padding(6);
             this.pnltoplam.Name = "pnltoplam";
             this.pnltoplam.Size = new System.Drawing.Size(976, 104);
             this.pnltoplam.TabIndex = 29;
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.groupControl1.Appearance.Options.UseBackColor = true;
+            this.groupControl1.Controls.Add(this.labelControl4);
+            this.groupControl1.Controls.Add(this.comboBoxEdit1);
+            this.groupControl1.Controls.Add(this.txtEuro);
+            this.groupControl1.Controls.Add(this.txtDolar);
+            this.groupControl1.Controls.Add(this.radioButton2);
+            this.groupControl1.Controls.Add(this.radioButton1);
+            this.groupControl1.Controls.Add(this.labelControl7);
+            this.groupControl1.Controls.Add(this.labelControl6);
+            this.groupControl1.Controls.Add(this.labelControl5);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupControl1.Location = new System.Drawing.Point(0, 0);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(562, 104);
+            this.groupControl1.TabIndex = 17;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(411, 37);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(89, 19);
+            this.labelControl4.TabIndex = 19;
+            this.labelControl4.Text = "Ödeme Şekli";
+            // 
+            // comboBoxEdit1
+            // 
+            this.comboBoxEdit1.EditValue = "Nakit";
+            this.comboBoxEdit1.Location = new System.Drawing.Point(411, 60);
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            "Nakit",
+            "Çek",
+            "Kart"});
+            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxEdit1.Size = new System.Drawing.Size(142, 26);
+            this.comboBoxEdit1.TabIndex = 18;
+            // 
+            // txtEuro
+            // 
+            this.txtEuro.Location = new System.Drawing.Point(263, 60);
+            this.txtEuro.Name = "txtEuro";
+            this.txtEuro.Properties.ReadOnly = true;
+            this.txtEuro.Size = new System.Drawing.Size(86, 26);
+            this.txtEuro.TabIndex = 16;
+            // 
+            // txtDolar
+            // 
+            this.txtDolar.Location = new System.Drawing.Point(163, 60);
+            this.txtDolar.Name = "txtDolar";
+            this.txtDolar.Properties.ReadOnly = true;
+            this.txtDolar.Size = new System.Drawing.Size(86, 26);
+            this.txtDolar.TabIndex = 17;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(56, 60);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(45, 23);
+            this.radioButton2.TabIndex = 4;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "H";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 60);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(43, 23);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "E";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(263, 37);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(71, 19);
+            this.labelControl7.TabIndex = 2;
+            this.labelControl7.Text = "Euro Kuru";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(163, 37);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(76, 19);
+            this.labelControl6.TabIndex = 2;
+            this.labelControl6.Text = "Dolar Kuru";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(6, 37);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(95, 19);
+            this.labelControl5.TabIndex = 2;
+            this.labelControl5.Text = "Kur Sabit mi?";
             // 
             // grdMaterialList
             // 
@@ -828,6 +949,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.rpstIsSelectedSupplier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
+            this.pnltoplam.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEuro.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDolar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
@@ -873,5 +1001,15 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.TextEdit txtEuro;
+        private DevExpress.XtraEditors.TextEdit txtDolar;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
     }
 }

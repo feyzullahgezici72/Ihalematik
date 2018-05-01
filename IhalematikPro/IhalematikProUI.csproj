@@ -312,6 +312,12 @@
     <Compile Include="Forms\IhaleAdim\frm_TopluPozYukleIhale.Designer.cs">
       <DependentUpon>frm_TopluPozYukleIhale.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Kurumlar\frm_Kurumlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Kurumlar\frm_Kurumlar.Designer.cs">
+      <DependentUpon>frm_Kurumlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\OBF\frm_TopluObfTemp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -800,6 +806,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IhaleAdim\frm_TopluPozYukleIhale.resx">
       <DependentUpon>frm_TopluPozYukleIhale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Kurumlar\frm_Kurumlar.resx">
+      <DependentUpon>frm_Kurumlar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OBF\frm_TopluObfTemp.resx">
       <DependentUpon>frm_TopluObfTemp.cs</DependentUpon>

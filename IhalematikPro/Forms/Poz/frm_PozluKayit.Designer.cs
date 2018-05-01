@@ -37,6 +37,8 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblGrupName = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.grdPozList = new DevExpress.XtraGrid.GridControl();
@@ -65,6 +67,7 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdPozList)).BeginInit();
@@ -112,7 +115,7 @@
             this.groupControl2.Location = new System.Drawing.Point(0, 35);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1174, 50);
+            this.groupControl2.Size = new System.Drawing.Size(1166, 50);
             this.groupControl2.TabIndex = 33;
             this.groupControl2.Text = "Malzeme Bilgileri";
             // 
@@ -122,7 +125,7 @@
             this.btnBul.Appearance.Options.UseFont = true;
             this.btnBul.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnBul.Image = global::IhalematikProUI.Properties.Resources.search_icon__4_;
-            this.btnBul.Location = new System.Drawing.Point(938, 0);
+            this.btnBul.Location = new System.Drawing.Point(930, 0);
             this.btnBul.Margin = new System.Windows.Forms.Padding(6);
             this.btnBul.Name = "btnBul";
             this.btnBul.Size = new System.Drawing.Size(118, 50);
@@ -136,7 +139,7 @@
             this.btnEkle.Appearance.Options.UseFont = true;
             this.btnEkle.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEkle.Image = global::IhalematikProUI.Properties.Resources.Button_Add_icon__1_;
-            this.btnEkle.Location = new System.Drawing.Point(1056, 0);
+            this.btnEkle.Location = new System.Drawing.Point(1048, 0);
             this.btnEkle.Margin = new System.Windows.Forms.Padding(6);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(118, 50);
@@ -157,7 +160,7 @@
             this.txtDescription.Properties.Appearance.Options.UseForeColor = true;
             this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtDescription.Size = new System.Drawing.Size(622, 30);
+            this.txtDescription.Size = new System.Drawing.Size(530, 30);
             this.txtDescription.TabIndex = 1;
             this.txtDescription.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescription_KeyPress);
             // 
@@ -195,7 +198,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1174, 35);
+            this.panelControl1.Size = new System.Drawing.Size(1166, 35);
             this.panelControl1.TabIndex = 32;
             // 
             // panelControl2
@@ -203,13 +206,35 @@
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.labelControl1);
+            this.panelControl2.Controls.Add(this.comboBoxEdit1);
             this.panelControl2.Controls.Add(this.lblGrupName);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1174, 35);
+            this.panelControl2.Size = new System.Drawing.Size(1166, 35);
             this.panelControl2.TabIndex = 2;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl1.Location = new System.Drawing.Point(665, 7);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(91, 19);
+            this.labelControl1.TabIndex = 33;
+            this.labelControl1.Text = "Kurum Adı:";
+            // 
+            // comboBoxEdit1
+            // 
+            this.comboBoxEdit1.Location = new System.Drawing.Point(763, 4);
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Size = new System.Drawing.Size(404, 26);
+            this.comboBoxEdit1.TabIndex = 34;
             // 
             // lblGrupName
             // 
@@ -235,7 +260,7 @@
             this.groupControl1.Location = new System.Drawing.Point(0, 85);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1174, 323);
+            this.groupControl1.Size = new System.Drawing.Size(1166, 323);
             this.groupControl1.TabIndex = 34;
             this.groupControl1.Text = "Poz Listesi";
             // 
@@ -249,7 +274,7 @@
             this.grdPozList.MainView = this.gridView1;
             this.grdPozList.Margin = new System.Windows.Forms.Padding(4);
             this.grdPozList.Name = "grdPozList";
-            this.grdPozList.Size = new System.Drawing.Size(1174, 323);
+            this.grdPozList.Size = new System.Drawing.Size(1166, 323);
             this.grdPozList.TabIndex = 0;
             this.grdPozList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -507,7 +532,7 @@
             this.groupControl3.Location = new System.Drawing.Point(0, 408);
             this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1174, 242);
+            this.groupControl3.Size = new System.Drawing.Size(1166, 234);
             this.groupControl3.TabIndex = 35;
             this.groupControl3.Text = "Eklenen Malzemeler";
             // 
@@ -521,7 +546,7 @@
             this.grdAddedPoz.MainView = this.gridView2;
             this.grdAddedPoz.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddedPoz.Name = "grdAddedPoz";
-            this.grdAddedPoz.Size = new System.Drawing.Size(1054, 242);
+            this.grdAddedPoz.Size = new System.Drawing.Size(1046, 234);
             this.grdAddedPoz.TabIndex = 0;
             this.grdAddedPoz.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -776,7 +801,7 @@
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(120, 242);
+            this.panelControl3.Size = new System.Drawing.Size(120, 234);
             this.panelControl3.TabIndex = 0;
             // 
             // simpleButton3
@@ -814,7 +839,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1174, 650);
+            this.ClientSize = new System.Drawing.Size(1166, 642);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl1);
@@ -839,6 +864,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdPozList)).EndInit();
@@ -884,5 +910,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colAddedPozOfferPrice;
         private DevExpress.XtraEditors.SimpleButton btnCikar2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
     }
 }
