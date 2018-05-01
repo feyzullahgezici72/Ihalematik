@@ -30,7 +30,6 @@ namespace IhalematikPro.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Anaform));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
@@ -202,6 +201,8 @@ namespace IhalematikPro.Forms
             this.dolarCh = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.barButtonGroup2 = new DevExpress.XtraBars.BarButtonGroup();
             this.barButtonItem50 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem51 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem52 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -219,6 +220,7 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup18 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup24 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -276,7 +278,7 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barBtnKuralllar = new DevExpress.XtraBars.BarButtonItem();
-            this.styleController1 = new DevExpress.XtraEditors.StyleController(this.components);
+            this.styleController1 = new DevExpress.XtraEditors.StyleController();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
@@ -427,10 +429,12 @@ namespace IhalematikPro.Forms
             this.barEditItem4,
             this.barEditItem1,
             this.barButtonGroup2,
-            this.barButtonItem50});
+            this.barButtonItem50,
+            this.barButtonItem51,
+            this.barButtonItem52});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 124;
+            this.ribbon.MaxItemId = 126;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsTouch.AffectOnlyRibbon = true;
             this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem1);
@@ -1666,6 +1670,26 @@ namespace IhalematikPro.Forms
             this.barButtonItem50.Name = "barButtonItem50";
             this.barButtonItem50.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem50_ItemClick);
             // 
+            // barButtonItem51
+            // 
+            this.barButtonItem51.Caption = "Taşeron Tanımla";
+            this.barButtonItem51.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem51.Glyph")));
+            this.barButtonItem51.Id = 124;
+            this.barButtonItem51.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem51.LargeGlyph")));
+            this.barButtonItem51.LargeWidth = 120;
+            this.barButtonItem51.Name = "barButtonItem51";
+            this.barButtonItem51.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem51_ItemClick);
+            // 
+            // barButtonItem52
+            // 
+            this.barButtonItem52.Caption = "Taşere Et";
+            this.barButtonItem52.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem52.Glyph")));
+            this.barButtonItem52.Id = 125;
+            this.barButtonItem52.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem52.LargeGlyph")));
+            this.barButtonItem52.LargeWidth = 120;
+            this.barButtonItem52.Name = "barButtonItem52";
+            this.barButtonItem52.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem52_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Appearance.BackColor = System.Drawing.Color.Red;
@@ -1692,6 +1716,7 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem10);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem51);
             this.ribbonPageGroup1.MergeOrder = 2;
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.ShowCaptionButton = false;
@@ -1795,6 +1820,7 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup12,
             this.ribbonPageGroup13,
             this.ribbonPageGroup14,
+            this.ribbonPageGroup2,
             this.ribbonPageGroup18});
             this.ribbonPage7.Name = "ribbonPage7";
             this.ribbonPage7.Text = "İhale Hazırlama Modülü";
@@ -1834,6 +1860,12 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup14.Name = "ribbonPageGroup14";
             this.ribbonPageGroup14.ShowCaptionButton = false;
             this.ribbonPageGroup14.Text = "5.Adım";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem52);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.ShowCaptionButton = false;
             // 
             // ribbonPageGroup18
             // 
@@ -2575,6 +2607,9 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup33;
         private DevExpress.XtraBars.BarButtonItem barButtonItem50;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup31;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem51;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem52;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }

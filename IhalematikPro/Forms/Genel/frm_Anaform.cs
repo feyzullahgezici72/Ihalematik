@@ -19,6 +19,7 @@ using IhalematikProUI.Forms.IhaleAdim;
 using IhalematikProUI.Forms.Ihale;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Hakedis;
+using IhalematikProUI.Forms.Taseron;
 
 namespace IhalematikPro.Forms
 {
@@ -1198,6 +1199,54 @@ namespace IhalematikPro.Forms
         {
             frm_KurListele kl = new frm_KurListele();
             kl.ShowDialog();
+        }
+        frm_TaseronListesi tsr;
+        private void barButtonItem51_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            barButtonItem51.ButtonStyle = BarButtonStyle.Check;
+            RibonPasif();
+            if (tsr == null)
+            {
+                tsr = new frm_TaseronListesi();
+                tsr.MdiParent = this;
+                tsr.FormClosed +=new FormClosedEventHandler(Tsr_FormClosed);
+                tsr.Show();
+            }
+            else
+            {
+                tsr.Activate();
+            }
+        }
+
+        private void Tsr_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            tsr = null;
+            RibonAktif();
+            barButtonItem51.ButtonStyle = BarButtonStyle.Default;
+        }
+        frm_IhaleTasereEt tsrEt;
+        private void barButtonItem52_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            barButtonItem52.ButtonStyle = BarButtonStyle.Check;
+            RibonPasif();
+            if (tsrEt == null)
+            {
+                tsrEt = new frm_IhaleTasereEt();
+                tsrEt.MdiParent = this;
+                tsrEt.FormClosed +=new FormClosedEventHandler(TsrEt_FormClosed);
+                tsrEt.Show();
+            }
+            else
+            {
+                tsrEt.Activate();
+            }
+        }
+
+        private void TsrEt_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            tsrEt = null;
+            RibonAktif();
+            barButtonItem52.ButtonStyle = BarButtonStyle.Default;
         }
     }
 }

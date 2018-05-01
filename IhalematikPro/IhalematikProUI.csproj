@@ -420,6 +420,24 @@
     <Compile Include="Forms\OBF\frm_TopluOBFekle.Designer.cs">
       <DependentUpon>frm_TopluOBFekle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Taseron\frm_IhaleTasereEt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Taseron\frm_IhaleTasereEt.Designer.cs">
+      <DependentUpon>frm_IhaleTasereEt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Taseron\frm_IsMalzemeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Taseron\frm_IsMalzemeEkle.Designer.cs">
+      <DependentUpon>frm_IsMalzemeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Taseron\frm_TaseronListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Taseron\frm_TaseronListesi.Designer.cs">
+      <DependentUpon>frm_TaseronListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tedarikci\frm_activityGuncelle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -860,6 +878,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OBF\frm_TopluOBFekle.resx">
       <DependentUpon>frm_TopluOBFekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Taseron\frm_IhaleTasereEt.resx">
+      <DependentUpon>frm_IhaleTasereEt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Taseron\frm_IsMalzemeEkle.resx">
+      <DependentUpon>frm_IsMalzemeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Taseron\frm_TaseronListesi.resx">
+      <DependentUpon>frm_TaseronListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_activityGuncelle.resx">
       <DependentUpon>frm_activityGuncelle.cs</DependentUpon>
