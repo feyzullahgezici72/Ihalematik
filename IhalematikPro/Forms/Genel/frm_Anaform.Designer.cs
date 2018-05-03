@@ -30,6 +30,7 @@ namespace IhalematikPro.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Anaform));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
@@ -278,9 +279,45 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barBtnKuralllar = new DevExpress.XtraBars.BarButtonItem();
-            this.styleController1 = new DevExpress.XtraEditors.StyleController();
+            this.styleController1 = new DevExpress.XtraEditors.StyleController(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.hideContainerLeft = new DevExpress.XtraBars.Docking.AutoHideContainer();
+            this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
+            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem8 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem13 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem14 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem15 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem16 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem17 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem18 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem19 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem20 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem21 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem22 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem23 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem25 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem26 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brDolar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brEuro)).BeginInit();
@@ -324,6 +361,11 @@ namespace IhalematikPro.Forms
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel)).BeginInit();
             this.MainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.styleController1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
+            this.hideContainerLeft.SuspendLayout();
+            this.dockPanel1.SuspendLayout();
+            this.dockPanel1_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -1066,7 +1108,7 @@ namespace IhalematikPro.Forms
             // barButtonItem28
             // 
             this.barButtonItem28.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check;
-            this.barButtonItem28.Caption = "Teklifleri Aktar";
+            this.barButtonItem28.Caption = "Teklifleri İçe Aktar";
             this.barButtonItem28.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem28.Glyph")));
             this.barButtonItem28.Id = 22;
             this.barButtonItem28.ItemAppearance.Hovered.ForeColor = System.Drawing.Color.Green;
@@ -2215,7 +2257,7 @@ namespace IhalematikPro.Forms
             this.pnlAna.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAna.Location = new System.Drawing.Point(3, 3);
             this.pnlAna.Name = "pnlAna";
-            this.pnlAna.Size = new System.Drawing.Size(1435, 473);
+            this.pnlAna.Size = new System.Drawing.Size(1408, 473);
             this.pnlAna.TabIndex = 0;
             this.pnlAna.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             this.pnlAna.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelControl1_MouseMove);
@@ -2242,7 +2284,7 @@ namespace IhalematikPro.Forms
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1435, 28);
+            this.panelControl4.Size = new System.Drawing.Size(1408, 28);
             this.panelControl4.TabIndex = 2;
             // 
             // lblCompanyName
@@ -2257,7 +2299,7 @@ namespace IhalematikPro.Forms
             this.lblCompanyName.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.lblCompanyName.Location = new System.Drawing.Point(3, 3);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(1429, 35);
+            this.lblCompanyName.Size = new System.Drawing.Size(1402, 35);
             this.lblCompanyName.TabIndex = 1;
             this.lblCompanyName.Text = " ";
             // 
@@ -2309,9 +2351,9 @@ namespace IhalematikPro.Forms
             this.MainPanel.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.MainPanel.Controls.Add(this.pnlAna);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(0, 205);
+            this.MainPanel.Location = new System.Drawing.Point(27, 205);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1441, 479);
+            this.MainPanel.Size = new System.Drawing.Size(1414, 479);
             this.MainPanel.TabIndex = 9;
             // 
             // ribbonPageGroup16
@@ -2348,6 +2390,350 @@ namespace IhalematikPro.Forms
             this.barButtonGroup1.SmallWithoutTextWidth = 200;
             this.barButtonGroup1.SmallWithTextWidth = 200;
             // 
+            // dockManager1
+            // 
+            this.dockManager1.AutoHideContainers.AddRange(new DevExpress.XtraBars.Docking.AutoHideContainer[] {
+            this.hideContainerLeft});
+            this.dockManager1.Form = this;
+            this.dockManager1.MenuManager = this.ribbon;
+            this.dockManager1.TopZIndexControls.AddRange(new string[] {
+            "DevExpress.XtraBars.BarDockControl",
+            "DevExpress.XtraBars.StandaloneBarDockControl",
+            "System.Windows.Forms.StatusBar",
+            "System.Windows.Forms.MenuStrip",
+            "System.Windows.Forms.StatusStrip",
+            "DevExpress.XtraBars.Ribbon.RibbonStatusBar",
+            "DevExpress.XtraBars.Ribbon.RibbonControl",
+            "DevExpress.XtraBars.Navigation.OfficeNavigationBar",
+            "DevExpress.XtraBars.Navigation.TileNavPane"});
+            // 
+            // hideContainerLeft
+            // 
+            this.hideContainerLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.hideContainerLeft.Controls.Add(this.dockPanel1);
+            this.hideContainerLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.hideContainerLeft.Location = new System.Drawing.Point(0, 205);
+            this.hideContainerLeft.Name = "hideContainerLeft";
+            this.hideContainerLeft.Size = new System.Drawing.Size(27, 479);
+            this.hideContainerLeft.Click += new System.EventHandler(this.hideContainerLeft_Click);
+            // 
+            // dockPanel1
+            // 
+            this.dockPanel1.AutoScroll = true;
+            this.dockPanel1.Controls.Add(this.dockPanel1_Container);
+            this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel1.ID = new System.Guid("d279f17e-3ef7-4eb5-bcb8-88d6e719e1b5");
+            this.dockPanel1.Image = ((System.Drawing.Image)(resources.GetObject("dockPanel1.Image")));
+            this.dockPanel1.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel1.Name = "dockPanel1";
+            this.dockPanel1.Options.ShowAutoHideButton = false;
+            this.dockPanel1.Options.ShowCloseButton = false;
+            this.dockPanel1.OriginalSize = new System.Drawing.Size(265, 200);
+            this.dockPanel1.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel1.SavedIndex = 0;
+            this.dockPanel1.Size = new System.Drawing.Size(265, 479);
+            this.dockPanel1.Text = "  Hızlı Menü";
+            this.dockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
+            // 
+            // dockPanel1_Container
+            // 
+            this.dockPanel1_Container.Controls.Add(this.navBarControl1);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(6, 32);
+            this.dockPanel1_Container.Name = "dockPanel1_Container";
+            this.dockPanel1_Container.Size = new System.Drawing.Size(253, 441);
+            this.dockPanel1_Container.TabIndex = 0;
+            // 
+            // navBarControl1
+            // 
+            this.navBarControl1.ActiveGroup = this.navBarGroup1;
+            this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navBarControl1.ExplorerBarGroupInterval = 2;
+            this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.navBarGroup1,
+            this.navBarGroup2,
+            this.navBarGroup3,
+            this.navBarGroup4,
+            this.navBarGroup5});
+            this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.navBarItem1,
+            this.navBarItem2,
+            this.navBarItem3,
+            this.navBarItem4,
+            this.navBarItem5,
+            this.navBarItem6,
+            this.navBarItem7,
+            this.navBarItem8,
+            this.navBarItem9,
+            this.navBarItem10,
+            this.navBarItem11,
+            this.navBarItem12,
+            this.navBarItem13,
+            this.navBarItem14,
+            this.navBarItem15,
+            this.navBarItem16,
+            this.navBarItem17,
+            this.navBarItem18,
+            this.navBarItem19,
+            this.navBarItem20,
+            this.navBarItem21,
+            this.navBarItem22,
+            this.navBarItem23,
+            this.navBarItem24,
+            this.navBarItem25,
+            this.navBarItem26});
+            this.navBarControl1.Location = new System.Drawing.Point(0, 0);
+            this.navBarControl1.Name = "navBarControl1";
+            this.navBarControl1.NavigationPaneGroupClientHeight = 250;
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 238;
+            this.navBarControl1.OptionsNavPane.PopupFormSize = new System.Drawing.Size(200, 200);
+            this.navBarControl1.OptionsNavPane.ShowSplitter = false;
+            this.navBarControl1.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.ExplorerBar;
+            this.navBarControl1.Size = new System.Drawing.Size(253, 441);
+            this.navBarControl1.StoreDefaultPaintStyleName = true;
+            this.navBarControl1.TabIndex = 14;
+            this.navBarControl1.Click += new System.EventHandler(this.navBarControl1_Click);
+            // 
+            // navBarGroup1
+            // 
+            this.navBarGroup1.Caption = "Tanımlamalar";
+            this.navBarGroup1.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
+            this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem5),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem6),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem7)});
+            this.navBarGroup1.Name = "navBarGroup1";
+            // 
+            // navBarItem1
+            // 
+            this.navBarItem1.Caption = "Çalışan Tanımlama";
+            this.navBarItem1.Name = "navBarItem1";
+            this.navBarItem1.SmallImage = global::IhalematikProUI.Properties.Resources.user_group_icon;
+            this.navBarItem1.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem1_LinkClicked);
+            // 
+            // navBarItem2
+            // 
+            this.navBarItem2.Caption = "Araç Tanımlama";
+            this.navBarItem2.Name = "navBarItem2";
+            this.navBarItem2.SmallImage = global::IhalematikProUI.Properties.Resources.icons8_digger;
+            this.navBarItem2.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem2_LinkClicked);
+            // 
+            // navBarItem3
+            // 
+            this.navBarItem3.Caption = "Tedarikçi Tanımlama";
+            this.navBarItem3.Name = "navBarItem3";
+            this.navBarItem3.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem3.SmallImage")));
+            this.navBarItem3.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem3_LinkClicked);
+            // 
+            // navBarItem4
+            // 
+            this.navBarItem4.Caption = "Taşeron Tanımlama";
+            this.navBarItem4.Name = "navBarItem4";
+            this.navBarItem4.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem4.SmallImage")));
+            this.navBarItem4.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem4_LinkClicked);
+            // 
+            // navBarItem5
+            // 
+            this.navBarItem5.Caption = "Poz Listesi";
+            this.navBarItem5.Name = "navBarItem5";
+            this.navBarItem5.SmallImage = global::IhalematikProUI.Properties.Resources.Inventory_icon__1_;
+            this.navBarItem5.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem5_LinkClicked);
+            // 
+            // navBarItem6
+            // 
+            this.navBarItem6.Caption = "Öbf Listesi";
+            this.navBarItem6.Name = "navBarItem6";
+            this.navBarItem6.SmallImage = global::IhalematikProUI.Properties.Resources.App_lists_icon__1_;
+            this.navBarItem6.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem6_LinkClicked);
+            // 
+            // navBarItem7
+            // 
+            this.navBarItem7.Caption = "Kur İşlemleri";
+            this.navBarItem7.Name = "navBarItem7";
+            this.navBarItem7.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem7.SmallImage")));
+            this.navBarItem7.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem7_LinkClicked);
+            // 
+            // navBarGroup2
+            // 
+            this.navBarGroup2.Caption = "Fiyat Araştırma Modülü";
+            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem8),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem9),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem10),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem11),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem12)});
+            this.navBarGroup2.Name = "navBarGroup2";
+            // 
+            // navBarItem8
+            // 
+            this.navBarItem8.Caption = "Yeni Teklif Oluştur";
+            this.navBarItem8.Name = "navBarItem8";
+            this.navBarItem8.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem8.SmallImage")));
+            this.navBarItem8.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem8_LinkClicked);
+            // 
+            // navBarItem9
+            // 
+            this.navBarItem9.Caption = "Teklif Listesi Oluştur";
+            this.navBarItem9.Name = "navBarItem9";
+            this.navBarItem9.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem9.SmallImage")));
+            this.navBarItem9.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem9_LinkClicked);
+            // 
+            // navBarItem10
+            // 
+            this.navBarItem10.Caption = "Teklifleri İçe Aktar";
+            this.navBarItem10.Name = "navBarItem10";
+            this.navBarItem10.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem10.SmallImage")));
+            this.navBarItem10.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem10_LinkClicked);
+            // 
+            // navBarItem11
+            // 
+            this.navBarItem11.Caption = "Teklifleri Karşılaştır";
+            this.navBarItem11.Name = "navBarItem11";
+            this.navBarItem11.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem11.SmallImage")));
+            this.navBarItem11.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem11_LinkClicked);
+            // 
+            // navBarItem12
+            // 
+            this.navBarItem12.Caption = "Firma Bazlı Uygun Fiyat";
+            this.navBarItem12.Name = "navBarItem12";
+            this.navBarItem12.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem12.SmallImage")));
+            this.navBarItem12.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem12_LinkClicked);
+            // 
+            // navBarGroup3
+            // 
+            this.navBarGroup3.Caption = "İhale Hazırlama Modülü";
+            this.navBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
+            this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem13),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem14),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem15),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem16),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem17),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem18),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem19)});
+            this.navBarGroup3.Name = "navBarGroup3";
+            // 
+            // navBarItem13
+            // 
+            this.navBarItem13.Caption = "Yeni İhale Oluştur";
+            this.navBarItem13.Name = "navBarItem13";
+            this.navBarItem13.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem13.SmallImage")));
+            this.navBarItem13.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem13_LinkClicked);
+            // 
+            // navBarItem14
+            // 
+            this.navBarItem14.Caption = "Malzeme Keşif Listesi";
+            this.navBarItem14.Name = "navBarItem14";
+            this.navBarItem14.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem14.SmallImage")));
+            this.navBarItem14.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem14_LinkClicked);
+            // 
+            // navBarItem15
+            // 
+            this.navBarItem15.Caption = "Malzeme Karı Hesapla";
+            this.navBarItem15.Name = "navBarItem15";
+            this.navBarItem15.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem15.SmallImage")));
+            this.navBarItem15.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem15_LinkClicked);
+            // 
+            // navBarItem16
+            // 
+            this.navBarItem16.Caption = "İşçilik Keşif Listesi";
+            this.navBarItem16.Name = "navBarItem16";
+            this.navBarItem16.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem16.SmallImage")));
+            this.navBarItem16.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem16_LinkClicked);
+            // 
+            // navBarItem17
+            // 
+            this.navBarItem17.Caption = "İhale Teklif Özeti";
+            this.navBarItem17.Name = "navBarItem17";
+            this.navBarItem17.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem17.SmallImage")));
+            this.navBarItem17.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem17_LinkClicked);
+            // 
+            // navBarItem18
+            // 
+            this.navBarItem18.Caption = "Taşere Et";
+            this.navBarItem18.Name = "navBarItem18";
+            this.navBarItem18.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem18.SmallImage")));
+            this.navBarItem18.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem18_LinkClicked);
+            // 
+            // navBarItem19
+            // 
+            this.navBarItem19.Caption = "Birim Fiyat Analizi";
+            this.navBarItem19.Name = "navBarItem19";
+            this.navBarItem19.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem19.SmallImage")));
+            this.navBarItem19.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem19_LinkClicked);
+            // 
+            // navBarGroup4
+            // 
+            this.navBarGroup4.Caption = "Raporlar";
+            this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem20),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem21),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem22)});
+            this.navBarGroup4.Name = "navBarGroup4";
+            // 
+            // navBarItem20
+            // 
+            this.navBarItem20.Caption = "Teklif Listesi";
+            this.navBarItem20.Name = "navBarItem20";
+            this.navBarItem20.SmallImage = global::IhalematikProUI.Properties.Resources.App_lists_icon1;
+            this.navBarItem20.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem20_LinkClicked);
+            // 
+            // navBarItem21
+            // 
+            this.navBarItem21.Caption = "İhale Listesi";
+            this.navBarItem21.Name = "navBarItem21";
+            this.navBarItem21.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem21.SmallImage")));
+            this.navBarItem21.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem21_LinkClicked);
+            // 
+            // navBarItem22
+            // 
+            this.navBarItem22.Caption = "Döviz Kur Listesi";
+            this.navBarItem22.Name = "navBarItem22";
+            this.navBarItem22.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem22.SmallImage")));
+            this.navBarItem22.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem22_LinkClicked);
+            // 
+            // navBarGroup5
+            // 
+            this.navBarGroup5.Caption = "Ayarlar";
+            this.navBarGroup5.Expanded = true;
+            this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem23),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem24),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem25),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem26)});
+            this.navBarGroup5.Name = "navBarGroup5";
+            // 
+            // navBarItem23
+            // 
+            this.navBarItem23.Caption = "Program Güncelle";
+            this.navBarItem23.Name = "navBarItem23";
+            this.navBarItem23.SmallImage = global::IhalematikProUI.Properties.Resources.network_icon32;
+            this.navBarItem23.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem23_LinkClicked);
+            // 
+            // navBarItem24
+            // 
+            this.navBarItem24.Caption = "Kurallar Tablosu";
+            this.navBarItem24.Name = "navBarItem24";
+            this.navBarItem24.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem24.SmallImage")));
+            this.navBarItem24.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem24_LinkClicked);
+            // 
+            // navBarItem25
+            // 
+            this.navBarItem25.Caption = "Şifre Değiştir";
+            this.navBarItem25.Name = "navBarItem25";
+            this.navBarItem25.SmallImage = global::IhalematikProUI.Properties.Resources.password_icon;
+            this.navBarItem25.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem25_LinkClicked);
+            // 
+            // navBarItem26
+            // 
+            this.navBarItem26.Caption = "Logo Ayarları";
+            this.navBarItem26.Name = "navBarItem26";
+            this.navBarItem26.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem26.SmallImage")));
+            this.navBarItem26.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem26_LinkClicked);
+            // 
             // frm_Anaform
             // 
             this.ActiveGlowColor = System.Drawing.Color.White;
@@ -2364,6 +2750,7 @@ namespace IhalematikPro.Forms
             this.ClientSize = new System.Drawing.Size(1441, 684);
             this.ControlBox = false;
             this.Controls.Add(this.MainPanel);
+            this.Controls.Add(this.hideContainerLeft);
             this.Controls.Add(this.ribbon);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.InactiveGlowColor = System.Drawing.SystemColors.Control;
@@ -2422,6 +2809,11 @@ namespace IhalematikPro.Forms
             ((System.ComponentModel.ISupportInitialize)(this.MainPanel)).EndInit();
             this.MainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.styleController1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
+            this.hideContainerLeft.ResumeLayout(false);
+            this.dockPanel1.ResumeLayout(false);
+            this.dockPanel1_Container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2610,6 +3002,42 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.BarButtonItem barButtonItem51;
         private DevExpress.XtraBars.BarButtonItem barButtonItem52;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.Docking.DockManager dockManager1;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanel1;
+        private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
+        private DevExpress.XtraNavBar.NavBarControl navBarControl1;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem3;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem4;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem5;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem6;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem7;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem8;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem9;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem10;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem11;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem12;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup3;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem13;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem14;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem15;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem16;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem17;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem18;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem19;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup4;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem20;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem21;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem22;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem23;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem24;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem25;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem26;
+        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerLeft;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }

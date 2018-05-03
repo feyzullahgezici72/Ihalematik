@@ -20,6 +20,7 @@ using IhalematikProUI.Forms.Ihale;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Hakedis;
 using IhalematikProUI.Forms.Taseron;
+using DevExpress.XtraBars.Docking;
 
 namespace IhalematikPro.Forms
 {
@@ -621,11 +622,13 @@ namespace IhalematikPro.Forms
         {
             ribbon.Enabled = true;
             MainPanel.Visible = true;
+            hideContainerLeft.Enabled = true;
         }
         public void RibonPasif()
         {
             MainPanel.Visible = false;
             ribbon.Enabled = false;
+            hideContainerLeft.Enabled = false;
         }
         private void barButtonItem2_ItemClick_1(object sender, ItemClickEventArgs e)
         {
@@ -743,7 +746,7 @@ namespace IhalematikPro.Forms
 
         private void panelControl1_MouseMove(object sender, MouseEventArgs e)
         {
-
+            
 
 
         }
@@ -1247,6 +1250,146 @@ namespace IhalematikPro.Forms
             tsrEt = null;
             RibonAktif();
             barButtonItem52.ButtonStyle = BarButtonStyle.Default;
+        }
+
+        private void hideContainerLeft_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void navBarControl1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void navBarItem2_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem4.PerformClick();
+        }
+
+        private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem2.PerformClick();
+        }
+
+        private void navBarItem3_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem10.PerformClick();
+        }
+
+        private void navBarItem4_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem51.PerformClick();
+        }
+
+        private void navBarItem5_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barBtnPozListesi.PerformClick();
+        }
+
+        private void navBarItem6_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barBtnOzelStokListesi.PerformClick();
+        }
+
+        private void navBarItem7_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barBtnDovizKurlar.PerformClick();
+        }
+
+        private void navBarItem8_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem12.PerformClick();
+        }
+
+        private void navBarItem9_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem14.PerformClick();
+        }
+
+        private void navBarItem10_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem28.PerformClick();
+        }
+
+        private void navBarItem11_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem15.PerformClick();
+        }
+
+        private void navBarItem12_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem45.PerformClick();
+        }
+
+        private void navBarItem13_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barBtnTeklifHazirla.PerformClick();
+        }
+
+        private void navBarItem14_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            btnAdimx1.PerformClick();
+        }
+
+        private void navBarItem15_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            btnAdimx4.PerformClick();
+        }
+
+        private void navBarItem16_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            btnAdimx3.PerformClick();
+        }
+
+        private void navBarItem17_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            btnAdimx5.PerformClick();
+        }
+
+        private void navBarItem18_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem52.PerformClick();
+        }
+
+        private void navBarItem19_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem43.PerformClick();
+        }
+
+        private void navBarItem20_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem13.PerformClick();
+        }
+
+        private void navBarItem21_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem6.PerformClick();
+        }
+
+        private void navBarItem22_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem50.PerformClick();
+        }
+
+        private void navBarItem23_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem7.PerformClick();
+        }
+
+        private void navBarItem24_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem39.PerformClick();
+        }
+
+        private void navBarItem25_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem30.PerformClick();
+        }
+
+        private void navBarItem26_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            barButtonItem31.PerformClick();
         }
     }
 }
