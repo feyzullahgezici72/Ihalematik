@@ -45,7 +45,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             string obfDescription = txtDescription.Text;
             oBFModels = UIOBFManager.Instance.GetOBFs(obfNo, obfDescription);
             oBFModels = oBFModels.Where(p => p.IsActive).ToList();
-            List<OfferMaterialList> selectedMaterialLists = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => !p.IsPoz).ToList();
+            List<OfferMaterialList> selectedMaterialLists = UICurrentManager.Instance.CurrentOffer.MaterialList.Where(p => !p.IsPoz).ToList();
 
             if (selectedMaterialLists != null)
             {
@@ -78,7 +78,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void btnEkle_Click(object sender, EventArgs e)
         {
         
-            Offer currentOffer = CurrentManager.Instance.CurrentOffer;
+            Offer currentOffer = UICurrentManager.Instance.CurrentOffer;
 
             int[] selectedRows = gridView1.GetSelectedRows();
 
@@ -114,7 +114,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            Offer currentOffer = CurrentManager.Instance.CurrentOffer;
+            Offer currentOffer = UICurrentManager.Instance.CurrentOffer;
             int[] selectedRows = gridView2.GetSelectedRows();
             List<OfferMaterialListModel> models = gridView2.DataSource as List<OfferMaterialListModel>;
 
@@ -142,7 +142,7 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            Offer currentOffer = CurrentManager.Instance.CurrentOffer;
+            Offer currentOffer = UICurrentManager.Instance.CurrentOffer;
             if (currentOffer.MaterialList != null)
             {
                 List<OfferMaterialList> items = currentOffer.MaterialList.Where(p => !p.IsPoz).ToList();
@@ -161,10 +161,10 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void frm_TedarikciOfbKayit_Shown(object sender, EventArgs e)
         {
-            if (CurrentManager.Instance.CurrentOffer != null && CurrentManager.Instance.CurrentOffer.MaterialList != null)
+            if (UICurrentManager.Instance.CurrentOffer != null && UICurrentManager.Instance.CurrentOffer.MaterialList != null)
             {
                 txtNumber.Focus();
-                List<OfferMaterialList> items = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => !p.IsPoz).ToList();
+                List<OfferMaterialList> items = UICurrentManager.Instance.CurrentOffer.MaterialList.Where(p => !p.IsPoz).ToList();
                 List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(items).ToList();
                 grdAddedOBF.DataSource = models;
             }

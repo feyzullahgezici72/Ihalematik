@@ -92,7 +92,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                             LoggingManager.Instance.SaveErrorLog(ex);
                             break;
                         }
-                        if (CurrentManager.Instance.CurrentOffer == null)
+                        if (UICurrentManager.Instance.CurrentOffer == null)
                         {
                             Offer offer = OfferProvider.Instance.GetItem((int)offerId);
                             if (offer == null)
@@ -105,9 +105,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                             return;
                         }
 
-                        if (CurrentManager.Instance.CurrentOffer != null)
+                        if (UICurrentManager.Instance.CurrentOffer != null)
                         {
-                            if (CurrentManager.Instance.CurrentOffer.Id != offerId)
+                            if (UICurrentManager.Instance.CurrentOffer.Id != offerId)
                             {
                                 Offer offer = OfferProvider.Instance.GetItem((int)offerId);
                                 MessageBox.Show("Yüklemeye çalıştığınız teklif aktif teklife ait değildir." + offer.Number + " nolu ve " + offer.Description + "adlı teklifi aktif hale getirip yükleyiniz");

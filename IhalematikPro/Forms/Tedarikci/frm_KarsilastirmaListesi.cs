@@ -35,11 +35,11 @@ namespace IhalematikProUI.Forms.Tedarikci
 
         private void frm_KarsilastirmadaSecilenFirmaUrunListesi_Shown(object sender, EventArgs e)
         {
-            if (CurrentManager.Instance.CurrentOffer != null)
+            if (UICurrentManager.Instance.CurrentOffer != null)
             {
-                if (CurrentManager.Instance.CurrentOffer.SelectedSupplierMaterialList != null)
+                if (UICurrentManager.Instance.CurrentOffer.SelectedSupplierMaterialList != null)
                 {
-                    grdSupplier.DataSource = CurrentManager.Instance.CurrentOffer.SelectedSupplierMaterialList.GroupBy(p => p.SupplierId).Select(p => p.FirstOrDefault().Supplier).ToList();
+                    grdSupplier.DataSource = UICurrentManager.Instance.CurrentOffer.SelectedSupplierMaterialList.GroupBy(p => p.SupplierId).Select(p => p.FirstOrDefault().Supplier).ToList();
                 }
             }
         }
@@ -47,7 +47,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void gridViewSupplier_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             int supplierId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
-            List<SupplierMaterialList> items = CurrentManager.Instance.CurrentOffer.SelectedSupplierMaterialList.Where(p => p.SupplierId == supplierId).ToList();
+            List<SupplierMaterialList> items = UICurrentManager.Instance.CurrentOffer.SelectedSupplierMaterialList.Where(p => p.SupplierId == supplierId).ToList();
 
             grdMaterialList.DataSource = null;
             grdMaterialList.DataSource = items;//.Select(p => p.MaterialList).ToList();
@@ -57,7 +57,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
             this.Enabled = false;
             LoadingManager.Instance.Show(this);
-            List<SupplierMaterialList> items = CurrentManager.Instance.CurrentOffer.SelectedSupplierMaterialList;
+            List<SupplierMaterialList> items = UICurrentManager.Instance.CurrentOffer.SelectedSupplierMaterialList;
 
             grdMaterialList.DataSource = null;
             grdMaterialList.DataSource = items;

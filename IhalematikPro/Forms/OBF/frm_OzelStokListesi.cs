@@ -21,6 +21,7 @@ using IhalematikProUI.Forms.Genel;
 using System.Diagnostics;
 using IhalematikProUI.Manager;
 using IhalematikProBL.Manager;
+using IhalematikProBL.Enum;
 
 namespace IhalematikPro.Forms
 {
@@ -35,6 +36,7 @@ namespace IhalematikPro.Forms
         }
         public void LoadGrid()
         {
+            LoadingManager.Instance.Show(this);
             List<OBFModel> allItems = UIOBFManager.Instance.GetOBFs();
             List<OBFModel> items = new List<OBFModel>();
 
@@ -49,11 +51,10 @@ namespace IhalematikPro.Forms
                     items.Add(item.Childrens.OrderByDescending(p => p.InserTime).FirstOrDefault());
                 }
             }
-            
+
             if (cmbAktivePasive.SelectedIndex == 0)
             {
                 items = items.Where(p => p.IsActive).ToList();
-                grdOBFList.DataSource = items;
                 colPasive.Visible = true;
                 colEdit.Visible = true;
                 colActive.Visible = false;
@@ -61,11 +62,12 @@ namespace IhalematikPro.Forms
             else if (cmbAktivePasive.SelectedIndex == 1)
             {
                 items = items.Where(p => !p.IsActive).ToList();
-                grdOBFList.DataSource = items;
                 colEdit.Visible = false;
                 colPasive.Visible = false;
                 colActive.Visible = true;
             }
+            LoadingManager.Instance.Hide();
+            grdOBFList.DataSource = items;
             lblRecordCount.Text = items.Count.ToString();
         }
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -84,7 +86,9 @@ namespace IhalematikPro.Forms
             model.Unit = txtUnit.Text;
             //model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty), CultureInfo.InvariantCulture);
             model.UnitPrice = model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty));
+            model.CurrencyType = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<CurrencyTypesEnum>(ddlCurrencyType.SelectedIndex);
             model.DescriptionForSupplier = txtDescriptionForSupplier.Text;
+
             List<OBFModel> existingOBFs = UIOBFManager.Instance.GetOBFs(model.Description);
             if (existingOBFs != null && existingOBFs.Count != 0)
             {
@@ -181,7 +185,7 @@ namespace IhalematikPro.Forms
         private void cmbAktivePasive_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.LoadGrid();
-            LoadingManager.Instance.Hide();;
+            LoadingManager.Instance.Hide(); ;
         }
 
         private void btnSl_Click(object sender, EventArgs e)
@@ -192,9 +196,7 @@ namespace IhalematikPro.Forms
         private void frm_OzelStokListesi_Shown(object sender, EventArgs e)
         {
             this.Enabled = false;
-            LoadingManager.Instance.Show(this);
             this.LoadGrid();
-            LoadingManager.Instance.Hide();;
             this.Enabled = true;
         }
 
@@ -264,7 +266,7 @@ namespace IhalematikPro.Forms
                     items.Add(item.Childrens.OrderByDescending(p => p.InserTime).FirstOrDefault());
                 }
             }
-            
+
             if (cmbAktivePasive.SelectedIndex == 0)
             {
                 items = items.Where(p => p.IsActive).ToList();
@@ -340,7 +342,7 @@ namespace IhalematikPro.Forms
 
         private void txtDescription_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==13)
+            if (e.KeyChar == 13)
             {
                 txtUnit.Focus();
             }

@@ -65,9 +65,9 @@ namespace IhalematikProUI.Forms.IhaleAdim
             {
                 MaterialListProvider.Instance.Save(item);
 
-                if (CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.Id == item.Id).Count() == 0)
+                if (UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.Id == item.Id).Count() == 0)
                 {
-                    CurrentManager.Instance.CurrentTender.MaterialList.Add(item);
+                    UICurrentManager.Instance.CurrentTender.MaterialList.Add(item);
                 }
 
                 Poz currentPoz = PozProvider.Instance.GetItem(item.PozOBFId);

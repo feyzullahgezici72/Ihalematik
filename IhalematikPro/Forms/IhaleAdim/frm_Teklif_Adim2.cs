@@ -46,10 +46,10 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim2_Load(object sender, EventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender != null)
+            if (UICurrentManager.Instance.CurrentTender != null)
             {
-                lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
-                lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
+                lblTenderDescription.Text = UICurrentManager.Instance.CurrentTender.Description;
+                lblTenderNumber.Text = UICurrentManager.Instance.CurrentTender.DisplayNumber;
             }
         }
         private void CalculateTotalMarkup()
@@ -65,9 +65,9 @@ namespace IhalematikPro.Forms
 
         public void LoadTenderGroupGrid()
         {
-            if (CurrentManager.Instance.CurrentTender != null)
+            if (UICurrentManager.Instance.CurrentTender != null)
             {
-                List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
+                List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", UICurrentManager.Instance.CurrentTender.Id);
                 List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(items);
                 if (models != null && models.Count != 0)
                 {
@@ -86,7 +86,7 @@ namespace IhalematikPro.Forms
                 double markup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtMarkup.Text.Replace("%", ""));
                 double risk = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(txtRisk.Text.Replace("%", ""));
 
-                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
+                List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
                 foreach (var item in items)
                 {
                     if (!string.IsNullOrEmpty(txtMarkup.Text))
@@ -109,7 +109,7 @@ namespace IhalematikPro.Forms
             if (e.Column == colMarkup)
             {
                 int currenMaterialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialListNonWorkship.GetFocusedRowCellValue("Id"));
-                foreach (var item in CurrentManager.Instance.CurrentTender.MaterialList)
+                foreach (var item in UICurrentManager.Instance.CurrentTender.MaterialList)
                 {
                     if (item.Id.Equals(currenMaterialId))
                     {
@@ -121,7 +121,7 @@ namespace IhalematikPro.Forms
             if (e.Column == colRisk)
             {
                 int currenMaterialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialListNonWorkship.GetFocusedRowCellValue("Id"));
-                foreach (var item in CurrentManager.Instance.CurrentTender.MaterialList)
+                foreach (var item in UICurrentManager.Instance.CurrentTender.MaterialList)
                 {
                     if (item.Id.Equals(currenMaterialId))
                     {
@@ -156,10 +156,10 @@ namespace IhalematikPro.Forms
 
         public void LoadTenderMaterialList()
         {
-            if (this.SelectedGroupId != 0 && CurrentManager.Instance.CurrentTender.MaterialList != null)
+            if (this.SelectedGroupId != 0 && UICurrentManager.Instance.CurrentTender.MaterialList != null)
             {
                 LoadingManager.Instance.Show(this);
-                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
+                List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
                 List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
                 LoadingManager.Instance.Hide();
                 grdMaterialListNonWorkship.DataSource = models;
@@ -191,7 +191,7 @@ namespace IhalematikPro.Forms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.Markup == 0).ToList();
+            List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.Markup == 0).ToList();
 
             if (items != null && items.Count != 0)
             {
@@ -199,7 +199,7 @@ namespace IhalematikPro.Forms
                 if (resultMsg.Equals(DialogResult.Yes))
                 {
                     this.Close();
-                    if (CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() == 0)
+                    if (UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() == 0)
                     {
                         frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
                         af.RibonPasif();
@@ -216,7 +216,7 @@ namespace IhalematikPro.Forms
             else
             {
                 this.Close();
-                if (CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() == 0)
+                if (UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() == 0)
                 {
                     frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
                     af.RibonPasif();
@@ -267,9 +267,9 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            if (this.SelectedGroupId != 0 && CurrentManager.Instance.CurrentTender.MaterialList != null)
+            if (this.SelectedGroupId != 0 && UICurrentManager.Instance.CurrentTender.MaterialList != null)
             {
-                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+                List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList;
                 List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
                 grdMaterialListNonWorkship.DataSource = models;
                 this.CalculateTotalMarkup();

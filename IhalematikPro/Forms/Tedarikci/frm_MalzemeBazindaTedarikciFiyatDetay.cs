@@ -37,7 +37,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             txtUnit.Text = offerMaterialList.PozOBF.Unit;
 
             Dictionary<string, object> param = new Dictionary<string, object>();
-            param.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
+            param.Add("OfferId", UICurrentManager.Instance.CurrentOffer.Id);
             param.Add("MaterialListId", this.SelectedOfferMaterialListId);
 
             List<SupplierMaterialList> items = SupplierMaterialListProvider.Instance.GetItems(param);

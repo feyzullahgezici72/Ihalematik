@@ -708,7 +708,7 @@
     <Compile Include="Forms\Hakedis\frm_YeniSozlesmeYarat.Designer.cs">
       <DependentUpon>frm_YeniSozlesmeYarat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manager\CurrentManager.cs" />
+    <Compile Include="Manager\UICurrentManager.cs" />
     <Compile Include="Manager\LoadingManager.cs" />
     <Compile Include="Manager\UIRuleManager.cs" />
     <Compile Include="Manager\UICustomConfigurationManager.cs" />

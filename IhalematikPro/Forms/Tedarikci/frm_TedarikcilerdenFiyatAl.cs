@@ -48,7 +48,7 @@ namespace IhalematikProUI.Forms
         }
         public void LoadSupplierGrid()
         {
-            List<Supplier> suppliers = CurrentManager.Instance.CurrentOffer.Suppliers;
+            List<Supplier> suppliers = UICurrentManager.Instance.CurrentOffer.Suppliers;
             List<SupplierModel> models = IhalematikModelBase.GetModels<SupplierModel, Supplier>(suppliers);
             grdSupplier.DataSource = models;
             this.gridViewSupplier_RowClick(null, null);
@@ -60,7 +60,7 @@ namespace IhalematikProUI.Forms
             colPriceWithRisk.Visible = false;
             int supplierId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewSupplier.GetFocusedRowCellValue("Id"));
             Dictionary<string, object> parameters = new Dictionary<string, object>();
-            parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
+            parameters.Add("OfferId", UICurrentManager.Instance.CurrentOffer.Id);
             parameters.Add("SupplierId", supplierId);
             List<SupplierMaterialList> supplierMaterialList = SupplierMaterialListProvider.Instance.GetItems(parameters);
 
@@ -89,7 +89,7 @@ namespace IhalematikProUI.Forms
             List<OfferMaterialListModel> dataSoruce = new List<OfferMaterialListModel>();
             if (rdSortPrice.SelectedIndex == 0)
             {
-                List<SupplierMaterialList> supplierMaterialLists = SupplierMaterialListProvider.Instance.GetItems("OfferId", CurrentManager.Instance.CurrentOffer.Id);
+                List<SupplierMaterialList> supplierMaterialLists = SupplierMaterialListProvider.Instance.GetItems("OfferId", UICurrentManager.Instance.CurrentOffer.Id);
                 var groupedMaterial = supplierMaterialLists.GroupBy(p => p.MaterialListId);
 
                 foreach (var item in groupedMaterial)
@@ -115,7 +115,7 @@ namespace IhalematikProUI.Forms
             }
             else if (rdSortPrice.SelectedIndex == 1)
             {
-                List<SupplierMaterialList> supplierMaterialLists = SupplierMaterialListProvider.Instance.GetItems("OfferId", CurrentManager.Instance.CurrentOffer.Id);
+                List<SupplierMaterialList> supplierMaterialLists = SupplierMaterialListProvider.Instance.GetItems("OfferId", UICurrentManager.Instance.CurrentOffer.Id);
                 var groupedMaterial = supplierMaterialLists.GroupBy(p => p.MaterialListId);
 
                 foreach (var item in groupedMaterial)
@@ -188,7 +188,7 @@ namespace IhalematikProUI.Forms
 
             if (items != null && items.Count != 0)
             {
-                SupplierMaterialListProvider.Instance.SupplierMaterialListSelectedUpdate(CurrentManager.Instance.CurrentOffer.Id);
+                SupplierMaterialListProvider.Instance.SupplierMaterialListSelectedUpdate(UICurrentManager.Instance.CurrentOffer.Id);
 
                 foreach (var item in items)
                 {
@@ -200,8 +200,8 @@ namespace IhalematikProUI.Forms
                 mesajform.lblMesaj.Text = "Teklif Kaydedildi...";
                 mesajform.ShowDialog();
 
-                CurrentManager.Instance.CurrentOffer.IsCompleated = true;
-                OfferProvider.Instance.Save(CurrentManager.Instance.CurrentOffer);
+                UICurrentManager.Instance.CurrentOffer.IsCompleated = true;
+                OfferProvider.Instance.Save(UICurrentManager.Instance.CurrentOffer);
             }
         }
 

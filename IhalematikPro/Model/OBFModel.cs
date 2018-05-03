@@ -7,6 +7,7 @@ using SimpleApplicationBase.BL.Base;
 using IhalematikProBL.Entity;
 using IhalematikPro.Manager;
 using IhalematikProBL.Provider;
+using IhalematikProBL.Enum;
 
 namespace IhalematikPro.Model
 {
@@ -26,6 +27,7 @@ namespace IhalematikPro.Model
         public double LastUnitPrice { get; set; }
 
         public DateTime InserTime { get; set; }
+        public CurrencyTypesEnum CurrencyType { get; set; }
 
         public OBFModel(OBF Entity)
         {
@@ -40,6 +42,7 @@ namespace IhalematikPro.Model
             this.ParentId = Entity.ParentId;
             this.Childrens = CustomSaveableModelBase.GetModels<OBFModel, OBF>(Entity.Childrens);
             this.InserTime = Entity.InsertTime;
+            this.CurrencyType = Entity.CurrencyType;
             //if (this.Childrens.Count != 0)
             //{
             //    this.UnitPrice = this.Childrens.OrderByDescending(p => p.InserTime).FirstOrDefault().UnitPrice;
@@ -62,6 +65,7 @@ namespace IhalematikPro.Model
             OBF.Number = this.Number;
             OBF.Unit = this.Unit;
             OBF.UnitPrice = this.UnitPrice;
+            OBF.CurrencyType = this.CurrencyType;
             OBF.StokNumber = this.StokNumber;
             OBF.IsActive = this.IsActive;
             OBF.DescriptionForSupplier = this.DescriptionForSupplier;

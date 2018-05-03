@@ -14,6 +14,7 @@ using IhalematikPro.Forms;
 using IhalematikPro.Model;
 using System.Globalization;
 using IhalematikPro.Manager;
+using IhalematikProBL.Enum;
 
 namespace IhalematikProUI.Forms
 {
@@ -119,6 +120,7 @@ namespace IhalematikProUI.Forms
                         model.ParentId = model.Id.Value;
                     }
                     model.UnitPrice = newUnitPrice;
+                    model.CurrencyType = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<CurrencyTypesEnum>(ddlCurrencyType.SelectedIndex);
                     model.Id = 0;
                     model.Save();
                 }
@@ -138,6 +140,11 @@ namespace IhalematikProUI.Forms
             {
                 txtUnit.Focus();
             }
+        }
+
+        private void ddlCurrencyType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

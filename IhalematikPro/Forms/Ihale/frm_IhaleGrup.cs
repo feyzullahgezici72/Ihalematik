@@ -33,11 +33,11 @@ namespace IhalematikProUI.Forms
         private void btnIptal_Click(object sender, EventArgs e)
         {
 
-            if (CurrentManager.Instance.CurrentTender.Groups == null || CurrentManager.Instance.CurrentTender.Groups.Count == 0)
+            if (UICurrentManager.Instance.CurrentTender.Groups == null || UICurrentManager.Instance.CurrentTender.Groups.Count == 0)
             {
                 TenderGroup item = new TenderGroup();
                 item.Description = "Genel Grup";
-                item.Tender = CurrentManager.Instance.CurrentTender;
+                item.Tender = UICurrentManager.Instance.CurrentTender;
                 TenderGroupProvider.Instance.Save(item);
             }
 
@@ -60,9 +60,9 @@ namespace IhalematikProUI.Forms
                 TenderGroup item = new TenderGroup();
                 item.Description = txtTenderGroupDescription.Text;
 
-                if (CurrentManager.Instance.CurrentTender.Groups != null)
+                if (UICurrentManager.Instance.CurrentTender.Groups != null)
                 {
-                    List<TenderGroup> existingItems = CurrentManager.Instance.CurrentTender.Groups.Where(p => p.Description.Trim() == item.Description.Trim()).ToList();
+                    List<TenderGroup> existingItems = UICurrentManager.Instance.CurrentTender.Groups.Where(p => p.Description.Trim() == item.Description.Trim()).ToList();
                     if (existingItems != null && existingItems.Count != 0)
                     {
                         frm_MesajFormu message = new frm_MesajFormu();
@@ -71,8 +71,8 @@ namespace IhalematikProUI.Forms
                     }
                     else
                     {
-                        item.Tender = CurrentManager.Instance.CurrentTender;
-                        CurrentManager.Instance.CurrentTender.Groups.Add(item);
+                        item.Tender = UICurrentManager.Instance.CurrentTender;
+                        UICurrentManager.Instance.CurrentTender.Groups.Add(item);
                         TenderGroupProvider.Instance.Save(item);
                         this.LoadGrid();
                         txtTenderGroupDescription.Text = "";
@@ -84,15 +84,15 @@ namespace IhalematikProUI.Forms
 
         private void frm_IhaleGrup_Load(object sender, EventArgs e)
         {
-            txtTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
-            txtTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
-            txtTenderCompanyName.Text = CurrentManager.Instance.CurrentTender.CompanyName;
+            txtTenderNumber.Text = UICurrentManager.Instance.CurrentTender.DisplayNumber;
+            txtTenderDescription.Text = UICurrentManager.Instance.CurrentTender.Description;
+            txtTenderCompanyName.Text = UICurrentManager.Instance.CurrentTender.CompanyName;
             this.LoadGrid();
         }
 
         public void LoadGrid()
         {
-            List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
+            List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", UICurrentManager.Instance.CurrentTender.Id);
             List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(items);
             int i = 1;
             foreach (var item in models)
@@ -116,7 +116,7 @@ namespace IhalematikProUI.Forms
                 TenderGroup tenderGroup = TenderGroupProvider.Instance.GetItem(selectedGroupId);
                 tenderGroup.IsMarkedForDeletion = true;
                 TenderGroupProvider.Instance.Save(tenderGroup);
-                CurrentManager.Instance.CurrentTender.Groups.Remove(tenderGroup);
+                UICurrentManager.Instance.CurrentTender.Groups.Remove(tenderGroup);
                 this.LoadGrid();
             }
             else
@@ -128,14 +128,14 @@ namespace IhalematikProUI.Forms
 
         private void btnTamam_Click(object sender, EventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender.Groups == null || CurrentManager.Instance.CurrentTender.Groups.Count == 0)
+            if (UICurrentManager.Instance.CurrentTender.Groups == null || UICurrentManager.Instance.CurrentTender.Groups.Count == 0)
             {
                 DialogResult resultMsg = MessageBox.Show("Hiç Grup oluşturmadınız emin misiniz?", "Uyarı!!! ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultMsg.Equals(DialogResult.Yes))
                 {
                     TenderGroup item = new TenderGroup();
                     item.Description = "Genel Grup";
-                    item.Tender = CurrentManager.Instance.CurrentTender;
+                    item.Tender = UICurrentManager.Instance.CurrentTender;
                     TenderGroupProvider.Instance.Save(item);
                     this.Close();
                 }

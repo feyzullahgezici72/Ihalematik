@@ -40,11 +40,11 @@ namespace IhalematikPro.Forms
         }
         private void frm_Teklif_Adim3_Load(object sender, EventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender != null)
+            if (UICurrentManager.Instance.CurrentTender != null)
             {
                 this.WorkerVehiclePanelCenter();
-                lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
-                lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
+                lblTenderDescription.Text = UICurrentManager.Instance.CurrentTender.Description;
+                lblTenderNumber.Text = UICurrentManager.Instance.CurrentTender.DisplayNumber;
             }
         }
 
@@ -143,7 +143,7 @@ namespace IhalematikPro.Forms
             models.ForEach(p => p.WorkerPercentageMarkup = markup);
             foreach (var model in models)
             {
-                MaterialList item = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.Id == model.Id).FirstOrDefault();
+                MaterialList item = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.Id == model.Id).FirstOrDefault();
                 item.WorkerMarkup = markup;
                 MaterialListProvider.Instance.Save(item);
             }
@@ -200,7 +200,7 @@ namespace IhalematikPro.Forms
             //List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
             List<TenderGroup> tenderGroupItems = new List<TenderGroup>();
 
-            var items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).GroupBy(p => p.TenderGroup).ToList();
+            var items = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).GroupBy(p => p.TenderGroup).ToList();
 
             if (items != null)
             {
@@ -234,11 +234,11 @@ namespace IhalematikPro.Forms
 
         public void LoadTenderMaterialList()
         {
-            if (this.SelectedGroupId != 0 && CurrentManager.Instance.CurrentTender.MaterialList != null)
+            if (this.SelectedGroupId != 0 && UICurrentManager.Instance.CurrentTender.MaterialList != null)
             {
                 LoadingManager.Instance.Show(this);
 
-                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
+                List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
                 List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
                 LoadingManager.Instance.Hide();
                 grdMaterialListIsWorkship.DataSource = models;
@@ -292,12 +292,12 @@ namespace IhalematikPro.Forms
             if (e.Column == colMaterialListMarkup)
             {
                 int currenMaterialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialListIsWorkship.GetFocusedRowCellValue("Id"));
-                foreach (var item in CurrentManager.Instance.CurrentTender.MaterialList)
+                foreach (var item in UICurrentManager.Instance.CurrentTender.MaterialList)
                 {
                     if (item.Id.Equals(currenMaterialId))
                     {
                         item.WorkerMarkup = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
-                        List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
+                        List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsWorkship).ToList();
                         foreach (var materialList in items)
                         {
                             MaterialListProvider.Instance.Save(materialList);
@@ -312,7 +312,7 @@ namespace IhalematikPro.Forms
             if (e.Column == colCustomWorkerUnitPrice)
             {
                 int currenMaterialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialListIsWorkship.GetFocusedRowCellValue("Id"));
-                foreach (var item in CurrentManager.Instance.CurrentTender.MaterialList)
+                foreach (var item in UICurrentManager.Instance.CurrentTender.MaterialList)
                 {
                     if (item.Id.Equals(currenMaterialId))
                     {
@@ -326,9 +326,9 @@ namespace IhalematikPro.Forms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.WorkerMarkup == 0 && p.IsWorkship).ToList();
+            List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.WorkerMarkup == 0 && p.IsWorkship).ToList();
 
-            if (CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() != 0 && CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.CustomWorkerUnitPrice == 0 && p.IsWorkship).Count() > 0)
+            if (UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() != 0 && UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.CustomWorkerUnitPrice == 0 && p.IsWorkship).Count() > 0)
             {
                 DialogResult resultMsg = MessageBox.Show("İşçilik Birim Fiyat belirtmediginiz malzemeler var!!!");
                 return;
@@ -349,8 +349,8 @@ namespace IhalematikPro.Forms
             {
                 bool personHour = cmbAdamSaat.Checked ? true : false;
 
-                CurrentManager.Instance.CurrentTender.PersonHour = personHour;
-                TenderProvider.Instance.Save(CurrentManager.Instance.CurrentTender);
+                UICurrentManager.Instance.CurrentTender.PersonHour = personHour;
+                TenderProvider.Instance.Save(UICurrentManager.Instance.CurrentTender);
 
                 this.Close();
                 frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
@@ -439,7 +439,7 @@ namespace IhalematikPro.Forms
 
             bindingSourceAddWorker.DataSource = null;
             int currentId = Convert.ToInt32(gridViewMaterialListIsWorkship.GetFocusedRowCellValue("Id"));
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).ToList();
+            List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).ToList();
             List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             foreach (var item in models)
             {
@@ -463,7 +463,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).ToList();
+            List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).ToList();
             List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             grdMaterialListIsWorkship.DataSource = models;
         }

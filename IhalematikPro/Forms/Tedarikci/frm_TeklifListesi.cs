@@ -47,7 +47,7 @@ namespace IhalematikProUI.Forms
         {
             int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOffer.GetFocusedRowCellValue("Id"));
 
-            CurrentManager.Instance.CurrentOffer = OfferProvider.Instance.GetItem(id);
+            UICurrentManager.Instance.CurrentOffer = OfferProvider.Instance.GetItem(id);
 
             this.Close();
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
@@ -169,7 +169,7 @@ namespace IhalematikProUI.Forms
         {
             int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridView1.GetFocusedRowCellValue("Id"));
 
-            CurrentManager.Instance.CurrentOffer = OfferProvider.Instance.GetItem(id);
+            UICurrentManager.Instance.CurrentOffer = OfferProvider.Instance.GetItem(id);
 
             this.Close();
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];

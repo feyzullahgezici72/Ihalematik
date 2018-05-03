@@ -36,7 +36,7 @@ namespace IhalematikPro.Forms
 
         private void frm_FirmaTanimlama_Load(object sender, EventArgs e)
         {
-            Company company = CurrentManager.Instance.CurrentCompany;
+            Company company = UICurrentManager.Instance.CurrentCompany;
             if (company == null)
             {
                 company = new Company();
@@ -59,7 +59,7 @@ namespace IhalematikPro.Forms
                 txtTaxNumber.Text = company.TaxNumber;
                 if (!string.IsNullOrEmpty(company.LogoPath))
                 {
-                    if (!string.IsNullOrEmpty(CurrentManager.Instance.CurrentCompany.LogoPath))
+                    if (!string.IsNullOrEmpty(UICurrentManager.Instance.CurrentCompany.LogoPath))
                     {
                         //string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
                         //picLogo.Image = Image.FromFile(path + "\\ihalematik\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
@@ -72,8 +72,8 @@ namespace IhalematikPro.Forms
                         {
                             path = Application.StartupPath.Substring(0, (Application.StartupPath.Length));
                         }
-                        picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
-                        this.logoName = CurrentManager.Instance.CurrentCompany.LogoPath;
+                        picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + UICurrentManager.Instance.CurrentCompany.LogoPath);
+                        this.logoName = UICurrentManager.Instance.CurrentCompany.LogoPath;
                     }
                 }
             }
@@ -81,7 +81,7 @@ namespace IhalematikPro.Forms
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            Company company = CurrentManager.Instance.CurrentCompany;
+            Company company = UICurrentManager.Instance.CurrentCompany;
             if (company == null)
             {
                 company = new Company();
@@ -106,7 +106,7 @@ namespace IhalematikPro.Forms
                 company.MailPassword = txtMailPassword.Text.Trim();
             }
             CompanyProvider.Instance.Save(company);
-            CurrentManager.Instance.CurrentCompany = company;
+            UICurrentManager.Instance.CurrentCompany = company;
             //this._owner.frm_Anaform_Load(null, null);
             this._owner.LoadLogo();
             frm_MesajFormu mf = new frm_MesajFormu();
@@ -142,7 +142,7 @@ namespace IhalematikPro.Forms
                     this.logoName = Guid.NewGuid().ToString() + filename;
                     System.IO.File.Copy(dialog.FileName, path + "\\EmailFile\\Images\\Logo\\" + this.logoName);
                     picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + this.logoName);
-                    CurrentManager.Instance.CurrentCompany.LogoPath = this.logoName;
+                    UICurrentManager.Instance.CurrentCompany.LogoPath = this.logoName;
                     //picLogo.Image.
                     //this.logoName = Guid.NewGuid().ToString() + filename;
                 }

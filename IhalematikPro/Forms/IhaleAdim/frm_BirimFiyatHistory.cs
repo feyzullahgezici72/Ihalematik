@@ -31,11 +31,11 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
         private void frm_BirimFiyatHistory_Shown(object sender, EventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender != null)
+            if (UICurrentManager.Instance.CurrentTender != null)
             {
-                lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
-                lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
-                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+                lblTenderDescription.Text = UICurrentManager.Instance.CurrentTender.Description;
+                lblTenderNumber.Text = UICurrentManager.Instance.CurrentTender.DisplayNumber;
+                List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList;
                 if (items != null)
                 {
                     List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);

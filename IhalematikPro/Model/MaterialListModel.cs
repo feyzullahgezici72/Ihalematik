@@ -323,7 +323,7 @@ namespace IhalematikPro.Model
                 if (this.tenderEquipments == null)
                 {
                     Dictionary<string, object> parameters = new Dictionary<string, object>();
-                    parameters.Add("TenderId", CurrentManager.Instance.CurrentTender.Id);
+                    parameters.Add("TenderId", UICurrentManager.Instance.CurrentTender.Id);
                     //parameters.Add("MaterialId", this.Id);
                     this.tenderEquipments = TenderEquipmentProvider.Instance.GetItems(parameters);
                 }
@@ -364,7 +364,7 @@ namespace IhalematikPro.Model
         {
             get
             {
-                if (!CurrentManager.Instance.CurrentTender.PersonHour)
+                if (!UICurrentManager.Instance.CurrentTender.PersonHour)
                 {
                     return Math.Round(this.CustomWorkerMarkupUnitPrice + this.MarkupUnitPrice, 2);
                 }

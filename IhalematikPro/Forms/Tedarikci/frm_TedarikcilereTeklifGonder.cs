@@ -44,10 +44,10 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
             grdMaterialList.TabIndex = 0; //samet
             grdSupplier.TabIndex = 0;//samet
-            if (CurrentManager.Instance.CurrentOffer != null)
+            if (UICurrentManager.Instance.CurrentOffer != null)
             {
-                lblOfferDescription.Text = CurrentManager.Instance.CurrentOffer.Description;
-                lblTenderNumber.Text = CurrentManager.Instance.CurrentOffer.Number;
+                lblOfferDescription.Text = UICurrentManager.Instance.CurrentOffer.Description;
+                lblTenderNumber.Text = UICurrentManager.Instance.CurrentOffer.Number;
             }
             colChangeMetreialName.Visible = true;
             pnlx.Visible = true;
@@ -71,7 +71,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         //Malzeme eklenen Tedarikciler
         public void LoadAddedMaterialSupplierGrid()
         {
-            List<Supplier> suppliers = CurrentManager.Instance.CurrentOffer.Suppliers;
+            List<Supplier> suppliers = UICurrentManager.Instance.CurrentOffer.Suppliers;
             List<SupplierModel> models = IhalematikModelBase.GetModels<SupplierModel, Supplier>(suppliers);
             grdSupplier.DataSource = models;
         }
@@ -81,9 +81,9 @@ namespace IhalematikProUI.Forms.Tedarikci
             if (Items == null)
             {
                 colIsSelectedOfferMaterial.Visible = false;
-                if (CurrentManager.Instance.CurrentOffer != null)
+                if (UICurrentManager.Instance.CurrentOffer != null)
                 {
-                    List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(CurrentManager.Instance.CurrentOffer.MaterialList.ToList());
+                    List<OfferMaterialListModel> models = IhalematikModelBase.GetModels<OfferMaterialListModel, OfferMaterialList>(UICurrentManager.Instance.CurrentOffer.MaterialList.ToList());
                     grdMaterialList.DataSource = models;
                 }
             }
@@ -110,9 +110,9 @@ namespace IhalematikProUI.Forms.Tedarikci
             if (e.Column == colMaterialListQuantity)
             {
                 int Id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialList.GetFocusedRowCellValue("Id"));
-                if (CurrentManager.Instance.CurrentOffer.MaterialList != null)
+                if (UICurrentManager.Instance.CurrentOffer.MaterialList != null)
                 {
-                    foreach (OfferMaterialList offerMaterialList in CurrentManager.Instance.CurrentOffer.MaterialList)
+                    foreach (OfferMaterialList offerMaterialList in UICurrentManager.Instance.CurrentOffer.MaterialList)
                     {
                         if (offerMaterialList.Id == Id)
                         {
@@ -143,13 +143,13 @@ namespace IhalematikProUI.Forms.Tedarikci
                 {
                     foreach (OfferMaterialListModel seledtedMaterialList in seledtedMaterialLists)
                     {
-                        OfferMaterialList items = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Id == seledtedMaterialList.Id).FirstOrDefault();
+                        OfferMaterialList items = UICurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Id == seledtedMaterialList.Id).FirstOrDefault();
                         items.IsSelected = true;
                         OfferMaterialListProvider.Instance.Save(items);
                         foreach (var seledtedSupplier in seledtedSuppliers)
                         {
                             SupplierMaterialList supplierMaterialList = new SupplierMaterialList();
-                            supplierMaterialList.Offer = CurrentManager.Instance.CurrentOffer;
+                            supplierMaterialList.Offer = UICurrentManager.Instance.CurrentOffer;
                             supplierMaterialList.SupplierId = seledtedSupplier.Id.Value;
                             supplierMaterialList.MaterialListId = seledtedMaterialList.Id.Value;
                             Dictionary<string, object> parameters = new Dictionary<string, object>();
@@ -165,7 +165,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                             }
                         }
                     }
-                    this.LoadMaterialGrid(CurrentManager.Instance.CurrentOffer.MaterialList.ToList());
+                    this.LoadMaterialGrid(UICurrentManager.Instance.CurrentOffer.MaterialList.ToList());
                     frm_MesajFormu mf = new frm_MesajFormu();
                     mf.lblMesaj.Text = "Seçili Malzemeler Firmaya aktarıldı...";
                     mf.ShowDialog();
@@ -193,11 +193,11 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void btnTedaikcileregonder_Click(object sender, EventArgs e)
         {
             lblTedarikciListesi.Text = "TEDARİKÇİ LİSTESİ               Arama için :  CTRL + F ";
-            if (CurrentManager.Instance.CurrentOffer == null)
+            if (UICurrentManager.Instance.CurrentOffer == null)
             {
                 return;
             }
-            int quantityZeroCount = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Quantity == 0).Count();
+            int quantityZeroCount = UICurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Quantity == 0).Count();
 
             if (quantityZeroCount > 0)
             {
@@ -207,7 +207,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             }
 
             this.LoadSupplierGrid();
-            this.LoadMaterialGrid(CurrentManager.Instance.CurrentOffer.MaterialList.ToList());
+            this.LoadMaterialGrid(UICurrentManager.Instance.CurrentOffer.MaterialList.ToList());
             colMaterialListQuantity.OptionsColumn.AllowEdit = false;
             colMaterialListQuantity.OptionsColumn.AllowFocus = false;
             colMaterialListQuantity.OptionsColumn.ReadOnly = false;
@@ -231,7 +231,7 @@ namespace IhalematikProUI.Forms.Tedarikci
         private void btnTedarikciListesi_Click(object sender, EventArgs e)
         {
             lblTedarikciListesi.Text = "TEDARİKÇİ LİSTESİ";
-            int quantityZeroCount = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Quantity == 0).Count();
+            int quantityZeroCount = UICurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Quantity == 0).Count();
 
             if (quantityZeroCount > 0)
             {

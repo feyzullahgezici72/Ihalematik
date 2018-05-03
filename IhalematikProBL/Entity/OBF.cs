@@ -1,4 +1,5 @@
-﻿using IhalematikProBL.Provider;
+﻿using IhalematikProBL.Enum;
+using IhalematikProBL.Provider;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace IhalematikProBL.Entity
 
         public string StokNumber { get; set; }
         public int ParentId { get; set; }
+        public CurrencyTypesEnum CurrencyType { get; set; }
 
         private List<OBF> childrens { get; set; }
         public List<OBF> Childrens

@@ -31,7 +31,7 @@ namespace IhalematikProUI.Forms.Genel
 
             if (height != 0 && width != 0)
             {
-                Company company = CurrentManager.Instance.CurrentCompany;
+                Company company = UICurrentManager.Instance.CurrentCompany;
                 company.LogoHeight = height;
                 company.LogoWidth = width;
                 CompanyProvider.Instance.Save(company);
@@ -42,9 +42,9 @@ namespace IhalematikProUI.Forms.Genel
 
         private void frm_LogoAyarları_Load(object sender, EventArgs e)
         {
-            if (CurrentManager.Instance.CurrentCompany != null)
+            if (UICurrentManager.Instance.CurrentCompany != null)
             {
-                if (!string.IsNullOrEmpty(CurrentManager.Instance.CurrentCompany.LogoPath))
+                if (!string.IsNullOrEmpty(UICurrentManager.Instance.CurrentCompany.LogoPath))
                 {
                     string path = string.Empty;
                     if (Application.StartupPath.Contains("bin\\Debug"))
@@ -57,15 +57,15 @@ namespace IhalematikProUI.Forms.Genel
                     }
 
                     //string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
-                    picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
+                    picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + UICurrentManager.Instance.CurrentCompany.LogoPath);
                 }
-                if (CurrentManager.Instance.CurrentCompany.LogoWidth != 0)
+                if (UICurrentManager.Instance.CurrentCompany.LogoWidth != 0)
                 {
-                    txtWidth.Text = CurrentManager.Instance.CurrentCompany.LogoWidth.ToString();
+                    txtWidth.Text = UICurrentManager.Instance.CurrentCompany.LogoWidth.ToString();
                 }
-                if (CurrentManager.Instance.CurrentCompany.LogoHeight != 0)
+                if (UICurrentManager.Instance.CurrentCompany.LogoHeight != 0)
                 {
-                    txtHeight.Text = CurrentManager.Instance.CurrentCompany.LogoHeight.ToString();
+                    txtHeight.Text = UICurrentManager.Instance.CurrentCompany.LogoHeight.ToString();
                 }
             }
         }

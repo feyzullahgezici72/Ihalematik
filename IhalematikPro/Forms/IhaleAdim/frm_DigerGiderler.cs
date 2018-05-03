@@ -41,7 +41,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
         private void LoadGrid()
         {
-            List<OtherExpenses> items = OtherExpensesProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
+            List<OtherExpenses> items = OtherExpensesProvider.Instance.GetItems("TenderId", UICurrentManager.Instance.CurrentTender.Id);
             bindingSourceOtherExpenses.DataSource = items;
             grdOtherExpenses.DataSource = bindingSourceOtherExpenses;
         }
@@ -68,7 +68,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
             }
             else
             {
-                currentItem = new OtherExpenses(CurrentManager.Instance.CurrentTender.Id);
+                currentItem = new OtherExpenses(UICurrentManager.Instance.CurrentTender.Id);
                 if (e.Column == colDescription)
                 {
                     currentItem.Description = (string)gridViewOtherExpenses.ActiveEditor.EditValue;

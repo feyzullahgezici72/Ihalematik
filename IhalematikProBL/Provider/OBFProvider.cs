@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections;
 using SimpleApplicationBase.Toolkit;
 using IhalematikProBL.Manager;
+using IhalematikProBL.Enum;
 
 namespace IhalematikProBL.Provider
 {
@@ -19,6 +20,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("DescriptionForSupplier", t.DescriptionForSupplier);
             parameters.Add("StokNumber", t.StokNumber);
             parameters.Add("ParentId", t.ParentId);
+            parameters.Add("CurrencyType", t.CurrencyType);
             return parameters;
         }
 
@@ -28,17 +30,38 @@ namespace IhalematikProBL.Provider
             t.Description = dr.GetValue<string>("Description");
             t.Number = dr.GetValue<string>("Number");
             t.Unit = dr.GetValue<string>("Unit");
-            t.UnitPrice = dr.GetValue<double>("UnitPrice");
+            t.CurrencyType = dr.GetValue<CurrencyTypesEnum>("CurrencyType");
+
+            double unitPrice = dr.GetValue<double>("UnitPrice");
+
+            switch (t.CurrencyType)
+            {
+                case CurrencyTypesEnum.TL:
+                    t.UnitPrice = unitPrice;
+                    break;
+                case CurrencyTypesEnum.USD:
+                    t.UnitPrice = unitPrice * CurrentManager.Instance.CurrentExchangeRateUSD.UnitPrice;
+                    break;
+                case CurrencyTypesEnum.EUR:
+                    t.UnitPrice = unitPrice * CurrentManager.Instance.CurrentExchangeRateEUR.UnitPrice;
+                    break;
+                default:
+                    t.UnitPrice = unitPrice;
+                    break;
+            }
+
+
             t.IsActive = dr.GetValue<bool>("IsActive");
             t.DescriptionForSupplier = dr.GetValue<string>("DescriptionForSupplier");
             t.StokNumber = dr.GetValue<string>("StokNumber");
-            t.ParentId= dr.GetValue<int>("ParentId");
+            t.ParentId = dr.GetValue<int>("ParentId");
         }
 
         public void UpdateOBFPrice(int Id, double UnitPrice)
         {
             Hashtable param = new Hashtable();
             param.Add("UnitPrice", UnitPrice);
+            param.Add("CurrencyType", CurrencyTypesEnum.TL);
             param.Add("Id", Id);
 
             CustomDBConnectionManager.Instance.ExecuteNonQuery("OBFPriceUpdate", param);

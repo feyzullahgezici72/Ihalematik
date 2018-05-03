@@ -59,8 +59,8 @@ namespace IhalematikPro.Forms
             string pozNumber = txtPozNumber.Text;
             string pozDescription = txtDescription.Text.Trim();
             pozModels = new List<PozModel>();
-            Offer offer = CurrentManager.Instance.CurrentTender.Offer;
-            List<MaterialList> selectedMaterialLists = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsPoz).ToList();
+            Offer offer = UICurrentManager.Instance.CurrentTender.Offer;
+            List<MaterialList> selectedMaterialLists = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsPoz).ToList();
 
             if (offer == null)
             {
@@ -159,7 +159,7 @@ namespace IhalematikPro.Forms
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            Tender currentTender = CurrentManager.Instance.CurrentTender;
+            Tender currentTender = UICurrentManager.Instance.CurrentTender;
 
             int[] selectedRows = gridView1.GetSelectedRows();
 
@@ -208,7 +208,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            Tender currentTender = CurrentManager.Instance.CurrentTender;
+            Tender currentTender = UICurrentManager.Instance.CurrentTender;
             if (currentTender.MaterialList != null)
             {
                 LoadingManager.Instance.Show(this);
@@ -243,7 +243,7 @@ namespace IhalematikPro.Forms
         {
             lblGrupName.Text = this.SelectedGroup.Description;
             txtPozNumber.Focus();
-            if (CurrentManager.Instance.CurrentTender.Offer == null)
+            if (UICurrentManager.Instance.CurrentTender.Offer == null)
             {
                 colOfferPrice.Visible = false;
                 colAddedPozOfferPrice.Visible = false;
@@ -264,9 +264,9 @@ namespace IhalematikPro.Forms
 
         private void LoadAddedPozGrid()
         {
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsPoz).ToList();
+            List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && p.IsPoz).ToList();
 
-            Offer offer = CurrentManager.Instance.CurrentTender.Offer;
+            Offer offer = UICurrentManager.Instance.CurrentTender.Offer;
             if (offer != null)
             {
                 foreach (var item in items)
@@ -306,7 +306,7 @@ namespace IhalematikPro.Forms
 
         private void btnCikar2_Click(object sender, EventArgs e)
         {
-            Tender currentTender = CurrentManager.Instance.CurrentTender;
+            Tender currentTender = UICurrentManager.Instance.CurrentTender;
             int[] selectedRows = gridView2.GetSelectedRows();
             List<MaterialListModel> models = (List<MaterialListModel>)gridView2.DataSource;
 

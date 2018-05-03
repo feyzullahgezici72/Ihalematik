@@ -1,5 +1,7 @@
 ﻿using IhalematikPro.Model;
 using IhalematikProBL.Entity;
+using IhalematikProBL.Enum;
+using IhalematikProBL.Provider;
 using IhalematikProUI.Forms;
 using SimpleApplicationBase.BL.Base;
 using System;
@@ -10,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace IhalematikPro.Manager
 {
-    public class CurrentManager : SingletonBase<CurrentManager>
+    public class UICurrentManager : SingletonBase<UICurrentManager>
     {
         public Tender CurrentTender { get; set; }
         public Company CurrentCompany { get; set; }

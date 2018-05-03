@@ -45,15 +45,15 @@ namespace IhalematikPro.Forms
 
         public void logoOrtala()
         {
-            if (CurrentManager.Instance.CurrentCompany != null)
+            if (UICurrentManager.Instance.CurrentCompany != null)
             {
-                if (CurrentManager.Instance.CurrentCompany.LogoWidth != 0)
+                if (UICurrentManager.Instance.CurrentCompany.LogoWidth != 0)
                 {
-                    picLogo.Width = CurrentManager.Instance.CurrentCompany.LogoWidth;
+                    picLogo.Width = UICurrentManager.Instance.CurrentCompany.LogoWidth;
                 }
-                if (CurrentManager.Instance.CurrentCompany.LogoHeight != 0)
+                if (UICurrentManager.Instance.CurrentCompany.LogoHeight != 0)
                 {
-                    picLogo.Height = CurrentManager.Instance.CurrentCompany.LogoHeight;
+                    picLogo.Height = UICurrentManager.Instance.CurrentCompany.LogoHeight;
                 }
             }
 
@@ -65,9 +65,9 @@ namespace IhalematikPro.Forms
             DevExpress.UserSkins.BonusSkins.Register();
             this.WindowState = FormWindowState.Maximized;
             this.LoadLogo();
-            if (CurrentManager.Instance.CurrentMember != null && !string.IsNullOrEmpty(CurrentManager.Instance.CurrentMember.UserName))
+            if (UICurrentManager.Instance.CurrentMember != null && !string.IsNullOrEmpty(UICurrentManager.Instance.CurrentMember.UserName))
             {
-                UserName.Caption = CurrentManager.Instance.CurrentMember.UserName.ToString(); 
+                UserName.Caption = UICurrentManager.Instance.CurrentMember.UserName.ToString(); 
             }
 
         }
@@ -75,10 +75,10 @@ namespace IhalematikPro.Forms
         public void LoadLogo()
         {
             logoOrtala();
-            if (CurrentManager.Instance.CurrentCompany != null)
+            if (UICurrentManager.Instance.CurrentCompany != null)
             {
-                lblCompanyName.Text = CurrentManager.Instance.CurrentCompany.Name;
-                if (!string.IsNullOrEmpty(CurrentManager.Instance.CurrentCompany.LogoPath))
+                lblCompanyName.Text = UICurrentManager.Instance.CurrentCompany.Name;
+                if (!string.IsNullOrEmpty(UICurrentManager.Instance.CurrentCompany.LogoPath))
                 {
                     //string path = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
                     //picLogo.Image = Image.FromFile(path + "\\ihalematik\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
@@ -93,7 +93,7 @@ namespace IhalematikPro.Forms
                     }
                     try
                     {
-                        picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath);
+                        picLogo.Image = Image.FromFile(path + "\\EmailFile\\Images\\Logo\\" + UICurrentManager.Instance.CurrentCompany.LogoPath);
                     }
                     catch (Exception)
                     {
@@ -194,7 +194,7 @@ namespace IhalematikPro.Forms
         Forms.frm_Teklif_Adim1 ta1;
         private void btnAdimx1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender != null)
+            if (UICurrentManager.Instance.CurrentTender != null)
             {
                 btnAdimx1.ButtonStyle = BarButtonStyle.Check;
                 RibonPasif();
@@ -278,7 +278,7 @@ namespace IhalematikPro.Forms
         Forms.frm_Teklif_Adim3 ta3;
         private void btnAdimx3_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender != null)
+            if (UICurrentManager.Instance.CurrentTender != null)
             {
                 btnAdimx3.ButtonStyle = BarButtonStyle.Check;
                 RibonPasif();
@@ -313,7 +313,7 @@ namespace IhalematikPro.Forms
         Forms.frm_Teklif_Adim2 ta4;
         private void btnAdimx4_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender != null && CurrentManager.Instance.CurrentTender.MaterialList != null && CurrentManager.Instance.CurrentTender.MaterialList.Count != 0)
+            if (UICurrentManager.Instance.CurrentTender != null && UICurrentManager.Instance.CurrentTender.MaterialList != null && UICurrentManager.Instance.CurrentTender.MaterialList.Count != 0)
             {
                 btnAdimx4.ButtonStyle = BarButtonStyle.Check;
                 RibonPasif();
@@ -470,7 +470,7 @@ namespace IhalematikPro.Forms
         frm_TedarikcilerdenFiyatAl tfa;
         private void barButtonItem15_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (CurrentManager.Instance.CurrentOffer != null && CurrentManager.Instance.CurrentOffer.MaterialList != null)
+            if (UICurrentManager.Instance.CurrentOffer != null && UICurrentManager.Instance.CurrentOffer.MaterialList != null)
             {
                 barButtonItem15.ButtonStyle = BarButtonStyle.Check;
                 RibonPasif();
@@ -504,7 +504,7 @@ namespace IhalematikPro.Forms
         frm_TeklifAdimSon ts;
         private void btnAdimx5_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender != null)
+            if (UICurrentManager.Instance.CurrentTender != null)
             {
                 btnAdimx5.ButtonStyle = BarButtonStyle.Check;
                 RibonPasif();
@@ -770,7 +770,7 @@ namespace IhalematikPro.Forms
         frm_TedarikcilereTeklifGonder tg;
         private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (CurrentManager.Instance.CurrentOffer != null && CurrentManager.Instance.CurrentOffer.MaterialList != null)
+            if (UICurrentManager.Instance.CurrentOffer != null && UICurrentManager.Instance.CurrentOffer.MaterialList != null)
             {
                 frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
                 if (tg == null)
@@ -827,7 +827,7 @@ namespace IhalematikPro.Forms
         frm_TeklifAktar teklifAktar;
         private void barButtonItem28_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (CurrentManager.Instance.CurrentOffer != null && CurrentManager.Instance.CurrentOffer.MaterialList != null)
+            if (UICurrentManager.Instance.CurrentOffer != null && UICurrentManager.Instance.CurrentOffer.MaterialList != null)
             {
                 barButtonItem28.ButtonStyle = BarButtonStyle.Check;
                 RibonPasif();
@@ -989,7 +989,7 @@ namespace IhalematikPro.Forms
         frm_BirimFiyatHistory bfh;
         private void barButtonItem43_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender != null)
+            if (UICurrentManager.Instance.CurrentTender != null)
             {
                 barButtonItem43.ButtonStyle = BarButtonStyle.Check;
                 RibonPasif();

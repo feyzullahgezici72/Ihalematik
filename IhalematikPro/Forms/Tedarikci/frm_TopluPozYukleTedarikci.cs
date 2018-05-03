@@ -122,7 +122,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                                         materialList.IsPoz = true;
                                         materialList.PozOBFId = pozId;
                                         materialList.Quantity = (float)quantity;
-                                        materialList.Offer = CurrentManager.Instance.CurrentOffer;
+                                        materialList.Offer = UICurrentManager.Instance.CurrentOffer;
                                         materialListItems.Add(materialList);
                                     }
                                 }

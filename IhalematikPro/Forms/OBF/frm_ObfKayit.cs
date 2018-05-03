@@ -54,7 +54,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            Tender currentTender = CurrentManager.Instance.CurrentTender;
+            Tender currentTender = UICurrentManager.Instance.CurrentTender;
 
             int[] selectedRows = gridView1.GetSelectedRows();
 
@@ -95,7 +95,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            Tender currentTender = CurrentManager.Instance.CurrentTender;
+            Tender currentTender = UICurrentManager.Instance.CurrentTender;
             if (currentTender.MaterialList != null)
             {
                 List<MaterialList> items = currentTender.MaterialList.Where(p => !p.IsPoz && p.TenderGroupId == this.SelectedGroupId).ToList();
@@ -113,7 +113,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            Tender currentTender = CurrentManager.Instance.CurrentTender;
+            Tender currentTender = UICurrentManager.Instance.CurrentTender;
             int[] selectedRows = gridView2.GetSelectedRows();
             List<MaterialListModel> models = (List<MaterialListModel>)gridView2.DataSource;
 
@@ -145,7 +145,7 @@ namespace IhalematikPro.Forms
         {
             lblGrupName.Text = this.SelectedGroup.Description;
             txtNumber.Focus();
-            if (CurrentManager.Instance.CurrentTender.Offer == null)
+            if (UICurrentManager.Instance.CurrentTender.Offer == null)
             {
                 colOfferPrice.Visible = false;
                 colAddedOBFOfferPrice.Visible = false;
@@ -165,9 +165,9 @@ namespace IhalematikPro.Forms
 
         private void LoadAddedOBFGrid()
         {
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && !p.IsPoz).ToList();
+            List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId && !p.IsPoz).ToList();
 
-            Offer offer = CurrentManager.Instance.CurrentTender.Offer;
+            Offer offer = UICurrentManager.Instance.CurrentTender.Offer;
             if (offer != null)
             {
                 foreach (var item in items)
@@ -190,8 +190,8 @@ namespace IhalematikPro.Forms
             string obfDescription = txtDescription.Text;
 
             oBFModels = new List<OBFModel>();
-            Offer offer = CurrentManager.Instance.CurrentTender.Offer;
-            List<MaterialList> selectedMaterialLists = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => !p.IsPoz).ToList();
+            Offer offer = UICurrentManager.Instance.CurrentTender.Offer;
+            List<MaterialList> selectedMaterialLists = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => !p.IsPoz).ToList();
 
             if (offer == null)
             {

@@ -40,7 +40,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
         private void btnOk_Click(object sender, EventArgs e)
         {
             double carriage = double.Parse(string.IsNullOrEmpty(txtCarriage.Text) ? "0" : txtCarriage.Text.Replace("TL", string.Empty));
-            CurrentManager.Instance.CurrentTender.Carriage = carriage;
+            UICurrentManager.Instance.CurrentTender.Carriage = carriage;
             this._owner.SetCarriageValue();
             this.Close();
         }
@@ -52,11 +52,11 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
         private void LoadGrid()
         {
-            if (CurrentManager.Instance.CurrentTender != null)
+            if (UICurrentManager.Instance.CurrentTender != null)
             {
-                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+                List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList;
                 this.grdMaterialList.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
-                txtCarriage.Text = CurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
+                txtCarriage.Text = UICurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
             }
         }
 
@@ -77,7 +77,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
             if (column == colCarriagePercent)
             {
-                double carriagePercent = CurrentManager.Instance.CurrentTender.MaterialList.Sum(p => p.CarriagePercent);
+                double carriagePercent = UICurrentManager.Instance.CurrentTender.MaterialList.Sum(p => p.CarriagePercent);
                 double currentCarriagePercent = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(e.Value);
                 if ((carriagePercent + currentCarriagePercent) > 100)
                 {
@@ -89,7 +89,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                 else
                 {
                     int currenMaterialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewMaterialList.GetFocusedRowCellValue("Id"));
-                    foreach (var item in CurrentManager.Instance.CurrentTender.MaterialList)
+                    foreach (var item in UICurrentManager.Instance.CurrentTender.MaterialList)
                     {
                         if (item.Id.Equals(currenMaterialId))
                         {
@@ -108,9 +108,9 @@ namespace IhalematikProUI.Forms.IhaleAdim
 
         private void btnResetValue_Click(object sender, EventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender.MaterialList.Count > 0)
+            if (UICurrentManager.Instance.CurrentTender.MaterialList.Count > 0)
             {
-                foreach (var item in CurrentManager.Instance.CurrentTender.MaterialList)
+                foreach (var item in UICurrentManager.Instance.CurrentTender.MaterialList)
                 {
                     item.CarriagePercent = 0;
                 }

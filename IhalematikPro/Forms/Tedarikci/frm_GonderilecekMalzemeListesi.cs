@@ -34,19 +34,19 @@ namespace IhalematikProUI.Forms.Tedarikci
         }
         private void LoadAddedMateriallistGrid()
         {
-            grdAddedOfferMaterialList.DataSource = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.IsSelected);
+            grdAddedOfferMaterialList.DataSource = UICurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.IsSelected);
         }
 
         private void rpstRemove_Click(object sender, EventArgs e)
         {
             int materialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewAddedOfferMaterialList.GetFocusedRowCellValue("Id"));
-            OfferMaterialList selectedOfferMaterialList = CurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Id == materialId).FirstOrDefault();
+            OfferMaterialList selectedOfferMaterialList = UICurrentManager.Instance.CurrentOffer.MaterialList.Where(p => p.Id == materialId).FirstOrDefault();
             selectedOfferMaterialList.IsSelected = false;
 
             OfferMaterialListProvider.Instance.Save(selectedOfferMaterialList);
 
             Dictionary<string, object> parameters = new Dictionary<string, object>();
-            parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
+            parameters.Add("OfferId", UICurrentManager.Instance.CurrentOffer.Id);
             parameters.Add("MaterialListId", materialId);
 
             List<SupplierMaterialList> items = SupplierMaterialListProvider.Instance.GetItems(parameters);
@@ -57,14 +57,14 @@ namespace IhalematikProUI.Forms.Tedarikci
                 SupplierMaterialListProvider.Instance.Save(item);
             }
 
-            this._owner.LoadMaterialGrid(CurrentManager.Instance.CurrentOffer.MaterialList);
+            this._owner.LoadMaterialGrid(UICurrentManager.Instance.CurrentOffer.MaterialList);
             this.LoadAddedMateriallistGrid();
         }
 
         private void btnTumunuCikar_Click(object sender, EventArgs e)
         {
             //   int materialId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewAddedOfferMaterialList.GetFocusedRowCellValue("Id"));
-            List<OfferMaterialList> selectedOfferMaterialLists = CurrentManager.Instance.CurrentOffer.MaterialList;
+            List<OfferMaterialList> selectedOfferMaterialLists = UICurrentManager.Instance.CurrentOffer.MaterialList;
             if (selectedOfferMaterialLists != null)
             {
                 foreach (var selectedOfferMaterialList in selectedOfferMaterialLists)
@@ -72,7 +72,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                     selectedOfferMaterialList.IsSelected = false;
                     OfferMaterialListProvider.Instance.Save(selectedOfferMaterialList);
                     Dictionary<string, object> parameters = new Dictionary<string, object>();
-                    parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
+                    parameters.Add("OfferId", UICurrentManager.Instance.CurrentOffer.Id);
                     parameters.Add("MaterialListId", selectedOfferMaterialList.Id);
                     List<SupplierMaterialList> items = SupplierMaterialListProvider.Instance.GetItems(parameters);
                     foreach (var item in items)
@@ -81,7 +81,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                         SupplierMaterialListProvider.Instance.Save(item);
                     }
                 }
-                this._owner.LoadMaterialGrid(CurrentManager.Instance.CurrentOffer.MaterialList);
+                this._owner.LoadMaterialGrid(UICurrentManager.Instance.CurrentOffer.MaterialList);
                 this.LoadAddedMateriallistGrid();
             }
         }

@@ -46,7 +46,7 @@ namespace IhalematikProUI.Forms.Genel
 
             string hashPass = SimpleApplicationBase.Toolkit.Helpers.CreateOneWayHash(password1);
 
-            Member member = CurrentManager.Instance.CurrentMember;
+            Member member = UICurrentManager.Instance.CurrentMember;
             if (member == null)
             {
                 member = new Member();
@@ -61,7 +61,7 @@ namespace IhalematikProUI.Forms.Genel
 
         private void frm_LoginGuncelle_Load(object sender, EventArgs e)
         {
-            txtUserName.Text = CurrentManager.Instance.CurrentMember != null ? CurrentManager.Instance.CurrentMember.UserName : string.Empty;
+            txtUserName.Text = UICurrentManager.Instance.CurrentMember != null ? UICurrentManager.Instance.CurrentMember.UserName : string.Empty;
         }
 
         private void txtPassword2_KeyPress(object sender, KeyPressEventArgs e)

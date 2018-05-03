@@ -63,21 +63,21 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim1_Load(object sender, EventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender != null)
+            if (UICurrentManager.Instance.CurrentTender != null)
             {
-                lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
-                lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
+                lblTenderDescription.Text = UICurrentManager.Instance.CurrentTender.Description;
+                lblTenderNumber.Text = UICurrentManager.Instance.CurrentTender.DisplayNumber;
                 this.KeyPreview = true;
                 this.KeyDown += new KeyEventHandler(Frm_Teklif_Adim1_KeyDown);
             }
         }
         public void LoadTenderGroupGrid()
         {
-            Offer offer = CurrentManager.Instance.CurrentTender.Offer;
-            Tender tender = CurrentManager.Instance.CurrentTender;
+            Offer offer = UICurrentManager.Instance.CurrentTender.Offer;
+            Tender tender = UICurrentManager.Instance.CurrentTender;
             if (tender != null)
             {
-                List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
+                List<TenderGroup> items = TenderGroupProvider.Instance.GetItems("TenderId", UICurrentManager.Instance.CurrentTender.Id);
                 List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(items);
 
                 if (models != null && models.Count != 0)
@@ -85,7 +85,7 @@ namespace IhalematikPro.Forms
                     LoadingManager.Instance.Show(this);
                     if (models.Count == 1 && offer != null)
                     {
-                        List<MaterialList> addedMaterialLists = CurrentManager.Instance.CurrentTender.MaterialList.ToList();
+                        List<MaterialList> addedMaterialLists = UICurrentManager.Instance.CurrentTender.MaterialList.ToList();
 
                         foreach (var item in offer.MaterialList)
                         {
@@ -143,7 +143,7 @@ namespace IhalematikPro.Forms
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            grdMaterialList.DataSource = CurrentManager.Instance.CurrentTender.MaterialList;
+            grdMaterialList.DataSource = UICurrentManager.Instance.CurrentTender.MaterialList;
             grdMaterialList.RefreshDataSource();
         }
 
@@ -167,7 +167,7 @@ namespace IhalematikPro.Forms
         {
             if (this.SelectedGroupId != 0)
             {
-                grdMaterialList.DataSource = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId);
+                grdMaterialList.DataSource = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId);
                 grdMaterialList.RefreshDataSource();
             }
         }
@@ -188,7 +188,7 @@ namespace IhalematikPro.Forms
         {
             List<MaterialListModel> models = grdMaterialList.DataSource as List<MaterialListModel>;
 
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+            List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList;
 
             foreach (MaterialListModel model in models)
             {
@@ -206,9 +206,9 @@ namespace IhalematikPro.Forms
         public void LoadTenderMaterialList()
         {
             List<MaterialListModel> models = new List<MaterialListModel>();
-            if (this.SelectedGroupId != 0 && CurrentManager.Instance.CurrentTender.MaterialList != null)
+            if (this.SelectedGroupId != 0 && UICurrentManager.Instance.CurrentTender.MaterialList != null)
             {
-                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
+                List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
                 foreach (var item in items)
                 {
                     MaterialListModel model = new MaterialListModel(item);
@@ -233,7 +233,7 @@ namespace IhalematikPro.Forms
 
         private void frm_Teklif_Adim1_Shown(object sender, EventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender != null && CurrentManager.Instance.CurrentTender.Offer != null)
+            if (UICurrentManager.Instance.CurrentTender != null && UICurrentManager.Instance.CurrentTender.Offer != null)
             {
                 colQuantity.OptionsColumn.AllowEdit = false;
                 colQuantity.OptionsColumn.AllowFocus = false;
@@ -253,16 +253,16 @@ namespace IhalematikPro.Forms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender.MaterialList == null || CurrentManager.Instance.CurrentTender.MaterialList.Count == 0)
+            if (UICurrentManager.Instance.CurrentTender.MaterialList == null || UICurrentManager.Instance.CurrentTender.MaterialList.Count == 0)
             {
                 MessageBox.Show("Liste boş yada miktar belirtmediğiniz malzemeler var");
                 return;
             }
 
             this.SaveMaterialListIsWorkship();
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).ToList();
+            List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).ToList();
 
-            List<MaterialList> zeroAmountItems = CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.Quantity == 0).ToList();
+            List<MaterialList> zeroAmountItems = UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.Quantity == 0).ToList();
 
             if (zeroAmountItems != null && zeroAmountItems.Count != 0)
             {
@@ -352,9 +352,9 @@ namespace IhalematikPro.Forms
 
         private void barTumGrupListele_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (CurrentManager.Instance.CurrentTender.MaterialList != null)
+            if (UICurrentManager.Instance.CurrentTender.MaterialList != null)
             {
-                List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+                List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList;
                 List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
                 grdMaterialList.DataSource = models;
             }

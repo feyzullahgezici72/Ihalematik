@@ -11,6 +11,9 @@ using DevExpress.XtraEditors;
 using System.Xml;
 using IhalematikProUI.Forms;
 using IhalematikProBL.Manager;
+using IhalematikProBL.Entity;
+using IhalematikProBL.Provider;
+using IhalematikPro.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -23,8 +26,17 @@ namespace IhalematikPro.Forms
 
         private void frm_DovizKurlari_Load(object sender, EventArgs e)
         {
-           
-           
+
+            try
+            {
+                txtDolar.Text = CurrentManager.Instance.CurrentExchangeRateUSD.UnitPrice.ToString();
+                txtEuro.Text = CurrentManager.Instance.CurrentExchangeRateEUR.UnitPrice.ToString();
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.SaveErrorLog(ex);
+            }
+
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
@@ -42,46 +54,15 @@ namespace IhalematikPro.Forms
         {
             this.Close();
         }
-        public class Currency
-        {
-            public string Code { get; set; }
-            public decimal Rate { get; set; }
-        }
-        private decimal GetRate(string code)
-        {
-            string url = string.Empty;
-            var date = DateTime.Now;
-            if (date.Date == DateTime.Today)
-                url = "http://www.tcmb.gov.tr/kurlar/today.xml";
-            else
-                url = string.Format("http://www.tcmb.gov.tr/kurlar/{0}{1}/{2}{1}{0}.xml", date.Year, addZero(date.Month), addZero(date.Day));
-
-            System.Xml.Linq.XDocument document = System.Xml.Linq.XDocument.Load(url);
-            Dictionary<string, string> dic = new Dictionary<string, string>();
-            var result = document.Descendants("Currency")
-            .Where(v => v.Element("ForexBuying") != null && v.Element("ForexBuying").Value.Length > 0)
-            .Select(v => new Currency
-            {
-                Code = v.Attribute("Kod").Value,
-                Rate = decimal.Parse(v.Element("ForexBuying").Value.Replace('.', ','))
-            }).ToList();
-            return result.FirstOrDefault(s => s.Code == code).Rate;
-        }
-        private string addZero(int p)
-        {
-            if (p.ToString().Length == 1)
-                return "0" + p;
-            return p.ToString();
-        }
-
-      
+       
+       
 
         private void btnOnlineAl_Click(object sender, EventArgs e)
         {
             try
             {
-                txtDolar.Text = GetRate("USD").ToString();
-                txtEuro.Text = GetRate("EUR").ToString();
+                txtDolar.Text = CurrentManager.Instance.GetRate("USD").ToString();
+                txtEuro.Text = CurrentManager.Instance.GetRate("EUR").ToString();
             }
             catch (Exception ex)
             {
@@ -93,6 +74,21 @@ namespace IhalematikPro.Forms
         
         }
 
+        private void btnKurKaydet_Click(object sender, EventArgs e)
+        {
+            double usd = double.Parse(txtDolar.Text);
+            double euro = double.Parse(txtEuro.Text);
 
+            ExchangeRate exchangeRateUSD = new ExchangeRate();
+            exchangeRateUSD.CurrencyType = IhalematikProBL.Enum.CurrencyTypesEnum.USD;
+            exchangeRateUSD.UnitPrice = usd;
+            ExchangeRateProvider.Instance.Save(exchangeRateUSD);
+
+
+            ExchangeRate exchangeRateEURO = new ExchangeRate();
+            exchangeRateEURO.CurrencyType = IhalematikProBL.Enum.CurrencyTypesEnum.EUR;
+            exchangeRateEURO.UnitPrice = euro;
+            ExchangeRateProvider.Instance.Save(exchangeRateEURO);
+        }
     }
 }

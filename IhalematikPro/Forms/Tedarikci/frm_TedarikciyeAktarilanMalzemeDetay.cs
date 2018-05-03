@@ -73,7 +73,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                     }
                 }
                 Dictionary<string, object> parameters = new Dictionary<string, object>();
-                parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
+                parameters.Add("OfferId", UICurrentManager.Instance.CurrentOffer.Id);
                 parameters.Add("SupplierId", supplier.Id);
 
                 List<SupplierMaterialList> items = SupplierMaterialListProvider.Instance.GetItems(parameters);
@@ -157,10 +157,10 @@ namespace IhalematikProUI.Forms.Tedarikci
                     oXL = new Microsoft.Office.Interop.Excel.Application();
                     oWB = oXL.Workbooks.Open(DestinationFile);
                     oSheet = String.IsNullOrEmpty("Sayfa1") ? (Microsoft.Office.Interop.Excel._Worksheet)oWB.ActiveSheet : (Microsoft.Office.Interop.Excel._Worksheet)oWB.Worksheets["Sayfa1"];
-                    if (CurrentManager.Instance.CurrentOffer != null)
+                    if (UICurrentManager.Instance.CurrentOffer != null)
                     {
                         Dictionary<string, object> parameters = new Dictionary<string, object>();
-                        parameters.Add("OfferId", CurrentManager.Instance.CurrentOffer.Id);
+                        parameters.Add("OfferId", UICurrentManager.Instance.CurrentOffer.Id);
                         parameters.Add("SupplierId", this.Supplier.Id);
                         List<SupplierMaterialList> items = SupplierMaterialListProvider.Instance.GetItems(parameters);
                         List<OfferMaterialList> offerMaterialLists = new List<OfferMaterialList>();
@@ -173,13 +173,13 @@ namespace IhalematikProUI.Forms.Tedarikci
                         {
                             int row = 7;
                             int indexNumber = 1;
-                            oSheet.Cells[1, 5] = CurrentManager.Instance.CurrentCompany.Name;
-                            oSheet.Cells[2, 5] = CurrentManager.Instance.CurrentCompany.Address;
+                            oSheet.Cells[1, 5] = UICurrentManager.Instance.CurrentCompany.Name;
+                            oSheet.Cells[2, 5] = UICurrentManager.Instance.CurrentCompany.Address;
                             oSheet.Cells[2, 10] = DateTime.Now.ToShortDateString();
                             oSheet.Cells[4, 6] = this.Supplier.CompanyName;
                             foreach (OfferMaterialList materialList in offerMaterialLists)
                             {
-                                oSheet.Cells[row, 2] = CurrentManager.Instance.CurrentOffer.Id;
+                                oSheet.Cells[row, 2] = UICurrentManager.Instance.CurrentOffer.Id;
                                 oSheet.Cells[row, 3] = this.Supplier.Id;//supplierId
                                 oSheet.Cells[row, 4] = materialList.Id;
                                 oSheet.Cells[row, 5] = indexNumber;
@@ -200,7 +200,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                     }
                     int LogoW = 180;
                     int LogoH = 80;
-                    if (!string.IsNullOrEmpty(CurrentManager.Instance.CurrentCompany.LogoPath))
+                    if (!string.IsNullOrEmpty(UICurrentManager.Instance.CurrentCompany.LogoPath))
                     {
                         string path = string.Empty;
                         if (Application.StartupPath.Contains("bin\\Debug"))
@@ -211,7 +211,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                         {
                             path = Application.StartupPath.Substring(0, (Application.StartupPath.Length));
                         }
-                        path = path + "\\EmailFile\\Images\\Logo\\" + CurrentManager.Instance.CurrentCompany.LogoPath;
+                        path = path + "\\EmailFile\\Images\\Logo\\" + UICurrentManager.Instance.CurrentCompany.LogoPath;
                         oSheet.Shapes.AddPicture(path, Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, 330, 2, LogoW, LogoH);
                     }
                     oWB.Save();

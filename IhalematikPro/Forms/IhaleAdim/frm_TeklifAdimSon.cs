@@ -56,7 +56,7 @@ namespace IhalematikProUI.Forms
 
 
             List<ReportModel> models = new List<ReportModel>();
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+            List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList;
             List<MaterialListModel> materialModels = grdMaterialList.DataSource as List<MaterialListModel>; //IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             double totalAmount = 0;
             if (materialModels != null)
@@ -80,7 +80,7 @@ namespace IhalematikProUI.Forms
 
             WrapperReportModel reportModel = new WrapperReportModel();
             reportModel.Items = models;
-            reportModel.TenderNumber = CurrentManager.Instance.CurrentTender.Number.ToString();
+            reportModel.TenderNumber = UICurrentManager.Instance.CurrentTender.Number.ToString();
             reportModel.TotalAmount = totalAmount.ToString("c2");
             ms.DataSource = reportModel;
 
@@ -91,12 +91,12 @@ namespace IhalematikProUI.Forms
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            foreach (var item in CurrentManager.Instance.CurrentTender.MaterialList)
+            foreach (var item in UICurrentManager.Instance.CurrentTender.MaterialList)
             {
                 MaterialListProvider.Instance.Save(item);
             }
 
-            TenderProvider.Instance.Save(CurrentManager.Instance.CurrentTender);
+            TenderProvider.Instance.Save(UICurrentManager.Instance.CurrentTender);
 
             frm_MesajFormu mf = new frm_MesajFormu();
             mf.lblMesaj.Text = "İhale Kaydedildi...";
@@ -106,9 +106,9 @@ namespace IhalematikProUI.Forms
         private void frm_TeklifAdimSon_Shown(object sender, EventArgs e)
         {
             this.Enabled = false;
-            if (CurrentManager.Instance.CurrentTender != null)
+            if (UICurrentManager.Instance.CurrentTender != null)
             {
-                Tender currentTender = CurrentManager.Instance.CurrentTender;
+                Tender currentTender = UICurrentManager.Instance.CurrentTender;
                 txtCarriage.Text = currentTender.Carriage.ToString("c2");
                 txtLeftPanelCarriage.Text = currentTender.Carriage.ToString("c2");
                 txtAccountingCosts.Text = currentTender.AccountingCosts.ToString("c2");
@@ -116,8 +116,8 @@ namespace IhalematikProUI.Forms
                 //chckCompletionBond.Checked = currentTender.CompletionBond;
                 //chckProvisionalBond.Checked = currentTender.ProvisionalBond;
 
-                lblTenderDescription.Text = CurrentManager.Instance.CurrentTender.Description;
-                lblTenderNumber.Text = CurrentManager.Instance.CurrentTender.DisplayNumber;
+                lblTenderDescription.Text = UICurrentManager.Instance.CurrentTender.Description;
+                lblTenderNumber.Text = UICurrentManager.Instance.CurrentTender.DisplayNumber;
 
                 this.OtherExpenses();
                 this.LoadGrid();
@@ -130,7 +130,7 @@ namespace IhalematikProUI.Forms
 
         private void CalculateMaterialListEquipment()
         {
-            List<TenderMaterialListEquipment> items = TenderMaterialListEquipmentProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
+            List<TenderMaterialListEquipment> items = TenderMaterialListEquipmentProvider.Instance.GetItems("TenderId", UICurrentManager.Instance.CurrentTender.Id);
 
             double totalWorkerHour = 0;
             double totalVehicleHour = 0;
@@ -183,7 +183,7 @@ namespace IhalematikProUI.Forms
 
         public void OtherExpenses()
         {
-            List<OtherExpenses> otherExpenses = OtherExpensesProvider.Instance.GetItems("TenderId", CurrentManager.Instance.CurrentTender.Id);
+            List<OtherExpenses> otherExpenses = OtherExpensesProvider.Instance.GetItems("TenderId", UICurrentManager.Instance.CurrentTender.Id);
             //if (otherExpenses.Count != 0)
             //{
             this.OtherCost = otherExpenses.Sum(p => p.Price);
@@ -195,7 +195,7 @@ namespace IhalematikProUI.Forms
 
         private void CalculateLeftPanelValues()
         {
-            Tender tender = CurrentManager.Instance.CurrentTender;
+            Tender tender = UICurrentManager.Instance.CurrentTender;
             isciAracGirisPaneli.Visible = true;
             //txtTenderNumber.Text = string.Format("{0}", (tender.Number).ToString().PadLeft(8, '0'));
             //txtTenderDescription.Text = tender.Description;
@@ -224,10 +224,10 @@ namespace IhalematikProUI.Forms
         private void LoadGrid()
         {
             LoadingManager.Instance.Show(this);
-            List<MaterialList> items = CurrentManager.Instance.CurrentTender.MaterialList;
+            List<MaterialList> items = UICurrentManager.Instance.CurrentTender.MaterialList;
             this.DataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
             this.TotalMarkupNonKDVPreview = this.DataSource.Sum(p => p.TotalFare);
-            Tender currentTender = CurrentManager.Instance.CurrentTender;
+            Tender currentTender = UICurrentManager.Instance.CurrentTender;
             IhalematikProBL.Entity.Rule provisionalBond = RuleProvider.Instance.GetItems("Code", "ProvisionalBond").FirstOrDefault();
             IhalematikProBL.Entity.Rule completionBond = RuleProvider.Instance.GetItems("Code", "CompletionBond").FirstOrDefault();
             IhalematikProBL.Entity.Rule tradingStamps = RuleProvider.Instance.GetItems("Code", "TradingStamps").FirstOrDefault();
@@ -324,9 +324,9 @@ namespace IhalematikProUI.Forms
             txtWorkerCostAmount.Text = workerCostAmount.ToString("c2");
             txtAccountingCosts.Text = (accountingCosts - KDVTefkifat).ToString("c2");
             txtKDVTefkifat.Text = KDVTefkifat.ToString("c2");
-            txtLeftPanelCarriage.Text = CurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
+            txtLeftPanelCarriage.Text = UICurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
             //double otherCost = double.Parse(txtLeftPanelOtherCoast.Text);
-            txtTotalAmount.Text = (materialCostAmount + workerCostAmount + accountingCosts + CurrentManager.Instance.CurrentTender.Carriage + this.OtherCost).ToString("c2");
+            txtTotalAmount.Text = (materialCostAmount + workerCostAmount + accountingCosts + UICurrentManager.Instance.CurrentTender.Carriage + this.OtherCost).ToString("c2");
             double workerMarkupAmount = Math.Round((workerCostAmount * 18 / 100), 2);
             txtMarkupMaterialTotal.Text = markupMaterialAmount.ToString("c2");
             txtMarkupWorkerAmount.Text = markupWorkerAmount.ToString("c2");
@@ -367,8 +367,8 @@ namespace IhalematikProUI.Forms
         }
         public void SetCarriageValue()
         {
-            txtCarriage.Text = CurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
-            txtLeftPanelCarriage.Text = CurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
+            txtCarriage.Text = UICurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
+            txtLeftPanelCarriage.Text = UICurrentManager.Instance.CurrentTender.Carriage.ToString("c2");
         }
 
         private void groupControl5_Paint(object sender, PaintEventArgs e)
@@ -385,7 +385,7 @@ namespace IhalematikProUI.Forms
         private void btnPrev_Click(object sender, EventArgs e)
         {
             this.Close();
-            if (CurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() == 0)
+            if (UICurrentManager.Instance.CurrentTender.MaterialList.Where(p => p.IsWorkship).Count() == 0)
             {
                 frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
                 af.RibonPasif();

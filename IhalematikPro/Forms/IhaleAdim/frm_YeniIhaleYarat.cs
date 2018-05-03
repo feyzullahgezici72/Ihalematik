@@ -80,7 +80,7 @@ namespace IhalematikPro.Forms
                 }
                 else
                 {
-                    CurrentManager.Instance.CurrentTender = tender;
+                    UICurrentManager.Instance.CurrentTender = tender;
                 }
                 this.Enabled = false;
                 frm_MesajFormu mf = new frm_MesajFormu();

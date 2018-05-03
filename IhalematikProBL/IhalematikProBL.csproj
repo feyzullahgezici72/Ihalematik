@@ -121,6 +121,7 @@
   <ItemGroup>
     <Compile Include="Entity\Company.cs" />
     <Compile Include="Entity\ErrorLog.cs" />
+    <Compile Include="Entity\ExchangeRate.cs" />
     <Compile Include="Entity\License.cs" />
     <Compile Include="Entity\Member.cs" />
     <Compile Include="Entity\OtherExpenses.cs" />
@@ -154,6 +155,7 @@
     <Compile Include="Enum\UnitTimeTypesEnum.cs" />
     <Compile Include="Mailing\EmailHelper.cs" />
     <Compile Include="Manager\CompanyManager.cs" />
+    <Compile Include="Manager\CurrentManager.cs" />
     <Compile Include="Manager\CustomConfigurationManager.cs" />
     <Compile Include="Manager\CustomDBConnectionManager.cs" />
     <Compile Include="Mailing\MailingManager.cs" />
@@ -165,6 +167,7 @@
     <Compile Include="Provider\CompanyProvider.cs" />
     <Compile Include="Provider\CustomEntityBaseProvider.cs" />
     <Compile Include="Provider\ErrorLogProvider.cs" />
+    <Compile Include="Provider\ExchangeRateProvider.cs" />
     <Compile Include="Provider\LicenseProvider.cs" />
     <Compile Include="Provider\MaterialListProvider.cs" />
     <Compile Include="Provider\MemberProvider.cs" />

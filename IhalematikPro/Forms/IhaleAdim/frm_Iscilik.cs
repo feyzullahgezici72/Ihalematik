@@ -177,7 +177,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                 currentItem = new TenderMaterialListEquipmentModel();
                 TenderEquipment equipment = new TenderEquipment();
                 equipment.IsWorker = true;
-                equipment.TenderId = CurrentManager.Instance.CurrentTender.Id;
+                equipment.TenderId = UICurrentManager.Instance.CurrentTender.Id;
                 if (e.Column == colAddWorkerWorker)
                 {
                     object b = gridViewAddWorker.ActiveEditor.EditValue;
@@ -189,7 +189,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                     TenderMaterialListEquipment tenderMaterialListEquipment = new TenderMaterialListEquipment();
                     tenderMaterialListEquipment.EquipmentId = equipment.Id;
                     tenderMaterialListEquipment.MaterialListId = this.SelectedMaterial.Id.Value;
-                    tenderMaterialListEquipment.TenderId = CurrentManager.Instance.CurrentTender.Id;
+                    tenderMaterialListEquipment.TenderId = UICurrentManager.Instance.CurrentTender.Id;
                     tenderMaterialListEquipment.Equipment = equipment;
                     OperationResult result1 = TenderMaterialListEquipmentProvider.Instance.Save(tenderMaterialListEquipment);
                     if (result1.Success)
@@ -277,7 +277,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                 currentItem = new TenderMaterialListEquipmentModel();
                 TenderEquipment equipment = new TenderEquipment();
                 equipment.IsWorker = false;
-                equipment.TenderId = CurrentManager.Instance.CurrentTender.Id;
+                equipment.TenderId = UICurrentManager.Instance.CurrentTender.Id;
                 if (e.Column == colAddVehicleVehicle)
                 {
                     //System.Data.DataRow row = gridViewAddVehicle.GetDataRow(gridViewAddVehicle.FocusedRowHandle);
@@ -292,7 +292,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                     TenderMaterialListEquipment tenderMaterialListEquipment = new TenderMaterialListEquipment();
                     tenderMaterialListEquipment.EquipmentId = equipment.Id;
                     tenderMaterialListEquipment.MaterialListId = this.SelectedMaterial.Id.Value;
-                    tenderMaterialListEquipment.TenderId = CurrentManager.Instance.CurrentTender.Id;
+                    tenderMaterialListEquipment.TenderId = UICurrentManager.Instance.CurrentTender.Id;
                     tenderMaterialListEquipment.Equipment = equipment;
                     OperationResult result1 = TenderMaterialListEquipmentProvider.Instance.Save(tenderMaterialListEquipment);
                     if (result1.Success)

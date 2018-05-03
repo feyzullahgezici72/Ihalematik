@@ -136,7 +136,7 @@ namespace IhalematikProUI.Forms.IhaleAdim
                                     materialList.PozOBFId = obfId;
                                     materialList.Quantity = (float)quantity;
                                     materialList.KDVPercentage = 18;
-                                    materialList.Tender = CurrentManager.Instance.CurrentTender;
+                                    materialList.Tender = UICurrentManager.Instance.CurrentTender;
                                     materialList.TenderGroupId = this._owner.SelectedGroupId;
                                     materialListItems.Add(materialList);
                                 }

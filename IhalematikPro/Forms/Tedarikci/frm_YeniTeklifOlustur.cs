@@ -51,7 +51,7 @@ namespace IhalematikProUI.Forms
                 offer.DateTime = DateTime.Parse(txtDateTime.Text);
 
                 OfferProvider.Instance.Save(offer);
-                CurrentManager.Instance.CurrentOffer = offer;
+                UICurrentManager.Instance.CurrentOffer = offer;
                 frm_MesajFormu mf = new frm_MesajFormu();
                 mf.lblMesaj.Text = "Yeni Teklif Oluşturuldu...";
                 mf.ShowDialog();
