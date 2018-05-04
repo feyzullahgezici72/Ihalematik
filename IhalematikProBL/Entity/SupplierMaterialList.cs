@@ -1,4 +1,5 @@
-﻿using IhalematikProBL.Provider;
+﻿using IhalematikProBL.Enum;
+using IhalematikProBL.Provider;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -81,5 +82,7 @@ namespace IhalematikProBL.Entity
                 return Math.Round(this.Price + (this.Price * this.Risk / 100), 2);
             }
         }
+
+        public CurrencyTypesEnum CurrencyType { get; set; }
     }
 }

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SimpleApplicationBase.Toolkit;
 using IhalematikProBL.Manager;
+using IhalematikProBL.Enum;
 
 namespace IhalematikProBL.Provider
 {
@@ -23,6 +24,7 @@ namespace IhalematikProBL.Provider
             parameters.Add("Risk", t.Risk);
             parameters.Add("IsSelected", t.IsSelected);
             parameters.Add("KDV", t.KDV);
+            parameters.Add("CurrencyType", t.CurrencyType);
             return parameters;
         }
 
@@ -32,11 +34,29 @@ namespace IhalematikProBL.Provider
             t.SupplierId = dr.GetValue<int>("SupplierId");
             t.OfferId = dr.GetValue<int>("OfferId");
             t.MaterialListId = dr.GetValue<int>("MaterialListId");
-            t.Price = dr.GetValue<double>("Price");
             t.Risk = dr.GetValue<double>("Risk");
             t.IsActive = dr.GetValue<bool>("IsActive");
             t.IsSelected = dr.GetValue<bool>("IsSelected");
             t.KDV = dr.GetValue<double>("KDV");
+            t.CurrencyType = dr.GetValue<CurrencyTypesEnum>("CurrencyType");
+
+            double price = dr.GetValue<double>("Price");
+            t.Price = price;
+            //switch (t.CurrencyType)
+            //{
+            //    case CurrencyTypesEnum.TL:
+            //        t.Price = price;
+            //        break;
+            //    case CurrencyTypesEnum.USD:
+            //        t.Price = price * CurrentManager.Instance.CurrentExchangeRateUSD.UnitPrice;
+            //        break;
+            //    case CurrencyTypesEnum.EUR:
+            //        t.Price = price * CurrentManager.Instance.CurrentExchangeRateEUR.UnitPrice;
+            //        break;
+            //    default:
+            //        t.Price = price;
+            //        break;
+            //}
         }
 
         public void SupplierMaterialListSelectedUpdate(int OfferId)
