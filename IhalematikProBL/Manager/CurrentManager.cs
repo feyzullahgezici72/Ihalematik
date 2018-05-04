@@ -76,7 +76,7 @@ namespace IhalematikProBL.Manager
         {
             if (p.ToString().Length == 1)
                 return "0" + p;
-            return p.ToString();
+            return p.ToString("c4");
         }
         public class Currency
         {

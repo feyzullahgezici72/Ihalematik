@@ -622,13 +622,13 @@ namespace IhalematikPro.Forms
         {
             ribbon.Enabled = true;
             MainPanel.Visible = true;
-            hideContainerLeft.Enabled = true;
+            dockPanel1.Enabled = true;
         }
         public void RibonPasif()
         {
             MainPanel.Visible = false;
             ribbon.Enabled = false;
-            hideContainerLeft.Enabled = false;
+            dockPanel1.Enabled = false;
         }
         private void barButtonItem2_ItemClick_1(object sender, ItemClickEventArgs e)
         {
@@ -746,7 +746,14 @@ namespace IhalematikPro.Forms
 
         private void panelControl1_MouseMove(object sender, MouseEventArgs e)
         {
-            
+            if (dockPanel1.Width > 100)
+            {
+                dockPanel1.HideSliding();
+            }
+            else
+            {
+                dockPanel1.ShowSliding();
+            }
 
 
         }
@@ -1254,8 +1261,9 @@ namespace IhalematikPro.Forms
 
         private void hideContainerLeft_Click(object sender, EventArgs e)
         {
-          
+           
         }
+
 
         private void navBarControl1_Click(object sender, EventArgs e)
         {
@@ -1264,132 +1272,190 @@ namespace IhalematikPro.Forms
 
         private void navBarItem2_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem4.PerformClick();
         }
 
         private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem2.PerformClick();
         }
 
         private void navBarItem3_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem10.PerformClick();
         }
 
         private void navBarItem4_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem51.PerformClick();
         }
 
         private void navBarItem5_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barBtnPozListesi.PerformClick();
         }
 
         private void navBarItem6_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barBtnOzelStokListesi.PerformClick();
         }
 
         private void navBarItem7_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barBtnDovizKurlar.PerformClick();
         }
 
         private void navBarItem8_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem12.PerformClick();
         }
 
         private void navBarItem9_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem14.PerformClick();
         }
 
         private void navBarItem10_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem28.PerformClick();
         }
 
         private void navBarItem11_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem15.PerformClick();
         }
 
         private void navBarItem12_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem45.PerformClick();
         }
 
         private void navBarItem13_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barBtnTeklifHazirla.PerformClick();
         }
 
         private void navBarItem14_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             btnAdimx1.PerformClick();
         }
 
         private void navBarItem15_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             btnAdimx4.PerformClick();
         }
 
         private void navBarItem16_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             btnAdimx3.PerformClick();
         }
 
         private void navBarItem17_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             btnAdimx5.PerformClick();
         }
 
         private void navBarItem18_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem52.PerformClick();
         }
 
         private void navBarItem19_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem43.PerformClick();
         }
 
         private void navBarItem20_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem13.PerformClick();
         }
 
         private void navBarItem21_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem6.PerformClick();
         }
 
         private void navBarItem22_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem50.PerformClick();
         }
 
         private void navBarItem23_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem7.PerformClick();
         }
 
         private void navBarItem24_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem39.PerformClick();
         }
 
         private void navBarItem25_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem30.PerformClick();
         }
 
         private void navBarItem26_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            dockPanel1.HideSliding();
             barButtonItem31.PerformClick();
+        }
+
+        private void ribbon_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dockPanel1.Width > 100)
+            {
+                dockPanel1.HideSliding();
+            }
+            else
+            {
+                dockPanel1.ShowSliding();
+            }
+
+        }
+
+        private void hideContainerLeft_Click_1(object sender, EventArgs e)
+        {
+            //if (dockPanel1.Width==0)
+            //{
+            //    dockPanel1.ShowSliding();
+            //}
+            //else
+
+            //{
+            //    dockPanel1.HideSliding();
+            //}
+        }
+
+        private void navBarItem27_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            dockPanel1.HideSliding();
+            barButtonItem42.PerformClick();
         }
     }
 }
