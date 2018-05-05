@@ -175,7 +175,7 @@ namespace IhalematikPro.Forms
                     OfferMaterialList offerMaterialList = offer.MaterialList.Where(p => p.PozOBFId == item.PozOBFId && !p.IsPoz).FirstOrDefault();
                     if (offerMaterialList != null)
                     {
-                        item.OfferPrice = OfferManager.Instance.GetOfferMaterialListPrice(offerMaterialList.Id).Price;
+                        item.OfferPrice = OfferManager.Instance.GetOfferMaterialListPrice(offerMaterialList.Id).PriceWithRisk;
                     }
                 }
             }
@@ -253,7 +253,7 @@ namespace IhalematikPro.Forms
                             if (item.IsSelected)
                             {
                                 // Malzeme tedarikciye gonderilmisse fiyatini offerMatetialdan ceksin.
-                                offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).Price;
+                                offerPrice = OfferManager.Instance.GetOfferMaterialListPrice(item.Id).PriceWithRisk;
                                 model.OfferPrice = offerPrice;
                             }
                             else

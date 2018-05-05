@@ -42,21 +42,7 @@ namespace IhalematikProBL.Provider
 
             double price = dr.GetValue<double>("Price");
             t.Price = price;
-            //switch (t.CurrencyType)
-            //{
-            //    case CurrencyTypesEnum.TL:
-            //        t.Price = price;
-            //        break;
-            //    case CurrencyTypesEnum.USD:
-            //        t.Price = price * CurrentManager.Instance.CurrentExchangeRateUSD.UnitPrice;
-            //        break;
-            //    case CurrencyTypesEnum.EUR:
-            //        t.Price = price * CurrentManager.Instance.CurrentExchangeRateEUR.UnitPrice;
-            //        break;
-            //    default:
-            //        t.Price = price;
-            //        break;
-            //}
+           
         }
 
         public void SupplierMaterialListSelectedUpdate(int OfferId)

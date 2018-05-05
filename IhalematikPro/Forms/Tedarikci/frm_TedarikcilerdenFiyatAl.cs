@@ -72,7 +72,7 @@ namespace IhalematikProUI.Forms
                     if (item.Price != 0)
                     {
                         OfferMaterialListModel model = new OfferMaterialListModel(item.MaterialList);
-                        model.Price = item.Price;
+                        model.Price = item.PriceWithRate;
                         model.KDV = item.KDV;
                         model.Risk = item.Risk;
                         model.SupplierMaterialList = item;
@@ -104,7 +104,7 @@ namespace IhalematikProUI.Forms
                     {
                         OfferMaterialListModel model = new OfferMaterialListModel(supplierMaterialList.MaterialList);
                         model.KDV = supplierMaterialList.KDV;
-                        model.Price = supplierMaterialList.Price;
+                        model.Price = supplierMaterialList.PriceWithRate;
                         model.SupplierName = supplierMaterialList.Supplier.CompanyName;
                         model.SupplierMaterialList = supplierMaterialList;
                         model.SupplierMaterialListId = supplierMaterialList.Id;

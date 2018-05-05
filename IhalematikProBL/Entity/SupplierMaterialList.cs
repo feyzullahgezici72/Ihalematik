@@ -1,4 +1,5 @@
 ﻿using IhalematikProBL.Enum;
+using IhalematikProBL.Manager;
 using IhalematikProBL.Provider;
 using System;
 using System.Collections.Generic;
@@ -79,7 +80,33 @@ namespace IhalematikProBL.Entity
         {
             get
             {
-                return Math.Round(this.Price + (this.Price * this.Risk / 100), 2);
+                if (this.CurrencyType == CurrencyTypesEnum.TL)
+                {
+                    return Math.Round(this.Price + (this.Price * this.Risk / 100), 2);
+                }
+                else
+                {
+                    return Math.Round(this.PriceWithRate + (this.PriceWithRate * this.Risk / 100), 2);
+                }
+            }
+        }
+
+        //Doviz kuru ile carpilmis hali
+        public double PriceWithRate
+        {
+            get
+            {
+                switch (this.CurrencyType)
+                {
+                    case CurrencyTypesEnum.TL:
+                        return this.Price;
+                    case CurrencyTypesEnum.USD:
+                        return this.Price * CurrentManager.Instance.CurrentExchangeRateUSD.UnitPrice;
+                    case CurrencyTypesEnum.EUR:
+                        return this.Price * CurrentManager.Instance.CurrentExchangeRateEUR.UnitPrice;
+                    default:
+                        return this.Price;
+                }
             }
         }
 

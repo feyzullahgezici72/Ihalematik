@@ -17,6 +17,7 @@ using IhalematikPro.Manager;
 using IhalematikProBL.Manager;
 using IhalematikProUI.Forms.Base;
 using IhalematikProUI.Manager;
+using IhalematikProBL.Enum;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -122,11 +123,13 @@ namespace IhalematikProUI.Forms.Tedarikci
                         string description = excelReader.GetString(5);
                         string unit = excelReader.GetString(6);
 
-                        double quantity = excelReader.GetDouble(7);
+                        string currencyType = excelReader.GetString(7);
+
+                        double quantity = excelReader.GetDouble(8);
                         double kdv = 0;
                         try
                         {
-                            kdv = excelReader.GetDouble(8) * 100;
+                            kdv = excelReader.GetDouble(9) * 100;
                         }
                         catch (Exception ex)
                         {
@@ -136,7 +139,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                         double price = 0;
                         try
                         {
-                            price = excelReader.GetDouble(9);
+                            price = excelReader.GetDouble(10);
                         }
                         catch (Exception ex)
                         {
@@ -153,10 +156,11 @@ namespace IhalematikProUI.Forms.Tedarikci
                         {
                             supplierMaterialList.Price = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(price);
                             supplierMaterialList.KDV = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(kdv);
+                            supplierMaterialList.CurrencyType = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<CurrencyTypesEnum>(currencyType);
                             SupplierMaterialListProvider.Instance.Save(supplierMaterialList);
 
                             OfferMaterialListModel offerMaterialList = new OfferMaterialListModel(supplierMaterialList.MaterialList);
-                            offerMaterialList.Price = supplierMaterialList.Price;
+                            offerMaterialList.Price = supplierMaterialList.PriceWithRate;
                             offerMaterialList.KDV = supplierMaterialList.KDV;
                             this.MaterialLists.Add(offerMaterialList);
                             if (string.IsNullOrEmpty(this.SupplierName))
