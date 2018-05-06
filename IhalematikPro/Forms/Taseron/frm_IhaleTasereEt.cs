@@ -33,5 +33,11 @@ namespace IhalematikProUI.Forms.Taseron
             frm_IsMalzemeEkle ImEkle = new frm_IsMalzemeEkle();
             ImEkle.ShowDialog();
         }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            frm_IsMalzemeEkle ime = new frm_IsMalzemeEkle();
+            ime.ShowDialog();
+        }
     }
 }

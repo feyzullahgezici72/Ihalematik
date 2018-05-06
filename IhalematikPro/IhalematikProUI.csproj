@@ -432,11 +432,35 @@
     <Compile Include="Forms\Taseron\frm_IsMalzemeEkle.Designer.cs">
       <DependentUpon>frm_IsMalzemeEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Taseron\frm_TaseronListesi.cs">
+    <Compile Include="Forms\Taseron\frm_TasareIsListesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Taseron\frm_TaseronListesi.Designer.cs">
-      <DependentUpon>frm_TaseronListesi.cs</DependentUpon>
+    <Compile Include="Forms\Taseron\frm_TasareIsListesi.Designer.cs">
+      <DependentUpon>frm_TasareIsListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Taseron\frm_TaseronGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Taseron\frm_TaseronGuncelle.Designer.cs">
+      <DependentUpon>frm_TaseronGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Taseron\frm_TaseronTanimlama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Taseron\frm_TaseronTanimlama.Designer.cs">
+      <DependentUpon>frm_TaseronTanimlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Taseron\frm_TaseronSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Taseron\frm_TaseronSec.Designer.cs">
+      <DependentUpon>frm_TaseronSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Taseron\frm_YeniTasereIsYarat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Taseron\frm_YeniTasereIsYarat.Designer.cs">
+      <DependentUpon>frm_YeniTasereIsYarat.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tedarikci\frm_activityGuncelle.cs">
       <SubType>Form</SubType>
@@ -885,8 +909,20 @@
     <EmbeddedResource Include="Forms\Taseron\frm_IsMalzemeEkle.resx">
       <DependentUpon>frm_IsMalzemeEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Taseron\frm_TaseronListesi.resx">
-      <DependentUpon>frm_TaseronListesi.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Taseron\frm_TasareIsListesi.resx">
+      <DependentUpon>frm_TasareIsListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Taseron\frm_TaseronGuncelle.resx">
+      <DependentUpon>frm_TaseronGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Taseron\frm_TaseronTanimlama.resx">
+      <DependentUpon>frm_TaseronTanimlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Taseron\frm_TaseronSec.resx">
+      <DependentUpon>frm_TaseronSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Taseron\frm_YeniTasereIsYarat.resx">
+      <DependentUpon>frm_YeniTasereIsYarat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tedarikci\frm_activityGuncelle.resx">
       <DependentUpon>frm_activityGuncelle.cs</DependentUpon>

@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace IhalematikProUI.Forms.Taseron
 {
-    public partial class frm_TaseronListesi : DevExpress.XtraEditors.XtraForm
+    public partial class frm_TaseronTanimlama : DevExpress.XtraEditors.XtraForm
     {
-        public frm_TaseronListesi()
+        public frm_TaseronTanimlama()
         {
             InitializeComponent();
         }

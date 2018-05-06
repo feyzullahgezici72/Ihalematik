@@ -126,7 +126,7 @@
             this.panelControl1.Controls.Add(this.btnKapat);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1370, 35);
             this.panelControl1.TabIndex = 37;
@@ -151,7 +151,7 @@
             this.lblTenderCaptin.LineColor = System.Drawing.Color.Red;
             this.lblTenderCaptin.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.lblTenderCaptin.Location = new System.Drawing.Point(57, 0);
-            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTenderCaptin.Margin = new System.Windows.Forms.Padding(4);
             this.lblTenderCaptin.Name = "lblTenderCaptin";
             this.lblTenderCaptin.ShowLineShadow = false;
             this.lblTenderCaptin.Size = new System.Drawing.Size(154, 35);
@@ -167,7 +167,7 @@
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnKapat.Location = new System.Drawing.Point(1342, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 3;
@@ -176,10 +176,10 @@
             // grdActiveTenderList
             // 
             this.grdActiveTenderList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdActiveTenderList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdActiveTenderList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.grdActiveTenderList.Location = new System.Drawing.Point(0, 111);
             this.grdActiveTenderList.MainView = this.gridViewActiveTenderList;
-            this.grdActiveTenderList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdActiveTenderList.Margin = new System.Windows.Forms.Padding(4);
             this.grdActiveTenderList.Name = "grdActiveTenderList";
             this.grdActiveTenderList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnIhaleAc,
@@ -671,7 +671,7 @@
             this.simpleButton4.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton4.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton4.Location = new System.Drawing.Point(292, 33);
-            this.simpleButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton4.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(50, 34);
             toolTipTitleItem1.Text = "Kaydet";
@@ -704,7 +704,7 @@
             this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton3.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton3.Location = new System.Drawing.Point(205, 33);
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(50, 34);
             toolTipTitleItem2.Text = "Kaydet";
@@ -718,7 +718,7 @@
             // 
             this.cmbYear.EditValue = null;
             this.cmbYear.Location = new System.Drawing.Point(8, 38);
-            this.cmbYear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbYear.Margin = new System.Windows.Forms.Padding(4);
             this.cmbYear.Name = "cmbYear";
             this.cmbYear.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.cmbYear.Properties.Appearance.Options.UseBackColor = true;
@@ -769,7 +769,7 @@
             // 
             this.txtTenderDescription.EnterMoveNextControl = true;
             this.txtTenderDescription.Location = new System.Drawing.Point(8, 38);
-            this.txtTenderDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenderDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenderDescription.Name = "txtTenderDescription";
             this.txtTenderDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTenderDescription.Properties.Appearance.Options.UseBackColor = true;
@@ -788,7 +788,7 @@
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton1.Location = new System.Drawing.Point(520, 33);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(50, 34);
             toolTipTitleItem3.Text = "Kaydet";
@@ -821,7 +821,7 @@
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton2.Location = new System.Drawing.Point(199, 33);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(50, 34);
             this.simpleButton2.TabIndex = 27;
@@ -833,7 +833,7 @@
             // 
             this.txtTenderNumber.EnterMoveNextControl = true;
             this.txtTenderNumber.Location = new System.Drawing.Point(8, 39);
-            this.txtTenderNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenderNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenderNumber.Name = "txtTenderNumber";
             this.txtTenderNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTenderNumber.Properties.Appearance.Options.UseBackColor = true;
@@ -853,7 +853,7 @@
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.statusPanel);
             this.Controls.Add(this.panelControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_DevamEdenIhaleListesi";

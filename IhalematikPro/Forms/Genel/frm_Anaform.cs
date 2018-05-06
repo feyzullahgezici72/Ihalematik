@@ -1210,14 +1210,14 @@ namespace IhalematikPro.Forms
             frm_KurListele kl = new frm_KurListele();
             kl.ShowDialog();
         }
-        frm_TaseronListesi tsr;
+        frm_TaseronTanimlama tsr;
         private void barButtonItem51_ItemClick(object sender, ItemClickEventArgs e)
         {
             barButtonItem51.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             if (tsr == null)
             {
-                tsr = new frm_TaseronListesi();
+                tsr = new frm_TaseronTanimlama();
                 tsr.MdiParent = this;
                 tsr.FormClosed +=new FormClosedEventHandler(Tsr_FormClosed);
                 tsr.Show();
@@ -1234,14 +1234,14 @@ namespace IhalematikPro.Forms
             RibonAktif();
             barButtonItem51.ButtonStyle = BarButtonStyle.Default;
         }
-        frm_IhaleTasereEt tsrEt;
+        frm_YeniTasereIsYarat tsrEt;
         private void barButtonItem52_ItemClick(object sender, ItemClickEventArgs e)
         {
             barButtonItem52.ButtonStyle = BarButtonStyle.Check;
             RibonPasif();
             if (tsrEt == null)
             {
-                tsrEt = new frm_IhaleTasereEt();
+                tsrEt = new frm_YeniTasereIsYarat();
                 tsrEt.MdiParent = this;
                 tsrEt.FormClosed +=new FormClosedEventHandler(TsrEt_FormClosed);
                 tsrEt.Show();
@@ -1441,21 +1441,78 @@ namespace IhalematikPro.Forms
 
         private void hideContainerLeft_Click_1(object sender, EventArgs e)
         {
-            //if (dockPanel1.Width==0)
-            //{
-            //    dockPanel1.ShowSliding();
-            //}
-            //else
-
-            //{
-            //    dockPanel1.HideSliding();
-            //}
+           
         }
 
         private void navBarItem27_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             dockPanel1.HideSliding();
             barButtonItem42.PerformClick();
+        }
+        frm_IhaleTasereEt tsrEtx;
+        private void barButtonItem53_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            barButtonItem53.ButtonStyle = BarButtonStyle.Check;
+            RibonPasif();
+            if (tsrEtx == null)
+            {
+                tsrEtx = new frm_IhaleTasereEt();
+                tsrEtx.MdiParent = this;
+                tsrEtx.FormClosed +=new FormClosedEventHandler(TsrEtx_FormClosed);
+                tsrEtx.Show();
+            }
+            else
+            {
+                tsrEtx.Activate();
+            }
+        }
+
+        private void TsrEtx_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            tsrEtx = null;
+            RibonAktif();
+            barButtonItem53.ButtonStyle = BarButtonStyle.Default;
+        }
+        frm_TasareIsListesi tsrEtl;
+        private void barButtonItem54_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            barButtonItem54.ButtonStyle = BarButtonStyle.Check;
+            RibonPasif();
+            if (tsrEtl == null)
+            {
+                tsrEtl = new frm_TasareIsListesi();
+                tsrEtl.MdiParent = this;
+                tsrEtl.FormClosed += new FormClosedEventHandler(TsrEtl_FormClosed);
+                tsrEtl.Show();
+            }
+            else
+            {
+                tsrEtl.Activate();
+            }
+        }
+        private void TsrEtl_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            tsrEtl = null;
+            RibonAktif();
+            barButtonItem54.ButtonStyle = BarButtonStyle.Default;
+        }
+
+        private void navBarItem28_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            dockPanel1.HideSliding();
+            barButtonItem52.PerformClick();
+        }
+
+        private void navBarItem29_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            dockPanel1.HideSliding();
+            barButtonItem53.PerformClick();
+        }
+
+        private void navBarItem30_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            dockPanel1.HideSliding();
+            barButtonItem54.PerformClick();
         }
     }
 }

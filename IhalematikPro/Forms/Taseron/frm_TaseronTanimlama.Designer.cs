@@ -1,6 +1,6 @@
 ﻿namespace IhalematikProUI.Forms.Taseron
 {
-    partial class frm_TaseronListesi
+    partial class frm_TaseronTanimlama
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TaseronListesi));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TaseronTanimlama));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -43,7 +44,7 @@
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.txtCompanyName = new DevExpress.XtraEditors.TextEdit();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
@@ -53,7 +54,6 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAuthorNameSurname = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -378,7 +378,7 @@
             this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.OptionsFilter.AllowFilter = false;
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 88;
             // 
             // gridColumn6
@@ -400,7 +400,7 @@
             this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.OptionsFilter.AllowFilter = false;
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 3;
+            this.gridColumn6.VisibleIndex = 2;
             this.gridColumn6.Width = 113;
             // 
             // colAuthorNameSurname
@@ -422,31 +422,8 @@
             this.colAuthorNameSurname.OptionsColumn.ReadOnly = true;
             this.colAuthorNameSurname.OptionsFilter.AllowFilter = false;
             this.colAuthorNameSurname.Visible = true;
-            this.colAuthorNameSurname.VisibleIndex = 2;
+            this.colAuthorNameSurname.VisibleIndex = 1;
             this.colAuthorNameSurname.Width = 109;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gridColumn3.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.gridColumn3.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
-            this.gridColumn3.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gridColumn3.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn3.Caption = "FAALİYET ALANI";
-            this.gridColumn3.FieldName = "SupplierSegmentTexts";
-            this.gridColumn3.MinWidth = 80;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsColumn.AllowEdit = false;
-            this.gridColumn3.OptionsColumn.AllowFocus = false;
-            this.gridColumn3.OptionsColumn.FixedWidth = true;
-            this.gridColumn3.OptionsColumn.ReadOnly = true;
-            this.gridColumn3.OptionsFilter.AllowFilter = false;
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 167;
             // 
             // gridColumn4
             // 
@@ -467,7 +444,7 @@
             this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 4;
+            this.gridColumn4.VisibleIndex = 3;
             this.gridColumn4.Width = 109;
             // 
             // labelControl11
@@ -615,7 +592,6 @@
             this.gridViewSupplier.Appearance.VertLine.Options.UseBackColor = true;
             this.gridViewSupplier.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colCompanyName,
-            this.gridColumn3,
             this.colAuthorNameSurname,
             this.gridColumn6,
             this.gridColumn4,
@@ -671,7 +647,7 @@
             this.gridColumn1.OptionsColumn.AllowFocus = false;
             this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 6;
+            this.gridColumn1.VisibleIndex = 5;
             // 
             // colEdit
             // 
@@ -684,7 +660,7 @@
             this.colEdit.MaxWidth = 20;
             this.colEdit.Name = "colEdit";
             this.colEdit.Visible = true;
-            this.colEdit.VisibleIndex = 7;
+            this.colEdit.VisibleIndex = 6;
             this.colEdit.Width = 20;
             // 
             // btnEdit
@@ -707,7 +683,7 @@
             this.colPasive.MaxWidth = 20;
             this.colPasive.Name = "colPasive";
             this.colPasive.Visible = true;
-            this.colPasive.VisibleIndex = 8;
+            this.colPasive.VisibleIndex = 7;
             this.colPasive.Width = 20;
             // 
             // btnPasive
@@ -1032,7 +1008,7 @@
             this.panelControl1.Size = new System.Drawing.Size(1609, 35);
             this.panelControl1.TabIndex = 43;
             // 
-            // frm_TaseronListesi
+            // frm_TaseronTanimlama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1043,7 +1019,7 @@
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.pnlKayit);
             this.Controls.Add(this.panelControl1);
-            this.Name = "frm_TaseronListesi";
+            this.Name = "frm_TaseronTanimlama";
             this.ShowInTaskbar = false;
             this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1106,7 +1082,6 @@
         private DevExpress.XtraGrid.GridControl grdSupplier;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewSupplier;
         private DevExpress.XtraGrid.Columns.GridColumn colCompanyName;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn colAuthorNameSurname;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
