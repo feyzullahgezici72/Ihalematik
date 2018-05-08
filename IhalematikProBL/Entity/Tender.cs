@@ -143,5 +143,7 @@ namespace IhalematikProBL.Entity
         public bool ProvisionalBond { get; set; }
 
         public bool PersonHour { get; set; }
+
+        public bool IsSelected { get; set; }
     }
 }

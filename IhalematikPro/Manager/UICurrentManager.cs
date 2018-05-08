@@ -21,5 +21,7 @@ namespace IhalematikPro.Manager
         public List<MaterialListModel> CurrentMaterialListModel { get; set; }
 
         public Member CurrentMember { get; set; }
+
+        public JobberTender CurrentJobberTender { get; set; }
     }
 }

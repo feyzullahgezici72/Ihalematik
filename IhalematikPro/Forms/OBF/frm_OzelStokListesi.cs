@@ -185,7 +185,6 @@ namespace IhalematikPro.Forms
         private void cmbAktivePasive_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.LoadGrid();
-            LoadingManager.Instance.Hide(); ;
         }
 
         private void btnSl_Click(object sender, EventArgs e)

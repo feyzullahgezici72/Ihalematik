@@ -19,5 +19,7 @@ namespace IhalematikProBL.Entity
         public string City { get; set; }
         public string TaxOffice { get; set; }
         public string TaxNumber { get; set; }
+
+        public bool IsSelected { get; set; }
     }
 }

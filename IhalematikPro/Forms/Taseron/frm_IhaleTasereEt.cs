@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using IhalematikProBL.Entity;
 
 namespace IhalematikProUI.Forms.Taseron
 {
@@ -25,7 +26,7 @@ namespace IhalematikProUI.Forms.Taseron
 
         private void barTumIsMalzemeEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-          
+
         }
 
         private void btnIsMalzemeEkle_Click(object sender, EventArgs e)
@@ -38,6 +39,18 @@ namespace IhalematikProUI.Forms.Taseron
         {
             frm_IsMalzemeEkle ime = new frm_IsMalzemeEkle();
             ime.ShowDialog();
+        }
+
+        private void kaydet_Click(object sender, EventArgs e)
+        {
+            JobberTender jobberTender = new JobberTender();
+            jobberTender.JobName = txtJobName.Text;
+            jobberTender.JobDescription = memoEditJobDescription.Text;
+            double contractPrice = double.Parse(txtContractPrice.Text.Replace("TL", string.Empty));
+            jobberTender.ContractPrice = contractPrice;
+            jobberTender.ContractDate = dateTimeContractDate.DateTime;
+            jobberTender.StartJobDate = dateTimeStartDate.DateTime;
+            jobberTender.EndJobDate = dateTimeEndDate.DateTime;
         }
     }
 }

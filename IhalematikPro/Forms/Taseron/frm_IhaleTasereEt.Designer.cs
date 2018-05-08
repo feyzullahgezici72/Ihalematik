@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_IhaleTasereEt));
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
@@ -69,8 +68,8 @@
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.txtTotalRisk = new DevExpress.XtraEditors.TextEdit();
             this.txtMarkupWorkerAmount = new DevExpress.XtraEditors.TextEdit();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.memoEditJobDescription = new DevExpress.XtraEditors.MemoEdit();
+            this.barManager1 = new DevExpress.XtraBars.BarManager();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -82,25 +81,25 @@
             this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtContractPrice = new DevExpress.XtraEditors.TextEdit();
+            this.txtJobName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.DateEdit();
-            this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.dateTimeEndDate = new DevExpress.XtraEditors.DateEdit();
+            this.dateTimeStartDate = new DevExpress.XtraEditors.DateEdit();
+            this.dateTimeContractDate = new DevExpress.XtraEditors.DateEdit();
+            this.popupMenu2 = new DevExpress.XtraBars.PopupMenu();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.kaydet = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.btnExcel = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
@@ -143,16 +142,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMarkupMaterialTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalRisk.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMarkupWorkerAmount.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditJobDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContractPrice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtJobName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeEndDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeEndDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeStartDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeStartDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeContractDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeContractDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -175,10 +174,9 @@
             this.panelControl6.Controls.Add(this.groupControl2);
             this.panelControl6.Controls.Add(this.groupControl3);
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl6.Location = new System.Drawing.Point(0, 142);
-            this.panelControl6.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl6.Location = new System.Drawing.Point(0, 97);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(1493, 671);
+            this.panelControl6.Size = new System.Drawing.Size(913, 415);
             this.panelControl6.TabIndex = 27;
             // 
             // groupControl2
@@ -190,8 +188,9 @@
             this.groupControl2.Controls.Add(this.grdMaterialList);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1493, 367);
+            this.groupControl2.Size = new System.Drawing.Size(913, 207);
             this.groupControl2.TabIndex = 23;
             this.groupControl2.Text = "TAŞERE EDİLEN İŞ/MALZEME LİSTESİ";
             // 
@@ -199,12 +198,10 @@
             // 
             this.grdMaterialList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdMaterialList.Location = new System.Drawing.Point(3, 30);
+            this.grdMaterialList.Location = new System.Drawing.Point(2, 20);
             this.grdMaterialList.MainView = this.grdMaterialList2;
-            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
-            this.grdMaterialList.Size = new System.Drawing.Size(1487, 334);
+            this.grdMaterialList.Size = new System.Drawing.Size(909, 185);
             this.grdMaterialList.TabIndex = 1;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdMaterialList2});
@@ -508,22 +505,23 @@
             this.groupControl3.AppearanceCaption.Options.UseFont = true;
             this.groupControl3.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl3.Controls.Add(this.panelControl8);
-            this.groupControl3.Controls.Add(this.memoEdit1);
-            this.groupControl3.Controls.Add(this.textEdit2);
-            this.groupControl3.Controls.Add(this.textEdit1);
+            this.groupControl3.Controls.Add(this.memoEditJobDescription);
+            this.groupControl3.Controls.Add(this.txtContractPrice);
+            this.groupControl3.Controls.Add(this.txtJobName);
             this.groupControl3.Controls.Add(this.labelControl8);
             this.groupControl3.Controls.Add(this.labelControl7);
             this.groupControl3.Controls.Add(this.labelControl6);
             this.groupControl3.Controls.Add(this.labelControl5);
             this.groupControl3.Controls.Add(this.labelControl4);
             this.groupControl3.Controls.Add(this.labelControl3);
-            this.groupControl3.Controls.Add(this.dateEdit2);
-            this.groupControl3.Controls.Add(this.dateEdit1);
-            this.groupControl3.Controls.Add(this.textEdit3);
+            this.groupControl3.Controls.Add(this.dateTimeEndDate);
+            this.groupControl3.Controls.Add(this.dateTimeStartDate);
+            this.groupControl3.Controls.Add(this.dateTimeContractDate);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl3.Location = new System.Drawing.Point(0, 367);
+            this.groupControl3.Location = new System.Drawing.Point(0, 207);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1493, 304);
+            this.groupControl3.Size = new System.Drawing.Size(913, 208);
             this.groupControl3.TabIndex = 23;
             this.groupControl3.Text = "SÖZLEŞME BİLGİLERİ";
             // 
@@ -535,9 +533,10 @@
             this.panelControl8.Controls.Add(this.groupControl6);
             this.panelControl8.Controls.Add(this.groupControl8);
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl8.Location = new System.Drawing.Point(959, 30);
+            this.panelControl8.Location = new System.Drawing.Point(557, 20);
+            this.panelControl8.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(531, 271);
+            this.panelControl8.Size = new System.Drawing.Size(354, 186);
             this.panelControl8.TabIndex = 49;
             // 
             // groupControl6
@@ -561,9 +560,10 @@
             this.groupControl6.Controls.Add(this.labelControl12);
             this.groupControl6.Controls.Add(this.txtMaterialCostAmount);
             this.groupControl6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl6.Location = new System.Drawing.Point(9, 0);
+            this.groupControl6.Location = new System.Drawing.Point(6, 0);
+            this.groupControl6.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(261, 271);
+            this.groupControl6.Size = new System.Drawing.Size(174, 186);
             this.groupControl6.TabIndex = 58;
             this.groupControl6.Text = "Maliyet Toplamları";
             // 
@@ -571,17 +571,15 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl9.Location = new System.Drawing.Point(54, 241);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl9.Location = new System.Drawing.Point(36, 165);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(52, 19);
+            this.labelControl9.Size = new System.Drawing.Size(38, 13);
             this.labelControl9.TabIndex = 21;
             this.labelControl9.Text = "Toplam:";
             // 
             // txtLeftPanelOtherCoast
             // 
-            this.txtLeftPanelOtherCoast.Location = new System.Drawing.Point(118, 205);
-            this.txtLeftPanelOtherCoast.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLeftPanelOtherCoast.Location = new System.Drawing.Point(79, 140);
             this.txtLeftPanelOtherCoast.Name = "txtLeftPanelOtherCoast";
             this.txtLeftPanelOtherCoast.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtLeftPanelOtherCoast.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -592,7 +590,7 @@
             this.txtLeftPanelOtherCoast.Properties.Mask.EditMask = "c";
             this.txtLeftPanelOtherCoast.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtLeftPanelOtherCoast.Properties.ReadOnly = true;
-            this.txtLeftPanelOtherCoast.Size = new System.Drawing.Size(125, 26);
+            this.txtLeftPanelOtherCoast.Size = new System.Drawing.Size(83, 20);
             this.txtLeftPanelOtherCoast.TabIndex = 19;
             this.txtLeftPanelOtherCoast.TabStop = false;
             // 
@@ -600,17 +598,15 @@
             // 
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl16.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl16.Location = new System.Drawing.Point(12, 208);
-            this.labelControl16.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl16.Location = new System.Drawing.Point(8, 142);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(95, 19);
+            this.labelControl16.Size = new System.Drawing.Size(69, 13);
             this.labelControl16.TabIndex = 21;
             this.labelControl16.Text = "Diğer Giderler:";
             // 
             // txtLeftPanelCarriage
             // 
-            this.txtLeftPanelCarriage.Location = new System.Drawing.Point(118, 171);
-            this.txtLeftPanelCarriage.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLeftPanelCarriage.Location = new System.Drawing.Point(79, 117);
             this.txtLeftPanelCarriage.Name = "txtLeftPanelCarriage";
             this.txtLeftPanelCarriage.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtLeftPanelCarriage.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -621,14 +617,13 @@
             this.txtLeftPanelCarriage.Properties.Mask.EditMask = "c";
             this.txtLeftPanelCarriage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtLeftPanelCarriage.Properties.ReadOnly = true;
-            this.txtLeftPanelCarriage.Size = new System.Drawing.Size(125, 26);
+            this.txtLeftPanelCarriage.Size = new System.Drawing.Size(83, 20);
             this.txtLeftPanelCarriage.TabIndex = 19;
             this.txtLeftPanelCarriage.TabStop = false;
             // 
             // txtTotalAmount
             // 
-            this.txtTotalAmount.Location = new System.Drawing.Point(118, 239);
-            this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalAmount.Location = new System.Drawing.Point(79, 164);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTotalAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -639,7 +634,7 @@
             this.txtTotalAmount.Properties.Mask.EditMask = "c";
             this.txtTotalAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTotalAmount.Properties.ReadOnly = true;
-            this.txtTotalAmount.Size = new System.Drawing.Size(125, 26);
+            this.txtTotalAmount.Size = new System.Drawing.Size(83, 20);
             this.txtTotalAmount.TabIndex = 11;
             this.txtTotalAmount.TabStop = false;
             // 
@@ -647,17 +642,15 @@
             // 
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl15.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl15.Location = new System.Drawing.Point(25, 144);
-            this.labelControl15.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl15.Location = new System.Drawing.Point(17, 99);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(85, 19);
+            this.labelControl15.Size = new System.Drawing.Size(60, 13);
             this.labelControl15.TabIndex = 21;
             this.labelControl15.Text = "Kdv Tefkifatı:";
             // 
             // txtKDVTefkifat
             // 
-            this.txtKDVTefkifat.Location = new System.Drawing.Point(118, 138);
-            this.txtKDVTefkifat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKDVTefkifat.Location = new System.Drawing.Point(79, 94);
             this.txtKDVTefkifat.Name = "txtKDVTefkifat";
             this.txtKDVTefkifat.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtKDVTefkifat.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -668,7 +661,7 @@
             this.txtKDVTefkifat.Properties.Mask.EditMask = "c";
             this.txtKDVTefkifat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtKDVTefkifat.Properties.ReadOnly = true;
-            this.txtKDVTefkifat.Size = new System.Drawing.Size(125, 26);
+            this.txtKDVTefkifat.Size = new System.Drawing.Size(83, 20);
             this.txtKDVTefkifat.TabIndex = 19;
             this.txtKDVTefkifat.TabStop = false;
             // 
@@ -676,17 +669,15 @@
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl14.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl14.Location = new System.Drawing.Point(54, 174);
-            this.labelControl14.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl14.Location = new System.Drawing.Point(36, 119);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(52, 19);
+            this.labelControl14.Size = new System.Drawing.Size(38, 13);
             this.labelControl14.TabIndex = 21;
             this.labelControl14.Text = "Nakliye:";
             // 
             // txtAccountingCosts
             // 
-            this.txtAccountingCosts.Location = new System.Drawing.Point(118, 103);
-            this.txtAccountingCosts.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAccountingCosts.Location = new System.Drawing.Point(79, 70);
             this.txtAccountingCosts.Name = "txtAccountingCosts";
             this.txtAccountingCosts.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAccountingCosts.Properties.Appearance.Options.UseFont = true;
@@ -697,24 +688,22 @@
             this.txtAccountingCosts.Properties.Mask.EditMask = "c2";
             this.txtAccountingCosts.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAccountingCosts.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtAccountingCosts.Size = new System.Drawing.Size(125, 26);
+            this.txtAccountingCosts.Size = new System.Drawing.Size(83, 20);
             this.txtAccountingCosts.TabIndex = 1;
             // 
             // labelControl10
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl10.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl10.Location = new System.Drawing.Point(34, 106);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl10.Location = new System.Drawing.Point(23, 73);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(72, 19);
+            this.labelControl10.Size = new System.Drawing.Size(53, 13);
             this.labelControl10.TabIndex = 21;
             this.labelControl10.Text = "Muhasebe:";
             // 
             // txtWorkerCostAmount
             // 
-            this.txtWorkerCostAmount.Location = new System.Drawing.Point(118, 69);
-            this.txtWorkerCostAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtWorkerCostAmount.Location = new System.Drawing.Point(79, 47);
             this.txtWorkerCostAmount.Name = "txtWorkerCostAmount";
             this.txtWorkerCostAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtWorkerCostAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -725,7 +714,7 @@
             this.txtWorkerCostAmount.Properties.Mask.EditMask = "c";
             this.txtWorkerCostAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtWorkerCostAmount.Properties.ReadOnly = true;
-            this.txtWorkerCostAmount.Size = new System.Drawing.Size(125, 26);
+            this.txtWorkerCostAmount.Size = new System.Drawing.Size(83, 20);
             this.txtWorkerCostAmount.TabIndex = 19;
             this.txtWorkerCostAmount.TabStop = false;
             // 
@@ -733,10 +722,9 @@
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl11.Location = new System.Drawing.Point(66, 72);
-            this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl11.Location = new System.Drawing.Point(44, 49);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(40, 19);
+            this.labelControl11.Size = new System.Drawing.Size(29, 13);
             this.labelControl11.TabIndex = 21;
             this.labelControl11.Text = "İşçilik:";
             // 
@@ -744,17 +732,15 @@
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl12.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl12.Location = new System.Drawing.Point(43, 38);
-            this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl12.Location = new System.Drawing.Point(29, 26);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(63, 19);
+            this.labelControl12.Size = new System.Drawing.Size(46, 13);
             this.labelControl12.TabIndex = 15;
             this.labelControl12.Text = "Malzeme:";
             // 
             // txtMaterialCostAmount
             // 
-            this.txtMaterialCostAmount.Location = new System.Drawing.Point(118, 35);
-            this.txtMaterialCostAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaterialCostAmount.Location = new System.Drawing.Point(79, 24);
             this.txtMaterialCostAmount.Name = "txtMaterialCostAmount";
             this.txtMaterialCostAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMaterialCostAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -765,7 +751,7 @@
             this.txtMaterialCostAmount.Properties.Mask.EditMask = "c";
             this.txtMaterialCostAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMaterialCostAmount.Properties.ReadOnly = true;
-            this.txtMaterialCostAmount.Size = new System.Drawing.Size(125, 26);
+            this.txtMaterialCostAmount.Size = new System.Drawing.Size(83, 20);
             this.txtMaterialCostAmount.TabIndex = 13;
             this.txtMaterialCostAmount.TabStop = false;
             // 
@@ -785,9 +771,10 @@
             this.groupControl8.Controls.Add(this.txtTotalRisk);
             this.groupControl8.Controls.Add(this.txtMarkupWorkerAmount);
             this.groupControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl8.Location = new System.Drawing.Point(270, 0);
+            this.groupControl8.Location = new System.Drawing.Point(180, 0);
+            this.groupControl8.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl8.Name = "groupControl8";
-            this.groupControl8.Size = new System.Drawing.Size(261, 271);
+            this.groupControl8.Size = new System.Drawing.Size(174, 186);
             this.groupControl8.TabIndex = 57;
             this.groupControl8.Text = "Kar Toplamları";
             // 
@@ -795,16 +782,16 @@
             // 
             this.groupControl1.Controls.Add(this.textEdit4);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(3, 201);
+            this.groupControl1.Location = new System.Drawing.Point(2, 138);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(255, 67);
+            this.groupControl1.Size = new System.Drawing.Size(170, 46);
             this.groupControl1.TabIndex = 24;
             this.groupControl1.Text = "Kalan Kar";
             // 
             // textEdit4
             // 
-            this.textEdit4.Location = new System.Drawing.Point(7, 34);
-            this.textEdit4.Margin = new System.Windows.Forms.Padding(4);
+            this.textEdit4.Location = new System.Drawing.Point(5, 23);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -815,7 +802,7 @@
             this.textEdit4.Properties.Mask.EditMask = "c";
             this.textEdit4.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textEdit4.Properties.ReadOnly = true;
-            this.textEdit4.Size = new System.Drawing.Size(244, 26);
+            this.textEdit4.Size = new System.Drawing.Size(163, 20);
             this.textEdit4.TabIndex = 18;
             this.textEdit4.TabStop = false;
             // 
@@ -823,17 +810,15 @@
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl13.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl13.Location = new System.Drawing.Point(56, 146);
-            this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl13.Location = new System.Drawing.Point(37, 100);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(52, 19);
+            this.labelControl13.Size = new System.Drawing.Size(38, 13);
             this.labelControl13.TabIndex = 23;
             this.labelControl13.Text = "Toplam:";
             // 
             // txtTotalMarkupAmount
             // 
-            this.txtTotalMarkupAmount.Location = new System.Drawing.Point(120, 145);
-            this.txtTotalMarkupAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalMarkupAmount.Location = new System.Drawing.Point(80, 99);
             this.txtTotalMarkupAmount.Name = "txtTotalMarkupAmount";
             this.txtTotalMarkupAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTotalMarkupAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -844,14 +829,13 @@
             this.txtTotalMarkupAmount.Properties.Mask.EditMask = "c";
             this.txtTotalMarkupAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTotalMarkupAmount.Properties.ReadOnly = true;
-            this.txtTotalMarkupAmount.Size = new System.Drawing.Size(125, 26);
+            this.txtTotalMarkupAmount.Size = new System.Drawing.Size(83, 20);
             this.txtTotalMarkupAmount.TabIndex = 17;
             this.txtTotalMarkupAmount.TabStop = false;
             // 
             // txtMarkupMaterialTotal
             // 
-            this.txtMarkupMaterialTotal.Location = new System.Drawing.Point(120, 42);
-            this.txtMarkupMaterialTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMarkupMaterialTotal.Location = new System.Drawing.Point(80, 29);
             this.txtMarkupMaterialTotal.Name = "txtMarkupMaterialTotal";
             this.txtMarkupMaterialTotal.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMarkupMaterialTotal.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -862,7 +846,7 @@
             this.txtMarkupMaterialTotal.Properties.Mask.EditMask = "c";
             this.txtMarkupMaterialTotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMarkupMaterialTotal.Properties.ReadOnly = true;
-            this.txtMarkupMaterialTotal.Size = new System.Drawing.Size(125, 26);
+            this.txtMarkupMaterialTotal.Size = new System.Drawing.Size(83, 20);
             this.txtMarkupMaterialTotal.TabIndex = 19;
             this.txtMarkupMaterialTotal.TabStop = false;
             // 
@@ -870,10 +854,9 @@
             // 
             this.labelControl21.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl21.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl21.Location = new System.Drawing.Point(6, 113);
-            this.labelControl21.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl21.Location = new System.Drawing.Point(4, 77);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(102, 19);
+            this.labelControl21.Size = new System.Drawing.Size(72, 13);
             this.labelControl21.TabIndex = 23;
             this.labelControl21.Text = "F. Risk Toplamı:";
             // 
@@ -881,10 +864,9 @@
             // 
             this.labelControl17.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl17.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl17.Location = new System.Drawing.Point(68, 80);
-            this.labelControl17.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl17.Location = new System.Drawing.Point(45, 55);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(40, 19);
+            this.labelControl17.Size = new System.Drawing.Size(29, 13);
             this.labelControl17.TabIndex = 23;
             this.labelControl17.Text = "İşçilik:";
             // 
@@ -892,17 +874,15 @@
             // 
             this.labelControl20.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl20.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl20.Location = new System.Drawing.Point(45, 47);
-            this.labelControl20.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl20.Location = new System.Drawing.Point(30, 32);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(63, 19);
+            this.labelControl20.Size = new System.Drawing.Size(46, 13);
             this.labelControl20.TabIndex = 23;
             this.labelControl20.Text = "Malzeme:";
             // 
             // txtTotalRisk
             // 
-            this.txtTotalRisk.Location = new System.Drawing.Point(120, 110);
-            this.txtTotalRisk.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotalRisk.Location = new System.Drawing.Point(80, 75);
             this.txtTotalRisk.Name = "txtTotalRisk";
             this.txtTotalRisk.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTotalRisk.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -913,14 +893,13 @@
             this.txtTotalRisk.Properties.Mask.EditMask = "c";
             this.txtTotalRisk.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTotalRisk.Properties.ReadOnly = true;
-            this.txtTotalRisk.Size = new System.Drawing.Size(125, 26);
+            this.txtTotalRisk.Size = new System.Drawing.Size(83, 20);
             this.txtTotalRisk.TabIndex = 19;
             this.txtTotalRisk.TabStop = false;
             // 
             // txtMarkupWorkerAmount
             // 
-            this.txtMarkupWorkerAmount.Location = new System.Drawing.Point(120, 76);
-            this.txtMarkupWorkerAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMarkupWorkerAmount.Location = new System.Drawing.Point(80, 52);
             this.txtMarkupWorkerAmount.Name = "txtMarkupWorkerAmount";
             this.txtMarkupWorkerAmount.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMarkupWorkerAmount.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -931,17 +910,18 @@
             this.txtMarkupWorkerAmount.Properties.Mask.EditMask = "c";
             this.txtMarkupWorkerAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMarkupWorkerAmount.Properties.ReadOnly = true;
-            this.txtMarkupWorkerAmount.Size = new System.Drawing.Size(125, 26);
+            this.txtMarkupWorkerAmount.Size = new System.Drawing.Size(83, 20);
             this.txtMarkupWorkerAmount.TabIndex = 19;
             this.txtMarkupWorkerAmount.TabStop = false;
             // 
-            // memoEdit1
+            // memoEditJobDescription
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(90, 80);
-            this.memoEdit1.MenuManager = this.barManager1;
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(533, 211);
-            this.memoEdit1.TabIndex = 2;
+            this.memoEditJobDescription.Location = new System.Drawing.Point(60, 55);
+            this.memoEditJobDescription.Margin = new System.Windows.Forms.Padding(2);
+            this.memoEditJobDescription.MenuManager = this.barManager1;
+            this.memoEditJobDescription.Name = "memoEditJobDescription";
+            this.memoEditJobDescription.Size = new System.Drawing.Size(355, 144);
+            this.memoEditJobDescription.TabIndex = 2;
             // 
             // barManager1
             // 
@@ -965,28 +945,32 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1493, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2);
+            this.barDockControlTop.Size = new System.Drawing.Size(913, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 813);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1493, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 512);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(913, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 813);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 512);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1493, 0);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 813);
+            this.barDockControlRight.Location = new System.Drawing.Point(913, 0);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 512);
             // 
             // btnPoz
             // 
@@ -1039,128 +1023,139 @@
             this.skinBarSubItem1.Id = 6;
             this.skinBarSubItem1.Name = "skinBarSubItem1";
             // 
-            // textEdit2
+            // txtContractPrice
             // 
-            this.textEdit2.Location = new System.Drawing.Point(770, 48);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(178, 26);
-            this.textEdit2.TabIndex = 1;
+            this.txtContractPrice.Location = new System.Drawing.Point(513, 33);
+            this.txtContractPrice.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContractPrice.Name = "txtContractPrice";
+            this.txtContractPrice.Size = new System.Drawing.Size(119, 20);
+            this.txtContractPrice.TabIndex = 1;
             // 
-            // textEdit1
+            // txtJobName
             // 
-            this.textEdit1.Location = new System.Drawing.Point(89, 48);
-            this.textEdit1.MenuManager = this.barManager1;
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(534, 26);
-            this.textEdit1.TabIndex = 1;
+            this.txtJobName.Location = new System.Drawing.Point(59, 33);
+            this.txtJobName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtJobName.MenuManager = this.barManager1;
+            this.txtJobName.Name = "txtJobName";
+            this.txtJobName.Size = new System.Drawing.Size(356, 20);
+            this.txtJobName.TabIndex = 1;
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(684, 150);
+            this.labelControl8.Location = new System.Drawing.Point(456, 103);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(81, 19);
+            this.labelControl8.Size = new System.Drawing.Size(52, 13);
             this.labelControl8.TabIndex = 0;
             this.labelControl8.Text = "Bitiş Tarihi:";
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(655, 118);
+            this.labelControl7.Location = new System.Drawing.Point(437, 81);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(110, 19);
+            this.labelControl7.Size = new System.Drawing.Size(72, 13);
             this.labelControl7.TabIndex = 0;
             this.labelControl7.Text = "Başlama Tarihi:";
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(647, 86);
+            this.labelControl6.Location = new System.Drawing.Point(431, 59);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(118, 19);
+            this.labelControl6.Size = new System.Drawing.Size(77, 13);
             this.labelControl6.TabIndex = 0;
             this.labelControl6.Text = "Sözleşme Tarihi:";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(646, 51);
+            this.labelControl5.Location = new System.Drawing.Point(431, 35);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(119, 19);
+            this.labelControl5.Size = new System.Drawing.Size(79, 13);
             this.labelControl5.TabIndex = 0;
             this.labelControl5.Text = "Sözleşme Tutarı:";
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(11, 82);
+            this.labelControl4.Location = new System.Drawing.Point(7, 56);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(70, 19);
+            this.labelControl4.Size = new System.Drawing.Size(45, 13);
             this.labelControl4.TabIndex = 0;
             this.labelControl4.Text = "Açıklama:";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(20, 51);
+            this.labelControl3.Location = new System.Drawing.Point(13, 35);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(61, 19);
+            this.labelControl3.Size = new System.Drawing.Size(39, 13);
             this.labelControl3.TabIndex = 0;
             this.labelControl3.Text = "İşin Adı:";
             // 
-            // dateEdit2
+            // dateTimeEndDate
             // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(770, 144);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateTimeEndDate.EditValue = null;
+            this.dateTimeEndDate.Location = new System.Drawing.Point(513, 99);
+            this.dateTimeEndDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimeEndDate.Name = "dateTimeEndDate";
+            this.dateTimeEndDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateTimeEndDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
-            this.dateEdit2.Properties.DisplayFormat.FormatString = "";
-            this.dateEdit2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit2.Properties.EditFormat.FormatString = "";
-            this.dateEdit2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit2.Properties.Mask.EditMask = "";
-            this.dateEdit2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dateEdit2.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dateEdit2.Size = new System.Drawing.Size(178, 26);
-            this.dateEdit2.TabIndex = 1;
+            this.dateTimeEndDate.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
+            this.dateTimeEndDate.Properties.DisplayFormat.FormatString = "";
+            this.dateTimeEndDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateTimeEndDate.Properties.EditFormat.FormatString = "";
+            this.dateTimeEndDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateTimeEndDate.Properties.Mask.EditMask = "";
+            this.dateTimeEndDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.dateTimeEndDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.dateTimeEndDate.Size = new System.Drawing.Size(119, 20);
+            this.dateTimeEndDate.TabIndex = 1;
             // 
-            // dateEdit1
+            // dateTimeStartDate
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(770, 112);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateTimeStartDate.EditValue = null;
+            this.dateTimeStartDate.Location = new System.Drawing.Point(513, 77);
+            this.dateTimeStartDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimeStartDate.Name = "dateTimeStartDate";
+            this.dateTimeStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateTimeStartDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
-            this.dateEdit1.Properties.DisplayFormat.FormatString = "";
-            this.dateEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit1.Properties.EditFormat.FormatString = "";
-            this.dateEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit1.Properties.Mask.EditMask = "";
-            this.dateEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dateEdit1.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dateEdit1.Size = new System.Drawing.Size(178, 26);
-            this.dateEdit1.TabIndex = 1;
+            this.dateTimeStartDate.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
+            this.dateTimeStartDate.Properties.DisplayFormat.FormatString = "";
+            this.dateTimeStartDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateTimeStartDate.Properties.EditFormat.FormatString = "";
+            this.dateTimeStartDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateTimeStartDate.Properties.Mask.EditMask = "";
+            this.dateTimeStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.dateTimeStartDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.dateTimeStartDate.Size = new System.Drawing.Size(119, 20);
+            this.dateTimeStartDate.TabIndex = 1;
             // 
-            // textEdit3
+            // dateTimeContractDate
             // 
-            this.textEdit3.EditValue = null;
-            this.textEdit3.Location = new System.Drawing.Point(770, 80);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateTimeContractDate.EditValue = null;
+            this.dateTimeContractDate.Location = new System.Drawing.Point(513, 55);
+            this.dateTimeContractDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimeContractDate.Name = "dateTimeContractDate";
+            this.dateTimeContractDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit3.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateTimeContractDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit3.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
-            this.textEdit3.Properties.DisplayFormat.FormatString = "";
-            this.textEdit3.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.textEdit3.Properties.EditFormat.FormatString = "";
-            this.textEdit3.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.textEdit3.Properties.Mask.EditMask = "";
-            this.textEdit3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.textEdit3.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.textEdit3.Size = new System.Drawing.Size(178, 26);
-            this.textEdit3.TabIndex = 1;
+            this.dateTimeContractDate.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
+            this.dateTimeContractDate.Properties.DisplayFormat.FormatString = "";
+            this.dateTimeContractDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateTimeContractDate.Properties.EditFormat.FormatString = "";
+            this.dateTimeContractDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateTimeContractDate.Properties.Mask.EditMask = "";
+            this.dateTimeContractDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.dateTimeContractDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.dateTimeContractDate.Size = new System.Drawing.Size(119, 20);
+            this.dateTimeContractDate.TabIndex = 1;
             // 
             // popupMenu2
             // 
@@ -1191,10 +1186,9 @@
             this.panelControl2.Controls.Add(this.lblTederDescription);
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(0, 35);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl2.Location = new System.Drawing.Point(0, 24);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1493, 107);
+            this.panelControl2.Size = new System.Drawing.Size(913, 73);
             this.panelControl2.TabIndex = 26;
             // 
             // panelControl3
@@ -1204,9 +1198,10 @@
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl3.Controls.Add(this.panelControl4);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl3.Location = new System.Drawing.Point(856, 3);
+            this.panelControl3.Location = new System.Drawing.Point(488, 2);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(634, 101);
+            this.panelControl3.Size = new System.Drawing.Size(423, 69);
             this.panelControl3.TabIndex = 13;
             // 
             // panelControl4
@@ -1216,12 +1211,13 @@
             this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl4.Controls.Add(this.simpleButton2);
             this.panelControl4.Controls.Add(this.panelControl7);
-            this.panelControl4.Controls.Add(this.simpleButton1);
+            this.panelControl4.Controls.Add(this.kaydet);
             this.panelControl4.Controls.Add(this.panelControl5);
             this.panelControl4.Controls.Add(this.btnExcel);
-            this.panelControl4.Location = new System.Drawing.Point(3, 3);
+            this.panelControl4.Location = new System.Drawing.Point(2, 2);
+            this.panelControl4.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(628, 77);
+            this.panelControl4.Size = new System.Drawing.Size(419, 53);
             this.panelControl4.TabIndex = 14;
             // 
             // simpleButton2
@@ -1232,9 +1228,8 @@
             this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
             this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.simpleButton2.Location = new System.Drawing.Point(1, 0);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(198, 77);
+            this.simpleButton2.Size = new System.Drawing.Size(132, 53);
             this.simpleButton2.TabIndex = 56;
             this.simpleButton2.Text = "İş/Malzeme Aktar";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -1246,24 +1241,25 @@
             this.panelControl7.Appearance.Options.UseBackColor = true;
             this.panelControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl7.Location = new System.Drawing.Point(199, 0);
+            this.panelControl7.Location = new System.Drawing.Point(133, 0);
+            this.panelControl7.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(25, 77);
+            this.panelControl7.Size = new System.Drawing.Size(17, 53);
             this.panelControl7.TabIndex = 55;
             // 
-            // simpleButton1
+            // kaydet
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton1.Location = new System.Drawing.Point(224, 0);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(143, 77);
-            this.simpleButton1.TabIndex = 54;
-            this.simpleButton1.Text = "&Kaydet";
+            this.kaydet.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kaydet.Appearance.Options.UseFont = true;
+            this.kaydet.Dock = System.Windows.Forms.DockStyle.Right;
+            this.kaydet.Image = ((System.Drawing.Image)(resources.GetObject("kaydet.Image")));
+            this.kaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.kaydet.Location = new System.Drawing.Point(150, 0);
+            this.kaydet.Name = "kaydet";
+            this.kaydet.Size = new System.Drawing.Size(95, 53);
+            this.kaydet.TabIndex = 54;
+            this.kaydet.Text = "&Kaydet";
+            this.kaydet.Click += new System.EventHandler(this.kaydet_Click);
             // 
             // panelControl5
             // 
@@ -1272,9 +1268,10 @@
             this.panelControl5.Appearance.Options.UseBackColor = true;
             this.panelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl5.Location = new System.Drawing.Point(367, 0);
+            this.panelControl5.Location = new System.Drawing.Point(245, 0);
+            this.panelControl5.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(25, 77);
+            this.panelControl5.Size = new System.Drawing.Size(17, 53);
             this.panelControl5.TabIndex = 53;
             // 
             // btnExcel
@@ -1284,9 +1281,10 @@
             this.btnExcel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExcel.Image = global::IhalematikProUI.Properties.Resources.Excel_icon;
             this.btnExcel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnExcel.Location = new System.Drawing.Point(392, 0);
+            this.btnExcel.Location = new System.Drawing.Point(262, 0);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(236, 77);
+            this.btnExcel.Size = new System.Drawing.Size(157, 53);
             this.btnExcel.TabIndex = 52;
             this.btnExcel.Text = "&Excel\'e Aktar";
             // 
@@ -1294,10 +1292,9 @@
             // 
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl18.Appearance.ForeColor = System.Drawing.Color.Crimson;
-            this.labelControl18.Location = new System.Drawing.Point(102, 82);
-            this.labelControl18.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl18.Location = new System.Drawing.Point(68, 56);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(134, 19);
+            this.labelControl18.Size = new System.Drawing.Size(99, 14);
             this.labelControl18.TabIndex = 12;
             this.labelControl18.Text = "Taşeron firma Adı";
             // 
@@ -1305,10 +1302,9 @@
             // 
             this.labelControl19.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl19.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl19.Location = new System.Drawing.Point(15, 82);
-            this.labelControl19.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl19.Location = new System.Drawing.Point(10, 56);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(73, 19);
+            this.labelControl19.Size = new System.Drawing.Size(52, 14);
             this.labelControl19.TabIndex = 11;
             this.labelControl19.Text = "Taşeron :";
             // 
@@ -1316,20 +1312,18 @@
             // 
             this.lblTenderDescription.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTenderDescription.Appearance.ForeColor = System.Drawing.Color.Crimson;
-            this.lblTenderDescription.Location = new System.Drawing.Point(102, 45);
-            this.lblTenderDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTenderDescription.Location = new System.Drawing.Point(68, 31);
             this.lblTenderDescription.Name = "lblTenderDescription";
-            this.lblTenderDescription.Size = new System.Drawing.Size(0, 19);
+            this.lblTenderDescription.Size = new System.Drawing.Size(0, 14);
             this.lblTenderDescription.TabIndex = 10;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl2.Location = new System.Drawing.Point(9, 45);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Location = new System.Drawing.Point(6, 31);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(79, 19);
+            this.labelControl2.Size = new System.Drawing.Size(56, 14);
             this.labelControl2.TabIndex = 9;
             this.labelControl2.Text = "Açıklama :";
             // 
@@ -1337,30 +1331,27 @@
             // 
             this.lblTenderNumber.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTenderNumber.Appearance.ForeColor = System.Drawing.Color.Crimson;
-            this.lblTenderNumber.Location = new System.Drawing.Point(102, 13);
-            this.lblTenderNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTenderNumber.Location = new System.Drawing.Point(68, 9);
             this.lblTenderNumber.Name = "lblTenderNumber";
-            this.lblTenderNumber.Size = new System.Drawing.Size(0, 19);
+            this.lblTenderNumber.Size = new System.Drawing.Size(0, 14);
             this.lblTenderNumber.TabIndex = 8;
             // 
             // lblTederDescription
             // 
             this.lblTederDescription.Appearance.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTederDescription.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.lblTederDescription.Location = new System.Drawing.Point(15, 75);
-            this.lblTederDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTederDescription.Location = new System.Drawing.Point(10, 51);
             this.lblTederDescription.Name = "lblTederDescription";
-            this.lblTederDescription.Size = new System.Drawing.Size(0, 34);
+            this.lblTederDescription.Size = new System.Drawing.Size(0, 22);
             this.lblTederDescription.TabIndex = 7;
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl1.Location = new System.Drawing.Point(12, 13);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Location = new System.Drawing.Point(8, 9);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(76, 19);
+            this.labelControl1.Size = new System.Drawing.Size(52, 14);
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "İhale No  :";
             // 
@@ -1370,8 +1361,9 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2);
             this.pcWorld.Name = "pcWorld";
-            this.pcWorld.Size = new System.Drawing.Size(50, 35);
+            this.pcWorld.Size = new System.Drawing.Size(33, 24);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcWorld.TabIndex = 16;
             this.pcWorld.TabStop = false;
@@ -1383,10 +1375,10 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1465, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(6);
+            this.btnKapat.Location = new System.Drawing.Point(887, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(28, 35);
+            this.btnKapat.Size = new System.Drawing.Size(26, 24);
             this.btnKapat.TabIndex = 3;
             this.btnKapat.TabStop = false;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
@@ -1399,11 +1391,10 @@
             this.txtAdimAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
             this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.txtAdimAciklama.Location = new System.Drawing.Point(57, 1);
-            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdimAciklama.Location = new System.Drawing.Point(38, 1);
             this.txtAdimAciklama.Name = "txtAdimAciklama";
             this.txtAdimAciklama.ShowLineShadow = false;
-            this.txtAdimAciklama.Size = new System.Drawing.Size(213, 35);
+            this.txtAdimAciklama.Size = new System.Drawing.Size(144, 23);
             this.txtAdimAciklama.TabIndex = 0;
             this.txtAdimAciklama.Text = "TAŞERE İŞLEMLERİ";
             // 
@@ -1419,16 +1410,15 @@
             this.panelControl1.Controls.Add(this.txtAdimAciklama);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1493, 35);
+            this.panelControl1.Size = new System.Drawing.Size(913, 24);
             this.panelControl1.TabIndex = 25;
             // 
             // frm_IhaleTasereEt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1493, 813);
+            this.ClientSize = new System.Drawing.Size(913, 512);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl6);
             this.Controls.Add(this.panelControl2);
@@ -1437,6 +1427,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_IhaleTasereEt";
             this.ShowInTaskbar = false;
             this.Text = " ";
@@ -1473,16 +1464,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMarkupMaterialTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalRisk.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMarkupWorkerAmount.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditJobDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContractPrice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtJobName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeEndDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeEndDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeStartDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeStartDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeContractDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTimeContractDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
@@ -1540,25 +1531,25 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn colUnitTotalFare;
         private DevExpress.XtraGrid.Columns.GridColumn colTotalFare;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.MemoEdit memoEditJobDescription;
+        private DevExpress.XtraEditors.TextEdit txtContractPrice;
+        private DevExpress.XtraEditors.TextEdit txtJobName;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraEditors.DateEdit textEdit3;
+        private DevExpress.XtraEditors.DateEdit dateTimeStartDate;
+        private DevExpress.XtraEditors.DateEdit dateTimeContractDate;
         private DevExpress.XtraEditors.LabelControl labelControl18;
         private DevExpress.XtraEditors.LabelControl labelControl19;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
+        private DevExpress.XtraEditors.DateEdit dateTimeEndDate;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         public DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.PanelControl panelControl7;
-        public DevExpress.XtraEditors.SimpleButton simpleButton1;
+        public DevExpress.XtraEditors.SimpleButton kaydet;
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.SimpleButton btnExcel;
         private DevExpress.XtraEditors.PanelControl panelControl8;
