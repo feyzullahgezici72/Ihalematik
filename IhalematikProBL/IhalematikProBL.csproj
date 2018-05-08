@@ -122,6 +122,7 @@
     <Compile Include="Entity\Company.cs" />
     <Compile Include="Entity\ErrorLog.cs" />
     <Compile Include="Entity\ExchangeRate.cs" />
+    <Compile Include="Entity\Jobber.cs" />
     <Compile Include="Entity\License.cs" />
     <Compile Include="Entity\Member.cs" />
     <Compile Include="Entity\OtherExpenses.cs" />
@@ -168,6 +169,7 @@
     <Compile Include="Provider\CustomEntityBaseProvider.cs" />
     <Compile Include="Provider\ErrorLogProvider.cs" />
     <Compile Include="Provider\ExchangeRateProvider.cs" />
+    <Compile Include="Provider\JobberProvider.cs" />
     <Compile Include="Provider\LicenseProvider.cs" />
     <Compile Include="Provider\MaterialListProvider.cs" />
     <Compile Include="Provider\MemberProvider.cs" />
