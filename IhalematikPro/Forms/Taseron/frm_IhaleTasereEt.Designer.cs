@@ -177,7 +177,7 @@
             this.panelControl6.Location = new System.Drawing.Point(0, 142);
             this.panelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(1370, 606);
+            this.panelControl6.Size = new System.Drawing.Size(1495, 606);
             this.panelControl6.TabIndex = 27;
             // 
             // groupControl2
@@ -190,7 +190,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1370, 302);
+            this.groupControl2.Size = new System.Drawing.Size(1495, 302);
             this.groupControl2.TabIndex = 23;
             this.groupControl2.Text = "TAŞERE EDİLEN İŞ/MALZEME LİSTESİ";
             // 
@@ -203,7 +203,7 @@
             this.grdMaterialList.MainView = this.grdMaterialList2;
             this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
-            this.grdMaterialList.Size = new System.Drawing.Size(1364, 269);
+            this.grdMaterialList.Size = new System.Drawing.Size(1489, 269);
             this.grdMaterialList.TabIndex = 1;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdMaterialList2});
@@ -523,7 +523,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupControl3.Location = new System.Drawing.Point(0, 302);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1370, 304);
+            this.groupControl3.Size = new System.Drawing.Size(1495, 304);
             this.groupControl3.TabIndex = 23;
             this.groupControl3.Text = "SÖZLEŞME BİLGİLERİ";
             // 
@@ -535,7 +535,7 @@
             this.panelControl8.Controls.Add(this.groupControl6);
             this.panelControl8.Controls.Add(this.groupControl8);
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl8.Location = new System.Drawing.Point(836, 30);
+            this.panelControl8.Location = new System.Drawing.Point(961, 30);
             this.panelControl8.Name = "panelControl8";
             this.panelControl8.Size = new System.Drawing.Size(531, 271);
             this.panelControl8.TabIndex = 49;
@@ -937,13 +937,14 @@
             // 
             // memoEditJobDescription
             // 
+            this.memoEditJobDescription.EnterMoveNextControl = true;
             this.memoEditJobDescription.Location = new System.Drawing.Point(90, 80);
             this.memoEditJobDescription.MenuManager = this.barManager1;
             this.memoEditJobDescription.Name = "memoEditJobDescription";
             this.memoEditJobDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.memoEditJobDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.memoEditJobDescription.Size = new System.Drawing.Size(532, 210);
-            this.memoEditJobDescription.TabIndex = 2;
+            this.memoEditJobDescription.TabIndex = 1;
             // 
             // barManager1
             // 
@@ -967,14 +968,14 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1370, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1495, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 748);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1370, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1495, 0);
             // 
             // barDockControlLeft
             // 
@@ -987,7 +988,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1370, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1495, 0);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 748);
             // 
             // btnPoz
@@ -1043,22 +1044,30 @@
             // 
             // txtContractPrice
             // 
+            this.txtContractPrice.EnterMoveNextControl = true;
             this.txtContractPrice.Location = new System.Drawing.Point(770, 48);
             this.txtContractPrice.Name = "txtContractPrice";
             this.txtContractPrice.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtContractPrice.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtContractPrice.Properties.DisplayFormat.FormatString = "c2";
+            this.txtContractPrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtContractPrice.Properties.EditFormat.FormatString = "c2";
+            this.txtContractPrice.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtContractPrice.Properties.Mask.EditMask = "c2";
+            this.txtContractPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtContractPrice.Size = new System.Drawing.Size(178, 26);
-            this.txtContractPrice.TabIndex = 1;
+            this.txtContractPrice.TabIndex = 2;
             // 
             // txtJobName
             // 
+            this.txtJobName.EnterMoveNextControl = true;
             this.txtJobName.Location = new System.Drawing.Point(88, 48);
             this.txtJobName.MenuManager = this.barManager1;
             this.txtJobName.Name = "txtJobName";
             this.txtJobName.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtJobName.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtJobName.Size = new System.Drawing.Size(534, 26);
-            this.txtJobName.TabIndex = 1;
+            this.txtJobName.TabIndex = 0;
             // 
             // labelControl8
             // 
@@ -1111,6 +1120,7 @@
             // dateTimeEndDate
             // 
             this.dateTimeEndDate.EditValue = null;
+            this.dateTimeEndDate.EnterMoveNextControl = true;
             this.dateTimeEndDate.Location = new System.Drawing.Point(770, 145);
             this.dateTimeEndDate.Name = "dateTimeEndDate";
             this.dateTimeEndDate.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -1124,15 +1134,14 @@
             this.dateTimeEndDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateTimeEndDate.Properties.EditFormat.FormatString = "";
             this.dateTimeEndDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateTimeEndDate.Properties.Mask.EditMask = "";
-            this.dateTimeEndDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.dateTimeEndDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.dateTimeEndDate.Size = new System.Drawing.Size(178, 26);
-            this.dateTimeEndDate.TabIndex = 1;
+            this.dateTimeEndDate.TabIndex = 5;
             // 
             // dateTimeStartDate
             // 
             this.dateTimeStartDate.EditValue = null;
+            this.dateTimeStartDate.EnterMoveNextControl = true;
             this.dateTimeStartDate.Location = new System.Drawing.Point(770, 113);
             this.dateTimeStartDate.Name = "dateTimeStartDate";
             this.dateTimeStartDate.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -1146,15 +1155,14 @@
             this.dateTimeStartDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateTimeStartDate.Properties.EditFormat.FormatString = "";
             this.dateTimeStartDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateTimeStartDate.Properties.Mask.EditMask = "";
-            this.dateTimeStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.dateTimeStartDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.dateTimeStartDate.Size = new System.Drawing.Size(178, 26);
-            this.dateTimeStartDate.TabIndex = 1;
+            this.dateTimeStartDate.TabIndex = 4;
             // 
             // dateTimeContractDate
             // 
             this.dateTimeContractDate.EditValue = null;
+            this.dateTimeContractDate.EnterMoveNextControl = true;
             this.dateTimeContractDate.Location = new System.Drawing.Point(770, 80);
             this.dateTimeContractDate.Name = "dateTimeContractDate";
             this.dateTimeContractDate.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -1168,11 +1176,9 @@
             this.dateTimeContractDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dateTimeContractDate.Properties.EditFormat.FormatString = "";
             this.dateTimeContractDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateTimeContractDate.Properties.Mask.EditMask = "";
-            this.dateTimeContractDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.dateTimeContractDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.dateTimeContractDate.Size = new System.Drawing.Size(178, 26);
-            this.dateTimeContractDate.TabIndex = 1;
+            this.dateTimeContractDate.TabIndex = 3;
             // 
             // popupMenu2
             // 
@@ -1206,7 +1212,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 35);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1370, 107);
+            this.panelControl2.Size = new System.Drawing.Size(1495, 107);
             this.panelControl2.TabIndex = 26;
             // 
             // panelControl3
@@ -1216,7 +1222,7 @@
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.panelControl3.Controls.Add(this.panelControl4);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl3.Location = new System.Drawing.Point(733, 3);
+            this.panelControl3.Location = new System.Drawing.Point(858, 3);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(634, 101);
             this.panelControl3.TabIndex = 13;
@@ -1396,7 +1402,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1342, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1467, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(6);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -1434,14 +1440,14 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1370, 35);
+            this.panelControl1.Size = new System.Drawing.Size(1495, 35);
             this.panelControl1.TabIndex = 25;
             // 
             // frm_IhaleTasereEt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 748);
+            this.ClientSize = new System.Drawing.Size(1495, 748);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl6);
             this.Controls.Add(this.panelControl2);

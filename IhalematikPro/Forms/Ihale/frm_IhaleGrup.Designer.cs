@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_IhaleGrup));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -56,7 +55,7 @@
             this.txtTenderNumber = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.bindingSourceTenderGroup = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceTenderGroup = new System.Windows.Forms.BindingSource();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnTamam = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -540,7 +539,7 @@
             // 
             // frm_IhaleGrup
             // 
-            this.AcceptButton = this.btnEkle;
+            this.AcceptButton = this.btnTamam;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;

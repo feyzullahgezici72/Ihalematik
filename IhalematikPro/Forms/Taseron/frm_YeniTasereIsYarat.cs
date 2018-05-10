@@ -39,12 +39,21 @@ namespace IhalematikProUI.Forms.Taseron
                 MessageBox.Show("Lütfen İhale seçiniz?");
                 return;
             }
-            JobberTender jobTender = new JobberTender();
-            jobTender.TenderId = this.SelectedTenderId;
-            UICurrentManager.Instance.CurrentJobberTender = jobTender;
+            DialogResult resultMsg = MessageBox.Show("Yeni Taşere İş oluşturulsun mu?", "Yeni ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultMsg.Equals(DialogResult.Yes))
+            {
+                JobberTender jobTender = new JobberTender();
+                jobTender.TenderId = this.SelectedTenderId;
+                UICurrentManager.Instance.CurrentJobberTender = jobTender;
 
-            JobberTenderProvider.Instance.Save(UICurrentManager.Instance.CurrentJobberTender);
-            this.Close();
+                JobberTenderProvider.Instance.Save(UICurrentManager.Instance.CurrentJobberTender);
+                this.Close();
+              
+            }
+            else
+            {
+                return;
+            }
             frm_TaseronSec tSec = new frm_TaseronSec();
             tSec.ShowDialog();
         }

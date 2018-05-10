@@ -57,6 +57,25 @@ namespace IhalematikProUI.Forms.Taseron
 
         private void kaydet_Click(object sender, EventArgs e)
         {
+            if (txtJobName.Text=="")
+            {
+                MessageBox.Show("Lütfen İşin Adını belirtiniz...");
+                return;
+            }
+            else
+            {
+               
+            }
+            if (txtContractPrice.Text=="0")
+            {
+                MessageBox.Show("Lütfen Sözleşme Tutarını belirtiniz...");
+                return;
+            }
+            else
+            {
+
+            }
+
             JobberTender jobberTender = UICurrentManager.Instance.CurrentJobberTender;
             jobberTender.JobName = txtJobName.Text;
             jobberTender.JobDescription = memoEditJobDescription.Text;
@@ -65,10 +84,10 @@ namespace IhalematikProUI.Forms.Taseron
             jobberTender.ContractDate = dateTimeContractDate.DateTime;
             jobberTender.StartJobDate = dateTimeStartDate.DateTime;
             jobberTender.EndJobDate = dateTimeEndDate.DateTime;
-
             JobberTenderProvider.Instance.Save(jobberTender);
             frm_MesajFormu msj = new frm_MesajFormu();
             msj.lblMesaj.Text = "Kaydedildi...";
+            msj.ShowDialog();
         }
 
         public void LoadTenderMaterialList()
