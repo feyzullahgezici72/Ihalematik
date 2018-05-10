@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SimpleApplicationBase.Toolkit;
 using System.Collections;
+using IhalematikProBL.Enum;
 
 namespace IhalematikProBL.Provider
 {
@@ -16,6 +17,7 @@ namespace IhalematikProBL.Provider
             Hashtable parameters = base.GetCommonParameters(t);
             parameters.Add("JobberTenderId", t.JobberTenderId);
             parameters.Add("MaterialListId", t.MaterialListId);
+            parameters.Add("JobberType", t.JobberType);
 
             return parameters;
         }
@@ -25,6 +27,7 @@ namespace IhalematikProBL.Provider
             base.Initialize(t, dr);
             t.MaterialListId = dr.GetValue<int>("MaterialListId");
             t.JobberTenderId = dr.GetValue<int>("JobberTenderId");
+            t.JobberType = dr.GetValue<JobberTypesEnum>("JobberTenderId");
         }
     }
 }

@@ -538,6 +538,7 @@
             this.gridColumn8.AppearanceHeader.Options.UseFont = true;
             this.gridColumn8.Caption = "TSR.TİPİ";
             this.gridColumn8.ColumnEdit = this.repositoryTaseronTipi;
+            this.gridColumn8.FieldName = "JobberTypeValue";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 1;
@@ -553,6 +554,7 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MeterialAndWork", "Malzeme+İşçilik")});
             this.repositoryTaseronTipi.Name = "repositoryTaseronTipi";
             this.repositoryTaseronTipi.NullText = "Taşeron Tipi Seçin";
+            this.repositoryTaseronTipi.CustomDisplayText += new DevExpress.XtraEditors.Controls.CustomDisplayTextEventHandler(this.repositoryTaseronTipi_CustomDisplayText);
             // 
             // gridColumn1
             // 

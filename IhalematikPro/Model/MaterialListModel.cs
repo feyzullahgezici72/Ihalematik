@@ -422,6 +422,8 @@ namespace IhalematikPro.Model
 
         public JobberTypesEnum JobberType { get; set; }
 
+        public int JobberTypeValue { get; set; }
+
         public double CarriagePercent { get; set; }
         public MaterialListModel()
         {

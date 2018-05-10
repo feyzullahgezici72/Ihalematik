@@ -1,4 +1,5 @@
-﻿using IhalematikProBL.Provider;
+﻿using IhalematikProBL.Enum;
+using IhalematikProBL.Provider;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,5 +48,8 @@ namespace IhalematikProBL.Entity
             }
         }
 
+        public JobberTypesEnum JobberType { get; set; }
+
+        public int JobberTypeValue { get; set; }
     }
 }

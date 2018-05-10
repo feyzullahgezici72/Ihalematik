@@ -15,6 +15,7 @@ using IhalematikProBL.Provider;
 using IhalematikProUI.Manager;
 using IhalematikProUI.Forms.Base;
 using IhalematikProBL.Enum;
+using IhalematikPro.Forms;
 
 namespace IhalematikProUI.Forms.Taseron
 {

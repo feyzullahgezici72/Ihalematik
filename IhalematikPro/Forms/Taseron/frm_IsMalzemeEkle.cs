@@ -90,6 +90,18 @@ namespace IhalematikProUI.Forms.Taseron
             {
                 MaterialListModel materialListModel = selectedRowsItems[item];
                 JobberMaterialList jobberMaterialList = new JobberMaterialList();
+                if (materialListModel.JobberTypeValue == 0)
+                {
+                    jobberMaterialList.JobberType = JobberTypesEnum.Material;
+                }
+                else if (materialListModel.JobberTypeValue == 1)
+                {
+                    jobberMaterialList.JobberType = JobberTypesEnum.Worker;
+                }
+                if (materialListModel.JobberTypeValue == 2)
+                {
+                    jobberMaterialList.JobberType = JobberTypesEnum.WorkerMaterial;
+                }
                 jobberMaterialList.JobberTenderId = currentJobberTender.Id;
                 jobberMaterialList.MaterialListId = materialListModel.Id.Value;
                 List<JobberMaterialList> items = currentJobberTender.MaterialList.Where(p => p.Id == materialListModel.Id).ToList();
@@ -158,7 +170,7 @@ namespace IhalematikProUI.Forms.Taseron
                     }
                 }
             }
-           
+
             this.LoadMaterialListGridCalculate(dataSource);
         }
 
@@ -233,6 +245,10 @@ namespace IhalematikProUI.Forms.Taseron
             List<JobberMaterialList> items = UICurrentManager.Instance.CurrentJobberTender.MaterialList;
             List<MaterialListModel> dataSource = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items.Select(p => p.MaterialList).ToList()).ToList();
             grdAddedJobberMaterialList.DataSource = dataSource;
+        }
+
+        private void repositoryTaseronTipi_CustomDisplayText(object sender, DevExpress.XtraEditors.Controls.CustomDisplayTextEventArgs e)
+        {
         }
     }
 }
