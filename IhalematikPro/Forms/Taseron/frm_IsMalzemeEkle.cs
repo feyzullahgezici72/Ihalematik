@@ -13,11 +13,19 @@ using IhalematikProBL.Entity;
 using IhalematikPro.Model;
 using IhalematikProUI.Model;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Manager;
+using IhalematikProUI.Forms.Base;
+using IhalematikProBL.Enum;
 
 namespace IhalematikProUI.Forms.Taseron
 {
-    public partial class frm_IsMalzemeEkle : DevExpress.XtraEditors.XtraForm
+    public partial class frm_IsMalzemeEkle : IhalematikBaseForm
     {
+        private double TotalMarkupNonKDVPreview = 0;
+
+        private double OtherTotalAmount = 0;
+        public double OtherCost { get; set; }
+
         frm_IhaleTasereEt _owner;
         public frm_IsMalzemeEkle(frm_IhaleTasereEt Owner)
         {
@@ -150,8 +158,74 @@ namespace IhalematikProUI.Forms.Taseron
                     }
                 }
             }
+           
+            this.LoadMaterialListGridCalculate(dataSource);
+        }
+
+        private void LoadMaterialListGridCalculate(List<MaterialListModel> DataSource)
+        {
+            LoadingManager.Instance.Show(this);
+
+            Tender currentTender = UICurrentManager.Instance.CurrentJobberTender.Tender;
+            this.TotalMarkupNonKDVPreview = DataSource.Sum(p => p.TotalFare);
+            //Tender currentTender = UICurrentManager.Instance.CurrentTender;
+            IhalematikProBL.Entity.Rule provisionalBond = RuleProvider.Instance.GetItems("Code", "ProvisionalBond").FirstOrDefault();
+            IhalematikProBL.Entity.Rule completionBond = RuleProvider.Instance.GetItems("Code", "CompletionBond").FirstOrDefault();
+            IhalematikProBL.Entity.Rule tradingStamps = RuleProvider.Instance.GetItems("Code", "TradingStamps").FirstOrDefault();
+
+            double KDVTefkifat = 0;
+            double carriage = currentTender.Carriage; //double.Parse(string.IsNullOrEmpty(txtCarriage.Text) ? "0" : txtCarriage.Text.Replace("TL", string.Empty));
+            double accountingCosts = 0;
+            if (currentTender.TenderType == TenderTypeEnum.DirectSupply)
+            {
+                accountingCosts = (this.TotalMarkupNonKDVPreview * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 100);
+            }
+            else
+            {
+                KDVTefkifat = this.TotalMarkupNonKDVPreview * 0.18 / 10 * 3;
+                accountingCosts = (this.TotalMarkupNonKDVPreview * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(provisionalBond.Value) / 100) + (this.TotalMarkupNonKDVPreview * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(completionBond.Value) / 100) +
+                    (this.TotalMarkupNonKDVPreview * SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<double>(tradingStamps.Value) / 100) + KDVTefkifat;
+
+            }
+
+            List<OtherExpenses> otherExpenses = OtherExpensesProvider.Instance.GetItems("TenderId", currentTender.Id);
+            this.OtherCost = otherExpenses.Sum(p => p.Price);
+
+            double otherCosts = this.OtherCost; //double.Parse(string.IsNullOrEmpty(txtOtherCoast.Text) ? "0" : txtOtherCoast.Text.Replace("TL", string.Empty));
+
+            currentTender.Carriage = carriage;
+            currentTender.AccountingCosts = accountingCosts;
+            this.OtherTotalAmount = accountingCosts + otherCosts;
+            double increaseAmount = (this.OtherTotalAmount / this.TotalMarkupNonKDVPreview);
+            double totalMarkupZeroCarriage = DataSource.Where(p => p.CarriagePercent == 0).Sum(p => p.TotalFare);
+            double otherCarriageZeroAmountPercent = DataSource.Sum(p => p.CarriagePercent);
+            double increaseZeroCarriage = (carriage * (100 - otherCarriageZeroAmountPercent) / 100 / totalMarkupZeroCarriage);
+            double increaseCarriageAmount = (carriage / increaseZeroCarriage);
+
+            if (carriage == 0)
+            {
+                increaseCarriageAmount = 0;
+            }
+
+            foreach (MaterialListModel item in DataSource)
+            {
+                double increaseOtherFare = 0;
+                increaseOtherFare = ((increaseAmount * item.TotalFare) / item.Quantity);
+                if (item.CarriagePercent == 0)
+                {
+
+                    increaseOtherFare += ((increaseZeroCarriage * item.TotalFare) / item.Quantity);
+                    item.UnitTotalFarePreview = (item.UnitTotalFare + increaseOtherFare);
+                }
+                else
+                {
+                    increaseOtherFare += (item.CarriagePercent * carriage / 100 / item.Quantity);
+                    item.UnitTotalFarePreview = (item.UnitTotalFare + increaseOtherFare);
+                }
+            }
+            LoadingManager.Instance.Hide();
             grdMaterialList.DataSource = null;
-            grdMaterialList.DataSource = dataSource;
+            grdMaterialList.DataSource = DataSource;
         }
 
         private void LoadAddedMaterialListGrid()

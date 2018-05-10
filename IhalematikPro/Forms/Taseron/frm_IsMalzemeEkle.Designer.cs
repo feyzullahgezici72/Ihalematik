@@ -38,7 +38,6 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAddedOBFPrice = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAddedOBFOfferPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdAddedJobberMaterialList = new DevExpress.XtraGrid.GridControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -232,8 +231,7 @@
             this.gridColumn5,
             this.gridColumn6,
             this.gridColumn7,
-            this.colAddedOBFPrice,
-            this.colAddedOBFOfferPrice});
+            this.colAddedOBFPrice});
             this.gridView2.GridControl = this.grdAddedJobberMaterialList;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsFind.AllowFindPanel = false;
@@ -337,28 +335,8 @@
             this.colAddedOBFPrice.OptionsColumn.AllowFocus = false;
             this.colAddedOBFPrice.OptionsColumn.ReadOnly = true;
             this.colAddedOBFPrice.Visible = true;
-            this.colAddedOBFPrice.VisibleIndex = 5;
+            this.colAddedOBFPrice.VisibleIndex = 4;
             this.colAddedOBFPrice.Width = 100;
-            // 
-            // colAddedOBFOfferPrice
-            // 
-            this.colAddedOBFOfferPrice.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.colAddedOBFOfferPrice.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.colAddedOBFOfferPrice.AppearanceHeader.Options.UseBackColor = true;
-            this.colAddedOBFOfferPrice.AppearanceHeader.Options.UseFont = true;
-            this.colAddedOBFOfferPrice.Caption = "BİRİM FİYATI";
-            this.colAddedOBFOfferPrice.DisplayFormat.FormatString = "c";
-            this.colAddedOBFOfferPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colAddedOBFOfferPrice.FieldName = "OfferPrice";
-            this.colAddedOBFOfferPrice.MaxWidth = 100;
-            this.colAddedOBFOfferPrice.MinWidth = 100;
-            this.colAddedOBFOfferPrice.Name = "colAddedOBFOfferPrice";
-            this.colAddedOBFOfferPrice.OptionsColumn.AllowEdit = false;
-            this.colAddedOBFOfferPrice.OptionsColumn.AllowFocus = false;
-            this.colAddedOBFOfferPrice.OptionsFilter.AllowFilter = false;
-            this.colAddedOBFOfferPrice.Visible = true;
-            this.colAddedOBFOfferPrice.VisibleIndex = 4;
-            this.colAddedOBFOfferPrice.Width = 100;
             // 
             // grdAddedJobberMaterialList
             // 
@@ -878,7 +856,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraGrid.Columns.GridColumn colAddedOBFOfferPrice;
         private DevExpress.XtraGrid.Columns.GridColumn colAddedOBFPrice;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
