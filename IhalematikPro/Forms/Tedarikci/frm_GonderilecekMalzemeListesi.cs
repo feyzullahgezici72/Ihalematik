@@ -83,7 +83,9 @@ namespace IhalematikProUI.Forms.Tedarikci
                 }
                 this._owner.LoadMaterialGrid(UICurrentManager.Instance.CurrentOffer.MaterialList);
                 this.LoadAddedMateriallistGrid();
+
             }
+            this.Close();
         }
     }
 }

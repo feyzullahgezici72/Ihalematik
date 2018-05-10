@@ -67,6 +67,8 @@ namespace IhalematikProUI.Forms.Taseron
             jobberTender.EndJobDate = dateTimeEndDate.DateTime;
 
             JobberTenderProvider.Instance.Save(jobberTender);
+            frm_MesajFormu msj = new frm_MesajFormu();
+            msj.lblMesaj.Text = "Kaydedildi...";
         }
 
         public void LoadTenderMaterialList()
@@ -206,6 +208,15 @@ namespace IhalematikProUI.Forms.Taseron
             if (jobberTender.EndJobDate.HasValue)
             {
                 dateTimeEndDate.DateTime = jobberTender.EndJobDate.Value;
+            }
+        }
+
+        private void frm_IhaleTasereEt_Load(object sender, EventArgs e)
+        {
+            if (UICurrentManager.Instance.CurrentTender != null)
+            {
+                lblTenderDescription.Text = UICurrentManager.Instance.CurrentTender.Description;
+                lblTenderNumber.Text = UICurrentManager.Instance.CurrentTender.DisplayNumber;
             }
         }
     }

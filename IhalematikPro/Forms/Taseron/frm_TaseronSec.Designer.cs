@@ -66,8 +66,9 @@
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(440, 24);
+            this.panelControl2.Size = new System.Drawing.Size(660, 35);
             this.panelControl2.TabIndex = 103;
             // 
             // btnKapat
@@ -77,9 +78,10 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(414, 0);
+            this.btnKapat.Location = new System.Drawing.Point(632, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(26, 24);
+            this.btnKapat.Size = new System.Drawing.Size(28, 35);
             this.btnKapat.TabIndex = 21;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
@@ -91,10 +93,11 @@
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.labelControl1.LineColor = System.Drawing.Color.Red;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(5, 0);
+            this.labelControl1.Location = new System.Drawing.Point(8, 0);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(108, 23);
+            this.labelControl1.Size = new System.Drawing.Size(159, 35);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "TAŞERON SEÇ";
             this.labelControl1.UseMnemonic = false;
@@ -103,10 +106,9 @@
             // 
             this.panelControl1.Controls.Add(this.btnTamam);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 384);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.panelControl1.Location = new System.Drawing.Point(0, 561);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(440, 49);
+            this.panelControl1.Size = new System.Drawing.Size(660, 72);
             this.panelControl1.TabIndex = 105;
             // 
             // btnTamam
@@ -117,9 +119,10 @@
             this.btnTamam.Appearance.Options.UseForeColor = true;
             this.btnTamam.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnTamam.Image = ((System.Drawing.Image)(resources.GetObject("btnTamam.Image")));
-            this.btnTamam.Location = new System.Drawing.Point(349, 5);
+            this.btnTamam.Location = new System.Drawing.Point(524, 7);
+            this.btnTamam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTamam.Name = "btnTamam";
-            this.btnTamam.Size = new System.Drawing.Size(87, 38);
+            this.btnTamam.Size = new System.Drawing.Size(130, 56);
             this.btnTamam.TabIndex = 10;
             this.btnTamam.Text = "Tamam";
             this.btnTamam.Click += new System.EventHandler(this.btnTamam_Click);
@@ -127,16 +130,18 @@
             // grdJobber
             // 
             this.grdJobber.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdJobber.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             gridLevelNode1.RelationName = "Level1";
             this.grdJobber.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.grdJobber.Location = new System.Drawing.Point(0, 24);
+            this.grdJobber.Location = new System.Drawing.Point(0, 35);
             this.grdJobber.MainView = this.gridViewTender;
+            this.grdJobber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdJobber.Name = "grdJobber";
             this.grdJobber.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.rpstColId,
             this.rpstSelected});
-            this.grdJobber.Size = new System.Drawing.Size(440, 360);
+            this.grdJobber.Size = new System.Drawing.Size(660, 526);
             this.grdJobber.TabIndex = 106;
             this.grdJobber.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTender,
@@ -294,7 +299,7 @@
             this.colIsSelected.OptionsFilter.AllowFilter = false;
             this.colIsSelected.Visible = true;
             this.colIsSelected.VisibleIndex = 0;
-            this.colIsSelected.Width = 41;
+            this.colIsSelected.Width = 56;
             // 
             // rpstSelected
             // 
@@ -316,7 +321,7 @@
             // 
             this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn3.Caption = "Taşeron Adı";
+            this.gridColumn3.Caption = "TAŞERON ADI/ÜNVANI";
             this.gridColumn3.FieldName = "CompanyName";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
@@ -324,13 +329,13 @@
             this.gridColumn3.OptionsFilter.AllowFilter = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 88;
+            this.gridColumn3.Width = 411;
             // 
             // gridColumn4
             // 
             this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn4.Caption = "Şehir";
+            this.gridColumn4.Caption = "ŞEHİR";
             this.gridColumn4.FieldName = "City";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
@@ -338,7 +343,7 @@
             this.gridColumn4.OptionsFilter.AllowFilter = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 102;
+            this.gridColumn4.Width = 111;
             // 
             // gridColumn10
             // 
@@ -346,7 +351,7 @@
             this.gridColumn10.AppearanceHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.gridColumn10.AppearanceHeader.Options.UseBorderColor = true;
             this.gridColumn10.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn10.Caption = "Puan";
+            this.gridColumn10.Caption = "PUANI";
             this.gridColumn10.FieldName = "Score";
             this.gridColumn10.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.Value;
             this.gridColumn10.MinWidth = 80;
@@ -357,7 +362,7 @@
             this.gridColumn10.OptionsFilter.AllowFilter = false;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 2;
-            this.gridColumn10.Width = 246;
+            this.gridColumn10.Width = 80;
             // 
             // rpstColId
             // 
@@ -373,15 +378,14 @@
             // frm_TaseronSec
             // 
             this.AcceptButton = this.btnTamam;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 433);
+            this.ClientSize = new System.Drawing.Size(660, 633);
             this.ControlBox = false;
             this.Controls.Add(this.grdJobber);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_TaseronSec";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

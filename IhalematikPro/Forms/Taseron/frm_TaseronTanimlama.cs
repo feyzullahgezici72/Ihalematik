@@ -11,6 +11,8 @@ using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using SimpleApplicationBase.BL.Base;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Manager;
+using IhalematikProBL.Manager;
 
 namespace IhalematikProUI.Forms.Taseron
 {
@@ -26,11 +28,14 @@ namespace IhalematikProUI.Forms.Taseron
         {
             this.Close();
         }
-
+        string hata;
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            // IsEmptyKontrol();//samet ekledi
-
+            if (txtCompanyName.Text=="")
+            {
+                MessageBox.Show("Firma adı boş bırakılamaz...");
+                return;
+            }
             Jobber jobber = new Jobber();
             jobber.Address = txtAddress.Text.Trim();
             jobber.AuthorNameSurname = txtAuthorNameSurname.Text.Trim();
@@ -163,6 +168,50 @@ namespace IhalematikProUI.Forms.Taseron
             {
 
             }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                bool isSuccess = UIReportManager.Instance.ExtractExcel(grdJobber);
+                if (!isSuccess)
+                {
+                    MessageBox.Show("Program beklenmeyen bir hata ile karşılaştı.");
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.SaveErrorLog(ex);
+            }
+        }
+
+        private void btnBul_Click(object sender, EventArgs e)
+        {
+            this.LoadGrid();
+            txtSearchCompanyName.Focus();
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            txtCompanyName.Text = "";
+            txtAuthorNameSurname.Text = "";
+            txtCountry.Text = "";
+            txtEmail.Text = "";
+            txtGSM.Text = "";
+            txtScore.Text = "";
+            txtTelephone.Text = "";
+            txtAddress.Text = "";
+            txtTaxNumber.Text = "";
+            txtTaxOffice.Text = "";
+            txtCompanyName.Focus();
+        }
+       
+
+        private void frm_TaseronTanimlama_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
