@@ -123,10 +123,12 @@
     <Compile Include="Entity\ErrorLog.cs" />
     <Compile Include="Entity\ExchangeRate.cs" />
     <Compile Include="Entity\Jobber.cs" />
+    <Compile Include="Entity\JobberMaterialList.cs" />
     <Compile Include="Entity\JobberTender.cs" />
     <Compile Include="Entity\License.cs" />
     <Compile Include="Entity\Member.cs" />
     <Compile Include="Entity\OtherExpenses.cs" />
+    <Compile Include="Enum\JobberTypesEnum.cs" />
     <Compile Include="Enum\TenderTypeEnum.cs" />
     <Compile Include="Enum\WorkerTypesEnum.cs" />
     <Compile Include="Mailing\EmailData.cs" />
@@ -170,6 +172,7 @@
     <Compile Include="Provider\CustomEntityBaseProvider.cs" />
     <Compile Include="Provider\ErrorLogProvider.cs" />
     <Compile Include="Provider\ExchangeRateProvider.cs" />
+    <Compile Include="Provider\JobberMaterialListProvider.cs" />
     <Compile Include="Provider\JobberProvider.cs" />
     <Compile Include="Provider\JobberTenderProvider.cs" />
     <Compile Include="Provider\LicenseProvider.cs" />

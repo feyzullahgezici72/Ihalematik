@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_IhaleTasereEt));
-            this.bindingSource1 = new System.Windows.Forms.BindingSource();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
@@ -69,7 +70,7 @@
             this.txtTotalRisk = new DevExpress.XtraEditors.TextEdit();
             this.txtMarkupWorkerAmount = new DevExpress.XtraEditors.TextEdit();
             this.memoEditJobDescription = new DevExpress.XtraEditors.MemoEdit();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -92,7 +93,7 @@
             this.dateTimeEndDate = new DevExpress.XtraEditors.DateEdit();
             this.dateTimeStartDate = new DevExpress.XtraEditors.DateEdit();
             this.dateTimeContractDate = new DevExpress.XtraEditors.DateEdit();
-            this.popupMenu2 = new DevExpress.XtraBars.PopupMenu();
+            this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
@@ -1432,6 +1433,7 @@
             this.ShowInTaskbar = false;
             this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Shown += new System.EventHandler(this.frm_IhaleTasereEt_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
             this.panelControl6.ResumeLayout(false);

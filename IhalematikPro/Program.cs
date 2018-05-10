@@ -41,6 +41,7 @@ namespace IhalematikPro
             UICurrentManager.Instance.CurrentTender = TenderProvider.Instance.GetItems().OrderByDescending(p => p.InsertTime).FirstOrDefault();
             UICurrentManager.Instance.CurrentCompany = CompanyProvider.Instance.GetItems().FirstOrDefault();
             UICurrentManager.Instance.CurrentOffer = OfferProvider.Instance.GetItems().OrderByDescending(p => p.InsertTime).FirstOrDefault();//.LastOrDefault();
+            UICurrentManager.Instance.CurrentJobberTender = JobberTenderProvider.Instance.GetItems().OrderByDescending(p => p.InsertTime).FirstOrDefault();//.LastOrDefault();
 
             Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
 

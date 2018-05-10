@@ -12,6 +12,7 @@ using IhalematikPro.Manager;
 using System.Collections;
 using IhalematikProBL.Manager;
 using IhalematikProUI.Manager;
+using IhalematikProBL.Enum;
 
 namespace IhalematikPro.Model
 {
@@ -418,6 +419,8 @@ namespace IhalematikPro.Model
                 return this.tender;
             }
         }
+
+        public JobberTypesEnum JobberType { get; set; }
 
         public double CarriagePercent { get; set; }
         public MaterialListModel()

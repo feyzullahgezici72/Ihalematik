@@ -54,5 +54,23 @@ namespace IhalematikProBL.Entity
         public DateTime? ContractDate { get; set; }
         public DateTime? StartJobDate { get; set; }
         public DateTime? EndJobDate { get; set; }
+
+        private List<JobberMaterialList> materialList { get; set; }
+        public List<JobberMaterialList> MaterialList
+        {
+            get
+            {
+                if (this.materialList == null || this.materialList.Count == 0)
+                {
+                    this.materialList = JobberMaterialListProvider.Instance.GetItems("JobberTenderId", this.Id);
+                }
+
+                return this.materialList;
+            }
+            set
+            {
+                this.materialList = value;
+            }
+        }
     }
 }
