@@ -49,12 +49,16 @@ namespace IhalematikPro.Forms
                 if (existingItem == null)
                 {
                     VehicleTitleProvider.Instance.Save(model);
+                    this._owner.SelectedTitleId = model.Id;
+                    this.LoadGrid();
                     frm_MesajFormu mf = new frm_MesajFormu();
                     mf.lblMesaj.Text = "Arac Kaydedildi...";
                     mf.ShowDialog();
-                    this._owner.SelectedTitleId = model.Id;
-                    this._owner.LoadVehicleTitle();
-                    this.Close();
+
+                    //this._owner.LoadVehicleTitle();
+                    //this.Close();
+                    txtName.Text = "";
+                    txtName.Focus();
                 }
                 else
                 {

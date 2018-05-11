@@ -357,7 +357,7 @@ namespace IhalematikProUI.Forms
 
         private void frm_TeklifAdimSon_Load(object sender, EventArgs e)
         {
-            btnPrev.Left = groupControl1.Left - btnPrev.Width - 5;
+          
         }
 
         private void txtCarriage_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)

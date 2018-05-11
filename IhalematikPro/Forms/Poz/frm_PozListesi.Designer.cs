@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PozListesi));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.lblPozListesi = new DevExpress.XtraEditors.LabelControl();
@@ -72,7 +72,7 @@
             this.txtSearchNumber = new DevExpress.XtraEditors.TextEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
-            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbYear = new DevExpress.XtraEditors.ComboBoxEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -112,7 +112,7 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
             this.groupControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbYear.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -256,6 +256,7 @@
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.comboBoxEdit1.Size = new System.Drawing.Size(404, 26);
             this.comboBoxEdit1.TabIndex = 32;
             // 
@@ -732,7 +733,7 @@
             this.btnGncelle.AutoHeight = false;
             this.btnGncelle.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnGncelle.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Güncelle", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.edit_icon, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "Güncelle", null, null, true)});
             this.btnGncelle.Name = "btnGncelle";
             this.btnGncelle.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnGncelle.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryItemButtonEdit1_ButtonClick);
@@ -761,7 +762,7 @@
             this.btnPasive.AutoHeight = false;
             this.btnPasive.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnPasive.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.PasiveData, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "Pasif Yap", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.PasiveData, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "Pasif Yap", null, null, true)});
             this.btnPasive.Name = "btnPasive";
             this.btnPasive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnPasive.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnPasive_ButtonClick);
@@ -784,7 +785,7 @@
             this.btnActive.AutoHeight = false;
             this.btnActive.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnActive.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.activeData, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "Aktif Yap", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::IhalematikProUI.Properties.Resources.activeData, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "Aktif Yap", null, null, true)});
             this.btnActive.Name = "btnActive";
             this.btnActive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnActive.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnActive_ButtonClick);
@@ -833,7 +834,7 @@
             // 
             this.groupControl6.AppearanceCaption.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupControl6.AppearanceCaption.Options.UseFont = true;
-            this.groupControl6.Controls.Add(this.comboBoxEdit2);
+            this.groupControl6.Controls.Add(this.cmbYear);
             this.groupControl6.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupControl6.Location = new System.Drawing.Point(791, 3);
             this.groupControl6.Name = "groupControl6";
@@ -841,22 +842,22 @@
             this.groupControl6.TabIndex = 31;
             this.groupControl6.Text = "Yıl";
             // 
-            // comboBoxEdit2
+            // cmbYear
             // 
-            this.comboBoxEdit2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBoxEdit2.EditValue = "2018";
-            this.comboBoxEdit2.EnterMoveNextControl = true;
-            this.dxErrorProvider1.SetIconAlignment(this.comboBoxEdit2, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.comboBoxEdit2.Location = new System.Drawing.Point(3, 33);
-            this.comboBoxEdit2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBoxEdit2.Name = "comboBoxEdit2";
-            this.comboBoxEdit2.Properties.AccessibleDescription = "Name";
-            this.comboBoxEdit2.Properties.AccessibleName = "Id";
-            this.comboBoxEdit2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.comboBoxEdit2.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cmbYear.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbYear.EditValue = "2018";
+            this.cmbYear.EnterMoveNextControl = true;
+            this.dxErrorProvider1.SetIconAlignment(this.cmbYear, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
+            this.cmbYear.Location = new System.Drawing.Point(3, 33);
+            this.cmbYear.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbYear.Name = "cmbYear";
+            this.cmbYear.Properties.AccessibleDescription = "Name";
+            this.cmbYear.Properties.AccessibleName = "Id";
+            this.cmbYear.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.cmbYear.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.cmbYear.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit2.Properties.Items.AddRange(new object[] {
+            this.cmbYear.Properties.Items.AddRange(new object[] {
             "2018",
             "2019",
             "2020",
@@ -890,9 +891,9 @@
             "2048",
             "2049",
             "2050"});
-            this.comboBoxEdit2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit2.Size = new System.Drawing.Size(73, 26);
-            this.comboBoxEdit2.TabIndex = 30;
+            this.cmbYear.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cmbYear.Size = new System.Drawing.Size(73, 26);
+            this.cmbYear.TabIndex = 30;
             // 
             // groupControl3
             // 
@@ -971,7 +972,7 @@
             // ddlPozYear
             // 
             this.ddlPozYear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ddlPozYear.EditValue = "Çevre ve Şehircilik Bakanlığı ";
+            this.ddlPozYear.EditValue = "2018 Tüm Kurumlar";
             this.ddlPozYear.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.ddlPozYear, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
             this.ddlPozYear.Location = new System.Drawing.Point(3, 33);
@@ -1100,7 +1101,7 @@
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
             this.groupControl6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbYear.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
@@ -1169,6 +1170,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.GroupControl groupControl5;
         private DevExpress.XtraEditors.GroupControl groupControl6;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbYear;
     }
 }

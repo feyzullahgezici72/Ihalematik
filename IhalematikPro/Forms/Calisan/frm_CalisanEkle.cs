@@ -29,9 +29,11 @@ namespace IhalematikPro.Forms
 
         private void btnKapat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
+            
             this._owner.LoadGrid();
             this._owner.LoadWorkerTitles();
+            this.Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -45,14 +47,17 @@ namespace IhalematikPro.Forms
                 if (existingItems.Count == 0)
                 {
                     TitleProvider.Instance.Save(model);
-
+                    this._owner.SelectedTitleId = model.Id;
                     frm_MesajFormu mf = new frm_MesajFormu();
                     mf.lblMesaj.Text = "Çalışan Ünvanı Kaydedildi...";
                     mf.ShowDialog();
-                    this._owner.SelectedTitleId = model.Id;
-                    this._owner.LoadWorkerTitles();
-                    this.Close();
-                   
+                    //this._owner.SelectedTitleId = model.Id;
+                    //this._owner.LoadWorkerTitles();
+                    //this.Close();
+                    this.LoadGrid();
+                    txtUnvan.Text = "";
+                    txtUnvan.Focus();
+
                 }
                 else
                 {

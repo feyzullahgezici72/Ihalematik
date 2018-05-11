@@ -2313,6 +2313,7 @@ namespace IhalematikPro.Forms
             // 
             // UserName
             // 
+            this.UserName.Caption = "Demo";
             this.UserName.Glyph = ((System.Drawing.Image)(resources.GetObject("UserName.Glyph")));
             this.UserName.Id = 81;
             this.UserName.Name = "UserName";

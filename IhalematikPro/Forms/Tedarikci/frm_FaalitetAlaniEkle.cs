@@ -36,11 +36,14 @@ namespace IhalematikProUI.Forms
                 if (existingItem.Count == 0)
                 {
                     SupplierSegmentProvider.Instance.Save(supplierSegment);
+                    this.LoadGrid();
                     frm_MesajFormu mf = new frm_MesajFormu();
                     mf.lblMesaj.Text = "Faaliyet alanı eklendi...";
                     mf.ShowDialog();
-                    this._owner.LoadSupplierSegments();
-                    this.Close();
+                    //this._owner.LoadSupplierSegments();
+                    //this.Close();
+                    txtUnvan.ResetText();
+                    txtUnvan.Focus();
                 }
                 else
                 {
