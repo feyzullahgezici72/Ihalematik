@@ -49,7 +49,7 @@ namespace IhalematikPro.Forms
                 txtBossSurName.Text = company.BossSurName;
                 txtFax.Text = company.Fax;
                 txtGSM.Text = company.GSM;
-                txtMailAddress.Text = company.MailUserName;
+                txtMailAddress.Text = company.MailAddress;
                 txtTelephone1.Text = company.Telephone1;
                 txtTelephone2.Text = company.Telephone2;
                 txtTitle.Text = company.Title;
@@ -93,7 +93,7 @@ namespace IhalematikPro.Forms
             company.BossSurName = txtBossSurName.Text;
             company.Fax = txtFax.Text;
             company.GSM = txtGSM.Text;
-            company.MailUserName = txtMailAddress.Text;
+            company.MailAddress = txtMailAddress.Text;
             company.Telephone1 = txtTelephone1.Text;
             company.Telephone2 = txtTelephone2.Text;
             company.Title = txtTitle.Text;

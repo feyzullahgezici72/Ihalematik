@@ -38,7 +38,7 @@ namespace IhalematikProBL.Mailing
 
         public string SmtpServer
         {
-            get { return CustomConfigurationManager.Instance.SmtpAdress; }
+            get;set;
             //set { this.smtpServer = value; }
         }
 
@@ -65,10 +65,10 @@ namespace IhalematikProBL.Mailing
             OperationResult result = new OperationResult();
             try
             {
-                if (string.IsNullOrEmpty(this.SmtpServer))
-                {
-                    return result;
-                }
+                //if (string.IsNullOrEmpty(this.SmtpServer))
+                //{
+                //    return result;
+                //}
 
                 MailMessage message = new MailMessage();
                 message.Sender = new MailAddress(sender, displayName);
@@ -102,6 +102,14 @@ namespace IhalematikProBL.Mailing
                 if (AttachmentFileName != null)
                     message.Attachments.Add(new Attachment(AttachmentFileName));
 
+                if (!this.UserName.Contains("gmail"))
+                {
+                    this.SmtpServer = "smtp-mail.outlook.com";
+                }
+                else
+                {
+                    this.SmtpServer = "smtp.gmail.com";
+                }
                 SmtpClient client = new SmtpClient(SmtpServer, SmtpPort);
 
                 client.UseDefaultCredentials = false;

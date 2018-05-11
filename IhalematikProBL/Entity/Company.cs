@@ -20,14 +20,7 @@ namespace IhalematikProBL.Entity
         public string WebAddress { get; set; }
         public string MailAddress
         {
-            get
-            {
-                if (!string.IsNullOrEmpty(this.MailUserName))
-                {
-                    return string.Format("{0}@gmail.com", this.MailUserName);
-                }
-                return string.Empty;
-            }
+            get;set;
         }
 
         public string MailUserName { get; set; }
