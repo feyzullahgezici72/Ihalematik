@@ -27,7 +27,7 @@ namespace IhalematikProUI.Forms.Taseron
         {
             this.Close();
         }
-       
+
         private void btnTamam_Click(object sender, EventArgs e)
         {
             if (this.SelectedJobberId == 0)
@@ -45,7 +45,7 @@ namespace IhalematikProUI.Forms.Taseron
         private void frm_TaseronSec_Shown(object sender, EventArgs e)
         {
             List<Jobber> jobbers = JobberProvider.Instance.GetItems();
-            grdJobber.DataSource = jobbers;
+            grdJobber.DataSource = jobbers.Where(p => p.IsActive).ToList();
         }
 
         private void rpstSelected_CheckedChanged(object sender, EventArgs e)
