@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_IhaleTasereEt));
-            this.bindingSource1 = new System.Windows.Forms.BindingSource();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
@@ -69,7 +70,7 @@
             this.txtTotalRisk = new DevExpress.XtraEditors.TextEdit();
             this.txtMarkupWorkerAmount = new DevExpress.XtraEditors.TextEdit();
             this.memoEditJobDescription = new DevExpress.XtraEditors.MemoEdit();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -81,7 +82,6 @@
             this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
-            this.txtContractPrice = new DevExpress.XtraEditors.TextEdit();
             this.txtJobName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -92,7 +92,7 @@
             this.dateTimeEndDate = new DevExpress.XtraEditors.DateEdit();
             this.dateTimeStartDate = new DevExpress.XtraEditors.DateEdit();
             this.dateTimeContractDate = new DevExpress.XtraEditors.DateEdit();
-            this.popupMenu2 = new DevExpress.XtraBars.PopupMenu();
+            this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
@@ -113,6 +113,7 @@
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.txtContractPrice = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
@@ -144,7 +145,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMarkupWorkerAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditJobDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtContractPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtJobName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeEndDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeEndDate.Properties)).BeginInit();
@@ -164,6 +164,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContractPrice.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl6
@@ -1042,22 +1043,6 @@
             this.skinBarSubItem1.Id = 6;
             this.skinBarSubItem1.Name = "skinBarSubItem1";
             // 
-            // txtContractPrice
-            // 
-            this.txtContractPrice.EnterMoveNextControl = true;
-            this.txtContractPrice.Location = new System.Drawing.Point(770, 48);
-            this.txtContractPrice.Name = "txtContractPrice";
-            this.txtContractPrice.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtContractPrice.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtContractPrice.Properties.DisplayFormat.FormatString = "c2";
-            this.txtContractPrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtContractPrice.Properties.EditFormat.FormatString = "c2";
-            this.txtContractPrice.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtContractPrice.Properties.Mask.EditMask = "c2";
-            this.txtContractPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtContractPrice.Size = new System.Drawing.Size(178, 26);
-            this.txtContractPrice.TabIndex = 2;
-            // 
             // txtJobName
             // 
             this.txtJobName.EnterMoveNextControl = true;
@@ -1443,6 +1428,22 @@
             this.panelControl1.Size = new System.Drawing.Size(1495, 35);
             this.panelControl1.TabIndex = 25;
             // 
+            // txtContractPrice
+            // 
+            this.txtContractPrice.EnterMoveNextControl = true;
+            this.txtContractPrice.Location = new System.Drawing.Point(770, 48);
+            this.txtContractPrice.Name = "txtContractPrice";
+            this.txtContractPrice.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtContractPrice.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtContractPrice.Properties.DisplayFormat.FormatString = "c2";
+            this.txtContractPrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtContractPrice.Properties.EditFormat.FormatString = "c2";
+            this.txtContractPrice.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtContractPrice.Properties.Mask.EditMask = "c2";
+            this.txtContractPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtContractPrice.Size = new System.Drawing.Size(178, 26);
+            this.txtContractPrice.TabIndex = 2;
+            // 
             // frm_IhaleTasereEt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1495,7 +1496,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMarkupWorkerAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditJobDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtContractPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtJobName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeEndDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeEndDate.Properties)).EndInit();
@@ -1517,6 +1517,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContractPrice.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1561,7 +1562,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colUnitTotalFare;
         private DevExpress.XtraGrid.Columns.GridColumn colTotalFare;
         private DevExpress.XtraEditors.MemoEdit memoEditJobDescription;
-        private DevExpress.XtraEditors.TextEdit txtContractPrice;
         private DevExpress.XtraEditors.TextEdit txtJobName;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
@@ -1608,5 +1608,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl20;
         private DevExpress.XtraEditors.TextEdit txtTotalRisk;
         private DevExpress.XtraEditors.TextEdit txtMarkupWorkerAmount;
+        private DevExpress.XtraEditors.TextEdit txtContractPrice;
     }
 }

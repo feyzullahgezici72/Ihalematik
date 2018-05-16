@@ -32,7 +32,7 @@ namespace IhalematikPro.Forms
         private void frm_YeniIhaleYarat_Load(object sender, EventArgs e)
         {
             int lastTenderNumber = TenderManager.Instance.GetLastTenderNumber();
-            txtTeklifNo.Text = string.Format("{0}", (lastTenderNumber + 1).ToString().PadLeft(8, '0'));
+            txtTeklifNo.Text =DateTime.Now.Year.ToString()+"/"+ string.Format("{0}", (lastTenderNumber + 1).ToString().PadLeft(4, '0'));
         }
 
         private void a1_FormClosed(object sender, FormClosedEventArgs e)

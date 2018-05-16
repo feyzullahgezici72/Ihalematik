@@ -46,6 +46,7 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCarriagePercent = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -69,7 +70,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(880, 35);
+            this.panelControl2.Size = new System.Drawing.Size(1261, 35);
             this.panelControl2.TabIndex = 96;
             // 
             // btnKapat
@@ -79,7 +80,7 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(852, 0);
+            this.btnKapat.Location = new System.Drawing.Point(1233, 0);
             this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(28, 35);
@@ -118,7 +119,7 @@
             this.groupControl1.LookAndFeel.SkinName = "London Liquid Sky";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(880, 42);
+            this.groupControl1.Size = new System.Drawing.Size(1261, 42);
             this.groupControl1.TabIndex = 97;
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
@@ -126,12 +127,12 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl6.Location = new System.Drawing.Point(50, 10);
+            this.labelControl6.Location = new System.Drawing.Point(33, 10);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(104, 19);
+            this.labelControl6.Size = new System.Drawing.Size(120, 19);
             this.labelControl6.TabIndex = 140;
-            this.labelControl6.Text = "Nakliye Gideri:";
+            this.labelControl6.Text = "Nakliye Toplamı:";
             // 
             // txtCarriage
             // 
@@ -145,13 +146,13 @@
             this.txtCarriage.Properties.Mask.EditMask = "c2";
             this.txtCarriage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCarriage.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtCarriage.Size = new System.Drawing.Size(236, 26);
+            this.txtCarriage.Size = new System.Drawing.Size(177, 26);
             this.txtCarriage.TabIndex = 0;
             // 
             // btnResetValue
             // 
             this.btnResetValue.Image = ((System.Drawing.Image)(resources.GetObject("btnResetValue.Image")));
-            this.btnResetValue.Location = new System.Drawing.Point(842, 493);
+            this.btnResetValue.Location = new System.Drawing.Point(1219, 494);
             this.btnResetValue.Name = "btnResetValue";
             this.btnResetValue.Size = new System.Drawing.Size(33, 41);
             this.btnResetValue.TabIndex = 142;
@@ -161,7 +162,7 @@
             // btnOk
             // 
             this.btnOk.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.Image")));
-            this.btnOk.Location = new System.Drawing.Point(729, 493);
+            this.btnOk.Location = new System.Drawing.Point(1106, 494);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(106, 41);
             this.btnOk.TabIndex = 141;
@@ -180,7 +181,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 77);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(880, 543);
+            this.groupControl2.Size = new System.Drawing.Size(1261, 543);
             this.groupControl2.TabIndex = 98;
             this.groupControl2.Text = "Ağırlık oranını belirtiniz";
             // 
@@ -192,7 +193,7 @@
             this.grdMaterialList.MainView = this.gridViewMaterialList;
             this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
-            this.grdMaterialList.Size = new System.Drawing.Size(874, 456);
+            this.grdMaterialList.Size = new System.Drawing.Size(1251, 456);
             this.grdMaterialList.TabIndex = 2;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
@@ -313,7 +314,8 @@
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
-            this.colCarriagePercent});
+            this.colCarriagePercent,
+            this.gridColumn5});
             this.gridViewMaterialList.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridViewMaterialList.GridControl = this.grdMaterialList;
             this.gridViewMaterialList.Name = "gridViewMaterialList";
@@ -458,12 +460,30 @@
             this.colCarriagePercent.VisibleIndex = 4;
             this.colCarriagePercent.Width = 60;
             // 
+            // gridColumn5
+            // 
+            this.gridColumn5.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridColumn5.AppearanceCell.Options.UseBackColor = true;
+            this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
+            this.gridColumn5.Caption = "N.TUTARI";
+            this.gridColumn5.DisplayFormat.FormatString = "c2";
+            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn5.MaxWidth = 80;
+            this.gridColumn5.MinWidth = 80;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "", "{0:c2}")});
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.Width = 80;
+            // 
             // frm_Nakliye
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(880, 620);
+            this.ClientSize = new System.Drawing.Size(1261, 620);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
@@ -511,5 +531,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraEditors.SimpleButton btnResetValue;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
     }
 }

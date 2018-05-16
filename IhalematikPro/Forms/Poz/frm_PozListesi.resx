@@ -5568,6 +5568,16 @@
         QwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="memoEdit1.EditValue" xml:space="preserve">
+    <value>"Ekle" Buttonuna tıklayarak  hazırladığınız 
+Excel dosyasını hızlı bir şekilde yükleyebilirsiniz.
+Excel Dosyanız aşağıdaki sutünlardan oluşmalı
+A1  Sütunu :Poz No
+B1  Sütunu: Malzeme Cinsi Açıklama
+C1  Sütunu :Birimi
+D1  Sütunu : Birim Fiyat
+şeklinde olmalıdır.</value>
+  </data>
   <data name="simpleButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -5579,15 +5589,5 @@
         OtxRp8IwzPN8UtjlJTYNdxjaYPv4XUBzZQNiieFfLfoIhpcscI3NC9zKpgVuLc8IGFbCsBKGlTCshGEl
         DCthWKftvgGH20AHMkqg3gAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="memoEdit1.EditValue" xml:space="preserve">
-    <value>"Ekle" Buttonuna tıklayarak  hazırladığınız 
-Excel dosyasını hızlı bir şekilde yükleyebilirsiniz.
-Excel Dosyanız aşağıdaki sutünlardan oluşmalı
-A1  Sütunu :Poz No
-B1  Sütunu: Malzeme Cinsi Açıklama
-C1  Sütunu :Birimi
-D1  Sütunu : Birim Fiyat
-şeklinde olmalıdır.</value>
   </data>
 </root>

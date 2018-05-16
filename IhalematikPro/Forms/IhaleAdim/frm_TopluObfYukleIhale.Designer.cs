@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TopluObfYukleIhale));
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.lblPozListesi = new DevExpress.XtraEditors.LabelControl();
@@ -43,6 +44,7 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             this.picture1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -226,6 +228,12 @@
             this.picture1.TabIndex = 8;
             this.picture1.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 300;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frm_TopluObfYukleIhale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -273,5 +281,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.MemoEdit memoEdit1;
         private System.Windows.Forms.PictureBox picture1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

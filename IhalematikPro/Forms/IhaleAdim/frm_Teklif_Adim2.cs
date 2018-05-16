@@ -42,6 +42,7 @@ namespace IhalematikPro.Forms
             this.Close();
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             af.RibonAktif();
+
         }
 
         private void frm_Teklif_Adim2_Load(object sender, EventArgs e)

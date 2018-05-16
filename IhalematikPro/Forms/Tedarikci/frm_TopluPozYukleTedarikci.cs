@@ -165,5 +165,17 @@ namespace IhalematikProUI.Forms.Tedarikci
         {
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (labelControl2.Visible == true)
+            {
+                labelControl2.Visible = false;
+            }
+            else
+            {
+                labelControl2.Visible = true;
+            }
+        }
     }
 }

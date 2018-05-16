@@ -59,6 +59,7 @@ namespace IhalematikPro.Forms
             this.Close();
             frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
             af.RibonAktif();
+            this.SaveMaterialListIsWorkship();
         }
 
         private void frm_Teklif_Adim1_Load(object sender, EventArgs e)
@@ -358,6 +359,19 @@ namespace IhalematikPro.Forms
                 List<MaterialListModel> models = IhalematikModelBase.GetModels<MaterialListModel, MaterialList>(items);
                 grdMaterialList.DataSource = models;
             }
+        }
+
+        private void btnBfGuncelle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+           
+
+        }
+
+        private void btGuncelle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            frm_obfGuncelle obfG = (frm_obfGuncelle) Application.OpenForms["frm_obfGuncelle"];
+            obfG.ShowDialog();
+            MessageBox.Show("Test");
         }
     }
 }

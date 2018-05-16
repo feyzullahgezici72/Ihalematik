@@ -639,6 +639,7 @@
             this.colAddWorkerQuantity.MinWidth = 60;
             this.colAddWorkerQuantity.Name = "colAddWorkerQuantity";
             this.colAddWorkerQuantity.OptionsFilter.AllowFilter = false;
+            this.colAddWorkerQuantity.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowForFocusedCell;
             this.colAddWorkerQuantity.Visible = true;
             this.colAddWorkerQuantity.VisibleIndex = 1;
             this.colAddWorkerQuantity.Width = 60;
@@ -658,6 +659,7 @@
             this.colAddWorkerUnitTime.MinWidth = 60;
             this.colAddWorkerUnitTime.Name = "colAddWorkerUnitTime";
             this.colAddWorkerUnitTime.OptionsFilter.AllowFilter = false;
+            this.colAddWorkerUnitTime.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowForFocusedCell;
             this.colAddWorkerUnitTime.Visible = true;
             this.colAddWorkerUnitTime.VisibleIndex = 2;
             this.colAddWorkerUnitTime.Width = 60;

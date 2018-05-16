@@ -187,5 +187,17 @@ namespace IhalematikProUI.Forms.OBF
         {
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (labelControl2.Visible == true)
+            {
+                labelControl2.Visible = false;
+            }
+            else
+            {
+                labelControl2.Visible = true;
+            }
+        }
     }
 }

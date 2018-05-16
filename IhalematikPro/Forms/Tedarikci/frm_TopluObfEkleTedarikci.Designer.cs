@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TopluObfEkleTedarikci));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.lblPozListesi = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.pnlYukle = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             this.picture1 = new System.Windows.Forms.PictureBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -42,7 +44,7 @@
             this.lblPosSayisi = new DevExpress.XtraEditors.LabelControl();
             this.btnIptal = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -122,6 +124,16 @@
             this.pnlYukle.Name = "pnlYukle";
             this.pnlYukle.Size = new System.Drawing.Size(984, 558);
             this.pnlYukle.TabIndex = 40;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelControl2.Location = new System.Drawing.Point(8, 42);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(77, 24);
+            this.labelControl2.TabIndex = 7;
+            this.labelControl2.Text = "UYARI !!!";
             // 
             // memoEdit1
             // 
@@ -216,15 +228,11 @@
             this.labelControl1.TabIndex = 30;
             this.labelControl1.Text = "Yüklenen Öbf Sayısı:";
             // 
-            // labelControl2
+            // timer1
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelControl2.Location = new System.Drawing.Point(8, 42);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(77, 24);
-            this.labelControl2.TabIndex = 7;
-            this.labelControl2.Text = "UYARI !!!";
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 300;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frm_TopluObfEkleTedarikci
             // 
@@ -271,5 +279,6 @@
         private DevExpress.XtraEditors.MemoEdit memoEdit1;
         private System.Windows.Forms.PictureBox picture1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

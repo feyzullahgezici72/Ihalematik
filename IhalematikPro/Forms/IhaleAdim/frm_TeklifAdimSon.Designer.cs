@@ -72,8 +72,22 @@
             this.labelControl36 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl39 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl40 = new DevExpress.XtraEditors.LabelControl();
             this.txtToplamAracSaat = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.txtToplamAdamSaat = new DevExpress.XtraEditors.TextEdit();
             this.btnPrev = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -137,6 +151,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtToplamAracSaat.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtToplamAdamSaat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -740,7 +760,7 @@
             this.groupControl2.Controls.Add(this.labelControl18);
             this.groupControl2.Controls.Add(this.labelControl37);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl2.Location = new System.Drawing.Point(511, 0);
+            this.groupControl2.Location = new System.Drawing.Point(645, 0);
             this.groupControl2.LookAndFeel.SkinName = "London Liquid Sky";
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(308, 145);
@@ -844,7 +864,7 @@
             this.groupControl5.Controls.Add(this.txtDifference);
             this.groupControl5.Controls.Add(this.labelControl36);
             this.groupControl5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl5.Location = new System.Drawing.Point(207, 0);
+            this.groupControl5.Location = new System.Drawing.Point(341, 0);
             this.groupControl5.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl5.Name = "groupControl5";
             this.groupControl5.Size = new System.Drawing.Size(304, 145);
@@ -946,43 +966,144 @@
             this.groupControl3.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl3.CaptionImage")));
             this.groupControl3.CaptionLocation = DevExpress.Utils.Locations.Top;
             this.groupControl3.Controls.Add(this.labelControl39);
+            this.groupControl3.Controls.Add(this.labelControl27);
+            this.groupControl3.Controls.Add(this.labelControl26);
+            this.groupControl3.Controls.Add(this.labelControl22);
+            this.groupControl3.Controls.Add(this.labelControl25);
+            this.groupControl3.Controls.Add(this.labelControl24);
+            this.groupControl3.Controls.Add(this.labelControl20);
+            this.groupControl3.Controls.Add(this.labelControl23);
+            this.groupControl3.Controls.Add(this.labelControl7);
             this.groupControl3.Controls.Add(this.labelControl40);
             this.groupControl3.Controls.Add(this.txtToplamAracSaat);
+            this.groupControl3.Controls.Add(this.textEdit6);
+            this.groupControl3.Controls.Add(this.textEdit4);
+            this.groupControl3.Controls.Add(this.textEdit5);
+            this.groupControl3.Controls.Add(this.textEdit3);
+            this.groupControl3.Controls.Add(this.textEdit2);
+            this.groupControl3.Controls.Add(this.textEdit1);
             this.groupControl3.Controls.Add(this.txtToplamAdamSaat);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(207, 145);
+            this.groupControl3.Size = new System.Drawing.Size(341, 145);
             this.groupControl3.TabIndex = 58;
             this.groupControl3.Text = "İşin Toplam Süresi";
             // 
             // labelControl39
             // 
-            this.labelControl39.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl39.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl39.Location = new System.Drawing.Point(14, 83);
+            this.labelControl39.Appearance.Font = new System.Drawing.Font("Calibri", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl39.Appearance.ForeColor = System.Drawing.Color.Navy;
+            this.labelControl39.Location = new System.Drawing.Point(4, 89);
             this.labelControl39.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl39.Name = "labelControl39";
-            this.labelControl39.Size = new System.Drawing.Size(65, 19);
+            this.labelControl39.Size = new System.Drawing.Size(35, 19);
             this.labelControl39.TabIndex = 23;
-            this.labelControl39.Text = "Araç Saat:";
+            this.labelControl39.Text = "Araç ";
+            // 
+            // labelControl27
+            // 
+            this.labelControl27.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl27.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelControl27.Location = new System.Drawing.Point(45, 91);
+            this.labelControl27.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl27.Name = "labelControl27";
+            this.labelControl27.Size = new System.Drawing.Size(28, 19);
+            this.labelControl27.TabIndex = 23;
+            this.labelControl27.Text = "Saat";
+            // 
+            // labelControl26
+            // 
+            this.labelControl26.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl26.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelControl26.Location = new System.Drawing.Point(268, 91);
+            this.labelControl26.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl26.Name = "labelControl26";
+            this.labelControl26.Size = new System.Drawing.Size(16, 19);
+            this.labelControl26.TabIndex = 23;
+            this.labelControl26.Text = "Yıl";
+            // 
+            // labelControl22
+            // 
+            this.labelControl22.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl22.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelControl22.Location = new System.Drawing.Point(47, 36);
+            this.labelControl22.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl22.Name = "labelControl22";
+            this.labelControl22.Size = new System.Drawing.Size(28, 19);
+            this.labelControl22.TabIndex = 23;
+            this.labelControl22.Text = "Saat";
+            // 
+            // labelControl25
+            // 
+            this.labelControl25.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl25.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelControl25.Location = new System.Drawing.Point(200, 91);
+            this.labelControl25.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl25.Name = "labelControl25";
+            this.labelControl25.Size = new System.Drawing.Size(16, 19);
+            this.labelControl25.TabIndex = 23;
+            this.labelControl25.Text = "Ay";
+            // 
+            // labelControl24
+            // 
+            this.labelControl24.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl24.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelControl24.Location = new System.Drawing.Point(270, 36);
+            this.labelControl24.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl24.Name = "labelControl24";
+            this.labelControl24.Size = new System.Drawing.Size(16, 19);
+            this.labelControl24.TabIndex = 23;
+            this.labelControl24.Text = "Yıl";
+            // 
+            // labelControl20
+            // 
+            this.labelControl20.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl20.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelControl20.Location = new System.Drawing.Point(132, 91);
+            this.labelControl20.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl20.Name = "labelControl20";
+            this.labelControl20.Size = new System.Drawing.Size(26, 19);
+            this.labelControl20.TabIndex = 23;
+            this.labelControl20.Text = "Gün";
+            // 
+            // labelControl23
+            // 
+            this.labelControl23.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl23.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelControl23.Location = new System.Drawing.Point(202, 36);
+            this.labelControl23.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl23.Name = "labelControl23";
+            this.labelControl23.Size = new System.Drawing.Size(16, 19);
+            this.labelControl23.TabIndex = 23;
+            this.labelControl23.Text = "Ay";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.labelControl7.Location = new System.Drawing.Point(134, 36);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(26, 19);
+            this.labelControl7.TabIndex = 23;
+            this.labelControl7.Text = "Gün";
             // 
             // labelControl40
             // 
-            this.labelControl40.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl40.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelControl40.Location = new System.Drawing.Point(4, 50);
+            this.labelControl40.Appearance.Font = new System.Drawing.Font("Calibri", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl40.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl40.Location = new System.Drawing.Point(4, 38);
             this.labelControl40.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl40.Name = "labelControl40";
-            this.labelControl40.Size = new System.Drawing.Size(73, 19);
+            this.labelControl40.Size = new System.Drawing.Size(36, 19);
             this.labelControl40.TabIndex = 23;
-            this.labelControl40.Text = "Adam Saat:";
+            this.labelControl40.Text = "İnsan";
             // 
             // txtToplamAracSaat
             // 
-            this.txtToplamAracSaat.Enabled = false;
-            this.txtToplamAracSaat.Location = new System.Drawing.Point(92, 80);
+            this.txtToplamAracSaat.Location = new System.Drawing.Point(44, 111);
             this.txtToplamAracSaat.Margin = new System.Windows.Forms.Padding(4);
             this.txtToplamAracSaat.Name = "txtToplamAracSaat";
             this.txtToplamAracSaat.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -995,14 +1116,127 @@
             this.txtToplamAracSaat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtToplamAracSaat.Properties.ReadOnly = true;
             this.txtToplamAracSaat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtToplamAracSaat.Size = new System.Drawing.Size(108, 26);
+            this.txtToplamAracSaat.Size = new System.Drawing.Size(82, 26);
             this.txtToplamAracSaat.TabIndex = 19;
             this.txtToplamAracSaat.TabStop = false;
             // 
+            // textEdit6
+            // 
+            this.textEdit6.Location = new System.Drawing.Point(270, 111);
+            this.textEdit6.Margin = new System.Windows.Forms.Padding(4);
+            this.textEdit6.Name = "textEdit6";
+            this.textEdit6.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textEdit6.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit6.Properties.Appearance.Options.UseFont = true;
+            this.textEdit6.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit6.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textEdit6.Properties.Mask.EditMask = "c";
+            this.textEdit6.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEdit6.Properties.ReadOnly = true;
+            this.textEdit6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit6.Size = new System.Drawing.Size(60, 26);
+            this.textEdit6.TabIndex = 19;
+            this.textEdit6.TabStop = false;
+            // 
+            // textEdit4
+            // 
+            this.textEdit4.Location = new System.Drawing.Point(270, 59);
+            this.textEdit4.Margin = new System.Windows.Forms.Padding(4);
+            this.textEdit4.Name = "textEdit4";
+            this.textEdit4.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textEdit4.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit4.Properties.Appearance.Options.UseFont = true;
+            this.textEdit4.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit4.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textEdit4.Properties.Mask.EditMask = "c";
+            this.textEdit4.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEdit4.Properties.ReadOnly = true;
+            this.textEdit4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit4.Size = new System.Drawing.Size(60, 26);
+            this.textEdit4.TabIndex = 19;
+            this.textEdit4.TabStop = false;
+            // 
+            // textEdit5
+            // 
+            this.textEdit5.Location = new System.Drawing.Point(202, 111);
+            this.textEdit5.Margin = new System.Windows.Forms.Padding(4);
+            this.textEdit5.Name = "textEdit5";
+            this.textEdit5.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textEdit5.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit5.Properties.Appearance.Options.UseFont = true;
+            this.textEdit5.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit5.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textEdit5.Properties.Mask.EditMask = "c";
+            this.textEdit5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEdit5.Properties.ReadOnly = true;
+            this.textEdit5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit5.Size = new System.Drawing.Size(60, 26);
+            this.textEdit5.TabIndex = 19;
+            this.textEdit5.TabStop = false;
+            // 
+            // textEdit3
+            // 
+            this.textEdit3.Location = new System.Drawing.Point(202, 59);
+            this.textEdit3.Margin = new System.Windows.Forms.Padding(4);
+            this.textEdit3.Name = "textEdit3";
+            this.textEdit3.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textEdit3.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit3.Properties.Appearance.Options.UseFont = true;
+            this.textEdit3.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit3.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textEdit3.Properties.Mask.EditMask = "c";
+            this.textEdit3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEdit3.Properties.ReadOnly = true;
+            this.textEdit3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit3.Size = new System.Drawing.Size(60, 26);
+            this.textEdit3.TabIndex = 19;
+            this.textEdit3.TabStop = false;
+            // 
+            // textEdit2
+            // 
+            this.textEdit2.Location = new System.Drawing.Point(134, 111);
+            this.textEdit2.Margin = new System.Windows.Forms.Padding(4);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textEdit2.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit2.Properties.Appearance.Options.UseFont = true;
+            this.textEdit2.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit2.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textEdit2.Properties.Mask.EditMask = "c";
+            this.textEdit2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEdit2.Properties.ReadOnly = true;
+            this.textEdit2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit2.Size = new System.Drawing.Size(60, 26);
+            this.textEdit2.TabIndex = 19;
+            this.textEdit2.TabStop = false;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(134, 59);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(4);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit1.Properties.Appearance.Options.UseFont = true;
+            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.textEdit1.Properties.Mask.EditMask = "c";
+            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEdit1.Properties.ReadOnly = true;
+            this.textEdit1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit1.Size = new System.Drawing.Size(60, 26);
+            this.textEdit1.TabIndex = 19;
+            this.textEdit1.TabStop = false;
+            // 
             // txtToplamAdamSaat
             // 
-            this.txtToplamAdamSaat.Enabled = false;
-            this.txtToplamAdamSaat.Location = new System.Drawing.Point(92, 47);
+            this.txtToplamAdamSaat.Location = new System.Drawing.Point(44, 57);
             this.txtToplamAdamSaat.Margin = new System.Windows.Forms.Padding(4);
             this.txtToplamAdamSaat.Name = "txtToplamAdamSaat";
             this.txtToplamAdamSaat.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1015,7 +1249,7 @@
             this.txtToplamAdamSaat.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtToplamAdamSaat.Properties.ReadOnly = true;
             this.txtToplamAdamSaat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtToplamAdamSaat.Size = new System.Drawing.Size(108, 26);
+            this.txtToplamAdamSaat.Size = new System.Drawing.Size(82, 26);
             this.txtToplamAdamSaat.TabIndex = 19;
             this.txtToplamAdamSaat.TabStop = false;
             // 
@@ -1630,6 +1864,12 @@
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtToplamAracSaat.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtToplamAdamSaat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -1751,5 +1991,19 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl lblbeforeTotalMarkupNonKDV;
         private DevExpress.XtraEditors.GroupControl groupControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl27;
+        private DevExpress.XtraEditors.LabelControl labelControl26;
+        private DevExpress.XtraEditors.LabelControl labelControl22;
+        private DevExpress.XtraEditors.LabelControl labelControl25;
+        private DevExpress.XtraEditors.LabelControl labelControl24;
+        private DevExpress.XtraEditors.LabelControl labelControl20;
+        private DevExpress.XtraEditors.LabelControl labelControl23;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.TextEdit textEdit6;
+        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
     }
 }

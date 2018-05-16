@@ -177,5 +177,17 @@ namespace IhalematikProUI.Forms.IhaleAdim
                 MessageBox.Show("Yuklediğiniz excel in formatını kontrol ediniz.\n Yuklemeye calistiginiz excel dosyasi en az office 2010 ile olusturulmus olmasi gerekmektedir.\n Excel in kapali oldugundan emin olunuz");
             }
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (labelControl2.Visible == true)
+            {
+                labelControl2.Visible = false;
+            }
+            else
+            {
+                labelControl2.Visible = true;
+            }
+        }
     }
 }

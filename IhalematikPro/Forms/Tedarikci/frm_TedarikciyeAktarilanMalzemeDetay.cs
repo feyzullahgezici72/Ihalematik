@@ -175,7 +175,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                             int indexNumber = 1;
                             oSheet.Cells[1, 5] = UICurrentManager.Instance.CurrentCompany.Name;
                             oSheet.Cells[2, 5] = UICurrentManager.Instance.CurrentCompany.Address;
-                            oSheet.Cells[2, 10] = DateTime.Now.ToShortDateString();
+                            oSheet.Cells[2, 11] = DateTime.Now.ToShortDateString();
                             oSheet.Cells[4, 6] = this.Supplier.CompanyName;
                             foreach (OfferMaterialList materialList in offerMaterialLists)
                             {

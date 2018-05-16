@@ -215,7 +215,7 @@ namespace IhalematikProUI.Forms.Taseron
             txtJobName.Text = jobberTender.JobName;
             memoEditJobDescription.Text = jobberTender.JobDescription;
             //double contractPrice = double.Parse(txtContractPrice.Text.Replace("TL", string.Empty));
-            txtContractPrice.Text = jobberTender.ContractPrice.ToString();
+            txtContractPrice.Text = jobberTender.ContractPrice.ToString("c2");
             if (jobberTender.ContractDate.HasValue)
             {
                 dateTimeContractDate.DateTime = jobberTender.ContractDate.Value;
