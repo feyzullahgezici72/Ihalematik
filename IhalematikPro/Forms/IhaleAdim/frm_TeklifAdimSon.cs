@@ -177,7 +177,14 @@ namespace IhalematikProUI.Forms
                     }
                 }
                 txtToplamAdamSaat.Text = Math.Round(totalWorkerHour, 2).ToString();
+                txtToplamAdamGun.Text = Math.Round(totalWorkerHour / 8, 2).ToString();
+                txtToplamAdamAy.Text = Math.Round(totalWorkerHour / 8 / 30, 2).ToString();
+                txtToplamAdamYil.Text = Math.Round(totalWorkerHour / 8 / 30 / 12, 2).ToString();
+
                 txtToplamAracSaat.Text = Math.Round(totalVehicleHour, 2).ToString();
+                txtToplamAracGun.Text = Math.Round(totalVehicleHour / 8, 2).ToString();
+                txtToplamAracAy.Text = Math.Round(totalVehicleHour / 8 / 30, 2).ToString();
+                txtToplamAracYil.Text = Math.Round(totalVehicleHour / 8 / 30 / 12, 2).ToString();
             }
         }
 
@@ -332,7 +339,7 @@ namespace IhalematikProUI.Forms
             txtMarkupWorkerAmount.Text = markupWorkerAmount.ToString("c2");
             txtTotalRisk.Text = totalRisk.ToString("c2");
             txtTotalMarkupAmount.Text = (markupMaterialAmount + markupWorkerAmount + totalRisk).ToString("c2");
-            
+
             txtMaterialkdvTotalAmount.Text = materialkdvTotalAmount.ToString("c2");
             txtWorkerKDVAmount.Text = workerMarkupAmount.ToString("c2");
             txtKDVToplam.Text = (materialkdvTotalAmount + workerMarkupAmount).ToString("c2");
@@ -357,7 +364,7 @@ namespace IhalematikProUI.Forms
 
         private void frm_TeklifAdimSon_Load(object sender, EventArgs e)
         {
-          
+
         }
 
         private void txtCarriage_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
