@@ -102,7 +102,7 @@ namespace IhalematikProUI.Forms.Taseron
             Tender tender = TenderProvider.Instance.GetItem(this.SelectedTenderId);
             if (tender != null)
             {
-                txtTeklifNo.Text = tender.Number.ToString();
+                txtTeklifNo.Text = tender.DisplayNumber.ToString();
                 txtAciklama.Text = tender.Description;
                 LastOfferDate.DateTime = tender.LastOfferDate.Value;
                 txtcompanyName.Text = tender.CompanyName;
