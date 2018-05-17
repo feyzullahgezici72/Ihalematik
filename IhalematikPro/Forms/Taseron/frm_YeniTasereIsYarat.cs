@@ -135,5 +135,10 @@ namespace IhalematikProUI.Forms.Taseron
             grdMaterialList.DataSource = null;
             grdMaterialList.DataSource = dataSource;
         }
+
+        private void frm_YeniTasereIsYarat_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
