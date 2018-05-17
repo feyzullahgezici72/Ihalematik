@@ -213,6 +213,8 @@ namespace IhalematikProUI.Forms.Taseron
 
             JobberTender jobberTender = UICurrentManager.Instance.CurrentJobberTender;
             txtJobName.Text = jobberTender.JobName;
+            lblTaseronFirmaAdi.Text = jobberTender.JobName;
+
             memoEditJobDescription.Text = jobberTender.JobDescription;
             //double contractPrice = double.Parse(txtContractPrice.Text.Replace("TL", string.Empty));
             txtContractPrice.Text = jobberTender.ContractPrice.ToString("c2");
