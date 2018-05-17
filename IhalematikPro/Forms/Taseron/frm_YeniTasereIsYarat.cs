@@ -61,7 +61,7 @@ namespace IhalematikProUI.Forms.Taseron
         private void frm_YeniTasereIsYarat_Shown(object sender, EventArgs e)
         {
             List<Tender> tenders = TenderProvider.Instance.GetItems();
-            grdTender.DataSource = tenders;
+            grdTender.DataSource = tenders.Where(p=> p.IsActive).ToList();
 
         }
         
