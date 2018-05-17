@@ -371,7 +371,7 @@ namespace IhalematikPro.Forms
         {
             frm_obfGuncelle obfG = (frm_obfGuncelle) Application.OpenForms["frm_obfGuncelle"];
             obfG.ShowDialog();
-            MessageBox.Show("Test");
+
         }
     }
 }
