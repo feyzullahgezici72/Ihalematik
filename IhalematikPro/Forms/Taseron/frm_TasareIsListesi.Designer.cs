@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_TasareIsListesi));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.grdActiveTenderList = new DevExpress.XtraGrid.GridControl();
             this.gridViewActiveTenderList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -37,17 +37,17 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.chYesNo = new DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit();
             this.colOpenTender = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnJobberTenderAc = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.chYesNo = new DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.pcWorld = new System.Windows.Forms.PictureBox();
             this.lblTenderCaptin = new DevExpress.XtraEditors.LabelControl();
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdActiveTenderList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewActiveTenderList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chYesNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnJobberTenderAc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chYesNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -259,7 +259,7 @@
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.AppearanceHeader.Options.UseForeColor = true;
             this.gridColumn3.Caption = "ACIKLAMA";
-            this.gridColumn3.FieldName = "Description";
+            this.gridColumn3.FieldName = "Tender.Description";
             this.gridColumn3.MinWidth = 80;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
@@ -284,20 +284,6 @@
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 2;
             this.gridColumn6.Width = 177;
-            // 
-            // chYesNo
-            // 
-            this.chYesNo.AutoHeight = false;
-            this.chYesNo.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.DropDown)});
-            this.chYesNo.ForceUpdateEditValue = DevExpress.Utils.DefaultBoolean.True;
-            this.chYesNo.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Evet"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Hayır")});
-            this.chYesNo.Name = "chYesNo";
-            this.chYesNo.SelectAllItemCaption = "";
-            this.chYesNo.SelectAllItemVisible = false;
-            this.chYesNo.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             // 
             // colOpenTender
             // 
@@ -325,10 +311,24 @@
             // 
             this.btnJobberTenderAc.AutoHeight = false;
             this.btnJobberTenderAc.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnJobberTenderAc.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "İhaleyi Aç", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnJobberTenderAc.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "İhaleyi Aç", null, null, true)});
             this.btnJobberTenderAc.Name = "btnJobberTenderAc";
             this.btnJobberTenderAc.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnJobberTenderAc.Click += new System.EventHandler(this.btnJobberTenderAc_Click);
+            // 
+            // chYesNo
+            // 
+            this.chYesNo.AutoHeight = false;
+            this.chYesNo.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.DropDown)});
+            this.chYesNo.ForceUpdateEditValue = DevExpress.Utils.DefaultBoolean.True;
+            this.chYesNo.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Evet"),
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem(null, "Hayır")});
+            this.chYesNo.Name = "chYesNo";
+            this.chYesNo.SelectAllItemCaption = "";
+            this.chYesNo.SelectAllItemVisible = false;
+            this.chYesNo.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             // 
             // panelControl1
             // 
@@ -351,7 +351,7 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(2);
             this.pcWorld.Name = "pcWorld";
             this.pcWorld.Size = new System.Drawing.Size(33, 24);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -396,7 +396,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.grdActiveTenderList);
             this.Controls.Add(this.panelControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_TasareIsListesi";
             this.ShowInTaskbar = false;
             this.Text = " ";
@@ -404,8 +404,8 @@
             this.Shown += new System.EventHandler(this.frm_TasareIsListesi_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.grdActiveTenderList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewActiveTenderList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chYesNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnJobberTenderAc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chYesNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
