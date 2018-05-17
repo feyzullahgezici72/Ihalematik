@@ -162,6 +162,7 @@
             // 
             // txtTeklifNo
             // 
+            this.txtTeklifNo.Enabled = false;
             this.txtTeklifNo.EnterMoveNextControl = true;
             this.txtTeklifNo.Location = new System.Drawing.Point(116, 19);
             this.txtTeklifNo.Margin = new System.Windows.Forms.Padding(4);

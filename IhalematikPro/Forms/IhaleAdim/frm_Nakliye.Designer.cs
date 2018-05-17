@@ -38,6 +38,7 @@
             this.btnResetValue = new DevExpress.XtraEditors.SimpleButton();
             this.btnOk = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.grdMaterialList = new DevExpress.XtraGrid.GridControl();
             this.gridViewMaterialList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -46,7 +47,7 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCarriagePercent = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNkTutar = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -175,6 +176,7 @@
             this.groupControl2.AppearanceCaption.ForeColor = System.Drawing.Color.Black;
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.AppearanceCaption.Options.UseForeColor = true;
+            this.groupControl2.Controls.Add(this.simpleButton1);
             this.groupControl2.Controls.Add(this.btnResetValue);
             this.groupControl2.Controls.Add(this.grdMaterialList);
             this.groupControl2.Controls.Add(this.btnOk);
@@ -184,6 +186,15 @@
             this.groupControl2.Size = new System.Drawing.Size(1261, 543);
             this.groupControl2.TabIndex = 98;
             this.groupControl2.Text = "Ağırlık oranını belirtiniz";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(1219, 1);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(35, 28);
+            this.simpleButton1.TabIndex = 143;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // grdMaterialList
             // 
@@ -315,7 +326,7 @@
             this.gridColumn3,
             this.gridColumn4,
             this.colCarriagePercent,
-            this.gridColumn5});
+            this.colNkTutar});
             this.gridViewMaterialList.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridViewMaterialList.GridControl = this.grdMaterialList;
             this.gridViewMaterialList.Name = "gridViewMaterialList";
@@ -460,23 +471,23 @@
             this.colCarriagePercent.VisibleIndex = 4;
             this.colCarriagePercent.Width = 60;
             // 
-            // gridColumn5
+            // colNkTutar
             // 
-            this.gridColumn5.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gridColumn5.AppearanceCell.Options.UseBackColor = true;
-            this.gridColumn5.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
-            this.gridColumn5.AppearanceHeader.Options.UseBackColor = true;
-            this.gridColumn5.Caption = "N.TUTARI";
-            this.gridColumn5.DisplayFormat.FormatString = "c2";
-            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn5.MaxWidth = 80;
-            this.gridColumn5.MinWidth = 80;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            this.colNkTutar.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.colNkTutar.AppearanceCell.Options.UseBackColor = true;
+            this.colNkTutar.AppearanceHeader.BackColor = System.Drawing.Color.Gainsboro;
+            this.colNkTutar.AppearanceHeader.Options.UseBackColor = true;
+            this.colNkTutar.Caption = "N.TUTARI";
+            this.colNkTutar.DisplayFormat.FormatString = "c2";
+            this.colNkTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colNkTutar.MaxWidth = 80;
+            this.colNkTutar.MinWidth = 80;
+            this.colNkTutar.Name = "colNkTutar";
+            this.colNkTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "", "{0:c2}")});
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 5;
-            this.gridColumn5.Width = 80;
+            this.colNkTutar.Visible = true;
+            this.colNkTutar.VisibleIndex = 5;
+            this.colNkTutar.Width = 80;
             // 
             // frm_Nakliye
             // 
@@ -531,6 +542,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraEditors.SimpleButton btnResetValue;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn colNkTutar;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

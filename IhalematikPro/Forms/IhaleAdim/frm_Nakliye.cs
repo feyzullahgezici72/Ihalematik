@@ -121,6 +121,19 @@ namespace IhalematikProUI.Forms.IhaleAdim
         private void frm_Nakliye_Shown(object sender, EventArgs e)
         {
             txtCarriage.Focus();
+            colNkTutar.Visible = false;
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            if (colNkTutar.Visible==true)
+            {
+                colNkTutar.Visible = false;
+            }
+            else
+            {
+                colNkTutar.Visible = true;
+            }
         }
     }
 }
