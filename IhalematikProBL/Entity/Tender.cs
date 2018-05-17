@@ -15,7 +15,7 @@ namespace IhalematikProBL.Entity
         {
             get
             {
-                return string.Format("{0}", (this.Number).ToString().PadLeft(8, '0'));
+                return DateTime.Now.Year.ToString() + "/" + string.Format("{0}", (this.Number).ToString().PadLeft(8, '0'));
             }
         }
         public int Number { get; set; }

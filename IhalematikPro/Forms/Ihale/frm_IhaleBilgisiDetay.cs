@@ -54,7 +54,7 @@ namespace IhalematikProUI.Forms
         }
         private void frm_IhaleBilgisiDetay_Load(object sender, EventArgs e)
         {
-            txtTeklifNo.Text = this.Tender.Number.ToString();
+            txtTeklifNo.Text = this.Tender.DisplayNumber.ToString();
             txtAciklama.Text = this.Tender.Description;
             LastOfferDate.DateTime = this.Tender.LastOfferDate.Value;
             txtcompanyName.Text = this.Tender.CompanyName;
