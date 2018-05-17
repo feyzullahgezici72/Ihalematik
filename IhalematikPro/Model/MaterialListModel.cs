@@ -426,6 +426,8 @@ namespace IhalematikPro.Model
 
         public double CarriagePercent { get; set; }
 
+        public double CarriagePrice { get; set; }
+
         public int TenderGroupId { get; set; }
         private TenderGroup tenderGroup { get; set; }
         public TenderGroup TenderGroup
