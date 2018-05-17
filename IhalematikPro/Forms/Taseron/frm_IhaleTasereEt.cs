@@ -213,7 +213,8 @@ namespace IhalematikProUI.Forms.Taseron
 
             JobberTender jobberTender = UICurrentManager.Instance.CurrentJobberTender;
             txtJobName.Text = jobberTender.JobName;
-            lblTaseronFirmaAdi.Text = jobberTender.JobName;
+           
+
 
             memoEditJobDescription.Text = jobberTender.JobDescription;
             //double contractPrice = double.Parse(txtContractPrice.Text.Replace("TL", string.Empty));
@@ -236,8 +237,9 @@ namespace IhalematikProUI.Forms.Taseron
         {
             if (UICurrentManager.Instance.CurrentTender != null)
             {
-                lblTenderDescription.Text = UICurrentManager.Instance.CurrentTender.Description;
-                lblTenderNumber.Text = UICurrentManager.Instance.CurrentTender.DisplayNumber;
+                lblTenderDescription.Text = UICurrentManager.Instance.CurrentJobberTender.Tender.Description;
+                lblTenderNumber.Text = UICurrentManager.Instance.CurrentJobberTender.Tender.DisplayNumber;
+                lblTaseronFirmaAdi.Text = UICurrentManager.Instance.CurrentJobberTender.JobName;
             }
         }
     }
