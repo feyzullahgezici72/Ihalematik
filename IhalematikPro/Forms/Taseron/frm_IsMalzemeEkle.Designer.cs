@@ -109,9 +109,8 @@
             this.panelControl3.Controls.Add(this.simpleButton2);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(245, 319);
+            this.panelControl3.Size = new System.Drawing.Size(163, 218);
             this.panelControl3.TabIndex = 0;
             // 
             // simpleButton3
@@ -121,10 +120,9 @@
             this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Top;
             this.simpleButton3.Image = global::IhalematikProUI.Properties.Resources.ok_icon__1_;
             this.simpleButton3.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton3.Location = new System.Drawing.Point(3, 83);
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton3.Location = new System.Drawing.Point(2, 57);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(239, 80);
+            this.simpleButton3.Size = new System.Drawing.Size(159, 55);
             this.simpleButton3.TabIndex = 1;
             this.simpleButton3.Text = "&Tamam";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
@@ -136,10 +134,9 @@
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Top;
             this.simpleButton2.Image = global::IhalematikProUI.Properties.Resources.Actions_trash_empty_icon__1_;
             this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(3, 3);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton2.Location = new System.Drawing.Point(2, 2);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(239, 80);
+            this.simpleButton2.Size = new System.Drawing.Size(159, 55);
             this.simpleButton2.TabIndex = 0;
             this.simpleButton2.Text = "Çı&kar";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -365,12 +362,10 @@
             // grdAddedJobberMaterialList
             // 
             this.grdAddedJobberMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdAddedJobberMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdAddedJobberMaterialList.Location = new System.Drawing.Point(245, 0);
+            this.grdAddedJobberMaterialList.Location = new System.Drawing.Point(163, 0);
             this.grdAddedJobberMaterialList.MainView = this.gridView2;
-            this.grdAddedJobberMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdAddedJobberMaterialList.Name = "grdAddedJobberMaterialList";
-            this.grdAddedJobberMaterialList.Size = new System.Drawing.Size(1222, 319);
+            this.grdAddedJobberMaterialList.Size = new System.Drawing.Size(750, 218);
             this.grdAddedJobberMaterialList.TabIndex = 0;
             this.grdAddedJobberMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -383,10 +378,9 @@
             this.groupControl3.Controls.Add(this.grdAddedJobberMaterialList);
             this.groupControl3.Controls.Add(this.panelControl3);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl3.Location = new System.Drawing.Point(0, 377);
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupControl3.Location = new System.Drawing.Point(0, 258);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1467, 319);
+            this.groupControl3.Size = new System.Drawing.Size(913, 218);
             this.groupControl3.TabIndex = 37;
             this.groupControl3.Text = "Eklenen Malzemeler";
             // 
@@ -400,10 +394,9 @@
             this.groupControl1.Controls.Add(this.grdMaterialList);
             this.groupControl1.Controls.Add(this.grdTenderGroup);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(0, 50);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupControl1.Location = new System.Drawing.Point(0, 34);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1467, 327);
+            this.groupControl1.Size = new System.Drawing.Size(913, 224);
             this.groupControl1.TabIndex = 36;
             this.groupControl1.Text = "ÖBF Malzeme Listesi";
             // 
@@ -411,15 +404,13 @@
             // 
             this.grdMaterialList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.grdMaterialList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdMaterialList.Location = new System.Drawing.Point(245, 0);
+            this.grdMaterialList.Location = new System.Drawing.Point(163, 0);
             this.grdMaterialList.MainView = this.gridViewMaterialList;
-            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4);
             this.grdMaterialList.Name = "grdMaterialList";
             this.grdMaterialList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryTaseronTipi,
             this.repositoryItemCheckEdit1});
-            this.grdMaterialList.Size = new System.Drawing.Size(1222, 327);
+            this.grdMaterialList.Size = new System.Drawing.Size(750, 224);
             this.grdMaterialList.TabIndex = 2;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
@@ -756,20 +747,18 @@
             // grdTenderGroup
             // 
             this.grdTenderGroup.Dock = System.Windows.Forms.DockStyle.Left;
-            this.grdTenderGroup.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             gridLevelNode1.RelationName = "Level1";
             this.grdTenderGroup.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
             this.grdTenderGroup.Location = new System.Drawing.Point(0, 0);
             this.grdTenderGroup.MainView = this.gridViewTenderGroup;
-            this.grdTenderGroup.Margin = new System.Windows.Forms.Padding(4);
             this.grdTenderGroup.Name = "grdTenderGroup";
             this.grdTenderGroup.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGuncelle,
             this.btnSil,
             this.rpstColId,
             this.rpstSelected});
-            this.grdTenderGroup.Size = new System.Drawing.Size(245, 327);
+            this.grdTenderGroup.Size = new System.Drawing.Size(163, 224);
             this.grdTenderGroup.TabIndex = 3;
             this.grdTenderGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTenderGroup,
@@ -893,6 +882,7 @@
             this.gridViewTenderGroup.OptionsView.ShowFooter = true;
             this.gridViewTenderGroup.OptionsView.ShowGroupPanel = false;
             this.gridViewTenderGroup.PaintStyleName = "Web";
+            this.gridViewTenderGroup.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridViewTenderGroup_RowClick);
             // 
             // colIsSelected
             // 
@@ -911,6 +901,7 @@
             this.rpstSelected.LookAndFeel.SkinName = "McSkin";
             this.rpstSelected.LookAndFeel.UseDefaultLookAndFeel = false;
             this.rpstSelected.Name = "rpstSelected";
+            this.rpstSelected.Click += new System.EventHandler(this.rpstSelected_Click);
             // 
             // colId1
             // 
@@ -968,8 +959,7 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(354, 13);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescription.Location = new System.Drawing.Point(236, 9);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtDescription.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -979,24 +969,22 @@
             this.txtDescription.Properties.Appearance.Options.UseForeColor = true;
             this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtDescription.Size = new System.Drawing.Size(742, 30);
+            this.txtDescription.Size = new System.Drawing.Size(495, 22);
             this.txtDescription.TabIndex = 1;
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl3.Location = new System.Drawing.Point(263, 15);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Location = new System.Drawing.Point(175, 10);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(83, 21);
+            this.labelControl3.Size = new System.Drawing.Size(55, 13);
             this.labelControl3.TabIndex = 97;
             this.labelControl3.Text = "Açıklama:";
             // 
             // txtNumber
             // 
-            this.txtNumber.Location = new System.Drawing.Point(74, 13);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumber.Location = new System.Drawing.Point(49, 9);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtNumber.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1006,17 +994,16 @@
             this.txtNumber.Properties.Appearance.Options.UseForeColor = true;
             this.txtNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtNumber.Size = new System.Drawing.Size(171, 30);
+            this.txtNumber.Size = new System.Drawing.Size(114, 22);
             this.txtNumber.TabIndex = 0;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.labelControl2.Location = new System.Drawing.Point(14, 15);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Location = new System.Drawing.Point(9, 10);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(51, 21);
+            this.labelControl2.Size = new System.Drawing.Size(31, 13);
             this.labelControl2.TabIndex = 97;
             this.labelControl2.Text = "Kodu:";
             // 
@@ -1035,9 +1022,8 @@
             this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1467, 50);
+            this.groupControl2.Size = new System.Drawing.Size(913, 34);
             this.groupControl2.TabIndex = 35;
             this.groupControl2.Text = "Malzeme Bilgileri";
             // 
@@ -1047,10 +1033,9 @@
             this.btnBul.Appearance.Options.UseFont = true;
             this.btnBul.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnBul.Image = global::IhalematikProUI.Properties.Resources.search_icon__4_;
-            this.btnBul.Location = new System.Drawing.Point(1231, 0);
-            this.btnBul.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBul.Location = new System.Drawing.Point(756, 0);
             this.btnBul.Name = "btnBul";
-            this.btnBul.Size = new System.Drawing.Size(116, 50);
+            this.btnBul.Size = new System.Drawing.Size(77, 34);
             this.btnBul.TabIndex = 2;
             this.btnBul.Text = "&Bul";
             // 
@@ -1060,24 +1045,24 @@
             this.btnEkle.Appearance.Options.UseFont = true;
             this.btnEkle.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEkle.Image = global::IhalematikProUI.Properties.Resources.Button_Add_icon__1_;
-            this.btnEkle.Location = new System.Drawing.Point(1347, 0);
-            this.btnEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEkle.Location = new System.Drawing.Point(833, 0);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(120, 50);
+            this.btnEkle.Size = new System.Drawing.Size(80, 34);
             this.btnEkle.TabIndex = 3;
             this.btnEkle.Text = "&Ekle";
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // frm_IsMalzemeEkle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1467, 696);
+            this.ClientSize = new System.Drawing.Size(913, 476);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_IsMalzemeEkle";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -425,6 +425,26 @@ namespace IhalematikPro.Model
         public int JobberTypeValue { get; set; }
 
         public double CarriagePercent { get; set; }
+
+        public int TenderGroupId { get; set; }
+        private TenderGroup tenderGroup { get; set; }
+        public TenderGroup TenderGroup
+        {
+            get
+            {
+                if (this.tenderGroup == null)
+                {
+                    this.tenderGroup = TenderGroupProvider.Instance.GetItem(this.TenderGroupId);
+                }
+                return this.tenderGroup;
+            }
+            set
+            {
+                this.tenderGroup = value;
+                this.TenderGroupId = this.tenderGroup.Id;
+            }
+        }
+
         public MaterialListModel()
         {
 
@@ -433,6 +453,7 @@ namespace IhalematikPro.Model
         {
             this.IsWorkship = Entity.IsWorkship;
             this.KDVPercentage = Entity.KDVPercentage;
+            this.TenderGroupId = Entity.TenderGroupId;
             this.PozOBFId = Entity.PozOBFId;
             this.Quantity = Entity.Quantity;
             this.TenderId = Entity.TenderId;

@@ -21,6 +21,8 @@ namespace IhalematikProUI.Forms.Taseron
 {
     public partial class frm_IsMalzemeEkle : IhalematikBaseForm
     {
+        public int SelectedGroupId { get; set; }
+
         private double TotalMarkupNonKDVPreview = 0;
 
         private double OtherTotalAmount = 0;
@@ -51,7 +53,8 @@ namespace IhalematikProUI.Forms.Taseron
 
         private void frm_IsMalzemeEkle_Shown(object sender, EventArgs e)
         {
-            this.LoadMaterialListGrid();
+            this.LoadTenderGroup();
+            //this.LoadMaterialListGrid();
             this.LoadAddedMaterialListGrid();
             this.RPSTTaseronTipi();
         }
@@ -139,6 +142,20 @@ namespace IhalematikProUI.Forms.Taseron
             grdAddedJobberMaterialList.DataSource = null;
             grdAddedJobberMaterialList.DataSource = dataSoruce;
             this.LoadMaterialListGrid();
+        }
+
+        private void LoadTenderGroup()
+        {
+            List<TenderGroup> groups = UICurrentManager.Instance.CurrentJobberTender.Tender.Groups;
+
+            List<TenderGroupModel> models = IhalematikModelBase.GetModels<TenderGroupModel, TenderGroup>(groups);
+            if (models.Count != 0)
+            {
+                grdTenderGroup.DataSource = models;
+                models[0].IsSelected = true;
+                this.SelectedGroupId = models[0].Id.Value;
+                this.LoadMaterialListGrid();
+            }
         }
 
         private void LoadMaterialListGrid()
@@ -237,7 +254,7 @@ namespace IhalematikProUI.Forms.Taseron
             }
             LoadingManager.Instance.Hide();
             grdMaterialList.DataSource = null;
-            grdMaterialList.DataSource = DataSource;
+            grdMaterialList.DataSource = DataSource.Where(p => p.TenderGroupId == this.SelectedGroupId).ToList();
         }
 
         private void LoadAddedMaterialListGrid()
@@ -249,6 +266,28 @@ namespace IhalematikProUI.Forms.Taseron
 
         private void repositoryTaseronTipi_CustomDisplayText(object sender, DevExpress.XtraEditors.Controls.CustomDisplayTextEventArgs e)
         {
+        }
+
+        private void rpstSelected_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < gridViewTenderGroup.RowCount; i++)
+            {
+                gridViewTenderGroup.SetRowCellValue(i, colIsSelected, false);
+            }
+            gridViewTenderGroup.SetFocusedRowCellValue(colIsSelected, true);
+            this.SelectedGroupId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewTenderGroup.GetFocusedRowCellValue("Id"));
+            LoadMaterialListGrid();
+        }
+
+        private void gridViewTenderGroup_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            for (int i = 0; i < gridViewTenderGroup.RowCount; i++)
+            {
+                gridViewTenderGroup.SetRowCellValue(i, colIsSelected, false);
+            }
+            gridViewTenderGroup.SetFocusedRowCellValue(colIsSelected, true);
+            this.SelectedGroupId = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewTenderGroup.GetFocusedRowCellValue("Id"));
+            this.LoadMaterialListGrid();
         }
     }
 }
