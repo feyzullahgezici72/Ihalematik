@@ -239,7 +239,7 @@ namespace IhalematikProUI.Forms.Taseron
             {
                 lblTenderDescription.Text = UICurrentManager.Instance.CurrentJobberTender.Tender.Description;
                 lblTenderNumber.Text = UICurrentManager.Instance.CurrentJobberTender.Tender.DisplayNumber;
-                lblTaseronFirmaAdi.Text = UICurrentManager.Instance.CurrentJobberTender.JobName;
+                lblTaseronFirmaAdi.Text = UICurrentManager.Instance.CurrentJobberTender.Jobber.CompanyName;
             }
         }
     }
