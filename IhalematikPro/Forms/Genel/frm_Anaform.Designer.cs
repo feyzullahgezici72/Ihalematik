@@ -2038,6 +2038,7 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup30});
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "Hakediş Modülü";
+            this.ribbonPage3.Visible = false;
             // 
             // ribbonPageGroup24
             // 
