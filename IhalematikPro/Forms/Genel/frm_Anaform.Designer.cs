@@ -30,7 +30,6 @@ namespace IhalematikPro.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Anaform));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
@@ -296,10 +295,10 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barBtnKuralllar = new DevExpress.XtraBars.BarButtonItem();
-            this.styleController1 = new DevExpress.XtraEditors.StyleController(this.components);
+            this.styleController1 = new DevExpress.XtraEditors.StyleController();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
             this.hideContainerLeft = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
@@ -501,8 +500,8 @@ namespace IhalematikPro.Forms
             this.ribbon.MaxItemId = 132;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsTouch.AffectOnlyRibbon = true;
-            this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem1);
             this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem3);
+            this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem42);
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage8,
@@ -555,6 +554,7 @@ namespace IhalematikPro.Forms
             this.ribbon.Toolbar.ItemLinks.Add(this.barButtonItem23);
             this.ribbon.Toolbar.ItemLinks.Add(this.barButtonItem18);
             this.ribbon.Toolbar.ItemLinks.Add(this.barButtonItem41);
+            this.ribbon.Toolbar.ItemLinks.Add(this.barButtonItem1);
             this.ribbon.Toolbar.ItemLinks.Add(this.barMenu, true);
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             this.ribbon.ApplicationButtonClick += new System.EventHandler(this.ribbon_ApplicationButtonClick);
