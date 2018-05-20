@@ -1514,5 +1514,11 @@ namespace IhalematikPro.Forms
             dockPanel1.HideSliding();
             barButtonItem54.PerformClick();
         }
+
+        private void barButtonItem40_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frm_IsTakvimi tk = new frm_IsTakvimi();
+            tk.ShowDialog();
+        }
     }
 }

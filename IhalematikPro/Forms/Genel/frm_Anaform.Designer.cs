@@ -30,6 +30,7 @@ namespace IhalematikPro.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Anaform));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
@@ -161,9 +162,9 @@ namespace IhalematikPro.Forms
             this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem40 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem42 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem40 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem41 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem43 = new DevExpress.XtraBars.BarButtonItem();
@@ -295,10 +296,10 @@ namespace IhalematikPro.Forms
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barBtnKuralllar = new DevExpress.XtraBars.BarButtonItem();
-            this.styleController1 = new DevExpress.XtraEditors.StyleController();
+            this.styleController1 = new DevExpress.XtraEditors.StyleController(this.components);
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.hideContainerLeft = new DevExpress.XtraBars.Docking.AutoHideContainer();
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
@@ -1360,13 +1361,6 @@ namespace IhalematikPro.Forms
             this.barButtonItem24.Name = "barButtonItem24";
             this.barButtonItem24.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem24_ItemClick_2);
             // 
-            // barButtonItem40
-            // 
-            this.barButtonItem40.Caption = "Yardım";
-            this.barButtonItem40.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem40.Glyph")));
-            this.barButtonItem40.Id = 51;
-            this.barButtonItem40.Name = "barButtonItem40";
-            // 
             // barButtonItem42
             // 
             this.barButtonItem42.Caption = "Çıkış";
@@ -1382,6 +1376,14 @@ namespace IhalematikPro.Forms
             this.barButtonItem21.Id = 48;
             this.barButtonItem21.Name = "barButtonItem21";
             this.barButtonItem21.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem21_ItemClick_2);
+            // 
+            // barButtonItem40
+            // 
+            this.barButtonItem40.Caption = "Takvim";
+            this.barButtonItem40.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem40.Glyph")));
+            this.barButtonItem40.Id = 51;
+            this.barButtonItem40.Name = "barButtonItem40";
+            this.barButtonItem40.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem40_ItemClick);
             // 
             // barButtonItem1
             // 
