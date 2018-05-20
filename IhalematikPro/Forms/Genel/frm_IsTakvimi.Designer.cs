@@ -144,6 +144,7 @@
             this.Name = "frm_IsTakvimi";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.frm_IsTakvimi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

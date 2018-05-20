@@ -1107,7 +1107,7 @@
             // txtToplamAracSaat
             // 
             this.txtToplamAracSaat.Enabled = false;
-            this.txtToplamAracSaat.Location = new System.Drawing.Point(44, 111);
+            this.txtToplamAracSaat.Location = new System.Drawing.Point(27, 111);
             this.txtToplamAracSaat.Margin = new System.Windows.Forms.Padding(4);
             this.txtToplamAracSaat.Name = "txtToplamAracSaat";
             this.txtToplamAracSaat.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1207,7 +1207,7 @@
             // txtToplamAracGun
             // 
             this.txtToplamAracGun.Enabled = false;
-            this.txtToplamAracGun.Location = new System.Drawing.Point(134, 111);
+            this.txtToplamAracGun.Location = new System.Drawing.Point(117, 111);
             this.txtToplamAracGun.Margin = new System.Windows.Forms.Padding(4);
             this.txtToplamAracGun.Name = "txtToplamAracGun";
             this.txtToplamAracGun.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1220,14 +1220,14 @@
             this.txtToplamAracGun.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtToplamAracGun.Properties.ReadOnly = true;
             this.txtToplamAracGun.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtToplamAracGun.Size = new System.Drawing.Size(60, 26);
+            this.txtToplamAracGun.Size = new System.Drawing.Size(77, 26);
             this.txtToplamAracGun.TabIndex = 19;
             this.txtToplamAracGun.TabStop = false;
             // 
             // txtToplamAdamGun
             // 
             this.txtToplamAdamGun.Enabled = false;
-            this.txtToplamAdamGun.Location = new System.Drawing.Point(134, 58);
+            this.txtToplamAdamGun.Location = new System.Drawing.Point(117, 58);
             this.txtToplamAdamGun.Margin = new System.Windows.Forms.Padding(4);
             this.txtToplamAdamGun.Name = "txtToplamAdamGun";
             this.txtToplamAdamGun.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -1240,14 +1240,14 @@
             this.txtToplamAdamGun.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtToplamAdamGun.Properties.ReadOnly = true;
             this.txtToplamAdamGun.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtToplamAdamGun.Size = new System.Drawing.Size(60, 26);
+            this.txtToplamAdamGun.Size = new System.Drawing.Size(77, 26);
             this.txtToplamAdamGun.TabIndex = 19;
             this.txtToplamAdamGun.TabStop = false;
             // 
             // txtToplamAdamSaat
             // 
             this.txtToplamAdamSaat.Enabled = false;
-            this.txtToplamAdamSaat.Location = new System.Drawing.Point(44, 57);
+            this.txtToplamAdamSaat.Location = new System.Drawing.Point(27, 57);
             this.txtToplamAdamSaat.Margin = new System.Windows.Forms.Padding(4);
             this.txtToplamAdamSaat.Name = "txtToplamAdamSaat";
             this.txtToplamAdamSaat.Properties.Appearance.BackColor = System.Drawing.Color.White;
