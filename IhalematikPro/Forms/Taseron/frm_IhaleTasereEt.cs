@@ -16,6 +16,7 @@ using IhalematikProUI.Manager;
 using IhalematikProUI.Forms.Base;
 using IhalematikProBL.Enum;
 using IhalematikPro.Forms;
+using IhalematikProBL.Manager;
 
 namespace IhalematikProUI.Forms.Taseron
 {
@@ -240,6 +241,22 @@ namespace IhalematikProUI.Forms.Taseron
                 lblTenderDescription.Text = UICurrentManager.Instance.CurrentJobberTender.Tender.Description;
                 lblTenderNumber.Text = UICurrentManager.Instance.CurrentJobberTender.Tender.DisplayNumber;
                 lblTaseronFirmaAdi.Text = UICurrentManager.Instance.CurrentJobberTender.Jobber.CompanyName;
+            }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool isSuccess = UIReportManager.Instance.ExtractExcel(grdMaterialList);
+                if (!isSuccess)
+                {
+                    MessageBox.Show("Program beklenmeyen bir hata ile karşılaştı.");
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingManager.Instance.SaveErrorLog(ex);
             }
         }
     }
