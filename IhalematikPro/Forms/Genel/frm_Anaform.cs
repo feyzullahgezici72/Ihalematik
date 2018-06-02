@@ -21,6 +21,8 @@ using IhalematikProBL.Provider;
 using IhalematikProUI.Hakedis;
 using IhalematikProUI.Forms.Taseron;
 using DevExpress.XtraBars.Docking;
+using DevExpress.Xpf.Core.Native;
+using Tulpep.NotificationWindow;
 
 namespace IhalematikPro.Forms
 {
@@ -1519,6 +1521,52 @@ namespace IhalematikPro.Forms
         {
             frm_IsTakvimi tk = new frm_IsTakvimi();
             tk.ShowDialog();
+        }
+
+        private void barButtonItem41_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            dockPanel1.Visibility = DockVisibility.AutoHide;
+            dockPanel1.Show();
+        }
+
+        private void barButtonItem58_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("Calc");
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hesap Makinesi bulunamadı...");
+            }
+        }
+
+        private void barButtonItem59_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            
+
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            PopupNotifier popup = new PopupNotifier();
+            popup.Image = IhalematikProUI.Properties.Resources.System_Info_icon;
+            popup.TitleText = "Mesajı";
+            popup.ContentText = "";
+            popup.ContentFont.Bold.ToString();
+            popup.TitleColor = Color.Red;
+            popup.ContentText = "İhale Kaydedildi...";
+            popup.Popup();
+        
+           
         }
     }
 }

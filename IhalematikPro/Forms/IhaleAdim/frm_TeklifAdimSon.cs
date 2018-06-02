@@ -431,5 +431,10 @@ namespace IhalematikProUI.Forms
         {
 
         }
+
+        private void groupControl4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

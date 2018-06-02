@@ -1313,6 +1313,7 @@
             this.groupControl4.Size = new System.Drawing.Size(332, 72);
             this.groupControl4.TabIndex = 26;
             this.groupControl4.Text = "TEKLİF EDİLECEK KDV HARİÇ TOPLAM ";
+            this.groupControl4.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl4_Paint);
             // 
             // lblTotalMarkupNonKDV
             // 
