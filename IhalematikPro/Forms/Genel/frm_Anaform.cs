@@ -1559,16 +1559,27 @@ namespace IhalematikPro.Forms
         {
             PopupNotifier popup = new PopupNotifier();
             popup.Image = IhalematikProUI.Properties.Resources.System_Info_icon;
+            popup.HeaderHeight = 20;
             popup.HeaderColor = Color.DodgerBlue;
+            popup.TitleText = "  KAYIT ZAMANI:  " + DateTime.Now.ToString();
             popup.ContentFont.Bold.ToString();
-            popup.ContentFont = new System.Drawing.Font("Tahoma", 14F);
-            popup.TitleText = "MESAJ !!!";
+            popup.ContentFont = new System.Drawing.Font("Arial Black", 14F);
             popup.TitleColor = Color.Red;
             popup.ContentFont = new System.Drawing.Font("Tahoma", 11F);
-            popup.ContentText = "\n\n İhale Başarıyla Kaydedildi...";
-            popup.Delay = 500;
+            popup.ContentText = "\n İşlem Başarıyla Kaydedildi...";
+            popup.Delay = 600;
             popup.Popup();
         
+           
+        }
+
+        private void barButtonItem60_ItemClick(object sender, ItemClickEventArgs e)
+        {
+           
+        }
+
+        private void barButtonItem61_ItemClick(object sender, ItemClickEventArgs e)
+        {
            
         }
     }

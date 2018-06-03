@@ -215,6 +215,8 @@ namespace IhalematikPro.Forms
             this.barButtonItem56 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem57 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem59 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem60 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem61 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -507,10 +509,12 @@ namespace IhalematikPro.Forms
             this.barButtonItem56,
             this.barButtonItem57,
             this.barButtonItem58,
-            this.barButtonItem59});
+            this.barButtonItem59,
+            this.barButtonItem60,
+            this.barButtonItem61});
             this.ribbon.ItemsVertAlign = DevExpress.Utils.VertAlignment.Center;
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 134;
+            this.ribbon.MaxItemId = 138;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsTouch.AffectOnlyRibbon = true;
             this.ribbon.PageHeaderItemLinks.Add(this.barButtonItem3);
@@ -1744,6 +1748,20 @@ namespace IhalematikPro.Forms
             this.barButtonItem59.Id = 133;
             this.barButtonItem59.Name = "barButtonItem59";
             this.barButtonItem59.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem59_ItemClick);
+            // 
+            // barButtonItem60
+            // 
+            this.barButtonItem60.Caption = "Sağda";
+            this.barButtonItem60.Id = 136;
+            this.barButtonItem60.Name = "barButtonItem60";
+            this.barButtonItem60.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem60_ItemClick);
+            // 
+            // barButtonItem61
+            // 
+            this.barButtonItem61.Caption = "Solda";
+            this.barButtonItem61.Id = 137;
+            this.barButtonItem61.Name = "barButtonItem61";
+            this.barButtonItem61.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem61_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -3283,6 +3301,8 @@ namespace IhalematikPro.Forms
         private DevExpress.XtraBars.BarButtonItem barButtonItem58;
         private DevExpress.XtraBars.BarButtonItem barButtonItem59;
         private System.Windows.Forms.Button button1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem60;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem61;
 
         public EventHandler MdiChilddeActivate { get; private set; }
     }
