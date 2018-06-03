@@ -1559,11 +1559,14 @@ namespace IhalematikPro.Forms
         {
             PopupNotifier popup = new PopupNotifier();
             popup.Image = IhalematikProUI.Properties.Resources.System_Info_icon;
-            popup.TitleText = "Mesajı";
-            popup.ContentText = "";
+            popup.HeaderColor = Color.DodgerBlue;
             popup.ContentFont.Bold.ToString();
+            popup.ContentFont = new System.Drawing.Font("Tahoma", 14F);
+            popup.TitleText = "MESAJ !!!";
             popup.TitleColor = Color.Red;
-            popup.ContentText = "İhale Kaydedildi...";
+            popup.ContentFont = new System.Drawing.Font("Tahoma", 11F);
+            popup.ContentText = "\n\n İhale Başarıyla Kaydedildi...";
+            popup.Delay = 500;
             popup.Popup();
         
            
