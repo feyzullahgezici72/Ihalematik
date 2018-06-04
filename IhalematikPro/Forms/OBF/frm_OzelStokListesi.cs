@@ -36,7 +36,7 @@ namespace IhalematikPro.Forms
         }
         public void LoadGrid()
         {
-            LoadingManager.Instance.Show(this);
+            //LoadingManager.Instance.Show(this);
             List<OBFModel> allItems = UIOBFManager.Instance.GetOBFs();
             List<OBFModel> items = new List<OBFModel>();
 
@@ -66,7 +66,7 @@ namespace IhalematikPro.Forms
                 colPasive.Visible = false;
                 colActive.Visible = true;
             }
-            LoadingManager.Instance.Hide();
+            //LoadingManager.Instance.Hide();
             grdOBFList.DataSource = items;
             lblRecordCount.Text = items.Count.ToString();
         }
