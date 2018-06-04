@@ -23,6 +23,7 @@ using IhalematikProUI.Forms.Taseron;
 using DevExpress.XtraBars.Docking;
 using DevExpress.Xpf.Core.Native;
 using Tulpep.NotificationWindow;
+using IhalematikProUI.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -1557,20 +1558,7 @@ namespace IhalematikPro.Forms
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            PopupNotifier popup = new PopupNotifier();
-            popup.Image = IhalematikProUI.Properties.Resources.System_Info_icon;
-            popup.HeaderHeight = 20;
-            popup.HeaderColor = Color.DodgerBlue;
-            popup.TitleText = "  KAYIT ZAMANI:  " + DateTime.Now.ToString();
-            popup.ContentFont.Bold.ToString();
-            popup.ContentFont = new System.Drawing.Font("Arial Black", 14F);
-            popup.TitleColor = Color.Red;
-            popup.ContentFont = new System.Drawing.Font("Tahoma", 11F);
-            popup.ContentText = "\n İşlem Başarıyla Kaydedildi...";
-            popup.Delay = 600;
-            popup.Popup();
-        
-           
+            UIPopupManager.Instance.ShowPopup();
         }
 
         private void barButtonItem60_ItemClick(object sender, ItemClickEventArgs e)

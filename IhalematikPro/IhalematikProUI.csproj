@@ -744,6 +744,7 @@
     </Compile>
     <Compile Include="Manager\UICurrentManager.cs" />
     <Compile Include="Manager\LoadingManager.cs" />
+    <Compile Include="Manager\UIPopupManager.cs" />
     <Compile Include="Manager\UIRuleManager.cs" />
     <Compile Include="Manager\UICustomConfigurationManager.cs" />
     <Compile Include="Manager\UIGlobalVeriables.cs" />
