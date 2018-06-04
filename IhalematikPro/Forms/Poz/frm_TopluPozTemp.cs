@@ -41,6 +41,7 @@ namespace IhalematikProUI.Forms.PozTem
                 {
                     PozProvider.Instance.Save(item);
                 }
+                UIPopupManager.Instance.ShowPopup();
                 LoadingManager.Instance.Hide();;
                 this._owner.LoadPozGrid();
             }

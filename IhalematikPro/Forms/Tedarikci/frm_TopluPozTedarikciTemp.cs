@@ -47,6 +47,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             }
             LoadingManager.Instance.Hide();
             this.Enabled = true;
+            UIPopupManager.Instance.ShowPopup();
             this.Close();
             this._owner.LoadMaterialGrid();
         }

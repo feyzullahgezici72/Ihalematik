@@ -67,9 +67,10 @@ namespace IhalematikPro.Forms
                     model.Save();
                     FormClear();
                     LoadPozGrid();
-                    frm_MesajFormu mf = new frm_MesajFormu();
-                    mf.lblMesaj.Text = "Malzeme Kaydedildi...";
-                    mf.ShowDialog();
+                    //frm_MesajFormu mf = new frm_MesajFormu();
+                    //mf.lblMesaj.Text = "Malzeme Kaydedildi...";
+                    //mf.ShowDialog();
+                    UIPopupManager.Instance.ShowPopup();
                 }
             }
         }
@@ -97,10 +98,10 @@ namespace IhalematikPro.Forms
             frm_pozGuncelle frm = new frm_pozGuncelle(this);
             int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewPozList.GetFocusedRowCellValue("Id"));
             frm.CurrentPozId = id;
-            pozMenu.Visible = false;
+            //pozMenu.Visible = false;
             grdPozList.Enabled = false;
             frm.ShowDialog();
-            pozMenu.Visible = true;
+            //pozMenu.Visible = true;
             grdPozList.Enabled = true;
             this.LoadPozGrid();
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PozListesi));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -83,7 +84,7 @@
             this.cmbAktivePasive = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblRecordCount = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
+            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
@@ -137,9 +138,9 @@
             this.panelControl1.Controls.Add(this.btnKapat);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1734, 35);
+            this.panelControl1.Size = new System.Drawing.Size(1927, 42);
             this.panelControl1.TabIndex = 18;
             // 
             // pcWorld
@@ -148,8 +149,9 @@
             this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
             this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
             this.pcWorld.Location = new System.Drawing.Point(0, 0);
+            this.pcWorld.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pcWorld.Name = "pcWorld";
-            this.pcWorld.Size = new System.Drawing.Size(50, 35);
+            this.pcWorld.Size = new System.Drawing.Size(56, 42);
             this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcWorld.TabIndex = 23;
             this.pcWorld.TabStop = false;
@@ -162,11 +164,11 @@
             this.lblPozListesi.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.lblPozListesi.LineColor = System.Drawing.Color.Red;
             this.lblPozListesi.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.lblPozListesi.Location = new System.Drawing.Point(52, 0);
-            this.lblPozListesi.Margin = new System.Windows.Forms.Padding(4);
+            this.lblPozListesi.Location = new System.Drawing.Point(58, 0);
+            this.lblPozListesi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblPozListesi.Name = "lblPozListesi";
             this.lblPozListesi.ShowLineShadow = false;
-            this.lblPozListesi.Size = new System.Drawing.Size(133, 35);
+            this.lblPozListesi.Size = new System.Drawing.Size(159, 40);
             this.lblPozListesi.TabIndex = 22;
             this.lblPozListesi.Text = "POZ LİSTESİ";
             // 
@@ -177,10 +179,10 @@
             this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
             this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(1706, 0);
-            this.btnKapat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKapat.Location = new System.Drawing.Point(1895, 0);
+            this.btnKapat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(28, 35);
+            this.btnKapat.Size = new System.Drawing.Size(32, 42);
             this.btnKapat.TabIndex = 20;
             this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
@@ -196,10 +198,10 @@
             this.pozMenu.Controls.Add(this.simpleButton4);
             this.pozMenu.Controls.Add(this.groupControl4);
             this.pozMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pozMenu.Location = new System.Drawing.Point(0, 35);
-            this.pozMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.pozMenu.Location = new System.Drawing.Point(0, 42);
+            this.pozMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pozMenu.Name = "pozMenu";
-            this.pozMenu.Size = new System.Drawing.Size(526, 623);
+            this.pozMenu.Size = new System.Drawing.Size(584, 755);
             this.pozMenu.TabIndex = 37;
             this.pozMenu.Text = "Yeni Poz Ekle";
             // 
@@ -222,9 +224,10 @@
             this.groupControl5.Controls.Add(this.labelControl2);
             this.groupControl5.Controls.Add(this.labelControl4);
             this.groupControl5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl5.Location = new System.Drawing.Point(0, 50);
+            this.groupControl5.Location = new System.Drawing.Point(0, 61);
+            this.groupControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(526, 301);
+            this.groupControl5.Size = new System.Drawing.Size(584, 364);
             this.groupControl5.TabIndex = 98;
             this.groupControl5.Text = "Poz Ekle";
             // 
@@ -232,10 +235,10 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl1.Location = new System.Drawing.Point(7, 43);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Location = new System.Drawing.Point(8, 52);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(82, 19);
+            this.labelControl1.Size = new System.Drawing.Size(95, 23);
             this.labelControl1.TabIndex = 22;
             this.labelControl1.Text = "Kurum Adı:";
             // 
@@ -243,31 +246,32 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl3.Location = new System.Drawing.Point(20, 109);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Location = new System.Drawing.Point(22, 132);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(70, 19);
+            this.labelControl3.Size = new System.Drawing.Size(80, 23);
             this.labelControl3.TabIndex = 19;
             this.labelControl3.Text = "Açıklama:";
             // 
             // comboBoxEdit1
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(96, 40);
+            this.comboBoxEdit1.Location = new System.Drawing.Point(107, 48);
+            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit1.Size = new System.Drawing.Size(404, 26);
+            this.comboBoxEdit1.Size = new System.Drawing.Size(449, 30);
             this.comboBoxEdit1.TabIndex = 32;
             // 
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl5.Location = new System.Drawing.Point(4, 177);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl5.Location = new System.Drawing.Point(4, 214);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(85, 19);
+            this.labelControl5.Size = new System.Drawing.Size(98, 23);
             this.labelControl5.TabIndex = 14;
             this.labelControl5.Text = "Birim Fiyatı:";
             // 
@@ -275,28 +279,28 @@
             // 
             this.txtUnit.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtUnit, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.txtUnit.Location = new System.Drawing.Point(96, 141);
-            this.txtUnit.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUnit.Location = new System.Drawing.Point(107, 171);
+            this.txtUnit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUnit.Properties.Appearance.Options.UseBackColor = true;
             this.txtUnit.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtUnit.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtUnit.Size = new System.Drawing.Size(405, 26);
+            this.txtUnit.Size = new System.Drawing.Size(450, 30);
             this.txtUnit.TabIndex = 2;
             // 
             // txtNumber
             // 
             this.txtNumber.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtNumber, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.txtNumber.Location = new System.Drawing.Point(96, 73);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumber.Location = new System.Drawing.Point(107, 88);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtNumber.Properties.Appearance.Options.UseBackColor = true;
             this.txtNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtNumber.Size = new System.Drawing.Size(404, 26);
+            this.txtNumber.Size = new System.Drawing.Size(449, 30);
             this.txtNumber.TabIndex = 0;
             // 
             // txtUnitPrice
@@ -304,8 +308,8 @@
             this.txtUnitPrice.EditValue = "";
             this.txtUnitPrice.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtUnitPrice, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.txtUnitPrice.Location = new System.Drawing.Point(96, 175);
-            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUnitPrice.Location = new System.Drawing.Point(107, 212);
+            this.txtUnitPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtUnitPrice.Properties.Appearance.Options.UseBackColor = true;
@@ -318,7 +322,7 @@
             this.txtUnitPrice.Properties.Mask.EditMask = "c";
             this.txtUnitPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtUnitPrice.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtUnitPrice.Size = new System.Drawing.Size(405, 26);
+            this.txtUnitPrice.Size = new System.Drawing.Size(450, 30);
             this.txtUnitPrice.TabIndex = 3;
             // 
             // btnKaydet
@@ -327,10 +331,10 @@
             this.btnKaydet.Appearance.Options.UseFont = true;
             this.btnKaydet.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.Image")));
             this.btnKaydet.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnKaydet.Location = new System.Drawing.Point(316, 226);
-            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKaydet.Location = new System.Drawing.Point(351, 274);
+            this.btnKaydet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(124, 58);
+            this.btnKaydet.Size = new System.Drawing.Size(138, 70);
             this.btnKaydet.TabIndex = 4;
             this.btnKaydet.Text = "&Kaydet";
             this.btnKaydet.ToolTip = "Kaydet";
@@ -340,14 +344,14 @@
             // 
             this.txtDescription.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtDescription, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.txtDescription.Location = new System.Drawing.Point(96, 106);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescription.Location = new System.Drawing.Point(107, 128);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtDescription.Properties.Appearance.Options.UseBackColor = true;
             this.txtDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtDescription.Size = new System.Drawing.Size(405, 26);
+            this.txtDescription.Size = new System.Drawing.Size(450, 30);
             this.txtDescription.TabIndex = 1;
             // 
             // btnTemizle
@@ -358,10 +362,10 @@
             this.btnTemizle.Appearance.Options.UseForeColor = true;
             this.btnTemizle.Image = global::IhalematikProUI.Properties.Resources.Actions_edit_clear_icon;
             this.btnTemizle.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnTemizle.Location = new System.Drawing.Point(448, 226);
-            this.btnTemizle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTemizle.Location = new System.Drawing.Point(498, 274);
+            this.btnTemizle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(48, 58);
+            this.btnTemizle.Size = new System.Drawing.Size(53, 70);
             this.btnTemizle.TabIndex = 25;
             this.btnTemizle.ToolTip = "Formu Temizle";
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
@@ -370,10 +374,10 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Location = new System.Drawing.Point(33, 76);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Location = new System.Drawing.Point(37, 92);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(56, 19);
+            this.labelControl2.Size = new System.Drawing.Size(64, 23);
             this.labelControl2.TabIndex = 22;
             this.labelControl2.Text = "Poz No:";
             // 
@@ -381,10 +385,10 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Location = new System.Drawing.Point(42, 143);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl4.Location = new System.Drawing.Point(47, 173);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(47, 19);
+            this.labelControl4.Size = new System.Drawing.Size(53, 23);
             this.labelControl4.TabIndex = 18;
             this.labelControl4.Text = "Birimi:";
             // 
@@ -396,8 +400,9 @@
             this.simpleButton4.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.Image")));
             this.simpleButton4.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.simpleButton4.Location = new System.Drawing.Point(0, 0);
+            this.simpleButton4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(526, 50);
+            this.simpleButton4.Size = new System.Drawing.Size(584, 61);
             this.simpleButton4.TabIndex = 97;
             this.simpleButton4.Text = "Kurum Ekle > F1";
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
@@ -409,11 +414,12 @@
             this.groupControl4.Controls.Add(this.panelControl3);
             this.groupControl4.Controls.Add(this.simpleButton3);
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl4.Location = new System.Drawing.Point(0, 483);
+            this.groupControl4.Location = new System.Drawing.Point(0, 586);
             this.groupControl4.LookAndFeel.SkinName = "London Liquid Sky";
             this.groupControl4.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.groupControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(526, 140);
+            this.groupControl4.Size = new System.Drawing.Size(584, 169);
             this.groupControl4.TabIndex = 31;
             this.groupControl4.Text = "Toplu Malzeme Ekle";
             // 
@@ -421,11 +427,12 @@
             // 
             this.panelControl3.Controls.Add(this.memoEdit1);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl3.Location = new System.Drawing.Point(3, 35);
+            this.panelControl3.Location = new System.Drawing.Point(3, 40);
             this.panelControl3.LookAndFeel.SkinName = "Dark Side";
             this.panelControl3.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(398, 102);
+            this.panelControl3.Size = new System.Drawing.Size(442, 126);
             this.panelControl3.TabIndex = 1;
             // 
             // memoEdit1
@@ -433,13 +440,14 @@
             this.memoEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.memoEdit1.EditValue = resources.GetString("memoEdit1.EditValue");
             this.memoEdit1.Location = new System.Drawing.Point(3, 3);
+            this.memoEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.memoEdit1.Name = "memoEdit1";
             this.memoEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.memoEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.memoEdit1.Properties.LookAndFeel.SkinName = "Lilian";
             this.memoEdit1.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.memoEdit1.Properties.ReadOnly = true;
-            this.memoEdit1.Size = new System.Drawing.Size(392, 96);
+            this.memoEdit1.Size = new System.Drawing.Size(436, 120);
             this.memoEdit1.TabIndex = 2;
             // 
             // simpleButton3
@@ -447,9 +455,10 @@
             this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton3.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.Image")));
             this.simpleButton3.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton3.Location = new System.Drawing.Point(401, 35);
+            this.simpleButton3.Location = new System.Drawing.Point(445, 40);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(122, 102);
+            this.simpleButton3.Size = new System.Drawing.Size(136, 126);
             this.simpleButton3.TabIndex = 0;
             this.simpleButton3.Text = "&Dosyadan \r\nAl";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
@@ -457,16 +466,16 @@
             // grdPozList
             // 
             this.grdPozList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdPozList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdPozList.Location = new System.Drawing.Point(526, 110);
+            this.grdPozList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grdPozList.Location = new System.Drawing.Point(584, 133);
             this.grdPozList.MainView = this.gridViewPozList;
-            this.grdPozList.Margin = new System.Windows.Forms.Padding(4);
+            this.grdPozList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grdPozList.Name = "grdPozList";
             this.grdPozList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnGncelle,
             this.btnPasive,
             this.btnActive});
-            this.grdPozList.Size = new System.Drawing.Size(1208, 514);
+            this.grdPozList.Size = new System.Drawing.Size(1343, 623);
             this.grdPozList.TabIndex = 0;
             this.grdPozList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPozList});
@@ -792,21 +801,21 @@
             // 
             // txtSearchDescription
             // 
-            this.txtSearchDescription.Location = new System.Drawing.Point(8, 37);
-            this.txtSearchDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchDescription.Location = new System.Drawing.Point(9, 45);
+            this.txtSearchDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearchDescription.Name = "txtSearchDescription";
             this.txtSearchDescription.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSearchDescription.Properties.Appearance.Options.UseBackColor = true;
             this.txtSearchDescription.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtSearchDescription.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtSearchDescription.Size = new System.Drawing.Size(422, 26);
+            this.txtSearchDescription.Size = new System.Drawing.Size(469, 30);
             this.txtSearchDescription.TabIndex = 1;
             this.txtSearchDescription.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchDescription_KeyPress);
             // 
             // txtSearchNumber
             // 
-            this.txtSearchNumber.Location = new System.Drawing.Point(4, 38);
-            this.txtSearchNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchNumber.Location = new System.Drawing.Point(4, 46);
+            this.txtSearchNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearchNumber.Name = "txtSearchNumber";
             this.txtSearchNumber.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSearchNumber.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -814,7 +823,7 @@
             this.txtSearchNumber.Properties.Appearance.Options.UseFont = true;
             this.txtSearchNumber.Properties.AppearanceFocused.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtSearchNumber.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtSearchNumber.Size = new System.Drawing.Size(192, 26);
+            this.txtSearchNumber.Size = new System.Drawing.Size(213, 30);
             this.txtSearchNumber.TabIndex = 0;
             this.txtSearchNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchNumber_KeyPress);
             // 
@@ -825,9 +834,10 @@
             this.panelControl2.Controls.Add(this.groupControl2);
             this.panelControl2.Controls.Add(this.groupControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(526, 35);
+            this.panelControl2.Location = new System.Drawing.Point(584, 42);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1208, 75);
+            this.panelControl2.Size = new System.Drawing.Size(1343, 91);
             this.panelControl2.TabIndex = 39;
             // 
             // groupControl6
@@ -836,9 +846,10 @@
             this.groupControl6.AppearanceCaption.Options.UseFont = true;
             this.groupControl6.Controls.Add(this.cmbYear);
             this.groupControl6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl6.Location = new System.Drawing.Point(791, 3);
+            this.groupControl6.Location = new System.Drawing.Point(880, 3);
+            this.groupControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(79, 69);
+            this.groupControl6.Size = new System.Drawing.Size(88, 85);
             this.groupControl6.TabIndex = 31;
             this.groupControl6.Text = "Yıl";
             // 
@@ -848,8 +859,8 @@
             this.cmbYear.EditValue = "2018";
             this.cmbYear.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.cmbYear, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.cmbYear.Location = new System.Drawing.Point(3, 33);
-            this.cmbYear.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbYear.Location = new System.Drawing.Point(3, 37);
+            this.cmbYear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbYear.Name = "cmbYear";
             this.cmbYear.Properties.AccessibleDescription = "Name";
             this.cmbYear.Properties.AccessibleName = "Id";
@@ -892,7 +903,7 @@
             "2049",
             "2050"});
             this.cmbYear.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbYear.Size = new System.Drawing.Size(73, 26);
+            this.cmbYear.Size = new System.Drawing.Size(82, 30);
             this.cmbYear.TabIndex = 30;
             // 
             // groupControl3
@@ -903,9 +914,10 @@
             this.groupControl3.Controls.Add(this.simpleButton2);
             this.groupControl3.Controls.Add(this.txtSearchDescription);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl3.Location = new System.Drawing.Point(255, 3);
+            this.groupControl3.Location = new System.Drawing.Point(283, 3);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(484, 69);
+            this.groupControl3.Size = new System.Drawing.Size(538, 85);
             this.groupControl3.TabIndex = 30;
             this.groupControl3.Text = "Açıklama";
             // 
@@ -917,10 +929,10 @@
             this.simpleButton2.Appearance.Options.UseForeColor = true;
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton2.Location = new System.Drawing.Point(431, 33);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton2.Location = new System.Drawing.Point(479, 37);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(50, 33);
+            this.simpleButton2.Size = new System.Drawing.Size(56, 45);
             this.simpleButton2.TabIndex = 28;
             this.simpleButton2.Text = "Bul";
             this.simpleButton2.ToolTip = "Poz Bul";
@@ -935,8 +947,9 @@
             this.groupControl2.Controls.Add(this.simpleButton1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl2.Location = new System.Drawing.Point(3, 3);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(252, 69);
+            this.groupControl2.Size = new System.Drawing.Size(280, 85);
             this.groupControl2.TabIndex = 29;
             this.groupControl2.Text = "Poz No";
             // 
@@ -948,10 +961,10 @@
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.simpleButton1.Location = new System.Drawing.Point(199, 33);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton1.Location = new System.Drawing.Point(221, 37);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(50, 33);
+            this.simpleButton1.Size = new System.Drawing.Size(56, 45);
             this.simpleButton1.TabIndex = 27;
             this.simpleButton1.Text = "Bul";
             this.simpleButton1.ToolTip = "Poz Bul";
@@ -963,9 +976,10 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.ddlPozYear);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl1.Location = new System.Drawing.Point(870, 3);
+            this.groupControl1.Location = new System.Drawing.Point(968, 3);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(335, 69);
+            this.groupControl1.Size = new System.Drawing.Size(372, 85);
             this.groupControl1.TabIndex = 28;
             this.groupControl1.Text = "Poz Listele";
             // 
@@ -975,8 +989,8 @@
             this.ddlPozYear.EditValue = "2018 Tüm Kurumlar";
             this.ddlPozYear.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.ddlPozYear, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.ddlPozYear.Location = new System.Drawing.Point(3, 33);
-            this.ddlPozYear.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlPozYear.Location = new System.Drawing.Point(3, 37);
+            this.ddlPozYear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ddlPozYear.Name = "ddlPozYear";
             this.ddlPozYear.Properties.AccessibleDescription = "Name";
             this.ddlPozYear.Properties.AccessibleName = "Id";
@@ -987,7 +1001,7 @@
             this.ddlPozYear.Properties.Items.AddRange(new object[] {
             "Çevre ve Şehircilik Bakanlığı "});
             this.ddlPozYear.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.ddlPozYear.Size = new System.Drawing.Size(329, 26);
+            this.ddlPozYear.Size = new System.Drawing.Size(366, 30);
             this.ddlPozYear.TabIndex = 30;
             this.ddlPozYear.SelectedIndexChanged += new System.EventHandler(this.ddlPozYear_SelectedIndexChanged);
             // 
@@ -997,9 +1011,10 @@
             this.statusPanel.Controls.Add(this.lblRecordCount);
             this.statusPanel.Controls.Add(this.labelControl14);
             this.statusPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusPanel.Location = new System.Drawing.Point(526, 624);
+            this.statusPanel.Location = new System.Drawing.Point(584, 756);
+            this.statusPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.statusPanel.Name = "statusPanel";
-            this.statusPanel.Size = new System.Drawing.Size(1208, 34);
+            this.statusPanel.Size = new System.Drawing.Size(1343, 41);
             this.statusPanel.TabIndex = 43;
             // 
             // cmbAktivePasive
@@ -1007,7 +1022,8 @@
             this.cmbAktivePasive.Dock = System.Windows.Forms.DockStyle.Right;
             this.cmbAktivePasive.EditValue = "Aktif Kayıtlar";
             this.cmbAktivePasive.EnterMoveNextControl = true;
-            this.cmbAktivePasive.Location = new System.Drawing.Point(1038, 0);
+            this.cmbAktivePasive.Location = new System.Drawing.Point(1154, 0);
+            this.cmbAktivePasive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbAktivePasive.Name = "cmbAktivePasive";
             this.cmbAktivePasive.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbAktivePasive.Properties.Appearance.Options.UseFont = true;
@@ -1021,7 +1037,7 @@
             this.cmbAktivePasive.Properties.LookAndFeel.SkinName = "McSkin";
             this.cmbAktivePasive.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cmbAktivePasive.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cmbAktivePasive.Size = new System.Drawing.Size(170, 28);
+            this.cmbAktivePasive.Size = new System.Drawing.Size(189, 32);
             this.cmbAktivePasive.TabIndex = 1;
             this.cmbAktivePasive.SelectedIndexChanged += new System.EventHandler(this.cmbAktivePasive_SelectedIndexChanged);
             // 
@@ -1030,9 +1046,10 @@
             this.lblRecordCount.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblRecordCount.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.lblRecordCount.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblRecordCount.Location = new System.Drawing.Point(89, 0);
+            this.lblRecordCount.Location = new System.Drawing.Point(102, 0);
+            this.lblRecordCount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblRecordCount.Name = "lblRecordCount";
-            this.lblRecordCount.Size = new System.Drawing.Size(0, 19);
+            this.lblRecordCount.Size = new System.Drawing.Size(0, 23);
             this.lblRecordCount.TabIndex = 0;
             // 
             // labelControl14
@@ -1040,8 +1057,9 @@
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl14.Dock = System.Windows.Forms.DockStyle.Left;
             this.labelControl14.Location = new System.Drawing.Point(0, 0);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(89, 19);
+            this.labelControl14.Size = new System.Drawing.Size(102, 23);
             this.labelControl14.TabIndex = 0;
             this.labelControl14.Text = "Kayıt Sayısı : ";
             // 
@@ -1051,17 +1069,17 @@
             // 
             // frm_PozListesi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1734, 658);
+            this.ClientSize = new System.Drawing.Size(1927, 797);
             this.ControlBox = false;
             this.Controls.Add(this.grdPozList);
             this.Controls.Add(this.statusPanel);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.pozMenu);
             this.Controls.Add(this.panelControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_PozListesi";

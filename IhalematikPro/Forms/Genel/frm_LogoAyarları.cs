@@ -12,6 +12,7 @@ using IhalematikPro.Manager;
 using IhalematikPro.Forms;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms.Genel
 {
@@ -37,6 +38,7 @@ namespace IhalematikProUI.Forms.Genel
                 CompanyProvider.Instance.Save(company);
             }
             this._owner.logoOrtala();
+            UIPopupManager.Instance.ShowPopup();
             this.Close();
         }
 

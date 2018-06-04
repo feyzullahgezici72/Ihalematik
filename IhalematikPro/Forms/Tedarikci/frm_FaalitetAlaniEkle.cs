@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms.Tedarikci;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms
 {
@@ -37,11 +38,12 @@ namespace IhalematikProUI.Forms
                 {
                     SupplierSegmentProvider.Instance.Save(supplierSegment);
                     this.LoadGrid();
-                    frm_MesajFormu mf = new frm_MesajFormu();
-                    mf.lblMesaj.Text = "Faaliyet alanı eklendi...";
-                    mf.ShowDialog();
+                    //frm_MesajFormu mf = new frm_MesajFormu();
+                    //mf.lblMesaj.Text = "Faaliyet alanı eklendi...";
+                    //mf.ShowDialog();
                     //this._owner.LoadSupplierSegments();
                     //this.Close();
+                    UIPopupManager.Instance.ShowPopup();
                     txtUnvan.ResetText();
                     txtUnvan.Focus();
                 }

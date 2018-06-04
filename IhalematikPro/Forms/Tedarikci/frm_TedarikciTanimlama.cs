@@ -124,10 +124,10 @@ namespace IhalematikProUI.Forms
                 {
                     btnTemizle.PerformClick();
                     this.LoadGrid();
-                    frm_MesajFormu mf = new frm_MesajFormu();
-                    mf.lblMesaj.Text = "Tedarikçi Kaydedildi...";
-                    mf.ShowDialog();
-
+                    //frm_MesajFormu mf = new frm_MesajFormu();
+                    //mf.lblMesaj.Text = "Tedarikçi Kaydedildi...";
+                    //mf.ShowDialog();
+                    UIPopupManager.Instance.ShowPopup();
                 }
                 else
                 {
@@ -194,14 +194,14 @@ namespace IhalematikProUI.Forms
 
             this.FocusedRowHandle = gridViewSupplier.FocusedRowHandle;
 
-            this.pnlKayit.Visible = false;
+            //this.pnlKayit.Visible = false;
             this.Enabled = false;
             frm_TedarikciGuncelleme tg = new Tedarikci.frm_TedarikciGuncelleme(this);
 
             tg.CurrentSupplierId = id;
 
             tg.ShowDialog();
-            pnlKayit.Visible = true;
+            //pnlKayit.Visible = true;
             this.Enabled = true;
         }
 

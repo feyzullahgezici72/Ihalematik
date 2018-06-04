@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -67,6 +68,7 @@ namespace IhalematikProUI.Forms.Tedarikci
                 }
                 this.PozOBF.DescriptionForSupplier = txtdescriptionForSupplier.Text.Trim();
                 this._owner.LoadMaterialGrid();
+                UIPopupManager.Instance.ShowPopup();
                 this.Close();
             }
             //else

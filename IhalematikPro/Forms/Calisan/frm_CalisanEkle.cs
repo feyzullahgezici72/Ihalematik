@@ -13,6 +13,7 @@ using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikProUI.Forms;
 using IhalematikProUI.Forms.Calisan;
+using IhalematikProUI.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -48,12 +49,13 @@ namespace IhalematikPro.Forms
                 {
                     TitleProvider.Instance.Save(model);
                     this._owner.SelectedTitleId = model.Id;
-                    frm_MesajFormu mf = new frm_MesajFormu();
-                    mf.lblMesaj.Text = "Çalışan Ünvanı Kaydedildi...";
-                    mf.ShowDialog();
+                    //frm_MesajFormu mf = new frm_MesajFormu();
+                    //mf.lblMesaj.Text = "Çalışan Ünvanı Kaydedildi...";
+                    //mf.ShowDialog();
                     //this._owner.SelectedTitleId = model.Id;
                     //this._owner.LoadWorkerTitles();
                     //this.Close();
+                    UIPopupManager.Instance.ShowPopup();
                     this.LoadGrid();
                     txtUnvan.Text = "";
                     txtUnvan.Focus();

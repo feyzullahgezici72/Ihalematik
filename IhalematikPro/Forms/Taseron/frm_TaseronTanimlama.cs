@@ -54,9 +54,10 @@ namespace IhalematikProUI.Forms.Taseron
             {
                 btnTemizle.PerformClick();
                 this.LoadGrid();
-                frm_MesajFormu mf = new frm_MesajFormu();
-                mf.lblMesaj.Text = "Tedarikçi Kaydedildi...";
-                mf.ShowDialog();
+                //frm_MesajFormu mf = new frm_MesajFormu();
+                //mf.lblMesaj.Text = "Tedarikçi Kaydedildi...";
+                //mf.ShowDialog();
+                UIPopupManager.Instance.ShowPopup();
 
             }
             else
@@ -123,14 +124,14 @@ namespace IhalematikProUI.Forms.Taseron
 
             this.FocusedRowHandle = gridViewSupplier.FocusedRowHandle;
 
-            this.pnlKayit.Visible = false;
+            //this.pnlKayit.Visible = false;
             this.Enabled = false;
             frm_TaseronGuncelle tg = new frm_TaseronGuncelle(this);
 
             tg.CurrentJobberId = id;
 
             tg.ShowDialog();
-            pnlKayit.Visible = true;
+            //pnlKayit.Visible = true;
             this.Enabled = true;
         }
 

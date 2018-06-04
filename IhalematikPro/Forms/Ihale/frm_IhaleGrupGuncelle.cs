@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms
 {
@@ -45,6 +46,7 @@ namespace IhalematikProUI.Forms
                 TenderGroupProvider.Instance.Save(this.SelectedGroup);
             }
             this._owner.LoadGrid();
+            UIPopupManager.Instance.ShowPopup();
             this.Close();
         }
     }

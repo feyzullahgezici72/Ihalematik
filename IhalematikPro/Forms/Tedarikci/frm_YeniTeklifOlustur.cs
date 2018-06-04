@@ -16,6 +16,7 @@ using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikPro.Manager;
 using DevExpress.LookAndFeel;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms
 {
@@ -52,9 +53,10 @@ namespace IhalematikProUI.Forms
 
                 OfferProvider.Instance.Save(offer);
                 UICurrentManager.Instance.CurrentOffer = offer;
-                frm_MesajFormu mf = new frm_MesajFormu();
-                mf.lblMesaj.Text = "Yeni Teklif Oluşturuldu...";
-                mf.ShowDialog();
+                //frm_MesajFormu mf = new frm_MesajFormu();
+                //mf.lblMesaj.Text = "Yeni Teklif Oluşturuldu...";
+                //mf.ShowDialog();
+                UIPopupManager.Instance.ShowPopup();
                 this.Close();
                 frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
                 af.RibonPasif();

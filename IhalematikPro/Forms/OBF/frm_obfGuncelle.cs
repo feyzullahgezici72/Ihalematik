@@ -15,6 +15,7 @@ using IhalematikPro.Model;
 using System.Globalization;
 using IhalematikPro.Manager;
 using IhalematikProBL.Enum;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms
 {
@@ -124,10 +125,11 @@ namespace IhalematikProUI.Forms
                     model.Id = 0;
                     model.Save();
                 }
-               
-                frm_MesajFormu mf = new frm_MesajFormu();
-                mf.lblMesaj.Text = "Kayıt Güncellendi...";
-                mf.ShowDialog();
+
+                //frm_MesajFormu mf = new frm_MesajFormu();
+                //mf.lblMesaj.Text = "Kayıt Güncellendi...";
+                //mf.ShowDialog();
+                UIPopupManager.Instance.ShowPopup();
                 this._owner.LoadGrid();
                 this.Close();
                 //}

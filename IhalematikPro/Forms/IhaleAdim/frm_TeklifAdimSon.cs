@@ -98,9 +98,10 @@ namespace IhalematikProUI.Forms
 
             TenderProvider.Instance.Save(UICurrentManager.Instance.CurrentTender);
 
-            frm_MesajFormu mf = new frm_MesajFormu();
-            mf.lblMesaj.Text = "İhale Kaydedildi...";
-            mf.ShowDialog();
+            //frm_MesajFormu mf = new frm_MesajFormu();
+            //mf.lblMesaj.Text = "İhale Kaydedildi...";
+            //mf.ShowDialog();
+            UIPopupManager.Instance.ShowPopup();
         }
 
         private void frm_TeklifAdimSon_Shown(object sender, EventArgs e)

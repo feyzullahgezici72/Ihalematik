@@ -17,6 +17,7 @@ using System.Threading;
 using IhalematikProUI.Forms;
 using DevExpress.LookAndFeel;
 using IhalematikProUI.Forms.Base;
+using IhalematikProUI.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -83,9 +84,10 @@ namespace IhalematikPro.Forms
                     UICurrentManager.Instance.CurrentTender = tender;
                 }
                 this.Enabled = false;
-                frm_MesajFormu mf = new frm_MesajFormu();
-                mf.lblMesaj.Text = "Yeni İhale Oluşturuldu";
-                mf.ShowDialog();
+                //frm_MesajFormu mf = new frm_MesajFormu();
+                //mf.lblMesaj.Text = "Yeni İhale Oluşturuldu";
+                //mf.ShowDialog();
+                UIPopupManager.Instance.ShowPopup();
 
                 frm_IhaleGrup ig = new frm_IhaleGrup(this);
                 ig.ShowDialog();

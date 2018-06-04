@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -53,6 +54,7 @@ namespace IhalematikProUI.Forms.Tedarikci
             {
                 this.CurrentSupplierSegment.Name = txtSupplierSegment.Text;
                 SupplierSegmentProvider.Instance.Save(this.CurrentSupplierSegment);
+                UIPopupManager.Instance.ShowPopup();
                 this.Close();
                 this._owner.LoadGrid();
             }

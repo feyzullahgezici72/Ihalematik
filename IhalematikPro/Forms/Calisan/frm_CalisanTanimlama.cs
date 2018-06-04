@@ -248,9 +248,10 @@ namespace IhalematikPro.Forms
                 model.Save();
                 LoadGrid();
                 btnTemizle.PerformClick();
-                frm_MesajFormu mf = new frm_MesajFormu();
-                mf.lblMesaj.Text = "Çalışan kaydı yapıldı...";
-                mf.ShowDialog();
+                //frm_MesajFormu mf = new frm_MesajFormu();
+                //mf.lblMesaj.Text = "Çalışan kaydı yapıldı...";
+                //mf.ShowDialog();
+                UIPopupManager.Instance.ShowPopup();
             }
         }
         public bool IsEmptyKontrol()
@@ -375,13 +376,13 @@ namespace IhalematikPro.Forms
             int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewWorker.GetFocusedRowCellValue("Id"));
             cg.CurrentWorkerId = id;
 
-            kayitMenusu.Visible = false;
+            //kayitMenusu.Visible = false;
             this.Opacity = 10;
             this.Enabled = false;
             cg.ShowDialog();
             this.Enabled = true;
             this.Opacity = 100;
-            kayitMenusu.Visible = true;
+            //kayitMenusu.Visible = true;
         }
 
         private void btnTemizle_Click(object sender, EventArgs e)

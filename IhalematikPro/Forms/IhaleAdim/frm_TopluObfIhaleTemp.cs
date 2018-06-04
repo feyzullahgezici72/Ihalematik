@@ -60,8 +60,9 @@ namespace IhalematikProUI.Forms.IhaleAdim
             }
             LoadingManager.Instance.Hide();
             this.Enabled = true;
-            this.Close();
             this._owner.LoadTenderGroupGrid();
+            UIPopupManager.Instance.ShowPopup();
+            this.Close();
         }
 
         private void frm_TopluObfYukleIhaleTemp_Shown(object sender, EventArgs e)

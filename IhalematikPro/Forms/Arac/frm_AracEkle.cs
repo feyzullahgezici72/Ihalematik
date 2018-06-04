@@ -15,6 +15,7 @@ using IhalematikProUI.Forms.Base;
 using IhalematikProUI.Forms;
 using System.Threading;
 using IhalematikProUI.Forms.Arac;
+using IhalematikProUI.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -51,12 +52,13 @@ namespace IhalematikPro.Forms
                     VehicleTitleProvider.Instance.Save(model);
                     this._owner.SelectedTitleId = model.Id;
                     this.LoadGrid();
-                    frm_MesajFormu mf = new frm_MesajFormu();
-                    mf.lblMesaj.Text = "Arac Kaydedildi...";
-                    mf.ShowDialog();
+                    //frm_MesajFormu mf = new frm_MesajFormu();
+                    //mf.lblMesaj.Text = "Arac Kaydedildi...";
+                    //mf.ShowDialog();
 
                     //this._owner.LoadVehicleTitle();
                     //this.Close();
+                    UIPopupManager.Instance.ShowPopup();
                     txtName.Text = "";
                     txtName.Focus();
                 }

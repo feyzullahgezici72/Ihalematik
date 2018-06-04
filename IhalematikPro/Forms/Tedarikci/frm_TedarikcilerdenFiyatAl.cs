@@ -196,10 +196,10 @@ namespace IhalematikProUI.Forms
                     supplierMaterialList.IsSelected = true;
                     SupplierMaterialListProvider.Instance.Save(supplierMaterialList);
                 }
-                frm_MesajFormu mesajform = new frm_MesajFormu();
-                mesajform.lblMesaj.Text = "Teklif Kaydedildi...";
-                mesajform.ShowDialog();
-
+                //frm_MesajFormu mesajform = new frm_MesajFormu();
+                //mesajform.lblMesaj.Text = "Teklif Kaydedildi...";
+                //mesajform.ShowDialog();
+                UIPopupManager.Instance.ShowPopup();
                 UICurrentManager.Instance.CurrentOffer.IsCompleated = true;
                 OfferProvider.Instance.Save(UICurrentManager.Instance.CurrentOffer);
             }

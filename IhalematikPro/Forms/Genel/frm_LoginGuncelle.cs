@@ -12,6 +12,7 @@ using IhalematikProBL.Entity;
 using IhalematikPro.Manager;
 using IhalematikProBL.Provider;
 using IhalematikPro.Forms;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms.Genel
 {
@@ -55,8 +56,10 @@ namespace IhalematikProUI.Forms.Genel
             member.UserName = txtUserName.Text;
 
             MemberProvider.Instance.Save(member);
-            MessageBox.Show("Güncelleme yapıldı...");
+            //MessageBox.Show("Güncelleme yapıldı...");
             this.Close();
+            UIPopupManager.Instance.ShowPopup();
+
         }
 
         private void frm_LoginGuncelle_Load(object sender, EventArgs e)

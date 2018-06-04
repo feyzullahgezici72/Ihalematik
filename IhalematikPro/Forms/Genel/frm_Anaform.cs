@@ -1558,7 +1558,7 @@ namespace IhalematikPro.Forms
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            UIPopupManager.Instance.ShowPopup();
+            
         }
 
         private void barButtonItem60_ItemClick(object sender, ItemClickEventArgs e)

@@ -101,9 +101,10 @@ namespace IhalematikPro.Forms
             else
             {
                 model.Save();
-                frm_MesajFormu mf = new frm_MesajFormu();
-                mf.lblMesaj.Text = "Kayıt Yapıldı...";
-                mf.ShowDialog();
+                //frm_MesajFormu mf = new frm_MesajFormu();
+                //mf.lblMesaj.Text = "Kayıt Yapıldı...";
+                //mf.ShowDialog();
+                UIPopupManager.Instance.ShowPopup();
                 FormClear();
                 LoadGrid();
             }
@@ -175,10 +176,10 @@ namespace IhalematikPro.Forms
             int id = SimpleApplicationBase.Toolkit.Helpers.GetValueFromObject<int>(gridViewOBFList.GetFocusedRowCellValue("Id"));
             frm.CurrentOBFId = id;
 
-            pnlObfKayit.Visible = false;
+            //pnlObfKayit.Visible = false;
             grdOBFList.Enabled = false;
             frm.ShowDialog();
-            pnlObfKayit.Visible = true;
+            //pnlObfKayit.Visible = true;
             grdOBFList.Enabled = true;
         }
 

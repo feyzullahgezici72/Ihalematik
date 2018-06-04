@@ -47,6 +47,7 @@ namespace IhalematikProUI.Forms.Taseron
                 UICurrentManager.Instance.CurrentJobberTender = jobTender;
 
                 JobberTenderProvider.Instance.Save(UICurrentManager.Instance.CurrentJobberTender);
+                UIPopupManager.Instance.ShowPopup();
                 this.Close();
               
             }

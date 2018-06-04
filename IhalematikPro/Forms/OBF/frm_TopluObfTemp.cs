@@ -47,6 +47,7 @@ namespace IhalematikProUI.Forms.OBF
                 LoadingManager.Instance.Hide();
                 this._owner.LoadGrid();
                 //this.Enabled = true;
+                UIPopupManager.Instance.ShowPopup();
                 this.Close();
             }
             else

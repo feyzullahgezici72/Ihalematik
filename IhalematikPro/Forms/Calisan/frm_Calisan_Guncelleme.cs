@@ -16,6 +16,7 @@ using IhalematikPro.Forms;
 using IhalematikProBL.Enum;
 using IhalematikProUI.Forms.Base;
 using System.Globalization;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms
 {
@@ -240,9 +241,10 @@ namespace IhalematikProUI.Forms
             model.ExtraFare = new Fare(double.Parse(txtExtraFare.Text.Replace("TL", string.Empty))); //.Replace("TL", string.Empty) SAMET ekledi
 
             model.Save();
-            frm_MesajFormu mf = new frm_MesajFormu();
-            mf.lblMesaj.Text = "Kayıt Güncellendi...";
-            mf.ShowDialog();
+            //frm_MesajFormu mf = new frm_MesajFormu();
+            //mf.lblMesaj.Text = "Kayıt Güncellendi...";
+            //mf.ShowDialog();
+            UIPopupManager.Instance.ShowPopup();
             this._owner.LoadGrid();
             this.Close();
 

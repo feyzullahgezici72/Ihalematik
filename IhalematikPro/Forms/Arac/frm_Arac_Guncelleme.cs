@@ -14,6 +14,7 @@ using IhalematikPro.Forms;
 using IhalematikPro.Model;
 using IhalematikPro.Manager;
 using System.Threading;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms
 {
@@ -188,9 +189,10 @@ namespace IhalematikProUI.Forms
 
             model.Save();
             this._owner.LoadGrid();
-            frm_MesajFormu mf = new frm_MesajFormu();
-            mf.lblMesaj.Text = "Güncelleme Yapıldı...";
-            mf.ShowDialog();
+            //frm_MesajFormu mf = new frm_MesajFormu();
+            //mf.lblMesaj.Text = "Güncelleme Yapıldı...";
+            //mf.ShowDialog();
+            UIPopupManager.Instance.ShowPopup();
             this.Close();
         }
 

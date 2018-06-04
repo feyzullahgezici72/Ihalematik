@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms.Kurumlar
 {
@@ -21,6 +22,12 @@ namespace IhalematikProUI.Forms.Kurumlar
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            UIPopupManager.Instance.ShowPopup();
+
         }
     }
 }

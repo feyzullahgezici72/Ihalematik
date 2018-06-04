@@ -86,9 +86,10 @@ namespace IhalematikProUI.Forms.Taseron
             jobberTender.StartJobDate = dateTimeStartDate.DateTime;
             jobberTender.EndJobDate = dateTimeEndDate.DateTime;
             JobberTenderProvider.Instance.Save(jobberTender);
-            frm_MesajFormu msj = new frm_MesajFormu();
-            msj.lblMesaj.Text = "Kaydedildi...";
-            msj.ShowDialog();
+            //frm_MesajFormu msj = new frm_MesajFormu();
+            //msj.lblMesaj.Text = "Kaydedildi...";
+            //msj.ShowDialog();
+            UIPopupManager.Instance.ShowPopup();
         }
 
         public void LoadTenderMaterialList()

@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using IhalematikPro.Forms;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms.Arac
 {
@@ -49,6 +50,7 @@ namespace IhalematikProUI.Forms.Arac
                 this.CurrentVehicleTitle.Name = txtVehicleTitleName.Text;
                 VehicleTitleProvider.Instance.Save(this.CurrentVehicleTitle);
                 this._owner.LoadGrid();
+                UIPopupManager.Instance.ShowPopup();
                 this.Close();
             }
         }

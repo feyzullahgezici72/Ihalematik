@@ -13,6 +13,7 @@ using IhalematikProBL.Provider;
 using IhalematikPro.Forms;
 using IhalematikPro.Model;
 using System.Globalization;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms
 {
@@ -66,9 +67,10 @@ namespace IhalematikProUI.Forms
                 model.UnitPrice = double.Parse(txtUnitPrice.Text.Replace("TL", string.Empty));
                 model.Save();
                 //PozProvider.Instance.Save()
-                frm_MesajFormu mf = new frm_MesajFormu();
-                mf.lblMesaj.Text = "Kayıt Güncellendi...";
-                mf.ShowDialog();
+                //frm_MesajFormu mf = new frm_MesajFormu();
+                //mf.lblMesaj.Text = "Kayıt Güncellendi...";
+                //mf.ShowDialog();
+                UIPopupManager.Instance.ShowPopup();
                 this.Close();
                 this._owner.LoadPozGrid();
             }

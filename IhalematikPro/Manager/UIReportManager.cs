@@ -20,9 +20,10 @@ namespace IhalematikProUI.Manager
             try
             {
                 GridControl.ExportToXls(UIGlobalVeriables.Instance.MalzemeMaliyetListesiPath);
-                frm_MesajFormu mesaj = new frm_MesajFormu();
-                mesaj.lblMesaj.Text = "Veriler Excel dosyasına aktarıldı...";
-                mesaj.ShowDialog();
+                //frm_MesajFormu mesaj = new frm_MesajFormu();
+                //mesaj.lblMesaj.Text = "Veriler Excel dosyasına aktarıldı...";
+                //mesaj.ShowDialog();
+                UIPopupManager.Instance.ShowPopup();
                 System.Diagnostics.ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.FileName = "EXCEL.EXE";
                 startInfo.Arguments = UIGlobalVeriables.Instance.MalzemeMaliyetListesiPath;

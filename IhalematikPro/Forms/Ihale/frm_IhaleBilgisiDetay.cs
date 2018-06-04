@@ -12,6 +12,7 @@ using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using SimpleApplicationBase.BL.Base;
 using IhalematikPro.Forms;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms
 {
@@ -103,8 +104,9 @@ namespace IhalematikProUI.Forms
                 OperationResult res = TenderProvider.Instance.Save(this.Tender);
                 if (res.Success)
                 {
-                    MessageBox.Show("Ihale bilgileri güncellendi.");
+                    //MessageBox.Show("Ihale bilgileri güncellendi.");
                     this._owner.LoadGrid();
+                    UIPopupManager.Instance.ShowPopup();
                 }
                 else
                 {

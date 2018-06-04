@@ -23,7 +23,7 @@ namespace IhalematikProUI.Manager
             popup.TitleColor = Color.Red;
             popup.ContentFont = new System.Drawing.Font("Tahoma", 11F);
             popup.ContentText = "\n İşlem Başarıyla Kaydedildi...";
-            popup.Delay = 600;
+            //popup.Delay = 600;
             popup.Popup();
         }
     }

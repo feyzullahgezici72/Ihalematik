@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using IhalematikPro.Forms;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms
 {
@@ -54,6 +55,7 @@ namespace IhalematikProUI.Forms
             this.CurrentRule.Value = txtRuleValue.Text;
             RuleProvider.Instance.Save(this.CurrentRule);
             this._owner.LoadGrid();
+            UIPopupManager.Instance.ShowPopup();
             this.Close();
         }
     }

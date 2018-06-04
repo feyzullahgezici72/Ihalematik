@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using IhalematikProBL.Entity;
 using IhalematikPro.Forms;
 using IhalematikProBL.Provider;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms.Calisan
 {
@@ -53,6 +54,7 @@ namespace IhalematikProUI.Forms.Calisan
             {
                 this.CurrentWorkerTitle.Name = txtWorkerTitle.Text;
                 TitleProvider.Instance.Save(this.CurrentWorkerTitle);
+                UIPopupManager.Instance.ShowPopup();
                 this.Close();
                 this._owner.LoadGrid();
             }

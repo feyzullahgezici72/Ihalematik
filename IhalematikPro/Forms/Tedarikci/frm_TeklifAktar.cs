@@ -208,9 +208,10 @@ namespace IhalematikProUI.Forms.Tedarikci
                             SupplierProvider.Instance.Save(supplier);
                         }
                     }
-                    frm_MesajFormu mf = new frm_MesajFormu();
-                    mf.lblMesaj.Text = this.SupplierName + " Firmasının \nTeklif dosyası aktarıldı...";
-                    mf.ShowDialog();
+                    //frm_MesajFormu mf = new frm_MesajFormu();
+                    //mf.lblMesaj.Text = this.SupplierName + " Firmasının \nTeklif dosyası aktarıldı...";
+                    //mf.ShowDialog();
+                    UIPopupManager.Instance.ShowPopup();
                 }
             }
             grdMaterialList.DataSource = this.MaterialLists;

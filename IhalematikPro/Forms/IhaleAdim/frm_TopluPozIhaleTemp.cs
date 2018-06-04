@@ -79,8 +79,9 @@ namespace IhalematikProUI.Forms.IhaleAdim
             }
             LoadingManager.Instance.Hide();
             this.Enabled = true;
-            this.Close();
             this._owner.LoadTenderGroupGrid();
+            UIPopupManager.Instance.ShowPopup();
+            this.Close();
         }
 
         private void gridViewMaterialList_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)

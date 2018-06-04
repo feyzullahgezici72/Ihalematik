@@ -202,9 +202,10 @@ namespace IhalematikPro.Forms
                 model.Save();
                 LoadGrid();
                 btnTemizle.PerformClick();
-                frm_MesajFormu mf = new frm_MesajFormu();
-                mf.lblMesaj.Text = "Araç kaydedildi...";
-                mf.ShowDialog();
+                //frm_MesajFormu mf = new frm_MesajFormu();
+                //mf.lblMesaj.Text = "Araç kaydedildi...";
+                //mf.ShowDialog();
+                UIPopupManager.Instance.ShowPopup();
             }
         }
 
@@ -252,13 +253,13 @@ namespace IhalematikPro.Forms
             this.FocusedRowHandle = gridViewVehicle.FocusedRowHandle;
 
             frm.CurrentVehicleId = id;
-            KayitMenusu.Visible = false;
+            //KayitMenusu.Visible = false;
             this.Opacity = 10;
             this.Enabled = false;
             frm.ShowDialog();
             this.Enabled = true;
             this.Opacity = 100;
-            KayitMenusu.Visible = true;
+            //KayitMenusu.Visible = true;
         }
 
         private void btnSil_Click(object sender, EventArgs e)

@@ -12,6 +12,7 @@ using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using SimpleApplicationBase.BL.Base;
 using IhalematikProUI.Model;
+using IhalematikProUI.Manager;
 
 namespace IhalematikProUI.Forms.Tedarikci
 {
@@ -125,9 +126,10 @@ namespace IhalematikProUI.Forms.Tedarikci
                 if (result.Success)
                 {
                     this._owner.LoadGrid();
-                    frm_MesajFormu mf = new frm_MesajFormu();
-                    mf.lblMesaj.Text = "Güncelleme Yapıldı...";
-                    mf.ShowDialog();
+                    //frm_MesajFormu mf = new frm_MesajFormu();
+                    //mf.lblMesaj.Text = "Güncelleme Yapıldı...";
+                    //mf.ShowDialog();
+                    UIPopupManager.Instance.ShowPopup();
                     this.Close();
                 }
             }

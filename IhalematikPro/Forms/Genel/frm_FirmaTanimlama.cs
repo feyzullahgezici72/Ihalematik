@@ -14,6 +14,7 @@ using IhalematikProBL.Provider;
 using IhalematikProUI.Forms;
 using System.IO;
 using IhalematikProBL.Manager;
+using IhalematikProUI.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -109,9 +110,10 @@ namespace IhalematikPro.Forms
             UICurrentManager.Instance.CurrentCompany = company;
             //this._owner.frm_Anaform_Load(null, null);
             this._owner.LoadLogo();
-            frm_MesajFormu mf = new frm_MesajFormu();
-            mf.lblMesaj.Text = "Bilgiler Güncellendi";
-            mf.ShowDialog();
+            //frm_MesajFormu mf = new frm_MesajFormu();
+            //mf.lblMesaj.Text = "Bilgiler Güncellendi";
+            //mf.ShowDialog();
+            UIPopupManager.Instance.ShowPopup();
             this.Close();
 
         }
