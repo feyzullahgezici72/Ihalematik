@@ -227,6 +227,7 @@ namespace IhalematikProUI.Forms
         private void btnTumuneUygula_Click(object sender, EventArgs e)
         {
             this.LoadGrid();
+            UIPopupManager.Instance.ShowPopup();
         }
 
         private void LoadGrid()

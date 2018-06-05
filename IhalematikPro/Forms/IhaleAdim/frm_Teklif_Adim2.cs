@@ -102,6 +102,7 @@ namespace IhalematikPro.Forms
                 }
                 this.LoadTenderMaterialList();
                 this.CalculateTotalMarkup();
+                UIPopupManager.Instance.ShowPopup();
             }
         }
 

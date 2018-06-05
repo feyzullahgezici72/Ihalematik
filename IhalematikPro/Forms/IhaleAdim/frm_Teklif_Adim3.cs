@@ -150,6 +150,7 @@ namespace IhalematikPro.Forms
             grdMaterialListIsWorkship.DataSource = null;
             grdMaterialListIsWorkship.DataSource = models;
             this.CalculateInnerValuesMarkup(models);
+            UIPopupManager.Instance.ShowPopup();
         }
 
         private void btnPanelKapat_Click(object sender, EventArgs e)

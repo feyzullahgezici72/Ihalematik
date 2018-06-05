@@ -1489,6 +1489,9 @@
     <Content Include="icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\information-icon64.png" />
+    <None Include="Resources\information-icon48.png" />
+    <None Include="Resources\information-icon32.png" />
     <None Include="Resources\xx2.png" />
     <None Include="Resources\xx1.png" />
     <None Include="Resources\xx.png" />
