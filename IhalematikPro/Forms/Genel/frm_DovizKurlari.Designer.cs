@@ -79,7 +79,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(386, 39);
+            this.panelControl1.Size = new System.Drawing.Size(395, 39);
             this.panelControl1.TabIndex = 13;
             // 
             // btnIptal
@@ -91,8 +91,8 @@
             this.btnIptal.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnIptal.Image = ((System.Drawing.Image)(resources.GetObject("btnIptal.Image")));
             this.btnIptal.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnIptal.Location = new System.Drawing.Point(358, 0);
-            this.btnIptal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIptal.Location = new System.Drawing.Point(367, 0);
+            this.btnIptal.Margin = new System.Windows.Forms.Padding(4);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(28, 39);
             this.btnIptal.TabIndex = 2;
@@ -121,7 +121,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(0, 39);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(386, 143);
+            this.groupControl2.Size = new System.Drawing.Size(395, 143);
             this.groupControl2.TabIndex = 14;
             this.groupControl2.Text = "Güncel Kur Kaydet";
             // 
@@ -194,13 +194,13 @@
             this.groupControl1.LookAndFeel.SkinName = "The Asphalt World";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(386, 222);
+            this.groupControl1.Size = new System.Drawing.Size(395, 222);
             this.groupControl1.TabIndex = 15;
             this.groupControl1.Text = "Kur Sabitle";
             // 
             // checkEdit2
             // 
-            this.checkEdit2.Location = new System.Drawing.Point(356, 148);
+            this.checkEdit2.Location = new System.Drawing.Point(340, 139);
             this.checkEdit2.Name = "checkEdit2";
             this.checkEdit2.Properties.Caption = "";
             this.checkEdit2.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.UserDefined;
@@ -212,7 +212,7 @@
             // 
             // checkEdit1
             // 
-            this.checkEdit1.Location = new System.Drawing.Point(357, 75);
+            this.checkEdit1.Location = new System.Drawing.Point(339, 65);
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "";
             this.checkEdit1.Properties.CheckStyle = DevExpress.XtraEditors.Controls.CheckStyles.UserDefined;
@@ -233,7 +233,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtSabitEuro.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
             this.dtSabitEuro.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dtSabitEuro.Size = new System.Drawing.Size(188, 26);
+            this.dtSabitEuro.Size = new System.Drawing.Size(174, 26);
             this.dtSabitEuro.TabIndex = 16;
             // 
             // dtSabitDolar
@@ -247,7 +247,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtSabitDolar.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
             this.dtSabitDolar.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dtSabitDolar.Size = new System.Drawing.Size(188, 26);
+            this.dtSabitDolar.Size = new System.Drawing.Size(174, 26);
             this.dtSabitDolar.TabIndex = 16;
             // 
             // txtSabitEuro
@@ -301,13 +301,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnIptal;
-            this.ClientSize = new System.Drawing.Size(386, 389);
+            this.ClientSize = new System.Drawing.Size(395, 385);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_DovizKurlari";

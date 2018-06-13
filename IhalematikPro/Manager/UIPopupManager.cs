@@ -16,7 +16,7 @@ namespace IhalematikProUI.Manager
             PopupNotifier popup = new PopupNotifier();
             popup.Image = IhalematikProUI.Properties.Resources.information_icon64;
             popup.HeaderHeight = 20;
-            popup.HeaderColor = Color.DodgerBlue;
+            popup.HeaderColor = Color.Green;
             popup.TitleText = "  KAYIT ZAMANI:  " + DateTime.Now.ToString();
             popup.ContentFont.Bold.ToString();
             popup.ContentFont = new System.Drawing.Font("Arial Black", 14F);

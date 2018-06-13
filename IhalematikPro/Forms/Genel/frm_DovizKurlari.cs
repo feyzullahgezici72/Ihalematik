@@ -14,6 +14,7 @@ using IhalematikProBL.Manager;
 using IhalematikProBL.Entity;
 using IhalematikProBL.Provider;
 using IhalematikPro.Manager;
+using IhalematikProUI.Manager;
 
 namespace IhalematikPro.Forms
 {
@@ -31,6 +32,10 @@ namespace IhalematikPro.Forms
             {
                 txtDolar.Text = CurrentManager.Instance.CurrentExchangeRateUSD.UnitPrice.ToString();
                 txtEuro.Text = CurrentManager.Instance.CurrentExchangeRateEUR.UnitPrice.ToString();
+                txtSabitDolar.Text = txtDolar.Text.ToString();
+                txtSabitEuro.Text = txtEuro.Text;
+                dtSabitDolar.Text = DateTime.UtcNow.Date.ToShortDateString();
+                dtSabitEuro.Text = DateTime.UtcNow.Date.ToShortDateString();
             }
             catch (Exception ex)
             {
@@ -89,6 +94,9 @@ namespace IhalematikPro.Forms
             exchangeRateEURO.CurrencyType = IhalematikProBL.Enum.CurrencyTypesEnum.EUR;
             exchangeRateEURO.UnitPrice = euro;
             ExchangeRateProvider.Instance.Save(exchangeRateEURO);
+            UIPopupManager.Instance.ShowPopup();
+
+
         }
     }
 }

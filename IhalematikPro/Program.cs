@@ -30,11 +30,11 @@ namespace IhalematikPro
             mutex = new Mutex(true, appName, out createdNew);
             if (!createdNew)
             {
-                MessageBox.Show(appName + " zaten çalışıyor!");
+                MessageBox.Show(appName + "'nın bir kopyası zaten çalışıyor!");
                 return;
             }
 
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName ="Office 2010 Blue";//Devexpress Style"; //"";  //"Money Twins";//
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Green";//Devexpress Style"; //"";  //"Money Twins";//
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

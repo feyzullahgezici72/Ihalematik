@@ -565,7 +565,7 @@ namespace IhalematikPro.Forms
             this.ribbon.ShowFullScreenButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowQatLocationSelector = false;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1487, 234);
+            this.ribbon.Size = new System.Drawing.Size(1487, 205);
             this.ribbon.StatusBar = this.ribbonStatusBar1;
             this.ribbon.Toolbar.ItemLinks.Add(this.barButtonItem23);
             this.ribbon.Toolbar.ItemLinks.Add(this.barButtonItem18);
@@ -2344,10 +2344,10 @@ namespace IhalematikPro.Forms
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem6);
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem7);
             this.ribbonStatusBar1.ItemLinks.Add(this.UserName);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 709);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 715);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbon;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1487, 49);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1487, 43);
             // 
             // txtDate
             // 
@@ -2441,7 +2441,7 @@ namespace IhalematikPro.Forms
             this.pnlAna.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAna.Location = new System.Drawing.Point(3, 3);
             this.pnlAna.Name = "pnlAna";
-            this.pnlAna.Size = new System.Drawing.Size(1448, 469);
+            this.pnlAna.Size = new System.Drawing.Size(1454, 504);
             this.pnlAna.TabIndex = 0;
             this.pnlAna.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             this.pnlAna.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelControl1_MouseMove);
@@ -2468,7 +2468,7 @@ namespace IhalematikPro.Forms
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1448, 28);
+            this.panelControl4.Size = new System.Drawing.Size(1454, 28);
             this.panelControl4.TabIndex = 2;
             // 
             // lblCompanyName
@@ -2483,7 +2483,7 @@ namespace IhalematikPro.Forms
             this.lblCompanyName.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.lblCompanyName.Location = new System.Drawing.Point(3, 3);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(1442, 40);
+            this.lblCompanyName.Size = new System.Drawing.Size(1448, 35);
             this.lblCompanyName.TabIndex = 1;
             this.lblCompanyName.Text = " ";
             // 
@@ -2535,9 +2535,9 @@ namespace IhalematikPro.Forms
             this.MainPanel.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.MainPanel.Controls.Add(this.pnlAna);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(0, 234);
+            this.MainPanel.Location = new System.Drawing.Point(0, 205);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1454, 475);
+            this.MainPanel.Size = new System.Drawing.Size(1460, 510);
             this.MainPanel.TabIndex = 9;
             // 
             // ribbonPageGroup16
@@ -2601,9 +2601,9 @@ namespace IhalematikPro.Forms
             this.hideContainerRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.hideContainerRight.Controls.Add(this.dockPanel1);
             this.hideContainerRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.hideContainerRight.Location = new System.Drawing.Point(1454, 234);
+            this.hideContainerRight.Location = new System.Drawing.Point(1460, 205);
             this.hideContainerRight.Name = "hideContainerRight";
-            this.hideContainerRight.Size = new System.Drawing.Size(33, 475);
+            this.hideContainerRight.Size = new System.Drawing.Size(27, 510);
             // 
             // dockPanel1
             // 
