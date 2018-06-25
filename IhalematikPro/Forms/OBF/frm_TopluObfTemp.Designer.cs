@@ -487,7 +487,6 @@
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frm_TopluObfTemp";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ÖBF";
             this.Shown += new System.EventHandler(this.frm_TopluObfTemp_Shown);

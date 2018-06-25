@@ -132,9 +132,10 @@ namespace IhalematikProUI.Forms.OBF
                 if (this.obfItems == null || this.obfItems.Count == 0)
                 {
                     pnlYuke.Visible = false;
-                    MessageBox.Show("Yüklenecek yeni OBF bulunamadı.");
-                    this.Close();
+                    MessageBox.Show("Yüklemeye çalıştığınız tüm malzemelerin sitemde yüklü oldukları tespit edildi.\nDoğru dosyayı seçtiğinize dikkat ediniz.");
                     return;
+                    this.Close();
+                    
                 }
                 stream.Close();
                 frm_MesajFormu mesaj = new frm_MesajFormu();
