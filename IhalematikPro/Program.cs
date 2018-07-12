@@ -34,7 +34,7 @@ namespace IhalematikPro
                 return;
             }
 
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Green";//Devexpress Style"; //"";  //"Money Twins";//
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2010 Blue";//Devexpress Style"; //"";  //"Money Twins";//
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

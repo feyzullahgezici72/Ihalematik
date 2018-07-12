@@ -37,9 +37,6 @@
             this.btnHayir = new DevExpress.XtraEditors.SimpleButton();
             this.btnEvet = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.pcWorld = new System.Windows.Forms.PictureBox();
-            this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
             this.grdPozTempList = new DevExpress.XtraGrid.GridControl();
             this.gridViewPozList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -55,9 +52,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdPozTempList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPozList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).BeginInit();
@@ -70,9 +64,9 @@
             this.groupControl2.Controls.Add(this.groupControl3);
             this.groupControl2.Controls.Add(this.groupControl4);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl2.Location = new System.Drawing.Point(0, 35);
+            this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(309, 659);
+            this.groupControl2.Size = new System.Drawing.Size(309, 694);
             this.groupControl2.TabIndex = 3;
             // 
             // groupControl3
@@ -125,55 +119,11 @@
             this.groupControl4.TabIndex = 5;
             this.groupControl4.Text = "Tablodaki veriler okundu!";
             // 
-            // panelControl1
-            // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.BottomLeft;
-            this.panelControl1.Controls.Add(this.pcWorld);
-            this.panelControl1.Controls.Add(this.txtAdimAciklama);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1228, 35);
-            this.panelControl1.TabIndex = 26;
-            // 
-            // pcWorld
-            // 
-            this.pcWorld.BackColor = System.Drawing.Color.Transparent;
-            this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
-            this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Name = "pcWorld";
-            this.pcWorld.Size = new System.Drawing.Size(50, 35);
-            this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcWorld.TabIndex = 16;
-            this.pcWorld.TabStop = false;
-            // 
-            // txtAdimAciklama
-            // 
-            this.txtAdimAciklama.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdimAciklama.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
-            this.txtAdimAciklama.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.txtAdimAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
-            this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.txtAdimAciklama.Location = new System.Drawing.Point(57, 0);
-            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAdimAciklama.Name = "txtAdimAciklama";
-            this.txtAdimAciklama.ShowLineShadow = false;
-            this.txtAdimAciklama.Size = new System.Drawing.Size(244, 35);
-            this.txtAdimAciklama.TabIndex = 0;
-            this.txtAdimAciklama.Text = "OKUNAN POZ LİSTESİ";
-            // 
             // grdPozTempList
             // 
             this.grdPozTempList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdPozTempList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdPozTempList.Location = new System.Drawing.Point(309, 35);
+            this.grdPozTempList.Location = new System.Drawing.Point(309, 0);
             this.grdPozTempList.MainView = this.gridViewPozList;
             this.grdPozTempList.Margin = new System.Windows.Forms.Padding(4);
             this.grdPozTempList.Name = "grdPozTempList";
@@ -181,7 +131,7 @@
             this.btnGncelle,
             this.btnPasive,
             this.btnActive});
-            this.grdPozTempList.Size = new System.Drawing.Size(919, 659);
+            this.grdPozTempList.Size = new System.Drawing.Size(919, 694);
             this.grdPozTempList.TabIndex = 25;
             this.grdPozTempList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewPozList});
@@ -456,22 +406,17 @@
             this.ControlBox = false;
             this.Controls.Add(this.grdPozTempList);
             this.Controls.Add(this.groupControl2);
-            this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frm_TopluPozTemp";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "POZ";
+            this.Text = "OKUNAN POZ LİSTESİ";
             this.Shown += new System.EventHandler(this.frm_TopluPozTemp_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdPozTempList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPozList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).EndInit();
@@ -487,9 +432,6 @@
         private DevExpress.XtraEditors.SimpleButton btnHayir;
         private DevExpress.XtraEditors.SimpleButton btnEvet;
         private DevExpress.XtraEditors.GroupControl groupControl4;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private System.Windows.Forms.PictureBox pcWorld;
-        private DevExpress.XtraEditors.LabelControl txtAdimAciklama;
         private DevExpress.XtraGrid.GridControl grdPozTempList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewPozList;
         private DevExpress.XtraGrid.Columns.GridColumn colId;

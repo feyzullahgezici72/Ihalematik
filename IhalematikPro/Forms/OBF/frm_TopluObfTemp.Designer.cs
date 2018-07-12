@@ -49,9 +49,6 @@
             this.btnGncelle = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnPasive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnActive = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.pcWorld = new System.Windows.Forms.PictureBox();
-            this.txtAdimAciklama = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
@@ -62,9 +59,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnActive)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl2
@@ -72,9 +66,9 @@
             this.groupControl2.Controls.Add(this.groupControl3);
             this.groupControl2.Controls.Add(this.groupControl4);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl2.Location = new System.Drawing.Point(0, 35);
+            this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(309, 659);
+            this.groupControl2.Size = new System.Drawing.Size(309, 694);
             this.groupControl2.TabIndex = 1;
             // 
             // groupControl3
@@ -134,7 +128,7 @@
             gridLevelNode1.RelationName = "Level1";
             this.grdOBFTempList.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.grdOBFTempList.Location = new System.Drawing.Point(309, 35);
+            this.grdOBFTempList.Location = new System.Drawing.Point(309, 0);
             this.grdOBFTempList.MainView = this.gridViewOBFList;
             this.grdOBFTempList.Margin = new System.Windows.Forms.Padding(4);
             this.grdOBFTempList.Name = "grdOBFTempList";
@@ -142,7 +136,7 @@
             this.btnGncelle,
             this.btnPasive,
             this.btnActive});
-            this.grdOBFTempList.Size = new System.Drawing.Size(919, 659);
+            this.grdOBFTempList.Size = new System.Drawing.Size(919, 694);
             this.grdOBFTempList.TabIndex = 2;
             this.grdOBFTempList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewOBFList});
@@ -432,50 +426,6 @@
             this.btnActive.Name = "btnActive";
             this.btnActive.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // panelControl1
-            // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.BottomLeft;
-            this.panelControl1.Controls.Add(this.pcWorld);
-            this.panelControl1.Controls.Add(this.txtAdimAciklama);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1228, 35);
-            this.panelControl1.TabIndex = 27;
-            // 
-            // pcWorld
-            // 
-            this.pcWorld.BackColor = System.Drawing.Color.Transparent;
-            this.pcWorld.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pcWorld.Image = ((System.Drawing.Image)(resources.GetObject("pcWorld.Image")));
-            this.pcWorld.Location = new System.Drawing.Point(0, 0);
-            this.pcWorld.Name = "pcWorld";
-            this.pcWorld.Size = new System.Drawing.Size(50, 35);
-            this.pcWorld.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcWorld.TabIndex = 16;
-            this.pcWorld.TabStop = false;
-            // 
-            // txtAdimAciklama
-            // 
-            this.txtAdimAciklama.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdimAciklama.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
-            this.txtAdimAciklama.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.txtAdimAciklama.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.txtAdimAciklama.LineColor = System.Drawing.Color.Red;
-            this.txtAdimAciklama.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.txtAdimAciklama.Location = new System.Drawing.Point(57, 0);
-            this.txtAdimAciklama.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAdimAciklama.Name = "txtAdimAciklama";
-            this.txtAdimAciklama.ShowLineShadow = false;
-            this.txtAdimAciklama.Size = new System.Drawing.Size(245, 35);
-            this.txtAdimAciklama.TabIndex = 0;
-            this.txtAdimAciklama.Text = "OKUNAN ÖBF LİSTESİ";
-            // 
             // frm_TopluObfTemp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -484,11 +434,10 @@
             this.ControlBox = false;
             this.Controls.Add(this.grdOBFTempList);
             this.Controls.Add(this.groupControl2);
-            this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frm_TopluObfTemp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ÖBF";
+            this.Text = "OKUNAN ÖBF LİSTESİ";
             this.Shown += new System.EventHandler(this.frm_TopluObfTemp_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
@@ -500,10 +449,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnGncelle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPasive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnActive)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcWorld)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -525,8 +470,5 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnGncelle;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnPasive;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnActive;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private System.Windows.Forms.PictureBox pcWorld;
-        private DevExpress.XtraEditors.LabelControl txtAdimAciklama;
     }
 }

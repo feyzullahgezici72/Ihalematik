@@ -57,7 +57,7 @@ namespace IhalematikPro.Forms
 
         private void btnIptal_Click(object sender, EventArgs e)
         {
-            this.Close();
+           
         }
        
        

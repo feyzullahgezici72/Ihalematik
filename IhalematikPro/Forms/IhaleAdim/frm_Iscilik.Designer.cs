@@ -72,9 +72,6 @@
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.btnPanelKapat = new DevExpress.XtraEditors.SimpleButton();
             this.bindingSourceAddWorker = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceAddVehicle = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.isciAracGirisPanelix)).BeginInit();
@@ -97,8 +94,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCurrentQuantity.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCurrentUnit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCurrentNumber.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
-            this.panelControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddWorker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddVehicle)).BeginInit();
             this.SuspendLayout();
@@ -109,7 +104,6 @@
             this.isciAracGirisPanelix.Controls.Add(this.grdAddVehicle);
             this.isciAracGirisPanelix.Controls.Add(this.groupControl3);
             this.isciAracGirisPanelix.Controls.Add(this.groupControl1);
-            this.isciAracGirisPanelix.Controls.Add(this.panelControl5);
             this.isciAracGirisPanelix.Dock = System.Windows.Forms.DockStyle.Fill;
             this.isciAracGirisPanelix.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.isciAracGirisPanelix.Location = new System.Drawing.Point(0, 0);
@@ -121,7 +115,7 @@
             // 
             this.grdAddVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdAddVehicle.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.grdAddVehicle.Location = new System.Drawing.Point(3, 361);
+            this.grdAddVehicle.Location = new System.Drawing.Point(3, 326);
             this.grdAddVehicle.LookAndFeel.SkinName = "London Liquid Sky";
             this.grdAddVehicle.LookAndFeel.UseDefaultLookAndFeel = false;
             this.grdAddVehicle.MainView = this.gridViewAddVehicle;
@@ -131,7 +125,7 @@
             this.rpstVehicle,
             this.rpstVehicleUnitTimeTypes,
             this.btnAracCikar});
-            this.grdAddVehicle.Size = new System.Drawing.Size(956, 262);
+            this.grdAddVehicle.Size = new System.Drawing.Size(956, 297);
             this.grdAddVehicle.TabIndex = 0;
             this.grdAddVehicle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewAddVehicle});
@@ -430,7 +424,7 @@
             this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.groupControl3.Controls.Add(this.grdAddWorker);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl3.Location = new System.Drawing.Point(3, 148);
+            this.groupControl3.Location = new System.Drawing.Point(3, 113);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(956, 213);
             this.groupControl3.TabIndex = 6;
@@ -756,7 +750,7 @@
             this.groupControl1.Controls.Add(this.labelControl10);
             this.groupControl1.Controls.Add(this.labelControl11);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(3, 38);
+            this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(956, 110);
             this.groupControl1.TabIndex = 5;
@@ -853,70 +847,20 @@
             this.labelControl11.TabIndex = 0;
             this.labelControl11.Text = "Poz/Öbf No:";
             // 
-            // panelControl5
-            // 
-            this.panelControl5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl5.Appearance.BackColor2 = System.Drawing.Color.SpringGreen;
-            this.panelControl5.Appearance.Options.UseBackColor = true;
-            this.panelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl5.Controls.Add(this.labelControl3);
-            this.panelControl5.Controls.Add(this.btnPanelKapat);
-            this.panelControl5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl5.Location = new System.Drawing.Point(3, 3);
-            this.panelControl5.Margin = new System.Windows.Forms.Padding(4);
-            this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(956, 35);
-            this.panelControl5.TabIndex = 4;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
-            this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.labelControl3.LineColor = System.Drawing.Color.Red;
-            this.labelControl3.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl3.Location = new System.Drawing.Point(10, 1);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.ShowLineShadow = false;
-            this.labelControl3.Size = new System.Drawing.Size(316, 35);
-            this.labelControl3.TabIndex = 5;
-            this.labelControl3.Text = "İŞÇİLİK / ARAÇ KEŞİF İŞLEMİ";
-            this.labelControl3.UseMnemonic = false;
-            // 
-            // btnPanelKapat
-            // 
-            this.btnPanelKapat.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPanelKapat.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.btnPanelKapat.Appearance.Options.UseFont = true;
-            this.btnPanelKapat.Appearance.Options.UseForeColor = true;
-            this.btnPanelKapat.AutoSize = true;
-            this.btnPanelKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnPanelKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPanelKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnPanelKapat.Image")));
-            this.btnPanelKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnPanelKapat.Location = new System.Drawing.Point(928, 0);
-            this.btnPanelKapat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPanelKapat.Name = "btnPanelKapat";
-            this.btnPanelKapat.Size = new System.Drawing.Size(28, 35);
-            this.btnPanelKapat.TabIndex = 1;
-            this.btnPanelKapat.Click += new System.EventHandler(this.btnPanelKapat_Click);
-            // 
             // frm_Iscilik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnPanelKapat;
             this.ClientSize = new System.Drawing.Size(962, 626);
-            this.ControlBox = false;
             this.Controls.Add(this.isciAracGirisPanelix);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Iscilik";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = "İŞÇİLİK / ARAÇ KEŞİF İŞLEMİ";
             this.Load += new System.EventHandler(this.frm_Iscilik_Load);
             this.Shown += new System.EventHandler(this.frm_Iscilik_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.isciAracGirisPanelix)).EndInit();
@@ -940,9 +884,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCurrentQuantity.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCurrentUnit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCurrentNumber.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
-            this.panelControl5.ResumeLayout(false);
-            this.panelControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddWorker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAddVehicle)).EndInit();
             this.ResumeLayout(false);
@@ -983,9 +924,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.PanelControl panelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.SimpleButton btnPanelKapat;
         private System.Windows.Forms.BindingSource bindingSourceAddWorker;
         private System.Windows.Forms.BindingSource bindingSourceAddVehicle;
         private DevExpress.XtraGrid.Columns.GridColumn colCikar;

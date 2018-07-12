@@ -40,8 +40,8 @@ namespace IhalematikProUI.Forms
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
-            frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
-            af.RibonAktif();
+            //frm_Anaform af = (frm_Anaform)Application.OpenForms["frm_Anaform"];
+            //af.RibonAktif();
         }
 
         private void frm_Kurallar_Load(object sender, EventArgs e)

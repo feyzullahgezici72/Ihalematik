@@ -925,7 +925,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem32_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2007 Green"; //""; //"Lilian";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2010 Blue"; //""; //"Lilian";
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }
@@ -951,7 +951,7 @@ namespace IhalematikPro.Forms
 
         private void barButtonItem38_ItemClick(object sender, ItemClickEventArgs e)
         {
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Office 2010 Blue"; //London Liquid Sky
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = " Office 2010 Green"; //London Liquid Sky
             DevExpress.Skins.SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
         }

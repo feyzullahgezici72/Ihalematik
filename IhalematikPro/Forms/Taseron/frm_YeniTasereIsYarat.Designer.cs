@@ -1242,7 +1242,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frm_YeniTasereIsYarat";
             this.ShowInTaskbar = false;
-            this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_YeniTasereIsYarat_Load);
             this.Shown += new System.EventHandler(this.frm_YeniTasereIsYarat_Shown);

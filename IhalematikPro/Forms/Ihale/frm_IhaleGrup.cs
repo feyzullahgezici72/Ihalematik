@@ -138,7 +138,7 @@ namespace IhalematikProUI.Forms
                     item.Description = "Genel Grup";
                     item.Tender = UICurrentManager.Instance.CurrentTender;
                     TenderGroupProvider.Instance.Save(item);
-                    UIPopupManager.Instance.ShowPopup();
+                    //UIPopupManager.Instance.ShowPopup();
                     this.Close();
                 }
                 else

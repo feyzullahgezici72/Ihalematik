@@ -1145,9 +1145,9 @@ namespace IhalematikPro.Forms
             this.barButtonItem7.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.LargeGlyph")));
             this.barButtonItem7.LargeWidth = 120;
             this.barButtonItem7.Name = "barButtonItem7";
-            toolTipTitleItem18.Text = "ONLİNE POZ GÜNCELLEME";
+            toolTipTitleItem18.Text = "ONLİNE GÜNCELLEME";
             toolTipItem18.LeftIndent = 6;
-            toolTipItem18.Text = "Online olarak tüm güncel pozların alındığı form";
+            toolTipItem18.Text = "Programı online olarak günceller";
             superToolTip18.Items.Add(toolTipTitleItem18);
             superToolTip18.Items.Add(toolTipItem18);
             this.barButtonItem7.SuperTip = superToolTip18;

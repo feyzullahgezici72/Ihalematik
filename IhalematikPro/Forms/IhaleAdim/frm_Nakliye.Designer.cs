@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Nakliye));
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtCarriage = new DevExpress.XtraEditors.TextEdit();
@@ -48,8 +45,6 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCarriagePercent = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNkTutar = new DevExpress.XtraGrid.Columns.GridColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCarriage.Properties)).BeginInit();
@@ -58,49 +53,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdMaterialList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewMaterialList)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelControl2.Appearance.BackColor2 = System.Drawing.Color.SpringGreen;
-            this.panelControl2.Appearance.Options.UseBackColor = true;
-            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.btnKapat);
-            this.panelControl2.Controls.Add(this.labelControl1);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(841, 24);
-            this.panelControl2.TabIndex = 96;
-            // 
-            // btnKapat
-            // 
-            this.btnKapat.AutoSize = true;
-            this.btnKapat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnKapat.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnKapat.Image = ((System.Drawing.Image)(resources.GetObject("btnKapat.Image")));
-            this.btnKapat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnKapat.Location = new System.Drawing.Point(815, 0);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(26, 24);
-            this.btnKapat.TabIndex = 21;
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.AliceBlue;
-            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl1.LineColor = System.Drawing.Color.Red;
-            this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.labelControl1.Location = new System.Drawing.Point(7, 0);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.ShowLineShadow = false;
-            this.labelControl1.Size = new System.Drawing.Size(172, 23);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "NAKLİYE HESAPLAMA";
-            this.labelControl1.UseMnemonic = false;
             // 
             // groupControl1
             // 
@@ -113,12 +65,11 @@
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.txtCarriage);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(0, 24);
+            this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.LookAndFeel.SkinName = "London Liquid Sky";
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(841, 29);
+            this.groupControl1.Size = new System.Drawing.Size(1262, 42);
             this.groupControl1.TabIndex = 97;
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
@@ -126,16 +77,16 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl6.Location = new System.Drawing.Point(22, 7);
+            this.labelControl6.Location = new System.Drawing.Point(33, 10);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(77, 13);
+            this.labelControl6.Size = new System.Drawing.Size(120, 19);
             this.labelControl6.TabIndex = 140;
             this.labelControl6.Text = "Nakliye Toplamı:";
             // 
             // txtCarriage
             // 
-            this.txtCarriage.Location = new System.Drawing.Point(107, 5);
-            this.txtCarriage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCarriage.Location = new System.Drawing.Point(160, 7);
             this.txtCarriage.Name = "txtCarriage";
             this.txtCarriage.Properties.DisplayFormat.FormatString = "c2";
             this.txtCarriage.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -145,16 +96,15 @@
             this.txtCarriage.Properties.Mask.EditMask = "c2";
             this.txtCarriage.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCarriage.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtCarriage.Size = new System.Drawing.Size(118, 20);
+            this.txtCarriage.Size = new System.Drawing.Size(177, 26);
             this.txtCarriage.TabIndex = 0;
             // 
             // btnResetValue
             // 
             this.btnResetValue.Image = ((System.Drawing.Image)(resources.GetObject("btnResetValue.Image")));
-            this.btnResetValue.Location = new System.Drawing.Point(813, 338);
-            this.btnResetValue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnResetValue.Location = new System.Drawing.Point(1220, 494);
             this.btnResetValue.Name = "btnResetValue";
-            this.btnResetValue.Size = new System.Drawing.Size(22, 28);
+            this.btnResetValue.Size = new System.Drawing.Size(33, 41);
             this.btnResetValue.TabIndex = 142;
             this.btnResetValue.ToolTip = "Sıfırla";
             this.btnResetValue.Click += new System.EventHandler(this.btnResetValue_Click);
@@ -162,10 +112,9 @@
             // btnOk
             // 
             this.btnOk.Image = ((System.Drawing.Image)(resources.GetObject("btnOk.Image")));
-            this.btnOk.Location = new System.Drawing.Point(737, 338);
-            this.btnOk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOk.Location = new System.Drawing.Point(1106, 494);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(71, 28);
+            this.btnOk.Size = new System.Drawing.Size(106, 41);
             this.btnOk.TabIndex = 141;
             this.btnOk.Text = "&Tamam";
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
@@ -181,30 +130,30 @@
             this.groupControl2.Controls.Add(this.grdMaterialList);
             this.groupControl2.Controls.Add(this.btnOk);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(0, 53);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupControl2.Location = new System.Drawing.Point(0, 42);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(841, 371);
+            this.groupControl2.Size = new System.Drawing.Size(1262, 578);
             this.groupControl2.TabIndex = 98;
             this.groupControl2.Text = "Ağırlık oranını belirtiniz";
             // 
             // simpleButton1
             // 
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(813, 1);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.simpleButton1.Location = new System.Drawing.Point(1220, 1);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(23, 19);
+            this.simpleButton1.Size = new System.Drawing.Size(34, 28);
             this.simpleButton1.TabIndex = 143;
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // grdMaterialList
             // 
             this.grdMaterialList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.grdMaterialList.Location = new System.Drawing.Point(2, 21);
+            this.grdMaterialList.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdMaterialList.Location = new System.Drawing.Point(3, 31);
             this.grdMaterialList.MainView = this.gridViewMaterialList;
+            this.grdMaterialList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdMaterialList.Name = "grdMaterialList";
-            this.grdMaterialList.Size = new System.Drawing.Size(834, 312);
+            this.grdMaterialList.Size = new System.Drawing.Size(1251, 456);
             this.grdMaterialList.TabIndex = 2;
             this.grdMaterialList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMaterialList});
@@ -492,27 +441,21 @@
             // 
             // frm_Nakliye
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnKapat;
-            this.ClientSize = new System.Drawing.Size(841, 424);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(1262, 620);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
-            this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_Nakliye";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = "NAKLİYE HESAPLAMA";
             this.Load += new System.EventHandler(this.frm_Nakliye_Load);
             this.Shown += new System.EventHandler(this.frm_Nakliye_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -526,10 +469,6 @@
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.SimpleButton btnKapat;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         public DevExpress.XtraGrid.GridControl grdMaterialList;
