@@ -100,9 +100,9 @@
             this.groupControl2.Controls.Add(this.labelControl3);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(465, 616);
+            this.groupControl2.Size = new System.Drawing.Size(465, 644);
             this.groupControl2.TabIndex = 97;
             this.groupControl2.Text = "Çalışan Bilgileri";
             // 
@@ -111,9 +111,9 @@
             this.groupControl3.Controls.Add(this.rbNormal);
             this.groupControl3.Controls.Add(this.rbAsgariUcret);
             this.groupControl3.Controls.Add(this.rbNetSalary);
-            this.groupControl3.Location = new System.Drawing.Point(22, 83);
+            this.groupControl3.Location = new System.Drawing.Point(22, 74);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(267, 71);
+            this.groupControl3.Size = new System.Drawing.Size(418, 71);
             this.groupControl3.TabIndex = 139;
             this.groupControl3.Text = "Maaş Tipi";
             this.groupControl3.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl3_Paint);
@@ -125,12 +125,12 @@
             this.rbNormal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbNormal.ForeColor = System.Drawing.Color.Maroon;
             this.rbNormal.Location = new System.Drawing.Point(7, 39);
-            this.rbNormal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbNormal.Margin = new System.Windows.Forms.Padding(4);
             this.rbNormal.Name = "rbNormal";
-            this.rbNormal.Size = new System.Drawing.Size(72, 25);
+            this.rbNormal.Size = new System.Drawing.Size(131, 25);
             this.rbNormal.TabIndex = 0;
             this.rbNormal.TabStop = true;
-            this.rbNormal.Text = "Brüt";
+            this.rbNormal.Text = "Brüt Maaşlı";
             this.rbNormal.UseVisualStyleBackColor = false;
             this.rbNormal.CheckedChanged += new System.EventHandler(this.rbNormal_CheckedChanged);
             this.rbNormal.Click += new System.EventHandler(this.rbNormal_Click);
@@ -140,13 +140,13 @@
             this.rbAsgariUcret.AutoSize = true;
             this.rbAsgariUcret.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbAsgariUcret.ForeColor = System.Drawing.Color.Maroon;
-            this.rbAsgariUcret.Location = new System.Drawing.Point(93, 39);
-            this.rbAsgariUcret.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbAsgariUcret.Location = new System.Drawing.Point(142, 39);
+            this.rbAsgariUcret.Margin = new System.Windows.Forms.Padding(4);
             this.rbAsgariUcret.Name = "rbAsgariUcret";
-            this.rbAsgariUcret.Size = new System.Drawing.Size(89, 25);
+            this.rbAsgariUcret.Size = new System.Drawing.Size(150, 25);
             this.rbAsgariUcret.TabIndex = 2;
             this.rbAsgariUcret.TabStop = true;
-            this.rbAsgariUcret.Text = "Asgari";
+            this.rbAsgariUcret.Text = "Asgari Ücretli";
             this.rbAsgariUcret.UseVisualStyleBackColor = false;
             this.rbAsgariUcret.CheckedChanged += new System.EventHandler(this.rbAsgariUcret_CheckedChanged);
             this.rbAsgariUcret.Click += new System.EventHandler(this.rbAsgariUcret_Click);
@@ -157,12 +157,12 @@
             this.rbNetSalary.BackColor = System.Drawing.Color.Transparent;
             this.rbNetSalary.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rbNetSalary.ForeColor = System.Drawing.Color.Maroon;
-            this.rbNetSalary.Location = new System.Drawing.Point(196, 39);
-            this.rbNetSalary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbNetSalary.Location = new System.Drawing.Point(296, 39);
+            this.rbNetSalary.Margin = new System.Windows.Forms.Padding(4);
             this.rbNetSalary.Name = "rbNetSalary";
-            this.rbNetSalary.Size = new System.Drawing.Size(63, 23);
+            this.rbNetSalary.Size = new System.Drawing.Size(120, 23);
             this.rbNetSalary.TabIndex = 137;
-            this.rbNetSalary.Text = "Net";
+            this.rbNetSalary.Text = "Net Maaşlı";
             this.rbNetSalary.UseVisualStyleBackColor = false;
             this.rbNetSalary.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             this.rbNetSalary.Click += new System.EventHandler(this.rbNetSalary_Click);
@@ -174,10 +174,10 @@
             this.btnGuncelle.Appearance.Options.UseFont = true;
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.Image = global::IhalematikProUI.Properties.Resources.refresh_icon;
-            this.btnGuncelle.Location = new System.Drawing.Point(310, 83);
-            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuncelle.Location = new System.Drawing.Point(308, 573);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(130, 71);
+            this.btnGuncelle.Size = new System.Drawing.Size(130, 58);
             this.btnGuncelle.TabIndex = 1;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
@@ -186,8 +186,8 @@
             // 
             this.txtBaseFare.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.txtBaseFare, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.txtBaseFare.Location = new System.Drawing.Point(198, 165);
-            this.txtBaseFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBaseFare.Location = new System.Drawing.Point(198, 152);
+            this.txtBaseFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtBaseFare.Name = "txtBaseFare";
             this.txtBaseFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtBaseFare.Properties.Appearance.Options.UseBackColor = true;
@@ -200,7 +200,7 @@
             this.txtBaseFare.Properties.Mask.EditMask = "c";
             this.txtBaseFare.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtBaseFare.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtBaseFare.Size = new System.Drawing.Size(224, 26);
+            this.txtBaseFare.Size = new System.Drawing.Size(240, 26);
             this.txtBaseFare.TabIndex = 0;
             this.txtBaseFare.EditValueChanged += new System.EventHandler(this.txtBaseFare_EditValueChanged);
             this.txtBaseFare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBaseFare_KeyPress);
@@ -209,8 +209,8 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Location = new System.Drawing.Point(116, 168);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Location = new System.Drawing.Point(114, 155);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(74, 19);
             this.labelControl4.TabIndex = 99;
@@ -241,8 +241,8 @@
             this.panel1.Controls.Add(this.labelControl8);
             this.panel1.Controls.Add(this.txtStampTaxFare);
             this.panel1.Controls.Add(this.txtFoodFare);
-            this.panel1.Location = new System.Drawing.Point(22, 196);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(22, 186);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(418, 382);
             this.panel1.TabIndex = 34;
@@ -252,7 +252,7 @@
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl9.Location = new System.Drawing.Point(48, 211);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(121, 19);
             this.labelControl9.TabIndex = 138;
@@ -263,7 +263,7 @@
             this.label99.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label99.Appearance.ForeColor = System.Drawing.Color.Black;
             this.label99.Location = new System.Drawing.Point(76, 243);
-            this.label99.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label99.Margin = new System.Windows.Forms.Padding(4);
             this.label99.Name = "label99";
             this.label99.Size = new System.Drawing.Size(91, 19);
             this.label99.TabIndex = 136;
@@ -274,7 +274,7 @@
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl11.Location = new System.Drawing.Point(22, 279);
-            this.labelControl11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(145, 19);
             this.labelControl11.TabIndex = 137;
@@ -284,7 +284,7 @@
             // 
             this.txtWorklesFonFare.EnterMoveNextControl = true;
             this.txtWorklesFonFare.Location = new System.Drawing.Point(176, 37);
-            this.txtWorklesFonFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtWorklesFonFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtWorklesFonFare.Name = "txtWorklesFonFare";
             this.txtWorklesFonFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtWorklesFonFare.Properties.Appearance.Options.UseBackColor = true;
@@ -304,7 +304,7 @@
             // 
             this.txtSeveranceFare.EnterMoveNextControl = true;
             this.txtSeveranceFare.Location = new System.Drawing.Point(176, 172);
-            this.txtSeveranceFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSeveranceFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtSeveranceFare.Name = "txtSeveranceFare";
             this.txtSeveranceFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSeveranceFare.Properties.Appearance.Options.UseBackColor = true;
@@ -324,7 +324,7 @@
             // 
             this.txtAGI.EnterMoveNextControl = true;
             this.txtAGI.Location = new System.Drawing.Point(176, 140);
-            this.txtAGI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAGI.Margin = new System.Windows.Forms.Padding(4);
             this.txtAGI.Name = "txtAGI";
             this.txtAGI.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtAGI.Properties.Appearance.Options.UseBackColor = true;
@@ -344,7 +344,7 @@
             // 
             this.txtExtraFare.EnterMoveNextControl = true;
             this.txtExtraFare.Location = new System.Drawing.Point(176, 343);
-            this.txtExtraFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtExtraFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtExtraFare.Name = "txtExtraFare";
             this.txtExtraFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtExtraFare.Properties.Appearance.Options.UseBackColor = true;
@@ -366,7 +366,7 @@
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl13.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl13.Location = new System.Drawing.Point(118, 346);
-            this.labelControl13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(49, 19);
             this.labelControl13.TabIndex = 108;
@@ -377,7 +377,7 @@
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl5.Location = new System.Drawing.Point(30, 7);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(139, 19);
             this.labelControl5.TabIndex = 100;
@@ -387,7 +387,7 @@
             // 
             this.txtISGFare.EnterMoveNextControl = true;
             this.txtISGFare.Location = new System.Drawing.Point(176, 311);
-            this.txtISGFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtISGFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtISGFare.Name = "txtISGFare";
             this.txtISGFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtISGFare.Properties.Appearance.Options.UseBackColor = true;
@@ -407,7 +407,7 @@
             // 
             this.txtSGKPrimFare.EnterMoveNextControl = true;
             this.txtSGKPrimFare.Location = new System.Drawing.Point(176, 4);
-            this.txtSGKPrimFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSGKPrimFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtSGKPrimFare.Name = "txtSGKPrimFare";
             this.txtSGKPrimFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSGKPrimFare.Properties.Appearance.Options.UseBackColor = true;
@@ -428,7 +428,7 @@
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl12.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl12.Location = new System.Drawing.Point(92, 314);
-            this.labelControl12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(75, 19);
             this.labelControl12.TabIndex = 103;
@@ -439,7 +439,7 @@
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl6.Location = new System.Drawing.Point(44, 39);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(125, 19);
             this.labelControl6.TabIndex = 101;
@@ -449,7 +449,7 @@
             // 
             this.txtHotelFare.EnterMoveNextControl = true;
             this.txtHotelFare.Location = new System.Drawing.Point(176, 276);
-            this.txtHotelFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHotelFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtHotelFare.Name = "txtHotelFare";
             this.txtHotelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtHotelFare.Properties.Appearance.Options.UseBackColor = true;
@@ -470,7 +470,7 @@
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl7.Location = new System.Drawing.Point(76, 75);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(92, 19);
             this.labelControl7.TabIndex = 102;
@@ -480,7 +480,7 @@
             // 
             this.txtIncomeTaxFare.EnterMoveNextControl = true;
             this.txtIncomeTaxFare.Location = new System.Drawing.Point(176, 72);
-            this.txtIncomeTaxFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIncomeTaxFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtIncomeTaxFare.Name = "txtIncomeTaxFare";
             this.txtIncomeTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtIncomeTaxFare.Properties.Appearance.Options.UseBackColor = true;
@@ -500,7 +500,7 @@
             // 
             this.txtTravelFare.EnterMoveNextControl = true;
             this.txtTravelFare.Location = new System.Drawing.Point(176, 243);
-            this.txtTravelFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTravelFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtTravelFare.Name = "txtTravelFare";
             this.txtTravelFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTravelFare.Properties.Appearance.Options.UseBackColor = true;
@@ -521,7 +521,7 @@
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl10.Location = new System.Drawing.Point(44, 178);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(124, 19);
             this.labelControl10.TabIndex = 104;
@@ -532,7 +532,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl2.Location = new System.Drawing.Point(138, 143);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(30, 19);
             this.labelControl2.TabIndex = 105;
@@ -543,7 +543,7 @@
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl8.Location = new System.Drawing.Point(60, 110);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(109, 19);
             this.labelControl8.TabIndex = 106;
@@ -553,7 +553,7 @@
             // 
             this.txtStampTaxFare.EnterMoveNextControl = true;
             this.txtStampTaxFare.Location = new System.Drawing.Point(176, 107);
-            this.txtStampTaxFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStampTaxFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtStampTaxFare.Name = "txtStampTaxFare";
             this.txtStampTaxFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtStampTaxFare.Properties.Appearance.Options.UseBackColor = true;
@@ -573,7 +573,7 @@
             // 
             this.txtFoodFare.EnterMoveNextControl = true;
             this.txtFoodFare.Location = new System.Drawing.Point(176, 208);
-            this.txtFoodFare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFoodFare.Margin = new System.Windows.Forms.Padding(4);
             this.txtFoodFare.Name = "txtFoodFare";
             this.txtFoodFare.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtFoodFare.Properties.Appearance.Options.UseBackColor = true;
@@ -593,8 +593,8 @@
             // 
             this.ddlTitles.EnterMoveNextControl = true;
             this.dxErrorProvider1.SetIconAlignment(this.ddlTitles, System.Windows.Forms.ErrorIconAlignment.MiddleRight);
-            this.ddlTitles.Location = new System.Drawing.Point(22, 50);
-            this.ddlTitles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ddlTitles.Location = new System.Drawing.Point(85, 41);
+            this.ddlTitles.Margin = new System.Windows.Forms.Padding(4);
             this.ddlTitles.Name = "ddlTitles";
             this.ddlTitles.Properties.AccessibleDescription = "Name";
             this.ddlTitles.Properties.AccessibleName = "Id";
@@ -602,15 +602,15 @@
             this.ddlTitles.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.ddlTitles.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ddlTitles.Size = new System.Drawing.Size(418, 26);
+            this.ddlTitles.Size = new System.Drawing.Size(355, 26);
             this.ddlTitles.TabIndex = 0;
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl3.Location = new System.Drawing.Point(22, 32);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Location = new System.Drawing.Point(22, 44);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(55, 19);
             this.labelControl3.TabIndex = 78;
@@ -627,7 +627,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(465, 616);
+            this.ClientSize = new System.Drawing.Size(465, 644);
             this.Controls.Add(this.groupControl2);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
